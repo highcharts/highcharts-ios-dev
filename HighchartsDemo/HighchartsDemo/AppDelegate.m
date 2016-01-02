@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  ExampleCharts
+//  HighchartsDemo
 //
-//  Created by Highsoft AS 09.12.2015.
-//  Copyright © 2015 Highsoft AS. All rights reserved.
+//  License: www.highcharts.com/license
+//  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    RootViewController *rootViewController = [[RootViewController alloc] init];
+    
+    [self.window setRootViewController:rootViewController];
+    
     return YES;
 }
 

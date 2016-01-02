@@ -1,9 +1,9 @@
 //
 //  main.m
-//  ExampleCharts
+//  HighchartsDemo
 //
-//  Created by Highsoft AS 09.12.2015.
-//  Copyright © 2015 Highsoft AS. All rights reserved.
+//  License: www.highcharts.com/license
+//  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
