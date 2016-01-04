@@ -11,6 +11,7 @@
 		343E13A61C385287006DDD68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A51C385287006DDD68 /* AppDelegate.m */; };
 		343E13A91C385287006DDD68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A81C385287006DDD68 /* RootViewController.m */; };
 		343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343E13AD1C385287006DDD68 /* Assets.xcassets */; };
+		345BA00B1C39AD02001DAB1B /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345BA00A1C39AD02001DAB1B /* Highcharts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		343E13A81C385287006DDD68 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		343E13AD1C385287006DDD68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343E13B21C385287006DDD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		345BA00A1C39AD02001DAB1B /* Highcharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Highcharts.framework; path = "../Highcharts/build/Debug-iphoneos/Highcharts.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345BA00B1C39AD02001DAB1B /* Highcharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		343E13951C385287006DDD68 = {
 			isa = PBXGroup;
 			children = (
+				345BA00A1C39AD02001DAB1B /* Highcharts.framework */,
 				343E13A01C385287006DDD68 /* HighchartsDemo */,
 				343E139F1C385287006DDD68 /* Products */,
 			);
@@ -273,6 +277,7 @@
 				343E13B71C385287006DDD68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

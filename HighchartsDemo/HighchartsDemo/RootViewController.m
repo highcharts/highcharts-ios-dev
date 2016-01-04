@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import <Highcharts/Highcharts.h>
 
 @interface RootViewController ()
 
