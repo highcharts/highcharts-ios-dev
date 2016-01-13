@@ -10,4 +10,5 @@
 
 @interface HIGView ()
 - (instancetype)initWithFrame:(CGRect)frame bundle:(NSString*)bundle;
+- (void)loadHighcharts:(NSString *)highcharts;
 @end

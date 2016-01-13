@@ -22,4 +22,9 @@ NSString * const kHighchartsChartBundleId = @"com.highcharts.charts";
     return self;
 }
 
+- (void)loadHighcharts:(NSString *)highcharts
+{
+    [super loadHighcharts:highcharts];
+}
+
 @end

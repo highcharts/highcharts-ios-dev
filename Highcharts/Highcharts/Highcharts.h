@@ -14,4 +14,4 @@ FOUNDATION_EXPORT double HighchartsVersionNumber;
 //! Project version string for Highcharts.
 FOUNDATION_EXPORT const unsigned char HighchartsVersionString[];
 
-<Highcharts/HIGChartView.h>
+#import <Highcharts/HIGChartView.h>

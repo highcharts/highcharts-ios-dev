@@ -22,7 +22,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.highchartsBundle = [NSBundle bundleWithIdentifier:bundles];
+        self.highchartsBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:bundle ofType:@"bundle"]];
         
         NSAssert(self.highchartsBundle, @"Highcharts bundle was not found!");
         if (!self.highchartsBundle) {
@@ -42,6 +42,7 @@
         self.webView.scrollView.scrollEnabled = NO;
         
         self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
         [self addSubview:self.webView];
     }
     return self;

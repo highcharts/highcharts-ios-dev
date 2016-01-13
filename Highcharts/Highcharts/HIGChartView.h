@@ -10,4 +10,6 @@
 
 @interface HIGChartView : HIGView
 
+- (void)loadHighcharts:(NSString *)highcharts;
+
 @end
