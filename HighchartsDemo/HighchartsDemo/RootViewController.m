@@ -10,7 +10,7 @@
 #import <Highcharts/Highcharts.h>
 
 @interface RootViewController ()
-@property (strong, nonatomic) HIGChartView *chart;
+@property (strong, nonatomic) HIGChartView *chartView;
 @end
 
 @implementation RootViewController
@@ -19,18 +19,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.chart = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIGChart *chart = [[HIGChart alloc] init];
     
-    [self.view addSubview:self.chart];
+    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds chart:chart];
+    
+    [self.view addSubview:self.chartView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    NSString *charts = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"first-chart" ofType:@"js"] encoding:NSUTF8StringEncoding error:nil];
-    
-    [self.chart loadHighcharts:charts];
 }
 
 - (void)didReceiveMemoryWarning {

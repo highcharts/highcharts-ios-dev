@@ -7,9 +7,12 @@
 //
 
 #import "HIGView.h"
+#import "HIGChart.h"
 
 @interface HIGChartView : HIGView
 
-- (void)loadHighcharts:(NSString *)highcharts;
+@property (strong, nonatomic, readonly) HIGChart *chart;
+
+- (instancetype)initWithFrame:(CGRect)frame chart:(HIGChart*)chart;
 
 @end

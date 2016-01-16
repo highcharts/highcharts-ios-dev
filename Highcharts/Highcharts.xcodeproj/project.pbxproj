@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340283F11C4ACFD10046684F /* HIGAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283E81C4ACFD10046684F /* HIGAxis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		340283F21C4ACFD10046684F /* HIGAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 340283E91C4ACFD10046684F /* HIGAxis.m */; };
+		340283F31C4ACFD10046684F /* HIGChart_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283EA1C4ACFD10046684F /* HIGChart_Private.h */; };
+		340283F41C4ACFD10046684F /* HIGChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283EB1C4ACFD10046684F /* HIGChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		340283F51C4ACFD10046684F /* HIGChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 340283EC1C4ACFD10046684F /* HIGChart.m */; };
+		340283F61C4ACFD10046684F /* HIGChartsTypes_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283ED1C4ACFD10046684F /* HIGChartsTypes_Private.h */; };
+		340283F71C4ACFD10046684F /* HIGChartsTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283EE1C4ACFD10046684F /* HIGChartsTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		340283F81C4ACFD10046684F /* HIGSeries.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283EF1C4ACFD10046684F /* HIGSeries.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		340283F91C4ACFD10046684F /* HIGSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 340283F01C4ACFD10046684F /* HIGSeries.m */; };
 		343E138E1C38513D006DDD68 /* Highcharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 343E138D1C38513D006DDD68 /* Highcharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0101C39AFB9001DAB1B /* HIGView.h in Headers */ = {isa = PBXBuildFile; fileRef = 345BA00E1C39AFB9001DAB1B /* HIGView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0111C39AFB9001DAB1B /* HIGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIGView.m */; };
@@ -16,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		340283E81C4ACFD10046684F /* HIGAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGAxis.h; sourceTree = "<group>"; };
+		340283E91C4ACFD10046684F /* HIGAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGAxis.m; sourceTree = "<group>"; };
+		340283EA1C4ACFD10046684F /* HIGChart_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChart_Private.h; sourceTree = "<group>"; };
+		340283EB1C4ACFD10046684F /* HIGChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChart.h; sourceTree = "<group>"; };
+		340283EC1C4ACFD10046684F /* HIGChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChart.m; sourceTree = "<group>"; };
+		340283ED1C4ACFD10046684F /* HIGChartsTypes_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartsTypes_Private.h; sourceTree = "<group>"; };
+		340283EE1C4ACFD10046684F /* HIGChartsTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartsTypes.h; sourceTree = "<group>"; };
+		340283EF1C4ACFD10046684F /* HIGSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGSeries.h; sourceTree = "<group>"; };
+		340283F01C4ACFD10046684F /* HIGSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGSeries.m; sourceTree = "<group>"; };
 		343E138A1C38513D006DDD68 /* Highcharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Highcharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E138D1C38513D006DDD68 /* Highcharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Highcharts.h; sourceTree = "<group>"; };
 		343E138F1C38513D006DDD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,31 +74,24 @@
 		343E138C1C38513D006DDD68 /* Highcharts */ = {
 			isa = PBXGroup;
 			children = (
-				345BA00D1C39ADE4001DAB1B /* Public */,
-				345BA00C1C39ADDD001DAB1B /* Private */,
+				340283E81C4ACFD10046684F /* HIGAxis.h */,
+				340283E91C4ACFD10046684F /* HIGAxis.m */,
+				340283EA1C4ACFD10046684F /* HIGChart_Private.h */,
+				340283EB1C4ACFD10046684F /* HIGChart.h */,
+				340283EC1C4ACFD10046684F /* HIGChart.m */,
+				340283ED1C4ACFD10046684F /* HIGChartsTypes_Private.h */,
+				340283EE1C4ACFD10046684F /* HIGChartsTypes.h */,
+				340283EF1C4ACFD10046684F /* HIGSeries.h */,
+				340283F01C4ACFD10046684F /* HIGSeries.m */,
+				345BA0161C39B3B7001DAB1B /* HIGView_Private.h */,
+				345BA00E1C39AFB9001DAB1B /* HIGView.h */,
+				345BA00F1C39AFB9001DAB1B /* HIGView.m */,
+				345BA0121C39AFDA001DAB1B /* HIGChartView.h */,
+				345BA0131C39AFDA001DAB1B /* HIGChartView.m */,
 				343E138D1C38513D006DDD68 /* Highcharts.h */,
 				343E138F1C38513D006DDD68 /* Info.plist */,
 			);
 			path = Highcharts;
-			sourceTree = "<group>";
-		};
-		345BA00C1C39ADDD001DAB1B /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				345BA0161C39B3B7001DAB1B /* HIGView_Private.h */,
-				345BA00E1C39AFB9001DAB1B /* HIGView.h */,
-				345BA00F1C39AFB9001DAB1B /* HIGView.m */,
-			);
-			name = Private;
-			sourceTree = "<group>";
-		};
-		345BA00D1C39ADE4001DAB1B /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				345BA0121C39AFDA001DAB1B /* HIGChartView.h */,
-				345BA0131C39AFDA001DAB1B /* HIGChartView.m */,
-			);
-			name = Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,8 +102,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				345BA0181C39B3B7001DAB1B /* HIGView_Private.h in Headers */,
+				340283F71C4ACFD10046684F /* HIGChartsTypes.h in Headers */,
 				345BA0141C39AFDA001DAB1B /* HIGChartView.h in Headers */,
+				340283F11C4ACFD10046684F /* HIGAxis.h in Headers */,
+				340283F41C4ACFD10046684F /* HIGChart.h in Headers */,
+				340283F81C4ACFD10046684F /* HIGSeries.h in Headers */,
+				340283F61C4ACFD10046684F /* HIGChartsTypes_Private.h in Headers */,
 				345BA0101C39AFB9001DAB1B /* HIGView.h in Headers */,
+				340283F31C4ACFD10046684F /* HIGChart_Private.h in Headers */,
 				343E138E1C38513D006DDD68 /* Highcharts.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340283F21C4ACFD10046684F /* HIGAxis.m in Sources */,
 				345BA0151C39AFDA001DAB1B /* HIGChartView.m in Sources */,
 				345BA0111C39AFB9001DAB1B /* HIGView.m in Sources */,
+				340283F91C4ACFD10046684F /* HIGSeries.m in Sources */,
+				340283F51C4ACFD10046684F /* HIGChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

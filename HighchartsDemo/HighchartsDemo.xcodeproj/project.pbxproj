@@ -10,7 +10,6 @@
 		341E876D1C46E1DC0053048C /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341E876C1C46E1DC0053048C /* Highcharts.framework */; };
 		341E876E1C46E1DC0053048C /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 341E876C1C46E1DC0053048C /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		341E87721C46E3350053048C /* com.highcharts.charts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 341E87711C46E3350053048C /* com.highcharts.charts.bundle */; };
-		341E87771C46E93D0053048C /* first-chart.js in Resources */ = {isa = PBXBuildFile; fileRef = 341E87761C46E93D0053048C /* first-chart.js */; };
 		343E13A31C385287006DDD68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A21C385287006DDD68 /* main.m */; };
 		343E13A61C385287006DDD68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A51C385287006DDD68 /* AppDelegate.m */; };
 		343E13A91C385287006DDD68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A81C385287006DDD68 /* RootViewController.m */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		341E876C1C46E1DC0053048C /* Highcharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Highcharts.framework; path = "/Users/soleniacz/Library/Developer/Xcode/DerivedData/Highcharts-eobrmmcugglvvoekgllxkfwyllxb/Build/Products/Debug-iphoneos/Highcharts.framework"; sourceTree = "<absolute>"; };
 		341E87711C46E3350053048C /* com.highcharts.charts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = com.highcharts.charts.bundle; path = ../Highcharts/com.highcharts.charts.bundle; sourceTree = "<group>"; };
-		341E87761C46E93D0053048C /* first-chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "first-chart.js"; path = "../first-chart.js"; sourceTree = "<group>"; };
 		343E139E1C385287006DDD68 /* HighchartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighchartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E13A21C385287006DDD68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		343E13A41C385287006DDD68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 		343E13951C385287006DDD68 = {
 			isa = PBXGroup;
 			children = (
-				341E87761C46E93D0053048C /* first-chart.js */,
 				341E87711C46E3350053048C /* com.highcharts.charts.bundle */,
 				341E87701C46E31C0053048C /* Frameworks */,
 				343E13A01C385287006DDD68 /* HighchartsDemo */,
@@ -167,7 +164,6 @@
 			files = (
 				343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */,
 				341E87721C46E3350053048C /* com.highcharts.charts.bundle in Resources */,
-				341E87771C46E93D0053048C /* first-chart.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

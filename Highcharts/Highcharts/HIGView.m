@@ -6,8 +6,9 @@
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import "HIGView.h"
+#import "HIGView_Private.h"
 #import <WebKit/WebKit.h>
+#import "HIGChart_Private.h"
 
 @interface HIGView ()
 @property (nonatomic, strong) WKWebView *webView;
