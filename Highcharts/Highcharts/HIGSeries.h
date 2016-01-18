@@ -6,11 +6,14 @@
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <JSONModel/JSONModel.h>
 
-@interface HIGSeries : NSObject
+@protocol HIGSeries
+@end
+
+@interface HIGSeries : JSONModel
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSArray <NSNumber *> *data;
+@property (strong, nonatomic) NSArray *data;
 
 @end

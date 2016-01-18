@@ -1,15 +1,13 @@
 //
-//  HIGChart.h
+//  HIGOptions.m
 //  Highcharts
 //
 //  License: www.highcharts.com/license
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+#import "HIGOptions_Private.h"
 
-@interface HIGChart : JSONModel
-
-@property (strong, nonatomic) NSString *type;
+@implementation HIGOptions
 
 @end

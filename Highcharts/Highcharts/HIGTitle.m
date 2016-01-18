@@ -1,22 +1,20 @@
 //
-//  HIGChart.m
+//  HIGTitle.m
 //  Highcharts
 //
 //  License: www.highcharts.com/license
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import "HIGChart_Private.h"
-#import "HIGChartsTypes_Private.h"
+#import "HIGTitle.h"
 
-@implementation HIGChart
+@implementation HIGTitle
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        self.renderTo = @"container";
-        self.type = HIGChartTypeLine;
+        self.text = @"";
     }
     return self;
 }

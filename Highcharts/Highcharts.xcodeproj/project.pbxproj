@@ -14,8 +14,14 @@
 		340283F51C4ACFD10046684F /* HIGChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 340283EC1C4ACFD10046684F /* HIGChart.m */; };
 		340283F61C4ACFD10046684F /* HIGChartsTypes_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283ED1C4ACFD10046684F /* HIGChartsTypes_Private.h */; };
 		340283F71C4ACFD10046684F /* HIGChartsTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283EE1C4ACFD10046684F /* HIGChartsTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		340283F81C4ACFD10046684F /* HIGSeries.h in Headers */ = {isa = PBXBuildFile; fileRef = 340283EF1C4ACFD10046684F /* HIGSeries.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		340283F91C4ACFD10046684F /* HIGSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 340283F01C4ACFD10046684F /* HIGSeries.m */; };
+		340284091C4AF0F40046684F /* HIGOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 340284071C4AF0F40046684F /* HIGOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3402840A1C4AF0F40046684F /* HIGOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 340284081C4AF0F40046684F /* HIGOptions.m */; };
+		3402840C1C4AF1FC0046684F /* HIGOptions_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3402840B1C4AF1FC0046684F /* HIGOptions_Private.h */; };
+		3402841A1C4B0F870046684F /* HIGTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 340284181C4B0F870046684F /* HIGTitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3402841B1C4B0F870046684F /* HIGTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 340284191C4B0F870046684F /* HIGTitle.m */; };
+		340284221C4B1B010046684F /* HIGSeries.h in Headers */ = {isa = PBXBuildFile; fileRef = 340284201C4B1B010046684F /* HIGSeries.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		340284231C4B1B010046684F /* HIGSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 340284211C4B1B010046684F /* HIGSeries.m */; };
+		3425428D1C4D9D810024B70F /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3425428C1C4D9D810024B70F /* JSONModel.framework */; };
 		343E138E1C38513D006DDD68 /* Highcharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 343E138D1C38513D006DDD68 /* Highcharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0101C39AFB9001DAB1B /* HIGView.h in Headers */ = {isa = PBXBuildFile; fileRef = 345BA00E1C39AFB9001DAB1B /* HIGView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0111C39AFB9001DAB1B /* HIGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIGView.m */; };
@@ -32,8 +38,14 @@
 		340283EC1C4ACFD10046684F /* HIGChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChart.m; sourceTree = "<group>"; };
 		340283ED1C4ACFD10046684F /* HIGChartsTypes_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartsTypes_Private.h; sourceTree = "<group>"; };
 		340283EE1C4ACFD10046684F /* HIGChartsTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartsTypes.h; sourceTree = "<group>"; };
-		340283EF1C4ACFD10046684F /* HIGSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGSeries.h; sourceTree = "<group>"; };
-		340283F01C4ACFD10046684F /* HIGSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGSeries.m; sourceTree = "<group>"; };
+		340284071C4AF0F40046684F /* HIGOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGOptions.h; sourceTree = "<group>"; };
+		340284081C4AF0F40046684F /* HIGOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptions.m; sourceTree = "<group>"; };
+		3402840B1C4AF1FC0046684F /* HIGOptions_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGOptions_Private.h; sourceTree = "<group>"; };
+		340284181C4B0F870046684F /* HIGTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGTitle.h; sourceTree = "<group>"; };
+		340284191C4B0F870046684F /* HIGTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGTitle.m; sourceTree = "<group>"; };
+		340284201C4B1B010046684F /* HIGSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGSeries.h; sourceTree = "<group>"; };
+		340284211C4B1B010046684F /* HIGSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGSeries.m; sourceTree = "<group>"; };
+		3425428C1C4D9D810024B70F /* JSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONModel.framework; path = ../Carthage/Build/iOS/JSONModel.framework; sourceTree = "<group>"; };
 		343E138A1C38513D006DDD68 /* Highcharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Highcharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E138D1C38513D006DDD68 /* Highcharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Highcharts.h; sourceTree = "<group>"; };
 		343E138F1C38513D006DDD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,15 +61,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3425428D1C4D9D810024B70F /* JSONModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340283FC1C4AD40C0046684F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3425428C1C4D9D810024B70F /* JSONModel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		343E13801C38513D006DDD68 = {
 			isa = PBXGroup;
 			children = (
+				340283FC1C4AD40C0046684F /* Frameworks */,
 				343E138C1C38513D006DDD68 /* Highcharts */,
 				343E138B1C38513D006DDD68 /* Products */,
 			);
@@ -74,20 +96,25 @@
 		343E138C1C38513D006DDD68 /* Highcharts */ = {
 			isa = PBXGroup;
 			children = (
-				340283E81C4ACFD10046684F /* HIGAxis.h */,
-				340283E91C4ACFD10046684F /* HIGAxis.m */,
+				3402840B1C4AF1FC0046684F /* HIGOptions_Private.h */,
+				340284071C4AF0F40046684F /* HIGOptions.h */,
+				340284081C4AF0F40046684F /* HIGOptions.m */,
 				340283EA1C4ACFD10046684F /* HIGChart_Private.h */,
 				340283EB1C4ACFD10046684F /* HIGChart.h */,
 				340283EC1C4ACFD10046684F /* HIGChart.m */,
+				340284201C4B1B010046684F /* HIGSeries.h */,
+				340284211C4B1B010046684F /* HIGSeries.m */,
+				340283E81C4ACFD10046684F /* HIGAxis.h */,
+				340283E91C4ACFD10046684F /* HIGAxis.m */,
 				340283ED1C4ACFD10046684F /* HIGChartsTypes_Private.h */,
 				340283EE1C4ACFD10046684F /* HIGChartsTypes.h */,
-				340283EF1C4ACFD10046684F /* HIGSeries.h */,
-				340283F01C4ACFD10046684F /* HIGSeries.m */,
 				345BA0161C39B3B7001DAB1B /* HIGView_Private.h */,
 				345BA00E1C39AFB9001DAB1B /* HIGView.h */,
 				345BA00F1C39AFB9001DAB1B /* HIGView.m */,
 				345BA0121C39AFDA001DAB1B /* HIGChartView.h */,
 				345BA0131C39AFDA001DAB1B /* HIGChartView.m */,
+				340284181C4B0F870046684F /* HIGTitle.h */,
+				340284191C4B0F870046684F /* HIGTitle.m */,
 				343E138D1C38513D006DDD68 /* Highcharts.h */,
 				343E138F1C38513D006DDD68 /* Info.plist */,
 			);
@@ -104,9 +131,12 @@
 				345BA0181C39B3B7001DAB1B /* HIGView_Private.h in Headers */,
 				340283F71C4ACFD10046684F /* HIGChartsTypes.h in Headers */,
 				345BA0141C39AFDA001DAB1B /* HIGChartView.h in Headers */,
+				3402840C1C4AF1FC0046684F /* HIGOptions_Private.h in Headers */,
 				340283F11C4ACFD10046684F /* HIGAxis.h in Headers */,
+				340284091C4AF0F40046684F /* HIGOptions.h in Headers */,
+				3402841A1C4B0F870046684F /* HIGTitle.h in Headers */,
+				340284221C4B1B010046684F /* HIGSeries.h in Headers */,
 				340283F41C4ACFD10046684F /* HIGChart.h in Headers */,
-				340283F81C4ACFD10046684F /* HIGSeries.h in Headers */,
 				340283F61C4ACFD10046684F /* HIGChartsTypes_Private.h in Headers */,
 				345BA0101C39AFB9001DAB1B /* HIGView.h in Headers */,
 				340283F31C4ACFD10046684F /* HIGChart_Private.h in Headers */,
@@ -121,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 343E13921C38513D006DDD68 /* Build configuration list for PBXNativeTarget "Highcharts" */;
 			buildPhases = (
+				340283FD1C4AD42E0046684F /* ShellScript */,
 				343E13851C38513D006DDD68 /* Sources */,
 				343E13861C38513D006DDD68 /* Frameworks */,
 				343E13871C38513D006DDD68 /* Headers */,
@@ -176,15 +207,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		340283FD1C4AD42E0046684F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/JSONModel.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		343E13851C38513D006DDD68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				340283F21C4ACFD10046684F /* HIGAxis.m in Sources */,
+				340284231C4B1B010046684F /* HIGSeries.m in Sources */,
 				345BA0151C39AFDA001DAB1B /* HIGChartView.m in Sources */,
 				345BA0111C39AFB9001DAB1B /* HIGView.m in Sources */,
-				340283F91C4ACFD10046684F /* HIGSeries.m in Sources */,
+				3402840A1C4AF0F40046684F /* HIGOptions.m in Sources */,
+				3402841B1C4B0F870046684F /* HIGTitle.m in Sources */,
 				340283F51C4ACFD10046684F /* HIGChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,32 +333,46 @@
 		343E13931C38513D006DDD68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(SRCROOT)/../Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.highcharts.highcharts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		343E13941C38513D006DDD68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(SRCROOT)/../Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.highcharts.highcharts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

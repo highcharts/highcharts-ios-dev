@@ -6,8 +6,12 @@
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <JSONModel/JSONModel.h>
+#import "HIGTitle.h"
 
-@interface HIGAxis : NSObject
+@interface HIGAxis : JSONModel
+
+@property (strong, nonatomic) HIGTitle <Optional> *title;
+@property (strong, nonatomic) NSArray *categories;
 
 @end

@@ -7,12 +7,12 @@
 //
 
 #import "HIGView.h"
-#import "HIGChart.h"
+#import "HIGOptions.h"
 
 @interface HIGChartView : HIGView
 
-@property (strong, nonatomic, readonly) HIGChart *chart;
+@property (strong, nonatomic, readonly) HIGOptions *option;
 
-- (instancetype)initWithFrame:(CGRect)frame chart:(HIGChart*)chart;
+- (instancetype)initWithFrame:(CGRect)frame options:(HIGOptions*)options;
 
 @end

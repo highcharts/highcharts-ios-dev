@@ -19,9 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    HIGChart *chart = [[HIGChart alloc] init];
+    HIGOptions *options = [[HIGOptions alloc] init];
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds chart:chart];
+    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds options:options];
     
     [self.view addSubview:self.chartView];
 }

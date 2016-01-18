@@ -8,12 +8,12 @@
 
 #import "HIGChartView.h"
 #import "HIGView_Private.h"
-#import "HIGChart_Private.h"
+#import "HIGOptions_Private.h"
 
 NSString * const kHighchartsChartBundleId = @"com.highcharts.charts";
 
 @interface HIGChartView ()
-@property (strong, nonatomic, readwrite) HIGChart *chart;
+@property (strong, nonatomic, readwrite) HIGOptions *options;
 @end
 
 @implementation HIGChartView
@@ -22,14 +22,14 @@ NSString * const kHighchartsChartBundleId = @"com.highcharts.charts";
 {
     [super didMoveToSuperview];
     
-    [self loadHighcharts:self.chart.JSON];
+    [self loadHighcharts:[self.options toJSONString]];
 }
 
-- (instancetype)initWithFrame:(CGRect)frame chart:(HIGChart*)chart;
+- (instancetype)initWithFrame:(CGRect)frame options:(HIGOptions*)options;
 {
     self = [super initWithFrame:frame bundle:kHighchartsChartBundleId];
     if (self) {
-        self.chart = chart;
+        self.options = options;
     }
     return self;
 }

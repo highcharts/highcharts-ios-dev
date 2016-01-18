@@ -8,7 +8,6 @@
 
 #import "HIGView_Private.h"
 #import <WebKit/WebKit.h>
-#import "HIGChart_Private.h"
 
 @interface HIGView ()
 @property (nonatomic, strong) WKWebView *webView;

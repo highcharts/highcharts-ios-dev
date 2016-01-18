@@ -9,7 +9,5 @@
 #import "HIGChart.h"
 
 @interface HIGChart ()
-
-- (NSString *)JSON;
-
+@property (strong, nonatomic) NSString *renderTo;
 @end
