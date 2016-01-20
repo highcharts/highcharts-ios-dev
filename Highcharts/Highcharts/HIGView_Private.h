@@ -9,6 +9,9 @@
 #import "HIGView.h"
 
 @interface HIGView ()
+
+@property (strong, nonatomic, readwrite) NSDictionary *options;
+
 - (instancetype)initWithFrame:(CGRect)frame bundle:(NSString*)bundle;
-- (void)loadHighcharts:(NSString *)highcharts;
+
 @end

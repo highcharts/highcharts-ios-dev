@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		340284161C4B0D830046684F /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340284131C4B0D660046684F /* Highcharts.framework */; };
-		340284171C4B0D830046684F /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 340284131C4B0D660046684F /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3408AFC31C4FBAF700A37AF5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3408AFC21C4FBAF700A37AF5 /* logo.png */; };
+		3408AFC61C4FDAA800A37AF5 /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340284131C4B0D660046684F /* Highcharts.framework */; };
+		3408AFC71C4FDAA800A37AF5 /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 340284131C4B0D660046684F /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		341E87721C46E3350053048C /* com.highcharts.charts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 341E87711C46E3350053048C /* com.highcharts.charts.bundle */; };
-		3425428F1C4D9F050024B70F /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3425428E1C4D9F050024B70F /* JSONModel.framework */; };
-		342542901C4D9F050024B70F /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3425428E1C4D9F050024B70F /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		343E13A31C385287006DDD68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A21C385287006DDD68 /* main.m */; };
 		343E13A61C385287006DDD68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A51C385287006DDD68 /* AppDelegate.m */; };
 		343E13A91C385287006DDD68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A81C385287006DDD68 /* RootViewController.m */; };
@@ -27,8 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				342542901C4D9F050024B70F /* JSONModel.framework in Embed Frameworks */,
-				340284171C4B0D830046684F /* Highcharts.framework in Embed Frameworks */,
+				3408AFC71C4FDAA800A37AF5 /* Highcharts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,9 +34,8 @@
 
 /* Begin PBXFileReference section */
 		340284131C4B0D660046684F /* Highcharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Highcharts.framework; path = "/Users/soleniacz/Library/Developer/Xcode/DerivedData/Highcharts-eobrmmcugglvvoekgllxkfwyllxb/Build/Products/Debug-iphoneos/Highcharts.framework"; sourceTree = "<absolute>"; };
-		3408AFC21C4FBAF700A37AF5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		3408AFC21C4FBAF700A37AF5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = HighchartsDemo/logo.png; sourceTree = "<group>"; };
 		341E87711C46E3350053048C /* com.highcharts.charts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = com.highcharts.charts.bundle; path = ../Highcharts/com.highcharts.charts.bundle; sourceTree = "<group>"; };
-		3425428E1C4D9F050024B70F /* JSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONModel.framework; path = ../Carthage/Build/iOS/JSONModel.framework; sourceTree = "<group>"; };
 		343E139E1C385287006DDD68 /* HighchartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighchartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E13A21C385287006DDD68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		343E13A41C385287006DDD68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,8 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3425428F1C4D9F050024B70F /* JSONModel.framework in Frameworks */,
-				340284161C4B0D830046684F /* Highcharts.framework in Frameworks */,
+				3408AFC61C4FDAA800A37AF5 /* Highcharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,10 +71,18 @@
 			name = DemoControllers;
 			sourceTree = "<group>";
 		};
+		3408AFC51C4FD9BB00A37AF5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				341E87711C46E3350053048C /* com.highcharts.charts.bundle */,
+				3408AFC21C4FBAF700A37AF5 /* logo.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		341E87701C46E31C0053048C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3425428E1C4D9F050024B70F /* JSONModel.framework */,
 				340284131C4B0D660046684F /* Highcharts.framework */,
 			);
 			name = Frameworks;
@@ -88,7 +91,7 @@
 		343E13951C385287006DDD68 = {
 			isa = PBXGroup;
 			children = (
-				341E87711C46E3350053048C /* com.highcharts.charts.bundle */,
+				3408AFC51C4FD9BB00A37AF5 /* Resources */,
 				341E87701C46E31C0053048C /* Frameworks */,
 				343E13A01C385287006DDD68 /* HighchartsDemo */,
 				343E139F1C385287006DDD68 /* Products */,
@@ -106,7 +109,6 @@
 		343E13A01C385287006DDD68 /* HighchartsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3408AFC21C4FBAF700A37AF5 /* logo.png */,
 				3408AFC11C4FAB4A00A37AF5 /* DemoControllers */,
 				343E13A41C385287006DDD68 /* AppDelegate.h */,
 				343E13A51C385287006DDD68 /* AppDelegate.m */,
@@ -300,7 +302,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(SRCROOT)/../Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = HighchartsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -318,7 +319,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(SRCROOT)/../Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = HighchartsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

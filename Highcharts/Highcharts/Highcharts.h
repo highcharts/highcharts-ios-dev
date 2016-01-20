@@ -15,10 +15,3 @@ FOUNDATION_EXPORT double HighchartsVersionNumber;
 FOUNDATION_EXPORT const unsigned char HighchartsVersionString[];
 
 #import <Highcharts/HIGChartView.h>
-#import <Highcharts/HIGOptions.h>
-#import <Highcharts/HIGChartsTypes.h>
-#import <Highcharts/HIGChart.h>
-#import <Highcharts/HIGSeries.h>
-#import <Highcharts/HIGAxis.h>
-#import <Highcharts/HIGAxis.h>
-#import <Highcharts/HIGTitle.h>

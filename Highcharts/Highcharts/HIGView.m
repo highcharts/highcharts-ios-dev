@@ -48,6 +48,24 @@
     return self;
 }
 
+- (void)didMoveToSuperview
+{
+    [super didMoveToSuperview];
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.options
+                                                       options:0
+                                                         error:&error];
+    
+    if (!jsonData) {
+        NSAssert(jsonData, @"Highcharts script was not found!");
+        return;
+    }
+    
+    NSString *JSONString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
+    [self loadHighcharts:JSONString];
+}
+
 - (void)loadHighcharts:(NSString *)highcharts
 {
     NSAssert(highcharts, @"Highcharts script was not found!");

@@ -7,12 +7,11 @@
 //
 
 #import "HIGView.h"
-#import "HIGOptions.h"
 
 @interface HIGChartView : HIGView
 
-@property (strong, nonatomic, readonly) HIGOptions *option;
+@property (strong, nonatomic, readonly) NSDictionary *options;
 
-- (instancetype)initWithFrame:(CGRect)frame options:(HIGOptions*)options;
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary *)options;
 
 @end
