@@ -7,6 +7,11 @@
 //
 
 #import "DemoViewController.h"
+#import <Highcharts/HIGChartView.h>
+
+@interface DemoViewController ()
+@property (strong, nonatomic) HIGChartView *chartView;
+@end
 
 @implementation DemoViewController
 
@@ -23,6 +28,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds options:self.options];
+    
+    [self.view addSubview:self.chartView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -32,6 +46,14 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - 
+
+- (void)done
+{
+    [self dismissViewControllerAnimated:YES completion:^(){
+    }];
 }
 
 @end

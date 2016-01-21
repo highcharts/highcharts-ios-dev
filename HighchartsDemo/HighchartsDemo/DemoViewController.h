@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DemoViewControllerProtocol.h"
 
-@interface DemoViewController : UIViewController <DemoViewControllerProtocol>
+@interface DemoViewController : UIViewController
 
-@property (strong, nonatomic) NSString *demoTitle;
-
-+ (UIViewController*)controller;
+@property (strong, nonatomic) NSDictionary *options;
 
 @end

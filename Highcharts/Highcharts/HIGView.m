@@ -52,8 +52,12 @@
 {
     [super didMoveToSuperview];
     
+    NSMutableDictionary *tmp = [self.options mutableCopy];
+    
+    tmp[@"chart"] = @{ @"renderTo": @"container" };
+    
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.options
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmp
                                                        options:0
                                                          error:&error];
     
