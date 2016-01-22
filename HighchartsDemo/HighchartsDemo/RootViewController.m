@@ -93,7 +93,7 @@
     demoViewController.options  = [self.demos demoForName:item[@"options"]];
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
-    [navigation setModalPresentationStyle:UIModalPresentationFormSheet];
+    [navigation setModalPresentationStyle:UIModalPresentationFullScreen];
     
     [self presentViewController:navigation animated:YES completion:^(){
         

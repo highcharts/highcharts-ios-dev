@@ -22,9 +22,9 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Basic area</string>
+				<string>Random</string>
 				<key>options</key>
-				<string>area-basic</string>
+				<string>line-random</string>
 			</dict>
 		</array>
 	</dict>

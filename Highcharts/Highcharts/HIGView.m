@@ -22,7 +22,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.highchartsBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:bundle ofType:@"bundle"]];
+        NSString *tmpLiblary = NSTemporaryDirectory();
+        tmpLiblary = [tmpLiblary stringByAppendingPathComponent:@"com.highcharts.charts.bundle"];
+        self.highchartsBundle = [NSBundle bundleWithPath:tmpLiblary];
         
         NSAssert(self.highchartsBundle, @"Highcharts bundle was not found!");
         if (!self.highchartsBundle) {
@@ -52,12 +54,12 @@
 {
     [super didMoveToSuperview];
     
-    NSMutableDictionary *tmp = [self.options mutableCopy];
-    
-    tmp[@"chart"] = @{ @"renderTo": @"container" };
+//    NSMutableDictionary *tmp = [self.options mutableCopy];
+//    
+//    tmp[@"chart"] = @{ @"renderTo": @"container" };
     
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmp
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.options
                                                        options:0
                                                          error:&error];
     
