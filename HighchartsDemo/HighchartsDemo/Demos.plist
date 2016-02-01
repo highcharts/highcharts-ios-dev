@@ -4,29 +4,9 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Line charts</string>
-		<key>items</key>
-		<array>
-			<dict>
-				<key>title</key>
-				<string>Basic line</string>
-				<key>options</key>
-				<string>line-basic</string>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Area charts</string>
-		<key>items</key>
-		<array>
-			<dict>
-				<key>title</key>
-				<string>Random</string>
-				<key>options</key>
-				<string>line-random</string>
-			</dict>
-		</array>
+		<string>Basic line</string>
+		<key>class</key>
+		<string>LineBasic</string>
 	</dict>
 </array>
 </plist>

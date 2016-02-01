@@ -8,12 +8,10 @@
 
 #import "RootViewController.h"
 #import <Highcharts/Highcharts.h>
-#import "DemoViewController.h"
-#import "Demos.h"
+#import "ABCDemoViewController.h"
 
 @interface RootViewController ()
 @property (strong, nonatomic) NSArray *demoControllers;
-@property (strong, nonatomic) Demos *demos;
 @end
 
 @implementation RootViewController
@@ -30,8 +28,6 @@
     [headerView setContentMode:UIViewContentModeCenter];
     headerView.bounds = CGRectInset(headerView.frame, -25.0f,- 25.0f);
     [[UITableView appearance] setTableHeaderView:headerView];
-    
-    self.demos = [Demos new];
     
     [self setUpDemoOptions];
 }
@@ -56,14 +52,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.demoControllers.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *items = [[self.demoControllers objectAtIndex:section] objectForKey:@"items"];
-    
-    return items.count;
+    return self.demoControllers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,7 +70,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    NSDictionary *item = [self itemForIndexPath:indexPath];
+    NSDictionary *item = [self.demoControllers objectAtIndex:indexPath.row];
     
     cell.textLabel.text = item[@"title"];
     
@@ -87,10 +81,9 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    DemoViewController *demoViewController = [[DemoViewController alloc] init];
+    NSDictionary *item = [self.demoControllers objectAtIndex:indexPath.row];
     
-    NSDictionary *item = [self itemForIndexPath:indexPath];
-    demoViewController.options  = [self.demos demoForName:item[@"options"]];
+    id demoViewController = [[NSClassFromString(item[@"class"]) alloc] init];
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
     [navigation setModalPresentationStyle:UIModalPresentationFullScreen];
@@ -99,14 +92,5 @@
         
     }];
 }
-
-- (NSDictionary *)itemForIndexPath:(NSIndexPath *)indexPath
-{
-    NSArray *items = [[self.demoControllers objectAtIndex:indexPath.section] objectForKey:@"items"];
-    NSDictionary *item = [items objectAtIndex:indexPath.row];
-    
-    return item;
-}
-
 
 @end

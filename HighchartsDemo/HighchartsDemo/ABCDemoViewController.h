@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DemoViewController : UIViewController
+@interface ABCDemoViewController : UIViewController
 
 @property (strong, nonatomic) NSDictionary *options;
 
