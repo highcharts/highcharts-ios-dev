@@ -17,7 +17,7 @@
 		345331511C5442BD008BD0D8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = Resources;
+			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
 				34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in CopyFiles */,
