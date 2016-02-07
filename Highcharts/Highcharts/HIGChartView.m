@@ -30,9 +30,7 @@ NSString * const kHighchartsChartBundleId = @"com.highcharts.charts.bundle";
         
         NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
         
-        NSLog(@"%@", frameworkBundle);
-        
-        NSString *tmpBundle = [frameworkBundle pathForResource:kHighchartsChartBundleId ofType:nil inDirectory:@"Resources"];
+        NSString *tmpBundle = [frameworkBundle pathForResource:kHighchartsChartBundleId ofType:nil];
              NSLog(@"%@", tmpBundle);
         NSString *tmpLiblary = NSTemporaryDirectory();
         tmpLiblary = [tmpLiblary stringByAppendingPathComponent:kHighchartsChartBundleId];
@@ -43,8 +41,6 @@ NSString * const kHighchartsChartBundleId = @"com.highcharts.charts.bundle";
                 NSLog(@"Error copying files: %@", [error localizedDescription]);
             }
         }
-        
-   
         
         if (![[NSFileManager defaultManager] copyItemAtPath:tmpBundle toPath:tmpLiblary error:&error]) {
             NSLog(@"Error copying files: %@", [error localizedDescription]);
