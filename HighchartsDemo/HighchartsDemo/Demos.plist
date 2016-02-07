@@ -8,5 +8,11 @@
 		<key>class</key>
 		<string>LineBasic</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Synchronized Charts</string>
+		<key>class</key>
+		<string>SynchronizedCharts</string>
+	</dict>
 </array>
 </plist>

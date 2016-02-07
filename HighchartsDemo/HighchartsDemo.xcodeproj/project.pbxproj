@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3408AFC31C4FBAF700A37AF5 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3408AFC21C4FBAF700A37AF5 /* logo@2x.png */; };
 		3408AFC91C4FDEFE00A37AF5 /* Demos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3408AFC81C4FDEFE00A37AF5 /* Demos.plist */; };
+		3416D52E1C6808C600FD8DCB /* SynchronizedCharts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3416D52D1C6808C600FD8DCB /* SynchronizedCharts.m */; };
+		3416D5301C6809BA00FD8DCB /* SynchronizedCharts.js in Resources */ = {isa = PBXBuildFile; fileRef = 3416D52F1C6809BA00FD8DCB /* SynchronizedCharts.js */; };
 		343E13A31C385287006DDD68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A21C385287006DDD68 /* main.m */; };
 		343E13A61C385287006DDD68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A51C385287006DDD68 /* AppDelegate.m */; };
 		343E13A91C385287006DDD68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A81C385287006DDD68 /* RootViewController.m */; };
@@ -60,6 +62,9 @@
 /* Begin PBXFileReference section */
 		3408AFC21C4FBAF700A37AF5 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "HighchartsDemo/logo@2x.png"; sourceTree = "<group>"; };
 		3408AFC81C4FDEFE00A37AF5 /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Demos.plist; path = HighchartsDemo/Demos.plist; sourceTree = "<group>"; };
+		3416D52C1C6808C600FD8DCB /* SynchronizedCharts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizedCharts.h; sourceTree = "<group>"; };
+		3416D52D1C6808C600FD8DCB /* SynchronizedCharts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronizedCharts.m; sourceTree = "<group>"; };
+		3416D52F1C6809BA00FD8DCB /* SynchronizedCharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = SynchronizedCharts.js; path = HighchartsDemo/SynchronizedCharts.js; sourceTree = "<group>"; };
 		343E139E1C385287006DDD68 /* HighchartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighchartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E13A21C385287006DDD68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		343E13A41C385287006DDD68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +104,7 @@
 		3408AFC51C4FD9BB00A37AF5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3416D52F1C6809BA00FD8DCB /* SynchronizedCharts.js */,
 				3408AFC21C4FBAF700A37AF5 /* logo@2x.png */,
 				3408AFC81C4FDEFE00A37AF5 /* Demos.plist */,
 			);
@@ -168,6 +174,8 @@
 			children = (
 				347274991C5FFFD8007EEFAA /* LineBasic.h */,
 				3472749A1C5FFFD8007EEFAA /* LineBasic.m */,
+				3416D52C1C6808C600FD8DCB /* SynchronizedCharts.h */,
+				3416D52D1C6808C600FD8DCB /* SynchronizedCharts.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */,
+				3416D5301C6809BA00FD8DCB /* SynchronizedCharts.js in Resources */,
 				3408AFC91C4FDEFE00A37AF5 /* Demos.plist in Resources */,
 				3408AFC31C4FBAF700A37AF5 /* logo@2x.png in Resources */,
 			);
@@ -263,6 +272,7 @@
 			files = (
 				343E13A91C385287006DDD68 /* RootViewController.m in Sources */,
 				34F13D2A1C4ED62100EE62CF /* ABCDemoViewController.m in Sources */,
+				3416D52E1C6808C600FD8DCB /* SynchronizedCharts.m in Sources */,
 				343E13A61C385287006DDD68 /* AppDelegate.m in Sources */,
 				3472749B1C5FFFD8007EEFAA /* LineBasic.m in Sources */,
 				343E13A31C385287006DDD68 /* main.m in Sources */,

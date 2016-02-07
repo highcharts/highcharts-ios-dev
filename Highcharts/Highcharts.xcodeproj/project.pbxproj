@@ -7,26 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3416D5281C68078A00FD8DCB /* HIGChartViewJS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3416D5261C68078A00FD8DCB /* HIGChartViewJS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3416D5291C68078A00FD8DCB /* HIGChartViewJS.m in Sources */ = {isa = PBXBuildFile; fileRef = 3416D5271C68078A00FD8DCB /* HIGChartViewJS.m */; };
+		3416D52B1C68085600FD8DCB /* com.highcharts.chartsjs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3416D52A1C68085600FD8DCB /* com.highcharts.chartsjs.bundle */; };
 		343E138E1C38513D006DDD68 /* Highcharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 343E138D1C38513D006DDD68 /* Highcharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 345BA00E1C39AFB9001DAB1B /* HIGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIGChartView.m */; };
-		34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		345331511C5442BD008BD0D8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-				34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		3416D5261C68078A00FD8DCB /* HIGChartViewJS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartViewJS.h; sourceTree = "<group>"; };
+		3416D5271C68078A00FD8DCB /* HIGChartViewJS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChartViewJS.m; sourceTree = "<group>"; };
+		3416D52A1C68085600FD8DCB /* com.highcharts.chartsjs.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = com.highcharts.chartsjs.bundle; sourceTree = "<group>"; };
 		343E138A1C38513D006DDD68 /* Highcharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Highcharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E138D1C38513D006DDD68 /* Highcharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Highcharts.h; path = Highcharts/Highcharts.h; sourceTree = "<group>"; };
 		343E138F1C38513D006DDD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Highcharts/Info.plist; sourceTree = "<group>"; };
@@ -78,6 +71,8 @@
 			children = (
 				345BA00E1C39AFB9001DAB1B /* HIGChartView.h */,
 				345BA00F1C39AFB9001DAB1B /* HIGChartView.m */,
+				3416D5261C68078A00FD8DCB /* HIGChartViewJS.h */,
+				3416D5271C68078A00FD8DCB /* HIGChartViewJS.m */,
 			);
 			path = Highcharts;
 			sourceTree = "<group>";
@@ -85,6 +80,7 @@
 		345331531C544361008BD0D8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3416D52A1C68085600FD8DCB /* com.highcharts.chartsjs.bundle */,
 				3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */,
 			);
 			name = Resources;
@@ -98,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */,
+				3416D5281C68078A00FD8DCB /* HIGChartViewJS.h in Headers */,
 				343E138E1C38513D006DDD68 /* Highcharts.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,7 +110,6 @@
 				343E13861C38513D006DDD68 /* Frameworks */,
 				343E13871C38513D006DDD68 /* Headers */,
 				343E13881C38513D006DDD68 /* Resources */,
-				345331511C5442BD008BD0D8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -160,6 +156,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3416D52B1C68085600FD8DCB /* com.highcharts.chartsjs.bundle in Resources */,
+				34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */,
+				3416D5291C68078A00FD8DCB /* HIGChartViewJS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

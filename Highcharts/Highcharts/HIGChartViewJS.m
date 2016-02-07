@@ -1,39 +1,39 @@
 //
-//  HIGView.m
+//  HIGChartViewJS.m
 //  Highcharts
 //
 //  License: www.highcharts.com/license
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import "HIGChartView.h"
+#import "HIGChartViewJS.h"
 #import <WebKit/WebKit.h>
 
-NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
+NSString * const kHighchartsChartBundleJS = @"com.highcharts.chartsjs.bundle";
 
-@interface HIGChartView ()
+@interface HIGChartViewJS ()
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) NSString *HTML;
 
-@property (strong, nonatomic, readwrite) NSDictionary *options;
+@property (strong, nonatomic, readwrite) NSString *js;
 @end
 
-@implementation HIGChartView
+@implementation HIGChartViewJS
 
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options
+- (instancetype)initWithFrame:(CGRect)frame js:(NSString*)js
 {
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.options = options;
+        self.js = js;
         
         NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
         
-        NSString *tmpBundle = [frameworkBundle pathForResource:kHighchartsChartBundle ofType:nil];
+        NSString *tmpBundle = [frameworkBundle pathForResource:kHighchartsChartBundleJS ofType:nil];
         
         NSString *tmpLiblary = NSTemporaryDirectory();
-        tmpLiblary = [tmpLiblary stringByAppendingPathComponent:kHighchartsChartBundle];
+        tmpLiblary = [tmpLiblary stringByAppendingPathComponent:kHighchartsChartBundleJS];
         
         NSError *error = nil;
         if ([[NSFileManager defaultManager] fileExistsAtPath:tmpLiblary]) {
@@ -76,23 +76,7 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
 {
     [super didMoveToSuperview];
     
-    NSMutableDictionary *tmpOptions = [self.options mutableCopy];
-    
-    NSMutableDictionary *chart = [tmpOptions[@"chart"] mutableCopy] ? : [NSMutableDictionary dictionary];
-    [chart setValue:@"container" forKey:@"renderTo"];
-    
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmpOptions
-                                                       options:0
-                                                         error:&error];
-    
-    if (!jsonData) {
-        NSAssert(jsonData, @"Highcharts script was not found!");
-        return;
-    }
-    
-    NSString *JSONString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
-    [self loadHighcharts:JSONString];
+    [self loadHighcharts:self.js];
 }
 
 - (void)loadHighcharts:(NSString *)highcharts
