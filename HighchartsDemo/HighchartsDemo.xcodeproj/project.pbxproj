@@ -15,10 +15,10 @@
 		343E13A61C385287006DDD68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A51C385287006DDD68 /* AppDelegate.m */; };
 		343E13A91C385287006DDD68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A81C385287006DDD68 /* RootViewController.m */; };
 		343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343E13AD1C385287006DDD68 /* Assets.xcassets */; };
+		343E70ED1C692EFA008D322A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 343E70EC1C692EFA008D322A /* Default-568h@2x.png */; };
 		34662D8F1C67F07B008B0B5D /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34662D8C1C67F062008B0B5D /* Highcharts.framework */; };
 		34662D901C67F07B008B0B5D /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34662D8C1C67F062008B0B5D /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3472749B1C5FFFD8007EEFAA /* LineBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3472749A1C5FFFD8007EEFAA /* LineBasic.m */; };
-		34A329A81C69227000AC09CB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34A329A71C69227000AC09CB /* Default-568h@2x.png */; };
 		34A329AC1C6925B700AC09CB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AA1C6925B700AC09CB /* Fabric.framework */; };
 		34A329AD1C6925B700AC09CB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AB1C6925B700AC09CB /* Crashlytics.framework */; };
 		34F13D2A1C4ED62100EE62CF /* ABCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F13D291C4ED62100EE62CF /* ABCDemoViewController.m */; };
@@ -76,10 +76,10 @@
 		343E13A81C385287006DDD68 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		343E13AD1C385287006DDD68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343E13B21C385287006DDD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		343E70EC1C692EFA008D322A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		34662D871C67F062008B0B5D /* Highcharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highcharts.xcodeproj; path = ../Highcharts/Highcharts.xcodeproj; sourceTree = "<group>"; };
 		347274991C5FFFD8007EEFAA /* LineBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBasic.h; sourceTree = "<group>"; };
 		3472749A1C5FFFD8007EEFAA /* LineBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBasic.m; sourceTree = "<group>"; };
-		34A329A71C69227000AC09CB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		34A329AA1C6925B700AC09CB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		34A329AB1C6925B700AC09CB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		34F13D281C4ED62100EE62CF /* ABCDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCDemoViewController.h; sourceTree = "<group>"; };
@@ -131,7 +131,6 @@
 		343E13951C385287006DDD68 = {
 			isa = PBXGroup;
 			children = (
-				34A329A71C69227000AC09CB /* Default-568h@2x.png */,
 				34662D871C67F062008B0B5D /* Highcharts.xcodeproj */,
 				3408AFC51C4FD9BB00A37AF5 /* Resources */,
 				341E87701C46E31C0053048C /* Frameworks */,
@@ -165,6 +164,7 @@
 		343E13A11C385287006DDD68 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				343E70EC1C692EFA008D322A /* Default-568h@2x.png */,
 				343E13AD1C385287006DDD68 /* Assets.xcassets */,
 				343E13B21C385287006DDD68 /* Info.plist */,
 				343E13A21C385287006DDD68 /* main.m */,
@@ -270,8 +270,8 @@
 			files = (
 				343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */,
 				3416D5301C6809BA00FD8DCB /* SynchronizedCharts.js in Resources */,
-				34A329A81C69227000AC09CB /* Default-568h@2x.png in Resources */,
 				3408AFC91C4FDEFE00A37AF5 /* Demos.plist in Resources */,
+				343E70ED1C692EFA008D322A /* Default-568h@2x.png in Resources */,
 				3408AFC31C4FBAF700A37AF5 /* logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +415,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = HighchartsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -432,6 +433,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = HighchartsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -63,7 +63,6 @@ NSString * const kHighchartsChartBundleJS = @"com.highcharts.chartsjs.bundle";
         }
         
         self.webView = [[WKWebView alloc] initWithFrame:frame];
-        self.webView.scrollView.scrollEnabled = NO;
         
         self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
