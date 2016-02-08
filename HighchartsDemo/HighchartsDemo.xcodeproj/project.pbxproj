@@ -18,6 +18,9 @@
 		34662D8F1C67F07B008B0B5D /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34662D8C1C67F062008B0B5D /* Highcharts.framework */; };
 		34662D901C67F07B008B0B5D /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34662D8C1C67F062008B0B5D /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3472749B1C5FFFD8007EEFAA /* LineBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3472749A1C5FFFD8007EEFAA /* LineBasic.m */; };
+		34A329A81C69227000AC09CB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34A329A71C69227000AC09CB /* Default-568h@2x.png */; };
+		34A329AC1C6925B700AC09CB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AA1C6925B700AC09CB /* Fabric.framework */; };
+		34A329AD1C6925B700AC09CB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AB1C6925B700AC09CB /* Crashlytics.framework */; };
 		34F13D2A1C4ED62100EE62CF /* ABCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F13D291C4ED62100EE62CF /* ABCDemoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,9 @@
 		34662D871C67F062008B0B5D /* Highcharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highcharts.xcodeproj; path = ../Highcharts/Highcharts.xcodeproj; sourceTree = "<group>"; };
 		347274991C5FFFD8007EEFAA /* LineBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBasic.h; sourceTree = "<group>"; };
 		3472749A1C5FFFD8007EEFAA /* LineBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBasic.m; sourceTree = "<group>"; };
+		34A329A71C69227000AC09CB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		34A329AA1C6925B700AC09CB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		34A329AB1C6925B700AC09CB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		34F13D281C4ED62100EE62CF /* ABCDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCDemoViewController.h; sourceTree = "<group>"; };
 		34F13D291C4ED62100EE62CF /* ABCDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +92,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				34662D8F1C67F07B008B0B5D /* Highcharts.framework in Frameworks */,
+				34A329AD1C6925B700AC09CB /* Crashlytics.framework in Frameworks */,
+				34A329AC1C6925B700AC09CB /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +122,8 @@
 		341E87701C46E31C0053048C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34A329AA1C6925B700AC09CB /* Fabric.framework */,
+				34A329AB1C6925B700AC09CB /* Crashlytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +131,7 @@
 		343E13951C385287006DDD68 = {
 			isa = PBXGroup;
 			children = (
+				34A329A71C69227000AC09CB /* Default-568h@2x.png */,
 				34662D871C67F062008B0B5D /* Highcharts.xcodeproj */,
 				3408AFC51C4FD9BB00A37AF5 /* Resources */,
 				341E87701C46E31C0053048C /* Frameworks */,
@@ -191,6 +202,7 @@
 				343E139B1C385287006DDD68 /* Frameworks */,
 				343E139C1C385287006DDD68 /* Resources */,
 				34662D931C67F07B008B0B5D /* Embed Frameworks */,
+				34A329A91C69259F00AC09CB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -258,12 +270,29 @@
 			files = (
 				343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */,
 				3416D5301C6809BA00FD8DCB /* SynchronizedCharts.js in Resources */,
+				34A329A81C69227000AC09CB /* Default-568h@2x.png in Resources */,
 				3408AFC91C4FDEFE00A37AF5 /* Demos.plist in Resources */,
 				3408AFC31C4FBAF700A37AF5 /* logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34A329A91C69259F00AC09CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 4c50cb1a243de1a23211e3ab58b021cafe317453 c37c9c79d571f85dbdd9845c7a291f68c5e6fe0a3db3b6309202f29159d78fb8";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		343E139A1C385287006DDD68 /* Sources */ = {
