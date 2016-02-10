@@ -14,5 +14,11 @@
 		<key>class</key>
 		<string>SynchronizedCharts</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Scatter</string>
+		<key>class</key>
+		<string>Scatter</string>
+	</dict>
 </array>
 </plist>
