@@ -12,6 +12,9 @@
 
 @interface RootViewController ()
 @property (strong, nonatomic) NSArray *demoControllers;
+@property (strong, nonatomic) NSArray *themes;
+@property (strong, nonatomic) UISegmentedControl *themeSelect;
+
 @end
 
 @implementation RootViewController
@@ -26,10 +29,26 @@
     
     UIImageView *headerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
     [headerView setContentMode:UIViewContentModeCenter];
-    headerView.bounds = CGRectInset(headerView.frame, -25.0f,- 25.0f);
+    headerView.bounds = CGRectInset(headerView.frame, -25.0f, -75.0f);
     [[UITableView appearance] setTableHeaderView:headerView];
     
+    [self setUpDemoThemes];
+    
+    [[UISegmentedControl appearance] setTintColor:[UIColor whiteColor]];
+    
+    self.themeSelect = [[UISegmentedControl alloc] init];
+    NSUInteger index = 0;
+    for (NSDictionary *theme in self.themes) {
+        [self.themeSelect insertSegmentWithTitle:theme[@"name"] atIndex:index animated:NO];
+        index++;
+    }
+    [headerView addSubview:self.themeSelect];
+    [self.themeSelect setSelectedSegmentIndex:0];
+    
     [self setUpDemoOptions];
+    
+    [self viewWillTransitionToSize:self.view.frame.size withTransitionCoordinator:self.transitionCoordinator];
+    headerView.userInteractionEnabled = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -41,6 +60,13 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    [self.themeSelect setFrame:CGRectMake((size.width-360-40)/2.0, 50, 360.0f, 40.0f)];
+}
+
 #pragma mark - Demo View Controllers
 
 - (void)setUpDemoOptions
@@ -48,12 +74,12 @@
     self.demoControllers = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Demos" ofType:@"plist"]];
 }
 
-#pragma mark - TableView Delegate Methods
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)setUpDemoThemes
 {
-    return 1;
+    self.themes = @[ @{ @"name": @"Default" }, @{ @"name": @"Dark Unica", @"theme": @"dark-unica" }, @{ @"name": @"Sand Signika", @"theme": @"sand-signika" }, @{ @"name": @"Grid Light", @"theme": @"grid-light" } ];
 }
+
+#pragma mark - TableView Delegate Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -83,7 +109,10 @@
     
     NSDictionary *item = [self.demoControllers objectAtIndex:indexPath.row];
     
-    id demoViewController = [[NSClassFromString(item[@"class"]) alloc] init];
+    ABCDemoViewController *demoViewController = [[NSClassFromString(item[@"class"]) alloc] init];
+    
+    NSDictionary *theme = self.themes[self.themeSelect.selectedSegmentIndex];
+    demoViewController.theme = theme[@"theme"];
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
     [navigation setModalPresentationStyle:UIModalPresentationFullScreen];

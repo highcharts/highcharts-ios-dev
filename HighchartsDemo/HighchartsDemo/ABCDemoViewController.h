@@ -11,5 +11,6 @@
 @interface ABCDemoViewController : UIViewController
 
 @property (strong, nonatomic) NSDictionary *options;
+@property (strong, nonatomic) NSString *theme;
 
 @end

@@ -36,7 +36,7 @@
 {
     [super viewWillAppear:animated];
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds options:self.options];
+    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds options:self.options theme:self.theme];
     
     [self.view addSubview:self.chartView];
 }
