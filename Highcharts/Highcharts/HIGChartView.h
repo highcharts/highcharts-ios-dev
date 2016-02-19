@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic, readonly) NSDictionary *options;
 
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options;
+
 - (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme;
+
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme debug:(BOOL)debug;
 
 @end

@@ -19,14 +19,29 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
 @property (strong, nonatomic, readwrite) NSDictionary *options;
 
 @property (strong, nonatomic) NSString *theme;
+
+@property (assign, nonatomic) BOOL debug;
+
 @end
 
 @implementation HIGChartView
 
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options
+{
+    return [self initWithFrame:frame options:options theme:@""];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString *)theme
+{
+    return [self initWithFrame:frame options:options theme:theme debug:NO];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme debug:(BOOL)debug
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        self.debug = debug;
         
         self.theme = theme;
         
@@ -94,11 +109,25 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
         NSAssert(jsonData, @"Highcharts script was not found!");
         return;
     }
-    
+
+    [self loadHighchartsDebug:self.debug];
     [self loadHighchartsTheme:self.theme];
     
     NSString *JSONString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
     [self loadHighcharts:JSONString];
+}
+
+- (void)loadHighchartsDebug:(BOOL)debug
+{
+    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{debug}" withString:debug?@".src":@""];
+}
+
+- (void)loadHighchartsTheme:(NSString*)theme
+{
+    NSString *jsTheme = [NSString stringWithFormat:@"<script src=\"%@.js\"></script>", theme];
+    
+    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script}" withString:theme?jsTheme:@""];
+    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{theme}" withString:theme?@"Highcharts.setOptions(Highcharts.theme);":@""];
 }
 
 - (void)loadHighcharts:(NSString *)highcharts
@@ -108,14 +137,6 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
     NSString *HTMLString = [self.HTML stringByReplacingOccurrencesOfString:@"{highcharts}" withString:highcharts];
     
     [self.webView loadHTMLString:HTMLString baseURL:[self.highchartsBundle bundleURL]];
-}
-
-- (void)loadHighchartsTheme:(NSString*)theme
-{
-    NSString *jsTheme = [NSString stringWithFormat:@"<script src=\"%@.js\"></script>", theme];
-    
-    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script}" withString:theme?jsTheme:@""];
-    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{theme}" withString:theme?@"Highcharts.setOptions(Highcharts.theme);":@""];
 }
 
 @end
