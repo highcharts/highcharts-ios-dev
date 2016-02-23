@@ -19,6 +19,7 @@
 		34662D8F1C67F07B008B0B5D /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34662D8C1C67F062008B0B5D /* Highcharts.framework */; };
 		34662D901C67F07B008B0B5D /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34662D8C1C67F062008B0B5D /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3472749B1C5FFFD8007EEFAA /* LineBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3472749A1C5FFFD8007EEFAA /* LineBasic.m */; };
+		3475215C1C898AF2003CF187 /* AreaNegativeValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 3475215B1C898AF2003CF187 /* AreaNegativeValues.m */; };
 		349C6BCF1C6BA00E0035E803 /* Scatter.js in Resources */ = {isa = PBXBuildFile; fileRef = 349C6BCE1C6BA00E0035E803 /* Scatter.js */; };
 		349C6BD21C6BA0250035E803 /* Scatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 349C6BD11C6BA0250035E803 /* Scatter.m */; };
 		34A329AC1C6925B700AC09CB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AA1C6925B700AC09CB /* Fabric.framework */; };
@@ -82,6 +83,8 @@
 		34662D871C67F062008B0B5D /* Highcharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highcharts.xcodeproj; path = ../Highcharts/Highcharts.xcodeproj; sourceTree = "<group>"; };
 		347274991C5FFFD8007EEFAA /* LineBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBasic.h; sourceTree = "<group>"; };
 		3472749A1C5FFFD8007EEFAA /* LineBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBasic.m; sourceTree = "<group>"; };
+		3475215A1C898AF2003CF187 /* AreaNegativeValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaNegativeValues.h; sourceTree = "<group>"; };
+		3475215B1C898AF2003CF187 /* AreaNegativeValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaNegativeValues.m; sourceTree = "<group>"; };
 		349C6BCE1C6BA00E0035E803 /* Scatter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Scatter.js; path = HighchartsDemo/Scatter.js; sourceTree = "<group>"; };
 		349C6BD01C6BA0250035E803 /* Scatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scatter.h; sourceTree = "<group>"; };
 		349C6BD11C6BA0250035E803 /* Scatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scatter.m; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				3416D52D1C6808C600FD8DCB /* SynchronizedCharts.m */,
 				349C6BD01C6BA0250035E803 /* Scatter.h */,
 				349C6BD11C6BA0250035E803 /* Scatter.m */,
+				3475215A1C898AF2003CF187 /* AreaNegativeValues.h */,
+				3475215B1C898AF2003CF187 /* AreaNegativeValues.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				343E13A91C385287006DDD68 /* RootViewController.m in Sources */,
 				34F13D2A1C4ED62100EE62CF /* ABCDemoViewController.m in Sources */,
 				3416D52E1C6808C600FD8DCB /* SynchronizedCharts.m in Sources */,
+				3475215C1C898AF2003CF187 /* AreaNegativeValues.m in Sources */,
 				343E13A61C385287006DDD68 /* AppDelegate.m in Sources */,
 				3472749B1C5FFFD8007EEFAA /* LineBasic.m in Sources */,
 				343E13A31C385287006DDD68 /* main.m in Sources */,
