@@ -16,6 +16,8 @@
 
 - (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme;
 
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme debug:(BOOL)debug;
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme plugin:(NSString*)plugin;
+
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme plugin:(NSString*)plugin debug:(BOOL)debug;
 
 @end

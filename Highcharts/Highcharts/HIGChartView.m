@@ -20,6 +20,8 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
 
 @property (strong, nonatomic) NSString *theme;
 
+@property (strong, nonatomic) NSString *plugin;
+
 @property (assign, nonatomic) BOOL debug;
 
 @end
@@ -33,13 +35,20 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
 
 - (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString *)theme
 {
-    return [self initWithFrame:frame options:options theme:theme debug:NO];
+    return [self initWithFrame:frame options:options theme:theme plugin:nil];
 }
 
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme debug:(BOOL)debug
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme plugin:(NSString*)plugin
+{
+    return [self initWithFrame:frame options:options theme:theme plugin:plugin debug:NO];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme plugin:(NSString*)plugin debug:(BOOL)debug
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        self.plugin = plugin;
         
         self.debug = debug;
         
@@ -111,6 +120,7 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
     }
 
     [self loadHighchartsDebug:self.debug];
+    [self loadHighchartsPlugin:self.plugin];
     [self loadHighchartsTheme:self.theme];
     
     NSString *JSONString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
@@ -122,11 +132,19 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
     self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{debug}" withString:debug?@".src":@""];
 }
 
+- (void)loadHighchartsPlugin:(NSString*)plugin
+{
+    NSString *jsPlugin = [NSString stringWithFormat:@"<script src=\"%@.js\"></script>", plugin];
+    
+    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script-plugin}" withString:plugin?jsPlugin:@""];
+    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{theme}" withString:plugin?@"Highcharts.setOptions(Highcharts.theme);":@""];
+}
+
 - (void)loadHighchartsTheme:(NSString*)theme
 {
     NSString *jsTheme = [NSString stringWithFormat:@"<script src=\"%@.js\"></script>", theme];
     
-    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script}" withString:theme?jsTheme:@""];
+    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script-theme}" withString:theme?jsTheme:@""];
     self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{theme}" withString:theme?@"Highcharts.setOptions(Highcharts.theme);":@""];
 }
 
