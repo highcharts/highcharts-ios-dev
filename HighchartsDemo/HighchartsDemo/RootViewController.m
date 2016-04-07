@@ -11,6 +11,7 @@
 #import "ABCDemoViewController.h"
 
 @interface RootViewController ()
+
 @property (strong, nonatomic) NSArray *demoControllers;
 @property (strong, nonatomic) NSArray *themes;
 @property (strong, nonatomic) UISegmentedControl *themeSelect;
@@ -22,8 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0];
+    
     [[UITableView appearance] setSeparatorColor:[UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0]];
-    [[UITableView appearance] setBackgroundColor:[UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0]];
     
     [[UITableViewCell appearance] setBackgroundColor:[UIColor colorWithRed:39/255.0 green:39/255.0 blue:47/255.0 alpha:1.0]];
     
