@@ -134,7 +134,7 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
 
 - (void)loadHighchartsPlugin:(NSString*)plugin
 {
-    NSString *jsPlugin = [NSString stringWithFormat:@"<script src=\"%@.js\"></script>", plugin];
+    NSString *jsPlugin = [NSString stringWithFormat:@"<script src=\"js/modules/%@.js\"></script>", plugin];
     
     self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script-plugin}" withString:plugin?jsPlugin:@""];
     self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{theme}" withString:plugin?@"Highcharts.setOptions(Highcharts.theme);":@""];
@@ -142,7 +142,7 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
 
 - (void)loadHighchartsTheme:(NSString*)theme
 {
-    NSString *jsTheme = [NSString stringWithFormat:@"<script src=\"%@.js\"></script>", theme];
+    NSString *jsTheme = [NSString stringWithFormat:@"<script src=\"js/themes/%@.js\"></script>", theme];
     
     self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script-theme}" withString:theme?jsTheme:@""];
     self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{theme}" withString:theme?@"Highcharts.setOptions(Highcharts.theme);":@""];
