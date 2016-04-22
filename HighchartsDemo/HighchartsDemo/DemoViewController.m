@@ -6,18 +6,18 @@
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import "ABCDemoViewController.h"
+#import "DemoViewController.h"
 #import <Highcharts/HIGChartView.h>
 
-@interface ABCDemoViewController ()
+@interface DemoViewController ()
 @property (strong, nonatomic) HIGChartView *chartView;
 @end
 
-@implementation ABCDemoViewController
+@implementation DemoViewController
 
 + (UIViewController*)controller
 {
-    ABCDemoViewController *demoViewController = [ABCDemoViewController new];
+    DemoViewController *demoViewController = [DemoViewController new];
     
     UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:demoViewController];
     
@@ -36,7 +36,9 @@
 {
     [super viewWillAppear:animated];
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds options:self.options theme:self.theme];
+    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    self.chartView.options = self.options;
+    self.chartView.theme = self.theme;
     
     [self.view addSubview:self.chartView];
 }

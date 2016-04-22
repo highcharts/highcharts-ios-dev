@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ABCDemoViewController : UIViewController
+@interface DemoViewController : UIViewController
 
 @property (strong, nonatomic) NSDictionary *options;
 @property (strong, nonatomic) NSString *theme;
+@property (strong, nonatomic) NSString *plugin;
 
 @end

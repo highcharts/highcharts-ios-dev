@@ -10,14 +10,9 @@
 
 @interface HIGChartView : UIView
 
-@property (strong, nonatomic, readonly) NSDictionary *options;
-
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options;
-
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme;
-
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme plugin:(NSString*)plugin;
-
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme plugin:(NSString*)plugin debug:(BOOL)debug;
+@property (strong, nonatomic) NSDictionary *options;
+@property (strong, nonatomic) NSString *theme;
+@property (strong, nonatomic) NSString *plugin;
+@property (assign, nonatomic) BOOL debug;
 
 @end

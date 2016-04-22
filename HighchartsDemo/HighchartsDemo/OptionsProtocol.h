@@ -1,13 +1,15 @@
 //
-//  AreaNegativeValues.h
+//  OptionsProtocol.h
 //  HighchartsDemo
 //
 //  License: www.highcharts.com/license
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import "ABCDemoViewController.h"
+#import <Foundation/Foundation.h>
 
-@interface AreaNegativeValues : ABCDemoViewController
+@protocol OptionsProtocol <NSObject>
+
++ (NSDictionary*)options;
 
 @end

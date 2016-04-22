@@ -15,46 +15,14 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) NSString *HTML;
-
-@property (strong, nonatomic, readwrite) NSDictionary *options;
-
-@property (strong, nonatomic) NSString *theme;
-
-@property (strong, nonatomic) NSString *plugin;
-
-@property (assign, nonatomic) BOOL debug;
-
 @end
 
 @implementation HIGChartView
 
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options
-{
-    return [self initWithFrame:frame options:options theme:@""];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString *)theme
-{
-    return [self initWithFrame:frame options:options theme:theme plugin:nil];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme plugin:(NSString*)plugin
-{
-    return [self initWithFrame:frame options:options theme:theme plugin:plugin debug:NO];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame options:(NSDictionary*)options theme:(NSString*)theme plugin:(NSString*)plugin debug:(BOOL)debug
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        self.plugin = plugin;
-        
-        self.debug = debug;
-        
-        self.theme = theme;
-        
-        self.options = options;
         
         NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
         
@@ -106,8 +74,9 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
     
     NSMutableDictionary *tmpOptions = [self.options mutableCopy];
     
-    NSMutableDictionary *chart = [tmpOptions[@"chart"] mutableCopy] ? : [NSMutableDictionary dictionary];
-    [chart setValue:@"container" forKey:@"renderTo"];
+    if (!tmpOptions[@"chart"][@"renderTo"]) {
+        [tmpOptions setValue:@{@"renderTo": @"container"} forKey:@"chart"];
+    }
     
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmpOptions
@@ -137,7 +106,6 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
     NSString *jsPlugin = [NSString stringWithFormat:@"<script src=\"js/modules/%@.js\"></script>", plugin];
     
     self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script-plugin}" withString:plugin?jsPlugin:@""];
-    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{theme}" withString:plugin?@"Highcharts.setOptions(Highcharts.theme);":@""];
 }
 
 - (void)loadHighchartsTheme:(NSString*)theme

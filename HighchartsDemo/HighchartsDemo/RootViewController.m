@@ -8,7 +8,8 @@
 
 #import "RootViewController.h"
 #import <Highcharts/Highcharts.h>
-#import "ABCDemoViewController.h"
+#import "DemoViewController.h"
+#import "OptionsProtocol.h"
 
 @interface RootViewController ()
 
@@ -111,10 +112,11 @@
     
     NSDictionary *item = [self.demoControllers objectAtIndex:indexPath.row];
     
-    ABCDemoViewController *demoViewController = [[NSClassFromString(item[@"class"]) alloc] init];
+    DemoViewController *demoViewController = [[DemoViewController alloc] init];
     
     NSDictionary *theme = self.themes[self.themeSelect.selectedSegmentIndex];
     demoViewController.theme = theme[@"theme"];
+    demoViewController.options = [NSClassFromString(item[@"class"]) options];
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
     [navigation setModalPresentationStyle:UIModalPresentationFullScreen];

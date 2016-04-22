@@ -8,11 +8,5 @@
 		<key>class</key>
 		<string>LineBasic</string>
 	</dict>
-	<dict>
-		<key>title</key>
-		<string>Area Negative Values</string>
-		<key>class</key>
-		<string>AreaNegativeValues</string>
-	</dict>
 </array>
 </plist>
