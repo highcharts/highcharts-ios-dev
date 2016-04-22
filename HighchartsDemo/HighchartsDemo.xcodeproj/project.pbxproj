@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3408AFC31C4FBAF700A37AF5 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3408AFC21C4FBAF700A37AF5 /* logo@2x.png */; };
-		3408AFC91C4FDEFE00A37AF5 /* Demos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3408AFC81C4FDEFE00A37AF5 /* Demos.plist */; };
 		343E13A31C385287006DDD68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A21C385287006DDD68 /* main.m */; };
 		343E13A61C385287006DDD68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A51C385287006DDD68 /* AppDelegate.m */; };
 		343E13A91C385287006DDD68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A81C385287006DDD68 /* RootViewController.m */; };
@@ -61,8 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3408AFC21C4FBAF700A37AF5 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "HighchartsDemo/logo@2x.png"; sourceTree = "<group>"; };
-		3408AFC81C4FDEFE00A37AF5 /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Demos.plist; path = HighchartsDemo/Demos.plist; sourceTree = "<group>"; };
+		3408AFC21C4FBAF700A37AF5 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		343E139E1C385287006DDD68 /* HighchartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighchartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E13A21C385287006DDD68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		343E13A41C385287006DDD68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,15 +94,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3408AFC51C4FD9BB00A37AF5 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3408AFC21C4FBAF700A37AF5 /* logo@2x.png */,
-				3408AFC81C4FDEFE00A37AF5 /* Demos.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		341E87701C46E31C0053048C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				34662D871C67F062008B0B5D /* Highcharts.xcodeproj */,
-				3408AFC51C4FD9BB00A37AF5 /* Resources */,
 				341E87701C46E31C0053048C /* Frameworks */,
 				343E13A01C385287006DDD68 /* HighchartsDemo */,
 				343E139F1C385287006DDD68 /* Products */,
@@ -152,6 +140,7 @@
 		343E13A11C385287006DDD68 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3408AFC21C4FBAF700A37AF5 /* logo@2x.png */,
 				343E70EC1C692EFA008D322A /* Default-568h@2x.png */,
 				343E13AD1C385287006DDD68 /* Assets.xcassets */,
 				343E13B21C385287006DDD68 /* Info.plist */,
@@ -255,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */,
-				3408AFC91C4FDEFE00A37AF5 /* Demos.plist in Resources */,
 				343E70ED1C692EFA008D322A /* Default-568h@2x.png in Resources */,
 				3408AFC31C4FBAF700A37AF5 /* logo@2x.png in Resources */,
 			);

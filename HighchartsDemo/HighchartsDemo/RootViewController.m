@@ -13,7 +13,7 @@
 
 @interface RootViewController ()
 
-@property (strong, nonatomic) NSArray *demoControllers;
+@property (strong, nonatomic) NSArray *demoOptions;
 @property (strong, nonatomic) NSArray *themes;
 @property (strong, nonatomic) UISegmentedControl *themeSelect;
 
@@ -74,7 +74,7 @@
 
 - (void)setUpDemoOptions
 {
-    self.demoControllers = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Demos" ofType:@"plist"]];
+    self.demoOptions = @[@"Line Basic"];
 }
 
 - (void)setUpDemoThemes
@@ -86,7 +86,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.demoControllers.count;
+    return self.demoOptions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,9 +99,9 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    NSDictionary *item = [self.demoControllers objectAtIndex:indexPath.row];
+    NSString *item = [self.demoOptions objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = item[@"title"];
+    cell.textLabel.text = item;
     
     return cell;
 }
@@ -110,13 +110,13 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSDictionary *item = [self.demoControllers objectAtIndex:indexPath.row];
+    NSString *demo = [[self.demoOptions objectAtIndex:indexPath.row] stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     DemoViewController *demoViewController = [[DemoViewController alloc] init];
     
     NSDictionary *theme = self.themes[self.themeSelect.selectedSegmentIndex];
     demoViewController.theme = theme[@"theme"];
-    demoViewController.options = [NSClassFromString(item[@"class"]) options];
+    demoViewController.options = [NSClassFromString(demo) options];
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
     [navigation setModalPresentationStyle:UIModalPresentationFullScreen];

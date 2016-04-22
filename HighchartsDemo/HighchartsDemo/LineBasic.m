@@ -6,7 +6,7 @@
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import "Line-Basic.h"
+#import "LineBasic.h"
 
 @implementation LineBasic
 
