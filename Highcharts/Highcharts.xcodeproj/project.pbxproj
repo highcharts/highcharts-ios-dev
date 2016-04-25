@@ -17,7 +17,7 @@
 		343E138A1C38513D006DDD68 /* Highcharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Highcharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E138D1C38513D006DDD68 /* Highcharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Highcharts.h; path = Highcharts/Highcharts.h; sourceTree = "<group>"; };
 		343E138F1C38513D006DDD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Highcharts/Info.plist; sourceTree = "<group>"; };
-		3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = com.highcharts.charts.bundle; sourceTree = "<group>"; };
+		3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = com.highcharts.charts.bundle; path = Highcharts/com.highcharts.charts.bundle; sourceTree = "<group>"; };
 		345BA00E1C39AFB9001DAB1B /* HIGChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartView.h; sourceTree = "<group>"; };
 		345BA00F1C39AFB9001DAB1B /* HIGChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +46,7 @@
 			children = (
 				3408AFC41C4FD61000A37AF5 /* Supporting Files */,
 				343E138C1C38513D006DDD68 /* Highcharts */,
+				3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */,
 				343E138D1C38513D006DDD68 /* Highcharts.h */,
 				343E138B1C38513D006DDD68 /* Products */,
 			);
@@ -62,11 +63,26 @@
 		343E138C1C38513D006DDD68 /* Highcharts */ = {
 			isa = PBXGroup;
 			children = (
-				3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */,
+				34A531C81CCE49470014124A /* Private */,
+				34A531C91CCE494E0014124A /* Public */,
+			);
+			path = Highcharts;
+			sourceTree = "<group>";
+		};
+		34A531C81CCE49470014124A /* Private */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		34A531C91CCE494E0014124A /* Public */ = {
+			isa = PBXGroup;
+			children = (
 				345BA00E1C39AFB9001DAB1B /* HIGChartView.h */,
 				345BA00F1C39AFB9001DAB1B /* HIGChartView.m */,
 			);
-			path = Highcharts;
+			name = Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
