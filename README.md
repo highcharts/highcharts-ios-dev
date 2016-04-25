@@ -2,50 +2,70 @@
 	<img src="http://www.highcharts.com/media/templates/highsoft_bootstrap/images/logo.svg" alt="Highcharts" title="Highcharts">
 </p>
 
-Highcharts iOS is a delightful wrapper of HighchartsJS for iOS.
+Highcharts iOS is a wrapper of HighchartsJS for iOS. And best is that you don't need to know JavaScript!
+
+## System Requirementss
+
+- iOS 8.0+
+- Xcode 7.0+
 
 ## Documentation
-Highcharts iOS i based on Highcharts JS therefore standard documentation apply.
+There are some limitations that apply for wrapper if you want more power ower the charts you need to know JS and Higcharst API because Highcharts iOS is based on Highcharts JS therefore standard documentation apply.
 
-- Read the ["General Docummentation"](http://www.highcharts.com/docs)
+- Read the ["General Docummentation"](http://www.highcharts.com/docs) if you want to know more.
+- Read the ["API Docummentation"](http://api.highcharts.com/highcharts) if you need more customized charts.
 
 ## Installation
-Highcharts-iOS supports for now only one method of installation.
+You can integrate `Highcharts.framework` into your project manually as a **Embedded Framework**.
 
-## Drag&Drop
-Drag Highcharts folder in your project, and select **Create groups**, add to your target and click **Finish**
-
-```
-// Init HighchartView with specified frame.
-HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
-[self.view addSubview:self.highchartsView];
-
-// Load your chart.
-NSString *chartJS = @"...";
-[self.highchartsView loadHighcharts:chartJS];
-```
+- Select your project in the Project Navigator to show the target configuration window and select the target in the sidebar.
+- In the tab bar at the top of that window, open the "General" panel.
+- Click on the `+` button under the "Embedded Binaries" section.
+- Click `Add Other...`, and select `Highcharts.framework`.
+- Select 'Create Groups' and click `finish`.
 
 ## Demo
-ExampleCharts contains project with chart.
+There is `DemoCharts.xcodeproj` that contains few example charts.
 
-## Creating chart
-To create chart you need to use JS. Like in standard Highcharts JS.
 
+## Your First Chart
 ```
-var chart = new Highcharts.Chart({
-    chart: {
-        renderTo: 'container'
+// Import Higcharts framework header
+#import <Highcharts/Highcharts.h>
+
+// Init HighchartView with desired frame.
+HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
+
+// Load your chart.
+highchartsView.options = @{
+
+    @"chart": @{
+        @"type": @"bar"
     },
-
-    xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-        ]
+    @"title": @{
+        @"text": @"Fruit Consumption"
     },
+    @"xAxis": @{
+        @"categories": @[ @"Apples", @"Bananas", @"Oranges" ]
+    },
+    @"yAxis": @{
+        @"title": @{
+            @"text": @"Fruit eaten"
+        }
+    },
+    @"series": @[
+        @{
+            @"name": @"Jane",
+            @"data": @[ @1, @0, @4 ]
+        },
+        @{
+            @"name": @"John",
+            @"data": @[ @5, @7, @3 ]
+        }
+    ]
+};
 
-    series: [{
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-    }]
+// Add Chart to view.
+[self.view addSubview:self.highchartsView];
 
-});
 ```
