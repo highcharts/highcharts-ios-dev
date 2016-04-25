@@ -11,6 +11,4 @@
 
 @interface LineBasic : NSObject <OptionsProtocol>
 
-+ (NSDictionary*)options;
-
 @end

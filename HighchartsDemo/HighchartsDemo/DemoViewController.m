@@ -7,7 +7,7 @@
 //
 
 #import "DemoViewController.h"
-#import <Highcharts/HIGChartView.h>
+#import <Highcharts/Highcharts.h>
 
 @interface DemoViewController ()
 @property (strong, nonatomic) HIGChartView *chartView;
@@ -57,7 +57,7 @@
     [self.chartView setFrame:CGRectMake(CGRectGetMinX(self.view.bounds), CGRectGetMinY(self.view.bounds), size.width, size.height)];
 }
 
-#pragma mark - 
+#pragma mark - Dismiss view
 
 - (void)done
 {

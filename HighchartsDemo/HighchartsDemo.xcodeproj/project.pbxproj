@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3408AFC31C4FBAF700A37AF5 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3408AFC21C4FBAF700A37AF5 /* logo@2x.png */; };
 		343E13A31C385287006DDD68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A21C385287006DDD68 /* main.m */; };
 		343E13A61C385287006DDD68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A51C385287006DDD68 /* AppDelegate.m */; };
 		343E13A91C385287006DDD68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A81C385287006DDD68 /* RootViewController.m */; };
@@ -18,6 +17,7 @@
 		34662D901C67F07B008B0B5D /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34662D8C1C67F062008B0B5D /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		34A329AC1C6925B700AC09CB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AA1C6925B700AC09CB /* Fabric.framework */; };
 		34A329AD1C6925B700AC09CB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AB1C6925B700AC09CB /* Crashlytics.framework */; };
+		34A531C41CCE26EC0014124A /* Demos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34A531C31CCE26EC0014124A /* Demos.plist */; };
 		34F13D2A1C4ED62100EE62CF /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F13D291C4ED62100EE62CF /* DemoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3408AFC21C4FBAF700A37AF5 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		343E139E1C385287006DDD68 /* HighchartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighchartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E13A21C385287006DDD68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		343E13A41C385287006DDD68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		34662D871C67F062008B0B5D /* Highcharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highcharts.xcodeproj; path = ../Highcharts/Highcharts.xcodeproj; sourceTree = "<group>"; };
 		34A329AA1C6925B700AC09CB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		34A329AB1C6925B700AC09CB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		34A531C31CCE26EC0014124A /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demos.plist; sourceTree = "<group>"; };
 		34F13D281C4ED62100EE62CF /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		34F13D291C4ED62100EE62CF /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,7 +132,6 @@
 				343E13A81C385287006DDD68 /* RootViewController.m */,
 				34F13D281C4ED62100EE62CF /* DemoViewController.h */,
 				34F13D291C4ED62100EE62CF /* DemoViewController.m */,
-				3441F7021CCA283100A0D0C8 /* OptionsProtocol.h */,
 			);
 			path = HighchartsDemo;
 			sourceTree = "<group>";
@@ -140,11 +139,11 @@
 		343E13A11C385287006DDD68 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3408AFC21C4FBAF700A37AF5 /* logo@2x.png */,
 				343E70EC1C692EFA008D322A /* Default-568h@2x.png */,
 				343E13AD1C385287006DDD68 /* Assets.xcassets */,
 				343E13B21C385287006DDD68 /* Info.plist */,
 				343E13A21C385287006DDD68 /* main.m */,
+				34A531C31CCE26EC0014124A /* Demos.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,6 +159,7 @@
 		347274981C5FFF9B007EEFAA /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				3441F7021CCA283100A0D0C8 /* OptionsProtocol.h */,
 				3441F6FF1CCA22E800A0D0C8 /* LineBasic.h */,
 				3441F7001CCA22E800A0D0C8 /* LineBasic.m */,
 			);
@@ -244,8 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */,
+				34A531C41CCE26EC0014124A /* Demos.plist in Resources */,
 				343E70ED1C692EFA008D322A /* Default-568h@2x.png in Resources */,
-				3408AFC31C4FBAF700A37AF5 /* logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,9 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+#ifdef DEBUG
     NSLog(@"%@", NSTemporaryDirectory());
-    
+#endif
     [Fabric with:@[[Crashlytics class]]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -31,7 +31,9 @@
     
     RootViewController *rootViewController = [[RootViewController alloc] init];
     
-    [self.window setRootViewController:rootViewController];
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    [self.window setRootViewController:navigation];
     
     return YES;
 }

@@ -13,9 +13,9 @@
 
 @interface RootViewController ()
 
-@property (strong, nonatomic) NSArray *demoOptions;
-@property (strong, nonatomic) NSArray *themes;
-@property (strong, nonatomic) UISegmentedControl *themeSelect;
+@property (strong, nonatomic) NSArray *demos;
+@property (strong, nonatomic) NSString *theme;
+@property (strong, nonatomic) NSString *plugin;
 
 @end
 
@@ -24,34 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0];
     self.view.backgroundColor = [UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
     
     [[UITableView appearance] setSeparatorColor:[UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0]];
-    
     [[UITableViewCell appearance] setBackgroundColor:[UIColor colorWithRed:39/255.0 green:39/255.0 blue:47/255.0 alpha:1.0]];
     
-    UIImageView *headerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
-    [headerView setContentMode:UIViewContentModeCenter];
-    headerView.bounds = CGRectInset(headerView.frame, -25.0f, -75.0f);
-    [[UITableView appearance] setTableHeaderView:headerView];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Theme" style:UIBarButtonItemStyleDone target:self action:@selector(presentThemeSelector)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Plugin" style:UIBarButtonItemStyleDone target:self action:@selector(presentPluginSelector)];
     
-    [self setUpDemoThemes];
-    
-    [[UISegmentedControl appearance] setTintColor:[UIColor whiteColor]];
-    
-    self.themeSelect = [[UISegmentedControl alloc] init];
-    NSUInteger index = 0;
-    for (NSDictionary *theme in self.themes) {
-        [self.themeSelect insertSegmentWithTitle:theme[@"name"] atIndex:index animated:NO];
-        index++;
-    }
-    [headerView addSubview:self.themeSelect];
-    [self.themeSelect setSelectedSegmentIndex:0];
-    
-    [self setUpDemoOptions];
-    
-    [self viewWillTransitionToSize:self.view.frame.size withTransitionCoordinator:self.transitionCoordinator];
-    headerView.userInteractionEnabled = YES;
+    self.demos = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Demos" ofType:@"plist"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -63,45 +46,24 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
-{
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    
-    [self.themeSelect setFrame:CGRectMake((size.width-360-40)/2.0, 50, 360.0f, 40.0f)];
-}
-
-#pragma mark - Demo View Controllers
-
-- (void)setUpDemoOptions
-{
-    self.demoOptions = @[@"Line Basic"];
-}
-
-- (void)setUpDemoThemes
-{
-    self.themes = @[ @{ @"name": @"Default" }, @{ @"name": @"Dark Unica", @"theme": @"dark-unica" }, @{ @"name": @"Sand Signika", @"theme": @"sand-signika" }, @{ @"name": @"Grid Light", @"theme": @"grid-light" } ];
-}
-
 #pragma mark - TableView Delegate Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.demoOptions.count;
+    return self.demos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    NSString *item = [self.demoOptions objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = item;
+    cell.textLabel.text = [self.demos objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -109,21 +71,28 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+ 
+    NSString *demo = [self.demos objectAtIndex:indexPath.row];
     
-    NSString *demo = [[self.demoOptions objectAtIndex:indexPath.row] stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
+    [self presentDemo:demo];
+}
+
+- (void)presentDemo:(NSString*)demo
+{
     DemoViewController *demoViewController = [[DemoViewController alloc] init];
-    
-    NSDictionary *theme = self.themes[self.themeSelect.selectedSegmentIndex];
-    demoViewController.theme = theme[@"theme"];
-    demoViewController.options = [NSClassFromString(demo) options];
+    demoViewController.options = [self optionsForDemoName:demo];
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
-    [navigation setModalPresentationStyle:UIModalPresentationFullScreen];
+    [navigation setModalPresentationStyle:UIModalPresentationFormSheet];
     
-    [self presentViewController:navigation animated:YES completion:^(){
-        
-    }];
+    [self presentViewController:navigation animated:YES completion:nil];
+}
+
+- (NSDictionary*)optionsForDemoName:(NSString*)demoName
+{
+    NSString *demoClass = [demoName stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    return [NSClassFromString(demoClass) options];
 }
 
 @end

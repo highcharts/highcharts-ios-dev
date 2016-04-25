@@ -74,8 +74,14 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
     
     NSMutableDictionary *tmpOptions = [self.options mutableCopy];
     
-    if (!tmpOptions[@"chart"][@"renderTo"]) {
+    if (!tmpOptions[@"chart"]) {
         [tmpOptions setValue:@{@"renderTo": @"container"} forKey:@"chart"];
+    }
+    
+    if (tmpOptions[@"chart"]) {
+        NSMutableDictionary *chart = [tmpOptions[@"chart"] mutableCopy];
+        chart[@"renderTo"] = @"container";
+        [tmpOptions setValue:chart forKey:@"chart"];
     }
     
     NSError *error;
