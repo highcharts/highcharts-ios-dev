@@ -1,5 +1,5 @@
 //
-//  LineBasic.m
+//  BasicLine.m
 //  HighchartsDemo
 //
 //  License: www.highcharts.com/license

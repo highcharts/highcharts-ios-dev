@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "OptionsProtocol.h"
 
-@interface BasicArea : NSObject <OptionsProtocol>
+@interface AreaBasic : NSObject <OptionsProtocol>
 
 @end
 
-@implementation BasicArea
+@implementation AreaBasic
 
 + (NSDictionary*)options {
 

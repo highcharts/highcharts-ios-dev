@@ -1,5 +1,5 @@
 //
-//  AreaNegativeValues.m
+//  BarStacked.m
 //  HighchartsDemo
 //
 //  License: www.highcharts.com/license
@@ -9,37 +9,48 @@
 #import <Foundation/Foundation.h>
 #import "OptionsProtocol.h"
 
-@interface AreaNegativeValues : NSObject <OptionsProtocol>
+@interface BarStacked : NSObject <OptionsProtocol>
 
 @end
 
-@implementation AreaNegativeValues
+@implementation BarStacked
 
 + (NSDictionary*)options {
 
     return @{
     
         @"chart" : @{
-            @"type" : @"area"
+            @"type" : @"bar"
         },
         @"title" : @{
-            @"text" : @"Area chart with negative values"
+            @"text" : @"Stacked bar chart"
         },
         @"xAxis" : @{
             @"categories" : @[@"Apples", @"Oranges", @"Pears", @"Grapes", @"Bananas"]
         },
-        @"credits" : @{
-            @"enabled" : @NO
+        @"yAxis" : @{
+            @"min" : @0,
+            @"title" : @{
+                @"text" : @"Total fruit consumption"
+            }
+        },
+        @"legend" : @{
+            @"reversed" : @YES
+        },
+        @"plotOptions" : @{
+            @"series" : @{
+                @"stacking" : @"normal"
+            }
         },
         @"series" : @[@{
             @"name" : @"John",
             @"data" : @[@5, @3, @4, @7, @2]
         }, @{
             @"name" : @"Jane",
-            @"data" : @[@2, @-2, @-3, @2, @1]
+            @"data" : @[@2, @2, @3, @2, @1]
         }, @{
             @"name" : @"Joe",
-            @"data" : @[@3, @4, @4, @-2, @5]
+            @"data" : @[@3, @4, @4, @2, @5]
         }]
 
     };

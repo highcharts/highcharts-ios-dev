@@ -81,8 +81,8 @@
 {
     DemoViewController *demoViewController = [[DemoViewController alloc] init];
     demoViewController.options = [self optionsForDemoName:demo];
-    demoViewController.theme = @"gray";
-    demoViewController.plugin = @"exporting";
+//    demoViewController.theme = @"gray";
+//    demoViewController.plugin = @"exporting";
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
     [navigation setModalPresentationStyle:UIModalPresentationFullScreen];

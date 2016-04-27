@@ -5,6 +5,9 @@
 	<string>Line Basic</string>
 	<string>Line Data Labels</string>
 	<string>Line Logarithmic</string>
-	<string>Basic Area</string>
+	<string>Area Basic</string>
+	<string>Area Negative</string>
+	<string>Bar Stacked</string>
+	<string>Pie Basic</string>
 </array>
 </plist>

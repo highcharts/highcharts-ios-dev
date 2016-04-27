@@ -17,11 +17,13 @@
 		348BEEF81CD0A9E400BB85C8 /* LineBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEF61CD0A9E400BB85C8 /* LineBasic.m */; };
 		348BEEF91CD0A9E400BB85C8 /* LineDataLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEF71CD0A9E400BB85C8 /* LineDataLabels.m */; };
 		348BEEFB1CD0AB5800BB85C8 /* LineLogarithmic.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEFA1CD0AB5800BB85C8 /* LineLogarithmic.m */; };
-		348BEEFD1CD0ADEA00BB85C8 /* BasicArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEFC1CD0ADEA00BB85C8 /* BasicArea.m */; };
-		348BEEFF1CD0AFC300BB85C8 /* AreaNegativeValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEFE1CD0AFC300BB85C8 /* AreaNegativeValues.m */; };
+		348BEEFD1CD0ADEA00BB85C8 /* AreaBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEFC1CD0ADEA00BB85C8 /* AreaBasic.m */; };
+		348BEEFF1CD0AFC300BB85C8 /* AreaNegative.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEFE1CD0AFC300BB85C8 /* AreaNegative.m */; };
 		34A329AC1C6925B700AC09CB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AA1C6925B700AC09CB /* Fabric.framework */; };
 		34A329AD1C6925B700AC09CB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AB1C6925B700AC09CB /* Crashlytics.framework */; };
 		34A531C41CCE26EC0014124A /* Demos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34A531C31CCE26EC0014124A /* Demos.plist */; };
+		34E28E3F1CD0FA1600DFE9CD /* BarStacked.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */; };
+		34E28E411CD0FB2600DFE9CD /* PieBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E401CD0FB2600DFE9CD /* PieBasic.m */; };
 		34F13D2A1C4ED62100EE62CF /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F13D291C4ED62100EE62CF /* DemoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -75,14 +77,16 @@
 		343E70EC1C692EFA008D322A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3441F7021CCA283100A0D0C8 /* OptionsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsProtocol.h; sourceTree = "<group>"; };
 		34662D871C67F062008B0B5D /* Highcharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highcharts.xcodeproj; path = ../Highcharts/Highcharts.xcodeproj; sourceTree = "<group>"; };
-		348BEEF61CD0A9E400BB85C8 /* LineBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBasic.m; sourceTree = "<group>"; };
-		348BEEF71CD0A9E400BB85C8 /* LineDataLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDataLabels.m; sourceTree = "<group>"; };
-		348BEEFA1CD0AB5800BB85C8 /* LineLogarithmic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineLogarithmic.m; sourceTree = "<group>"; };
-		348BEEFC1CD0ADEA00BB85C8 /* BasicArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicArea.m; sourceTree = "<group>"; };
-		348BEEFE1CD0AFC300BB85C8 /* AreaNegativeValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaNegativeValues.m; sourceTree = "<group>"; };
+		348BEEF61CD0A9E400BB85C8 /* LineBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineBasic.m; path = Demos/LineBasic.m; sourceTree = "<group>"; };
+		348BEEF71CD0A9E400BB85C8 /* LineDataLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineDataLabels.m; path = Demos/LineDataLabels.m; sourceTree = "<group>"; };
+		348BEEFA1CD0AB5800BB85C8 /* LineLogarithmic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLogarithmic.m; path = Demos/LineLogarithmic.m; sourceTree = "<group>"; };
+		348BEEFC1CD0ADEA00BB85C8 /* AreaBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaBasic.m; path = Demos/AreaBasic.m; sourceTree = "<group>"; };
+		348BEEFE1CD0AFC300BB85C8 /* AreaNegative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaNegative.m; path = Demos/AreaNegative.m; sourceTree = "<group>"; };
 		34A329AA1C6925B700AC09CB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		34A329AB1C6925B700AC09CB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		34A531C31CCE26EC0014124A /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demos.plist; sourceTree = "<group>"; };
+		34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarStacked.m; path = Demos/BarStacked.m; sourceTree = "<group>"; };
+		34E28E401CD0FB2600DFE9CD /* PieBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PieBasic.m; path = Demos/PieBasic.m; sourceTree = "<group>"; };
 		34F13D281C4ED62100EE62CF /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		34F13D291C4ED62100EE62CF /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,8 +173,10 @@
 				348BEEF61CD0A9E400BB85C8 /* LineBasic.m */,
 				348BEEF71CD0A9E400BB85C8 /* LineDataLabels.m */,
 				348BEEFA1CD0AB5800BB85C8 /* LineLogarithmic.m */,
-				348BEEFC1CD0ADEA00BB85C8 /* BasicArea.m */,
-				348BEEFE1CD0AFC300BB85C8 /* AreaNegativeValues.m */,
+				348BEEFC1CD0ADEA00BB85C8 /* AreaBasic.m */,
+				348BEEFE1CD0AFC300BB85C8 /* AreaNegative.m */,
+				34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */,
+				34E28E401CD0FB2600DFE9CD /* PieBasic.m */,
 				3441F7021CCA283100A0D0C8 /* OptionsProtocol.h */,
 			);
 			name = Demos;
@@ -283,14 +289,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				348BEEF91CD0A9E400BB85C8 /* LineDataLabels.m in Sources */,
-				348BEEFD1CD0ADEA00BB85C8 /* BasicArea.m in Sources */,
+				348BEEFD1CD0ADEA00BB85C8 /* AreaBasic.m in Sources */,
 				343E13A91C385287006DDD68 /* RootViewController.m in Sources */,
 				348BEEFB1CD0AB5800BB85C8 /* LineLogarithmic.m in Sources */,
 				34F13D2A1C4ED62100EE62CF /* DemoViewController.m in Sources */,
-				348BEEFF1CD0AFC300BB85C8 /* AreaNegativeValues.m in Sources */,
+				348BEEFF1CD0AFC300BB85C8 /* AreaNegative.m in Sources */,
 				348BEEF81CD0A9E400BB85C8 /* LineBasic.m in Sources */,
+				34E28E411CD0FB2600DFE9CD /* PieBasic.m in Sources */,
 				343E13A61C385287006DDD68 /* AppDelegate.m in Sources */,
 				343E13A31C385287006DDD68 /* main.m in Sources */,
+				34E28E3F1CD0FA1600DFE9CD /* BarStacked.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
