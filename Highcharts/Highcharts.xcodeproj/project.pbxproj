@@ -10,8 +10,6 @@
 		343E138E1C38513D006DDD68 /* Highcharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 343E138D1C38513D006DDD68 /* Highcharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 345BA00E1C39AFB9001DAB1B /* HIGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIGChartView.m */; };
-		348BEF021CD0BA3300BB85C8 /* ModuleExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 348BEF001CD0BA3300BB85C8 /* ModuleExport.h */; };
-		348BEF031CD0BA3300BB85C8 /* ModuleExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEF011CD0BA3300BB85C8 /* ModuleExport.m */; };
 		34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -22,8 +20,6 @@
 		3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = com.highcharts.charts.bundle; path = Highcharts/com.highcharts.charts.bundle; sourceTree = "<group>"; };
 		345BA00E1C39AFB9001DAB1B /* HIGChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartView.h; sourceTree = "<group>"; };
 		345BA00F1C39AFB9001DAB1B /* HIGChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChartView.m; sourceTree = "<group>"; };
-		348BEF001CD0BA3300BB85C8 /* ModuleExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleExport.h; sourceTree = "<group>"; };
-		348BEF011CD0BA3300BB85C8 /* ModuleExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleExport.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,20 +63,10 @@
 		343E138C1C38513D006DDD68 /* Highcharts */ = {
 			isa = PBXGroup;
 			children = (
-				348BEF041CD0BB0E00BB85C8 /* Modules */,
 				34A531C81CCE49470014124A /* Private */,
 				34A531C91CCE494E0014124A /* Public */,
 			);
 			path = Highcharts;
-			sourceTree = "<group>";
-		};
-		348BEF041CD0BB0E00BB85C8 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				348BEF001CD0BA3300BB85C8 /* ModuleExport.h */,
-				348BEF011CD0BA3300BB85C8 /* ModuleExport.m */,
-			);
-			name = Modules;
 			sourceTree = "<group>";
 		};
 		34A531C81CCE49470014124A /* Private */ = {
@@ -106,7 +92,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348BEF021CD0BA3300BB85C8 /* ModuleExport.h in Headers */,
 				345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */,
 				343E138E1C38513D006DDD68 /* Highcharts.h in Headers */,
 			);
@@ -181,7 +166,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */,
-				348BEF031CD0BA3300BB85C8 /* ModuleExport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
