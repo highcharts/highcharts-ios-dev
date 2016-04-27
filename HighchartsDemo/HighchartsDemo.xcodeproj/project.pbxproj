@@ -24,6 +24,7 @@
 		34A531C41CCE26EC0014124A /* Demos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34A531C31CCE26EC0014124A /* Demos.plist */; };
 		34E28E3F1CD0FA1600DFE9CD /* BarStacked.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */; };
 		34E28E411CD0FB2600DFE9CD /* PieBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E401CD0FB2600DFE9CD /* PieBasic.m */; };
+		34E28E4D1CD111AD00DFE9CD /* LineSplineSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E4C1CD111AD00DFE9CD /* LineSplineSymbols.m */; };
 		34F13D2A1C4ED62100EE62CF /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F13D291C4ED62100EE62CF /* DemoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		34A531C31CCE26EC0014124A /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demos.plist; sourceTree = "<group>"; };
 		34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarStacked.m; path = Demos/BarStacked.m; sourceTree = "<group>"; };
 		34E28E401CD0FB2600DFE9CD /* PieBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PieBasic.m; path = Demos/PieBasic.m; sourceTree = "<group>"; };
+		34E28E4C1CD111AD00DFE9CD /* LineSplineSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineSplineSymbols.m; sourceTree = "<group>"; };
 		34F13D281C4ED62100EE62CF /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		34F13D291C4ED62100EE62CF /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 				348BEEF61CD0A9E400BB85C8 /* LineBasic.m */,
 				348BEEF71CD0A9E400BB85C8 /* LineDataLabels.m */,
 				348BEEFA1CD0AB5800BB85C8 /* LineLogarithmic.m */,
+				34E28E4C1CD111AD00DFE9CD /* LineSplineSymbols.m */,
 				348BEEFC1CD0ADEA00BB85C8 /* AreaBasic.m */,
 				348BEEFE1CD0AFC300BB85C8 /* AreaNegative.m */,
 				34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */,
@@ -294,6 +297,7 @@
 				348BEEFB1CD0AB5800BB85C8 /* LineLogarithmic.m in Sources */,
 				34F13D2A1C4ED62100EE62CF /* DemoViewController.m in Sources */,
 				348BEEFF1CD0AFC300BB85C8 /* AreaNegative.m in Sources */,
+				34E28E4D1CD111AD00DFE9CD /* LineSplineSymbols.m in Sources */,
 				348BEEF81CD0A9E400BB85C8 /* LineBasic.m in Sources */,
 				34E28E411CD0FB2600DFE9CD /* PieBasic.m in Sources */,
 				343E13A61C385287006DDD68 /* AppDelegate.m in Sources */,

@@ -18,7 +18,6 @@
 + (NSDictionary*)options {
 
     return @{
-    
 
         @"title" : @{
             @"text" : @"Logarithmic axis demo"
