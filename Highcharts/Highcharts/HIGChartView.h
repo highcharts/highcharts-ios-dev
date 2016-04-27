@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSDictionary *options;
 @property (strong, nonatomic) NSString *theme;
 @property (strong, nonatomic) NSString *plugin;
+
 @property (assign, nonatomic) BOOL debug;
 
 @end

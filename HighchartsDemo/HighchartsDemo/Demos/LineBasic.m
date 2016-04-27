@@ -6,8 +6,10 @@
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "OptionsProtocol.h"
+#import <Highcharts/Highcharts.h>
+#import <Highcharts/UIColor+HIG.h>
 
 @interface LineBasic : NSObject <OptionsProtocol>
 
@@ -16,6 +18,9 @@
 @implementation LineBasic
 
 + (NSDictionary*)options {
+
+    // html #808080
+    UIColor *color = [UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:1];
 
     return @{
     
@@ -38,7 +43,7 @@
             @"plotLines" : @[@{
                 @"value" : @0,
                 @"width" : @1,
-                @"color" : @"#808080"
+                @"color" : [color color]
             }]
         },
         @"tooltip" : @{
