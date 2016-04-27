@@ -3,5 +3,8 @@
 <plist version="1.0">
 <array>
 	<string>Line Basic</string>
+	<string>Line Data Labels</string>
+	<string>Line Logarithmic</string>
+	<string>Basic Area</string>
 </array>
 </plist>

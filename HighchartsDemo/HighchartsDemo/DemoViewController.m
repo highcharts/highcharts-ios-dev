@@ -39,6 +39,7 @@
     self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
     self.chartView.options = self.options;
     self.chartView.theme = self.theme;
+    self.chartView.plugin = self.plugin;
     
     [self.view addSubview:self.chartView];
 }
