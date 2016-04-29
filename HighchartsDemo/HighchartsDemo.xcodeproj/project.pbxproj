@@ -22,6 +22,9 @@
 		34A329AC1C6925B700AC09CB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AA1C6925B700AC09CB /* Fabric.framework */; };
 		34A329AD1C6925B700AC09CB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A329AB1C6925B700AC09CB /* Crashlytics.framework */; };
 		34A531C41CCE26EC0014124A /* Demos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34A531C31CCE26EC0014124A /* Demos.plist */; };
+		34AFDA5A1CD36A4800BE07CE /* ItemSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA591CD36A4800BE07CE /* ItemSelectViewController.m */; };
+		34AFDA5C1CD3721B00BE07CE /* Themes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34AFDA5B1CD3721B00BE07CE /* Themes.plist */; };
+		34AFDA5E1CD3747B00BE07CE /* Plugins.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34AFDA5D1CD3747B00BE07CE /* Plugins.plist */; };
 		34E28E3F1CD0FA1600DFE9CD /* BarStacked.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */; };
 		34E28E411CD0FB2600DFE9CD /* PieBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E401CD0FB2600DFE9CD /* PieBasic.m */; };
 		34E28E4D1CD111AD00DFE9CD /* LineSplineSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E4C1CD111AD00DFE9CD /* LineSplineSymbols.m */; };
@@ -86,6 +89,10 @@
 		34A329AA1C6925B700AC09CB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		34A329AB1C6925B700AC09CB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		34A531C31CCE26EC0014124A /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demos.plist; sourceTree = "<group>"; };
+		34AFDA581CD36A4800BE07CE /* ItemSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSelectViewController.h; sourceTree = "<group>"; };
+		34AFDA591CD36A4800BE07CE /* ItemSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSelectViewController.m; sourceTree = "<group>"; };
+		34AFDA5B1CD3721B00BE07CE /* Themes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Themes.plist; sourceTree = "<group>"; };
+		34AFDA5D1CD3747B00BE07CE /* Plugins.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plugins.plist; sourceTree = "<group>"; };
 		34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarStacked.m; path = Demos/BarStacked.m; sourceTree = "<group>"; };
 		34E28E401CD0FB2600DFE9CD /* PieBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PieBasic.m; path = Demos/PieBasic.m; sourceTree = "<group>"; };
 		34E28E4C1CD111AD00DFE9CD /* LineSplineSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineSplineSymbols.m; sourceTree = "<group>"; };
@@ -145,6 +152,8 @@
 				343E13A81C385287006DDD68 /* RootViewController.m */,
 				34F13D281C4ED62100EE62CF /* DemoViewController.h */,
 				34F13D291C4ED62100EE62CF /* DemoViewController.m */,
+				34AFDA581CD36A4800BE07CE /* ItemSelectViewController.h */,
+				34AFDA591CD36A4800BE07CE /* ItemSelectViewController.m */,
 			);
 			path = HighchartsDemo;
 			sourceTree = "<group>";
@@ -157,6 +166,8 @@
 				343E13B21C385287006DDD68 /* Info.plist */,
 				343E13A21C385287006DDD68 /* main.m */,
 				34A531C31CCE26EC0014124A /* Demos.plist */,
+				34AFDA5B1CD3721B00BE07CE /* Themes.plist */,
+				34AFDA5D1CD3747B00BE07CE /* Plugins.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -262,8 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AFDA5C1CD3721B00BE07CE /* Themes.plist in Resources */,
 				343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */,
 				34A531C41CCE26EC0014124A /* Demos.plist in Resources */,
+				34AFDA5E1CD3747B00BE07CE /* Plugins.plist in Resources */,
 				343E70ED1C692EFA008D322A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +314,7 @@
 				348BEEF81CD0A9E400BB85C8 /* LineBasic.m in Sources */,
 				34E28E411CD0FB2600DFE9CD /* PieBasic.m in Sources */,
 				343E13A61C385287006DDD68 /* AppDelegate.m in Sources */,
+				34AFDA5A1CD36A4800BE07CE /* ItemSelectViewController.m in Sources */,
 				343E13A31C385287006DDD68 /* main.m in Sources */,
 				34E28E3F1CD0FA1600DFE9CD /* BarStacked.m in Sources */,
 			);

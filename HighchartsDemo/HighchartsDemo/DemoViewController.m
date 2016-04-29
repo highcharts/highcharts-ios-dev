@@ -35,7 +35,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
     self.chartView.options = self.options;
     self.chartView.theme = self.theme;
@@ -62,8 +62,7 @@
 
 - (void)done
 {
-    [self dismissViewControllerAnimated:YES completion:^(){
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

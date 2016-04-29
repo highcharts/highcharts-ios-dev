@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import <Highcharts/Highcharts.h>
+#import "ItemSelectViewController.h"
 #import "DemoViewController.h"
 #import "OptionsProtocol.h"
 
@@ -16,6 +17,12 @@
 @property (strong, nonatomic) NSArray *demos;
 @property (strong, nonatomic) NSString *theme;
 @property (strong, nonatomic) NSString *plugin;
+
+@property (strong, nonatomic) UINavigationController *themeNavigation;
+@property (strong, nonatomic) ItemSelectViewController *themeController;
+
+@property (strong, nonatomic) UINavigationController *pluginNavigation;
+@property (strong, nonatomic) ItemSelectViewController *pluginController;
 
 @end
 
@@ -26,12 +33,10 @@
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0];
     self.view.backgroundColor = [UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0];
+    self.tableView.separatorColor = [UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
     
-    [[UITableView appearance] setSeparatorColor:[UIColor colorWithRed:28/255.0 green:27/255.0 blue:36/255.0 alpha:1.0]];
-    [[UITableViewCell appearance] setBackgroundColor:[UIColor colorWithRed:39/255.0 green:39/255.0 blue:47/255.0 alpha:1.0]];
-    
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Theme" style:UIBarButtonItemStyleDone target:self action:@selector(presentThemeSelector)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Theme" style:UIBarButtonItemStyleDone target:self action:@selector(presentThemeSelector)];
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Plugin" style:UIBarButtonItemStyleDone target:self action:@selector(presentPluginSelector)];
     
     self.demos = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Demos" ofType:@"plist"]];
@@ -59,6 +64,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.backgroundColor = [UIColor colorWithRed:39/255.0 green:39/255.0 blue:47/255.0 alpha:1.0];
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
@@ -81,8 +87,9 @@
 {
     DemoViewController *demoViewController = [[DemoViewController alloc] init];
     demoViewController.options = [self optionsForDemoName:demo];
-//    demoViewController.theme = @"gray";
-//    demoViewController.plugin = @"exporting";
+    
+    demoViewController.theme = [self.themeController.itemsSelected objectAtIndex:0];
+    demoViewController.plugin = [self.pluginController.itemsSelected objectAtIndex:0];
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
     [navigation setModalPresentationStyle:UIModalPresentationFullScreen];
@@ -95,6 +102,37 @@
     NSString *demoClass = [demoName stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     return [NSClassFromString(demoClass) options];
+}
+
+#pragma mark - 
+
+- (void)presentThemeSelector
+{
+    if (!self.themeController) {
+        NSArray *items = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Themes" ofType:@"plist"]];
+        
+        self.themeController = [[ItemSelectViewController alloc] initWithItems:items multipleItems:NO];
+        
+        self.themeNavigation = [[UINavigationController alloc] initWithRootViewController:self.themeController];
+        self.themeNavigation.modalPresentationStyle = UIModalPresentationFormSheet;
+    }
+    
+    [self presentViewController:self.themeNavigation animated:YES completion:nil];
+}
+
+
+- (void)presentPluginSelector
+{
+    if (!self.pluginController) {
+        NSArray *items = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Plugins" ofType:@"plist"]];
+        
+        self.pluginController = [[ItemSelectViewController alloc] initWithItems:items multipleItems:YES];
+        
+        self.pluginNavigation = [[UINavigationController alloc] initWithRootViewController:self.pluginController];
+        self.pluginNavigation.modalPresentationStyle = UIModalPresentationFormSheet;
+    }
+    
+    [self presentViewController:self.pluginNavigation animated:YES completion:nil];
 }
 
 @end

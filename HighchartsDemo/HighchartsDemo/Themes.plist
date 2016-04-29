@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Dark Blue</string>
+		<key>item</key>
+		<string>dark-blue</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dark Green</string>
+		<key>item</key>
+		<string>dark-green</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dark Unica</string>
+		<key>item</key>
+		<string>dark-unica</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gray</string>
+		<key>item</key>
+		<string>gray</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Grid Light</string>
+		<key>item</key>
+		<string>grid -light</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sand Signika</string>
+		<key>item</key>
+		<string>sand-signika</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Skies</string>
+		<key>item</key>
+		<string>skies</string>
+	</dict>
+</array>
+</plist>
