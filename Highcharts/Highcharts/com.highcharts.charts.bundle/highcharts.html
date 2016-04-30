@@ -4,16 +4,12 @@
         <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
             <title></title>
-            <script src="js/highcharts{debug}.js"></script>
-            {script-plugin}
-            {script-theme}
+            {{script}}
     </head>
     <body>
         <div id="container" style="width:100%; height:100%"></div>
         <script>
-            {theme}
-            var result = JSON.parse('{highcharts}');
-            var chart = new Highcharts.Chart(result);
+            var chart = new Highcharts.Chart({{options}});
         </script>
     </body>
 </html>

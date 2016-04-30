@@ -7,12 +7,22 @@
 //
 
 #import "UIImage+HIG.h"
+#import "HIGCommon.h"
 
 @implementation UIImage (HIG)
 
-- (NSString*)image
+- (NSString*)image;
 {
-    return nil;
+    NSString *tmpLiblary = NSTemporaryDirectory();
+    tmpLiblary = [tmpLiblary stringByAppendingPathComponent:kHighchartsChartBundle];
+    
+    NSString *fileName = [NSString stringWithFormat:@"%@.png", [[[NSUUID UUID] UUIDString] lowercaseString]];
+    
+    NSString *filePath = [tmpLiblary stringByAppendingPathComponent:fileName];
+    
+    [UIImagePNGRepresentation(self) writeToFile:filePath atomically:YES];
+    
+    return [NSString stringWithFormat:@"./%@/", fileName];
 }
 
 @end

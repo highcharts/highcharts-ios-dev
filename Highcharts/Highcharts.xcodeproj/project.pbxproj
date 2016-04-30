@@ -10,11 +10,20 @@
 		343E138E1C38513D006DDD68 /* Highcharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 343E138D1C38513D006DDD68 /* Highcharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 345BA00E1C39AFB9001DAB1B /* HIGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIGChartView.m */; };
+		3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */; };
+		3481FB1F1CD4BB410068A523 /* HIGJavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */; };
+		34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA671CD3A6F500BE07CE /* HIGBundle.h */; };
+		34AFDA6A1CD3A6F500BE07CE /* HIGBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA681CD3A6F500BE07CE /* HIGBundle.m */; };
+		34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */; };
+		34AFDA6E1CD3AD0600BE07CE /* HIGHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */; };
+		34AFDA751CD3B3EE00BE07CE /* HIGOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA731CD3B3EE00BE07CE /* HIGOptions.h */; };
+		34AFDA761CD3B3EE00BE07CE /* HIGOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA741CD3B3EE00BE07CE /* HIGOptions.m */; };
 		34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E471CD1071C00DFE9CD /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
 		34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E4B1CD10CA300DFE9CD /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
+		34E344F91CD4EFA800677B09 /* HIGCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E344F81CD4EFA800677B09 /* HIGCommon.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +33,19 @@
 		3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = com.highcharts.charts.bundle; path = Highcharts/com.highcharts.charts.bundle; sourceTree = "<group>"; };
 		345BA00E1C39AFB9001DAB1B /* HIGChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartView.h; sourceTree = "<group>"; };
 		345BA00F1C39AFB9001DAB1B /* HIGChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChartView.m; sourceTree = "<group>"; };
+		3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGJavaScript.h; sourceTree = "<group>"; };
+		3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGJavaScript.m; sourceTree = "<group>"; };
+		34AFDA671CD3A6F500BE07CE /* HIGBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGBundle.h; sourceTree = "<group>"; };
+		34AFDA681CD3A6F500BE07CE /* HIGBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGBundle.m; sourceTree = "<group>"; };
+		34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGHTML.h; sourceTree = "<group>"; };
+		34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGHTML.m; sourceTree = "<group>"; };
+		34AFDA731CD3B3EE00BE07CE /* HIGOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGOptions.h; sourceTree = "<group>"; };
+		34AFDA741CD3B3EE00BE07CE /* HIGOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptions.m; sourceTree = "<group>"; };
 		34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HIG.h"; sourceTree = "<group>"; };
 		34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HIG.m"; sourceTree = "<group>"; };
 		34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HIG.h"; sourceTree = "<group>"; };
 		34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HIG.m"; sourceTree = "<group>"; };
+		34E344F81CD4EFA800677B09 /* HIGCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGCommon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +98,15 @@
 		34A531C81CCE49470014124A /* Private */ = {
 			isa = PBXGroup;
 			children = (
+				34AFDA671CD3A6F500BE07CE /* HIGBundle.h */,
+				34AFDA681CD3A6F500BE07CE /* HIGBundle.m */,
+				34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */,
+				34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */,
+				34AFDA731CD3B3EE00BE07CE /* HIGOptions.h */,
+				34AFDA741CD3B3EE00BE07CE /* HIGOptions.m */,
+				3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */,
+				3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */,
+				34E344F81CD4EFA800677B09 /* HIGCommon.h */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -104,9 +131,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */,
 				345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */,
+				34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */,
+				34AFDA751CD3B3EE00BE07CE /* HIGOptions.h in Headers */,
+				3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */,
 				343E138E1C38513D006DDD68 /* Highcharts.h in Headers */,
 				34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */,
+				34E344F91CD4EFA800677B09 /* HIGCommon.h in Headers */,
 				34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,7 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3481FB1F1CD4BB410068A523 /* HIGJavaScript.m in Sources */,
+				34AFDA6E1CD3AD0600BE07CE /* HIGHTML.m in Sources */,
 				34E28E4B1CD10CA300DFE9CD /* UIImage+HIG.m in Sources */,
+				34AFDA6A1CD3A6F500BE07CE /* HIGBundle.m in Sources */,
+				34AFDA761CD3B3EE00BE07CE /* HIGOptions.m in Sources */,
 				34E28E471CD1071C00DFE9CD /* UIColor+HIG.m in Sources */,
 				345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */,
 			);

@@ -7,14 +7,15 @@
 //
 
 #import "HIGChartView.h"
+#import "HIGCommon.h"
 #import <WebKit/WebKit.h>
-
-NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
+#import "HIGBundle.h"
+#import "HIGHTML.h"
 
 @interface HIGChartView ()
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSBundle *highchartsBundle;
-@property (nonatomic, strong) NSString *HTML;
+@property (nonatomic, strong) HIGHTML *HTML;
 @end
 
 @implementation HIGChartView
@@ -24,37 +25,15 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
     self = [super initWithFrame:frame];
     if (self) {
         
-        NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
+        self.highchartsBundle = [HIGBundle prepareBundle:kHighchartsChartBundle];
         
-        NSString *tmpBundle = [frameworkBundle pathForResource:kHighchartsChartBundle ofType:nil];
+        self.HTML = [[HIGHTML alloc] init];
         
-        NSString *tmpLiblary = NSTemporaryDirectory();
-        tmpLiblary = [tmpLiblary stringByAppendingPathComponent:kHighchartsChartBundle];
+        [self.HTML loadHTML:[self.highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
         
-        NSError *error = nil;
-        if ([[NSFileManager defaultManager] fileExistsAtPath:tmpLiblary]) {
-            if (![[NSFileManager defaultManager] removeItemAtPath:tmpLiblary error:&error]) {
-                NSLog(@"Error copying files: %@", [error localizedDescription]);
-            }
-        }
+        NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
         
-        if (![[NSFileManager defaultManager] copyItemAtPath:tmpBundle toPath:tmpLiblary error:&error]) {
-            NSLog(@"Error copying files: %@", [error localizedDescription]);
-        }
-        
-        self.highchartsBundle = [NSBundle bundleWithPath:tmpLiblary];
-        
-        NSAssert(self.highchartsBundle, @"Highcharts bundle was not found!");
-        if (!self.highchartsBundle) {
-            return nil;
-        }
-        
-        NSString *HTMLPath = [self.highchartsBundle pathForResource:@"highcharts" ofType:@"html"];
-        
-        self.HTML = [NSString stringWithContentsOfFile:HTMLPath encoding:NSUTF8StringEncoding error:nil];
-        
-        NSAssert(self.HTML, @"Highcharts HTML was not found!");
-        if (!self.HTML) {
+        if (!self.HTML.html) {
             return nil;
         }
         
@@ -72,63 +51,18 @@ NSString * const kHighchartsChartBundle = @"com.highcharts.charts.bundle";
 {
     [super didMoveToSuperview];
     
-    NSMutableDictionary *tmpOptions = [self.options mutableCopy];
+    NSString *suffix = self.debug ? @".src.js" : @".js";
     
-    if (!tmpOptions[@"chart"]) {
-        [tmpOptions setValue:@{@"renderTo": @"container"} forKey:@"chart"];
-    }
+    [self.HTML prepareJavaScript:@[@"highcharts"] prefix:nil suffix:suffix];
+    [self.HTML prepareJavaScript:self.plugins prefix:@"js/modules/" suffix:suffix];
+    [self.HTML prepareJavaScript:self.theme?@[self.theme]:nil prefix:@"js/themes/" suffix:nil];
     
-    if (tmpOptions[@"chart"]) {
-        NSMutableDictionary *chart = [tmpOptions[@"chart"] mutableCopy];
-        chart[@"renderTo"] = @"container";
-        [tmpOptions setValue:chart forKey:@"chart"];
-    }
     
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmpOptions
-                                                       options:0
-                                                         error:&error];
+    [self.HTML prepareOptions:self.options];
     
-    if (!jsonData) {
-        NSAssert(jsonData, @"Highcharts script was not found!");
-        return;
-    }
-
-    [self loadHighchartsDebug:self.debug];
-    [self loadHighchartsPlugin:self.plugin];
-    [self loadHighchartsTheme:self.theme];
+    [self.HTML injectJavaScriptToHTML];
     
-    NSString *JSONString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
-    [self loadHighcharts:JSONString];
-}
-
-- (void)loadHighchartsDebug:(BOOL)debug
-{
-    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{debug}" withString:debug?@".src":@""];
-}
-
-- (void)loadHighchartsPlugin:(NSString*)plugin
-{
-    NSString *jsPlugin = [NSString stringWithFormat:@"<script src=\"js/modules/%@.js\"></script>", plugin];
-    
-    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script-plugin}" withString:plugin?jsPlugin:@""];
-}
-
-- (void)loadHighchartsTheme:(NSString*)theme
-{
-    NSString *jsTheme = [NSString stringWithFormat:@"<script src=\"js/themes/%@.js\"></script>", theme];
-    
-    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{script-theme}" withString:theme?jsTheme:@""];
-    self.HTML = [self.HTML stringByReplacingOccurrencesOfString:@"{theme}" withString:theme?@"Highcharts.setOptions(Highcharts.theme);":@""];
-}
-
-- (void)loadHighcharts:(NSString *)highcharts
-{
-    NSAssert(highcharts, @"Highcharts script was not found!");
-    
-    NSString *HTMLString = [self.HTML stringByReplacingOccurrencesOfString:@"{highcharts}" withString:highcharts];
-    
-    [self.webView loadHTMLString:HTMLString baseURL:[self.highchartsBundle bundleURL]];
+    [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
 }
 
 @end

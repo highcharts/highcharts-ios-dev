@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) NSDictionary *options;
 @property (strong, nonatomic) NSString *theme;
-@property (strong, nonatomic) NSString *plugin;
+@property (strong, nonatomic) NSArray *plugins;
 
 @end

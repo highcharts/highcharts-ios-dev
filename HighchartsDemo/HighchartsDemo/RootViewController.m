@@ -89,7 +89,7 @@
     demoViewController.options = [self optionsForDemoName:demo];
     
     demoViewController.theme = [self.themeController.itemsSelected objectAtIndex:0];
-    demoViewController.plugin = [self.pluginController.itemsSelected objectAtIndex:0];
+    demoViewController.plugins = self.pluginController.itemsSelected;
     
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:demoViewController];
     [navigation setModalPresentationStyle:UIModalPresentationFullScreen];

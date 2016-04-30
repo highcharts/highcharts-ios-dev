@@ -10,7 +10,7 @@
 
 @implementation UIColor (HIG)
 
-- (NSString*)color
+- (NSString*)color;
 {
     const CGFloat *components = CGColorGetComponents(self.CGColor);
     
