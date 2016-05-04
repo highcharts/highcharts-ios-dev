@@ -14,15 +14,18 @@
 - (NSString*)image;
 {
     NSString *tmpLiblary = NSTemporaryDirectory();
-    tmpLiblary = [tmpLiblary stringByAppendingPathComponent:kHighchartsChartBundle];
     
     NSString *fileName = [NSString stringWithFormat:@"%@.png", [[[NSUUID UUID] UUIDString] lowercaseString]];
     
     NSString *filePath = [tmpLiblary stringByAppendingPathComponent:fileName];
     
-    [UIImagePNGRepresentation(self) writeToFile:filePath atomically:YES];
+    NSError *error = nil;
     
-    return [NSString stringWithFormat:@"./%@/", fileName];
+    [UIImagePNGRepresentation(self) writeToFile:filePath options:NSDataWritingFileProtectionNone error:&error];
+    
+    NSString *imagePath = [NSString stringWithFormat:@"url(%@)", filePath];
+    
+    return imagePath;
 }
 
 @end
