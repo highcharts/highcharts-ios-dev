@@ -24,6 +24,9 @@
 		34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E4B1CD10CA300DFE9CD /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		34E344F91CD4EFA800677B09 /* HIGCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E344F81CD4EFA800677B09 /* HIGCommon.h */; };
+		34F873FE1CDA134400674E6C /* HIGExporting.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F873FC1CDA134400674E6C /* HIGExporting.h */; };
+		34F873FF1CDA134400674E6C /* HIGExporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F873FD1CDA134400674E6C /* HIGExporting.m */; };
+		34F874011CDA15AC00674E6C /* HIGProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F874001CDA15AC00674E6C /* HIGProtocol.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HIG.h"; sourceTree = "<group>"; };
 		34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HIG.m"; sourceTree = "<group>"; };
 		34E344F81CD4EFA800677B09 /* HIGCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGCommon.h; sourceTree = "<group>"; };
+		34F873FC1CDA134400674E6C /* HIGExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGExporting.h; sourceTree = "<group>"; };
+		34F873FD1CDA134400674E6C /* HIGExporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGExporting.m; sourceTree = "<group>"; };
+		34F874001CDA15AC00674E6C /* HIGProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,9 @@
 				3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */,
 				3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */,
 				34E344F81CD4EFA800677B09 /* HIGCommon.h */,
+				34F873FC1CDA134400674E6C /* HIGExporting.h */,
+				34F873FD1CDA134400674E6C /* HIGExporting.m */,
+				34F874001CDA15AC00674E6C /* HIGProtocol.h */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -131,10 +140,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F874011CDA15AC00674E6C /* HIGProtocol.h in Headers */,
 				34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */,
 				345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */,
 				34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */,
 				34AFDA751CD3B3EE00BE07CE /* HIGOptions.h in Headers */,
+				34F873FE1CDA134400674E6C /* HIGExporting.h in Headers */,
 				3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */,
 				343E138E1C38513D006DDD68 /* Highcharts.h in Headers */,
 				34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */,
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3481FB1F1CD4BB410068A523 /* HIGJavaScript.m in Sources */,
+				34F873FF1CDA134400674E6C /* HIGExporting.m in Sources */,
 				34AFDA6E1CD3AD0600BE07CE /* HIGHTML.m in Sources */,
 				34E28E4B1CD10CA300DFE9CD /* UIImage+HIG.m in Sources */,
 				34AFDA6A1CD3A6F500BE07CE /* HIGBundle.m in Sources */,

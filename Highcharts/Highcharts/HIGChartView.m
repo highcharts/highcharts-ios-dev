@@ -11,8 +11,9 @@
 #import <WebKit/WebKit.h>
 #import "HIGBundle.h"
 #import "HIGHTML.h"
+#import "HIGProtocol.h"
 
-@interface HIGChartView ()
+@interface HIGChartView () <WKNavigationDelegate>
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) HIGHTML *HTML;
@@ -39,6 +40,7 @@
         
         self.webView = [[WKWebView alloc] initWithFrame:frame];
         self.webView.scrollView.scrollEnabled = NO;
+        self.webView.navigationDelegate = self;
         
         self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
@@ -63,6 +65,33 @@
     [self.HTML injectJavaScriptToHTML];
     
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    NSURL *url = navigationAction.request.URL;
+    
+    if ([url.scheme isEqualToString:@"hig"]) {
+        decisionHandler(WKNavigationActionPolicyCancel);
+        
+        NSString *HIGClass = [NSString stringWithFormat:@"HIG%@", [url.host capitalizedString]];
+        
+        if (HIGClass) {
+            NSString *jsonString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+            NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+            
+            id <HIGProtocol> hig = [[NSClassFromString(HIGClass) alloc] init];
+            
+            hig.viewController = self.viewController;
+            
+            [hig response:dict];
+        }
+        
+        return;
+    }
+    
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 @end
