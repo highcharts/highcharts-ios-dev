@@ -18,9 +18,6 @@
 
 + (NSDictionary*)options {
 
-    // html #808080
-    UIColor *color = [UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:1];
-
     return @{
     
         @"title" : @{
@@ -42,7 +39,7 @@
             @"plotLines" : @[@{
                 @"value" : @0,
                 @"width" : @1,
-                @"color" : [color color]
+                @"color" : @"#808080"
             }]
         },
         @"tooltip" : @{

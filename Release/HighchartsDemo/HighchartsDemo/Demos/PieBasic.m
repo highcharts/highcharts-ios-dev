@@ -26,10 +26,10 @@
             @"type" : @"pie"
         },
         @"title" : @{
-            @"text" : @"Browser market shares January, @2015 to May, @2015"
+            @"text" : @"Browser market shares January, 2015 to May, @2015"
         },
         @"tooltip" : @{
-            @"pointFormat" : @"#{series.name}: <b>@{point.percentage:.1f}%</b>"
+            @"pointFormat" : @"{series.name}: <b>{point.percentage:.1f}%</b>"
         },
         @"plotOptions" : @{
             @"pie" : @{
@@ -37,7 +37,7 @@
                 @"cursor" : @"pointer",
                 @"dataLabels" : @{
                     @"enabled" : @YES,
-                    @"format" : @"<b>@{point.name}</b>: {point.percentage:.1f} %",
+                    @"format" : @"<b>{point.name}</b>: {point.percentage:.1f} %",
                 }
             }
         },

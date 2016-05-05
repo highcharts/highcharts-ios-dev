@@ -7,36 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342769A91CDB5B2A00F8812E /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342769A71CDB5B1F00F8812E /* Highcharts.framework */; };
+		342769AA1CDB5B2A00F8812E /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342769A71CDB5B1F00F8812E /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		342769B21CDB606C00F8812E /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769AD1CDB606C00F8812E /* DemoViewController.m */; };
+		342769B31CDB606C00F8812E /* ItemSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769AF1CDB606C00F8812E /* ItemSelectViewController.m */; };
+		342769B41CDB606C00F8812E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769B11CDB606C00F8812E /* RootViewController.m */; };
+		342769B91CDB61D300F8812E /* Demos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 342769B61CDB61D300F8812E /* Demos.plist */; };
+		342769BA1CDB61D300F8812E /* Plugins.plist in Resources */ = {isa = PBXBuildFile; fileRef = 342769B71CDB61D300F8812E /* Plugins.plist */; };
+		342769BB1CDB61D300F8812E /* Themes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 342769B81CDB61D300F8812E /* Themes.plist */; };
+		342769C91CDB623E00F8812E /* AreaBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769BD1CDB623E00F8812E /* AreaBasic.m */; };
+		342769CA1CDB623E00F8812E /* AreaNegative.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769BE1CDB623E00F8812E /* AreaNegative.m */; };
+		342769CC1CDB623E00F8812E /* BarStacked.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769C01CDB623E00F8812E /* BarStacked.m */; };
+		342769CD1CDB623E00F8812E /* LineBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769C11CDB623E00F8812E /* LineBasic.m */; };
+		342769CE1CDB623E00F8812E /* LineDataLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769C21CDB623E00F8812E /* LineDataLabels.m */; };
+		342769CF1CDB623E00F8812E /* LineLogarithmic.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769C31CDB623E00F8812E /* LineLogarithmic.m */; };
+		342769D01CDB623E00F8812E /* LineSplineSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769C41CDB623E00F8812E /* LineSplineSymbols.m */; };
+		342769D21CDB623E00F8812E /* PieBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769C71CDB623E00F8812E /* PieBasic.m */; };
+		342769D71CDB631400F8812E /* BarColumnNegative.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769D51CDB631400F8812E /* BarColumnNegative.m */; };
+		342769D81CDB631400F8812E /* ComboRegression.m in Sources */ = {isa = PBXBuildFile; fileRef = 342769D61CDB631400F8812E /* ComboRegression.m */; };
 		343E13A31C385287006DDD68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A21C385287006DDD68 /* main.m */; };
 		343E13A61C385287006DDD68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A51C385287006DDD68 /* AppDelegate.m */; };
-		343E13A91C385287006DDD68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E13A81C385287006DDD68 /* RootViewController.m */; };
 		343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343E13AD1C385287006DDD68 /* Assets.xcassets */; };
 		343E70ED1C692EFA008D322A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 343E70EC1C692EFA008D322A /* Default-568h@2x.png */; };
-		348BEEF81CD0A9E400BB85C8 /* LineBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEF61CD0A9E400BB85C8 /* LineBasic.m */; };
-		348BEEF91CD0A9E400BB85C8 /* LineDataLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEF71CD0A9E400BB85C8 /* LineDataLabels.m */; };
-		348BEEFB1CD0AB5800BB85C8 /* LineLogarithmic.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEFA1CD0AB5800BB85C8 /* LineLogarithmic.m */; };
-		348BEEFD1CD0ADEA00BB85C8 /* AreaBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEFC1CD0ADEA00BB85C8 /* AreaBasic.m */; };
-		348BEEFF1CD0AFC300BB85C8 /* AreaNegative.m in Sources */ = {isa = PBXBuildFile; fileRef = 348BEEFE1CD0AFC300BB85C8 /* AreaNegative.m */; };
-		34A531C41CCE26EC0014124A /* Demos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34A531C31CCE26EC0014124A /* Demos.plist */; };
-		34AFDA5A1CD36A4800BE07CE /* ItemSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA591CD36A4800BE07CE /* ItemSelectViewController.m */; };
-		34AFDA5C1CD3721B00BE07CE /* Themes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34AFDA5B1CD3721B00BE07CE /* Themes.plist */; };
-		34AFDA5E1CD3747B00BE07CE /* Plugins.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34AFDA5D1CD3747B00BE07CE /* Plugins.plist */; };
-		34E28E3F1CD0FA1600DFE9CD /* BarStacked.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */; };
-		34E28E411CD0FB2600DFE9CD /* PieBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E401CD0FB2600DFE9CD /* PieBasic.m */; };
-		34E28E4D1CD111AD00DFE9CD /* LineSplineSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E4C1CD111AD00DFE9CD /* LineSplineSymbols.m */; };
-		34EDEBA01CD55A9600B2FF94 /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34EDEB9F1CD55A9600B2FF94 /* Highcharts.framework */; };
-		34EDEBA11CD55A9600B2FF94 /* Highcharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34EDEB9F1CD55A9600B2FF94 /* Highcharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		34F13D2A1C4ED62100EE62CF /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F13D291C4ED62100EE62CF /* DemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		34EDEB9E1CD55A6200B2FF94 /* Embed Frameworks */ = {
+		342769A41CDB589A00F8812E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				34EDEBA11CD55A9600B2FF94 /* Highcharts.framework in Embed Frameworks */,
+				342769AA1CDB5B2A00F8812E /* Highcharts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,32 +46,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		342769A71CDB5B1F00F8812E /* Highcharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Highcharts.framework; path = ../Highcharts.framework; sourceTree = "<group>"; };
+		342769AC1CDB606C00F8812E /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		342769AD1CDB606C00F8812E /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		342769AE1CDB606C00F8812E /* ItemSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSelectViewController.h; sourceTree = "<group>"; };
+		342769AF1CDB606C00F8812E /* ItemSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSelectViewController.m; sourceTree = "<group>"; };
+		342769B01CDB606C00F8812E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		342769B11CDB606C00F8812E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		342769B61CDB61D300F8812E /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demos.plist; sourceTree = "<group>"; };
+		342769B71CDB61D300F8812E /* Plugins.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plugins.plist; sourceTree = "<group>"; };
+		342769B81CDB61D300F8812E /* Themes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Themes.plist; sourceTree = "<group>"; };
+		342769BD1CDB623E00F8812E /* AreaBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaBasic.m; sourceTree = "<group>"; };
+		342769BE1CDB623E00F8812E /* AreaNegative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaNegative.m; sourceTree = "<group>"; };
+		342769C01CDB623E00F8812E /* BarStacked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarStacked.m; sourceTree = "<group>"; };
+		342769C11CDB623E00F8812E /* LineBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBasic.m; sourceTree = "<group>"; };
+		342769C21CDB623E00F8812E /* LineDataLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDataLabels.m; sourceTree = "<group>"; };
+		342769C31CDB623E00F8812E /* LineLogarithmic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineLogarithmic.m; sourceTree = "<group>"; };
+		342769C41CDB623E00F8812E /* LineSplineSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineSplineSymbols.m; sourceTree = "<group>"; };
+		342769C61CDB623E00F8812E /* OptionsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsProtocol.h; sourceTree = "<group>"; };
+		342769C71CDB623E00F8812E /* PieBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieBasic.m; sourceTree = "<group>"; };
+		342769D51CDB631400F8812E /* BarColumnNegative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarColumnNegative.m; sourceTree = "<group>"; };
+		342769D61CDB631400F8812E /* ComboRegression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboRegression.m; sourceTree = "<group>"; };
 		343E139E1C385287006DDD68 /* HighchartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighchartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E13A21C385287006DDD68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		343E13A41C385287006DDD68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		343E13A51C385287006DDD68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		343E13A71C385287006DDD68 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		343E13A81C385287006DDD68 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		343E13AD1C385287006DDD68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343E13B21C385287006DDD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		343E70EC1C692EFA008D322A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3441F7021CCA283100A0D0C8 /* OptionsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsProtocol.h; sourceTree = "<group>"; };
-		348BEEF61CD0A9E400BB85C8 /* LineBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineBasic.m; path = Demos/LineBasic.m; sourceTree = "<group>"; };
-		348BEEF71CD0A9E400BB85C8 /* LineDataLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineDataLabels.m; path = Demos/LineDataLabels.m; sourceTree = "<group>"; };
-		348BEEFA1CD0AB5800BB85C8 /* LineLogarithmic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLogarithmic.m; path = Demos/LineLogarithmic.m; sourceTree = "<group>"; };
-		348BEEFC1CD0ADEA00BB85C8 /* AreaBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaBasic.m; path = Demos/AreaBasic.m; sourceTree = "<group>"; };
-		348BEEFE1CD0AFC300BB85C8 /* AreaNegative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaNegative.m; path = Demos/AreaNegative.m; sourceTree = "<group>"; };
-		34A531C31CCE26EC0014124A /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demos.plist; sourceTree = "<group>"; };
-		34AFDA581CD36A4800BE07CE /* ItemSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSelectViewController.h; sourceTree = "<group>"; };
-		34AFDA591CD36A4800BE07CE /* ItemSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSelectViewController.m; sourceTree = "<group>"; };
-		34AFDA5B1CD3721B00BE07CE /* Themes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Themes.plist; sourceTree = "<group>"; };
-		34AFDA5D1CD3747B00BE07CE /* Plugins.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plugins.plist; sourceTree = "<group>"; };
-		34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarStacked.m; path = Demos/BarStacked.m; sourceTree = "<group>"; };
-		34E28E401CD0FB2600DFE9CD /* PieBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PieBasic.m; path = Demos/PieBasic.m; sourceTree = "<group>"; };
-		34E28E4C1CD111AD00DFE9CD /* LineSplineSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineSplineSymbols.m; sourceTree = "<group>"; };
-		34EDEB9F1CD55A9600B2FF94 /* Highcharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Highcharts.framework; path = ../Highcharts/Highcharts.framework; sourceTree = "<group>"; };
-		34F13D281C4ED62100EE62CF /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
-		34F13D291C4ED62100EE62CF /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34EDEBA01CD55A9600B2FF94 /* Highcharts.framework in Frameworks */,
+				342769A91CDB5B2A00F8812E /* Highcharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +91,50 @@
 		341E87701C46E31C0053048C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				34EDEB9F1CD55A9600B2FF94 /* Highcharts.framework */,
+				342769A71CDB5B1F00F8812E /* Highcharts.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		342769AB1CDB5FBF00F8812E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				342769B01CDB606C00F8812E /* RootViewController.h */,
+				342769B11CDB606C00F8812E /* RootViewController.m */,
+				342769AC1CDB606C00F8812E /* DemoViewController.h */,
+				342769AD1CDB606C00F8812E /* DemoViewController.m */,
+				342769AE1CDB606C00F8812E /* ItemSelectViewController.h */,
+				342769AF1CDB606C00F8812E /* ItemSelectViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		342769B51CDB61D300F8812E /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				342769B61CDB61D300F8812E /* Demos.plist */,
+				342769B71CDB61D300F8812E /* Plugins.plist */,
+				342769B81CDB61D300F8812E /* Themes.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		342769BC1CDB623E00F8812E /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				342769C11CDB623E00F8812E /* LineBasic.m */,
+				342769C21CDB623E00F8812E /* LineDataLabels.m */,
+				342769C31CDB623E00F8812E /* LineLogarithmic.m */,
+				342769C41CDB623E00F8812E /* LineSplineSymbols.m */,
+				342769BD1CDB623E00F8812E /* AreaBasic.m */,
+				342769BE1CDB623E00F8812E /* AreaNegative.m */,
+				342769C01CDB623E00F8812E /* BarStacked.m */,
+				342769D51CDB631400F8812E /* BarColumnNegative.m */,
+				342769C71CDB623E00F8812E /* PieBasic.m */,
+				342769D61CDB631400F8812E /* ComboRegression.m */,
+				342769C61CDB623E00F8812E /* OptionsProtocol.h */,
+			);
+			path = Demos;
 			sourceTree = "<group>";
 		};
 		343E13951C385287006DDD68 = {
@@ -112,16 +157,12 @@
 		343E13A01C385287006DDD68 /* HighchartsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				347274981C5FFF9B007EEFAA /* Demos */,
+				342769BC1CDB623E00F8812E /* Demos */,
+				342769B51CDB61D300F8812E /* Plists */,
+				342769AB1CDB5FBF00F8812E /* Classes */,
 				343E13A11C385287006DDD68 /* Supporting Files */,
 				343E13A41C385287006DDD68 /* AppDelegate.h */,
 				343E13A51C385287006DDD68 /* AppDelegate.m */,
-				343E13A71C385287006DDD68 /* RootViewController.h */,
-				343E13A81C385287006DDD68 /* RootViewController.m */,
-				34F13D281C4ED62100EE62CF /* DemoViewController.h */,
-				34F13D291C4ED62100EE62CF /* DemoViewController.m */,
-				34AFDA581CD36A4800BE07CE /* ItemSelectViewController.h */,
-				34AFDA591CD36A4800BE07CE /* ItemSelectViewController.m */,
 			);
 			path = HighchartsDemo;
 			sourceTree = "<group>";
@@ -133,27 +174,8 @@
 				343E13AD1C385287006DDD68 /* Assets.xcassets */,
 				343E13B21C385287006DDD68 /* Info.plist */,
 				343E13A21C385287006DDD68 /* main.m */,
-				34A531C31CCE26EC0014124A /* Demos.plist */,
-				34AFDA5B1CD3721B00BE07CE /* Themes.plist */,
-				34AFDA5D1CD3747B00BE07CE /* Plugins.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		347274981C5FFF9B007EEFAA /* Demos */ = {
-			isa = PBXGroup;
-			children = (
-				348BEEF61CD0A9E400BB85C8 /* LineBasic.m */,
-				348BEEF71CD0A9E400BB85C8 /* LineDataLabels.m */,
-				348BEEFA1CD0AB5800BB85C8 /* LineLogarithmic.m */,
-				34E28E4C1CD111AD00DFE9CD /* LineSplineSymbols.m */,
-				348BEEFC1CD0ADEA00BB85C8 /* AreaBasic.m */,
-				348BEEFE1CD0AFC300BB85C8 /* AreaNegative.m */,
-				34E28E3E1CD0FA1600DFE9CD /* BarStacked.m */,
-				34E28E401CD0FB2600DFE9CD /* PieBasic.m */,
-				3441F7021CCA283100A0D0C8 /* OptionsProtocol.h */,
-			);
-			name = Demos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +188,7 @@
 				343E139A1C385287006DDD68 /* Sources */,
 				343E139B1C385287006DDD68 /* Frameworks */,
 				343E139C1C385287006DDD68 /* Resources */,
-				34EDEB9E1CD55A6200B2FF94 /* Embed Frameworks */,
+				342769A41CDB589A00F8812E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,11 +236,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34AFDA5C1CD3721B00BE07CE /* Themes.plist in Resources */,
 				343E13AE1C385287006DDD68 /* Assets.xcassets in Resources */,
-				34A531C41CCE26EC0014124A /* Demos.plist in Resources */,
-				34AFDA5E1CD3747B00BE07CE /* Plugins.plist in Resources */,
+				342769BA1CDB61D300F8812E /* Plugins.plist in Resources */,
+				342769B91CDB61D300F8812E /* Demos.plist in Resources */,
 				343E70ED1C692EFA008D322A /* Default-568h@2x.png in Resources */,
+				342769BB1CDB61D300F8812E /* Themes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,19 +251,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348BEEF91CD0A9E400BB85C8 /* LineDataLabels.m in Sources */,
-				348BEEFD1CD0ADEA00BB85C8 /* AreaBasic.m in Sources */,
-				343E13A91C385287006DDD68 /* RootViewController.m in Sources */,
-				348BEEFB1CD0AB5800BB85C8 /* LineLogarithmic.m in Sources */,
-				34F13D2A1C4ED62100EE62CF /* DemoViewController.m in Sources */,
-				348BEEFF1CD0AFC300BB85C8 /* AreaNegative.m in Sources */,
-				34E28E4D1CD111AD00DFE9CD /* LineSplineSymbols.m in Sources */,
-				348BEEF81CD0A9E400BB85C8 /* LineBasic.m in Sources */,
-				34E28E411CD0FB2600DFE9CD /* PieBasic.m in Sources */,
+				342769B21CDB606C00F8812E /* DemoViewController.m in Sources */,
+				342769D81CDB631400F8812E /* ComboRegression.m in Sources */,
+				342769CA1CDB623E00F8812E /* AreaNegative.m in Sources */,
+				342769CE1CDB623E00F8812E /* LineDataLabels.m in Sources */,
+				342769D21CDB623E00F8812E /* PieBasic.m in Sources */,
+				342769D71CDB631400F8812E /* BarColumnNegative.m in Sources */,
+				342769CD1CDB623E00F8812E /* LineBasic.m in Sources */,
+				342769C91CDB623E00F8812E /* AreaBasic.m in Sources */,
 				343E13A61C385287006DDD68 /* AppDelegate.m in Sources */,
-				34AFDA5A1CD36A4800BE07CE /* ItemSelectViewController.m in Sources */,
+				342769D01CDB623E00F8812E /* LineSplineSymbols.m in Sources */,
 				343E13A31C385287006DDD68 /* main.m in Sources */,
-				34E28E3F1CD0FA1600DFE9CD /* BarStacked.m in Sources */,
+				342769CC1CDB623E00F8812E /* BarStacked.m in Sources */,
+				342769B31CDB606C00F8812E /* ItemSelectViewController.m in Sources */,
+				342769B41CDB606C00F8812E /* RootViewController.m in Sources */,
+				342769CF1CDB623E00F8812E /* LineLogarithmic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +364,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
-					"${SRCROOT}/../Highcharts/",
+					"${PROJECT_DIR}/../",
 				);
-				HEADER_SEARCH_PATHS = "${SRCROOT}/../Highcharts/Highcharts.framework/Headers";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"${PROJECT_DIR}/../Highcharts.framework/Headers",
+				);
 				INFOPLIST_FILE = HighchartsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.highcharts.HighchartsDemo;
@@ -360,9 +388,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
-					"${SRCROOT}/../Highcharts/",
+					"${PROJECT_DIR}/../",
 				);
-				HEADER_SEARCH_PATHS = "${SRCROOT}/../Highcharts/Highcharts.framework/Headers";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"${PROJECT_DIR}/../Highcharts.framework/Headers",
+				);
 				INFOPLIST_FILE = HighchartsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.highcharts.HighchartsDemo;
