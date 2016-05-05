@@ -7,7 +7,6 @@
 //
 
 #import "UIImage+HIG.h"
-#import "HIGCommon.h"
 
 @implementation UIImage (HIG)
 
