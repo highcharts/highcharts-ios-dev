@@ -21,12 +21,17 @@
 
 @implementation HIGChartView
 
++ (void)preload
+{
+    [HIGBundle preloadBundle:kHighchartsChartBundle];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.highchartsBundle = [HIGBundle prepareBundle:kHighchartsChartBundle];
+        self.highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
         
         self.HTML = [[HIGHTML alloc] init];
         

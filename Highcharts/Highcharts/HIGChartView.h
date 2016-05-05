@@ -19,4 +19,6 @@
 
 @property (weak, nonatomic) UIViewController *viewController;
 
++ (void)preload;
+
 @end

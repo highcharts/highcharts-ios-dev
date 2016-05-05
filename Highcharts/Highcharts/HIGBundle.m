@@ -10,33 +10,45 @@
 
 @implementation HIGBundle
 
-+ (NSBundle*)prepareBundle:(NSString*)bundleName
++ (BOOL)preloadBundle:(NSString*)bundleName
 {
-    NSBundle *highchartsBundle = nil;
+    BOOL result = YES;
     
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
     
     NSString *tmpBundle = [frameworkBundle pathForResource:bundleName ofType:nil];
     
-    NSString *tmpLiblary = NSTemporaryDirectory();
-    tmpLiblary = [tmpLiblary stringByAppendingPathComponent:bundleName];
+    NSString *tmpBundleDirectory = [NSTemporaryDirectory() stringByAppendingPathComponent:bundleName];
     
     NSError *error = nil;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:tmpLiblary]) {
-        if (![[NSFileManager defaultManager] removeItemAtPath:tmpLiblary error:&error]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:tmpBundleDirectory]) {
+        if (![[NSFileManager defaultManager] removeItemAtPath:tmpBundleDirectory error:&error]) {
             NSLog(@"Error copying files: %@", [error localizedDescription]);
+            result = NO;
         }
     }
     
-    if (![[NSFileManager defaultManager] copyItemAtPath:tmpBundle toPath:tmpLiblary error:&error]) {
+    if (![[NSFileManager defaultManager] copyItemAtPath:tmpBundle toPath:tmpBundleDirectory error:&error]) {
         NSLog(@"Error copying files: %@", [error localizedDescription]);
+        result = NO;
     }
     
-    highchartsBundle = [NSBundle bundleWithPath:tmpLiblary];
+    return result;
+}
+
++ (NSBundle*)bundle:(NSString*)bundleName
+{
+    NSBundle *bundle = nil;
     
-    NSAssert(highchartsBundle, @"Highcharts bundle was not found!");
+    NSString *tmpBundleDirectory = [NSTemporaryDirectory() stringByAppendingPathComponent:bundleName];
     
-    return highchartsBundle;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:tmpBundleDirectory]) {
+        bundle = [NSBundle bundleWithPath:tmpBundleDirectory];
+    }
+    
+    NSAssert(bundle, @"Highcharts bundle was not found!");
+    
+    return bundle;
 }
 
 @end

@@ -10,6 +10,8 @@
 
 @interface HIGBundle : NSObject
 
-+ (NSBundle*)prepareBundle:(NSString*)bundleName;
++ (BOOL)preloadBundle:(NSString*)bundleName;
+
++ (NSBundle*)bundle:(NSString*)bundleName;
 
 @end
