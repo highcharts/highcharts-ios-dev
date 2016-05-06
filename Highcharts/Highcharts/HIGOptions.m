@@ -12,6 +12,10 @@
 
 + (NSDictionary*)addOptions:(NSDictionary*)options;
 {
+    if (!options) {
+        return nil;
+    }
+    
     NSMutableDictionary *tmpOptions = [options mutableCopy];
     
     if (!tmpOptions[@"chart"]) {

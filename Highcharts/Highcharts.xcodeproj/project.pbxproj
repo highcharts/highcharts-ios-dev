@@ -12,22 +12,39 @@
 		345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIGChartView.m */; };
 		3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */; };
 		3481FB1F1CD4BB410068A523 /* HIGJavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */; };
+		348557771CDB9AB9008829B6 /* HIGHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 348F28311CDB8459005CA399 /* HIGHTMLTests.m */; };
+		348F28231CDB790F005CA399 /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343E138A1C38513D006DDD68 /* Highcharts.framework */; };
+		348F282A1CDB7998005CA399 /* UIColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 348F28291CDB7998005CA399 /* UIColorTests.m */; };
+		348F282E1CDB7CB0005CA399 /* HIGJavaScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 348F282D1CDB7CB0005CA399 /* HIGJavaScriptTests.m */; };
 		34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA671CD3A6F500BE07CE /* HIGBundle.h */; };
 		34AFDA6A1CD3A6F500BE07CE /* HIGBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA681CD3A6F500BE07CE /* HIGBundle.m */; };
 		34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */; };
 		34AFDA6E1CD3AD0600BE07CE /* HIGHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */; };
 		34AFDA751CD3B3EE00BE07CE /* HIGOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA731CD3B3EE00BE07CE /* HIGOptions.h */; };
 		34AFDA761CD3B3EE00BE07CE /* HIGOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA741CD3B3EE00BE07CE /* HIGOptions.m */; };
+		34B60A6F1CDB8EE300FEFA7A /* TestTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 34B60A6E1CDB8EE300FEFA7A /* TestTemplate.html */; };
+		34B60A731CDB909A00FEFA7A /* TestResult.html in Resources */ = {isa = PBXBuildFile; fileRef = 34B60A701CDB909A00FEFA7A /* TestResult.html */; };
 		34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E471CD1071C00DFE9CD /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
 		34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E4B1CD10CA300DFE9CD /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		34E344F91CD4EFA800677B09 /* HIGCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E344F81CD4EFA800677B09 /* HIGCommon.h */; };
+		34EC1CF61CDCC783001DB3A0 /* HIGOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */; };
 		34F873FE1CDA134400674E6C /* HIGExporting.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F873FC1CDA134400674E6C /* HIGExporting.h */; };
 		34F873FF1CDA134400674E6C /* HIGExporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F873FD1CDA134400674E6C /* HIGExporting.m */; };
 		34F874011CDA15AC00674E6C /* HIGProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F874001CDA15AC00674E6C /* HIGProtocol.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		348F28241CDB790F005CA399 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 343E13811C38513D006DDD68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 343E13891C38513D006DDD68;
+			remoteInfo = Highcharts;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		343E138A1C38513D006DDD68 /* Highcharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Highcharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,17 +55,25 @@
 		345BA00F1C39AFB9001DAB1B /* HIGChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChartView.m; sourceTree = "<group>"; };
 		3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGJavaScript.h; sourceTree = "<group>"; };
 		3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGJavaScript.m; sourceTree = "<group>"; };
+		348F281E1CDB790F005CA399 /* HighchartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HighchartsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		348F28221CDB790F005CA399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		348F28291CDB7998005CA399 /* UIColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorTests.m; sourceTree = "<group>"; };
+		348F282D1CDB7CB0005CA399 /* HIGJavaScriptTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGJavaScriptTests.m; sourceTree = "<group>"; };
+		348F28311CDB8459005CA399 /* HIGHTMLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGHTMLTests.m; sourceTree = "<group>"; };
 		34AFDA671CD3A6F500BE07CE /* HIGBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGBundle.h; sourceTree = "<group>"; };
 		34AFDA681CD3A6F500BE07CE /* HIGBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGBundle.m; sourceTree = "<group>"; };
 		34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGHTML.h; sourceTree = "<group>"; };
 		34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGHTML.m; sourceTree = "<group>"; };
 		34AFDA731CD3B3EE00BE07CE /* HIGOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGOptions.h; sourceTree = "<group>"; };
 		34AFDA741CD3B3EE00BE07CE /* HIGOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptions.m; sourceTree = "<group>"; };
+		34B60A6E1CDB8EE300FEFA7A /* TestTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestTemplate.html; sourceTree = "<group>"; };
+		34B60A701CDB909A00FEFA7A /* TestResult.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestResult.html; sourceTree = "<group>"; };
 		34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HIG.h"; sourceTree = "<group>"; };
 		34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HIG.m"; sourceTree = "<group>"; };
 		34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HIG.h"; sourceTree = "<group>"; };
 		34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HIG.m"; sourceTree = "<group>"; };
 		34E344F81CD4EFA800677B09 /* HIGCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGCommon.h; sourceTree = "<group>"; };
+		34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptionsTest.m; sourceTree = "<group>"; };
 		34F873FC1CDA134400674E6C /* HIGExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGExporting.h; sourceTree = "<group>"; };
 		34F873FD1CDA134400674E6C /* HIGExporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGExporting.m; sourceTree = "<group>"; };
 		34F874001CDA15AC00674E6C /* HIGProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGProtocol.h; sourceTree = "<group>"; };
@@ -59,6 +84,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		348F281B1CDB790F005CA399 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				348F28231CDB790F005CA399 /* Highcharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,10 +109,11 @@
 		343E13801C38513D006DDD68 = {
 			isa = PBXGroup;
 			children = (
+				3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */,
 				3408AFC41C4FD61000A37AF5 /* Supporting Files */,
 				343E138C1C38513D006DDD68 /* Highcharts */,
-				3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */,
 				343E138D1C38513D006DDD68 /* Highcharts.h */,
+				348F281F1CDB790F005CA399 /* HighchartsTests */,
 				343E138B1C38513D006DDD68 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				343E138A1C38513D006DDD68 /* Highcharts.framework */,
+				348F281E1CDB790F005CA399 /* HighchartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +134,20 @@
 				34A531C91CCE494E0014124A /* Public */,
 			);
 			path = Highcharts;
+			sourceTree = "<group>";
+		};
+		348F281F1CDB790F005CA399 /* HighchartsTests */ = {
+			isa = PBXGroup;
+			children = (
+				348F28221CDB790F005CA399 /* Info.plist */,
+				348F28291CDB7998005CA399 /* UIColorTests.m */,
+				348F282D1CDB7CB0005CA399 /* HIGJavaScriptTests.m */,
+				34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */,
+				348F28311CDB8459005CA399 /* HIGHTMLTests.m */,
+				34B60A6E1CDB8EE300FEFA7A /* TestTemplate.html */,
+				34B60A701CDB909A00FEFA7A /* TestResult.html */,
+			);
+			path = HighchartsTests;
 			sourceTree = "<group>";
 		};
 		34A531C81CCE49470014124A /* Private */ = {
@@ -175,6 +224,24 @@
 			productReference = 343E138A1C38513D006DDD68 /* Highcharts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		348F281D1CDB790F005CA399 /* HighchartsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 348F28281CDB790F005CA399 /* Build configuration list for PBXNativeTarget "HighchartsTests" */;
+			buildPhases = (
+				348F281A1CDB790F005CA399 /* Sources */,
+				348F281B1CDB790F005CA399 /* Frameworks */,
+				348F281C1CDB790F005CA399 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				348F28251CDB790F005CA399 /* PBXTargetDependency */,
+			);
+			name = HighchartsTests;
+			productName = HighchartsTests;
+			productReference = 348F281E1CDB790F005CA399 /* HighchartsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,6 +252,9 @@
 				ORGANIZATIONNAME = "Highsoft AS";
 				TargetAttributes = {
 					343E13891C38513D006DDD68 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					348F281D1CDB790F005CA399 = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
@@ -202,6 +272,7 @@
 			projectRoot = "";
 			targets = (
 				343E13891C38513D006DDD68 /* Highcharts */,
+				348F281D1CDB790F005CA399 /* HighchartsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,6 +283,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		348F281C1CDB790F005CA399 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34B60A6F1CDB8EE300FEFA7A /* TestTemplate.html in Resources */,
+				34B60A731CDB909A00FEFA7A /* TestResult.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +313,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		348F281A1CDB790F005CA399 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				348F282A1CDB7998005CA399 /* UIColorTests.m in Sources */,
+				348F282E1CDB7CB0005CA399 /* HIGJavaScriptTests.m in Sources */,
+				348557771CDB9AB9008829B6 /* HIGHTMLTests.m in Sources */,
+				34EC1CF61CDCC783001DB3A0 /* HIGOptionsTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		348F28251CDB790F005CA399 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 343E13891C38513D006DDD68 /* Highcharts */;
+			targetProxy = 348F28241CDB790F005CA399 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		343E13901C38513D006DDD68 /* Debug */ = {
@@ -368,6 +467,30 @@
 			};
 			name = Release;
 		};
+		348F28261CDB790F005CA399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = HighchartsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.highsoft.HighchartsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		348F28271CDB790F005CA399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = HighchartsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.highsoft.HighchartsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -385,6 +508,15 @@
 			buildConfigurations = (
 				343E13931C38513D006DDD68 /* Debug */,
 				343E13941C38513D006DDD68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		348F28281CDB790F005CA399 /* Build configuration list for PBXNativeTarget "HighchartsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				348F28261CDB790F005CA399 /* Debug */,
+				348F28271CDB790F005CA399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
