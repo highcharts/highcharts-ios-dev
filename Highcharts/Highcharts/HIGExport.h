@@ -1,5 +1,5 @@
 //
-//  HIGExporting.h
+//  HIGExport.h
 //  Highcharts
 //
 //  License: www.highcharts.com/license
@@ -8,6 +8,6 @@
 
 #import "HIGProtocol.h"
 
-@interface HIGExporting : NSObject
+@interface HIGExport : NSObject
 
 @end

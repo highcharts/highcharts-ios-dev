@@ -43,7 +43,7 @@
 	/**
 	 * Add a new method to the Chart object to perform a local download
 	 */
-	Highcharts.Chart.prototype.exportChartLocal = function (exportingOptions, chartOptions) {
+	Highcharts.Chart.prototype.exportChartLocal = function (exportingOptions, chartOptions, objc) {
 		var chart = this,
 			options = Highcharts.merge(chart.options.exporting, exportingOptions),
 			webKit = nav.userAgent.indexOf('WebKit') > -1 && nav.userAgent.indexOf('Chrome') < 0, // Webkit and not chrome
@@ -168,7 +168,9 @@
 						}
 					} catch (e) {
 						// window.open failed, trying location.href
-						win.location.href = dataURL;
+                        var params = {};
+                        params.image = dataURL;
+                        win.location.href = 'hig://'+objc.action+'#' + escape((JSON.stringify(params)));
 					}
 				}
 			},
@@ -300,21 +302,14 @@
 	Highcharts.getOptions().exporting.buttons.contextButton.menuItems = [{
 		textKey: 'printChart',
 		onclick: function () {
-			this.print();
+            this.exportChartLocal(null, null, { action:'print'} );
 		}
 	}, {
 		separator: true
 	}, {
 		textKey: 'downloadPNG',
 		onclick: function () {
-			this.exportChartLocal();
-		}
-	}, {
-		textKey: 'downloadSVG',
-		onclick: function () {
-			this.exportChartLocal({
-				type: 'image/svg+xml'
-			});
+            this.exportChartLocal(null, null, { action:'export'} );
 		}
 	}];
 

@@ -6,17 +6,17 @@
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import "HIGExporting.h"
+#import "HIGExport.h"
 
-@interface HIGExporting ()
+@interface HIGExport ()
 
 @property (weak, nonatomic) UIViewController *viewController;
 
 @end
 
-@implementation HIGExporting
+@implementation HIGExport
 
-- (void)response:(NSDictionary*)params
+- (void)response:(NSDictionary*)params;
 {
     NSString *imageBase64 = [params[@"image"] stringByReplacingOccurrencesOfString:@"data:image/png;base64," withString:@""];
     
@@ -24,10 +24,10 @@
     
     UIImage *image = [UIImage imageWithData:data];
     
-    [self activityController:@[image]];
+    [self action:@[image]];
 }
 
-- (void)activityController:(NSArray*)objects;
+- (void)action:(NSArray*)objects;
 {
     if (!objects) {
         return;

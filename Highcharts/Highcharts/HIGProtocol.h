@@ -15,6 +15,9 @@
 - (void)response:(NSDictionary*)params;
 
 @optional
+
+- (void)action:(NSArray*)objects;
+
 @property (weak, nonatomic) UIViewController *viewController;
 
 @end
