@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <Highcharts/Highcharts.h>
 
 @interface AppDelegate ()
 
@@ -18,9 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-#ifdef DEBUG
-    NSLog(@"%@", NSTemporaryDirectory());
-#endif
+    
+    [HIGChartView preload];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

@@ -36,7 +36,7 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Theme" style:UIBarButtonItemStyleDone target:self action:@selector(presentThemeSelector)];
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Plugin" style:UIBarButtonItemStyleDone target:self action:@selector(presentPluginSelector)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Plugin" style:UIBarButtonItemStyleDone target:self action:@selector(presentPluginSelector)];
     
     self.demos = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Demos" ofType:@"plist"]];
 }

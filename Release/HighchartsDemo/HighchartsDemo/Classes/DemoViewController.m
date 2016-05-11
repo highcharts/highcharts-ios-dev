@@ -35,11 +35,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-
+    
     self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
     self.chartView.options = self.options;
     self.chartView.theme = self.theme;
     self.chartView.plugins = self.plugins;
+    self.chartView.viewController = self;
     
     [self.view addSubview:self.chartView];
 }

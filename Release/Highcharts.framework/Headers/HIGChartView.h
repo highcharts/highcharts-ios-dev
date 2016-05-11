@@ -17,4 +17,8 @@
 
 @property (assign, nonatomic) BOOL debug;
 
+@property (weak, nonatomic) UIViewController *viewController;
+
++ (void)preload;
+
 @end

@@ -31,6 +31,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        
         self.highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
         
         self.HTML = [[HIGHTML alloc] init];
