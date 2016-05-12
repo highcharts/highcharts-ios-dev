@@ -42,7 +42,7 @@
 {
     [super viewWillAppear:animated];
     
-    [self.tableView selectRowAtIndexPath:self.selectedRow animated:NO scrollPosition:UITableViewScrollPositionNone];
+//    [self.tableView selectRowAtIndexPath:self.selectedRow animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,21 +78,28 @@
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSIndexPath *oldIndex = [self.tableView indexPathForSelectedRow];
+    NSIndexPath *oldIndex = self.selectedRow;
     
     [self.tableView cellForRowAtIndexPath:oldIndex].accessoryType = UITableViewCellAccessoryNone;
-    [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = (oldIndex == indexPath) ? UITableViewCellAccessoryNone : UITableViewCellAccessoryCheckmark;
     
-    self.selectedRow = (oldIndex == indexPath) ? nil : indexPath;
+    if ([indexPath isEqual:oldIndex]) {
+        
+        [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+        [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+        self.selectedRow = nil;
+        self.itemsSelected = nil;
+        return nil;
+    }
     
-    return (oldIndex == indexPath) ? nil : indexPath;
+    if (![indexPath isEqual:oldIndex]) {
+        [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+        self.selectedRow = [indexPath copy];
+    }
+    
+    return indexPath;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!indexPath) {
-        self.itemsSelected = nil;
-        return;
-    }
     
     if (self.multiple) {
         self.itemsSelected = [[self.items objectAtIndex:indexPath.row][@"items"] copy];
