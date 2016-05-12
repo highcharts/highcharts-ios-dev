@@ -33,6 +33,9 @@ There is `DemoCharts.xcodeproj` that contains few example charts.
 // Import Higcharts framework header
 #import <Highcharts/Highcharts.h>
 
+// This is needed before any chart view is initialized. Yo need do it only once. Egz. When starting your app.
+[HighchartsView preload];
+
 // Init HighchartView with desired frame.
 HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
 
@@ -69,3 +72,75 @@ highchartsView.options = @{
 [self.view addSubview:self.highchartsView];
 
 ```
+
+### Non static data
+If data you want to display is not static egz. from network or user input, of course you can do that.
+
+```
+
+// Make sure data you want to display is in proper format. See exaples or API documentation.
+NSArray *data = ...
+
+// Load your chart.
+highchartsView.options = @{
+
+    @"chart": @{
+        @"type": @"line"
+    },
+    @"title": @{
+        @"text": @"Non static chart"
+    },
+    @"series": data
+    
+};
+
+```
+## HTML #808080?
+You can but dont need to use HTML colors. Simply initialize UIColor like you always do.
+
+```
+
+UIColor *myColor = [UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:0.502];
+
+...
+
+@"yAxis" : @{
+    @"title" : @{
+        @"text" : @"Temperature (°C)"
+    },
+    @"plotLines" : @[@{
+        @"value" : @0,
+        @"width" : @1,
+        @"color" : [myColor color]
+    }]
+}
+
+...
+
+```
+
+## Local images
+Some times you will ned to load image asset that you need to display on chart.
+
+```
+UIImage *myImage = [UIImage imageNamed:@"myImage.png"];
+
+...
+
+@"series" : @[@{
+    @"name" : @"Tokyo",
+    @"marker" : @{
+        @"symbol" : @"square"
+    },
+    @"data" : @[@7.0, @6.9, @9.5, @14.5, @18.2, @21.5, @25.2, @{
+        @"y" : @26.5,
+        @"marker" : @{
+            @"symbol" : [myImage image]
+        }
+    }, @23.3, @18.3, @13.9, @9.6]
+}
+
+...
+
+```
+
