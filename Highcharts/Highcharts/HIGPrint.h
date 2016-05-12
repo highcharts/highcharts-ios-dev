@@ -8,6 +8,9 @@
 
 #import "HIGProtocol.h"
 
+/**
+ *  Plugin Class Required to print functionality.
+ */
 @interface HIGPrint : NSObject
 
 @end

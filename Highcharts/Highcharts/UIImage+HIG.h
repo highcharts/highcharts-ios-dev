@@ -10,6 +10,12 @@
 
 @interface UIImage (HIG)
 
+/**
+ *  Image class category. This saves image in file system and returns image
+ *  string representation.
+ *
+ *  @return image path.
+ */
 - (NSString*)image;
 
 @end

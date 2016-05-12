@@ -8,6 +8,9 @@
 
 #import "HIGProtocol.h"
 
+/**
+ *  Plugin Class Required to export functionality.
+ */
 @interface HIGExport : NSObject
 
 @end

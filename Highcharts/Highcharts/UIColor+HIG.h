@@ -10,6 +10,11 @@
 
 @interface UIColor (HIG)
 
+/**
+ *  Color class category. Creating HTML string representation of UIColor object.
+ *
+ *  @return color as html string egz. #808080
+ */
 - (NSString*)color;
 
 @end
