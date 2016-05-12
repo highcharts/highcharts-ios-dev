@@ -39,8 +39,7 @@
     
     UIPrintInteractionCompletionHandler completionHandler = ^(UIPrintInteractionController *printController, BOOL completed, NSError *error) {
         if(!completed && error){
-            NSLog(@"Print failed - domain: %@ error code %u", error.domain,
-                 error.code);
+            NSLog(@"Print failed - domain: %@ error code %ld", error.domain, (long)error.code);
         }
     };
     
