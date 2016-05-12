@@ -7,11 +7,12 @@
 //
 
 #import "HIGChartView.h"
-#import "HIGCommon.h"
 #import <WebKit/WebKit.h>
 #import "HIGBundle.h"
 #import "HIGHTML.h"
 #import "HIGProtocol.h"
+
+#define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
 @interface HIGChartView () <WKNavigationDelegate>
 @property (nonatomic, strong) WKWebView *webView;
