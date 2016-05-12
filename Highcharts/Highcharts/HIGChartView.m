@@ -45,7 +45,7 @@
         }
         
         self.webView = [[WKWebView alloc] initWithFrame:frame];
-        self.webView.scrollView.scrollEnabled = NO;
+//        self.webView.scrollView.scrollEnabled = NO;
         self.webView.navigationDelegate = self;
         
         self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
