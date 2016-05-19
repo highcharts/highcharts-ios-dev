@@ -87,15 +87,14 @@ highchartsView.options = ...;
 
 ```
 
-List avaiable themes in distribution:
+#### List avaiable themes in distribution:
 
-```
-dark-unica
 
-sand-signika
-
-grid-light
-```
+Name         |
+------------ |
+dark-unica   |
+sand-signika |
+grid-light   |
 
 ## Plugins
 Some time's or dependig from your needs you will need to use/load plugins that view reqires for proper display or extend functionality.
