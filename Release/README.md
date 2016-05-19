@@ -73,15 +73,15 @@ highchartsView.options = @{
 
 ```
 
-### Themes
+## Themes
 You can change look of you chart by loading theme.
 
 ```
 HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
 
-chartView.theme = @"dark-unica"
+highchartsView.theme = @"dark-unica";
 
-highchartsView.options = ...
+highchartsView.options = ...;
 
 [self.view addSubview:self.highchartsView];
 
@@ -97,8 +97,40 @@ sand-signika
 grid-light
 ```
 
+## Plugins
+Some time's or dependig from your needs you will need to use/load plugins that view reqires for proper display or extend functionality.
 
-### Non static data
+```
+HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
+
+highchartsView.plugins = @[ @"exporting", ...];
+
+highchartsView.options = ...;
+
+[self.view addSubview:self.highchartsView];
+
+```
+
+#### Plugins that extends functionality,
+
+Name         | Description
+------------ | -------------
+exporting    | This plugin allows export to photos, or share menu.
+
+
+## Errors
+
+#### Plugins, Themes
+
+When loading of plugin or theme fails there is Log on console
+
+`[Highcharts]: /js/plugins/dummy.js dont exist!`
+
+If this happens check that you are initializing Highcharts properly and plugin / theme you are loading exist.
+
+## FAQ
+
+#### How to ues non static data in chart, from array or later from network?
 If data you want to display is not static egz. from network or user input, of course you can do that.
 
 ```
@@ -120,7 +152,8 @@ highchartsView.options = @{
 };
 
 ```
-## HTML #808080?
+
+#### How to ues UIColor objent not HTML
 You can but dont need to use HTML colors. Simply initialize UIColor like you always do.
 
 ```
@@ -144,7 +177,7 @@ UIColor *myColor = [UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:0.50
 
 ```
 
-## Local images
+### How to use custom UIImage loaded from bundle?
 Some times you will ned to load image asset that you need to display on chart.
 
 ```
