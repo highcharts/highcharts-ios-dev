@@ -41,17 +41,17 @@
         return;
     }
     
-    if (!prefix) {
-        prefix = @"js/";
-    }
-    
-    if (!suffix) {
-        suffix = @".js";
-    }
-    
     NSString *template = @"<script src=\"%@%@%@\"></script>\n";
     
     for (NSString *js in files) {
+        
+        NSString *jsFileName = [NSString stringWithFormat:@"%@%@%@", prefix, js, suffix];
+        NSString *jsFilePath = [self.baseURL stringByAppendingPathComponent:jsFileName];
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:jsFilePath]) {
+            NSLog(@"[ Highcharts ]: %@, dont exits!", jsFileName);
+            continue;
+        }
         self.scripts = [self.scripts stringByAppendingString:[NSString stringWithFormat:template, prefix, js, suffix]];
     }
 }

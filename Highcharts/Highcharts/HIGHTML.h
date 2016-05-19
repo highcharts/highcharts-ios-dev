@@ -14,6 +14,11 @@
 @interface HIGHTML : NSObject
 
 /**
+ *  This is base ULRL path for bundle.
+ */
+@property (strong, nonatomic) NSString *baseURL;
+
+/**
  *  This is parsed HTML.
  */
 @property (strong, readonly) NSString *html;

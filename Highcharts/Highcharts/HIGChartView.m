@@ -37,6 +37,8 @@
         
         self.HTML = [[HIGHTML alloc] init];
         
+        self.HTML.baseURL = [self.highchartsBundle bundlePath];
+        
         [self.HTML loadHTML:[self.highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
         
         NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
@@ -62,10 +64,9 @@
     
     NSString *suffix = self.debug ? @".src.js" : @".js";
     
-    [self.HTML prepareJavaScript:@[@"highcharts"] prefix:nil suffix:suffix];
+    [self.HTML prepareJavaScript:@[@"highcharts"] prefix:@"js/" suffix:suffix];
     [self.HTML prepareJavaScript:self.plugins prefix:@"js/modules/" suffix:suffix];
-    [self.HTML prepareJavaScript:self.theme?@[self.theme]:nil prefix:@"js/themes/" suffix:nil];
-    
+    [self.HTML prepareJavaScript:self.theme?@[self.theme]:nil prefix:@"js/themes/" suffix:@".js"];
     
     [self.HTML prepareOptions:self.options];
     
