@@ -73,6 +73,31 @@ highchartsView.options = @{
 
 ```
 
+### Themes
+You can change look of you chart by loading theme.
+
+```
+HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
+
+chartView.theme = @"dark-unica"
+
+highchartsView.options = ...
+
+[self.view addSubview:self.highchartsView];
+
+```
+
+List avaiable themes in distribution:
+
+```
+dark-unica
+
+sand-signika
+
+grid-light
+```
+
+
 ### Non static data
 If data you want to display is not static egz. from network or user input, of course you can do that.
 
