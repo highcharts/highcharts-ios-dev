@@ -67,6 +67,22 @@
 {
     self.html = [self.html stringByReplacingOccurrencesOfString:@"{{script}}" withString:self.scripts?:@""];
     
+//    NSString *tmpOptions = [self.options stringByReplacingOccurrencesOfString:@"\"{code}" withString:@""];
+//    tmpOptions = [tmpOptions stringByReplacingOccurrencesOfString:@"{code}\"" withString:@""];
+    
+//    NSString *code = @"function() { var params = {}; params.value = this.value; win.location.href = 'formatter://test#' + escape((JSON.stringify(params)));  return this.value;}";
+    
+    
+    
+    NSString *formatter = @"function() { window.webkit.messageHandlers.formatter.postMessage(this.value); return this.value;}";
+    self.options = [self.options stringByReplacingOccurrencesOfString:@"\"{{formatter}}\"" withString:formatter];
+    
+//    NSString *event = @"function(e) { console.log( Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', e.xAxis[0].value), e.yAxis[0].value ); window.webkit.messageHandlers.eventz.postMessage(event.yAxis[0].value);}";
+
+        NSString *event = @"function(e) { window.webkit.messageHandlers.eventz.postMessage(1);}";
+    
+    self.options = [self.options stringByReplacingOccurrencesOfString:@"\"{{eventz}}\"" withString:event];
+    
     self.html = [self.html stringByReplacingOccurrencesOfString:@"{{options}}" withString:self.options?:@""];
 }
 
