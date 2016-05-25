@@ -11,6 +11,7 @@
 #import "HIGBundle.h"
 #import "HIGHTML.h"
 #import "HIGProtocol.h"
+#import "HIGOptions.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
@@ -62,9 +63,12 @@
 {
     [super didMoveToSuperview];
     
+    NSDictionary *plugin = [HIGOptions pluginForOptions:self.options];
+    
     NSString *suffix = self.debug ? @".src.js" : @".js";
     
     [self.HTML prepareJavaScript:@[@"highcharts"] prefix:@"js/" suffix:suffix];
+    [self.HTML prepareJavaScript:@[plugin[@"name"]] prefix:plugin[@"prefix"] suffix:@".js"];
     [self.HTML prepareJavaScript:self.plugins prefix:@"js/modules/" suffix:suffix];
     [self.HTML prepareJavaScript:self.theme?@[self.theme]:nil prefix:@"js/themes/" suffix:@".js"];
     

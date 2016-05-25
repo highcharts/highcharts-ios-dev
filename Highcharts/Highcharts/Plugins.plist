@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PLUGIN_NAME_KEY</key>
+	<dict>
+		<key>prefix</key>
+		<string>PATH_PREFIX</string>
+		<key>name</key>
+		<string>FILE_NAME</string>
+		<key>suffix</key>
+		<string>PATH_SUFFIX</string>
+	</dict>
+</dict>
+</plist>

@@ -31,4 +31,15 @@
     return [tmpOptions copy];
 }
 
++ (NSDictionary*)pluginForOptions:(NSDictionary*)options;
+{
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    
+    NSDictionary *plugins = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"Plugins" ofType:@"plist"]];
+    
+    NSString *plugin = options[@"chart"][@"type"];
+    
+    return plugins[plugin];
+}
+
 @end

@@ -22,4 +22,13 @@
  */
 + (NSDictionary*)addOptions:(NSDictionary*)options;
 
+/**
+ *  Return
+ *
+ *  @param options object for searching.
+ *
+ *  @return return plugin name to load.
+ */
++ (NSDictionary*)pluginForOptions:(NSDictionary*)options;
+
 @end
