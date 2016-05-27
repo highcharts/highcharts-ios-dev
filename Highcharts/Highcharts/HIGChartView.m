@@ -11,7 +11,7 @@
 #import "HIGBundle.h"
 #import "HIGHTML.h"
 #import "HIGProtocol.h"
-#import "HIGOptions.h"
+#import "HIGDependency.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
@@ -32,7 +32,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
         
         self.highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
         
@@ -63,14 +62,25 @@
 {
     [super didMoveToSuperview];
     
-    NSDictionary *plugin = [HIGOptions pluginForOptions:self.options];
-    
     NSString *suffix = self.debug ? @".src.js" : @".js";
     
-    [self.HTML prepareJavaScript:@[@"highcharts"] prefix:@"js/" suffix:suffix];
-    [self.HTML prepareJavaScript:@[plugin[@"name"]] prefix:plugin[@"prefix"] suffix:@".js"];
-    [self.HTML prepareJavaScript:self.plugins prefix:@"js/modules/" suffix:suffix];
-    [self.HTML prepareJavaScript:self.theme?@[self.theme]:nil prefix:@"js/themes/" suffix:@".js"];
+    // Load Highchart main script.
+    [self.HTML prepareJavaScript:@"highcharts" prefix:@"js/" suffix:suffix];
+    
+    // If Module is needed in chart to work is loaded here.
+    NSArray *plugins = [HIGDependency pluginsForOptions:self.options];
+    
+    self.plugins = [self.plugins arrayByAddingObjectsFromArray:plugins];
+    
+    self.plugins = [[NSOrderedSet orderedSetWithArray:self.plugins] array];
+    
+    // Load Array of modules user added.
+    for (NSString *plugin in self.plugins) {
+        [self.HTML prepareJavaScript:plugin prefix:@"js/modules/" suffix:suffix];
+    }
+    
+    // Load theme js, only one.
+    [self.HTML prepareJavaScript:self.theme?:nil prefix:@"js/themes/" suffix:@".js"];
     
     [self.HTML prepareOptions:self.options];
     

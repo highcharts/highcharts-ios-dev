@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "HIGOptions.h"
+#import "HIGDependency.h"
 
 @interface HIGOptionsTest : XCTestCase
 

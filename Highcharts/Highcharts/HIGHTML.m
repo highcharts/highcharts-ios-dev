@@ -7,7 +7,7 @@
 //
 
 #import "HIGHTML.h"
-#import "HIGOptions.h"
+#import "HIGDependency.h"
 #import "HIGJavaScript.h"
 
 @interface HIGHTML ()
@@ -35,30 +35,28 @@
     self.scripts = @"";
 }
 
-- (void)prepareJavaScript:(NSArray*)files prefix:(NSString*)prefix suffix:(NSString*)suffix;
+- (void)prepareJavaScript:(NSString*)js prefix:(NSString*)prefix suffix:(NSString*)suffix;
 {
-    if (!files) {
+    if (!js) {
         return;
     }
     
     NSString *template = @"<script src=\"%@%@%@\"></script>\n";
     
-    for (NSString *js in files) {
-        
-        NSString *jsFileName = [NSString stringWithFormat:@"%@%@%@", prefix, js, suffix];
-        NSString *jsFilePath = [self.baseURL stringByAppendingPathComponent:jsFileName];
-        
-        if (![[NSFileManager defaultManager] fileExistsAtPath:jsFilePath]) {
-            NSLog(@"[ Highcharts ]: %@, dont exits!", jsFileName);
-            continue;
-        }
-        self.scripts = [self.scripts stringByAppendingString:[NSString stringWithFormat:template, prefix, js, suffix]];
+    NSString *jsFileName = [NSString stringWithFormat:@"%@%@%@", prefix, js, suffix];
+    NSString *jsFilePath = [self.baseURL stringByAppendingPathComponent:jsFileName];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:jsFilePath]) {
+        NSLog(@"[ Highcharts ]: %@, dont exits!", jsFileName);
+        return;
     }
+    
+    self.scripts = [self.scripts stringByAppendingString:[NSString stringWithFormat:template, prefix, js, suffix]];
 }
 
 - (void)prepareOptions:(NSDictionary*)options;
 {
-    options = [HIGOptions addOptions:options];
+    options = [HIGDependency addOptions:options];
     
     self.options = [self.js JSObject:options];
 }

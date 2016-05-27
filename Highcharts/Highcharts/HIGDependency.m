@@ -1,14 +1,14 @@
 //
-//  HIGOptions.m
+//  HIGDependency.m
 //  Highcharts
 //
 //  License: www.highcharts.com/license
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
-#import "HIGOptions.h"
+#import "HIGDependency.h"
 
-@implementation HIGOptions
+@implementation HIGDependency
 
 + (NSDictionary*)addOptions:(NSDictionary*)options;
 {
@@ -31,15 +31,24 @@
     return [tmpOptions copy];
 }
 
-+ (NSDictionary*)pluginForOptions:(NSDictionary*)options;
++ (NSArray*)pluginsForOptions:(NSDictionary*)options;
+{
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    
+    NSDictionary *plugins = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"Charts" ofType:@"plist"]];
+    
+    NSString *chart = options[@"chart"][@"type"];
+    
+    return plugins[chart] ? : nil;
+}
+
++ (NSArray*)pluginsForPlugin:(NSString*)plugin
 {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     
     NSDictionary *plugins = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"Plugins" ofType:@"plist"]];
     
-    NSString *plugin = options[@"chart"][@"type"];
-    
-    return plugins[plugin];
+    return plugins[plugin] ? : @[plugin];
 }
 
 @end

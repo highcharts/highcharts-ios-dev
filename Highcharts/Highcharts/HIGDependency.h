@@ -1,5 +1,5 @@
 //
-//  HIGOptions.h
+//  HIGDependency.h
 //  Highcharts
 //
 //  License: www.highcharts.com/license
@@ -11,7 +11,7 @@
 /**
  *  Options to prepare before inserting to html/js variables.
  */
-@interface HIGOptions : NSObject
+@interface HIGDependency : NSObject
 
 /**
  *  Prepares options object and adds requireds params.
@@ -23,12 +23,21 @@
 + (NSDictionary*)addOptions:(NSDictionary*)options;
 
 /**
- *  Return
+ *  Return plugins required to chart render.
  *
  *  @param options object for searching.
  *
  *  @return return plugin name to load.
  */
-+ (NSDictionary*)pluginForOptions:(NSDictionary*)options;
++ (NSArray*)pluginsForOptions:(NSDictionary*)options;
+
+/**
+ *  Returns additional plugins if are required to plugin dependency.
+ *
+ *  @param plugin name to search for dependency.
+ *
+ *  @return list of plugins dependency.
+ */
++ (NSArray*)pluginsForPlugin:(NSString*)plugin;
 
 @end

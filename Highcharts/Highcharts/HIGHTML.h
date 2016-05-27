@@ -37,7 +37,7 @@
  *  @param prefix JS files prefix default 'js/'
  *  @param suffix JS files suffix default '.js'
  */
-- (void)prepareJavaScript:(NSArray*)files prefix:(NSString*)prefix suffix:(NSString*)suffix;
+- (void)prepareJavaScript:(NSString*)js prefix:(NSString*)prefix suffix:(NSString*)suffix;
 
 /**
  *  Prepare options objective-c object to JS representation.

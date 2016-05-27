@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342B40E81CF8821400B09FA1 /* Charts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 342B40E71CF8821400B09FA1 /* Charts.plist */; };
 		343E138E1C38513D006DDD68 /* Highcharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 343E138D1C38513D006DDD68 /* Highcharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 345BA00E1C39AFB9001DAB1B /* HIGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIGChartView.m */; };
@@ -21,8 +22,8 @@
 		34AFDA6A1CD3A6F500BE07CE /* HIGBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA681CD3A6F500BE07CE /* HIGBundle.m */; };
 		34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */; };
 		34AFDA6E1CD3AD0600BE07CE /* HIGHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */; };
-		34AFDA751CD3B3EE00BE07CE /* HIGOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA731CD3B3EE00BE07CE /* HIGOptions.h */; };
-		34AFDA761CD3B3EE00BE07CE /* HIGOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA741CD3B3EE00BE07CE /* HIGOptions.m */; };
+		34AFDA751CD3B3EE00BE07CE /* HIGDependency.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA731CD3B3EE00BE07CE /* HIGDependency.h */; };
+		34AFDA761CD3B3EE00BE07CE /* HIGDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA741CD3B3EE00BE07CE /* HIGDependency.m */; };
 		34B60A6F1CDB8EE300FEFA7A /* TestTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 34B60A6E1CDB8EE300FEFA7A /* TestTemplate.html */; };
 		34B60A731CDB909A00FEFA7A /* TestResult.html in Resources */ = {isa = PBXBuildFile; fileRef = 34B60A701CDB909A00FEFA7A /* TestResult.html */; };
 		34BD98E91CE0831D00D24A8C /* HIGPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 34BD98E71CE0831D00D24A8C /* HIGPrint.h */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		342B40E71CF8821400B09FA1 /* Charts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Charts.plist; sourceTree = "<group>"; };
 		343E138A1C38513D006DDD68 /* Highcharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Highcharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343E138D1C38513D006DDD68 /* Highcharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Highcharts.h; path = Highcharts/Highcharts.h; sourceTree = "<group>"; };
 		343E138F1C38513D006DDD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Highcharts/Info.plist; sourceTree = "<group>"; };
@@ -67,8 +69,8 @@
 		34AFDA681CD3A6F500BE07CE /* HIGBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGBundle.m; sourceTree = "<group>"; };
 		34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGHTML.h; sourceTree = "<group>"; };
 		34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGHTML.m; sourceTree = "<group>"; };
-		34AFDA731CD3B3EE00BE07CE /* HIGOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGOptions.h; sourceTree = "<group>"; };
-		34AFDA741CD3B3EE00BE07CE /* HIGOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptions.m; sourceTree = "<group>"; };
+		34AFDA731CD3B3EE00BE07CE /* HIGDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGDependency.h; sourceTree = "<group>"; };
+		34AFDA741CD3B3EE00BE07CE /* HIGDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGDependency.m; sourceTree = "<group>"; };
 		34B60A6E1CDB8EE300FEFA7A /* TestTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestTemplate.html; sourceTree = "<group>"; };
 		34B60A701CDB909A00FEFA7A /* TestResult.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestResult.html; sourceTree = "<group>"; };
 		34BD98E71CE0831D00D24A8C /* HIGPrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGPrint.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				34A531C81CCE49470014124A /* Private */,
 				34A531C91CCE494E0014124A /* Public */,
 				348675451CF5BB0300FB5E54 /* Plugins.plist */,
+				342B40E71CF8821400B09FA1 /* Charts.plist */,
 			);
 			path = Highcharts;
 			sourceTree = "<group>";
@@ -162,8 +165,8 @@
 				34AFDA681CD3A6F500BE07CE /* HIGBundle.m */,
 				34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */,
 				34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */,
-				34AFDA731CD3B3EE00BE07CE /* HIGOptions.h */,
-				34AFDA741CD3B3EE00BE07CE /* HIGOptions.m */,
+				34AFDA731CD3B3EE00BE07CE /* HIGDependency.h */,
+				34AFDA741CD3B3EE00BE07CE /* HIGDependency.m */,
 				3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */,
 				3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */,
 				34F873FC1CDA134400674E6C /* HIGExport.h */,
@@ -199,7 +202,7 @@
 				34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */,
 				345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */,
 				34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */,
-				34AFDA751CD3B3EE00BE07CE /* HIGOptions.h in Headers */,
+				34AFDA751CD3B3EE00BE07CE /* HIGDependency.h in Headers */,
 				34F873FE1CDA134400674E6C /* HIGExport.h in Headers */,
 				3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */,
 				343E138E1C38513D006DDD68 /* Highcharts.h in Headers */,
@@ -290,6 +293,7 @@
 			files = (
 				34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */,
 				348675461CF5BB0300FB5E54 /* Plugins.plist in Resources */,
+				342B40E81CF8821400B09FA1 /* Charts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +319,7 @@
 				34E28E4B1CD10CA300DFE9CD /* UIImage+HIG.m in Sources */,
 				34BD98EA1CE0831D00D24A8C /* HIGPrint.m in Sources */,
 				34AFDA6A1CD3A6F500BE07CE /* HIGBundle.m in Sources */,
-				34AFDA761CD3B3EE00BE07CE /* HIGOptions.m in Sources */,
+				34AFDA761CD3B3EE00BE07CE /* HIGDependency.m in Sources */,
 				34E28E471CD1071C00DFE9CD /* UIColor+HIG.m in Sources */,
 				345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */,
 			);
