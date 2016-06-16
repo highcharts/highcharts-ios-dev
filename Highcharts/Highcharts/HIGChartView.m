@@ -62,15 +62,21 @@
 {
     [super didMoveToSuperview];
     
+    self.plugins = @[];
+    
     NSString *suffix = self.debug ? @".src.js" : @".js";
     
-    // Load Highchart main script.
+    // Load Highchart main scripts.
     [self.HTML prepareJavaScript:@"highcharts" prefix:@"js/" suffix:suffix];
+    [self.HTML prepareJavaScript:@"highcharts-more" prefix:@"js/" suffix:suffix];
+    [self.HTML prepareJavaScript:@"highcharts-3d" prefix:@"js/" suffix:suffix];
     
     // If Module is needed in chart to work is loaded here.
     NSArray *plugins = [HIGDependency pluginsForOptions:self.options];
     
     self.plugins = [self.plugins arrayByAddingObjectsFromArray:plugins];
+    
+    self.plugins = [self.plugins arrayByAddingObjectsFromArray: @[ @"exporting", @"offline-exporting" ] ];
     
     self.plugins = [[NSOrderedSet orderedSetWithArray:self.plugins] array];
     
