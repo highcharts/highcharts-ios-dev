@@ -56,3 +56,5 @@ fastlane/screenshots
 # MacOS X
 .DS_Store
 
+# Project
+/API/dump
