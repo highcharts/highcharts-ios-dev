@@ -222,6 +222,7 @@
 				343E13851C38513D006DDD68 /* Sources */,
 				343E13861C38513D006DDD68 /* Frameworks */,
 				343E13871C38513D006DDD68 /* Headers */,
+				34EC0A9B1D2542BD009016E9 /* ShellScript */,
 				343E13881C38513D006DDD68 /* Resources */,
 			);
 			buildRules = (
@@ -307,6 +308,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34EC0A9B1D2542BD009016E9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${GCC_PREPROCESSOR_DEFINITIONS}\" = \"TRIAL=1\" ]; then\n    uuidgen >> ${BUILT_PRODUCTS_DIR}/$TARGET_NAME.framework/VERSION.txt\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		343E13851C38513D006DDD68 /* Sources */ = {
