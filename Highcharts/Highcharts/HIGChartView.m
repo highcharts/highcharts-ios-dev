@@ -78,10 +78,10 @@
         [self.trialWindow setWindowLevel:UIWindowLevelAlert + 1];
         [self.trialWindow makeKeyAndVisible];
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Highcharts" message:@"Trial Text" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Highcharts for iOS" message:@"This is a free trial. Please contact us to access a fully licensed version of our charts at sales@highsoft.com" preferredStyle:UIAlertControllerStyleAlert];
         
         [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
+            
         }]];
         
         [trialViewController presentViewController:alert animated:YES completion:nil];
