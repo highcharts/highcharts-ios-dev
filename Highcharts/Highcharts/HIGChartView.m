@@ -86,6 +86,10 @@
         
         [trialViewController presentViewController:alert animated:YES completion:nil];
 #endif
+        if (!self.superview) {
+            NSLog(@"Highcharts: Error! Superview is required!");
+            return nil;
+        }
     }
     return self;
 }
