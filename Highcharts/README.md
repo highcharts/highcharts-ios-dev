@@ -12,14 +12,14 @@ Best way to build framework is to use [Carthage](https://github.com/Carthage/Car
 
 - [Install](https://github.com/Carthage/Carthage#installing-carthage) Carthage and follow instructions below to build framework.
 
-## Trial 
+#### Trial 
 This is limited build for trial users with restrictions.
 
 1. run `terminal`
 2. run command ``carthage build --configuration Trial --no-skip-current``
 
 
-## Full
+#### Full
 This is full comercial build for users with license.
 
 1. run `terminal`
@@ -28,4 +28,7 @@ This is full comercial build for users with license.
 Al builds willl be in `Carthage/Build` directory.
 
 ## Tests
+
+Unit Tests as separate TARGET in Xcode project. They can be executed in xcode.
+
 

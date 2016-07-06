@@ -127,6 +127,9 @@ When loading of plugin or theme fails there is Log on console
 
 If this happens check that you are initializing Highcharts properly and plugin / theme you are loading exist.
 
+## Release App to AppStore
+Highcharts is build with [Carthage](https://github.com/Carthage/) when making a realease version of your app to AppStore you need to make certain steps that are described [here](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
+
 ## FAQ
 
 #### How to ues non static data in chart, from array or later from network?
