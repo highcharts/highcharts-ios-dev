@@ -2,9 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CHART_NAME</key>
+	<key>solidgauge</key>
 	<array>
-		<string>PLUGIN_NAME</string>
+		<string>solid-gauge</string>
+	</array>
+	<key>heatmap</key>
+	<array>
+		<string>heatmap</string>
+	</array>
+	<key>treemap</key>
+	<array>
+		<string>treemap</string>
+	</array>
+	<key>funnel</key>
+	<array>
+		<string>funnel</string>
+	</array>
+	<key>pyramid</key>
+	<array>
+		<string>funnel</string>
 	</array>
 </dict>
 </plist>
