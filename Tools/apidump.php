@@ -28,6 +28,11 @@
 		
 		foreach ($items as &$item) {
 			
+			$string = $item->returnType;
+			$item->returnType = str_ireplace($STR_SRCH, $STR_REPL, $string);
+			
+			var_dump($item->returnType);
+			
 			if ($CLEAR) {
 				$item->deprecated = FALSE;
 				$item->seeAlso = "";
@@ -35,12 +40,14 @@
 				$item->since = "";
 			}
 
-			var_dump($item);
+			// var_dump($item);
 		}
 		
-		// file_put_contents($PATH_OUT, $FILE_CONTENT_OUT);
+		$FILE_CONTENT_OUT = json_encode($items);
+
+		file_put_contents($PATH_OUT, $FILE_CONTENT_OUT);
     }
-    
+	
     if (!$argv[1]) {
         echo 'usage: apidump [input file] [output file] -c';
         echo "\n";
@@ -54,9 +61,9 @@
     $DIR_PATH_OUT = $argv[2];
 
     // clear unused items
-    $CLEAR = $argv[3] ? TRUE : FALSE;
+    // $CLEAR = $argv[3] ? TRUE : FALSE;
 
-    apiParse($DIR_PATH_IN, $DIR_PATH_OUT, $CLEAR);
+    apiParse($DIR_PATH_IN, $DIR_PATH_OUT, TRUE);
     
     exit;
 ?>
