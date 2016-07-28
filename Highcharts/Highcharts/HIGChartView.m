@@ -32,6 +32,11 @@
     [HIGBundle preloadBundle:kHighchartsChartBundle];
 }
 
+- (void)reload
+{
+    [self loadChart];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -86,10 +91,7 @@
         
         [trialViewController presentViewController:alert animated:YES completion:nil];
 #endif
-        if (!self.superview) {
-            NSLog(@"Highcharts: Error! Superview is required!");
-            return nil;
-        }
+
     }
     return self;
 }
@@ -98,6 +100,11 @@
 {
     [super didMoveToSuperview];
     
+    [self loadChart];
+}
+
+- (void)loadChart
+{
     self.plugins = @[];
     
     NSString *suffix = self.debug ? @".src.js" : @".js";

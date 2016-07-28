@@ -47,4 +47,6 @@
  */
 + (void)preload;
 
+- (void)reload;
+
 @end
