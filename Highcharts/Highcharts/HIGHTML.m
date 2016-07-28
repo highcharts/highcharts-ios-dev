@@ -11,6 +11,7 @@
 #import "HIGJavaScript.h"
 
 @interface HIGHTML ()
+@property (strong, readwrite) NSString *html_tmp;
 @property (strong, readwrite) NSString *html;
 @property (strong, nonatomic) NSString *scripts;
 @property (strong, nonatomic) NSString *options;
@@ -30,7 +31,9 @@
 
 - (void)loadHTML:(NSString*)path
 {
-    self.html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    self.html_tmp = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    self.html = [self.html_tmp copy];
     
     self.scripts = @"";
 }
@@ -63,7 +66,7 @@
 
 - (void)injectJavaScriptToHTML
 {
-    self.html = [self.html stringByReplacingOccurrencesOfString:@"{{script}}" withString:self.scripts?:@""];
+    self.html = [self.html_tmp stringByReplacingOccurrencesOfString:@"{{script}}" withString:self.scripts?:@""];
     
     self.html = [self.html stringByReplacingOccurrencesOfString:@"{{options}}" withString:self.options?:@""];
 }
