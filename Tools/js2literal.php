@@ -63,6 +63,18 @@
         return 0;
     }
     
+    function parseTemplate($PATH_IN){
+        $TMPL = file_get_contents('./Lib/template.m');
+
+        $FILE_CONTENT = file_get_contents($PATH_IN);
+
+        $FILE_OUT = str_ireplace('{{OPTIONS}}', $FILE_CONTENT, $TMPL);
+
+        file_put_contents($PATH_IN, $FILE_OUT);
+
+        return 0;
+    }
+
     function clean($PATHS) {
         foreach ($PATHS as &$PATH) {
             if ( file_exists($PATH) ) {
@@ -129,6 +141,13 @@
                     continue;
                 }
                 
+                if ( parseTemplate($FILE_PATH_M_OUT) === 1) {
+                    if ($FAIL === FALSE) {
+                        clean($PATHS);
+                    }
+                    continue;
+                }
+
                 unset($PATHS[2]);
                 if ($PART === FALSE) {
                     clean($PATHS);
