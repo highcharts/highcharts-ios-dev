@@ -142,6 +142,14 @@
 {
     NSURL *url = navigationAction.request.URL;
     
+    // Open taped link in external browser.
+    if ([url.scheme isEqualToString:@"http"]) {
+        BOOL openExternalPage = navigationAction.navigationType == WKNavigationTypeOther;
+        if (openExternalPage) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
+    }
+    
     if ([url.scheme isEqualToString:@"hig"]) {
         decisionHandler(WKNavigationActionPolicyCancel);
         
