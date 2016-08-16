@@ -1,14 +1,12 @@
 //
 //  AppDelegate.m
-//  HighchartsDemo
+//  HighFit
 //
 //  License: www.highcharts.com/license
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
-#import <Highcharts/Highcharts.h>
 
 @interface AppDelegate ()
 
@@ -19,19 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [HIGChartView preload];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    RootViewController *rootViewController = [[RootViewController alloc] init];
-    
-    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-    
-    [self.window setRootViewController:navigation];
-    
     return YES;
 }
 
