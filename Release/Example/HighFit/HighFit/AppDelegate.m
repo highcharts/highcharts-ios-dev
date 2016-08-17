@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DashboardViewController.h"
+#import "DataViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    
+    DashboardViewController *dashboard = [[DashboardViewController alloc] init];
+    dashboard.tabBarItem.title = @"Dashboard";
+    
+    DataViewController *data = [[DataViewController alloc] init];
+    data.tabBarItem.title = @"Data";
+    
+    tabBar.viewControllers  = @[dashboard, data];
+    
+    [self.window setRootViewController:tabBar];
+    
     return YES;
 }
 

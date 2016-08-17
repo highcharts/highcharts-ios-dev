@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DataViewController.h
 //  HighFit
 //
 //  License: www.highcharts.com/license
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DataViewController : UIViewController
 
 @end
-
