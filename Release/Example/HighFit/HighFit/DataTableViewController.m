@@ -22,6 +22,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,7 +44,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 
@@ -56,15 +58,34 @@
     
     cell.accessoryView = nil;
     cell.textLabel.text = nil;
+    cell.accessoryType = UITableViewCellAccessoryNone;
     
     if (indexPath.row == 0) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.textLabel.text = @"Show on Dashboard.";
+        
         UISwitch *switchview = [[UISwitch alloc] init];
         [switchview addTarget:self action:@selector(actionSwitch:) forControlEvents:UIControlEventValueChanged];
         cell.accessoryView = switchview;
-        cell.textLabel.text = @"Show on dashboard.";
     }
     
-//    cell.textLabel.text = [self.class objectAtIndex:indexPath.row][@"title"];
+    if (indexPath.row == 1) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.text = @"Show all Data";
+    }
+    
+    if (indexPath.row == 2) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.textLabel.text = @"Unit";
+        
+        UILabel *label = [[UILabel alloc] init];
+        [label setText:self.configuration[@"unit"]];
+        [label setFont:[UIFont systemFontOfSize:16.0f]];
+        [label setTextColor:[UIColor lightGrayColor]];
+        [label sizeToFit];
+        
+        cell.accessoryView = label;
+    }
     
     return cell;
 }

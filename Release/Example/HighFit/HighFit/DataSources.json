@@ -1,10 +1,12 @@
 [
     {
         "title": "Steps",
-        "source": "DataSteps"
+        "source": "DataSteps",
+        "unit": "steps"
     },
     {
         "title": "Calories",
-        "source": "DataCalories"
+        "source": "DataCalories",
+        "unit": "cal."
     }
 ]
