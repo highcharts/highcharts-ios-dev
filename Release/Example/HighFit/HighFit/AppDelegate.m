@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DashboardViewController.h"
-#import "DataViewController.h"
+#import "ListDataTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,13 +26,14 @@
     
     UITabBarController *tabBar = [[UITabBarController alloc] init];
     
+
     DashboardViewController *dashboard = [[DashboardViewController alloc] init];
-    dashboard.tabBarItem.title = @"Dashboard";
+    UINavigationController *navigationDashboard = [[UINavigationController alloc] initWithRootViewController:dashboard];
+
+    ListDataTableViewController *data = [[ListDataTableViewController alloc] initWithNibName:@"ListDataTableViewController" bundle:nil];
+    UINavigationController *navigationData = [[UINavigationController alloc] initWithRootViewController:data];
     
-    DataViewController *data = [[DataViewController alloc] init];
-    data.tabBarItem.title = @"Data";
-    
-    tabBar.viewControllers  = @[dashboard, data];
+    tabBar.viewControllers  = @[navigationDashboard, navigationData];
     
     [self.window setRootViewController:tabBar];
     

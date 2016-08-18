@@ -15,6 +15,11 @@
 		345F5D571D646F87007BC569 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345F5D551D646F87007BC569 /* DashboardViewController.xib */; };
 		345F5D5B1D64702E007BC569 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345F5D591D64702E007BC569 /* DataViewController.m */; };
 		345F5D5C1D64702E007BC569 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345F5D5A1D64702E007BC569 /* DataViewController.xib */; };
+		349F3DF51D65DF4700CC4BFA /* ListDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F3DF31D65DF4700CC4BFA /* ListDataTableViewController.m */; };
+		349F3DF61D65DF4700CC4BFA /* ListDataTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349F3DF41D65DF4700CC4BFA /* ListDataTableViewController.xib */; };
+		349F3DF91D65E63200CC4BFA /* DataSources.json in Resources */ = {isa = PBXBuildFile; fileRef = 349F3DF81D65E63200CC4BFA /* DataSources.json */; };
+		349F3DFD1D65F61000CC4BFA /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F3DFB1D65F61000CC4BFA /* DataTableViewController.m */; };
+		349F3DFE1D65F61000CC4BFA /* DataTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349F3DFC1D65F61000CC4BFA /* DataTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +49,13 @@
 		345F5D581D64702E007BC569 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		345F5D591D64702E007BC569 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		345F5D5A1D64702E007BC569 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
+		349F3DF21D65DF4700CC4BFA /* ListDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDataTableViewController.h; sourceTree = "<group>"; };
+		349F3DF31D65DF4700CC4BFA /* ListDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDataTableViewController.m; sourceTree = "<group>"; };
+		349F3DF41D65DF4700CC4BFA /* ListDataTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDataTableViewController.xib; sourceTree = "<group>"; };
+		349F3DF81D65E63200CC4BFA /* DataSources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataSources.json; sourceTree = "<group>"; };
+		349F3DFA1D65F61000CC4BFA /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
+		349F3DFB1D65F61000CC4BFA /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
+		349F3DFC1D65F61000CC4BFA /* DataTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 		342CEC561D63163700661D50 /* HighFit */ = {
 			isa = PBXGroup;
 			children = (
+				349F3DF71D65E5D300CC4BFA /* Resources */,
 				345F5D5E1D64706D007BC569 /* Views */,
 				345F5D5D1D647065007BC569 /* Models */,
 				342CEC5A1D63163700661D50 /* AppDelegate.h */,
@@ -117,11 +130,25 @@
 				345F5D531D646F87007BC569 /* DashboardViewController.h */,
 				345F5D541D646F87007BC569 /* DashboardViewController.m */,
 				345F5D551D646F87007BC569 /* DashboardViewController.xib */,
+				349F3DF21D65DF4700CC4BFA /* ListDataTableViewController.h */,
+				349F3DF31D65DF4700CC4BFA /* ListDataTableViewController.m */,
+				349F3DF41D65DF4700CC4BFA /* ListDataTableViewController.xib */,
+				349F3DFA1D65F61000CC4BFA /* DataTableViewController.h */,
+				349F3DFB1D65F61000CC4BFA /* DataTableViewController.m */,
+				349F3DFC1D65F61000CC4BFA /* DataTableViewController.xib */,
 				345F5D581D64702E007BC569 /* DataViewController.h */,
 				345F5D591D64702E007BC569 /* DataViewController.m */,
 				345F5D5A1D64702E007BC569 /* DataViewController.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		349F3DF71D65E5D300CC4BFA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				349F3DF81D65E63200CC4BFA /* DataSources.json */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,9 +211,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				345F5D5C1D64702E007BC569 /* DataViewController.xib in Resources */,
+				349F3DF61D65DF4700CC4BFA /* ListDataTableViewController.xib in Resources */,
 				342CEC641D63163700661D50 /* Assets.xcassets in Resources */,
 				345F5D571D646F87007BC569 /* DashboardViewController.xib in Resources */,
+				349F3DF91D65E63200CC4BFA /* DataSources.json in Resources */,
 				345F5D521D646E10007BC569 /* Default-568h@2x.png in Resources */,
+				349F3DFE1D65F61000CC4BFA /* DataTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				345F5D5B1D64702E007BC569 /* DataViewController.m in Sources */,
+				349F3DFD1D65F61000CC4BFA /* DataTableViewController.m in Sources */,
+				349F3DF51D65DF4700CC4BFA /* ListDataTableViewController.m in Sources */,
 				342CEC5C1D63163700661D50 /* AppDelegate.m in Sources */,
 				342CEC591D63163700661D50 /* main.m in Sources */,
 				345F5D561D646F87007BC569 /* DashboardViewController.m in Sources */,
