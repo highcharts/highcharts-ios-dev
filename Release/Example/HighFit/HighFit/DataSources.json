@@ -3,10 +3,5 @@
         "title": "Steps",
         "source": "DataSteps",
         "unit": "steps"
-    },
-    {
-        "title": "Calories",
-        "source": "DataCalories",
-        "unit": "cal."
     }
 ]

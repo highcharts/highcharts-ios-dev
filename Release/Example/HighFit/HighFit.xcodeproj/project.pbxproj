@@ -20,7 +20,6 @@
 		349F3DF91D65E63200CC4BFA /* DataSources.json in Resources */ = {isa = PBXBuildFile; fileRef = 349F3DF81D65E63200CC4BFA /* DataSources.json */; };
 		349F3DFD1D65F61000CC4BFA /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F3DFB1D65F61000CC4BFA /* DataTableViewController.m */; };
 		349F3DFE1D65F61000CC4BFA /* DataTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349F3DFC1D65F61000CC4BFA /* DataTableViewController.xib */; };
-		34BCB0E01D664A11002C5E96 /* DataCalories.json in Resources */ = {isa = PBXBuildFile; fileRef = 34BCB0DE1D664A11002C5E96 /* DataCalories.json */; };
 		34BCB0E11D664A11002C5E96 /* DataSteps.json in Resources */ = {isa = PBXBuildFile; fileRef = 34BCB0DF1D664A11002C5E96 /* DataSteps.json */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +57,6 @@
 		349F3DFA1D65F61000CC4BFA /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
 		349F3DFB1D65F61000CC4BFA /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
 		349F3DFC1D65F61000CC4BFA /* DataTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataTableViewController.xib; sourceTree = "<group>"; };
-		34BCB0DE1D664A11002C5E96 /* DataCalories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataCalories.json; sourceTree = "<group>"; };
 		34BCB0DF1D664A11002C5E96 /* DataSteps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataSteps.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,7 +148,6 @@
 		349F3DF71D65E5D300CC4BFA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				34BCB0DE1D664A11002C5E96 /* DataCalories.json */,
 				34BCB0DF1D664A11002C5E96 /* DataSteps.json */,
 				349F3DF81D65E63200CC4BFA /* DataSources.json */,
 			);
@@ -222,7 +219,6 @@
 				34BCB0E11D664A11002C5E96 /* DataSteps.json in Resources */,
 				345F5D571D646F87007BC569 /* DashboardViewController.xib in Resources */,
 				349F3DF91D65E63200CC4BFA /* DataSources.json in Resources */,
-				34BCB0E01D664A11002C5E96 /* DataCalories.json in Resources */,
 				345F5D521D646E10007BC569 /* Default-568h@2x.png in Resources */,
 				349F3DFE1D65F61000CC4BFA /* DataTableViewController.xib in Resources */,
 			);

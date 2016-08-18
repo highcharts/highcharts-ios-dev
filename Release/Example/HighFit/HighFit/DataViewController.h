@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DataViewController : UIViewController
+@interface DataViewController : UITableViewController
+
+@property (strong, nonatomic) NSString *unit;
+
+@property (strong, nonatomic) NSArray *data;
 
 @end

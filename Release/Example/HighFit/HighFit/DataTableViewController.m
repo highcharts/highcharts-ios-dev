@@ -7,9 +7,10 @@
 //
 
 #import "DataTableViewController.h"
+#import "DataViewController.h"
 
 @interface DataTableViewController ()
-
+@property (strong, nonatomic) NSDictionary *data;
 @end
 
 @implementation DataTableViewController
@@ -30,6 +31,12 @@
     [super viewWillAppear:animated];
     
     self.title = self.configuration[@"title"];
+    
+    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:self.configuration[@"source"] ofType:@"json"]];
+    
+    NSError *error = nil;
+    
+    self.data = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -125,21 +132,28 @@
 }
 */
 
-/*
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row != 1) {
+        return;
+    }
+    
+    DataViewController *detailViewController = [[DataViewController alloc] initWithNibName:@"DataViewController" bundle:nil];
     
     // Pass the selected object to the new view controller.
+    detailViewController.unit = self.configuration[@"unit"];
+    detailViewController.data = self.data[@"all"];
     
     // Push the view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
-*/
 
 /*
 #pragma mark - Navigation
