@@ -3,22 +3,18 @@
 ```
 ./
 ├── API
-├── Demo
 ├── Highcharts
 ├── Release
-└── Tools
+├── Tools
+└── WWW
 ```
 
 #### API
-API Documentation JSON for website. With documentation presenter.
-
-#### Demo
-
-Demo examles for website. Created by script from tool directory.
+JSON dumpp with API. Documentation in JSON for website. With documentation presenter.
 
 #### Highcharts
 
-Main Framework project directory. Additional information about flow/build/test is in directory.
+Main Framework project directory. Additional README.md in directory.
 
 #### Release
 
@@ -26,4 +22,8 @@ This is release catalog for compiled framework and demo aplication/showcase this
 
 #### Tools
 
-All tools for parsing API, Demo JSON. Additional info is for each tool in separate directory.
+All tools for parsing API, Demo JSON. Additional README.md in directory.
+
+#### WWW
+
+Demo examples for website. Created by script from `./Tool` directory.
