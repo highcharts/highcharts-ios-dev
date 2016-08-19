@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DashboardViewController : UIViewController
+@interface DashboardViewController : UITableViewController
+
++ (id)sharedDashboard;
+
+- (void)dataSource:(NSDictionary*)dataSource show:(BOOL)show;
 
 @end

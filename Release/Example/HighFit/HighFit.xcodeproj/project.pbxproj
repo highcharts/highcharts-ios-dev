@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341658331D67310100D6FF2A /* OptionsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 341658321D67310100D6FF2A /* OptionsProvider.m */; };
 		342CEC591D63163700661D50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 342CEC581D63163700661D50 /* main.m */; };
 		342CEC5C1D63163700661D50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 342CEC5B1D63163700661D50 /* AppDelegate.m */; };
 		342CEC641D63163700661D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342CEC631D63163700661D50 /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		341658311D67310100D6FF2A /* OptionsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsProvider.h; sourceTree = "<group>"; };
+		341658321D67310100D6FF2A /* OptionsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsProvider.m; sourceTree = "<group>"; };
 		342CEC541D63163700661D50 /* HighFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		342CEC581D63163700661D50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		342CEC5A1D63163700661D50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 		345F5D5D1D647065007BC569 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				341658311D67310100D6FF2A /* OptionsProvider.h */,
+				341658321D67310100D6FF2A /* OptionsProvider.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				349F3DFD1D65F61000CC4BFA /* DataTableViewController.m in Sources */,
 				349F3DF51D65DF4700CC4BFA /* ListDataTableViewController.m in Sources */,
 				342CEC5C1D63163700661D50 /* AppDelegate.m in Sources */,
+				341658331D67310100D6FF2A /* OptionsProvider.m in Sources */,
 				342CEC591D63163700661D50 /* main.m in Sources */,
 				345F5D561D646F87007BC569 /* DashboardViewController.m in Sources */,
 			);

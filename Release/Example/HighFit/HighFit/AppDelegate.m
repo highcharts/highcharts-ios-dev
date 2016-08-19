@@ -30,7 +30,7 @@
     UITabBarController *tabBar = [[UITabBarController alloc] init];
     
 
-    DashboardViewController *dashboard = [[DashboardViewController alloc] init];
+    DashboardViewController *dashboard = [DashboardViewController sharedDashboard];
     UINavigationController *navigationDashboard = [[UINavigationController alloc] initWithRootViewController:dashboard];
 
     ListDataTableViewController *data = [[ListDataTableViewController alloc] initWithNibName:@"ListDataTableViewController" bundle:nil];

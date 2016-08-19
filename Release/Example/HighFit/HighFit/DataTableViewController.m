@@ -9,6 +9,8 @@
 #import "DataTableViewController.h"
 #import "DataViewController.h"
 #import <Highcharts/Highcharts.h>
+#import "DashboardViewController.h"
+#import "OptionsProvider.h"
 
 @interface DataTableViewController ()
 @property (strong, nonatomic) NSDictionary *data;
@@ -26,9 +28,15 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
+    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:self.configuration[@"source"] ofType:@"json"]];
+    NSError *error = nil;
+    self.data = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
-    self.chartView.options = nil;
+    self.title = self.configuration[@"title"];
+    
+    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 440.0f)];
+    
+    self.chartView.options = [OptionsProvider provideOptionsChartForseries:self.data[@"day"]];
     
     self.tableView.tableHeaderView = self.chartView;
     
@@ -38,13 +46,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.title = self.configuration[@"title"];
-    
-    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:self.configuration[@"source"] ofType:@"json"]];
-    
-    NSError *error = nil;
-    
-    self.data = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -177,6 +178,7 @@
 
 - (void)actionSwitch:(UISwitch*)actionSwitch
 {
+    [[DashboardViewController sharedDashboard] dataSource:self.data show:YES];
     // Show or hide on dashboard.
 }
 
