@@ -7,6 +7,7 @@
 //
 
 #import "DashboardViewController.h"
+#import <Highcharts/Highcharts.h>
 
 @interface DashboardViewController ()
 
@@ -26,6 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning {

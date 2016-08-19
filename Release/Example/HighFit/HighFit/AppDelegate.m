@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DashboardViewController.h"
 #import "ListDataTableViewController.h"
+#import <Highcharts/Highcharts.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [HIGChartView preload];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

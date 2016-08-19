@@ -8,9 +8,11 @@
 
 #import "DataTableViewController.h"
 #import "DataViewController.h"
+#import <Highcharts/Highcharts.h>
 
 @interface DataTableViewController ()
 @property (strong, nonatomic) NSDictionary *data;
+@property (strong, nonatomic) HIGChartView *chartView;
 @end
 
 @implementation DataTableViewController
@@ -23,6 +25,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
+    
+    self.chartView.options = nil;
+    
+    self.tableView.tableHeaderView = self.chartView;
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
