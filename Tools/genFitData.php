@@ -1,30 +1,30 @@
 <?php
     
-    function genFitData($PATH_OUT) {
+    function genFitData($PATH_OUT, $RANGE_FROM, $RANGE_TO) {
 		$data = '';
 
 		$date = 1451606400;
 
         for ($index = 0; $index < 365; $index++) {
-			$data['all'][$index]['sample'] = rand(5000, 10000);
+			$data['all'][$index]['sample'] = rand($RANGE_FROM, $RANGE_TO);
 			$date = $date - (60*60*24);
 			$data['all'][$index]['date'] = $date;
         }
 
 		for ($index = 0; $index < 12; $index++) {
-			$data['year'][] = rand(5000, 10000)*30;
+			$data['year'][] = rand($RANGE_FROM, $RANGE_TO)*30;
         }
 
 		for ($index = 0; $index < 30; $index++) {
-			$data['month'][] = rand(5000, 10000);
+			$data['month'][] = rand($RANGE_FROM, $RANGE_TO);
         }
 
 		for ($index = 0; $index < 7; $index++) {
-			$data['week'][] = rand(5000, 10000);
+			$data['week'][] = rand($RANGE_FROM, $RANGE_TO);
         }
 
 		for ($index = 0; $index < 12; $index++) {
-			$data['day'][] = rand(50, 1000);
+			$data['day'][] = rand($RANGE_FROM/100, $RANGE_TO/100);
         }
         
         $FILE_CONTENT = json_encode($data);
@@ -47,8 +47,9 @@
 
     // directory to output
     $PATH_OUT = $argv[1];
-	
-    genFitData($PATH_OUT);
+	$RANGE_FROM = $argv[2];
+	$RANGE_TO = $argv[3];
+    genFitData($PATH_OUT, $RANGE_FROM, $RANGE_TO);
     
     exit;
 ?>

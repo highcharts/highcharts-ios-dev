@@ -34,7 +34,7 @@
     
     self.title = self.configuration[@"title"];
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 440.0f)];
+    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
     
     self.chartView.options = [OptionsProvider provideOptionsChartForseries:self.data[@"day"]];
     

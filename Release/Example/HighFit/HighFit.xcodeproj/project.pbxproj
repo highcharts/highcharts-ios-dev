@@ -18,6 +18,7 @@
 		345F5D571D646F87007BC569 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345F5D551D646F87007BC569 /* DashboardViewController.xib */; };
 		345F5D5B1D64702E007BC569 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345F5D591D64702E007BC569 /* DataViewController.m */; };
 		345F5D5C1D64702E007BC569 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345F5D5A1D64702E007BC569 /* DataViewController.xib */; };
+		3472BC8C1D67598300A71D67 /* DataCalories.json in Resources */ = {isa = PBXBuildFile; fileRef = 3472BC8B1D67598300A71D67 /* DataCalories.json */; };
 		349F3DF51D65DF4700CC4BFA /* ListDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F3DF31D65DF4700CC4BFA /* ListDataTableViewController.m */; };
 		349F3DF61D65DF4700CC4BFA /* ListDataTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349F3DF41D65DF4700CC4BFA /* ListDataTableViewController.xib */; };
 		349F3DF91D65E63200CC4BFA /* DataSources.json in Resources */ = {isa = PBXBuildFile; fileRef = 349F3DF81D65E63200CC4BFA /* DataSources.json */; };
@@ -57,6 +58,7 @@
 		345F5D581D64702E007BC569 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		345F5D591D64702E007BC569 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		345F5D5A1D64702E007BC569 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
+		3472BC8B1D67598300A71D67 /* DataCalories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataCalories.json; sourceTree = "<group>"; };
 		349F3DF21D65DF4700CC4BFA /* ListDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDataTableViewController.h; sourceTree = "<group>"; };
 		349F3DF31D65DF4700CC4BFA /* ListDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDataTableViewController.m; sourceTree = "<group>"; };
 		349F3DF41D65DF4700CC4BFA /* ListDataTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDataTableViewController.xib; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		349F3DF71D65E5D300CC4BFA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3472BC8B1D67598300A71D67 /* DataCalories.json */,
 				34BCB0DF1D664A11002C5E96 /* DataSteps.json */,
 				349F3DF81D65E63200CC4BFA /* DataSources.json */,
 			);
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				345F5D5C1D64702E007BC569 /* DataViewController.xib in Resources */,
+				3472BC8C1D67598300A71D67 /* DataCalories.json in Resources */,
 				349F3DF61D65DF4700CC4BFA /* ListDataTableViewController.xib in Resources */,
 				342CEC641D63163700661D50 /* Assets.xcassets in Resources */,
 				34BCB0E11D664A11002C5E96 /* DataSteps.json in Resources */,

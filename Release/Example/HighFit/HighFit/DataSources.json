@@ -7,7 +7,7 @@
     },
     {
         "title": "Calories",
-        "source": "DataSteps",
+        "source": "DataCalories",
         "unit": "cal.",
         "icon": "ic_whatshot"
      }
