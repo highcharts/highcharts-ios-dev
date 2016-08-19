@@ -2,6 +2,13 @@
     {
         "title": "Steps",
         "source": "DataSteps",
-        "unit": "steps"
-    }
-]
+        "unit": "steps",
+        "icon": "ic_directions_walk"
+    },
+    {
+        "title": "Calories",
+        "source": "DataSteps",
+        "unit": "cal.",
+        "icon": "ic_whatshot"
+     }
+ ]

@@ -21,11 +21,15 @@
     if (self) {
         self.title = @"Data";
         
+        self.tabBarItem.image = [UIImage imageNamed:@"ic_insert_chart_white"];
+        
         NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DataSources" ofType:@"json"]];
         
         NSError *error = nil;
         
         self.dataSources = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     }
     return self;
 }
@@ -67,7 +71,11 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = [self.dataSources objectAtIndex:indexPath.row][@"title"];
+    NSDictionary *data = [self.dataSources objectAtIndex:indexPath.row];
+    
+    cell.imageView.image = [UIImage imageNamed:data[@"icon"]];
+    
+    cell.textLabel.text = data[@"title"];
     
     return cell;
 }

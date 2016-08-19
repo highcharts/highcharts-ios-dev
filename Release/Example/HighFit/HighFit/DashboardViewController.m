@@ -34,6 +34,8 @@
         
         self.title = @"Dashboard";
         
+        self.tabBarItem.image = [UIImage imageNamed:@"ic_content_paste_white"];
+        
         self.dataSources = [NSMutableArray array];
         
         self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
