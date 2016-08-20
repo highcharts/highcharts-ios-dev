@@ -297,20 +297,24 @@
 			fallbackToExportServer();
 		}
 	};
+    
+    Highcharts.setOptions({
+        exporting: {
+        buttons: {
+        // Disable default button:
+        contextButton: {
+          enabled: false
+        },
+        // Create custom button:
+        iOSExporting: {
+          symbol: 'menu',
+		  onclick: function () {
+		      this.exportChartLocal(null, null, { action:'export'} );
+            }
 
-	// Extend the default options to use the local exporter logic
-	Highcharts.getOptions().exporting.buttons.contextButton.menuItems = [{
-		textKey: 'printChart',
-		onclick: function () {
-            this.exportChartLocal(null, null, { action:'print'} );
-		}
-	}, {
-		separator: true
-	}, {
-		textKey: 'downloadPNG',
-		onclick: function () {
-            this.exportChartLocal(null, null, { action:'export'} );
-		}
-	}];
+          }
+         }
+        }
+    });
 
 }));
