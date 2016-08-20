@@ -10,6 +10,9 @@
 
 @interface DashboardViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
+
 + (id)sharedDashboard;
 
 - (void)dataSource:(NSDictionary*)dataSource show:(BOOL)show;

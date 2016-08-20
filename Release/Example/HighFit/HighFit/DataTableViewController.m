@@ -28,19 +28,19 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    
     NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:self.configuration[@"source"] ofType:@"json"]];
     NSError *error = nil;
     self.data = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
     self.title = self.configuration[@"title"];
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
-    
-    self.chartView.options = [OptionsProvider provideOptionsChartForseries:self.data[@"day"]];
-    
-    self.tableView.tableHeaderView = self.chartView;
+    self.tableView.tableHeaderView = self.toolbar;
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    [self.segment addTarget:self action:@selector(actionSegment:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,16 +60,30 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (!self.chartView) {
+        self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
+        self.chartView.options = [OptionsProvider provideOptionsChartForseries:self.data[@"day"]];
+    }
+
+    return self.chartView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 240.0f;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HighFitCellData"];
     
     // Configure the cell...
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"HighFitCellData"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HighFitCellData"];
     }
     
     cell.accessoryView = nil;
@@ -105,7 +119,6 @@
     
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -178,8 +191,37 @@
 
 - (void)actionSwitch:(UISwitch*)actionSwitch
 {
+    // Show or hide chart on dashboard.
     [[DashboardViewController sharedDashboard] dataSource:self.data show:YES];
-    // Show or hide on dashboard.
+}
+
+- (IBAction)actionSegment:(UISegmentedControl*)sender
+{
+    NSString *dataName = @"day";
+    
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            dataName = @"day";
+            break;
+        case 1:
+            dataName = @"week";
+            break;
+        case 2:
+            dataName = @"month";
+            break;
+        case 3:
+            dataName = @"year";
+            break;
+        default:
+            break;
+    }
+    
+    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
+    self.chartView.options = [OptionsProvider provideOptionsChartForseries:self.data[dataName]];
+    
+    [self.tableView reloadData];
+    
+//    [self.chartView reload];
 }
 
 @end

@@ -12,6 +12,8 @@
 
 @interface DashboardViewController ()
 @property (strong, nonatomic) NSMutableArray *dataSources;
+@property (strong, nonatomic) NSString *dataName;
+@property (strong, nonatomic) NSMutableArray *charts;
 @end
 
 @implementation DashboardViewController
@@ -41,6 +43,12 @@
         self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         
         self.tableView.rowHeight = 240.0f;
+        
+        self.tableView.tableHeaderView.hidden = YES;
+        
+        self.dataName = @"day";
+        
+        [self.segment addTarget:self action:@selector(actionSegment:) forControlEvents:UIControlEventValueChanged];
     }
     return self;
 }
@@ -96,11 +104,14 @@
         
         HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
         
-        NSArray *series = [self.dataSources objectAtIndex:indexPath.row][@"day"];
+        
+        NSArray *series = [self.dataSources objectAtIndex:indexPath.row][self.dataName];
         
         chartView.options = [OptionsProvider provideOptionsChartForseries:series];
         
         [cell addSubview:chartView];
+        
+        [self.charts addObject:chartView];
     }
     
     return cell;
@@ -173,6 +184,40 @@
     } else {
         [self.dataSources removeObject:dataSource];
     }
+    
+    if (self.dataSources.count > 0) {
+        self.tableView.tableHeaderView.hidden = NO;
+    } else {
+        self.tableView.tableHeaderView.hidden = YES;
+    }
+}
+
+- (IBAction)actionSegment:(UISegmentedControl*)sender
+{
+    NSString *dataName = @"day";
+    
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            dataName = @"day";
+            break;
+        case 1:
+            dataName = @"week";
+            break;
+        case 2:
+            dataName = @"month";
+            break;
+        case 3:
+            dataName = @"year";
+            break;
+        default:
+            break;
+    }
+    
+    self.dataName = dataName;
+    
+    [self.tableView reloadData];
+    
+    //    [self.chartView reload];
 }
 
 @end

@@ -10,6 +10,9 @@
 
 @interface DataTableViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
+
 @property (strong, nonatomic) NSDictionary *configuration;
 
 @end
