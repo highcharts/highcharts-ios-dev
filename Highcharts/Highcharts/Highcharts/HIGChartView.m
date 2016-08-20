@@ -15,6 +15,9 @@
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
+// Use this with care when you need ony test things...
+//#define TRIAL 1
+
 @interface HIGChartView () <WKNavigationDelegate>
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSBundle *highchartsBundle;
@@ -90,12 +93,11 @@
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Highcharts for iOS" message:@"This is a free trial. Please contact us to access a fully licensed version of our charts at sales@highsoft.com" preferredStyle:UIAlertControllerStyleAlert];
         
         [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            
+            self.trialWindow.hidden = YES;
         }]];
         
         [trialViewController presentViewController:alert animated:YES completion:nil];
 #endif
-
     }
     return self;
 }
