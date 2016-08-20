@@ -47,6 +47,14 @@
 - (void)prepareOptions:(NSDictionary*)options;
 
 /**
+ *  Prepare width and height in htm for proper display.
+ *
+ *  @param width for wiew.
+ *  @param height for wiew.
+ */
+- (void)prepareViewWidth:(float)width height:(float)height;
+
+/**
  *  Last step preparing HTML. After this get HTML from 'html' property.
  */
 - (void)injectJavaScriptToHTML;

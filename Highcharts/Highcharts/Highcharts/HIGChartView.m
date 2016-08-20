@@ -50,6 +50,8 @@
         
         [self.HTML loadHTML:[self.highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
         
+        [self.HTML prepareViewWidth:frame.size.width height:frame.size.height];
+        
         NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
         
         if (!self.HTML.html) {
@@ -58,6 +60,8 @@
         
         self.webView = [[WKWebView alloc] initWithFrame:frame];
         self.webView.scrollView.scrollEnabled = NO;
+        self.webView.multipleTouchEnabled = NO;
+        
         self.webView.navigationDelegate = self;
         
         self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

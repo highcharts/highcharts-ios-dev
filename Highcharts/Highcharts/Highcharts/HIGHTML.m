@@ -64,9 +64,19 @@
     self.options = [self.js JSObject:options];
 }
 
+- (void)prepareViewWidth:(float)width height:(float)height
+{
+    
+    NSString *widthString = [NSString stringWithFormat:@"%.f", width];
+    self.html = [self.html_tmp stringByReplacingOccurrencesOfString:@"{{width}}" withString:widthString];
+
+    NSString *heightString = [NSString stringWithFormat:@"%.f", height];
+    self.html = [self.html stringByReplacingOccurrencesOfString:@"{{height}}" withString:heightString];
+}
+
 - (void)injectJavaScriptToHTML
 {
-    self.html = [self.html_tmp stringByReplacingOccurrencesOfString:@"{{script}}" withString:self.scripts?:@""];
+    self.html = [self.self.html stringByReplacingOccurrencesOfString:@"{{script}}" withString:self.scripts?:@""];
     
     self.html = [self.html stringByReplacingOccurrencesOfString:@"{{options}}" withString:self.options?:@""];
 }
