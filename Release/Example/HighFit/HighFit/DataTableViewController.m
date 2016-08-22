@@ -216,12 +216,9 @@
             break;
     }
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
     self.chartView.options = [OptionsProvider provideOptionsChartForseries:self.data[dataName]];
     
-    [self.tableView reloadData];
-    
-//    [self.chartView reload];
+    [self.chartView reload];
 }
 
 @end

@@ -16,6 +16,9 @@
              @"exporting": @{
                  @"enabled": @NO
              },
+             @"credits": @{
+                     @"enabled": @NO
+                     },
              @"chart": @{
                      @"type": @"column"
                      },
@@ -35,7 +38,7 @@
                      },
              @"series": @[
                      @{ @"enableMouseTracking": @NO,@"showInLegend": @NO, @"data" : [series copy] }
-                        ]
+                     ]
              };
 }
 
