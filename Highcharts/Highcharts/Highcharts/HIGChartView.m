@@ -71,11 +71,12 @@
 #ifdef TRIAL
         CGRect labelFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 300.0f);
         self.trialLabel = [[UILabel alloc] initWithFrame:labelFrame];
-        [self.trialLabel setTextColor:[UIColor colorWithWhite:0.0 alpha:0.50]];
+        [self.trialLabel setTextColor:[UIColor colorWithWhite:0.0 alpha:0.15]];
         [self.trialLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         [self.trialLabel setFont:[UIFont systemFontOfSize:46 weight:UIFontDescriptorTraitBold]];
-        [self.trialLabel setText:@"TRIAL VERSION"];
+        [self.trialLabel setText:@" TRIAL VERSION "];
         [self.trialLabel setTextAlignment:NSTextAlignmentCenter];
+        [self.trialLabel setAdjustsFontSizeToFitWidth:YES];
         [self addSubview:self.trialLabel];
         
         
