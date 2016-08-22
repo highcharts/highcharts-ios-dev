@@ -49,6 +49,8 @@
         self.dataName = @"day";
         
         [self.segment addTarget:self action:@selector(actionSegment:) forControlEvents:UIControlEventValueChanged];
+        
+        self.tableView.tableHeaderView = nil;
     }
     return self;
 }
