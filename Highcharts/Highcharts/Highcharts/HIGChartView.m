@@ -53,8 +53,6 @@
         
         [self.HTML loadHTML:[self.highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
         
-        [self.HTML prepareViewWidth:frame.size.width height:frame.size.height];
-        
         NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
         
         if (!self.HTML.html) {
@@ -111,6 +109,8 @@
 
 - (void)loadChart
 {
+    [self.HTML prepareViewWidth:self.bounds.size.width height:self.bounds.size.height];
+    
     self.plugins = @[];
     
     NSString *suffix = self.debug ? @".src.js" : @".js";

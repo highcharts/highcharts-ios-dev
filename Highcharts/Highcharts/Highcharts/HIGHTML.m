@@ -66,7 +66,6 @@
 
 - (void)prepareViewWidth:(float)width height:(float)height
 {
-    
     NSString *widthString = [NSString stringWithFormat:@"%.f", width];
     self.html = [self.html_tmp stringByReplacingOccurrencesOfString:@"{{width}}" withString:widthString];
 
@@ -76,7 +75,7 @@
 
 - (void)injectJavaScriptToHTML
 {
-    self.html = [self.self.html stringByReplacingOccurrencesOfString:@"{{script}}" withString:self.scripts?:@""];
+    self.html = [self.html stringByReplacingOccurrencesOfString:@"{{script}}" withString:self.scripts?:@""];
     
     self.html = [self.html stringByReplacingOccurrencesOfString:@"{{options}}" withString:self.options?:@""];
 }
