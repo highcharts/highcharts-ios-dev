@@ -21,6 +21,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    NSArray *defaults = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UserDefaults" ofType:@"plist"]];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:defaults, @"sources", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: dic];
+    
     [HIGChartView preload];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
