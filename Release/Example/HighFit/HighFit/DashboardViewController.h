@@ -15,6 +15,7 @@
 
 + (id)sharedDashboard;
 
-- (void)dataSource:(NSDictionary*)dataSource show:(BOOL)show;
+- (void)dataSourceAdd:(NSDictionary*)dataSource;
+- (void)dataSourceRem:(NSDictionary*)dataSource;
 
 @end

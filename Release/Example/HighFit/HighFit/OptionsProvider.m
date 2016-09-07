@@ -10,7 +10,7 @@
 
 @implementation OptionsProvider
 
-+ (NSDictionary*)provideOptionsChartForseries:(NSArray*)series;
++ (NSDictionary*)provideOptionsForChartType:(NSString*)chartType series:(NSArray*)series;
 {
     return @{
              @"exporting": @{
@@ -20,7 +20,7 @@
                      @"enabled": @NO
                      },
              @"chart": @{
-                     @"type": @"column"
+                     @"type": [chartType copy]
                      },
              @"title": @{
                      @"text": @""

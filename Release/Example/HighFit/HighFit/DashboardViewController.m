@@ -11,7 +11,8 @@
 #import "OptionsProvider.h"
 
 @interface DashboardViewController ()
-@property (strong, nonatomic) NSMutableArray *dataSources;
+@property (strong, nonatomic) NSMutableArray *sources;
+@property (strong, nonatomic) NSArray *data;
 @property (strong, nonatomic) NSString *dataName;
 @property (strong, nonatomic) NSMutableArray *charts;
 @end
@@ -38,7 +39,7 @@
         
         self.tabBarItem.image = [UIImage imageNamed:@"ic_content_paste_white"];
         
-        self.dataSources = [NSMutableArray array];
+        [self loadSourcesAndData];
         
         self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         
@@ -91,7 +92,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataSources.count;
+    return self.data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -106,10 +107,10 @@
         
         HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
         
+        NSArray *series = [self.data objectAtIndex:indexPath.row][self.dataName];
         
-        NSArray *series = [self.dataSources objectAtIndex:indexPath.row][self.dataName];
-        
-        chartView.options = [OptionsProvider provideOptionsChartForseries:series];
+        NSString *chartType = [self.sources objectAtIndex:indexPath.row][@"chartType"];
+        chartView.options = [OptionsProvider provideOptionsForChartType:chartType series:series];
         
         [cell addSubview:chartView];
         
@@ -179,47 +180,71 @@
 
 #pragma mark - Additional methods
 
-- (void)dataSource:(NSDictionary*)dataSource show:(BOOL)show
+- (void)dataSourceAdd:(NSDictionary*)dataSource
 {
-    if (![self.dataSources containsObject:dataSource] && show) {
-        [self.dataSources addObject:dataSource];
-    } else {
-        [self.dataSources removeObject:dataSource];
+    if (![self.sources containsObject:dataSource]) {
+        NSMutableArray *tmp = [NSMutableArray arrayWithArray:self.sources];
+        [tmp addObject:dataSource];
+        self.sources = [tmp copy];
+        
+        [[NSUserDefaults standardUserDefaults] setValue:self.sources forKey:@"sources"];
     }
     
-    if (self.dataSources.count > 0) {
-        self.tableView.tableHeaderView.hidden = NO;
-    } else {
-        self.tableView.tableHeaderView.hidden = YES;
+    [self loadSourcesAndData];
+    [self.tableView reloadData];
+}
+
+- (void)dataSourceRem:(NSDictionary*)dataSource
+{
+    if ([self.sources containsObject:dataSource]) {
+        NSMutableArray *tmp = [NSMutableArray arrayWithArray:self.sources];
+        [tmp removeObject:dataSource];
+        self.sources = [tmp copy];
+        
+        [[NSUserDefaults standardUserDefaults] setValue:self.sources forKey:@"sources"];
     }
+    
+    [self loadSourcesAndData];
+    [self.tableView reloadData];
 }
 
 - (IBAction)actionSegment:(UISegmentedControl*)sender
 {
-    NSString *dataName = @"day";
-    
     switch (sender.selectedSegmentIndex) {
         case 0:
-            dataName = @"day";
+            self.dataName = @"day";
             break;
         case 1:
-            dataName = @"week";
+            self.dataName = @"week";
             break;
         case 2:
-            dataName = @"month";
+            self.dataName = @"month";
             break;
         case 3:
-            dataName = @"year";
+            self.dataName = @"year";
             break;
         default:
             break;
     }
     
-    self.dataName = dataName;
-    
     [self.tableView reloadData];
+}
+
+- (void)loadSourcesAndData
+{
+    self.data = [NSArray array];
     
-    //    [self.chartView reload];
+    self.sources = [[NSUserDefaults standardUserDefaults] valueForKey:@"sources"];
+    
+    NSMutableArray *tmpData = [NSMutableArray array];
+    for (NSDictionary *source in self.sources) {
+        
+        NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:source[@"source"] ofType:@"json"]];
+        NSError *error = nil;
+        
+        [tmpData addObject:[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error]];
+    }
+    self.data = [tmpData copy];
 }
 
 @end

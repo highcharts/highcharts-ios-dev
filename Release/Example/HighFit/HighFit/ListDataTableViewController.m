@@ -28,7 +28,7 @@
         NSError *error = nil;
         
         self.dataSources = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        
+    
         self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     }
     return self;

@@ -13,8 +13,11 @@
 #import "OptionsProvider.h"
 
 @interface DataTableViewController ()
+@property (strong, nonatomic) NSString *chartType;
 @property (strong, nonatomic) NSDictionary *data;
 @property (strong, nonatomic) HIGChartView *chartView;
+
+@property (strong, nonatomic) UISwitch *switchView;
 @end
 
 @implementation DataTableViewController
@@ -27,6 +30,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.chartType = @"column";
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
@@ -41,11 +46,15 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     [self.segment addTarget:self action:@selector(actionSegment:) forControlEvents:UIControlEventValueChanged];
+    
+    self.switchView = [[UISwitch alloc] init];
+    [self.switchView addTarget:self action:@selector(actionSwitch:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    self.switchView.on = [self isSwitchOn];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +76,7 @@
 {
     if (!self.chartView) {
         self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
-        self.chartView.options = [OptionsProvider provideOptionsChartForseries:self.data[@"day"]];
+        self.chartView.options = [OptionsProvider provideOptionsForChartType:self.chartType series:self.data[@"day"]];
     }
 
     return self.chartView;
@@ -94,9 +103,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.text = @"Show on Dashboard.";
         
-        UISwitch *switchview = [[UISwitch alloc] init];
-        [switchview addTarget:self action:@selector(actionSwitch:) forControlEvents:UIControlEventValueChanged];
-        cell.accessoryView = switchview;
+        cell.accessoryView = self.switchView;
     }
     
     if (indexPath.row == 1) {
@@ -192,7 +199,11 @@
 - (void)actionSwitch:(UISwitch*)actionSwitch
 {
     // Show or hide chart on dashboard.
-    [[DashboardViewController sharedDashboard] dataSource:self.data show:YES];
+    if (actionSwitch.isOn) {
+        [[DashboardViewController sharedDashboard] dataSourceAdd: @{ @"chartType":[self.chartType copy], @"source": [self.configuration[@"source"] copy] } ];
+    } else {
+        [[DashboardViewController sharedDashboard] dataSourceRem: @{ @"chartType":[self.chartType copy], @"source": [self.configuration[@"source"] copy] } ];
+    }
 }
 
 - (IBAction)actionSegment:(UISegmentedControl*)sender
@@ -216,9 +227,20 @@
             break;
     }
     
-    self.chartView.options = [OptionsProvider provideOptionsChartForseries:self.data[dataName]];
+    self.chartView.options = [OptionsProvider provideOptionsForChartType:self.chartType series:self.data[dataName]];
     
     [self.chartView reload];
+}
+
+- (BOOL)isSwitchOn
+{
+    NSArray *sources = [[NSUserDefaults standardUserDefaults] valueForKey:@"sources"];
+    for (NSDictionary *item in sources) {
+        if ([[item valueForKey:@"source"] isEqualToString:self.configuration[@"source"]]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 @end
