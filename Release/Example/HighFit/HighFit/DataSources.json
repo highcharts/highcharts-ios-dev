@@ -3,12 +3,21 @@
         "title": "Steps",
         "source": "DataSteps",
         "unit": "steps",
+        "chartType": "column",
         "icon": "ic_directions_walk"
     },
     {
-        "title": "Calories",
-        "source": "DataCalories",
+        "title": "Calories (Burned)",
+        "source": "DataCaloriesOut",
         "unit": "cal.",
+        "chartType": "column",
         "icon": "ic_whatshot"
+     },
+     {
+         "title": "Calories (Eaten)",
+         "source": "DataCaloriesIn",
+         "unit": "cal.",
+         "chartType": "column",
+         "icon": "ic_whatshot"
      }
  ]

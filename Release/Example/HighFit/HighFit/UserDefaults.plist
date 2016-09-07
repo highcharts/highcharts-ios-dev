@@ -12,7 +12,7 @@
 		<key>chartType</key>
 		<string>column</string>
 		<key>source</key>
-		<string>DataCalories</string>
+		<string>DataCaloriesOut</string>
 	</dict>
 </array>
 </plist>
