@@ -58,4 +58,4 @@ fastlane/screenshots
 
 # Project
 /API/dump
-/Release/Highcharts
+/Release/Highcharts.framework
