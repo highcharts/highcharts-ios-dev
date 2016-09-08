@@ -21,9 +21,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSArray *defaults = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UserDefaults" ofType:@"plist"]];
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:defaults, @"sources", nil];
-    [[NSUserDefaults standardUserDefaults] registerDefaults: dic];
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"DataSources" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    NSError *error = nil;
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error], @"sources", nil];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
     
     [HIGChartView preload];
     
@@ -37,8 +40,8 @@
     DashboardViewController *dashboard = [DashboardViewController sharedDashboard];
     UINavigationController *navigationDashboard = [[UINavigationController alloc] initWithRootViewController:dashboard];
 
-    ListDataTableViewController *data = [[ListDataTableViewController alloc] initWithNibName:@"ListDataTableViewController" bundle:nil];
-    UINavigationController *navigationData = [[UINavigationController alloc] initWithRootViewController:data];
+    ListDataTableViewController *datas = [[ListDataTableViewController alloc] initWithNibName:@"ListDataTableViewController" bundle:nil];
+    UINavigationController *navigationData = [[UINavigationController alloc] initWithRootViewController:datas];
     
     tabBar.viewControllers  = @[navigationDashboard, navigationData];
     

@@ -7,20 +7,29 @@
 //
 
 #import "OptionsProvider.h"
+#import <UIKit/UIKit.h>
+#import <Highcharts/Highcharts.h>
 
 @implementation OptionsProvider
 
-+ (NSDictionary*)provideOptionsForChartType:(NSString*)chartType series:(NSArray*)series;
++ (NSDictionary*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series;
 {
     return @{
+             @"chart" : @{
+                     @"backgroundColor": @"#AAAAAA",
+                     @"borderRadius": @6,
+                     @"type": options[@"chartType"]
+             },
              @"exporting": @{
                  @"enabled": @NO
              },
+             @"plotOptions": @{
+                 @"series": @{
+                     @"borderRadius": @5
+                     }
+             },
              @"credits": @{
                      @"enabled": @NO
-                     },
-             @"chart": @{
-                     @"type": [chartType copy]
                      },
              @"title": @{
                      @"text": @""
@@ -28,16 +37,19 @@
              @"subtitle": @{
                      @"text": @""
                      },
+             @"tooltip": @{
+                      @"headerFormat": @"",
+             },
              @"xAxis": @{
                      },
              @"yAxis": @{
                      @"title": @{
                              @"text": @""
                              },
-                     @"tickAmount": @1
+                     @"tickAmount": @0
                      },
              @"series": @[
-                     @{ @"enableMouseTracking": @NO,@"showInLegend": @NO, @"data" : [series copy] }
+                     @{ @"showInLegend": @NO, @"data" : [series copy], @"color": @"#FFFFFF", @"name": options[@"title"]}
                      ]
              };
 }

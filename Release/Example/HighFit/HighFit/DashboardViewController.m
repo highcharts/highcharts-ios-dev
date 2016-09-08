@@ -61,6 +61,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.separatorInset = UIEdgeInsetsZero;
 
 }
 
@@ -105,13 +106,13 @@
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
+        HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-2, 0, self.view.bounds.size.width, 240.0f)];
         
         NSArray *series = [self.data objectAtIndex:indexPath.row][self.dataName];
         
-        NSString *chartType = [self.sources objectAtIndex:indexPath.row][@"chartType"];
-        chartView.options = [OptionsProvider provideOptionsForChartType:chartType series:series];
-        
+        NSDictionary *options = [self.sources objectAtIndex:indexPath.row];
+        chartView.options = [OptionsProvider provideOptionsForChartType:options series:series];
+
         [cell addSubview:chartView];
         
         [self.charts addObject:chartView];

@@ -75,8 +75,8 @@
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (!self.chartView) {
-        self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 240.0f)];
-        self.chartView.options = [OptionsProvider provideOptionsForChartType:self.chartType series:self.data[@"day"]];
+        self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-2, 0, self.view.bounds.size.width, 240.0f)];
+        self.chartView.options = [OptionsProvider provideOptionsForChartType:self.configuration series:self.data[@"day"]];
     }
 
     return self.chartView;
@@ -200,9 +200,9 @@
 {
     // Show or hide chart on dashboard.
     if (actionSwitch.isOn) {
-        [[DashboardViewController sharedDashboard] dataSourceAdd: @{ @"chartType":[self.chartType copy], @"source": [self.configuration[@"source"] copy] } ];
+        [[DashboardViewController sharedDashboard] dataSourceAdd: self.configuration];
     } else {
-        [[DashboardViewController sharedDashboard] dataSourceRem: @{ @"chartType":[self.chartType copy], @"source": [self.configuration[@"source"] copy] } ];
+        [[DashboardViewController sharedDashboard] dataSourceRem: self.configuration];
     }
 }
 
@@ -227,7 +227,7 @@
             break;
     }
     
-    self.chartView.options = [OptionsProvider provideOptionsForChartType:self.chartType series:self.data[dataName]];
+    self.chartView.options = [OptionsProvider provideOptionsForChartType:self.configuration series:self.data[dataName]];
     
     [self.chartView reload];
 }
