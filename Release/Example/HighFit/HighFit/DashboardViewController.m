@@ -100,8 +100,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HighFitCell"];
     
     // Configure the cell...
-    if (cell == nil) {
-        
+//    if (cell == nil) {
+    
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HighFitCell"];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -116,7 +116,7 @@
         [cell addSubview:chartView];
         
         [self.charts addObject:chartView];
-    }
+//    }
     
     return cell;
 }
