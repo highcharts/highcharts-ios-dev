@@ -59,3 +59,5 @@ fastlane/screenshots
 # Project
 /API/dump
 /Release/Highcharts.framework
+/Release/Fabric.framework
+/Release/Crashlytics.framework
