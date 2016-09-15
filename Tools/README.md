@@ -1,32 +1,52 @@
 #### Directory structure
 
 ```
-./Scripts
+./Tools/
 ├── Lib
 │   ├── Dictionary.js
 │   ├── js2json
-│   ├── template_app.m
-│   └── template_demo.m
+│   ├── jsonmini
+│   └── template.m
 ├── README.md
+├── apidump.php
+├── genFitData.php
 ├── js2literal.php
 └── src
-    └── js2json
+    ├── js2json
+    └── jsonmini
 
 ```
+## Lib
+Additional files required for woking tools
 
 #### Dictionary.js
 `Dictionary.js` is JSON to NSDictionary parser.
 
 
-#### js2json.js
-`js2json.js` is JS Object parset that creates NSJSON representation.
+#### js2json
+`js2json` is JS Object parset that creates NSJSON representation.
 
 
-#### Templates
+#### jsonmini
+`jsonmini` is JS Object parset that creates JSON minified version.
 
-`template_app.m` - template for demo app
 
-`template_demo.m` - template for web demos options
+#### template.m
+`template.m` - template for web demos options
+
+
+## Tools
+
+#### README.md
+This file.
+
+#### apidump.php
+`apidump.php` is JSON api parser that creates Objective-C representation.
+Can use templates. egz. 'template.m'
+
+
+#### genFitData.php
+`genFitData.php` is JSON fit data generator for example app.
 
 
 #### js2literal
@@ -41,5 +61,6 @@ php js2literal.php /highcharts-js/samples/highcharts/demo/ /highcharts-ios/Demo/
 
 ```
 
-#### jsrc
+
+## src
 Source code for scripts or CLI if there are one.

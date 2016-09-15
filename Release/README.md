@@ -110,12 +110,21 @@ highchartsView.options = ...;
 
 ```
 
-#### Plugins that extends functionality,
+#### Official Plugins that extends functionality. 
+These plugins are included in this distribution.
 
-Name         | Description
------------- | -------------
-exporting    | This plugin allows export to photos, or share menu.
-
+Name              |
+------------------|
+boost             |
+broken-axis       |
+canvas-toolsv     |
+data              |
+drilldown         |
+funnel            |
+heatmap           |
+no-data-to-display|
+solid-gauge       |
+treemap           |
 
 ## Errors
 
@@ -159,11 +168,12 @@ highchartsView.options = @{
 You can but dont need to use HTML colors. Simply initialize UIColor like you always do.
 
 ```
-
+// First create color object in any way you want, here standard UIColor init.
 UIColor *myColor = [UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:0.502];
 
 ...
 
+// Second use method 'color' on your object color in your chart color options.
 @"yAxis" : @{
     @"title" : @{
         @"text" : @"Temperature (°C)"
@@ -179,14 +189,16 @@ UIColor *myColor = [UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:0.50
 
 ```
 
-### How to use custom UIImage loaded from bundle?
-Some times you will ned to load image asset that you need to display on chart.
+### How to use custom UIImage loaded from my app bundle?
+Some times you will ned to load image asset from your app bundle or from other source that you need to display on chart.
 
 ```
+// First load image from any source you have.
 UIImage *myImage = [UIImage imageNamed:@"myImage.png"];
 
 ...
 
+// Second use method 'image' on your image object egz. [instance image].
 @"series" : @[@{
     @"name" : @"Tokyo",
     @"marker" : @{
