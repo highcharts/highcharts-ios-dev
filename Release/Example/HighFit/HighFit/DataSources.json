@@ -3,7 +3,7 @@
         "title": "Steps",
         "source": "DataSteps",
         "unit": "steps",
-        "chartType": "line",
+        "chartType": "area",
         "icon": "ic_directions_walk"
     },
     {

@@ -75,8 +75,9 @@
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (!self.chartView) {
-        self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-2, 0, self.view.bounds.size.width, 240.0f)];
+        self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-4, 0, self.view.bounds.size.width, 250.0f)];
         self.chartView.options = [OptionsProvider provideOptionsForChartType:self.configuration series:self.data[@"day"]];
+        self.chartView.backgroundColor = [UIColor whiteColor];
     }
 
     return self.chartView;
@@ -84,7 +85,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 240.0f;
+    return 260.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

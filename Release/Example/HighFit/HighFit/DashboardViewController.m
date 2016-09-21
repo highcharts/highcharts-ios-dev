@@ -41,11 +41,10 @@
         
         [self loadSourcesAndData];
         
-        self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        
         self.tableView.rowHeight = 240.0f;
         
-        self.tableView.tableHeaderView.hidden = YES;
+        self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableView.bounds.size.width, 0.01f)];
+
         
         self.dataName = @"day";
         
@@ -59,6 +58,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 8.0f)];
+    
     
     self.tableView.separatorColor = [UIColor clearColor];
     self.tableView.separatorInset = UIEdgeInsetsZero;
@@ -103,18 +105,20 @@
 //    if (cell == nil) {
     
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HighFitCell"];
-        
+    
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-2, 0, self.view.bounds.size.width, 240.0f)];
-        
+    
+        HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-2, -1, self.view.bounds.size.width, 243.0f)];
+    
+        chartView.backgroundColor = [UIColor clearColor];
+    
         NSArray *series = [self.data objectAtIndex:indexPath.row][self.dataName];
-        
+    
         NSDictionary *options = [self.sources objectAtIndex:indexPath.row];
         chartView.options = [OptionsProvider provideOptionsForChartType:options series:series];
-
+    
         [cell addSubview:chartView];
-        
+    
         [self.charts addObject:chartView];
 //    }
     
