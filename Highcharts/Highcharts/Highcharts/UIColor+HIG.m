@@ -17,8 +17,9 @@
     CGFloat r = components[0];
     CGFloat g = components[1];
     CGFloat b = components[2];
+    CGFloat a = components[3];
     
-    NSString *color = [NSString stringWithFormat:@"#%02X%02X%02X", (int)(r * 255), (int)(g * 255), (int)(b * 255)];
+    NSString *color = [NSString stringWithFormat:@"rgba(%d, %d, %d, %.2f)", (int)(r * 255), (int)(g * 255), (int)(b * 255), a];
     
     return color;
 }

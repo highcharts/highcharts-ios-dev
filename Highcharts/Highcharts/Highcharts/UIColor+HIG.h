@@ -13,7 +13,7 @@
 /**
  *  Color class category. Creating HTML string representation of UIColor object.
  *
- *  @return color as html string egz. #808080
+ *  @return UIColor as rgba color string egz. [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0].color to rgba(255, 255, 255, 1.0)
  */
 - (NSString*)color;
 
