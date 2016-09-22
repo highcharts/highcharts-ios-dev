@@ -45,7 +45,6 @@
         
         self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableView.bounds.size.width, 0.01f)];
 
-        
         self.dataName = @"day";
         
         [self.segment addTarget:self action:@selector(actionSegment:) forControlEvents:UIControlEventValueChanged];
@@ -90,6 +89,11 @@
 
 #pragma mark - Table view data source
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 250.0f;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -103,12 +107,12 @@
     
     // Configure the cell...
 //    if (cell == nil) {
-    
+        
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HighFitCell"];
     
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-        HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-2, -1, self.view.bounds.size.width, 243.0f)];
+        HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(5.0f, 5.0f, self.view.bounds.size.width-20.0f, 240.0f)];
     
         chartView.backgroundColor = [UIColor clearColor];
     

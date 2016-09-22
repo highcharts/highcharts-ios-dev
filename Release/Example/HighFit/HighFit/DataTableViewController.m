@@ -15,6 +15,7 @@
 @interface DataTableViewController ()
 @property (strong, nonatomic) NSString *chartType;
 @property (strong, nonatomic) NSDictionary *data;
+@property (strong, nonatomic) UIView *chartViewBase;
 @property (strong, nonatomic) HIGChartView *chartView;
 
 @property (strong, nonatomic) UISwitch *switchView;
@@ -74,17 +75,20 @@
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (!self.chartView) {
+    if (!self.chartViewBase) {
         
+        self.chartViewBase = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 260.0f)];
+        self.chartViewBase.backgroundColor = [UIColor whiteColor];
         NSMutableDictionary *tmpOptions = [NSMutableDictionary dictionaryWithDictionary:self.configuration];
         tmpOptions[@"exporting"] = @YES;
-        self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-4, 0, self.view.bounds.size.width, 250.0f)];
+        self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(5.0f, 5.0f, self.view.frame.size.width-20, 240.0f)];
         self.chartView.options = [OptionsProvider provideOptionsForChartType:tmpOptions series:self.data[@"day"]];
-        self.chartView.backgroundColor = [UIColor whiteColor];
         self.chartView.viewController = self;
+        
+        [self.chartViewBase addSubview:self.chartView];
     }
-
-    return self.chartView;
+    
+    return self.chartViewBase;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
