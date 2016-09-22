@@ -75,9 +75,13 @@
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (!self.chartView) {
+        
+        NSMutableDictionary *tmpOptions = [NSMutableDictionary dictionaryWithDictionary:self.configuration];
+        tmpOptions[@"exporting"] = @YES;
         self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x-4, 0, self.view.bounds.size.width, 250.0f)];
-        self.chartView.options = [OptionsProvider provideOptionsForChartType:self.configuration series:self.data[@"day"]];
+        self.chartView.options = [OptionsProvider provideOptionsForChartType:tmpOptions series:self.data[@"day"]];
         self.chartView.backgroundColor = [UIColor whiteColor];
+        self.chartView.viewController = self;
     }
 
     return self.chartView;

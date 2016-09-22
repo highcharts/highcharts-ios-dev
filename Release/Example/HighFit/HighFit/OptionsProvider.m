@@ -12,24 +12,35 @@
 
 @implementation OptionsProvider
 
+//@[@0, @"rgb(102, 153, 161)"],
+//@[@1, @"rgb(128, 135, 232)"]
+
 + (NSDictionary*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series;
 {
     
-    if ([options[@"source"] isEqualToString:@"DataSteps"]) {
+    if ([options[@"chartType"] isEqualToString:@"area"]) {
         return @{
                  @"chart" : @{
                          @"backgroundColor": @{
                                  @"linearGradient": @[@0, @0, @0, @300],
                                  @"stops": @[
-                                         @[@0, @"rgb(102, 153, 161)"],
-                                         @[@1, @"rgb(128, 135, 232)"]
+                                         @[@0, @"rgba(132, 103, 144, 1)"],
+                                         @[@1, @"rgba(163, 95, 103, 1)"]
                                          ]
                                  },
                          @"borderRadius": @6,
                          @"type": options[@"chartType"]
                          },
                  @"exporting": @{
-                         @"enabled": @NO
+                         @"enabled": options[@"exporting"]
+                         },
+                 @"navigation": @{
+                         @"buttonOptions": @{
+                                 @"symbolStroke": @"rgba(255, 255, 255, 0.4)",
+                                 @"theme": @{
+                                         @"fill": @"rgba(0,0,0,0.0)"
+                                         }
+                                 }
                          },
                  @"plotOptions": @{
                          @"series": @{
@@ -55,7 +66,13 @@
                                  }
                          },
                  @"subtitle": @{
-                         @"text": @""
+                         @"text": options[@"subtitle"],
+                         @"align": @"left",
+                         @"style": @{
+                                 @"fontFamily": @"Arial",
+                                 @"fontSize": @"10px",
+                                 @"color": @"rgba(255, 255, 255, 0.6)"
+                                 }
                          },
                  @"tooltip": @{
                          @"headerFormat": @"",
@@ -77,7 +94,7 @@
                  };
     }
 
-    if ([options[@"source"] isEqualToString:@"DataCaloriesOut"]) {
+    if ([options[@"chartType"] isEqualToString:@"column"]) {
         return @{
                  @"chart" : @{
                          @"backgroundColor":  @{
@@ -91,7 +108,15 @@
                          @"type": options[@"chartType"]
                          },
                  @"exporting": @{
-                         @"enabled": @NO
+                         @"enabled": options[@"exporting"]
+                         },
+                 @"navigation": @{
+                         @"buttonOptions": @{
+                                 @"symbolStroke": @"rgba(255, 255, 255, 0.4)",
+                                 @"theme": @{
+                                         @"fill": @"rgba(0,0,0,0.0)"
+                                         }
+                                 }
                          },
                  @"plotOptions": @{
                          @"series": @{
@@ -113,9 +138,14 @@
                                  }
                          },
                  @"subtitle": @{
-                         @"text": @""
-                         },
-                 @"tooltip": @{
+                         @"text": options[@"subtitle"],
+                         @"align": @"left",
+                         @"style": @{
+                                 @"fontFamily": @"Arial",
+                                 @"fontSize": @"10px",
+                                 @"color": @"rgba(255, 255, 255, 0.6)"
+                                 }
+                         },                 @"tooltip": @{
                          @"headerFormat": @"",
                          },
                  @"xAxis": @{
@@ -136,7 +166,7 @@
                  };
     }
 
-    if ([options[@"source"] isEqualToString:@"DataCaloriesIn"]) {
+    if ([options[@"chartType"] isEqualToString:@"spline"]) {
         return @{
                  @"chart" : @{
                          @"backgroundColor":  @{
@@ -150,7 +180,15 @@
                          @"type": options[@"chartType"]
                          },
                  @"exporting": @{
-                         @"enabled": @NO
+                         @"enabled": options[@"exporting"]
+                         },
+                 @"navigation": @{
+                         @"buttonOptions": @{
+                                 @"symbolStroke": @"rgba(255, 255, 255, 0.4)",
+                                 @"theme": @{
+                                         @"fill": @"rgba(0,0,0,0.0)"
+                                         }
+                                 }
                          },
                  @"plotOptions": @{
                          @"series": @{
@@ -172,13 +210,19 @@
                                  }
                          },
                  @"subtitle": @{
-                         @"text": @""
+                         @"text": options[@"subtitle"],
+                         @"align": @"left",
+                         @"style": @{
+                                 @"fontFamily": @"Arial",
+                                 @"fontSize": @"10px",
+                                 @"color": @"rgba(255, 255, 255, 0.6)"
+                                 }
                          },
                  @"tooltip": @{
                          @"headerFormat": @"",
                          },
                  @"xAxis": @{
-                                                   @"tickColor": @"rgba(255,255,255,0.0)",
+                          @"tickColor": @"rgba(255,255,255,0.0)",
                           @"lineColor": @"rgba(255, 255, 255, 0.3)",
                           @"labels": @{
                                   @"style": @{

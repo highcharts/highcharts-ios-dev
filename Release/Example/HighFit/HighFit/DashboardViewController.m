@@ -113,8 +113,14 @@
         chartView.backgroundColor = [UIColor clearColor];
     
         NSArray *series = [self.data objectAtIndex:indexPath.row][self.dataName];
+        int sum = 0;
+        for (NSNumber *number in series) {
+            sum += number.integerValue;
+        }
+        
+        NSMutableDictionary *options = [NSMutableDictionary dictionaryWithDictionary:[self.sources objectAtIndex:indexPath.row]];
+        options[@"subtitle"] = [NSString stringWithFormat:@"%d %@", sum, options[@"unit"]];
     
-        NSDictionary *options = [self.sources objectAtIndex:indexPath.row];
         chartView.options = [OptionsProvider provideOptionsForChartType:options series:series];
     
         [cell addSubview:chartView];
