@@ -29,7 +29,6 @@
                                          ]
                                  },
                          @"borderRadius": @6,
-                         @"panning": @YES,
                          @"type": options[@"chartType"]
                          },
                  @"exporting": @{
@@ -87,9 +86,7 @@
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
                                           }
-                                  },
-                          @"min": @0,
-                          @"max": @10
+                                  }
                          },
                  @"yAxis": @{
                          @"visible": @NO                         },
