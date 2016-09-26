@@ -24,6 +24,11 @@
 @property (strong, readonly) NSString *html;
 
 /**
+ *  This is options object injected to WebView.
+ */
+@property (strong, nonatomic) NSString *options;
+
+/**
  *  Loads html from location.
  *
  *  @param path to HTML file to load.

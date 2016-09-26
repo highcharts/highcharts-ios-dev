@@ -37,7 +37,7 @@
 
 - (void)reload
 {
-    [self loadChart];
+    [self loadChartOptions];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -62,12 +62,10 @@
         self.webView = [[WKWebView alloc] initWithFrame:frame];
         self.webView.scrollView.scrollEnabled = NO;
         self.webView.multipleTouchEnabled = NO;
-        
         self.webView.navigationDelegate = self;
-        
         self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
         [self addSubview:self.webView];
+        
 #ifdef TRIAL
         CGRect labelFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 300.0f);
         self.trialLabel = [[UILabel alloc] initWithFrame:labelFrame];
@@ -105,10 +103,10 @@
 {
     [super didMoveToSuperview];
     
-    [self loadChart];
+    [self loadChartHtml];
 }
 
-- (void)loadChart
+- (void)loadChartHtml
 {
     [self.HTML prepareViewWidth:self.bounds.size.width height:self.bounds.size.height];
     
@@ -143,6 +141,19 @@
     [self.HTML injectJavaScriptToHTML];
     
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
+}
+
+- (void)loadChartOptions
+{
+    [self.HTML prepareOptions:self.options];
+    
+    NSString *options = [NSString stringWithFormat:@"var chart = new Highcharts.Chart(%@)", self.HTML.options];
+    
+    [self.webView evaluateJavaScript:options completionHandler:^(id result, NSError *error){
+        if (error) {
+            NSLog(@"%@", error);
+        }
+    }];
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler

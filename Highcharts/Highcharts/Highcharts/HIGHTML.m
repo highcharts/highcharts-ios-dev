@@ -14,7 +14,6 @@
 @property (strong, readwrite) NSString *html_tmp;
 @property (strong, readwrite) NSString *html;
 @property (strong, nonatomic) NSString *scripts;
-@property (strong, nonatomic) NSString *options;
 @property (strong, nonatomic) HIGJavaScript *js;
 @end
 
