@@ -236,7 +236,10 @@
             break;
     }
     
-    self.chartView.options = [OptionsProvider provideOptionsForChartType:self.configuration series:self.data[dataName]];
+    NSMutableDictionary *tmpOptions = [NSMutableDictionary dictionaryWithDictionary:self.configuration];
+    tmpOptions[@"exporting"] = @YES;
+    
+    self.chartView.options = [OptionsProvider provideOptionsForChartType:tmpOptions series:self.data[dataName]];
     
     [self.chartView reload];
 }
