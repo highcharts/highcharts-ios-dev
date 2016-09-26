@@ -9,6 +9,7 @@
 #import "DashboardViewController.h"
 #import <Highcharts/Highcharts.h>
 #import "OptionsProvider.h"
+#import "DataTableViewController.h"
 
 @interface DashboardViewController ()
 @property (strong, nonatomic) NSMutableArray *sources;
@@ -103,12 +104,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HighFitCell"];
+    
+    NSMutableDictionary *options = [NSMutableDictionary dictionaryWithDictionary:[self.sources objectAtIndex:indexPath.row]];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:options[@"chartType"]];
     
     // Configure the cell...
-//    if (cell == nil) {
+    if (cell == nil) {
         
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HighFitCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:options[@"chartType"]];
     
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -122,7 +126,6 @@
             sum += number.integerValue;
         }
         
-        NSMutableDictionary *options = [NSMutableDictionary dictionaryWithDictionary:[self.sources objectAtIndex:indexPath.row]];
         options[@"subtitle"] = [NSString stringWithFormat:@"%d %@", sum, options[@"unit"]];
     
         chartView.options = [OptionsProvider provideOptionsForChartType:options series:series];
@@ -130,7 +133,17 @@
         [cell addSubview:chartView];
     
         [self.charts addObject:chartView];
-//    }
+    
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setImage:[UIImage imageNamed:@"ic_info_outline_white"] forState:UIControlStateNormal];
+    
+        [button setFrame:CGRectMake(self.view.bounds.size.width-20.0f-5.0f-24.0f, 15.0f, 24, 24)];
+    
+        button.tag = indexPath.row;
+        [button addTarget:self action:@selector(showDetailData:) forControlEvents:UIControlEventTouchUpInside];
+    
+        [chartView addSubview:button];
+    }
     
     return cell;
 }
@@ -260,6 +273,21 @@
         [tmpData addObject:[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error]];
     }
     self.data = [tmpData copy];
+}
+
+- (void)showDetailData:(UIButton*)sender
+{
+    
+    DataTableViewController *dataView = [[DataTableViewController alloc] initWithNibName:@"DataTableViewController" bundle:nil];
+    
+    // Pass the selected object to the new view controller.
+    
+    NSMutableDictionary *options = [NSMutableDictionary dictionaryWithDictionary:[self.sources objectAtIndex:sender.tag]];
+    
+    [dataView setConfiguration:options];
+    
+    // Push the view controller.
+    [self.navigationController pushViewController:dataView animated:YES];
 }
 
 @end
