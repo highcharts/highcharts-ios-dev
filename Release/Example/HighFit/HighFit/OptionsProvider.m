@@ -15,8 +15,25 @@
 //@[@0, @"rgb(98, 104, 166)"],
 //@[@1, @"rgb(244, 153, 82)"]
 
-+ (NSDictionary*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series;
++ (NSDictionary*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series type:(NSString*)type;
 {
+    NSArray *categories = nil;
+    
+    if ([type isEqualToString:@"day"]) {
+        categories = @[@"0", @"", @"", @"", @"", @"12", @"", @"", @"", @"", @"0"];
+    }
+    
+    if ([type isEqualToString:@"week"]) {
+        categories = @[@"Mon.", @"Tues.", @"Weds.", @"Thurs.", @"Fri.", @"Sat.", @"Sun."];
+    }
+    
+    if ([type isEqualToString:@"month"]) {
+        categories = @[@1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13, @14, @15, @16, @17, @18, @19, @20, @21, @22, @23, @24, @25, @26, @27,@28, @29, @30];
+    }
+    
+    if ([type isEqualToString:@"year"]) {
+        categories = @[@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec"];
+    }
     
     if ([options[@"chartType"] isEqualToString:@"area"]) {
         return @{
@@ -86,7 +103,9 @@
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
                                           }
-                                  }
+                                  },
+                          @"categories": [categories copy]
+                          
                          },
                  @"yAxis": @{
                          @"visible": @NO                         },
@@ -159,7 +178,8 @@
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
                                           }
-                                  }
+                                  },
+                          @"categories": [categories copy]
                          },
                  @"yAxis": @{
                          @"visible": @NO
@@ -234,7 +254,8 @@
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
                                           }
-                                  }
+                                  },
+                          @"categories": [categories copy]
                          },
                  @"yAxis": @{
                          @"visible": @NO

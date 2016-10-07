@@ -128,8 +128,8 @@
         
         options[@"subtitle"] = [NSString stringWithFormat:@"%d %@", sum, options[@"unit"]];
     
-        chartView.options = [OptionsProvider provideOptionsForChartType:options series:series];
-    
+        chartView.options = [OptionsProvider provideOptionsForChartType:options series:series type:@"day"];
+        
         [cell addSubview:chartView];
     
         [self.charts addObject:chartView];

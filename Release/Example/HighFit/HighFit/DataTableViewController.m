@@ -82,7 +82,7 @@
         NSMutableDictionary *tmpOptions = [NSMutableDictionary dictionaryWithDictionary:self.configuration];
         tmpOptions[@"exporting"] = @YES;
         self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(5.0f, 5.0f, self.view.frame.size.width-20, 240.0f)];
-        self.chartView.options = [OptionsProvider provideOptionsForChartType:tmpOptions series:self.data[@"day"]];
+        self.chartView.options = [OptionsProvider provideOptionsForChartType:tmpOptions series:self.data[@"day"] type:@"day"];
         self.chartView.viewController = self;
         
         [self.chartViewBase addSubview:self.chartView];
@@ -239,7 +239,7 @@
     NSMutableDictionary *tmpOptions = [NSMutableDictionary dictionaryWithDictionary:self.configuration];
     tmpOptions[@"exporting"] = @YES;
     
-    self.chartView.options = [OptionsProvider provideOptionsForChartType:tmpOptions series:self.data[dataName]];
+    self.chartView.options = [OptionsProvider provideOptionsForChartType:tmpOptions series:self.data[dataName] type:dataName];
     
     [self.chartView reload];
 }

@@ -10,6 +10,6 @@
 
 @interface OptionsProvider : NSObject
 
-+ (NSDictionary*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series;
++ (NSDictionary*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series type:(NSString*)type;
 
 @end
