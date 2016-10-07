@@ -124,7 +124,7 @@
     
     self.plugins = [self.plugins arrayByAddingObjectsFromArray:plugins];
     
-    self.plugins = [self.plugins arrayByAddingObjectsFromArray: @[ @"exporting", @"offline-exporting" ] ];
+    self.plugins = [self.plugins arrayByAddingObjectsFromArray: @[ @"exporting", @"offline-exporting", @"offline-exporting-wrap" ] ];
     
     self.plugins = [[NSOrderedSet orderedSetWithArray:self.plugins] array];
     

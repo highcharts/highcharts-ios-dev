@@ -336,12 +336,4 @@
 		chart.getSVGForLocalExport(options, chartOptions, fallbackToExportServer, svgSuccess);
 	};
 
-	// Set new default options to use the ios exporter logic
-	Highcharts.getOptions().exporting.buttons.contextButton = {
-        symbol: 'menu',
-        onclick: function () {
-            this.exportChartLocal();
-        }
-    };
-
 }));
