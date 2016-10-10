@@ -20,11 +20,11 @@
     NSArray *categories = nil;
     
     if ([type isEqualToString:@"day"]) {
-        categories = @[@"0", @"", @"", @"", @"", @"12", @"", @"", @"", @"", @"0"];
+        categories = @[ @"12AM", @"", @"3 AM", @"", @"6 AM", @"", @"9 AM", @"", @"12 PM", @"", @"3 PM", @"", @"6 PM", @"", @"9 PM", @"", @"12AM"];
     }
     
     if ([type isEqualToString:@"week"]) {
-        categories = @[@"Mon.", @"Tues.", @"Weds.", @"Thurs.", @"Fri.", @"Sat.", @"Sun."];
+        categories = @[@"Mon", @"Tue", @"Wed", @"Thu", @"Fri", @"Sat", @"Sun"];
     }
     
     if ([type isEqualToString:@"month"]) {
@@ -102,6 +102,7 @@
                           @"labels": @{
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
+                                          @"font": @"6px Helvetica"
                                           }
                                   },
                           @"categories": [categories copy]
@@ -177,6 +178,7 @@
                           @"labels": @{
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
+                                          @"font": @"6px Helvetica"
                                           }
                                   },
                           @"categories": [categories copy]
@@ -253,6 +255,7 @@
                           @"labels": @{
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
+                                          @"font": @"6px Helvetica"
                                           }
                                   },
                           @"categories": [categories copy]
