@@ -19,8 +19,11 @@
 {
     NSArray *categories = nil;
     
+     id step = [NSNull null];
+    
     if ([type isEqualToString:@"day"]) {
-        categories = @[ @"12AM", @"", @"3 AM", @"", @"6 AM", @"", @"9 AM", @"", @"12 PM", @"", @"3 PM", @"", @"6 PM", @"", @"9 PM", @"", @"12AM"];
+        categories = @[ @"12AM", @"", @"3AM", @"", @"6AM", @"", @"9AM", @"", @"12PM", @"", @"3PM", @"", @"6PM", @"", @"9PM", @"", @"12AM"];
+        step = @1;
     }
     
     if ([type isEqualToString:@"week"]) {
@@ -33,6 +36,7 @@
     
     if ([type isEqualToString:@"year"]) {
         categories = @[@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec"];
+        step = @1;
     }
     
     if ([options[@"chartType"] isEqualToString:@"area"]) {
@@ -102,8 +106,9 @@
                           @"labels": @{
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
-                                          @"font": @"6px Helvetica"
-                                          }
+                                          @"font": @"10px Arial"
+                                          },
+                                  @"step": step
                                   },
                           @"categories": [categories copy]
                           
@@ -178,8 +183,9 @@
                           @"labels": @{
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
-                                          @"font": @"6px Helvetica"
-                                          }
+                                          @"font": @"10px Arial"
+                                          },
+                                  @"step": step
                                   },
                           @"categories": [categories copy]
                          },
@@ -255,8 +261,9 @@
                           @"labels": @{
                                   @"style": @{
                                           @"color": @"rgb(255, 255, 255)",
-                                          @"font": @"6px Helvetica"
-                                          }
+                                          @"font": @"10px Arial"
+                                          },
+                                  @"step": step
                                   },
                           @"categories": [categories copy]
                          },
