@@ -2,15 +2,19 @@
 
 ```
 ./
-├── API
+├── _dump
+├── api
 ├── Highcharts
 ├── Release
 ├── Tools
 └── WWW
 ```
 
+#### _DUMP
+Current json api dump.
+
 #### API
-JSON dumpp with API. Documentation in JSON for website. With documentation presenter.
+Ready for website or offline documentation in JSON. With documentation presenter.
 
 #### Highcharts
 

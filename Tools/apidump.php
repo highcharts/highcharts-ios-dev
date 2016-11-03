@@ -1,5 +1,16 @@
 <?php
 	
+	function remove($STACK, $HAY) {
+		$remove = FALSE;
+		foreach ($HAY as $item) {
+			if(strpos($STACK, $item) !== FALSE){
+				$remove = TRUE;
+				break;
+			}
+		}
+		return $remove;
+	}
+
     function apiParse($PATH_IN, $PATH_OUT, $CLEAR) {
         $FILE_CONTENT_IN = file_get_contents($PATH_IN);
         
@@ -20,18 +31,22 @@
 
 		$STR_SRCH[] = 'Array';
 		$STR_REPL[] = 'NSArray';
-
-		$STR_SRCH[] = 'Object';
-		$STR_REPL[] = 'NSObject';
-
-		$items = json_decode($FILE_CONTENT_IN);
 		
+		// $STR_SRCH[] = 'Object';
+		// $STR_REPL[] = 'NSObject';
+
+		$STR_REMOVE[] = '.events';
+		$STR_REMOVE[] = '.formatter';
+
+		$newItems = [];
+		$items = json_decode($FILE_CONTENT_IN);
+		$index = 0;
 		foreach ($items as &$item) {
 			
 			$string = $item->returnType;
 			$item->returnType = str_ireplace($STR_SRCH, $STR_REPL, $string);
 			
-			var_dump($item->returnType);
+			// var_dump($item->returnType);
 			
 			if ($CLEAR) {
 				$item->deprecated = FALSE;
@@ -40,10 +55,15 @@
 				$item->since = "";
 			}
 
+			if (remove($item->fullname, $STR_REMOVE) !== TRUE) {
+				array_push($newItems, $item);
+			}
+
 			// var_dump($item);
+			$index++;
 		}
 		
-		$FILE_CONTENT_OUT = json_encode($items);
+		$FILE_CONTENT_OUT = json_encode($newItems);
 
 		file_put_contents($PATH_OUT, $FILE_CONTENT_OUT);
     }
