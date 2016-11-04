@@ -57,7 +57,7 @@ fastlane/screenshots
 .DS_Store
 
 # Project
-/API/dump
-/Release/Highcharts.framework
+#/API/dump
+#/Release/Highcharts.framework
 /Release/Fabric.framework
 /Release/Crashlytics.framework
