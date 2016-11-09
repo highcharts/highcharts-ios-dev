@@ -41,8 +41,15 @@ Additional files required for woking tools
 This file.
 
 #### apidump.php
-`apidump.php` is JSON api parser that creates Objective-C representation.
-Can use templates. egz. 'template.m'
+`apidump.php` is JSON api parser that format Highchart api object from documentation for import to db.
+
+Data is imported to MongoDB with mongoimport by using the highcharts.json file in the highcharts-ios repo, but first you need to format it correctly:
+
+1. Rename all "name" properties to "_id" (but keep the values)
+2. Place each option object on its own line, without a comma in the end:
+Line 1: {"_id":"accessibility"...}
+Line 2: {"_id":"accessibility--descr...}
+etc.
 
 
 #### genFitData.php
