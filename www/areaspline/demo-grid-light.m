@@ -19,27 +19,21 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"grid-light";
     
     chartView.options = @{
                                @"chart": @{
-                                       @"type": @"area",
-                                       @"inverted": @true
+                                       @"type": @"areaspline"
                                        },
                                @"title": @{
                                        @"text": @"Average fruit consumption during one week"
                                        },
-                               @"subtitle": @{
-                                       @"style": @{
-                                               @"position": @"absolute",
-                                               @"right": @"0px",
-                                               @"bottom": @"10px"
-                                               }
-                                       },
                                @"legend": @{
                                        @"layout": @"vertical",
-                                       @"align": @"right",
+                                       @"align": @"left",
                                        @"verticalAlign": @"top",
-                                       @"x": @-150,
+                                       @"x": @150,
                                        @"y": @100,
                                        @"floating": @true,
                                        @"borderWidth": @1,
@@ -54,17 +48,29 @@
                                                @"Friday",
                                                @"Saturday",
                                                @"Sunday"
+                                               ],
+                                       @"plotBands": @[
+                                               @{
+                                                   @"from": @4.5,
+                                                   @"to": @6.5,
+                                                   @"color": @"rgba(68, 170, 213, .2)"
+                                                   }
                                                ]
                                        },
                                @"yAxis": @{
                                        @"title": @{
-                                               @"text": @"Number of units"
-                                               },
-                                       @"labels": @{},
-                                       @"min": @0
+                                               @"text": @"Fruit units"
+                                               }
+                                       },
+                               @"tooltip": @{
+                                       @"shared": @true,
+                                       @"valueSuffix": @" units"
+                                       },
+                               @"credits": @{
+                                       @"enabled": @false
                                        },
                                @"plotOptions": @{
-                                       @"area": @{
+                                       @"areaspline": @{
                                                @"fillOpacity": @0.5
                                                }
                                        },

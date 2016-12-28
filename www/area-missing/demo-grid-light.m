@@ -19,27 +19,29 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"grid-light";
     
     chartView.options = @{
                                @"chart": @{
                                        @"type": @"area",
-                                       @"inverted": @true
+                                       @"spacingBottom": @30
                                        },
                                @"title": @{
-                                       @"text": @"Average fruit consumption during one week"
+                                       @"text": @"Fruit consumption *"
                                        },
                                @"subtitle": @{
-                                       @"style": @{
-                                               @"position": @"absolute",
-                                               @"right": @"0px",
-                                               @"bottom": @"10px"
-                                               }
+                                       @"text": @"* Jane's banana consumption is unknown",
+                                       @"floating": @true,
+                                       @"align": @"right",
+                                       @"verticalAlign": @"bottom",
+                                       @"y": @15
                                        },
                                @"legend": @{
                                        @"layout": @"vertical",
-                                       @"align": @"right",
+                                       @"align": @"left",
                                        @"verticalAlign": @"top",
-                                       @"x": @-150,
+                                       @"x": @150,
                                        @"y": @100,
                                        @"floating": @true,
                                        @"borderWidth": @1,
@@ -47,50 +49,56 @@
                                        },
                                @"xAxis": @{
                                        @"categories": @[
-                                               @"Monday",
-                                               @"Tuesday",
-                                               @"Wednesday",
-                                               @"Thursday",
-                                               @"Friday",
-                                               @"Saturday",
-                                               @"Sunday"
+                                               @"Apples",
+                                               @"Pears",
+                                               @"Oranges",
+                                               @"Bananas",
+                                               @"Grapes",
+                                               @"Plums",
+                                               @"Strawberries",
+                                               @"Raspberries"
                                                ]
                                        },
                                @"yAxis": @{
                                        @"title": @{
-                                               @"text": @"Number of units"
+                                               @"text": @"Y-Axis"
                                                },
-                                       @"labels": @{},
-                                       @"min": @0
+                                       @"labels": @{}
                                        },
+                               @"tooltip": @{},
                                @"plotOptions": @{
                                        @"area": @{
                                                @"fillOpacity": @0.5
                                                }
                                        },
+                               @"credits": @{
+                                       @"enabled": @false
+                                       },
                                @"series": @[
                                        @{
                                            @"name": @"John",
                                            @"data": @[
-                                                   @3,
+                                                   @0,
+                                                   @1,
                                                    @4,
-                                                   @3,
+                                                   @4,
                                                    @5,
-                                                   @4,
-                                                   @10,
-                                                   @12
+                                                   @2,
+                                                   @3,
+                                                   @7
                                                    ]
                                            },
                                        @{
                                            @"name": @"Jane",
                                            @"data": @[
                                                    @1,
+                                                   @0,
                                                    @3,
-                                                   @4,
+                                                   [NSNull null],
                                                    @3,
-                                                   @3,
-                                                   @5,
-                                                   @4
+                                                   @1,
+                                                   @2,
+                                                   @1
                                                    ]
                                            }
                                        ]

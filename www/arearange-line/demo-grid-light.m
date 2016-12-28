@@ -19,6 +19,8 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"grid-light";
     
     NSArray *ranges = @[
                         @[@1246406400000, @14.3, @27.7],

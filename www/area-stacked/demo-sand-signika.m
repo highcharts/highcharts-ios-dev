@@ -19,13 +19,15 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"sand-signika";
     
     chartView.options = @{
     @"chart": @{
         @"type": @"area"
     },
     @"title": @{
-        @"text": @"Historic and Estimated Worldwide Population Distribution by Region"
+        @"text": @"Historic and Estimated Worldwide Population Growth by Region"
     },
     @"subtitle": @{
         @"text": @"Source: Wikipedia.org"
@@ -47,21 +49,22 @@
     },
     @"yAxis": @{
         @"title": @{
-            @"text": @"Percent"
-        }
+            @"text": @"Billions"
+        },
+        @"labels": @{}
     },
     @"tooltip": @{
-        @"pointFormat": @"<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} millions)<br/>",
-        @"shared": @true
+        @"shared": @true,
+        @"valueSuffix": @" millions"
     },
     @"plotOptions": @{
         @"area": @{
-            @"stacking": @"percent",
-            @"lineColor": @"#ffffff",
+            @"stacking": @"normal",
+            @"lineColor": @"#666666",
             @"lineWidth": @1,
             @"marker": @{
                 @"lineWidth": @1,
-                @"lineColor": @"#ffffff"
+                @"lineColor": @"#666666"
             }
         }
     },

@@ -19,6 +19,8 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"dark-unica";
     
     NSArray *ranges = @[
                         @[@1246406400000, @14.3, @27.7],
@@ -114,7 +116,7 @@
                                            @"marker": @{
                                                    @"fillColor": @"white",
                                                    @"lineWidth": @2,
-                                                   @"lineColor": @"#7cb5ec"
+                                                   @"lineColor": @"#2b908f"
                                                    }
                                            },
                                        @{
@@ -123,7 +125,7 @@
                                            @"type": @"arearange",
                                            @"lineWidth": @0,
                                            @"linkedTo": @":previous",
-                                           @"color": @"#7cb5ec",
+                                           @"color": @"#2b908f",
                                            @"fillOpacity": @0.3,
                                            @"zIndex": @0
                                            }

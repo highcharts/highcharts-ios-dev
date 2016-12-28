@@ -20,7 +20,7 @@
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
     
-    self.chartView.options = @{
+    chartView.options = @{
                                @"chart": @{
                                        @"type": @"area",
                                        @"spacingBottom": @30
@@ -42,7 +42,8 @@
                                        @"x": @150,
                                        @"y": @100,
                                        @"floating": @true,
-                                       @"borderWidth": @1
+                                       @"borderWidth": @1,
+                                       @"backgroundColor": @"#FFFFFF"
                                        },
                                @"xAxis": @{
                                        @"categories": @[
@@ -101,7 +102,7 @@
                                        ]
                                };
     
-    [self.view addSubview:self.chartView];
+    [self.view addSubview:chartView];
 }
 
 @end
