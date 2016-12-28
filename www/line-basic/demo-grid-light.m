@@ -19,16 +19,17 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"grid-light";
     
     chartView.options = @{
-    @"chart": @{
-        @"type": @"spline"
-    },
     @"title": @{
-        @"text": @"Monthly Average Temperature"
+        @"text": @"Monthly Average Temperature",
+        @"x": @-20
     },
     @"subtitle": @{
-        @"text": @"Source: WorldClimate.com"
+        @"text": @"Source: WorldClimate.com",
+        @"x": @-20
     },
     @"xAxis": @{
         @"categories": @[
@@ -48,29 +49,28 @@
     },
     @"yAxis": @{
         @"title": @{
-            @"text": @"Temperature"
+            @"text": @"Temperature (°C)"
         },
-        @"labels": @{}
+        @"plotLines": @[
+            @{
+                @"value": @0,
+                @"width": @1,
+                @"color": @"#808080"
+            }
+        ]
     },
     @"tooltip": @{
-        @"crosshairs": @true,
-        @"shared": @true
+        @"valueSuffix": @"°C"
     },
-    @"plotOptions": @{
-        @"spline": @{
-            @"marker": @{
-                @"radius": @4,
-                @"lineColor": @"#666666",
-                @"lineWidth": @1
-            }
-        }
+    @"legend": @{
+        @"layout": @"vertical",
+        @"align": @"right",
+        @"verticalAlign": @"middle",
+        @"borderWidth": @0
     },
     @"series": @[
         @{
             @"name": @"Tokyo",
-            @"marker": @{
-                @"symbol": @"square"
-            },
             @"data": @[
                 @7,
                 @6.9,
@@ -79,12 +79,7 @@
                 @18.2,
                 @21.5,
                 @25.2,
-                @{
-                    @"y": @26.5,
-                    @"marker": @{
-                        @"symbol": @"url(https://www.highcharts.com/samples/graphics/sun.png)"
-                    }
-                },
+                @26.5,
                 @23.3,
                 @18.3,
                 @13.9,
@@ -92,17 +87,43 @@
             ]
         },
         @{
-            @"name": @"London",
-            @"marker": @{
-                @"symbol": @"diamond"
-            },
+            @"name": @"New York",
             @"data": @[
-                @{
-                    @"y": @3.9,
-                    @"marker": @{
-                        @"symbol": @"url(https://www.highcharts.com/samples/graphics/snow.png)"
-                    }
-                },
+                @-0.2,
+                @0.8,
+                @5.7,
+                @11.3,
+                @17,
+                @22,
+                @24.8,
+                @24.1,
+                @20.1,
+                @14.1,
+                @8.6,
+                @2.5
+            ]
+        },
+        @{
+            @"name": @"Berlin",
+            @"data": @[
+                @-0.9,
+                @0.6,
+                @3.5,
+                @8.4,
+                @13.5,
+                @17,
+                @18.6,
+                @17.9,
+                @14.3,
+                @9,
+                @3.9,
+                @1
+            ]
+        },
+        @{
+            @"name": @"London",
+            @"data": @[
+                @3.9,
                 @4.2,
                 @5.7,
                 @8.5,

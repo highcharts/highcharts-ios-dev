@@ -20,7 +20,7 @@
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
     
-    self.chartView.options = @{
+    chartView.options = @{
     @"title": @{
         @"text": @"Monthly Average Temperature",
         @"x": @-20
@@ -138,7 +138,7 @@
     ]
 };
     
-    [self.view addSubview:self.chartView];
+    [self.view addSubview:chartView];
 }
 
 @end

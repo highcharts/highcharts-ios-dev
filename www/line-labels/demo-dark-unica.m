@@ -19,10 +19,12 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"dark-unica";
     
     chartView.options = @{
     @"chart": @{
-        @"type": @"spline"
+        @"type": @"line"
     },
     @"title": @{
         @"text": @"Monthly Average Temperature"
@@ -48,43 +50,29 @@
     },
     @"yAxis": @{
         @"title": @{
-            @"text": @"Temperature"
-        },
-        @"labels": @{}
-    },
-    @"tooltip": @{
-        @"crosshairs": @true,
-        @"shared": @true
+            @"text": @"Temperature (°C)"
+        }
     },
     @"plotOptions": @{
-        @"spline": @{
-            @"marker": @{
-                @"radius": @4,
-                @"lineColor": @"#666666",
-                @"lineWidth": @1
-            }
+        @"line": @{
+            @"dataLabels": @{
+                @"enabled": @true
+            },
+            @"enableMouseTracking": @false
         }
     },
     @"series": @[
         @{
             @"name": @"Tokyo",
-            @"marker": @{
-                @"symbol": @"square"
-            },
             @"data": @[
                 @7,
                 @6.9,
                 @9.5,
                 @14.5,
-                @18.2,
+                @18.4,
                 @21.5,
                 @25.2,
-                @{
-                    @"y": @26.5,
-                    @"marker": @{
-                        @"symbol": @"url(https://www.highcharts.com/samples/graphics/sun.png)"
-                    }
-                },
+                @26.5,
                 @23.3,
                 @18.3,
                 @13.9,
@@ -93,16 +81,8 @@
         },
         @{
             @"name": @"London",
-            @"marker": @{
-                @"symbol": @"diamond"
-            },
             @"data": @[
-                @{
-                    @"y": @3.9,
-                    @"marker": @{
-                        @"symbol": @"url(https://www.highcharts.com/samples/graphics/snow.png)"
-                    }
-                },
+                @3.9,
                 @4.2,
                 @5.7,
                 @8.5,
