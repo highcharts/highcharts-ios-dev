@@ -19,13 +19,15 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"dark-unica";
     
     chartView.options = @{
     @"chart": @{
         @"type": @"column"
     },
     @"title": @{
-        @"text": @"Stacked column chart"
+        @"text": @"Total fruit consumtion, grouped by gender"
     },
     @"xAxis": @{
         @"categories": @[
@@ -37,18 +39,16 @@
         ]
     },
     @"yAxis": @{
+        @"allowDecimals": @false,
         @"min": @0,
         @"title": @{
-            @"text": @"Total fruit consumption"
+            @"text": @"Number of fruits"
         }
     },
-    @"tooltip": @{
-        @"pointFormat": @"<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>",
-        @"shared": @true
-    },
+    @"tooltip": @{},
     @"plotOptions": @{
         @"column": @{
-            @"stacking": @"percent"
+            @"stacking": @"normal"
         }
     },
     @"series": @[
@@ -60,17 +60,8 @@
                 @4,
                 @7,
                 @2
-            ]
-        },
-        @{
-            @"name": @"Jane",
-            @"data": @[
-                @2,
-                @2,
-                @3,
-                @2,
-                @1
-            ]
+            ],
+            @"stack": @"male"
         },
         @{
             @"name": @"Joe",
@@ -80,7 +71,30 @@
                 @4,
                 @2,
                 @5
-            ]
+            ],
+            @"stack": @"male"
+        },
+        @{
+            @"name": @"Jane",
+            @"data": @[
+                @2,
+                @5,
+                @6,
+                @2,
+                @1
+            ],
+            @"stack": @"female"
+        },
+        @{
+            @"name": @"Janet",
+            @"data": @[
+                @3,
+                @0,
+                @4,
+                @4,
+                @3
+            ],
+            @"stack": @"female"
         }
     ]
 };

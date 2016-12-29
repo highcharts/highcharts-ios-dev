@@ -19,7 +19,9 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
-    
+
+    chartView.theme = @"dark-unica";
+
     chartView.options = @{
                                @"chart": @{
                                        @"type": @"column"
@@ -45,7 +47,7 @@
                                                @"enabled": @true,
                                                @"style": @{
                                                        @"fontWeight": @"bold",
-                                                       @"color": @"gray"
+                                                       @"color": @"#C0C0C0"
                                                        }
                                                }
                                        },
@@ -55,7 +57,7 @@
                                        @"verticalAlign": @"top",
                                        @"y": @25,
                                        @"floating": @true,
-                                       @"backgroundColor": @"white",
+                                       @"backgroundColor": @"#505053",
                                        @"borderColor": @"#CCC",
                                        @"borderWidth": @1,
                                        @"shadow": @false
@@ -69,7 +71,7 @@
                                                @"stacking": @"normal",
                                                @"dataLabels": @{
                                                        @"enabled": @true,
-                                                       @"color": @"white"
+                                                       @"color": @"#B0B0B3"
                                                        @"style": @{
                                                                @"textShadow": @"0 0 3px black"
                                                                }

@@ -19,13 +19,15 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"sand-signika";
     
     chartView.options = @{
     @"chart": @{
-        @"type": @"column"
+        @"type": @"bar"
     },
     @"title": @{
-        @"text": @"Stacked column chart"
+        @"text": @"Stacked bar chart"
     },
     @"xAxis": @{
         @"categories": @[
@@ -42,13 +44,12 @@
             @"text": @"Total fruit consumption"
         }
     },
-    @"tooltip": @{
-        @"pointFormat": @"<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>",
-        @"shared": @true
+    @"legend": @{
+        @"reversed": @true
     },
     @"plotOptions": @{
-        @"column": @{
-            @"stacking": @"percent"
+        @"series": @{
+            @"stacking": @"normal"
         }
     },
     @"series": @[

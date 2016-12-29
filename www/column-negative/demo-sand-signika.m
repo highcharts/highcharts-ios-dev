@@ -19,13 +19,15 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"sand-signika";
     
     chartView.options = @{
     @"chart": @{
         @"type": @"column"
     },
     @"title": @{
-        @"text": @"Stacked column chart"
+        @"text": @"Column chart with negative values"
     },
     @"xAxis": @{
         @"categories": @[
@@ -36,20 +38,8 @@
             @"Bananas"
         ]
     },
-    @"yAxis": @{
-        @"min": @0,
-        @"title": @{
-            @"text": @"Total fruit consumption"
-        }
-    },
-    @"tooltip": @{
-        @"pointFormat": @"<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>",
-        @"shared": @true
-    },
-    @"plotOptions": @{
-        @"column": @{
-            @"stacking": @"percent"
-        }
+    @"credits": @{
+        @"enabled": @false
     },
     @"series": @[
         @{
@@ -66,8 +56,8 @@
             @"name": @"Jane",
             @"data": @[
                 @2,
-                @2,
-                @3,
+                @-2,
+                @-3,
                 @2,
                 @1
             ]
@@ -78,7 +68,7 @@
                 @3,
                 @4,
                 @4,
-                @2,
+                @-2,
                 @5
             ]
         }

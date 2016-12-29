@@ -19,6 +19,8 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"dark-unica";
     
     chartView.options = @{
                                @"chart": @{
@@ -70,7 +72,7 @@
                                        @"y": @80,
                                        @"floating": @true,
                                        @"borderWidth": @1,
-                                       @"backgroundColor": @"#FFFFFF",
+                                       @"backgroundColor": @"rgba(0, 0, 0, 0.5)",
                                        @"shadow": @true
                                        },
                                @"credits": @{

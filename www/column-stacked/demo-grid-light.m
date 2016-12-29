@@ -19,7 +19,9 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
-    
+
+    chartView.theme = @"grid-light";
+
     chartView.options = @{
                                @"chart": @{
                                        @"type": @"column"
@@ -55,7 +57,7 @@
                                        @"verticalAlign": @"top",
                                        @"y": @25,
                                        @"floating": @true,
-                                       @"backgroundColor": @"white",
+                                       @"backgroundColor": @"#F0F0EA",
                                        @"borderColor": @"#CCC",
                                        @"borderWidth": @1,
                                        @"shadow": @false
