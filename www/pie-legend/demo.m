@@ -20,7 +20,7 @@
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
     
-    self.chartView.options = @{
+    chartView.options = @{
                                @"chart": @{
                                        @"plotBackgroundColor": [NSNull null],
                                        @"plotBorderWidth": [NSNull null],
@@ -79,7 +79,7 @@
                                        ]
                                };
     
-    [self.view addSubview:self.chartView];
+    [self.view addSubview:chartView];
 }
 
 @end

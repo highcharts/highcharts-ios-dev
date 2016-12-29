@@ -19,6 +19,8 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"dark-unica";
     
     chartView.options = @{
                                @"chart": @{
@@ -38,12 +40,9 @@
                                                @"allowPointSelect": @true,
                                                @"cursor": @"pointer",
                                                @"dataLabels": @{
-                                                       @"enabled": @true,
-                                                       @"format": @"<b>{point.name}</b>: {point.percentage:.1f} %",
-                                                       @"style": @{
-                                                            @"color": @"black"
-                                                          }
-                                                       }
+                                                       @"enabled": @false
+                                                       },
+                                               @"showInLegend": @true
                                                }
                                        },
                                @"series": @[

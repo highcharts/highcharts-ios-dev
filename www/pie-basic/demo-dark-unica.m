@@ -19,6 +19,8 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"dark-unica";
     
     chartView.options = @{
                                @"chart": @{
@@ -41,7 +43,7 @@
                                                        @"enabled": @true,
                                                        @"format": @"<b>{point.name}</b>: {point.percentage:.1f} %",
                                                        @"style": @{
-                                                            @"color": @"black"
+                                                            @"color": @"#F0F0F3"
                                                           }
                                                        }
                                                }
