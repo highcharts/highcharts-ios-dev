@@ -19,63 +19,68 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.theme = @"grid-light";
     
     chartView.options = @{
     @"chart": @{
         @"type": @"pie",
         @"options3d": @{
             @"enabled": @true,
-            @"alpha": @45,
-            @"beta": @0
+            @"alpha": @45
         }
     },
     @"title": @{
-        @"text": @"Browser market shares at a specific website, 2014"
+        @"text": @"Contents of Highsoft's weekly fruit delivery"
     },
-    @"tooltip": @{
-        @"pointFormat": @"{series.name}: <b>{point.percentage:.1f}%</b>"
+    @"subtitle": @{
+        @"text": @"3D donut in Highcharts"
     },
     @"plotOptions": @{
         @"pie": @{
-            @"allowPointSelect": @true,
-            @"cursor": @"pointer",
-            @"depth": @35,
-            @"dataLabels": @{
-                @"enabled": @true,
-                @"format": @"{point.name}"
-            }
+            @"innerSize": @100,
+            @"depth": @45
         }
     },
     @"series": @[
         @{
-            @"type": @"pie",
-            @"name": @"Browser share",
+            @"name": @"Delivered amount",
             @"data": @[
                 @[
-                    @"Firefox",
-                    @45
+                    @"Bananas",
+                    @8
                 ],
                 @[
-                    @"IE",
-                    @26.8
-                ],
-                @{
-                    @"name": @"Chrome",
-                    @"y": @12.8,
-                    @"sliced": @true,
-                    @"selected": @true
-                },
-                @[
-                    @"Safari",
-                    @8.5
+                    @"Kiwi",
+                    @3
                 ],
                 @[
-                    @"Opera",
-                    @6.2
+                    @"Mixed nuts",
+                    @1
                 ],
                 @[
-                    @"Others",
-                    @0.7
+                    @"Oranges",
+                    @6
+                ],
+                @[
+                    @"Apples",
+                    @8
+                ],
+                @[
+                    @"Pears",
+                    @4
+                ],
+                @[
+                    @"Clementines",
+                    @4
+                ],
+                @[
+                    @"Reddish (bag)",
+                    @1
+                ],
+                @[
+                    @"Grapes (bunch)",
+                    @1
                 ]
             ]
         }
