@@ -22,6 +22,8 @@
 
     chartView.theme = @"sand-signika";
     
+    chartView.plugins = @[ @"drilldown" ];
+    
     chartView.options = @{
     @"chart": @{
         @"type": @"column"

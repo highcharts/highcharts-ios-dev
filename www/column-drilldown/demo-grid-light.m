@@ -22,6 +22,8 @@
 
     chartView.theme = @"grid-light";
     
+    chartView.plugins = @[ @"drilldown" ];
+    
     chartView.options = @{
     @"chart": @{
         @"type": @"column"

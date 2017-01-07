@@ -22,6 +22,8 @@
 
     chartView.theme = @"dark-unica";
     
+    chartView.plugins = @[ @"drilldown" ];
+    
     chartView.options = @{
     @"chart": @{
         @"type": @"column"

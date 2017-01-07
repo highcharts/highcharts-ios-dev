@@ -19,6 +19,8 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    
+    chartView.plugins = @[ @"treemap" ];
 
     chartView.theme = @"sand-signika";
     

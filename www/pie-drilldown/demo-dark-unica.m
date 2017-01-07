@@ -20,6 +20,8 @@
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
 
+    chartView.plugins = @[ @"drilldown" ];
+    
     chartView.theme = @"dark-unica";
     
     chartView.options = @{
