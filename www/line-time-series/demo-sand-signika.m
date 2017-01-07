@@ -71,7 +71,7 @@
                                 @{
                                     @"type": @"area",
                                     @"name": @"USD to EUR",
-                                    @"data": data
+                                    @"data": [self data]
                                 }
                             ]
                         };
