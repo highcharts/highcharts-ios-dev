@@ -19,6 +19,8 @@
     [super viewDidLoad];
     
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.plugins = @[ @"heatmap", @"treemap" ];
     
     chartView.options = @{
                             @"series": @[
