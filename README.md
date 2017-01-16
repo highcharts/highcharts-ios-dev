@@ -2,19 +2,15 @@
 
 ```
 ./
-├── _dump
 ├── api
 ├── Highcharts
 ├── Release
 ├── Tools
-└── WWW
+└── www
 ```
 
-#### _DUMP
-Current json api dump.
-
 #### API
-Ready for website or offline documentation in JSON. With documentation presenter.
+API documentation in JSON.
 
 #### Highcharts
 
@@ -28,6 +24,6 @@ This is release catalog for compiled framework and demo aplication/showcase this
 
 All tools for parsing API, Demo JSON. Additional README.md in directory.
 
-#### WWW
+#### www
 
 Demo examples for website. Created by script from `./Tool` directory.
