@@ -8,6 +8,7 @@ sys.setdefaultencoding('utf-8')
 struktura = dict()
 
 
+
 def addFieldToParent(prop):
     fullname = prop["fullname"].split(".")
     if len(fullname) > 1:
@@ -59,7 +60,7 @@ def upperfirst(x):
 def getType(x):
     return {
         "Number": 'NSNumber',
-        "Boolean": 'Bool',
+        "Boolean": 'BOOL',
         "Color": 'HexColor',
         "String": 'NSString',
         "Object": 'id',
@@ -68,19 +69,19 @@ def getType(x):
         "Array<Object>": 'NSMutableArray<id *>',
         "Array": 'NSMutableArray<id *>',
         "Array<String>": 'NSMutableArray<NSString *>',
-        "Boolean|Object": "id /* Boolean | Object */",
-        "String|Number": 'id /* NSNumber | NSString */',
-        "Array<Array>": 'NSMutableArray<id *> /* NSArray<NSArray> */',
+        "Boolean|Object": "BOOL",
+        "String|Number": 'NSString',
+        "Array<Array>": 'NSMutableArray<NSArray *>',
         "CSSObject": 'NSMutableDictionary /* <NSString, NSString> */',
         "Array<Color>": 'NSMutableArray<HexColor *>',
-        "Array<Object|Array|Number>": 'NSMutableArray<id *> /* <id | NSArray | NSNumber> */',
-        "Array<String|Number>": 'NSMutableArray<id *> /* <NSString | NSNumber> */',
-        "Array<Object|Number>": 'NSMutableArray<id *>',
-        "Array<Object|Array>": 'NSMutableArray<id *> /* <id | NSNumber> */',
-        "Number|String": 'id /* NSNumber | NSString */',
+        "Array<Object|Array|Number>": 'NSMutableArray<NSArray<NSNumber*> *>',
+        "Array<String|Number>": 'NSMutableArray<NSString *>',
+        "Array<Object|Number>": 'NSMutableArray<NSNumber *>',
+        "Array<Object|Array>": 'NSMutableArray<NSArray *>',
+        "Number|String": 'NSString',
         "String|HTMLElement": 'NSString',
-        "Array<Array<Mixed>>": 'NSMutableArray<id *> /* NSArray<NSArray<id>> */',
-        "String|Object": 'id /* NSString | id */',
+        "Array<Array<Mixed>>": 'NSMutableArray<NSArray *>',
+        "String|Object": 'NSString',
         "Mixed": 'id',
         "Number|Boolean": 'NSNumber',
         "": 'id',
@@ -94,16 +95,67 @@ def createFiles(dictionary):
             t = str(klasa)
             u = upperfirst(t)
 
-            name = "output/{0}.c".format(u)
-            if not os.path.exists("output"):
-                os.makedirs("output")
+
+
+            # name = "output/{0}.h".format(u)
+            # if not os.path.exists("output"):
+            #     os.makedirs("output")
             # st = formatToH(dictionary[klasa])
             # with open(name, "w") as h_file:
             #     h_file.write(st)
-            name = "output/{0}.m".format(u)
+            # name = "output/{0}.m".format(u)
             st = formatToM(dictionary[klasa])
-            with open(name, "w") as m_file:
-                m_file.write(st)
+            # with open(name, "w") as m_file:
+            #     m_file.write(st)
+
+
+def num(s):
+    try:
+        return int(s)
+    except ValueError:
+        try:
+            return float(s)
+        except ValueError:
+            return None
+
+
+
+def createDefaultValue(s, typee):
+    if typee == 'NSNumber':
+        if type(num(s)) is int:
+            return "[NSNumber numberWithInt:{0}".format(num(s))
+        elif type(num(s)) is float:
+            return "[NSNumber numberWithDouble:{0}".format(num(s))
+        else:
+            return "[NSNumber new]"
+    elif typee == 'BOOL':
+        if s == "true":
+            return 'YES'
+        else:
+            return 'NO'
+    elif typee == 'HexColor':
+        if s == "nil":
+            return "[HexColor new]"
+        else:
+            return "[HexColor colorWithString: \"{0}\"]".format(s)
+    elif typee == 'NSString':
+        return "[NSString stringWithString: @\"{0}\"".format(s)
+    elif typee == 'id':
+        print "This is type id: {0} : {1}".format(s, typee)
+    elif typee == 'Function':
+        print "This is type function: {0} : {1}".format(s, typee)
+    elif typee == 'NSMutableDictionary /* <NSString, NSString> */':
+        txt = "@{"
+        for key in s:
+            txt += "\"{0}\" : @\"{1}\",".format(key, s[key])
+        txt = txt[:-1]
+        txt += "}"
+        return txt
+    else:
+        print "Other: {0} = {1}".format(s, typee)
+
+
+
 
 
 def formatToM(klasa):
@@ -116,13 +168,19 @@ def formatToM(klasa):
             if klasa.fields[field].isParent:
                 text += "({0} *){1}".format(klasa.fields[field].title, field)
             else:
-                text += "({0} *){1}".format(klasa.fields[field].typee, field)
+                if klasa.fields[field].typee == "BOOL":
+                    text += "({0}){1}".format(klasa.fields[field].typee, field)
+                else:
+                    text += "({0} *){1}".format(klasa.fields[field].typee, field)
             count += 1
         else:
             if klasa.fields[field].isParent:
                 text += " {0}:({1} *){2}".format(field, klasa.fields[field].title, field)
             else:
-                text += " {0}:({1} *){2}".format(field, klasa.fields[field].typee, field)
+                if klasa.fields[field].typee == "BOOL":
+                    text += " {0}:({1}){2}".format(field, klasa.fields[field].typee, field)
+                else:
+                    text += " {0}:({1} *){2}".format(field, klasa.fields[field].typee, field)
 
     text += " {\n"
     text += "\tif(self = [super init]) {\n"
@@ -140,19 +198,27 @@ def formatToM(klasa):
                 if klasa.fields[field].isParent:
                     text += "({0} *){1}".format(klasa.fields[field].title, field)
                 else:
-                    text += "({0} *){1}".format(klasa.fields[field].typee, field)
+                    if klasa.fields[field].typee == "BOOL":
+                        text += "({0}){1}".format(klasa.fields[field].typee, field)
+                    else:
+                        text += "({0} *){1}".format(klasa.fields[field].typee, field)
                 count += 1
         else:
             if not klasa.fields[field].default:
                 if klasa.fields[field].isParent:
                     text += " {0}:({1} *){2}".format(field, klasa.fields[field].title, field)
                 else:
-                    text += " {0}:({1} *){2}".format(field, klasa.fields[field].typee, field)
+                    if klasa.fields[field].typee == "BOOL":
+                        text += " {0}:({1}){2}".format(field, klasa.fields[field].typee, field)
+                    else:
+                        text += " {0}:({1} *){2}".format(field, klasa.fields[field].typee, field)
     text += " {\n"
 
     init = "\treturn [self initWithParameters:"
     count = 0
     for field in klasa.fields:
+        if klasa.fields[field].default:
+            createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee)
         if count == 0:
             init += "{0}".format(field)
             count += 1
@@ -174,7 +240,10 @@ def formatToH(klasa):
         if klasa.fields[field].isParent:
             text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(klasa.fields[field].title, field)
         else:
-            text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(klasa.fields[field].typee, field)
+            if klasa.fields[field].typee == "BOOL":
+                text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(klasa.fields[field].typee, field)
+            else:
+                text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(klasa.fields[field].typee, field)
     text += "\n\t-(NSDictionary) getParams;\n"
     text += "@end"
     return text
@@ -190,7 +259,7 @@ class Klasa:
         self.isParent = isParent
         self.default = default
         if self.default == "null" or self.default == "undefined":
-            self.default = "nil"
+            self.default = 'nil'
 
     def update(self, description, demo, title, typee, isParent, default):
         self.description = description
@@ -200,7 +269,7 @@ class Klasa:
         self.isParent = isParent
         self.default = default
         if self.default == "null" or self.default == "undefined":
-            self.default = "nil"
+            self.default = 'nil'
 
 
 with open('HighchartsJSON') as data_file:
