@@ -157,7 +157,7 @@ def createDefaultValue(s, typee):
         x = ast.literal_eval(s)
         txt = "[NSMutableArray arrayWithObjects:"
         for i in x:
-            txt += " [HexColor colorwithString: \"{0}\"],"
+            txt += " [HexColor colorWithString: \"{0}\"],".format(i)
         txt = txt[:-1]
         txt += "]"
         return txt
