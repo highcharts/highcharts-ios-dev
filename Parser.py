@@ -1,6 +1,7 @@
 import json
 import sys
 import os
+import ast
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -146,10 +147,19 @@ def createDefaultValue(s, typee):
         print "This is type function: {0} : {1}".format(s, typee)
     elif typee == 'NSMutableDictionary /* <NSString, NSString> */':
         txt = "@{"
-        for key in s:
-            txt += "\"{0}\" : @\"{1}\",".format(key, s[key])
+        data = json.loads(s)
+        for key in data:
+            txt += "\"{0}\" : @\"{1}\",".format(key, data[key])
         txt = txt[:-1]
         txt += "}"
+        return txt
+    elif typee == 'NSMutableArray<HexColor *>':
+        x = ast.literal_eval(s)
+        txt = "[NSMutableArray arrayWithObjects:"
+        for i in x:
+            txt += " [HexColor colorwithString: \"{0}\"],"
+        txt = txt[:-1]
+        txt += "]"
         return txt
     else:
         print "Other: {0} = {1}".format(s, typee)
