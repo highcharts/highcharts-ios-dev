@@ -117,8 +117,11 @@ def createFiles(dictionary):
         if dictionary[klasa].fields:
             t = str(klasa)
             u = upperfirst(t)
-
-
+            x = u.split("<")
+            if len(x) > 1:
+                x[1] = x[1][:-1]
+                x[1] = upperfirst(x[1])
+                u = "{0}{1}".format(x[0], x[1])
 
             name = "output/{0}.h".format(u)
             if not os.path.exists("output"):
@@ -161,12 +164,15 @@ def createDefaultValue(s, typee):
         else:
             return "[HexColor colorWithString: \"{0}\"]".format(s)
     elif typee == 'NSString':
-        return "[NSString stringWithString: @\"{0}\"]".format(s)
+        if s == "nil":
+            return "nil"
+        else:
+            return "[NSString stringWithString: @\"{0}\"]".format(s)
     elif typee == 'id':
-        #print "This is type id: {0} : {1}".format(s, typee)
+        # NOT SURE
         return "{0}".format(s)
     elif typee == 'Function':
-        #print "This is type function: {0} : {1}".format(s, typee)
+        # NOT SURE
         return "{0}".format(s)
     elif typee == 'NSMutableDictionary /* <NSString, NSString> */':
         txt = "@{"
