@@ -250,48 +250,56 @@ def formatToM(klasa):
     text += "\t} else {\n\t\treturn nil;\n\t}\n"
     text += "}\n\n"
 
-    count = 0
-    text += "-(instancetype)initWithDefaults:"
-    for field in klasa.fields:
-        if count == 0:
-            if not klasa.fields[field].default:
-                if klasa.fields[field].isParent:
-                    text += "({0} *){1}".format(klasa.fields[field].title, field)
-                else:
-                    if klasa.fields[field].typee == "BOOL":
-                        text += "({0}){1}".format(klasa.fields[field].typee, field)
-                    else:
-                        text += "({0} *){1}".format(klasa.fields[field].typee, field)
-                count += 1
-        else:
-            if not klasa.fields[field].default:
-                if klasa.fields[field].isParent:
-                    text += " {0}:({1} *){2}".format(field, klasa.fields[field].title, field)
-                else:
-                    if klasa.fields[field].typee == "BOOL":
-                        text += " {0}:({1}){2}".format(field, klasa.fields[field].typee, field)
-                    else:
-                        text += " {0}:({1} *){2}".format(field, klasa.fields[field].typee, field)
-    text += " {\n"
 
-    init = "\treturn [self initWithParameters:"
-    count = 0
+
+    defaults = False
     for field in klasa.fields:
         if klasa.fields[field].default:
-            if count == 0:
-                init += " {0}".format(createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee))
-                count += 1
-            else:
-                init += " {0}:{1}".format(field, createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee))
-        else:
-            if count == 0:
-                init += " {0}".format(field)
-                count += 1
-            else:
-                init += " {0}:{1}".format(field, field)
+            defaults = True
+            break
 
-    init += "]\n}\n"
-    text += init
+    if defaults:
+        count = 0
+        text += "-(instancetype)initWithDefaults:"
+        for field in klasa.fields:
+            if count == 0:
+                if not klasa.fields[field].default:
+                    if klasa.fields[field].isParent:
+                        text += "({0} *){1}".format(klasa.fields[field].title, field)
+                    else:
+                        if klasa.fields[field].typee == "BOOL":
+                            text += "({0}){1}".format(klasa.fields[field].typee, field)
+                        else:
+                            text += "({0} *){1}".format(klasa.fields[field].typee, field)
+                    count += 1
+            else:
+                if not klasa.fields[field].default:
+                    if klasa.fields[field].isParent:
+                        text += " {0}:({1} *){2}".format(field, klasa.fields[field].title, field)
+                    else:
+                        if klasa.fields[field].typee == "BOOL":
+                            text += " {0}:({1}){2}".format(field, klasa.fields[field].typee, field)
+                        else:
+                            text += " {0}:({1} *){2}".format(field, klasa.fields[field].typee, field)
+        text += " {\n"
+        init = "\treturn [self initWithParameters:"
+        count = 0
+        for field in klasa.fields:
+            if klasa.fields[field].default:
+                if count == 0:
+                    init += " {0}".format(createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee))
+                    count += 1
+                else:
+                    init += " {0}:{1}".format(field, createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee))
+            else:
+                if count == 0:
+                    init += " {0}".format(field)
+                    count += 1
+                else:
+                    init += " {0}:{1}".format(field, field)
+
+        init += "]\n}\n"
+        text += init
     text += "\n@end"
     return text
 
