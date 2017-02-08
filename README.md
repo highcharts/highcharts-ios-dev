@@ -8,5 +8,4 @@ TODO:
 
 `2. Enums ex. "series<arearange>--step"`
 
-`3. Bool from true/false to YES/NO and vv`
 

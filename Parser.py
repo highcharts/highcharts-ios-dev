@@ -6,10 +6,10 @@ import ast
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-struktura = dict()
+structure = dict()
 
 
-class Klasa:
+class HIClass:
     def __init__(self, description, demo, title, typee, fields, isParent, default):
         self.description = description
         self.demo = demo
@@ -36,11 +36,24 @@ def addFieldToParent(prop):
     fullname = prop["fullname"].split(".")
     if len(fullname) > 1:
         parent = fullname[len(fullname) - 2]
-        if parent in struktura:
-            struktura[parent].fields[fullname[len(fullname) - 1]] = struktura[str(prop["title"])]
+        x = parent.split("<")
+        if len(x) > 1:
+            x[1] = x[1][:-1]
+            x[1] = upperfirst(x[1])
+            parent = "{0}{1}".format(x[0], x[1])
+
+        name = prop["title"]
+        x = name.split("<")
+        if len(x) > 1:
+            x[1] = x[1][:-1]
+            x[1] = upperfirst(x[1])
+            name = "{0}{1}".format(x[0], x[1])
+
+        if parent in structure:
+            structure[parent].fields[name] = structure[name]
         else:
-            struktura[parent] = Klasa(None, None, None, None, dict(), None, None)
-            struktura[parent].fields[fullname[len(fullname) - 1]] = struktura[str(prop["title"])]
+            structure[parent] = HIClass(None, None, None, None, dict(), None, None)
+            structure[parent].fields[name] = structure[name]
 
 
 def generateClass(prop):
@@ -61,7 +74,13 @@ def generateClass(prop):
         typee = prop["returnType"]
 
     if "title" in prop:
-        title = prop["title"]
+        u = prop["title"]
+        x = u.split("<")
+        if len(x) > 1:
+            x[1] = x[1][:-1]
+            x[1] = upperfirst(x[1])
+            u = "{0}{1}".format(x[0], x[1])
+        title = u
 
     if "isParent" in prop:
         isParent = prop["isParent"]
@@ -69,11 +88,11 @@ def generateClass(prop):
     if "defaults" in prop:
         defaults = prop["defaults"]
 
-    if title in struktura:
-        k = struktura[title]
+    if title in structure:
+        k = structure[title]
         k.update(description, demo, upperfirst(title), getType(typee), isParent, defaults)
     else:
-        struktura[title] = Klasa(description, demo, upperfirst(title), getType(typee), dict(), isParent, defaults)
+        structure[title] = HIClass(description, demo, upperfirst(title), getType(typee), dict(), isParent, defaults)
 
 
 def upperfirst(x):
@@ -113,9 +132,9 @@ def getType(x):
 
 
 def createFiles(dictionary):
-    for klasa in dictionary:
-        if dictionary[klasa].fields:
-            t = str(klasa)
+    for k in dictionary:
+        if dictionary[k].fields:
+            t = str(k)
             u = upperfirst(t)
             x = u.split("<")
             if len(x) > 1:
@@ -126,11 +145,11 @@ def createFiles(dictionary):
             name = "output/{0}.h".format(u)
             if not os.path.exists("output"):
                 os.makedirs("output")
-            st = formatToH(dictionary[klasa])
+            st = formatToH(dictionary[k])
             with open(name, "w") as h_file:
                 h_file.write(st)
             name = "output/{0}.m".format(u)
-            st = formatToM(dictionary[klasa])
+            st = formatToM(dictionary[k])
             with open(name, "w") as m_file:
                 m_file.write(st)
 
@@ -224,33 +243,33 @@ def createDefaultValue(s, typee):
         print "Not supported yet: {0} = {1}".format(s, typee)
 
 
-def formatToM(klasa):
-    text = "#import \"{0}.h\"\n\n@implementation {1}\n\n".format(klasa.title, klasa.title)
+def formatToM(k):
+    text = "#import \"{0}.h\"\n\n@implementation {1}\n\n".format(k.title, k.title)
 
     text += "-(instancetype)initWithParameters:"
     count = 0
-    for field in klasa.fields:
+    for field in k.fields:
         if count == 0:
-            if klasa.fields[field].isParent:
-                text += "({0} *){1}".format(klasa.fields[field].title, field)
+            if k.fields[field].isParent:
+                text += "({0} *){1}".format(k.fields[field].title, field)
             else:
-                if klasa.fields[field].typee == "BOOL":
-                    text += "({0}){1}".format(klasa.fields[field].typee, field)
+                if k.fields[field].typee == "BOOL":
+                    text += "({0}){1}".format(k.fields[field].typee, field)
                 else:
-                    text += "({0} *){1}".format(klasa.fields[field].typee, field)
+                    text += "({0} *){1}".format(k.fields[field].typee, field)
             count += 1
         else:
-            if klasa.fields[field].isParent:
-                text += " {0}:({1} *){2}".format(field, klasa.fields[field].title, field)
+            if k.fields[field].isParent:
+                text += " {0}:({1} *){2}".format(field, k.fields[field].title, field)
             else:
-                if klasa.fields[field].typee == "BOOL":
-                    text += " {0}:({1}){2}".format(field, klasa.fields[field].typee, field)
+                if k.fields[field].typee == "BOOL":
+                    text += " {0}:({1}){2}".format(field, k.fields[field].typee, field)
                 else:
-                    text += " {0}:({1} *){2}".format(field, klasa.fields[field].typee, field)
+                    text += " {0}:({1} *){2}".format(field, k.fields[field].typee, field)
 
     text += " {\n"
     text += "\tif(self = [super init]) {\n"
-    for field in klasa.fields:
+    for field in k.fields:
         text += "\t\tself.{0} = {1};\n".format(field, field)
     text += "\t\treturn self;\n"
     text += "\t} else {\n\t\treturn nil;\n\t}\n"
@@ -259,44 +278,44 @@ def formatToM(klasa):
 
 
     defaults = False
-    for field in klasa.fields:
-        if klasa.fields[field].default:
+    for field in k.fields:
+        if k.fields[field].default:
             defaults = True
             break
 
     if defaults:
         count = 0
         text += "-(instancetype)initWithDefaults:"
-        for field in klasa.fields:
+        for field in k.fields:
             if count == 0:
-                if not klasa.fields[field].default:
-                    if klasa.fields[field].isParent:
-                        text += "({0} *){1}".format(klasa.fields[field].title, field)
+                if not k.fields[field].default:
+                    if k.fields[field].isParent:
+                        text += "({0} *){1}".format(k.fields[field].title, field)
                     else:
-                        if klasa.fields[field].typee == "BOOL":
-                            text += "({0}){1}".format(klasa.fields[field].typee, field)
+                        if k.fields[field].typee == "BOOL":
+                            text += "({0}){1}".format(k.fields[field].typee, field)
                         else:
-                            text += "({0} *){1}".format(klasa.fields[field].typee, field)
+                            text += "({0} *){1}".format(k.fields[field].typee, field)
                     count += 1
             else:
-                if not klasa.fields[field].default:
-                    if klasa.fields[field].isParent:
-                        text += " {0}:({1} *){2}".format(field, klasa.fields[field].title, field)
+                if not k.fields[field].default:
+                    if k.fields[field].isParent:
+                        text += " {0}:({1} *){2}".format(field, k.fields[field].title, field)
                     else:
-                        if klasa.fields[field].typee == "BOOL":
-                            text += " {0}:({1}){2}".format(field, klasa.fields[field].typee, field)
+                        if k.fields[field].typee == "BOOL":
+                            text += " {0}:({1}){2}".format(field, k.fields[field].typee, field)
                         else:
-                            text += " {0}:({1} *){2}".format(field, klasa.fields[field].typee, field)
+                            text += " {0}:({1} *){2}".format(field, k.fields[field].typee, field)
         text += " {\n"
         init = "\treturn [self initWithParameters:"
         count = 0
-        for field in klasa.fields:
-            if klasa.fields[field].default:
+        for field in k.fields:
+            if k.fields[field].default:
                 if count == 0:
-                    init += " {0}".format(createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee))
+                    init += " {0}".format(createDefaultValue(k.fields[field].default, k.fields[field].typee))
                     count += 1
                 else:
-                    init += " {0}:{1}".format(field, createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee))
+                    init += " {0}:{1}".format(field, createDefaultValue(k.fields[field].default, k.fields[field].typee))
             else:
                 if count == 0:
                     init += " {0}".format(field)
@@ -310,19 +329,19 @@ def formatToM(klasa):
     return text
 
 
-def formatToH(klasa):
+def formatToH(k):
     text = "#import <Foundation/Foundation.h>\n\n"
-    text += "/**\n*  {0}\n*  {1}\n*/\n".format(klasa.description, klasa.demo)
-    text += "@interface {0}: NSObject".format(klasa.title) + "\n"
-    for field in klasa.fields:
-        text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(klasa.fields[field].description, klasa.fields[field].demo)
-        if klasa.fields[field].isParent:
-            text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(klasa.fields[field].title, field)
+    text += "/**\n*  {0}\n*  {1}\n*/\n".format(k.description, k.demo)
+    text += "@interface {0}: NSObject".format(k.title) + "\n"
+    for field in k.fields:
+        text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
+        if k.fields[field].isParent:
+            text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
         else:
-            if klasa.fields[field].typee == "BOOL":
-                text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(klasa.fields[field].typee, field)
+            if k.fields[field].typee == "BOOL":
+                text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].typee, field)
             else:
-                text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(klasa.fields[field].typee, field)
+                text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].typee, field)
     text += "\n\t-(NSDictionary) getParams;\n"
     text += "@end"
     return text
@@ -337,4 +356,4 @@ for field in data:
         if "parent" in field and field["parent"] != "":
             addFieldToParent(field)
 
-createFiles(struktura)
+createFiles(structure)
