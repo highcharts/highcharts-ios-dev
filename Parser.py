@@ -9,6 +9,28 @@ sys.setdefaultencoding('utf-8')
 struktura = dict()
 
 
+class Klasa:
+    def __init__(self, description, demo, title, typee, fields, isParent, default):
+        self.description = description
+        self.demo = demo
+        self.title = title
+        self.typee = typee
+        self.fields = fields
+        self.isParent = isParent
+        self.default = default
+        if self.default == "null" or self.default == "undefined":
+            self.default = 'nil'
+
+    def update(self, description, demo, title, typee, isParent, default):
+        self.description = description
+        self.demo = demo
+        self.title = title
+        self.typee = typee
+        self.isParent = isParent
+        self.default = default
+        if self.default == "null" or self.default == "undefined":
+            self.default = 'nil'
+
 
 def addFieldToParent(prop):
     fullname = prop["fullname"].split(".")
@@ -98,16 +120,16 @@ def createFiles(dictionary):
 
 
 
-            # name = "output/{0}.h".format(u)
-            # if not os.path.exists("output"):
-            #     os.makedirs("output")
-            # st = formatToH(dictionary[klasa])
-            # with open(name, "w") as h_file:
-            #     h_file.write(st)
-            # name = "output/{0}.m".format(u)
+            name = "output/{0}.h".format(u)
+            if not os.path.exists("output"):
+                os.makedirs("output")
+            st = formatToH(dictionary[klasa])
+            with open(name, "w") as h_file:
+                h_file.write(st)
+            name = "output/{0}.m".format(u)
             st = formatToM(dictionary[klasa])
-            # with open(name, "w") as m_file:
-            #     m_file.write(st)
+            with open(name, "w") as m_file:
+                m_file.write(st)
 
 
 def num(s):
@@ -118,7 +140,6 @@ def num(s):
             return float(s)
         except ValueError:
             return None
-
 
 
 def createDefaultValue(s, typee):
@@ -197,9 +218,6 @@ def createDefaultValue(s, typee):
         print "Not supported yet: {0} = {1}".format(s, typee)
 
 
-
-
-
 def formatToM(klasa):
     text = "#import \"{0}.h\"\n\n@implementation {1}\n\n".format(klasa.title, klasa.title)
 
@@ -260,12 +278,17 @@ def formatToM(klasa):
     count = 0
     for field in klasa.fields:
         if klasa.fields[field].default:
-            createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee)
-        if count == 0:
-            init += "{0}".format(field)
-            count += 1
+            if count == 0:
+                init += " {0}".format(createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee))
+                count += 1
+            else:
+                init += " {0}:{1}".format(field, createDefaultValue(klasa.fields[field].default, klasa.fields[field].typee))
         else:
-            init += " {0}:{1}".format(field, field)
+            if count == 0:
+                init += " {0}".format(field)
+                count += 1
+            else:
+                init += " {0}:{1}".format(field, field)
 
     init += "]\n}\n"
     text += init
@@ -289,29 +312,6 @@ def formatToH(klasa):
     text += "\n\t-(NSDictionary) getParams;\n"
     text += "@end"
     return text
-
-
-class Klasa:
-    def __init__(self, description, demo, title, typee, fields, isParent, default):
-        self.description = description
-        self.demo = demo
-        self.title = title
-        self.typee = typee
-        self.fields = fields
-        self.isParent = isParent
-        self.default = default
-        if self.default == "null" or self.default == "undefined":
-            self.default = 'nil'
-
-    def update(self, description, demo, title, typee, isParent, default):
-        self.description = description
-        self.demo = demo
-        self.title = title
-        self.typee = typee
-        self.isParent = isParent
-        self.default = default
-        if self.default == "null" or self.default == "undefined":
-            self.default = 'nil'
 
 
 with open('HighchartsJSON') as data_file:
