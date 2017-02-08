@@ -32,8 +32,8 @@ class HIClass:
             self.default = 'nil'
 
 
-def addFieldToParent(prop):
-    fullname = prop["fullname"].split(".")
+def addFieldToParent(source):
+    fullname = source["fullname"].split(".")
     if len(fullname) > 1:
         parent = fullname[len(fullname) - 2]
         x = parent.split("<")
@@ -41,13 +41,17 @@ def addFieldToParent(prop):
             x[1] = x[1][:-1]
             x[1] = upperfirst(x[1])
             parent = "{0}{1}".format(x[0], x[1])
+        if parent == "id":
+            parent = "ID"
 
-        name = prop["title"]
+        name = source["title"]
         x = name.split("<")
         if len(x) > 1:
             x[1] = x[1][:-1]
             x[1] = upperfirst(x[1])
             name = "{0}{1}".format(x[0], x[1])
+        if name == "id":
+            name = "ID"
 
         if parent in structure:
             structure[parent].fields[name] = structure[name]
@@ -56,7 +60,7 @@ def addFieldToParent(prop):
             structure[parent].fields[name] = structure[name]
 
 
-def generateClass(prop):
+def generateClass(source):
     description = ""
     demo = ""
     title = ""
@@ -64,29 +68,33 @@ def generateClass(prop):
     isParent = False
     defaults = None
 
-    if "description" in prop:
-        description = prop["description"]
+    if "description" in source:
+        description = source["description"]
+        if "values" in source and len(source["values"]) > 0:
+            description += "\n\t* Accepted values: {0}".format(source["values"])
 
-    if "demo" in prop:
-        demo = prop["demo"]
+    if "demo" in source:
+        demo = source["demo"]
 
-    if "returnType" in prop:
-        typee = prop["returnType"]
+    if "returnType" in source:
+        typee = source["returnType"]
 
-    if "title" in prop:
-        u = prop["title"]
+    if "title" in source:
+        u = source["title"]
         x = u.split("<")
         if len(x) > 1:
             x[1] = x[1][:-1]
             x[1] = upperfirst(x[1])
             u = "{0}{1}".format(x[0], x[1])
         title = u
+        if title == "id":
+            title = "ID"
 
-    if "isParent" in prop:
-        isParent = prop["isParent"]
+    if "isParent" in source:
+        isParent = source["isParent"]
 
-    if "defaults" in prop:
-        defaults = prop["defaults"]
+    if "defaults" in source:
+        defaults = source["defaults"]
 
     if title in structure:
         k = structure[title]
