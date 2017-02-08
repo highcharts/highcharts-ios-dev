@@ -124,9 +124,9 @@ def num(s):
 def createDefaultValue(s, typee):
     if typee == 'NSNumber':
         if type(num(s)) is int:
-            return "[NSNumber numberWithInt:{0}".format(num(s))
+            return "[NSNumber numberWithInt:{0}]".format(num(s))
         elif type(num(s)) is float:
-            return "[NSNumber numberWithDouble:{0}".format(num(s))
+            return "[NSNumber numberWithDouble:{0}]".format(num(s))
         else:
             return "[NSNumber new]"
     elif typee == 'BOOL':
@@ -140,11 +140,13 @@ def createDefaultValue(s, typee):
         else:
             return "[HexColor colorWithString: \"{0}\"]".format(s)
     elif typee == 'NSString':
-        return "[NSString stringWithString: @\"{0}\"".format(s)
+        return "[NSString stringWithString: @\"{0}\"]".format(s)
     elif typee == 'id':
-        print "This is type id: {0} : {1}".format(s, typee)
+        #print "This is type id: {0} : {1}".format(s, typee)
+        return "{0}".format(s)
     elif typee == 'Function':
-        print "This is type function: {0} : {1}".format(s, typee)
+        #print "This is type function: {0} : {1}".format(s, typee)
+        return "{0}".format(s)
     elif typee == 'NSMutableDictionary /* <NSString, NSString> */':
         txt = "@{"
         data = json.loads(s)
@@ -161,8 +163,38 @@ def createDefaultValue(s, typee):
         txt = txt[:-1]
         txt += "]"
         return txt
+    elif typee == 'NSMutableArray<NSString *>':
+        t = str(s).replace("[", "")
+        t = t.replace("]", "")
+        t = t.replace(" ", "")
+        t = t.split(",")
+        txt = "[NSMutableArray arrayWithObjects:"
+        for i in t:
+            if i == 'null':
+                txt += " nil,"
+            else:
+                txt += "@\"{0}\"".format(i)
+        txt = txt[:-1]
+        txt += "]"
+        return txt
+    elif typee == 'NSMutableArray<NSNumber *>':
+        t = str(s).replace("[", "")
+        t = t.replace("]", "")
+        t = t.replace(" ", "")
+        t = t.split(",")
+        txt = "[NSMutableArray arrayWithObjects:"
+        for i in t:
+            if type(num(i)) is int:
+                txt += " [NSNumber numberWithInt:{0}],".format(num(i))
+            elif type(num(i)) is float:
+                txt += " [NSNumber numberWithDouble:{0}],".format(num(i))
+            else:
+                txt += " [NSNumber new],"
+        txt = txt[:-1]
+        txt += "]"
+        return txt
     else:
-        print "Other: {0} = {1}".format(s, typee)
+        print "Not supported yet: {0} = {1}".format(s, typee)
 
 
 
