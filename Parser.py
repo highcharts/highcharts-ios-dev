@@ -340,6 +340,24 @@ def formatToM(k):
 
         init += "]\n}\n"
         text += init
+
+    getParams = "\n-(NSDictionary) getParams\n{\n\tNSMutableDictionary *params = " \
+                "@[NSMutableDictionary dictionaryWithDictionary: @{}];\n"
+    for field in k.fields:
+        if k.fields[field].typee == "BOOL":
+            getParams += "\tif ({0})".format(field) + "{" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" +\
+                        " else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}\n"
+        else:
+            getParams += "\tif ({0})".format(field) + " {\n"
+            if k.fields[field].isParent:
+                getParams += "\t\tparams[@\"{0}\"] = {1}.getParams();\n".format(field, field)
+            else:
+                getParams += "\t\tparams[@\"{0}\"] = {1};\n".format(field, field)
+            getParams += "\t}\n"
+
+    getParams += "\treturn params;\n"
+    getParams += "}\n"
+    text += getParams
     text += "\n@end"
     return text
 
