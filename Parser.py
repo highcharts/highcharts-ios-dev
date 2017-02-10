@@ -140,6 +140,7 @@ def getType(x):
 
 
 def createFiles(dictionary):
+    bridge = ""
     for k in dictionary:
         if dictionary[k].fields:
             t = str(k)
@@ -150,7 +151,10 @@ def createFiles(dictionary):
                 x[1] = upperfirst(x[1])
                 u = "{0}{1}".format(x[0], x[1])
 
+
+
             name = "output/{0}.h".format(u)
+            bridge += "#import \"{0}.h\"\n".format(u)
             if not os.path.exists("output"):
                 os.makedirs("output")
             st = formatToH(dictionary[k])
@@ -160,6 +164,9 @@ def createFiles(dictionary):
             st = formatToM(dictionary[k])
             with open(name, "w") as m_file:
                 m_file.write(st)
+
+    with open("Bridge.h", "w") as bridge_file:
+        bridge_file.write(bridge)
 
 
 def num(s):
