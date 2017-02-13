@@ -11,11 +11,11 @@ structure = dict()
 
 
 class HIClass:
-    def __init__(self, description, demo, title, typee, fields, isParent, default, extends):
+    def __init__(self, description, demo, title, dataType, fields, isParent, default, extends):
         self.description = description
         self.demo = demo
         self.title = title
-        self.typee = typee
+        self.dataType = dataType
         self.fields = fields
         self.isParent = isParent
         self.default = default
@@ -23,11 +23,11 @@ class HIClass:
         if self.default == "null" or self.default == "undefined":
             self.default = 'nil'
 
-    def update(self, description, demo, title, typee, isParent, default, extends):
+    def update(self, description, demo, title, dataType, isParent, default, extends):
         self.description = description
         self.demo = demo
         self.title = title
-        self.typee = typee
+        self.dataType = dataType
         self.isParent = isParent
         self.default = default
         self.extends = extends
@@ -69,7 +69,7 @@ def generateClass(source):
     description = ""
     demo = ""
     title = ""
-    typee = ""
+    dataType = ""
     isParent = False
     defaults = None
     extends = None
@@ -83,7 +83,7 @@ def generateClass(source):
         demo = source["demo"]
 
     if "returnType" in source:
-        typee = source["returnType"]
+        dataType = source["returnType"]
 
     if "title" in source:
         u = source["title"]
@@ -105,9 +105,9 @@ def generateClass(source):
     if title in structure:
         k = structure[title]
         if not k.extends:
-            k.update(description, demo, upperfirst(title), getType(typee), isParent, defaults, extends)
+            k.update(description, demo, upperfirst(title), getType(dataType), isParent, defaults, extends)
     else:
-        structure[title] = HIClass(description, demo, upperfirst(title), getType(typee), dict(), isParent, defaults, extends)
+        structure[title] = HIClass(description, demo, upperfirst(title), getType(dataType), dict(), isParent, defaults, extends)
 
 
 def upperfirst(x):
@@ -186,36 +186,36 @@ def num(s):
             return None
 
 
-def createDefaultValue(s, typee):
-    if typee == 'NSNumber':
+def createDefaultValue(s, dataType):
+    if dataType == 'NSNumber':
         if type(num(s)) is int:
             return "[NSNumber numberWithInt:{0}]".format(num(s))
         elif type(num(s)) is float:
             return "[NSNumber numberWithDouble:{0}]".format(num(s))
         else:
             return "[NSNumber new]"
-    elif typee == 'BOOL':
+    elif dataType == 'BOOL':
         if s == "true":
             return 'YES'
         else:
             return 'NO'
-    elif typee == 'HexColor':
+    elif dataType == 'HexColor':
         if s == "nil":
             return "[HexColor new]"
         else:
             return "[HexColor colorWithString: \"{0}\"]".format(s)
-    elif typee == 'NSString':
+    elif dataType == 'NSString':
         if s == "nil":
             return "nil"
         else:
             return "[NSString stringWithString: @\"{0}\"]".format(s)
-    elif typee == 'id':
+    elif dataType == 'id':
         # NOT SURE
         return "{0}".format(s)
-    elif typee == 'Function':
+    elif dataType == 'Function':
         # NOT SURE
         return "{0}".format(s)
-    elif typee == 'NSMutableDictionary /* <NSString, NSString> */':
+    elif dataType == 'NSMutableDictionary /* <NSString, NSString> */':
         txt = "@{"
         data = json.loads(s)
         for key in data:
@@ -223,7 +223,7 @@ def createDefaultValue(s, typee):
         txt = txt[:-1]
         txt += "}"
         return txt
-    elif typee == 'NSMutableArray<HexColor *>':
+    elif dataType == 'NSMutableArray<HexColor *>':
         x = ast.literal_eval(s)
         txt = "[NSMutableArray arrayWithObjects:"
         for i in x:
@@ -231,7 +231,7 @@ def createDefaultValue(s, typee):
         txt = txt[:-1]
         txt += "]"
         return txt
-    elif typee == 'NSMutableArray<NSString *>':
+    elif dataType == 'NSMutableArray<NSString *>':
         t = str(s).replace("[", "")
         t = t.replace("]", "")
         t = t.replace(" ", "")
@@ -245,7 +245,7 @@ def createDefaultValue(s, typee):
         txt = txt[:-1]
         txt += "]"
         return txt
-    elif typee == 'NSMutableArray<NSNumber *>':
+    elif dataType == 'NSMutableArray<NSNumber *>':
         t = str(s).replace("[", "")
         t = t.replace("]", "")
         t = t.replace(" ", "")
@@ -262,7 +262,7 @@ def createDefaultValue(s, typee):
         txt += "]"
         return txt
     else:
-        print "Not supported yet: {0} = {1}".format(s, typee)
+        print "Not supported yet: {0} = {1}".format(s, dataType)
 
 
 def formatToM(k):
@@ -275,19 +275,19 @@ def formatToM(k):
             if k.fields[field].isParent:
                 text += "({0} *){1}".format(k.fields[field].title, field)
             else:
-                if k.fields[field].typee == "BOOL":
-                    text += "({0}){1}".format(k.fields[field].typee, field)
+                if k.fields[field].dataType == "BOOL":
+                    text += "({0}){1}".format(k.fields[field].dataType, field)
                 else:
-                    text += "({0} *){1}".format(k.fields[field].typee, field)
+                    text += "({0} *){1}".format(k.fields[field].dataType, field)
             count += 1
         else:
             if k.fields[field].isParent:
                 text += " {0}:({1} *){2}".format(field, k.fields[field].title, field)
             else:
-                if k.fields[field].typee == "BOOL":
-                    text += " {0}:({1}){2}".format(field, k.fields[field].typee, field)
+                if k.fields[field].dataType == "BOOL":
+                    text += " {0}:({1}){2}".format(field, k.fields[field].dataType, field)
                 else:
-                    text += " {0}:({1} *){2}".format(field, k.fields[field].typee, field)
+                    text += " {0}:({1} *){2}".format(field, k.fields[field].dataType, field)
 
     text += " {\n"
     text += "\tif(self = [super init]) {\n"
@@ -314,30 +314,30 @@ def formatToM(k):
                     if k.fields[field].isParent:
                         text += "({0} *){1}".format(k.fields[field].title, field)
                     else:
-                        if k.fields[field].typee == "BOOL":
-                            text += "({0}){1}".format(k.fields[field].typee, field)
+                        if k.fields[field].dataType == "BOOL":
+                            text += "({0}){1}".format(k.fields[field].dataType, field)
                         else:
-                            text += "({0} *){1}".format(k.fields[field].typee, field)
+                            text += "({0} *){1}".format(k.fields[field].dataType, field)
                     count += 1
             else:
                 if not k.fields[field].default:
                     if k.fields[field].isParent:
                         text += " {0}:({1} *){2}".format(field, k.fields[field].title, field)
                     else:
-                        if k.fields[field].typee == "BOOL":
-                            text += " {0}:({1}){2}".format(field, k.fields[field].typee, field)
+                        if k.fields[field].dataType == "BOOL":
+                            text += " {0}:({1}){2}".format(field, k.fields[field].dataType, field)
                         else:
-                            text += " {0}:({1} *){2}".format(field, k.fields[field].typee, field)
+                            text += " {0}:({1} *){2}".format(field, k.fields[field].dataType, field)
         text += " {\n"
         init = "\treturn [self initWithParameters:"
         count = 0
         for field in k.fields:
             if k.fields[field].default:
                 if count == 0:
-                    init += " {0}".format(createDefaultValue(k.fields[field].default, k.fields[field].typee))
+                    init += " {0}".format(createDefaultValue(k.fields[field].default, k.fields[field].dataType))
                     count += 1
                 else:
-                    init += " {0}:{1}".format(field, createDefaultValue(k.fields[field].default, k.fields[field].typee))
+                    init += " {0}:{1}".format(field, createDefaultValue(k.fields[field].default, k.fields[field].dataType))
             else:
                 if count == 0:
                     init += " {0}".format(field)
@@ -351,7 +351,7 @@ def formatToM(k):
     getParams = "\n-(NSDictionary) getParams\n{\n\tNSMutableDictionary *params = " \
                 "@[NSMutableDictionary dictionaryWithDictionary: @{}];\n"
     for field in k.fields:
-        if k.fields[field].typee == "BOOL":
+        if k.fields[field].dataType == "BOOL":
             getParams += "\tif ({0})".format(field) + "{" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" +\
                         " else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"false\";\n\t".format(field) + "}\n"
         else:
@@ -389,19 +389,19 @@ def formatToH(k):
                     else:
                         text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
                 else:
-                    if k.fields[field].typee == "BOOL":
-                        text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].typee, field)
+                    if k.fields[field].dataType == "BOOL":
+                        text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].dataType, field)
                     else:
-                        text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].typee, field)
+                        text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
         else:
             text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
             if k.fields[field].isParent:
                 text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
             else:
-                if k.fields[field].typee == "BOOL":
-                    text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].typee, field)
+                if k.fields[field].dataType == "BOOL":
+                    text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].dataType, field)
                 else:
-                    text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].typee, field)
+                    text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
     text += "\n\t-(NSDictionary) getParams;\n"
     text += "@end"
     return text
