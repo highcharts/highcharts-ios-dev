@@ -2,6 +2,7 @@ import json
 import sys
 import os
 import ast
+import pprint
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -10,7 +11,7 @@ structure = dict()
 
 
 class HIClass:
-    def __init__(self, description, demo, title, typee, fields, isParent, default):
+    def __init__(self, description, demo, title, typee, fields, isParent, default, extends):
         self.description = description
         self.demo = demo
         self.title = title
@@ -18,45 +19,49 @@ class HIClass:
         self.fields = fields
         self.isParent = isParent
         self.default = default
+        self.extends = extends
         if self.default == "null" or self.default == "undefined":
             self.default = 'nil'
 
-    def update(self, description, demo, title, typee, isParent, default):
+    def update(self, description, demo, title, typee, isParent, default, extends):
         self.description = description
         self.demo = demo
         self.title = title
         self.typee = typee
         self.isParent = isParent
         self.default = default
+        self.extends = extends
         if self.default == "null" or self.default == "undefined":
             self.default = 'nil'
 
 
 def addFieldToParent(source):
+    extends = None
     fullname = source["fullname"].split(".")
     if len(fullname) > 1:
         parent = fullname[len(fullname) - 2]
         x = parent.split("<")
         if len(x) > 1:
             x[1] = x[1][:-1]
-            x[1] = upperfirst(x[1])
-            parent = "{0}{1}".format(x[0], x[1])
+            parent = x[1]
         if parent == "id":
             parent = "ID"
 
         name = source["title"]
         x = name.split("<")
         if len(x) > 1:
+            extends = x[0]
             x[1] = x[1][:-1]
-            x[1] = upperfirst(x[1])
-            name = "{0}{1}".format(x[0], x[1])
+            name = x[1]
         if name == "id":
             name = "ID"
+        if extends:
+            name = extends
 
         if parent in structure:
             structure[parent].fields[name] = structure[name]
         else:
-            structure[parent] = HIClass(None, None, None, None, dict(), None, None)
+            structure[parent] = HIClass(None, None, None, None, dict(), None, None, extends)
             structure[parent].fields[name] = structure[name]
 
 
@@ -67,6 +72,7 @@ def generateClass(source):
     typee = ""
     isParent = False
     defaults = None
+    extends = None
 
     if "description" in source:
         description = source["description"]
@@ -83,9 +89,9 @@ def generateClass(source):
         u = source["title"]
         x = u.split("<")
         if len(x) > 1:
+            extends = x[0]
             x[1] = x[1][:-1]
-            x[1] = upperfirst(x[1])
-            u = "{0}{1}".format(x[0], x[1])
+            u = x[1]
         title = u
         if title == "id":
             title = "ID"
@@ -98,9 +104,10 @@ def generateClass(source):
 
     if title in structure:
         k = structure[title]
-        k.update(description, demo, upperfirst(title), getType(typee), isParent, defaults)
+        if not k.extends:
+            k.update(description, demo, upperfirst(title), getType(typee), isParent, defaults, extends)
     else:
-        structure[title] = HIClass(description, demo, upperfirst(title), getType(typee), dict(), isParent, defaults)
+        structure[title] = HIClass(description, demo, upperfirst(title), getType(typee), dict(), isParent, defaults, extends)
 
 
 def upperfirst(x):
@@ -346,7 +353,7 @@ def formatToM(k):
     for field in k.fields:
         if k.fields[field].typee == "BOOL":
             getParams += "\tif ({0})".format(field) + "{" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" +\
-                        " else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}\n"
+                        " else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"false\";\n\t".format(field) + "}\n"
         else:
             getParams += "\tif ({0})".format(field) + " {\n"
             if k.fields[field].isParent:
@@ -363,18 +370,38 @@ def formatToM(k):
 
 
 def formatToH(k):
-    text = "#import <Foundation/Foundation.h>\n\n"
+    text = "#import <Foundation/Foundation.h>\n"
+    if k.extends:
+        text += "#import \"{0}.h\"\n".format(upperfirst(k.extends))
+
     text += "/**\n*  {0}\n*  {1}\n*/\n".format(k.description, k.demo)
-    text += "@interface {0}: NSObject".format(k.title) + "\n"
+    if k.extends:
+        text += "@interface {0}: {1}\n".format(k.title, upperfirst(k.extends))
+    else:
+        text += "@interface {0}: NSObject\n".format(k.title)
     for field in k.fields:
-        text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
-        if k.fields[field].isParent:
-            text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
+        if k.extends:
+            if not field in structure[k.extends].fields:
+                text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
+                if k.fields[field].isParent:
+                    if k.fields[field].extends:
+                        text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].extends, k.fields[field].extends)
+                    else:
+                        text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
+                else:
+                    if k.fields[field].typee == "BOOL":
+                        text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].typee, field)
+                    else:
+                        text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].typee, field)
         else:
-            if k.fields[field].typee == "BOOL":
-                text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].typee, field)
+            text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
+            if k.fields[field].isParent:
+                text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
             else:
-                text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].typee, field)
+                if k.fields[field].typee == "BOOL":
+                    text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].typee, field)
+                else:
+                    text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].typee, field)
     text += "\n\t-(NSDictionary) getParams;\n"
     text += "@end"
     return text
