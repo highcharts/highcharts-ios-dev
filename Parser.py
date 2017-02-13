@@ -172,7 +172,7 @@ def createFiles(dictionary):
             with open(name, "w") as m_file:
                 m_file.write(st)
 
-    with open("Bridge.h", "w") as bridge_file:
+    with open("HIBridge.h", "w") as bridge_file:
         bridge_file.write(bridge)
 
 
@@ -193,7 +193,7 @@ def createDefaultValue(s, dataType):
         elif type(num(s)) is float:
             return "[NSNumber numberWithDouble:{0}]".format(num(s))
         else:
-            return "[NSNumber new]"
+            return "nil"
     elif dataType == 'BOOL':
         if s == "true":
             return 'YES'
@@ -201,7 +201,7 @@ def createDefaultValue(s, dataType):
             return 'NO'
     elif dataType == 'HexColor':
         if s == "nil":
-            return "[HexColor new]"
+            return "nil"
         else:
             return "[HexColor colorWithString: \"{0}\"]".format(s)
     elif dataType == 'NSString':
@@ -257,7 +257,7 @@ def createDefaultValue(s, dataType):
             elif type(num(i)) is float:
                 txt += " [NSNumber numberWithDouble:{0}],".format(num(i))
             else:
-                txt += " [NSNumber new],"
+                txt += " nil,"
         txt = txt[:-1]
         txt += "]"
         return txt
@@ -268,91 +268,23 @@ def createDefaultValue(s, dataType):
 def formatToM(k):
     text = "#import \"{0}.h\"\n\n@implementation {1}\n\n".format(k.title, k.title)
 
-    text += "-(instancetype)initWithParameters:"
-    count = 0
+    text += "-(instancetype)init {\n"
+    if k.extends:
+        text += "\tif (self = [super init]) {\n"
     for field in k.fields:
-        if count == 0:
-            if k.fields[field].isParent:
-                text += "({0} *){1}".format(k.fields[field].title, field)
-            else:
-                if k.fields[field].dataType == "BOOL":
-                    text += "({0}){1}".format(k.fields[field].dataType, field)
-                else:
-                    text += "({0} *){1}".format(k.fields[field].dataType, field)
-            count += 1
-        else:
-            if k.fields[field].isParent:
-                text += " {0}:({1} *){2}".format(field, k.fields[field].title, field)
-            else:
-                if k.fields[field].dataType == "BOOL":
-                    text += " {0}:({1}){2}".format(field, k.fields[field].dataType, field)
-                else:
-                    text += " {0}:({1} *){2}".format(field, k.fields[field].dataType, field)
-
-    text += " {\n"
-    text += "\tif(self = [super init]) {\n"
-    for field in k.fields:
-        text += "\t\tself.{0} = {1};\n".format(field, field)
+        if k.fields[field].default:
+            text += "\t\tself.{0} = {1};\n".format(field, createDefaultValue(k.fields[field].default, k.fields[field].dataType))
+        elif k.fields[field].dataType == "BOOL":
+            text += "\t\tself.{0} = NO;\n".format(field)
     text += "\t\treturn self;\n"
     text += "\t} else {\n\t\treturn nil;\n\t}\n"
     text += "}\n\n"
-
-
-
-    defaults = False
-    for field in k.fields:
-        if k.fields[field].default:
-            defaults = True
-            break
-
-    if defaults:
-        count = 0
-        text += "-(instancetype)initWithDefaults:"
-        for field in k.fields:
-            if count == 0:
-                if not k.fields[field].default:
-                    if k.fields[field].isParent:
-                        text += "({0} *){1}".format(k.fields[field].title, field)
-                    else:
-                        if k.fields[field].dataType == "BOOL":
-                            text += "({0}){1}".format(k.fields[field].dataType, field)
-                        else:
-                            text += "({0} *){1}".format(k.fields[field].dataType, field)
-                    count += 1
-            else:
-                if not k.fields[field].default:
-                    if k.fields[field].isParent:
-                        text += " {0}:({1} *){2}".format(field, k.fields[field].title, field)
-                    else:
-                        if k.fields[field].dataType == "BOOL":
-                            text += " {0}:({1}){2}".format(field, k.fields[field].dataType, field)
-                        else:
-                            text += " {0}:({1} *){2}".format(field, k.fields[field].dataType, field)
-        text += " {\n"
-        init = "\treturn [self initWithParameters:"
-        count = 0
-        for field in k.fields:
-            if k.fields[field].default:
-                if count == 0:
-                    init += " {0}".format(createDefaultValue(k.fields[field].default, k.fields[field].dataType))
-                    count += 1
-                else:
-                    init += " {0}:{1}".format(field, createDefaultValue(k.fields[field].default, k.fields[field].dataType))
-            else:
-                if count == 0:
-                    init += " {0}".format(field)
-                    count += 1
-                else:
-                    init += " {0}:{1}".format(field, field)
-
-        init += "]\n}\n"
-        text += init
 
     getParams = "\n-(NSDictionary) getParams\n{\n\tNSMutableDictionary *params = " \
                 "@[NSMutableDictionary dictionaryWithDictionary: @{}];\n"
     for field in k.fields:
         if k.fields[field].dataType == "BOOL":
-            getParams += "\tif ({0})".format(field) + "{" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" +\
+            getParams += "\tif ({0})".format(field) + " {" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" +\
                         " else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"false\";\n\t".format(field) + "}\n"
         else:
             getParams += "\tif ({0})".format(field) + " {\n"
