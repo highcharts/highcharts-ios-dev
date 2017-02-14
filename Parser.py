@@ -2,7 +2,6 @@ import json
 import sys
 import os
 import ast
-import pprint
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -46,6 +45,10 @@ def addFieldToParent(source):
             parent = x[1]
         if parent == "id":
             parent = "ID"
+        if parent == "point":
+            parent = "HIPoint"
+        if parent == "description":
+            parent = "definition"
 
         name = source["title"]
         x = name.split("<")
@@ -55,6 +58,10 @@ def addFieldToParent(source):
             name = x[1]
         if name == "id":
             name = "ID"
+        if name == "point":
+            name = "HIPoint"
+        if name == "description":
+            name = "definition"
         if extends:
             name = extends
 
@@ -95,6 +102,10 @@ def generateClass(source):
         title = u
         if title == "id":
             title = "ID"
+        if title == "point":
+            title = "HIPoint"
+        if title == "description":
+            title = "definition"
 
     if "isParent" in source:
         isParent = source["isParent"]
@@ -121,10 +132,10 @@ def getType(x):
         "Color": 'HexColor',
         "String": 'NSString',
         "Object": 'id',
-        "Function": 'Function',
+        "Function": 'NSString',
         "Array<Number>": 'NSMutableArray<NSNumber *>',
-        "Array<Object>": 'NSMutableArray<id *>',
-        "Array": 'NSMutableArray<id *>',
+        "Array<Object>": 'NSMutableArray<id>',
+        "Array": 'NSMutableArray<id>',
         "Array<String>": 'NSMutableArray<NSString *>',
         "Boolean|Object": "BOOL",
         "String|Number": 'NSString',
@@ -158,22 +169,21 @@ def createFiles(dictionary):
                 x[1] = upperfirst(x[1])
                 u = "{0}{1}".format(x[0], x[1])
 
-
-
-            name = "output/{0}.h".format(u)
+            name = "HIChartsClasses/{0}.h".format(u)
             bridge += "#import \"{0}.h\"\n".format(u)
-            if not os.path.exists("output"):
-                os.makedirs("output")
+            if not os.path.exists("HIChartsClasses"):
+                os.makedirs("HIChartsClasses")
             st = formatToH(dictionary[k])
             with open(name, "w") as h_file:
                 h_file.write(st)
-            name = "output/{0}.m".format(u)
+            name = "HIChartsClasses/{0}.m".format(u)
             st = formatToM(dictionary[k])
             with open(name, "w") as m_file:
                 m_file.write(st)
 
     with open("HIBridge.h", "w") as bridge_file:
         bridge_file.write(bridge)
+        bridge_file.write("#import \"HexColor.h\"")
 
 
 def num(s):
@@ -203,12 +213,13 @@ def createDefaultValue(s, dataType):
         if s == "nil":
             return "nil"
         else:
-            return "[HexColor colorWithString: \"{0}\"]".format(s)
+            return "[[HexColor alloc] initWithString: @\"{0}\"]".format(s)
     elif dataType == 'NSString':
         if s == "nil":
             return "nil"
         else:
-            return "[NSString stringWithString: @\"{0}\"]".format(s)
+            x = s.replace("\"", "\\\"")
+            return "@\"{0}\"".format(x)
     elif dataType == 'id':
         # NOT SURE
         return "{0}".format(s)
@@ -216,34 +227,32 @@ def createDefaultValue(s, dataType):
         # NOT SURE
         return "{0}".format(s)
     elif dataType == 'NSMutableDictionary /* <NSString, NSString> */':
-        txt = "@{"
+        txt = "[NSMutableDictionary dictionaryWithDictionary: @{"
         data = json.loads(s)
         for key in data:
-            txt += "\"{0}\" : @\"{1}\",".format(key, data[key])
+            txt += "@\"{0}\" : @\"{1}\",".format(key, data[key])
         txt = txt[:-1]
-        txt += "}"
+        txt += "}]"
         return txt
     elif dataType == 'NSMutableArray<HexColor *>':
         x = ast.literal_eval(s)
         txt = "[NSMutableArray arrayWithObjects:"
         for i in x:
-            txt += " [HexColor colorWithString: \"{0}\"],".format(i)
-        txt = txt[:-1]
-        txt += "]"
+            txt += " [[HexColor alloc] initWithString: @\"{0}\"],".format(i)
+        txt += " nil]"
         return txt
     elif dataType == 'NSMutableArray<NSString *>':
-        t = str(s).replace("[", "")
+        t = s.replace("[", "")
         t = t.replace("]", "")
         t = t.replace(" ", "")
         t = t.split(",")
         txt = "[NSMutableArray arrayWithObjects:"
         for i in t:
             if i == 'null':
-                txt += " nil,"
+                txt += " @\"null\","
             else:
-                txt += "@\"{0}\"".format(i)
-        txt = txt[:-1]
-        txt += "]"
+                txt += " @{0},".format(i)
+        txt += " nil]"
         return txt
     elif dataType == 'NSMutableArray<NSNumber *>':
         t = str(s).replace("[", "")
@@ -258,8 +267,7 @@ def createDefaultValue(s, dataType):
                 txt += " [NSNumber numberWithDouble:{0}],".format(num(i))
             else:
                 txt += " nil,"
-        txt = txt[:-1]
-        txt += "]"
+        txt += " nil]"
         return txt
     else:
         print "Not supported yet: {0} = {1}".format(s, dataType)
@@ -269,19 +277,18 @@ def formatToM(k):
     text = "#import \"{0}.h\"\n\n@implementation {1}\n\n".format(k.title, k.title)
 
     text += "-(instancetype)init {\n"
-    if k.extends:
-        text += "\tif (self = [super init]) {\n"
+    text += "\tif (self = [super init]) {\n"
     for field in k.fields:
-        if k.fields[field].default:
+        if k.fields[field].default and not k.fields[field].fields:
             text += "\t\tself.{0} = {1};\n".format(field, createDefaultValue(k.fields[field].default, k.fields[field].dataType))
-        elif k.fields[field].dataType == "BOOL":
+        elif k.fields[field].dataType == "BOOL" and not k.fields[field].fields:
             text += "\t\tself.{0} = NO;\n".format(field)
     text += "\t\treturn self;\n"
     text += "\t} else {\n\t\treturn nil;\n\t}\n"
     text += "}\n\n"
 
-    getParams = "\n-(NSDictionary) getParams\n{\n\tNSMutableDictionary *params = " \
-                "@[NSMutableDictionary dictionaryWithDictionary: "
+    getParams = "\n-(NSDictionary *) getParams\n{\n\tNSMutableDictionary *params = " \
+                "[NSMutableDictionary dictionaryWithDictionary: "
     if k.extends:
         getParams += "[super getParams]];\n"
     else:
@@ -291,15 +298,18 @@ def formatToM(k):
         if k.extends and field in structure[k.extends].fields:
             pass
         else:
-            if k.fields[field].dataType == "BOOL":
-                getParams += "\tif ({0})".format(field) + " {" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" +\
+            if k.fields[field].dataType == "BOOL" and not k.fields[field].fields:
+                getParams += "\tif (self.{0})".format(field) + " {" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" +\
                             " else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"false\";\n\t".format(field) + "}\n"
             else:
-                getParams += "\tif ({0})".format(field) + " {\n"
+                getParams += "\tif (self.{0})".format(field) + " {\n"
                 if k.fields[field].isParent:
-                    getParams += "\t\tparams[@\"{0}\"] = {1}.getParams();\n".format(field, field)
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(field, field)
                 else:
-                    getParams += "\t\tparams[@\"{0}\"] = {1};\n".format(field, field)
+                    if k.fields[field].dataType == "HexColor":
+                        getParams += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(field, field)
+                    else:
+                        getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(field, field)
                 getParams += "\t}\n"
     getParams += "\treturn params;\n"
     getParams += "}\n"
@@ -309,9 +319,11 @@ def formatToM(k):
 
 
 def formatToH(k):
-    text = "#import <Foundation/Foundation.h>\n"
+    imports = "#import <Foundation/Foundation.h>\n"
+    colorAdded = False
+    text = ""
     if k.extends:
-        text += "#import \"{0}.h\"\n".format(upperfirst(k.extends))
+        imports += "#import \"{0}.h\"\n".format(upperfirst(k.extends))
 
     text += "/**\n*  {0}\n*  {1}\n*/\n".format(k.description, k.demo)
     if k.extends:
@@ -319,38 +331,43 @@ def formatToH(k):
     else:
         text += "@interface {0}: NSObject\n".format(k.title)
     for field in k.fields:
+        if k.fields[field].dataType == "HexColor" and not colorAdded:
+            imports += "#import \"HexColor.h\"\n"
+            colorAdded = True
         if k.extends:
-            if not field in structure[k.extends].fields:
+            if field not in structure[k.extends].fields:
                 text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
                 if k.fields[field].isParent:
+                    imports += "#import \"{0}.h\"\n".format(upperfirst(field))
                     if k.fields[field].extends:
                         text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].extends, k.fields[field].extends)
                     else:
                         text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
                 else:
-                    if k.fields[field].dataType == "BOOL":
+                    if k.fields[field].dataType == "BOOL" or k.fields[field].dataType == "id":
                         text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].dataType, field)
                     else:
                         text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
         else:
             text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
             if k.fields[field].isParent:
+                imports += "#import \"{0}.h\"\n".format(upperfirst(field))
                 text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
             else:
-                if k.fields[field].dataType == "BOOL":
+                if k.fields[field].dataType == "BOOL" or k.fields[field].dataType == "id":
                     text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].dataType, field)
                 else:
                     text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
-    text += "\n\t-(NSDictionary) getParams;\n"
+    text += "\n\t-(NSDictionary *) getParams;\n"
     text += "@end"
-    return text
+    return imports + text
 
 
 with open('HighchartsJSON') as data_file:
     data = json.load(data_file)
 
 for field in data:
-    if "title" in field and len(field["title"]) > 0:
+    if "title" in field and len(field["title"]) > 0 and "description" in field:
         generateClass(field)
         if "parent" in field and field["parent"] != "":
             addFieldToParent(field)
