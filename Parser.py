@@ -7,6 +7,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 structure = dict()
+options = list()
 
 
 class HIClass:
@@ -84,7 +85,7 @@ def generateClass(source):
     if "description" in source:
         description = source["description"]
         if "values" in source and len(source["values"]) > 0:
-            description += "\n\t* Accepted values: {0}".format(source["values"])
+            description += "\n\t*  Accepted values: {0}".format(source["values"])
 
     if "demo" in source:
         demo = source["demo"]
@@ -112,6 +113,7 @@ def generateClass(source):
 
     if "defaults" in source:
         defaults = source["defaults"]
+        description += "\n\t*  Default value: {0}".format(defaults)
 
     if title in structure:
         k = structure[title]
@@ -119,6 +121,9 @@ def generateClass(source):
             k.update(description, demo, upperfirst(title), getType(dataType), isParent, defaults, extends)
     else:
         structure[title] = HIClass(description, demo, upperfirst(title), getType(dataType), dict(), isParent, defaults, extends)
+
+    if "parent" not in source and not extends:
+        options.append((str(title), getType(dataType)))
 
 
 def upperfirst(x):
@@ -128,24 +133,24 @@ def upperfirst(x):
 def getType(x):
     return {
         "Number": 'NSNumber',
-        "Boolean": 'BOOL',
+        "Boolean": 'NSNumber', # /* Bool */
         "Color": 'HexColor',
         "String": 'NSString',
         "Object": 'id',
         "Function": 'NSString',
         "Array<Number>": 'NSMutableArray<NSNumber *>',
-        "Array<Object>": 'NSMutableArray<id>',
-        "Array": 'NSMutableArray<id>',
+        "Array<Object>": 'NSMutableArray',
+        "Array": 'NSMutableArray',
         "Array<String>": 'NSMutableArray<NSString *>',
-        "Boolean|Object": "BOOL",
+        "Boolean|Object": "NSNumber", # /* Bool */
         "String|Number": 'NSString',
         "Array<Array>": 'NSMutableArray<NSArray *>',
         "CSSObject": 'NSMutableDictionary /* <NSString, NSString> */',
         "Array<Color>": 'NSMutableArray<HexColor *>',
-        "Array<Object|Array|Number>": 'NSMutableArray<NSArray<NSNumber*> *>',
+        "Array<Object|Array|Number>": 'NSMutableArray /* <Data, NSNumber, NSArray> */',
         "Array<String|Number>": 'NSMutableArray<NSString *>',
-        "Array<Object|Number>": 'NSMutableArray<NSNumber *>',
-        "Array<Object|Array>": 'NSMutableArray<NSArray *>',
+        "Array<Object|Number>": 'NSMutableArray',
+        "Array<Object|Array>": 'NSMutableArray',
         "Number|String": 'NSString',
         "String|HTMLElement": 'NSString',
         "Array<Array<Mixed>>": 'NSMutableArray<NSArray *>',
@@ -184,6 +189,42 @@ def createFiles(dictionary):
     with open("HIBridge.h", "w") as bridge_file:
         bridge_file.write(bridge)
         bridge_file.write("#import \"HexColor.h\"")
+
+    with open("HIChartsClasses/Options.h", "w") as optionsH_file:
+        optionsH_file.write(createOptionsH())
+
+    with open("HIChartsClasses/Options.m", "w") as optionsM_file:
+        optionsM_file.write(createOptionsM())
+
+
+def createOptionsH():
+    text = "@interface Options: NSObject\n\n"
+    imports = "#import <Foundation/Foundation.h>\n"
+    for s in options:
+        if s[1] == "id":
+            imports += "#import \"{0}.h\"\n".format(upperfirst(s[0]))
+            text += "\t@property(nonatomic, readwrite) {0} *{1};\n\n".format(upperfirst(s[0]), s[0])
+        else:
+            text += "\t@property(nonatomic, readwrite) {0} *{1};\n\n".format(s[1], s[0])
+    text += "\t-(NSDictionary *)getParams;\n\n@end"
+    imports += "\n\n\n"
+    return imports + text
+
+
+def createOptionsM():
+    text = "#import \"Options.h\"\n\n@implementation Options\n\n-(instancetype)init {\n\treturn [super init];\n}\n\n" \
+           "-(NSDictionary *) getParams\n{\n" \
+           "\tNSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];\n"
+    for s in options:
+        text += "\tif (self.{0})".format(s[0]) + " {\n"
+        if s[1] == "id":
+            text += "\t\tparams[@\"{0}\"] = [self.{0} getParams];\n".format(s[0])
+        else:
+            text += "\t\tparams[@\"{0}\"] = self.{0};\n".format(s[0])
+        text += "\t}\n"
+    text += "\treturn params;\n"
+    text += "}\n\n@end"
+    return text
 
 
 def num(s):
@@ -276,16 +317,18 @@ def createDefaultValue(s, dataType):
 def formatToM(k):
     text = "#import \"{0}.h\"\n\n@implementation {1}\n\n".format(k.title, k.title)
 
-    text += "-(instancetype)init {\n"
-    text += "\tif (self = [super init]) {\n"
-    for field in k.fields:
-        if k.fields[field].default and not k.fields[field].fields:
-            text += "\t\tself.{0} = {1};\n".format(field, createDefaultValue(k.fields[field].default, k.fields[field].dataType))
-        elif k.fields[field].dataType == "BOOL" and not k.fields[field].fields:
-            text += "\t\tself.{0} = NO;\n".format(field)
-    text += "\t\treturn self;\n"
-    text += "\t} else {\n\t\treturn nil;\n\t}\n"
-    text += "}\n\n"
+    text += "-(instancetype)init {\n\treturn [super init];\n}\n"
+    if k.default:
+        text += "-(instancetype)initWithDefaults {\n"
+        text += "\tif (self = [super init]) {\n"
+        for field in k.fields:
+            if k.fields[field].default and not k.fields[field].fields:
+                text += "\t\tself.{0} = {1};\n".format(field, createDefaultValue(k.fields[field].default, k.fields[field].dataType))
+            elif k.fields[field].dataType == "BOOL" and not k.fields[field].fields:
+                text += "\t\tself.{0} = NO;\n".format(field)
+        text += "\t\treturn self;\n"
+        text += "\t} else {\n\t\treturn nil;\n\t}\n"
+        text += "}\n\n"
 
     getParams = "\n-(NSDictionary *) getParams\n{\n\tNSMutableDictionary *params = " \
                 "[NSMutableDictionary dictionaryWithDictionary: "
@@ -299,11 +342,11 @@ def formatToM(k):
             pass
         else:
             if k.fields[field].dataType == "BOOL" and not k.fields[field].fields:
-                getParams += "\tif (self.{0})".format(field) + " {" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" +\
-                            " else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"false\";\n\t".format(field) + "}\n"
+                getParams += "\tif (self.{0})".format(field) + " {" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" #+\
+                            #" else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"false\";\n\t".format(field) + "}\n"
             else:
                 getParams += "\tif (self.{0})".format(field) + " {\n"
-                if k.fields[field].isParent:
+                if k.fields[field].isParent and "NSMutable" not in k.fields[field].dataType:
                     getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(field, field)
                 else:
                     if k.fields[field].dataType == "HexColor":
@@ -352,12 +395,17 @@ def formatToH(k):
             text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
             if k.fields[field].isParent:
                 imports += "#import \"{0}.h\"\n".format(upperfirst(field))
-                text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
+                if "NSMutable" in k.fields[field].dataType:
+                    text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
+                else:
+                    text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
             else:
                 if k.fields[field].dataType == "BOOL" or k.fields[field].dataType == "id":
                     text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].dataType, field)
                 else:
                     text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
+    if k.default:
+        text += "\n\t-(instancetype)initWithDefaults;\n"
     text += "\n\t-(NSDictionary *) getParams;\n"
     text += "@end"
     return imports + text
