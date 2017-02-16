@@ -151,7 +151,7 @@ def getType(x):
         "Array<String|Number>": 'NSMutableArray<NSString *>',
         "Array<Object|Number>": 'NSMutableArray',
         "Array<Object|Array>": 'NSMutableArray',
-        "Number|String": 'NSString',
+        "Number|String": 'NSNumber',
         "String|HTMLElement": 'NSString',
         "Array<Array<Mixed>>": 'NSMutableArray<NSArray *>',
         "String|Object": 'NSString',
@@ -188,7 +188,8 @@ def createFiles(dictionary):
 
     with open("HIBridge.h", "w") as bridge_file:
         bridge_file.write(bridge)
-        bridge_file.write("#import \"HexColor.h\"")
+        bridge_file.write("#import \"HexColor.h\"\n")
+        bridge_file.write("#import \"Options.h\"\n")
 
     with open("HIChartsClasses/Options.h", "w") as optionsH_file:
         optionsH_file.write(createOptionsH())
@@ -201,11 +202,11 @@ def createOptionsH():
     text = "@interface Options: NSObject\n\n"
     imports = "#import <Foundation/Foundation.h>\n"
     for s in options:
-        if s[1] == "id":
+        if s[0] == "series":
+            text += "\t@property(nonatomic, readwrite) NSMutableArray *{0};\n\n".format(s[0])
+        elif s[0] != "defs":
             imports += "#import \"{0}.h\"\n".format(upperfirst(s[0]))
             text += "\t@property(nonatomic, readwrite) {0} *{1};\n\n".format(upperfirst(s[0]), s[0])
-        else:
-            text += "\t@property(nonatomic, readwrite) {0} *{1};\n\n".format(s[1], s[0])
     text += "\t-(NSDictionary *)getParams;\n\n@end"
     imports += "\n\n\n"
     return imports + text
@@ -217,10 +218,12 @@ def createOptionsM():
            "\tNSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];\n"
     for s in options:
         text += "\tif (self.{0})".format(s[0]) + " {\n"
-        if s[1] == "id":
-            text += "\t\tparams[@\"{0}\"] = [self.{0} getParams];\n".format(s[0])
+        if s[0] == "series":
+            text += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
+            text += "\t\tfor (Series *s in self.series) {\n\t\t\t[array addObject: [s getParams]];\n\t\t}\n"
+            text += "\t\tparams[@\"{0}\"] = array;\n"
         else:
-            text += "\t\tparams[@\"{0}\"] = self.{0};\n".format(s[0])
+            text += "\t\tparams[@\"{0}\"] = [self.{0} getParams];\n".format(s[0])
         text += "\t}\n"
     text += "\treturn params;\n"
     text += "}\n\n@end"
@@ -316,9 +319,12 @@ def createDefaultValue(s, dataType):
 
 def formatToM(k):
     text = "#import \"{0}.h\"\n\n@implementation {1}\n\n".format(k.title, k.title)
-
+    defaults = False
+    for field in k.fields:
+        if k.fields[field].default:
+            defaults = True
     text += "-(instancetype)init {\n\treturn [super init];\n}\n"
-    if k.default:
+    if defaults:
         text += "-(instancetype)initWithDefaults {\n"
         text += "\tif (self = [super init]) {\n"
         for field in k.fields:
@@ -364,6 +370,7 @@ def formatToM(k):
 def formatToH(k):
     imports = "#import <Foundation/Foundation.h>\n"
     colorAdded = False
+    defaults = False
     text = ""
     if k.extends:
         imports += "#import \"{0}.h\"\n".format(upperfirst(k.extends))
@@ -374,6 +381,8 @@ def formatToH(k):
     else:
         text += "@interface {0}: NSObject\n".format(k.title)
     for field in k.fields:
+        if k.fields[field].default:
+            defaults = True
         if k.fields[field].dataType == "HexColor" and not colorAdded:
             imports += "#import \"HexColor.h\"\n"
             colorAdded = True
@@ -404,7 +413,7 @@ def formatToH(k):
                     text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].dataType, field)
                 else:
                     text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
-    if k.default:
+    if defaults:
         text += "\n\t-(instancetype)initWithDefaults;\n"
     text += "\n\t-(NSDictionary *) getParams;\n"
     text += "@end"
