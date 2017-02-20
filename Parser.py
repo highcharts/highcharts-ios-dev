@@ -1,233 +1,232 @@
 import json
 import sys
 import os
-import ast
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+tree = dict()
 structure = dict()
+groups = list()
+files = list()
+bridge = set()
 options = list()
 
 
-class HIClass:
-    def __init__(self, description, demo, title, dataType, fields, isParent, default, extends):
+class HIChartsClass:
+    def __init__(self, name, dataType, description, demo, values, defaults):
+        self.name = name
+        self.dataType = dataType
         self.description = description
         self.demo = demo
-        self.title = title
-        self.dataType = dataType
-        self.fields = fields
-        self.isParent = isParent
-        self.default = default
-        self.extends = extends
-        if self.default == "null" or self.default == "undefined":
-            self.default = 'nil'
+        self.values = values
+        self.defaults = defaults
+        self.properties = list()
+        self.extends = None
+        self.comment = None
+        self.checked = False
+        self.duplicate = False
+        self.group = None
+        x = name.split(".")
+        if len(x) == 1:
+            x = name.split("<")
+            if len(x) > 1:
+                self.extends = x[0]
+        if self.description:
+            self.comment = "/**\n* description: {0}\n".format(self.description)
+            if self.demo:
+                self.comment += "* demo: {0}\n".format(self.demo)
+            if self.values:
+                self.comment += "* accepted values: {0}\n".format(self.values)
+            if self.defaults:
+                self.comment += "* default: {0}\n".format(self.defaults)
+            self.comment += "*/\n"
 
-    def update(self, description, demo, title, dataType, isParent, default, extends):
-        self.description = description
-        self.demo = demo
-        self.title = title
-        self.dataType = dataType
-        self.isParent = isParent
-        self.default = default
-        self.extends = extends
-        if self.default == "null" or self.default == "undefined":
-            self.default = 'nil'
+    def update(self, source):
+        self.dataType = source.dataType
+        self.description = source.description
+        self.demo = source.demo
+        self.values = source.values
+        self.defaults = source.defaults
+        if self.description:
+            self.comment = "/**\n* description: {0}\n".format(self.description)
+            if self.demo:
+                self.comment += "* demo: {0}\n".format(self.demo)
+            if self.values:
+                self.comment += "* accepted values: {0}\n".format(self.values)
+            if self.defaults:
+                self.comment += "* default: {0}\n".format(self.defaults)
+            self.comment += "*/\n"
 
-
-def addFieldToParent(source):
-    extends = None
-    fullname = source["fullname"].split(".")
-    if len(fullname) > 1:
-        parent = fullname[len(fullname) - 2]
-        x = parent.split("<")
-        if len(x) > 1:
-            x[1] = x[1][:-1]
-            parent = x[1]
-        if parent == "id":
-            parent = "ID"
-        if parent == "point":
-            parent = "HIPoint"
-        if parent == "description":
-            parent = "definition"
-
-        name = source["title"]
-        x = name.split("<")
-        if len(x) > 1:
-            extends = x[0]
-            x[1] = x[1][:-1]
-            name = x[1]
-        if name == "id":
-            name = "ID"
-        if name == "point":
-            name = "HIPoint"
-        if name == "description":
-            name = "definition"
-        if extends:
-            name = extends
-
-        if parent in structure:
-            structure[parent].fields[name] = structure[name]
-        else:
-            structure[parent] = HIClass(None, None, None, None, dict(), None, None, extends)
-            structure[parent].fields[name] = structure[name]
+    def addProperty(self, variable):
+        self.properties.append(variable)
 
 
-def generateClass(source):
-    description = ""
-    demo = ""
-    title = ""
-    dataType = ""
-    isParent = False
-    defaults = None
-    extends = None
+class Node:
+    def __init__(self, name, parent, info):
+        self.name = name
+        self.info = info
+        self.children = list()
+        self.parent = parent
+    def addChild(self, child):
+        self.children.append(child)
 
-    if "description" in source:
-        description = source["description"]
-        if "values" in source and len(source["values"]) > 0:
-            description += "\n\t*  Accepted values: {0}".format(source["values"])
-
-    if "demo" in source:
-        demo = source["demo"]
-
-    if "returnType" in source:
-        dataType = source["returnType"]
-
-    if "title" in source:
-        u = source["title"]
-        x = u.split("<")
-        if len(x) > 1:
-            extends = x[0]
-            x[1] = x[1][:-1]
-            u = x[1]
-        title = u
-        if title == "id":
-            title = "ID"
-        if title == "point":
-            title = "HIPoint"
-        if title == "description":
-            title = "definition"
-
-    if "isParent" in source:
-        isParent = source["isParent"]
-
-    if "defaults" in source:
-        defaults = source["defaults"]
-        description += "\n\t*  Default value: {0}".format(defaults)
-
-    if title in structure:
-        k = structure[title]
-        if not k.extends:
-            k.update(description, demo, upperfirst(title), getType(dataType), isParent, defaults, extends)
-    else:
-        structure[title] = HIClass(description, demo, upperfirst(title), getType(dataType), dict(), isParent, defaults, extends)
-
-    if "parent" not in source and not extends:
-        options.append((str(title), getType(dataType)))
-
-
-def upperfirst(x):
-    return x[0].upper() + x[1:]
+    def update(self, parent, info):
+        self.parent = parent
+        self.info = info
 
 
 def getType(x):
     return {
         "Number": 'NSNumber',
-        "Boolean": 'NSNumber', # /* Bool */
+        "Boolean": 'NSNumber /* Bool */',
         "Color": 'HexColor',
         "String": 'NSString',
         "Object": 'id',
-        "Function": 'NSString',
+        "Function": 'NSString /* Function? */',
         "Array<Number>": 'NSMutableArray<NSNumber *>',
         "Array<Object>": 'NSMutableArray',
         "Array": 'NSMutableArray',
         "Array<String>": 'NSMutableArray<NSString *>',
-        "Boolean|Object": "NSNumber", # /* Bool */
+        "Boolean|Object": 'NSNumber /* Bool */',
         "String|Number": 'NSString',
-        "Array<Array>": 'NSMutableArray<NSArray *>',
+        "Array<Array>": 'NSMutableArray<NSMutableArray *>',
         "CSSObject": 'NSMutableDictionary /* <NSString, NSString> */',
         "Array<Color>": 'NSMutableArray<HexColor *>',
         "Array<Object|Array|Number>": 'NSMutableArray /* <Data, NSNumber, NSArray> */',
         "Array<String|Number>": 'NSMutableArray<NSString *>',
         "Array<Object|Number>": 'NSMutableArray',
         "Array<Object|Array>": 'NSMutableArray',
-        "Number|String": 'NSNumber',
+        "Number|String": 'NSString',
         "String|HTMLElement": 'NSString',
-        "Array<Array<Mixed>>": 'NSMutableArray<NSArray *>',
+        "Array<Array<Mixed>>": 'NSMutableArray<NSMutableArray *>',
         "String|Object": 'NSString',
         "Mixed": 'id',
         "Number|Boolean": 'NSNumber',
         "": 'id',
-        "plotOptions.series.states": 'NSMutableArray<States *>'
+        "plotOptions.series.states": 'NSMutableArray'
     }[str(x)]
 
 
-def createFiles(dictionary):
-    bridge = ""
-    for k in dictionary:
-        if dictionary[k].fields:
-            t = str(k)
-            u = upperfirst(t)
-            x = u.split("<")
-            if len(x) > 1:
-                x[1] = x[1][:-1]
-                x[1] = upperfirst(x[1])
-                u = "{0}{1}".format(x[0], x[1])
-
-            name = "HIChartsClasses/{0}.h".format(u)
-            bridge += "#import \"{0}.h\"\n".format(u)
-            if not os.path.exists("HIChartsClasses"):
-                os.makedirs("HIChartsClasses")
-            st = formatToH(dictionary[k])
-            with open(name, "w") as h_file:
-                h_file.write(st)
-            name = "HIChartsClasses/{0}.m".format(u)
-            st = formatToM(dictionary[k])
-            with open(name, "w") as m_file:
-                m_file.write(st)
-
-    with open("HIBridge.h", "w") as bridge_file:
-        bridge_file.write(bridge)
-        bridge_file.write("#import \"HexColor.h\"\n")
-        bridge_file.write("#import \"Options.h\"\n")
-
-    with open("HIChartsClasses/Options.h", "w") as optionsH_file:
-        optionsH_file.write(createOptionsH())
-
-    with open("HIChartsClasses/Options.m", "w") as optionsM_file:
-        optionsM_file.write(createOptionsM())
+def upperfirst(x):
+    r = x[0].upper() + x[1:]
+    if r == 'Point':
+        r = 'HIPoint'
+    return r
 
 
-def createOptionsH():
-    text = "@interface Options: NSObject\n\n"
-    imports = "#import <Foundation/Foundation.h>\n"
-    for s in options:
-        if s[0] == "series":
-            text += "\t@property(nonatomic, readwrite) NSMutableArray *{0};\n\n".format(s[0])
-        elif s[0] != "defs":
-            imports += "#import \"{0}.h\"\n".format(upperfirst(s[0]))
-            text += "\t@property(nonatomic, readwrite) {0} *{1};\n\n".format(upperfirst(s[0]), s[0])
-    text += "\t-(NSDictionary *)getParams;\n\n@end"
-    imports += "\n\n\n"
-    return imports + text
+def lowerfirst(x):
+    return x[0].lower() + x[1:]
 
 
-def createOptionsM():
-    text = "#import \"Options.h\"\n\n@implementation Options\n\n-(instancetype)init {\n\treturn [super init];\n}\n\n" \
-           "-(NSDictionary *) getParams\n{\n" \
-           "\tNSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];\n"
-    for s in options:
-        text += "\tif (self.{0})".format(s[0]) + " {\n"
-        if s[0] == "series":
-            text += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
-            text += "\t\tfor (Series *s in self.series) {\n\t\t\t[array addObject: [s getParams]];\n\t\t}\n"
-            text += "\t\tparams[@\"{0}\"] = array;\n"
+def getLast(x):
+    last = ''
+    s = x.split("<")
+    if len(s) > 1:
+        n = s[1].split(".")
+        last = n[len(n) - 1]
+    else:
+        n = s[0].split(".")
+        last = n[len(n) - 1]
+    if last == 'description':
+        last = 'definition'
+    return last
+
+
+def searchForRepetitions():
+    for key1 in structure:
+        if not structure[key1].checked:
+            search(key1)
+
+
+def search(key1):
+    duplicates = list()
+    for key2 in structure:
+        if key1 != key2:
+            if getLast(structure[key1].name) == getLast(structure[key1].name):
+                if structure[key1].dataType == structure[key2].dataType:
+                    if len(structure[key1].properties) == len(structure[key2].properties):
+                        if structure[key1].description == structure[key2].description:
+                            if key1 != "xAxis.breaks" and key2 != "xAxis.breaks":
+                                all = True
+                                for p1 in structure[key1].properties:
+                                    ok = False
+                                    for p2 in structure[key2].properties:
+                                        if getLast(p1.name) == getLast(p2.name):
+                                            ok = True
+                                    if not ok:
+                                        all = False
+                                if all:
+                                    duplicates.append(key2)
+    name = getLast(key1)
+    if name in structure:
+        x = key1.split(".")
+        if len(x) > 1:
+            name = x[len(x) - 2] + upperfirst(x[len(x) - 1])
         else:
-            text += "\t\tparams[@\"{0}\"] = [self.{0} getParams];\n".format(s[0])
-        text += "\t}\n"
-    text += "\treturn params;\n"
-    text += "}\n\n@end"
-    return text
+            name = 'HI' + name
+    # x = key1.split(".")
+    # if len(x) > 1:
+    #     name = x[len(x) - 2] + x[len(x) - 1]
+    # else:
+    #     name = getLast(key1)
+    # if name in structure:
+    #     name = 'HI' + name
+
+
+    for i in duplicates:
+        structure[i].checked = True
+        structure[i].duplicate = True
+        structure[i].group = name
+
+
+def addToTree(source):
+    fullname = source["fullname"]
+    x = fullname.split(".")
+    parent = None
+    if len(x) > 1:
+        if x[len(x)-1] == '':
+            return
+        else:
+            x = x[:-1]
+            parent = ".".join(x)
+
+    node = Node(fullname, parent, source)
+
+    if fullname in tree:
+        tree[fullname].update(parent, source)
+    else:
+        tree[fullname] = node
+
+    if parent is None:
+        pass
+    else:
+        if parent in tree:
+            tree[parent].addChild(node)
+        else:
+            p = Node(parent, None, None)
+            tree[parent] = p
+            tree[parent].addChild(node)
+
+
+def printTree():
+    count = 0
+    for node in tree:
+        print "node: " + node
+        if tree[node].parent:
+            print "Parent: " + tree[node].parent
+        else:
+            print "noParent"
+            count += 1
+        if tree[node].info and "returnType" in tree[node].info:
+            print "returnType: " + tree[node].info["returnType"]
+        else:
+            print tree[node].info
+        if tree[node].children:
+            print "Children: "
+            for child in tree[node].children:
+                print child.name + " | "
+    print "Classes: " + str(count)
 
 
 def num(s):
@@ -240,193 +239,347 @@ def num(s):
             return None
 
 
-def createDefaultValue(s, dataType):
-    if dataType == 'NSNumber':
-        if type(num(s)) is int:
-            return "[NSNumber numberWithInt:{0}]".format(num(s))
-        elif type(num(s)) is float:
-            return "[NSNumber numberWithDouble:{0}]".format(num(s))
+def createClass(node):
+    source = node.info
+    dataType = None
+    description = None
+    demo = None
+    values = None
+    defaults = None
+    if source:
+        if "description" in source:
+            description = source["description"]
+
+        if "values" in source and len(source["values"]) > 0:
+            values = source["values"]
+
+        if "default" in source:
+            defaults = source["default"]
+
+        if "demo" in source:
+            demo = source["demo"]
+
+        if "returnType" in source:
+            dataType = source["returnType"]
+
+        name = node.name
+        if name == "id":
+            name = "ID"
+        elif name == "point":
+            name = "HIPoint"
+        elif name == "description":
+            name = "definition"
+
+        c = HIChartsClass(name, dataType, description, demo, values, defaults)
+        return c
+
+
+def createStructure():
+    for node in tree:
+        c = createClass(tree[node])
+        if node in structure:
+            structure[node].update(c)
         else:
-            return "nil"
-    elif dataType == 'BOOL':
-        if s == "true":
-            return 'YES'
-        else:
-            return 'NO'
-    elif dataType == 'HexColor':
-        if s == "nil":
-            return "nil"
-        else:
-            return "[[HexColor alloc] initWithString: @\"{0}\"]".format(s)
-    elif dataType == 'NSString':
-        if s == "nil":
-            return "nil"
-        else:
-            x = s.replace("\"", "\\\"")
-            return "@\"{0}\"".format(x)
-    elif dataType == 'id':
-        # NOT SURE
-        return "{0}".format(s)
-    elif dataType == 'Function':
-        # NOT SURE
-        return "{0}".format(s)
-    elif dataType == 'NSMutableDictionary /* <NSString, NSString> */':
-        txt = "[NSMutableDictionary dictionaryWithDictionary: @{"
-        data = json.loads(s)
-        for key in data:
-            txt += "@\"{0}\" : @\"{1}\",".format(key, data[key])
-        txt = txt[:-1]
-        txt += "}]"
-        return txt
-    elif dataType == 'NSMutableArray<HexColor *>':
-        x = ast.literal_eval(s)
-        txt = "[NSMutableArray arrayWithObjects:"
-        for i in x:
-            txt += " [[HexColor alloc] initWithString: @\"{0}\"],".format(i)
-        txt += " nil]"
-        return txt
-    elif dataType == 'NSMutableArray<NSString *>':
-        t = s.replace("[", "")
-        t = t.replace("]", "")
-        t = t.replace(" ", "")
-        t = t.split(",")
-        txt = "[NSMutableArray arrayWithObjects:"
-        for i in t:
-            if i == 'null':
-                txt += " @\"null\","
+            structure[node] = c
+        if tree[node].children:
+            if tree[node].parent:
+                if tree[node].parent in structure:
+                    structure[tree[node].parent].addProperty(c)
+                else:
+                    p = HIChartsClass(tree[node].parent, None, None, None, None, None)
+                    structure[tree[node].parent] = p
+                    structure[tree[node].parent].addProperty(c)
+        elif tree[node].parent:
+            if tree[node].parent in structure:
+                structure[tree[node].parent].addProperty(c)
             else:
-                txt += " @{0},".format(i)
-        txt += " nil]"
-        return txt
-    elif dataType == 'NSMutableArray<NSNumber *>':
-        t = str(s).replace("[", "")
-        t = t.replace("]", "")
-        t = t.replace(" ", "")
-        t = t.split(",")
-        txt = "[NSMutableArray arrayWithObjects:"
-        for i in t:
-            if type(num(i)) is int:
-                txt += " [NSNumber numberWithInt:{0}],".format(num(i))
-            elif type(num(i)) is float:
-                txt += " [NSNumber numberWithDouble:{0}],".format(num(i))
-            else:
-                txt += " nil,"
-        txt += " nil]"
-        return txt
+                p = HIChartsClass(tree[node].parent, None, None, None, None, None)
+                structure[tree[node].parent] = p
+                structure[tree[node].parent].addProperty(c)
+
+
+def createName(source):
+    if source in structure and structure[source].group:
+        source = structure[source].group
+
+    name = source.split("<")
+    if len(name) > 1:
+        name = name[1]
+        name = name.replace(">", "")
     else:
-        print "Not supported yet: {0} = {1}".format(s, dataType)
+        name = name[0]
+    x = name.split(".")
+    name = ''
+    count = 0
+    for i in x:
+        if count == 0:
+            name += i
+            count += 1
+        else:
+            name += upperfirst(i)
+    return name
 
 
-def formatToM(k):
-    text = "#import \"{0}.h\"\n\n@implementation {1}\n\n".format(k.title, k.title)
-    defaults = False
-    for field in k.fields:
-        if k.fields[field].default:
-            defaults = True
-    text += "-(instancetype)init {\n\treturn [super init];\n}\n"
-    if defaults:
-        text += "-(instancetype)initWithDefaults {\n"
-        text += "\tif (self = [super init]) {\n"
-        for field in k.fields:
-            if k.fields[field].default and not k.fields[field].fields:
-                text += "\t\tself.{0} = {1};\n".format(field, createDefaultValue(k.fields[field].default, k.fields[field].dataType))
-            elif k.fields[field].dataType == "BOOL" and not k.fields[field].fields:
-                text += "\t\tself.{0} = NO;\n".format(field)
-        text += "\t\treturn self;\n"
-        text += "\t} else {\n\t\treturn nil;\n\t}\n"
-        text += "}\n\n"
+def createHFile(name):
+    source = structure[name]
+    h = None
+    if source.properties:
+        if source.group:
+            if source.group not in groups:
+                groups.append(source.group)
+                h = formatToH(source.group, source)
+                name = source.group
+        else:
+            h = formatToH(name, source)
 
-    getParams = "\n-(NSDictionary *) getParams\n{\n\tNSMutableDictionary *params = " \
-                "[NSMutableDictionary dictionaryWithDictionary: "
-    if k.extends:
+        if h:
+            filename = "HIChartsClasses/{0}.h".format(upperfirst(createName(name)))
+            files.append(upperfirst(createName(name)))
+            with open(filename, "w") as h_file:
+                h_file.write(h)
+
+
+def createMFile(name):
+    source = structure[name]
+    m = None
+    if source.properties:
+        if source.group:
+            m = formatToM(source.group, source)
+            name = source.group
+        else:
+            m = formatToM(name, source)
+
+        if m:
+            filename = "HIChartsClasses/{0}.m".format(upperfirst(createName(name)))
+            with open(filename, "w") as m_file:
+                m_file.write(m)
+
+
+def formatToH(name, source):
+    imports = ""
+    colorAdded = False
+    htext = ""
+    if source.extends is not None:
+        imports += "#import \"{0}.h\"\n".format(upperfirst(source.extends))
+        # if source.comment:
+        #     htext += source.comment
+        htext += "@interface {0}: {1}\n\n".format(upperfirst(createName(name)), upperfirst(source.extends))
+    else:
+        # if source.comment:
+        #     htext += source.comment
+        htext += "@interface {0}: HIChartsJSONSerializable\n\n".format(upperfirst(createName(name)))
+    bridge.add("#import \"{0}.h\"\n".format(upperfirst(createName(name))))
+    for field in source.properties:
+        if source.extends:
+            skip = False
+            for i in structure[source.extends].properties:
+                if getLast(field.name) == getLast(i.name):
+                    skip = True
+            if skip:
+                continue
+        # if field.comment:
+        #     htext += "\t{0}".format(field.comment)
+        if field.dataType:
+            if field.dataType == "Mixed":
+                htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
+            elif "NSMutableArray" in str(getType(field.dataType)) and field.properties:
+                htext += "@property(nonatomic, readwrite) {0} /*{1}*/ *{2};\n".format(getType(field.dataType),
+                                                                                        upperfirst(
+                                                                                            createName(field.name)),
+                                                                                        getLast(field.name))
+            elif "NSMutableArray" in str(getType(field.dataType)):
+                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.dataType), getLast(field.name))
+            elif field.dataType == "Object":
+                if structure[field.name].properties:
+                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(upperfirst(createName(field.name)), getLast(field.name))
+                    imports += "#import \"{0}.h\"\n".format(upperfirst(createName(field.name)))
+                else:
+                    htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
+
+            else:
+                if getType(field.dataType) == "HexColor" and not colorAdded:
+                    colorAdded = True
+                if structure[field.name].properties:
+                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(upperfirst(createName(field.name)), getLast(field.name))
+                    imports += "#import \"{0}.h\"\n".format(upperfirst(createName(field.name)))
+                else:
+                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.dataType), getLast(field.name))
+        else:
+            if not field.dataType and not structure[field.name].properties:
+                htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
+            elif structure[field.name].properties:
+                name = createName(field.name)
+                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(upperfirst(name), getLast(field.name))
+                imports += "#import \"{0}.h\"\n".format(upperfirst(name))
+
+    htext += "\n-(NSDictionary *)getParams;\n\n"
+    htext += "@end\n"
+    if imports == "":
+        imports += "#import \"HIChartsJSONSerializable.h\"\n"
+    if colorAdded:
+        imports += "#import \"HexColor.h\"\n"
+    imports += "\n\n"
+    return imports + htext
+
+
+def formatToM(name, source):
+    mtext = "#import \"{0}.h\"\n\n".format(upperfirst(createName(name)))
+    mtext += "@implementation {0}\n\n".format(upperfirst(createName(name)))
+    mtext += "-(instancetype)init {\n\treturn [super init];\n}\n"
+
+    getParams = "\n-(NSDictionary *)getParams\n{\n\tNSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: "
+    if source.extends:
         getParams += "[super getParams]];\n"
     else:
         getParams += "@{}];\n"
 
-    for field in k.fields:
-        if k.extends and field in structure[k.extends].fields:
+    for field in source.properties:
+        if source.extends and field in structure[source.extends].properties:
             pass
         else:
-            if k.fields[field].dataType == "BOOL" and not k.fields[field].fields:
-                getParams += "\tif (self.{0})".format(field) + " {" + "\n\t\tparams[@\"{0}\"] = @\"true\";\n\t".format(field) + "}" #+\
-                            #" else " + "{" + "\n\t\tparams[@\"{0}\"] = @\"false\";\n\t".format(field) + "}\n"
-            else:
-                getParams += "\tif (self.{0})".format(field) + " {\n"
-                if k.fields[field].isParent and "NSMutable" not in k.fields[field].dataType:
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(field, field)
+            getParams += "\tif (self.{0})".format(getLast(field.name)) + " {\n"
+            if field.dataType:
+                if getType(field.dataType) == 'HexColor':
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name), getLast(field.name))
+                elif getType(field.dataType) == 'NSMutableArray<HexColor *>':
+                    getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
+                    getParams += "\t\tfor (HexColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
+                    getParams += "\t\t\t[array addObject:[obj getString]];\n".format(
+                        getLast(field.name))
+                    getParams += "\t\t}\n"
+                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
+                elif 'NSMutableArray' in str(getType(field.dataType)):
+                    getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
+                    getParams += "\t\tfor (id obj in self.{0})".format(getLast(field.name)) + " {\n"
+                    getParams += "\t\t\tif ([obj isKindOfClass: [HIChartsJSONSerializable class]])".format(getLast(field.name)) + " {\n"
+                    getParams += "\t\t\t\t[array addObject:[(HIChartsJSONSerializable *)obj getParams]];\n".format(getLast(field.name))
+                    getParams += "\t\t\t}\n"
+                    getParams += "\t\t\telse {\n\t\t\t\t[array addObject: obj];\n"
+                    getParams += "\t\t\t}\n"
+                    getParams += "\t\t}\n"
+                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
                 else:
-                    if k.fields[field].dataType == "HexColor":
-                        getParams += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(field, field)
-                    else:
-                        getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(field, field)
-                getParams += "\t}\n"
+                    getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(getLast(field.name), getLast(field.name))
+            elif structure[field.name].properties:
+                getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(getLast(field.name), getLast(field.name))
+            getParams += "\t}\n"
     getParams += "\treturn params;\n"
     getParams += "}\n"
-    text += getParams
-    text += "\n@end"
-    return text
+    mtext += getParams
+    mtext += "\n@end"
+    return mtext
 
 
-def formatToH(k):
-    imports = "#import <Foundation/Foundation.h>\n"
-    colorAdded = False
-    defaults = False
-    text = ""
-    if k.extends:
-        imports += "#import \"{0}.h\"\n".format(upperfirst(k.extends))
-
-    text += "/**\n*  {0}\n*  {1}\n*/\n".format(k.description, k.demo)
-    if k.extends:
-        text += "@interface {0}: {1}\n".format(k.title, upperfirst(k.extends))
-    else:
-        text += "@interface {0}: NSObject\n".format(k.title)
-    for field in k.fields:
-        if k.fields[field].default:
-            defaults = True
-        if k.fields[field].dataType == "HexColor" and not colorAdded:
-            imports += "#import \"HexColor.h\"\n"
-            colorAdded = True
-        if k.extends:
-            if field not in structure[k.extends].fields:
-                text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
-                if k.fields[field].isParent:
-                    imports += "#import \"{0}.h\"\n".format(upperfirst(field))
-                    if k.fields[field].extends:
-                        text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].extends, k.fields[field].extends)
+def createOptionsFiles():
+    imports = "#import \"HexColor.h\"\n"
+    htext = "@interface HIOptions: NSObject\n\n"
+    mtext = "#import \"HIOptions.h\"\n\n@implementation HIOptions\n\n"
+    mtext += "-(instancetype)init {\n\treturn [super init];\n}\n\n"
+    mtext += "-(NSDictionary *)getParams {\n\tNSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];\n"
+    for field in options:
+        if field.name != 'global' and field.name != 'lang':
+            if upperfirst((createName(field.name))) in files:
+                imports += "#import \"{0}.h\"\n".format(upperfirst(createName(field.name)))
+            if structure[field.name].dataType:
+                if getType(field.dataType) == 'id':
+                    if structure[field.name].properties:
+                        htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(upperfirst(createName(field.name)), getLast(field.name))
                     else:
-                        text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
+                        htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
+                elif "NSMutableArray" in str(getType(field.dataType)) and field.properties:
+                    htext += "@property(nonatomic, readwrite) {0}<{1} *> *{2};\n".format(getType(field.dataType),
+                                                                                           upperfirst(createName(field.name)), getLast(field.name))
                 else:
-                    if k.fields[field].dataType == "BOOL" or k.fields[field].dataType == "id":
-                        text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].dataType, field)
-                    else:
-                        text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
-        else:
-            text += "\n\t/**\n\t*  {0}\n\t*  {1}\n\t*/\n".format(k.fields[field].description, k.fields[field].demo)
-            if k.fields[field].isParent:
-                imports += "#import \"{0}.h\"\n".format(upperfirst(field))
-                if "NSMutable" in k.fields[field].dataType:
-                    text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
-                else:
-                    text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].title, field)
+                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.dataType),
+                                                                                    getLast(field.name))
             else:
-                if k.fields[field].dataType == "BOOL" or k.fields[field].dataType == "id":
-                    text += "\t@property(nonatomic, readwrite) {0} {1};\n".format(k.fields[field].dataType, field)
+                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(upperfirst(createName(field.name)),
+                                                                               getLast(field.name))
+    htext += "-(NSDictionary *)getParams;\n\n"
+    for field in options:
+        if field.name != 'global' and field.name != "lang":
+            mtext += "\tif (self.{0})".format(getLast(field.name)) + " {\n"
+
+            if field.dataType:
+                if getType(field.dataType) == 'HexColor':
+                    mtext += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name),
+                                                                                         getLast(field.name))
+                elif getType(field.dataType) == 'NSMutableArray':
+                    mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
+                    mtext += "\t\tfor (id obj in self.{0})".format(getLast(field.name)) + " {\n"
+                    mtext += "\t\t\tif ([obj isKindOfClass: [HIChartsJSONSerializable class]])".format(
+                        getLast(field.name)) + " {\n"
+                    mtext += "\t\t\t\t[array addObject:[(HIChartsJSONSerializable *)obj getParams]];\n".format(
+                        getLast(field.name))
+                    mtext += "\t\t\t}\n"
+                    mtext += "\t\t\telse {\n\t\t\t\t[array addObject: obj];\n"
+                    mtext += "\t\t\t}\n"
+                    mtext += "\t\t}\n"
+                    mtext += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
+                elif getType(field.dataType) == 'NSMutableArray<HexColor *>':
+                    mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
+                    mtext += "\t\tfor (HexColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
+                    mtext += "\t\t\t[array addObject:[obj getString]];\n".format(
+                        getLast(field.name))
+                    mtext += "\t\t}\n"
+                    mtext += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
+                elif structure[field.name].properties:
+                    mtext += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(getLast(field.name),
+                                                                                     getLast(field.name))
                 else:
-                    text += "\t@property(nonatomic, readwrite) {0} *{1};\n".format(k.fields[field].dataType, field)
-    if defaults:
-        text += "\n\t-(instancetype)initWithDefaults;\n"
-    text += "\n\t-(NSDictionary *) getParams;\n"
-    text += "@end"
-    return imports + text
+                    mtext += "\t\tparams[@\"{0}\"] = self.{1};\n".format(getLast(field.name), getLast(field.name))
+            elif structure[field.name].properties:
+                mtext += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(getLast(field.name), getLast(field.name))
+            mtext += "\t}\n"
+    mtext += "\treturn params;\n"
+    mtext += "}\n"
+    mtext += "\n@end"
+    imports += "\n\n"
+    htext += "\n@end\n"
+    with open("HIChartsClasses/HIOptions.h", "w") as o:
+        o.write(imports + htext)
+    with open("HIChartsClasses/HIOptions.m", "w") as m:
+        m.write(mtext)
 
 
-with open('HighchartsJSON') as data_file:
-    data = json.load(data_file)
+def createBridgeFile():
+    text = ""
+    for field in bridge:
+        text += field
+    text += "#import \"HexColor.h\"\n"
+    text += "#import \"HIOptions.h\"\n"
+    with open("HIBridge.h", "w") as b:
+        b.write(text)
 
-for field in data:
-    if "title" in field and len(field["title"]) > 0 and "description" in field:
-        generateClass(field)
-        if "parent" in field and field["parent"] != "":
-            addFieldToParent(field)
 
-createFiles(structure)
+def createFiles():
+    if not os.path.exists("HIChartsClasses"):
+        os.makedirs("HIChartsClasses")
+    for field in structure:
+        if len(field.split(".")) == 1 and len(field.split(">")) == 1:
+            options.append(structure[field])
+        createHFile(field)
+        createMFile(field)
+    createOptionsFiles()
+    createBridgeFile()
+
+
+def main():
+    with open('HighchartsJSON') as data_file:
+        data = json.load(data_file)
+    count = 0
+    for field in data:
+        count += 1
+        addToTree(field)
+    #printTree()
+    createStructure()
+    #searchForRepetitions()
+    # for c in structure:
+    #     text = "name: {0}, type: {1}, group: {3}, extends: {2}, props: ".format(c, structure[c].dataType, structure[c].extends, structure[c].group)
+    #     for p in structure[c].properties:
+    #         text += "{0} | ".format(p.name)
+    #     print text
+    createFiles()
+
+if __name__ == "__main__":
+    main()
