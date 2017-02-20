@@ -1,6 +1,8 @@
 import json
 import sys
 import os
+import ast
+import re
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -438,17 +440,17 @@ def formatToM(name, source):
             pass
         else:
             getParams += "\tif (self.{0})".format(getLast(field.name)) + " {\n"
-            if field.dataType:
-                if getType(field.dataType) == 'HexColor':
+            if structure[field.name].dataType:
+                if getType(structure[field.name].dataType) == 'HexColor':
                     getParams += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name), getLast(field.name))
-                elif getType(field.dataType) == 'NSMutableArray<HexColor *>':
+                elif getType(structure[field.name].dataType) == 'NSMutableArray<HexColor *>':
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     getParams += "\t\tfor (HexColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
                     getParams += "\t\t\t[array addObject:[obj getString]];\n".format(
                         getLast(field.name))
                     getParams += "\t\t}\n"
                     getParams += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
-                elif 'NSMutableArray' in str(getType(field.dataType)):
+                elif 'NSMutableArray' in str(getType(structure[field.name].dataType)):
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     getParams += "\t\tfor (id obj in self.{0})".format(getLast(field.name)) + " {\n"
                     getParams += "\t\t\tif ([obj isKindOfClass: [HIChartsJSONSerializable class]])".format(getLast(field.name)) + " {\n"
@@ -458,6 +460,8 @@ def formatToM(name, source):
                     getParams += "\t\t\t}\n"
                     getParams += "\t\t}\n"
                     getParams += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
+                elif structure[field.name].properties:
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(getLast(field.name), getLast(field.name))
                 else:
                     getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(getLast(field.name), getLast(field.name))
             elif structure[field.name].properties:
@@ -564,6 +568,14 @@ def createFiles():
     createBridgeFile()
 
 
+def printStructure():
+    for c in structure:
+        text = "name: {0}, type: {1}, group: {3}, extends: {2}, props: ".format(c, structure[c].dataType, structure[c].extends, structure[c].group)
+        for p in structure[c].properties:
+            text += "{0} | ".format(p.name)
+        print text
+
+
 def main():
     with open('HighchartsJSON') as data_file:
         data = json.load(data_file)
@@ -574,11 +586,7 @@ def main():
     #printTree()
     createStructure()
     #searchForRepetitions()
-    # for c in structure:
-    #     text = "name: {0}, type: {1}, group: {3}, extends: {2}, props: ".format(c, structure[c].dataType, structure[c].extends, structure[c].group)
-    #     for p in structure[c].properties:
-    #         text += "{0} | ".format(p.name)
-    #     print text
+    #printStructure()
     createFiles()
 
 if __name__ == "__main__":
