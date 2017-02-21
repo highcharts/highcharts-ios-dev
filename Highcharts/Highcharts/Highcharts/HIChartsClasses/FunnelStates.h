@@ -1,0 +1,16 @@
+#import "FunnelStatesHover.h"
+
+
+/**
+* description: A wrapper object for all the series options in specific states.
+*/
+@interface FunnelStates: HIChartsJSONSerializable
+
+/**
+* description: Options for the hovered series
+*/
+@property(nonatomic, readwrite) FunnelStatesHover *hover;
+
+-(NSDictionary *)getParams;
+
+@end

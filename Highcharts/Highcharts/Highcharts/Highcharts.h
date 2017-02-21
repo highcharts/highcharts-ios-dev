@@ -18,3 +18,5 @@ FOUNDATION_EXPORT const unsigned char HighchartsVersionString[];
 
 #import <Highcharts/UIColor+HIG.h>
 #import <Highcharts/UIImage+HIG.h>
+
+#import "Highcharts/HIBridge.h"

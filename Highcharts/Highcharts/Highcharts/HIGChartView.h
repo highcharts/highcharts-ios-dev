@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HIOptions.h"
 
 /**
  *  Highcharts Chart View Class. Initialize this as a normal view and set
@@ -18,7 +19,7 @@
  *  Options are main configuration entry point for chart view, for more
  *  information read API documentation.
  */
-@property (strong, nonatomic) NSDictionary *options;
+@property (strong, nonatomic) HIOptions *options;
 
 /**
  *  Theme name to load from file system after preloading.

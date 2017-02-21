@@ -120,7 +120,7 @@
     [self.HTML prepareJavaScript:@"highcharts-3d" prefix:@"js/" suffix:suffix];
     
     // If Module is needed in chart to work is loaded here.
-    NSArray *plugins = [HIGDependency pluginsForOptions:self.options];
+    NSArray *plugins = [HIGDependency pluginsForOptions:[self.options getParams]];
     
     self.plugins = [self.plugins arrayByAddingObjectsFromArray:plugins];
     
@@ -136,7 +136,7 @@
     // Load theme js, only one.
     [self.HTML prepareJavaScript:self.theme?:nil prefix:@"js/themes/" suffix:@".js"];
     
-    [self.HTML prepareOptions:self.options];
+    [self.HTML prepareOptions:[self.options getParams]];
     
     [self.HTML injectJavaScriptToHTML];
     
@@ -145,7 +145,7 @@
 
 - (void)loadChartOptions
 {
-    [self.HTML prepareOptions:self.options];
+    [self.HTML prepareOptions:[self.options getParams]];
     
     NSString *options = [NSString stringWithFormat:@"var chart = new Highcharts.Chart(%@)", self.HTML.options];
     
