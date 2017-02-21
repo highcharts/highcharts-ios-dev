@@ -363,12 +363,12 @@ def formatToH(name, source):
     htext = ""
     if source.extends is not None:
         imports += "#import \"{0}.h\"\n".format(upperfirst(source.extends))
-        # if source.comment:
-        #     htext += source.comment
+        if source.comment:
+            htext += source.comment
         htext += "@interface {0}: {1}\n\n".format(upperfirst(createName(name)), upperfirst(source.extends))
     else:
-        # if source.comment:
-        #     htext += source.comment
+        if source.comment:
+            htext += source.comment
         htext += "@interface {0}: HIChartsJSONSerializable\n\n".format(upperfirst(createName(name)))
     bridge.add("#import \"{0}.h\"\n".format(upperfirst(createName(name))))
     for field in source.properties:
@@ -379,8 +379,8 @@ def formatToH(name, source):
                     skip = True
             if skip:
                 continue
-        # if field.comment:
-        #     htext += "\t{0}".format(field.comment)
+        if field.comment:
+            htext += "{0}".format(field.comment)
         if field.dataType:
             if field.dataType == "Mixed":
                 htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
@@ -482,24 +482,26 @@ def createOptionsFiles():
     mtext += "-(NSDictionary *)getParams {\n\tNSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];\n"
     for field in options:
         if field.name != 'global' and field.name != 'lang':
+            if field.comment:
+                htext += "{0}".format(field.comment)
             if upperfirst((createName(field.name))) in files:
                 imports += "#import \"{0}.h\"\n".format(upperfirst(createName(field.name)))
             if structure[field.name].dataType:
                 if getType(field.dataType) == 'id':
                     if structure[field.name].properties:
-                        htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(upperfirst(createName(field.name)), getLast(field.name))
+                        htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format(upperfirst(createName(field.name)), getLast(field.name))
                     else:
-                        htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
+                        htext += "@property(nonatomic, readwrite) id {0};\n\n".format(getLast(field.name))
                 elif "NSMutableArray" in str(getType(field.dataType)) and field.properties:
-                    htext += "@property(nonatomic, readwrite) {0}<{1} *> *{2};\n".format(getType(field.dataType),
+                    htext += "@property(nonatomic, readwrite) {0}<{1} *> *{2};\n\n".format(getType(field.dataType),
                                                                                            upperfirst(createName(field.name)), getLast(field.name))
                 else:
-                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.dataType),
+                    htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format(getType(field.dataType),
                                                                                     getLast(field.name))
             else:
-                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(upperfirst(createName(field.name)),
+                htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format(upperfirst(createName(field.name)),
                                                                                getLast(field.name))
-    htext += "-(NSDictionary *)getParams;\n\n"
+    htext += "\n\n-(NSDictionary *)getParams;\n\n"
     for field in options:
         if field.name != 'global' and field.name != "lang":
             mtext += "\tif (self.{0})".format(getLast(field.name)) + " {\n"
