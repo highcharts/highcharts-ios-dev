@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Highcharts/Highcharts.h>
+#import "ChartType.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) HIGChartView *chartView;
@@ -57,6 +58,7 @@
                    @194.1,
                    @95.6,
                    @54.4, nil];
+    
     options.exporting = exporting;
     options.chart = chart;
     options.title = title;
@@ -82,36 +84,78 @@
 
 - (void)buttonReload:(UIButton*)sender
 {
-    self.chartView.options = @{
-                          @"exporting": @{
-                                  @"enabled": @NO
-                                  },
-                          @"chart": @{
-                                  @"type": @"column"
-                                  },
-                          @"title": @{
-                                  @"text": @""
-                                  },
-                          @"subtitle": @{
-                                  @"text": @""
-                                  },
-                          @"xAxis": @{
-                                  },
-                          @"yAxis": @{
-                                  @"title": @{
-                                          @"text": @""
-                                          },
-                                  @"tickAmount": @1
-                                  },
-                          @"series": @[
-                                  @{ @"enableMouseTracking": @NO,@"showInLegend": @NO, @"data" : @[
-                                             @49.9,
-                                             @71.5,
-                                             @106.4
-                                             ]
-                                     }
-                                  ]
-                          };
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    Chart *chart = [[Chart alloc]init];
+    chart.type = @"waterfall";
+    
+    Title *title = [[Title alloc]init];
+    title.text = @"Waterfall";
+    
+    XAxis *xAxis = [[XAxis alloc]init];
+    xAxis.type = @"category";
+    
+    YAxis *yAxis = [[YAxis alloc]init];
+    yAxis.title = [[YAxisTitle alloc]init];
+    yAxis.title.text = @"USD";
+    yAxis.labels = [[YAxisLabels alloc]init];
+    yAxis.labels.format = @"{value}k";
+    
+    Legend *legend = [[Legend alloc]init];
+    legend.enabled = @NO;
+    
+    Tooltip *tooltip = [[Tooltip alloc]init];
+    tooltip.pointFormat = @"<b>${point.y:,.2f}</b> USD";
+    
+    Waterfall *series = [[Waterfall alloc]init];
+    series.upColor = [[HexColor alloc]initWithString:@"#90ed7d"];
+    series.color = [[HexColor alloc]initWithString:@"#f7a35c"];
+    series.data = [NSMutableArray arrayWithObjects:@{
+                                                     @"name": @"Start",
+                                                     @"y": @120
+                                                     },
+                   @{
+                     @"name": @"Product Revenue",
+                     @"y": @569
+                     },
+                   @{
+                     @"name": @"Service Revenue",
+                     @"y": @231
+                     },
+                   @{
+                     @"name": @"Positive Balance",
+                     @"isIntermediateSum": @true,
+                     @"color": @"#434348"
+                     },
+                   @{
+                     @"name": @"Fixed Costs",
+                     @"y": @-342
+                     },
+                   @{
+                     @"name": @"Variable Costs",
+                     @"y": @-233
+                     },
+                   @{
+                     @"name": @"Balance",
+                     @"isSum": @true,
+                     @"color": @"#434348"
+                     }, nil];
+    
+    series.dataLabels = [[WaterfallDataLabels alloc]init];
+    series.dataLabels.enabled = @YES;
+    series.dataLabels.format = @"{point.y}k";
+    series.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold",@"fontWeight",  nil];
+    series.pointPadding = @0;
+    
+    options.chart = chart;
+    options.title = title;
+    options.xAxis = [NSMutableArray arrayWithObject:xAxis];
+    options.yAxis = [NSMutableArray arrayWithObject:yAxis];
+    options.legend = legend;
+    options.tooltip = tooltip;
+    options.series = [NSMutableArray arrayWithObject:series];
+    
+    self.chartView.options = [ChartType getChartByType:@"Line"];
     
     [self.chartView reload];
 }
