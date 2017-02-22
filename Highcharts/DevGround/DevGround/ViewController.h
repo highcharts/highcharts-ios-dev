@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *typeButtons;
-
+@property (strong, nonatomic) NSString *chartType;
 @end
 
