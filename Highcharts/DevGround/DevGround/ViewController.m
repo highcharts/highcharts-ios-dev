@@ -24,26 +24,26 @@
     
     HIOptions *options = [[HIOptions alloc]init];
     
-    Exporting *exporting = [[Exporting alloc]init];
+    HIExporting *exporting = [[HIExporting alloc]init];
     exporting.enabled = @NO;
     
-    Chart *chart = [[Chart alloc]init];
+    HIChart *chart = [[HIChart alloc]init];
     chart.type = @"column";
     
-    Title *title = [[Title alloc]init];
+    HITitle *title = [[HITitle alloc]init];
     title.text = @"";
     
-    Subtitle *subtitle = [[Subtitle alloc]init];
+    HISubtitle *subtitle = [[HISubtitle alloc]init];
     subtitle.text = @"";
     
-    XAxis *xAxis = [[XAxis alloc]init];
+    HIXAxis *xAxis = [[HIXAxis alloc]init];
     
-    YAxis *yAxis = [[YAxis alloc]init];
-    yAxis.title = [[YAxisTitle alloc]init];
+    HIYAxis *yAxis = [[HIYAxis alloc]init];
+    yAxis.title = [[HIYAxisTitle alloc]init];
     yAxis.title.text = @"";
     yAxis.tickAmount = @1;
     
-    Column *series = [[Column alloc]init];
+    HIColumn *series = [[HIColumn alloc]init];
     series.enableMouseTracking = @NO;
     series.showInLegend = @NO;
     series.data = [NSMutableArray arrayWithObjects: @49.9,
@@ -89,30 +89,30 @@
 {
     HIOptions *options = [[HIOptions alloc]init];
     
-    Chart *chart = [[Chart alloc]init];
+    HIChart *chart = [[HIChart alloc]init];
     chart.type = @"waterfall";
     
-    Title *title = [[Title alloc]init];
+    HITitle *title = [[HITitle alloc]init];
     title.text = @"Waterfall";
     
-    XAxis *xAxis = [[XAxis alloc]init];
+    HIXAxis *xAxis = [[HIXAxis alloc]init];
     xAxis.type = @"category";
     
-    YAxis *yAxis = [[YAxis alloc]init];
-    yAxis.title = [[YAxisTitle alloc]init];
+    HIYAxis *yAxis = [[HIYAxis alloc]init];
+    yAxis.title = [[HIYAxisTitle alloc]init];
     yAxis.title.text = @"USD";
-    yAxis.labels = [[YAxisLabels alloc]init];
+    yAxis.labels = [[HIYAxisLabels alloc]init];
     yAxis.labels.format = @"{value}k";
     
-    Legend *legend = [[Legend alloc]init];
+    HILegend *legend = [[HILegend alloc]init];
     legend.enabled = @NO;
     
-    Tooltip *tooltip = [[Tooltip alloc]init];
+    HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.pointFormat = @"<b>${point.y:,.2f}</b> USD";
     
-    Waterfall *series = [[Waterfall alloc]init];
-    series.upColor = [[HexColor alloc]initWithString:@"#90ed7d"];
-    series.color = [[HexColor alloc]initWithString:@"#f7a35c"];
+    HIWaterfall *series = [[HIWaterfall alloc]init];
+    series.upColor = [[HIHexColor alloc]initWithString:@"#90ed7d"];
+    series.color = [[HIHexColor alloc]initWithString:@"#f7a35c"];
     series.data = [NSMutableArray arrayWithObjects:@{
                                                      @"name": @"Start",
                                                      @"y": @120
@@ -144,7 +144,7 @@
                      @"color": @"#434348"
                      }, nil];
     
-    series.dataLabels = [[WaterfallDataLabels alloc]init];
+    series.dataLabels = [[HIWaterfallDataLabels alloc]init];
     series.dataLabels.enabled = @YES;
     series.dataLabels.format = @"{point.y}k";
     series.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold",@"fontWeight",  nil];

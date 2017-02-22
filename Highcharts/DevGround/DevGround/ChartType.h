@@ -19,15 +19,15 @@
 +(HIOptions *)getChartByType:(NSString *)type
 {
     if ([type isEqualToString:@"Line"]) {
-        Title *title = [[Title alloc]init];
+        HITitle *title = [[HITitle alloc]init];
         title.text = @"Monthly Average Temperature";
         title.x = @-20;
         
-        Subtitle *subtitle = [[Subtitle alloc]init];
+        HISubtitle *subtitle = [[HISubtitle alloc]init];
         subtitle.text = @"Source: WorldClimate.com";
         subtitle.x = @-20;
         
-        XAxis *xaxis = [[XAxis alloc]init];
+        HIXAxis *xaxis = [[HIXAxis alloc]init];
         xaxis.categories = [NSMutableArray arrayWithObjects:@"Jan",
                             @"Feb",
                             @"Mar",
@@ -40,8 +40,8 @@
                             @"Oct",
                             @"Nov",
                             @"Dec", nil];
-        YAxis *yaxis = [[YAxis alloc]init];
-        yaxis.title = [[YAxisTitle alloc]init];
+        HIYAxis *yaxis = [[HIYAxis alloc]init];
+        yaxis.title = [[HIYAxisTitle alloc]init];
         yaxis.title.text = @"Temperature (°C)";
         yaxis.plotLines = [NSMutableArray arrayWithObjects:@{
                                                              @"value": @0,
@@ -49,16 +49,16 @@
                                                              @"color": @"#808080"
                                                              }, nil];
         
-        Tooltip *tooltip = [[Tooltip alloc]init];
+        HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.valueSuffix = @"°C";
         
-        Legend *legend = [[Legend alloc]init];
+        HILegend *legend = [[HILegend alloc]init];
         legend.layout = @"vertical";
         legend.align = @"right";
         legend.verticalAlign = @"middle";
         legend.borderWidth = @0;
         
-        Line *line1 = [[Line alloc]init];
+        HILine *line1 = [[HILine alloc]init];
         line1.name = @"Tokyo";
         line1.data = [NSMutableArray arrayWithObjects:@7,
                      @6.9,
@@ -73,7 +73,7 @@
                      @13.9,
                       @9.6, nil];
         
-        Line *line2 = [[Line alloc]init];
+        HILine *line2 = [[HILine alloc]init];
         line2.name = @"New York";
         line2.data = [NSMutableArray arrayWithObjects:@7,
                       @-0.2,
@@ -89,7 +89,7 @@
                       @8.6,
                       @2.5, nil];
         
-        Line *line3 = [[Line alloc]init];
+        HILine *line3 = [[HILine alloc]init];
         line3.name = @"Berlin";
         line3.data = [NSMutableArray arrayWithObjects:@7,
                       @-0.9,
@@ -105,7 +105,7 @@
                       @3.9,
                       @1, nil];
         
-        Line *line4 = [[Line alloc]init];
+        HILine *line4 = [[HILine alloc]init];
         line4.name = @"London";
         line4.data = [NSMutableArray arrayWithObjects:@7,
                       @3.9,
@@ -136,26 +136,26 @@
     else {
         HIOptions *options = [[HIOptions alloc]init];
         
-        Exporting *exporting = [[Exporting alloc]init];
+        HIExporting *exporting = [[HIExporting alloc]init];
         exporting.enabled = @NO;
         
-        Chart *chart = [[Chart alloc]init];
+        HIChart *chart = [[HIChart alloc]init];
         chart.type = @"column";
         
-        Title *title = [[Title alloc]init];
+        HITitle *title = [[HITitle alloc]init];
         title.text = @"";
         
-        Subtitle *subtitle = [[Subtitle alloc]init];
+        HISubtitle *subtitle = [[HISubtitle alloc]init];
         subtitle.text = @"";
         
-        XAxis *xAxis = [[XAxis alloc]init];
+        HIXAxis *xAxis = [[HIXAxis alloc]init];
         
-        YAxis *yAxis = [[YAxis alloc]init];
-        yAxis.title = [[YAxisTitle alloc]init];
+        HIYAxis *yAxis = [[HIYAxis alloc]init];
+        yAxis.title = [[HIYAxisTitle alloc]init];
         yAxis.title.text = @"";
         yAxis.tickAmount = @1;
         
-        Column *series = [[Column alloc]init];
+        HIColumn *series = [[HIColumn alloc]init];
         series.enableMouseTracking = @NO;
         series.showInLegend = @NO;
         series.data = [NSMutableArray arrayWithObjects: @49.9,

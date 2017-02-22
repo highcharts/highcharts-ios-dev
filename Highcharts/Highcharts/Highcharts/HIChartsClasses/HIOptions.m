@@ -91,7 +91,7 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HexColor *obj in self.colors) {
+		for (HIHexColor *obj in self.colors) {
 			[array addObject:[obj getString]];
 		}
 		params[@"colors"] = array;
