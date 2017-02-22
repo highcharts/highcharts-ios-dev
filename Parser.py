@@ -365,7 +365,7 @@ def formatToH(name, source):
         imports += "#import \"{0}.h\"\n".format("HI" + upperfirst(source.extends))
         if source.comment:
             htext += source.comment
-        htext += "@interface {0}: {1}\n\n".format("HI" + upperfirst(createName(name)), upperfirst(source.extends))
+        htext += "@interface {0}: {1}\n\n".format("HI" + upperfirst(createName(name)), "HI" + upperfirst(source.extends))
     else:
         if source.comment:
             htext += source.comment
@@ -403,7 +403,7 @@ def formatToH(name, source):
                     colorAdded = True
                 if structure[field.name].properties:
                     htext += "@property(nonatomic, readwrite) {0} *{1};\n".format("HI" + upperfirst(createName(field.name)), getLast(field.name))
-                    imports += "#import \"{0}.h\"\n".format(upperfirst(createName(field.name)))
+                    imports += "#import \"{0}.h\"\n".format("HI" + upperfirst(createName(field.name)))
                 else:
                     htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.dataType), getLast(field.name))
         else:
