@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, 240.0f)];
+    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 20, self.view.bounds.size.width, 240.0f)];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -73,6 +73,9 @@
     [self.view addSubview:self.chartView];
     
     [self.button addTarget:self action:@selector(buttonReload:) forControlEvents:UIControlEventTouchUpInside];
+    for (UIButton *button in self.typeButtons) {
+        [button addTarget:self action:@selector(typeButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
     [self.view bringSubviewToFront:self.button];
 
 }
@@ -155,8 +158,14 @@
     options.tooltip = tooltip;
     options.series = [NSMutableArray arrayWithObject:series];
     
-    self.chartView.options = [ChartType getChartByType:@"Line"];
+    self.chartView.options = options;
     
+    [self.chartView reload];
+}
+
+-(void)typeButtonTapped:(UIButton *)sender
+{
+    self.chartView.options = [ChartType getChartByType:sender.titleLabel.text];
     [self.chartView reload];
 }
 

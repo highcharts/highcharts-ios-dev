@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *typeButtons;
 
 @end
 
