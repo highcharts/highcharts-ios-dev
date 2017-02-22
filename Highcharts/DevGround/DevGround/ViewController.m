@@ -19,11 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 20, self.view.bounds.size.width, 240.0f)];
+    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 20, self.view.bounds.size.width, 300.0f)];
 
     self.chartView.options = [ChartType getChartByType:self.chartType];
     

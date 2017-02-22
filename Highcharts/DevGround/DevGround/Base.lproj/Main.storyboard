@@ -229,14 +229,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aj-To-EvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="-558"/>
+            <point key="canvasLocation" x="1896.8" y="-558.17091454272872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OFo-b7-ajt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fMX-ia-8BZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ofc-Gj-Ykl">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" translucent="NO" id="ofc-Gj-Ykl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.28160414099693298" green="0.28168049454689026" blue="0.36354672908782959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

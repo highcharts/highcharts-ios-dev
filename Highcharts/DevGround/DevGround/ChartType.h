@@ -515,6 +515,331 @@
         
         return options;
     }
+    else if ([type isEqualToString:@"Pie"]) {
+        HIChart *chart = [[HIChart alloc]init];
+        chart.type = @"pie";
+        chart.plotShadow = @NO;
+        
+        HITitle *title = [[HITitle alloc]init];
+        title.text = @"Browser market shares January, 2015 to May, 2015";
+        
+        HITooltip *tooltip = [[HITooltip alloc]init];
+        tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
+        
+        HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
+        plotOptions.pie = [[HIPlotOptionsPie alloc]init];
+        plotOptions.pie.allowPointSelect = @YES;
+        plotOptions.pie.cursor = @"pointer";
+        plotOptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
+        plotOptions.pie.dataLabels.enabled = @YES;
+        plotOptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
+        plotOptions.pie.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"black", @"color", nil];
+        
+        HIPie *pie = [[HIPie alloc]init];
+        pie.name = @"Brands";
+        pie.data = [NSMutableArray arrayWithObjects:@{
+                                                      @"name": @"Microsoft Internet Explorer",
+                                                      @"y": @56.33
+                                                      },
+                    @{
+                      @"name": @"Chrome",
+                      @"y": @24.03,
+                      @"sliced": @true,
+                      @"selected": @true
+                      },
+                    @{
+                      @"name": @"Firefox",
+                      @"y": @10.38
+                      },
+                    @{
+                      @"name": @"Safari",
+                      @"y": @4.77
+                      },
+                    @{
+                      @"name": @"Opera",
+                      @"y": @0.91
+                      },
+                    @{
+                      @"name": @"Proprietary or Undetectable",
+                      @"y": @0.2
+                      }, nil];
+        
+        HIOptions *options = [[HIOptions alloc]init];
+        options.chart = chart;
+        options.title = title;
+        options.tooltip = tooltip;
+        options.plotOptions = plotOptions;
+        options.series = [NSMutableArray arrayWithObjects:pie, nil];
+        
+        return options;
+    }
+    else if ([type isEqualToString:@"Bubble"]) {
+        HIChart *chart = [[HIChart alloc]init];
+        chart.type = @"bubble";
+        chart.plotBorderWidth = @1;
+        chart.zoomType = @"xy";
+        
+        HILegend *legend = [[HILegend alloc]init];
+        legend.enabled = @NO;
+        
+        HITitle *title = [[HITitle alloc]init];
+        title.text = @"Sugar and fat intake per country";
+        
+        HISubtitle *subtitile = [[HISubtitle alloc]init];
+        subtitile.text = @"Source: <a href=\"http://www.euromonitor.com/\">Euromonitor</a> and <a href=\"https://data.oecd.org/\">OECD</a>";
+        
+        HIXAxis *xaxis = [[HIXAxis alloc]init];
+        xaxis.gridLineWidth = @1;
+        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.title.text = @"Daily fat intake";
+        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels.format = @"{value} gr";
+        HIXAxisPlotLines *plotLines = [[HIXAxisPlotLines alloc]init];
+        plotLines.color = [[HIHexColor alloc]initWithString:@"#FFFFFF"];
+        plotLines.dashStyle = @"dot";
+        plotLines.width = @2;
+        plotLines.value = @65;
+        plotLines.label = [[HIXAxisPlotLinesLabel alloc]init];
+        plotLines.label.rotation = @0;
+        plotLines.label.y = @15;
+        plotLines.label.style = @{@"fontStyle": @"italic"};
+        plotLines.label.text = @"Safe fat intake 65g/day";
+        plotLines.zIndex = @3;
+        xaxis.plotLines = [NSMutableArray arrayWithObject:plotLines];
+        
+        HIYAxis *yaxis = [[HIYAxis alloc]init];
+        yaxis.startOnTick = @NO;
+        yaxis.endOnTick = @NO;
+        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title.text = @"Daily sugar intake";
+        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels.format = @"{value} gr";
+        yaxis.maxPadding = @0.2;
+        HIYAxisPlotLines *yplotLines = [[HIYAxisPlotLines alloc]init];
+        yplotLines.color = [[HIHexColor alloc]initWithString:@"#FFFFFF"];
+        yplotLines.dashStyle = @"dot";
+        yplotLines.width = @2;
+        yplotLines.value = @50;
+        yplotLines.label = [[HIYAxisPlotLinesLabel alloc]init];
+        yplotLines.label.align = @"right";
+        yplotLines.label.x = @-10;
+        yplotLines.label.style = @{@"fontStyle": @"italic"};
+        yplotLines.label.text = @"Safe sugar intake 50g/day";
+        yplotLines.zIndex = @3;
+        yaxis.plotLines = [NSMutableArray arrayWithObject:yplotLines];
+        
+        HITooltip *tooltip = [[HITooltip alloc]init];
+        tooltip.useHTML = @YES;
+        tooltip.headerFormat = @"<table>";
+        tooltip.pointFormat = @"<tr><th colspan=\"2\"><h3>{point.country}</h3></th></tr><tr><th>Fat intake:</th><td>{point.x}g</td></tr><tr><th>Sugar intake:</th><td>{point.y}g</td></tr><tr><th>Obesity (adults):</th><td>{point.z}%</td></tr>";
+        tooltip.footerFormat = @"</table>";
+        tooltip.followPointer = @YES;
+        
+        HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
+        plotOptions.series = [[HIPlotOptionsSeries alloc]init];
+        plotOptions.series.dataLabels = [[HIPlotOptionsSeriesDataLabels alloc]init];
+        plotOptions.series.dataLabels.enabled = @YES;
+        plotOptions.series.dataLabels.format = @"{point.name}";
+        
+        HIBubble *series = [[HIBubble alloc]init];
+        series.data = [NSMutableArray arrayWithObjects:@{
+                                                         @"x": @95,
+                                                         @"y": @95,
+                                                         @"z": @13.8,
+                                                         @"name": @"BE",
+                                                         @"country": @"Belgium"
+                                                         },
+                       @{
+                         @"x": @86.5,
+                         @"y": @102.9,
+                         @"z": @14.7,
+                         @"name": @"DE",
+                         @"country": @"Germany"
+                         },
+                       @{
+                         @"x": @80.8,
+                         @"y": @91.5,
+                         @"z": @15.8,
+                         @"name": @"FI",
+                         @"country": @"Finland"
+                         },
+                       @{
+                         @"x": @80.4,
+                         @"y": @102.5,
+                         @"z": @12,
+                         @"name": @"NL",
+                         @"country": @"Netherlands"
+                         },
+                       @{
+                         @"x": @80.3,
+                         @"y": @86.1,
+                         @"z": @11.8,
+                         @"name": @"SE",
+                         @"country": @"Sweden"
+                         },
+                       @{
+                         @"x": @78.4,
+                         @"y": @70.1,
+                         @"z": @16.6,
+                         @"name": @"ES",
+                         @"country": @"Spain"
+                         },
+                       @{
+                         @"x": @74.2,
+                         @"y": @68.5,
+                         @"z": @14.5,
+                         @"name": @"FR",
+                         @"country": @"France"
+                         },
+                       @{
+                         @"x": @73.5,
+                         @"y": @83.1,
+                         @"z": @10,
+                         @"name": @"NO",
+                         @"country": @"Norway"
+                         },
+                       @{
+                         @"x": @71,
+                         @"y": @93.2,
+                         @"z": @24.7,
+                         @"name": @"UK",
+                         @"country": @"United Kingdom"
+                         },
+                       @{
+                         @"x": @69.2,
+                         @"y": @57.6,
+                         @"z": @10.4,
+                         @"name": @"IT",
+                         @"country": @"Italy"
+                         },
+                       @{
+                         @"x": @68.6,
+                         @"y": @20,
+                         @"z": @16,
+                         @"name": @"RU",
+                         @"country": @"Russia"
+                         },
+                       @{
+                         @"x": @65.5,
+                         @"y": @126.4,
+                         @"z": @35.3,
+                         @"name": @"US",
+                         @"country": @"United States"
+                         },
+                       @{
+                         @"x": @65.4,
+                         @"y": @50.8,
+                         @"z": @28.5,
+                         @"name": @"HU",
+                         @"country": @"Hungary"
+                         },
+                       @{
+                         @"x": @63.4,
+                         @"y": @51.8,
+                         @"z": @15.4,
+                         @"name": @"PT",
+                         @"country": @"Portugal"
+                         },
+                       @{
+                         @"x": @64,
+                         @"y": @82.9,
+                         @"z": @31.3,
+                         @"name": @"NZ",
+                         @"country": @"New Zealand"
+                         }, nil];
+        
+        HIOptions *options = [[HIOptions alloc]init];
+        options.chart = chart;
+        options.legend = legend;
+        options.title = title;
+        options.subtitle = subtitile;
+        options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
+        options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
+        options.tooltip = tooltip;
+        options.plotOptions = plotOptions;
+        options.series = [NSMutableArray arrayWithObjects:series, nil];
+        
+        return options;
+        
+    }
+    else if ([type isEqualToString:@"Polar"]) {
+        HIChart *chart = [[HIChart alloc]init];
+        chart.polar = @YES;
+        
+        HITitle *title = [[HITitle alloc]init];
+        title.text = @"Highcharts Polar Chart";
+        
+        HIPane *pane = [[HIPane alloc]init];
+        pane.startAngle = @0;
+        pane.endAngle = @360;
+        
+        HIXAxis *xaxis = [[HIXAxis alloc]init];
+        xaxis.tickInterval = @45;
+        xaxis.min = @0;
+        xaxis.max = @360;
+        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels.format = @"{value}°";
+        
+        HIYAxis *yaxis = [[HIYAxis alloc]init];
+        yaxis.min = @0;
+        
+        HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
+        plotOptions.series = [[HIPlotOptionsSeries alloc]init];
+        plotOptions.series.pointStart = @0;
+        plotOptions.series.pointInterval = @45;
+        plotOptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotOptions.column.pointPadding = @0;
+        plotOptions.column.groupPadding = @0;
+        
+        HIColumn *column = [[HIColumn alloc]init];
+        column.type = @"column";
+        column.name = @"Column";
+        column.data = [NSMutableArray arrayWithObjects:@8,
+                       @7,
+                       @6,
+                       @5,
+                       @4,
+                       @3,
+                       @2,
+                       @1, nil];
+        column.pointPlacement = @"between";
+        
+        HILine *line = [[HILine alloc]init];
+        line.type = @"line";
+        line.name = @"Line";
+        line.data = [NSMutableArray arrayWithObjects:@1,
+                     @2,
+                     @3,
+                     @4,
+                     @5,
+                     @6,
+                     @7,
+                     @8, nil];
+        
+        HIArea *area = [[HIArea alloc]init];
+        area.type = @"area";
+        area.name = @"Area";
+        area.data = [NSMutableArray arrayWithObjects:@1,
+                     @8,
+                     @2,
+                     @7,
+                     @3,
+                     @6,
+                     @4,
+                     @5, nil];
+        
+        HIOptions *options = [[HIOptions alloc]init];
+        options.chart = chart;
+        options.title = title;
+        options.pane = pane;
+        options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
+        options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
+        options.plotOptions = plotOptions;
+        options.series = [NSMutableArray arrayWithObjects:column, line, area, nil];
+        
+        return options;
+        
+    }
     else if ([type isEqualToString:@"Waterfall"]) {
         HIOptions *options = [[HIOptions alloc]init];
         
