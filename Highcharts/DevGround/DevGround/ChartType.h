@@ -923,6 +923,14 @@
         HIWaterfall *series = [[HIWaterfall alloc]init];
         series.upColor = [[HIHexColor alloc]initWithString:@"#90ed7d"];
         series.color = [[HIHexColor alloc]initWithString:@"#f7a35c"];
+        
+        //You can add objects by hand or creating data objects - one presented below:
+        
+        HIWaterfallData *data = [[HIWaterfallData alloc]init];
+        data.name = @"Positive Balance";
+        data.isIntermediateSum = @YES;
+        data.color = [[HIHexColor alloc]initWithString:@"#434348"];
+        
         series.data = [NSMutableArray arrayWithObjects:@{
                                                          @"name": @"Start",
                                                          @"y": @120
@@ -935,11 +943,7 @@
                          @"name": @"Service Revenue",
                          @"y": @231
                          },
-                       @{
-                         @"name": @"Positive Balance",
-                         @"isIntermediateSum": @true,
-                         @"color": @"#434348"
-                         },
+                       data,
                        @{
                          @"name": @"Fixed Costs",
                          @"y": @-342
