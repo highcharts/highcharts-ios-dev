@@ -3,25 +3,25 @@
 
 /**
 * description: Language object. The language object is global and it can't
-		be set on each chart initiation. Instead, use <code>Highcharts.setOptions</code> to
+		be set on each chart initiation. Instead, use Highcharts.setOptions to
 		set it before any chart is initiated. 
-<pre>Highcharts.setOptions({
+Highcharts.setOptions({
 	lang: {
 		months: ['Janvier', 'FĂŠvrier', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'AoĂťt', 'Septembre', 'Octobre', 'Novembre', 'DĂŠcembre'],
 		weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
 	}
-});</pre>
+});
 */
 @interface HILang: HIChartsJSONSerializable
 
 /**
-* description: Short week days, starting Sunday. If not specified, Highcharts uses the first three letters of the <code>lang.weekdays</code> option.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/" target="_blank">Finnish two-letter abbreviations</a>.
+* description: Short week days, starting Sunday. If not specified, Highcharts uses the first three letters of the lang.weekdays option.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/ : Finnish two-letter abbreviations.
 */
 @property(nonatomic, readwrite) NSMutableArray<NSString *> *shortWeekdays;
 /**
 * description: An array containing the months names. Corresponds to the 
- <code>%B</code> format in <code>Highcharts.dateFormat()</code>.
+ %B format in Highcharts.dateFormat().
 */
 @property(nonatomic, readwrite) NSMutableArray<NSString *> *months;
 /**
@@ -29,7 +29,7 @@
 */
 @property(nonatomic, readwrite) NSString *resetZoom;
 /**
-* description: The text to display when the chart contains no data. Requires the no-data module, see <a href="#noData">noData</a>.
+* description: The text to display when the chart contains no data. Requires the no-data module, see noData.
 */
 @property(nonatomic, readwrite) NSString *noData;
 /**
@@ -37,8 +37,8 @@
 */
 @property(nonatomic, readwrite) NSString *downloadPDF;
 /**
-* description: The magnitude of <a href="#lang.numericSymbol">numericSymbols</a> replacements. Use 10000 for Japanese, Korean and various Chinese locales, which use symbols for 10^4, 10^8 and 10^12.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbolmagnitude/" target="_blank">10000 magnitude for Japanese</a>
+* description: The magnitude of numericSymbols replacements. Use 10000 for Japanese, Korean and various Chinese locales, which use symbols for 10^4, 10^8 and 10^12.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbolmagnitude/ : 10000 magnitude for Japanese
 */
 @property(nonatomic, readwrite) NSNumber *numericSymbolMagnitude;
 /**
@@ -54,8 +54,8 @@
 */
 @property(nonatomic, readwrite) NSString *invalidDate;
 /**
-* description: <a href="http://en.wikipedia.org/wiki/Metric_prefix">Metric prefixes</a> used to shorten high numbers in axis labels. Replacing any of the positions with <code>null</code> causes the full number to be written. Setting <code>numericSymbols</code> to <code>null</code> disables shortening altogether.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/" target="_blank">Replacing the symbols with text</a>
+* description: http://en.wikipedia.org/wiki/Metric_prefix : Metric prefixes used to shorten high numbers in axis labels. Replacing any of the positions with null causes the full number to be written. Setting numericSymbols to null disables shortening altogether.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/ : Replacing the symbols with text
 */
 @property(nonatomic, readwrite) NSMutableArray<NSString *> *numericSymbols;
 /**
@@ -63,7 +63,7 @@
 */
 @property(nonatomic, readwrite) NSString *resetZoomTitle;
 /**
-* description: The default decimal point used in the <code>Highcharts.numberFormat</code> method unless otherwise specified in the function arguments.
+* description: The default decimal point used in the Highcharts.numberFormat method unless otherwise specified in the function arguments.
 */
 @property(nonatomic, readwrite) NSString *decimalPoint;
 /**
@@ -71,7 +71,7 @@
 */
 @property(nonatomic, readwrite) NSString *downloadJPEG;
 /**
-* description: An array containing the months names in abbreviated form. Corresponds to the  <code>%b</code> format in <code>Highcharts.dateFormat()</code>. 
+* description: An array containing the months names in abbreviated form. Corresponds to the  %b format in Highcharts.dateFormat(). 
 */
 @property(nonatomic, readwrite) NSMutableArray<NSString *> *shortMonths;
 /**
@@ -79,11 +79,11 @@
 */
 @property(nonatomic, readwrite) NSString *downloadSVG;
 /**
-* description: The text for the button that appears when drilling down, linking back to the parent series. The parent series' name is inserted for <code>{series.name}</code>.
+* description: The text for the button that appears when drilling down, linking back to the parent series. The parent series' name is inserted for {series.name}.
 */
 @property(nonatomic, readwrite) NSString *drillUpText;
 /**
-* description: The loading text that appears when the chart is set into the loading state following a call to <code>chart.showLoading</code>.
+* description: The loading text that appears when the chart is set into the loading state following a call to chart.showLoading.
 */
 @property(nonatomic, readwrite) NSString *loading;
 /**
@@ -91,9 +91,8 @@
 */
 @property(nonatomic, readwrite) NSString *contextButtonTitle;
 /**
-* description: <p>The default thousands separator used in the <code>Highcharts.numberFormat</code> method unless otherwise specified in the function arguments. Since Highcharts 4.1 it defaults to a single space character, which is compatible with ISO and works across Anglo-American and continental European languages.</p>
-
-<p>The default is a single space.</p>
+* description: The default thousands separator used in the Highcharts.numberFormat method unless otherwise specified in the function arguments. Since Highcharts 4.1 it defaults to a single space character, which is compatible with ISO and works across Anglo-American and continental European languages.
+The default is a single space.
 */
 @property(nonatomic, readwrite) NSString *thousandsSep;
 /**

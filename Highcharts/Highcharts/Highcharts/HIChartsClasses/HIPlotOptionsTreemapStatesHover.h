@@ -9,9 +9,9 @@
 
 /**
 * description: Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
-* demo: Disable hover on <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/" target="_blank">line</a>,
-			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/" target="_blank">column</a>,
-			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/" target="_blank">pie</a>
+* demo: Disable hover on http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/ : line,
+			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/ : column,
+			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/ : pie
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
@@ -19,10 +19,9 @@
 */
 @property(nonatomic, readwrite) HIHexColor *borderColor;
 /**
-* description: <p>How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.</p>
-
-<p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the hover brightening is by default replaced with a fill-opacity set in the <code>.highcharts-point:hover</code> rule.</p>
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-states-hover-brightness/" target="_blank">Brighten by 0.5</a>
+* description: How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.
+In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the hover brightening is by default replaced with a fill-opacity set in the .highcharts-point:hover rule.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-states-hover-brightness/ : Brighten by 0.5
 */
 @property(nonatomic, readwrite) NSNumber *brightness;
 /**

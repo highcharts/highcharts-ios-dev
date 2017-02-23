@@ -2,15 +2,14 @@
 
 
 /**
-* description: <p>Options for the halo appearing around the hovered point in line-type series as well as outside the hovered slice in pie charts. By default the halo is filled by the current point or series color with an opacity of 0.25. The halo can be disabled by setting the <code>halo</code> option to <code>false</code>.</p>
-
-<p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the halo is styled with the <code>.highcharts-halo</code> class, with colors inherited from <code>.highcharts-color-{n}</code>.</p>
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/" target="_blank">Halo options</a>
+* description: Options for the halo appearing around the hovered point in line-type series as well as outside the hovered slice in pie charts. By default the halo is filled by the current point or series color with an opacity of 0.25. The halo can be disabled by setting the halo option to false.
+In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the halo is styled with the .highcharts-halo class, with colors inherited from .highcharts-color-{n}.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/ : Halo options
 */
 @interface HIPlotOptionsBarStatesHoverHalo: HIChartsJSONSerializable
 
 /**
-* description: A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>.
+* description: A collection of SVG attributes to override the appearance of the halo, for example fill, stroke and stroke-width.
 */
 @property(nonatomic, readwrite) id attributes;
 /**
@@ -18,7 +17,7 @@
 */
 @property(nonatomic, readwrite) NSNumber *size;
 /**
-* description: Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats.
+* description: Opacity for the halo unless a specific fill is overridden using the attributes setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats.
 */
 @property(nonatomic, readwrite) NSNumber *opacity;
 

@@ -3,7 +3,7 @@
 
 /**
 * description: Position configuration for the credits label.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/" target="_blank">Left aligned</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
 */
 @interface HICreditsPosition: HIChartsJSONSerializable
 

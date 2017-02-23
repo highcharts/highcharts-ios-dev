@@ -8,10 +8,10 @@
 
 /**
 * description: CSS styles for each label. To position the label, use left and top like this:
-<pre>style: {
+style: {
 	left: '100px',
 	top: '100px'
-}</pre>
+}
 */
 @property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
 /**

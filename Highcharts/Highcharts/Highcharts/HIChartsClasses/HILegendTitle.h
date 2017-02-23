@@ -3,7 +3,7 @@
 
 /**
 * description: A title to be added on top of the legend.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/title/" target="_blank">Legend title</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/title/ : Legend title
 */
 @interface HILegendTitle: HIChartsJSONSerializable
 

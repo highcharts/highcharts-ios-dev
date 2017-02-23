@@ -3,7 +3,7 @@
 
 /**
 * description: The position of the button.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/" target="_blank">Above the plot area</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/ : Above the plot area
 */
 @interface HIChartResetZoomButtonPosition: HIChartsJSONSerializable
 

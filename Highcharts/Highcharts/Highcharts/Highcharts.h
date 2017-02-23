@@ -19,4 +19,7 @@ FOUNDATION_EXPORT const unsigned char HighchartsVersionString[];
 #import <Highcharts/UIColor+HIG.h>
 #import <Highcharts/UIImage+HIG.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdocumentation"
 #import "Highcharts/HIBridge.h"
+#pragma clang pop

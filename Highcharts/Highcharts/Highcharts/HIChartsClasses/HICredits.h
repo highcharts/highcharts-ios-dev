@@ -9,7 +9,7 @@
 
 /**
 * description: Position configuration for the credits label.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/" target="_blank">Left aligned</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
 */
 @property(nonatomic, readwrite) HICreditsPosition *position;
 /**
@@ -18,17 +18,17 @@
 @property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
 /**
 * description: The URL for the credits label.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/href/" target="_blank">Custom URL and text</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
 */
 @property(nonatomic, readwrite) NSString *href;
 /**
 * description: The text for the credits label.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/href/" target="_blank">Custom URL and text</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
 */
 @property(nonatomic, readwrite) NSString *text;
 /**
 * description: Whether to show the credits text.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/" target="_blank">Credits disabled</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/ : Credits disabled
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 

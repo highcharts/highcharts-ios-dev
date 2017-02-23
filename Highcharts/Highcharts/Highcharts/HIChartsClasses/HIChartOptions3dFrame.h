@@ -5,7 +5,7 @@
 
 /**
 * description: Provides the option to draw a frame around the charts by defining a bottom, front and back panel. 
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/column-frame/">Framed column chart</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/column-frame/ : Framed column chart
 */
 @interface HIChartOptions3dFrame: HIChartsJSONSerializable
 

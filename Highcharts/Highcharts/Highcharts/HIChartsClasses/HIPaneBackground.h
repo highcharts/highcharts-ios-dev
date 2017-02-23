@@ -4,7 +4,7 @@
 
 /**
 * description: An object, or array of objects, for backgrounds.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/" target="_blank">Multiple backgrounds on a gauge</a>.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/ : Multiple backgrounds on a gauge.
 */
 @interface HIPaneBackground: HIChartsJSONSerializable
 
@@ -13,13 +13,13 @@
 */
 @property(nonatomic, readwrite) HIHexColor *borderColor;
 /**
-* description: Tha shape of the pane background. When <code>solid</code>, the background is circular. When <code>arc</code>, the background extends only from the min to the max of the value axis.
+* description: Tha shape of the pane background. When solid, the background is circular. When arc, the background extends only from the min to the max of the value axis.
 * accepted values: ["solid", "arc"]
 */
 @property(nonatomic, readwrite) NSString *shape;
 /**
 * description: The class name for this background.
-* demo:  <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pane/" target="_blank">Panes styled by CSS</a> in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>
+* demo:  http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pane/ : Panes styled by CSS in http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode
 */
 @property(nonatomic, readwrite) NSString *className;
 /**

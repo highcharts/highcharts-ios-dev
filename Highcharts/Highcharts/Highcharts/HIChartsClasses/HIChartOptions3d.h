@@ -2,8 +2,8 @@
 
 
 /**
-* description: Options to render charts in 3 dimensions. This feature requires <code>highcharts-3d.js</code>, found in the download package or online at <a href="http://code.highcharts.com/highcharts-3d.js">code.highcharts.com/highcharts-3d.js</a>.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/column/">Basic 3D columns</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie/">basic 3D pie</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter/">basic 3D scatter chart</a>.
+* description: Options to render charts in 3 dimensions. This feature requires highcharts-3d.js, found in the download package or online at http://code.highcharts.com/highcharts-3d.js : code.highcharts.com/highcharts-3d.js.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/column/ : Basic 3D columns, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie/ : basic 3D pie, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter/ : basic 3D scatter chart.
 */
 @interface HIChartOptions3d: HIChartsJSONSerializable
 
@@ -13,7 +13,7 @@
 @property(nonatomic, readwrite) NSNumber /* Bool */ *fitToPlot;
 /**
 * description: One of the two rotation angles for the chart.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-interactive/">Dynamic Angles</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-interactive/ : Dynamic Angles
 */
 @property(nonatomic, readwrite) NSNumber *beta;
 /**
@@ -23,7 +23,7 @@ It is not used for 3D pie charts.
 @property(nonatomic, readwrite) NSNumber *viewDistance;
 /**
 * description: Provides the option to draw a frame around the charts by defining a bottom, front and back panel. 
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/column-frame/">Framed column chart</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/column-frame/ : Framed column chart
 */
 @property(nonatomic, readwrite) HIChartOptions3dFrame *frame;
 /**
@@ -36,7 +36,7 @@ It is not used for 3D pie charts.
 @property(nonatomic, readwrite) NSNumber *depth;
 /**
 * description: One of the two rotation angles for the chart.
-* demo: <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-interactive/">Dynamic Angles</a>
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-interactive/ : Dynamic Angles
 */
 @property(nonatomic, readwrite) NSNumber *alpha;
 
