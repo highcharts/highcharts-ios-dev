@@ -3,7 +3,12 @@
 @implementation HIColumn
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"column";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

@@ -3,7 +3,12 @@
 @implementation HIPolygon
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"polygon";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

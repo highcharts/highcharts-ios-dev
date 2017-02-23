@@ -3,7 +3,12 @@
 @implementation HIGauge
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"gauge";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

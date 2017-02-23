@@ -3,7 +3,12 @@
 @implementation HILine
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"line";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

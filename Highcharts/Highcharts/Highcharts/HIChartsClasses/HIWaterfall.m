@@ -3,7 +3,12 @@
 @implementation HIWaterfall
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"waterfall";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

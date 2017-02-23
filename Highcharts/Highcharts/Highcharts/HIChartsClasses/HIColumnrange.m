@@ -3,7 +3,12 @@
 @implementation HIColumnrange
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"columnrange";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

@@ -3,7 +3,12 @@
 @implementation HIBubble
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"bubble";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

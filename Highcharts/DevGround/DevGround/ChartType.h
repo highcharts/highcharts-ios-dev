@@ -784,14 +784,15 @@
         yaxis.min = @0;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
+        plotOptions.series = [[HIPlotOptionsSeries alloc]init];
+        plotOptions.series.pointStart = @0;
+        plotOptions.series.pointInterval = @45;
         plotOptions.column = [[HIPlotOptionsColumn alloc]init];
-        plotOptions.column.pointStart = @0;
-        plotOptions.column.pointInterval = @45;
         plotOptions.column.pointPadding = @0;
         plotOptions.column.groupPadding = @0;
         
         HIColumn *column = [[HIColumn alloc]init];
-        column.type = @"column";
+        //column.type = @"column";
         column.name = @"Column";
         column.data = [NSMutableArray arrayWithObjects:@8,
                        @7,
@@ -804,7 +805,7 @@
         column.pointPlacement = @"between";
         
         HILine *line = [[HILine alloc]init];
-        line.type = @"line";
+        //line.type = @"line";
         line.name = @"Line";
         line.data = [NSMutableArray arrayWithObjects:@1,
                      @2,
@@ -816,7 +817,7 @@
                      @8, nil];
         
         HIArea *area = [[HIArea alloc]init];
-        area.type = @"area";
+        //area.type = @"area";
         area.name = @"Area";
         area.data = [NSMutableArray arrayWithObjects:@1,
                      @8,
@@ -835,6 +836,8 @@
         options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
         options.plotOptions = plotOptions;
         options.series = [NSMutableArray arrayWithObjects:column, line, area, nil];
+        
+        NSLog(@"%@", [options getParams]);
         
         return options;
         

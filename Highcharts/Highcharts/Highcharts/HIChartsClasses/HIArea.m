@@ -3,7 +3,12 @@
 @implementation HIArea
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"area";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

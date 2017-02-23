@@ -3,7 +3,12 @@
 @implementation HIPyramid
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"pyramid";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams

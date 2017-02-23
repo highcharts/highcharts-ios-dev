@@ -3,7 +3,12 @@
 @implementation HITreemap
 
 -(instancetype)init {
-	return [super init];
+	if (self = [super init]) {
+		self.type = @"treemap";
+		return self;
+	} else {
+		return nil;
+	}
 }
 
 -(NSDictionary *)getParams
