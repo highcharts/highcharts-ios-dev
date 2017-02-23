@@ -28,6 +28,7 @@
 
     self.chartView.options = [ChartType getChartByType:self.chartType];
     
+    
     [self.view addSubview:self.chartView];
 
 }
