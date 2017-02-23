@@ -441,8 +441,8 @@ def formatToM(name, source):
     mtext += "@implementation {0}\n\n".format("HI" + upperfirst(createName(name)))
     if source.extends:
         mtext += "-(instancetype)init {\n\tif (self = [super init]) {" +\
-                 "\n\t\tself.type = @\"{0}\"".format(createName(name)) +\
-                 "\n\t\treturn self;\n\t} else {\n\t\treturn nil;\n\t}\n"
+                 "\n\t\tself.type = @\"{0}\";".format(createName(name)) +\
+                 "\n\t\treturn self;\n\t} else {\n\t\treturn nil;\n\t}\n}\n"
     else:
         mtext += "-(instancetype)init {\n\treturn [super init];\n}\n"
     getParams = "\n-(NSDictionary *)getParams\n{\n\tNSMutableDictionary *params =" \
