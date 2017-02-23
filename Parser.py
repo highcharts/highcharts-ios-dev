@@ -1,8 +1,7 @@
 import json
 import sys
 import os
-import ast
-import re
+from bs4 import BeautifulSoup, SoupStrainer
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -43,6 +42,7 @@ class HIChartsClass:
             if self.defaults:
                 self.comment += "* default: {0}\n".format(self.defaults)
             self.comment += "*/\n"
+            self.comment = cleanComment(self.comment)
 
     def update(self, source):
         self.dataType = source.dataType
@@ -59,9 +59,22 @@ class HIChartsClass:
             if self.defaults:
                 self.comment += "* default: {0}\n".format(self.defaults)
             self.comment += "*/\n"
+            self.comment = cleanComment(self.comment)
 
     def addProperty(self, variable):
         self.properties.append(variable)
+
+
+def cleanComment(comment):
+    soup = BeautifulSoup(comment, 'html.parser')
+    for m in soup.find_all('a'):
+        if str(m) in comment:
+            if not m['href'].startswith("#"):
+                comment = comment.replace(str(m), m['href'] + " : " + m.__dict__['next_element'])
+    soup = BeautifulSoup(comment, 'html.parser')
+    comment = soup.get_text()
+    return comment
+
 
 
 class Node:
