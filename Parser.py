@@ -647,16 +647,24 @@ def generateDocumentation():
         entry["_id"] = getDocumentationName(field)
         entry["fullname"] = fullname
         entry["title"] = name
-        entry["description"] = structure[field].description if structure[field].description else ""
-        entry["demo"] = structure[field].demo if structure[field].demo else ""
-        entry["defaults"] = structure[field].defaults if structure[field].defaults else ""
-        entry["values"] = structure[field].values if structure[field].values else ""
-        entry["since"] = tree[field].info["since"] if tree[field].info and "since" in tree[field].info else ""
+        if structure[field].description and structure[field].description != "":
+            entry["description"] = structure[field].description
+        if structure[field].demo:
+            entry["demo"] = structure[field].demo
+        if structure[field].defaults:
+            entry["defaults"] = structure[field].defaults
+        if structure[field].values:
+            entry["values"] = structure[field].values
+        if tree[field].info and "since" in tree[field].info:
+            entry["since"] = tree[field].info["since"]
         entry["deprecated"] = tree[field].info["deprecated"] if tree[field].info and "deprecated" in tree[field].info else False
-        entry["seeAlso"] = tree[field].info["seeAlso"] if tree[field].info and "seeAlso" in tree[field].info else ""
-        entry["returnType"] = returnType
+        if tree[field].info and "seeAlso" in tree[field].info:
+            entry["seeAlso"] = tree[field].info["seeAlso"]
+        if returnType != "":
+            entry["returnType"] = returnType
         entry["isParent"] = isParent
-        entry["parent"] = getDocumentationName(parent, False) if parent else ""
+        if parent:
+            entry["parent"] = getDocumentationName(parent, False)
         documentation.append(entry)
     entry = dict()
     entry["_id"] = "options"
@@ -666,13 +674,9 @@ def generateDocumentation():
     entry["returnType"] = "HIOptions"
     entry["isParent"] = True
     entry["name"] = "options"
-    entry["parent"] = ""
     documentation.append(entry)
-    with open('APIDocs.json', 'w') as file:
-        json.dump(documentation, file, indent=4)
-
-
-
+    with open('APIDocs.json', 'w') as json_file:
+        json.dump(documentation, json_file)
 
 
 def main():
