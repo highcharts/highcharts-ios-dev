@@ -596,6 +596,48 @@ def printStructure():
         print text
 
 
+def generateDocumentation():
+    pass
+    documentation = list()
+    for field in structure:
+        entry = dict()
+        name = getLast(field).replace(">", "")
+        description = structure[field].comment
+        if description:
+            description = description.replace("/**", "").replace("*/", "").replace("\n", "").replace("*", "")\
+                .replace("\t", "").replace("\r", "")
+        returnType = ""
+        isParent = False
+        if structure[field].properties:
+            isParent = True
+            returnType = "HI" + upperfirst(createName(field))
+        elif structure[field].dataType:
+            returnType = getType(structure[field].dataType)
+        parent = None
+        if tree[field].parent:
+            parent = "HI" + upperfirst(createName(tree[field].parent))
+        elif name != "global" and name != "lang":
+            parent = "HIOptions"
+        entry["name"] = name
+        entry["description"] = description
+        entry["returnType"] = returnType
+        entry["isParent"] = isParent
+        entry["parent"] = parent
+        documentation.append(entry)
+    entry = dict()
+    entry["returnType"] = "HIOptions"
+    entry["isParent"] = True
+    entry["name"] = "options"
+    entry["parent"] = None
+    entry["description"] = None
+    documentation.append(entry)
+    with open('APIDocs.json', 'w') as file:
+        json.dump(documentation, file)
+
+
+
+
+
 def main():
     with open('HighchartsJSON') as data_file:
         data = json.load(data_file)
@@ -608,6 +650,7 @@ def main():
     #searchForRepetitions()
     #printStructure()
     createFiles()
+    generateDocumentation()
 
 if __name__ == "__main__":
     main()
