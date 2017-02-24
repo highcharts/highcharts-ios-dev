@@ -13,6 +13,8 @@
 @property(nonatomic, readwrite) NSString *string;
 
 -(instancetype)initWithString:(NSString *)string;
+-(instancetype)initWithRGB:(int)red green:(int)green blue:(int)blue;
+-(instancetype)initWithRGBA:(int)red green:(int)green blue:(int)blue alpha:(double)alpha;
 -(NSString *)getString;
 
 @end

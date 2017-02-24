@@ -24,8 +24,7 @@
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    //self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 20, self.view.bounds.size.width, 300.0f)];
-    self.chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 20, self.view.bounds.size.width, 300.0f)];
 
     self.chartView.options = [ChartType getChartByType:self.chartType];
     
