@@ -896,6 +896,34 @@
         
         return options;
     }
+//    else if ([type isEqualToString:@"Scatter"]) {
+//        HIOptions *options = [[HIOptions alloc]init];
+//        
+//        HIChart *chart = [[HIChart alloc]init];
+//        chart.type = @"scatter";
+//        chart.zoomType = @"xy";
+//        
+//        HITitle *title = [[HITitle alloc]init];
+//        title.text = @"Height Versus Weight of 507 Individuals by Gender";
+//        
+//        HISubtitle *subtitle = [[HISubtitle alloc]init];
+//        subtitle.text = @"Source: Heinz  2003";
+//        
+//        HIXAxis *xaxis = [[HIXAxis alloc]init];
+//        xaxis.title = [[HIXAxisTitle alloc]init];
+//        xaxis.title.text = @"Height (cm)";
+//        xaxis.startOnTick = @YES;
+//        xaxis.endOnTick = @YES;
+//        xaxis.showLastLabel = @YES;
+//        
+//        HIYAxis *yaxis = [[HIYAxis alloc]init];
+//        yaxis.title = [[HIYAxisTitle alloc]init];
+//        yaxis.title.text = @"Weight (kg)";
+//        
+//        
+//        
+//        
+//    }
     else if ([type isEqualToString:@"Waterfall"]) {
         HIOptions *options = [[HIOptions alloc]init];
         
