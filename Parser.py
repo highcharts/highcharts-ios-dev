@@ -596,18 +596,44 @@ def printStructure():
         print text
 
 
+def getDocumentationName(name, doubleLast = True):
+    ret = str(name)
+    x = ret.split("<")
+    if len(x) > 1:
+        x = x[1]
+        x = x.replace(">", "")
+    else:
+        x = x[0]
+    x = x.split(".")
+    if len(x) > 1:
+        ret = x[0]
+        if len(x) > 2:
+            for i in range(1, len(x) - 1):
+                ret += "-{0}".format(x[i])
+        if doubleLast:
+            ret += "--{0}".format(x[len(x) - 1])
+        else:
+            ret += "-{0}".format(x[len(x) - 1])
+    else:
+        ret = x[0]
+    return ret
+
+
 def generateDocumentation():
     pass
     documentation = list()
     for field in structure:
         entry = dict()
         name = getLast(field).replace(">", "")
-        description = structure[field].comment
-        if description:
-            description = description.replace("/**", "").replace("*/", "").replace("\n", "").replace("*", "")\
-                .replace("\t", "").replace("\r", "")
         returnType = ""
         isParent = False
+        x = tree[field].info["fullname"].split("<")
+        if len(x) > 1:
+            x = x[1]
+        else:
+            x = x[0]
+        x = x.replace(">", "")
+        fullname = x
         if structure[field].properties:
             isParent = True
             returnType = "HI" + upperfirst(createName(field))
@@ -615,24 +641,35 @@ def generateDocumentation():
             returnType = getType(structure[field].dataType)
         parent = None
         if tree[field].parent:
-            parent = "HI" + upperfirst(createName(tree[field].parent))
+            parent = tree[field].parent
         elif name != "global" and name != "lang":
-            parent = "HIOptions"
-        entry["name"] = name
-        entry["description"] = description
+            parent = "options"
+        entry["_id"] = getDocumentationName(field)
+        entry["fullname"] = fullname
+        entry["title"] = name
+        entry["description"] = structure[field].description if structure[field].description else ""
+        entry["demo"] = structure[field].demo if structure[field].demo else ""
+        entry["defaults"] = structure[field].defaults if structure[field].defaults else ""
+        entry["values"] = structure[field].values if structure[field].values else ""
+        entry["since"] = tree[field].info["since"] if tree[field].info and "since" in tree[field].info else ""
+        entry["deprecated"] = tree[field].info["deprecated"] if tree[field].info and "deprecated" in tree[field].info else False
+        entry["seeAlso"] = tree[field].info["seeAlso"] if tree[field].info and "seeAlso" in tree[field].info else ""
         entry["returnType"] = returnType
         entry["isParent"] = isParent
-        entry["parent"] = parent
+        entry["parent"] = getDocumentationName(parent, False) if parent else ""
         documentation.append(entry)
     entry = dict()
+    entry["_id"] = "options"
+    entry["fullname"] = "options"
+    entry["title"] = "options"
+    entry["description"] = ""
     entry["returnType"] = "HIOptions"
     entry["isParent"] = True
     entry["name"] = "options"
-    entry["parent"] = None
-    entry["description"] = None
+    entry["parent"] = ""
     documentation.append(entry)
     with open('APIDocs.json', 'w') as file:
-        json.dump(documentation, file)
+        json.dump(documentation, file, indent=4)
 
 
 
