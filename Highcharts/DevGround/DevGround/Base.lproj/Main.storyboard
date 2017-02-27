@@ -133,7 +133,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nch-EJ-Hgj">
                                                 <rect key="frame" x="0.0" y="250" width="112" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Error bars">
+                                                <state key="normal" title="Error bar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
