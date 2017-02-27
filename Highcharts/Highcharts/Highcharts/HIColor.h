@@ -23,6 +23,10 @@
  * Values of red, green and blue color in RGBa standard. Values for colors: 0-255, alpha: 0-1
  */
 -(instancetype)initWithRGBA:(int)red green:(int)green blue:(int)blue alpha:(double)alpha;
+/**
+ * Standard color names: red, green, black etc.
+ */
+-(instancetype)initWithName:(NSString *)name;
 
 -(NSString *)getString;
 

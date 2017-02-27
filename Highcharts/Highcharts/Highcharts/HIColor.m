@@ -11,9 +11,9 @@
 
 @implementation HIColor
 
--(instancetype)initWithHexValue:(NSString *)string {
+-(instancetype)initWithHexValue:(NSString *)hex {
     if (self = [super init]) {
-        self.string = [NSString stringWithFormat:@"#%@", string];
+        self.string = [NSString stringWithFormat:@"#%@", hex];
         return self;
     }
     else {
@@ -39,6 +39,16 @@
         else {
             self.string = [NSString stringWithFormat:@"rgba(%d, %d, %d,%f)", red, green, blue, 1.0];
         }
+        return self;
+    }
+    else {
+        return nil;
+    }
+}
+
+-(instancetype)initWithName:(NSString *)name {
+    if (self = [super init]) {
+        self.string = name;
         return self;
     }
     else {
