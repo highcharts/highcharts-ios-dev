@@ -1354,6 +1354,8 @@
 		201AB2661E5F36B500EC78B1 /* HIZAxisTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 201AAD241E5F36B100EC78B1 /* HIZAxisTitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		201AB2671E5F36B500EC78B1 /* HIZAxisTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 201AAD251E5F36B100EC78B1 /* HIZAxisTitle.m */; };
 		207AD9CB1E5D82B10028405D /* HIBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 207AD9CA1E5D82B10028405D /* HIBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		208980261E641223007280D7 /* HIColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 208980251E641223007280D7 /* HIColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		208980281E6412EA007280D7 /* HIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 208980271E6412EA007280D7 /* HIColor.m */; };
 		208C10511E5C4BD8005C425F /* HIHexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 208C104D1E5C4BD8005C425F /* HIHexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		208C10521E5C4BD8005C425F /* HIHexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C104E1E5C4BD8005C425F /* HIHexColor.m */; };
 		208C10531E5C4BD8005C425F /* HIChartsJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 208C104F1E5C4BD8005C425F /* HIChartsJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2748,6 +2750,8 @@
 		201AAD241E5F36B100EC78B1 /* HIZAxisTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIZAxisTitle.h; sourceTree = "<group>"; };
 		201AAD251E5F36B100EC78B1 /* HIZAxisTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIZAxisTitle.m; sourceTree = "<group>"; };
 		207AD9CA1E5D82B10028405D /* HIBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBridge.h; sourceTree = "<group>"; };
+		208980251E641223007280D7 /* HIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIColor.h; sourceTree = "<group>"; };
+		208980271E6412EA007280D7 /* HIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIColor.m; sourceTree = "<group>"; };
 		208C104D1E5C4BD8005C425F /* HIHexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIHexColor.h; sourceTree = "<group>"; };
 		208C104E1E5C4BD8005C425F /* HIHexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIHexColor.m; sourceTree = "<group>"; };
 		208C104F1E5C4BD8005C425F /* HIChartsJSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIChartsJSONSerializable.h; sourceTree = "<group>"; };
@@ -4248,6 +4252,8 @@
 				34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */,
 				34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */,
 				207AD9CA1E5D82B10028405D /* HIBridge.h */,
+				208980251E641223007280D7 /* HIColor.h */,
+				208980271E6412EA007280D7 /* HIColor.m */,
 			);
 			name = Public;
 			sourceTree = "<group>";
@@ -4259,6 +4265,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				208980261E641223007280D7 /* HIColor.h in Headers */,
 				201AB24A1E5F36B500EC78B1 /* HIYAxisPlotBands.h in Headers */,
 				201AAD681E5F36B100EC78B1 /* HIAreasplineDataLabels.h in Headers */,
 				201AAF1A1E5F36B200EC78B1 /* HIPieTooltip.h in Headers */,
@@ -5238,6 +5245,7 @@
 				201AB0651E5F36B300EC78B1 /* HIPlotOptionsLineStatesHoverMarker.m in Sources */,
 				201AB24F1E5F36B500EC78B1 /* HIYAxisPlotLines.m in Sources */,
 				201AAECF1E5F36B200EC78B1 /* HILineDataEvents.m in Sources */,
+				208980281E6412EA007280D7 /* HIColor.m in Sources */,
 				201AAF231E5F36B200EC78B1 /* HIPlotOptionsAreaDataLabels.m in Sources */,
 				201AAFA51E5F36B200EC78B1 /* HIPlotOptionsBoxplotPointEvents.m in Sources */,
 				201AB17D1E5F36B400EC78B1 /* HIPyramidStates.m in Sources */,
