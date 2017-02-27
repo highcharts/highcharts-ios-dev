@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -10,7 +10,7 @@
 /**
 * description: A specific border color for the hovered point. Defaults to inherit the normal state border color.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
 * demo: Disable hover on http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/ : line,
@@ -21,7 +21,7 @@
 /**
 * description: A specific color for the hovered point.
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The opacity of a point in treemap. When a point has children, the visibility of the children is determined by the opacity. 
 */

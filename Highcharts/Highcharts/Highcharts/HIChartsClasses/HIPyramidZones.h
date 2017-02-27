@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -22,7 +22,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Defines the fill color for the series (in area type series)
 */
-@property(nonatomic, readwrite) HIHexColor *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 * description: The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
 */
@@ -30,7 +30,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Defines the color of the series.
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 
 -(NSDictionary *)getParams;
 

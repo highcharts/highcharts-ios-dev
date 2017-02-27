@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -49,7 +49,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The border color for the data label. Defaults to undefined.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: A class name for the data label. Particularly in http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/ : contrast text shadow.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/ : Styling by CSS.
@@ -64,7 +64,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The background color or gradient for the data label. Defaults to undefined.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
 */
-@property(nonatomic, readwrite) HIHexColor *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: How to handle data labels that flow outside the plot area. The default is justify, which aligns them inside the plot area. For columns and bars, this means it will be moved inside the bar. To display data labels outside the plot area, set crop to false and overflow to "none".
 * accepted values: ["justify", "none"]
@@ -74,7 +74,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The text color for the data labels. Defaults to null.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-color/ : Red data labels
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The border width in pixels for the data label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options

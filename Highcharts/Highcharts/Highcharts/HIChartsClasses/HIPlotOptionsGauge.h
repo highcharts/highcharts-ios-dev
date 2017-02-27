@@ -4,7 +4,7 @@
 #import "HIPlotOptionsGaugeDataLabels.h"
 #import "HIPlotOptionsGaugePivot.h"
 #import "HIPlotOptionsGaugePoint.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -67,7 +67,7 @@ A description of the series to add to the screen reader information about the se
 * description: The color for the parts of the graph or points that are below the threshold.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column - http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : arearange.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: Data labels for the gauge. For gauges, the data labels are enabled by default and shown in a bordered box below the point.
 */
@@ -111,7 +111,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The id of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series

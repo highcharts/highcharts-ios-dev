@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -21,7 +21,7 @@
 /**
 * description: Can set a color on all points which lies on the same level.
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Can set the borderWidth on all points which lies on the same level.
 */
@@ -29,7 +29,7 @@
 /**
 * description: Can set a borderColor on all points which lies on the same level.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Can set the options of dataLabels on each point which lies on the level.
 plotOptions.treemap.dataLabels for possible values.

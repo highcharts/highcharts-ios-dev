@@ -3,7 +3,7 @@
 #import "HIWaterfallDataLabels.h"
 #import "HIWaterfallPoint.h"
 #import "HIWaterfallTooltip.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -20,7 +20,7 @@ For options that apply to multiple series, it is recommended to add them to the 
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray /*HIWaterfallStates*/ *states;
+@property(nonatomic, readwrite) NSMutableArray <HIWaterfallStates *> *states;
 /**
 * description: Sticky tracking of mouse events. When true, the mouseOut event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the mouseOut event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When stickyTracking is false and tooltip.shared is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/ : True by default,
@@ -32,7 +32,7 @@ For options that apply to multiple series, it is recommended to add them to the 
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the waterfall colors can be set with the .highcharts-point-negative, .highcharts-sum and .highcharts-intermediate-sum classes.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/ : Waterfall
 */
-@property(nonatomic, readwrite) HIHexColor *upColor;
+@property(nonatomic, readwrite) HIColor *upColor;
 /**
 * description: If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the selected option.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box
@@ -69,7 +69,7 @@ Since Highcharts 4.1, it can be combined with pointIntervalUnit to draw irregula
 /**
 * description: A series specific or series type specific color set to apply instead of the global colors when colorByPoint is true.
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 /**
 * description: An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
@@ -86,7 +86,7 @@ Since Highcharts 4.1, it can be combined with pointIntervalUnit to draw irregula
 * description: The color of the border of each waterfall column.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the border stroke can be set with the .highcharts-point class.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
@@ -151,7 +151,7 @@ A description of the series to add to the screen reader information about the se
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIWaterfallZones *> *zones;
 /**
 * description: Whether to display this particular series or series type in the legend. The default value is true for standalone series, false for linked series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
@@ -191,7 +191,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: 3D columns only. The color of the edges. Similar to borderColor, except it defaults to the same color as the column.
 */
-@property(nonatomic, readwrite) HIHexColor *edgeColor;
+@property(nonatomic, readwrite) HIColor *edgeColor;
 /**
 * description: For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation doesn't run if there is more than 250 points totally. To disable this cap, set animationLimit to Infinity.
 */
@@ -226,7 +226,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Possible values: null, "on", "between".
 In a column chart, when pointPlacement is "on", the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is "between", the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.
@@ -245,7 +245,7 @@ Defaults to null in cartesian charts, "between" in polar charts.
 * description: The color of the line that connects columns in a waterfall series.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke can be set with the .highcharts-graph class.
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: A configuration object for the tooltip rendering of each single series. Properties are inherited from tooltip, but only the following properties can be defined on a series level.
 */

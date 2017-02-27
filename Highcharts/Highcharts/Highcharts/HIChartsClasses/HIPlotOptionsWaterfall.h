@@ -2,7 +2,7 @@
 #import "HIPlotOptionsWaterfallEvents.h"
 #import "HIPlotOptionsWaterfallPoint.h"
 #import "HIPlotOptionsWaterfallTooltip.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -33,7 +33,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: 3D columns only. The color of the edges. Similar to borderColor, except it defaults to the same color as the column.
 */
-@property(nonatomic, readwrite) HIHexColor *edgeColor;
+@property(nonatomic, readwrite) HIColor *edgeColor;
 /**
 * description: Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/ : Grouping disabled
@@ -42,7 +42,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray /*HIPlotOptionsWaterfallStates*/ *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsWaterfallStates *> *states;
 /**
 * description: A class name to apply to the series' graphical elements.
 */
@@ -156,7 +156,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Requires Accessibility module
 A description of the series to add to the screen reader information about the series.
@@ -204,13 +204,13 @@ Since Highcharts 4.1, it can be combined with pointIntervalUnit to draw irregula
 * description: The color of the border of each waterfall column.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the border stroke can be set with the .highcharts-point class.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the zoneAxis option.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsWaterfallZones *> *zones;
 /**
 * description: A name for the dash style to use for the line connecting the columns of the waterfall series. Possible values:
 		    
@@ -257,11 +257,11 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the waterfall colors can be set with the .highcharts-point-negative, .highcharts-sum and .highcharts-intermediate-sum classes.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/ : Waterfall
 */
-@property(nonatomic, readwrite) HIHexColor *upColor;
+@property(nonatomic, readwrite) HIColor *upColor;
 /**
 * description: A series specific or series type specific color set to apply instead of the global colors when colorByPoint is true.
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 /**
 * description: Whether to select the series initially. If showCheckbox is true, the checkbox next to the series name will be checked for a selected series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/ : One out of two series selected
@@ -283,7 +283,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The color of the line that connects columns in a waterfall series.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke can be set with the .highcharts-graph class.
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/ : Set the point range to one day on a data set with one week between the points

@@ -3,7 +3,7 @@
 #import "HIPlotOptionsSplineDataLabels.h"
 #import "HIPlotOptionsSplineEvents.h"
 #import "HIPlotOptionsSplineMarker.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 @interface HIPlotOptionsSpline: HIChartsJSONSerializable
@@ -94,7 +94,7 @@ LongDashDotDot
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsSplineStates *> *states;
 /**
 * description: An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
@@ -124,7 +124,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Options for the series data labels, appearing next to each data point.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (see example).
@@ -178,12 +178,12 @@ Defaults to null in cartesian charts, "between" in polar charts.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsSplineZones *> *zones;
 /**
 * description: The color for the parts of the graph or points that are below the threshold.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column - http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : arearange.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: A class name to apply to the series' graphical elements.
 */

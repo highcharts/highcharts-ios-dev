@@ -1,5 +1,5 @@
 #import "HIFunnelDataEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -36,7 +36,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: Individual color for the point. By default the color is pulled from the global colors array.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/color/ : Mark the highest point
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: http://www.highcharts.com/docs/chart-design-and-style/style-by-css : Styled mode only. A specific color index to use for the point, so its graphic representations are given the class name highcharts-color-{n}.
 */

@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -29,7 +29,7 @@
 * description: The background color or gradient for the data label. Defaults to undefined.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
 */
-@property(nonatomic, readwrite) HIHexColor *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: The border radius in pixels for the gauge's data label.
 */
@@ -87,7 +87,7 @@ The y value.
 * description: The text color for the data labels. Defaults to null.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-color/ : Red data labels
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/ : Vertical labels
@@ -96,7 +96,7 @@ The y value.
 /**
 * description: The border color for the data label.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The x position offset of the label relative to the point. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/ : Vertical and positioned

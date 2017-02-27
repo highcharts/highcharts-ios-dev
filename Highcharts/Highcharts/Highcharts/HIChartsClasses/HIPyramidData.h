@@ -1,5 +1,5 @@
 #import "HIPyramidDataEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -60,7 +60,7 @@ A description of the point to add to the screen reader information about the poi
 * description: Individual color for the point. By default the color is pulled from the global colors array.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/color/ : Mark the highest point
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The id of a series in the drilldown.series array to use for a drilldown for this point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/drilldown/basic/ : Basic drilldown

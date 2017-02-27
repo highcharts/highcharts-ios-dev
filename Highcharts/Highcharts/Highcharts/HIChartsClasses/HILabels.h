@@ -9,7 +9,7 @@
 /**
 * description: A HTML label that can be positioned anywhere in the chart area.
 */
-@property(nonatomic, readwrite) NSMutableArray *items;
+@property(nonatomic, readwrite) NSMutableArray <HILabelsItems *> *items;
 /**
 * description: Shared CSS styles for all labels.
 */

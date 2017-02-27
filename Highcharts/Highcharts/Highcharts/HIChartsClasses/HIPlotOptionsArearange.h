@@ -2,7 +2,7 @@
 #import "HIPlotOptionsArearangeTooltip.h"
 #import "HIPlotOptionsArearangePoint.h"
 #import "HIPlotOptionsArearangeEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -15,7 +15,7 @@
 * description: A separate color for the graph line. By default the line takes the color of the series, but the lineColor setting allows setting a separate color for the line without altering the fillColor.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/ : Dark gray line
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width. 
 */
@@ -85,7 +85,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
 */
@@ -95,7 +95,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/ : Null by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/ : gradient
 */
-@property(nonatomic, readwrite) HIHexColor *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 * description: The line cap used for line ends and line joins on the graph.
 * accepted values: ["round", "square"]
@@ -133,7 +133,7 @@ A description of the series to add to the screen reader information about the se
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsArearangeZones *> *zones;
 /**
 * description: A class name to apply to the series' graphical elements.
 */
@@ -219,12 +219,12 @@ LongDashDotDot
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsArearangeStates *> *states;
 /**
 * description: The color for the parts of the graph or points that are below the threshold.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column - http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : arearange.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: Fill opacity for the area. Note that when you set an explicit fillColor, the fillOpacity is not applied. Instead, you should define the opacity in the fillColor with an rgba color definition.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/ : Automatic fill color and fill opacity of 0.1
@@ -233,7 +233,7 @@ LongDashDotDot
 /**
 * description: A separate color for the negative part of the area.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeFillColor;
+@property(nonatomic, readwrite) HIColor *negativeFillColor;
 @property(nonatomic, readwrite) HIPlotOptionsArearangeEvents *events;
 /**
 * description: For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation doesn't run if there is more than 250 points totally. To disable this cap, set animationLimit to Infinity.

@@ -2,7 +2,7 @@
 #import "HIPlotOptionsHeatmapPoint.h"
 #import "HIPlotOptionsHeatmapTooltip.h"
 #import "HIPlotOptionsHeatmapDataLabels.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -21,7 +21,7 @@ The colors of each heat map point is usually determined by its value and control
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the border stroke can be set with the .highcharts-point rule.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/ : Dark gray border
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The row size - how many Y axis units each heatmap row should span.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/ : 1 by default
@@ -69,7 +69,7 @@ A description of the series to add to the screen reader information about the se
 /**
 * description: A series specific or series type specific color set to apply instead of the global colors when colorByPoint is true.
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 /**
 * description: Allow this series' points to be selected by clicking on the markers, bars or pie slices.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line, 
@@ -140,7 +140,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 /**
 * description: The main color of the series. In heat maps this color is rarely used, as we mostly use the color to denote the value of each point. Unless options are set in the colorAxis, the default value is pulled from the options.colors array.
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Properties for each single point
 */
@@ -162,13 +162,13 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsHeatmapStates *> *states;
 /**
 * description: An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the zoneAxis option.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsHeatmapZones *> *zones;
 /**
 * description: A configuration object for the tooltip rendering of each single series. Properties are inherited from tooltip, but only the following properties can be defined on a series level.
 */

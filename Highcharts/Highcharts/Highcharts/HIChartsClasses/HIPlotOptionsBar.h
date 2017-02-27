@@ -2,7 +2,7 @@
 #import "HIPlotOptionsBarEvents.h"
 #import "HIPlotOptionsBarTooltip.h"
 #import "HIPlotOptionsBarDataLabels.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 @interface HIPlotOptionsBar: HIChartsJSONSerializable
@@ -39,7 +39,7 @@
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the border stroke can be set with the .highcharts-point rule.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/ : Dark gray border
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
@@ -84,7 +84,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: 3D columns only. The color of the edges. Similar to borderColor, except it defaults to the same color as the column.
 */
-@property(nonatomic, readwrite) HIHexColor *edgeColor;
+@property(nonatomic, readwrite) HIColor *edgeColor;
 /**
 * description: 3D columns only. The width of the colored edges.
 */
@@ -94,7 +94,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsBarZones *> *zones;
 /**
 * description: Possible values: null, "on", "between".
 In a column chart, when pointPlacement is "on", the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is "between", the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.
@@ -117,7 +117,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: When this is true, the series will not cause the Y axis to cross the zero plane (or threshold option) unless the data actually crosses the plane.
 For example, if softThreshold is false, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the minPadding option. If softThreshold is true, the Y axis starts at 0.
@@ -242,7 +242,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 /**
 * description: A series specific or series type specific color set to apply instead of the global colors when colorByPoint is true.
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 /**
 * description: When the series contains less points than the crop threshold, all points are drawn,  event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.  .
 */
@@ -271,7 +271,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The color for the parts of the graph or points that are below the threshold.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column - http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : arearange.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: If no x values are given for the points in a series, pointInterval defines
  the interval of the x values. For example, if a series contains one value
@@ -283,7 +283,7 @@ Since Highcharts 4.1, it can be combined with pointIntervalUnit to draw irregula
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsBarStates *> *states;
 
 -(NSDictionary *)getParams;
 

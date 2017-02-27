@@ -3,7 +3,7 @@
 #import "HIPlotOptionsBubbleTooltip.h"
 #import "HIPlotOptionsBubblePoint.h"
 #import "HIPlotOptionsBubbleDataLabels.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -39,7 +39,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/ : Linear,
@@ -93,7 +93,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsBubbleStates *> *states;
 /**
 * description: Whether the bubble's value should be represented by the area or the width of the bubble. The default, area, corresponds best to the human perception of the size of each bubble. 
 * demo:  http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-sizeby/ : Comparison of area and size
@@ -105,7 +105,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsBubbleZones *> *zones;
 /**
 * description: Allow this series' points to be selected by clicking on the markers, bars or pie slices.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line, 
@@ -226,7 +226,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: When a point's Z value is below the zThreshold setting, this color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-negative/ : Negative bubbles
 */
-@property(nonatomic, readwrite) HIHexColor *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking

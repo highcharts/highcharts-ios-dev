@@ -4,7 +4,7 @@
 #import "HIAreaPoint.h"
 #import "HIAreaDataLabels.h"
 #import "HIAreaEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -31,7 +31,7 @@ For example, if softThreshold is false, a series of 0, 1, 2, 3 will make the Y a
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray /*HIAreaStates*/ *states;
+@property(nonatomic, readwrite) NSMutableArray <HIAreaStates *> *states;
 /**
 * description: A configuration object for the tooltip rendering of each single series. Properties are inherited from tooltip, but only the following properties can be defined on a series level.
 */
@@ -51,12 +51,12 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: A separate color for the graph line. By default the line takes the color of the series, but the lineColor setting allows setting a separate color for the line without altering the fillColor.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/ : Dark gray line
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to 0 disable.
 */
@@ -112,7 +112,7 @@ A description of the series to add to the screen reader information about the se
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/ : Null by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/ : gradient
 */
-@property(nonatomic, readwrite) HIHexColor *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 * description: On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointintervalunit/ : One point a month
@@ -158,7 +158,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The color for the parts of the graph or points that are below the threshold.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column - http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : arearange.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: Polar charts only. Whether to connect the ends of a line series plot across the extremes.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-connectends-false/ : Do not connect
@@ -249,13 +249,13 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: A separate color for the negative part of the area.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeFillColor;
+@property(nonatomic, readwrite) HIColor *negativeFillColor;
 /**
 * description: An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the zoneAxis option.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIAreaZones *> *zones;
 /**
 * description: A class name to apply to the series' graphical elements.
 */

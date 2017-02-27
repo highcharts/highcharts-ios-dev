@@ -2,7 +2,7 @@
 #import "HIPlotOptionsAreasplinerangeDataLabels.h"
 #import "HIPlotOptionsAreasplinerangePoint.h"
 #import "HIPlotOptionsAreasplinerangeEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -51,7 +51,7 @@
 /**
 * description: A separate color for the negative part of the area.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeFillColor;
+@property(nonatomic, readwrite) HIColor *negativeFillColor;
 /**
 * description: The line cap used for line ends and line joins on the graph.
 * accepted values: ["round", "square"]
@@ -68,7 +68,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : one specific series,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : area color
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Pixel width of the arearange graph line.
 */
@@ -111,7 +111,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/ : Null by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/ : gradient
 */
-@property(nonatomic, readwrite) HIHexColor *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 * description: Possible values: null, "on", "between".
 In a column chart, when pointPlacement is "on", the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is "between", the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.
@@ -136,7 +136,7 @@ Defaults to null in cartesian charts, "between" in polar charts.
 * description: A separate color for the graph line. By default the line takes the color of the series, but the lineColor setting allows setting a separate color for the line without altering the fillColor.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/ : Dark gray line
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: Set the initial visibility of the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
@@ -157,7 +157,7 @@ Defaults to null in cartesian charts, "between" in polar charts.
 * description: The color for the parts of the graph or points that are below the threshold.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column - http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : arearange.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: Whether to display this particular series or series type in the legend. The default value is true for standalone series, false for linked series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
@@ -211,7 +211,7 @@ A description of the series to add to the screen reader information about the se
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsAreasplinerangeZones *> *zones;
 /**
 * description: Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods.		The following properties are supported:
 
@@ -230,7 +230,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsAreasplinerangeStates *> *states;
 /**
 * description: If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the selected option.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box

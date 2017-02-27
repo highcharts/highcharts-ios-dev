@@ -2,7 +2,7 @@
 #import "HIPlotOptionsPieDataLabels.h"
 #import "HIPlotOptionsPieTooltip.h"
 #import "HIPlotOptionsPiePoint.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -33,7 +33,7 @@ A description of the series to add to the screen reader information about the se
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray /*HIPlotOptionsPieStates*/ *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsPieStates *> *states;
 /**
 * description: The start angle of the pie slices in degrees where 0 is top and 90 right. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/ : Start from right
@@ -105,7 +105,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 
 
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie/ : Basic 3D pie chart
@@ -156,13 +156,13 @@ Note: in Highcharts < 4.1.2, the percentage was relative to the plot area, not t
 * description: A series specific or series type specific color set to use instead of the global colors.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 /**
 * description: An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the zoneAxis option.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsPieZones *> *zones;
 /**
 * description: Properties for each single point
 */

@@ -1,5 +1,5 @@
 #import "HIPlotOptionsAreaMarkerStates.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -22,7 +22,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The fill color of the point marker. When null, the series' or point's color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : White fill
 */
-@property(nonatomic, readwrite) HIHexColor *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 * description: Enable or disable the point marker. If null, the markers are hidden when the data is dense, and shown for more widespread data points.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabled/ : Disabled markers,
@@ -47,7 +47,7 @@ Custom callbacks for symbol path generation can also be added to Highcharts.SVGR
 * description: The color of the point marker's outline. When null, the series' or point's color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : Inherit from series color (null)
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: The width of the point marker's outline.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : 2px blue marker

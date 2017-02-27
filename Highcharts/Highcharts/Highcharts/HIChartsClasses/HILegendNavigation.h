@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -12,7 +12,7 @@
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : 
 				Legend page navigation demonstrated
 */
-@property(nonatomic, readwrite) HIHexColor *inactiveColor;
+@property(nonatomic, readwrite) HIColor *inactiveColor;
 /**
 * description: How to animate the pages when navigating up or down. A value of true applies the default navigation given in  the chart.animation option. Additional options can be given as an object containing values for easing and duration.  .
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : 
@@ -35,7 +35,7 @@ See also the http://www.highcharts.com/plugin-registry/single/8/Adapt-Chart-To-L
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : 
 				Legend page navigation demonstrated
 */
-@property(nonatomic, readwrite) HIHexColor *activeColor;
+@property(nonatomic, readwrite) HIColor *activeColor;
 /**
 * description: Text styles for the legend page navigation.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : 

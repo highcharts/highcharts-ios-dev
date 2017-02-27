@@ -1,5 +1,5 @@
 #import "HIYAxisPlotBandsLabel.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -47,7 +47,7 @@
 * description: The color of the plot band.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/ : Color band
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The end position of the plot band in axis units.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/ : Datetime axis,
@@ -67,7 +67,7 @@
 /**
 * description: Border color for the plot band. Also requires borderWidth to be set.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Text labels for the plot bands
 */

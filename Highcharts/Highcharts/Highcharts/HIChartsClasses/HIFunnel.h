@@ -3,7 +3,7 @@
 #import "HIFunnelTooltip.h"
 #import "HIFunnelPoint.h"
 #import "HIFunnelEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -50,7 +50,7 @@ For options that apply to multiple series, it is recommended to add them to the 
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray /*HIFunnelStates*/ *states;
+@property(nonatomic, readwrite) NSMutableArray <HIFunnelStates *> *states;
 /**
 * description: The width of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/ : Funnel demo
@@ -75,7 +75,7 @@ For options that apply to multiple series, it is recommended to add them to the 
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIFunnelZones *> *zones;
 /**
 * description: The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height.
 */
@@ -89,7 +89,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: A series specific or series type specific color set to use instead of the global colors.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 /**
 * description: The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
 */
@@ -150,7 +150,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 
 
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking

@@ -2,7 +2,7 @@
 #import "HIPlotOptionsPyramidTooltip.h"
 #import "HIPlotOptionsPyramidPoint.h"
 #import "HIPlotOptionsPyramidEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -91,7 +91,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray *states;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsPyramidStates *> *states;
 @property(nonatomic, readwrite) HIPlotOptionsPyramidEvents *events;
 /**
 * description: If a point is sliced, moved out from the center, how many pixels should  it be moved?.
@@ -107,7 +107,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 
 
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The height of the funnel or pyramid. If it is a number it defines the pixel height, if it is a percentage string it is the percentage of the plot area height.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/ : Funnel demo
@@ -138,13 +138,13 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: A series specific or series type specific color set to use instead of the global colors.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 /**
 * description: An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the zoneAxis option.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsPyramidZones *> *zones;
 /**
 * description: The id of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series

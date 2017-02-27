@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 @interface HIPlotOptionsFunnelDataLabels: HIChartsJSONSerializable
@@ -36,7 +36,7 @@
 * description: The background color or gradient for the data label. Defaults to undefined.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
 */
-@property(nonatomic, readwrite) HIHexColor *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html : use HTML to render the labels.
 */
@@ -90,7 +90,7 @@
 * description: The text color for the data labels. Defaults to null.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-color/ : Red data labels
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The Z index of the data labels. The default Z index puts it above the series. Use a Z index of 2 to display it behind the series.
 */
@@ -163,7 +163,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: The border color for the data label. Defaults to undefined.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The width of the line connecting the data label to the pie slice.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the connector stroke width is given in the .highcharts-data-label-connector class.

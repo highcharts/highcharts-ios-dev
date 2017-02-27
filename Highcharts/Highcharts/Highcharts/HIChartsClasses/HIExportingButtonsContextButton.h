@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -64,7 +64,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: See navigation.buttonOptions => symbolFill.
 */
-@property(nonatomic, readwrite) HIHexColor *symbolFill;
+@property(nonatomic, readwrite) HIColor *symbolFill;
 /**
 * description: The symbol for the button. Points to a definition function in the  Highcharts.Renderer.symbols collection. The default exportIcon function is part of the exporting module.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-symbol/ : Use a circle for symbol
@@ -75,7 +75,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The color of the symbol's stroke or line.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolstroke/ : Blue symbol stroke
 */
-@property(nonatomic, readwrite) HIHexColor *symbolStroke;
+@property(nonatomic, readwrite) HIColor *symbolStroke;
 /**
 * description: The pixel size of the symbol on the button.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons

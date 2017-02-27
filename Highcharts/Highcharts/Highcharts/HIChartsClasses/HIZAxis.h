@@ -2,7 +2,7 @@
 #import "HIZAxisEvents.h"
 #import "HIZAxisLabels.h"
 #import "HIZAxisTitle.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -40,7 +40,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *tickColor;
+@property(nonatomic, readwrite) HIColor *tickColor;
 /**
 * description: A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic tick positions are accessible through this.tickPositions and can be modified by the callback.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
@@ -68,7 +68,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *gridLineColor;
+@property(nonatomic, readwrite) HIColor *gridLineColor;
 /**
 * description: The lowest allowed value for automatically computed axis extremes.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/floor-ceiling/ : Floor and ceiling
@@ -115,7 +115,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: An array of lines stretching across the plot area, marking a specific value on one of the axes.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the plot lines are styled by the .highcharts-plot-line class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSMutableArray *plotLines;
+@property(nonatomic, readwrite) NSMutableArray <HIZAxisPlotLines *> *plotLines;
 /**
 * description: The dash or dot style of the grid lines. For possible values, see http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/ : this demonstration.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinedashstyle/ : Long dashes
@@ -226,7 +226,7 @@ Note that the minPadding, maxPadding, startOnTick and endOnTick settings also af
 In a gauge, a plot band on the Y axis (value axis) will stretch along the perimeter of the gauge.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the plot bands are styled by the .highcharts-plot-band class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSMutableArray *plotBands;
+@property(nonatomic, readwrite) NSMutableArray <HIZAxisPlotBands *> *plotBands;
 /**
 * description: The position of the major tick marks relative to the axis line. Can be one of inside and outside.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-outside/ : "outside" by default, 
@@ -307,7 +307,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis/ : Axes in styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: The minimum tick interval allowed in axis values. For example on zooming in on an axis with daily data, this can be used to prevent the axis from showing hours. Defaults to the closest distance between two points on the axis.
 */
@@ -359,7 +359,7 @@ Description of the axis to screen reader users.
 * description: Color for the minor tick marks.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/ : Black tick marks on Y axis
 */
-@property(nonatomic, readwrite) HIHexColor *minorTickColor;
+@property(nonatomic, readwrite) HIColor *minorTickColor;
 /**
 * description: A soft minimum for the axis. If the series data minimum is greater than this, the axis will stay at this minimum, but if the series data minimum is lower, the axis will flex to show all data.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/ : Soft min and max
@@ -372,7 +372,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *minorGridLineColor;
+@property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
 * description: A class name that opens for styling the axis by CSS, especially in Highcharts http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode. The class name is applied to group elements for the grid, axis elements and labels.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis/ : Multiple axes with separate styling.
@@ -403,7 +403,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: When using an alternate grid color, a band is painted across the plot area between every other grid line.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/alternategridcolor/ : Alternate grid color on the Y axis
 */
-@property(nonatomic, readwrite) HIHexColor *alternateGridColor;
+@property(nonatomic, readwrite) HIColor *alternateGridColor;
 /**
 * description: The axis title, showing next to the axis line.
 */

@@ -1,5 +1,5 @@
 #import "HIBoxplotDataEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -79,7 +79,7 @@ If the xAxis.type is set to category, and no categories option exists, the categ
 * description: Individual color for the point. By default the color is pulled from the global colors array.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/color/ : Mark the highest point
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The median for each data point. This is drawn as a line through the middle area of the box.
 */

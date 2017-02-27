@@ -2,7 +2,7 @@
 #import "HIErrorbarEvents.h"
 #import "HIErrorbarPoint.h"
 #import "HIErrorbarTooltip.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -29,7 +29,7 @@ Since Highcharts 4.1, it can be combined with pointIntervalUnit to draw irregula
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray *zones;
+@property(nonatomic, readwrite) NSMutableArray <HIErrorbarZones *> *zones;
 /**
 * description: A pixel value specifying a fixed width for each column or bar. When null, the width is calculated from the pointPadding and groupPadding.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/ : 20px wide columns regardless of chart width
@@ -48,11 +48,11 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: A series specific or series type specific color set to apply instead of the global colors when colorByPoint is true.
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 /**
 * description: 3D columns only. The color of the edges. Similar to borderColor, except it defaults to the same color as the column.
 */
-@property(nonatomic, readwrite) HIHexColor *edgeColor;
+@property(nonatomic, readwrite) HIColor *edgeColor;
 /**
 * description: When using automatic point colors pulled from the options.colors collection, this option determines whether the chart should receive  one color per series or one color per point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/ : False by default,
@@ -67,7 +67,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The color of the stem, the vertical line extending from the box to the whiskers. If null, the series color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/ : Box plot styling, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/ : error bar styling
 */
-@property(nonatomic, readwrite) HIHexColor *stemColor;
+@property(nonatomic, readwrite) HIColor *stemColor;
 /**
 * description: The dash style of the stem, the vertical line extending from the box to the whiskers.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/ : Box plot styling, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/ : error bar styling
@@ -95,18 +95,18 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The color of the whiskers, the horizontal lines marking low and high values. When null, the general series color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/ : Box plot styling
 */
-@property(nonatomic, readwrite) HIHexColor *whiskerColor;
+@property(nonatomic, readwrite) HIColor *whiskerColor;
 @property(nonatomic, readwrite) HIErrorbarEvents *events;
 /**
 * description: The color for the parts of the graph or points that are below the threshold.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column - http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : arearange.
 */
-@property(nonatomic, readwrite) HIHexColor *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: The main color of the bars. This can be overridden by stemColor and whiskerColor individually. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/ : Error bar styling
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The line width of the whiskers, the horizontal lines marking low and high values. When null, the general lineWidth applies.
 * demo:  http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/ : Error bar styling
@@ -163,7 +163,7 @@ Defaults to null in cartesian charts, "between" in polar charts.
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray /*HIErrorbarStates*/ *states;
+@property(nonatomic, readwrite) NSMutableArray <HIErrorbarStates *> *states;
 /**
 * description: The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/ : Set the point range to one day on a data set with one week between the points

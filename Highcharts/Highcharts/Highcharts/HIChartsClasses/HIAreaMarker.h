@@ -1,5 +1,5 @@
 #import "HIAreaMarkerStates.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -21,7 +21,7 @@ Custom callbacks for symbol path generation can also be added to Highcharts.SVGR
 * description: The color of the point marker's outline. When null, the series' or point's color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : Inherit from series color (null)
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: Enable or disable the point marker. If null, the markers are hidden when the data is dense, and shown for more widespread data points.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabled/ : Disabled markers,
@@ -32,7 +32,7 @@ Custom callbacks for symbol path generation can also be added to Highcharts.SVGR
 * description: The fill color of the point marker. When null, the series' or point's color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : White fill
 */
-@property(nonatomic, readwrite) HIHexColor *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 * description: The radius of the point marker.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-radius/ : Bigger markers

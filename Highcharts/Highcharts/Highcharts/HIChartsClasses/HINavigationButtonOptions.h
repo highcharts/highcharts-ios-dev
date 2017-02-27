@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -48,12 +48,12 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: Fill color for the symbol within the button.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolfill/ : Blue symbol stroke for one of the buttons
 */
-@property(nonatomic, readwrite) HIHexColor *symbolFill;
+@property(nonatomic, readwrite) HIColor *symbolFill;
 /**
 * description: The color of the symbol's stroke or line.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolstroke/ : Blue symbol stroke
 */
-@property(nonatomic, readwrite) HIHexColor *symbolStroke;
+@property(nonatomic, readwrite) HIColor *symbolStroke;
 /**
 * description: The pixel width of the button.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons

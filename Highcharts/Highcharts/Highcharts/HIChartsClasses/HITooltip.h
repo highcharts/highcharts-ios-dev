@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -104,7 +104,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/ : Tooltip in styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: The name of a symbol to use for the border around the tooltip. In Highcharts 3.x and less, the shape was square. 
 */
@@ -158,7 +158,7 @@ The return should be an object containing x and y values, for example { x: 100, 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : Follow series by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/ : black border
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: CSS styles for the tooltip. The tooltip can also be styled through the CSS
  class .highcharts-tooltip.

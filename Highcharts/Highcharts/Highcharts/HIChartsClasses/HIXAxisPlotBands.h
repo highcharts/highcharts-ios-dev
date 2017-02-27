@@ -1,5 +1,5 @@
 #import "HIXAxisPlotBandsLabel.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -13,7 +13,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The color of the plot band.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/ : Color band
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: An object defining mouse events for the plot band. Supported properties are click, mouseover, mouseout, mousemove.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-events/ : Mouse events demonstrated
@@ -39,7 +39,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Border color for the plot band. Also requires borderWidth to be set.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Border width for the plot band.  Also requires borderColor to be set.
 */

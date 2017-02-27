@@ -1,5 +1,5 @@
 #import "HILineDataMarkerStates.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 @interface HILineDataMarker: HIChartsJSONSerializable
@@ -18,12 +18,12 @@
 * description: The color of the point marker's outline. When null, the series' or point's color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : Inherit from series color (null)
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: The fill color of the point marker. When null, the series' or point's color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : White fill
 */
-@property(nonatomic, readwrite) HIHexColor *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 * description: Image markers only. Set the image width explicitly. When using this option, a height must also be set.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/ : Fixed width and height

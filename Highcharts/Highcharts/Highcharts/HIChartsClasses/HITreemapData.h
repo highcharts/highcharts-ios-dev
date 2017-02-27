@@ -1,5 +1,5 @@
 #import "HITreemapDataEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -91,7 +91,7 @@ If the xAxis.type is set to category, and no categories option exists, the categ
 /**
 * description: The color of the point. In heat maps the point color is rarely set explicitly, as we use the color to denote the value. Options for this are set in the colorAxis configuration.
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Only for treemap. Use this option to build a tree structure. The value should be the id of the point which is the parent. If no points has a matching id, or this option is undefined, then the parent will be set to the root.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/parent/ : Point parent, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/ : Example where parent id is not matching

@@ -15,7 +15,7 @@
 * description: An object, or array of objects, for backgrounds.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/ : Multiple backgrounds on a gauge.
 */
-@property(nonatomic, readwrite) NSMutableArray *background;
+@property(nonatomic, readwrite) NSMutableArray <HIPaneBackground *> *background;
 /**
 * description: The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to startAngle + 360.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/ : VU-meter with custom start and end angle.

@@ -1,5 +1,5 @@
 #import "HIHeatmapDataEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -47,7 +47,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: The color of the point. In heat maps the point color is rarely set explicitly, as we use the color to denote the value. Options for this are set in the colorAxis configuration.
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: An additional, individual class name for the data point's graphic representation.
 */

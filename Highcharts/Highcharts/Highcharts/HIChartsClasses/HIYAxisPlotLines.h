@@ -1,5 +1,5 @@
 #import "HIYAxisPlotLinesLabel.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -28,7 +28,7 @@
 * description: The color of the line.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/ : A red line from X axis
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: A custom class name, in addition to the default highcharts-plot-line, to apply to each individual line.
 */

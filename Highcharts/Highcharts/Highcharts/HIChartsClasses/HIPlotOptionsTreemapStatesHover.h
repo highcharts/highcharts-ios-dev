@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -17,7 +17,7 @@
 /**
 * description: A specific border color for the hovered point. Defaults to inherit the normal state border color.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the hover brightening is by default replaced with a fill-opacity set in the .highcharts-point:hover rule.
@@ -31,7 +31,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: A specific color for the hovered point.
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 
 -(NSDictionary *)getParams;
 

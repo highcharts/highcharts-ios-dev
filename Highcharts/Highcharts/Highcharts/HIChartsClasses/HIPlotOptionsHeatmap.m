@@ -53,13 +53,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getString]];
 		}
 		params[@"colors"] = array;
 	}

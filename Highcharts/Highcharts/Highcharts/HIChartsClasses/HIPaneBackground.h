@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializable.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -11,7 +11,7 @@
 /**
 * description: The pane background border color.
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Tha shape of the pane background. When solid, the background is circular. When arc, the background extends only from the min to the max of the value axis.
 * accepted values: ["solid", "arc"]
@@ -25,7 +25,7 @@
 /**
 * description: The background color or gradient for the pane.
 */
-@property(nonatomic, readwrite) HIHexColor *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: The pixel border width of the pane background.
 */

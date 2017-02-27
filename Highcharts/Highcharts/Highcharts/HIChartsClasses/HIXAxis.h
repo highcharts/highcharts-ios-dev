@@ -2,7 +2,7 @@
 #import "HIXAxisTitle.h"
 #import "HIXAxisCrosshair.h"
 #import "HIXAxisLabels.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -121,12 +121,12 @@ Defaults to:
 * description: An array of lines stretching across the plot area, marking a specific value on one of the axes.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the plot lines are styled by the .highcharts-plot-line class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSMutableArray *plotLines;
+@property(nonatomic, readwrite) NSMutableArray <HIXAxisPlotLines *> *plotLines;
 /**
 * description: Color for the minor tick marks.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/ : Black tick marks on Y axis
 */
-@property(nonatomic, readwrite) HIHexColor *minorTickColor;
+@property(nonatomic, readwrite) HIColor *minorTickColor;
 /**
 * description: Whether to force the axis to start on a tick. Use this option with the minPadding option to control the axis start.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-false/ : False by default,
@@ -150,7 +150,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *gridLineColor;
+@property(nonatomic, readwrite) HIColor *gridLineColor;
 /**
 * description: Index of another axis that this axis is linked to. When an axis is linked to a master axis, it will take the same extremes as the master, but as assigned by min or max or by setExtremes. It can be used to show additional info, or to ease reading the chart by duplicating the scales.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/linkedto/ : Different string formats of the same date,
@@ -248,7 +248,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *tickColor;
+@property(nonatomic, readwrite) HIColor *tickColor;
 /**
 * description: Whether axis, including axis title, line, ticks and labels, should be visible.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/visible/ : Toggle axis visibility.
@@ -258,7 +258,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: When using an alternate grid color, a band is painted across the plot area between every other grid line.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/alternategridcolor/ : Alternate grid color on the Y axis
 */
-@property(nonatomic, readwrite) HIHexColor *alternateGridColor;
+@property(nonatomic, readwrite) HIColor *alternateGridColor;
 /**
 * description: Datetime axis only. An array determining what time intervals the ticks are allowed to fall on. Each array item is an array where the first value is the time unit and the  second value another array of allowed multiples. Defaults to:
 units: [[
@@ -301,7 +301,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *minorGridLineColor;
+@property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
 * description: Applies only when the axis type is category. When nameToX is true, points are placed on the X axis according to their names. If the same point name is repeated in the same or another series, the point is placed on the same X position as other points of the same name. When nameToX is false, the points are laid out in increasing X positions regardless of their names, and the X axis category will take the name of the last point in each position.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/uniquenames-true/ : True by default, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/uniquenames-false/ : false
@@ -357,7 +357,7 @@ If a tickAmount is set, the axis may be extended beyond the set max in order to 
 In a gauge, a plot band on the Y axis (value axis) will stretch along the perimeter of the gauge.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the plot bands are styled by the .highcharts-plot-band class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSMutableArray *plotBands;
+@property(nonatomic, readwrite) NSMutableArray <HIXAxisPlotBands *> *plotBands;
 /**
 * description: The axis labels show the number or category for each tick.
 */
@@ -408,7 +408,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis/ : Axes in styled mode.
 */
-@property(nonatomic, readwrite) HIHexColor *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: Deprecated. Renamed to minRange as of Highcharts 2.2.
 */
@@ -438,7 +438,7 @@ This option only has an effect on linear axes. Datetime, logarithmic or category
 * description: An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other. Requires that the broken-axis.js module is loaded.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-simple/ : Simple break, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/ : advanced with callback
 */
-@property(nonatomic, readwrite) NSMutableArray *breaks;
+@property(nonatomic, readwrite) NSMutableArray <HIXAxisBreaks *> *breaks;
 /**
 * description: The lowest allowed value for automatically computed axis extremes.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/floor-ceiling/ : Floor and ceiling

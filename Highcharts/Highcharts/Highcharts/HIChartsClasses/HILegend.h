@@ -1,6 +1,6 @@
 #import "HILegendNavigation.h"
 #import "HILegendTitle.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -149,7 +149,7 @@ In the case that the legend is aligned in a corner position, the layout option w
 * description: The background color of the legend.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/backgroundcolor/ : Yellowish background
 */
-@property(nonatomic, readwrite) HIHexColor *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: CSS styles for each legend item in hover mode. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from style unless overridden here.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/ : Red on hover
@@ -159,7 +159,7 @@ In the case that the legend is aligned in a corner position, the layout option w
 * description: The color of the drawn border around the legend.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/bordercolor/ : Brown border
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The border radius of the symbol for series types that use a rectangle in the legend. Defaults to half the symbolHeight.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolradius/ : Round symbols

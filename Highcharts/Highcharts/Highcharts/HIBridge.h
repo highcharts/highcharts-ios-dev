@@ -670,5 +670,5 @@
 #import "HIAreaDataMarkerStates.h"
 #import "HIPlotOptionsSplineStatesHoverHalo.h"
 #import "HITreemapLevels.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 #import "HIOptions.h"

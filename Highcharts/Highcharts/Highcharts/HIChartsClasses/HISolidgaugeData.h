@@ -1,5 +1,5 @@
 #import "HISolidgaugeDataEvents.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -73,7 +73,7 @@ If the xAxis.type is set to category, and no categories option exists, the categ
 * description: Individual color for the point. By default the color is pulled from the global colors array.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/color/ : Mark the highest point
 */
-@property(nonatomic, readwrite) HIHexColor *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The rank for this point's data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 */

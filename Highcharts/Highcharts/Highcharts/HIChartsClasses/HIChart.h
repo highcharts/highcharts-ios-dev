@@ -1,7 +1,7 @@
 #import "HIChartOptions3d.h"
 #import "HIChartEvents.h"
 #import "HIChartResetZoomButton.h"
-#import "HIHexColor.h"
+#import "HIColor.h"
 
 
 /**
@@ -108,12 +108,12 @@ A string reference to an easing function set on the Math object. See http://jsfi
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/ : Color,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/ : gradient
 */
-@property(nonatomic, readwrite) HIHexColor *plotBackgroundColor;
+@property(nonatomic, readwrite) HIColor *plotBackgroundColor;
 /**
 * description: The color of the inner chart or plot area border.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbordercolor/ : Blue border
 */
-@property(nonatomic, readwrite) HIHexColor *plotBorderColor;
+@property(nonatomic, readwrite) HIColor *plotBorderColor;
 /**
 * description: Allow panning in a chart. Best used with panKey to combine zooming and panning.
 On touch devices, when the tooltip.followTouchMove option is true (default), panning requires two fingers. To allow panning with one finger, set followTouchMove to false.
@@ -125,7 +125,7 @@ On touch devices, when the tooltip.followTouchMove option is true (default), pan
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-color/ : Color,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-gradient/ : gradient
 */
-@property(nonatomic, readwrite) HIHexColor *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: A text description of the chart.
 If the Accessibility module is loaded, this is included by default as a long description of the chart and its contents in the hidden screen reader information region.
@@ -178,7 +178,7 @@ Inverting the chart doesn't have an effect if there are no cartesian series in t
 * description: The color of the outer chart border.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/bordercolor/ : Brown border
 */
-@property(nonatomic, readwrite) HIHexColor *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: When using multiple axis, the ticks of two or more opposite axes will  automatically be aligned by adding ticks to the axis or axes with the least ticks, as if tickAmount were specified.
 This can be prevented by setting alignTicks to false. If the grid lines look messy, it's a good idea to hide them for the secondary axis by setting gridLineWidth to 0.
@@ -265,7 +265,7 @@ This can be prevented by setting alignTicks to false. If the grid lines look mes
 /**
 * description: The background color of the marker square when selecting (zooming in on) an area of the chart.
 */
-@property(nonatomic, readwrite) HIHexColor *selectionMarkerFill;
+@property(nonatomic, readwrite) HIColor *selectionMarkerFill;
 /**
 * description: Additional CSS styles to apply inline to the container div. Note that since the default font styles are applied in the renderer, it is ignorant of the individual chart  options and must be set globally.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/style-serif-font/ : Using a serif type font.

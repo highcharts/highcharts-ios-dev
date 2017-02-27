@@ -1,4 +1,4 @@
-#import "HIHexColor.h"
+#import "HIColor.h"
 #import "HISeries.h"
 #import "HIData.h"
 #import "HIYAxis.h"
@@ -161,7 +161,7 @@ colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE',
    '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/ : Assign a global color theme
 */
-@property(nonatomic, readwrite) NSMutableArray<HIHexColor *> *colors;
+@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
 
 /**
 * description: A collection of options for buttons and menus appearing in the exporting module.
