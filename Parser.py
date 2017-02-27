@@ -401,6 +401,7 @@ def formatToH(name, source):
                                                                                       "HI" + upperfirst(
                                                                                             createName(field.name)),
                                                                                       getLast(field.name))
+                imports += "#import \"{0}.h\"\n".format("HI" + upperfirst(createName(field.name)))
             elif "NSMutableArray" in str(getType(field.dataType)):
                 htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.dataType), getLast(field.name))
             elif field.dataType == "Object":
