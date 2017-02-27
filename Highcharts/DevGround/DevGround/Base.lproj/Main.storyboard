@@ -21,140 +21,140 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9WG-qM-pRi">
-                                <rect key="frame" x="67" y="86.5" width="240" height="430"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9WG-qM-pRi">
+                                <rect key="frame" x="85" y="86.5" width="204" height="430"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ONP-rj-SwO">
-                                        <rect key="frame" x="0.0" y="0.0" width="108" height="430"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="430"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGd-kl-z8Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Area">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulh-p2-96C">
-                                                <rect key="frame" x="0.0" y="50" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="50" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Bar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRT-KT-40v">
-                                                <rect key="frame" x="0.0" y="100" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="100" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Pie">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhs-go-7Zy">
-                                                <rect key="frame" x="0.0" y="150" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="150" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Polar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuY-e2-sDA">
-                                                <rect key="frame" x="0.0" y="200" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="200" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Scatter">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGZ-Sv-A3w">
-                                                <rect key="frame" x="0.0" y="250" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="250" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Waterfall">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sX4-Nr-zsQ">
-                                                <rect key="frame" x="0.0" y="300" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="300" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Spline">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-O6-gVv">
-                                                <rect key="frame" x="0.0" y="350" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="350" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Arearange">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WpD-Sh-COY">
-                                                <rect key="frame" x="0.0" y="400" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="400" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Angular gauges">
+                                                <state key="normal" title="Gauge">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pbp-9J-oxQ">
-                                        <rect key="frame" x="128" y="0.0" width="112" height="430"/>
+                                        <rect key="frame" x="112" y="0.0" width="92" height="430"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzY-Qe-ch5">
-                                                <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Line">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skD-gU-j9V">
-                                                <rect key="frame" x="0.0" y="50" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="50" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Column">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmb-2G-o4K">
-                                                <rect key="frame" x="0.0" y="100" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="100" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Bubble">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcU-nb-AdC">
-                                                <rect key="frame" x="0.0" y="150" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="150" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Funnel">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnz-EI-JCy">
-                                                <rect key="frame" x="0.0" y="200" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="200" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Box plot">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nch-EJ-Hgj">
-                                                <rect key="frame" x="0.0" y="250" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="250" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Error bar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y83-EP-f4t">
-                                                <rect key="frame" x="0.0" y="300" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="300" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Areaspline">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNM-a1-UwM">
-                                                <rect key="frame" x="0.0" y="350" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="350" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Areasplinerange">
+                                                <state key="normal" title="Columnrange">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTw-7R-Obq">
-                                                <rect key="frame" x="0.0" y="400" width="112" height="30"/>
+                                                <rect key="frame" x="0.0" y="400" width="92" height="30"/>
                                                 <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Columnrange">
+                                                <state key="normal" title="Combination">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
@@ -236,7 +236,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fMX-ia-8BZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" translucent="NO" id="ofc-Gj-Ykl">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ofc-Gj-Ykl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.28160414099693298" green="0.28168049454689026" blue="0.36354672908782959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
