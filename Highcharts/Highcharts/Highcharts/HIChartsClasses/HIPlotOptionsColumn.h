@@ -1,6 +1,8 @@
+#import "HIPlotOptionsColumnStates.h"
 #import "HIPlotOptionsColumnTooltip.h"
 #import "HIPlotOptionsColumnEvents.h"
 #import "HIPlotOptionsColumnDataLabels.h"
+#import "HIPlotOptionsColumnZones.h"
 #import "HIPlotOptionsColumnPoint.h"
 #import "HIColor.h"
 

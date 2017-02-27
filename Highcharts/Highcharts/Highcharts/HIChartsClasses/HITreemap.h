@@ -1,9 +1,11 @@
 #import "HISeries.h"
 #import "HITreemapPoint.h"
 #import "HITreemapTooltip.h"
+#import "HITreemapLevels.h"
 #import "HITreemapEvents.h"
 #import "HITreemapStates.h"
 #import "HITreemapDataLabels.h"
+#import "HITreemapZones.h"
 #import "HIColor.h"
 
 

@@ -1,4 +1,6 @@
+#import "HIPlotOptionsFunnelStates.h"
 #import "HIPlotOptionsFunnelEvents.h"
+#import "HIPlotOptionsFunnelZones.h"
 #import "HIPlotOptionsFunnelTooltip.h"
 #import "HIPlotOptionsFunnelPoint.h"
 #import "HIPlotOptionsFunnelDataLabels.h"

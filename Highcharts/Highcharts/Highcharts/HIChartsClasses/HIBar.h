@@ -1,8 +1,10 @@
 #import "HISeries.h"
 #import "HIBarTooltip.h"
+#import "HIBarZones.h"
 #import "HIBarPoint.h"
 #import "HIBarEvents.h"
 #import "HIBarDataLabels.h"
+#import "HIBarStates.h"
 #import "HIColor.h"
 
 

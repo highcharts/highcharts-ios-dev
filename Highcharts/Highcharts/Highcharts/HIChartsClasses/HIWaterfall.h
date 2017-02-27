@@ -1,5 +1,7 @@
 #import "HISeries.h"
+#import "HIWaterfallStates.h"
 #import "HIWaterfallEvents.h"
+#import "HIWaterfallZones.h"
 #import "HIWaterfallDataLabels.h"
 #import "HIWaterfallPoint.h"
 #import "HIWaterfallTooltip.h"

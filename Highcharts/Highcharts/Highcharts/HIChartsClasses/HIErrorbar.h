@@ -1,6 +1,8 @@
 #import "HISeries.h"
+#import "HIErrorbarZones.h"
 #import "HIErrorbarEvents.h"
 #import "HIErrorbarPoint.h"
+#import "HIErrorbarStates.h"
 #import "HIErrorbarTooltip.h"
 #import "HIColor.h"
 

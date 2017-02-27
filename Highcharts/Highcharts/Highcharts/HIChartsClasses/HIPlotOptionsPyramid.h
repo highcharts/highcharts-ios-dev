@@ -1,7 +1,9 @@
 #import "HIPlotOptionsPyramidDataLabels.h"
 #import "HIPlotOptionsPyramidTooltip.h"
 #import "HIPlotOptionsPyramidPoint.h"
+#import "HIPlotOptionsPyramidStates.h"
 #import "HIPlotOptionsPyramidEvents.h"
+#import "HIPlotOptionsPyramidZones.h"
 #import "HIColor.h"
 
 

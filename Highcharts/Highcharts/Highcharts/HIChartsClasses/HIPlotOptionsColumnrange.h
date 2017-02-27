@@ -1,3 +1,5 @@
+#import "HIPlotOptionsColumnrangeStates.h"
+#import "HIPlotOptionsColumnrangeZones.h"
 #import "HIPlotOptionsColumnrangePoint.h"
 #import "HIPlotOptionsColumnrangeDataLabels.h"
 #import "HIPlotOptionsColumnrangeEvents.h"

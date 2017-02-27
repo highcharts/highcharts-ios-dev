@@ -1,7 +1,9 @@
 #import "HIPlotOptionsScatterMarker.h"
 #import "HIPlotOptionsScatterTooltip.h"
+#import "HIPlotOptionsScatterZones.h"
 #import "HIPlotOptionsScatterEvents.h"
 #import "HIPlotOptionsScatterPoint.h"
+#import "HIPlotOptionsScatterStates.h"
 #import "HIPlotOptionsScatterDataLabels.h"
 #import "HIColor.h"
 

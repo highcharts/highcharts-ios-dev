@@ -1,8 +1,10 @@
 #import "HISeries.h"
 #import "HIPieEvents.h"
+#import "HIPieZones.h"
 #import "HIPieTooltip.h"
 #import "HIPiePoint.h"
 #import "HIPieDataLabels.h"
+#import "HIPieStates.h"
 #import "HIColor.h"
 
 

@@ -1,6 +1,8 @@
 #import "HIPlotOptionsPieEvents.h"
+#import "HIPlotOptionsPieStates.h"
 #import "HIPlotOptionsPieDataLabels.h"
 #import "HIPlotOptionsPieTooltip.h"
+#import "HIPlotOptionsPieZones.h"
 #import "HIPlotOptionsPiePoint.h"
 #import "HIColor.h"
 

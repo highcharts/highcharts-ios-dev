@@ -1,6 +1,8 @@
 #import "HIPlotOptionsErrorbarEvents.h"
 #import "HIPlotOptionsErrorbarPoint.h"
 #import "HIPlotOptionsErrorbarTooltip.h"
+#import "HIPlotOptionsErrorbarZones.h"
+#import "HIPlotOptionsErrorbarStates.h"
 #import "HIColor.h"
 
 

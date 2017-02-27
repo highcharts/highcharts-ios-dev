@@ -1,5 +1,7 @@
 #import "HISeries.h"
+#import "HIFunnelStates.h"
 #import "HIFunnelDataLabels.h"
+#import "HIFunnelZones.h"
 #import "HIFunnelTooltip.h"
 #import "HIFunnelPoint.h"
 #import "HIFunnelEvents.h"

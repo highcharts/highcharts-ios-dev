@@ -3,6 +3,8 @@
 #import "HIPolygonTooltip.h"
 #import "HIPolygonMarker.h"
 #import "HIPolygonDataLabels.h"
+#import "HIPolygonStates.h"
+#import "HIPolygonZones.h"
 #import "HIPolygonEvents.h"
 #import "HIColor.h"
 

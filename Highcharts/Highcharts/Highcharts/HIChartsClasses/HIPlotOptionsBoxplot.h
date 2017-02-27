@@ -1,6 +1,8 @@
 #import "HIPlotOptionsBoxplotPoint.h"
 #import "HIPlotOptionsBoxplotTooltip.h"
+#import "HIPlotOptionsBoxplotStates.h"
 #import "HIPlotOptionsBoxplotEvents.h"
+#import "HIPlotOptionsBoxplotZones.h"
 #import "HIColor.h"
 
 

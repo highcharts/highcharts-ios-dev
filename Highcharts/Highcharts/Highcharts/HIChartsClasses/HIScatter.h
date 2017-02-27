@@ -1,5 +1,7 @@
 #import "HISeries.h"
 #import "HIScatterMarker.h"
+#import "HIScatterStates.h"
+#import "HIScatterZones.h"
 #import "HIScatterDataLabels.h"
 #import "HIScatterTooltip.h"
 #import "HIScatterEvents.h"

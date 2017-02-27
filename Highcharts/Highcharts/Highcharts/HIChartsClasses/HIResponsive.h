@@ -1,4 +1,4 @@
-#import "HIChartsJSONSerializable.h"
+#import "HIResponsiveRules.h"
 
 
 /**

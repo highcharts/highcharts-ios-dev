@@ -1,4 +1,6 @@
 #import "HIPlotOptionsBubbleEvents.h"
+#import "HIPlotOptionsBubbleStates.h"
+#import "HIPlotOptionsBubbleZones.h"
 #import "HIPlotOptionsBubbleMarker.h"
 #import "HIPlotOptionsBubbleTooltip.h"
 #import "HIPlotOptionsBubblePoint.h"

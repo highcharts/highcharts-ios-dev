@@ -1,9 +1,11 @@
 #import "HISeries.h"
 #import "HIBubbleMarker.h"
 #import "HIBubbleDataLabels.h"
+#import "HIBubbleStates.h"
 #import "HIBubblePoint.h"
 #import "HIBubbleTooltip.h"
 #import "HIBubbleEvents.h"
+#import "HIBubbleZones.h"
 #import "HIColor.h"
 
 

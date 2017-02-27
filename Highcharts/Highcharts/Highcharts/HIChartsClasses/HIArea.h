@@ -1,9 +1,11 @@
 #import "HISeries.h"
+#import "HIAreaStates.h"
 #import "HIAreaTooltip.h"
 #import "HIAreaMarker.h"
 #import "HIAreaPoint.h"
 #import "HIAreaDataLabels.h"
 #import "HIAreaEvents.h"
+#import "HIAreaZones.h"
 #import "HIColor.h"
 
 

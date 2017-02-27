@@ -1,6 +1,8 @@
 #import "HIPlotOptionsAreasplinerangeTooltip.h"
 #import "HIPlotOptionsAreasplinerangeDataLabels.h"
 #import "HIPlotOptionsAreasplinerangePoint.h"
+#import "HIPlotOptionsAreasplinerangeZones.h"
+#import "HIPlotOptionsAreasplinerangeStates.h"
 #import "HIPlotOptionsAreasplinerangeEvents.h"
 #import "HIColor.h"
 

@@ -2,7 +2,9 @@
 #import "HIPlotOptionsAreaTooltip.h"
 #import "HIPlotOptionsAreaMarker.h"
 #import "HIPlotOptionsAreaEvents.h"
+#import "HIPlotOptionsAreaZones.h"
 #import "HIPlotOptionsAreaDataLabels.h"
+#import "HIPlotOptionsAreaStates.h"
 #import "HIColor.h"
 
 

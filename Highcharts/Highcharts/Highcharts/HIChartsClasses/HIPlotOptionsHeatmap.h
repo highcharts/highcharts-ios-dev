@@ -1,5 +1,7 @@
 #import "HIPlotOptionsHeatmapEvents.h"
 #import "HIPlotOptionsHeatmapPoint.h"
+#import "HIPlotOptionsHeatmapStates.h"
+#import "HIPlotOptionsHeatmapZones.h"
 #import "HIPlotOptionsHeatmapTooltip.h"
 #import "HIPlotOptionsHeatmapDataLabels.h"
 #import "HIColor.h"

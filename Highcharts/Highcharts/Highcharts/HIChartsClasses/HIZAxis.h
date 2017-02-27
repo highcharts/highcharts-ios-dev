@@ -1,6 +1,8 @@
 #import "HIZAxisCrosshair.h"
 #import "HIZAxisEvents.h"
+#import "HIZAxisPlotLines.h"
 #import "HIZAxisLabels.h"
+#import "HIZAxisPlotBands.h"
 #import "HIZAxisTitle.h"
 #import "HIColor.h"
 

@@ -1,6 +1,8 @@
 #import "HIPlotOptionsPolygonTooltip.h"
 #import "HIPlotOptionsPolygonMarker.h"
 #import "HIPlotOptionsPolygonDataLabels.h"
+#import "HIPlotOptionsPolygonStates.h"
+#import "HIPlotOptionsPolygonZones.h"
 #import "HIPlotOptionsPolygonEvents.h"
 #import "HIPlotOptionsPolygonPoint.h"
 #import "HIColor.h"

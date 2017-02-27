@@ -2,7 +2,9 @@
 #import "HISplineEvents.h"
 #import "HISplineMarker.h"
 #import "HISplineTooltip.h"
+#import "HISplineStates.h"
 #import "HISplinePoint.h"
+#import "HISplineZones.h"
 #import "HISplineDataLabels.h"
 #import "HIColor.h"
 

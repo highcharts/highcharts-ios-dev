@@ -1,5 +1,7 @@
 #import "HIPlotOptionsTreemapDataLabels.h"
+#import "HIPlotOptionsTreemapLevels.h"
 #import "HIPlotOptionsTreemapTooltip.h"
+#import "HIPlotOptionsTreemapZones.h"
 #import "HIPlotOptionsTreemapEvents.h"
 #import "HIPlotOptionsTreemapStates.h"
 #import "HIPlotOptionsTreemapPoint.h"

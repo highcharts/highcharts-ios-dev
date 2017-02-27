@@ -1,7 +1,9 @@
 #import "HIPlotOptionsWaterfallDataLabels.h"
+#import "HIPlotOptionsWaterfallStates.h"
 #import "HIPlotOptionsWaterfallEvents.h"
 #import "HIPlotOptionsWaterfallPoint.h"
 #import "HIPlotOptionsWaterfallTooltip.h"
+#import "HIPlotOptionsWaterfallZones.h"
 #import "HIColor.h"
 
 

@@ -2,6 +2,8 @@
 #import "HIBoxplotTooltip.h"
 #import "HIBoxplotPoint.h"
 #import "HIBoxplotEvents.h"
+#import "HIBoxplotZones.h"
+#import "HIBoxplotStates.h"
 #import "HIColor.h"
 
 

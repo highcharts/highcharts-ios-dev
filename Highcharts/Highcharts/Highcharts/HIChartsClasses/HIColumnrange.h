@@ -1,8 +1,10 @@
 #import "HISeries.h"
 #import "HIColumnrangeTooltip.h"
 #import "HIColumnrangePoint.h"
+#import "HIColumnrangeZones.h"
 #import "HIColumnrangeDataLabels.h"
 #import "HIColumnrangeEvents.h"
+#import "HIColumnrangeStates.h"
 #import "HIColor.h"
 
 

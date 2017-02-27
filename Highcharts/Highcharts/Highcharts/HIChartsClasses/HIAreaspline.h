@@ -4,6 +4,8 @@
 #import "HIAreasplineTooltip.h"
 #import "HIAreasplineMarker.h"
 #import "HIAreasplinePoint.h"
+#import "HIAreasplineStates.h"
+#import "HIAreasplineZones.h"
 #import "HIColor.h"
 
 

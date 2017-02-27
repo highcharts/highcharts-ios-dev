@@ -1,4 +1,4 @@
-#import "HIChartsJSONSerializable.h"
+#import "HIPaneBackground.h"
 
 
 /**

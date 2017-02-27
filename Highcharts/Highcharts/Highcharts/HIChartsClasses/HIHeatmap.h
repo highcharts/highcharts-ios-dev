@@ -1,7 +1,9 @@
 #import "HISeries.h"
 #import "HIHeatmapDataLabels.h"
+#import "HIHeatmapZones.h"
 #import "HIHeatmapPoint.h"
 #import "HIHeatmapTooltip.h"
+#import "HIHeatmapStates.h"
 #import "HIHeatmapEvents.h"
 #import "HIColor.h"
 

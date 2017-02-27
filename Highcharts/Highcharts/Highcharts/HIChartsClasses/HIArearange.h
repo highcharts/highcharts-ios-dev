@@ -3,6 +3,8 @@
 #import "HIArearangeTooltip.h"
 #import "HIArearangePoint.h"
 #import "HIArearangeDataLabels.h"
+#import "HIArearangeStates.h"
+#import "HIArearangeZones.h"
 #import "HIColor.h"
 
 

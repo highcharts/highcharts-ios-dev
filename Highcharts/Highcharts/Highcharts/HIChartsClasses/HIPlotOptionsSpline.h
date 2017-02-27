@@ -1,7 +1,9 @@
 #import "HIPlotOptionsSplinePoint.h"
+#import "HIPlotOptionsSplineStates.h"
 #import "HIPlotOptionsSplineTooltip.h"
 #import "HIPlotOptionsSplineDataLabels.h"
 #import "HIPlotOptionsSplineEvents.h"
+#import "HIPlotOptionsSplineZones.h"
 #import "HIPlotOptionsSplineMarker.h"
 #import "HIColor.h"
 

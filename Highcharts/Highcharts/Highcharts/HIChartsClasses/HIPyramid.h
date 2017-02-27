@@ -1,7 +1,9 @@
 #import "HISeries.h"
 #import "HIPyramidTooltip.h"
+#import "HIPyramidStates.h"
 #import "HIPyramidDataLabels.h"
 #import "HIPyramidEvents.h"
+#import "HIPyramidZones.h"
 #import "HIPyramidPoint.h"
 #import "HIColor.h"
 

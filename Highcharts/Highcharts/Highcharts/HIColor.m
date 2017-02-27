@@ -13,7 +13,7 @@
 
 -(instancetype)initWithHexValue:(NSString *)string {
     if (self = [super init]) {
-        self.string = string;
+        self.string = [NSString stringWithFormat:@"#%@", string];
         return self;
     }
     else {

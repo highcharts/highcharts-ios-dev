@@ -1,7 +1,9 @@
+#import "HIPlotOptionsBarZones.h"
 #import "HIPlotOptionsBarPoint.h"
 #import "HIPlotOptionsBarEvents.h"
 #import "HIPlotOptionsBarTooltip.h"
 #import "HIPlotOptionsBarDataLabels.h"
+#import "HIPlotOptionsBarStates.h"
 #import "HIColor.h"
 
 

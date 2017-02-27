@@ -1,6 +1,8 @@
 #import "HIPlotOptionsArearangeDataLabels.h"
+#import "HIPlotOptionsArearangeZones.h"
 #import "HIPlotOptionsArearangeTooltip.h"
 #import "HIPlotOptionsArearangePoint.h"
+#import "HIPlotOptionsArearangeStates.h"
 #import "HIPlotOptionsArearangeEvents.h"
 #import "HIColor.h"
 

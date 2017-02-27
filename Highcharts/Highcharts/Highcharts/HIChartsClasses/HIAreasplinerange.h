@@ -1,6 +1,8 @@
 #import "HISeries.h"
+#import "HIAreasplinerangeZones.h"
 #import "HIAreasplinerangePoint.h"
 #import "HIAreasplinerangeEvents.h"
+#import "HIAreasplinerangeStates.h"
 #import "HIAreasplinerangeTooltip.h"
 #import "HIAreasplinerangeDataLabels.h"
 #import "HIColor.h"

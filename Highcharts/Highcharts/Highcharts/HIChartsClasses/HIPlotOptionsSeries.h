@@ -1,6 +1,8 @@
+#import "HIPlotOptionsSeriesZones.h"
 #import "HIPlotOptionsSeriesTooltip.h"
 #import "HIPlotOptionsSeriesDataLabels.h"
 #import "HIPlotOptionsSeriesEvents.h"
+#import "HIPlotOptionsSeriesStates.h"
 #import "HIPlotOptionsSeriesMarker.h"
 #import "HIPlotOptionsSeriesPoint.h"
 #import "HIColor.h"

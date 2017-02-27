@@ -1,7 +1,9 @@
 #import "HISeries.h"
 #import "HIColumnTooltip.h"
 #import "HIColumnPoint.h"
+#import "HIColumnStates.h"
 #import "HIColumnDataLabels.h"
+#import "HIColumnZones.h"
 #import "HIColumnEvents.h"
 #import "HIColor.h"
 

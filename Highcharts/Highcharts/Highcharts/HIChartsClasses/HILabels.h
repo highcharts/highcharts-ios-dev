@@ -1,4 +1,4 @@
-#import "HIChartsJSONSerializable.h"
+#import "HILabelsItems.h"
 
 
 /**

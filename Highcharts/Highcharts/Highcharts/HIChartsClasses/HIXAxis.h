@@ -1,7 +1,10 @@
 #import "HIXAxisEvents.h"
 #import "HIXAxisTitle.h"
 #import "HIXAxisCrosshair.h"
+#import "HIXAxisPlotLines.h"
+#import "HIXAxisPlotBands.h"
 #import "HIXAxisLabels.h"
+#import "HIXAxisBreaks.h"
 #import "HIColor.h"
 
 

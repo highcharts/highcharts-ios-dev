@@ -1,6 +1,8 @@
 #import "HIPlotOptionsLineMarker.h"
+#import "HIPlotOptionsLineStates.h"
 #import "HIPlotOptionsLineDataLabels.h"
 #import "HIPlotOptionsLinePoint.h"
+#import "HIPlotOptionsLineZones.h"
 #import "HIPlotOptionsLineEvents.h"
 #import "HIPlotOptionsLineTooltip.h"
 #import "HIColor.h"

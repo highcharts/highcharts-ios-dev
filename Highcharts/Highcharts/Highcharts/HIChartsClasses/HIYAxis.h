@@ -1,5 +1,8 @@
 #import "HIYAxisLabels.h"
+#import "HIYAxisPlotLines.h"
 #import "HIYAxisStackLabels.h"
+#import "HIYAxisPlotBands.h"
+#import "HIYAxisBreaks.h"
 #import "HIYAxisCrosshair.h"
 #import "HIYAxisTitle.h"
 #import "HIYAxisEvents.h"

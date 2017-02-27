@@ -357,7 +357,7 @@
         legend.y = @80;
         legend.floating = @YES;
         legend.borderWidth = @1;
-        legend.backgroundColor = [[HIHexColor alloc]initWithString:@"#FFFFFF"];
+        legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"#FFFFFF"];
         legend.shadow = @YES;
         
         HICredits *credits = [[HICredits alloc]init];
@@ -595,7 +595,7 @@
         xaxis.labels = [[HIXAxisLabels alloc]init];
         xaxis.labels.format = @"{value} gr";
         HIXAxisPlotLines *plotLines = [[HIXAxisPlotLines alloc]init];
-        plotLines.color = [[HIHexColor alloc]initWithString:@"#FFFFFF"];
+        plotLines.color = [[HIColor alloc]initWithHexValue:@"#FFFFFF"];
         plotLines.dashStyle = @"dot";
         plotLines.width = @2;
         plotLines.value = @65;
@@ -616,7 +616,7 @@
         yaxis.labels.format = @"{value} gr";
         yaxis.maxPadding = @0.2;
         HIYAxisPlotLines *yplotLines = [[HIYAxisPlotLines alloc]init];
-        yplotLines.color = [[HIHexColor alloc]initWithString:@"#FFFFFF"];
+        yplotLines.color = [[HIColor alloc]initWithHexValue:@"#FFFFFF"];
         yplotLines.dashStyle = @"dot";
         yplotLines.width = @2;
         yplotLines.value = @50;
@@ -858,7 +858,7 @@
         plotOptions.funnel.dataLabels = [[HIPlotOptionsFunnelDataLabels alloc]init];
         plotOptions.funnel.dataLabels.enabled = @YES;
         plotOptions.funnel.dataLabels.format = @"<b>{point.name}</b> ({point.y:,.0f})";
-        plotOptions.funnel.dataLabels.color = [[HIHexColor alloc]initWithString:@"#FFFFFF"];
+        plotOptions.funnel.dataLabels.color = [[HIColor alloc]initWithHexValue:@"#FFFFFF"];
         plotOptions.funnel.dataLabels.softConnector = @YES;
         plotOptions.funnel.neckWidth = @"30%";
         plotOptions.funnel.neckHeight = @"25%";
@@ -927,7 +927,7 @@
         legend.x = @100;
         legend.y = @70;
         legend.floating = @YES;
-        legend.backgroundColor = [[HIHexColor alloc]initWithString:@"#FFFFFF"];
+        legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"#FFFFFF"];
         legend.borderWidth = @1;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
@@ -937,7 +937,7 @@
         plotOptions.scatter.marker.states = [[HIPlotOptionsScatterMarkerStates alloc]init];
         plotOptions.scatter.marker.states.hover = [[HIPlotOptionsScatterMarkerStatesHover alloc]init];
         plotOptions.scatter.marker.states.hover.enabled = @YES;
-        plotOptions.scatter.marker.states.hover.lineColor = [[HIHexColor alloc]initWithRGB:100 green:100 blue:100];
+        plotOptions.scatter.marker.states.hover.lineColor = [[HIColor alloc]initWithRGB:100 green:100 blue:100];
         HIPlotOptionsScatterStates *state = [[HIPlotOptionsScatterStates alloc]init];
         state.hover = [[HIPlotOptionsScatterStatesHover alloc]init];
         state.hover.marker = [[HIPlotOptionsScatterStatesHoverMarker alloc]init];
@@ -949,7 +949,7 @@
         
         HIScatter *scatter1 = [[HIScatter alloc]init];
         scatter1.name = @"Female";
-        scatter1.color = [[HIHexColor alloc]initWithRGBA:223 green:83 blue:83 alpha:.5];
+        scatter1.color = [[HIColor alloc]initWithRGBA:223 green:83 blue:83 alpha:.5];
         scatter1.data = [NSMutableArray arrayWithObjects:@[@161.2, @1.6], @[@167.5, @9.0], @[@159.5, @9.2], @[@157.0, @3.0], @[@155.8, @3.6],
                          @[@170.0, @9.0], @[@159.1, @7.6], @[@166.0, @9.8], @[@176.2, @6.8], @[@160.2, @5.2],
                          @[@172.5, @5.2], @[@170.9, @4.2], @[@172.9, @2.5], @[@153.4, @2.0], @[@160.0, @0.0],
@@ -1005,7 +1005,7 @@
         
         HIScatter *scatter2 = [[HIScatter alloc]init];
         scatter2.name = @"Male";
-        scatter2.color = [[HIHexColor alloc]initWithRGBA:119 green:152 blue:191 alpha:.5];
+        scatter2.color = [[HIColor alloc]initWithRGBA:119 green:152 blue:191 alpha:.5];
         scatter2.data = [NSMutableArray arrayWithObjects:@[@174.0, @5.6], @[@175.3, @1.8], @[@193.5, @0.7], @[@186.5, @2.6], @[@187.2, @8.8],
                          @[@181.5, @4.8], @[@184.0, @6.4], @[@184.5, @8.4], @[@175.0, @2.0], @[@184.0, @1.6],
                          @[@180.0, @6.6], @[@177.8, @3.6], @[@192.0, @0.0], @[@176.0, @4.6], @[@174.0, @1.0],
@@ -1095,15 +1095,15 @@
         tooltip.pointFormat = @"<b>${point.y:,.2f}</b> USD";
         
         HIWaterfall *series = [[HIWaterfall alloc]init];
-        series.upColor = [[HIHexColor alloc]initWithString:@"#90ed7d"];
-        series.color = [[HIHexColor alloc]initWithString:@"#f7a35c"];
+        series.upColor = [[HIColor alloc]initWithHexValue:@"#90ed7d"];
+        series.color = [[HIColor alloc]initWithHexValue:@"#f7a35c"];
         
         //You can add objects by hand or creating data objects - one presented below:
         
         HIWaterfallData *data = [[HIWaterfallData alloc]init];
         data.name = @"Positive Balance";
         data.isIntermediateSum = @YES;
-        data.color = [[HIHexColor alloc]initWithString:@"#434348"];
+        data.color = [[HIColor alloc]initWithHexValue:@"#434348"];
         
         series.data = [NSMutableArray arrayWithObjects:@{
                                                          @"name": @"Start",
