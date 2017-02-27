@@ -94,7 +94,7 @@ def getType(x):
     return {
         "Number": 'NSNumber',
         "Boolean": 'NSNumber /* Bool */',
-        "Color": 'HIHexColor',
+        "Color": 'HIColor',
         "String": 'NSString',
         "Object": 'id',
         "Function": 'NSString /* Function? */',
@@ -106,7 +106,7 @@ def getType(x):
         "String|Number": 'NSString',
         "Array<Array>": 'NSMutableArray<NSMutableArray *>',
         "CSSObject": 'NSMutableDictionary /* <NSString, NSString> */',
-        "Array<Color>": 'NSMutableArray<HIHexColor *>',
+        "Array<Color>": 'NSMutableArray<HIColor *>',
         "Array<Object|Array|Number>": 'NSMutableArray /* <HIData, NSNumber, NSArray> */',
         "Array<String|Number>": 'NSMutableArray<NSString *>',
         "Array<Object|Number>": 'NSMutableArray',
@@ -396,8 +396,8 @@ def formatToH(name, source):
         if field.dataType:
             if field.dataType == "Mixed":
                 htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
-            elif "NSMutableArray" in str(getType(field.dataType)) and field.properties:
-                htext += "@property(nonatomic, readwrite) {0} /*{1}*/ *{2};\n".format(getType(field.dataType),
+            elif "NSMutableArray" in str(getType(field.dataType)) and structure[field.name].properties:
+                htext += "@property(nonatomic, readwrite) {0} <{1} *> *{2};\n".format(getType(field.dataType),
                                                                                       "HI" + upperfirst(
                                                                                             createName(field.name)),
                                                                                       getLast(field.name))
@@ -411,7 +411,7 @@ def formatToH(name, source):
                     htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
 
             else:
-                if getType(field.dataType) == "HIHexColor" and not colorAdded:
+                if getType(field.dataType) == "HIColor" and not colorAdded:
                     colorAdded = True
                 if structure[field.name].properties:
                     htext += "@property(nonatomic, readwrite) {0} *{1};\n".format("HI" + upperfirst(createName(field.name)), getLast(field.name))
@@ -431,7 +431,7 @@ def formatToH(name, source):
     if imports == "":
         imports += "#import \"HIChartsJSONSerializable.h\"\n"
     if colorAdded:
-        imports += "#import \"HIHexColor.h\"\n"
+        imports += "#import \"HIColor.h\"\n"
     imports += "\n\n"
     return imports + htext
 
@@ -458,11 +458,11 @@ def formatToM(name, source):
         else:
             getParams += "\tif (self.{0})".format(getLast(field.name)) + " {\n"
             if structure[field.name].dataType:
-                if getType(structure[field.name].dataType) == 'HIHexColor':
+                if getType(structure[field.name].dataType) == 'HIColor':
                     getParams += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name), getLast(field.name))
-                elif getType(structure[field.name].dataType) == 'NSMutableArray<HexColor *>':
+                elif getType(structure[field.name].dataType) == 'NSMutableArray<HIColor *>':
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
-                    getParams += "\t\tfor (HexColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
+                    getParams += "\t\tfor (HIColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
                     getParams += "\t\t\t[array addObject:[obj getString]];\n".format(
                         getLast(field.name))
                     getParams += "\t\t}\n"
@@ -492,7 +492,7 @@ def formatToM(name, source):
 
 
 def createOptionsFiles():
-    imports = "#import \"HIHexColor.h\"\n"
+    imports = "#import \"HIColor.h\"\n"
     htext = "@interface HIOptions: NSObject\n\n"
     mtext = "#import \"HIOptions.h\"\n\n@implementation HIOptions\n\n"
     mtext += "-(instancetype)init {\n\treturn [super init];\n}\n\n"
@@ -525,7 +525,7 @@ def createOptionsFiles():
             mtext += "\tif (self.{0})".format(getLast(field.name)) + " {\n"
 
             if field.dataType:
-                if getType(field.dataType) == 'HIHexColor':
+                if getType(field.dataType) == 'HIColor':
                     mtext += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name),
                                                                                          getLast(field.name))
                 elif getType(field.dataType) == 'NSMutableArray':
@@ -540,9 +540,9 @@ def createOptionsFiles():
                     mtext += "\t\t\t}\n"
                     mtext += "\t\t}\n"
                     mtext += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
-                elif getType(field.dataType) == 'NSMutableArray<HIHexColor *>':
+                elif getType(field.dataType) == 'NSMutableArray<HIColor *>':
                     mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
-                    mtext += "\t\tfor (HIHexColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
+                    mtext += "\t\tfor (HIColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
                     mtext += "\t\t\t[array addObject:[obj getString]];\n".format(
                         getLast(field.name))
                     mtext += "\t\t}\n"
@@ -570,7 +570,7 @@ def createBridgeFile():
     text = ""
     for field in bridge:
         text += field
-    text += "#import \"HIHexColor.h\"\n"
+    text += "#import \"HIColor.h\"\n"
     text += "#import \"HIOptions.h\"\n"
     with open("HIBridge.h", "w") as b:
         b.write(text)
