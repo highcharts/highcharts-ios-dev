@@ -22,58 +22,55 @@
 
     chartView.theme = @"grid-light";
     
-    chartView.options = @{
-    @"chart": @{
-        @"type": @"area"
-    },
-    @"title": @{
-        @"text": @"Area chart with negative values"
-    },
-    @"xAxis": @{
-        @"categories": @[
-            @"Apples",
-            @"Oranges",
-            @"Pears",
-            @"Grapes",
-            @"Bananas"
-        ]
-    },
-    @"credits": @{
-        @"enabled": @false
-    },
-    @"series": @[
-        @{
-            @"name": @"John",
-            @"data": @[
-                @5,
-                @3,
-                @4,
-                @7,
-                @2
-            ]
-        },
-        @{
-            @"name": @"Jane",
-            @"data": @[
-                @2,
-                @-2,
-                @-3,
-                @2,
-                @1
-            ]
-        },
-        @{
-            @"name": @"Joe",
-            @"data": @[
-                @3,
-                @4,
-                @4,
-                @-2,
-                @5
-            ]
-        }
-    ]
-};
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    HIChart *chart = [[HIChart alloc]init];
+    chart.type = @"area";
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Area chart with negative values";
+    
+    HIXAxis *xaxis = [[HIXAxis alloc]init];
+    xaxis.categories = [NSMutableArray arrayWithObjects:@"Apples",
+                        @"Oranges",
+                        @"Pears",
+                        @"Grapes",
+                        @"Bananas", nil];
+    
+    HICredits *credits = [[HICredits alloc]init];
+    credits.enabled = @false;
+    
+    HIArea *area1 = [[HIArea alloc]init];
+    area1.name = @"John";
+    area1.data = [NSMutableArray arrayWithObjects:@5,
+                  @3,
+                  @4,
+                  @7,
+                  @2, nil];
+    
+    HIArea *area2 = [[HIArea alloc]init];
+    area2.name = @"Jane";
+    area2.data = [NSMutableArray arrayWithObjects:@2,
+                  @-2,
+                  @-3,
+                  @2,
+                  @1, nil];
+    
+    HIArea *area3 = [[HIArea alloc]init];
+    area3.name = @"Joe";
+    area3.data = [NSMutableArray arrayWithObjects:@3,
+                  @4,
+                  @4,
+                  @-2,
+                  @5, nil];
+    
+    options.chart = chart;
+    options.title = title;
+    options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
+    options.credits = credits;
+    options.series = [NSMutableArray arrayWithObjects: area1, area2, area3, nil];
+    
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }

@@ -22,85 +22,84 @@
 
     chartView.theme = @"sand-signika";
     
-    chartView.options = @{
-                               @"chart": @{
-                                       @"type": @"areaspline"
-                                       },
-                               @"title": @{
-                                       @"text": @"Average fruit consumption during one week"
-                                       },
-                               @"legend": @{
-                                       @"layout": @"vertical",
-                                       @"align": @"left",
-                                       @"verticalAlign": @"top",
-                                       @"x": @150,
-                                       @"y": @100,
-                                       @"floating": @true,
-                                       @"borderWidth": @1,
-                                       @"backgroundColor": @"#FFFFFF"
-                                       },
-                               @"xAxis": @{
-                                       @"categories": @[
-                                               @"Monday",
-                                               @"Tuesday",
-                                               @"Wednesday",
-                                               @"Thursday",
-                                               @"Friday",
-                                               @"Saturday",
-                                               @"Sunday"
-                                               ],
-                                       @"plotBands": @[
-                                               @{
-                                                   @"from": @4.5,
-                                                   @"to": @6.5,
-                                                   @"color": @"rgba(68, 170, 213, .2)"
-                                                   }
-                                               ]
-                                       },
-                               @"yAxis": @{
-                                       @"title": @{
-                                               @"text": @"Fruit units"
-                                               }
-                                       },
-                               @"tooltip": @{
-                                       @"shared": @true,
-                                       @"valueSuffix": @" units"
-                                       },
-                               @"credits": @{
-                                       @"enabled": @false
-                                       },
-                               @"plotOptions": @{
-                                       @"areaspline": @{
-                                               @"fillOpacity": @0.5
-                                               }
-                                       },
-                               @"series": @[
-                                       @{
-                                           @"name": @"John",
-                                           @"data": @[
-                                                   @3,
-                                                   @4,
-                                                   @3,
-                                                   @5,
-                                                   @4,
-                                                   @10,
-                                                   @12
-                                                   ]
-                                           },
-                                       @{
-                                           @"name": @"Jane",
-                                           @"data": @[
-                                                   @1,
-                                                   @3,
-                                                   @4,
-                                                   @3,
-                                                   @3,
-                                                   @5,
-                                                   @4
-                                                   ]
-                                           }
-                                       ]
-                               };
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    HIChart *chart = [[HIChart alloc]init];
+    chart.type = @"areaspline";
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Average fruit consumption during one week";
+    
+    HILegend *legend = [[HILegend alloc]init];
+    legend.layout = @"vertical";
+    legend.align = @"left";
+    legend.verticalAlign = @"top";
+    legend.x = @150;
+    legend.y = @100;
+    legend.floating = @true;
+    legend.borderWidth = @1;
+    legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
+    
+    HIXAxis *xaxis = [[HIXAxis alloc]init];
+    xaxis.categories = [NSMutableArray arrayWithObjects:@"Monday",
+                        @"Tuesday",
+                        @"Wednesday",
+                        @"Thursday",
+                        @"Friday",
+                        @"Saturday",
+                        @"Sunday", nil];
+    HIXAxisPlotBands *plotband = [[HIXAxisPlotBands alloc]init];
+    plotband.from = @4.5;
+    plotband.to = @6.5;
+    plotband.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:.2];
+    xaxis.plotBands = [NSMutableArray arrayWithObject:plotband];
+    
+    HIYAxis *yaxis = [[HIYAxis alloc]init];
+    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title.text = @"Fruit unit";
+    
+    HITooltip *tooltip = [[HITooltip alloc]init];
+    tooltip.shared = @true;
+    tooltip.valueSuffix = @" units";
+    
+    HICredits *credits = [[HICredits alloc]init];
+    credits.enabled = @false;
+    
+    HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
+    plotoptions.areaspline = [[HIPlotOptionsAreaspline alloc]init];
+    plotoptions.areaspline.fillOpacity = @0.5;
+    
+    HIAreaspline *areaspline1 = [[HIAreaspline alloc]init];
+    areaspline1.name = @"John";
+    areaspline1.data = [NSMutableArray arrayWithObjects:@3,
+                        @4,
+                        @3,
+                        @5,
+                        @4,
+                        @10,
+                        @12, nil];
+    
+    HIAreaspline *areaspline2 = [[HIAreaspline alloc]init];
+    areaspline2.name = @"Jane";
+    areaspline2.data = [NSMutableArray arrayWithObjects:@1,
+                        @3,
+                        @4,
+                        @3,
+                        @3,
+                        @5,
+                        @4, nil];
+    
+    options.chart = chart;
+    options.title = title;
+    options.legend = legend;
+    options.xAxis = [NSMutableArray arrayWithObject:xaxis];
+    options.yAxis = [NSMutableArray arrayWithObject:yaxis];
+    options.tooltip = tooltip;
+    options.credits = credits;
+    options.plotOptions = plotoptions;
+    options.series = [NSMutableArray arrayWithObjects:areaspline1, areaspline2, nil];
+    
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }

@@ -23,70 +23,66 @@
 
     chartView.theme = @"grid-light";
 
-    chartView.options = @{
-                            @"chart": @{
-                                @"type": @"gauge",
-                                @"alignTicks": @false,
-                                @"plotBackgroundColor": [NSNull null],
-                                @"plotBackgroundImage": [NSNull null],
-                                @"plotBorderWidth": @0,
-                                @"plotShadow": @false
-                            },
-                            @"title": @{
-                                @"text": @"Speedometer with dual axes"
-                            },
-                            @"pane": @{
-                                @"startAngle": @-150,
-                                @"endAngle": @150
-                            },
-                            @"yAxis": @[
-                                @{
-                                    @"min": @0,
-                                    @"max": @200,
-                                    @"lineColor": @"#339",
-                                    @"tickColor": @"#339",
-                                    @"minorTickColor": @"#339",
-                                    @"offset": @-25,
-                                    @"lineWidth": @2,
-                                    @"labels": @{
-                                        @"distance": @-20,
-                                        @"rotation": @"auto"
-                                    },
-                                    @"tickLength": @5,
-                                    @"minorTickLength": @5,
-                                    @"endOnTick": @false
-                                },
-                                @{
-                                    @"min": @0,
-                                    @"max": @124,
-                                    @"tickPosition": @"outside",
-                                    @"lineColor": @"#933",
-                                    @"lineWidth": @2,
-                                    @"minorTickPosition": @"outside",
-                                    @"tickColor": @"#933",
-                                    @"minorTickColor": @"#933",
-                                    @"tickLength": @5,
-                                    @"minorTickLength": @5,
-                                    @"labels": @{
-                                        @"distance": @12,
-                                        @"rotation": @"auto"
-                                    },
-                                    @"offset": @-20,
-                                    @"endOnTick": @false
-                                }
-                            ],
-                            @"series": @[
-                                @{
-                                    @"name": @"Speed",
-                                    @"data": @[
-                                        @80
-                                    ],
-                                    @"tooltip": @{
-                                        @"valueSuffix": @" km/h"
-                                    }
-                                }
-                            ]
-                        };
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    HIChart *chart = [[HIChart alloc]init];
+    chart.type = @"gauge";
+    chart.alignTicks = @false;
+    chart.plotBorderWidth = @0;
+    chart.plotShadow = @false;
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Speedometer with dual axes";
+    
+    HIPane *pane = [[HIPane alloc]init];
+    pane.startAngle = @-150;
+    pane.endAngle = @150;
+    
+    HIYAxis *yaxis1 = [[HIYAxis alloc]init];
+    yaxis1.min = @0;
+    yaxis1.max = @200;
+    yaxis1.lineColor = [[HIColor alloc]initWithHexValue:@"339"];
+    yaxis1.tickColor = [[HIColor alloc]initWithHexValue:@"339"];
+    yaxis1.minorTickColor = [[HIColor alloc]initWithHexValue:@"339"];
+    yaxis1.offset = @-25;
+    yaxis1.lineWidth = @2;
+    yaxis1.labels = [[HIYAxisLabels alloc]init];
+    yaxis1.labels.distance = @-20;
+    yaxis1.labels.rotation = @"auto";
+    yaxis1.tickLength = @5;
+    yaxis1.minorTickLength = @5;
+    yaxis1.endOnTick = @false;
+    
+    HIYAxis *yaxis2 = [[HIYAxis alloc]init];
+    yaxis2.min = @0;
+    yaxis2.max = @124;
+    yaxis2.tickPosition = @"outside";
+    yaxis2.lineColor = [[HIColor alloc]initWithHexValue:@"933"];
+    yaxis2.lineWidth = @2;
+    yaxis2.minorTickPosition = @"outside";
+    yaxis2.tickColor = [[HIColor alloc]initWithHexValue:@"933"];
+    yaxis2.minorTickColor = [[HIColor alloc]initWithHexValue:@"933"];
+    yaxis2.offset = @-20;
+    yaxis2.labels = [[HIYAxisLabels alloc]init];
+    yaxis2.labels.distance = @12;
+    yaxis2.labels.rotation = @"auto";
+    yaxis2.tickLength = @5;
+    yaxis2.minorTickLength = @5;
+    yaxis2.endOnTick = @false;
+    
+    HIGauge *gauge = [[HIGauge alloc]init];
+    gauge.name = @"Speed";
+    gauge.tooltip = [[HIGaugeTooltip alloc]init];
+    gauge.tooltip.valueSuffix = @" km/h";
+    gauge.data = [NSMutableArray arrayWithObjects:@80, nil];
+    
+    options.chart = chart;
+    options.title = title;
+    options.pane = pane;
+    options.yAxis = [NSMutableArray arrayWithObjects:yaxis1, yaxis2, nil];
+    options.series = [NSMutableArray arrayWithObjects: gauge, nil];
+    
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }

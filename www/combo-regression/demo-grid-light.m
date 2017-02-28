@@ -22,58 +22,54 @@
 
     chartView.theme = @"grid-light";
     
-    chartView.options = @{
-    @"xAxis": @{
-        @"min": @-0.5,
-        @"max": @5.5
-    },
-    @"yAxis": @{
-        @"min": @0
-    },
-    @"title": @{
-        @"text": @"Scatter plot with regression line"
-    },
-    @"series": @[
-        @{
-            @"type": @"line",
-            @"name": @"Regression Line",
-            @"data": @[
-                @[
-                    @0,
-                    @1.11
-                ],
-                @[
-                    @5,
-                    @4.51
-                ]
-            ],
-            @"marker": @{
-                @"enabled": @false
-            },
-            @"states": @{
-                @"hover": @{
-                    @"lineWidth": @0
-                }
-            },
-            @"enableMouseTracking": @false
-        },
-        @{
-            @"type": @"scatter",
-            @"name": @"Observations",
-            @"data": @[
-                @1,
-                @1.5,
-                @2.8,
-                @3.5,
-                @3.9,
-                @4.2
-            ],
-            @"marker": @{
-                @"radius": @4
-            }
-        }
-    ]
-};
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Scatter plot with regression line";
+    
+    HIXAxis *xaxis = [[HIXAxis alloc]init];
+    xaxis.min = @-0.5;
+    xaxis.max = @5.5;
+    
+    HIYAxis *yaxis = [[HIYAxis alloc]init];
+    yaxis.min = @0;
+    
+    HILine *line = [[HILine alloc]init];
+    line.name = @"Regression Line";
+    line.data = [NSMutableArray arrayWithObjects:
+                 @[
+                   @0,
+                   @1.11
+                   ],
+                 @[
+                   @5,
+                   @4.51
+                   ] , nil];
+    line.marker = [[HILineMarker alloc]init];
+    line.marker.enabled = @false;
+    HILineStates *state = [[HILineStates alloc]init];
+    state.hover = [[HILineStatesHover alloc]init];
+    state.hover.lineWidth = @0;
+    line.states = [NSMutableArray arrayWithObject:state];
+    line.enableMouseTracking = @false;
+    
+    HIScatter *scatter = [[HIScatter alloc]init];
+    scatter.name = @"Observations";
+    scatter.data = [NSMutableArray arrayWithObjects:@1,
+                    @1.5,
+                    @2.8,
+                    @3.5,
+                    @3.9,
+                    @4.2, nil];
+    scatter.marker = [[HIScatterMarker alloc]init];
+    scatter.marker.radius = @4;
+    
+    options.title = title;
+    options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
+    options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
+    options.series = [NSMutableArray arrayWithObjects: line, scatter, nil];
+    
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }
