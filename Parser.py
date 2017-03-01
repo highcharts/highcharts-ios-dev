@@ -599,6 +599,7 @@ def printStructure():
 
 def getDocumentationName(name, doubleLast = True):
     ret = str(name)
+    ret = ret.replace("description", "definition")
     x = ret.split("<")
     if len(x) > 1:
         x = x[1]
@@ -612,7 +613,10 @@ def getDocumentationName(name, doubleLast = True):
             for i in range(1, len(x) - 1):
                 ret += "-{0}".format(x[i])
         if doubleLast:
-            ret += "--{0}".format(x[len(x) - 1])
+            if structure[name].properties:
+                ret += "-{0}".format(x[len(x) - 1])
+            else:
+                ret += "--{0}".format(x[len(x) - 1])
         else:
             ret += "-{0}".format(x[len(x) - 1])
     else:
@@ -646,8 +650,8 @@ def generateDocumentation():
         elif name != "global" and name != "lang":
             parent = "options"
         entry["_id"] = getDocumentationName(field)
-        entry["fullname"] = fullname
-        entry["title"] = name
+        entry["fullname"] = fullname.replace("description", "definition")
+        entry["title"] = name.replace("description", "definition")
         if structure[field].description and structure[field].description != "":
             entry["description"] = structure[field].description
         if structure[field].demo:
