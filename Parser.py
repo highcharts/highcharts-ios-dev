@@ -395,7 +395,7 @@ def formatToH(name, source):
             htext += "{0}".format(field.comment)
         if field.dataType:
             if "id" in str(getType(field.dataType)) and "NSArray" not in str(getType(field.dataType)) and not structure[field.name].properties:
-                htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
+                htext += "@property(nonatomic, readwrite) {0} {1};\n".format(getType(field.dataType), getLast(field.name))
             elif "NSArray" in str(getType(field.dataType)) and structure[field.name].properties:
                 htext += "@property(nonatomic, readwrite) {0} <{1} *> *{2};\n".format(getType(field.dataType),
                                                                                       "HI" + upperfirst(
@@ -509,7 +509,7 @@ def createOptionsFiles():
                     if structure[field.name].properties:
                         htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format("HI" + upperfirst(createName(field.name)), getLast(field.name))
                     else:
-                        htext += "@property(nonatomic, readwrite) id {0};\n\n".format(getLast(field.name))
+                        htext += "@property(nonatomic, readwrite) {0} {1};\n\n".format(getType(field.dataType), getLast(field.name))
                 elif "NSArray" in str(getType(field.dataType)) and field.properties:
                     htext += "@property(nonatomic, readwrite) {0}<{1} *> *{2};\n\n".format(getType(field.dataType),
                                                                                            "HI" + upperfirst(createName(field.name)),
