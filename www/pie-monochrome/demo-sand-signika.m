@@ -22,76 +22,81 @@
 
     chartView.theme = @"sand-signika";
     
-    chartView.options = @{
-                            @"colors": @[
-                                @"rgb(15,72,127)",
-                                @"rgb(52,109,164)",
-                                @"rgb(88,145,200)",
-                                @"rgb(124,181,236)",
-                                @"rgb(160,217,255)",
-                                @"rgb(196,253,255)",
-                                @"rgb(233,255,255)",
-                                @"rgb(255,255,255)",
-                                @"rgb(255,255,255)",
-                                @"rgb(255,255,255)"
-                            ],
-                            @"chart": @{
-                                @"plotBackgroundColor": [NSNull null],
-                                @"plotBorderWidth": [NSNull null],
-                                @"plotShadow": @false,
-                                @"type": @"pie"
-                            },
-                            @"title": @{
-                                @"text": @"Browser market shares at a specific website, 2014"
-                            },
-                            @"tooltip": @{
-                                @"pointFormat": @"{series.name}: <b>{point.percentage:.1f}%</b>"
-                            },
-                            @"plotOptions": @{
-                                @"pie": @{
-                                    @"allowPointSelect": @true,
-                                    @"cursor": @"pointer",
-                                    @"dataLabels": @{
-                                        @"enabled": @true,
-                                        @"format": @"<b>{point.name}</b>: {point.percentage:.1f} %",
-                                        @"style": @{
-                                            @"color": @"black"
-                                        }
-                                    }
-                                }
-                            },
-                            @"series": @[
-                                @{
-                                    @"name": @"Brands",
-                                    @"data": @[
-                                        @{
-                                            @"name": @"Microsoft Internet Explorer",
-                                            @"y": @56.33
-                                        },
-                                        @{
-                                            @"name": @"Chrome",
-                                            @"y": @24.03
-                                        },
-                                        @{
-                                            @"name": @"Firefox",
-                                            @"y": @10.38
-                                        },
-                                        @{
-                                            @"name": @"Safari",
-                                            @"y": @4.77
-                                        },
-                                        @{
-                                            @"name": @"Opera",
-                                            @"y": @0.91
-                                        },
-                                        @{
-                                            @"name": @"Proprietary or Undetectable",
-                                            @"y": @0.2
-                                        }
-                                    ]
-                                }
-                            ]
-                        };
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    HIChart *chart = [[HIChart alloc]init];
+    chart.plotBackgroundColor = [[HIColor alloc]init];
+    chart.plotBorderWidth = [[NSNumber alloc]init];
+    chart.plotShadow = @false;
+    chart.type = @"pie";
+    
+    NSArray *colors = @[
+                        [[HIColor alloc]initWithRGB:15 green:72 blue:127],
+                        [[HIColor alloc]initWithRGB:52 green:109 blue:164],
+                        [[HIColor alloc]initWithRGB:88 green:145 blue:200],
+                        [[HIColor alloc]initWithRGB:124 green:181 blue:236],
+                        [[HIColor alloc]initWithRGB:160 green:217 blue:255],
+                        [[HIColor alloc]initWithRGB:196 green:253 blue:255],
+                        [[HIColor alloc]initWithRGB:233 green:255 blue:255],
+                        [[HIColor alloc]initWithRGB:255 green:255 blue:255],
+                        [[HIColor alloc]initWithRGB:255 green:255 blue:255],
+                        [[HIColor alloc]initWithRGB:255 green:255 blue:255]
+                        ];
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Browser market shares at a specific website, 2014";
+    
+    HITooltip *tooltip = [[HITooltip alloc]init];
+    tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
+    
+    HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
+    plotoptions.pie = [[HIPlotOptionsPie alloc]init];
+    plotoptions.pie.allowPointSelect = @true;
+    plotoptions.pie.cursor = @"pointer";
+    plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
+    plotoptions.pie.dataLabels.enabled = @true;
+    plotoptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
+    plotoptions.pie.dataLabels.style = @{@"color": @"black"};
+    
+    HIPie *pie = [[HIPie alloc]init];
+    pie.name = @"Brands";
+    pie.data = @[
+                 @{
+                     @"name": @"Microsoft Internet Explorer",
+                     @"y": @56.33
+                     },
+                 @{
+                     @"name": @"Chrome",
+                     @"y": @24.03,
+                     @"sliced": @true,
+                     @"selected": @true
+                     },
+                 @{
+                     @"name": @"Firefox",
+                     @"y": @10.38
+                     },
+                 @{
+                     @"name": @"Safari",
+                     @"y": @4.77
+                     },
+                 @{
+                     @"name": @"Opera",
+                     @"y": @0.91
+                     },
+                 @{
+                     @"name": @"Proprietary or Undetectable",
+                     @"y": @0.2
+                     }
+                 ];
+    
+    options.chart = chart;
+    options.colors = colors;
+    options.title = title;
+    options.tooltip = tooltip;
+    options.plotOptions = plotoptions;
+    options.series = [NSMutableArray arrayWithObjects:pie,  nil];
+    
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }

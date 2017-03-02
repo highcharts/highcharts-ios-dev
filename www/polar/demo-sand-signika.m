@@ -22,84 +22,78 @@
 
     chartView.theme = @"sand-signika";
     
-    chartView.options = @{
-    @"chart": @{
-        @"polar": @true
-    },
-    @"title": @{
-        @"text": @"Highcharts Polar Chart"
-    },
-    @"pane": @{
-        @"startAngle": @0,
-        @"endAngle": @360
-    },
-    @"xAxis": @{
-        @"tickInterval": @45,
-        @"min": @0,
-        @"max": @360,
-        @"labels": @{
-            @"format": @"{value}°"
-        }
-    },
-    @"yAxis": @{
-        @"min": @0
-    },
-    @"plotOptions": @{
-        @"series": @{
-            @"pointStart": @0,
-            @"pointInterval": @45
-        },
-        @"column": @{
-            @"pointPadding": @0,
-            @"groupPadding": @0
-        }
-    },
-    @"series": @[
-        @{
-            @"type": @"column",
-            @"name": @"Column",
-            @"data": @[
-                @8,
-                @7,
-                @6,
-                @5,
-                @4,
-                @3,
-                @2,
-                @1
-            ],
-            @"pointPlacement": @"between"
-        },
-        @{
-            @"type": @"line",
-            @"name": @"Line",
-            @"data": @[
-                @1,
-                @2,
-                @3,
-                @4,
-                @5,
-                @6,
-                @7,
-                @8
-            ]
-        },
-        @{
-            @"type": @"area",
-            @"name": @"Area",
-            @"data": @[
-                @1,
-                @8,
-                @2,
-                @7,
-                @3,
-                @6,
-                @4,
-                @5
-            ]
-        }
-    ]
-};
+    HIChart *chart = [[HIChart alloc]init];
+    chart.polar = @true;
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Highcharts Polar Chart";
+    
+    HIPane *pane = [[HIPane alloc]init];
+    pane.startAngle = @0;
+    pane.endAngle = @360;
+    
+    HIXAxis *xaxis = [[HIXAxis alloc]init];
+    xaxis.tickInterval = @45;
+    xaxis.min = @0;
+    xaxis.max = @360;
+    xaxis.labels = [[HIXAxisLabels alloc]init];
+    xaxis.labels.format = @"{value}°";
+    
+    HIYAxis *yaxis = [[HIYAxis alloc]init];
+    yaxis.min = @0;
+    
+    HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
+    plotOptions.series = [[HIPlotOptionsSeries alloc]init];
+    plotOptions.series.pointStart = @0;
+    plotOptions.series.pointInterval = @45;
+    plotOptions.column = [[HIPlotOptionsColumn alloc]init];
+    plotOptions.column.pointPadding = @0;
+    plotOptions.column.groupPadding = @0;
+    
+    HIColumn *column = [[HIColumn alloc]init];
+    column.name = @"Column";
+    column.data = [NSMutableArray arrayWithObjects:@8,
+                   @7,
+                   @6,
+                   @5,
+                   @4,
+                   @3,
+                   @2,
+                   @1, nil];
+    column.pointPlacement = @"between";
+    
+    HILine *line = [[HILine alloc]init];
+    line.name = @"Line";
+    line.data = [NSMutableArray arrayWithObjects:@1,
+                 @2,
+                 @3,
+                 @4,
+                 @5,
+                 @6,
+                 @7,
+                 @8, nil];
+    
+    HIArea *area = [[HIArea alloc]init];
+    area.name = @"Area";
+    area.data = [NSMutableArray arrayWithObjects:@1,
+                 @8,
+                 @2,
+                 @7,
+                 @3,
+                 @6,
+                 @4,
+                 @5, nil];
+    
+    HIOptions *options = [[HIOptions alloc]init];
+    options.chart = chart;
+    options.title = title;
+    options.pane = pane;
+    options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
+    options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
+    options.plotOptions = plotOptions;
+    options.series = [NSMutableArray arrayWithObjects:column, line, area, nil];
+    
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }

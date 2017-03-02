@@ -36,11 +36,40 @@
     pane.startAngle = @-150;
     pane.endAngle = @150;
     HIPaneBackground *background1 = [[HIPaneBackground alloc]init];
-    background1.backgroundColor = [[HIColor alloc]initWithHexValue:@"333"];
+    background1.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                           @"x1": @0,
+                                                                           @"y1": @0,
+                                                                           @"x2": @0,
+                                                                           @"y2": @1
+                                                                           }
+                                                                   stops:@[
+                                                                           @[
+                                                                               @0,
+                                                                               @"#FFF"
+                                                                               ],
+                                                                           @[
+                                                                               @1,
+                                                                               @"#333"
+                                                                               ]
+                                                                           ]];
     background1.borderWidth = @0;
     background1.outerRadius = @"109%";
     HIPaneBackground *background2 = [[HIPaneBackground alloc]init];
-    background2.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFF"];
+    background2.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                           @"x1": @0,
+                                                                           @"y1": @0,
+                                                                           @"x2": @0,
+                                                                           @"y2": @1
+                                                                           } stops:@[
+                                                                                     @[
+                                                                                         @0,
+                                                                                         @"#333"
+                                                                                         ],
+                                                                                     @[
+                                                                                         @1,
+                                                                                         @"#FFF"
+                                                                                         ]
+                                                                                     ]];
     background2.borderWidth = @1;
     background2.outerRadius = @"107%";
     HIPaneBackground *background3 = [[HIPaneBackground alloc]init];
