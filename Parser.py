@@ -460,11 +460,11 @@ def formatToM(name, source):
             getParams += "\tif (self.{0})".format(getLast(field.name)) + " {\n"
             if structure[field.name].dataType:
                 if getType(structure[field.name].dataType) == 'HIColor':
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name), getLast(field.name))
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(getLast(field.name), getLast(field.name))
                 elif getType(structure[field.name].dataType) == 'NSArray<HIColor *>':
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     getParams += "\t\tfor (HIColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
-                    getParams += "\t\t\t[array addObject:[obj getString]];\n".format(
+                    getParams += "\t\t\t[array addObject:[obj getData]];\n".format(
                         getLast(field.name))
                     getParams += "\t\t}\n"
                     getParams += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
@@ -527,7 +527,7 @@ def createOptionsFiles():
 
             if field.dataType:
                 if getType(field.dataType) == 'HIColor':
-                    mtext += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name),
+                    mtext += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(getLast(field.name),
                                                                                          getLast(field.name))
                 elif "NSArray" in str(getType(field.dataType)):
                     mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
@@ -544,7 +544,7 @@ def createOptionsFiles():
                 elif getType(field.dataType) == 'NSMutableArray<HIColor *>':
                     mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     mtext += "\t\tfor (HIColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
-                    mtext += "\t\t\t[array addObject:[obj getString]];\n".format(
+                    mtext += "\t\t\t[array addObject:[obj getData]];\n".format(
                         getLast(field.name))
                     mtext += "\t\t}\n"
                     mtext += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
