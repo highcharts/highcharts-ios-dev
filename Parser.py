@@ -394,7 +394,7 @@ def formatToH(name, source):
         if field.comment:
             htext += "{0}".format(field.comment)
         if field.dataType:
-            if "id" in str(getType(field.dataType)) and "NSArray" not in str(getType(field.dataType)):
+            if "id" in str(getType(field.dataType)) and "NSArray" not in str(getType(field.dataType)) and not structure[field.name].properties:
                 htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
             elif "NSArray" in str(getType(field.dataType)) and structure[field.name].properties:
                 htext += "@property(nonatomic, readwrite) {0} <{1} *> *{2};\n".format(getType(field.dataType),
@@ -505,7 +505,7 @@ def createOptionsFiles():
             if upperfirst((createName(field.name))) in files:
                 imports += "#import \"HI{0}.h\"\n".format(upperfirst(createName(field.name)))
             if structure[field.name].dataType:
-                if "in" in str(getType(field.dataType)) and "NSArray" not in str(getType(field.dataType)):
+                if "id" in str(getType(field.dataType)) and "NSArray" not in str(getType(field.dataType)):
                     if structure[field.name].properties:
                         htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format("HI" + upperfirst(createName(field.name)), getLast(field.name))
                     else:
