@@ -25,7 +25,25 @@
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"gauge";
     chart.plotBorderWidth = @1;
-    chart.plotBackgroundColor = [[HIColor alloc]initWithHexValue:@"FFF4C6"];
+    chart.plotBackgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                         @"x1": @0,
+                                                                         @"y1": @0,
+                                                                         @"x2": @0,
+                                                                         @"y2": @1
+                                                                         } stops:@[
+                                                                                   @[
+                                                                                       @0,
+                                                                                       @"#FFF4C6"
+                                                                                       ],
+                                                                                   @[
+                                                                                       @0.3,
+                                                                                       @"#FFFFFF"
+                                                                                       ],
+                                                                                   @[
+                                                                                       @1,
+                                                                                       @"#FFF4C6"
+                                                                                       ]
+                                                                                   ]];
     chart.height = @200;
     
     HITitle *title = [[HITitle alloc]init];
