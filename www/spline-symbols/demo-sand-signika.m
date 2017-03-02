@@ -22,104 +22,107 @@
 
     chartView.theme = @"sand-signika";
     
-    chartView.options = @{
-    @"chart": @{
-        @"type": @"spline"
-    },
-    @"title": @{
-        @"text": @"Monthly Average Temperature"
-    },
-    @"subtitle": @{
-        @"text": @"Source: WorldClimate.com"
-    },
-    @"xAxis": @{
-        @"categories": @[
-            @"Jan",
-            @"Feb",
-            @"Mar",
-            @"Apr",
-            @"May",
-            @"Jun",
-            @"Jul",
-            @"Aug",
-            @"Sep",
-            @"Oct",
-            @"Nov",
-            @"Dec"
-        ]
-    },
-    @"yAxis": @{
-        @"title": @{
-            @"text": @"Temperature"
-        },
-        @"labels": @{}
-    },
-    @"tooltip": @{
-        @"crosshairs": @true,
-        @"shared": @true
-    },
-    @"plotOptions": @{
-        @"spline": @{
-            @"marker": @{
-                @"radius": @4,
-                @"lineColor": @"#666666",
-                @"lineWidth": @1
-            }
-        }
-    },
-    @"series": @[
-        @{
-            @"name": @"Tokyo",
-            @"marker": @{
-                @"symbol": @"square"
-            },
-            @"data": @[
-                @7,
-                @6.9,
-                @9.5,
-                @14.5,
-                @18.2,
-                @21.5,
-                @25.2,
-                @{
-                    @"y": @26.5,
-                    @"marker": @{
-                        @"symbol": @"url(https://www.highcharts.com/samples/graphics/sun.png)"
-                    }
-                },
-                @23.3,
-                @18.3,
-                @13.9,
-                @9.6
-            ]
-        },
-        @{
-            @"name": @"London",
-            @"marker": @{
-                @"symbol": @"diamond"
-            },
-            @"data": @[
-                @{
-                    @"y": @3.9,
-                    @"marker": @{
-                        @"symbol": @"url(https://www.highcharts.com/samples/graphics/snow.png)"
-                    }
-                },
-                @4.2,
-                @5.7,
-                @8.5,
-                @11.9,
-                @15.2,
-                @17,
-                @16.6,
-                @14.2,
-                @10.3,
-                @6.6,
-                @4.8
-            ]
-        }
-    ]
-};
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    HIChart *chart = [[HIChart alloc]init];
+    chart.type = @"spline";
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Monthly Average Temperature";
+    
+    HISubtitle *subtitle = [[HISubtitle alloc]init];
+    subtitle.text = @"Source: WorldClimate.com";
+    
+    HIXAxis *xaxis = [[HIXAxis alloc]init];
+    xaxis.categories = @[
+                         @"Jan",
+                         @"Feb",
+                         @"Mar",
+                         @"Apr",
+                         @"May",
+                         @"Jun",
+                         @"Jul",
+                         @"Aug",
+                         @"Sep",
+                         @"Oct",
+                         @"Nov",
+                         @"Dec"
+                         ];
+    
+    HIYAxis *yaxis = [[HIYAxis alloc]init];
+    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title.text = @"Temperature";
+    yaxis.labels = [[HIYAxisLabels alloc]init];
+    
+    
+    HITooltip *tooltip = [[HITooltip alloc]init];
+    tooltip.crosshairs = @true;
+    tooltip.shared = @true;
+    
+    HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
+    plotoptions.spline = [[HIPlotOptionsSpline alloc]init];
+    plotoptions.spline.marker = [[HIPlotOptionsSplineMarker alloc]init];
+    plotoptions.spline.marker.radius = @4;
+    plotoptions.spline.marker.lineColor = [[HIColor alloc]initWithHexValue:@"666666"];
+    plotoptions.spline.marker.lineWidth = @1;
+    
+    HISpline *spline1 = [[HISpline alloc]init];
+    spline1.name = @"Tokyo";
+    spline1.marker = [[HISplineMarker alloc]init];
+    spline1.marker.symbol = @"square";
+    HISplineData *data1 = [[HISplineData alloc]init];
+    data1.y = @26.5;
+    data1.marker = [[HISplineDataMarker alloc]init];
+    data1.marker.symbol = @"url(https://www.highcharts.com/samples/graphics/sun.png)";
+    spline1.data = @[
+                     @7,
+                     @6.9,
+                     @9.5,
+                     @14.5,
+                     @18.2,
+                     @21.5,
+                     @25.2,
+                     data1,
+                     @23.3,
+                     @18.3,
+                     @13.9,
+                     @9.6
+                     ];
+    
+    
+    HISpline *spline2 = [[HISpline alloc]init];
+    spline2.name = @"London";
+    spline2.marker = [[HISplineMarker alloc]init];
+    spline2.marker.symbol = @"diamond";
+    HISplineData *data2 = [[HISplineData alloc]init];
+    data2.y = @3.9;
+    data2.marker = [[HISplineDataMarker alloc]init];
+    data2.marker.symbol = @"url(https://www.highcharts.com/samples/graphics/snow.png)";
+    spline2.data = @[
+                     data2,
+                     @4.2,
+                     @5.7,
+                     @8.5,
+                     @11.9,
+                     @15.2,
+                     @17,
+                     @16.6,
+                     @14.2,
+                     @10.3,
+                     @6.6,
+                     @4.8
+                     ];
+    
+    options.chart = chart;
+    options.title = title;
+    options.subtitle = subtitle;
+    options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
+    options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
+    options.tooltip = tooltip;
+    options.plotOptions = plotoptions;
+    options.series = [NSMutableArray arrayWithObjects:spline1, spline2, nil];
+    
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }
