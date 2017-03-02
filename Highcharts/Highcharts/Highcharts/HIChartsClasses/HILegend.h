@@ -37,12 +37,12 @@ In the case that the legend is aligned in a corner position, the layout option w
 * description: Callback function to format each of the series' labels. The this keyword refers to the series object, or the point object in case of pie charts. By default the series or point name is printed.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/labelformatter/ : Add text
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *labelFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *labelFormatter;
 /**
 * description: Whether to apply a drop shadow to the legend. A backgroundColor also needs to be applied for this to take effect. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/shadow/ : White background and drop shadow
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) id shadow;
 /**
 * description: Whether to show the symbol on the right side of the text rather than the left side.  This is common in Arabic and Hebraic.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/rtl/ : Symbol to the right
@@ -93,12 +93,12 @@ In the case that the legend is aligned in a corner position, the layout option w
 /**
 * description: CSS styles for the legend area. In the 1.x versions the position of the legend area was determined by CSS. In 2.x, the position is determined by properties like  align, verticalAlign, x and y, but the styles are still parsed for backwards compatibility.
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: CSS styles for each legend item when the corresponding series or point is hidden. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from style unless overridden here.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhiddenstyle/ : Darker gray color
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *itemHiddenStyle;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *itemHiddenStyle;
 /**
 * description: The width for each legend item. This is useful in a horizontal layout with many items when you want the items to align vertically.  .
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/itemwidth-default/ : Null by default,
@@ -144,7 +144,7 @@ In the case that the legend is aligned in a corner position, the layout option w
 * description: CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/itemstyle/ : Bold black text
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *itemStyle;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *itemStyle;
 /**
 * description: The background color of the legend.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/backgroundcolor/ : Yellowish background
@@ -154,7 +154,7 @@ In the case that the legend is aligned in a corner position, the layout option w
 * description: CSS styles for each legend item in hover mode. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from style unless overridden here.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/ : Red on hover
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *itemHoverStyle;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *itemHoverStyle;
 /**
 * description: The color of the drawn border around the legend.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/bordercolor/ : Brown border

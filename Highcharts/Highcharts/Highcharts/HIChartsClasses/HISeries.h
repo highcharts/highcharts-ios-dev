@@ -53,7 +53,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-null-values/ : 4) 3D column with null values
 
 */
-@property(nonatomic, readwrite) NSMutableArray /* <HIData, NSNumber, NSArray> */ *data;
+@property(nonatomic, readwrite) NSArray /* <Data, NSNumber, NSArray> */ *data;
 /**
 * description: An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
@@ -68,7 +68,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the yAxis array, with 0 being the first.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 */
-@property(nonatomic, readwrite) NSString *yAxis;
+@property(nonatomic, readwrite) id yAxis;
 /**
 * description: The sequential index of the series in the legend.  Try it:  	http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order .
 */
@@ -87,7 +87,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.
 */
-@property(nonatomic, readwrite) NSString *xAxis;
+@property(nonatomic, readwrite) id xAxis;
 /**
 * description: The type of series. Can be one of area, areaspline, bar, column, line, pie, scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
@@ -105,7 +105,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: This method is deprecated as of version 2.0. Instead, use options preprocessing as described in http://docs.highcharts.com/#preprocessing : the docs.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *dataParser;
+@property(nonatomic, readwrite) NSString /* Function */ *dataParser;
 
 -(NSDictionary *)getParams;
 

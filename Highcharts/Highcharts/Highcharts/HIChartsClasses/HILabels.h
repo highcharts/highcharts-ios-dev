@@ -9,11 +9,11 @@
 /**
 * description: A HTML label that can be positioned anywhere in the chart area.
 */
-@property(nonatomic, readwrite) NSMutableArray <HILabelsItems *> *items;
+@property(nonatomic, readwrite) NSArray <HILabelsItems *> *items;
 /**
 * description: Shared CSS styles for all labels.
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 
 -(NSDictionary *)getParams;
 

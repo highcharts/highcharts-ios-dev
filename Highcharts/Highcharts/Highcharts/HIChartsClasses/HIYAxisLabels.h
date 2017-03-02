@@ -17,7 +17,7 @@ function() {
 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-formatter-linked/ : Linked category names. http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-formatter-extended/ : Modified numeric labels.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *formatter;
+@property(nonatomic, readwrite) NSString /* Function */ *formatter;
 /**
 * description: To show only every n'th label on the axis, set the step to n. Setting the step to 2 shows every other label.
 By default, the step is calculated automatically to avoid overlap. To prevent this, set it to 1. This usually only happens on a category axis, and is often a sign that you have chosen the wrong axis type. Read more at http://www.highcharts.com/docs/chart-concepts/axes : Axis docs => What axis should I use? 
@@ -42,7 +42,7 @@ By default, the step is calculated automatically to avoid overlap. To prevent th
 * description: For horizontal axes, the allowed degrees of label rotation to prevent overlapping labels. If there is enough space, labels are not rotated. As the chart gets narrower, it will start rotating the labels -45 degrees, then remove every second label and try again with rotations 0 and -45 etc. Set it to false to disable rotation, which will cause the labels to word-wrap if possible.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-default/ : Default auto rotation of 0 or -45, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-0-90/ : custom graded auto rotation
 */
-@property(nonatomic, readwrite) NSMutableArray<NSNumber *> *autoRotation;
+@property(nonatomic, readwrite) NSArray<NSNumber *> *autoRotation;
 /**
 * description: Horizontal axes only. The number of lines to spread the labels over to make room or tighter labels.  .
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-staggerlines/ : Show labels over two lines
@@ -69,7 +69,7 @@ By default, the step is calculated automatically to avoid overlap. To prevent th
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the labels are styled with the .highcharts-axis-labels class.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-style/ : Red X axis labels
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html : use HTML to render the labels.
 */

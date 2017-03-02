@@ -37,7 +37,7 @@ Defaults to null in cartesian charts, "between" in polar charts.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/ : Between in a column chart, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-numeric/ : numeric placement for custom layout.
 * accepted values: [null, "on", "between"]
 */
-@property(nonatomic, readwrite) NSString *pointPlacement;
+@property(nonatomic, readwrite) id pointPlacement;
 /**
 * description: A configuration object for the tooltip rendering of each single series. Properties are inherited from tooltip, but only the following properties can be defined on a series level.
 */
@@ -51,7 +51,7 @@ Defaults to null in cartesian charts, "between" in polar charts.
 /**
 * description: A series specific or series type specific color set to apply instead of the global colors when colorByPoint is true.
 */
-@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 /**
 * description: Allow this series' points to be selected by clicking on the markers, bars or pie slices.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line, 
@@ -86,7 +86,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray <HIColumnrangeZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIColumnrangeZones *> *zones;
 /**
 * description: The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/ : Limited to 50
@@ -179,7 +179,7 @@ A description of the series to add to the screen reader information about the se
 * description: An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *keys;
+@property(nonatomic, readwrite) NSArray<NSString *> *keys;
 /**
 * description: Extended data labels for range series types. Range series  data labels have no x and y options. Instead, they have xLow, xHigh, yLow and yHigh options to allow the higher and lower data label sets individually. 
 */
@@ -215,7 +215,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) id shadow;
 /**
 * description: If no x values are given for the points in a series, pointInterval defines
  the interval of the x values. For example, if a series contains one value
@@ -266,7 +266,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray <HIColumnrangeStates *> *states;
+@property(nonatomic, readwrite) NSArray <HIColumnrangeStates *> *states;
 
 -(NSDictionary *)getParams;
 

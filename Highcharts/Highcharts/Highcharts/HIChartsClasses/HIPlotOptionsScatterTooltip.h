@@ -22,7 +22,7 @@
 /**
 * description: A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointFormatter;
 /**
 * description: Split the tooltip into one label per series, with the header close to the axis. This is recommended over shared tooltips for charts with multiple line series, generally making them easier to read.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/ : Split tooltip

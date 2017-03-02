@@ -13,7 +13,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/titles/ : Styled mode.
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html : use HTML to render the text.
 */

@@ -27,7 +27,7 @@ A description of the series to add to the screen reader information about the se
 /**
 * description: The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *center;
+@property(nonatomic, readwrite) NSArray<id> /* <NSString, NSNumber> */ *center;
 @property(nonatomic, readwrite) HIPlotOptionsPyramidDataLabels *dataLabels;
 /**
 * description: The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
@@ -93,7 +93,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsPyramidStates *> *states;
+@property(nonatomic, readwrite) NSArray <HIPlotOptionsPyramidStates *> *states;
 @property(nonatomic, readwrite) HIPlotOptionsPyramidEvents *events;
 /**
 * description: If a point is sliced, moved out from the center, how many pixels should  it be moved?.
@@ -114,11 +114,11 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: The height of the funnel or pyramid. If it is a number it defines the pixel height, if it is a percentage string it is the percentage of the plot area height.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/ : Funnel demo
 */
-@property(nonatomic, readwrite) NSString *height;
+@property(nonatomic, readwrite) id height;
 /**
 * description: The width of the funnel compared to the width of the plot area, or the pixel width if it is a number.
 */
-@property(nonatomic, readwrite) NSString *width;
+@property(nonatomic, readwrite) id width;
 /**
 * description: Defines the Axis on which the zones are applied.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/ : Zones on the X-Axis
@@ -140,13 +140,13 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: A series specific or series type specific color set to use instead of the global colors.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
 */
-@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 /**
 * description: An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the zoneAxis option.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray <HIPlotOptionsPyramidZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIPlotOptionsPyramidZones *> *zones;
 /**
 * description: The id of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
@@ -156,12 +156,12 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) id shadow;
 /**
 * description: An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *keys;
+@property(nonatomic, readwrite) NSArray<NSString *> *keys;
 /**
 * description: A class name to apply to the series' graphical elements.
 */

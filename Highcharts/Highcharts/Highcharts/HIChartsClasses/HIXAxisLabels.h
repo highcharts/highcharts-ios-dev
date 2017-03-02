@@ -25,13 +25,13 @@ function() {
 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-formatter-linked/ : Linked category names. http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-formatter-extended/ : Modified numeric labels.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *formatter;
+@property(nonatomic, readwrite) NSString /* Function */ *formatter;
 /**
 * description: CSS styles for the label. Use whiteSpace: 'nowrap' to prevent wrapping of category labels. Use textOverflow: 'none' to prevent ellipsis (dots).
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the labels are styled with the .highcharts-axis-labels class.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-style/ : Red X axis labels
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: Polar charts only. The label's pixel distance from the perimeter of the plot area.
 */
@@ -40,7 +40,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: For horizontal axes, the allowed degrees of label rotation to prevent overlapping labels. If there is enough space, labels are not rotated. As the chart gets narrower, it will start rotating the labels -45 degrees, then remove every second label and try again with rotations 0 and -45 etc. Set it to false to disable rotation, which will cause the labels to word-wrap if possible.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-default/ : Default auto rotation of 0 or -45, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-0-90/ : custom graded auto rotation
 */
-@property(nonatomic, readwrite) NSMutableArray<NSNumber *> *autoRotation;
+@property(nonatomic, readwrite) NSArray<NSNumber *> *autoRotation;
 /**
 * description: The Z index for the axis labels.
 */

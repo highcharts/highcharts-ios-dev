@@ -42,7 +42,7 @@ For touch moves to behave the same way, followTouchMove must be true also.
 /**
 * description: A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointFormatter;
 /**
 * description: A string to append to the tooltip format.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment

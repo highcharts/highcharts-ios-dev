@@ -80,7 +80,7 @@ Defaults to <span style="font-size: 10px">{point.key}</span><br/>
 /**
 * description: A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointFormatter;
 /**
 * description: Padding inside the tooltip, in pixels.
 */

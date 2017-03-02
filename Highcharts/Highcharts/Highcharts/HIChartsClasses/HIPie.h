@@ -43,7 +43,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSMutableArray <HIPieZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIPieZones *> *zones;
 /**
 * description: The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to startAngle plus 360.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/ : Semi-circle donut
@@ -62,7 +62,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) id shadow;
 /**
 * description: The width of the border surrounding each slice.
 When setting the border width to 0, there may be small gaps between the slices due to SVG antialiasing artefacts. To work around this, keep the border width at 0.5 or 1, but set the borderColor to null instead.
@@ -91,7 +91,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: A series specific or series type specific color set to use instead of the global colors.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
 */
-@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 /**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie/ : Basic 3D pie chart
@@ -119,7 +119,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 		 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/ : Centered at 100, 100
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *center;
+@property(nonatomic, readwrite) NSArray<id> /* <NSString, NSNumber> */ *center;
 @property(nonatomic, readwrite) HIPieDataLabels *dataLabels;
 /**
 * description: The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
@@ -146,7 +146,7 @@ Note: in Highcharts < 4.1.2, the percentage was relative to the plot area, not t
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/ : 50% of the plot area,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/ : 3D donut.
 */
-@property(nonatomic, readwrite) NSString *innerSize;
+@property(nonatomic, readwrite) id innerSize;
 /**
 * description: Requires Accessibility module
 A description of the series to add to the screen reader information about the series.
@@ -164,7 +164,7 @@ A description of the series to add to the screen reader information about the se
 * description: The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example "75%".
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/ : Smaller pie
 */
-@property(nonatomic, readwrite) NSString *size;
+@property(nonatomic, readwrite) id size;
 /**
 * description: Set the initial visibility of the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
@@ -183,12 +183,12 @@ A description of the series to add to the screen reader information about the se
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSMutableArray <HIPieStates *> *states;
+@property(nonatomic, readwrite) NSArray <HIPieStates *> *states;
 /**
 * description: An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *keys;
+@property(nonatomic, readwrite) NSArray<NSString *> *keys;
 /**
 * description: Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden

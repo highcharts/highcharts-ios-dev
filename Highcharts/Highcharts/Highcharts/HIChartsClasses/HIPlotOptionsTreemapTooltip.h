@@ -21,7 +21,7 @@
 /**
 * description: A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointFormatter;
 /**
 * description: How many decimals to show in each series' y value. This is overridable in each series' tooltip options object. The default is to preserve all decimals.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/ : Set decimals, prefix and suffix for the value

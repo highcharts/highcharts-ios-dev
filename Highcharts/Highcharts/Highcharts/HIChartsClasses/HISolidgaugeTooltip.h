@@ -75,7 +75,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointFormatter;
 /**
 * description: The format for the date in the tooltip header if the X axis is a datetime axis. The default is a best guess based on the smallest distance between points in the chart.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/xdateformat/ : A different format

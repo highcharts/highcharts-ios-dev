@@ -13,7 +13,7 @@
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the styles are set in the .highcharts-stack-label class.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-style/ : Red stack total labels
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: A http://docs.highcharts.com/#formatting : format string for the data label. Available variables are the same as for formatter.
 */
@@ -71,7 +71,7 @@ function() {
 }
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-formatter/ : Added units to stack total value
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *formatter;
+@property(nonatomic, readwrite) NSString /* Function */ *formatter;
 
 -(NSDictionary *)getParams;
 

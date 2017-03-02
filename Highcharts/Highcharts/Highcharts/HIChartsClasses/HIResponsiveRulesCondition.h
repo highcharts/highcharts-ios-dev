@@ -14,7 +14,7 @@
 /**
 * description: A callback function to gain complete control on when the responsive rule applies. Return true if it applies. This opens for checking against other metrics than the chart size, or example the document size or other elements.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *callback;
+@property(nonatomic, readwrite) NSString /* Function */ *callback;
 /**
 * description: The responsive rule applies if the chart height is greater than this.
 */

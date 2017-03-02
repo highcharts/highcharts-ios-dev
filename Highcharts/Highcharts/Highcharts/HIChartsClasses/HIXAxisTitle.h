@@ -56,7 +56,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis/ : Styled mode.
 
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 
 -(NSDictionary *)getParams;
 

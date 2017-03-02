@@ -14,7 +14,7 @@
 /**
 * description: CSS styles for the no-data label. 
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: An object of additional SVG attributes for the no-data label.
 */

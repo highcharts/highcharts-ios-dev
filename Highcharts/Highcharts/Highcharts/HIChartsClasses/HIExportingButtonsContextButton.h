@@ -90,13 +90,13 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: A click handler callback to use on the button directly instead of the popup menu.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-onclick/ : Skip the menu and export the chart directly
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *onclick;
+@property(nonatomic, readwrite) NSString /* Function */ *onclick;
 /**
 * description: A collection of config options for the menu items. Each options object consists of a text option which is a string to show in the menu item, as well as an onclick parameter which is a callback function to run on click. By default, there is the "Print" menu item plus one menu item for each of the available export types. Menu items can be customized by defining a new array of items and assigning  null to unwanted positions (see override example below).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-onclick/ : Skip the menu and export the chart directly,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-menuitems/ : override the menu items
 */
-@property(nonatomic, readwrite) NSMutableArray *menuItems;
+@property(nonatomic, readwrite) NSArray *menuItems;
 /**
 * description: The pixel width of the button.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons

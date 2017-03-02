@@ -18,7 +18,7 @@
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : 
 				Legend page navigation demonstrated
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
+@property(nonatomic, readwrite) id animation;
 /**
 * description: Whether to enable the legend navigation. In most cases, disabling the navigation results in an unwanted overflow.
 See also the http://www.highcharts.com/plugin-registry/single/8/Adapt-Chart-To-Legend : adapt chart to legend plugin for a solution to extend the chart height to make room for the legend, optionally in exported charts only.
@@ -41,7 +41,7 @@ See also the http://www.highcharts.com/plugin-registry/single/8/Adapt-Chart-To-L
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : 
 				Legend page navigation demonstrated
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 
 -(NSDictionary *)getParams;
 

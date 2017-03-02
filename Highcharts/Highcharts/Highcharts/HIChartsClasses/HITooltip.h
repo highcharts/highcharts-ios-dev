@@ -88,7 +88,7 @@ See also tooltip.split, that is better suited for charts with many series, espec
 /**
 * description: A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointFormatter;
 /**
 * description: Whether to apply a drop shadow to the tooltip.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : True by default,
@@ -152,7 +152,7 @@ The return should be an object containing x and y values, for example { x: 100, 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/ : 
 				A fixed tooltip position
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *positioner;
+@property(nonatomic, readwrite) NSString /* Function */ *positioner;
 /**
 * description: The color of the tooltip border. When null, the border takes the color of the corresponding series or point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : Follow series by default,
@@ -164,13 +164,13 @@ The return should be an object containing x and y values, for example { x: 100, 
  class .highcharts-tooltip.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/ : Greater padding, bold text
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: Callback function to format the text of the tooltip. Return false to disable tooltip for a specific point on series. A subset of HTML is supported. The HTML of the tooltip is parsed and converted to SVG,  therefore this isn't a complete HTML renderer. The following tags are supported:  <b>, <strong>, <i>, <em>, <br/>, <span>. Spans can be styled with a style attribute, but only text-related CSS that is  shared with SVG is handled.  Since version 2.1 the tooltip can be shared between multiple series through  the shared option. The available data in the formatter differ a bit depending on whether the tooltip is shared or not. In a shared tooltip, all  properties except x, which is common for all points, are kept in  an array, this.points. Available data are:  this.percentage (not shared) / this.points[i].percentage (shared) Stacked series and pies only. The point's percentage of the total. this.point (not shared) / this.points[i].point (shared) The point object. The point name, if defined, is available  through this.point.name. this.points In a shared tooltip, this is an array containing all other properties for each point. this.series (not shared) / this.points[i].series (shared) The series object. The series name is available  through this.series.name. this.total (not shared) / this.points[i].total (shared) Stacked series only. The total value at this point's x value. this.x The x value. This property is the same regardless of the tooltip being shared or not. this.y (not shared) / this.points[i].y (shared) The y value. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-simple/ : Simple string formatting,			
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-shared/ : formatting with shared tooltip
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *formatter;
+@property(nonatomic, readwrite) NSString /* Function */ *formatter;
 /**
 * description: The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore,  point.y can be extended by the tooltip.valuePrefix and tooltip.valueSuffix variables. This can also be overridden for each series, which makes it a good hook for displaying units.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the dot is colored by a class name rather than the point color.

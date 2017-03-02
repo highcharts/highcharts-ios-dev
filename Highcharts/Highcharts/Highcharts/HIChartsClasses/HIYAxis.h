@@ -63,7 +63,7 @@ categories: ['Apples', 'Bananas', 'Oranges']
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : With and
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/categories/ : without categories
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *categories;
+@property(nonatomic, readwrite) NSArray<NSString *> *categories;
 /**
 * description: The amount of ticks to draw on the axis. This opens up for aligning the ticks of multiple charts or panes within a chart. This option overrides the tickPixelInterval option.
 This option only has an effect on linear axes. Datetime, logarithmic or category axes are not affected.
@@ -106,7 +106,7 @@ units: [[
 	null
 ]]
 */
-@property(nonatomic, readwrite) NSMutableArray *units;
+@property(nonatomic, readwrite) NSArray *units;
 /**
 * description: The interval of the tick marks in axis units. When null, the tick interval
  is computed to approximately follow the tickPixelInterval on linear and datetime axes.
@@ -135,7 +135,7 @@ If the chart has multiple axes, the alignTicks option may interfere with the tic
 * description: An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSMutableArray<NSNumber *> *tickPositions;
+@property(nonatomic, readwrite) NSArray<NSNumber *> *tickPositions;
 /**
 * description: A soft minimum for the axis. If the series data minimum is greater than this, the axis will stay at this minimum, but if the series data minimum is lower, the axis will flex to show all data.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/ : Soft min and max
@@ -165,12 +165,12 @@ If the chart has multiple axes, the alignTicks option may interfere with the tic
 /**
 * description: An array of objects representing plot lines on the X axis
 */
-@property(nonatomic, readwrite) NSMutableArray <HIYAxisPlotLines *> *plotLines;
+@property(nonatomic, readwrite) NSArray <HIYAxisPlotLines *> *plotLines;
 /**
 * description: A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic tick positions are accessible through this.tickPositions and can be modified by the callback.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *tickPositioner;
+@property(nonatomic, readwrite) NSString /* Function */ *tickPositioner;
 /**
 * description: When using an alternate grid color, a band is painted across the plot area between every other grid line.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/alternategridcolor/ : Alternate grid color on the Y axis
@@ -209,7 +209,7 @@ For solid gauges, the Y axis also inherits the concept of http://api.highcharts.
 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-solid/ : True by default
 */
-@property(nonatomic, readwrite) NSMutableArray<NSMutableArray *> *stops;
+@property(nonatomic, readwrite) NSArray<NSArray *> *stops;
 /**
 * description: The pixel length of the minor tick marks.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorticklength/ : 10px on Y axis
@@ -286,7 +286,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: An array of objects defining plot bands on the Y axis.
 */
-@property(nonatomic, readwrite) NSMutableArray <HIYAxisPlotBands *> *plotBands;
+@property(nonatomic, readwrite) NSArray <HIYAxisPlotBands *> *plotBands;
 /**
 * description: The position of the minor tick marks relative to the axis line. Can be one of inside and outside.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickposition-outside/ : Outside by default,
@@ -324,7 +324,7 @@ Defaults to 72  for the Y axis and 100 for the X axis.
 * description: An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other. Requires that the broken-axis.js module is loaded.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-simple/ : Simple break, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/ : advanced with callback
 */
-@property(nonatomic, readwrite) NSMutableArray <HIYAxisBreaks *> *breaks;
+@property(nonatomic, readwrite) NSArray <HIYAxisBreaks *> *breaks;
 /**
 * description: Whether to force the axis to end on a tick. Use this option with the maxPadding option to control the axis end.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : True by default and
@@ -420,7 +420,7 @@ On axes using categories, minor ticks are not supported.
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/ : "auto" on logarithmic Y axis,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/ : 0.1 on logarithmic Y axis.
 */
-@property(nonatomic, readwrite) NSString *minorTickInterval;
+@property(nonatomic, readwrite) id minorTickInterval;
 /**
 * description: Polar charts only. Whether the grid lines should draw as a polygon with straight lines between categories, or as circles. Can be either circle or polygon.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/polar-spider/ : Polygon grid lines, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlineinterpolation/ : circle and polygon

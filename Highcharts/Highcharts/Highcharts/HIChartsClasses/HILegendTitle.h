@@ -14,7 +14,7 @@
 /**
 * description: Generic CSS styles for the legend title.
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 
 -(NSDictionary *)getParams;
 

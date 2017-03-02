@@ -71,7 +71,7 @@ Should currently point to location of https://github.com/canvg/canvg : CanVG lib
 /**
 * description: Function to call if the offline-exporting module fails to export a chart on the client side, and fallbackToExportServer is disabled. If left undefined, an exception is thrown instead.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *error;
+@property(nonatomic, readwrite) NSString /* Function */ *error;
 /**
 * description: When printing the chart from the menu item in the burger menu, if the on-screen chart exceeds this width, it is resized. After printing or cancelled, it is restored. The default width makes the chart fit into typical paper format. Note that this does not affect the chart when printing the web page as a whole.
 */

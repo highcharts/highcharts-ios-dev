@@ -38,7 +38,7 @@ Highcharts.setOptions({
 * description: A callback to return the time zone offset for a given datetime. It takes the timestamp in terms of milliseconds since January 1 1970, and returns the timezone offset in minutes. This provides a hook for drawing time based charts in specific time zones using their local DST crossover dates, with the help of external libraries. 
 * demo:  http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/gettimezoneoffset/ : Use moment.js to draw Oslo time regardless of browser locale
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *getTimezoneOffset;
+@property(nonatomic, readwrite) NSString /* Function */ *getTimezoneOffset;
 /**
 * description: Canvg rendering for Android 2.x is removed as of Highcharts 5.0. Use the libURL option to configure exporting.
 The URL to the additional file to lazy load for Android 2.x devices. These devices don't 

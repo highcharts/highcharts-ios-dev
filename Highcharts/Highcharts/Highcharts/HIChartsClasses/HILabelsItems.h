@@ -13,7 +13,7 @@ style: {
 	top: '100px'
 }
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: Inner HTML or text for the label.
 */

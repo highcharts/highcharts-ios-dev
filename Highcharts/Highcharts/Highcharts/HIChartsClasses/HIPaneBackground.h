@@ -33,11 +33,11 @@
 /**
 * description: The inner radius of the pane background. Can be either numeric (pixels) or a percentage string.
 */
-@property(nonatomic, readwrite) NSString *innerRadius;
+@property(nonatomic, readwrite) id innerRadius;
 /**
 * description: The outer radius of the circular pane background. Can be either numeric (pixels) or a percentage string.
 */
-@property(nonatomic, readwrite) NSString *outerRadius;
+@property(nonatomic, readwrite) id outerRadius;
 
 -(NSDictionary *)getParams;
 

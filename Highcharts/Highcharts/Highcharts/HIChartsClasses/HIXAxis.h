@@ -30,7 +30,7 @@ categories: ['Apples', 'Bananas', 'Oranges']
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : With and
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/categories/ : without categories
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *categories;
+@property(nonatomic, readwrite) NSArray<NSString *> *categories;
 /**
 * description: Whether to show the axis line and title when the axis has no data.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/showempty/ : When clicking the legend to hide series, one axis preserves line and title, the other doesn't
@@ -124,7 +124,7 @@ Defaults to:
 * description: An array of lines stretching across the plot area, marking a specific value on one of the axes.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the plot lines are styled by the .highcharts-plot-line class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSMutableArray <HIXAxisPlotLines *> *plotLines;
+@property(nonatomic, readwrite) NSArray <HIXAxisPlotLines *> *plotLines;
 /**
 * description: Color for the minor tick marks.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/ : Black tick marks on Y axis
@@ -217,7 +217,7 @@ On axes using categories, minor ticks are not supported.
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/ : "auto" on logarithmic Y axis,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/ : 0.1 on logarithmic Y axis.
 */
-@property(nonatomic, readwrite) NSString *minorTickInterval;
+@property(nonatomic, readwrite) id minorTickInterval;
 /**
 * description: The position of the major tick marks relative to the axis line. Can be one of inside and outside.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-outside/ : "outside" by default, 
@@ -243,7 +243,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSMutableArray<NSNumber *> *tickPositions;
+@property(nonatomic, readwrite) NSArray<NSNumber *> *tickPositions;
 /**
 * description: Color for the main tick marks.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke is given in the .highcharts-tick class.
@@ -290,7 +290,7 @@ units: [[
 	null
 ]]
 */
-@property(nonatomic, readwrite) NSMutableArray *units;
+@property(nonatomic, readwrite) NSArray *units;
 /**
 * description: The minimum value of the axis. If null the min value is automatically calculated. If the startOnTick option is true, the min value might be rounded down.
 * demo: Y axis min of http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/ : -50 with startOnTick to false,
@@ -360,7 +360,7 @@ If a tickAmount is set, the axis may be extended beyond the set max in order to 
 In a gauge, a plot band on the Y axis (value axis) will stretch along the perimeter of the gauge.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the plot bands are styled by the .highcharts-plot-band class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSMutableArray <HIXAxisPlotBands *> *plotBands;
+@property(nonatomic, readwrite) NSArray <HIXAxisPlotBands *> *plotBands;
 /**
 * description: The axis labels show the number or category for each tick.
 */
@@ -430,7 +430,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic tick positions are accessible through this.tickPositions and can be modified by the callback.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *tickPositioner;
+@property(nonatomic, readwrite) NSString /* Function */ *tickPositioner;
 /**
 * description: The amount of ticks to draw on the axis. This opens up for aligning the ticks of multiple charts or panes within a chart. This option overrides the tickPixelInterval option.
 This option only has an effect on linear axes. Datetime, logarithmic or category axes are not affected.
@@ -441,7 +441,7 @@ This option only has an effect on linear axes. Datetime, logarithmic or category
 * description: An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other. Requires that the broken-axis.js module is loaded.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-simple/ : Simple break, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/ : advanced with callback
 */
-@property(nonatomic, readwrite) NSMutableArray <HIXAxisBreaks *> *breaks;
+@property(nonatomic, readwrite) NSArray <HIXAxisBreaks *> *breaks;
 /**
 * description: The lowest allowed value for automatically computed axis extremes.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/floor-ceiling/ : Floor and ceiling

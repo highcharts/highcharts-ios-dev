@@ -50,7 +50,7 @@ For touch moves to behave the same way, followTouchMove must be true also.
 /**
 * description: A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointFormatter;
 /**
 * description: The number of milliseconds to wait until the tooltip is hidden when mouse out from a point or chart. 
 */

@@ -34,7 +34,7 @@ On axes using categories, minor ticks are not supported.
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/ : "auto" on logarithmic Y axis,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/ : 0.1 on logarithmic Y axis.
 */
-@property(nonatomic, readwrite) NSString *minorTickInterval;
+@property(nonatomic, readwrite) id minorTickInterval;
 /**
 * description: Color for the main tick marks.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke is given in the .highcharts-tick class.
@@ -47,7 +47,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic tick positions are accessible through this.tickPositions and can be modified by the callback.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *tickPositioner;
+@property(nonatomic, readwrite) NSString /* Function */ *tickPositioner;
 /**
 * description: If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a name and setting axis type to category. However, if you have multiple series, best practice remains defining the categories array.
 Example:
@@ -57,7 +57,7 @@ categories: ['Apples', 'Bananas', 'Oranges']
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : With and
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/categories/ : without categories
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *categories;
+@property(nonatomic, readwrite) NSArray<NSString *> *categories;
 /**
 * description: Whether axis, including axis title, line, ticks and labels, should be visible.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/visible/ : Toggle axis visibility.
@@ -117,7 +117,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: An array of lines stretching across the plot area, marking a specific value on one of the axes.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the plot lines are styled by the .highcharts-plot-line class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSMutableArray <HIZAxisPlotLines *> *plotLines;
+@property(nonatomic, readwrite) NSArray <HIZAxisPlotLines *> *plotLines;
 /**
 * description: The dash or dot style of the grid lines. For possible values, see http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/ : this demonstration.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinedashstyle/ : Long dashes
@@ -192,7 +192,7 @@ units: [[
 	null
 ]]
 */
-@property(nonatomic, readwrite) NSMutableArray *units;
+@property(nonatomic, readwrite) NSArray *units;
 /**
 * description: For categorized axes only. If on the tick mark is placed in the center of  the category, if between the tick mark is placed between categories. The default is between if the tickInterval is 1, else on.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-between/ : "between" by default, 
@@ -228,7 +228,7 @@ Note that the minPadding, maxPadding, startOnTick and endOnTick settings also af
 In a gauge, a plot band on the Y axis (value axis) will stretch along the perimeter of the gauge.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the plot bands are styled by the .highcharts-plot-band class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSMutableArray <HIZAxisPlotBands *> *plotBands;
+@property(nonatomic, readwrite) NSArray <HIZAxisPlotBands *> *plotBands;
 /**
 * description: The position of the major tick marks relative to the axis line. Can be one of inside and outside.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-outside/ : "outside" by default, 
@@ -336,7 +336,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSMutableArray<NSNumber *> *tickPositions;
+@property(nonatomic, readwrite) NSArray<NSNumber *> *tickPositions;
 /**
 * description: The width of the line marking the axis itself.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke width is given in the .highcharts-axis-line or .highcharts-xaxis-line class.

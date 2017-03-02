@@ -20,16 +20,16 @@ For an overview of the replacement codes, see dateFormat.
 * description: Function to run upon clicking the "View as Data Table" link in the screen reader region.
 By default Highcharts will insert and set focus to a data table representation of the chart.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *onTableAnchorClick;
+@property(nonatomic, readwrite) NSString /* Function */ *onTableAnchorClick;
 /**
 * description: A formatter function to create the HTML contents of the hidden screen reader information region. Receives one argument, chart, referring to the chart object. Should return a String with the HTML content of the region.
 The link to view the chart as a data table will be added automatically after the custom HTML content.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *screenReaderSectionFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *screenReaderSectionFormatter;
 /**
 * description: Formatter function to determine the date/time format used with points on datetime axes when describing them to screen reader users. Receives one argument, point, referring to the point to describe. Should return a date format string compatible with dateFormat.
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointDateFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointDateFormatter;
 /**
 * description: Whether or not to add series descriptions to charts with a single series.
 */
@@ -48,12 +48,12 @@ Set to false to disable.
 * description: Formatter function to use instead of the default for point descriptions. Receives one argument, point, referring to the point to describe. Should return a String with the description of the point for a screen reader user.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/accessibility/advanced-accessible/ : Complex accessible chart
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *pointDescriptionFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
 /**
 * description: Formatter function to use instead of the default for series descriptions. Receives one argument, series, referring to the series to describe. Should return a String with the description of the series for a screen reader user.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/accessibility/advanced-accessible/ : Accessible complex chart
 */
-@property(nonatomic, readwrite) NSString /* Function? */ *seriesDescriptionFormatter;
+@property(nonatomic, readwrite) NSString /* Function */ *seriesDescriptionFormatter;
 
 -(NSDictionary *)getParams;
 

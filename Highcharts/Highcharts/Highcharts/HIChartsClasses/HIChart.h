@@ -50,7 +50,7 @@ A string reference to an easing function set on the Math object. See http://jsfi
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-duration/ : with a longer duration,  
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-easing/ : with a jQuery UI easing.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
+@property(nonatomic, readwrite) id animation;
 /**
 * description: The URL for an image to use as the plot background. To set an image as the background for the entire chart, set a CSS background image to the container element. Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundimage/ : Skies
@@ -66,15 +66,14 @@ A string reference to an easing function set on the Math object. See http://jsfi
 		 Defaults to [null].
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/margins-zero/ : Zero margins
 */
-@property(nonatomic, readwrite) NSMutableArray *margin;
+@property(nonatomic, readwrite) NSArray *margin;
 /**
 * description: The pixel width of the plot area border.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotborderwidth/ : 1px border
 */
 @property(nonatomic, readwrite) NSNumber *plotBorderWidth;
 /**
-* description: The margin between the left outer edge of the chart and the plot area. Use this to set a fixed
- pixel value for the margin as opposed to the default dynamic margin. See also spacingLeft.
+* description: The margin between the left outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also spacingLeft.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/marginleft/ : 150px left margin
 */
 @property(nonatomic, readwrite) NSNumber *marginLeft;
@@ -100,11 +99,10 @@ A string reference to an easing function set on the Math object. See http://jsfi
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showAxes;
 /**
-* description: Whether to apply a drop shadow to the outer chart area. Requires that 
- backgroundColor be set. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
+* description: Whether to apply a drop shadow to the outer chart area. Requires that  backgroundColor be set. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/shadow/ : Shadow
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) id shadow;
 /**
 * description: The background color or gradient for the plot area.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/ : Color,
@@ -141,7 +139,7 @@ When using the Highcharts.chart constructor, the renderTo is given as a paramete
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-object/ : object reference,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-jquery/ : object reference through jQuery,
 */
-@property(nonatomic, readwrite) NSString *renderTo;
+@property(nonatomic, readwrite) id renderTo;
 /**
 * description: Whether to invert the axes so that the x axis is vertical and y axis is horizontal. When true, the x axis is reversed by default. If a bar series is present in the chart, it will be inverted automatically.
 Inverting the chart doesn't have an effect if there are no cartesian series in the chart, or if the chart is polar.
@@ -159,14 +157,12 @@ Inverting the chart doesn't have an effect if there are no cartesian series in t
 */
 @property(nonatomic, readwrite) NSString *pinchType;
 /**
-* description: The margin between the bottom outer edge of the chart and the plot area. Use this to set a fixed
- pixel value for the margin as opposed to the default dynamic margin. See also spacingBottom.
+* description: The margin between the bottom outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also spacingBottom.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/marginbottom/ : 100px bottom margin
 */
 @property(nonatomic, readwrite) NSNumber *marginBottom;
 /**
-* description: The margin between the right outer edge of the chart and the plot area. Use this to set a fixed
- pixel value for the margin as opposed to the default dynamic margin. See also spacingRight.
+* description: The margin between the right outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also spacingRight.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/marginright/ : 100px right margin
 */
 @property(nonatomic, readwrite) NSNumber *marginRight;
@@ -177,7 +173,7 @@ Inverting the chart doesn't have an effect if there are no cartesian series in t
 /**
 * description: The distance between the outer edge of the chart and the content, like title, legend, axis title or labels. The numbers in the array designate top, right, bottom and left respectively. Use the options spacingTop, spacingRight, spacingBottom and spacingLeft options for shorthand setting of one option.
 */
-@property(nonatomic, readwrite) NSMutableArray<NSNumber *> *spacing;
+@property(nonatomic, readwrite) NSArray<NSNumber *> *spacing;
 /**
 * description: The color of the outer chart border.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/bordercolor/ : Brown border
@@ -224,14 +220,12 @@ This can be prevented by setting alignTicks to false. If the grid lines look mes
 */
 @property(nonatomic, readwrite) NSNumber *spacingTop;
 /**
-* description: The space between the bottom edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
- legend in top position).
+* description: The space between the bottom edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingbottom/ : Spacing bottom set to 100.
 */
 @property(nonatomic, readwrite) NSNumber *spacingBottom;
 /**
-* description: The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
- legend in top position).
+* description: The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingright-100/ : Spacing set to 100,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingright-legend/ : legend in right position with default spacing
 */
@@ -246,8 +240,7 @@ This can be prevented by setting alignTicks to false. If the grid lines look mes
 */
 @property(nonatomic, readwrite) NSString *className;
 /**
-* description: The space between the left edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
- legend in top position).
+* description: The space between the left edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingleft/ : Spacing left set to 100
 */
 @property(nonatomic, readwrite) NSNumber *spacingLeft;
@@ -255,7 +248,7 @@ This can be prevented by setting alignTicks to false. If the grid lines look mes
 * description: Whether to apply a drop shadow to the plot area. Requires that plotBackgroundColor be set. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotshadow/ : Plot shadow
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *plotShadow;
+@property(nonatomic, readwrite) id plotShadow;
 /**
 * description: Decides in what dimensions the user can zoom by dragging the mouse. Can be one of x, y or xy.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-none/ : None by default,
@@ -280,7 +273,7 @@ This can be prevented by setting alignTicks to false. If the grid lines look mes
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/em/ : Styled mode with relative font sizes.
 
 */
-@property(nonatomic, readwrite) NSMutableDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 
 -(NSDictionary *)getParams;
 

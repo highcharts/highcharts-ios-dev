@@ -18,12 +18,12 @@ Highcharts.setOptions({
 * description: Short week days, starting Sunday. If not specified, Highcharts uses the first three letters of the lang.weekdays option.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/ : Finnish two-letter abbreviations.
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *shortWeekdays;
+@property(nonatomic, readwrite) NSArray<NSString *> *shortWeekdays;
 /**
 * description: An array containing the months names. Corresponds to the 
  %B format in Highcharts.dateFormat().
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *months;
+@property(nonatomic, readwrite) NSArray<NSString *> *months;
 /**
 * description: The text for the label appearing when a chart is zoomed.
 */
@@ -44,7 +44,7 @@ Highcharts.setOptions({
 /**
 * description: An array containing the weekday names.		 
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *weekdays;
+@property(nonatomic, readwrite) NSArray<NSString *> *weekdays;
 /**
 * description: Exporting module only. The text for the menu item to print the chart.
 */
@@ -57,7 +57,7 @@ Highcharts.setOptions({
 * description: http://en.wikipedia.org/wiki/Metric_prefix : Metric prefixes used to shorten high numbers in axis labels. Replacing any of the positions with null causes the full number to be written. Setting numericSymbols to null disables shortening altogether.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/ : Replacing the symbols with text
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *numericSymbols;
+@property(nonatomic, readwrite) NSArray<NSString *> *numericSymbols;
 /**
 * description: The tooltip title for the label appearing when a chart is zoomed.
 */
@@ -73,7 +73,7 @@ Highcharts.setOptions({
 /**
 * description: An array containing the months names in abbreviated form. Corresponds to the  %b format in Highcharts.dateFormat(). 
 */
-@property(nonatomic, readwrite) NSMutableArray<NSString *> *shortMonths;
+@property(nonatomic, readwrite) NSArray<NSString *> *shortMonths;
 /**
 * description: Exporting module only. The text for the SVG download menu item.
 */

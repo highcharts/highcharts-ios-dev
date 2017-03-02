@@ -31,7 +31,7 @@
 	lineWidth is specified in plotOptions.series, an individual
 	lineWidth can be specified for each series.
 */
-@property(nonatomic, readwrite) NSMutableArray<HISeries *> *series;
+@property(nonatomic, readwrite) NSArray<HISeries *> *series;
 
 /**
 * description: The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the http://www.highcharts.com/docs/working-with-data/data-module : tutorial article on the Data module.
@@ -53,7 +53,7 @@ Please note that the default way of adding data in Highcharts, without the need 
 See the Axis object for programmatic
 	access to the axis.
 */
-@property(nonatomic, readwrite) NSMutableArray<HIYAxis *> *yAxis;
+@property(nonatomic, readwrite) NSArray<HIYAxis *> *yAxis;
 
 /**
 * description: The legend is a box containing a symbol and name for each series item or point item in the chart. Each series (or points in case of pie charts) is represented by a symbol and its name in the legend.
@@ -123,7 +123,7 @@ Configuration options for the series are given in three levels. Options
 See the Axis object for programmatic
 	access to the axis.
 */
-@property(nonatomic, readwrite) NSMutableArray<HIXAxis *> *xAxis;
+@property(nonatomic, readwrite) NSArray<HIXAxis *> *xAxis;
 
 /**
 * description: The Z axis or depth axis for 3D plots.
@@ -161,7 +161,7 @@ colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE',
    '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/ : Assign a global color theme
 */
-@property(nonatomic, readwrite) NSMutableArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 
 /**
 * description: A collection of options for buttons and menus appearing in the exporting module.
