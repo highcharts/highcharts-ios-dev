@@ -23,7 +23,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    _pickerData = @[@"Pie", @"Scatter", @"Polar", @"Area", @"Line", @"Bar", @"Column", @"Bubble", @"Funnel", @"Box plot", @"Waterfall", @"Error bar", @"Spline"];
+    _pickerData = @[@"Pie", @"Scatter", @"Polar", @"Area", @"Line", @"Bar", @"Column", @"Bubble", @"Funnel", @"Box plot", @"Waterfall", @"Error bar", @"Spline",@"Areaspline",@"Arearange",@"Columnrange",@"Gauge Solid",@"Combination",@"3D Column",@"3D Column Nullable",@"3D Column Grouped",@"3D Pie",@"3D Pie Donut",@"3D Scatter",@"Area Inverted",@"Area Missing",@"Area Negative",@"Area Stacked",@"Area Stacked Percent",@"Area Range",@"Area Range Line",@"Area Spline",@"Bar Stacked",@"Column Drilldown",@"Column Negative",@"Column Placement",@"Column Rotated Labels",@"Column Stacked",@"Column Stacked & Grouped",@"Column Stacked Percent",@"Combination Dual Axes",@"Combination Multi Axes",@"Combination Regression",@"Gauge Dual",@"Gauge Speedometer",@"Gauge VU-meter",@"Line Labels",@"Line Log Axis",@"Line Time Series",@"Pie Donut",@"Pie Drilldown", @"Pie Gradient", @"Pie Legend", @"Pie Monochrome",@"Pie Semi-circle", @"Polar Spider",@"Polygon", @"Spline Irregular Time",@"Spline Plot Bands", @"Spline Symbols" ];
     self.chartTypePicker.dataSource = self;
     self.chartTypePicker.delegate = self;
     
@@ -33,17 +33,18 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.myChartView.bounds.origin.x, self.myChartView.bounds.origin.y , self.myChartView.bounds.size.width, 300.0f)];
+    self.chartView.options = [[HIOptions alloc]init];
+    [self.myChartView addSubview:self.chartView];
     
-   // self.chartView.options = [ChartType getChartByType:self.chartType];
 }
 
 -(void)proceedButtonTapped:(UIButton *)sender {
-    for (UIView* subView in self.myChartView.subviews) {
-        [subView removeFromSuperview];
-    }
+
     NSString *yourSelectedTitle = [_pickerData objectAtIndex:[self.chartTypePicker selectedRowInComponent:0]];
+    self.chartView.options = nil;
     self.chartView.options = [ChartType getChartByType: yourSelectedTitle];
-    [self.myChartView addSubview:self.chartView];
+    self.chartView.reload;
+
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

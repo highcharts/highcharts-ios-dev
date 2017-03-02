@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chart types-->
+        <!--HighCharts Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
@@ -26,17 +26,17 @@
                                 <rect key="frame" x="4" y="6" width="367.5" height="591"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdv-82-Rpk">
-                                        <rect key="frame" x="0.0" y="531" width="367.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="551" width="367.5" height="40"/>
                                         <color key="backgroundColor" red="0.27450980392156865" green="0.74117647058823533" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="1eA-yG-sTv"/>
+                                            <constraint firstAttribute="height" constant="40" id="1eA-yG-sTv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Draw"/>
                                     </button>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-6d-nZh">
-                                        <rect key="frame" x="0.0" y="302" width="368" height="221"/>
+                                        <rect key="frame" x="0.0" y="302" width="368" height="241"/>
                                     </pickerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62S-yV-nRr">
                                         <rect key="frame" x="0.0" y="0.0" width="367.5" height="300"/>
@@ -79,7 +79,7 @@
                             <constraint firstItem="IeI-Pm-Gh1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.98" id="ONU-4Q-zL6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Chart types" id="TQy-N9-lSw"/>
+                    <navigationItem key="navigationItem" title="HighCharts Demo" id="TQy-N9-lSw"/>
                     <connections>
                         <outlet property="chartTypePicker" destination="IkU-6d-nZh" id="VfP-mh-Prl"/>
                         <outlet property="myChartView" destination="62S-yV-nRr" id="okJ-1V-MY4"/>
