@@ -97,28 +97,28 @@ def getType(x):
         "Color": 'HIColor',
         "String": 'NSString',
         "Object": 'id',
-        "Function": 'NSString /* Function? */',
-        "Array<Number>": 'NSMutableArray<NSNumber *>',
-        "Array<Object>": 'NSMutableArray',
-        "Array": 'NSMutableArray',
-        "Array<String>": 'NSMutableArray<NSString *>',
-        "Boolean|Object": 'NSNumber /* Bool */',
-        "String|Number": 'NSString',
-        "Array<Array>": 'NSMutableArray<NSMutableArray *>',
-        "CSSObject": 'NSMutableDictionary /* <NSString, NSString> */',
-        "Array<Color>": 'NSMutableArray<HIColor *>',
-        "Array<Object|Array|Number>": 'NSMutableArray /* <HIData, NSNumber, NSArray> */',
-        "Array<String|Number>": 'NSMutableArray<NSString *>',
-        "Array<Object|Number>": 'NSMutableArray',
-        "Array<Object|Array>": 'NSMutableArray',
-        "Number|String": 'NSString',
+        "Function": 'NSString /* Function */',
+        "Array<Number>": 'NSArray<NSNumber *>',
+        "Array<Object>": 'NSArray',
+        "Array": 'NSArray',
+        "Array<String>": 'NSArray<NSString *>',
+        "Boolean|Object": 'id /* Bool, Object */',
+        "String|Number": 'id /* NSString, NSNumber */',
+        "Array<Array>": 'NSArray<NSArray *>',
+        "CSSObject": 'NSDictionary /* <NSString, NSString> */',
+        "Array<Color>": 'NSArray<HIColor *>',
+        "Array<Object|Array|Number>": 'NSArray /* <Data, NSNumber, NSArray> */',
+        "Array<String|Number>": 'NSArray<id> /* <NSString, NSNumber> */',
+        "Array<Object|Number>": 'NSArray /* <id, NSNumber> */',
+        "Array<Object|Array>": 'NSArray',
+        "Number|String": 'id /* NSString, NSNumber */',
         "String|HTMLElement": 'NSString',
-        "Array<Array<Mixed>>": 'NSMutableArray<NSMutableArray *>',
-        "String|Object": 'NSString',
+        "Array<Array<Mixed>>": 'NSArray<NSArray *>',
+        "String|Object": 'id /* NSString, id */',
         "Mixed": 'id',
         "Number|Boolean": 'NSNumber',
         "": 'id',
-        "plotOptions.series.states": 'NSMutableArray'
+        "plotOptions.series.states": 'NSArray'
     }[str(x)]
 
 
@@ -394,15 +394,15 @@ def formatToH(name, source):
         if field.comment:
             htext += "{0}".format(field.comment)
         if field.dataType:
-            if field.dataType == "Mixed":
+            if "id" in str(getType(field.dataType)) and "NSArray" not in str(getType(field.dataType)):
                 htext += "@property(nonatomic, readwrite) id {0};\n".format(getLast(field.name))
-            elif "NSMutableArray" in str(getType(field.dataType)) and structure[field.name].properties:
+            elif "NSArray" in str(getType(field.dataType)) and structure[field.name].properties:
                 htext += "@property(nonatomic, readwrite) {0} <{1} *> *{2};\n".format(getType(field.dataType),
                                                                                       "HI" + upperfirst(
                                                                                             createName(field.name)),
                                                                                       getLast(field.name))
                 imports += "#import \"{0}.h\"\n".format("HI" + upperfirst(createName(field.name)))
-            elif "NSMutableArray" in str(getType(field.dataType)):
+            elif "NSArray" in str(getType(field.dataType)):
                 htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.dataType), getLast(field.name))
             elif field.dataType == "Object":
                 if structure[field.name].properties:
@@ -461,14 +461,14 @@ def formatToM(name, source):
             if structure[field.name].dataType:
                 if getType(structure[field.name].dataType) == 'HIColor':
                     getParams += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name), getLast(field.name))
-                elif getType(structure[field.name].dataType) == 'NSMutableArray<HIColor *>':
+                elif getType(structure[field.name].dataType) == 'NSArray<HIColor *>':
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     getParams += "\t\tfor (HIColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
                     getParams += "\t\t\t[array addObject:[obj getString]];\n".format(
                         getLast(field.name))
                     getParams += "\t\t}\n"
                     getParams += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
-                elif 'NSMutableArray' in str(getType(structure[field.name].dataType)):
+                elif 'NSArray' in str(getType(structure[field.name].dataType)):
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     getParams += "\t\tfor (id obj in self.{0})".format(getLast(field.name)) + " {\n"
                     getParams += "\t\t\tif ([obj isKindOfClass: [HIChartsJSONSerializable class]])".format(getLast(field.name)) + " {\n"
@@ -505,12 +505,12 @@ def createOptionsFiles():
             if upperfirst((createName(field.name))) in files:
                 imports += "#import \"HI{0}.h\"\n".format(upperfirst(createName(field.name)))
             if structure[field.name].dataType:
-                if getType(field.dataType) == 'id':
+                if "in" in str(getType(field.dataType)) and "NSArray" not in str(getType(field.dataType)):
                     if structure[field.name].properties:
                         htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format("HI" + upperfirst(createName(field.name)), getLast(field.name))
                     else:
                         htext += "@property(nonatomic, readwrite) id {0};\n\n".format(getLast(field.name))
-                elif "NSMutableArray" in str(getType(field.dataType)) and field.properties:
+                elif "NSArray" in str(getType(field.dataType)) and field.properties:
                     htext += "@property(nonatomic, readwrite) {0}<{1} *> *{2};\n\n".format(getType(field.dataType),
                                                                                            "HI" + upperfirst(createName(field.name)),
                                                                                            getLast(field.name))
@@ -529,7 +529,7 @@ def createOptionsFiles():
                 if getType(field.dataType) == 'HIColor':
                     mtext += "\t\tparams[@\"{0}\"] = [self.{1} getString];\n".format(getLast(field.name),
                                                                                          getLast(field.name))
-                elif getType(field.dataType) == 'NSMutableArray':
+                elif "NSArray" in str(getType(field.dataType)):
                     mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     mtext += "\t\tfor (id obj in self.{0})".format(getLast(field.name)) + " {\n"
                     mtext += "\t\t\tif ([obj isKindOfClass: [HIChartsJSONSerializable class]])".format(
