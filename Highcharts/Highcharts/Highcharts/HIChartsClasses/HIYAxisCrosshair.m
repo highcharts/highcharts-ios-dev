@@ -16,7 +16,7 @@
 		params[@"width"] = self.width;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;

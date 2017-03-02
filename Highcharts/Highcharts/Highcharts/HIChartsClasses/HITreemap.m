@@ -21,7 +21,7 @@
 		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.name) {
 		params[@"name"] = self.name;
@@ -117,7 +117,7 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
@@ -167,7 +167,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}

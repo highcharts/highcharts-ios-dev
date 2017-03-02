@@ -28,7 +28,7 @@
 		params[@"connectorPadding"] = self.connectorPadding;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
@@ -61,7 +61,7 @@
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -88,7 +88,7 @@
 		params[@"crop"] = self.crop;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.connectorWidth) {
 		params[@"connectorWidth"] = self.connectorWidth;

@@ -76,7 +76,7 @@
 		params[@"animationLimit"] = self.animationLimit;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.dataLabels) {
 		params[@"dataLabels"] = [self.dataLabels getParams];
@@ -118,7 +118,7 @@
 		params[@"zones"] = array;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;

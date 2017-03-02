@@ -45,7 +45,7 @@
 		params[@"cursor"] = self.cursor;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.xAxis) {
 		params[@"xAxis"] = self.xAxis;
@@ -60,7 +60,7 @@
 		params[@"tooltip"] = [self.tooltip getParams];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;
@@ -78,7 +78,7 @@
 		params[@"selected"] = self.selected;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.data) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -117,7 +117,7 @@
 		params[@"yAxis"] = self.yAxis;
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getString];
+		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
@@ -162,7 +162,7 @@
 		params[@"name"] = self.name;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.showCheckbox) {
 		params[@"showCheckbox"] = self.showCheckbox;

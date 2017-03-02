@@ -31,7 +31,7 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getString];
+		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
@@ -40,7 +40,7 @@
 		params[@"cropThreshold"] = self.cropThreshold;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
@@ -76,7 +76,7 @@
 		params[@"keys"] = array;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
@@ -88,7 +88,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
@@ -100,7 +100,7 @@
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;

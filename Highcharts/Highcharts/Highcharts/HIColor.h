@@ -11,6 +11,7 @@
 @interface HIColor : NSObject
 
 @property(nonatomic, readwrite) NSString *string;
+@property(nonatomic, readwrite) NSDictionary *dictionary;
 /** 
  * Standard hex color value, for example FFFFFF for black and 000000 for white
  */
@@ -27,7 +28,15 @@
  * Standard color names: red, green, black etc.
  */
 -(instancetype)initWithName:(NSString *)name;
+/**
+ * CSS-style linear gradient
+ */
+-(instancetype)initWithLinearGradient:(NSDictionary *)gradient stops:(NSArray *)stops;
+/**
+ * CSS-style radial gradient
+ */
+-(instancetype)initWithRadialGradient:(NSDictionary *)gradient stops:(NSArray *)stops;
 
--(NSString *)getString;
+-(id)getData;
 
 @end

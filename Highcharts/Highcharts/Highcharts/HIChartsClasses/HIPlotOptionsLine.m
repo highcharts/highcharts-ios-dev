@@ -28,7 +28,7 @@
 		params[@"threshold"] = self.threshold;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
@@ -109,7 +109,7 @@
 		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;

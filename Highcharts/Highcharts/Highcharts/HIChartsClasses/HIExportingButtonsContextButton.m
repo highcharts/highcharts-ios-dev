@@ -40,13 +40,13 @@
 		params[@"symbolX"] = self.symbolX;
 	}
 	if (self.symbolFill) {
-		params[@"symbolFill"] = [self.symbolFill getString];
+		params[@"symbolFill"] = [self.symbolFill getData];
 	}
 	if (self.symbol) {
 		params[@"symbol"] = self.symbol;
 	}
 	if (self.symbolStroke) {
-		params[@"symbolStroke"] = [self.symbolStroke getString];
+		params[@"symbolStroke"] = [self.symbolStroke getData];
 	}
 	if (self.symbolSize) {
 		params[@"symbolSize"] = self.symbolSize;

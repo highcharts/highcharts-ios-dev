@@ -22,7 +22,7 @@
 		params[@"rearLength"] = self.rearLength;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.topWidth) {
 		params[@"topWidth"] = self.topWidth;
@@ -31,7 +31,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	return params;
 }

@@ -10,7 +10,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.overflow) {
 		params[@"overflow"] = self.overflow;
@@ -19,7 +19,7 @@
 		params[@"padding"] = self.padding;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.defer) {
 		params[@"defer"] = self.defer;
@@ -34,7 +34,7 @@
 		params[@"shape"] = self.shape;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.xHigh) {
 		params[@"xHigh"] = self.xHigh;

@@ -82,7 +82,7 @@
 		params[@"slicedOffset"] = self.slicedOffset;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
@@ -105,7 +105,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}

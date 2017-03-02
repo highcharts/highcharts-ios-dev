@@ -25,7 +25,7 @@
 		params[@"zMax"] = self.zMax;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
@@ -148,7 +148,7 @@
 		params[@"showInLegend"] = self.showInLegend;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;

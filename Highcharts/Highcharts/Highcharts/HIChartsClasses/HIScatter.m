@@ -63,7 +63,7 @@
 		params[@"showInLegend"] = self.showInLegend;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.id) {
 		params[@"id"] = self.id;
@@ -78,7 +78,7 @@
 		params[@"dashStyle"] = self.dashStyle;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.yAxis) {
 		params[@"yAxis"] = self.yAxis;

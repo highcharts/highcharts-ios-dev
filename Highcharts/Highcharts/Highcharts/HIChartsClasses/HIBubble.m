@@ -99,7 +99,7 @@
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
@@ -162,7 +162,7 @@
 		params[@"events"] = [self.events getParams];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.name) {
 		params[@"name"] = self.name;

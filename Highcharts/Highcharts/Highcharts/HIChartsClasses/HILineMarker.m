@@ -16,7 +16,7 @@
 		params[@"states"] = [self.states getParams];
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.symbol) {
 		params[@"symbol"] = self.symbol;
@@ -28,7 +28,7 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.height) {
 		params[@"height"] = self.height;

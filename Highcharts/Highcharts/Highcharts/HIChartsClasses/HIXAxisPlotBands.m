@@ -10,7 +10,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.events) {
 		params[@"events"] = self.events;
@@ -25,7 +25,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;

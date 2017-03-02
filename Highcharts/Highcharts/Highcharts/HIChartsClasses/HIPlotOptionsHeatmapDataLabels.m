@@ -25,7 +25,7 @@
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
@@ -37,7 +37,7 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -76,7 +76,7 @@
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.overflow) {
 		params[@"overflow"] = self.overflow;

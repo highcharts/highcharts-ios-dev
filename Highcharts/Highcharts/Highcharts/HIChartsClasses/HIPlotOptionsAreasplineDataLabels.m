@@ -28,7 +28,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.defer) {
 		params[@"defer"] = self.defer;
@@ -52,7 +52,7 @@
 		params[@"shape"] = self.shape;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
@@ -67,7 +67,7 @@
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;

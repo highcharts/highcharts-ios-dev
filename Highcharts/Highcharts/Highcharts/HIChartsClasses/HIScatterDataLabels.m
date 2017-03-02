@@ -16,13 +16,13 @@
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.format) {
 		params[@"format"] = self.format;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
@@ -49,7 +49,7 @@
 		params[@"align"] = self.align;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.style) {
 		params[@"style"] = self.style;

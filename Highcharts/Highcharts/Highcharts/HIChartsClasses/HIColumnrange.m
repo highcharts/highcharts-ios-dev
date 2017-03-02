@@ -35,7 +35,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -49,7 +49,7 @@
 		params[@"selected"] = self.selected;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
@@ -112,7 +112,7 @@
 		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
@@ -175,7 +175,7 @@
 		params[@"cropThreshold"] = self.cropThreshold;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;

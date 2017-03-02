@@ -34,7 +34,7 @@
 		params[@"crop"] = self.crop;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -43,13 +43,13 @@
 		params[@"y"] = self.y;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.overflow) {
 		params[@"overflow"] = self.overflow;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;

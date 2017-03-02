@@ -64,16 +64,16 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.plotBackgroundColor) {
-		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getString];
+		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getData];
 	}
 	if (self.plotBorderColor) {
-		params[@"plotBorderColor"] = [self.plotBorderColor getString];
+		params[@"plotBorderColor"] = [self.plotBorderColor getData];
 	}
 	if (self.panning) {
 		params[@"panning"] = self.panning;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
@@ -112,7 +112,7 @@
 		params[@"spacing"] = array;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
@@ -157,7 +157,7 @@
 		params[@"resetZoomButton"] = [self.resetZoomButton getParams];
 	}
 	if (self.selectionMarkerFill) {
-		params[@"selectionMarkerFill"] = [self.selectionMarkerFill getString];
+		params[@"selectionMarkerFill"] = [self.selectionMarkerFill getData];
 	}
 	if (self.style) {
 		params[@"style"] = self.style;

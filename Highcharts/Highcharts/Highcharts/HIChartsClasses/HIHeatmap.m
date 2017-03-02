@@ -123,7 +123,7 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
@@ -131,7 +131,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -160,7 +160,7 @@
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;

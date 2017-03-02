@@ -13,7 +13,7 @@
 		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.tickColor) {
-		params[@"tickColor"] = [self.tickColor getString];
+		params[@"tickColor"] = [self.tickColor getData];
 	}
 	if (self.tickPositioner) {
 		params[@"tickPositioner"] = self.tickPositioner;
@@ -34,7 +34,7 @@
 		params[@"visible"] = self.visible;
 	}
 	if (self.gridLineColor) {
-		params[@"gridLineColor"] = [self.gridLineColor getString];
+		params[@"gridLineColor"] = [self.gridLineColor getData];
 	}
 	if (self.floor) {
 		params[@"floor"] = self.floor;
@@ -163,7 +163,7 @@
 		params[@"maxZoom"] = self.maxZoom;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.minTickInterval) {
 		params[@"minTickInterval"] = self.minTickInterval;
@@ -199,13 +199,13 @@
 		params[@"definition"] = self.definition;
 	}
 	if (self.minorTickColor) {
-		params[@"minorTickColor"] = [self.minorTickColor getString];
+		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
 	if (self.softMin) {
 		params[@"softMin"] = self.softMin;
 	}
 	if (self.minorGridLineColor) {
-		params[@"minorGridLineColor"] = [self.minorGridLineColor getString];
+		params[@"minorGridLineColor"] = [self.minorGridLineColor getData];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -220,7 +220,7 @@
 		params[@"minorGridLineWidth"] = self.minorGridLineWidth;
 	}
 	if (self.alternateGridColor) {
-		params[@"alternateGridColor"] = [self.alternateGridColor getString];
+		params[@"alternateGridColor"] = [self.alternateGridColor getData];
 	}
 	if (self.title) {
 		params[@"title"] = [self.title getParams];

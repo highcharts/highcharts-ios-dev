@@ -46,7 +46,7 @@
 		params[@"value"] = self.value;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.parent) {
 		params[@"parent"] = self.parent;

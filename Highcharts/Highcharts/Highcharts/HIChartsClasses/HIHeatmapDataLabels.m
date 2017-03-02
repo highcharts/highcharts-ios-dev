@@ -40,7 +40,7 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
@@ -79,10 +79,10 @@
 		params[@"rotation"] = self.rotation;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	return params;
 }

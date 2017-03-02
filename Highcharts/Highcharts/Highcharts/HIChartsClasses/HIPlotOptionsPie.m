@@ -82,7 +82,7 @@
 		params[@"animation"] = self.animation;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -111,7 +111,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}

@@ -52,7 +52,7 @@
 		params[@"showCheckbox"] = self.showCheckbox;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.dataLabels) {
 		params[@"dataLabels"] = [self.dataLabels getParams];
@@ -70,7 +70,7 @@
 		params[@"cursor"] = self.cursor;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;

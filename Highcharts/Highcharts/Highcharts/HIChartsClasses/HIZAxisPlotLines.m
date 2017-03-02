@@ -22,7 +22,7 @@
 		params[@"width"] = self.width;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.id) {
 		params[@"id"] = self.id;

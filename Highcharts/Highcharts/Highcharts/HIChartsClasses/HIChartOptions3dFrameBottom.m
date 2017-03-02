@@ -13,7 +13,7 @@
 		params[@"size"] = self.size;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	return params;
 }

@@ -120,7 +120,7 @@
 		params[@"linecap"] = self.linecap;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
@@ -147,7 +147,7 @@
 		params[@"linkedTo"] = self.linkedTo;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];

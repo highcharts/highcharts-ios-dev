@@ -13,7 +13,7 @@
 		params[@"height"] = self.height;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.radius) {
 		params[@"radius"] = self.radius;
@@ -33,7 +33,7 @@
 		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	return params;
 }

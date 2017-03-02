@@ -22,10 +22,10 @@
 		params[@"showInLegend"] = self.showInLegend;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -79,7 +79,7 @@
 		params[@"animationLimit"] = self.animationLimit;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
@@ -154,10 +154,10 @@
 		params[@"stacking"] = self.stacking;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getString];
+		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
 	if (self.allowPointSelect) {
 		params[@"allowPointSelect"] = self.allowPointSelect;

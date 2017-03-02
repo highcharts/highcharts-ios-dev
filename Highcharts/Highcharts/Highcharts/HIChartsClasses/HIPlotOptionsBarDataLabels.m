@@ -13,7 +13,7 @@
 		params[@"rotation"] = self.rotation;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.defer) {
 		params[@"defer"] = self.defer;
@@ -25,7 +25,7 @@
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
@@ -76,7 +76,7 @@
 		params[@"inside"] = self.inside;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.align) {
 		params[@"align"] = self.align;

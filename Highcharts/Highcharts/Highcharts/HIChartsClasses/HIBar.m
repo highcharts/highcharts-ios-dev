@@ -23,7 +23,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -43,7 +43,7 @@
 		params[@"edgeWidth"] = self.edgeWidth;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
@@ -55,7 +55,7 @@
 		params[@"turboThreshold"] = self.turboThreshold;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -124,7 +124,7 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.stack) {
 		params[@"stack"] = self.stack;
@@ -157,7 +157,7 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.name) {
 		params[@"name"] = self.name;

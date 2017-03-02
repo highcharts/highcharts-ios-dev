@@ -19,7 +19,7 @@
 		params[@"dataLabels"] = self.dataLabels;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];

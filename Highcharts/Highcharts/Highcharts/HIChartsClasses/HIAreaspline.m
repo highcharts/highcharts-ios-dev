@@ -48,7 +48,7 @@
 		params[@"selected"] = self.selected;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.legendIndex) {
 		params[@"legendIndex"] = self.legendIndex;
@@ -87,7 +87,7 @@
 		params[@"linecap"] = self.linecap;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
@@ -132,7 +132,7 @@
 		params[@"animation"] = self.animation;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
@@ -147,7 +147,7 @@
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getString];
+		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
@@ -207,7 +207,7 @@
 		params[@"keys"] = array;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;

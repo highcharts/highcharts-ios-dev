@@ -15,7 +15,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.type) {
 		params[@"type"] = self.type;
@@ -57,7 +57,7 @@
 		params[@"point"] = [self.point getParams];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;

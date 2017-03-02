@@ -91,13 +91,13 @@
 		params[@"itemStyle"] = self.itemStyle;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.itemHoverStyle) {
 		params[@"itemHoverStyle"] = self.itemHoverStyle;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.symbolRadius) {
 		params[@"symbolRadius"] = self.symbolRadius;

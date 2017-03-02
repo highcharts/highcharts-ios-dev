@@ -18,13 +18,13 @@
 	if (self.states) {
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.symbol) {
 		params[@"symbol"] = self.symbol;

@@ -16,13 +16,13 @@
 		params[@"dashStyle"] = self.dashStyle;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.value) {
 		params[@"value"] = self.value;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	return params;
 }

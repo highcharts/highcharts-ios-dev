@@ -34,7 +34,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.id) {
 		params[@"id"] = self.id;

@@ -76,7 +76,7 @@
 		params[@"plotLines"] = array;
 	}
 	if (self.minorTickColor) {
-		params[@"minorTickColor"] = [self.minorTickColor getString];
+		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
 	if (self.startOnTick) {
 		params[@"startOnTick"] = self.startOnTick;
@@ -88,7 +88,7 @@
 		params[@"showLastLabel"] = self.showLastLabel;
 	}
 	if (self.gridLineColor) {
-		params[@"gridLineColor"] = [self.gridLineColor getString];
+		params[@"gridLineColor"] = [self.gridLineColor getData];
 	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
@@ -133,13 +133,13 @@
 		params[@"tickPositions"] = array;
 	}
 	if (self.tickColor) {
-		params[@"tickColor"] = [self.tickColor getString];
+		params[@"tickColor"] = [self.tickColor getData];
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
 	if (self.alternateGridColor) {
-		params[@"alternateGridColor"] = [self.alternateGridColor getString];
+		params[@"alternateGridColor"] = [self.alternateGridColor getData];
 	}
 	if (self.units) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -157,7 +157,7 @@
 		params[@"min"] = self.min;
 	}
 	if (self.minorGridLineColor) {
-		params[@"minorGridLineColor"] = [self.minorGridLineColor getString];
+		params[@"minorGridLineColor"] = [self.minorGridLineColor getData];
 	}
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
@@ -217,7 +217,7 @@
 		params[@"endOnTick"] = self.endOnTick;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.maxZoom) {
 		params[@"maxZoom"] = self.maxZoom;

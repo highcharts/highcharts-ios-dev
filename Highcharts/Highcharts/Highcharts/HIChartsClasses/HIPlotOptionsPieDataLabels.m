@@ -37,7 +37,7 @@
 		params[@"connectorWidth"] = self.connectorWidth;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
@@ -79,10 +79,10 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.crop) {
 		params[@"crop"] = self.crop;

@@ -52,7 +52,7 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.shape) {
 		params[@"shape"] = self.shape;
@@ -82,7 +82,7 @@
 		params[@"positioner"] = self.positioner;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.style) {
 		params[@"style"] = self.style;

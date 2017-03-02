@@ -55,7 +55,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
@@ -64,7 +64,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -150,7 +150,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -167,7 +167,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.showCheckbox) {
 		params[@"showCheckbox"] = self.showCheckbox;
@@ -188,7 +188,7 @@
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	return params;
 }

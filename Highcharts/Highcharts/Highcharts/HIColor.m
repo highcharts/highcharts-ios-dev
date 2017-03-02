@@ -56,8 +56,33 @@
     }
 }
 
--(NSString *)getString {
-    return self.string;
+-(instancetype)initWithLinearGradient:(NSDictionary *)gradient stops:(NSArray *)stops {
+    if (self = [super init]) {
+        self.dictionary = [NSDictionary dictionaryWithObjectsAndKeys:gradient, @"linearGradient", stops, @"stops", nil];
+        return self;
+    }
+    else {
+        return nil;
+    }
+}
+
+-(instancetype)initWithRadialGradient:(NSDictionary *)gradient stops:(NSArray *)stops {
+    if (self = [super init]) {
+        self.dictionary = [NSDictionary dictionaryWithObjectsAndKeys:gradient, @"radialGradient", stops, @"stops", nil];
+        return self;
+    }
+    else {
+        return nil;
+    }
+}
+
+-(id)getData {
+    if (self.dictionary.count > 0) {
+        return self.dictionary;
+    }
+    else {
+        return self.string;
+    }
 }
 
 @end

@@ -15,7 +15,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -23,7 +23,7 @@
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.neckWidth) {
 		params[@"neckWidth"] = self.neckWidth;

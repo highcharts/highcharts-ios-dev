@@ -37,7 +37,7 @@
 		params[@"labelrank"] = self.labelrank;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.y) {
 		params[@"y"] = self.y;

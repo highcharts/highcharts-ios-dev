@@ -52,7 +52,7 @@
 		params[@"yHigh"] = self.yHigh;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.formatter) {
 		params[@"formatter"] = self.formatter;
@@ -73,13 +73,13 @@
 		params[@"shape"] = self.shape;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.format) {
 		params[@"format"] = self.format;

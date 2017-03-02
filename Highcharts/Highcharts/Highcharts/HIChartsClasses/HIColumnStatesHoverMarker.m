@@ -24,13 +24,13 @@
 		params[@"radius"] = self.radius;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.symbol) {
 		params[@"symbol"] = self.symbol;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;

@@ -45,7 +45,7 @@
 		params[@"stacking"] = self.stacking;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -72,7 +72,7 @@
 		params[@"stack"] = self.stack;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
@@ -96,7 +96,7 @@
 		params[@"allowPointSelect"] = self.allowPointSelect;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;
@@ -167,7 +167,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -175,7 +175,7 @@
 		params[@"name"] = self.name;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.dataLabels) {
 		params[@"dataLabels"] = [self.dataLabels getParams];

@@ -45,10 +45,10 @@
 		params[@"cursor"] = self.cursor;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
@@ -78,7 +78,7 @@
 		params[@"threshold"] = self.threshold;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
@@ -123,7 +123,7 @@
 		params[@"connectNulls"] = self.connectNulls;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
@@ -186,7 +186,7 @@
 		params[@"data"] = array;
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getString];
+		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
 	if (self.zones) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];

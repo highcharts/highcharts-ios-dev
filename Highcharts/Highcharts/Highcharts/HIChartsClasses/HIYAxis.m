@@ -46,7 +46,7 @@
 		params[@"tickAmount"] = self.tickAmount;
 	}
 	if (self.gridLineColor) {
-		params[@"gridLineColor"] = [self.gridLineColor getString];
+		params[@"gridLineColor"] = [self.gridLineColor getData];
 	}
 	if (self.units) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -112,7 +112,7 @@
 		params[@"tickPositioner"] = self.tickPositioner;
 	}
 	if (self.alternateGridColor) {
-		params[@"alternateGridColor"] = [self.alternateGridColor getString];
+		params[@"alternateGridColor"] = [self.alternateGridColor getData];
 	}
 	if (self.stackLabels) {
 		params[@"stackLabels"] = [self.stackLabels getParams];
@@ -145,13 +145,13 @@
 		params[@"minorTickLength"] = self.minorTickLength;
 	}
 	if (self.minColor) {
-		params[@"minColor"] = [self.minColor getString];
+		params[@"minColor"] = [self.minColor getData];
 	}
 	if (self.gridLineDashStyle) {
 		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
 	}
 	if (self.minorGridLineColor) {
-		params[@"minorGridLineColor"] = [self.minorGridLineColor getString];
+		params[@"minorGridLineColor"] = [self.minorGridLineColor getData];
 	}
 	if (self.minorGridLineWidth) {
 		params[@"minorGridLineWidth"] = self.minorGridLineWidth;
@@ -169,7 +169,7 @@
 		params[@"startOfWeek"] = self.startOfWeek;
 	}
 	if (self.tickColor) {
-		params[@"tickColor"] = [self.tickColor getString];
+		params[@"tickColor"] = [self.tickColor getData];
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -190,7 +190,7 @@
 		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
 	}
 	if (self.minorTickColor) {
-		params[@"minorTickColor"] = [self.minorTickColor getString];
+		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
 	if (self.tickPixelInterval) {
 		params[@"tickPixelInterval"] = self.tickPixelInterval;
@@ -214,7 +214,7 @@
 		params[@"endOnTick"] = self.endOnTick;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.showFirstLabel) {
 		params[@"showFirstLabel"] = self.showFirstLabel;
@@ -244,7 +244,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.maxColor) {
-		params[@"maxColor"] = [self.maxColor getString];
+		params[@"maxColor"] = [self.maxColor getData];
 	}
 	if (self.minPadding) {
 		params[@"minPadding"] = self.minPadding;

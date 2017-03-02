@@ -16,7 +16,7 @@
 		params[@"radius"] = self.radius;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
@@ -25,7 +25,7 @@
 		params[@"width"] = self.width;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.states) {
 	}

@@ -16,7 +16,7 @@
 		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.levels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -109,7 +109,7 @@
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
@@ -144,7 +144,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}

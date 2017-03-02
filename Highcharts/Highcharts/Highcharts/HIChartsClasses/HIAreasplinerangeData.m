@@ -28,7 +28,7 @@
 		params[@"drilldown"] = self.drilldown;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.x) {
 		params[@"x"] = self.x;

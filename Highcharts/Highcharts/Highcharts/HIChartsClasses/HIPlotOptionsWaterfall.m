@@ -19,7 +19,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
@@ -109,7 +109,7 @@
 		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
@@ -136,7 +136,7 @@
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.zones) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -160,12 +160,12 @@
 		params[@"animation"] = self.animation;
 	}
 	if (self.upColor) {
-		params[@"upColor"] = [self.upColor getString];
+		params[@"upColor"] = [self.upColor getData];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -179,7 +179,7 @@
 		params[@"pointWidth"] = self.pointWidth;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;

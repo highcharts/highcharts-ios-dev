@@ -65,7 +65,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -73,7 +73,7 @@
 		params[@"index"] = self.index;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
@@ -85,7 +85,7 @@
 		params[@"edgeWidth"] = self.edgeWidth;
 	}
 	if (self.stemColor) {
-		params[@"stemColor"] = [self.stemColor getString];
+		params[@"stemColor"] = [self.stemColor getData];
 	}
 	if (self.stemDashStyle) {
 		params[@"stemDashStyle"] = self.stemDashStyle;
@@ -100,16 +100,16 @@
 		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.whiskerColor) {
-		params[@"whiskerColor"] = [self.whiskerColor getString];
+		params[@"whiskerColor"] = [self.whiskerColor getData];
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.whiskerWidth) {
 		params[@"whiskerWidth"] = self.whiskerWidth;

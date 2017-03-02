@@ -27,7 +27,7 @@
 		params[@"cursor"] = self.cursor;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.yAxis) {
 		params[@"yAxis"] = self.yAxis;
@@ -48,7 +48,7 @@
 		params[@"id"] = self.id;
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getString];
+		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
@@ -102,7 +102,7 @@
 		params[@"linkedTo"] = self.linkedTo;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
@@ -129,7 +129,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.name) {
 		params[@"name"] = self.name;
@@ -195,7 +195,7 @@
 		params[@"showInLegend"] = self.showInLegend;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	return params;
 }

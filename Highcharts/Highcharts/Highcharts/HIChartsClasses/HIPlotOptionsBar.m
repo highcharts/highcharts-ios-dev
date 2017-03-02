@@ -25,7 +25,7 @@
 		params[@"pointWidth"] = self.pointWidth;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
@@ -61,7 +61,7 @@
 		params[@"linkedTo"] = self.linkedTo;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
@@ -85,7 +85,7 @@
 		params[@"selected"] = self.selected;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
@@ -156,7 +156,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -173,7 +173,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;

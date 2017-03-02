@@ -10,7 +10,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.whiskerColor) {
-		params[@"whiskerColor"] = [self.whiskerColor getString];
+		params[@"whiskerColor"] = [self.whiskerColor getData];
 	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
@@ -112,18 +112,18 @@
 		params[@"definition"] = self.definition;
 	}
 	if (self.medianColor) {
-		params[@"medianColor"] = [self.medianColor getString];
+		params[@"medianColor"] = [self.medianColor getData];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -137,7 +137,7 @@
 		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -176,10 +176,10 @@
 		params[@"groupPadding"] = self.groupPadding;
 	}
 	if (self.stemColor) {
-		params[@"stemColor"] = [self.stemColor getString];
+		params[@"stemColor"] = [self.stemColor getData];
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;

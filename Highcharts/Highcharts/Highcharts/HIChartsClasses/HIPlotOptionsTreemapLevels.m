@@ -25,13 +25,13 @@
 		params[@"layoutAlgorithm"] = self.layoutAlgorithm;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.dataLabels) {
 		params[@"dataLabels"] = self.dataLabels;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	return params;
 }

@@ -46,7 +46,7 @@
 		params[@"sliced"] = self.sliced;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.labelrank) {
 		params[@"labelrank"] = self.labelrank;

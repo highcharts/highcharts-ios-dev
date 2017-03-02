@@ -19,10 +19,10 @@
 		params[@"className"] = self.className;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.style) {
 		params[@"style"] = self.style;
@@ -82,7 +82,7 @@
 		params[@"format"] = self.format;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.defer) {
 		params[@"defer"] = self.defer;

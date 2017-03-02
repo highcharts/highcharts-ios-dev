@@ -16,7 +16,7 @@
 		params[@"pointPlacement"] = self.pointPlacement;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
@@ -25,7 +25,7 @@
 		params[@"point"] = [self.point getParams];
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getString];
+		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
@@ -34,7 +34,7 @@
 		params[@"animationLimit"] = self.animationLimit;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
@@ -124,7 +124,7 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -151,7 +151,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;

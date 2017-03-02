@@ -34,7 +34,7 @@
 		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -64,7 +64,7 @@
 		params[@"visible"] = self.visible;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;

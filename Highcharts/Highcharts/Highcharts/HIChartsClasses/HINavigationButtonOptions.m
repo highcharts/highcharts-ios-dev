@@ -31,10 +31,10 @@
 		params[@"symbolStrokeWidth"] = self.symbolStrokeWidth;
 	}
 	if (self.symbolFill) {
-		params[@"symbolFill"] = [self.symbolFill getString];
+		params[@"symbolFill"] = [self.symbolFill getData];
 	}
 	if (self.symbolStroke) {
-		params[@"symbolStroke"] = [self.symbolStroke getString];
+		params[@"symbolStroke"] = [self.symbolStroke getData];
 	}
 	if (self.width) {
 		params[@"width"] = self.width;

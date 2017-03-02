@@ -13,7 +13,7 @@
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
@@ -70,10 +70,10 @@
 		params[@"shape"] = self.shape;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;

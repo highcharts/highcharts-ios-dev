@@ -36,7 +36,7 @@
 		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.type) {
 		params[@"type"] = self.type;
@@ -50,7 +50,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -103,7 +103,7 @@
 		params[@"showInLegend"] = self.showInLegend;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getString];
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
@@ -115,7 +115,7 @@
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.whiskerColor) {
-		params[@"whiskerColor"] = [self.whiskerColor getString];
+		params[@"whiskerColor"] = [self.whiskerColor getData];
 	}
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
@@ -130,7 +130,7 @@
 		params[@"cursor"] = self.cursor;
 	}
 	if (self.stemColor) {
-		params[@"stemColor"] = [self.stemColor getString];
+		params[@"stemColor"] = [self.stemColor getData];
 	}
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
@@ -157,7 +157,7 @@
 		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -181,7 +181,7 @@
 		params[@"keys"] = array;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.yAxis) {
 		params[@"yAxis"] = self.yAxis;
@@ -226,7 +226,7 @@
 		params[@"definition"] = self.definition;
 	}
 	if (self.medianColor) {
-		params[@"medianColor"] = [self.medianColor getString];
+		params[@"medianColor"] = [self.medianColor getData];
 	}
 	return params;
 }

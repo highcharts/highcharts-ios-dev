@@ -127,7 +127,7 @@
 		params[@"allowPointSelect"] = self.allowPointSelect;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -148,7 +148,7 @@
 		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getString];
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;

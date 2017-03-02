@@ -28,7 +28,7 @@
 		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getString];
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
@@ -61,7 +61,7 @@
 		params[@"style"] = self.style;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.inside) {
 		params[@"inside"] = self.inside;
@@ -73,7 +73,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;

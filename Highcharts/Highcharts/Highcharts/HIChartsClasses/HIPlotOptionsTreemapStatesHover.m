@@ -13,7 +13,7 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.brightness) {
 		params[@"brightness"] = self.brightness;
@@ -22,7 +22,7 @@
 		params[@"opacity"] = self.opacity;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	return params;
 }

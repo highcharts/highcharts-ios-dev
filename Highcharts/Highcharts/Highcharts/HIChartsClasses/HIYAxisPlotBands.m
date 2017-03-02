@@ -31,7 +31,7 @@
 		params[@"thickness"] = self.thickness;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.to) {
 		params[@"to"] = self.to;
@@ -43,7 +43,7 @@
 		params[@"events"] = self.events;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];

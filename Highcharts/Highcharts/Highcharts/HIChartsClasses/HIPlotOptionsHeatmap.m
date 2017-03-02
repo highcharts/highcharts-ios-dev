@@ -16,7 +16,7 @@
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.rowsize) {
 		params[@"rowsize"] = self.rowsize;
@@ -54,7 +54,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -92,7 +92,7 @@
 		params[@"animation"] = self.animation;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];

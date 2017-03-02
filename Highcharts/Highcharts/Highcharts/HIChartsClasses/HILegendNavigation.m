@@ -10,7 +10,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.inactiveColor) {
-		params[@"inactiveColor"] = [self.inactiveColor getString];
+		params[@"inactiveColor"] = [self.inactiveColor getData];
 	}
 	if (self.animation) {
 		params[@"animation"] = self.animation;
@@ -22,7 +22,7 @@
 		params[@"arrowSize"] = self.arrowSize;
 	}
 	if (self.activeColor) {
-		params[@"activeColor"] = [self.activeColor getString];
+		params[@"activeColor"] = [self.activeColor getData];
 	}
 	if (self.style) {
 		params[@"style"] = self.style;

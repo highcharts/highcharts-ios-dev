@@ -33,7 +33,7 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.upColor) {
-		params[@"upColor"] = [self.upColor getString];
+		params[@"upColor"] = [self.upColor getData];
 	}
 	if (self.xAxis) {
 		params[@"xAxis"] = self.xAxis;
@@ -62,7 +62,7 @@
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getString]];
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -97,7 +97,7 @@
 		params[@"yAxis"] = self.yAxis;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getString];
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
@@ -169,7 +169,7 @@
 		params[@"pointWidth"] = self.pointWidth;
 	}
 	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getString];
+		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
@@ -190,7 +190,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getString];
+		params[@"color"] = [self.color getData];
 	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
@@ -199,7 +199,7 @@
 		params[@"point"] = [self.point getParams];
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getString];
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.tooltip) {
 		params[@"tooltip"] = [self.tooltip getParams];
