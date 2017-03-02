@@ -529,6 +529,13 @@ def createOptionsFiles():
                 if getType(field.dataType) == 'HIColor':
                     mtext += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(getLast(field.name),
                                                                                          getLast(field.name))
+                elif getType(field.dataType) == 'NSArray<HIColor *>':
+                    mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
+                    mtext += "\t\tfor (HIColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
+                    mtext += "\t\t\t[array addObject:[obj getData]];\n".format(
+                        getLast(field.name))
+                    mtext += "\t\t}\n"
+                    mtext += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
                 elif "NSArray" in str(getType(field.dataType)):
                     mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     mtext += "\t\tfor (id obj in self.{0})".format(getLast(field.name)) + " {\n"
@@ -539,13 +546,6 @@ def createOptionsFiles():
                     mtext += "\t\t\t}\n"
                     mtext += "\t\t\telse {\n\t\t\t\t[array addObject: obj];\n"
                     mtext += "\t\t\t}\n"
-                    mtext += "\t\t}\n"
-                    mtext += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
-                elif getType(field.dataType) == 'NSMutableArray<HIColor *>':
-                    mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
-                    mtext += "\t\tfor (HIColor *obj in self.{0})".format(getLast(field.name)) + " {\n"
-                    mtext += "\t\t\t[array addObject:[obj getData]];\n".format(
-                        getLast(field.name))
                     mtext += "\t\t}\n"
                     mtext += "\t\tparams[@\"{0}\"] = array;\n".format(getLast(field.name))
                 elif structure[field.name].properties:
