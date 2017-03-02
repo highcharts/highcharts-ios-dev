@@ -34,7 +34,7 @@ On axes using categories, minor ticks are not supported.
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/ : "auto" on logarithmic Y axis,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/ : 0.1 on logarithmic Y axis.
 */
-@property(nonatomic, readwrite) id minorTickInterval;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ minorTickInterval;
 /**
 * description: Color for the main tick marks.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke is given in the .highcharts-tick class.

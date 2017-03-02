@@ -11,12 +11,12 @@
 * description: In a gauge chart, this option determines the outer radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like "100%", or as a pixel number, like 100.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge : Gauge plot band
 */
-@property(nonatomic, readwrite) id outerRadius;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ outerRadius;
 /**
 * description: In a gauge chart, this option determines the inner radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like "100%", or as a pixel number, like 100. By default, the inner radius is controlled by the thickness option.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge : Gauge plot band
 */
-@property(nonatomic, readwrite) id innerRadius;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ innerRadius;
 /**
 * description: The start position of the plot band in axis units.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/ : Datetime axis,
@@ -42,7 +42,7 @@
 * description: In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like "10%", or as a pixel number, like 10. The default value 10 is the same as the default tickLength, thus making the plot band act as a background for the tick markers. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge : Gauge plot band
 */
-@property(nonatomic, readwrite) id thickness;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ thickness;
 /**
 * description: The color of the plot band.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/ : Color band

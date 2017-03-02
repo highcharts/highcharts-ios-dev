@@ -10,7 +10,7 @@
 * description: The size of the pane, either as a number defining pixels, or a percentage defining a percentage of the plot are.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/ : Smaller size
 */
-@property(nonatomic, readwrite) id size;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
 /**
 * description: An object, or array of objects, for backgrounds.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/ : Multiple backgrounds on a gauge.

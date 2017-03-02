@@ -50,7 +50,7 @@ A string reference to an easing function set on the Math object. See http://jsfi
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-duration/ : with a longer duration,  
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-easing/ : with a jQuery UI easing.
 */
-@property(nonatomic, readwrite) id animation;
+@property(nonatomic, readwrite) id /* Bool, Object */ animation;
 /**
 * description: The URL for an image to use as the plot background. To set an image as the background for the entire chart, set a CSS background image to the container element. Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundimage/ : Skies
@@ -102,7 +102,7 @@ A string reference to an easing function set on the Math object. See http://jsfi
 * description: Whether to apply a drop shadow to the outer chart area. Requires that  backgroundColor be set. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/shadow/ : Shadow
 */
-@property(nonatomic, readwrite) id shadow;
+@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
 /**
 * description: The background color or gradient for the plot area.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/ : Color,
@@ -139,7 +139,7 @@ When using the Highcharts.chart constructor, the renderTo is given as a paramete
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-object/ : object reference,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-jquery/ : object reference through jQuery,
 */
-@property(nonatomic, readwrite) id renderTo;
+@property(nonatomic, readwrite) id /* NSString, id */ renderTo;
 /**
 * description: Whether to invert the axes so that the x axis is vertical and y axis is horizontal. When true, the x axis is reversed by default. If a bar series is present in the chart, it will be inverted automatically.
 Inverting the chart doesn't have an effect if there are no cartesian series in the chart, or if the chart is polar.
@@ -248,7 +248,7 @@ This can be prevented by setting alignTicks to false. If the grid lines look mes
 * description: Whether to apply a drop shadow to the plot area. Requires that plotBackgroundColor be set. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/plotshadow/ : Plot shadow
 */
-@property(nonatomic, readwrite) id plotShadow;
+@property(nonatomic, readwrite) id /* Bool, Object */ plotShadow;
 /**
 * description: Decides in what dimensions the user can zoom by dragging the mouse. Can be one of x, y or xy.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-none/ : None by default,

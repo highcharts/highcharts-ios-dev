@@ -46,7 +46,7 @@ If the xAxis.type is set to category, and no categories option exists, the categ
 * description: The outer radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/ : Individual radius and innerRadius
 */
-@property(nonatomic, readwrite) id radius;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ radius;
 /**
 * description: Individual point events
 */
@@ -64,7 +64,7 @@ If the xAxis.type is set to category, and no categories option exists, the categ
 * description: The inner radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/ : Individual radius and innerRadius
 */
-@property(nonatomic, readwrite) id innerRadius;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ innerRadius;
 /**
 * description: An additional, individual class name for the data point's graphic representation.
 */
