@@ -41,7 +41,7 @@
     self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.myChartView.bounds.origin.x, self.myChartView.bounds.origin.y , self.myChartView.bounds.size.width, 300.0f)];
     
     // Here you add additional plugins - if you use one of the charts listed below, you should add plugin before addSubview
-    // In demo app we add all of them, because we use all types of charts
+    // In demo app we add all of them, because we use all types of charts. Remember that Pyramid also uses funnel plugin.
     self.chartView.plugins = @[ @"heatmap", @"treemap", @"funnel", @"solid-gauge", @"drilldown" ];
     
     // Here we use our helper class method to get options for chart name

@@ -192,6 +192,10 @@ The drilldown feature requires the drilldown.js file to be loaded, found in the 
 */
 @property(nonatomic, readwrite) HIDrilldown *drilldown;
 
+/**
+* Additional options that are not listed above but are accepted by API
+*/
+@property(nonatomic, readwrite) NSDictionary *additionalOptions;
 
 
 -(NSDictionary *)getParams;

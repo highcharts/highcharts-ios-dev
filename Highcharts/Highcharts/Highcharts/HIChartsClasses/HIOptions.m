@@ -108,6 +108,10 @@
 	if (self.drilldown) {
 		params[@"drilldown"] = [self.drilldown getParams];
 	}
+	if (self.additionalOptions) {
+		[params addEntriesFromDictionary: self.additionalOptions];
+	}
+
 	return params;
 }
 
