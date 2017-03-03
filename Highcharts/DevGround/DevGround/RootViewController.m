@@ -39,7 +39,7 @@
     self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.myChartView.bounds.origin.x, self.myChartView.bounds.origin.y , self.myChartView.bounds.size.width, 300.0f)];
     
     //*******************
-    self.chartView.plugins = @[ @"heatmap", @"treemap", @"funnel", @"solidgauge", @"drilldown" ];
+    self.chartView.plugins = @[ @"heatmap", @"treemap", @"funnel", @"solid-gauge", @"drilldown" ];
     //*******************
     
     self.chartView.options = [[HIOptions alloc]init];

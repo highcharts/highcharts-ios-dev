@@ -18,6 +18,7 @@
 
 +(HIOptions *)getChartByType:(NSString *)type
 {
+    NSLog(@"type: %@", type);
     //MARK: Area
     if ([type isEqualToString:@"Area"]) {
         HIChart *chart = [[HIChart alloc]init];
@@ -3612,7 +3613,7 @@
         return options;
     }
     //MARK: Gauge
-    else if ([type isEqualToString:@"Gauge Solid"]) {
+    else if ([type isEqualToString:@"Gauge Solid"]) {
         HIOptions *options = [[HIOptions alloc]init];
         
         HIChart *chart = [[HIChart alloc]init];
