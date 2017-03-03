@@ -52,7 +52,6 @@
     
     
     NSString *yourSelectedTitle = [_pickerData objectAtIndex:[self.chartTypePicker selectedRowInComponent:0]];
-    NSLog(@"%@", yourSelectedTitle);
     self.chartView.options = nil;
     self.chartView.options = [ChartType getChartByType: yourSelectedTitle];
     [self.chartView reload];

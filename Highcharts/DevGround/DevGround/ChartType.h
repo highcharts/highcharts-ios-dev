@@ -18,7 +18,6 @@
 
 +(HIOptions *)getChartByType:(NSString *)type
 {
-    NSLog(@"type: %@", type);
     //MARK: Area
     if ([type isEqualToString:@"Area"]) {
         HIChart *chart = [[HIChart alloc]init];
