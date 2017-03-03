@@ -520,6 +520,8 @@ def createOptionsFiles():
             else:
                 htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format("HI" + upperfirst(createName(field.name)),
                                                                                 getLast(field.name))
+    htext += "/**\n* Additional options that are not listed above but are accepted by API\n*/\n"
+    htext += "@property(nonatomic, readwrite) NSDictionary *additionalOptions;\n"
     htext += "\n\n-(NSDictionary *)getParams;\n\n"
     for field in options:
         if field.name != 'global' and field.name != "lang":
@@ -556,6 +558,7 @@ def createOptionsFiles():
             elif structure[field.name].properties:
                 mtext += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(getLast(field.name), getLast(field.name))
             mtext += "\t}\n"
+    mtext += "\tif (self.additionalOptions) {\n\t\t[params addEntriesFromDictionary: self.additionalOptions];\n\t}\n\n"
     mtext += "\treturn params;\n"
     mtext += "}\n"
     mtext += "\n@end"
