@@ -110,7 +110,9 @@
 {
     [self.HTML prepareViewWidth:self.bounds.size.width height:self.bounds.size.height];
     
-    //self.plugins = @[];
+    if (!self.plugins) {
+        self.plugins = @[];
+    }
     
     NSString *suffix = self.debug ? @".src.js" : @".js";
     

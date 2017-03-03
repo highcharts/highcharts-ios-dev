@@ -22,36 +22,34 @@
 
     chartView.plugins = @[ @"heatmap", @"treemap" ];
     
-    chartView.options = @{
-                            @"series": @[
-                                @{
-                                    @"type": @"treemap",
-                                    @"layoutAlgorithm": @"squarified",
-                                    @"allowDrillToNode": @true,
-                                    @"animationLimit": @1000,
-                                    @"dataLabels": @{
-                                        @"enabled": @false
-                                    },
-                                    @"levelIsConstant": @false,
-                                    @"levels": @[
-                                        @{
-                                            @"level": @1,
-                                            @"dataLabels": @{
-                                                @"enabled": @true
-                                            },
-                                            @"borderWidth": @3
-                                        }
-                                    ],
-                                    @"data": [self data]
-                                }
-                            ],
-                            @"subtitle": @{
-                                @"text": @"Click points to drill down. Source: <a href=\"http://apps.who.int/gho/data/node.main.12?lang=en\">WHO</a>."
-                            },
-                            @"title": @{
-                                @"text": @"Global Mortality Rate 2012, per 100 000 population"
-                            }
-                        };
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Click points to drill down. Source: <a href=\"http://apps.who.int/gho/data/node.main.12?lang=en\">WHO</a>.";
+    options.title = title;
+    
+    HISubtitle *subtitle = [[HISubtitle alloc]init];
+    subtitle.text = @"Global Mortality Rate 2012, per 100 000 population";
+    options.subtitle = subtitle;
+    
+    HITreemap *treemap = [[HITreemap alloc]init];
+    treemap.layoutAlgorithm = @"squarified";
+    treemap.allowDrillToNode = @true;
+    treemap.animationLimit = @1000;
+    treemap.dataLabels = [[HITreemapDataLabels alloc]init];
+    treemap.dataLabels.enabled = @false;
+    treemap.levelIsConstant = @false;
+    HITreemapLevels *level = [[HITreemapLevels alloc]init];
+    level.level = @1;
+    level.dataLabels = @{
+                         @"enabled": @true
+                         };
+    level.borderWidth = @3;
+    treemap.levels = @[level];
+    treemap.data = [self data];
+    options.series = @[treemap];
+    
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }
