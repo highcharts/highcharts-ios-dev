@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fMX-ia-8BZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fMX-ia-8BZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chart types-->
+        <!--HighCharts Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
@@ -21,215 +22,73 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9WG-qM-pRi">
-                                <rect key="frame" x="85" y="86.5" width="204" height="430"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeI-Pm-Gh1">
+                                <rect key="frame" x="4" y="6" width="367.5" height="591"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ONP-rj-SwO">
-                                        <rect key="frame" x="0.0" y="0.0" width="92" height="430"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGd-kl-z8Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Area">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulh-p2-96C">
-                                                <rect key="frame" x="0.0" y="50" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Bar">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRT-KT-40v">
-                                                <rect key="frame" x="0.0" y="100" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Pie">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhs-go-7Zy">
-                                                <rect key="frame" x="0.0" y="150" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Polar">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuY-e2-sDA">
-                                                <rect key="frame" x="0.0" y="200" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Scatter">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGZ-Sv-A3w">
-                                                <rect key="frame" x="0.0" y="250" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Waterfall">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sX4-Nr-zsQ">
-                                                <rect key="frame" x="0.0" y="300" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Spline">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-O6-gVv">
-                                                <rect key="frame" x="0.0" y="350" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Arearange">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WpD-Sh-COY">
-                                                <rect key="frame" x="0.0" y="400" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Gauge">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pbp-9J-oxQ">
-                                        <rect key="frame" x="112" y="0.0" width="92" height="430"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzY-Qe-ch5">
-                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Line">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skD-gU-j9V">
-                                                <rect key="frame" x="0.0" y="50" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Column">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmb-2G-o4K">
-                                                <rect key="frame" x="0.0" y="100" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Bubble">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcU-nb-AdC">
-                                                <rect key="frame" x="0.0" y="150" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Funnel">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnz-EI-JCy">
-                                                <rect key="frame" x="0.0" y="200" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Box plot">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nch-EJ-Hgj">
-                                                <rect key="frame" x="0.0" y="250" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Error bar">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y83-EP-f4t">
-                                                <rect key="frame" x="0.0" y="300" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Areaspline">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNM-a1-UwM">
-                                                <rect key="frame" x="0.0" y="350" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Columnrange">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTw-7R-Obq">
-                                                <rect key="frame" x="0.0" y="400" width="92" height="30"/>
-                                                <color key="backgroundColor" red="0.48380285501480103" green="0.51183843612670898" blue="0.9972037672996521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Combination">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdv-82-Rpk">
+                                        <rect key="frame" x="0.0" y="551" width="367.5" height="40"/>
+                                        <color key="backgroundColor" red="0.27450980392156865" green="0.74117647058823533" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1eA-yG-sTv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Draw"/>
+                                    </button>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-6d-nZh">
+                                        <rect key="frame" x="0.0" y="302" width="368" height="241"/>
+                                    </pickerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62S-yV-nRr">
+                                        <rect key="frame" x="0.0" y="0.0" width="367.5" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="Iqv-3t-x92"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPV-x7-6Qf">
+                                        <rect key="frame" x="0.0" y="300" width="367.5" height="2"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="dRg-hA-Ahf"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="vdv-82-Rpk" firstAttribute="leading" secondItem="IeI-Pm-Gh1" secondAttribute="leading" id="0P6-Ep-rwD"/>
+                                    <constraint firstItem="62S-yV-nRr" firstAttribute="leading" secondItem="IeI-Pm-Gh1" secondAttribute="leading" id="0XP-RA-kI7"/>
+                                    <constraint firstItem="fPV-x7-6Qf" firstAttribute="leading" secondItem="IeI-Pm-Gh1" secondAttribute="leading" id="7aT-L8-qba"/>
+                                    <constraint firstAttribute="trailing" secondItem="62S-yV-nRr" secondAttribute="trailing" id="9F6-yd-Mm2"/>
+                                    <constraint firstItem="62S-yV-nRr" firstAttribute="top" secondItem="IeI-Pm-Gh1" secondAttribute="top" id="DuT-Yb-U5E"/>
+                                    <constraint firstAttribute="trailing" secondItem="fPV-x7-6Qf" secondAttribute="trailing" id="K3U-wJ-osG"/>
+                                    <constraint firstAttribute="bottom" secondItem="vdv-82-Rpk" secondAttribute="bottom" id="MrX-aA-XSA"/>
+                                    <constraint firstItem="vdv-82-Rpk" firstAttribute="top" secondItem="IkU-6d-nZh" secondAttribute="bottom" constant="8" id="OaV-z9-FLd"/>
+                                    <constraint firstAttribute="trailing" secondItem="IkU-6d-nZh" secondAttribute="trailing" id="PBw-Dd-qwy"/>
+                                    <constraint firstItem="IkU-6d-nZh" firstAttribute="leading" secondItem="IeI-Pm-Gh1" secondAttribute="leading" id="SjE-Wb-xAv"/>
+                                    <constraint firstItem="IkU-6d-nZh" firstAttribute="top" secondItem="fPV-x7-6Qf" secondAttribute="bottom" id="akQ-fb-93Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="vdv-82-Rpk" secondAttribute="trailing" id="ba7-rn-gZq"/>
+                                    <constraint firstItem="fPV-x7-6Qf" firstAttribute="top" secondItem="62S-yV-nRr" secondAttribute="bottom" id="sYW-NQ-h80"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.28160414099693298" green="0.28168049454689026" blue="0.36354672908782959" alpha="0.29981806506849318" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9WG-qM-pRi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aq5-Vy-DW8"/>
-                            <constraint firstItem="9WG-qM-pRi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQn-ta-ZTh"/>
+                            <constraint firstItem="IeI-Pm-Gh1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="76N-UM-fB9"/>
+                            <constraint firstItem="IeI-Pm-Gh1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.98" id="FZo-mU-ppy"/>
+                            <constraint firstItem="IeI-Pm-Gh1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HuJ-7g-HwZ"/>
+                            <constraint firstItem="IeI-Pm-Gh1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.98" id="ONU-4Q-zL6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Chart types" id="TQy-N9-lSw"/>
+                    <navigationItem key="navigationItem" title="HighCharts Demo" id="TQy-N9-lSw"/>
                     <connections>
-                        <outletCollection property="typeButtons" destination="TGZ-Sv-A3w" id="OX4-JI-nLC"/>
-                        <outletCollection property="typeButtons" destination="qO2-O6-gVv" id="1hp-k6-49g"/>
-                        <outletCollection property="typeButtons" destination="Ulh-p2-96C" id="JMF-Gx-NH6"/>
-                        <outletCollection property="typeButtons" destination="KuY-e2-sDA" id="9Q3-zI-v8a"/>
-                        <outletCollection property="typeButtons" destination="sX4-Nr-zsQ" id="5jH-1V-F1C"/>
-                        <outletCollection property="typeButtons" destination="QRT-KT-40v" id="Nlx-qB-Hxy"/>
-                        <outletCollection property="typeButtons" destination="uGd-kl-z8Y" id="Ciq-SH-57o"/>
-                        <outletCollection property="typeButtons" destination="lhs-go-7Zy" id="YyR-5b-nIG"/>
-                        <outletCollection property="typeButtons" destination="WpD-Sh-COY" id="9nB-Vc-5M3"/>
-                        <outletCollection property="typeButtons" destination="skD-gU-j9V" id="VbC-wJ-2pE"/>
-                        <outletCollection property="typeButtons" destination="Lnz-EI-JCy" id="Sx6-pK-DCh"/>
-                        <outletCollection property="typeButtons" destination="jTw-7R-Obq" id="PwH-rD-5a5"/>
-                        <outletCollection property="typeButtons" destination="nch-EJ-Hgj" id="Lar-IE-naA"/>
-                        <outletCollection property="typeButtons" destination="VcU-nb-AdC" id="PrL-Fj-Vt7"/>
-                        <outletCollection property="typeButtons" destination="Kmb-2G-o4K" id="Pss-Zw-ZfR"/>
-                        <outletCollection property="typeButtons" destination="qNM-a1-UwM" id="Bmt-PM-Oc2"/>
-                        <outletCollection property="typeButtons" destination="zzY-Qe-ch5" id="Gf3-l7-OLo"/>
-                        <outletCollection property="typeButtons" destination="y83-EP-f4t" id="FP4-zs-3Wo"/>
-                        <outletCollection property="typeButtons" destination="uGd-kl-z8Y" id="wN4-z6-nRa"/>
-                        <outletCollection property="typeButtons" destination="zzY-Qe-ch5" id="ctp-AE-opc"/>
-                        <outletCollection property="typeButtons" destination="Ulh-p2-96C" id="yY3-38-tBB"/>
-                        <outletCollection property="typeButtons" destination="skD-gU-j9V" id="Qx0-dM-cHm"/>
-                        <outletCollection property="typeButtons" destination="QRT-KT-40v" id="0Yf-3G-k3J"/>
-                        <outletCollection property="typeButtons" destination="Kmb-2G-o4K" id="eGc-JG-Auc"/>
-                        <outletCollection property="typeButtons" destination="lhs-go-7Zy" id="HgV-UF-PKB"/>
-                        <outletCollection property="typeButtons" destination="VcU-nb-AdC" id="kpF-l7-VVv"/>
-                        <outletCollection property="typeButtons" destination="KuY-e2-sDA" id="PWP-88-dxZ"/>
-                        <outletCollection property="typeButtons" destination="Lnz-EI-JCy" id="V0C-RS-t5L"/>
-                        <outletCollection property="typeButtons" destination="TGZ-Sv-A3w" id="aEQ-1n-MUT"/>
-                        <outletCollection property="typeButtons" destination="nch-EJ-Hgj" id="2uL-lk-sbV"/>
-                        <outletCollection property="typeButtons" destination="sX4-Nr-zsQ" id="W9V-07-QIe"/>
-                        <outletCollection property="typeButtons" destination="y83-EP-f4t" id="BOF-07-aZ1"/>
-                        <outletCollection property="typeButtons" destination="qO2-O6-gVv" id="ERY-VN-fdk"/>
-                        <outletCollection property="typeButtons" destination="qNM-a1-UwM" id="adY-Nb-UIh"/>
-                        <outletCollection property="typeButtons" destination="WpD-Sh-COY" id="i3J-t2-tV3"/>
-                        <outletCollection property="typeButtons" destination="jTw-7R-Obq" id="vkS-7r-607"/>
+                        <outlet property="chartTypePicker" destination="IkU-6d-nZh" id="VfP-mh-Prl"/>
+                        <outlet property="myChartView" destination="62S-yV-nRr" id="okJ-1V-MY4"/>
+                        <outlet property="proceedButton" destination="vdv-82-Rpk" id="Pvl-Mw-eKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="-558"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="g3k-eg-8dB">
-            <objects>
-                <viewController storyboardIdentifier="ChartVC" id="W0H-Z3-edh" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XBr-16-8Hw"/>
-                        <viewControllerLayoutGuide type="bottom" id="coy-Mx-cLi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="S2W-WZ-kVD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.28160414099693298" green="0.28168049454689026" blue="0.36354672908782959" alpha="0.29981806506849318" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7aj-To-EvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1896.8" y="-558.17091454272872"/>
+            <point key="canvasLocation" x="936.79999999999995" y="-611.24437781109452"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OFo-b7-ajt">
