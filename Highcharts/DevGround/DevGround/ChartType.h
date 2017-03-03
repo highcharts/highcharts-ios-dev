@@ -861,7 +861,7 @@
         plotOptions.funnel.dataLabels = [[HIPlotOptionsFunnelDataLabels alloc]init];
         plotOptions.funnel.dataLabels.enabled = @true;
         plotOptions.funnel.dataLabels.format = @"<b>{point.name}</b> ({point.y:,.0f})";
-        plotOptions.funnel.dataLabels.color = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
+        plotOptions.funnel.dataLabels.color = [[HIColor alloc]initWithName:@"black"];
         plotOptions.funnel.dataLabels.softConnector = @true;
         plotOptions.funnel.neckWidth = @"30%";
         plotOptions.funnel.neckHeight = @"25%";
@@ -896,6 +896,8 @@
         options.plotOptions = plotOptions;
         options.legend = legend;
         options.series = [NSMutableArray arrayWithObject:series];
+        
+        //NSLog(@"%@", [options getParams]);
 
         return options;
     }

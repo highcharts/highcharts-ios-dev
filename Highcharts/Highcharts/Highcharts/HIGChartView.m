@@ -110,7 +110,7 @@
 {
     [self.HTML prepareViewWidth:self.bounds.size.width height:self.bounds.size.height];
     
-    self.plugins = @[];
+    //self.plugins = @[];
     
     NSString *suffix = self.debug ? @".src.js" : @".js";
     
@@ -148,7 +148,7 @@
     [self.HTML prepareOptions:[self.options getParams]];
     
     NSString *options = [NSString stringWithFormat:@"var chart = new Highcharts.Chart(%@)", self.HTML.options];
-    
+        
     [self.webView evaluateJavaScript:options completionHandler:^(id result, NSError *error){
         if (error) {
             NSLog(@"%@", error);
