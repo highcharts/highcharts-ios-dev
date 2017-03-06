@@ -633,6 +633,8 @@ def generateDocumentation():
     for field in structure:
         entry = dict()
         name = getLast(field).replace(">", "")
+        if name == "global" or name == "lang":
+            continue
         returnType = ""
         isParent = False
         x = tree[field].info["fullname"].split("<")
@@ -652,8 +654,8 @@ def generateDocumentation():
             parent = tree[field].parent
         elif name != "global" and name != "lang":
             parent = "options"
-        entry["_id"] = getDocumentationName(field)
-        entry["fullname"] = fullname.replace("description", "definition")
+        entry["_id"] = "options-" + getDocumentationName(field)
+        entry["fullname"] = "options." + fullname.replace("description", "definition")
         entry["title"] = name.replace("description", "definition")
         if structure[field].description and structure[field].description != "":
             entry["description"] = structure[field].description
@@ -672,7 +674,10 @@ def generateDocumentation():
             entry["returnType"] = returnType
         entry["isParent"] = isParent
         if parent:
-            entry["parent"] = getDocumentationName(parent, False)
+            x = getDocumentationName(parent, False)
+            if x != "options":
+                x = "options-" + x
+            entry["parent"] = x
         documentation.append(entry)
     entry = dict()
     entry["_id"] = "options"
@@ -681,7 +686,15 @@ def generateDocumentation():
     entry["description"] = ""
     entry["returnType"] = "HIOptions"
     entry["isParent"] = True
-    entry["name"] = "options"
+    documentation.append(entry)
+    entry = dict()
+    entry["_id"] = "options--additionalOptions"
+    entry["fullname"] = "options.additionalOptions"
+    entry["title"] = "additionalOptions"
+    entry["description"] = "Additional options that are not listed but are accepted by API"
+    entry["returnType"] = "NSDictionary"
+    entry["isParent"] = False
+    entry["parent"] = "options"
     documentation.append(entry)
     with open('APIDocs.json', 'w') as json_file:
         json.dump(documentation, json_file)
