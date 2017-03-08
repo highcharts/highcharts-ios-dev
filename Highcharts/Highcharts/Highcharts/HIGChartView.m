@@ -70,7 +70,7 @@
         self.trialLabel = [[UILabel alloc] initWithFrame:labelFrame];
         [self.trialLabel setTextColor:[UIColor colorWithWhite:0.0 alpha:0.15]];
         [self.trialLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-        [self.trialLabel setFont:[UIFont systemFontOfSize:30 weight:UIFontDescriptorTraitBold]];
+        [self.trialLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontDescriptorTraitBold]];
         [self.trialLabel setText:@" Highcharts for iOS "];
         [self.trialLabel setTextAlignment:NSTextAlignmentCenter];
         [self.trialLabel setAdjustsFontSizeToFitWidth:YES];
