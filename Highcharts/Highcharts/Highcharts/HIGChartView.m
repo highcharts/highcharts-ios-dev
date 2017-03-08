@@ -24,7 +24,6 @@
 @property (nonatomic, strong) HIGHTML *HTML;
 #ifdef TRIAL
 @property (nonatomic, strong) UILabel *trialLabel;
-@property (nonatomic, strong) UIWindow *trialWindow;
 #endif
 @end
 
@@ -71,8 +70,8 @@
         self.trialLabel = [[UILabel alloc] initWithFrame:labelFrame];
         [self.trialLabel setTextColor:[UIColor colorWithWhite:0.0 alpha:0.15]];
         [self.trialLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-        [self.trialLabel setFont:[UIFont systemFontOfSize:46 weight:UIFontDescriptorTraitBold]];
-        [self.trialLabel setText:@" TRIAL VERSION "];
+        [self.trialLabel setFont:[UIFont systemFontOfSize:30 weight:UIFontDescriptorTraitBold]];
+        [self.trialLabel setText:@" Highcharts for iOS "];
         [self.trialLabel setTextAlignment:NSTextAlignmentCenter];
         [self.trialLabel setAdjustsFontSizeToFitWidth:YES];
         [self addSubview:self.trialLabel];
@@ -80,20 +79,6 @@
         
         UIViewController *trialViewController = [[UIViewController alloc] init];
         [[trialViewController view] setBackgroundColor:[UIColor clearColor]];
-        
-        self.trialWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        [self.trialWindow setRootViewController:trialViewController];
-        [self.trialWindow setBackgroundColor:[UIColor clearColor]];
-        [self.trialWindow setWindowLevel:UIWindowLevelAlert + 1];
-        [self.trialWindow makeKeyAndVisible];
-        
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Highcharts for iOS" message:@"This is a free trial. Please contact us to access a fully licensed version of our charts at sales@highsoft.com" preferredStyle:UIAlertControllerStyleAlert];
-        
-        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            self.trialWindow.hidden = YES;
-        }]];
-        
-        [trialViewController presentViewController:alert animated:YES completion:nil];
 #endif
     }
     return self;
