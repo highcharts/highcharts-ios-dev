@@ -17,10 +17,12 @@
 @property(nonatomic, readwrite) NSString /* Function */ *callback;
 /**
 * description: The responsive rule applies if the chart height is greater than this.
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *minHeight;
 /**
 * description: The responsive rule applies if the chart width is greater than this.
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *minWidth;
 /**

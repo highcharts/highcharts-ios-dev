@@ -12,6 +12,7 @@
 @property(nonatomic, readwrite) NSArray <HILabelsItems *> *items;
 /**
 * description: Shared CSS styles for all labels.
+* default: { "color": "#333333" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 

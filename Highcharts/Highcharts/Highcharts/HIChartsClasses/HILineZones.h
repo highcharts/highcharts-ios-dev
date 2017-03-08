@@ -25,6 +25,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) HIColor *color;
 /**
 * description: The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
+* default: undefined
 */
 @property(nonatomic, readwrite) NSNumber *value;
 /**

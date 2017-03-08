@@ -17,12 +17,14 @@
 /**
 * description: Whether to select the series initially. If showCheckbox is true, the checkbox next to the series name will be checked for a selected series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/ : One out of two series selected
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
 * description: Whether the strokes of the solid gauge should be round or square.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-activity/ : Rounded gauge
 * accepted values: ["square", "round"]
+* default: round
 */
 @property(nonatomic, readwrite) NSString *linecap;
 /**
@@ -33,20 +35,24 @@
 /**
 * description: If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the selected option.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
 /**
 * description: When this option is true, the dial will wrap around the axes. For instance, in a full-range gauge going from 0 to 360, a value of 400 will point to 40. When wrap is false, the dial stops at 360.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *wrap;
 /**
 * description: Sticky tracking of mouse events. When true, the mouseOut event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the mouseOut event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When stickyTracking is false and tooltip.shared is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/ : True by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/ : false
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
 /**
 * description: Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *getExtremesFromAll;
 /**
@@ -57,6 +63,7 @@
 /**
 * description: Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
@@ -75,21 +82,25 @@
 * description: Requires Accessibility module
 A description of the series to add to the screen reader information about the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/ : Accessible stock chart
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**
 * description: Set the initial visibility of the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
 * description: The threshold or base level for the gauge. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-threshold/ : Zero threshold with negative and positive values
+* default: null
 */
 @property(nonatomic, readwrite) NSNumber *threshold;
 /**
 * description: Allow the dial to overshoot the end of the perimeter axis by this many degrees. Say if the gauge axis goes from 0 to 60, a value of 100, or 1000, will show 5 degrees beyond the end of the axis.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-overshoot/ : Allow 5 degrees overshoot
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *overshoot;
 /**
@@ -105,6 +116,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/ : Animation disabled,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/ : slower animation,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/ : custom easing function.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
 /**

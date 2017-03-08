@@ -20,27 +20,32 @@ Custom callbacks for symbol path generation can also be added to Highcharts.SVGR
 * description: Enable or disable the point marker. If null, the markers are hidden when the data is dense, and shown for more widespread data points.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabled/ : Disabled markers,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabled-false/ : disabled in normal state but enabled on hover
+* default: null
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 @property(nonatomic, readwrite) HIBubbleMarkerStates *states;
 /**
 * description: The color of the point marker's outline. When null, the series' or point's color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : Inherit from series color (null)
+* default: #ffffff
 */
 @property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: The width of the point marker's outline.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/ : 2px blue marker
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
 * description: Image markers only. Set the image width explicitly. When using this option, a height must also be set.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/ : Fixed width and height
+* default: null
 */
 @property(nonatomic, readwrite) NSNumber *width;
 /**
 * description: Image markers only. Set the image width explicitly. When using this option, a width must also be set.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/ : Fixed width and height
+* default: null
 */
 @property(nonatomic, readwrite) NSNumber *height;
 /**

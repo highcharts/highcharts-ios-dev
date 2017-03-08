@@ -10,11 +10,13 @@
 /**
 * description: In a gauge chart, this option determines the outer radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like "100%", or as a pixel number, like 100.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge : Gauge plot band
+* default: 100%
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ outerRadius;
 /**
 * description: In a gauge chart, this option determines the inner radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like "100%", or as a pixel number, like 100. By default, the inner radius is controlled by the thickness option.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge : Gauge plot band
+* default: null
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ innerRadius;
 /**
@@ -25,6 +27,7 @@
 @property(nonatomic, readwrite) NSNumber *from;
 /**
 * description: Border width for the plot band.  Also requires borderColor to be set.
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
@@ -41,6 +44,7 @@
 /**
 * description: In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like "10%", or as a pixel number, like 10. The default value 10 is the same as the default tickLength, thus making the plot band act as a background for the tick markers. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge : Gauge plot band
+* default: 10
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ thickness;
 /**
@@ -66,6 +70,7 @@
 @property(nonatomic, readwrite) id events;
 /**
 * description: Border color for the plot band. Also requires borderWidth to be set.
+* default: null
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**

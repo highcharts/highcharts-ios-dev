@@ -17,16 +17,19 @@ For options that apply to multiple series, it is recommended to add them to the 
 /**
 * description: Whether to select the series initially. If showCheckbox is true, the checkbox next to the series name will be checked for a selected series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/ : One out of two series selected
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
 * description: Set the initial visibility of the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
+* default: false
 */
 @property(nonatomic, readwrite) id /* Bool, Object */ shadow;
 /**
@@ -38,15 +41,18 @@ For options that apply to multiple series, it is recommended to add them to the 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/ : column, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/ : pie
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
 /**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie/ : Basic 3D pie chart
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *depth;
 /**
 * description: Sticky tracking of mouse events. When true, the mouseOut event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the mouseOut event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When stickyTracking is false and tooltip.shared is false, the  tooltip will be hidden when moving the mouse between series.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
 /**
@@ -56,16 +62,19 @@ For options that apply to multiple series, it is recommended to add them to the 
 /**
 * description: The width of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/ : Funnel demo
+* default: 30%
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ neckWidth;
 @property(nonatomic, readwrite) HIFunnelDataLabels *dataLabels;
 /**
 * description: Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *getExtremesFromAll;
 /**
 * description: Defines the Axis on which the zones are applied.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/ : Zones on the X-Axis
+* default: y
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
 /**
@@ -80,6 +89,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) NSArray <HIFunnelZones *> *zones;
 /**
 * description: The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height.
+* default: 25%
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ neckHeight;
 /**
@@ -94,11 +104,13 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 /**
 * description: The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
+* default: ["50%", "50%"]
 */
 @property(nonatomic, readwrite) NSArray<id> /* <NSString, NSNumber> */ *center;
 /**
 * description: Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
 /**
@@ -113,6 +125,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: If a point is sliced, moved out from the center, how many pixels should  it be moved?.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/ : 20px offset
+* default: 10
 */
 @property(nonatomic, readwrite) NSNumber *slicedOffset;
 /**
@@ -134,12 +147,14 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) HIFunnelPoint *point;
 /**
 * description: A reversed funnel has the widest area down. A reversed funnel with no neck width and neck height is a pyramid.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reversed;
 /**
 * description: Requires Accessibility module
 A description of the series to add to the screen reader information about the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/ : Accessible stock chart
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 @property(nonatomic, readwrite) HIFunnelEvents *events;
@@ -151,15 +166,18 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled mode.
 
 
+* default: #ffffff
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
 * description: The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
+* default: 80
 */
 @property(nonatomic, readwrite) NSNumber *minSize;
 /**
@@ -170,10 +188,12 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled mode.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
 * description: The width of the funnel compared to the width of the plot area, or the pixel width if it is a number.
+* default: 90%
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ width;
 

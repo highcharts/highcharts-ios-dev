@@ -18,6 +18,7 @@
 @property(nonatomic, readwrite) id position;
 /**
 * description: What box to align the button to. Can be either "plotBox" or "spacingBox".
+* default: plotBox
 */
 @property(nonatomic, readwrite) NSString *relativeTo;
 

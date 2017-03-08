@@ -15,10 +15,12 @@ Defaults to <span style="font-size: 10px">{point.key}</span><br/>
 @property(nonatomic, readwrite) NSString *headerFormat;
 /**
 * description: Enable or disable animation of the tooltip. In slow legacy IE browsers the animation is disabled by default.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
 /**
 * description: Whether the tooltip should follow the finger as it moves on a touch device. If this is true and chart.panning is set,followTouchMove will take over one-finger touches, so the user needs to use two fingers for zooming and panning.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *followTouchMove;
 /**
@@ -40,6 +42,7 @@ Defaults to:
 /**
 * description: A string to append to the tooltip format.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment
+* default: false
 */
 @property(nonatomic, readwrite) NSString *footerFormat;
 /**
@@ -49,6 +52,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderwidth/ : No border (shadow only).		
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/ : Tooltip in styled mode.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
@@ -59,6 +63,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the plotOptions for those series types. 
 For touch moves to behave the same way, followTouchMove must be true also.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *followPointer;
 /**
@@ -68,6 +73,7 @@ See also tooltip.split, that is better suited for charts with many series, espec
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true/ : true, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-x-crosshair/ : true with x axis crosshair, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true-mixed-types/ : true with mixed series types.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *shared;
 /**
@@ -79,10 +85,12 @@ See also tooltip.split, that is better suited for charts with many series, espec
 * description: The radius of the rounded border corners.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 5px by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderradius-0/ : square borders
+* default: 3
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
 * description: The number of milliseconds to wait until the tooltip is hidden when mouse out from a point or chart. 
+* default: 500
 */
 @property(nonatomic, readwrite) NSNumber *hideDelay;
 /**
@@ -93,6 +101,7 @@ See also tooltip.split, that is better suited for charts with many series, espec
 * description: Whether to apply a drop shadow to the tooltip.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : True by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shadow/ : false
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
 /**
@@ -103,10 +112,12 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/ : Tooltip in styled mode.
+* default: rgba(247,247,247,0.85)
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: The name of a symbol to use for the border around the tooltip. In Highcharts 3.x and less, the shape was square. 
+* default: callout
 */
 @property(nonatomic, readwrite) NSString *shape;
 /**
@@ -116,12 +127,14 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 @property(nonatomic, readwrite) NSString *valuePrefix;
 /**
 * description: Padding inside the tooltip, in pixels.
+* default: 8
 */
 @property(nonatomic, readwrite) NSNumber *padding;
 /**
 * description: Enable or disable the tooltip.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/ : Disabled,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/ : disable tooltip and show values on chart instead.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
@@ -144,6 +157,7 @@ Note that in most cases the whole plot area captures the mouse movement, and in 
 /**
 * description: Use HTML to render the contents of the tooltip instead of SVG. Using HTML allows advanced formatting like tables and images in the tooltip. It is also recommended for rtl languages as it works around rtl bugs in early Firefox.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment. http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/fullhtml/ : Full HTML tooltip.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
@@ -157,12 +171,14 @@ The return should be an object containing x and y values, for example { x: 100, 
 * description: The color of the tooltip border. When null, the border takes the color of the corresponding series or point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : Follow series by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/ : black border
+* default: null
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: CSS styles for the tooltip. The tooltip can also be styled through the CSS
  class .highcharts-tooltip.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/ : Greater padding, bold text
+* default: { "color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
@@ -175,11 +191,13 @@ The return should be an object containing x and y values, for example { x: 100, 
 * description: The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore,  point.y can be extended by the tooltip.valuePrefix and tooltip.valueSuffix variables. This can also be overridden for each series, which makes it a good hook for displaying units.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the dot is colored by a class name rather than the point color.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/ : A different point format with value suffix
+* default: <span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>
 */
 @property(nonatomic, readwrite) NSString *pointFormat;
 /**
 * description: Split the tooltip into one label per series, with the header close to the axis. This is recommended over shared tooltips for charts with multiple line series, generally making them easier to read.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/ : Split tooltip
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *split;
 

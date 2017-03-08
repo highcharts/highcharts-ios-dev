@@ -24,6 +24,7 @@ By default Highcharts will insert and set focus to a data table representation o
 /**
 * description: A formatter function to create the HTML contents of the hidden screen reader information region. Receives one argument, chart, referring to the chart object. Should return a String with the HTML content of the region.
 The link to view the chart as a data table will be added automatically after the custom HTML content.
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString /* Function */ *screenReaderSectionFormatter;
 /**
@@ -32,16 +33,19 @@ The link to view the chart as a data table will be added automatically after the
 @property(nonatomic, readwrite) NSString /* Function */ *pointDateFormatter;
 /**
 * description: Whether or not to add series descriptions to charts with a single series.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *describeSingleSeries;
 /**
 * description: When a series contains more points than this, we no longer expose information about individual points to screen readers.
 Set to false to disable.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/ : Accessible stock chart
+* default: 30
 */
 @property(nonatomic, readwrite) NSNumber *pointDescriptionThreshold;
 /**
 * description: Enable accessibility features for the chart.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**

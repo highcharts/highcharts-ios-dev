@@ -64,10 +64,12 @@ If the xAxis.type is set to category, and no categories option exists, the categ
 * description: Requires Accessibility module
 A description of the point to add to the screen reader information about the point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/accessibility/accessible-map/ : Accessible map
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**
 * description: Whether the data point is selected initially.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
@@ -86,11 +88,13 @@ A description of the point to add to the screen reader information about the poi
 /**
 * description: Whether to display a slice offset from the center.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/ : One sliced point
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *sliced;
 /**
 * description: Individual color for the point. By default the color is pulled from the global colors array.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/color/ : Mark the highest point
+* default: undefined
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**

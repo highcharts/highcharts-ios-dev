@@ -15,21 +15,25 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: The pixel radius of the pivot.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
+* default: 5
 */
 @property(nonatomic, readwrite) NSNumber *radius;
 /**
 * description: The border or stroke color of the pivot. In able to change this, the borderWidth must also be set to something other than the default 0.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
+* default: #cccccc
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The background color or fill of the pivot.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
+* default: #000000
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: The border or stroke width of the pivot.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 

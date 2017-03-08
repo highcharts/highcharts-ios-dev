@@ -12,10 +12,12 @@
 * description: CSS styles for the label.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the styles are set in the .highcharts-stack-label class.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-style/ : Red stack total labels
+* default: { "color": "#000000", "fontSize": "11px", "fontWeight": "bold", "textShadow": "1px 1px contrast, -1px -1px contrast, -1px 1px contrast, 1px -1px contrast" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: A http://docs.highcharts.com/#formatting : format string for the data label. Available variables are the same as for formatter.
+* default: {total}
 */
 @property(nonatomic, readwrite) NSString *format;
 /**
@@ -38,11 +40,13 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) NSNumber *y;
 /**
 * description: Whether to http://docs.highcharts.com/#formatting$html : use HTML to render the labels.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
 * description: Rotation of the labels in degrees.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/ : Labels rotated 45Â°
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
 /**
@@ -54,6 +58,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Enable or disable the stack total labels.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-enabled/ : Enabled stack total labels
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**

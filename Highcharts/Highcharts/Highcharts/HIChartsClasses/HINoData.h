@@ -9,10 +9,12 @@
 
 /**
 * description: The position of the no-data label, relative to the plot area. 
+* default: { "x": 0, "y": 0, "align": "center", "verticalAlign": "middle" }
 */
 @property(nonatomic, readwrite) HINoDataPosition *position;
 /**
 * description: CSS styles for the no-data label. 
+* default: { "fontSize": "12px", "fontWeight": "bold", "color": "#666666" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
@@ -21,6 +23,7 @@
 @property(nonatomic, readwrite) id attr;
 /**
 * description: Whether to insert the label as HTML, or as pseudo-HTML rendered with SVG.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 

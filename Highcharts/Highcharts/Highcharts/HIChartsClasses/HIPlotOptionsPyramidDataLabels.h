@@ -11,6 +11,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled connectors.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *connectorWidth;
 /**
@@ -21,14 +22,17 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: The x position offset of the label relative to the point. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/ : Vertical and positioned
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
 * description: Whether to hide data labels that are outside the plot area. By default, the data label is moved inside the plot area according to the overflow option.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *crop;
 /**
 * description: Whether to defer displaying the data labels until the initial series animation has finished.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *defer;
 /**
@@ -38,6 +42,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: The border width in pixels for the data label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
@@ -48,6 +53,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: How to handle data labels that flow outside the plot area. The default is justify, which aligns them inside the plot area. For columns and bars, this means it will be moved inside the bar. To display data labels outside the plot area, set crop to false and overflow to "none".
 * accepted values: ["justify", "none"]
+* default: justify
 */
 @property(nonatomic, readwrite) NSString *overflow;
 /**
@@ -58,25 +64,30 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: The y position offset of the label relative to the point. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/ : Vertical and positioned
+* default: -6
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
 * description: When either the borderWidth or the backgroundColor is set, this		is the padding within the box.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
+* default: 5
 */
 @property(nonatomic, readwrite) NSNumber *padding;
 /**
 * description: The shadow of the box. Works best with borderWidth or backgroundColor. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
+* default: false
 */
 @property(nonatomic, readwrite) id /* Bool, Object */ shadow;
 /**
 * description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html : use HTML to render the labels.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
 * description: Styles for the label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/ : Bold labels
+* default: {"color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "1px 1px contrast" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
@@ -114,22 +125,26 @@ The y value.
 /**
 * description: Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/ : Vertical labels
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
 /**
 * description: The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/ : A callout for annotations
+* default: square
 */
 @property(nonatomic, readwrite) NSString *shape;
 /**
 * description: Whether to render the connector as a soft arc or a line with sharp break.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-true/ : Soft,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/ : non soft connectors.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *softConnector;
 /**
 * description: A http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting : format string for the data label. Available variables are the same as for formatter.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-format/ : Add a unit
+* default: {y}
 */
 @property(nonatomic, readwrite) NSString *format;
 /**
@@ -138,10 +153,12 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/ : Blue connectors.
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled connectors.
+* default: {point.color}
 */
 @property(nonatomic, readwrite) NSString *connectorColor;
 /**
 * description: Enable or disable the data labels.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
@@ -152,15 +169,18 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: The distance of the data label from the pie's edge. Negative numbers put the data label on top of the pie slices. Connectors are only shown for data labels outside the pie.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-distance/ : Data labels on top of the pie
+* default: 30
 */
 @property(nonatomic, readwrite) NSNumber *distance;
 /**
 * description: The Z index of the data labels. The default Z index puts it above the series. Use a Z index of 2 to display it behind the series.
+* default: 6
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: The border radius in pixels for the data label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
@@ -171,6 +191,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: The distance from the data label to the connector.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorpadding/ : No padding
+* default: 5
 */
 @property(nonatomic, readwrite) NSNumber *connectorPadding;
 

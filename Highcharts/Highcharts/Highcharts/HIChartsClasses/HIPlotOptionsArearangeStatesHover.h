@@ -16,6 +16,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Pixel with of the graph line.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/ : 5px line on hover
+* default: 2
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
@@ -25,6 +26,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: The additional line width for the graph of a hovered series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/ : 5 pixels wider
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *lineWidthPlus;
 /**
@@ -32,6 +34,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * demo: Disable hover on http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/ : line,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/ : column,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/ : pie
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 

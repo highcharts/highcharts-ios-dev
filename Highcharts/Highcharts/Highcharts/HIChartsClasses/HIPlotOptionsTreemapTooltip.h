@@ -6,6 +6,7 @@
 /**
 * description: Split the tooltip into one label per series, with the header close to the axis. This is recommended over shared tooltips for charts with multiple line series, generally making them easier to read.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/ : Split tooltip
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *split;
 /**
@@ -16,6 +17,7 @@
 /**
 * description: A string to append to the tooltip format.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment
+* default: false
 */
 @property(nonatomic, readwrite) NSString *footerFormat;
 /**
@@ -29,11 +31,13 @@
 @property(nonatomic, readwrite) NSNumber *valueDecimals;
 /**
 * description: The number of milliseconds to wait until the tooltip is hidden when mouse out from a point or chart. 
+* default: 500
 */
 @property(nonatomic, readwrite) NSNumber *hideDelay;
 /**
 * description: The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore, point.y can be extended by the tooltip.yPrefix and tooltip.ySuffix variables. This can also be overridden for each series, which makes it a good hook for displaying units.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/ : A different point format with value suffix
+* default: "&#60;b&#62;{point.name}&#60;/b&#62;: {point.value}&#60;/b&#62;&#60;br/&#62;"
 */
 @property(nonatomic, readwrite) NSString *pointFormat;
 /**
@@ -59,15 +63,18 @@ Defaults to:
 @property(nonatomic, readwrite) NSString *xDateFormat;
 /**
 * description: Padding inside the tooltip, in pixels.
+* default: 8
 */
 @property(nonatomic, readwrite) NSNumber *padding;
 /**
 * description: Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the plotOptions for those series types. 
 For touch moves to behave the same way, followTouchMove must be true also.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *followPointer;
 /**
 * description: Whether the tooltip should follow the finger as it moves on a touch device. If this is true and chart.panning is set,followTouchMove will take over one-finger touches, so the user needs to use two fingers for zooming and panning.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *followTouchMove;
 /**
@@ -78,6 +85,7 @@ For touch moves to behave the same way, followTouchMove must be true also.
 /**
 * description: The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables	are point.key, series.name, series.color and other members from the point and series objects. The point.key variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the point.key date format can be set using tooltip.xDateFormat.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A HTML table in the tooltip
+* default: ""
 */
 @property(nonatomic, readwrite) NSString *headerFormat;
 

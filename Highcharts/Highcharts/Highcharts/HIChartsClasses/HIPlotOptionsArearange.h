@@ -20,11 +20,13 @@
 @property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width. 
+* default: false
 */
 @property(nonatomic, readwrite) id /* Bool, Object */ shadow;
 /**
 * description: If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the selected option.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
 /**
@@ -39,6 +41,7 @@
 /**
 * description: Defines the Axis on which the zones are applied.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/ : Zones on the X-Axis
+* default: y
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
 /**
@@ -55,17 +58,20 @@ Defaults to null in cartesian charts, "between" in polar charts.
 * description: Whether to connect a graph line across null points.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-false/ : False by default, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-true/ : true
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectNulls;
 /**
 * description: Whether to select the series initially. If showCheckbox is true, the checkbox next to the series name will be checked for a selected series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/ : One out of two series selected
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
 * description: Whether to apply steps to the line. Possible values are left, center and right. Prior to 2.3.5, only left was supported.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-step/ : Different step line options
 * accepted values: ["left", "center", "right"]
+* default: false
 */
 @property(nonatomic, readwrite) NSString *step;
 /**
@@ -73,6 +79,7 @@ Defaults to null in cartesian charts, "between" in polar charts.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/ : column, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/ : pie
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
 /**
@@ -90,6 +97,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *getExtremesFromAll;
 /**
@@ -101,11 +109,13 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: The line cap used for line ends and line joins on the graph.
 * accepted values: ["round", "square"]
+* default: round
 */
 @property(nonatomic, readwrite) NSString *linecap;
 /**
 * description: Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
@@ -114,12 +124,14 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
  every decade starting from year 0, set pointInterval to 10.
 Since Highcharts 4.1, it can be combined with pointIntervalUnit to draw irregular intervals.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime X axis
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *pointInterval;
 /**
 * description: Requires Accessibility module
 A description of the series to add to the screen reader information about the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/ : Accessible stock chart
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**
@@ -144,6 +156,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: Sticky tracking of mouse events. When true, the mouseOut event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the mouseOut event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When stickyTracking is false and tooltip.shared is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/ : True by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/ : false
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
 /**
@@ -153,6 +166,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Whether to display this particular series or series type in the legend. The default value is true for standalone series, false for linked series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
 /**
@@ -174,12 +188,14 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/ : Animation disabled,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/ : slower animation,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/ : custom easing function.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
 /**
 * description: If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/ : Linear,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : datetime X axis
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *pointStart;
 /**
@@ -188,14 +204,17 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 @property(nonatomic, readwrite) HIPlotOptionsArearangePoint *point;
 /**
 * description: Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *trackByArea;
 /**
 * description: Pixel width of the arearange graph line.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
 * description: When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to 0 disable.
+* default: 1000
 */
 @property(nonatomic, readwrite) NSNumber *turboThreshold;
 /**
@@ -216,6 +235,7 @@ LongDashDotDot
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/ : Possible values demonstrated,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle/ : chart suitable for printing in black and white
 * accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot", "LongDashDot", "LongDashDotDot"]
+* default: Solid
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
@@ -225,11 +245,13 @@ LongDashDotDot
 /**
 * description: The color for the parts of the graph or points that are below the threshold.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column - http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : arearange.
+* default: null
 */
 @property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 * description: Fill opacity for the area. Note that when you set an explicit fillColor, the fillOpacity is not applied. Instead, you should define the opacity in the fillColor with an rgba color definition.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/ : Automatic fill color and fill opacity of 0.1
+* default: 0.75
 */
 @property(nonatomic, readwrite) NSNumber *fillOpacity;
 /**
@@ -244,10 +266,12 @@ LongDashDotDot
 /**
 * description: Set the initial visibility of the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
 * description: When the series contains less points than the crop threshold, all points are drawn,  even if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
+* default: 300
 */
 @property(nonatomic, readwrite) NSNumber *cropThreshold;
 

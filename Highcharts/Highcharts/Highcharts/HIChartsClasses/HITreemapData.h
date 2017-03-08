@@ -38,12 +38,14 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 @property(nonatomic, readwrite) HITreemapDataEvents *events;
 /**
 * description: Whether the data point is selected initially.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
 * description: Requires Accessibility module
 A description of the point to add to the screen reader information about the point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/accessibility/accessible-map/ : Accessible map
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**
@@ -69,6 +71,7 @@ If the xAxis.type is set to category, and no categories option exists, the categ
 /**
 * description: Serves a purpose only if a colorAxis object is defined in the chart options. This value will decide which color the point gets from the scale of the colorAxis.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-coloraxis : Treemap with a colorAxis
+* default: undefined
 */
 @property(nonatomic, readwrite) NSNumber *colorValue;
 /**
@@ -95,6 +98,7 @@ If the xAxis.type is set to category, and no categories option exists, the categ
 /**
 * description: Only for treemap. Use this option to build a tree structure. The value should be the id of the point which is the parent. If no points has a matching id, or this option is undefined, then the parent will be set to the root.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/parent/ : Point parent, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/ : Example where parent id is not matching
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *parent;
 

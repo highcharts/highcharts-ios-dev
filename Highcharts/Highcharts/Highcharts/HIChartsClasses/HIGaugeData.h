@@ -38,12 +38,14 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 @property(nonatomic, readwrite) HIGaugeDataEvents *events;
 /**
 * description: Whether the data point is selected initially.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
 * description: Requires Accessibility module
 A description of the point to add to the screen reader information about the point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/accessibility/accessible-map/ : Accessible map
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**
@@ -53,6 +55,7 @@ A description of the point to add to the screen reader information about the poi
 /**
 * description: Individual color for the point. By default the color is pulled from the global colors array.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/color/ : Mark the highest point
+* default: undefined
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**

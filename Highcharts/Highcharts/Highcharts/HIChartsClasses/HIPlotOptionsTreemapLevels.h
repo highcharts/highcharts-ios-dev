@@ -39,6 +39,7 @@ See plotOptions.scatter.dashStyle for possible options.
 /**
 * description: Can set the options of dataLabels on each point which lies on the level.
 plotOptions.treemap.dataLabels for possible values.
+* default: undefined
 */
 @property(nonatomic, readwrite) id dataLabels;
 /**

@@ -9,10 +9,12 @@
 
 /**
 * description: The color of the panel.
+* default: transparent
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**
 * description: Thickness of the panel.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *size;
 

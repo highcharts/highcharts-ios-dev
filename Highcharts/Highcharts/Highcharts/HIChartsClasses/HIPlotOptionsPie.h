@@ -25,11 +25,13 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: Requires Accessibility module
 A description of the series to add to the screen reader information about the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/ : Accessible stock chart
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
+* default: false
 */
 @property(nonatomic, readwrite) id /* Bool, Object */ shadow;
 /**
@@ -39,11 +41,13 @@ A description of the series to add to the screen reader information about the se
 /**
 * description: The start angle of the pie slices in degrees where 0 is top and 90 right. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/ : Start from right
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
 /**
 * description: Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
@@ -56,22 +60,26 @@ A description of the series to add to the screen reader information about the se
 @property(nonatomic, readwrite) NSString *cursor;
 /**
 * description: Sticky tracking of mouse events. When true, the mouseOut event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the mouseOut event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When stickyTracking is false and tooltip.shared is false, the  tooltip will be hidden when moving the mouse between series.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
 /**
 * description: Defines the Axis on which the zones are applied.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/ : Zones on the X-Axis
+* default: y
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
 /**
 * description: The center of the pie chart relative to the plot area. Can be percentages or pixel values. The default behaviour (as of 3.0) is to center the pie so that all slices and data labels are within the plot area. As a consequence, the pie may actually jump around in a chart with dynamic values, as the data labels move. In that case, the center should be explicitly set, for example to ["50%", "50%"].
 		 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/ : Centered at 100, 100
+* default: [null, null]
 */
 @property(nonatomic, readwrite) NSArray<id> /* <NSString, NSNumber> */ *center;
 /**
 * description: Set the initial visibility of the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
@@ -96,6 +104,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/ : Animation disabled,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/ : slower animation,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/ : custom easing function.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
 /**
@@ -106,17 +115,20 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled mode.
 
 
+* default: #ffffff
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie/ : Basic 3D pie chart
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *depth;
 @property(nonatomic, readwrite) HIPlotOptionsPieDataLabels *dataLabels;
 /**
 * description: The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to startAngle plus 360.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/ : Semi-circle donut
+* default: null
 */
 @property(nonatomic, readwrite) NSNumber *endAngle;
 /**
@@ -131,6 +143,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled mode.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
@@ -138,12 +151,14 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/ : column, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/ : pie
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
 /**
 * description: Equivalent to chart.ignoreHiddenSeries, this option tells whether the series shall be redrawn as if the hidden point were null.
 The default value changed from false to true with Highcharts 3.0.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
 /**
@@ -152,6 +167,7 @@ Note: in Highcharts < 4.1.2, the percentage was relative to the plot area, not t
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/ : 80px inner size,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/ : 50% of the plot area,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/ : 3D donut.
+* default: 0
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ innerSize;
 /**
@@ -172,29 +188,35 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Whether to select the series initially. If showCheckbox is true, the checkbox next to the series name will be checked for a selected series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/ : One out of two series selected
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
 * description: The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example "75%".
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/ : Smaller pie
+* default:  
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
 /**
 * description: If a point is sliced, moved out from the center, how many pixels should  it be moved?.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/ : 20px offset
+* default: 10
 */
 @property(nonatomic, readwrite) NSNumber *slicedOffset;
 /**
 * description: Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *getExtremesFromAll;
 /**
 * description: The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
+* default: 80
 */
 @property(nonatomic, readwrite) NSNumber *minSize;
 /**
 * description: Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
 /**

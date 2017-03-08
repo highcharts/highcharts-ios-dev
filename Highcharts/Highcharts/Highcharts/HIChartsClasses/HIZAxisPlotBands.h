@@ -31,6 +31,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) HIZAxisPlotBandsLabel *label;
 /**
 * description: Border width for the plot band.  Also requires borderColor to be set.
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
@@ -50,6 +51,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) NSNumber *from;
 /**
 * description: Border color for the plot band. Also requires borderWidth to be set.
+* default: null
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**

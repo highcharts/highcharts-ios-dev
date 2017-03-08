@@ -6,6 +6,7 @@
 * description: Configure a crosshair that follows either the mouse pointer or the hovered point.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the crosshairs are styled in the .highcharts-crosshair, .highcharts-crosshair-thin or .highcharts-xaxis-category classes.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/ : Crosshair on both axes
+* default: false
 */
 @interface HIXAxisCrosshair: HIChartsJSONSerializable
 
@@ -16,6 +17,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) NSNumber *width;
 /**
 * description: The Z index of the crosshair. Higher Z indices allow drawing the crosshair on top of the series or behind the grid lines.
+* default: 2
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
@@ -25,12 +27,14 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Whether the crosshair should snap to the point or follow the pointer independent of points.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/ : True by default
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *snap;
 /**
 * description: The dash style for the crosshair. See series.dashStyle for possible values.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/ : Dotted crosshair
 * accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot", "LongDashDot", "LongDashDotDot"]
+* default: Solid
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**

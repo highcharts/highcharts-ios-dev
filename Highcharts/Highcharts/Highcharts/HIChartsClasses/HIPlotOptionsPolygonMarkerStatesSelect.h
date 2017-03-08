@@ -11,11 +11,13 @@
 /**
 * description: The color of the point marker's outline. When null, the series' or point's color is used.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linecolor/ : Red line color for selected points
+* default: #000000
 */
 @property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: The width of the point marker's outline.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linewidth/ : 3px line width for selected points
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
@@ -27,6 +29,7 @@
 /**
 * description: Enable or disable visible feedback for selection.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-enabled/ : Disabled select state
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**

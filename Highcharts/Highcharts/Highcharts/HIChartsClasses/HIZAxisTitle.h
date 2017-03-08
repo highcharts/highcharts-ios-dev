@@ -19,10 +19,12 @@
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/title-align-high/ : "high", 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/title-offset/ : place the Y axis title on top of the axis
 * accepted values: ["low", "middle", "high"]
+* default: middle
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
 * description: Deprecated. Set the text to null to disable the title.
+* default: middle
 */
 @property(nonatomic, readwrite) NSString *enabled;
 /**
@@ -32,10 +34,12 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 
 http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/axis/ : Styled mode.
 
+* default: { "color": "#666666" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: Horizontal pixel offset of the title position.
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
@@ -50,6 +54,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: The rotation of the text in degrees. 0 is horizontal, 270 is vertical reading from bottom to top.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/title-offset/ : Horizontal Y axis title
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
 /**

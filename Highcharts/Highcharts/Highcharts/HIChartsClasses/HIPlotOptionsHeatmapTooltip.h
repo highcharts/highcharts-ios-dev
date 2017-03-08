@@ -10,6 +10,7 @@
 * description: The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore,  point.y can be extended by the tooltip.valuePrefix and tooltip.valueSuffix variables. This can also be overridden for each series, which makes it a good hook for displaying units.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the dot is colored by a class name rather than the point color.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/ : A different point format with value suffix
+* default: <span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>
 */
 @property(nonatomic, readwrite) NSString *pointFormat;
 /**
@@ -30,11 +31,13 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the plotOptions for those series types. 
 For touch moves to behave the same way, followTouchMove must be true also.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *followPointer;
 /**
 * description: Split the tooltip into one label per series, with the header close to the axis. This is recommended over shared tooltips for charts with multiple line series, generally making them easier to read.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/ : Split tooltip
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *split;
 /**
@@ -45,19 +48,23 @@ Defaults to <span style="font-size: 10px">{point.key}</span><br/>
 @property(nonatomic, readwrite) NSString *headerFormat;
 /**
 * description: The number of milliseconds to wait until the tooltip is hidden when mouse out from a point or chart. 
+* default: 500
 */
 @property(nonatomic, readwrite) NSNumber *hideDelay;
 /**
 * description: Padding inside the tooltip, in pixels.
+* default: 8
 */
 @property(nonatomic, readwrite) NSNumber *padding;
 /**
 * description: A string to append to the tooltip format.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment
+* default: false
 */
 @property(nonatomic, readwrite) NSString *footerFormat;
 /**
 * description: Whether the tooltip should follow the finger as it moves on a touch device. If this is true and chart.panning is set,followTouchMove will take over one-finger touches, so the user needs to use two fingers for zooming and panning.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *followTouchMove;
 /**

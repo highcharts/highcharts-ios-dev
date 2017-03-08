@@ -15,6 +15,7 @@ Highcharts.setOptions({
 /**
 * description: Requires http://momentjs.com/ : moment.js. If the timezone option is specified, it creates a default getTimezoneOffset function that looks up the specified timezone in moment.js. If moment.js is not included, this throws a Highcharts error in the console, but does not crash the chart.
 * demo: http://jsfiddle.net/gh/get/jquery/3.0.0/highslide-software/highcharts.com/tree/master/samples/highcharts/global/timezone/ : Europe/Oslo
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *timezone;
 /**
@@ -28,10 +29,12 @@ Highcharts.setOptions({
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/useutc-false/ : False - the starting point which is 
 			at 00:00 UTC, is displayed as your local browser time in the axis labels and in 
 			the tooltip.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useUTC;
 /**
 * description: Path to the pattern image required by VML browsers in order to draw radial gradients.
+* default: http://code.highcharts.com/{version}/gfx/vml-radial-gradient.png
 */
 @property(nonatomic, readwrite) NSString *VMLRadialGradientURL;
 /**
@@ -45,11 +48,13 @@ The URL to the additional file to lazy load for Android 2.x devices. These devic
  support SVG, so we download a helper file that contains http://code.google.com/p/canvg/ : canvg,
  its dependency rbcolor, and our own CanVG Renderer class. To avoid hotlinking to our site,
  you can install canvas-tools.js on your own server and change this option accordingly.
+* default: http://code.highcharts.com/{version}/modules/canvas-tools.js
 */
 @property(nonatomic, readwrite) NSString *canvasToolsURL;
 /**
 * description: The timezone offset in minutes. Positive values are west, negative values are east of UTC, as in the ECMAScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset : getTimezoneOffset method. Use this to display UTC based data in a predefined time zone. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/timezoneoffset/ : Timezone offset
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *timezoneOffset;
 

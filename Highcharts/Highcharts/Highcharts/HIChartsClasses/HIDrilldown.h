@@ -13,11 +13,13 @@ The drilldown feature requires the drilldown.js file to be loaded, found in the 
 /**
 * description: When this option is false, clicking a single point will drill down all points in the same category, equivalent to clicking the X axis label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/drilldown/allowpointdrilldown-false/ : Don't allow point drilldown.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointDrilldown;
 /**
 * description: Additional styles to apply to the X axis label for a point that has drilldown data. By default it is underlined and blue to invite to interaction.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/ : Label styles
+* default: { "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *activeAxisLabelStyle;
 /**
@@ -45,6 +47,7 @@ A string reference to an easing function set on the Math object. See http://jsfi
 /**
 * description: Additional styles to apply to the data label of a point that has drilldown data. By default it is underlined and blue to invite to interaction.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/ : Label styles
+* default: { "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *activeDataLabelStyle;
 

@@ -62,6 +62,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 @property(nonatomic, readwrite) HIHeatmapDataEvents *events;
 /**
 * description: Whether the data point is selected initially.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
@@ -81,6 +82,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * description: Requires Accessibility module
 A description of the point to add to the screen reader information about the point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/accessibility/accessible-map/ : Accessible map
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**

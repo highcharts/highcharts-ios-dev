@@ -160,6 +160,7 @@ In Highcharts 2.x, the default colors were:
 colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE', 
    '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/ : Assign a global color theme
+* default: [ "#7cb5ec" , "#434348" , "#90ed7d" , "#f7a35c" , "#8085e9" , "#f15c80" , "#e4d354" , "#2b908f" , "#f45b5b" , "#91e8e1"]
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 

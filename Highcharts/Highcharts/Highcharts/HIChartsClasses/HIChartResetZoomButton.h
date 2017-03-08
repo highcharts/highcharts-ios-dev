@@ -20,6 +20,7 @@
 * description: What frame the button should be placed related to. Can be either "plot" or "chart".
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-relativeto/ : Relative to the chart
 * accepted values: ["plot", "chart"]
+* default: plot
 */
 @property(nonatomic, readwrite) NSString *relativeTo;
 

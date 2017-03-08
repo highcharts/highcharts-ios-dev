@@ -17,6 +17,7 @@ For options that apply to multiple series, it is recommended to add them to the 
 /**
 * description: Defines the Axis on which the zones are applied.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/ : Zones on the X-Axis
+* default: y
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
 /**
@@ -27,6 +28,7 @@ For options that apply to multiple series, it is recommended to add them to the 
 * description: Sticky tracking of mouse events. When true, the mouseOut event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the mouseOut event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When stickyTracking is false and tooltip.shared is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/ : True by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/ : false
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
 /**
@@ -38,6 +40,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the selected option.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
 /**
@@ -47,6 +50,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
@@ -55,17 +59,20 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
  every decade starting from year 0, set pointInterval to 10.
 Since Highcharts 4.1, it can be combined with pointIntervalUnit to draw irregular intervals.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime X axis
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *pointInterval;
 /**
 * description: The corner radius of the border surrounding each column or bar.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/ : Rounded columns
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
 * description: If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/ : Linear,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : datetime X axis
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *pointStart;
 /**
@@ -82,16 +89,19 @@ Since Highcharts 4.1, it can be combined with pointIntervalUnit to draw irregula
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/ : 0.1 by default, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/ : 0.25, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/ : 0 for tightly packed columns,
+* default: 0.1
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
 * description: The color of the border of each waterfall column.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the border stroke can be set with the .highcharts-point class.
+* default: #333333
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
+* default: false
 */
 @property(nonatomic, readwrite) id /* Bool, Object */ shadow;
 /**
@@ -111,41 +121,49 @@ LongDashDotDot
 
 
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke dash-array can be set with the .highcharts-graph class.
+* default: Dot
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 @property(nonatomic, readwrite) HIWaterfallEvents *events;
 /**
 * description: The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/ : Limited to 50
+* default: null
 */
 @property(nonatomic, readwrite) NSNumber *maxPointWidth;
 /**
 * description: 3D columns only. The width of the colored edges.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *edgeWidth;
 /**
 * description: The Y axis value to serve as the base for the columns, for distinguishing between values above and below a threshold. If null, the columns extend from the padding Y axis minimum.
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *threshold;
 /**
 * description: When this is true, the series will not cause the Y axis to cross the zero plane (or threshold option) unless the data actually crosses the plane.
 For example, if softThreshold is false, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the minPadding option. If softThreshold is true, the Y axis starts at 0.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *softThreshold;
 /**
 * description: Whether to select the series initially. If showCheckbox is true, the checkbox next to the series name will be checked for a selected series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/ : One out of two series selected
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
 * description: Requires Accessibility module
 A description of the series to add to the screen reader information about the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/ : Accessible stock chart
+* default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**
 * description: Set the initial visibility of the series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
@@ -157,6 +175,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Whether to display this particular series or series type in the legend. The default value is true for standalone series, false for linked series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
 /**
@@ -171,6 +190,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: The minimal height for a column or width for a bar. By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point length to a  pixel value like 3. In stacked column charts, minPointLength might not be respected for tightly packed values.
 * demo: Set to three with http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/ : zero base value,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/ : positive and negative close to zero values
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *minPointLength;
 /**
@@ -182,6 +202,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * description: When using automatic point colors pulled from the options.colors collection, this option determines whether the chart should receive  one color per series or one color per point.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/ : False by default,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/ : true
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
@@ -201,6 +222,7 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 /**
 * description: Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/ : Grouping disabled
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;
 /**
@@ -213,12 +235,14 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/ : 0.2 by default, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/ : no group padding - all 
 			columns are evenly spaced
+* default: 0.2
 */
 @property(nonatomic, readwrite) NSNumber *groupPadding;
 /**
 * description: The width of the border surrounding each column or bar.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke width can be set with the .highcharts-point rule.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/ : 2px black border
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
@@ -246,6 +270,7 @@ Defaults to null in cartesian charts, "between" in polar charts.
 /**
 * description: The color of the line that connects columns in a waterfall series.
 In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the stroke can be set with the .highcharts-graph class.
+* default: #333333
 */
 @property(nonatomic, readwrite) HIColor *lineColor;
 /**
@@ -265,14 +290,17 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/ : Animation disabled,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/ : slower animation,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/ : custom easing function.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
 /**
 * description: Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *getExtremesFromAll;
 /**
 * description: The spacing between columns on the Z Axis in a 3D chart. Requires highcharts-3d.js.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *groupZPadding;
 /**
@@ -284,6 +312,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 /**
 * description: Depth of the columns in a 3D column chart. Requires highcharts-3d.js.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/3d/column/ : Basic 3D column chart
+* default: 25
 */
 @property(nonatomic, readwrite) NSNumber *depth;
 /**
@@ -293,6 +322,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 @property(nonatomic, readwrite) NSNumber *pointRange;
 /**
 * description: The width of the line connecting waterfall columns.
+* default: 1
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
@@ -300,6 +330,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/ : column, 
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/ : pie
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
 

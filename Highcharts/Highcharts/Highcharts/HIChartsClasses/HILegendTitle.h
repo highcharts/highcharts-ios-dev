@@ -9,10 +9,12 @@
 
 /**
 * description: A text or HTML string for the title. 
+* default: null
 */
 @property(nonatomic, readwrite) NSString *text;
 /**
 * description: Generic CSS styles for the legend title.
+* default: {"fontWeight":"bold"}
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 

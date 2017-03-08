@@ -10,11 +10,13 @@
 * description: Vertical alignment of the label relative to the plot band. Can be one of "top", "middle" or "bottom".
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-verticalalign-middle/ : Vertically centered label
 * accepted values: ["top", "middle", "bottom"]
+* default: top
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
 /**
 * description: Horizontal alignment of the label. Can be one of "left", "center" or "right".
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-align-right/ : Aligned to the right
+* default: left
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
@@ -38,6 +40,7 @@
 @property(nonatomic, readwrite) NSNumber *rotation;
 /**
 * description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html : use HTML to render the labels.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**

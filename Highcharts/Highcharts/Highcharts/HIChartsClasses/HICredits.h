@@ -14,21 +14,25 @@
 @property(nonatomic, readwrite) HICreditsPosition *position;
 /**
 * description: CSS styles for the credits label.
+* default: { "cursor": "pointer", "color": "#999999", "fontSize": "10px" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: The URL for the credits label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
+* default: http://www.highcharts.com
 */
 @property(nonatomic, readwrite) NSString *href;
 /**
 * description: The text for the credits label.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
+* default: Highcharts.com
 */
 @property(nonatomic, readwrite) NSString *text;
 /**
 * description: Whether to show the credits text.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/ : Credits disabled
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 

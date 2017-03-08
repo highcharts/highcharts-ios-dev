@@ -47,6 +47,7 @@ The built-in CSV parser doesn't support all flavours of CSV, so in some cases it
 /**
 * description: In tabular input data, the first row (indexed by 0) to use.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Limited data
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *startRow;
 /**
@@ -72,16 +73,19 @@ mm/dd/YY
 /**
 * description: Switch rows and columns of the input data, so that this.columns effectively becomes the rows of the data set, and the rows are interpreted as series.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/data/switchrowsandcolumns/ : Switch rows and columns
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *switchRowsAndColumns;
 /**
 * description: The decimal point used for parsing numbers in the CSV.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/ : Comma as decimal point
+* default: .
 */
 @property(nonatomic, readwrite) NSString *decimalPoint;
 /**
 * description: In tabular input data, the first column (indexed by 0) to use.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Limited data
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *startColumn;
 /**
@@ -97,6 +101,7 @@ mm/dd/YY
 /**
 * description: Whether to use the first row in the data set as series names. 
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Don't get series names from the CSV
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *firstRowAsNames;
 /**
@@ -117,6 +122,7 @@ mm/dd/YY
 /**
 * description: Line delimiter for parsing CSV.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/ : Delimiters
+* default: \n
 */
 @property(nonatomic, readwrite) NSString *lineDelimiter;
 

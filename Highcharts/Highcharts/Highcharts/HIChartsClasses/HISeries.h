@@ -67,6 +67,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 /**
 * description: When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the yAxis array, with 0 being the first.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
+* default: 0
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ yAxis;
 /**
@@ -86,6 +87,7 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 @property(nonatomic, readwrite) NSString *stack;
 /**
 * description: When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.
+* default: 0
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ xAxis;
 /**

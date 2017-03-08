@@ -13,15 +13,18 @@
 @property(nonatomic, readwrite) NSString *align;
 /**
 * description: The vertical offset of the button.
+* default: 10
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
 * description: The horizontal offset of the button
+* default: -10
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
 * description: The vertical alignment of the button.
 * accepted values: ["top", "middle", "bottom"]
+* default: top
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
 

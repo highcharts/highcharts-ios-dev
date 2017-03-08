@@ -9,16 +9,19 @@
 
 /**
 * description: Whether the 3d box should automatically adjust to the chart plot area.
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *fitToPlot;
 /**
 * description: One of the two rotation angles for the chart.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-interactive/ : Dynamic Angles
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *beta;
 /**
 * description: Defines the distance the viewer is standing in front of the chart, this setting is important to calculate the perspective effect in column and scatter charts.
 It is not used for 3D pie charts.
+* default: 100
 */
 @property(nonatomic, readwrite) NSNumber *viewDistance;
 /**
@@ -28,15 +31,18 @@ It is not used for 3D pie charts.
 @property(nonatomic, readwrite) HIChartOptions3dFrame *frame;
 /**
 * description: Wether to render the chart using the 3D functionality.
+* default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
 * description: The total depth of the chart.
+* default: 100
 */
 @property(nonatomic, readwrite) NSNumber *depth;
 /**
 * description: One of the two rotation angles for the chart.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-interactive/ : Dynamic Angles
+* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *alpha;
 

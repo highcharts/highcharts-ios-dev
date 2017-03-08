@@ -10,19 +10,23 @@
 /**
 * description: Vertical alignment of the credits.
 * accepted values: ["top", "middle", "bottom"]
+* default: bottom
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
 /**
 * description: Horizontal alignment of the credits.
 * accepted values: ["left", "center", "right"]
+* default: right
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
 * description: Vertical pixel offset of the credits.
+* default: -5
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
 * description: Horizontal pixel offset of the credits.
+* default: -10
 */
 @property(nonatomic, readwrite) NSNumber *x;
 

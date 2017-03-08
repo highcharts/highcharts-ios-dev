@@ -14,10 +14,12 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 @property(nonatomic, readwrite) id attributes;
 /**
 * description: The pixel size of the halo. For point markers this is the radius of the halo. For pie slices it is the width of the halo outside the slice. For bubbles it defaults to 5 and is the width of the halo outside the bubble.
+* default: 10
 */
 @property(nonatomic, readwrite) NSNumber *size;
 /**
 * description: Opacity for the halo unless a specific fill is overridden using the attributes setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats.
+* default: 0.25
 */
 @property(nonatomic, readwrite) NSNumber *opacity;
 
