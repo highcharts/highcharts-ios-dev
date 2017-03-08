@@ -39,10 +39,10 @@ class HIChartsClass:
                 self.comment += "* demo: {0}\n".format(self.demo)
             if self.values:
                 self.comment += "* accepted values: {0}\n".format(self.values)
+            self.comment = cleanComment(self.comment)
             if self.defaults:
                 self.comment += "* default: {0}\n".format(self.defaults)
             self.comment += "*/\n"
-            self.comment = cleanComment(self.comment)
 
     def update(self, source):
         self.dataType = source.dataType
@@ -56,10 +56,10 @@ class HIChartsClass:
                 self.comment += "* demo: {0}\n".format(self.demo)
             if self.values:
                 self.comment += "* accepted values: {0}\n".format(self.values)
+            self.comment = cleanComment(self.comment)
             if self.defaults:
                 self.comment += "* default: {0}\n".format(self.defaults)
             self.comment += "*/\n"
-            self.comment = cleanComment(self.comment)
 
     def addProperty(self, variable):
         self.properties.append(variable)
@@ -267,8 +267,8 @@ def createClass(node):
         if "values" in source and len(source["values"]) > 0:
             values = source["values"]
 
-        if "default" in source:
-            defaults = source["default"]
+        if "defaults" in source:
+            defaults = source["defaults"]
 
         if "demo" in source:
             demo = source["demo"]
@@ -628,22 +628,15 @@ def getDocumentationName(name, doubleLast = True):
 
 
 def generateDocumentation():
-    pass
     documentation = list()
     for field in structure:
         entry = dict()
-        name = getLast(field).replace(">", "")
+        name = getLast(field)
         if name == "global" or name == "lang":
             continue
         returnType = ""
         isParent = False
-        x = tree[field].info["fullname"].split("<")
-        if len(x) > 1:
-            x = x[1]
-        else:
-            x = x[0]
-        x = x.replace(">", "")
-        fullname = x
+        fullname = tree[field].info["fullname"]
         if structure[field].properties:
             isParent = True
             returnType = "HI" + upperfirst(createName(field))
@@ -652,10 +645,10 @@ def generateDocumentation():
         parent = None
         if tree[field].parent:
             parent = tree[field].parent
-        elif name != "global" and name != "lang":
-            parent = "options"
-        entry["_id"] = "options-" + getDocumentationName(field)
-        entry["fullname"] = "options." + fullname.replace("description", "definition")
+            if parent == "global" or parent == "lang":
+                continue
+        entry["_id"] = getDocumentationName(field)
+        entry["fullname"] = fullname.replace("description", "definition")
         entry["title"] = name.replace("description", "definition")
         if structure[field].description and structure[field].description != "":
             entry["description"] = structure[field].description
@@ -674,19 +667,8 @@ def generateDocumentation():
             entry["returnType"] = returnType
         entry["isParent"] = isParent
         if parent:
-            x = getDocumentationName(parent, False)
-            if x != "options":
-                x = "options-" + x
-            entry["parent"] = x
+            entry["parent"] = getDocumentationName(parent, False)
         documentation.append(entry)
-    entry = dict()
-    entry["_id"] = "options"
-    entry["fullname"] = "options"
-    entry["title"] = "options"
-    entry["description"] = ""
-    entry["returnType"] = "HIOptions"
-    entry["isParent"] = True
-    documentation.append(entry)
     entry = dict()
     entry["_id"] = "options--additionalOptions"
     entry["fullname"] = "options.additionalOptions"
@@ -694,7 +676,6 @@ def generateDocumentation():
     entry["description"] = "Additional options that are not listed but are accepted by API"
     entry["returnType"] = "NSDictionary"
     entry["isParent"] = False
-    entry["parent"] = "options"
     documentation.append(entry)
     with open('APIDocs.json', 'w') as json_file:
         json.dump(documentation, json_file)
