@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		20B0FEC21E7068490049A5E5 /* Build framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 20B0FEC31E70684A0049A5E5 /* Build configuration list for PBXAggregateTarget "Build framework" */;
+			buildPhases = (
+				20B0FEC71E7068570049A5E5 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Build framework";
+			productName = "Build framework";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2011B0F61E7013FF0027DA10 /* HIAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 2011ABB41E7013F30027DA10 /* HIAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2011B0F71E7013FF0027DA10 /* HIAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2011ABB51E7013F30027DA10 /* HIAccessibility.m */; };
@@ -1362,22 +1376,22 @@
 		343E138E1C38513D006DDD68 /* Highcharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 343E138D1C38513D006DDD68 /* Highcharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 345BA00E1C39AFB9001DAB1B /* HIGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345BA0111C39AFB9001DAB1B /* HIGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIGChartView.m */; };
-		3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 3481FB1C1CD4BB410068A523 /* HIGJavaScript.h */; };
 		3481FB1F1CD4BB410068A523 /* HIGJavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */; };
 		348557771CDB9AB9008829B6 /* HIGHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 348F28311CDB8459005CA399 /* HIGHTMLTests.m */; };
 		348675461CF5BB0300FB5E54 /* Plugins.plist in Resources */ = {isa = PBXBuildFile; fileRef = 348675451CF5BB0300FB5E54 /* Plugins.plist */; };
 		348F28231CDB790F005CA399 /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343E138A1C38513D006DDD68 /* Highcharts.framework */; };
 		348F282A1CDB7998005CA399 /* UIColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 348F28291CDB7998005CA399 /* UIColorTests.m */; };
 		348F282E1CDB7CB0005CA399 /* HIGJavaScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 348F282D1CDB7CB0005CA399 /* HIGJavaScriptTests.m */; };
-		34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA671CD3A6F500BE07CE /* HIGBundle.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA671CD3A6F500BE07CE /* HIGBundle.h */; };
 		34AFDA6A1CD3A6F500BE07CE /* HIGBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA681CD3A6F500BE07CE /* HIGBundle.m */; };
-		34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA6B1CD3AD0600BE07CE /* HIGHTML.h */; };
 		34AFDA6E1CD3AD0600BE07CE /* HIGHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */; };
-		34AFDA751CD3B3EE00BE07CE /* HIGDependency.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA731CD3B3EE00BE07CE /* HIGDependency.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		34AFDA751CD3B3EE00BE07CE /* HIGDependency.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AFDA731CD3B3EE00BE07CE /* HIGDependency.h */; };
 		34AFDA761CD3B3EE00BE07CE /* HIGDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA741CD3B3EE00BE07CE /* HIGDependency.m */; };
 		34B60A6F1CDB8EE300FEFA7A /* TestTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 34B60A6E1CDB8EE300FEFA7A /* TestTemplate.html */; };
 		34B60A731CDB909A00FEFA7A /* TestResult.html in Resources */ = {isa = PBXBuildFile; fileRef = 34B60A701CDB909A00FEFA7A /* TestResult.html */; };
-		34BD98E91CE0831D00D24A8C /* HIGPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 34BD98E71CE0831D00D24A8C /* HIGPrint.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		34BD98E91CE0831D00D24A8C /* HIGPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 34BD98E71CE0831D00D24A8C /* HIGPrint.h */; };
 		34BD98EA1CE0831D00D24A8C /* HIGPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BD98E81CE0831D00D24A8C /* HIGPrint.m */; };
 		34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1385,9 +1399,9 @@
 		34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E4B1CD10CA300DFE9CD /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		34EC1CF61CDCC783001DB3A0 /* HIGOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */; };
-		34F873FE1CDA134400674E6C /* HIGExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F873FC1CDA134400674E6C /* HIGExport.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		34F873FE1CDA134400674E6C /* HIGExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F873FC1CDA134400674E6C /* HIGExport.h */; };
 		34F873FF1CDA134400674E6C /* HIGExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F873FD1CDA134400674E6C /* HIGExport.m */; };
-		34F874011CDA15AC00674E6C /* HIGProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F874001CDA15AC00674E6C /* HIGProtocol.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		34F874011CDA15AC00674E6C /* HIGProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F874001CDA15AC00674E6C /* HIGProtocol.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -4936,6 +4950,9 @@
 				208980261E641223007280D7 /* HIColor.h in Headers */,
 				208C10531E5C4BD8005C425F /* HIChartsJSONSerializable.h in Headers */,
 				345BA0101C39AFB9001DAB1B /* HIGChartView.h in Headers */,
+				343E138E1C38513D006DDD68 /* Highcharts.h in Headers */,
+				34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */,
+				34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */,
 				34F874011CDA15AC00674E6C /* HIGProtocol.h in Headers */,
 				34AFDA6D1CD3AD0600BE07CE /* HIGHTML.h in Headers */,
 				34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */,
@@ -4943,9 +4960,6 @@
 				34F873FE1CDA134400674E6C /* HIGExport.h in Headers */,
 				3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */,
 				34BD98E91CE0831D00D24A8C /* HIGPrint.h in Headers */,
-				343E138E1C38513D006DDD68 /* Highcharts.h in Headers */,
-				34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */,
-				34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4998,6 +5012,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Highsoft AS";
 				TargetAttributes = {
+					20B0FEC21E7068490049A5E5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = US9546DV3C;
+						ProvisioningStyle = Automatic;
+					};
 					343E13891C38513D006DDD68 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = YBXVGN2JB2;
@@ -5022,6 +5041,7 @@
 			targets = (
 				343E13891C38513D006DDD68 /* Highcharts */,
 				348F281D1CDB790F005CA399 /* HighchartsTests */,
+				20B0FEC21E7068490049A5E5 /* Build framework */,
 			);
 		};
 /* End PBXProject section */
@@ -5049,6 +5069,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		20B0FEC71E7068570049A5E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"Highcharts\"\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Trial -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Trial -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\ncp -r \"${SRCROOT}/build/Trial-iphoneos/${FRAMEWORK_NAME}.framework\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Trial-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Trial-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n\n\n# 9\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi";
+		};
 		34EC0A9B1D2542BD009016E9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -5778,6 +5811,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		20B0FEC41E70684A0049A5E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = US9546DV3C;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		20B0FEC51E70684A0049A5E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = US9546DV3C;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		20B0FEC61E70684A0049A5E5 /* Trial */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = US9546DV3C;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Trial;
+		};
 		341A67421D256CC800C234A6 /* Trial */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5839,6 +5896,7 @@
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.highcharts.highcharts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5967,6 +6025,7 @@
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.highcharts.highcharts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5991,6 +6050,7 @@
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.highcharts.highcharts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -6025,6 +6085,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20B0FEC31E70684A0049A5E5 /* Build configuration list for PBXAggregateTarget "Build framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20B0FEC41E70684A0049A5E5 /* Debug */,
+				20B0FEC51E70684A0049A5E5 /* Release */,
+				20B0FEC61E70684A0049A5E5 /* Trial */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		343E13841C38513D006DDD68 /* Build configuration list for PBXProject "Highcharts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
