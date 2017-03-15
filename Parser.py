@@ -496,7 +496,16 @@ def createOptionsFiles():
     imports = "#import \"HIColor.h\"\n"
     htext = "@interface HIOptions: NSObject\n\n"
     mtext = "#import \"HIOptions.h\"\n\n@implementation HIOptions\n\n"
-    mtext += "-(instancetype)init {\n\treturn [super init];\n}\n\n"
+    mtext += "-(instancetype)init {\n\tif (self = [super init]) {\n" \
+             "\t\tHICredits *credits = [[HICredits alloc]init];\n" \
+             "\t\tcredits.enabled = @true;\n" \
+             "\t\tcredits.text = @\"Highcharts iOS beta\";\n" \
+             "\t\tcredits.href = @\"http://www.highcharts.com\";\n" \
+             "\t\tself.credits = credits;\n" \
+             "\t\treturn self;\n" \
+             "\t}\n" \
+             "\treturn nil;\n" \
+             "}\n\n"
     mtext += "-(NSDictionary *)getParams {\n\tNSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];\n"
     for field in options:
         if field.name != 'global' and field.name != 'lang':
