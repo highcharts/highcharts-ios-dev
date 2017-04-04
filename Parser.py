@@ -12,6 +12,9 @@ groups = list()
 files = list()
 bridge = set()
 options = list()
+filelicense = "/**\n* (c) 2009-2017 Highsoft AS\n*\n* License: www.highcharts.com/license\n" \
+            "* Any commercial use of Highcharts iOS wrapper (beta version) is prohibited.\n" \
+            "* In case of questions, please contact sales@highsoft.com\n*/\n\n"
 
 
 class HIChartsClass:
@@ -434,7 +437,7 @@ def formatToH(name, source):
     if colorAdded:
         imports += "#import \"HIColor.h\"\n"
     imports += "\n\n"
-    return imports + htext
+    return filelicense + imports + htext
 
 
 def formatToM(name, source):
