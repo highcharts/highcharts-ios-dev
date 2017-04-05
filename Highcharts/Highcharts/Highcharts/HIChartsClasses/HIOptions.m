@@ -3,15 +3,15 @@
 @implementation HIOptions
 
 -(instancetype)init {
-	if (self = [super init]) {
-		HICredits *credits = [[HICredits alloc]init];
-		credits.enabled = @true;
-		credits.text = @"Highcharts iOS beta";
-		credits.href = @"http://www.highcharts.com";
-		self.credits = credits;
-		return self;
-	}
-	return nil;
+    if (self = [super init]) {
+        HICredits *credits = [[HICredits alloc]init];
+        credits.enabled = @true;
+        credits.text = @"Highcharts iOS";
+        credits.href = @"http://www.highcharts.com/blog/mobile/";
+        self.credits = credits;
+        return self;
+    }
+    return nil;
 }
 
 -(NSDictionary *)getParams {
