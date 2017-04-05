@@ -502,8 +502,8 @@ def createOptionsFiles():
     mtext += "-(instancetype)init {\n\tif (self = [super init]) {\n" \
              "\t\tHICredits *credits = [[HICredits alloc]init];\n" \
              "\t\tcredits.enabled = @true;\n" \
-             "\t\tcredits.text = @\"Highcharts iOS beta\";\n" \
-             "\t\tcredits.href = @\"http://www.highcharts.com\";\n" \
+             "\t\tcredits.text = @\"Highcharts iOS\";\n" \
+             "\t\tcredits.href = @\"http://www.highcharts.com/blog/mobile/\";\n" \
              "\t\tself.credits = credits;\n" \
              "\t\treturn self;\n" \
              "\t}\n" \
