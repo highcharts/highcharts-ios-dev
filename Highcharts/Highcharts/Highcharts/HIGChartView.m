@@ -15,16 +15,10 @@
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
-// Use this with care when you need ony test things...
-//#define TRIAL 1
-
 @interface HIGChartView () <WKNavigationDelegate>
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) HIGHTML *HTML;
-#ifdef TRIAL
-@property (nonatomic, strong) UILabel *trialLabel;
-#endif
 @end
 
 @implementation HIGChartView
@@ -64,22 +58,6 @@
         self.webView.navigationDelegate = self;
         self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self addSubview:self.webView];
-        
-#ifdef TRIAL
-        CGRect labelFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 300.0f);
-        self.trialLabel = [[UILabel alloc] initWithFrame:labelFrame];
-        [self.trialLabel setTextColor:[UIColor colorWithWhite:0.0 alpha:0.15]];
-        [self.trialLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-        [self.trialLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontDescriptorTraitBold]];
-        [self.trialLabel setText:@" Highcharts for iOS "];
-        [self.trialLabel setTextAlignment:NSTextAlignmentCenter];
-        [self.trialLabel setAdjustsFontSizeToFitWidth:YES];
-        [self addSubview:self.trialLabel];
-        
-        
-        UIViewController *trialViewController = [[UIViewController alloc] init];
-        [[trialViewController view] setBackgroundColor:[UIColor clearColor]];
-#endif
     }
     return self;
 }
