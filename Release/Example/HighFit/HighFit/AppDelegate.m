@@ -10,6 +10,9 @@
 #import "DashboardViewController.h"
 #import "ListDataTableViewController.h"
 #import <Highcharts/Highcharts.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 
 @interface AppDelegate ()
 
@@ -46,6 +49,8 @@
     tabBar.viewControllers  = @[navigationDashboard, navigationData];
     
     [self.window setRootViewController:tabBar];
+    [Fabric with:@[[Crashlytics class]]];
+
     
     return YES;
 }
