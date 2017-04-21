@@ -1,3 +1,16 @@
+<p align="center" >
+<img src="http://www.highcharts.com/media/templates/highsoft_bootstrap/images/logo.svg" alt="Highcharts" title="Highcharts">
+</p>
+
+Highcharts iOS is a delightful wrapper of HighchartsJS for iOS.
+
+The most popular, robust and battle-tested JavaScript Charting library is now available for iOS with our new Objective-C wrapper. Get gorgeous, multi-touch charts with minimal effort.
+
+## Documentation
+Highcharts iOS is based on Highcharts JS therefore standard documentation apply.
+
+- Read the ["General Docummentation"](http://www.highcharts.com/docs)
+
 # HOWTO
 
 Here we present how to create basic chart and place it in your project
@@ -13,7 +26,7 @@ Here we present how to create basic chart and place it in your project
 
 ## Preparing your project
 
-- First of all download Highcharts framework from here: [Highcharts](http://highcharts.com)
+- First of all download Highcharts framework from here: [Highcharts](http://www.highcharts.com/blog/mobile/) or by using Cocoapods/Carthage
 - Now add Highcharts to your project by simply copying it to your project to folder **Frameworks** (create it if necessary) and remeber to check "**Copy items if needed**" option:
 
 ![alt text](http://i67.tinypic.com/x6iey8.png "Files")
@@ -156,4 +169,4 @@ Your View Controller .m file should look like this:
 ```
 
 ## ***Press "Run" in XCode.***
-#### For more complex solutions see demo app HIFit provided by Highcharts or read documentation!
+#### For more complex solutions see demo app HighFit provided by Highcharts or read documentation!
