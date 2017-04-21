@@ -156,4 +156,4 @@ Your View Controller .m file should look like this:
 ```
 
 ## ***Press "Run" in XCode.***
-#### For more complex solutions see demo app provided by Highcharts or read documentation!
+#### For more complex solutions see demo app HIFit provided by Highcharts or read documentation!

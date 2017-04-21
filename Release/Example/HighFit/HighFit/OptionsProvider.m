@@ -8,14 +8,13 @@
 
 #import "OptionsProvider.h"
 #import <UIKit/UIKit.h>
-#import <Highcharts/Highcharts.h>
 
 @implementation OptionsProvider
 
 //@[@0, @"rgb(98, 104, 166)"],
 //@[@1, @"rgb(244, 153, 82)"]
 
-+ (NSDictionary*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series type:(NSString*)type;
++ (HIOptions*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series type:(NSString*)type;
 {
     NSArray *categories = nil;
     
@@ -40,240 +39,278 @@
     }
     
     if ([options[@"chartType"] isEqualToString:@"area"]) {
-        return @{
-                 @"chart" : @{
-                         @"backgroundColor": @{
-                                 @"linearGradient": @[@0, @0, @0, @300],
-                                 @"stops": @[
-                                         @[@0, @"rgb(102, 153, 161)"],
-                                         @[@1, @"rgb(128, 135, 232)"]
-                                         ]
-                                 },
-                         @"borderRadius": @6,
-                         @"type": options[@"chartType"]
-                         },
-                 @"exporting": @{
-                         @"enabled": options[@"exporting"]
-                         },
-                 @"navigation": @{
-                         @"buttonOptions": @{
-                                 @"symbolStroke": @"rgba(255, 255, 255, 0.4)",
-                                 @"theme": @{
-                                         @"fill": @"rgba(0,0,0,0.0)"
-                                         }
-                                 }
-                         },
-                 @"plotOptions": @{
-                         @"series": @{
-                         @"fillColor": @{
-                             @"linearGradient": @[@0, @0, @0, @150],
-                             @"stops": @[
-                                 @[@0, @"rgba(255,255,255, 0.75)"],
-                                 @[@1, @"rgba(255,255,255, 0.02)"]
-                                 ]
-                          }
-                         }
-                         },
-                 @"credits": @{
-                         @"enabled": @NO
-                         },
-                 @"title": @{
-                         @"text": options[@"title"],
-                         @"align": @"left",
-                         @"style": @{
-                                 @"fontFamily": @"Arial",
-                                 @"fontSize": @"14px",
-                                 @"color": @"rgba(255, 255, 255, 0.6)"
-                                 },
-                         @"y": @16
-                         },
-                 @"subtitle": @{
-                         @"text": options[@"subtitle"],
-                         @"align": @"left",
-                         @"style": @{
-                                 @"fontFamily": @"Arial",
-                                 @"fontSize": @"10px",
-                                 @"color": @"rgba(255, 255, 255, 0.6)"
-                                 },
-                         @"y": @28
-                         },
-                 @"tooltip": @{
-                         @"headerFormat": @"",
-                         },
-                 @"xAxis": @{
-                          @"tickColor": @"rgba(255,255,255,0.0)",
-                          @"lineColor": @"rgba(255, 255, 255, 0.3)",
-                          @"labels": @{
-                                  @"style": @{
-                                          @"color": @"rgb(255, 255, 255)",
-                                          @"font": @"10px Arial"
-                                          },
-                                  @"step": step
-                                  },
-                          @"categories": [categories copy]
-                          
-                         },
-                 @"yAxis": @{
-                         @"visible": @NO                         },
-                 @"series": @[
-                         @{ @"showInLegend": @NO, @"data" : [series copy], @"color": @"rgb(255, 255, 255)", @"name": options[@"title"]}
-                         ]
-                 };
+        
+        HIOptions *hioptions = [[HIOptions alloc]init];
+        
+        HIChart *chart = [[HIChart alloc]init];
+        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                         @"x1": @0,
+                                                                         @"y1": @0,
+                                                                         @"x2": @0,
+                                                                         @"y2": @300
+                                                                         } stops:@[
+                                                                                   @[@0, @"rgb(102, 153, 161)"],
+                                                                                   @[@1, @"rgb(128, 135, 232)"]
+                                                                                   ]];
+        chart.borderRadius = @6;
+        chart.type = options[@"chartType"];
+        hioptions.chart = chart;
+        
+        HIExporting *exporting = [[HIExporting alloc]init];
+        exporting.enabled = options[@"exporting"];
+        hioptions.exporting = exporting;
+        
+        HINavigation *navigation = [[HINavigation alloc]init];
+        navigation.buttonOptions = [[HINavigationButtonOptions alloc]init];
+        navigation.buttonOptions.symbolStroke = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.4];
+        navigation.buttonOptions.theme = @{@"fill": @"rgba(0,0,0,0.0)"};
+        hioptions.navigation = navigation;
+        
+        HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
+        plotOptions.area = [[HIPlotOptionsArea alloc]init];
+        plotOptions.area.fillColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                              @"x1": @0,
+                                                                              @"y1": @0,
+                                                                              @"x2": @0,
+                                                                              @"y2": @150
+                                                                              } stops:@[
+                                                                                        @[@0, @"rgba(255,255,255, 0.75)"],
+                                                                                        @[@1, @"rgba(255,255,255, 0.02)"]
+                                                                                        ]];
+        hioptions.plotOptions = plotOptions;
+        
+        HICredits *credits = [[HICredits alloc]init];
+        credits.enabled = false;
+        hioptions.credits = credits;
+        
+        HITitle *title = [[HITitle alloc]init];
+        title.text = options[@"title"];
+        title.align = @"left";
+        title.style = @{
+                        @"fontFamily": @"Arial",
+                        @"fontSize": @"14px",
+                        @"color": @"rgba(255, 255, 255, 0.6)"
+                        };
+        title.y = @16;
+        hioptions.title = title;
+        
+        HISubtitle *subtitle = [[HISubtitle alloc]init];
+        subtitle.text = options[@"subtitle"];
+        subtitle.align = @"left";
+        subtitle.style = @{
+                           @"fontFamily": @"Arial",
+                           @"fontSize": @"10px",
+                           @"color": @"rgba(255, 255, 255, 0.6)"
+                           };
+        subtitle.y = @28;
+        hioptions.subtitle = subtitle;
+        
+        HITooltip *tooltip = [[HITooltip alloc]init];
+        tooltip.headerFormat = @"";
+        hioptions.tooltip = tooltip;
+        
+        HIXAxis *xaxis = [[HIXAxis alloc]init];
+        xaxis.tickColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.0];
+        xaxis.lineColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.3];
+        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels.style = @{
+                               @"color": @"rgb(255, 255, 255)",
+                               @"font": @"10px Arial"
+                               };
+        xaxis.labels.step = step;
+        xaxis.categories = [categories copy];
+        hioptions.xAxis = @[xaxis];
+        
+        HIYAxis *yaxis = [[HIYAxis alloc]init];
+        yaxis.visible = false;
+        hioptions.yAxis = @[yaxis];
+        
+        HIArea *area = [[HIArea alloc]init];
+        area.showInLegend = false;
+        area.data = [series copy];
+        area.color = [[HIColor alloc]initWithRGB:255 green:255 blue:255];
+        area.name = options[@"title"];
+        hioptions.series = @[area];
+        
+        return hioptions;
     }
 
     if ([options[@"chartType"] isEqualToString:@"column"]) {
-        return @{
-                 @"chart" : @{
-                         @"backgroundColor":  @{
-                                 @"linearGradient": @[@0, @0, @0, @300],
-                                 @"stops": @[
-                                         @[@0, @"rgb(66, 218, 113)"],
-                                         @[@1, @"rgb(80, 140, 200)"]
-                                         ]
-                                 },
-                         @"borderRadius": @6,
-                         @"type": options[@"chartType"]
-                         },
-                 @"exporting": @{
-                         @"enabled": options[@"exporting"]
-                         },
-                 @"navigation": @{
-                         @"buttonOptions": @{
-                                 @"symbolStroke": @"rgba(255, 255, 255, 0.4)",
-                                 @"theme": @{
-                                         @"fill": @"rgba(0,0,0,0.0)"
-                                         }
-                                 }
-                         },
-                 @"plotOptions": @{
-                         @"series": @{
-                                 @"color": @"rgba(255, 255, 255, 0.6)",
-                                 @"borderRadius": @2,
-                                 @"borderWidth": @0
-                                 },
-                         },
-                 @"credits": @{
-                         @"enabled": @NO
-                         },
-                 @"title": @{
-                         @"text": options[@"title"],
-                         @"align": @"left",
-                         @"style": @{
-                                 @"fontFamily": @"Arial",
-                                 @"fontSize": @"14px",
-                                 @"color": @"rgba(255, 255, 255, 0.6)"
-                                 },
-                         @"y": @16
-                         },
-                 @"subtitle": @{
-                         @"text": options[@"subtitle"],
-                         @"align": @"left",
-                         @"style": @{
-                                 @"fontFamily": @"Arial",
-                                 @"fontSize": @"10px",
-                                 @"color": @"rgba(255, 255, 255, 0.6)"
-                                 },
-                         @"y": @28
-                         },                 @"tooltip": @{
-                         @"headerFormat": @"",
-                         },
-                 @"xAxis": @{
-                          @"tickColor": @"rgba(255,255,255,0.0)",
-                          @"lineColor": @"rgba(255, 255, 255, 0.3)",
-                          @"labels": @{
-                                  @"style": @{
-                                          @"color": @"rgb(255, 255, 255)",
-                                          @"font": @"10px Arial"
-                                          },
-                                  @"step": step
-                                  },
-                          @"categories": [categories copy]
-                         },
-                 @"yAxis": @{
-                         @"visible": @NO
-                         },
-                 @"series": @[
-                         @{ @"showInLegend": @NO, @"data" : [series copy], @"name": options[@"title"]}
-                         ]
-                 };
+        
+        HIOptions *hioptions = [[HIOptions alloc]init];
+        
+        HIChart *chart = [[HIChart alloc]init];
+        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                         @"x1": @0,
+                                                                         @"y1": @0,
+                                                                         @"x2": @0,
+                                                                         @"y2": @300
+                                                                         } stops: @[
+                                                                                    @[@0, @"rgb(66, 218, 113)"],
+                                                                                    @[@1, @"rgb(80, 140, 200)"]
+                                                                                    ]];
+        chart.borderRadius = @6;
+        chart.type = options[@"chartType"];
+        hioptions.chart = chart;
+        
+        HIExporting *exporting = [[HIExporting alloc]init];
+        exporting.enabled = options[@"exporting"];
+        hioptions.exporting = exporting;
+        
+        HINavigation *navigation = [[HINavigation alloc]init];
+        navigation.buttonOptions = [[HINavigationButtonOptions alloc]init];
+        navigation.buttonOptions.symbolStroke = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.4];
+        navigation.buttonOptions.theme = @{@"fill": @"rgba(0,0,0,0.0)"};
+        hioptions.navigation = navigation;
+        
+        HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
+        plotOptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotOptions.column.color = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.6];
+        plotOptions.column.borderRadius = @2;
+        plotOptions.column.borderWidth = @0;
+        hioptions.plotOptions = plotOptions;
+        
+        HICredits *credits = [[HICredits alloc]init];
+        credits.enabled = false;
+        hioptions.credits = credits;
+        
+        HITitle *title = [[HITitle alloc]init];
+        title.text = options[@"title"];
+        title.align = @"left";
+        title.style = @{
+                        @"fontFamily": @"Arial",
+                        @"fontSize": @"14px",
+                        @"color": @"rgba(255, 255, 255, 0.6)"
+                        };
+        title.y = @16;
+        hioptions.title = title;
+        
+        HISubtitle *subtitle = [[HISubtitle alloc]init];
+        subtitle.text = options[@"subtitle"];
+        subtitle.align = @"left";
+        subtitle.style = @{
+                           @"fontFamily": @"Arial",
+                           @"fontSize": @"10px",
+                           @"color": @"rgba(255, 255, 255, 0.6)"
+                           };
+        subtitle.y = @28;
+        hioptions.subtitle = subtitle;
+        
+        HITooltip *tooltip = [[HITooltip alloc]init];
+        tooltip.headerFormat = @"";
+        hioptions.tooltip = tooltip;
+        
+        HIXAxis *xaxis = [[HIXAxis alloc]init];
+        xaxis.tickColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.0];
+        xaxis.lineColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.3];
+        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels.style = @{
+                               @"color": @"rgb(255, 255, 255)",
+                               @"font": @"10px Arial"
+                               };
+        xaxis.labels.step = step;
+        xaxis.categories = [categories copy];
+        hioptions.xAxis = @[xaxis];
+        
+        HIYAxis *yaxis = [[HIYAxis alloc]init];
+        yaxis.visible = false;
+        hioptions.yAxis = @[yaxis];
+        
+        HIColumn *column = [[HIColumn alloc]init];
+        column.showInLegend = false;
+        column.data = [series copy];
+        column.name = options[@"title"];
+        hioptions.series = @[column];
+        
+        return hioptions;
     }
 
     if ([options[@"chartType"] isEqualToString:@"spline"]) {
-        return @{
-                 @"chart" : @{
-                         @"backgroundColor":  @{
-                                 @"linearGradient": @[@0, @0, @0, @300],
-                                 @"stops": @[
-                                         @[@0, @"rgba(132, 103, 144, 1)"],
-                                         @[@1, @"rgba(163, 95, 103, 1)"]
-                                         ]
-                                 },
-                         @"borderRadius": @6,
-                         @"type": options[@"chartType"]
-                         },
-                 @"exporting": @{
-                         @"enabled": options[@"exporting"]
-                         },
-                 @"navigation": @{
-                         @"buttonOptions": @{
-                                 @"symbolStroke": @"rgba(255, 255, 255, 0.4)",
-                                 @"theme": @{
-                                         @"fill": @"rgba(0,0,0,0.0)"
-                                         }
-                                 }
-                         },
-                 @"plotOptions": @{
-                         @"series": @{
-                                 @"color": @"rgba(255, 255, 255, 0.6)",
-                                 @"borderRadius": @2,
-                                 @"borderWidth": @0
-                                 },
-                         },
-                 @"credits": @{
-                         @"enabled": @NO
-                         },
-                 @"title": @{
-                         @"text": options[@"title"],
-                         @"align": @"left",
-                         @"style": @{
-                                 @"fontFamily": @"Arial",
-                                 @"fontSize": @"14px",
-                                 @"color": @"rgba(255, 255, 255, 0.6)"
-                                 },
-                         @"y": @16
-                         },
-                 @"subtitle": @{
-                         @"text": options[@"subtitle"],
-                         @"align": @"left",
-                         @"style": @{
-                                 @"fontFamily": @"Arial",
-                                 @"fontSize": @"10px",
-                                 @"color": @"rgba(255, 255, 255, 0.6)"
-                                 },
-                         @"y": @28
-                         },
-                 @"tooltip": @{
-                         @"headerFormat": @"",
-                         },
-                 @"xAxis": @{
-                          @"tickColor": @"rgba(255,255,255,0.0)",
-                          @"lineColor": @"rgba(255, 255, 255, 0.3)",
-                          @"labels": @{
-                                  @"style": @{
-                                          @"color": @"rgb(255, 255, 255)",
-                                          @"font": @"10px Arial"
-                                          },
-                                  @"step": step
-                                  },
-                          @"categories": [categories copy]
-                         },
-                 @"yAxis": @{
-                         @"visible": @NO
-                         },
-                 @"series": @[
-                         @{ @"showInLegend": @NO, @"data" : [series copy], @"name": options[@"title"]}
-                         ]
-                 };
+        
+        HIOptions *hioptions = [[HIOptions alloc]init];
+        
+        HIChart *chart = [[HIChart alloc]init];
+        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                         @"x1": @0,
+                                                                         @"y1": @0,
+                                                                         @"x2": @0,
+                                                                         @"y2": @300
+                                                                         } stops: @[
+                                                                                    @[@0, @"rgba(132, 103, 144, 1)"],
+                                                                                    @[@1, @"rgba(163, 95, 103, 1)"]
+                                                                                    ]];
+        chart.borderRadius = @6;
+        chart.type = options[@"chartType"];
+        hioptions.chart = chart;
+        
+        HIExporting *exporting = [[HIExporting alloc]init];
+        exporting.enabled = options[@"exporting"];
+        hioptions.exporting = exporting;
+        
+        HINavigation *navigation = [[HINavigation alloc]init];
+        navigation.buttonOptions = [[HINavigationButtonOptions alloc]init];
+        navigation.buttonOptions.symbolStroke = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.4];
+        navigation.buttonOptions.theme = @{@"fill": @"rgba(0,0,0,0.0)"};
+        hioptions.navigation = navigation;
+        
+        HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
+        plotOptions.spline = [[HIPlotOptionsSpline alloc]init];
+        plotOptions.spline.color = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.6];
+        hioptions.plotOptions = plotOptions;
+        
+        HICredits *credits = [[HICredits alloc]init];
+        credits.enabled = false;
+        hioptions.credits = credits;
+        
+        HITitle *title = [[HITitle alloc]init];
+        title.text = options[@"title"];
+        title.align = @"left";
+        title.style = @{
+                        @"fontFamily": @"Arial",
+                        @"fontSize": @"14px",
+                        @"color": @"rgba(255, 255, 255, 0.6)"
+                        };
+        title.y = @16;
+        hioptions.title = title;
+        
+        HISubtitle *subtitle = [[HISubtitle alloc]init];
+        subtitle.text = options[@"subtitle"];
+        subtitle.align = @"left";
+        subtitle.style = @{
+                           @"fontFamily": @"Arial",
+                           @"fontSize": @"10px",
+                           @"color": @"rgba(255, 255, 255, 0.6)"
+                           };
+        subtitle.y = @28;
+        hioptions.subtitle = subtitle;
+        
+        HITooltip *tooltip = [[HITooltip alloc]init];
+        tooltip.headerFormat = @"";
+        hioptions.tooltip = tooltip;
+        
+        HIXAxis *xaxis = [[HIXAxis alloc]init];
+        xaxis.tickColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.0];
+        xaxis.lineColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.3];
+        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels.style = @{
+                               @"color": @"rgb(255, 255, 255)",
+                               @"font": @"10px Arial"
+                               };
+        xaxis.labels.step = step;
+        xaxis.categories = [categories copy];
+        hioptions.xAxis = @[xaxis];
+        
+        HIYAxis *yaxis = [[HIYAxis alloc]init];
+        yaxis.visible = false;
+        hioptions.yAxis = @[yaxis];
+        
+        HISpline *spline = [[HISpline alloc]init];
+        spline.showInLegend = false;
+        spline.data = [series copy];
+        spline.name = options[@"title"];
+        hioptions.series = @[spline];
+        
+        return hioptions;
     }
     
     return nil;

@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Highcharts/Highcharts.h>
 
 @interface OptionsProvider : NSObject
 
-+ (NSDictionary*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series type:(NSString*)type;
++ (HIOptions*)provideOptionsForChartType:(NSDictionary*)options series:(NSArray*)series type:(NSString*)type;
 
 @end
