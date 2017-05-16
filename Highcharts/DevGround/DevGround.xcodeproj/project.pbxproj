@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2052FED81E5DA75B004B96B2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2052FED71E5DA75B004B96B2 /* RootViewController.m */; };
+		20A0EA711ECB07B900F609E0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A0EA701ECB07B900F609E0 /* TestViewController.m */; };
 		34352A091D687C29003E48AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34352A081D687C29003E48AA /* main.m */; };
 		34352A0C1D687C29003E48AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34352A0B1D687C29003E48AA /* AppDelegate.m */; };
 		34352A121D687C29003E48AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34352A101D687C29003E48AA /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 /* Begin PBXFileReference section */
 		2052FED61E5DA740004B96B2 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		2052FED71E5DA75B004B96B2 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		20A0EA6F1ECB07B900F609E0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		20A0EA701ECB07B900F609E0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		20F288121E5C536500D9695D /* ChartType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartType.h; sourceTree = "<group>"; };
 		34352A041D687C29003E48AA /* DevGround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevGround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34352A081D687C29003E48AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				34352A151D687C29003E48AA /* LaunchScreen.storyboard */,
 				34352A181D687C29003E48AA /* Info.plist */,
 				34352A071D687C29003E48AA /* Supporting Files */,
+				20A0EA6F1ECB07B900F609E0 /* TestViewController.h */,
+				20A0EA701ECB07B900F609E0 /* TestViewController.m */,
 			);
 			path = DevGround;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 			files = (
 				34352A0C1D687C29003E48AA /* AppDelegate.m in Sources */,
 				2052FED81E5DA75B004B96B2 /* RootViewController.m in Sources */,
+				20A0EA711ECB07B900F609E0 /* TestViewController.m in Sources */,
 				34352A091D687C29003E48AA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

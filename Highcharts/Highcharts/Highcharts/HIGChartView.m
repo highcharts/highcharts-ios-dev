@@ -62,6 +62,42 @@
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
+        
+        self.HTML = [[HIGHTML alloc] init];
+        
+        self.HTML.baseURL = [self.highchartsBundle bundlePath];
+        
+        [self.HTML loadHTML:[self.highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
+        
+        NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
+        
+        if (!self.HTML.html) {
+            return nil;
+        }
+        
+        self.options = [[HIOptions alloc]init];
+        
+        self.webView = [[WKWebView alloc] initWithFrame:[self frame]];
+        self.webView.scrollView.scrollEnabled = NO;
+        self.webView.multipleTouchEnabled = NO;
+        self.webView.navigationDelegate = self;
+        self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        [self addSubview:self.webView];
+    }
+    return self;
+}
+
+- (void)loadChart
+{
+    [self loadChartHtml];
+}
+
+
 - (void)didMoveToSuperview
 {
     [super didMoveToSuperview];
