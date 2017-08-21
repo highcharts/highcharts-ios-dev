@@ -22,7 +22,7 @@
 		params[@"VMLRadialGradientURL"] = self.VMLRadialGradientURL;
 	}
 	if (self.getTimezoneOffset) {
-		params[@"getTimezoneOffset"] = self.getTimezoneOffset;
+		params[@"getTimezoneOffset"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.getTimezoneOffset];
 	}
 	if (self.canvasToolsURL) {
 		params[@"canvasToolsURL"] = self.canvasToolsURL;

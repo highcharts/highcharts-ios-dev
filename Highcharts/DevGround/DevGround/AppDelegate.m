@@ -18,9 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [HIGChartView preload];
-    
+    [HIChartView preload];
     return YES;
 }
 

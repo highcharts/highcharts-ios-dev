@@ -25,7 +25,7 @@
 		params[@"squareSymbol"] = self.squareSymbol;
 	}
 	if (self.labelFormatter) {
-		params[@"labelFormatter"] = self.labelFormatter;
+		params[@"labelFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.labelFormatter];
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;

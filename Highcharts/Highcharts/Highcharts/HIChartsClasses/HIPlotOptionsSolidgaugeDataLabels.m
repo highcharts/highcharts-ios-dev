@@ -16,7 +16,7 @@
 		params[@"overflow"] = self.overflow;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = self.formatter;
+		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];

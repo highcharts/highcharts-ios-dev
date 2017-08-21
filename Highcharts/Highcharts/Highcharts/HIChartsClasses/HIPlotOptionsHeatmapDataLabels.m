@@ -46,7 +46,7 @@
 		params[@"crop"] = self.crop;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = self.formatter;
+		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
 	}
 	if (self.x) {
 		params[@"x"] = self.x;

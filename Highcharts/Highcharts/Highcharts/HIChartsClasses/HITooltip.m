@@ -46,7 +46,7 @@
 		params[@"hideDelay"] = self.hideDelay;
 	}
 	if (self.pointFormatter) {
-		params[@"pointFormatter"] = self.pointFormatter;
+		params[@"pointFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointFormatter];
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
@@ -79,7 +79,7 @@
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.positioner) {
-		params[@"positioner"] = self.positioner;
+		params[@"positioner"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.positioner];
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
@@ -88,7 +88,7 @@
 		params[@"style"] = self.style;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = self.formatter;
+		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
 	}
 	if (self.pointFormat) {
 		params[@"pointFormat"] = self.pointFormat;

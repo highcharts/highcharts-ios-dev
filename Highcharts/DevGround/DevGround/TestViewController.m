@@ -9,8 +9,9 @@
 #import "TestViewController.h"
 #import <Highcharts/Highcharts.h>
 
-@interface TestViewController ()
-@property (strong, nonatomic)HIGChartView *chartView;
+@interface TestViewController ()<HIChartViewDelegate>
+@property (strong, nonatomic)HIChartView *chartView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leadingConstraint;
 @end
 
 @implementation TestViewController
@@ -22,16 +23,22 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"column";
+    chart.animation = @NO;
+    chart.backgroundColor = [[HIColor alloc] initWithRGBA:255 green:255 blue:255 alpha:0.02];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Column chart with negative values";
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.categories = [NSMutableArray arrayWithObjects:@"Apples",
-                        @"Oranges",
-                        @"Pears",
-                        @"Grapes",
-                        @"Bananas", nil];
+                        @"Orange",
+                        @"Pear",
+                        @"Grape",
+                        @"Banana", nil];
+    xaxis.labels = [HIXAxisLabels new];
+    xaxis.labels.rotation = @0;
+    xaxis.labels.useHTML = @NO;
+    xaxis.labels.formatter = @"function() {  return this.value + 's';}";
     
     HICredits *credits = [[HICredits alloc]init];
     credits.enabled = @false;
@@ -65,23 +72,27 @@
     options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
     options.credits = credits;
     options.series = [NSMutableArray arrayWithObjects: column1, column2, column3,  nil];
+    
+    self.chartView.viewController = self;
     self.chartView.options = options;
-    [self.chartView loadChart];
+    self.chartView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)chartViewDidLoad:(HIChartView *)chart {
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)refreshAction:(id)sender {
+    
 }
-*/
+
+- (IBAction)resizeAction:(id)sender {
+    self.leadingConstraint.constant = self.leadingConstraint.constant + 100;
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
 
 @end

@@ -55,7 +55,7 @@
 		params[@"theme"] = self.theme;
 	}
 	if (self.onclick) {
-		params[@"onclick"] = self.onclick;
+		params[@"onclick"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.onclick];
 	}
 	if (self.menuItems) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];

@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *chartTypePicker;
 @property (weak, nonatomic) IBOutlet UIButton *proceedButton;
 @property (weak, nonatomic) IBOutlet UIView *myChartView;
-@property (strong, nonatomic) HIGChartView *chartView;
+@property (strong, nonatomic) HIChartView *chartView;
 
 @end

@@ -25,7 +25,7 @@
 		params[@"valueDecimals"] = self.valueDecimals;
 	}
 	if (self.pointFormatter) {
-		params[@"pointFormatter"] = self.pointFormatter;
+		params[@"pointFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointFormatter];
 	}
 	if (self.followPointer) {
 		params[@"followPointer"] = self.followPointer;

@@ -1,60 +1,15 @@
-//
-//  HIGView.h
-//  Highcharts
-//
-//  License: www.highcharts.com/license
-//  Copyright © 2016 Highsoft AS. All rights reserved.
-//
+/**
+ * (c) 2009-2017 Highsoft AS
+ *
+ * License: www.highcharts.com/license
+ * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
+ * In case of questions, please contact sales@highsoft.com
+ */
 
 #import <UIKit/UIKit.h>
-#import "HIOptions.h"
+#import "HIChartView.h"
 
-/**
- *  Highcharts Chart View Class. Initialize this as a normal view and set
- *  required properties.
- */
-@interface HIGChartView : UIView
-
-/**
- *  Options are main configuration entry point for chart view, for more
- *  information read API documentation.
- */
-@property (strong, nonatomic) HIOptions *options;
-
-/**
- *  Theme name to load from file system after preloading.
- */
-@property (strong, nonatomic) NSString *theme;
-
-/**
- *  Additional plugins to load into chart after preloading.
- */
-@property (strong, nonatomic) NSArray *plugins;
-
-/**
- *  This param alows to debug chart view in safari inspector. Loads unminified 
- *  JS files to ease debuging.
- */
-@property (assign, nonatomic) BOOL debug;
-
-/**
- *  This is needed to make interactions betwen chart and your aplication view.
- */
-@property (weak, nonatomic) UIViewController *viewController;
-
-/**
- *  Allows to preload needed data to file system. Required to run before
- *  initilaiznig view.
- */
-+ (void)preload;
-
-- (void)reload;
-
-/**
- *  Loads chart options into view.
- *  Use when instantiate from storyboard
- */
-
-- (void)loadChart;
+__deprecated_msg("Please use HIChartView instead")
+@interface HIGChartView : HIChartView
 
 @end

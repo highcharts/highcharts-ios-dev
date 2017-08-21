@@ -13,7 +13,7 @@
 		params[@"maxWidth"] = self.maxWidth;
 	}
 	if (self.callback) {
-		params[@"callback"] = self.callback;
+		params[@"callback"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.callback];
 	}
 	if (self.minHeight) {
 		params[@"minHeight"] = self.minHeight;

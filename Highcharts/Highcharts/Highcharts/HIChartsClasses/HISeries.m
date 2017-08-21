@@ -52,7 +52,7 @@
 		params[@"index"] = self.index;
 	}
 	if (self.dataParser) {
-		params[@"dataParser"] = self.dataParser;
+		params[@"dataParser"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.dataParser];
 	}
 	return params;
 }

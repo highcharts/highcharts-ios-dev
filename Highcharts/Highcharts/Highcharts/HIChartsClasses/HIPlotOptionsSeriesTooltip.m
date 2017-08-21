@@ -34,7 +34,7 @@
 		params[@"padding"] = self.padding;
 	}
 	if (self.pointFormatter) {
-		params[@"pointFormatter"] = self.pointFormatter;
+		params[@"pointFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointFormatter];
 	}
 	if (self.headerFormat) {
 		params[@"headerFormat"] = self.headerFormat;

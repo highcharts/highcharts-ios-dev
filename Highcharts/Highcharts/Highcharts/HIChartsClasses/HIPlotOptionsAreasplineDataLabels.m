@@ -22,7 +22,7 @@
 		params[@"inside"] = self.inside;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = self.formatter;
+		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;

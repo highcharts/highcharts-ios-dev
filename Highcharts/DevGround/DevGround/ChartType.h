@@ -8310,11 +8310,11 @@
         yaxis1.lineColor = [[HIColor alloc]initWithHexValue:@"339"];
         yaxis1.tickColor = [[HIColor alloc]initWithHexValue:@"339"];
         yaxis1.minorTickColor = [[HIColor alloc]initWithHexValue:@"339"];
-        yaxis1.offset = @-25;
+        yaxis1.offset = @(-25);
         yaxis1.lineWidth = @2;
         yaxis1.labels = [[HIYAxisLabels alloc]init];
         yaxis1.labels.distance = @-20;
-        yaxis1.labels.rotation = @"auto";
+        yaxis1.labels.rotation = @0;
         yaxis1.tickLength = @5;
         yaxis1.minorTickLength = @5;
         yaxis1.endOnTick = @false;
@@ -8331,7 +8331,7 @@
         yaxis2.offset = @-20;
         yaxis2.labels = [[HIYAxisLabels alloc]init];
         yaxis2.labels.distance = @12;
-        yaxis2.labels.rotation = @"auto";
+        yaxis2.labels.rotation = @0;
         yaxis2.tickLength = @5;
         yaxis2.minorTickLength = @5;
         yaxis2.endOnTick = @false;
@@ -8425,7 +8425,7 @@
         yaxis.tickColor = [[HIColor alloc]initWithHexValue:@"666"];
         yaxis.labels = [[HIYAxisLabels alloc]init];
         yaxis.labels.step = @2;
-        yaxis.labels.rotation = @"auto";
+        yaxis.labels.rotation = @0;
         yaxis.title = [[HIYAxisTitle alloc]init];
         yaxis.title.text = @"km/h";
         HIYAxisPlotBands *plotband1 = [[HIYAxisPlotBands alloc]init];
@@ -8505,7 +8505,7 @@
         yaxis.tickPosition = @"outside";
         yaxis.labels = [[HIYAxisLabels alloc]init];
         yaxis.labels.distance = @20;
-        yaxis.labels.rotation = @"auto";
+        yaxis.labels.rotation = @0;
         yaxis.title = [[HIYAxisTitle alloc]init];
         yaxis.title.text = @"VU<br/><span style=\"font-size:8px\">Channel</span>";
         yaxis.title.y = @-40;

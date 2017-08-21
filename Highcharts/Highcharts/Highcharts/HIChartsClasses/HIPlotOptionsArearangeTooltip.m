@@ -46,7 +46,7 @@
 		params[@"xDateFormat"] = self.xDateFormat;
 	}
 	if (self.pointFormatter) {
-		params[@"pointFormatter"] = self.pointFormatter;
+		params[@"pointFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointFormatter];
 	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;

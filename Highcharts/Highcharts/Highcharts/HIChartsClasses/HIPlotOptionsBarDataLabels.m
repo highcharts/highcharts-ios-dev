@@ -58,7 +58,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = self.formatter;
+		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
 	}
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
