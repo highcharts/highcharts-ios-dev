@@ -247,7 +247,7 @@
     tmpOptions[@"exporting"] = @YES;
     
     int sum = 0;
-    for (NSNumber *number in self.data[@"day"]) {
+    for (NSNumber *number in self.data[dataName]) {
         sum += number.integerValue;
     }
     

@@ -144,6 +144,9 @@
     
         [chartView addSubview:button];
     }
+    else {
+        [self updateCellButtonTag:cell newIndex:indexPath.row];
+    }
     
     return cell;
 }
@@ -236,6 +239,19 @@
     [self.tableView reloadData];
 }
 
+- (void) updateCellButtonTag: (UITableViewCell*) cell newIndex:(NSInteger) index
+{
+    for (UIView *view in [cell subviews]) {
+        if([view isKindOfClass:[HIGChartView class]]) {
+            for (UIView *subview in [view subviews]) {
+                if([subview isKindOfClass:[UIButton class]]) {
+                    subview.tag = index;
+                }
+            }
+        }
+    }
+}
+
 - (IBAction)actionSegment:(UISegmentedControl*)sender
 {
     switch (sender.selectedSegmentIndex) {
@@ -277,6 +293,7 @@
 
 - (void)showDetailData:(UIButton*)sender
 {
+    [self.tabBarController setSelectedIndex:1];
     
     DataTableViewController *dataView = [[DataTableViewController alloc] initWithNibName:@"DataTableViewController" bundle:nil];
     
@@ -286,8 +303,13 @@
     
     [dataView setConfiguration:options];
     
-    // Push the view controller.
-    [self.navigationController pushViewController:dataView animated:YES];
+    UINavigationController *navController = (UINavigationController*)self.tabBarController.selectedViewController;
+    if ([navController.visibleViewController isKindOfClass:[DataTableViewController class]]) {
+        [navController popViewControllerAnimated:NO];
+    }
+    
+    //Push the view controller
+    [navController pushViewController:dataView animated:YES];
 }
 
 @end
