@@ -45,6 +45,10 @@
     
     NSString *template = @"<script src=\"%@%@%@\"></script>\n";
     
+    if (SYSTEM_VERSION_LESS_THAN(@"9.0")) {
+        template = @"<script src=\"%@%@%@\" charset=\"UTF-8\"></script>\n";
+    }
+    
     NSString *jsFileName = [NSString stringWithFormat:@"%@%@%@", prefix, js, suffix];
     NSString *jsFilePath = [self.baseURL stringByAppendingPathComponent:jsFileName];
     

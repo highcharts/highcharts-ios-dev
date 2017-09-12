@@ -6,7 +6,13 @@
 //  Copyright © 2016 Highsoft AS. All rights reserved.
 //
 
+#import "UIKit/UIKit.h"
 #import <Foundation/Foundation.h>
+
+/**
+ *  System Versioning Preprocessor Macro
+ */
+#define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
 /**
  *  This is main class that operates on HTML, loading, parsing ect...
