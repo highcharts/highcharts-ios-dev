@@ -16,7 +16,7 @@
 		params[@"tickColor"] = [self.tickColor getData];
 	}
 	if (self.tickPositioner) {
-		params[@"tickPositioner"] = self.tickPositioner;
+		params[@"tickPositioner"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.tickPositioner];
 	}
 	if (self.categories) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];

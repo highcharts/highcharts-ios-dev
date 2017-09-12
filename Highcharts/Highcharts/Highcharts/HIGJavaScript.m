@@ -22,7 +22,11 @@
         return nil;
     }
     
-    return [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
+    NSString *preReplacement = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSString *openingsReplaced = [preReplacement stringByReplacingOccurrencesOfString:@"\"__xx__" withString:@""];
+    NSString *closingsReplaced = [openingsReplaced stringByReplacingOccurrencesOfString:@"__xx__\"" withString:@""];
+
+    return closingsReplaced;
 }
 
 @end

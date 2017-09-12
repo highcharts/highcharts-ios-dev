@@ -31,7 +31,7 @@
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = self.formatter;
+		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
 	}
 	if (self.align) {
 		params[@"align"] = self.align;

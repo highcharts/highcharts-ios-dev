@@ -49,7 +49,7 @@
 		params[@"chartOptions"] = self.chartOptions;
 	}
 	if (self.error) {
-		params[@"error"] = self.error;
+		params[@"error"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.error];
 	}
 	if (self.printMaxWidth) {
 		params[@"printMaxWidth"] = self.printMaxWidth;

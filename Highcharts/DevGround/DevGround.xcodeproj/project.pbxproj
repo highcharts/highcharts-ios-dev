@@ -109,14 +109,14 @@
 				34352A0B1D687C29003E48AA /* AppDelegate.m */,
 				2052FED61E5DA740004B96B2 /* RootViewController.h */,
 				2052FED71E5DA75B004B96B2 /* RootViewController.m */,
+				20A0EA6F1ECB07B900F609E0 /* TestViewController.h */,
+				20A0EA701ECB07B900F609E0 /* TestViewController.m */,
 				20F288121E5C536500D9695D /* ChartType.h */,
 				34352A101D687C29003E48AA /* Main.storyboard */,
 				34352A131D687C29003E48AA /* Assets.xcassets */,
 				34352A151D687C29003E48AA /* LaunchScreen.storyboard */,
 				34352A181D687C29003E48AA /* Info.plist */,
 				34352A071D687C29003E48AA /* Supporting Files */,
-				20A0EA6F1ECB07B900F609E0 /* TestViewController.h */,
-				20A0EA701ECB07B900F609E0 /* TestViewController.m */,
 			);
 			path = DevGround;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 				TargetAttributes = {
 					34352A031D687C29003E48AA = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = YBXVGN2JB2;
+						DevelopmentTeam = FYYW4F45T7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -361,7 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = YBXVGN2JB2;
+				DEVELOPMENT_TEAM = FYYW4F45T7;
 				INFOPLIST_FILE = DevGround/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.highsoft.DevGround;
@@ -374,7 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = YBXVGN2JB2;
+				DEVELOPMENT_TEAM = FYYW4F45T7;
 				INFOPLIST_FILE = DevGround/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.highsoft.DevGround;

@@ -10,7 +10,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.pointFormatter) {
-		params[@"pointFormatter"] = self.pointFormatter;
+		params[@"pointFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointFormatter];
 	}
 	if (self.valueSuffix) {
 		params[@"valueSuffix"] = self.valueSuffix;

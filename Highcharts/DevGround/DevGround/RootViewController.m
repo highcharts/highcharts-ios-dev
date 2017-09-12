@@ -38,7 +38,7 @@
     [super viewDidLayoutSubviews];
     
     //Initializing chartView with defined frame
-    self.chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.myChartView.bounds.origin.x, self.myChartView.bounds.origin.y , self.myChartView.bounds.size.width, 300.0f)];
+    self.chartView = [[HIChartView alloc] initWithFrame:CGRectMake(self.myChartView.bounds.origin.x, self.myChartView.bounds.origin.y , self.myChartView.bounds.size.width, 300.0f)];
     
     // Here you add additional plugins - if you use one of the charts listed below, you should add plugin before addSubview
     // In demo app we add all of them, because we use all types of charts. Remember that Pyramid also uses funnel plugin.
@@ -53,12 +53,8 @@
 }
 
 -(void)proceedButtonTapped:(UIButton *)sender {
-    
-    
     NSString *yourSelectedTitle = [_pickerData objectAtIndex:[self.chartTypePicker selectedRowInComponent:0]];
-    self.chartView.options = nil;
     self.chartView.options = [ChartType getChartByType: yourSelectedTitle];
-    [self.chartView reload];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

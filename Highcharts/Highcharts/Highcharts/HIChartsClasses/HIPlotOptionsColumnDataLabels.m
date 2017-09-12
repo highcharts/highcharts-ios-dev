@@ -31,7 +31,7 @@
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.formatter) {
-		params[@"formatter"] = self.formatter;
+		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;

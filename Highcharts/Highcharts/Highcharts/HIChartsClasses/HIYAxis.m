@@ -109,7 +109,7 @@
 		params[@"plotLines"] = array;
 	}
 	if (self.tickPositioner) {
-		params[@"tickPositioner"] = self.tickPositioner;
+		params[@"tickPositioner"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.tickPositioner];
 	}
 	if (self.alternateGridColor) {
 		params[@"alternateGridColor"] = [self.alternateGridColor getData];

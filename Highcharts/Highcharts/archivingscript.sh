@@ -2,11 +2,11 @@
 
 mkdir -p "Build"
 
-xcodebuild -project Highcharts.xcodeproj -scheme Highcharts -sdk iphoneos SYMROOT=Build -arch armv7 -arch armv7s -arch arm64 only_active_arch=no
+xcodebuild -project Highcharts.xcodeproj -configuration Release -scheme Highcharts -sdk iphoneos SYMROOT=Build -arch armv7 -arch armv7s -arch arm64 only_active_arch=no
 
-xcodebuild archive -project Highcharts.xcodeproj -scheme Highcharts -sdk iphoneos SYMROOT=Build -archivePath Archive -arch armv7 -arch armv7s -arch arm64
+xcodebuild archive -project Highcharts.xcodeproj -configuration Release -scheme Highcharts -sdk iphoneos SYMROOT=Build -archivePath Archive -arch armv7 -arch armv7s -arch arm64
 
-xcodebuild build -project Highcharts.xcodeproj -scheme Highcharts -sdk iphonesimulator SYMROOT=Build only_active_arch=no -arch x86_64 -arch i386
+xcodebuild build -project Highcharts.xcodeproj -configuration Release -scheme Highcharts -sdk iphonesimulator SYMROOT=Build only_active_arch=no -arch x86_64 -arch i386
 
 cp -RL Archive.xcarchive/Products/Library/Frameworks/ Build/Release-universal/
 

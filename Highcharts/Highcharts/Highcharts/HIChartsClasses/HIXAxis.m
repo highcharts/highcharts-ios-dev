@@ -229,7 +229,7 @@
 		params[@"showFirstLabel"] = self.showFirstLabel;
 	}
 	if (self.tickPositioner) {
-		params[@"tickPositioner"] = self.tickPositioner;
+		params[@"tickPositioner"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.tickPositioner];
 	}
 	if (self.tickAmount) {
 		params[@"tickAmount"] = self.tickAmount;

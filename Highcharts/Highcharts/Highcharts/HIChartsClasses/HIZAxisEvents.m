@@ -10,19 +10,19 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.afterSetExtremes) {
-		params[@"afterSetExtremes"] = self.afterSetExtremes;
+		params[@"afterSetExtremes"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.afterSetExtremes];
 	}
 	if (self.pointBreak) {
-		params[@"pointBreak"] = self.pointBreak;
+		params[@"pointBreak"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointBreak];
 	}
 	if (self.pointInBreak) {
-		params[@"pointInBreak"] = self.pointInBreak;
+		params[@"pointInBreak"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointInBreak];
 	}
 	if (self.afterBreaks) {
-		params[@"afterBreaks"] = self.afterBreaks;
+		params[@"afterBreaks"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.afterBreaks];
 	}
 	if (self.setExtremes) {
-		params[@"setExtremes"] = self.setExtremes;
+		params[@"setExtremes"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.setExtremes];
 	}
 	return params;
 }

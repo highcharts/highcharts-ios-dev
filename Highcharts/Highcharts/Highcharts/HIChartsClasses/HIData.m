@@ -31,7 +31,7 @@
 		params[@"endColumn"] = self.endColumn;
 	}
 	if (self.parseDate) {
-		params[@"parseDate"] = self.parseDate;
+		params[@"parseDate"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.parseDate];
 	}
 	if (self.endRow) {
 		params[@"endRow"] = self.endRow;
@@ -43,7 +43,7 @@
 		params[@"startRow"] = self.startRow;
 	}
 	if (self.complete) {
-		params[@"complete"] = self.complete;
+		params[@"complete"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.complete];
 	}
 	if (self.dateFormat) {
 		params[@"dateFormat"] = self.dateFormat;
@@ -79,7 +79,7 @@
 		params[@"googleSpreadsheetWorksheet"] = self.googleSpreadsheetWorksheet;
 	}
 	if (self.parsed) {
-		params[@"parsed"] = self.parsed;
+		params[@"parsed"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.parsed];
 	}
 	if (self.columns) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
