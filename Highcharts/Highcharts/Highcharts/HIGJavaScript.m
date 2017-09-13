@@ -25,8 +25,9 @@
     NSString *preReplacement = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     NSString *openingsReplaced = [preReplacement stringByReplacingOccurrencesOfString:@"\"__xx__" withString:@""];
     NSString *closingsReplaced = [openingsReplaced stringByReplacingOccurrencesOfString:@"__xx__\"" withString:@""];
-
-    return closingsReplaced;
+    NSString *slashReplaced = [closingsReplaced stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"];
+    
+    return slashReplaced;
 }
 
 @end
