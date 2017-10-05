@@ -133,6 +133,10 @@ static BOOL preloaded = NO;
 }
 
 - (void) loadChartWorker {
+    if (!self.options) {
+        return;
+    }
+    
     [self.HTML prepareViewWidth:CGRectGetWidth(self.webView.bounds) height: CGRectGetHeight(self.webView.bounds)];
     
     if (!self.plugins) {
