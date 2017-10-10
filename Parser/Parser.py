@@ -109,7 +109,7 @@ def get_type(x):
         "Color": 'HIColor',
         "String": 'NSString',
         "Object": 'id',
-        "Function": 'HSString',
+        "Function": 'NSString',
         "Array<Number>": 'NSArray<NSNumber *>',
         "Array<Object>": 'NSArray',
         "Array": 'NSArray',
@@ -136,7 +136,7 @@ def get_type(x):
         "Object|Boolean" : 'id',
         "String|Array.<String>" : 'id',
         "Array.<String>" : 'NSArray<NSString *>',
-        "function": 'HSString',
+        "function": 'NSString',
         "String|function" : 'id',
         "Array.<Object>" : 'NSArray',
         "Array.<Number>": 'NSArray<NSNumber *>',
@@ -160,7 +160,7 @@ def get_type(x):
         "Array.<Array.<Mixed>>": 'NSArray<NSArray *>',
         "Object|Number" : 'id',
         "umber": 'NSNumber',
-        "function|null" : 'HSString'
+        "function|null" : 'NSString'
     }[str(x)]
 
 
