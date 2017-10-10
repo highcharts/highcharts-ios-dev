@@ -129,7 +129,8 @@ def getType(x):
         "Mixed": 'id',
         "Number|Boolean": 'NSNumber',
         "": 'id',
-        "plotOptions.series.states": 'NSArray'
+        "plotOptions.series.states": 'NSArray',
+        "Boolean|String" : 'NSNumber /* Bool */'
     }[str(x)]
 
 
@@ -149,7 +150,7 @@ def getLast(x):
     s = x.split("<")
     if len(s) > 1:
         n = s[1].split(".")
-        last = n[len(n) - 1]
+        last = n[len(n) - 1].replace(">", "")
     else:
         n = s[0].split(".")
         last = n[len(n) - 1]
@@ -616,15 +617,20 @@ def printStructure():
 
 
 def getDocumentationName(name, doubleLast = True):
+    # it is v1
     ret = str(name)
     ret = ret.replace("description", "definition")
     x = ret.split("<")
-    if len(x) > 1:
-        x = x[1]
-        x = x.replace(">", "")
-    else:
-        x = x[0]
-    x = x.split(".")
+
+    # uncomment to get v2
+    #if len(x) > 1:
+     #   x = x[0] + "-" + x[1]
+      #  x = x.replace(">", "")
+    #else:
+     #   x = x[0]
+    #x = x.split(".")
+
+    x = ret.split(".") # comment to get v2
     if len(x) > 1:
         ret = x[0]
         if len(x) > 2:
