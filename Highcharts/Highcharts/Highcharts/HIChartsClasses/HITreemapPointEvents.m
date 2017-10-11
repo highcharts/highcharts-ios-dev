@@ -12,6 +12,9 @@
 	if (self.select) {
 		params[@"select"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.select];
 	}
+	if (self.click) {
+		params[@"click"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.click];
+	}
 	if (self.mouseOut) {
 		params[@"mouseOut"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.mouseOut];
 	}
@@ -20,9 +23,6 @@
 	}
 	if (self.mouseOver) {
 		params[@"mouseOver"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.mouseOver];
-	}
-	if (self.click) {
-		params[@"click"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.click];
 	}
 	if (self.remove) {
 		params[@"remove"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.remove];

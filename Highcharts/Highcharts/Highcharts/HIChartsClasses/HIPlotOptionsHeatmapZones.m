@@ -12,14 +12,14 @@
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
-	if (self.dashStyle) {
-		params[@"dashStyle"] = self.dashStyle;
+	if (self.color) {
+		params[@"color"] = [self.color getData];
 	}
 	if (self.value) {
 		params[@"value"] = self.value;
 	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
+	if (self.dashStyle) {
+		params[@"dashStyle"] = self.dashStyle;
 	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];

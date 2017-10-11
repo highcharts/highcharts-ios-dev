@@ -12,11 +12,11 @@
 	if (self.size) {
 		params[@"size"] = self.size;
 	}
-	if (self.opacity) {
-		params[@"opacity"] = self.opacity;
-	}
 	if (self.attributes) {
 		params[@"attributes"] = self.attributes;
+	}
+	if (self.opacity) {
+		params[@"opacity"] = self.opacity;
 	}
 	return params;
 }

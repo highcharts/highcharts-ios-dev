@@ -18,11 +18,11 @@
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
-	}
 	if (self.value) {
 		params[@"value"] = self.value;
+	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
 	}
 	return params;
 }

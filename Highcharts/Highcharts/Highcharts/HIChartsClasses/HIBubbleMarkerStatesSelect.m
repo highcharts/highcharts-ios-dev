@@ -9,9 +9,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
@@ -23,6 +20,9 @@
 	}
 	if (self.radius) {
 		params[@"radius"] = self.radius;
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	return params;
 }

@@ -12,11 +12,14 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
+	if (self.halo) {
+		params[@"halo"] = [self.halo getParams];
+	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
 	}
-	if (self.halo) {
-		params[@"halo"] = [self.halo getParams];
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;

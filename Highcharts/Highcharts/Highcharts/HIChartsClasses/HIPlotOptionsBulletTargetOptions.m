@@ -1,0 +1,30 @@
+#import "HIPlotOptionsBulletTargetOptions.h"
+
+@implementation HIPlotOptionsBulletTargetOptions
+
+-(instancetype)init {
+	return [super init];
+}
+
+-(NSDictionary *)getParams
+{
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.height) {
+		params[@"height"] = self.height;
+	}
+	if (self.width) {
+		params[@"width"] = self.width;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
+	return params;
+}
+
+@end

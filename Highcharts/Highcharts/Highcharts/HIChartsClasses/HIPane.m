@@ -9,9 +9,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.size) {
-		params[@"size"] = self.size;
-	}
 	if (self.background) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.background) {
@@ -23,6 +20,9 @@
 			}
 		}
 		params[@"background"] = array;
+	}
+	if (self.size) {
+		params[@"size"] = self.size;
 	}
 	if (self.endAngle) {
 		params[@"endAngle"] = self.endAngle;

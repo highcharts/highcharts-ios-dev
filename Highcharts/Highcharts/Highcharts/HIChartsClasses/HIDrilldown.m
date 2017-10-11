@@ -13,10 +13,13 @@
 		params[@"allowPointDrilldown"] = self.allowPointDrilldown;
 	}
 	if (self.activeAxisLabelStyle) {
-		params[@"activeAxisLabelStyle"] = self.activeAxisLabelStyle;
+		params[@"activeAxisLabelStyle"] = [self.activeAxisLabelStyle getParams];
 	}
-	if (self.animation) {
-		params[@"animation"] = self.animation;
+	if (self.drillUpButton) {
+		params[@"drillUpButton"] = [self.drillUpButton getParams];
+	}
+	if (self.activeDataLabelStyle) {
+		params[@"activeDataLabelStyle"] = [self.activeDataLabelStyle getParams];
 	}
 	if (self.series) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -30,11 +33,8 @@
 		}
 		params[@"series"] = array;
 	}
-	if (self.drillUpButton) {
-		params[@"drillUpButton"] = [self.drillUpButton getParams];
-	}
-	if (self.activeDataLabelStyle) {
-		params[@"activeDataLabelStyle"] = self.activeDataLabelStyle;
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	return params;
 }

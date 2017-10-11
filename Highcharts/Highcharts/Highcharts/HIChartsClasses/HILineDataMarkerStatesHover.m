@@ -12,23 +12,26 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.radiusPlus) {
-		params[@"radiusPlus"] = self.radiusPlus;
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.radius) {
-		params[@"radius"] = self.radius;
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.radius) {
+		params[@"radius"] = self.radius;
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.lineWidthPlus) {
 		params[@"lineWidthPlus"] = self.lineWidthPlus;
+	}
+	if (self.radiusPlus) {
+		params[@"radiusPlus"] = self.radiusPlus;
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	return params;
 }

@@ -9,32 +9,20 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.type) {
-		params[@"type"] = self.type;
+	if (self.width) {
+		params[@"width"] = self.width;
 	}
-	if (self.buttons) {
-		params[@"buttons"] = [self.buttons getParams];
+	if (self.libURL) {
+		params[@"libURL"] = self.libURL;
 	}
-	if (self.sourceHeight) {
-		params[@"sourceHeight"] = self.sourceHeight;
+	if (self.error) {
+		params[@"error"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.error];
 	}
 	if (self.fallbackToExportServer) {
 		params[@"fallbackToExportServer"] = self.fallbackToExportServer;
 	}
-	if (self.sourceWidth) {
-		params[@"sourceWidth"] = self.sourceWidth;
-	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
-	if (self.url) {
-		params[@"url"] = self.url;
-	}
-	if (self.allowHTML) {
-		params[@"allowHTML"] = self.allowHTML;
-	}
-	if (self.filename) {
-		params[@"filename"] = self.filename;
+	if (self.printMaxWidth) {
+		params[@"printMaxWidth"] = self.printMaxWidth;
 	}
 	if (self.scale) {
 		params[@"scale"] = self.scale;
@@ -42,20 +30,41 @@
 	if (self.formAttributes) {
 		params[@"formAttributes"] = self.formAttributes;
 	}
-	if (self.libURL) {
-		params[@"libURL"] = self.libURL;
+	if (self.url) {
+		params[@"url"] = self.url;
+	}
+	if (self.buttons) {
+		params[@"buttons"] = [self.buttons getParams];
+	}
+	if (self.allowHTML) {
+		params[@"allowHTML"] = self.allowHTML;
+	}
+	if (self.type) {
+		params[@"type"] = self.type;
+	}
+	if (self.csv) {
+		params[@"csv"] = [self.csv getParams];
+	}
+	if (self.sourceWidth) {
+		params[@"sourceWidth"] = self.sourceWidth;
+	}
+	if (self.menuItemDefinitions) {
+		params[@"menuItemDefinitions"] = self.menuItemDefinitions;
 	}
 	if (self.chartOptions) {
 		params[@"chartOptions"] = self.chartOptions;
 	}
-	if (self.error) {
-		params[@"error"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.error];
+	if (self.showTable) {
+		params[@"showTable"] = self.showTable;
 	}
-	if (self.printMaxWidth) {
-		params[@"printMaxWidth"] = self.printMaxWidth;
+	if (self.sourceHeight) {
+		params[@"sourceHeight"] = self.sourceHeight;
 	}
-	if (self.width) {
-		params[@"width"] = self.width;
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
+	}
+	if (self.filename) {
+		params[@"filename"] = self.filename;
 	}
 	return params;
 }

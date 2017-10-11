@@ -12,14 +12,14 @@
 	if (self.style) {
 		params[@"style"] = self.style;
 	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
+	if (self.y) {
+		params[@"y"] = self.y;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
-	if (self.y) {
-		params[@"y"] = self.y;
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.x) {
 		params[@"x"] = self.x;
@@ -30,14 +30,14 @@
 	if (self.margin) {
 		params[@"margin"] = self.margin;
 	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
 	if (self.widthAdjust) {
 		params[@"widthAdjust"] = self.widthAdjust;
-	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	return params;
 }

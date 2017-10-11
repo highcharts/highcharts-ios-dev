@@ -9,14 +9,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.showDuration) {
-		params[@"showDuration"] = self.showDuration;
+	if (self.labelStyle) {
+		params[@"labelStyle"] = [self.labelStyle getParams];
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
-	if (self.labelStyle) {
-		params[@"labelStyle"] = self.labelStyle;
+	if (self.showDuration) {
+		params[@"showDuration"] = self.showDuration;
 	}
 	if (self.hideDuration) {
 		params[@"hideDuration"] = self.hideDuration;

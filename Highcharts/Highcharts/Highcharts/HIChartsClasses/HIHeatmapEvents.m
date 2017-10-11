@@ -9,11 +9,20 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.click) {
-		params[@"click"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.click];
+	if (self.legendItemClick) {
+		params[@"legendItemClick"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.legendItemClick];
 	}
 	if (self.afterAnimate) {
 		params[@"afterAnimate"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.afterAnimate];
+	}
+	if (self.mouseOut) {
+		params[@"mouseOut"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.mouseOut];
+	}
+	if (self.click) {
+		params[@"click"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.click];
+	}
+	if (self.hide) {
+		params[@"hide"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.hide];
 	}
 	if (self.show) {
 		params[@"show"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.show];
@@ -23,15 +32,6 @@
 	}
 	if (self.checkboxClick) {
 		params[@"checkboxClick"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.checkboxClick];
-	}
-	if (self.hide) {
-		params[@"hide"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.hide];
-	}
-	if (self.legendItemClick) {
-		params[@"legendItemClick"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.legendItemClick];
-	}
-	if (self.mouseOut) {
-		params[@"mouseOut"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.mouseOut];
 	}
 	return params;
 }

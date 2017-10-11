@@ -9,23 +9,32 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.name) {
-		params[@"name"] = self.name;
+	if (self.labelrank) {
+		params[@"labelrank"] = self.labelrank;
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
+	if (self.name) {
+		params[@"name"] = self.name;
+	}
 	if (self.radius) {
 		params[@"radius"] = self.radius;
-	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
 	if (self.dataLabels) {
 		params[@"dataLabels"] = self.dataLabels;
+	}
+	if (self.id) {
+		params[@"id"] = self.id;
+	}
+	if (self.colorIndex) {
+		params[@"colorIndex"] = self.colorIndex;
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -36,17 +45,8 @@
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
-	if (self.labelrank) {
-		params[@"labelrank"] = self.labelrank;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
-	}
-	if (self.colorIndex) {
-		params[@"colorIndex"] = self.colorIndex;
 	}
 	return params;
 }

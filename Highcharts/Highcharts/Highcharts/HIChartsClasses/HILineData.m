@@ -9,23 +9,29 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.marker) {
+		params[@"marker"] = [self.marker getParams];
+	}
+	if (self.name) {
+		params[@"name"] = self.name;
+	}
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
 	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.id) {
 		params[@"id"] = self.id;
 	}
-	if (self.marker) {
-		params[@"marker"] = [self.marker getParams];
+	if (self.drilldown) {
+		params[@"drilldown"] = self.drilldown;
+	}
+	if (self.labelrank) {
+		params[@"labelrank"] = self.labelrank;
+	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -41,12 +47,6 @@
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
-	}
-	if (self.drilldown) {
-		params[@"drilldown"] = self.drilldown;
-	}
-	if (self.labelrank) {
-		params[@"labelrank"] = self.labelrank;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;

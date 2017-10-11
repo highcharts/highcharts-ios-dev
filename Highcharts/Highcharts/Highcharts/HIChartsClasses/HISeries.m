@@ -45,14 +45,8 @@
 	if (self.type) {
 		params[@"type"] = self.type;
 	}
-	if (self.dataURL) {
-		params[@"dataURL"] = self.dataURL;
-	}
 	if (self.index) {
 		params[@"index"] = self.index;
-	}
-	if (self.dataParser) {
-		params[@"dataParser"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.dataParser];
 	}
 	return params;
 }

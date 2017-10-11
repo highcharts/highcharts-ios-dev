@@ -12,44 +12,14 @@
 	if (self.definition) {
 		params[@"definition"] = self.definition;
 	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
-	}
-	if (self.getExtremesFromAll) {
-		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
-	}
-	if (self.maxSize) {
-		params[@"maxSize"] = self.maxSize;
-	}
-	if (self.zMax) {
-		params[@"zMax"] = self.zMax;
-	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
+	if (self.shadow) {
+		params[@"shadow"] = self.shadow;
 	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
-	if (self.zMin) {
-		params[@"zMin"] = self.zMin;
-	}
-	if (self.selected) {
-		params[@"selected"] = self.selected;
-	}
-	if (self.zThreshold) {
-		params[@"zThreshold"] = self.zThreshold;
-	}
-	if (self.animationLimit) {
-		params[@"animationLimit"] = self.animationLimit;
-	}
-	if (self.animation) {
-		params[@"animation"] = self.animation;
-	}
-	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+	if (self.point) {
+		params[@"point"] = [self.point getParams];
 	}
 	if (self.states) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -63,8 +33,74 @@
 		}
 		params[@"states"] = array;
 	}
+	if (self.pointInterval) {
+		params[@"pointInterval"] = self.pointInterval;
+	}
+	if (self.stickyTracking) {
+		params[@"stickyTracking"] = self.stickyTracking;
+	}
+	if (self.tooltip) {
+		params[@"tooltip"] = [self.tooltip getParams];
+	}
+	if (self.dashStyle) {
+		params[@"dashStyle"] = self.dashStyle;
+	}
+	if (self.colorIndex) {
+		params[@"colorIndex"] = self.colorIndex;
+	}
+	if (self.sizeByAbsoluteValue) {
+		params[@"sizeByAbsoluteValue"] = self.sizeByAbsoluteValue;
+	}
+	if (self.showInLegend) {
+		params[@"showInLegend"] = self.showInLegend;
+	}
+	if (self.linkedTo) {
+		params[@"linkedTo"] = self.linkedTo;
+	}
+	if (self.getExtremesFromAll) {
+		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
+	}
+	if (self.selected) {
+		params[@"selected"] = self.selected;
+	}
+	if (self.label) {
+		params[@"label"] = [self.label getParams];
+	}
+	if (self.connectEnds) {
+		params[@"connectEnds"] = self.connectEnds;
+	}
+	if (self.zoneAxis) {
+		params[@"zoneAxis"] = self.zoneAxis;
+	}
 	if (self.sizeBy) {
 		params[@"sizeBy"] = self.sizeBy;
+	}
+	if (self.allowPointSelect) {
+		params[@"allowPointSelect"] = self.allowPointSelect;
+	}
+	if (self.pointPlacement) {
+		params[@"pointPlacement"] = self.pointPlacement;
+	}
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
+	}
+	if (self.maxSize) {
+		params[@"maxSize"] = self.maxSize;
+	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
+	if (self.zThreshold) {
+		params[@"zThreshold"] = self.zThreshold;
+	}
+	if (self.visible) {
+		params[@"visible"] = self.visible;
+	}
+	if (self.exposeElementToA11y) {
+		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
+	}
+	if (self.turboThreshold) {
+		params[@"turboThreshold"] = self.turboThreshold;
 	}
 	if (self.zones) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -78,56 +114,8 @@
 		}
 		params[@"zones"] = array;
 	}
-	if (self.allowPointSelect) {
-		params[@"allowPointSelect"] = self.allowPointSelect;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
-	if (self.className) {
-		params[@"className"] = self.className;
-	}
-	if (self.zoneAxis) {
-		params[@"zoneAxis"] = self.zoneAxis;
-	}
-	if (self.stickyTracking) {
-		params[@"stickyTracking"] = self.stickyTracking;
-	}
-	if (self.pointIntervalUnit) {
-		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
-	}
-	if (self.marker) {
-		params[@"marker"] = [self.marker getParams];
-	}
-	if (self.threshold) {
-		params[@"threshold"] = self.threshold;
-	}
-	if (self.tooltip) {
-		params[@"tooltip"] = [self.tooltip getParams];
-	}
-	if (self.point) {
-		params[@"point"] = [self.point getParams];
-	}
-	if (self.displayNegative) {
-		params[@"displayNegative"] = self.displayNegative;
-	}
-	if (self.cropThreshold) {
-		params[@"cropThreshold"] = self.cropThreshold;
-	}
-	if (self.dashStyle) {
-		params[@"dashStyle"] = self.dashStyle;
-	}
-	if (self.visible) {
-		params[@"visible"] = self.visible;
-	}
-	if (self.lineWidth) {
-		params[@"lineWidth"] = self.lineWidth;
-	}
-	if (self.showCheckbox) {
-		params[@"showCheckbox"] = self.showCheckbox;
-	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
+	if (self.boostThreshold) {
+		params[@"boostThreshold"] = self.boostThreshold;
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -141,26 +129,83 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.sizeByAbsoluteValue) {
-		params[@"sizeByAbsoluteValue"] = self.sizeByAbsoluteValue;
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
 	}
-	if (self.showInLegend) {
-		params[@"showInLegend"] = self.showInLegend;
+	if (self.dataLabels) {
+		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
-	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getData];
+	if (self.linecap) {
+		params[@"linecap"] = self.linecap;
+	}
+	if (self.findNearestPointBy) {
+		params[@"findNearestPointBy"] = self.findNearestPointBy;
 	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
 	}
-	if (self.linkedTo) {
-		params[@"linkedTo"] = self.linkedTo;
+	if (self.step) {
+		params[@"step"] = self.step;
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
+	if (self.zMax) {
+		params[@"zMax"] = self.zMax;
+	}
+	if (self.zMin) {
+		params[@"zMin"] = self.zMin;
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.connectNulls) {
+		params[@"connectNulls"] = self.connectNulls;
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
+	}
+	if (self.animationLimit) {
+		params[@"animationLimit"] = self.animationLimit;
+	}
+	if (self.pointStart) {
+		params[@"pointStart"] = self.pointStart;
+	}
+	if (self.pointIntervalUnit) {
+		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
+	}
+	if (self.marker) {
+		params[@"marker"] = [self.marker getParams];
+	}
+	if (self.threshold) {
+		params[@"threshold"] = self.threshold;
+	}
+	if (self.pointDescriptionFormatter) {
+		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
+	}
+	if (self.cropThreshold) {
+		params[@"cropThreshold"] = self.cropThreshold;
+	}
+	if (self.displayNegative) {
+		params[@"displayNegative"] = self.displayNegative;
+	}
+	if (self.stacking) {
+		params[@"stacking"] = self.stacking;
+	}
+	if (self.showCheckbox) {
+		params[@"showCheckbox"] = self.showCheckbox;
+	}
+	if (self.negativeColor) {
+		params[@"negativeColor"] = [self.negativeColor getData];
+	}
+	if (self.skipKeyboardNavigation) {
+		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
-	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
 	}
 	return params;
 }

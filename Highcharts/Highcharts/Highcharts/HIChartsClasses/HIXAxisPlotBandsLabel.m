@@ -12,15 +12,6 @@
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
-	if (self.align) {
-		params[@"align"] = self.align;
-	}
-	if (self.y) {
-		params[@"y"] = self.y;
-	}
-	if (self.style) {
-		params[@"style"] = self.style;
-	}
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
@@ -30,11 +21,20 @@
 	if (self.textAlign) {
 		params[@"textAlign"] = self.textAlign;
 	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
+	if (self.y) {
+		params[@"y"] = self.y;
+	}
+	if (self.style) {
+		params[@"style"] = self.style;
 	}
 	if (self.text) {
 		params[@"text"] = self.text;
+	}
+	if (self.rotation) {
+		params[@"rotation"] = self.rotation;
+	}
+	if (self.align) {
+		params[@"align"] = self.align;
 	}
 	return params;
 }

@@ -9,11 +9,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.select) {
-		params[@"select"] = [self.select getParams];
-	}
 	if (self.hover) {
 		params[@"hover"] = [self.hover getParams];
+	}
+	if (self.select) {
+		params[@"select"] = [self.select getParams];
 	}
 	return params;
 }

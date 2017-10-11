@@ -16,6 +16,9 @@
 
 -(NSDictionary *)getParams {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.credits) {
+		params[@"credits"] = [self.credits getParams];
+	}
 	if (self.series) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.series) {
@@ -28,11 +31,14 @@
 		}
 		params[@"series"] = array;
 	}
+	if (self.boost) {
+		params[@"boost"] = [self.boost getParams];
+	}
 	if (self.data) {
 		params[@"data"] = [self.data getParams];
 	}
 	if (self.defs) {
-		params[@"defs"] = self.defs;
+		params[@"defs"] = [self.defs getParams];
 	}
 	if (self.yAxis) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -54,9 +60,6 @@
 	}
 	if (self.title) {
 		params[@"title"] = [self.title getParams];
-	}
-	if (self.credits) {
-		params[@"credits"] = [self.credits getParams];
 	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
@@ -88,11 +91,23 @@
 		}
 		params[@"xAxis"] = array;
 	}
+	if (self.chart) {
+		params[@"chart"] = [self.chart getParams];
+	}
+	if (self.annotations) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.annotations) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"annotations"] = array;
+	}
 	if (self.zAxis) {
 		params[@"zAxis"] = [self.zAxis getParams];
-	}
-	if (self.exporting) {
-		params[@"exporting"] = [self.exporting getParams];
 	}
 	if (self.labels) {
 		params[@"labels"] = [self.labels getParams];
@@ -110,11 +125,14 @@
 	if (self.loading) {
 		params[@"loading"] = [self.loading getParams];
 	}
-	if (self.chart) {
-		params[@"chart"] = [self.chart getParams];
+	if (self.colorAxis) {
+		params[@"colorAxis"] = [self.colorAxis getParams];
 	}
 	if (self.drilldown) {
 		params[@"drilldown"] = [self.drilldown getParams];
+	}
+	if (self.exporting) {
+		params[@"exporting"] = [self.exporting getParams];
 	}
 	if (self.additionalOptions) {
 		[params addEntriesFromDictionary: self.additionalOptions];

@@ -9,9 +9,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.topWidth) {
-		params[@"topWidth"] = self.topWidth;
-	}
 	if (self.rearLength) {
 		params[@"rearLength"] = self.rearLength;
 	}
@@ -21,17 +18,20 @@
 	if (self.baseLength) {
 		params[@"baseLength"] = self.baseLength;
 	}
-	if (self.baseWidth) {
-		params[@"baseWidth"] = self.baseWidth;
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.topWidth) {
+		params[@"topWidth"] = self.topWidth;
 	}
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
+	if (self.baseWidth) {
+		params[@"baseWidth"] = self.baseWidth;
+	}
 	if (self.radius) {
 		params[@"radius"] = self.radius;
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
 	}
 	return params;
 }

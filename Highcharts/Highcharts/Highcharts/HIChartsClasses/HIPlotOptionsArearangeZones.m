@@ -15,14 +15,14 @@
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
-	if (self.value) {
-		params[@"value"] = self.value;
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
 	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
+	if (self.value) {
+		params[@"value"] = self.value;
 	}
 	return params;
 }

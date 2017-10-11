@@ -15,6 +15,9 @@
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
@@ -23,9 +26,6 @@
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
-	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
 	}
 	return params;
 }

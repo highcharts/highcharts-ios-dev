@@ -12,29 +12,29 @@
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
-	if (self.textAlign) {
-		params[@"textAlign"] = self.textAlign;
-	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
-	}
-	if (self.style) {
-		params[@"style"] = self.style;
-	}
-	if (self.y) {
-		params[@"y"] = self.y;
-	}
 	if (self.x) {
 		params[@"x"] = self.x;
-	}
-	if (self.text) {
-		params[@"text"] = self.text;
 	}
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
 	}
+	if (self.style) {
+		params[@"style"] = self.style;
+	}
+	if (self.text) {
+		params[@"text"] = self.text;
+	}
 	if (self.align) {
 		params[@"align"] = self.align;
+	}
+	if (self.textAlign) {
+		params[@"textAlign"] = self.textAlign;
+	}
+	if (self.y) {
+		params[@"y"] = self.y;
+	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	return params;
 }

@@ -12,6 +12,9 @@
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
+	if (self.visible) {
+		params[@"visible"] = self.visible;
+	}
 	if (self.size) {
 		params[@"size"] = self.size;
 	}

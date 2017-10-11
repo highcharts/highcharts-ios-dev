@@ -12,14 +12,17 @@
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
-	if (self.halo) {
-		params[@"halo"] = [self.halo getParams];
-	}
 	if (self.lineWidthPlus) {
 		params[@"lineWidthPlus"] = self.lineWidthPlus;
 	}
+	if (self.halo) {
+		params[@"halo"] = [self.halo getParams];
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];

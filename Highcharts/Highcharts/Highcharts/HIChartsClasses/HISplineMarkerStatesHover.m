@@ -12,8 +12,17 @@
 	if (self.lineWidthPlus) {
 		params[@"lineWidthPlus"] = self.lineWidthPlus;
 	}
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
+	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.radius) {
 		params[@"radius"] = self.radius;
@@ -21,14 +30,8 @@
 	if (self.radiusPlus) {
 		params[@"radiusPlus"] = self.radiusPlus;
 	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
-	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
 	}
 	return params;
 }

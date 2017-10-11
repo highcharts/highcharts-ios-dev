@@ -15,10 +15,11 @@
 @interface HILabelsItems: HIChartsJSONSerializable
 
 /**
-* description: CSS styles for each label. To position the label, use left and top like this:
+* description: CSS styles for each label. To position the label, use left and top
+like this:
 style: {
-	left: '100px',
-	top: '100px'
+    left: '100px',
+    top: '100px'
 }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;

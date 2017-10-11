@@ -22,7 +22,7 @@
 		params[@"items"] = array;
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
 	return params;
 }

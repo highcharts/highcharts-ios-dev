@@ -10,13 +10,20 @@
 #import "HIPlotOptionsScatterMarkerStatesHover.h"
 
 
+/**
+* description: States for a single point marker.
+*/
 @interface HIPlotOptionsScatterMarkerStates: HIChartsJSONSerializable
 
 /**
-* description: The appearance of the point marker when selected. In order to allow a point to be 
-		selected, set the series.allowPointSelect option to true.
+* description: The appearance of the point marker when selected. In order to
+allow a point to be selected, set the series.allowPointSelect
+option to true.
 */
 @property(nonatomic, readwrite) HIPlotOptionsScatterMarkerStatesSelect *select;
+/**
+* description: The hover state for a single point marker.
+*/
 @property(nonatomic, readwrite) HIPlotOptionsScatterMarkerStatesHover *hover;
 
 -(NSDictionary *)getParams;

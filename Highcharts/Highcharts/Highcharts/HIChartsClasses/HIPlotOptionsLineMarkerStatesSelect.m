@@ -12,9 +12,6 @@
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
-	if (self.radius) {
-		params[@"radius"] = self.radius;
-	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -23,6 +20,9 @@
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.radius) {
+		params[@"radius"] = self.radius;
 	}
 	return params;
 }

@@ -9,9 +9,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.repeat) {
-		params[@"repeat"] = self.repeat;
-	}
 	if (self.to) {
 		params[@"to"] = self.to;
 	}
@@ -20,6 +17,9 @@
 	}
 	if (self.from) {
 		params[@"from"] = self.from;
+	}
+	if (self.repeat) {
+		params[@"repeat"] = self.repeat;
 	}
 	return params;
 }

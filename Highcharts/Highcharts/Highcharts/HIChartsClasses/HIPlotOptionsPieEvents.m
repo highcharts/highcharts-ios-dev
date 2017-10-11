@@ -27,11 +27,11 @@
 	if (self.afterAnimate) {
 		params[@"afterAnimate"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.afterAnimate];
 	}
-	if (self.mouseOver) {
-		params[@"mouseOver"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.mouseOver];
-	}
 	if (self.hide) {
 		params[@"hide"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.hide];
+	}
+	if (self.mouseOver) {
+		params[@"mouseOver"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.mouseOver];
 	}
 	return params;
 }

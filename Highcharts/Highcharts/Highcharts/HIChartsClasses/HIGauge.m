@@ -14,74 +14,23 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getData];
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
+	if (self.getExtremesFromAll) {
+		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
 	if (self.showCheckbox) {
 		params[@"showCheckbox"] = self.showCheckbox;
 	}
-	if (self.getExtremesFromAll) {
-		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
-	}
-	if (self.wrap) {
-		params[@"wrap"] = self.wrap;
-	}
-	if (self.animationLimit) {
-		params[@"animationLimit"] = self.animationLimit;
-	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
-	}
-	if (self.overshoot) {
-		params[@"overshoot"] = self.overshoot;
-	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.stickyTracking) {
-		params[@"stickyTracking"] = self.stickyTracking;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
-	if (self.point) {
-		params[@"point"] = [self.point getParams];
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
-	}
-	if (self.className) {
-		params[@"className"] = self.className;
-	}
-	if (self.pivot) {
-		params[@"pivot"] = [self.pivot getParams];
-	}
-	if (self.tooltip) {
-		params[@"tooltip"] = [self.tooltip getParams];
-	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
-	}
-	if (self.enableMouseTracking) {
-		params[@"enableMouseTracking"] = self.enableMouseTracking;
-	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
+	if (self.pointStart) {
+		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -95,18 +44,51 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
-	if (self.threshold) {
-		params[@"threshold"] = self.threshold;
+	if (self.linkedTo) {
+		params[@"linkedTo"] = self.linkedTo;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
+	if (self.visible) {
+		params[@"visible"] = self.visible;
 	}
-	if (self.data) {
+	if (self.dashStyle) {
+		params[@"dashStyle"] = self.dashStyle;
+	}
+	if (self.skipKeyboardNavigation) {
+		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
+	}
+	if (self.step) {
+		params[@"step"] = self.step;
+	}
+	if (self.colorIndex) {
+		params[@"colorIndex"] = self.colorIndex;
+	}
+	if (self.connectEnds) {
+		params[@"connectEnds"] = self.connectEnds;
+	}
+	if (self.animationLimit) {
+		params[@"animationLimit"] = self.animationLimit;
+	}
+	if (self.stickyTracking) {
+		params[@"stickyTracking"] = self.stickyTracking;
+	}
+	if (self.dial) {
+		params[@"dial"] = [self.dial getParams];
+	}
+	if (self.turboThreshold) {
+		params[@"turboThreshold"] = self.turboThreshold;
+	}
+	if (self.pointInterval) {
+		params[@"pointInterval"] = self.pointInterval;
+	}
+	if (self.pointDescriptionFormatter) {
+		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
+	}
+	if (self.states) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
+		for (id obj in self.states) {
 			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
 				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
 			}
@@ -114,25 +96,109 @@
 				[array addObject: obj];
 			}
 		}
-		params[@"data"] = array;
-	}
-	if (self.dial) {
-		params[@"dial"] = [self.dial getParams];
-	}
-	if (self.visible) {
-		params[@"visible"] = self.visible;
+		params[@"states"] = array;
 	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
 	}
-	if (self.linkedTo) {
-		params[@"linkedTo"] = self.linkedTo;
+	if (self.zoneAxis) {
+		params[@"zoneAxis"] = self.zoneAxis;
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
 	}
-	if (self.animation) {
-		params[@"animation"] = self.animation;
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
+	if (self.wrap) {
+		params[@"wrap"] = self.wrap;
+	}
+	if (self.pivot) {
+		params[@"pivot"] = [self.pivot getParams];
+	}
+	if (self.marker) {
+		params[@"marker"] = [self.marker getParams];
+	}
+	if (self.pointPlacement) {
+		params[@"pointPlacement"] = self.pointPlacement;
+	}
+	if (self.cropThreshold) {
+		params[@"cropThreshold"] = self.cropThreshold;
+	}
+	if (self.findNearestPointBy) {
+		params[@"findNearestPointBy"] = self.findNearestPointBy;
+	}
+	if (self.label) {
+		params[@"label"] = [self.label getParams];
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
+	if (self.pointIntervalUnit) {
+		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
+	}
+	if (self.exposeElementToA11y) {
+		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
+	}
+	if (self.negativeColor) {
+		params[@"negativeColor"] = [self.negativeColor getData];
+	}
+	if (self.definition) {
+		params[@"definition"] = self.definition;
+	}
+	if (self.overshoot) {
+		params[@"overshoot"] = self.overshoot;
+	}
+	if (self.shadow) {
+		params[@"shadow"] = self.shadow;
+	}
+	if (self.point) {
+		params[@"point"] = [self.point getParams];
+	}
+	if (self.zones) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.zones) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"zones"] = array;
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
+	}
+	if (self.boostThreshold) {
+		params[@"boostThreshold"] = self.boostThreshold;
+	}
+	if (self.tooltip) {
+		params[@"tooltip"] = [self.tooltip getParams];
+	}
+	if (self.enableMouseTracking) {
+		params[@"enableMouseTracking"] = self.enableMouseTracking;
+	}
+	if (self.dataLabels) {
+		params[@"dataLabels"] = [self.dataLabels getParams];
+	}
+	if (self.allowPointSelect) {
+		params[@"allowPointSelect"] = self.allowPointSelect;
+	}
+	if (self.softThreshold) {
+		params[@"softThreshold"] = self.softThreshold;
+	}
+	if (self.linecap) {
+		params[@"linecap"] = self.linecap;
+	}
+	if (self.threshold) {
+		params[@"threshold"] = self.threshold;
+	}
+	if (self.stacking) {
+		params[@"stacking"] = self.stacking;
+	}
+	if (self.connectNulls) {
+		params[@"connectNulls"] = self.connectNulls;
 	}
 	return params;
 }

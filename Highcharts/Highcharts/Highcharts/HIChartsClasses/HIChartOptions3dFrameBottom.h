@@ -21,6 +21,17 @@
 */
 @property(nonatomic, readwrite) NSNumber *size;
 /**
+* description: Whether to display the frame. Possible values are true, false,
+"auto" to display only the frames behind the data, and "default"
+to display faces behind the data based on the axis layout, ignoring
+the point of view.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-frame/ : Auto frames
+* accepted values: ["default", "auto", true, false]
+* default: default
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
+/**
 * description: The color of the panel.
 * default: transparent
 */

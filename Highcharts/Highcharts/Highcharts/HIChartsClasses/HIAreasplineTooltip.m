@@ -12,44 +12,44 @@
 	if (self.valueSuffix) {
 		params[@"valueSuffix"] = self.valueSuffix;
 	}
-	if (self.headerFormat) {
-		params[@"headerFormat"] = self.headerFormat;
-	}
-	if (self.followPointer) {
-		params[@"followPointer"] = self.followPointer;
+	if (self.valueDecimals) {
+		params[@"valueDecimals"] = self.valueDecimals;
 	}
 	if (self.xDateFormat) {
 		params[@"xDateFormat"] = self.xDateFormat;
 	}
-	if (self.valueDecimals) {
-		params[@"valueDecimals"] = self.valueDecimals;
-	}
-	if (self.pointFormat) {
-		params[@"pointFormat"] = self.pointFormat;
-	}
-	if (self.pointFormatter) {
-		params[@"pointFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointFormatter];
-	}
 	if (self.footerFormat) {
 		params[@"footerFormat"] = self.footerFormat;
-	}
-	if (self.dateTimeLabelFormats) {
-		params[@"dateTimeLabelFormats"] = self.dateTimeLabelFormats;
-	}
-	if (self.valuePrefix) {
-		params[@"valuePrefix"] = self.valuePrefix;
 	}
 	if (self.followTouchMove) {
 		params[@"followTouchMove"] = self.followTouchMove;
 	}
-	if (self.split) {
-		params[@"split"] = self.split;
+	if (self.valuePrefix) {
+		params[@"valuePrefix"] = self.valuePrefix;
+	}
+	if (self.dateTimeLabelFormats) {
+		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+	}
+	if (self.headerFormat) {
+		params[@"headerFormat"] = self.headerFormat;
+	}
+	if (self.pointFormat) {
+		params[@"pointFormat"] = self.pointFormat;
+	}
+	if (self.hideDelay) {
+		params[@"hideDelay"] = self.hideDelay;
 	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
 	}
-	if (self.hideDelay) {
-		params[@"hideDelay"] = self.hideDelay;
+	if (self.pointFormatter) {
+		params[@"pointFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointFormatter];
+	}
+	if (self.followPointer) {
+		params[@"followPointer"] = self.followPointer;
+	}
+	if (self.split) {
+		params[@"split"] = self.split;
 	}
 	return params;
 }

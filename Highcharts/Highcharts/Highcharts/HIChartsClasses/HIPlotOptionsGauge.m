@@ -9,6 +9,39 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.label) {
+		params[@"label"] = [self.label getParams];
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
+	}
+	if (self.linecap) {
+		params[@"linecap"] = self.linecap;
+	}
+	if (self.wrap) {
+		params[@"wrap"] = self.wrap;
+	}
+	if (self.pointInterval) {
+		params[@"pointInterval"] = self.pointInterval;
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
+	if (self.overshoot) {
+		params[@"overshoot"] = self.overshoot;
+	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
+	if (self.visible) {
+		params[@"visible"] = self.visible;
+	}
+	if (self.point) {
+		params[@"point"] = [self.point getParams];
+	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.keys) {
@@ -21,26 +54,17 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
+	if (self.exposeElementToA11y) {
+		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
 	}
-	if (self.selected) {
-		params[@"selected"] = self.selected;
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
 	}
-	if (self.visible) {
-		params[@"visible"] = self.visible;
+	if (self.colorIndex) {
+		params[@"colorIndex"] = self.colorIndex;
 	}
-	if (self.getExtremesFromAll) {
-		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
-	}
-	if (self.stickyTracking) {
-		params[@"stickyTracking"] = self.stickyTracking;
-	}
-	if (self.tooltip) {
-		params[@"tooltip"] = [self.tooltip getParams];
-	}
-	if (self.threshold) {
-		params[@"threshold"] = self.threshold;
+	if (self.skipKeyboardNavigation) {
+		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
 	}
 	if (self.dial) {
 		params[@"dial"] = [self.dial getParams];
@@ -57,41 +81,59 @@
 	if (self.dataLabels) {
 		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
-	if (self.className) {
-		params[@"className"] = self.className;
-	}
-	if (self.animation) {
-		params[@"animation"] = self.animation;
-	}
-	if (self.overshoot) {
-		params[@"overshoot"] = self.overshoot;
-	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
-	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
-	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
-	}
-	if (self.animationLimit) {
-		params[@"animationLimit"] = self.animationLimit;
-	}
-	if (self.wrap) {
-		params[@"wrap"] = self.wrap;
 	}
 	if (self.pivot) {
 		params[@"pivot"] = [self.pivot getParams];
 	}
-	if (self.showInLegend) {
-		params[@"showInLegend"] = self.showInLegend;
+	if (self.states) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.states) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"states"] = array;
 	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
 	}
-	if (self.point) {
-		params[@"point"] = [self.point getParams];
+	if (self.pointIntervalUnit) {
+		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
+	}
+	if (self.selected) {
+		params[@"selected"] = self.selected;
+	}
+	if (self.tooltip) {
+		params[@"tooltip"] = [self.tooltip getParams];
+	}
+	if (self.stickyTracking) {
+		params[@"stickyTracking"] = self.stickyTracking;
+	}
+	if (self.shadow) {
+		params[@"shadow"] = self.shadow;
+	}
+	if (self.pointDescriptionFormatter) {
+		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
+	}
+	if (self.allowPointSelect) {
+		params[@"allowPointSelect"] = self.allowPointSelect;
+	}
+	if (self.pointStart) {
+		params[@"pointStart"] = self.pointStart;
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.showInLegend) {
+		params[@"showInLegend"] = self.showInLegend;
 	}
 	return params;
 }

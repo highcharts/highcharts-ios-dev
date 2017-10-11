@@ -15,19 +15,20 @@
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
 	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.states) {
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
-	if (self.radius) {
-		params[@"radius"] = self.radius;
+	if (self.states) {
+		params[@"states"] = [self.states getParams];
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
+	}
+	if (self.radius) {
+		params[@"radius"] = self.radius;
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
