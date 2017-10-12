@@ -99,23 +99,17 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ xAxis;
 /**
-* description: The type of series. Can be one of area, areaspline, bar, column, line, pie, scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
+* description: The type of series. Can be one of area, areaspline,
+ bar, column, line, pie,
+ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
 * accepted values: [null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]
 */
 @property(nonatomic, readwrite) NSString *type;
 /**
-* description: This method is deprecated as of version 2.0. Instead, load the data using jQuery.ajax and use options preprocessing as described in http://docs.highcharts.com/#preprocessing : the docs.
-*/
-@property(nonatomic, readwrite) NSString *dataURL;
-/**
 * description: The index of the series in the chart, affecting the internal index in the chart.series array, the visible Z index as well as the order in the legend.
 */
 @property(nonatomic, readwrite) NSNumber *index;
-/**
-* description: This method is deprecated as of version 2.0. Instead, use options preprocessing as described in http://docs.highcharts.com/#preprocessing : the docs.
-*/
-@property(nonatomic, readwrite) NSString /* Function */ *dataParser;
 
 -(NSDictionary *)getParams;
 

@@ -11,15 +11,30 @@
 
 
 /**
-* description: An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the zoneAxis option.
-In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the color zones are styled with the .highcharts-zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : view live demo).
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
+* description: An array defining zones within a series. Zones can be applied to
+the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
+option.
+In styled mode, the color zones are styled with the .highcharts-
+zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-
+zones/ : view
+live demo).
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
 @interface HIPlotOptionsTreemapZones: HIChartsJSONSerializable
 
 /**
+* description: The value up to where the zone extends, if undefined the zones stretches
+to the last value in the series.
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSNumber *value;
+/**
 * description: A name for the dash style to use for the graph.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-dashstyle-dot/ : Dashed line indicates prognosis
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-dashstyle-dot/ : Dashed line indicates prognosis
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-dashstyle-dot/ : Dashed line indicates prognosis
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
@@ -27,13 +42,11 @@ In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled m
 */
 @property(nonatomic, readwrite) HIColor *fillColor;
 /**
-* description: The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber *value;
-/**
-* description: http://www.highcharts.com/docs/chart-design-and-style/style-by-css : Styled mode only. A custom class name for the zone.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : Zones styled by class name.
+* description: Styled mode only. A custom class name for the zone.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : Zones styled by class name
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : Zones styled by class name
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/ : Zones styled by class name
 */
 @property(nonatomic, readwrite) NSString *className;
 /**
