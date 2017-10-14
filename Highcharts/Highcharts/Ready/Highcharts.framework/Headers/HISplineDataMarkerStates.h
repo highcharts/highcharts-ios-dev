@@ -6,18 +6,25 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HISplineDataMarkerStatesHover.h"
 #import "HISplineDataMarkerStatesSelect.h"
+#import "HISplineDataMarkerStatesHover.h"
 
 
+/**
+* description: States for a single point marker.
+*/
 @interface HISplineDataMarkerStates: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) HISplineDataMarkerStatesHover *hover;
 /**
-* description: The appearance of the point marker when selected. In order to allow a point to be 
-		selected, set the series.allowPointSelect option to true.
+* description: The appearance of the point marker when selected. In order to
+allow a point to be selected, set the series.allowPointSelect
+option to true.
 */
 @property(nonatomic, readwrite) HISplineDataMarkerStatesSelect *select;
+/**
+* description: The hover state for a single point marker.
+*/
+@property(nonatomic, readwrite) HISplineDataMarkerStatesHover *hover;
 
 -(NSDictionary *)getParams;
 

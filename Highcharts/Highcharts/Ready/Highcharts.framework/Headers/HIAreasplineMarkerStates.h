@@ -10,13 +10,20 @@
 #import "HIAreasplineMarkerStatesHover.h"
 
 
+/**
+* description: States for a single point marker.
+*/
 @interface HIAreasplineMarkerStates: HIChartsJSONSerializable
 
 /**
-* description: The appearance of the point marker when selected. In order to allow a point to be 
-		selected, set the series.allowPointSelect option to true.
+* description: The appearance of the point marker when selected. In order to
+allow a point to be selected, set the series.allowPointSelect
+option to true.
 */
 @property(nonatomic, readwrite) HIAreasplineMarkerStatesSelect *select;
+/**
+* description: The hover state for a single point marker.
+*/
 @property(nonatomic, readwrite) HIAreasplineMarkerStatesHover *hover;
 
 -(NSDictionary *)getParams;

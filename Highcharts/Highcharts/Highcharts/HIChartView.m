@@ -153,7 +153,7 @@ static BOOL preloaded = NO;
     
     self.plugins = [self.plugins arrayByAddingObjectsFromArray:plugins];
     
-    self.plugins = [self.plugins arrayByAddingObjectsFromArray: @[ @"exporting", @"offline-exporting", @"offline-exporting-wrap" ] ];
+    self.plugins = [self.plugins arrayByAddingObjectsFromArray: @[ @"exporting", @"offline-exporting", @"offline-exporting-wrap", @"accessibility", @"boost", @"data", @"drilldown"] ];
     
     self.plugins = [[NSOrderedSet orderedSetWithArray:self.plugins] array];
     

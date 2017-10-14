@@ -10,12 +10,12 @@
 
 
 /**
-* description: Properties for each single point
+* description: Properties for each single point.
 */
 @interface HIErrorbarPoint: HIChartsJSONSerializable
 
 /**
-* description: Events for each single point
+* description: Events for each single point.
 */
 @property(nonatomic, readwrite) HIErrorbarPointEvents *events;
 

@@ -10,12 +10,12 @@
 
 
 /**
-* description: Properties for each single point
+* description: Properties for each single point.
 */
 @interface HIPlotOptionsColumnrangePoint: HIChartsJSONSerializable
 
 /**
-* description: Events for each single point
+* description: Events for each single point.
 */
 @property(nonatomic, readwrite) HIPlotOptionsColumnrangePointEvents *events;
 

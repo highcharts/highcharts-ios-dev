@@ -3641,7 +3641,7 @@
         plotoptions.solidgauge.dataLabels = [[HIPlotOptionsSolidgaugeDataLabels alloc]init];
         plotoptions.solidgauge.dataLabels.y = @5;
         plotoptions.solidgauge.dataLabels.borderWidth = @0;
-        plotoptions.solidgauge.dataLabels.useHTML = @true;
+        //plotoptions.solidgauge.dataLabels.useHTML = @true;
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.stops = [NSMutableArray arrayWithObjects:@[
