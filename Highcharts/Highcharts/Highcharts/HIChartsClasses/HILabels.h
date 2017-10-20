@@ -210,7 +210,7 @@ The final appearance depends heavily on labels.position3d.
 to make room or tighter labels. .
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-staggerlines/ : Show labels over two lines
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/labels-staggerlines/ : Show labels over two lines
+
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *staggerLines;
@@ -237,8 +237,8 @@ cause the labels to word-wrap if possible.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-default/ : Default auto rotation of 0 or -45
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-0-90/ : Custom graded auto rotation
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-default/ : Default auto rotation of 0 or -45
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-0-90/ : Custom graded auto rotation
+
+
 * default: [-45]
 */
 @property(nonatomic, readwrite) NSArray<NSNumber *> *autoRotation;
@@ -246,7 +246,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: Enable or disable the axis labels.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-enabled/ : X axis labels disabled
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/labels-enabled/ : X axis labels disabled
+
 * default: True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;

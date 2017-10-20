@@ -20,8 +20,8 @@ of the chart. This can be changed using these options.
 * description: Whether to show the credits text.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/ : Credits disabled
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/credits/enabled/ : Credits disabled
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/enabled-false/ : Credits disabled
+
+
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
@@ -29,7 +29,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * description: The URL for the credits label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/customized/ : Custom URL and text
+
 * default: http://www.highcharts.com
 */
 @property(nonatomic, readwrite) NSString *href;
@@ -37,9 +37,9 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * description: Position configuration for the credits label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/customized/ : Left aligned
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/customized/ : Left aligned
+
+
+
 */
 @property(nonatomic, readwrite) HIPosition *position;
 /**
@@ -51,7 +51,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * description: The text for the credits label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/customized/ : Custom URL and text
+
 * default: Highcharts.com
 */
 @property(nonatomic, readwrite) NSString *text;

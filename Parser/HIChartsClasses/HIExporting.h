@@ -21,7 +21,7 @@
 exporting.scale.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/width/ : Export to 200px wide images
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/width/ : Export to 200px wide images
+
 * default: undefined
 */
 @property(nonatomic, readwrite) NSNumber *width;
@@ -63,8 +63,8 @@ may look good on a website, it will look bad in print. The default
 scale of 2 makes this chart export to a 1200px PNG or JPG.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/scale/ : Scale demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/scale/ : Scale demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/exporting/scale/ : Scale demonstrated
+
+
 * default: 2
 */
 @property(nonatomic, readwrite) NSNumber *scale;
@@ -127,8 +127,8 @@ chart.width is set. The width exported raster image
 is then multiplied by scale.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/sourcewidth/ : Source size demo
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/sourcewidth/ : Source size demo
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/exporting/sourcewidth/ : Source size demo
+
+
 */
 @property(nonatomic, readwrite) NSNumber *sourceWidth;
 /**
@@ -145,8 +145,8 @@ textKey
 If internationalization is required, the key to a language string
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/ : Menu item definitions
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/ : Menu item definitions
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/ : Menu item definitions
+
+
 */
 @property(nonatomic, readwrite) id menuItemDefinitions;
 /**
@@ -155,7 +155,7 @@ example, a common use case is to add data labels to improve readability
 of the exported chart, or to add a printer-friendly color scheme.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/ : Added data labels
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/ : Added data labels
+
 * default: null
 */
 @property(nonatomic, readwrite) id chartOptions;
@@ -175,7 +175,7 @@ the chart's current data.
 hide the context button, but API methods will still be available.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/enabled-false/ : Exporting module is loaded but disabled
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/enabled-false/ : Exporting module is loaded but disabled
+
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
@@ -183,7 +183,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: The filename, without extension, to use for the exported chart.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/filename/ : Custom file name
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/filename/ : Custom file name
+
 * default: chart
 */
 @property(nonatomic, readwrite) NSString *filename;

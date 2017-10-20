@@ -25,8 +25,8 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 the top down.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis changes
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis changes
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis changes
+
+
 */
 @property(nonatomic, readwrite) NSArray <HIRules *> *rules;
 

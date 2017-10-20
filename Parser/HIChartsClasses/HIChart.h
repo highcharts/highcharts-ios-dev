@@ -25,7 +25,7 @@ that backgroundColor be set. The shadow can be an object configuration
 containing color, offsetX, offsetY, opacity and width.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/shadow/ : Shadow
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/shadow/ : Shadow
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/border/ : Chart border and shadow
 * default: false
 */
@@ -35,10 +35,10 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/ : Color
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/ : Gradient
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/plotbackgroundcolor-color/ : Color
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/plotbackgroundcolor-gradient/ : Gradient
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/plotbackgroundcolor-color/ : Color
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/plotbackgroundcolor-gradient/ : Gradient
+
+
+
+
 * default: null
 */
 @property(nonatomic, readwrite) HIColor *plotBackgroundColor;
@@ -69,7 +69,7 @@ plotBackgroundColor be set. The shadow can be an object configuration
 containing color, offsetX, offsetY, opacity and width.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotshadow/ : Plot shadow
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/plotshadow/ : Plot shadow
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/plotborder/ : Plot border options
 * default: false
 */
@@ -84,8 +84,8 @@ around it even if the axis is not affected.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true/ : True by default
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-false/ : False
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true-stacked/ : True with stack
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/ignorehiddenseries-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/ignorehiddenseries-false/ : False
+
+
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenSeries;
@@ -102,7 +102,7 @@ area. Use this to set a fixed pixel value for the margin as opposed
 to the default dynamic margin. See also spacingBottom.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginbottom/ : 100px bottom margin
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/marginbottom/ : 100px bottom margin
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/margin/ : 100px margins
 */
 @property(nonatomic, readwrite) NSNumber *marginBottom;
@@ -136,7 +136,7 @@ position).
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingtop-100/ : A top spacing of 100
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingtop-10/ : Floating chart title makes the plot area align to the default spacingTop of 10.
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/spacingtop/ : A top spacing of 100
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/spacing/ : Spacing 100 all around
 * default: 10
 */
@@ -155,7 +155,7 @@ Use this to set a fixed pixel value for the margin as opposed to
 the default dynamic margin. See also spacingTop.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/margintop/ : 100px top margin
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/margintop/ : 100px top margin
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/margin/ : 100px margins
 * default: null
 */
@@ -174,9 +174,9 @@ by direct reference, or as the first argument of the chart constructor,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : String
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-object/ : Object reference
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-jquery/ : Object reference through jQuery
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/renderto-string/ : String
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/renderto-object/ : Object reference
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/renderto-jquery/ : Object reference through jQuery
+
+
+
 */
 @property(nonatomic, readwrite) id /* NSString, id */ renderTo;
 /**
@@ -222,7 +222,7 @@ area. Use this to set a fixed pixel value for the margin as opposed
 to the default dynamic margin. See also spacingRight.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginright/ : 100px right margin
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/marginright/ : 100px right margin
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/margin/ : 100px margins
 * default: null
 */
@@ -238,7 +238,7 @@ in addition to the spacingTop, spacingRight, spacingBottom
 and spacingLeft options.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/margins-zero/ : Zero margins
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/margin-zero/ : Zero margins
+
 */
 @property(nonatomic, readwrite) NSArray *margin;
 /**
@@ -268,7 +268,7 @@ position).
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingright-100/ : Spacing set to 100
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingright-legend/ : Legend in right position with default spacing
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/spacingright/ : Spacing set to 100
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/spacing/ : Spacing 100 all around
 * default: 10
 */
@@ -285,8 +285,8 @@ is ignorant of the individual chart options and must be set globally.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/style-serif-font/ : Using a serif type font
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/em/ : Styled mode with relative font sizes
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/style/ : Using a serif type font
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/style-serif-font/ : Using a serif type font
+
+
 * default: {"fontFamily":"\"Lucida Grande\", \"Lucida Sans Unicode\", Verdana, Arial, Helvetica, sans-serif","fontSize":"12px"}
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
@@ -296,10 +296,10 @@ on resizing the window.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : True by default
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-false/ : False
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/reflow-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/reflow-false/ : False
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/reflow-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/reflow-false/ : False
+
+
+
+
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reflow;
@@ -325,8 +325,8 @@ series-animation-easing/ : the easing demo.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-none/ : Updating with no animation
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-duration/ : With a longer duration
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-easing/ : With a jQuery UI easing
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/animation-none/ : Updating with no animation
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/animation-duration/ : With a longer duration
+
+
 * default: true
 */
 @property(nonatomic, readwrite) id /* Bool, id */ animation;
@@ -335,7 +335,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 is calculated from the offset width of the containing element.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/width/ : 800px wide
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/width/ : 800px wide
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/size/ : Chart with explicit size
 * default: null
 */
@@ -345,10 +345,10 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-color/ : Color
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-gradient/ : Gradient
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/backgroundcolor-color/ : Color
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/backgroundcolor-gradient/ : Gradient
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/backgroundcolor-color/ : Color
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/backgroundcolor-gradient/ : Gradient
+
+
+
+
 * default: #FFFFFF
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
@@ -369,7 +369,7 @@ to the container element. Note that for the image to be applied to
 exported charts, its URL needs to be accessible by the export server.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundimage/ : Skies
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/plotbackgroundimage/ : Skies
+
 * default: null
 */
 @property(nonatomic, readwrite) NSString *plotBackgroundImage;
@@ -387,7 +387,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 area, axis title and labels, title, subtitle or legend in top position).
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingbottom/ : Spacing bottom set to 100
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/spacingbottom/ : Spacing bottom set to 100
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/spacing/ : Spacing 100 all around
 * default: 15
 */
@@ -429,7 +429,7 @@ options for shorthand setting of one option.
 * description: The color of the inner chart or plot area border.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbordercolor/ : Blue border
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/plotborder/ : Blue border
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/plotborder/ : Plot border options
 * default: #cccccc
 */
@@ -452,10 +452,10 @@ Can be one of x, y or xy.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-x/ : X
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-y/ : Y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-xy/ : Xy
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/basic-line/ : None by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/zoomtype-x/ : X
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/zoomtype-y/ : Y
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/zoomtype-xy/ : Xy
+
+
+
+
 * accepted values: [null, "x", "y", "xy"]
 */
 @property(nonatomic, readwrite) NSString *zoomType;
@@ -472,7 +472,7 @@ is to set colors using the colors setting.
 * description: The color of the outer chart border.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/bordercolor/ : Brown border
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/border/ : Brown border
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/border/ : Border options
 * default: #335cad
 */
@@ -487,8 +487,8 @@ axis by setting gridLineWidth to 0.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/alignticks-true/ : True by default
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/alignticks-false/ : False
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/alignticks-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/alignticks-false/ : False
+
+
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *alignTicks;
@@ -515,7 +515,7 @@ area. Use this to set a fixed pixel value for the margin as opposed
 to the default dynamic margin. See also spacingLeft.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginleft/ : 150px left margin
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/marginleft/ : 150px left margin
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/margin/ : 100px margins
 * default: null
 */
@@ -525,7 +525,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 area, axis title and labels, title, subtitle or legend in top position).
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingleft/ : Spacing left set to 100
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/spacingleft/ : Spacing left set to 100
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/spacing/ : Spacing 100 all around
 * default: 10
 */

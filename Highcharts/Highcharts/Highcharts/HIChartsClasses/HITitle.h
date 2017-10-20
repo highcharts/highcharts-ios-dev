@@ -141,7 +141,7 @@ for it.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-none/ : False by default
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/floating/ : True - title on top of the plot area
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/title-floating/ : True - title on top of the plot area
+
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *floating;
@@ -150,7 +150,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 and "bottom". When a value is given, the title behaves as if floating were true.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/verticalalign/ : Chart title in bottom right corner
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/title-verticalalign/ : Chart title in bottom right corner
+
 * accepted values: ["top", "middle", "bottom"]
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
@@ -159,8 +159,8 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 the exporting burger menu.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/ : Wider menu, greater padding
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/ : Wider menu, greater padding
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/ : Wider menu, greater padding
+
+
 * default: -44
 */
 @property(nonatomic, readwrite) NSNumber *widthAdjust;

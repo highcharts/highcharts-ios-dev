@@ -35,7 +35,7 @@ Additional options can be given as an object containing values for
 easing and duration.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
+
 * default: true
 */
 @property(nonatomic, readwrite) id /* Bool, id */ animation;
@@ -44,7 +44,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 navigation. .
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
+
 * default: #cccccc
 */
 @property(nonatomic, readwrite) HIColor *inactiveColor;
@@ -53,7 +53,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 navigation.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
+
 * default: 12
 */
 @property(nonatomic, readwrite) NSNumber *arrowSize;
@@ -61,14 +61,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: Text styles for the legend page navigation.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
+
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 * description: The color for the active up or down arrow in the legend page navigation.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/ : Legend page navigation demonstrated
+
 * default: #003399
 */
 @property(nonatomic, readwrite) HIColor *activeColor;
@@ -83,8 +83,8 @@ by default when the export icon is clicked. The menu items are rendered
 in HTML.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/ : Add a grey stripe to the left
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/ : Add a grey stripe to the left
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/ : Add a grey stripe to the left
+
+
 * default: { "padding": "0.5em 1em", "color": "#333333", "background": "none" }
 */
 @property(nonatomic, readwrite) HIMenuItemStyle *menuItemStyle;
@@ -93,8 +93,8 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 icon is clicked. This menu is rendered in HTML.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/ : Light gray menu background
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/ : Light gray menu background
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/ : Light gray menu background
+
+
 * default: { "border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0" }
 */
 @property(nonatomic, readwrite) HIMenuStyle *menuStyle;
@@ -104,8 +104,8 @@ popup menu appearing by default when the export icon is clicked.
  The menu items are rendered in HTML.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/ : Bold text on hover
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/ : Bold text on hover
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/ : Bold text on hover
+
+
 * default: { "background": "#335cad", "color": "#ffffff" }
 */
 @property(nonatomic, readwrite) HIMenuItemHoverStyle *menuItemHoverStyle;

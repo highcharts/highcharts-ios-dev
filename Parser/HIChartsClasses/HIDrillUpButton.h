@@ -14,7 +14,7 @@
 on a series. The text for the button is defined in lang.drillUpText.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/ : Drill up button
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/ : Drill up button
+
 */
 @interface HIDrillUpButton: HIChartsJSONSerializable
 
@@ -30,7 +30,7 @@ the text. Equivalent attributes for the hover state are given in
 theme.states.hover.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/ : Button theming
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/ : Button theming
+
 */
 @property(nonatomic, readwrite) id theme;
 /**

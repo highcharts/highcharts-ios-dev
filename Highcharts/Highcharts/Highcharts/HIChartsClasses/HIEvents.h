@@ -32,7 +32,7 @@ for the point's click event is to toggle the point's select state.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-column/ : Click column
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-url/ : Go to URL
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-point-events-click/ : Click marker to display values
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-point-events-click-url/ : Go to URL
+
 */
 @property(nonatomic, readwrite) NSString /* Function */ *click;
 /**
@@ -106,7 +106,7 @@ by clicking the legend item or by calling .hide().
 case animation is disabled, immediately as the series is displayed.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/ : Show label after animate
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/ : Show label after animate
+
 */
 @property(nonatomic, readwrite) NSString /* Function */ *afterAnimate;
 /**
@@ -181,7 +181,7 @@ selection: function(event) {
 }
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection/ : Report on selection and reset
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/ : Select a range of points through a drag selection
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/events-selection/ : Report on selection and reset
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/ : Select a range of points through a drag selection (Highcharts)
 */
 @property(nonatomic, readwrite) NSString /* Function */ *selection;
@@ -198,7 +198,7 @@ There is also a second parameter to the chart constructor where a
 callback function can be passed to be executed on chart.load.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-load/ : Alert on chart load
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/events-load/ : Alert on chart load
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-load/ : Add series on chart load
 */
 @property(nonatomic, readwrite) NSString /* Function */ *load;
@@ -216,7 +216,7 @@ passed to the addSeries method. Returning false prevents the series
 from being added.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/ : Alert on add series
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/events-addseries/ : Alert on add series
+
 */
 @property(nonatomic, readwrite) NSString /* Function */ *addSeries;
 /**
@@ -262,8 +262,8 @@ Options for the new series
 Chart.print method. Requires the exporting module.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
+
+
 */
 @property(nonatomic, readwrite) NSString /* Function */ *afterPrint;
 /**
@@ -271,8 +271,8 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 the Chart.print method. Requires the exporting module.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
+
+
 */
 @property(nonatomic, readwrite) NSString /* Function */ *beforePrint;
 

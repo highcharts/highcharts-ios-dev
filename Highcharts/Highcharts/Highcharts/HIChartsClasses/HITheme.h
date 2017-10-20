@@ -17,7 +17,7 @@ for the text. Equivalent attributes for the hover state are given
 in theme.states.hover.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-theme/ : Theming the button
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-theme/ : Theming the button
+
 */
 @interface HITheme: HIChartsJSONSerializable
 

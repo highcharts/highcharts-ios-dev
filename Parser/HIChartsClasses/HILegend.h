@@ -72,8 +72,8 @@ was disabled.
 * description: The pixel bottom margin for each legend item.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/ : Padding and item margins demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/ : Padding and item margins demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/ : Padding and item margins demonstrated
+
+
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *itemMarginBottom;
@@ -107,7 +107,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 pixel distance between each item.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/ : 50px item distance
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/ : 50px item distance
+
 */
 @property(nonatomic, readwrite) NSNumber *itemDistance;
 /**
@@ -149,7 +149,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/ : Horizontal by default
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-vertical/ : Vertical
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/layout-horizontal/ : Horizontal by default
+
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/ : Vertical with data classes
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical/ : Vertical with color axis gradient
 * accepted values: ["horizontal", "vertical"]
@@ -235,8 +235,8 @@ unless overridden here.
 * description: The pixel top margin for each legend item.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/ : Padding and item margins demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/ : Padding and item margins demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/ : Padding and item margins demonstrated
+
+
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *itemMarginTop;
@@ -277,8 +277,8 @@ the left side. This is common in Arabic and Hebraic.
 in the legend. Defaults to half the symbolHeight.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolradius/ : Round symbols
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolradius/ : Round symbols
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolradius/ : Round symbols
+
+
 */
 @property(nonatomic, readwrite) NSNumber *symbolRadius;
 /**
@@ -328,7 +328,7 @@ and the padding between items using itemMarginTop and itemMarginBottom.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/enabled-false/ : Legend disabled
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/ : Various legend options
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/enabled-false/ : Legend disabled
+
 * default: True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
@@ -336,8 +336,8 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * description: The inner padding of the legend box.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/ : Padding and item margins demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/ : Padding and item margins demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/ : Padding and item margins demonstrated
+
+
 * default: 8
 */
 @property(nonatomic, readwrite) NSNumber *padding;
