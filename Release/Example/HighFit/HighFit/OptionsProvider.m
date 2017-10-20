@@ -43,7 +43,7 @@
         HIOptions *hioptions = [[HIOptions alloc]init];
         
         HIChart *chart = [[HIChart alloc]init];
-        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@[@0,@0,@0,@300] stops:@[
+        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{ @"x1": @0, @"x2": @0, @"y1": @0, @"y2": @300 } stops:@[
                                                                                    @[@0, @"rgb(102, 153, 161)"],
                                                                                    @[@1, @"rgb(128, 135, 232)"]
                                                                                    ]];
@@ -58,12 +58,13 @@
         HINavigation *navigation = [[HINavigation alloc]init];
         navigation.buttonOptions = [[HINavigationButtonOptions alloc]init];
         navigation.buttonOptions.symbolStroke = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.4];
-        navigation.buttonOptions.theme = @{@"fill": @"rgba(0,0,0,0.0)"};
+        navigation.buttonOptions.theme = [[HINavigationButtonOptionsTheme alloc] init];
+        navigation.buttonOptions.theme.fill = @"rgba(0,0,0,0.0)";
         hioptions.navigation = navigation;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
         plotOptions.area = [[HIPlotOptionsArea alloc]init];
-        plotOptions.area.fillColor = [[HIColor alloc]initWithLinearGradient:@[@0,@0,@0,@150] stops:@[
+        plotOptions.area.fillColor = [[HIColor alloc]initWithLinearGradient:@{ @"x1": @0, @"x2": @0, @"y1": @0, @"y2": @150 } stops:@[
                                                                                         @[@0, @"rgba(255,255,255, 0.75)"],
                                                                                         @[@1, @"rgba(255,255,255, 0.02)"]
                                                                                         ]];
@@ -106,10 +107,9 @@
         xaxis.tickColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.0];
         xaxis.lineColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.3];
         xaxis.labels = [[HIXAxisLabels alloc]init];
-        xaxis.labels.style = @{
-                               @"color": @"rgb(255, 255, 255)",
-                               @"font": @"10px Arial"
-                               };
+        xaxis.labels.style = [[HIXAxisLabelsStyle alloc] init];
+        xaxis.labels.style.color = @"rgb(255, 255, 255)";
+        xaxis.labels.style.fontSize = @"10px Arial";
         xaxis.labels.step = step;
         xaxis.categories = [categories copy];
         hioptions.xAxis = @[xaxis];
@@ -119,10 +119,9 @@
         yaxis.lineWidth = @1;
         yaxis.gridLineWidth = @0;
         yaxis.labels = [[HIYAxisLabels alloc]init];
-        yaxis.labels.style = @{
-                               @"color": @"rgb(255, 255, 255)",
-                               @"font": @"10px Arial"
-                               };
+        yaxis.labels.style = [[HIYAxisLabelsStyle alloc] init];
+        yaxis.labels.style.color = @"rgb(255, 255, 255)";
+        yaxis.labels.style.fontSize = @"10px Arial";
         yaxis.labels.x = @-5;
         yaxis.title = [[HIYAxisTitle alloc]init];
         yaxis.title.text = @"";
@@ -146,7 +145,7 @@
         HIOptions *hioptions = [[HIOptions alloc]init];
         
         HIChart *chart = [[HIChart alloc]init];
-        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@[@0,@0,@0,@300] stops: @[
+        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{ @"x1": @0, @"x2": @0, @"y1": @0, @"y2": @300 } stops: @[
                                                                                     @[@0, @"rgb(66, 218, 113)"],
                                                                                     @[@1, @"rgb(80, 140, 200)"]
                                                                                     ]];
@@ -161,7 +160,8 @@
         HINavigation *navigation = [[HINavigation alloc]init];
         navigation.buttonOptions = [[HINavigationButtonOptions alloc]init];
         navigation.buttonOptions.symbolStroke = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.4];
-        navigation.buttonOptions.theme = @{@"fill": @"rgba(0,0,0,0.0)"};
+        navigation.buttonOptions.theme = [[HINavigationButtonOptionsTheme alloc] init];
+        navigation.buttonOptions.theme.fill = @"rgba(0,0,0,0.0)";
         hioptions.navigation = navigation;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
@@ -208,10 +208,9 @@
         xaxis.tickColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.0];
         xaxis.lineColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.3];
         xaxis.labels = [[HIXAxisLabels alloc]init];
-        xaxis.labels.style = @{
-                               @"color": @"rgb(255, 255, 255)",
-                               @"font": @"10px Arial"
-                               };
+        xaxis.labels.style = [[HIXAxisLabelsStyle alloc] init];
+        xaxis.labels.style.color = @"rgb(255, 255, 255)";
+        xaxis.labels.style.fontSize = @"10px Arial";
         xaxis.labels.step = step;
         xaxis.categories = [categories copy];
         hioptions.xAxis = @[xaxis];
@@ -221,10 +220,9 @@
         yaxis.gridLineWidth = @0;
         yaxis.lineColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.3];
         yaxis.labels = [[HIYAxisLabels alloc]init];
-        yaxis.labels.style = @{
-                               @"color": @"rgb(255, 255, 255)",
-                               @"font": @"10px Arial"
-                               };
+        yaxis.labels.style = [[HIYAxisLabelsStyle alloc] init];
+        yaxis.labels.style.color = @"rgb(255, 255, 255)";
+        yaxis.labels.style.fontSize = @"10px Arial";
         yaxis.labels.x = @-5;
         yaxis.title = [[HIYAxisTitle alloc]init];
         yaxis.title.text = @"";
@@ -247,7 +245,7 @@
         HIOptions *hioptions = [[HIOptions alloc]init];
         
         HIChart *chart = [[HIChart alloc]init];
-        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@[@0,@0,@0,@300] stops: @[
+        chart.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{ @"x1": @0, @"x2": @0, @"y1": @0, @"y2": @300 } stops: @[
                                                                                     @[@0, @"rgba(132, 103, 144, 1)"],
                                                                                     @[@1, @"rgba(163, 95, 103, 1)"]
                                                                                     ]];
@@ -262,7 +260,8 @@
         HINavigation *navigation = [[HINavigation alloc]init];
         navigation.buttonOptions = [[HINavigationButtonOptions alloc]init];
         navigation.buttonOptions.symbolStroke = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.4];
-        navigation.buttonOptions.theme = @{@"fill": @"rgba(0,0,0,0.0)"};
+        navigation.buttonOptions.theme = [[HINavigationButtonOptionsTheme alloc] init];
+        navigation.buttonOptions.theme.fill = @"rgba(0,0,0,0.0)";
         hioptions.navigation = navigation;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
@@ -307,10 +306,9 @@
         xaxis.tickColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.0];
         xaxis.lineColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.3];
         xaxis.labels = [[HIXAxisLabels alloc]init];
-        xaxis.labels.style = @{
-                               @"color": @"rgb(255, 255, 255)",
-                               @"font": @"10px Arial"
-                               };
+        xaxis.labels.style = [[HIXAxisLabelsStyle alloc] init];
+        xaxis.labels.style.color = @"rgb(255, 255, 255)";
+        xaxis.labels.style.fontSize = @"10px Arial";
         xaxis.labels.step = step;
         xaxis.categories = [categories copy];
         hioptions.xAxis = @[xaxis];
@@ -320,10 +318,9 @@
         yaxis.gridLineWidth = @0;
         yaxis.lineColor = [[HIColor alloc]initWithRGBA:255 green:255 blue:255 alpha:0.3];
         yaxis.labels = [[HIYAxisLabels alloc]init];
-        yaxis.labels.style = @{
-                               @"color": @"rgb(255, 255, 255)",
-                               @"font": @"10px Arial"
-                               };
+        yaxis.labels.style = [[HIYAxisLabelsStyle alloc] init];
+        yaxis.labels.style.color = @"rgb(255, 255, 255)";
+        yaxis.labels.style.fontSize = @"10px Arial";
         yaxis.labels.x = @-5;
         yaxis.title = [[HIYAxisTitle alloc]init];
         yaxis.title.text = @"";

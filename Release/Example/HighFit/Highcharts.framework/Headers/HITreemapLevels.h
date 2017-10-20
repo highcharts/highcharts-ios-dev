@@ -2,30 +2,46 @@
 * (c) 2009-2017 Highsoft AS
 *
 * License: www.highcharts.com/license
-* Any commercial use of Highcharts iOS wrapper (beta version) is prohibited.
+* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIChartsJSONSerializable.h"
+#import "HITreemapLevelsColorVariation.h"
 #import "HIColor.h"
 
 
 /**
-* description: Set options on specific levels. Takes precedence over series options, but not point options.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/ : Styling dataLabels and borders, http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/ : Different layoutAlgorithm
+* description: Set options on specific levels. Takes precedence over series options,
+but not point options.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/ : Styling dataLabels and borders
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/ : Different layoutAlgorithm
 */
 @interface HITreemapLevels: HIChartsJSONSerializable
 
 /**
+* description: Can set the layoutAlgorithm option on a specific level.
+
+* accepted values: ["sliceAndDice", "stripes", "squarified", "strip"]
+*/
+@property(nonatomic, readwrite) NSString *layoutAlgorithm;
+/**
 * description: Can set the layoutStartingDirection option on a specific level.
+
 * accepted values: ["vertical", "horizontal"]
 */
 @property(nonatomic, readwrite) NSString *layoutStartingDirection;
 /**
-* description: Can set the layoutAlgorithm option on a specific level. 
-* accepted values: ["sliceAndDice", "stripes", "squarified", "strip"]
+* description: Can set a borderColor on all points which lies on the same level.
 */
-@property(nonatomic, readwrite) NSString *layoutAlgorithm;
+@property(nonatomic, readwrite) HIColor *borderColor;
+/**
+* description: Can set the options of dataLabels on each point which lies on the
+level. plotOptions.treemap.dataLabels
+for possible values.
+* default: undefined
+*/
+@property(nonatomic, readwrite) id dataLabels;
 /**
 * description: Can set a color on all points which lies on the same level.
 */
@@ -35,23 +51,28 @@
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: Can set a borderColor on all points which lies on the same level.
-*/
-@property(nonatomic, readwrite) HIColor *borderColor;
-/**
-* description: Can set the options of dataLabels on each point which lies on the level.
-plotOptions.treemap.dataLabels for possible values.
-* default: undefined
-*/
-@property(nonatomic, readwrite) id dataLabels;
-/**
-* description: Set the dash style of the border of all the point which lies on the level.
-See plotOptions.scatter.dashStyle for possible options.
+* description: Set the dash style of the border of all the point which lies on the
+level. See 
+plotOptions.scatter.dashStyle for possible options.
 */
 @property(nonatomic, readwrite) NSString *borderDashStyle;
 /**
-* description: Decides which level takes effect from the options set in the levels object.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/ : Styling of both levels
+* description: A configuration object to define how the color of a child varies from the
+parent's color. The variation is distributed among the children of node.
+For example when setting brightness, the brightness change will range
+from the parent's original brightness on the first child, to the amount
+set in the to setting on the last node. This allows a gradient-like
+color scheme that sets children out from each other while highlighting
+the grouping on treemaps and sectors on sunburst charts.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst/ : Sunburst with color variation
+*/
+@property(nonatomic, readwrite) HITreemapLevelsColorVariation *colorVariation;
+/**
+* description: Decides which level takes effect from the options set in the levels
+object.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/ : Styling of both levels
 */
 @property(nonatomic, readwrite) NSNumber *level;
 

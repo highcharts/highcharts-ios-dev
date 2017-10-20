@@ -2,7 +2,7 @@
 * (c) 2009-2017 Highsoft AS
 *
 * License: www.highcharts.com/license
-* Any commercial use of Highcharts iOS wrapper (beta version) is prohibited.
+* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
 * In case of questions, please contact sales@highsoft.com
 */
 
@@ -15,10 +15,11 @@
 @interface HILabelsItems: HIChartsJSONSerializable
 
 /**
-* description: CSS styles for each label. To position the label, use left and top like this:
+* description: CSS styles for each label. To position the label, use left and top
+like this:
 style: {
-	left: '100px',
-	top: '100px'
+    left: '100px',
+    top: '100px'
 }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
