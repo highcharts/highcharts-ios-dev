@@ -85,11 +85,21 @@ class HIChartsClass:
 
 def clean_comment(comment):
     soup = BeautifulSoup(comment, 'html.parser')
+    demos = list()
     for m in soup.find_all('a'):
-        if str(m) in comment:
-            if 'href' in str(m):
-                if not m['href'].startswith("#"):
-                    comment = comment.replace(str(m), m['href'] + " : " + m.__dict__['next_element'])
+        a = str(m)
+        if a in comment:
+            if 'href' in a:
+                demo_link = m['href']
+                demo_text = m.__dict__['next_element']
+                if not demo_link.startswith("#"):
+                    if demo_text in demos:
+                        comment = comment.replace(a, "")
+                        print comment
+                    else:
+                        demos.append(demo_text)
+                        comment = comment.replace(a, demo_link + " : " + demo_text, 1)
+
     soup = BeautifulSoup(comment, 'html.parser')
     comment = soup.get_text()
     return comment
@@ -130,7 +140,7 @@ def get_type(x):
         "Array<Object|Number>": 'NSArray /* <id, NSNumber> */',
         "Array<Object|Array>": 'NSArray',
         "Number|String": 'id /* NSNumber, NSString */',
-        "String|HTMLElement": 'NSString',
+        "String|HTMLElement": 'id',
         "Array<Array<Mixed>>": 'NSArray<NSArray *>',
         "String|Object": 'id /* NSString, id */',
         "Mixed": 'id',
