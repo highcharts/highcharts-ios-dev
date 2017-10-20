@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
-# ************************************************
-# Created by Krzysztof Fryzlewicz and Marek Lipert
+# *********************************************
+# Created by Krzysztof Fryzlewicz, Marek Lipert
+#            Ihnat Moisieiev
 #                   of Spinney
 #                 www.spinney.io
 #   
@@ -24,6 +25,7 @@ files = list()
 bridge = set()
 options = list()
 notHichartsObjects = list()
+classes = dict()
 filelicense = "/**\n* (c) 2009-2017 Highsoft AS\n*\n* License: www.highcharts.com/license\n" \
               "* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/\n" \
               "* In case of questions, please contact sales@highsoft.com\n*/\n\n"
@@ -118,30 +120,30 @@ def get_type(x):
         "Array<Object>": 'NSArray',
         "Array": 'NSArray',
         "Array<String>": 'NSArray<NSString *>',
-        "Boolean|Object": 'id /* Bool, Object */',
+        "Boolean|Object": 'id /* Bool, id */',
         "String|Number": 'id /* NSString, NSNumber */',
         "Array<Array>": 'NSArray<NSArray *>',
         "CSSObject": 'NSDictionary /* <NSString, NSString> */',
         "Array<Color>": 'NSArray<HIColor *>',
         "Array<Object|Array|Number>": 'NSArray /* <Data, NSNumber, NSArray> */',
-        "Array<String|Number>": 'NSArray<id> /* <NSString, NSNumber> */',
+        "Array<String|Number>": 'NSArray /* <NSString, NSNumber> */',
         "Array<Object|Number>": 'NSArray /* <id, NSNumber> */',
         "Array<Object|Array>": 'NSArray',
-        "Number|String": 'id /* NSString, NSNumber */',
+        "Number|String": 'id /* NSNumber, NSString */',
         "String|HTMLElement": 'NSString',
         "Array<Array<Mixed>>": 'NSArray<NSArray *>',
         "String|Object": 'id /* NSString, id */',
         "Mixed": 'id',
         "Number|Boolean": 'NSNumber',
         "": 'id',
-        "plotOptions.series.states": 'NSArray',
-        "Boolean|String": 'NSNumber /* Bool */',
+        "plotOptions.series.states": 'id',
+        "Boolean|String": 'id /* Bool, NSString */',
         # nowe typy
-        "Object|Boolean": 'id',
+        "Object|Boolean": 'id /* id, Bool */',
         "String|Array.<String>": 'id',
         "Array.<String>": 'NSArray<NSString *>',
         "function": 'NSString /* Function */',
-        "String|function": 'id',
+        "String|function": 'NSString',
         "Array.<Object>": 'NSArray',
         "Array.<Number>": 'NSArray<NSNumber *>',
         "Array.<Array>": 'NSArray<NSArray *>',
@@ -162,7 +164,7 @@ def get_type(x):
         "String|null": 'NSString',
         "Array.<Array<Mixed>>": 'NSArray<NSArray *>',
         "Array.<Array.<Mixed>>": 'NSArray<NSArray *>',
-        "Object|Number": 'id',
+        "Object|Number": 'id /* id, NSNumber */',
         "umber": 'NSNumber',
         "function|null": 'NSString /* Function */'
     }[str(x)]
@@ -317,9 +319,7 @@ def create_class(node):
 
         if "products" in source:
             products = source["products"]
-            # print products
             if 'highcharts' not in products:
-                # print "NOT HIGHCHARTS"
                 okClass = ["x", "series"]
                 if node.name not in okClass:
                     notHichartsObjects.append(node.name)
@@ -397,7 +397,7 @@ def create_h_file(name):
             h = format_to_h(name, source)
 
         if h:
-            filename = "HIChartsClasses/HI{0}.h".format(upper_first(create_name(name)))
+            filename = "HIChartsClasses/HI{0}.h".format(upper_first(create_short_name(name)))
             files.append(upper_first(create_name(name)))
             with open(filename, "w") as h_file:
                 h_file.write(h)
@@ -414,26 +414,73 @@ def create_m_file(name):
             m = format_to_m(name, source)
 
         if m:
-            filename = "HIChartsClasses/HI{0}.m".format(upper_first(create_name(name)))
+            filename = "HIChartsClasses/HI{0}.m".format(upper_first(create_short_name(name)))
             with open(filename, "w") as m_file:
                 m_file.write(m)
+
+
+def create_short_name(source):
+    if source in structure and structure[source].group:
+        source = structure[source].group
+
+    name = source.split("<")
+    if len(name) > 1:
+        name = name[1]
+        name = name.replace(">", "")
+    else:
+        name = name[0]
+
+    name = name.split(".")[-1]
+
+    return name
+
+
+def check_class_attributes(class_name, source):
+    isUpdated = False
+    isFirstMatch = True
+
+    if class_name in classes:
+        isFirstMatch = False
+        class_properties = classes[class_name]
+        for property in source.properties:
+            isExists = False
+            for class_property in class_properties:
+                if get_last(property.name) == get_last(class_property.name):
+                    isExists = True
+            if not isExists:
+                class_properties.append(property)
+                isUpdated = True
+        classes[class_name] = class_properties
+    else:
+        classes[class_name] = source.properties
+
+    if not isUpdated and not isFirstMatch:
+        return False
+
+    return True
 
 
 def format_to_h(name, source):
     imports = ""
     colorAdded = False
     htext = ""
+
+    class_name = "HI" + upper_first(create_short_name(name))
+
+    if not check_class_attributes(class_name, source):
+        return None
+
     if source.extends is not None:
         imports += "#import \"{0}.h\"\n".format("HI" + upper_first(source.extends))
         if source.comment:
             htext += source.comment
-        htext += "@interface {0}: {1}\n\n".format("HI" + upper_first(create_name(name)), "HI" + upper_first(source.extends))
+        htext += "@interface {0}: {1}\n\n".format(class_name, "HI" + upper_first(source.extends))
     else:
         if source.comment:
             htext += source.comment
-        htext += "@interface {0}: HIChartsJSONSerializable\n\n".format("HI" + upper_first(create_name(name)))
-    bridge.add("#import \"{0}.h\"\n".format("HI" + upper_first(create_name(name))))
-    for field in source.properties:
+        htext += "@interface {0}: HIChartsJSONSerializable\n\n".format(class_name)
+    bridge.add("#import \"{0}.h\"\n".format(class_name))
+    for field in classes[class_name]:
         if source.extends:
             skip = False
             for i in structure[source.extends].properties:
@@ -445,26 +492,31 @@ def format_to_h(name, source):
             htext += "{0}".format(field.comment)
         if field.data_type:
             if "id" in str(get_type(field.data_type)) and "NSArray" not in str(get_type(field.data_type)) and not \
-            structure[
-                field.name].properties and not field.name.endswith(('>.xAxis', '>.yAxis')):
-                htext += "@property(nonatomic, readwrite) {0} {1};\n".format(get_type(field.data_type), get_last(field.name))
+                    structure[
+                        field.name].properties:
+                htext += "@property(nonatomic, readwrite) {0} {1};\n".format(get_type(field.data_type),
+                                                                             get_last(field.name))
+
             elif "NSArray" in str(get_type(field.data_type)) and field.name.endswith(">.data"):
-                # print "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.data_type),
-
-                # htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(getType(field.data_type),
-                # getLast(field.name))
-
-                continue
+                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(get_type(field.data_type),
+                                                                              get_last(field.name))
 
             elif "NSArray" in str(get_type(field.data_type)) and structure[field.name].properties:
-                htext += "@property(nonatomic, readwrite) {0} <{1} *> *{2};\n".format(get_type(field.data_type), "HI" + upper_first(create_name(field.name)), get_last(field.name))
-                imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_name(field.name)))
+                htext += "@property(nonatomic, readwrite) {0} <{1} *> *{2};\n".format(get_type(field.data_type),
+                                                                                      "HI" + upper_first(
+                                                                                          create_short_name(
+                                                                                              field.name)),
+                                                                                      get_last(field.name))
+                imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_short_name(field.name)))
+
             elif "NSArray" in str(get_type(field.data_type)):
-                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(get_type(field.data_type), get_last(field.name))
+                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(get_type(field.data_type),
+                                                                              get_last(field.name))
             elif field.data_type == "Object":
                 if structure[field.name].properties:
-                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format("HI" + upper_first(create_name(field.name)), get_last(field.name))
-                    imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_name(field.name)))
+                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(
+                        "HI" + upper_first(create_short_name(field.name)), get_last(field.name))
+                    imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_short_name(field.name)))
                 else:
                     htext += "@property(nonatomic, readwrite) id {0};\n".format(get_last(field.name))
 
@@ -472,20 +524,19 @@ def format_to_h(name, source):
                 if get_type(field.data_type) == "HIColor" and not colorAdded:
                     colorAdded = True
                 if structure[field.name].properties:
-                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format("HI" + upper_first(create_name(field.name)), get_last(field.name))
-                    imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_name(field.name)))
+                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(
+                        "HI" + upper_first(create_short_name(field.name)), get_last(field.name))
+                    imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_short_name(field.name)))
                 else:
-                    if not field.name.endswith(('>.data', '>.id', '>.name', '>.legendIndex', '>.zIndex', '>.stack',
-                                                '>.type', '>.index', '>.xAxis', '>.yAxis')):
-                        htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(get_type(field.data_type), get_last(field.name))
-                        # else:
-                        # print field.name
+                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(get_type(field.data_type),
+                                                                                  get_last(field.name))
         else:
             if not field.data_type and not structure[field.name].properties:
                 htext += "@property(nonatomic, readwrite) id {0};\n".format(get_last(field.name))
             elif structure[field.name].properties:
-                name = create_name(field.name)
-                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format("HI" + upper_first(name), get_last(field.name))
+                name = create_short_name(field.name)
+                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format("HI" + upper_first(name),
+                                                                              get_last(field.name))
                 imports += "#import \"{0}.h\"\n".format("HI" + upper_first(name))
 
     htext += "\n-(NSDictionary *)getParams;\n\n"
@@ -499,11 +550,14 @@ def format_to_h(name, source):
 
 
 def format_to_m(name, source):
-    mtext = "#import \"{0}.h\"\n\n".format("HI" + upper_first(create_name(name)))
-    mtext += "@implementation {0}\n\n".format("HI" + upper_first(create_name(name)))
+    class_name = "HI" + upper_first(create_short_name(name))
+
+    mtext = "#import \"{0}.h\"\n\n".format(class_name)
+    mtext += "@implementation {0}\n\n".format(class_name)
+
     if source.extends:
-        mtext += "-(instancetype)init {\n\tif (self = [super init]) {" +\
-                 "\n\t\tself.type = @\"{0}\";".format(create_name(name)) +\
+        mtext += "-(instancetype)init {\n\tif (self = [super init]) {" + \
+                 "\n\t\tself.type = @\"{0}\";".format(create_short_name(name)) + \
                  "\n\t\treturn self;\n\t} else {\n\t\treturn nil;\n\t}\n}\n"
     else:
         mtext += "-(instancetype)init {\n\treturn [super init];\n}\n"
@@ -514,44 +568,46 @@ def format_to_m(name, source):
     else:
         getParams += "@{}];\n"
 
-    for field in source.properties:
-        if not field.name.endswith(('>.data', '>.id', '>.name', '>.legendIndex', '>.zIndex', '>.stack', '>.type',
-                                    '>.index', '>.xAxis', '>.yAxis')):
-            if source.extends and field in structure[source.extends].properties:
-                pass
-            else:
-                getParams += "\tif (self.{0})".format(get_last(field.name)) + " {\n"
-                if structure[field.name].data_type:
-                    data_type = structure[field.name].data_type
-                    if data_type == 'Function' or data_type == 'function|null' or data_type == 'function':
-                        getParams += """\t\tparams[@\"{0}\"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.{1}];\n""".format(
-                            get_last(field.name), get_last(field.name))
-                    elif get_type(data_type) == 'HIColor':
-                        getParams += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(get_last(field.name),
-                                                                                           get_last(field.name))
-                    elif get_type(data_type) == 'NSArray<HIColor *>':
-                        getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
-                        getParams += "\t\tfor (HIColor *obj in self.{0})".format(get_last(field.name)) + " {\n"
-                        getParams += "\t\t\t[array addObject:[obj getData]];\n".format(get_last(field.name))
-                        getParams += "\t\t}\n"
-                        getParams += "\t\tparams[@\"{0}\"] = array;\n".format(get_last(field.name))
-                    elif 'NSArray' in str(get_type(data_type)):
-                        getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
-                        getParams += "\t\tfor (id obj in self.{0})".format(get_last(field.name)) + " {\n"
-                        getParams += "\t\t\tif ([obj isKindOfClass: [HIChartsJSONSerializable class]])".format(get_last(field.name)) + " {\n"
-                        getParams += "\t\t\t\t[array addObject:[(HIChartsJSONSerializable *)obj getParams]];\n".format(get_last(field.name))
-                        getParams += "\t\t\t}\n"
-                        getParams += "\t\t\telse {\n\t\t\t\t[array addObject: obj];\n"
-                        getParams += "\t\t\t}\n"
-                        getParams += "\t\t}\n"
-                        getParams += "\t\tparams[@\"{0}\"] = array;\n".format(get_last(field.name))
-                    elif structure[field.name].properties:
-                        getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(get_last(field.name), get_last(field.name))
-                    else:
-                        getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(get_last(field.name), get_last(field.name))
+    for field in classes[class_name]:
+        if source.extends and field in structure[source.extends].properties:
+            pass
+        else:
+            getParams += "\tif (self.{0})".format(get_last(field.name)) + " {\n"
+            if structure[field.name].data_type:
+                data_type = structure[field.name].data_type
+                if data_type == 'Function' or data_type == 'function|null' or data_type == 'function':
+                    getParams += """\t\tparams[@\"{0}\"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.{1}];\n""".format(
+                        get_last(field.name), get_last(field.name))
+                elif get_type(data_type) == 'HIColor':
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(get_last(field.name),
+                                                                                       get_last(field.name))
+                elif get_type(data_type) == 'NSArray<HIColor *>':
+                    getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
+                    getParams += "\t\tfor (HIColor *obj in self.{0})".format(get_last(field.name)) + " {\n"
+                    getParams += "\t\t\t[array addObject:[obj getData]];\n".format(get_last(field.name))
+                    getParams += "\t\t}\n"
+                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(get_last(field.name))
+                elif 'NSArray' in str(get_type(data_type)):
+                    getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
+                    getParams += "\t\tfor (id obj in self.{0})".format(get_last(field.name)) + " {\n"
+                    getParams += "\t\t\tif ([obj isKindOfClass: [HIChartsJSONSerializable class]])".format(
+                        get_last(field.name)) + " {\n"
+                    getParams += "\t\t\t\t[array addObject:[(HIChartsJSONSerializable *)obj getParams]];\n".format(
+                        get_last(field.name))
+                    getParams += "\t\t\t}\n"
+                    getParams += "\t\t\telse {\n\t\t\t\t[array addObject: obj];\n"
+                    getParams += "\t\t\t}\n"
+                    getParams += "\t\t}\n"
+                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(get_last(field.name))
                 elif structure[field.name].properties:
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(get_last(field.name), get_last(field.name))
-                getParams += "\t}\n"
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(get_last(field.name),
+                                                                                         get_last(field.name))
+                else:
+                    getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(get_last(field.name), get_last(field.name))
+            elif structure[field.name].properties:
+                getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(get_last(field.name),
+                                                                                     get_last(field.name))
+            getParams += "\t}\n"
     getParams += "\treturn params;\n"
     getParams += "}\n"
     mtext += getParams
@@ -659,9 +715,6 @@ def create_bridge_file():
 def check_ends_in_not_highcharts(field):
     for name in notHichartsObjects:
         if field.startswith(name):
-            # print "name: " + name
-            # print "field: " + field
-            # print "False"
             return False
     return True
 
@@ -670,8 +723,6 @@ def create_files():
     if not os.path.exists("HIChartsClasses"):
         os.makedirs("HIChartsClasses")
     for field in structure:
-        if field == "series":
-            print "SERIES IS FIELD!!!!!!!!!!!!!!!"
         if check_ends_in_not_highcharts(field):
             if len(field.split(".")) == 1 and len(field.split(">")) == 1:
                 options.append(structure[field])
