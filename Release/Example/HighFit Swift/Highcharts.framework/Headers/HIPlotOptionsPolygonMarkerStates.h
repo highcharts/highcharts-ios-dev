@@ -6,18 +6,25 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIPlotOptionsPolygonMarkerStatesSelect.h"
 #import "HIPlotOptionsPolygonMarkerStatesHover.h"
+#import "HIPlotOptionsPolygonMarkerStatesSelect.h"
 
 
+/**
+* description: States for a single point marker.
+*/
 @interface HIPlotOptionsPolygonMarkerStates: HIChartsJSONSerializable
 
 /**
-* description: The appearance of the point marker when selected. In order to allow a point to be 
-		selected, set the series.allowPointSelect option to true.
+* description: The hover state for a single point marker.
+*/
+@property(nonatomic, readwrite) HIPlotOptionsPolygonMarkerStatesHover *hover;
+/**
+* description: The appearance of the point marker when selected. In order to
+allow a point to be selected, set the series.allowPointSelect
+option to true.
 */
 @property(nonatomic, readwrite) HIPlotOptionsPolygonMarkerStatesSelect *select;
-@property(nonatomic, readwrite) HIPlotOptionsPolygonMarkerStatesHover *hover;
 
 -(NSDictionary *)getParams;
 

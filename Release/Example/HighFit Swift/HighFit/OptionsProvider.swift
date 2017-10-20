@@ -38,7 +38,7 @@ class OptionsProvider {
             let hioptions = HIOptions()
             
             let chart = HIChart()
-            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 1], stops: [[0, "rgb(102, 153, 161)"], [1, "rgb(128, 135, 232)"]])
+            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 300], stops: [[0, "rgb(102, 153, 161)"], [1, "rgb(128, 135, 232)"]])
             chart.borderRadius = 6
             chart.type = options["chartType"] as! String
             hioptions.chart = chart
@@ -50,12 +50,13 @@ class OptionsProvider {
             let navigation = HINavigation()
             navigation.buttonOptions = HINavigationButtonOptions()
             navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
-            navigation.buttonOptions.theme = ["fill": "rgba(0,0,0,0.0)"]
+            navigation.buttonOptions.theme = HINavigationButtonOptionsTheme()
+            navigation.buttonOptions.theme.fill = "rgba(0,0,0,0.0)"
             hioptions.navigation = navigation
             
             let plotOptions = HIPlotOptions()
             plotOptions.area = HIPlotOptionsArea()
-            plotOptions.area.fillColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 0.5], stops: [[0, "rgba(255,255,255, 0.75)"], [1, "rgba(255,255,255, 0.02)"]])
+            plotOptions.area.fillColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 150], stops: [[0, "rgba(255,255,255, 0.75)"], [1, "rgba(255,255,255, 0.02)"]])
             hioptions.plotOptions = plotOptions
             
             let credits = HICredits()
@@ -87,7 +88,9 @@ class OptionsProvider {
             xaxis.tickColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.0)
             xaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
             xaxis.labels = HIXAxisLabels()
-            xaxis.labels.style = ["color": "rgb(255, 255, 255)", "font": "10px Arial"]
+            xaxis.labels.style = HIXAxisLabelsStyle()
+            xaxis.labels.style.color = "rgb(255, 255, 255)"
+            xaxis.labels.style.fontSize = "10px Arial"
             xaxis.labels.step = step
             xaxis.categories = categories
             hioptions.xAxis = [xaxis]
@@ -97,7 +100,9 @@ class OptionsProvider {
             yaxis.lineWidth = 1
             yaxis.gridLineWidth = 0
             yaxis.labels = HIYAxisLabels()
-            yaxis.labels.style = ["color": "rgb(255, 255, 255)", "font": "10px Arial"]
+            yaxis.labels.style = HIYAxisLabelsStyle()
+            yaxis.labels.style.color = "rgb(255, 255, 255)"
+            yaxis.labels.style.fontSize = "10px Arial"
             yaxis.labels.x = -5
             yaxis.title = HIYAxisTitle()
             yaxis.title.text = ""
@@ -121,7 +126,7 @@ class OptionsProvider {
             let hioptions = HIOptions()
             
             let chart = HIChart()
-            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 1], stops: [[0, "rgb(66, 218, 113)"], [1, "rgb(80, 140, 200)"]])
+            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 300], stops: [[0, "rgb(66, 218, 113)"], [1, "rgb(80, 140, 200)"]])
             chart.borderRadius = 6
             chart.type = options["chartType"] as! String
             hioptions.chart = chart
@@ -133,7 +138,8 @@ class OptionsProvider {
             let navigation = HINavigation()
             navigation.buttonOptions = HINavigationButtonOptions()
             navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
-            navigation.buttonOptions.theme = ["fill": "rgba(0,0,0,0.0)"]
+            navigation.buttonOptions.theme = HINavigationButtonOptionsTheme()
+            navigation.buttonOptions.theme.fill = "rgba(0,0,0,0.0)"
             hioptions.navigation = navigation
             
             let plotOptions = HIPlotOptions()
@@ -172,7 +178,9 @@ class OptionsProvider {
             xaxis.tickColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.0)
             xaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
             xaxis.labels = HIXAxisLabels()
-            xaxis.labels.style = ["color": "rgb(255, 255, 255)", "font": "10px Arial"]
+            xaxis.labels.style = HIXAxisLabelsStyle()
+            xaxis.labels.style.color = "rgb(255, 255, 255)"
+            xaxis.labels.style.fontSize = "10px Arial"
             xaxis.labels.step = step
             xaxis.categories = categories
             hioptions.xAxis = [xaxis]
@@ -182,7 +190,9 @@ class OptionsProvider {
             yaxis.gridLineWidth = 0
             yaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
             yaxis.labels = HIYAxisLabels()
-            yaxis.labels.style = ["color": "rgb(255, 255, 255)", "font": "10px Arial"]
+            yaxis.labels.style = HIYAxisLabelsStyle()
+            yaxis.labels.style.color = "rgb(255, 255, 255)"
+            yaxis.labels.style.fontSize = "10px Arial"
             yaxis.labels.x = -5
             yaxis.title = HIYAxisTitle()
             yaxis.title.text = ""
@@ -204,7 +214,7 @@ class OptionsProvider {
             let hioptions = HIOptions()
             
             let chart = HIChart()
-            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 1], stops: [[0, "rgba(132, 103, 144, 1)"], [1, "rgba(163, 95, 103, 1)"]])
+            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 300], stops: [[0, "rgba(132, 103, 144, 1)"], [1, "rgba(163, 95, 103, 1)"]])
             chart.borderRadius = 6
             chart.type = options["chartType"] as! String
             hioptions.chart = chart
@@ -216,7 +226,8 @@ class OptionsProvider {
             let navigation = HINavigation()
             navigation.buttonOptions = HINavigationButtonOptions()
             navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
-            navigation.buttonOptions.theme = ["fill": "rgba(0,0,0,0.0)"]
+            navigation.buttonOptions.theme = HINavigationButtonOptionsTheme()
+            navigation.buttonOptions.theme.fill = "rgba(0,0,0,0.0)"
             hioptions.navigation = navigation
             
             let plotOptions = HIPlotOptions()
@@ -253,7 +264,9 @@ class OptionsProvider {
             xaxis.tickColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.0)
             xaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
             xaxis.labels = HIXAxisLabels()
-            xaxis.labels.style = ["color": "rgb(255, 255, 255)", "font": "10px Arial"]
+            xaxis.labels.style = HIXAxisLabelsStyle()
+            xaxis.labels.style.color = "rgb(255, 255, 255)"
+            xaxis.labels.style.fontSize = "10px Arial"
             xaxis.labels.step = step
             xaxis.categories = categories
             hioptions.xAxis = [xaxis]
@@ -263,7 +276,9 @@ class OptionsProvider {
             yaxis.gridLineWidth = 0
             yaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
             yaxis.labels = HIYAxisLabels()
-            yaxis.labels.style = ["color": "rgb(255, 255, 255)", "font": "10px Arial"]
+            yaxis.labels.style = HIYAxisLabelsStyle()
+            yaxis.labels.style.color = "rgb(255, 255, 255)"
+            yaxis.labels.style.fontSize = "10px Arial"
             yaxis.labels.x = -5
             yaxis.title = HIYAxisTitle()
             yaxis.title.text = ""

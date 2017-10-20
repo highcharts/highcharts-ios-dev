@@ -12,38 +12,43 @@
 
 /**
 * description: Options for the pivot or the center point of the gauge.
-In http://www.highcharts.com/docs/chart-design-and-style/style-by-css : styled mode, the pivot is styled with the .highcharts-gauge-series .highcharts-pivot rule.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/ : Styled mode.
+In styled mode, the pivot is styled with the .highcharts-gauge-
+series .highcharts-pivot rule.
 
-
-
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/ : Styled mode
 */
 @interface HIPlotOptionsGaugePivot: HIChartsJSONSerializable
 
 /**
-* description: The background color or fill of the pivot.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
-* default: #000000
+* description: The border or stroke width of the pivot.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
+* default: 0
 */
-@property(nonatomic, readwrite) HIColor *backgroundColor;
+@property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
 * description: The pixel radius of the pivot.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
 * default: 5
 */
 @property(nonatomic, readwrite) NSNumber *radius;
 /**
-* description: The border or stroke color of the pivot. In able to change this, the borderWidth must also be set to something other than the default 0.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
+* description: The border or stroke color of the pivot. In able to change this,
+the borderWidth must also be set to something other than the default
+0.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
 * default: #cccccc
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
-* description: The border or stroke width of the pivot.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
-* default: 0
+* description: The background color or fill of the pivot.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/ : Pivot options demonstrated
+* default: #000000
 */
-@property(nonatomic, readwrite) NSNumber *borderWidth;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 
 -(NSDictionary *)getParams;
 
