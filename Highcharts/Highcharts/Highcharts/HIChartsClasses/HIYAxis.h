@@ -6,20 +6,24 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIYAxisCrosshair.h"
-#import "HIYAxisEvents.h"
-#import "HIYAxisBreaks.h"
-#import "HIYAxisLabels.h"
-#import "HIYAxisPlotLines.h"
-#import "HIYAxisPlotBands.h"
-#import "HIYAxisStackLabels.h"
-#import "HIYAxisDateTimeLabelFormats.h"
-#import "HIYAxisTitle.h"
+#import "HICrosshair.h"
+#import "HIEvents.h"
+#import "HIBreaks.h"
+#import "HILabels.h"
+#import "HIPlotLines.h"
+#import "HIPlotBands.h"
+#import "HIStackLabels.h"
+#import "HIDateTimeLabelFormats.h"
+#import "HITitle.h"
 #import "HIColor.h"
 
 
 /**
-* description: This option set extends the defaultOptions for Y axes.
+* description: The Y axis or value axis. Normally this is the vertical axis,
+though if the chart is inverted this is the horizontal axis.
+In case of multiple axes, the yAxis node is an array of
+configuration objects.
+See the Axis object for programmatic access to the axis.
 */
 @interface HIYAxis: HIChartsJSONSerializable
 
@@ -170,7 +174,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/ : Crosshair on both axes
 * default: false
 */
-@property(nonatomic, readwrite) HIYAxisCrosshair *crosshair;
+@property(nonatomic, readwrite) HICrosshair *crosshair;
 /**
 * description: Solid gauge only. Unless stops are set, the color
 to represent the minimum value of the Y axis.
@@ -214,7 +218,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 /**
 * description: Event handlers for the axis.
 */
-@property(nonatomic, readwrite) HIYAxisEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: The Z index of the grid lines.
 
@@ -391,7 +395,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/intraday-breaks/ : Break on nights and weekends
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/ : Broken Y axis
 */
-@property(nonatomic, readwrite) NSArray <HIYAxisBreaks *> *breaks;
+@property(nonatomic, readwrite) NSArray <HIBreaks *> *breaks;
 /**
 * description: The position of the minor tick marks relative to the axis line.
  Can be one of inside and outside.
@@ -434,7 +438,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 /**
 * description: The axis labels show the number or category for each tick.
 */
-@property(nonatomic, readwrite) HIYAxisLabels *labels;
+@property(nonatomic, readwrite) HILabels *labels;
 /**
 * description: Requires Accessibility module
 Description of the axis to screen reader users.
@@ -464,7 +468,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 /**
 * description: An array of objects representing plot lines on the X axis
 */
-@property(nonatomic, readwrite) NSArray <HIYAxisPlotLines *> *plotLines;
+@property(nonatomic, readwrite) NSArray <HIPlotLines *> *plotLines;
 /**
 * description: In a polar chart, this is the angle of the Y axis in degrees, where
 0 is up and 90 is right. The angle determines the position of the
@@ -510,7 +514,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 /**
 * description: An array of objects defining plot bands on the Y axis.
 */
-@property(nonatomic, readwrite) NSArray <HIYAxisPlotBands *> *plotBands;
+@property(nonatomic, readwrite) NSArray <HIPlotBands *> *plotBands;
 /**
 * description: The highest allowed value for automatically computed axis extremes.
 
@@ -551,7 +555,7 @@ columns and below negative columns. In case of an inverted column
 chart or a bar chart the label is placed to the right of positive
 bars and to the left of negative bars.
 */
-@property(nonatomic, readwrite) HIYAxisStackLabels *stackLabels;
+@property(nonatomic, readwrite) HIStackLabels *stackLabels;
 /**
 * description: Padding of the min value relative to the length of the axis. A
 padding of 0.05 will make a 100px axis 5px longer. This is useful
@@ -698,7 +702,7 @@ dateFormat. Defaults to:
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/datetimelabelformats/ : Different day format on X axis
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/datetimelabelformats/ : More information in x axis labels
 */
-@property(nonatomic, readwrite) HIYAxisDateTimeLabelFormats *dateTimeLabelFormats;
+@property(nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats;
 /**
 * description: Specific tick interval in axis units for the minor ticks. On a linear axis,
 if "auto", the minor tick interval is calculated as a fifth of
@@ -741,7 +745,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 /**
 * description: The axis title, showing next to the axis line.
 */
-@property(nonatomic, readwrite) HIYAxisTitle *title;
+@property(nonatomic, readwrite) HITitle *title;
 /**
 * description: Enable or disable minor ticks. Unless
 minorTickInterval is set, the tick interval is

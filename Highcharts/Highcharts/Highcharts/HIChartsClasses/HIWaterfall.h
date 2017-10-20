@@ -7,15 +7,15 @@
 */
 
 #import "HISeries.h"
-#import "HIWaterfallLabel.h"
-#import "HIWaterfallPoint.h"
-#import "HIWaterfallTooltip.h"
-#import "HIWaterfallZones.h"
-#import "HIWaterfallEvents.h"
-#import "HIWaterfallAnimation.h"
-#import "HIWaterfallMarker.h"
-#import "HIWaterfallDataLabels.h"
-#import "HIWaterfallStates.h"
+#import "HILabel.h"
+#import "HIPoint.h"
+#import "HITooltip.h"
+#import "HIZones.h"
+#import "HIEvents.h"
+#import "HIAnimation.h"
+#import "HIMarker.h"
+#import "HIDataLabels.h"
+#import "HIStates.h"
 #import "HIColor.h"
 
 
@@ -42,7 +42,7 @@ Requires the series-label.js module.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
-@property(nonatomic, readwrite) HIWaterfallLabel *label;
+@property(nonatomic, readwrite) HILabel *label;
 /**
 * description: Defines the Axis on which the zones are applied.
 
@@ -90,6 +90,7 @@ id or the index of the axis in the xAxis array, with
 0 being the first.
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: A pixel value specifying a fixed width for each column or bar. When
 null, the width is calculated from the pointPadding and
@@ -108,6 +109,7 @@ id or the index of the axis in the yAxis array, with
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: Polar charts only. Whether to connect the ends of a line series plot
 across the extremes.
@@ -118,7 +120,7 @@ across the extremes.
 /**
 * description: Properties for each single point.
 */
-@property(nonatomic, readwrite) HIWaterfallPoint *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 * description: Whether to group non-stacked columns or to let them render independent
 of each other. Non-grouped columns will be laid out individually
@@ -134,7 +136,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 Properties are inherited from tooltip, but only the
 following properties can be defined on a series level.
 */
-@property(nonatomic, readwrite) HIWaterfallTooltip *tooltip;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 * description: When true, each column edge is rounded to its nearest pixel in order
 to render sharp on screen. In some cases, when there are a lot of
@@ -172,7 +174,7 @@ live demo).
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSArray <HIWaterfallZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
 * description: Whether to display this particular series or series type in the legend.
 The default value is true for standalone series, false for linked
@@ -219,7 +221,7 @@ animationLimit to Infinity.
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HIWaterfallEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: The X axis range that each point is valid for. This determines the
 width of the column. On a categorized axis, the range will be 1
@@ -241,6 +243,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: Enable or disable the mouse tracking for a specific series. This
 includes point tooltips and click events on graphs and points. For
@@ -312,7 +315,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HIWaterfallAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: This option allows grouping series in a stacked chart. The stack
 option can be a string or a number or anything else, as long as the
@@ -321,6 +324,7 @@ grouped series' stack options match each other.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns
 * default: null
 */
+@property(nonatomic, readwrite) NSString *stack;
 /**
 * description: If no x values are given for the points in a series, pointStart defines
 on what value to start. For example, if a series contains one yearly
@@ -350,7 +354,7 @@ In styled mode, the markers can be styled with the .highcharts-point,
 .highcharts-point-hover and .highcharts-point-select
 class names.
 */
-@property(nonatomic, readwrite) HIWaterfallMarker *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 * description: Whether to use the Y extremes of the total chart width or only the
 zoomed area when zooming in on parts of the X axis. By default, the
@@ -372,7 +376,7 @@ In styled mode, the data labels can be styled wtih the .highcharts-data-label-bo
 net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
 datalabels : see example).
 */
-@property(nonatomic, readwrite) HIWaterfallDataLabels *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 * description: Whether to select the series initially. If showCheckbox is true,
 the checkbox next to the series name in the legend will be checked for a
@@ -392,6 +396,7 @@ in this series for keyboard navigation.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: You can set the cursor to "pointer" if you have click events attached
 to the series, to signal to the user that the points and lines can
@@ -465,6 +470,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
 */
+@property(nonatomic, readwrite) NSArray /* <Data, NSNumber, NSArray> */ *data;
 /**
 * description: Determines whether the series should look for the nearest point
 in both dimensions or just the x-dimension when hovering the series.
@@ -514,6 +520,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: Sticky tracking of mouse events. When true, the mouseOut event
 on a series isn't triggered until the mouse moves over another series,
@@ -567,6 +574,7 @@ in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: A series specific or series type specific color set to apply instead
 of the global colors when colorByPoint is true.
@@ -580,7 +588,7 @@ can be an object configuration containing color, offsetX, offsetY,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: When this is true, the series will not cause the Y axis to cross
 the zero plane (or threshold option)
@@ -651,6 +659,7 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: Padding between each value groups, in x axis units.
 
@@ -711,7 +720,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSArray <HIWaterfallStates *> *states;
+@property(nonatomic, readwrite) HIStates *states;
 /**
 * description: A name for the dash style to use for the line connecting the columns
 of the waterfall series. Possible values:
@@ -752,6 +761,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: The Y axis value to serve as the base for the columns, for distinguishing
 between values above and below a threshold. If null, the columns

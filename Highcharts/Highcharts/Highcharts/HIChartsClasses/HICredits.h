@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HICreditsPosition.h"
-#import "HICreditsStyle.h"
+#import "HIPosition.h"
+#import "HIStyle.h"
 
 
 /**
@@ -41,12 +41,12 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/customized/ : Left aligned
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/customized/ : Left aligned
 */
-@property(nonatomic, readwrite) HICreditsPosition *position;
+@property(nonatomic, readwrite) HIPosition *position;
 /**
 * description: CSS styles for the credits label.
 * default: { "cursor": "pointer", "color": "#999999", "fontSize": "10px" }
 */
-@property(nonatomic, readwrite) HICreditsStyle *style;
+@property(nonatomic, readwrite) HIStyle *style;
 /**
 * description: The text for the credits label.
 

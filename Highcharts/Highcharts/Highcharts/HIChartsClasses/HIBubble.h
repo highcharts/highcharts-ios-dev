@@ -7,15 +7,15 @@
 */
 
 #import "HISeries.h"
-#import "HIBubbleDataLabels.h"
-#import "HIBubbleStates.h"
-#import "HIBubbleEvents.h"
-#import "HIBubbleAnimation.h"
-#import "HIBubbleTooltip.h"
-#import "HIBubbleZones.h"
-#import "HIBubbleLabel.h"
-#import "HIBubbleMarker.h"
-#import "HIBubblePoint.h"
+#import "HIDataLabels.h"
+#import "HIStates.h"
+#import "HIEvents.h"
+#import "HIAnimation.h"
+#import "HITooltip.h"
+#import "HIZones.h"
+#import "HILabel.h"
+#import "HIMarker.h"
+#import "HIPoint.h"
 #import "HIColor.h"
 
 
@@ -36,7 +36,7 @@ In styled mode, the data labels can be styled wtih the .highcharts-data-label-bo
 net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
 datalabels : see example).
 */
-@property(nonatomic, readwrite) HIBubbleDataLabels *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 * description: When a series contains a data array that is longer than this, only
 one dimensional arrays of numbers, or two dimensional arrays with
@@ -90,6 +90,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
 */
+@property(nonatomic, readwrite) NSArray *data;
 /**
 * description: Possible values: null, "on", "between".
 In a column chart, when pointPlacement is "on", the point will
@@ -128,6 +129,7 @@ in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: Minimum bubble size. Bubbles will automatically size between the
 minSize and maxSize to reflect the z value of each bubble.
@@ -155,7 +157,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSArray <HIBubbleStates *> *states;
+@property(nonatomic, readwrite) HIStates *states;
 /**
 * description: Whether to use the Y extremes of the total chart width or only the
 zoomed area when zooming in on parts of the X axis. By default, the
@@ -206,6 +208,7 @@ id or the index of the axis in the yAxis array, with
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: Requires the Accessibility module.
 A description of the series to add to the screen reader information
@@ -218,7 +221,7 @@ about the series.
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HIBubbleEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: Set the point threshold for when a series should enter boost mode.
 Setting it to e.g. 2000 will cause the series to enter boost mode when there
@@ -235,6 +238,7 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: Polar charts only. Whether to connect the ends of a line series plot
 across the extremes.
@@ -283,11 +287,13 @@ id or the index of the axis in the xAxis array, with
 0 being the first.
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: The sequential index of the series in the legend.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: The minimum for the Z value range. Defaults to the highest Z value
 in the data.
@@ -304,6 +310,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: Defines the Axis on which the zones are applied.
 
@@ -338,6 +345,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: When this is true, the series will not cause the Y axis to cross
 the zero plane (or threshold option)
@@ -372,7 +380,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HIBubbleAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: The minimum for the Z value range. Defaults to the lowest Z value
 in the data.
@@ -431,6 +439,7 @@ negativeColor.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: A configuration object for the tooltip rendering of each single
 series. Properties are inherited from #tooltip.
@@ -439,7 +448,7 @@ xDateFormat, yPrefix and ySuffix. Unlike other series, in
 a scatter plot the series.name by default shows in the headerFormat
 and point.x and point.y in the pointFormat.
 */
-@property(nonatomic, readwrite) HIBubbleTooltip *tooltip;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 * description: An array defining zones within a series. Zones can be applied to
 the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
@@ -452,7 +461,7 @@ live demo).
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSArray <HIBubbleZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
 * description: On datetime series, this allows for setting the
 pointInterval to irregular time 
@@ -518,7 +527,7 @@ Requires the series-label.js module.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
-@property(nonatomic, readwrite) HIBubbleLabel *label;
+@property(nonatomic, readwrite) HILabel *label;
 /**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
 can be an object configuration containing color, offsetX, offsetY,
@@ -527,7 +536,7 @@ can be an object configuration containing color, offsetX, offsetY,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: The SVG value used for the stroke-linecap and stroke-linejoin
 of a line graph. Round means that lines are rounded in the ends and
@@ -596,7 +605,7 @@ markers, but have visual options on the series level instead.
 In styled mode, the markers can be styled with the .highcharts-point, .highcharts-point-hover and .highcharts-point-select
 class names.
 */
-@property(nonatomic, readwrite) HIBubbleMarker *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 * description: If set to True, the accessibility module will skip past the points
 in this series for keyboard navigation.
@@ -709,7 +718,7 @@ minSize.
 /**
 * description: Properties for each single point.
 */
-@property(nonatomic, readwrite) HIBubblePoint *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 * description: Whether the bubble's value should be represented by the area or the
 width of the bubble. The default, area, corresponds best to the

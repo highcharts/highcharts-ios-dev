@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIAccessibilityKeyboardNavigation.h"
+#import "HIKeyboardNavigation.h"
 
 
 /**
@@ -46,7 +46,7 @@ dateFormat.
 /**
 * description: Options for keyboard navigation.
 */
-@property(nonatomic, readwrite) HIAccessibilityKeyboardNavigation *keyboardNavigation;
+@property(nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation;
 /**
 * description: Formatter function to determine the date/time format used with
 points on datetime axes when describing them to screen reader users.

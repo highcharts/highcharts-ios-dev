@@ -7,15 +7,15 @@
 */
 
 #import "HISeries.h"
-#import "HILineTooltip.h"
-#import "HILineMarker.h"
-#import "HILineEvents.h"
-#import "HILinePoint.h"
-#import "HILineZones.h"
-#import "HILineAnimation.h"
-#import "HILineStates.h"
-#import "HILineLabel.h"
-#import "HILineDataLabels.h"
+#import "HITooltip.h"
+#import "HIMarker.h"
+#import "HIEvents.h"
+#import "HIPoint.h"
+#import "HIZones.h"
+#import "HIAnimation.h"
+#import "HIStates.h"
+#import "HILabel.h"
+#import "HIDataLabels.h"
 #import "HIColor.h"
 
 
@@ -34,7 +34,7 @@ line.
 Properties are inherited from tooltip, but only the
 following properties can be defined on a series level.
 */
-@property(nonatomic, readwrite) HILineTooltip *tooltip;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 * description: Polar charts only. Whether to connect the ends of a line series plot
 across the extremes.
@@ -51,7 +51,7 @@ In styled mode, the markers can be styled with the .highcharts-point,
 .highcharts-point-hover and .highcharts-point-select
 class names.
 */
-@property(nonatomic, readwrite) HILineMarker *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 * description: Styled mode only. A specific color index to use for the series, so its
 graphic representations are given the class name highcharts-color-
@@ -117,7 +117,7 @@ the selected option.
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HILineEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: The color for the parts of the graph or points that are below the
 threshold.
@@ -200,11 +200,13 @@ id or the index of the axis in the xAxis array, with
 0 being the first.
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: The sequential index of the series in the legend.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: The SVG value used for the stroke-linecap and stroke-linejoin
 of a line graph. Round means that lines are rounded in the ends and
@@ -230,6 +232,7 @@ id or the index of the axis in the yAxis array, with
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: You can set the cursor to "pointer" if you have click events attached
 to the series, to signal to the user that the points and lines can
@@ -346,6 +349,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
 */
+@property(nonatomic, readwrite) NSArray /* <Data, NSNumber, NSArray> */ *data;
 /**
 * description: Set the initial visibility of the series.
 
@@ -357,7 +361,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 /**
 * description: Properties for each single point.
 */
-@property(nonatomic, readwrite) HILinePoint *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 * description: An array defining zones within a series. Zones can be applied to
 the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
@@ -370,7 +374,7 @@ live demo).
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSArray <HILineZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
 * description: Whether to stack the values of each series on top of each other.
 Possible values are null to disable, "normal" to stack by value or
@@ -397,6 +401,7 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: Whether to select the series initially. If showCheckbox is true,
 the checkbox next to the series name in the legend will be checked for a
@@ -466,7 +471,7 @@ can be an object configuration containing color, offsetX, offsetY,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: Whether to apply steps to the line. Possible values are left, center
 and right.
@@ -524,7 +529,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HILineAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: The type of series, for example line or column.
 
@@ -535,6 +540,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: Define the visual z index of the series.
 
@@ -543,6 +549,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
 the chart wide configuration.
@@ -574,13 +581,14 @@ series.
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSArray <HILineStates *> *states;
+@property(nonatomic, readwrite) HIStates *states;
 /**
 * description: The index of the series in the chart, affecting the internal index
 in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: Series labels are placed as close to the series as possible in a
 natural way, seeking to avoid other series. The goal of this
@@ -594,7 +602,7 @@ Requires the series-label.js module.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
-@property(nonatomic, readwrite) HILineLabel *label;
+@property(nonatomic, readwrite) HILabel *label;
 /**
 * description: The main color of the series. In line type series it applies to the
 line and the point markers unless otherwise specified. In bar type
@@ -620,6 +628,7 @@ grouped series' stack options match each other.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns
 * default: null
 */
+@property(nonatomic, readwrite) NSString *stack;
 /**
 * description: The id of another series to link to. Additionally,
 the value can be ":previous" to link to the previous series. When
@@ -636,6 +645,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: When a series contains a data array that is longer than this, only
 one dimensional arrays of numbers, or two dimensional arrays with
@@ -652,7 +662,7 @@ In styled mode, the data labels can be styled wtih the .highcharts-data-label-bo
 net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
 datalabels : see example).
 */
-@property(nonatomic, readwrite) HILineDataLabels *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 * description: For some series, there is a limit that shuts down initial animation
 by default when the total number of points in the chart is too high.

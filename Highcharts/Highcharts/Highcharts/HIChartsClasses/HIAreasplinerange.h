@@ -7,15 +7,15 @@
 */
 
 #import "HISeries.h"
-#import "HIAreasplinerangeZones.h"
-#import "HIAreasplinerangeMarker.h"
-#import "HIAreasplinerangeEvents.h"
-#import "HIAreasplinerangeStates.h"
-#import "HIAreasplinerangeTooltip.h"
-#import "HIAreasplinerangePoint.h"
-#import "HIAreasplinerangeDataLabels.h"
-#import "HIAreasplinerangeLabel.h"
-#import "HIAreasplinerangeAnimation.h"
+#import "HIZones.h"
+#import "HIMarker.h"
+#import "HIEvents.h"
+#import "HIStates.h"
+#import "HITooltip.h"
+#import "HIPoint.h"
+#import "HIDataLabels.h"
+#import "HILabel.h"
+#import "HIAnimation.h"
 #import "HIColor.h"
 
 
@@ -57,7 +57,7 @@ live demo).
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSArray <HIAreasplinerangeZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
 * description: When the series contains less points than the crop threshold, all
 points are drawn, even if the points fall outside the visible plot
@@ -89,6 +89,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: Defines the Axis on which the zones are applied.
 
@@ -173,6 +174,7 @@ in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: Options for the point markers of line-like series. Properties like
 fillColor, lineColor and lineWidth define the visual appearance
@@ -182,7 +184,7 @@ In styled mode, the markers can be styled with the .highcharts-point,
 .highcharts-point-hover and .highcharts-point-select
 class names.
 */
-@property(nonatomic, readwrite) HIAreasplinerangeMarker *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 * description: Requires the Accessibility module.
 A description of the series to add to the screen reader information
@@ -234,7 +236,7 @@ can be an object configuration containing color, offsetX, offsetY,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: Whether to connect a graph line across null points, or render a gap
 between the two points on either side of the null.
@@ -248,7 +250,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HIAreasplinerangeEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: Set the initial visibility of the series.
 
@@ -268,7 +270,7 @@ In styled mode, the border stroke width is given in the .highcharts-point class.
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSArray <HIAreasplinerangeStates *> *states;
+@property(nonatomic, readwrite) HIStates *states;
 /**
 * description: A name for the dash style to use for the graph, or for some series types
 the outline of each shape. The value for the dashStyle include:
@@ -311,18 +313,18 @@ data checking and indexing in long series. Set it to 0 disable.
 Properties are inherited from tooltip, but only the
 following properties can be defined on a series level.
 */
-@property(nonatomic, readwrite) HIAreasplinerangeTooltip *tooltip;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 * description: Properties for each single point.
 */
-@property(nonatomic, readwrite) HIAreasplinerangePoint *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 * description: Extended data labels for range series types. Range series data labels
 have no x and y options. Instead, they have xLow, xHigh,
 yLow and yHigh options to allow the higher and lower data label
 sets individually.
 */
-@property(nonatomic, readwrite) HIAreasplinerangeDataLabels *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 * description: Whether to apply steps to the line. Possible values are left, center
 and right.
@@ -339,12 +341,14 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: The name of the series as shown in the legend, tooltip etc.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: On datetime series, this allows for setting the
 pointInterval to irregular time 
@@ -418,7 +422,7 @@ Requires the series-label.js module.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
-@property(nonatomic, readwrite) HIAreasplinerangeLabel *label;
+@property(nonatomic, readwrite) HILabel *label;
 /**
 * description: A separate color for the graph line. By default the line takes the
 color of the series, but the lineColor setting allows setting a
@@ -454,6 +458,7 @@ id or the index of the axis in the xAxis array, with
 0 being the first.
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: Fill color or gradient for the area. When null, the series' color
 is used with the series' fillOpacity.
@@ -471,6 +476,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: Possible values: null, "on", "between".
 In a column chart, when pointPlacement is "on", the point will
@@ -503,6 +509,7 @@ id or the index of the axis in the yAxis array, with
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: An array of data points for the series. For the areasplinerange
 series type, points can be given in the following ways:
@@ -547,6 +554,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
 */
+@property(nonatomic, readwrite) NSArray *data;
 /**
 * description: A class name to apply to the series' graphical elements.
 */
@@ -575,7 +583,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HIAreasplinerangeAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: If no x values are given for the points in a series, pointStart defines
 on what value to start. For example, if a series contains one yearly
@@ -663,6 +671,7 @@ from different sources.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: Whether to stack the values of each series on top of each other.
 Possible values are null to disable, "normal" to stack by value or

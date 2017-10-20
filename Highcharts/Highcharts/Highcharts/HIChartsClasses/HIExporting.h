@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIExportingButtons.h"
-#import "HIExportingCsv.h"
+#import "HIButtons.h"
+#import "HICsv.h"
 
 
 /**
@@ -87,7 +87,7 @@ to the default buttons listed here, custom buttons can be added.
 See navigation.buttonOptions for general
 options.
 */
-@property(nonatomic, readwrite) HIExportingButtons *buttons;
+@property(nonatomic, readwrite) HIButtons *buttons;
 /**
 * description: Experimental setting to allow HTML inside the chart (added through
 the useHTML options), directly in the exported image. This allows
@@ -120,7 +120,7 @@ Chart.getTable, Chart.getDataRows and Chart.viewData.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/ : Categorized data
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/ : Highstock time axis
 */
-@property(nonatomic, readwrite) HIExportingCsv *csv;
+@property(nonatomic, readwrite) HICsv *csv;
 /**
 * description: The width of the original chart when exported, unless an explicit
 chart.width is set. The width exported raster image

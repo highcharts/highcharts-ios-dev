@@ -7,14 +7,14 @@
 */
 
 #import "HISeries.h"
-#import "HIWordcloudStates.h"
-#import "HIWordcloudPoint.h"
-#import "HIWordcloudStyle.h"
-#import "HIWordcloudEvents.h"
-#import "HIWordcloudRotation.h"
-#import "HIWordcloudTooltip.h"
-#import "HIWordcloudLabel.h"
-#import "HIWordcloudAnimation.h"
+#import "HIStates.h"
+#import "HIPoint.h"
+#import "HIStyle.h"
+#import "HIEvents.h"
+#import "HIRotation.h"
+#import "HITooltip.h"
+#import "HILabel.h"
+#import "HIAnimation.h"
 #import "HIColor.h"
 
 
@@ -37,6 +37,7 @@ id or the index of the axis in the yAxis array, with
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: The color of the border surrounding each column or bar.
 In styled mode, the border stroke can be set with the .highcharts-point
@@ -59,6 +60,7 @@ grouped series' stack options match each other.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns
 * default: null
 */
+@property(nonatomic, readwrite) NSString *stack;
 /**
 * description: An array specifying which option maps to which key in the data point
 array. This makes it convenient to work with unstructured data arrays
@@ -92,7 +94,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSArray <HIWordcloudStates *> *states;
+@property(nonatomic, readwrite) HIStates *states;
 /**
 * description: You can set the cursor to "pointer" if you have click events attached
 to the series, to signal to the user that the points and lines can
@@ -127,7 +129,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 /**
 * description: Properties for each single point.
 */
-@property(nonatomic, readwrite) HIWordcloudPoint *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 * description: If set to True, the accessibility module will skip past the points
 in this series for keyboard navigation.
@@ -141,6 +143,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: Sticky tracking of mouse events. When true, the mouseOut event
 on a series isn't triggered until the mouse moves over another series,
@@ -161,6 +164,7 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: Styled mode only. A specific color index to use for the series, so its
 graphic representations are given the class name highcharts-color-
@@ -173,6 +177,7 @@ in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: An array of data points for the series. For the wordcloud series
 type, points can be given in the following ways:
@@ -200,6 +205,7 @@ data: [{
 
 
 */
+@property(nonatomic, readwrite) NSArray *data;
 /**
 * description: Whether to select the series initially. If showCheckbox is true,
 the checkbox next to the series name in the legend will be checked for a
@@ -213,7 +219,7 @@ selected series.
 * description: CSS styles for the words.
 * default: {"fontFamily":"Impact, sans-serif"}
 */
-@property(nonatomic, readwrite) HIWordcloudStyle *style;
+@property(nonatomic, readwrite) HIStyle *style;
 /**
 * description: This option decides which algorithm is used for placement, and rotation
 of a word. The choice of algorith is therefore a crucial part of the
@@ -229,18 +235,19 @@ https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HIWordcloudEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: Rotation options for the words in the wordcloud.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/wordcloud-rotation : Word cloud with rotation
 */
-@property(nonatomic, readwrite) HIWordcloudRotation *rotation;
+@property(nonatomic, readwrite) HIRotation *rotation;
 /**
 * description: The sequential index of the series in the legend.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: Requires the Accessibility module.
 A description of the series to add to the screen reader information
@@ -304,6 +311,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: A series specific or series type specific color set to apply instead
 of the global colors when colorByPoint is true.
@@ -353,7 +361,7 @@ rule.
 Properties are inherited from tooltip, but only the
 following properties can be defined on a series level.
 */
-@property(nonatomic, readwrite) HIWordcloudTooltip *tooltip;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 * description: Series labels are placed as close to the series as possible in a
 natural way, seeking to avoid other series. The goal of this
@@ -367,7 +375,7 @@ Requires the series-label.js module.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
-@property(nonatomic, readwrite) HIWordcloudLabel *label;
+@property(nonatomic, readwrite) HILabel *label;
 /**
 * description: Spiral used for placing a word after the inital position experienced a
 collision with either another word or the borders.
@@ -396,12 +404,14 @@ id or the index of the axis in the xAxis array, with
 0 being the first.
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: The name of the series as shown in the legend, tooltip etc.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: A class name to apply to the series' graphical elements.
 */
@@ -430,7 +440,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HIWordcloudAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 
 -(NSDictionary *)getParams;
 

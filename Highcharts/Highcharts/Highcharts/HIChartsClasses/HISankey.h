@@ -7,16 +7,16 @@
 */
 
 #import "HISeries.h"
-#import "HISankeyMarker.h"
-#import "HISankeyEvents.h"
-#import "HISankeyPoint.h"
-#import "HISankeyAnimation.h"
-#import "HISankeyTooltip.h"
-#import "HISankeyZones.h"
-#import "HISankeyDataLabels.h"
-#import "HISankeyStates.h"
-#import "HISankeyNodes.h"
-#import "HISankeyLabel.h"
+#import "HITooltip.h"
+#import "HIAnimation.h"
+#import "HIPoint.h"
+#import "HIDataLabels.h"
+#import "HILabel.h"
+#import "HIEvents.h"
+#import "HIStates.h"
+#import "HIMarker.h"
+#import "HIZones.h"
+#import "HINodes.h"
 #import "HIColor.h"
 
 
@@ -31,29 +31,116 @@ sankey.
 @interface HISankey: HISeries
 
 /**
-* description: Options for the point markers of line-like series. Properties like
-fillColor, lineColor and lineWidth define the visual appearance
-of the markers. Other series types, like column series, don't have
-markers, but have visual options on the series level instead.
-In styled mode, the markers can be styled with the .highcharts-point,
-.highcharts-point-hover and .highcharts-point-select
-class names.
+* description: A configuration object for the tooltip rendering of each single series.
+Properties are inherited from tooltip, but only the
+following properties can be defined on a series level.
 */
-@property(nonatomic, readwrite) HISankeyMarker *marker;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
-* description: Pixel with of the graph line.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/ : On all series
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-specific/ : On one single series
-* default: 2
+* description: Higher numbers makes the links in a sankey diagram render more curved.
+A curveFactor of 0 makes the lines straight.
+* default: 0.33
 */
-@property(nonatomic, readwrite) NSNumber *lineWidth;
+@property(nonatomic, readwrite) NSNumber *curveFactor;
+/**
+* description: The id of another series to link to. Additionally,
+the value can be ":previous" to link to the previous series. When
+two series are linked, only the first one appears in the legend.
+Toggling the visibility of this also toggles the linked series.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
+*/
+@property(nonatomic, readwrite) NSString *linkedTo;
+/**
+* description: Styled mode only. A specific color index to use for the series, so its
+graphic representations are given the class name highcharts-color-
+{n}.
+*/
+@property(nonatomic, readwrite) NSNumber *colorIndex;
+/**
+* description: A class name to apply to the series' graphical elements.
+*/
+@property(nonatomic, readwrite) NSString *className;
+/**
+* description: Enable or disable the initial animation when a series is displayed.
+The animation can also be set as a configuration object. Please
+note that this option only applies to the initial animation of the
+series itself. For other animations, see chart.animation and the animation parameter under the API methods. The
+following properties are supported:
+
+duration
+The duration of the animation in milliseconds.
+easing
+A string reference to an easing function set on the Math object.
+See the Custom easing function demo below.
+
+Due to poor performance, animation is disabled in old IE browsers
+for several chart types.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/ : Animation disabled
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/ : Slower animation
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/ : Custom easing function
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/animation-slower/ : Slower animation
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/animation-easing/ : Custom easing function
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
+*/
+@property(nonatomic, readwrite) HIAnimation *animation;
+/**
+* description: Properties for each single point.
+*/
+@property(nonatomic, readwrite) HIPoint *point;
+/**
+* description: Whether to display this particular series or series type in the legend.
+The default value is true for standalone series, false for linked
+series.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
+/**
+* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.
+*/
+@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+/**
+* description: Opacity for the links between nodes in the sankey diagram.
+* default: 0.5
+*/
+@property(nonatomic, readwrite) NSNumber *linkOpacity;
+/**
+* description: Set the initial visibility of the series.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-visibility/ : Hidden series
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
+/**
+* description: When a series contains a data array that is longer than this, only
+one dimensional arrays of numbers, or two dimensional arrays with
+x and y values are allowed. Also, only the first point is tested,
+and the rest are assumed to be the same format. This saves expensive
+data checking and indexing in long series. Set it to 0 disable.
+* default: 1000
+*/
+@property(nonatomic, readwrite) NSNumber *turboThreshold;
 /**
 * description: The pixel width of each node in a sankey diagram, or the height in case
 the chart is inverted.
 * default: 20
 */
 @property(nonatomic, readwrite) NSNumber *nodeWidth;
+/**
+* description: If true, a checkbox is displayed next to the legend item to allow
+selecting the series. The state of the checkbox is determined by
+the selected option.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
 /**
 * description: Allow this series' points to be selected by clicking on the graphic 
 (columns, point markers, pie slices, map areas etc).
@@ -67,6 +154,191 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
 /**
+* description: Options for the data labels appearing on top of the nodes and links. For
+sankey charts, data labels are visible for the nodes by default, but 
+hidden for links. This is controlled by modifying the nodeFormat, and
+the format that applies to links and is an empty string by default.
+*/
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
+/**
+* description: Enable or disable the mouse tracking for a specific series. This
+includes point tooltips and click events on graphs and points. For
+large datasets it improves performance.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
+/**
+* description: Sticky tracking of mouse events. When true, the mouseOut event
+on a series isn't triggered until the mouse moves over another series,
+or out of the plot area. When false, the mouseOut event on a
+series is triggered when the mouse leaves the area around the series'
+graph or markers. This also implies the tooltip when not shared. When
+stickyTracking is false and tooltip.shared is false, the tooltip will
+be hidden when moving the mouse between series. Defaults to true for line
+and area type series, but to false for columns, pies etc.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/ : True by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/ : False
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
+/**
+* description: Whether to select the series initially. If showCheckbox is true,
+the checkbox next to the series name in the legend will be checked for a
+selected series.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/ : One out of two series selected
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
+/**
+* description: Whether to use the Y extremes of the total chart width or only the
+zoomed area when zooming in on parts of the X axis. By default, the
+Y axis adjusts to the min and max of the visible data. Cartesian
+series only.
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *getExtremesFromAll;
+/**
+* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/ : False by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/ : True
+* default: True
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
+/**
+* description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
+the chart wide configuration.
+*/
+@property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
+/**
+* description: By default, series are exposed to screen readers as regions. By enabling
+this option, the series element itself will be exposed in the same
+way as the data points. This is useful if the series is not used
+as a grouping entity in the chart, but you still want to attach a
+description to the series.
+Requires the Accessibility module.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/art-grants/ : Accessible data visualization
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *exposeElementToA11y;
+/**
+* description: An array specifying which option maps to which key in the data point
+array. This makes it convenient to work with unstructured data arrays
+from different sources.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
+*/
+@property(nonatomic, readwrite) NSArray<NSString *> *keys;
+/**
+* description: Series labels are placed as close to the series as possible in a
+natural way, seeking to avoid other series. The goal of this
+feature is to make the chart more easily readable, like if a
+human designer placed the labels in the optimal position.
+The series labels currently work with series types having a
+graph or an area.
+Requires the series-label.js module.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart : Line chart
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
+*/
+@property(nonatomic, readwrite) HILabel *label;
+/**
+* description: The padding between nodes in a sankey diagram, in pixels.
+* default: 10
+*/
+@property(nonatomic, readwrite) NSNumber *nodePadding;
+/**
+* description: The main color of the series. In line type series it applies to the
+line and the point markers unless otherwise specified. In bar type
+series it applies to the bars unless a color is specified per point.
+The default value is pulled from the options.colors array.
+In styled mode, the color can be defined by the
+colorIndex option. Also, the series
+color can be set with the .highcharts-series, .highcharts-color-{n},
+.highcharts-{type}-series or .highcharts-series-{n} class, or
+individual classes given by the className option.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/ : General plot option
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : One specific series
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : Area color
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Category map by multiple series
+*/
+@property(nonatomic, readwrite) HIColor *color;
+/**
+* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/ : Zero base value
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/ : Positive and negative close to zero values
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *minPointLength;
+/**
+* description: General event handlers for the series items. These event hooks can also
+be attached to the series at run time using the Highcharts.addEvent
+function.
+*/
+@property(nonatomic, readwrite) HIEvents *events;
+/**
+* description: Requires the Accessibility module.
+A description of the series to add to the screen reader information
+about the series.
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSString *definition;
+/**
+* description: A wrapper object for all the series options in specific states.
+*/
+@property(nonatomic, readwrite) HIStates *states;
+/**
+* description: If set to True, the accessibility module will skip past the points
+in this series for keyboard navigation.
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *skipKeyboardNavigation;
+/**
+* description: You can set the cursor to "pointer" if you have click events attached
+to the series, to signal to the user that the points and lines can
+be clicked.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/ : On line graph
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/ : On columns
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/ : On scatter markers
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/cursor/ : Pointer on a line graph
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/ : Map area
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/ : Map bubble
+* accepted values: [null, "default", "none", "help", "pointer", "crosshair"]
+*/
+@property(nonatomic, readwrite) NSString *cursor;
+/**
+* description: Options for the point markers of line-like series. Properties like
+fillColor, lineColor and lineWidth define the visual appearance
+of the markers. Other series types, like column series, don't have
+markers, but have visual options on the series level instead.
+In styled mode, the markers can be styled with the .highcharts-point,
+.highcharts-point-hover and .highcharts-point-select
+class names.
+*/
+@property(nonatomic, readwrite) HIMarker *marker;
+/**
+* description: Pixel with of the graph line.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/ : On all series
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-specific/ : On one single series
+* default: 2
+*/
+@property(nonatomic, readwrite) NSNumber *lineWidth;
+/**
 * description: On datetime series, this allows for setting the
 pointInterval to irregular time 
 units, day, month and year. A day is usually the same as 24 hours,
@@ -79,12 +351,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * accepted values: [null, "day", "month", "year"]
 */
 @property(nonatomic, readwrite) NSString *pointIntervalUnit;
-/**
-* description: General event handlers for the series items. These event hooks can also
-be attached to the series at run time using the Highcharts.addEvent
-function.
-*/
-@property(nonatomic, readwrite) HISankeyEvents *events;
 /**
 * description: An array of data points for the series. For the sankey series type,
 points can be given in the following way:
@@ -109,6 +375,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
 */
+@property(nonatomic, readwrite) NSArray /* <Data, NSNumber, NSArray> */ *data;
 /**
 * description: If no x values are given for the points in a series, pointStart defines
 on what value to start. For example, if a series contains one yearly
@@ -129,10 +396,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectNulls;
 /**
-* description: Properties for each single point.
-*/
-@property(nonatomic, readwrite) HISankeyPoint *point;
-/**
 * description: When using dual or multiple y axes, this number defines which yAxis
 the particular series is connected to. It refers to either the axis
 id or the index of the axis in the yAxis array, with
@@ -141,45 +404,7 @@ id or the index of the axis in the yAxis array, with
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 * default: 0
 */
-/**
-* description: By default, series are exposed to screen readers as regions. By enabling
-this option, the series element itself will be exposed in the same
-way as the data points. This is useful if the series is not used
-as a grouping entity in the chart, but you still want to attach a
-description to the series.
-Requires the Accessibility module.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/art-grants/ : Accessible data visualization
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *exposeElementToA11y;
-/**
-* description: When a series contains a data array that is longer than this, only
-one dimensional arrays of numbers, or two dimensional arrays with
-x and y values are allowed. Also, only the first point is tested,
-and the rest are assumed to be the same format. This saves expensive
-data checking and indexing in long series. Set it to 0 disable.
-* default: 1000
-*/
-@property(nonatomic, readwrite) NSNumber *turboThreshold;
-/**
-* description: If true, a checkbox is displayed next to the legend item to allow
-selecting the series. The state of the checkbox is determined by
-the selected option.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
-/**
-* description: Whether to select the series initially. If showCheckbox is true,
-the checkbox next to the series name in the legend will be checked for a
-selected series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/ : One out of two series selected
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: Set the point threshold for when a series should enter boost mode.
 Setting it to e.g. 2000 will cause the series to enter boost mode when there
@@ -190,16 +415,6 @@ Requires modules/boost.js.
 * default: 5000
 */
 @property(nonatomic, readwrite) NSNumber *boostThreshold;
-/**
-* description: Enable or disable the mouse tracking for a specific series. This
-includes point tooltips and click events on graphs and points. For
-large datasets it improves performance.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-enablemousetracking-false/ : No mouse tracking
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
 * description: Whether to stack the values of each series on top of each other.
 Possible values are null to disable, "normal" to stack by value or
@@ -220,16 +435,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * default: null
 */
 @property(nonatomic, readwrite) NSString *stacking;
-/**
-* description: When using automatic point colors pulled from the options.colors
-collection, this option determines whether the chart should receive
-one color per series or one color per point.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/ : False by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/ : True
-* default: True
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
 * description: Polar charts only. Whether to connect the ends of a line series plot
 across the extremes.
@@ -284,73 +489,11 @@ In styled mode, the border stroke width is given in the .highcharts-point class.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: Enable or disable the initial animation when a series is displayed.
-The animation can also be set as a configuration object. Please
-note that this option only applies to the initial animation of the
-series itself. For other animations, see chart.animation and the animation parameter under the API methods. The
-following properties are supported:
-
-duration
-The duration of the animation in milliseconds.
-easing
-A string reference to an easing function set on the Math object.
-See the Custom easing function demo below.
-
-Due to poor performance, animation is disabled in old IE browsers
-for several chart types.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/ : Animation disabled
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/ : Slower animation
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/ : Custom easing function
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/animation-slower/ : Slower animation
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/animation-easing/ : Custom easing function
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
-*/
-@property(nonatomic, readwrite) HISankeyAnimation *animation;
-/**
 * description: The sequential index of the series in the legend.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
-/**
-* description: The main color of the series. In line type series it applies to the
-line and the point markers unless otherwise specified. In bar type
-series it applies to the bars unless a color is specified per point.
-The default value is pulled from the options.colors array.
-In styled mode, the color can be defined by the
-colorIndex option. Also, the series
-color can be set with the .highcharts-series, .highcharts-color-{n},
-.highcharts-{type}-series or .highcharts-series-{n} class, or
-individual classes given by the className option.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/ : General plot option
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : One specific series
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : Area color
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Category map by multiple series
-*/
-@property(nonatomic, readwrite) HIColor *color;
-/**
-* description: A series specific or series type specific color set to apply instead
-of the global colors when colorByPoint is true.
-*/
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
-/**
-* description: The id of another series to link to. Additionally,
-the value can be ":previous" to link to the previous series. When
-two series are linked, only the first one appears in the legend.
-Toggling the visibility of this also toggles the linked series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
-*/
-@property(nonatomic, readwrite) NSString *linkedTo;
-/**
-* description: Higher numbers makes the links in a sankey diagram render more curved.
-A curveFactor of 0 makes the lines straight.
-* default: 0.33
-*/
-@property(nonatomic, readwrite) NSNumber *curveFactor;
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: The color for the parts of the graph or points that are below the
 threshold.
@@ -366,22 +509,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) HIColor *negativeColor;
 /**
-* description: A configuration object for the tooltip rendering of each single series.
-Properties are inherited from tooltip, but only the
-following properties can be defined on a series level.
-*/
-@property(nonatomic, readwrite) HISankeyTooltip *tooltip;
-/**
-* description: A class name to apply to the series' graphical elements.
-*/
-@property(nonatomic, readwrite) NSString *className;
-/**
-* description: Styled mode only. A specific color index to use for the series, so its
-graphic representations are given the class name highcharts-color-
-{n}.
-*/
-@property(nonatomic, readwrite) NSNumber *colorIndex;
-/**
 * description: Defines the Axis on which the zones are applied.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/ : Zones on the X-Axis
@@ -390,37 +517,12 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
 /**
-* description: The padding between nodes in a sankey diagram, in pixels.
-* default: 10
-*/
-@property(nonatomic, readwrite) NSNumber *nodePadding;
-/**
 * description: The threshold, also called zero level or base level. For line type
 series this is only used in conjunction with
 negativeColor.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *threshold;
-/**
-* description: The minimal height for a column or width for a bar. By default,
-0 values are not shown. To visualize a 0 (or close to zero) point,
-set the minimal point length to a pixel value like 3. In stacked
-column charts, minPointLength might not be respected for tightly
-packed values.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/ : Zero base value
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/ : Positive and negative close to zero values
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *minPointLength;
-/**
-* description: Set the initial visibility of the series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-visibility/ : Hidden series
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
 * description: Possible values: null, "on", "between".
 In a column chart, when pointPlacement is "on", the point will
@@ -456,32 +558,7 @@ live demo).
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSArray <HISankeyZones *> *zones;
-/**
-* description: Options for the data labels appearing on top of the nodes and links. For
-sankey charts, data labels are visible for the nodes by default, but 
-hidden for links. This is controlled by modifying the nodeFormat, and
-the format that applies to links and is an empty string by default.
-*/
-@property(nonatomic, readwrite) HISankeyDataLabels *dataLabels;
-/**
-* description: Sticky tracking of mouse events. When true, the mouseOut event
-on a series isn't triggered until the mouse moves over another series,
-or out of the plot area. When false, the mouseOut event on a
-series is triggered when the mouse leaves the area around the series'
-graph or markers. This also implies the tooltip when not shared. When
-stickyTracking is false and tooltip.shared is false, the tooltip will
-be hidden when moving the mouse between series. Defaults to true for line
-and area type series, but to false for columns, pies etc.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/ : False
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
-/**
-* description: A wrapper object for all the series options in specific states.
-*/
-@property(nonatomic, readwrite) NSArray <HISankeyStates *> *states;
+@property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
 * description: The line cap used for line ends and line joins on the graph.
 
@@ -495,33 +572,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: The index of the series in the chart, affecting the internal index
 in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
-/**
-* description: Whether to use the Y extremes of the total chart width or only the
-zoomed area when zooming in on parts of the X axis. By default, the
-Y axis adjusts to the min and max of the visible data. Cartesian
-series only.
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *getExtremesFromAll;
-/**
-* description: Whether to display this particular series or series type in the legend.
-The default value is true for standalone series, false for linked
-series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
-/**
-* description: If set to True, the accessibility module will skip past the points
-in this series for keyboard navigation.
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *skipKeyboardNavigation;
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: When using dual or multiple x axes, this number defines which xAxis
 the particular series is connected to. It refers to either the axis
@@ -529,6 +587,7 @@ id or the index of the axis in the xAxis array, with
 0 being the first.
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: A collection of options for the individual nodes. The nodes in a sankey 
 diagram are auto-generated instances of Highcharts.Point, but options can
@@ -536,7 +595,7 @@ be applied here and linked by the id.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/sankey/ : Sankey diagram with node options
 */
-@property(nonatomic, readwrite) NSArray <HISankeyNodes *> *nodes;
+@property(nonatomic, readwrite) NSArray <HINodes *> *nodes;
 /**
 * description: This option allows grouping series in a stacked chart. The stack
 option can be a string or a number or anything else, as long as the
@@ -545,6 +604,7 @@ grouped series' stack options match each other.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns
 * default: null
 */
+@property(nonatomic, readwrite) NSString *stack;
 /**
 * description: Determines whether the series should look for the nearest point
 in both dimensions or just the x-dimension when hovering the series.
@@ -567,19 +627,7 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
-/**
-* description: An array specifying which option maps to which key in the data point
-array. This makes it convenient to work with unstructured data arrays
-from different sources.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
-*/
-@property(nonatomic, readwrite) NSArray<NSString *> *keys;
-/**
-* description: Opacity for the links between nodes in the sankey diagram.
-* default: 0.5
-*/
-@property(nonatomic, readwrite) NSNumber *linkOpacity;
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: The type of series, for example line or column.
 
@@ -590,6 +638,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: For some series, there is a limit that shuts down initial animation
 by default when the total number of points in the chart is too high.
@@ -598,32 +647,6 @@ run if there is more than 250 points totally. To disable this cap, set
 animationLimit to Infinity.
 */
 @property(nonatomic, readwrite) NSNumber *animationLimit;
-/**
-* description: You can set the cursor to "pointer" if you have click events attached
-to the series, to signal to the user that the points and lines can
-be clicked.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/ : On line graph
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/ : On columns
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/ : On scatter markers
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/cursor/ : Pointer on a line graph
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/ : Map area
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/ : Map bubble
-* accepted values: [null, "default", "none", "help", "pointer", "crosshair"]
-*/
-@property(nonatomic, readwrite) NSString *cursor;
-/**
-* description: Requires the Accessibility module.
-A description of the series to add to the screen reader information
-about the series.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *definition;
-/**
-* description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
-the chart wide configuration.
-*/
-@property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
 /**
 * description: When this is true, the series will not cause the Y axis to cross
 the zero plane (or threshold option)
@@ -642,7 +665,7 @@ can be an object configuration containing color, offsetX, offsetY,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: Define the visual z index of the series.
 
@@ -651,20 +674,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
-/**
-* description: Series labels are placed as close to the series as possible in a
-natural way, seeking to avoid other series. The goal of this
-feature is to make the chart more easily readable, like if a
-human designer placed the labels in the optimal position.
-The series labels currently work with series types having a
-graph or an area.
-Requires the series-label.js module.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart : Line chart
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
-*/
-@property(nonatomic, readwrite) HISankeyLabel *label;
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: If no x values are given for the points in a series, pointInterval
 defines the interval of the x values. For example, if a series contains

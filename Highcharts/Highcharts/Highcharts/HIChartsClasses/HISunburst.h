@@ -7,14 +7,14 @@
 */
 
 #import "HISeries.h"
-#import "HISunburstAnimation.h"
-#import "HISunburstEvents.h"
-#import "HISunburstStates.h"
-#import "HISunburstLevels.h"
-#import "HISunburstTooltip.h"
-#import "HISunburstPoint.h"
-#import "HISunburstLabel.h"
-#import "HISunburstDataLabels.h"
+#import "HIPoint.h"
+#import "HIAnimation.h"
+#import "HIEvents.h"
+#import "HIStates.h"
+#import "HILevels.h"
+#import "HITooltip.h"
+#import "HILabel.h"
+#import "HIDataLabels.h"
 #import "HIColor.h"
 
 
@@ -40,6 +40,10 @@ In styled mode, the border stroke is given in the .highcharts-point class.
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
+* description: Properties for each single point.
+*/
+@property(nonatomic, readwrite) HIPoint *point;
+/**
 * description: A class name to apply to the series' graphical elements.
 */
 @property(nonatomic, readwrite) NSString *className;
@@ -49,6 +53,7 @@ in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: The main color of the series. In line type series it applies to the
 line and the point markers unless otherwise specified. In bar type
@@ -119,7 +124,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HISunburstAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: If set to True, the accessibility module will skip past the points
 in this series for keyboard navigation.
@@ -142,12 +147,13 @@ around. In that case it is best to set a fixed value, for example
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: General event handlers for the series items. These event hooks can also
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HISunburstEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: The id of another series to link to. Additionally,
 the value can be ":previous" to link to the previous series. When
@@ -161,7 +167,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSArray <HISunburstStates *> *states;
+@property(nonatomic, readwrite) HIStates *states;
 /**
 * description: Which point to use as a root in the visualization.
 * default: undefined
@@ -188,7 +194,7 @@ can be an object configuration containing color, offsetX, offsetY,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: By default, series are exposed to screen readers as regions. By enabling
 this option, the series element itself will be exposed in the same
@@ -227,7 +233,7 @@ but not point options.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst : Sunburst chart
 */
-@property(nonatomic, readwrite) NSArray <HISunburstLevels *> *levels;
+@property(nonatomic, readwrite) NSArray <HILevels *> *levels;
 /**
 * description: Used together with the levels and allowDrillToNode options. When
 set to false the first level visible when drilling is considered
@@ -246,12 +252,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
+@property(nonatomic, readwrite) NSArray *data;
 /**
 * description: The name of the series as shown in the legend, tooltip etc.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: If true, a checkbox is displayed next to the legend item to allow
 selecting the series. The state of the checkbox is determined by
@@ -266,7 +274,7 @@ the selected option.
 Properties are inherited from tooltip, but only the
 following properties can be defined on a series level.
 */
-@property(nonatomic, readwrite) HISunburstTooltip *tooltip;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 * description: Requires the Accessibility module.
 A description of the series to add to the screen reader information
@@ -280,6 +288,7 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: Whether to display this particular series or series type in the
 legend. Since 2.1, pies are not shown in the legend by default.
@@ -287,10 +296,6 @@ legend. Since 2.1, pies are not shown in the legend by default.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
-/**
-* description: Properties for each single point.
-*/
-@property(nonatomic, readwrite) HISunburstPoint *point;
 /**
 * description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
 the chart wide configuration.
@@ -310,6 +315,7 @@ id or the index of the axis in the xAxis array, with
 0 being the first.
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: Set the initial visibility of the series.
 
@@ -335,6 +341,7 @@ id or the index of the axis in the yAxis array, with
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: Series labels are placed as close to the series as possible in a
 natural way, seeking to avoid other series. The goal of this
@@ -348,7 +355,7 @@ Requires the series-label.js module.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
-@property(nonatomic, readwrite) HISunburstLabel *label;
+@property(nonatomic, readwrite) HILabel *label;
 /**
 * description: The width of the border surrounding each slice.
 When setting the border width to 0, there may be small gaps between
@@ -371,6 +378,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: When enabled the user can click on a point which is a parent and
 zoom in on its children.
@@ -387,6 +395,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: Options for the series data labels, appearing next to each data
 point.
@@ -394,7 +403,7 @@ In styled mode, the data labels can be styled wtih the .highcharts-data-label-bo
 net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
 datalabels : see example).
 */
-@property(nonatomic, readwrite) HISunburstDataLabels *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 
 -(NSDictionary *)getParams;
 

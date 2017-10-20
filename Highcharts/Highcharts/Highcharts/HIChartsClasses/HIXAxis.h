@@ -6,19 +6,22 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIXAxisTitle.h"
-#import "HIXAxisPlotLines.h"
-#import "HIXAxisDateTimeLabelFormats.h"
-#import "HIXAxisLabels.h"
-#import "HIXAxisBreaks.h"
-#import "HIXAxisEvents.h"
-#import "HIXAxisPlotBands.h"
-#import "HIXAxisCrosshair.h"
+#import "HITitle.h"
+#import "HIPlotLines.h"
+#import "HIDateTimeLabelFormats.h"
+#import "HILabels.h"
+#import "HIBreaks.h"
+#import "HIEvents.h"
+#import "HIPlotBands.h"
+#import "HICrosshair.h"
 #import "HIColor.h"
 
 
 /**
-* description: Options to render axis in 3 dimensions.
+* description: The X axis or category axis. Normally this is the horizontal axis,
+though if the chart is inverted this is the vertical axis. In case of
+multiple axes, the xAxis node is an array of configuration objects.
+See the Axis object for programmatic access to the axis.
 */
 @interface HIXAxis: HIChartsJSONSerializable
 
@@ -47,13 +50,13 @@ maximum is higher, the axis will flex to show all data.
 /**
 * description: The axis title, showing next to the axis line.
 */
-@property(nonatomic, readwrite) HIXAxisTitle *title;
+@property(nonatomic, readwrite) HITitle *title;
 /**
 * description: An array of lines stretching across the plot area, marking a specific
 value on one of the axes.
 In styled mode, the plot lines are styled by the .highcharts-plot-line class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSArray <HIXAxisPlotLines *> *plotLines;
+@property(nonatomic, readwrite) NSArray <HIPlotLines *> *plotLines;
 /**
 * description: Whether to show the axis line and title when the axis has no data.
 
@@ -104,7 +107,7 @@ dateFormat. Defaults to:
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/datetimelabelformats/ : Different day format on X axis
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/datetimelabelformats/ : More information in x axis labels
 */
-@property(nonatomic, readwrite) HIXAxisDateTimeLabelFormats *dateTimeLabelFormats;
+@property(nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats;
 /**
 * description: Color of the grid lines extending the ticks across the plot area.
 In styled mode, the stroke is given in the .highcharts-grid-line
@@ -183,7 +186,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 /**
 * description: The axis labels show the number or category for each tick.
 */
-@property(nonatomic, readwrite) HIXAxisLabels *labels;
+@property(nonatomic, readwrite) HILabels *labels;
 /**
 * description: Whether axis, including axis title, line, ticks and labels, should
 be visible.
@@ -250,11 +253,11 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/intraday-breaks/ : Break on nights and weekends
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/ : Broken Y axis
 */
-@property(nonatomic, readwrite) NSArray <HIXAxisBreaks *> *breaks;
+@property(nonatomic, readwrite) NSArray <HIBreaks *> *breaks;
 /**
 * description: Event handlers for the axis.
 */
-@property(nonatomic, readwrite) HIXAxisEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: The minimum range to display on this axis. The entire axis will not
 be allowed to span over a smaller interval than this. For example,
@@ -467,7 +470,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 an interval on the axis.
 In styled mode, the plot bands are styled by the .highcharts-plot-band class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSArray <HIXAxisPlotBands *> *plotBands;
+@property(nonatomic, readwrite) NSArray <HIPlotBands *> *plotBands;
 /**
 * description: The minimum value of the axis. If null the min value is automatically
 calculated. If the startOnTick option is true, the min value
@@ -588,7 +591,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/ : Crosshair on both axes
 * default: false
 */
-@property(nonatomic, readwrite) HIXAxisCrosshair *crosshair;
+@property(nonatomic, readwrite) HICrosshair *crosshair;
 /**
 * description: The dash or dot style of the grid lines. For possible values, see
 http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-

@@ -6,10 +6,10 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIChartEvents.h"
-#import "HIChartOptions3d.h"
-#import "HIChartParallelAxes.h"
-#import "HIChartResetZoomButton.h"
+#import "HIEvents.h"
+#import "HIOptions3d.h"
+#import "HIParallelAxes.h"
+#import "HIResetZoomButton.h"
 #import "HIColor.h"
 
 
@@ -29,7 +29,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/border/ : Chart border and shadow
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: The background color or gradient for the plot area.
 
@@ -62,7 +62,7 @@ event.metaKey and event.shiftKey).
 /**
 * description: Event listeners for the chart.
 */
-@property(nonatomic, readwrite) HIChartEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: Whether to apply a drop shadow to the plot area. Requires that
 plotBackgroundColor be set. The shadow can be an object configuration
@@ -73,7 +73,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/plotborder/ : Plot border options
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ plotShadow;
+@property(nonatomic, readwrite) id /* Bool, id */ plotShadow;
 /**
 * description: If true, the axes will scale to the remaining visible series once
 one series is hidden. If false, hiding and showing a series will
@@ -95,7 +95,7 @@ highcharts-3d.js, found in the download package or online at
 http://code.highcharts.com/highcharts-
 3d.js : code.highcharts.com/highcharts-3d.js.
 */
-@property(nonatomic, readwrite) HIChartOptions3d *options3d;
+@property(nonatomic, readwrite) HIOptions3d *options3d;
 /**
 * description: The margin between the bottom outer edge of the chart and the plot
 area. Use this to set a fixed pixel value for the margin as opposed
@@ -128,7 +128,7 @@ parallelAxes: {
 }
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/parallel-coordinates/parallelaxes/ : Set the same tickAmount for all yAxes
 */
-@property(nonatomic, readwrite) HIChartParallelAxes *parallelAxes;
+@property(nonatomic, readwrite) HIParallelAxes *parallelAxes;
 /**
 * description: The space between the top edge of the chart and the content (plot
 area, axis title and labels, title, subtitle or legend in top
@@ -164,7 +164,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * description: The button that appears after a selection zoom, allowing the user
 to reset zoom.
 */
-@property(nonatomic, readwrite) HIChartResetZoomButton *resetZoomButton;
+@property(nonatomic, readwrite) HIResetZoomButton *resetZoomButton;
 /**
 * description: The HTML element where the chart will be rendered. If it is a string,
 the element by that id is used. The HTML element can also be passed
@@ -329,7 +329,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/animation-duration/ : With a longer duration
 * default: true
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ animation;
+@property(nonatomic, readwrite) id /* Bool, id */ animation;
 /**
 * description: An explicit width for the chart. By default (when null) the width
 is calculated from the offset width of the containing element.
@@ -508,7 +508,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/height-percent/ : Highcharts with percentage height
 * default: null
 */
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ height;
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ height;
 /**
 * description: The margin between the left outer edge of the chart and the plot
 area. Use this to set a fixed pixel value for the margin as opposed

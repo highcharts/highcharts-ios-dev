@@ -6,10 +6,10 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIColorAxisMarker.h"
-#import "HIColorAxisLabels.h"
-#import "HIColorAxisEvents.h"
-#import "HIColorAxisDataClasses.h"
+#import "HIMarker.h"
+#import "HILabels.h"
+#import "HIEvents.h"
+#import "HIDataClasses.h"
 #import "HIColor.h"
 
 
@@ -43,7 +43,7 @@ null.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/coloraxis/marker/ : Black marker
 */
-@property(nonatomic, readwrite) HIColorAxisMarker *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 * description: Color for the minor tick marks.
 
@@ -124,7 +124,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 For more live examples on label options, see /highcharts#xAxis.labels : xAxis.labels in the
 Highcharts API.
 */
-@property(nonatomic, readwrite) HIColorAxisLabels *labels;
+@property(nonatomic, readwrite) HILabels *labels;
 /**
 * description: Color of the minor, secondary grid lines.
 In styled mode, the stroke width is given in the
@@ -347,7 +347,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 /**
 * description: Event handlers for the axis.
 */
-@property(nonatomic, readwrite) HIColorAxisEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: Whether to reverse the axis so that the highest number is closest
 to the origin. Defaults to false in a horizontal legend and true
@@ -387,7 +387,7 @@ between the minimum and maximum colors.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/data-class-ranges/ : Multiple ranges
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/data-class-two-ranges/ : Two ranges
 */
-@property(nonatomic, readwrite) NSArray <HIColorAxisDataClasses *> *dataClasses;
+@property(nonatomic, readwrite) NSArray <HIDataClasses *> *dataClasses;
 /**
 * description: For categorized axes only. If on the tick mark is placed in the
 center of the category, if between the tick mark is placed between

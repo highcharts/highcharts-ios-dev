@@ -23,7 +23,6 @@
 #import "HIColorAxis.h"
 #import "HIDrilldown.h"
 #import "HIExporting.h"
-#import "HISeries.h"
 
 
 @interface HIOptions: NSObject
@@ -34,7 +33,7 @@ of the chart. This can be changed using these options.
 */
 @property(nonatomic, readwrite) HICredits *credits;
 
-@property(nonatomic, readwrite) NSArray<HISeries *> *series;
+@property(nonatomic, readwrite) HISeries *series;
 
 /**
 * description: Options for the Boost module. The Boost module allows certain series types
@@ -85,9 +84,13 @@ patterns : gradients, shadows and patterns for more information and code example
 @property(nonatomic, readwrite) HIDefs *defs;
 
 /**
-* description: This option set extends the defaultOptions for Y axes.
+* description: The Y axis or value axis. Normally this is the vertical axis,
+though if the chart is inverted this is the horizontal axis.
+In case of multiple axes, the yAxis node is an array of
+configuration objects.
+See the Axis object for programmatic access to the axis.
 */
-@property(nonatomic, readwrite) NSArray<HIYAxis *> *yAxis;
+@property(nonatomic, readwrite) HIYAxis *yAxis;
 
 /**
 * description: The legend is a box containing a symbol and name for each series
@@ -167,9 +170,12 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 @property(nonatomic, readwrite) HIResponsive *responsive;
 
 /**
-* description: Options to render axis in 3 dimensions.
+* description: The X axis or category axis. Normally this is the horizontal axis,
+though if the chart is inverted this is the vertical axis. In case of
+multiple axes, the xAxis node is an array of configuration objects.
+See the Axis object for programmatic access to the axis.
 */
-@property(nonatomic, readwrite) NSArray<HIXAxis *> *xAxis;
+@property(nonatomic, readwrite) HIXAxis *xAxis;
 
 /**
 * description: Options regarding the chart area and plot area as well as general

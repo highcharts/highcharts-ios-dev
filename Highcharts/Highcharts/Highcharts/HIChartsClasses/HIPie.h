@@ -7,15 +7,15 @@
 */
 
 #import "HISeries.h"
-#import "HIPieAnimation.h"
-#import "HIPieTooltip.h"
-#import "HIPieZones.h"
-#import "HIPieEvents.h"
-#import "HIPieDataLabels.h"
-#import "HIPieLabel.h"
-#import "HIPieMarker.h"
-#import "HIPieStates.h"
-#import "HIPiePoint.h"
+#import "HIAnimation.h"
+#import "HITooltip.h"
+#import "HIZones.h"
+#import "HIEvents.h"
+#import "HIDataLabels.h"
+#import "HILabel.h"
+#import "HIMarker.h"
+#import "HIStates.h"
+#import "HIPoint.h"
 #import "HIColor.h"
 
 
@@ -53,7 +53,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HIPieAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: A name for the dash style to use for the graph, or for some series types
 the outline of each shape. The value for the dashStyle include:
@@ -87,7 +87,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 Properties are inherited from tooltip, but only the
 following properties can be defined on a series level.
 */
-@property(nonatomic, readwrite) HIPieTooltip *tooltip;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 * description: An array defining zones within a series. Zones can be applied to
 the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
@@ -100,13 +100,14 @@ live demo).
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSArray <HIPieZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
 * description: The name of the series as shown in the legend, tooltip etc.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * default: 0
@@ -146,13 +147,13 @@ can be an object configuration containing color, offsetX, offsetY,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: General event handlers for the series items. These event hooks can also
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HIPieEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: Set the point threshold for when a series should enter boost mode.
 Setting it to e.g. 2000 will cause the series to enter boost mode when there
@@ -369,7 +370,7 @@ In styled mode, the data labels can be styled wtih the .highcharts-data-label-bo
 net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
 datalabels : see example).
 */
-@property(nonatomic, readwrite) HIPieDataLabels *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 * description: For some series, there is a limit that shuts down initial animation
 by default when the total number of points in the chart is too high.
@@ -398,7 +399,7 @@ Requires the series-label.js module.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
-@property(nonatomic, readwrite) HIPieLabel *label;
+@property(nonatomic, readwrite) HILabel *label;
 /**
 * description: Options for the point markers of line-like series. Properties like
 fillColor, lineColor and lineWidth define the visual appearance
@@ -408,7 +409,7 @@ In styled mode, the markers can be styled with the .highcharts-point,
 .highcharts-point-hover and .highcharts-point-select
 class names.
 */
-@property(nonatomic, readwrite) HIPieMarker *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 * description: When the series contains less points than the crop threshold, all
 points are drawn, even if the points fall outside the visible plot
@@ -437,6 +438,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: When this is true, the series will not cause the Y axis to cross
 the zero plane (or threshold option)
@@ -452,6 +454,7 @@ option. If softThreshold is true, the Y axis starts at 0.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: A series specific or series type specific color set to use instead
 of the global colors.
@@ -488,6 +491,7 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: Pixel with of the graph line.
 
@@ -528,6 +532,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
 */
+@property(nonatomic, readwrite) NSArray *data;
 /**
 * description: Determines whether the series should look for the nearest point
 in both dimensions or just the x-dimension when hovering the series.
@@ -595,7 +600,7 @@ selected series.
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSArray <HIPieStates *> *states;
+@property(nonatomic, readwrite) HIStates *states;
 /**
 * description: You can set the cursor to "pointer" if you have click events attached
 to the series, to signal to the user that the points and lines can
@@ -628,6 +633,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: The center of the pie chart relative to the plot area. Can be percentages
 or pixel values. The default behaviour (as of 3.0) is to center
@@ -671,6 +677,7 @@ in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: The SVG value used for the stroke-linecap and stroke-linejoin
 of a line graph. Round means that lines are rounded in the ends and
@@ -701,7 +708,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 /**
 * description: Properties for each single point.
 */
-@property(nonatomic, readwrite) HIPiePoint *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 * description: If set to True, the accessibility module will skip past the points
 in this series for keyboard navigation.

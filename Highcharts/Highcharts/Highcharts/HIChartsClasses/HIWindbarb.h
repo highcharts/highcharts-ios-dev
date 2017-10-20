@@ -7,15 +7,15 @@
 */
 
 #import "HISeries.h"
-#import "HIWindbarbDataLabels.h"
-#import "HIWindbarbPoint.h"
-#import "HIWindbarbMarker.h"
-#import "HIWindbarbStates.h"
-#import "HIWindbarbZones.h"
-#import "HIWindbarbLabel.h"
-#import "HIWindbarbAnimation.h"
-#import "HIWindbarbTooltip.h"
-#import "HIWindbarbEvents.h"
+#import "HIDataLabels.h"
+#import "HIPoint.h"
+#import "HIMarker.h"
+#import "HIStates.h"
+#import "HIZones.h"
+#import "HILabel.h"
+#import "HIAnimation.h"
+#import "HITooltip.h"
+#import "HIEvents.h"
 #import "HIColor.h"
 
 
@@ -95,6 +95,7 @@ id or the index of the axis in the xAxis array, with
 0 being the first.
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: The color for the parts of the graph or points that are below the
 threshold.
@@ -114,6 +115,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: The width of the border surrounding each column or bar.
 In styled mode, the stroke width can be set with the .highcharts-point
@@ -130,11 +132,11 @@ In styled mode, the data labels can be styled wtih the .highcharts-data-label-bo
 net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
 datalabels : see example).
 */
-@property(nonatomic, readwrite) HIWindbarbDataLabels *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 * description: Properties for each single point.
 */
-@property(nonatomic, readwrite) HIWindbarbPoint *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 * description: Options for the point markers of line-like series. Properties like
 fillColor, lineColor and lineWidth define the visual appearance
@@ -144,7 +146,7 @@ In styled mode, the markers can be styled with the .highcharts-point,
 .highcharts-point-hover and .highcharts-point-select
 class names.
 */
-@property(nonatomic, readwrite) HIWindbarbMarker *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 * description: Requires the Accessibility module.
 A description of the series to add to the screen reader information
@@ -233,7 +235,7 @@ can be an object configuration containing color, offsetX, offsetY,
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
 * default: false
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: A series specific or series type specific color set to apply instead
 of the global colors when colorByPoint is true.
@@ -251,7 +253,7 @@ data checking and indexing in long series. Set it to 0 disable.
 /**
 * description: A wrapper object for all the series options in specific states.
 */
-@property(nonatomic, readwrite) NSArray <HIWindbarbStates *> *states;
+@property(nonatomic, readwrite) HIStates *states;
 /**
 * description: The Y axis value to serve as the base for the columns, for distinguishing
 between values above and below a threshold. If null, the columns
@@ -310,6 +312,7 @@ id or the index of the axis in the yAxis array, with
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
 * default: 0
 */
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: By default, series are exposed to screen readers as regions. By enabling
 this option, the series element itself will be exposed in the same
@@ -366,7 +369,7 @@ live demo).
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSArray <HIWindbarbZones *> *zones;
+@property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
 * description: Series labels are placed as close to the series as possible in a
 natural way, seeking to avoid other series. The goal of this
@@ -380,7 +383,7 @@ Requires the series-label.js module.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
-@property(nonatomic, readwrite) HIWindbarbLabel *label;
+@property(nonatomic, readwrite) HILabel *label;
 /**
 * description: The maximum allowed pixel width for a column, translated to the height
 of a bar in a bar chart. This prevents the columns from becoming
@@ -472,6 +475,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
 */
+@property(nonatomic, readwrite) NSArray /* <Data, NSNumber, NSArray> */ *data;
 /**
 * description: Vertical offset from the cartesian position, in pixels. The default value
 makes sure the symbols don't overlap the X axis when onSeries is
@@ -504,7 +508,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HIWindbarbAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: The type of series, for example line or column.
 
@@ -515,6 +519,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: Polar charts only. Whether to connect the ends of a line series plot
 across the extremes.
@@ -528,6 +533,7 @@ in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: Padding between each value groups, in x axis units.
 
@@ -584,6 +590,7 @@ series only.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: Defines the Axis on which the zones are applied.
 
@@ -621,12 +628,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: A configuration object for the tooltip rendering of each single series.
 Properties are inherited from tooltip, but only the
 following properties can be defined on a series level.
 */
-@property(nonatomic, readwrite) HIWindbarbTooltip *tooltip;
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 * description: Depth of the columns in a 3D column chart. Requires highcharts-3d.
 js.
@@ -681,7 +689,7 @@ selected series.
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HIWindbarbEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: The main color of the series. In line type series it applies to the
 line and the point markers unless otherwise specified. In bar type
@@ -768,6 +776,7 @@ grouped series' stack options match each other.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns
 * default: null
 */
+@property(nonatomic, readwrite) NSString *stack;
 /**
 * description: The line cap used for line ends and line joins on the graph.
 
@@ -805,6 +814,7 @@ pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
+@property(nonatomic, readwrite) NSString *id;
 
 -(NSDictionary *)getParams;
 

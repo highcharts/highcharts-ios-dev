@@ -7,15 +7,15 @@
 */
 
 #import "HISeries.h"
-#import "HIVariablepiePoint.h"
-#import "HIVariablepieEvents.h"
-#import "HIVariablepieAnimation.h"
-#import "HIVariablepieZones.h"
-#import "HIVariablepieDataLabels.h"
-#import "HIVariablepieMarker.h"
-#import "HIVariablepieStates.h"
-#import "HIVariablepieTooltip.h"
-#import "HIVariablepieLabel.h"
+#import "HILabel.h"
+#import "HIEvents.h"
+#import "HIPoint.h"
+#import "HITooltip.h"
+#import "HIAnimation.h"
+#import "HIDataLabels.h"
+#import "HIStates.h"
+#import "HIZones.h"
+#import "HIMarker.h"
 #import "HIColor.h"
 
 
@@ -30,64 +30,63 @@ variablepie.
 @interface HIVariablepie: HISeries
 
 /**
-* description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
-can be an object configuration containing color, offsetX, offsetY,
- opacity and width.
+* description: The minimum possible z value for the point's radius calculation. 
+If the point's Z value is smaller than zMin, the slice will be drawn
+according to the zMin value.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
-* default: false
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-5/ : zMin set to 5, smaller z values are treated as 5
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/ : Series limited by both zMin and zMax
 */
-@property(nonatomic, readwrite) id /* Bool, Object */ shadow;
+@property(nonatomic, readwrite) NSNumber *zMin;
 /**
-* description: The maximum possible z value for the point's radius calculation. If
-the point's Z value is bigger than zMax, the slice will be drawn
-according to the zMax value
+* description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
+the chart wide configuration.
+*/
+@property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
+/**
+* description: The main color of the series. In line type series it applies to the
+line and the point markers unless otherwise specified. In bar type
+series it applies to the bars unless a color is specified per point.
+The default value is pulled from the options.colors array.
+In styled mode, the color can be defined by the
+colorIndex option. Also, the series
+color can be set with the .highcharts-series, .highcharts-color-{n},
+.highcharts-{type}-series or .highcharts-series-{n} class, or
+individual classes given by the className option.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/ : Series limited by both zMin and zMax
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/ : General plot option
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : One specific series
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : Area color
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Category map by multiple series
 */
-@property(nonatomic, readwrite) NSNumber *zMax;
+@property(nonatomic, readwrite) HIColor *color;
 /**
-* description: Whether to connect a graph line across null points, or render a gap
-between the two points on either side of the null.
+* description: Set the initial visibility of the series.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-false/ : False by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-true/ : True
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-visibility/ : Hidden series
+* default: true
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *connectNulls;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
-* description: Properties for each single point.
-*/
-@property(nonatomic, readwrite) HIVariablepiePoint *point;
-/**
-* description: The color for the parts of the graph or points that are below the
-threshold.
+* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+The default value changed from false to true with Highcharts
+3.0.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : Arearange
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/ : Styled mode
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : Arearange
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : Arearange
-* default: null
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
+* default: true
 */
-@property(nonatomic, readwrite) HIColor *negativeColor;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
 /**
-* description: For some series, there is a limit that shuts down initial animation
-by default when the total number of points in the chart is too high.
-For example, for a column chart and its derivatives, animation doesn't
-run if there is more than 250 points totally. To disable this cap, set
-animationLimit to Infinity.
-*/
-@property(nonatomic, readwrite) NSNumber *animationLimit;
-/**
-* description: An array specifying which option maps to which key in the data point
-array. This makes it convenient to work with unstructured data arrays
-from different sources.
+* description: The maximum size of the points' radius related to chart's plotArea.
+If a number is set, it applies in pixels.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/ : Example of minPointSize and maxPointSize
+* default: 100%
 */
-@property(nonatomic, readwrite) NSArray<NSString *> *keys;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ maxPointSize;
 /**
 * description: Whether to select the series initially. If showCheckbox is true,
 the checkbox next to the series name in the legend will be checked for a
@@ -98,11 +97,250 @@ selected series.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
+* description: Allow this series' points to be selected by clicking on the graphic 
+(columns, point markers, pie slices, map areas etc).
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/ : Column
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/ : Pie
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/ : Map area
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/ : Map bubble
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
+/**
+* description: Requires the Accessibility module.
+A description of the series to add to the screen reader information
+about the series.
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSString *definition;
+/**
+* description: The diameter of the pie relative to the plot area. Can be a percentage
+or pixel value. Pixel values are given as integers. The default
+behaviour (as of 3.0) is to scale to the plot area and give room
+for data labels within the plot area. As a consequence, the size
+of the pie may vary when points are updated and data labels more
+around. In that case it is best to set a fixed value, for example
+"75%".
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/ : Smaller pie
+*/
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
+/**
+* description: The SVG value used for the stroke-linecap and stroke-linejoin
+of a line graph. Round means that lines are rounded in the ends and
+bends.
+
+* accepted values: ["round", "butt", "square"]
+* default: round
+*/
+@property(nonatomic, readwrite) NSString *linecap;
+/**
+* description: A class name to apply to the series' graphical elements.
+*/
+@property(nonatomic, readwrite) NSString *className;
+/**
+* description: The width of the border surrounding each slice.
+When setting the border width to 0, there may be small gaps between
+the slices due to SVG antialiasing artefacts. To work around this,
+keep the border width at 0.5 or 1, but set the borderColor to
+null instead.
+In styled mode, the border stroke width is given in the .highcharts-point class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-borderwidth/ : 3px border
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *borderWidth;
+/**
+* description: The center of the pie chart relative to the plot area. Can be percentages
+or pixel values. The default behaviour (as of 3.0) is to center
+the pie so that all slices and data labels are within the plot area.
+As a consequence, the pie may actually jump around in a chart with
+dynamic values, as the data labels move. In that case, the center
+should be explicitly set, for example to ["50%", "50%"].
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/ : Centered at 100, 100
+* default: [null, null]
+*/
+@property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
+/**
+* description: Series labels are placed as close to the series as possible in a
+natural way, seeking to avoid other series. The goal of this
+feature is to make the chart more easily readable, like if a
+human designer placed the labels in the optimal position.
+The series labels currently work with series types having a
+graph or an area.
+Requires the series-label.js module.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart : Line chart
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
+*/
+@property(nonatomic, readwrite) HILabel *label;
+/**
+* description: If set to True, the accessibility module will skip past the points
+in this series for keyboard navigation.
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *skipKeyboardNavigation;
+/**
+* description: Styled mode only. A specific color index to use for the series, so its
+graphic representations are given the class name highcharts-color-
+{n}.
+*/
+@property(nonatomic, readwrite) NSNumber *colorIndex;
+/**
+* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/ : Black border
+* default: #ffffff
+*/
+@property(nonatomic, readwrite) HIColor *borderColor;
+/**
+* description: If true, a checkbox is displayed next to the legend item to allow
+selecting the series. The state of the checkbox is determined by
+the selected option.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
+/**
+* description: Whether to display this particular series or series type in the
+legend. Since 2.1, pies are not shown in the legend by default.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
+/**
+* description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
+can be an object configuration containing color, offsetX, offsetY,
+ opacity and width.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/ : Shadow enabled
+* default: false
+*/
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
+/**
 * description: General event handlers for the series items. These event hooks can also
 be attached to the series at run time using the Highcharts.addEvent
 function.
 */
-@property(nonatomic, readwrite) HIVariablepieEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
+/**
+* description: You can set the cursor to "pointer" if you have click events attached
+to the series, to signal to the user that the points and lines can
+be clicked.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/ : On line graph
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/ : On columns
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/ : On scatter markers
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/cursor/ : Pointer on a line graph
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/ : Map area
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/ : Map bubble
+* accepted values: [null, "default", "none", "help", "pointer", "crosshair"]
+*/
+@property(nonatomic, readwrite) NSString *cursor;
+/**
+* description: Sticky tracking of mouse events. When true, the mouseOut event
+on a series isn't triggered until the mouse moves over another series,
+or out of the plot area. When false, the mouseOut event on a
+series is triggered when the mouse leaves the area around the series'
+graph or markers. This also implies the tooltip. When stickyTracking
+is false and tooltip.shared is false, the tooltip will be hidden
+when moving the mouse between series.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/ : True by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/ : False
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
+/**
+* description: By default, series are exposed to screen readers as regions. By enabling
+this option, the series element itself will be exposed in the same
+way as the data points. This is useful if the series is not used
+as a grouping entity in the chart, but you still want to attach a
+description to the series.
+Requires the Accessibility module.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/art-grants/ : Accessible data visualization
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *exposeElementToA11y;
+/**
+* description: Properties for each single point.
+*/
+@property(nonatomic, readwrite) HIPoint *point;
+/**
+* description: The size of the inner diameter for the pie. A size greater than 0
+renders a donut chart. Can be a percentage or pixel value. Percentages
+are relative to the pie size. Pixel values are given as integers.
+Note: in Highcharts < 4.1.2, the percentage was relative to the plot
+area, not the pie size.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/ : 80px inner size
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/ : 50% of the plot area
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/ : 3D donut
+* default: 0
+*/
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ innerSize;
+/**
+* description: The minimum size of the points' radius related to chart's plotArea.
+If a number is set, it applies in pixels.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/ : Example of minPointSize and maxPointSize
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-point-size-100/ : minPointSize set to 100
+* default: 10%
+*/
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ minPointSize;
+/**
+* description: An array specifying which option maps to which key in the data point
+array. This makes it convenient to work with unstructured data arrays
+from different sources.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
+*/
+@property(nonatomic, readwrite) NSArray<NSString *> *keys;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *clip;
+/**
+* description: A configuration object for the tooltip rendering of each single series.
+Properties are inherited from tooltip, but only the
+following properties can be defined on a series level.
+*/
+@property(nonatomic, readwrite) HITooltip *tooltip;
+/**
+* description: The thickness of a 3D pie. Requires highcharts-3d.js
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *depth;
+/**
+* description: Enable or disable the mouse tracking for a specific series. This
+includes point tooltips and click events on graphs and points. For
+large datasets it improves performance.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-enablemousetracking-false/ : No mouse tracking
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
+/**
+* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/ : Start from right
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *startAngle;
+/**
+* description: The minimum size for a pie in response to auto margins. The pie will
+try to shrink to make room for data labels in side the plot area,
+ but only to this size.
+* default: 80
+*/
+@property(nonatomic, readwrite) NSNumber *minSize;
 /**
 * description: Enable or disable the initial animation when a series is displayed.
 The animation can also be set as a configuration object. Please
@@ -127,7 +365,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/ : Animation enabled on map series
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/ : Disabled on mapbubble series
 */
-@property(nonatomic, readwrite) HIVariablepieAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: A series specific or series type specific color set to use instead
 of the global colors.
@@ -135,6 +373,93 @@ of the global colors.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+/**
+* description: Options for the series data labels, appearing next to each data
+point.
+In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
+net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
+datalabels : see example).
+*/
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
+/**
+* description: A wrapper object for all the series options in specific states.
+*/
+@property(nonatomic, readwrite) HIStates *states;
+/**
+* description: The id of another series to link to. Additionally,
+the value can be ":previous" to link to the previous series. When
+two series are linked, only the first one appears in the legend.
+Toggling the visibility of this also toggles the linked series.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
+*/
+@property(nonatomic, readwrite) NSString *linkedTo;
+/**
+* description: Whether the pie slice's value should be represented by the area 
+or the radius of the slice. Can be either area or radius. The
+default, area, corresponds best to the human perception of the size
+of each pie slice.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/sizeby/ : Difference between area and radius sizeBy
+* accepted values: ["area", "radius"]
+* default: area
+*/
+@property(nonatomic, readwrite) NSString *sizeBy;
+/**
+* description: The end angle of the pie in degrees where 0 is top and 90 is right.
+Defaults to startAngle plus 360.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/ : Semi-circle donut
+* default: null
+*/
+@property(nonatomic, readwrite) NSNumber *endAngle;
+/**
+* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/ : 20px offset
+* default: 10
+*/
+@property(nonatomic, readwrite) NSNumber *slicedOffset;
+/**
+* description: The maximum possible z value for the point's radius calculation. If
+the point's Z value is bigger than zMax, the slice will be drawn
+according to the zMax value
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/ : Series limited by both zMin and zMax
+*/
+@property(nonatomic, readwrite) NSNumber *zMax;
+/**
+* description: Whether to connect a graph line across null points, or render a gap
+between the two points on either side of the null.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-false/ : False by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-true/ : True
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *connectNulls;
+/**
+* description: The color for the parts of the graph or points that are below the
+threshold.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : Arearange
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/ : Styled mode
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : Arearange
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/ : Spline, area and column
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/ : Arearange
+* default: null
+*/
+@property(nonatomic, readwrite) HIColor *negativeColor;
+/**
+* description: For some series, there is a limit that shuts down initial animation
+by default when the total number of points in the chart is too high.
+For example, for a column chart and its derivatives, animation doesn't
+run if there is more than 250 points totally. To disable this cap, set
+animationLimit to Infinity.
+*/
+@property(nonatomic, readwrite) NSNumber *animationLimit;
 /**
 * description: Whether to stack the values of each series on top of each other.
 Possible values are null to disable, "normal" to stack by value or
@@ -155,30 +480,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * default: null
 */
 @property(nonatomic, readwrite) NSString *stacking;
-@property(nonatomic, readwrite) NSNumber /* Bool */ *clip;
-/**
-* description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
-the chart wide configuration.
-*/
-@property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
 /**
 * description: The name of the series as shown in the legend, tooltip etc.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Series name
 */
-/**
-* description: By default, series are exposed to screen readers as regions. By enabling
-this option, the series element itself will be exposed in the same
-way as the data points. This is useful if the series is not used
-as a grouping entity in the chart, but you still want to attach a
-description to the series.
-Requires the Accessibility module.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/art-grants/ : Accessible data visualization
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *exposeElementToA11y;
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: When a series contains a data array that is longer than this, only
 one dimensional arrays of numbers, or two dimensional arrays with
@@ -188,48 +496,6 @@ data checking and indexing in long series. Set it to 0 disable.
 * default: 1000
 */
 @property(nonatomic, readwrite) NSNumber *turboThreshold;
-/**
-* description: Allow this series' points to be selected by clicking on the graphic 
-(columns, point markers, pie slices, map areas etc).
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/ : Line
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/ : Column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/ : Pie
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/ : Map area
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/ : Map bubble
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
-/**
-* description: A class name to apply to the series' graphical elements.
-*/
-@property(nonatomic, readwrite) NSString *className;
-/**
-* description: The diameter of the pie relative to the plot area. Can be a percentage
-or pixel value. Pixel values are given as integers. The default
-behaviour (as of 3.0) is to scale to the plot area and give room
-for data labels within the plot area. As a consequence, the size
-of the pie may vary when points are updated and data labels more
-around. In that case it is best to set a fixed value, for example
-"75%".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/ : Smaller pie
-*/
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
-/**
-* description: The thickness of a 3D pie. Requires highcharts-3d.js
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *depth;
-/**
-* description: The SVG value used for the stroke-linecap and stroke-linejoin
-of a line graph. Round means that lines are rounded in the ends and
-bends.
-
-* accepted values: ["round", "butt", "square"]
-* default: round
-*/
-@property(nonatomic, readwrite) NSString *linecap;
 /**
 * description: Whether to apply steps to the line. Possible values are left, center
 and right.
@@ -252,23 +518,7 @@ live demo).
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/ : Color zones
 */
-@property(nonatomic, readwrite) NSArray <HIVariablepieZones *> *zones;
-/**
-* description: Styled mode only. A specific color index to use for the series, so its
-graphic representations are given the class name highcharts-color-
-{n}.
-*/
-@property(nonatomic, readwrite) NSNumber *colorIndex;
-/**
-* description: The id of another series to link to. Additionally,
-the value can be ":previous" to link to the previous series. When
-two series are linked, only the first one appears in the legend.
-Toggling the visibility of this also toggles the linked series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/ : Linked series
-*/
-@property(nonatomic, readwrite) NSString *linkedTo;
+@property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
 * description: If no x values are given for the points in a series, pointInterval
 defines the interval of the x values. For example, if a series contains
@@ -284,36 +534,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber *pointInterval;
 /**
-* description: Whether to display this particular series or series type in the
-legend. Since 2.1, pies are not shown in the legend by default.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/ : One series in the legend, one hidden
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
-/**
-* description: The minimum size for a pie in response to auto margins. The pie will
-try to shrink to make room for data labels in side the plot area,
- but only to this size.
-* default: 80
-*/
-@property(nonatomic, readwrite) NSNumber *minSize;
-/**
-* description: Requires the Accessibility module.
-A description of the series to add to the screen reader information
-about the series.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *definition;
-/**
-* description: The minimum size of the points' radius related to chart's plotArea.
-If a number is set, it applies in pixels.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/ : Example of minPointSize and maxPointSize
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-point-size-100/ : minPointSize set to 100
-* default: 10%
-*/
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ minPointSize;
-/**
 * description: Define the visual z index of the series.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
@@ -321,29 +541,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
 */
-/**
-* description: Enable or disable the mouse tracking for a specific series. This
-includes point tooltips and click events on graphs and points. For
-large datasets it improves performance.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/ : No mouse tracking
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-enablemousetracking-false/ : No mouse tracking
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
-/**
-* description: Sticky tracking of mouse events. When true, the mouseOut event
-on a series isn't triggered until the mouse moves over another series,
-or out of the plot area. When false, the mouseOut event on a
-series is triggered when the mouse leaves the area around the series'
-graph or markers. This also implies the tooltip. When stickyTracking
-is false and tooltip.shared is false, the tooltip will be hidden
-when moving the mouse between series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/ : False
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
+@property(nonatomic, readwrite) NSNumber *zIndex;
 /**
 * description: When this is true, the series will not cause the Y axis to cross
 the zero plane (or threshold option)
@@ -415,25 +613,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
 */
+@property(nonatomic, readwrite) NSArray *data;
 /**
 * description: An id for the series. This can be used after render time to get a
 pointer to the series object through chart.get().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
 */
-/**
-* description: Options for the series data labels, appearing next to each data
-point.
-In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
-net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
-datalabels : see example).
-*/
-@property(nonatomic, readwrite) HIVariablepieDataLabels *dataLabels;
-/**
-* description: If set to True, the accessibility module will skip past the points
-in this series for keyboard navigation.
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *skipKeyboardNavigation;
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: Options for the point markers of line-like series. Properties like
 fillColor, lineColor and lineWidth define the visual appearance
@@ -443,22 +630,20 @@ In styled mode, the markers can be styled with the .highcharts-point,
 .highcharts-point-hover and .highcharts-point-select
 class names.
 */
-@property(nonatomic, readwrite) HIVariablepieMarker *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 * description: The index of the series in the chart, affecting the internal index
 in the chart.series array, the visible Z index as well as the order
 in the legend.
 * default: undefined
 */
+@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: The sequential index of the series in the legend.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
 */
-/**
-* description: A wrapper object for all the series options in specific states.
-*/
-@property(nonatomic, readwrite) NSArray <HIVariablepieStates *> *states;
+@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: If no x values are given for the points in a series, pointStart defines
 on what value to start. For example, if a series contains one yearly
@@ -487,37 +672,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSString *findNearestPointBy;
 /**
-* description: Equivalent to chart.ignoreHiddenSeries,
-this option tells whether the series shall be redrawn as if the
-hidden point were null.
-The default value changed from false to true with Highcharts
-3.0.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
-/**
-* description: If a point is sliced, moved out from the center, how many pixels
-should it be moved?.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/ : 20px offset
-* default: 10
-*/
-@property(nonatomic, readwrite) NSNumber *slicedOffset;
-/**
-* description: The center of the pie chart relative to the plot area. Can be percentages
-or pixel values. The default behaviour (as of 3.0) is to center
-the pie so that all slices and data labels are within the plot area.
-As a consequence, the pie may actually jump around in a chart with
-dynamic values, as the data labels move. In that case, the center
-should be explicitly set, for example to ["50%", "50%"].
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/ : Centered at 100, 100
-* default: [null, null]
-*/
-@property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
-/**
 * description: Whether to use the Y extremes of the total chart width or only the
 zoomed area when zooming in on parts of the X axis. By default, the
 Y axis adjusts to the min and max of the visible data. Cartesian
@@ -525,14 +679,6 @@ series only.
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *getExtremesFromAll;
-/**
-* description: The start angle of the pie slices in degrees where 0 is top and 90
-right.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/ : Start from right
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *startAngle;
 /**
 * description: A name for the dash style to use for the graph, or for some series types
 the outline of each shape. The value for the dashStyle include:
@@ -562,61 +708,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
-* description: The size of the inner diameter for the pie. A size greater than 0
-renders a donut chart. Can be a percentage or pixel value. Percentages
-are relative to the pie size. Pixel values are given as integers.
-Note: in Highcharts < 4.1.2, the percentage was relative to the plot
-area, not the pie size.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/ : 80px inner size
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/ : 50% of the plot area
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/ : 3D donut
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ innerSize;
-/**
-* description: A configuration object for the tooltip rendering of each single series.
-Properties are inherited from tooltip, but only the
-following properties can be defined on a series level.
-*/
-@property(nonatomic, readwrite) HIVariablepieTooltip *tooltip;
-/**
-* description: Set the initial visibility of the series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/ : Two series, one hidden and one visible
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-visibility/ : Hidden series
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
-/**
-* description: You can set the cursor to "pointer" if you have click events attached
-to the series, to signal to the user that the points and lines can
-be clicked.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/ : On line graph
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/ : On columns
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/ : On scatter markers
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/cursor/ : Pointer on a line graph
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/ : Map area
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/ : Map bubble
-* accepted values: [null, "default", "none", "help", "pointer", "crosshair"]
-*/
-@property(nonatomic, readwrite) NSString *cursor;
-/**
-* description: Series labels are placed as close to the series as possible in a
-natural way, seeking to avoid other series. The goal of this
-feature is to make the chart more easily readable, like if a
-human designer placed the labels in the optimal position.
-The series labels currently work with series types having a
-graph or an area.
-Requires the series-label.js module.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart : Line chart
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
-*/
-@property(nonatomic, readwrite) HIVariablepieLabel *label;
-/**
 * description: Defines the Axis on which the zones are applied.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/ : Zones on the X-Axis
@@ -624,34 +715,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: y
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
-/**
-* description: The width of the border surrounding each slice.
-When setting the border width to 0, there may be small gaps between
-the slices due to SVG antialiasing artefacts. To work around this,
-keep the border width at 0.5 or 1, but set the borderColor to
-null instead.
-In styled mode, the border stroke width is given in the .highcharts-point class.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-borderwidth/ : 3px border
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *borderWidth;
-/**
-* description: The maximum size of the points' radius related to chart's plotArea.
-If a number is set, it applies in pixels.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/ : Example of minPointSize and maxPointSize
-* default: 100%
-*/
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ maxPointSize;
-/**
-* description: The end angle of the pie in degrees where 0 is top and 90 is right.
-Defaults to startAngle plus 360.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/ : Semi-circle donut
-* default: null
-*/
-@property(nonatomic, readwrite) NSNumber *endAngle;
 /**
 * description: On datetime series, this allows for setting the
 pointInterval to irregular time 
@@ -689,41 +752,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ pointPlacement;
 /**
-* description: If true, a checkbox is displayed next to the legend item to allow
-selecting the series. The state of the checkbox is determined by
-the selected option.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/ : Show select box
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
-/**
-* description: The minimum possible z value for the point's radius calculation. 
-If the point's Z value is smaller than zMin, the slice will be drawn
-according to the zMin value.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-5/ : zMin set to 5, smaller z values are treated as 5
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/ : Series limited by both zMin and zMax
-*/
-@property(nonatomic, readwrite) NSNumber *zMin;
-/**
-* description: The main color of the series. In line type series it applies to the
-line and the point markers unless otherwise specified. In bar type
-series it applies to the bars unless a color is specified per point.
-The default value is pulled from the options.colors array.
-In styled mode, the color can be defined by the
-colorIndex option. Also, the series
-color can be set with the .highcharts-series, .highcharts-color-{n},
-.highcharts-{type}-series or .highcharts-series-{n} class, or
-individual classes given by the className option.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/ : General plot option
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/ : One specific series
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/ : Area color
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/ : Category map by multiple series
-*/
-@property(nonatomic, readwrite) HIColor *color;
-/**
 * description: When the series contains less points than the crop threshold, all
 points are drawn, even if the points fall outside the visible plot
 area at the current zoom. The advantage of drawing all points (including
@@ -745,28 +773,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
       "columnrange", "errorbar", "funnel", "gauge", "scatter",
       "waterfall"]
 */
-/**
-* description: Whether the pie slice's value should be represented by the area 
-or the radius of the slice. Can be either area or radius. The
-default, area, corresponds best to the human perception of the size
-of each pie slice.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/sizeby/ : Difference between area and radius sizeBy
-* accepted values: ["area", "radius"]
-* default: area
-*/
-@property(nonatomic, readwrite) NSString *sizeBy;
-/**
-* description: The color of the border surrounding each slice. When null, the
-border takes the same color as the slice fill. This can be used
-together with a borderWidth to fill drawing gaps created by antialiazing
-artefacts in borderless pies.
-In styled mode, the border stroke is given in the .highcharts-point class.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/ : Black border
-* default: #ffffff
-*/
-@property(nonatomic, readwrite) HIColor *borderColor;
+@property(nonatomic, readwrite) NSString *type;
 /**
 * description: Set the point threshold for when a series should enter boost mode.
 Setting it to e.g. 2000 will cause the series to enter boost mode when there

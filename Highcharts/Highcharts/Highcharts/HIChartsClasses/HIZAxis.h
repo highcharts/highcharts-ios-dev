@@ -6,12 +6,12 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIZAxisDateTimeLabelFormats.h"
-#import "HIZAxisLabels.h"
-#import "HIZAxisPlotBands.h"
-#import "HIZAxisPlotLines.h"
-#import "HIZAxisTitle.h"
-#import "HIZAxisEvents.h"
+#import "HIDateTimeLabelFormats.h"
+#import "HILabels.h"
+#import "HIPlotBands.h"
+#import "HIPlotLines.h"
+#import "HITitle.h"
+#import "HIEvents.h"
 #import "HIColor.h"
 
 
@@ -160,7 +160,7 @@ dateFormat. Defaults to:
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/datetimelabelformats/ : Different day format on X axis
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/datetimelabelformats/ : More information in x axis labels
 */
-@property(nonatomic, readwrite) HIZAxisDateTimeLabelFormats *dateTimeLabelFormats;
+@property(nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats;
 /**
 * description: Color of the minor, secondary grid lines.
 In styled mode, the stroke width is given in the
@@ -186,7 +186,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 /**
 * description: The axis labels show the number or category for each tick.
 */
-@property(nonatomic, readwrite) HIZAxisLabels *labels;
+@property(nonatomic, readwrite) HILabels *labels;
 /**
 * description: Whether to display the axis on the opposite side of the normal. The
 normal is on the left side for vertical axes and bottom for horizontal,
@@ -233,7 +233,7 @@ be visible.
 an interval on the axis.
 In styled mode, the plot bands are styled by the .highcharts-plot-band class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSArray <HIZAxisPlotBands *> *plotBands;
+@property(nonatomic, readwrite) NSArray <HIPlotBands *> *plotBands;
 /**
 * description: Color of the grid lines extending the ticks across the plot area.
 In styled mode, the stroke is given in the .highcharts-grid-line
@@ -419,7 +419,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 value on one of the axes.
 In styled mode, the plot lines are styled by the .highcharts-plot-line class in addition to the className option.
 */
-@property(nonatomic, readwrite) NSArray <HIZAxisPlotLines *> *plotLines;
+@property(nonatomic, readwrite) NSArray <HIPlotLines *> *plotLines;
 /**
 * description: If categories are present for the xAxis, names are used instead of
 numbers for that axis. Since Highcharts 3.0, categories can also
@@ -539,11 +539,11 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 /**
 * description: The axis title, showing next to the axis line.
 */
-@property(nonatomic, readwrite) HIZAxisTitle *title;
+@property(nonatomic, readwrite) HITitle *title;
 /**
 * description: Event handlers for the axis.
 */
-@property(nonatomic, readwrite) HIZAxisEvents *events;
+@property(nonatomic, readwrite) HIEvents *events;
 /**
 * description: When using an alternate grid color, a band is painted across the
 plot area between every other grid line.

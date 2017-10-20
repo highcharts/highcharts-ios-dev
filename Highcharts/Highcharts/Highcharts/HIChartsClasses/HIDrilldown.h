@@ -6,10 +6,10 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIDrilldownActiveAxisLabelStyle.h"
-#import "HIDrilldownDrillUpButton.h"
-#import "HIDrilldownActiveDataLabelStyle.h"
-#import "HIDrilldownAnimation.h"
+#import "HIActiveAxisLabelStyle.h"
+#import "HIDrillUpButton.h"
+#import "HIActiveDataLabelStyle.h"
+#import "HIAnimation.h"
 
 
 /**
@@ -38,7 +38,7 @@ to interaction.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/ : Label styles
 * default: { "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }
 */
-@property(nonatomic, readwrite) HIDrilldownActiveAxisLabelStyle *activeAxisLabelStyle;
+@property(nonatomic, readwrite) HIActiveAxisLabelStyle *activeAxisLabelStyle;
 /**
 * description: Options for the drill up button that appears when drilling down
 on a series. The text for the button is defined in lang.drillUpText.
@@ -46,7 +46,7 @@ on a series. The text for the button is defined in lang.drillUpText.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/ : Drill up button
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/ : Drill up button
 */
-@property(nonatomic, readwrite) HIDrilldownDrillUpButton *drillUpButton;
+@property(nonatomic, readwrite) HIDrillUpButton *drillUpButton;
 /**
 * description: Additional styles to apply to the data label of a point that has
 drilldown data. By default it is underlined and blue to invite to
@@ -55,7 +55,7 @@ interaction.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/ : Label styles
 * default: { "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }
 */
-@property(nonatomic, readwrite) HIDrilldownActiveDataLabelStyle *activeDataLabelStyle;
+@property(nonatomic, readwrite) HIActiveDataLabelStyle *activeDataLabelStyle;
 /**
 * description: An array of series configurations for the drill down. Each series
 configuration uses the same syntax as the series option
@@ -82,7 +82,7 @@ See http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sa
 animation-easing/ : the easing demo.
 
 */
-@property(nonatomic, readwrite) HIDrilldownAnimation *animation;
+@property(nonatomic, readwrite) HIAnimation *animation;
 
 -(NSDictionary *)getParams;
 
