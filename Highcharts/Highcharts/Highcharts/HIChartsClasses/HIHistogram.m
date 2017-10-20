@@ -213,17 +213,11 @@
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
 	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
 	if (self.step) {
 		params[@"step"] = self.step;
 	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;

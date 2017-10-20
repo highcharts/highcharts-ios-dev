@@ -99,9 +99,6 @@
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
 	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
 	if (self.step) {
 		params[@"step"] = self.step;
 	}
@@ -144,14 +141,8 @@
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
@@ -182,9 +173,6 @@
 			}
 		}
 		params[@"keys"] = array;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;

@@ -13,7 +13,6 @@
 #import "HIEvents.h"
 #import "HIAnimation.h"
 #import "HIPoint.h"
-#import "HIDataLabels.h"
 #import "HIStates.h"
 #import "HIZones.h"
 #import "HIColor.h"
@@ -96,26 +95,6 @@ to draw weeks, quarters, 6 months, 10 years etc.
 * accepted values: [null, "day", "month", "year"]
 */
 @property(nonatomic, readwrite) NSString *pointIntervalUnit;
-/**
-* description: Whether to stack the values of each series on top of each other.
-Possible values are null to disable, "normal" to stack by value or
-"percent". When stacking is enabled, data must be sorted in ascending
-X order. A special stacking option is with the streamgraph series type,
-where the stacking option is set to "stream".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/ : Line
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-column/ : Column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-bar/ : Bar
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-area/ : Area
-
-
-
-
-
-* accepted values: [null, "normal", "percent"]
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *stacking;
 /**
 * description: Whether to display this particular series or series type in the legend.
 The default value is true for standalone series, false for linked
@@ -301,14 +280,6 @@ In styled mode, the border stroke width is given in the .highcharts-point class.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: Options for the series data labels, appearing next to each data
-point.
-In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
-net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
-datalabels : see example).
-*/
-@property(nonatomic, readwrite) HIDataLabels *dataLabels;
-/**
 * description: A class name to apply to the series' graphical elements.
 */
 @property(nonatomic, readwrite) NSString *className;
@@ -443,17 +414,6 @@ selected series.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
-* description: If no x values are given for the points in a series, pointStart defines
-on what value to start. For example, if a series contains one yearly
-value starting from 1945, set pointStart to 1945.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/ : Linear
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/ : Using pointStart and pointInterval
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *pointStart;
-/**
 * description: Whether to use the Y extremes of the total chart width or only the
 zoomed area when zooming in on parts of the X axis. By default, the
 Y axis adjusts to the min and max of the visible data. Cartesian
@@ -579,20 +539,6 @@ can be an object configuration containing color, offsetX, offsetY,
 * default: false
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
-/**
-* description: If no x values are given for the points in a series, pointInterval
-defines the interval of the x values. For example, if a series contains
-one value every decade starting from year 0, set pointInterval to
-10. In true datetime axes, the pointInterval is set in
-milliseconds.
-It can be also be combined with pointIntervalUnit to draw irregular
-time intervals.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime X axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/ : Using pointStart and pointInterval
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *pointInterval;
 
 -(NSDictionary *)getParams;
 

@@ -177,9 +177,6 @@
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
 	}
@@ -198,9 +195,6 @@
 		}
 		params[@"zones"] = array;
 	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
@@ -215,9 +209,6 @@
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;

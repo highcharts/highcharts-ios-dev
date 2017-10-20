@@ -116,9 +116,6 @@
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.step) {
 		params[@"step"] = self.step;
 	}
@@ -161,9 +158,6 @@
 		}
 		params[@"zones"] = array;
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
@@ -175,9 +169,6 @@
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	return params;
 }

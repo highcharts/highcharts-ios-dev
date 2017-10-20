@@ -415,26 +415,6 @@ Requires modules/boost.js.
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
 /**
-* description: Whether to stack the values of each series on top of each other.
-Possible values are null to disable, "normal" to stack by value or
-"percent". When stacking is enabled, data must be sorted in ascending
-X order. A special stacking option is with the streamgraph series type,
-where the stacking option is set to "stream".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/ : Line
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-column/ : Column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-bar/ : Bar
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-area/ : Area
-
-
-
-
-
-* accepted values: [null, "normal", "percent"]
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *stacking;
-/**
 * description: An array defining zones within a series. Zones can be applied to
 the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
 option.

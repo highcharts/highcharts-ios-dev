@@ -130,9 +130,6 @@
 	if (self.allowDrillToNode) {
 		params[@"allowDrillToNode"] = self.allowDrillToNode;
 	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
 	return params;
 }
 

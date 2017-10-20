@@ -14,7 +14,6 @@
 #import "HILevels.h"
 #import "HITooltip.h"
 #import "HILabel.h"
-#import "HIDataLabels.h"
 #import "HIColor.h"
 
 
@@ -330,14 +329,6 @@ zoom in on its children.
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowDrillToNode;
-/**
-* description: Options for the series data labels, appearing next to each data
-point.
-In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
-net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
-datalabels : see example).
-*/
-@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 
 -(NSDictionary *)getParams;
 

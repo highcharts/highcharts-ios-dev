@@ -21,14 +21,8 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;
@@ -114,9 +108,6 @@
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
@@ -164,9 +155,6 @@
 	}
 	if (self.step) {
 		params[@"step"] = self.step;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;

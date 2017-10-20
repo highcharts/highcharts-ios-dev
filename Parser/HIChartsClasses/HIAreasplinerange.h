@@ -13,7 +13,6 @@
 #import "HIStates.h"
 #import "HITooltip.h"
 #import "HIPoint.h"
-#import "HIDataLabels.h"
 #import "HILabel.h"
 #import "HIAnimation.h"
 #import "HIColor.h"
@@ -301,13 +300,6 @@ following properties can be defined on a series level.
 */
 @property(nonatomic, readwrite) HIPoint *point;
 /**
-* description: Extended data labels for range series types. Range series data labels
-have no x and y options. Instead, they have xLow, xHigh,
-yLow and yHigh options to allow the higher and lower data label
-sets individually.
-*/
-@property(nonatomic, readwrite) HIDataLabels *dataLabels;
-/**
 * description: Whether to apply steps to the line. Possible values are left, center
 and right.
 
@@ -481,34 +473,9 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) HIAnimation *animation;
 /**
-* description: If no x values are given for the points in a series, pointStart defines
-on what value to start. For example, if a series contains one yearly
-value starting from 1945, set pointStart to 1945.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/ : Linear
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/ : Using pointStart and pointInterval
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *pointStart;
-/**
 * description: A separate color for the negative part of the area.
 */
 @property(nonatomic, readwrite) HIColor *negativeFillColor;
-/**
-* description: If no x values are given for the points in a series, pointInterval
-defines the interval of the x values. For example, if a series contains
-one value every decade starting from year 0, set pointInterval to
-10. In true datetime axes, the pointInterval is set in
-milliseconds.
-It can be also be combined with pointIntervalUnit to draw irregular
-time intervals.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime X axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/ : Using pointStart and pointInterval
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *pointInterval;
 /**
 * description: When this is true, the series will not cause the Y axis to cross
 the zero plane (or threshold option)
@@ -562,26 +529,6 @@ from different sources.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *keys;
-/**
-* description: Whether to stack the values of each series on top of each other.
-Possible values are null to disable, "normal" to stack by value or
-"percent". When stacking is enabled, data must be sorted in ascending
-X order. A special stacking option is with the streamgraph series type,
-where the stacking option is set to "stream".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/ : Line
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-column/ : Column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-bar/ : Bar
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-area/ : Area
-
-
-
-
-
-* accepted values: [null, "normal", "percent"]
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *stacking;
 /**
 * description: Whether to display this particular series or series type in the legend.
 The default value is true for standalone series, false for linked

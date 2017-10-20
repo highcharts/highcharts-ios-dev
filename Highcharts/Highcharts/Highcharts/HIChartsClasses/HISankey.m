@@ -135,17 +135,11 @@
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
 	}
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
@@ -209,9 +203,6 @@
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.cropThreshold) {
 		params[@"cropThreshold"] = self.cropThreshold;

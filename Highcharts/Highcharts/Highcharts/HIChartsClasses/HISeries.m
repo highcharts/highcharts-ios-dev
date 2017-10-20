@@ -54,6 +54,18 @@
     if (self.dataParser) {
         params[@"dataParser"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.dataParser];
     }
+    if (self.dataLabels) {
+        params[@"dataLabels"] = [self.dataLabels getParams];
+    }
+    if (self.pointStart) {
+        params[@"pointStart"] = self.pointStart;
+    }
+    if (self.pointInterval) {
+        params[@"pointInterval"] = self.pointInterval;
+    }
+    if (self.stacking) {
+        params[@"pointInterval"] = self.stacking;
+    }
     return params;
 }
 

@@ -21,9 +21,6 @@
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
 	}
@@ -77,9 +74,6 @@
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -135,9 +129,6 @@
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
@@ -185,9 +176,6 @@
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	return params;
 }

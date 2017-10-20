@@ -69,9 +69,6 @@
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
 	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.keys) {
@@ -102,9 +99,6 @@
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
 	}
@@ -122,9 +116,6 @@
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;
@@ -161,9 +152,6 @@
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];

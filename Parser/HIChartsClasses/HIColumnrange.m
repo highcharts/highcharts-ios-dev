@@ -221,9 +221,6 @@
 	if (self.negativeColor) {
 		params[@"negativeColor"] = [self.negativeColor getData];
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}

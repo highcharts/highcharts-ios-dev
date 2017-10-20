@@ -153,12 +153,6 @@
 	if (self.groupZPadding) {
 		params[@"groupZPadding"] = self.groupZPadding;
 	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
 	}
@@ -173,9 +167,6 @@
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -197,9 +188,6 @@
 	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.exposeElementToA11y) {
 		params[@"exposeElementToA11y"] = self.exposeElementToA11y;

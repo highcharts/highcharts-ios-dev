@@ -191,14 +191,8 @@
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.step) {
 		params[@"step"] = self.step;

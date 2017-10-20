@@ -11,7 +11,6 @@
 #import "HITooltip.h"
 #import "HIZones.h"
 #import "HIEvents.h"
-#import "HIDataLabels.h"
 #import "HILabel.h"
 #import "HIMarker.h"
 #import "HIStates.h"
@@ -197,20 +196,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
 /**
-* description: If no x values are given for the points in a series, pointInterval
-defines the interval of the x values. For example, if a series contains
-one value every decade starting from year 0, set pointInterval to
-10. In true datetime axes, the pointInterval is set in
-milliseconds.
-It can be also be combined with pointIntervalUnit to draw irregular
-time intervals.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime X axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/ : Using pointStart and pointInterval
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *pointInterval;
-/**
 * description: The minimum size for a pie in response to auto margins. The pie will
 try to shrink to make room for data labels in side the plot area,
  but only to this size.
@@ -328,26 +313,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSString *step;
 /**
-* description: Whether to stack the values of each series on top of each other.
-Possible values are null to disable, "normal" to stack by value or
-"percent". When stacking is enabled, data must be sorted in ascending
-X order. A special stacking option is with the streamgraph series type,
-where the stacking option is set to "stream".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/ : Line
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-column/ : Column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-bar/ : Bar
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-area/ : Area
-
-
-
-
-
-* accepted values: [null, "normal", "percent"]
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *stacking;
-/**
 * description: If true, a checkbox is displayed next to the legend item to allow
 selecting the series. The state of the checkbox is determined by
 the selected option.
@@ -356,14 +321,6 @@ the selected option.
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
-/**
-* description: Options for the series data labels, appearing next to each data
-point.
-In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
-net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
-datalabels : see example).
-*/
-@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 * description: For some series, there is a limit that shuts down initial animation
 by default when the total number of points in the chart is too high.
@@ -614,17 +571,6 @@ negativeColor.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *threshold;
-/**
-* description: If no x values are given for the points in a series, pointStart defines
-on what value to start. For example, if a series contains one yearly
-value starting from 1945, set pointStart to 1945.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/ : Linear
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/ : Using pointStart and pointInterval
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *pointStart;
 /**
 * description: Properties for each single point.
 */

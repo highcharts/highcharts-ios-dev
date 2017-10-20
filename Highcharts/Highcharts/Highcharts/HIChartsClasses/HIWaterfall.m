@@ -102,9 +102,6 @@
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
@@ -116,9 +113,6 @@
 	}
 	if (self.groupZPadding) {
 		params[@"groupZPadding"] = self.groupZPadding;
-	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
@@ -150,9 +144,6 @@
 	if (self.showCheckbox) {
 		params[@"showCheckbox"] = self.showCheckbox;
 	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -165,9 +156,6 @@
 	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;

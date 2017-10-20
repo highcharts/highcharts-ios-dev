@@ -39,9 +39,6 @@
 	if (self.negativeColor) {
 		params[@"negativeColor"] = [self.negativeColor getData];
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
 	}
@@ -105,9 +102,6 @@
 		}
 		params[@"zones"] = array;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
@@ -147,9 +141,6 @@
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
 	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
 	}
@@ -167,9 +158,6 @@
 	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
-	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;

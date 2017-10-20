@@ -15,7 +15,6 @@
 #import "HIAnimation.h"
 #import "HIStates.h"
 #import "HILabel.h"
-#import "HIDataLabels.h"
 #import "HIColor.h"
 
 
@@ -132,17 +131,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: null
 */
 @property(nonatomic, readwrite) HIColor *negativeColor;
-/**
-* description: If no x values are given for the points in a series, pointStart defines
-on what value to start. For example, if a series contains one yearly
-value starting from 1945, set pointStart to 1945.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/ : Linear
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/ : Using pointStart and pointInterval
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *pointStart;
 /**
 * description: A name for the dash style to use for the graph, or for some series types
 the outline of each shape. The value for the dashStyle include:
@@ -304,26 +292,6 @@ live demo).
 */
 @property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
-* description: Whether to stack the values of each series on top of each other.
-Possible values are null to disable, "normal" to stack by value or
-"percent". When stacking is enabled, data must be sorted in ascending
-X order. A special stacking option is with the streamgraph series type,
-where the stacking option is set to "stream".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/ : Line
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-column/ : Column
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-bar/ : Bar
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-area/ : Area
-
-
-
-
-
-* accepted values: [null, "normal", "percent"]
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *stacking;
-/**
 * description: Whether to select the series initially. If showCheckbox is true,
 the checkbox next to the series name in the legend will be checked for a
 selected series.
@@ -457,20 +425,6 @@ the chart wide configuration.
 */
 @property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
 /**
-* description: If no x values are given for the points in a series, pointInterval
-defines the interval of the x values. For example, if a series contains
-one value every decade starting from year 0, set pointInterval to
-10. In true datetime axes, the pointInterval is set in
-milliseconds.
-It can be also be combined with pointIntervalUnit to draw irregular
-time intervals.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/ : Datetime X axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/ : Using pointStart and pointInterval
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *pointInterval;
-/**
 * description: Whether to display this particular series or series type in the legend.
 The default value is true for standalone series, false for linked
 series.
@@ -533,14 +487,6 @@ data checking and indexing in long series. Set it to 0 disable.
 * default: 1000
 */
 @property(nonatomic, readwrite) NSNumber *turboThreshold;
-/**
-* description: Options for the series data labels, appearing next to each data
-point.
-In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
-net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
-datalabels : see example).
-*/
-@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 * description: For some series, there is a limit that shuts down initial animation
 by default when the total number of points in the chart is too high.

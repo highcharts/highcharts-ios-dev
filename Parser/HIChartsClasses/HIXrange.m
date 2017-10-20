@@ -12,17 +12,11 @@
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
 	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
 	if (self.skipKeyboardNavigation) {
 		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
 	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
-	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.cropThreshold) {
 		params[@"cropThreshold"] = self.cropThreshold;
@@ -68,9 +62,6 @@
 	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
@@ -168,9 +159,6 @@
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.tooltip) {
 		params[@"tooltip"] = [self.tooltip getParams];

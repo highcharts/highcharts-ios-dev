@@ -165,9 +165,6 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
@@ -189,9 +186,6 @@
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
 	}
@@ -206,9 +200,6 @@
 	}
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.cropThreshold) {
 		params[@"cropThreshold"] = self.cropThreshold;

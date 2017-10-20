@@ -18,9 +18,6 @@
 
 +(HIOptions *)getChartByType:(NSString *)type
 {
-    //return [[HIOptions alloc]init];
-    
-    
     //MARK: Area
     if ([type isEqualToString:@"Area"]) {
         HIChart *chart = [[HIChart alloc]init];
@@ -543,7 +540,6 @@
         plotOptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
         plotOptions.pie.dataLabels.style = [[HIStyle alloc] init];
         plotOptions.pie.dataLabels.style.color = @"black";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"black", @"color", nil];
         
         HIPie *pie = [[HIPie alloc]init];
         pie.name = @"Brands";
@@ -615,7 +611,6 @@
         plotLines.label.y = @15;
         plotLines.label.style = [[HIStyle alloc] init];
         plotLines.label.style.fontWeight = @"italic";
-        //@{@"fontStyle": @"italic"};
         plotLines.label.text = @"Safe fat intake 65g/day";
         plotLines.zIndex = @3;
         xaxis.plotLines = [NSMutableArray arrayWithObject:plotLines];
@@ -638,7 +633,6 @@
         yplotLines.label.x = @-10;
         yplotLines.label.style = [[HIStyle alloc] init];
         yplotLines.label.style.fontWeight = @"italic";
-        //@{@"fontStyle": @"italic"};
         yplotLines.label.text = @"Safe sugar intake 50g/day";
         yplotLines.zIndex = @3;
         yaxis.plotLines = [NSMutableArray arrayWithObject:yplotLines];
@@ -801,8 +795,8 @@
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
         plotOptions.series = [[HISeries alloc]init];
-        //plotOptions.series.pointStart = @0;
-        //plotOptions.series.pointInterval = @45;
+        plotOptions.series.pointStart = @0;
+        plotOptions.series.pointInterval = @45;
         plotOptions.column = [[HIColumn alloc]init];
         plotOptions.column.pointPadding = @0;
         plotOptions.column.groupPadding = @0;
@@ -1120,7 +1114,6 @@
         plotlines.label.align = @"center";
         plotlines.label.style = [[HIStyle alloc] init];
         plotlines.label.style.color = @"gray";
-        //    @{@"color": @"gray"};
         yaxis.plotLines = [NSMutableArray arrayWithObject:plotlines];
         
         HIBoxplot *series1 = [[HIBoxplot alloc]init];
@@ -1267,7 +1260,6 @@
         series.dataLabels = [[HIDataLabels alloc]init];
         series.dataLabels.enabled = @true;
         series.dataLabels.format = @"{point.y}k";
-        //series.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold",@"fontWeight",  nil];
         series.dataLabels.style = [[HIStyle alloc] init];
         series.dataLabels.style.fontWeight = @"bold";
         series.pointPadding = @0;
@@ -1311,24 +1303,20 @@
         yaxis1.labels.format = @"{value} °C";
         yaxis1.labels.style = [[HIStyle alloc]init];
         yaxis1.labels.style.color = @"#434348";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
         yaxis1.title = [[HITitle alloc]init];
         yaxis1.title.text = @"Temperature";
         yaxis1.title.style = [[HIStyle alloc]init];
         yaxis1.title.style.color = @"#434348";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
         
         HIYAxis *yaxis2 = [[HIYAxis alloc]init];
         yaxis2.labels = [[HILabels alloc]init];
         yaxis2.labels.format = @"{value} mm";
         yaxis2.labels.style = [[HIStyle alloc]init];
         yaxis2.labels.style.color = @"#7cb5ec";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
         yaxis2.title = [[HITitle alloc]init];
         yaxis2.title.text = @"Rainfall";
         yaxis2.title.style = [[HIStyle alloc]init];
         yaxis2.title.style.color = @"#7cb5ec";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
         yaxis2.opposite = @true;
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -3649,7 +3637,7 @@
         pane.startAngle = @-90;
         pane.endAngle = @90;
         HIBackground *background = [[HIBackground alloc]init];
-        //background.backgroundColor = [[HIColor alloc]initWithHexValue:@"EEE"];
+        background.backgroundColor = [[HIColor alloc]initWithHexValue:@"EEE"];
         background.innerRadius = @"60%";
         background.outerRadius = @"100%";
         background.shape = @"arc";
@@ -3663,7 +3651,7 @@
         plotoptions.solidgauge.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.solidgauge.dataLabels.y = @5;
         plotoptions.solidgauge.dataLabels.borderWidth = @0;
-        //plotoptions.solidgauge.dataLabels.useHTML = @true;
+        plotoptions.solidgauge.dataLabels.useHTML = @true;
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.stops = [NSMutableArray arrayWithObjects:@[
@@ -7210,7 +7198,7 @@
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
         plotoptions.series = [[HISeries alloc]init];
-        //plotoptions.series.stacking = @"normal";
+        plotoptions.series.stacking = @"normal";
         
         HIBar *bar1 = [[HIBar alloc]init];
         bar1.name = @"John";
@@ -7271,9 +7259,9 @@
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
         plotoptions.series = [[HISeries alloc]init];
-        //plotoptions.series.dataLabels = [[HIPlotOptionsSeriesDataLabels alloc]init];
-        //plotoptions.series.dataLabels.enabled = @true;
-        //plotoptions.series.dataLabels.format = @"{point.y:.1f}%";
+        plotoptions.series.dataLabels = [[HIDataLabels alloc]init];
+        plotoptions.series.dataLabels.enabled = @true;
+        plotoptions.series.dataLabels.format = @"{point.y:.1f}%";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.headerFormat = @"<span style=\"font-size:11px\">{series.name}</span><br>";
@@ -7673,7 +7661,6 @@
         xaxis.labels.style = [[HIStyle alloc] init];
         xaxis.labels.style.fontSize = @"13px";
         xaxis.labels.style.fontFamily = @"Verdana, sans-serif";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"13px", @"fonSize", @"Verdana, sans-serif", @"fontFamily", nil];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
@@ -7779,7 +7766,6 @@
         column.dataLabels.style = [[HIStyle alloc] init];
         column.dataLabels.style.fontSize = @"13px";
         column.dataLabels.style.fontFamily = @"Verdana, sans-serif";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"13px", @"fonSize", @"Verdana, sans-serif", @"fontFamily", nil];
         
         options.chart = chart;
         options.title = title;
@@ -7817,7 +7803,6 @@
         yaxis.stackLabels.style = [[HIStyle alloc] init];
         yaxis.stackLabels.style.fontWeight = @"bold";
         yaxis.stackLabels.style.color = @"gray";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold", @"fontWeight", @"gray", @"color", nil];
         
         HILegend *legend = [[HILegend alloc]init];
         legend.align = @"right";
@@ -7842,7 +7827,6 @@
         plotoptions.column.dataLabels.color = [[HIColor alloc]initWithName:@"white"];
         plotoptions.column.dataLabels.style = [[HIStyle alloc] init];
         plotoptions.column.dataLabels.style.textOutline = @"0 0 3px black";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"0 0 3px black", @"textShadow", nil];
         
         HIColumn *column1 = [[HIColumn alloc]init];
         column1.name = @"John";
@@ -8054,24 +8038,20 @@
         yaxis1.labels.format = @"{value}°C";
         yaxis1.labels.style = [[HIStyle alloc] init];
         yaxis1.labels.style.color = @"#434348";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
         yaxis1.title = [[HITitle alloc]init];
         yaxis1.title.text = @"Temperature";
         yaxis1.title.style = [[HIStyle alloc] init];
         yaxis1.title.style.color = @"#434348";
-        //yaxis1.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
         
         HIYAxis *yaxis2 = [[HIYAxis alloc]init];
         yaxis2.labels = [[HILabels alloc]init];
         yaxis2.labels.format = @"{value} mm";
         yaxis2.labels.style = [[HIStyle alloc] init];
         yaxis2.labels.style.color = @"#7cb5ec";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
         yaxis2.title = [[HITitle alloc]init];
         yaxis2.title.text = @"Rainfall";
         yaxis2.title.style = [[HIStyle alloc] init];
         yaxis2.labels.style.color = @"#7cb5ec";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
         yaxis2.opposite = @true;
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -8170,12 +8150,10 @@
         yaxis1.labels.format = @"{value}°C";
         yaxis1.labels.style = [[HIStyle alloc] init];
         yaxis1.labels.style.color = @"#90ed7d";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#90ed7d", @"color", nil];
         yaxis1.title = [[HITitle alloc]init];
         yaxis1.title.text = @"Temperature";
         yaxis1.title.style = [[HIStyle alloc] init];
         yaxis1.title.style.color = @"#90ed7d";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#90ed7d", @"color", nil];
         yaxis1.opposite = @true;
         
         HIYAxis *yaxis2 = [[HIYAxis alloc]init];
@@ -8184,12 +8162,10 @@
         yaxis2.labels.format = @"{value} mm";
         yaxis2.labels.style = [[HIStyle alloc] init];
         yaxis2.labels.style.color = @"#7cb5ec";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
         yaxis2.title = [[HITitle alloc]init];
         yaxis2.title.text = @"Rainfall";
         yaxis2.title.style = [[HIStyle alloc] init];
         yaxis2.title.style.color = @"#7cb5ec";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
         
         HIYAxis *yaxis3 = [[HIYAxis alloc]init];
         yaxis3.gridLineWidth = @0;
@@ -8197,12 +8173,10 @@
         yaxis3.labels.format = @"{value} mb";
         yaxis3.labels.style = [[HIStyle alloc] init];
         yaxis3.labels.style.color = @"#434348";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
         yaxis3.title = [[HITitle alloc]init];
         yaxis3.title.text = @"Sea-Level Pressure";
         yaxis3.title.style = [[HIStyle alloc] init];
         yaxis3.title.style.color = @"#434348";
-        //[NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
         yaxis3.opposite = @true;
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -8420,83 +8394,45 @@
         pane.startAngle = @-150;
         pane.endAngle = @150;
         HIBackground *background1 = [[HIBackground alloc]init];
-        background1.backgroundColor = [[HIBackgroundColor alloc]init];
-        background1.backgroundColor.linearGradient = [[HILinearGradient alloc] init];
-        background1.backgroundColor.linearGradient.x1 = @0;
-        background1.backgroundColor.linearGradient.y1 = @0;
-        background1.backgroundColor.linearGradient.x2 = @0;
-        background1.backgroundColor.linearGradient.y2 = @1;
-        background1.backgroundColor.stops = @[
-                                              @[
-                                                  @0,
-                                                  @"#FFF"
-                                                  ],
-                                              @[
-                                                  @1,
-                                                  @"#333"
-                                                  ]
-                                              ];
-        
-//        [[HIColor alloc]initWithLinearGradient:@{
-//                                                                               @"x1": @0,
-//                                                                               @"y1": @0,
-//                                                                               @"x2": @0,
-//                                                                               @"y2": @1
-//                                                                               }
-//                                                                       stops:@[
-//                                                                               @[
-//                                                                                   @0,
-//                                                                                   @"#FFF"
-//                                                                                   ],
-//                                                                               @[
-//                                                                                   @1,
-//                                                                                   @"#333"
-//                                                                                   ]
-//                                                                               ]];
+        background1.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                               @"x1": @0,
+                                                                               @"y1": @0,
+                                                                               @"x2": @0,
+                                                                               @"y2": @1
+                                                                               }
+                                                                       stops:@[
+                                                                               @[
+                                                                                   @0,
+                                                                                   @"#FFF"
+                                                                                   ],
+                                                                               @[
+                                                                                   @1,
+                                                                                   @"#333"
+                                                                                   ]
+                                                                               ]];
         background1.borderWidth = @0;
         background1.outerRadius = @"109%";
         HIBackground *background2 = [[HIBackground alloc]init];
-        background1.backgroundColor = [[HIBackgroundColor alloc]init];
-        background1.backgroundColor.linearGradient = [[HILinearGradient alloc] init];
-        background1.backgroundColor.linearGradient.x1 = @0;
-        background1.backgroundColor.linearGradient.y1 = @0;
-        background1.backgroundColor.linearGradient.x2 = @0;
-        background1.backgroundColor.linearGradient.y2 = @1;
-        background1.backgroundColor.stops = @[
-                                              @[
-                                                  @0,
-                                                  @"#333"
-                                                  ],
-                                              @[
-                                                  @1,
-                                                  @"#FFF"
-                                                  ]
-                                              ];
-        
-        
-        
-        
-//        [[HIColor alloc]initWithLinearGradient:@{
-//                                                                               @"x1": @0,
-//                                                                               @"y1": @0,
-//                                                                               @"x2": @0,
-//                                                                               @"y2": @1
-//                                                                               } stops:@[
-//                                                                                         @[
-//                                                                                             @0,
-//                                                                                             @"#333"
-//                                                                                             ],
-//                                                                                         @[
-//                                                                                             @1,
-//                                                                                             @"#FFF"
-//                                                                                             ]
-//                                                                                         ]];
-        background2.borderWidth = @1;
+        background1.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+                                                                               @"x1": @0,
+                                                                               @"y1": @0,
+                                                                               @"x2": @0,
+                                                                               @"y2": @1
+                                                                               } stops:@[
+                                                                                         @[
+                                                                                             @0,
+                                                                                             @"#333"
+                                                                                             ],
+                                                                                         @[
+                                                                                             @1,
+                                                                                             @"#FFF"
+                                                                                             ]
+                                                                                         ]];
+                            background2.borderWidth = @1;
         background2.outerRadius = @"107%";
         HIBackground *background3 = [[HIBackground alloc]init];
         HIBackground *background4 = [[HIBackground alloc]init];
-        background4.backgroundColor = [[HIBackgroundColor alloc] init];
-        //[[HIColor alloc]initWithHexValue:@"DDD"];
+        background4.backgroundColor = [[HIColor alloc]initWithHexValue:@"DDD"];
         background4.borderWidth = @0;
         background4.outerRadius = @"105%";
         background4.innerRadius = @"103%";
@@ -11695,9 +11631,9 @@
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
         plotoptions.series = [[HISeries alloc]init];
-        //plotoptions.series.dataLabels = [[HIPlotOptionsSeriesDataLabels alloc]init];
-        //plotoptions.series.dataLabels.enabled = @true;
-        //plotoptions.series.dataLabels.format = @"{point.name}: {point.y:.1f}%";
+        plotoptions.series.dataLabels = [[HIDataLabels alloc]init];
+        plotoptions.series.dataLabels.enabled = @true;
+        plotoptions.series.dataLabels.format = @"{point.name}: {point.y:.1f}%";
         
         HIPie *pie = [[HIPie alloc]init];
         pie.name = @"Brands";
@@ -12094,7 +12030,6 @@
         plotoptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
         plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
         plotoptions.pie.dataLabels.style.color = @"black";
-        //@{@"color": @"black"};
         plotoptions.pie.dataLabels.connectorColor = @"silver";
         
         HIPie *pie = [[HIPie alloc]init];
@@ -12240,7 +12175,6 @@
         plotoptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
         plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
         plotoptions.pie.dataLabels.style.color = @"black";
-        //@{@"color": @"black"};
         
         HIPie *pie = [[HIPie alloc]init];
         pie.name = @"Brands";
@@ -12308,7 +12242,6 @@
         plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
         plotoptions.pie.dataLabels.style.fontWeight = @"white";
         plotoptions.pie.dataLabels.style.textOutline = @"0px 1px 2px black";
-        //@{@"color": @"white", @"fontWeight" : @"bold", @"textShadow" : @"0px 1px 2px black"};
         plotoptions.pie.startAngle = @-90;
         plotoptions.pie.endAngle = @90;
         plotoptions.pie.center = @[@"50%", @"75%"];
@@ -13639,11 +13572,7 @@
         xaxis.dateTimeLabelFormats = [[HIDateTimeLabelFormats alloc] init];
         xaxis.dateTimeLabelFormats.month = @"%e. %b";
         xaxis.dateTimeLabelFormats.year = @"%b";
-//  @{
-//                                       @"month": @"%e. %b",
-//                                       @"year": @"%b"
-//                                       };
-//        xaxis.title = [[HITitle alloc]init];
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"Date";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
@@ -13932,7 +13861,6 @@
         band1.label.text = @"Light air";
         band1.label.style = [[HIStyle alloc] init];
         band1.label.style.color = @"#606060";
-        //@{@"color": @"#606060"};
         HIPlotBands *band2 = [[HIPlotBands alloc]init];
         band2.from = @1.5;
         band2.to = @3.3;
@@ -13941,7 +13869,6 @@
         band2.label.text = @"Light breeze";
         band2.label.style = [[HIStyle alloc] init];
         band2.label.style.color = @"#606060";
-        //@{@"color": @"#606060"};
         HIPlotBands *band3 = [[HIPlotBands alloc]init];
         band3.from = @3.3;
         band3.to = @5.5;
@@ -13950,7 +13877,6 @@
         band3.label.text = @"Gentel breeze";
         band3.label.style = [[HIStyle alloc] init];
         band3.label.style.color = @"#606060";
-        //@{@"color": @"#606060"};
         HIPlotBands *band4 = [[HIPlotBands alloc]init];
         band4.from = @5.5;
         band4.to = @8;
@@ -13959,7 +13885,6 @@
         band4.label.text = @"Moderate breeze";
         band4.label.style = [[HIStyle alloc] init];
         band4.label.style.color = @"#606060";
-        //@{@"color": @"#606060"};
         HIPlotBands *band5 = [[HIPlotBands alloc]init];
         band5.from = @8;
         band5.to = @11;
@@ -13968,7 +13893,6 @@
         band5.label.text = @"Fresh breeze";
         band5.label.style = [[HIStyle alloc] init];
         band5.label.style.color = @"#606060";
-        //@{@"color": @"#606060"};
         HIPlotBands *band6 = [[HIPlotBands alloc]init];
         band6.from = @11;
         band6.to = @14;
@@ -13977,7 +13901,6 @@
         band6.label.text = @"Strong breeze";
         band6.label.style = [[HIStyle alloc] init];
         band6.label.style.color = @"#606060";
-        //@{@"color": @"#606060"};
         HIPlotBands *band7 = [[HIPlotBands alloc]init];
         band7.from = @14;
         band7.to = @15;
@@ -13986,7 +13909,6 @@
         band7.label.text = @"High wind";
         band7.label.style = [[HIStyle alloc] init];
         band7.label.style.color = @"#606060";
-        //@{@"color": @"#606060"};
         yaxis.plotBands = @[band1, band2, band3, band4, band5, band6, band7];
         
         
@@ -14116,7 +14038,6 @@
         HINavigation *navigation = [[HINavigation alloc]init];
         navigation.menuItemStyle = [[HIMenuItemStyle alloc] init];
         navigation.menuItemStyle.fontSize = @"10px";
-        //@{@"fontSize": @"10px"};
         
         
         

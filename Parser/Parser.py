@@ -499,7 +499,7 @@ def format_to_h(name, source):
                 continue
 
         # delete when will be right json version with series class
-        if field.name.endswith((">.data", ">.id", ">.name", ">.yAxis", ">.legendIndex", ">.zIndex", ">.stack", ">.xAxis", ">.type", ">.dataURL", ">.index", ">.dataParser")):
+        if field.name.endswith((">.data", ">.id", ">.name", ">.yAxis", ">.legendIndex", ">.zIndex", ">.stack", ">.xAxis", ">.type", ">.dataURL", ">.index", ">.dataParser", ">.dataLabels", ">.pointStart", ">.pointInterval", ">.stacking")):
             continue
 
         if field.comment:
@@ -587,7 +587,7 @@ def format_to_m(name, source):
             pass
         else:
             #delete when will be right json version with series class
-            if field.name.endswith((">.data", ">.id", ">.name", ">.yAxis", ">.legendIndex", ">.zIndex", ">.stack", ">.xAxis", ">.type", ">.dataURL", ">.index", ">.dataParser")):
+            if field.name.endswith((">.data", ">.id", ">.name", ">.yAxis", ">.legendIndex", ">.zIndex", ">.stack", ">.xAxis", ">.type", ">.dataURL", ">.index", ">.dataParser", ">.dataLabels", ">.pointStart", ">.pointInterval", ">.stacking")):
                 continue
             getParams += "\tif (self.{0})".format(get_last(field.name)) + " {\n"
             if structure[field.name].data_type:

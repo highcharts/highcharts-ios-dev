@@ -185,9 +185,6 @@
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
 	}

@@ -168,9 +168,6 @@
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
@@ -194,9 +191,6 @@
 	}
 	if (self.cropThreshold) {
 		params[@"cropThreshold"] = self.cropThreshold;
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.step) {
 		params[@"step"] = self.step;
@@ -224,9 +218,6 @@
 	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;

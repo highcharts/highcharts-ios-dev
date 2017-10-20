@@ -63,9 +63,6 @@
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
-	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
 	}
@@ -102,14 +99,8 @@
 	if (self.step) {
 		params[@"step"] = self.step;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.showCheckbox) {
 		params[@"showCheckbox"] = self.showCheckbox;
-	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
@@ -207,9 +198,6 @@
 	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];

@@ -21,9 +21,6 @@
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
 	}
@@ -33,9 +30,6 @@
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
 	}
@@ -44,9 +38,6 @@
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
-	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
 	}
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
@@ -228,9 +219,6 @@
 	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.step) {
 		params[@"step"] = self.step;

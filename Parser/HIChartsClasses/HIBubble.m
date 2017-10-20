@@ -9,9 +9,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
 	}
@@ -99,9 +96,6 @@
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
 	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
-	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
@@ -147,17 +141,11 @@
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
 	}
 	if (self.allowPointSelect) {
 		params[@"allowPointSelect"] = self.allowPointSelect;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];

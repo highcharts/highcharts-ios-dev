@@ -18,9 +18,6 @@
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
-	}
 	if (self.negativeColor) {
 		params[@"negativeColor"] = [self.negativeColor getData];
 	}
@@ -111,17 +108,11 @@
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.step) {
 		params[@"step"] = self.step;
 	}
 	if (self.states) {
 		params[@"states"] = [self.states getParams];
-	}
-	if (self.pointStart) {
-		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -146,9 +137,6 @@
 	}
 	if (self.vectorLength) {
 		params[@"vectorLength"] = self.vectorLength;
-	}
-	if (self.pointInterval) {
-		params[@"pointInterval"] = self.pointInterval;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;

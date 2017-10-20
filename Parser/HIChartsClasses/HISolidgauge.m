@@ -146,9 +146,6 @@
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
-	if (self.stacking) {
-		params[@"stacking"] = self.stacking;
-	}
 	if (self.zones) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.zones) {
