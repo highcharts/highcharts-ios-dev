@@ -165,9 +165,6 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
 	}
@@ -177,32 +174,14 @@
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
 	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
 	}
 	if (self.negativeColor) {
 		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
@@ -216,20 +195,11 @@
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;

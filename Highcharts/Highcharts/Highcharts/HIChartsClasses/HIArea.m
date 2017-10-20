@@ -9,17 +9,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
 	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];
@@ -51,18 +45,6 @@
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
@@ -87,17 +69,8 @@
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
@@ -126,23 +99,14 @@
 	if (self.definition) {
 		params[@"definition"] = self.definition;
 	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
 	if (self.skipKeyboardNavigation) {
 		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
 	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
 	}
 	if (self.negativeColor) {
 		params[@"negativeColor"] = [self.negativeColor getData];
@@ -194,9 +158,6 @@
 			}
 		}
 		params[@"zones"] = array;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
 	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;

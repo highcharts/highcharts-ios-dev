@@ -24,9 +24,6 @@
 	if (self.dataLabels) {
 		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
 	}
@@ -108,23 +105,11 @@
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
 	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
 	if (self.negativeColor) {
 		params[@"negativeColor"] = [self.negativeColor getData];
 	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -165,18 +150,6 @@
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
@@ -185,9 +158,6 @@
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
 	}
 	if (self.tooltip) {
 		params[@"tooltip"] = [self.tooltip getParams];
@@ -216,17 +186,8 @@
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
 	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
 	}
 	return params;
 }

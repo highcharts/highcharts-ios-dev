@@ -605,43 +605,12 @@ js.
 */
 @property(nonatomic, readwrite) NSNumber *depth;
 /**
-* description: Define the visual z index of the series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
-
-
-*/
-@property(nonatomic, readwrite) NSNumber *zIndex;
-/**
-* description: The name of the series as shown in the legend, tooltip etc.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
-
-*/
-@property(nonatomic, readwrite) NSString *name;
-/**
-* description: The index of the series in the chart, affecting the internal index
-in the chart.series array, the visible Z index as well as the order
-in the legend.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber *index;
-/**
 * description: The line cap used for line ends and line joins on the graph.
 
 * accepted values: ["round", "square"]
 * default: round
 */
 @property(nonatomic, readwrite) NSString *linecap;
-/**
-* description: When using dual or multiple x axes, this number defines which xAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the xAxis array, with
-0 being the first.
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
 * description: Whether to apply steps to the line. Possible values are left, center
 and right.
@@ -652,16 +621,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * accepted values: [null, "left", "center", "right"]
 */
 @property(nonatomic, readwrite) NSString *step;
-/**
-* description: When using dual or multiple y axes, this number defines which yAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the yAxis array, with
-0 being the first.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: Pixel with of the graph line.
 
@@ -716,54 +675,6 @@ across the extremes.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectEnds;
 /**
-* description: An array of data points for the series. For the bar series type,
-points can be given in the following ways:
-
-An array of numerical values. In this case, the numerical values
-will be interpreted as y options. The x values will be automatically
-calculated, either starting at 0 and incremented by 1, or from pointStart
-and pointInterval given in the series options. If the axis has
-categories, these will be used. Example:
-data: [0, 5, 3, 5]
-
-
-An array of arrays with 2 values. In this case, the values correspond
-to x,y. If the first value is a string, it is applied as the name
-of the point, and the x value is inferred.
-data: [
-    [0, 5],
-    [1, 10],
-    [2, 3]
-]
-
-
-An array of objects with named values. The objects are point
-configuration objects as seen below. If the total number of data
-points exceeds the series' turboThreshold,
-this option is not available.
-data: [{
-    x: 1,
-    y: 1,
-    name: "Point2",
-    color: "#00FF00"
-}, {
-    x: 1,
-    y: 10,
-    name: "Point1",
-    color: "#FF00FF"
-}]
-
-
-
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : Numerical values
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-arrays/ : Arrays of numeric x and y
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-arrays-datetime/ : Arrays of datetime x and y
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
-*/
-@property(nonatomic, readwrite) NSArray /* <Data, NSNumber, NSArray> */ *data;
-/**
 * description: Whether to connect a graph line across null points, or render a gap
 between the two points on either side of the null.
 
@@ -771,39 +682,6 @@ between the two points on either side of the null.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-true/ : True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectNulls;
-/**
-* description: This option allows grouping series in a stacked chart. The stack
-option can be a string or a number or anything else, as long as the
-grouped series' stack options match each other.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *stack;
-/**
-* description: The type of series, for example line or column.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/mapline-mappoint/ : Multiple types in the same map
-* accepted values: [null, "line", "spline", "column", "area", "areaspline",
-      "pie", "arearange", "areasplinerange", "boxplot", "bubble",
-      "columnrange", "errorbar", "funnel", "gauge", "scatter",
-      "waterfall"]
-*/
-@property(nonatomic, readwrite) NSString *type;
-/**
-* description: The sequential index of the series in the legend.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
-*/
-@property(nonatomic, readwrite) NSNumber *legendIndex;
-/**
-* description: An id for the series. This can be used after render time to get a
-pointer to the series object through chart.get().
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
-*/
-@property(nonatomic, readwrite) NSString *id;
 
 -(NSDictionary *)getParams;
 

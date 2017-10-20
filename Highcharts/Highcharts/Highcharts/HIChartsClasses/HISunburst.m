@@ -18,9 +18,6 @@
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
@@ -41,9 +38,6 @@
 	}
 	if (self.size) {
 		params[@"size"] = self.size;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -90,21 +84,6 @@
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.showCheckbox) {
 		params[@"showCheckbox"] = self.showCheckbox;
 	}
@@ -113,9 +92,6 @@
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
 	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
@@ -129,9 +105,6 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
@@ -148,23 +121,14 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.allowDrillToNode) {
 		params[@"allowDrillToNode"] = self.allowDrillToNode;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.dataLabels) {
 		params[@"dataLabels"] = [self.dataLabels getParams];

@@ -59,80 +59,6 @@ rule.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: The index of the series in the chart, affecting the internal index
-in the chart.series array, the visible Z index as well as the order
-in the legend.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber *index;
-/**
-* description: Define the visual z index of the series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
-
-
-*/
-@property(nonatomic, readwrite) NSNumber *zIndex;
-/**
-* description: An array of data points for the series. For the boxplot series
-type, points can be given in the following ways:
-
-An array of arrays with 6 or 5 values. In this case, the values
-correspond to x,low,q1,median,q3,high. If the first value is a
-string, it is applied as the name of the point, and the x value
-is inferred. The x value can also be omitted, in which case the
-inner arrays should be of length 5. Then the x value is automatically
-calculated, either starting at 0 and incremented by 1, or from pointStart
-and pointInterval given in the series options.
-data: [
-    [0, 3, 0, 10, 3, 5],
-    [1, 7, 8, 7, 2, 9],
-    [2, 6, 9, 5, 1, 3]
-]
-
-
-An array of objects with named values. The objects are point
-configuration objects as seen below. If the total number of data
-points exceeds the series' turboThreshold,
-this option is not available.
-data: [{
-    x: 1,
-    low: 4,
-    q1: 9,
-    median: 9,
-    q3: 1,
-    high: 10,
-    name: "Point2",
-    color: "#00FF00"
-}, {
-    x: 1,
-    low: 5,
-    q1: 7,
-    median: 3,
-    q3: 6,
-    high: 2,
-    name: "Point1",
-    color: "#FF00FF"
-}]
-
-
-
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : Numerical values
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-arrays/ : Arrays of numeric x and y
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-arrays-datetime/ : Arrays of datetime x and y
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/ : Arrays of point.name and y
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Config objects
-*/
-@property(nonatomic, readwrite) NSArray *data;
-/**
-* description: The sequential index of the series in the legend.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
-*/
-@property(nonatomic, readwrite) NSNumber *legendIndex;
-/**
 * description: The minimal height for a column or width for a bar. By default,
 0 values are not shown. To visualize a 0 (or close to zero) point,
 set the minimal point length to a pixel value like 3. In stacked
@@ -576,13 +502,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectNulls;
 /**
-* description: The name of the series as shown in the legend, tooltip etc.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
-
-*/
-@property(nonatomic, readwrite) NSString *name;
-/**
 * description: Padding between each value groups, in x axis units.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/ : 0.2 by default
@@ -658,14 +577,6 @@ class names.
 */
 @property(nonatomic, readwrite) HIMarker *marker;
 /**
-* description: When using dual or multiple x axes, this number defines which xAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the xAxis array, with
-0 being the first.
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
-/**
 * description: If no x values are given for the points in a series, pointInterval
 defines the interval of the x values. For example, if a series contains
 one value every decade starting from year 0, set pointInterval to
@@ -680,17 +591,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber *pointInterval;
 /**
-* description: The type of series, for example line or column.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/mapline-mappoint/ : Multiple types in the same map
-* accepted values: [null, "line", "spline", "column", "area", "areaspline",
-      "pie", "arearange", "areasplinerange", "boxplot", "bubble",
-      "columnrange", "errorbar", "funnel", "gauge", "scatter",
-      "waterfall"]
-*/
-@property(nonatomic, readwrite) NSString *type;
-/**
 * description: An array specifying which option maps to which key in the data point
 array. This makes it convenient to work with unstructured data arrays
 from different sources.
@@ -698,23 +598,6 @@ from different sources.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/ : An extended data array with keys
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *keys;
-/**
-* description: When using dual or multiple y axes, this number defines which yAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the yAxis array, with
-0 being the first.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
-/**
-* description: An id for the series. This can be used after render time to get a
-pointer to the series object through chart.get().
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
-*/
-@property(nonatomic, readwrite) NSString *id;
 /**
 * description: Styled mode only. A specific color index to use for the series, so its
 graphic representations are given the class name highcharts-color-

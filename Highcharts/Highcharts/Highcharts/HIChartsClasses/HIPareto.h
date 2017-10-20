@@ -356,13 +356,6 @@ data checking and indexing in long series. Set it to 0 disable.
 */
 @property(nonatomic, readwrite) NSNumber *turboThreshold;
 /**
-* description: The name of the series as shown in the legend, tooltip etc.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
-
-*/
-@property(nonatomic, readwrite) NSString *name;
-/**
 * description: Set the point threshold for when a series should enter boost mode.
 Setting it to e.g. 2000 will cause the series to enter boost mode when there
 are 2000 or more points in the series.
@@ -425,30 +418,6 @@ from different sources.
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *keys;
 /**
-* description: An id for the series. This can be used after render time to get a
-pointer to the series object through chart.get().
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
-*/
-@property(nonatomic, readwrite) NSString *id;
-/**
-* description: This option allows grouping series in a stacked chart. The stack
-option can be a string or a number or anything else, as long as the
-grouped series' stack options match each other.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *stack;
-/**
-* description: When using dual or multiple x axes, this number defines which xAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the xAxis array, with
-0 being the first.
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
-/**
 * description: When this is true, the series will not cause the Y axis to cross
 the zero plane (or threshold option)
 unless the data actually crosses the plane.
@@ -466,16 +435,6 @@ option. If softThreshold is true, the Y axis starts at 0.
 * default: y
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
-/**
-* description: When using dual or multiple y axes, this number defines which yAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the yAxis array, with
-0 being the first.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 * description: Possible values: null, "on", "between".
 In a column chart, when pointPlacement is "on", the point will
@@ -520,22 +479,6 @@ live demo).
 */
 @property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
-* description: The sequential index of the series in the legend.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
-*/
-@property(nonatomic, readwrite) NSNumber *legendIndex;
-/**
-* description: Define the visual z index of the series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
-
-
-* default: 3
-*/
-@property(nonatomic, readwrite) NSNumber *zIndex;
-/**
 * description: If no x values are given for the points in a series, pointStart defines
 on what value to start. For example, if a series contains one yearly
 value starting from 1945, set pointStart to 1945.
@@ -555,17 +498,6 @@ In styled mode, the border stroke width is given in the .highcharts-point class.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: The type of series, for example line or column.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/mapline-mappoint/ : Multiple types in the same map
-* accepted values: [null, "line", "spline", "column", "area", "areaspline",
-      "pie", "arearange", "areasplinerange", "boxplot", "bubble",
-      "columnrange", "errorbar", "funnel", "gauge", "scatter",
-      "waterfall"]
-*/
-@property(nonatomic, readwrite) NSString *type;
-/**
 * description: On datetime series, this allows for setting the
 pointInterval to irregular time 
 units, day, month and year. A day is usually the same as 24 hours,
@@ -578,13 +510,6 @@ to draw weeks, quarters, 6 months, 10 years etc.
 * accepted values: [null, "day", "month", "year"]
 */
 @property(nonatomic, readwrite) NSString *pointIntervalUnit;
-/**
-* description: The index of the series in the chart, affecting the internal index
-in the chart.series array, the visible Z index as well as the order
-in the legend.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber *index;
 /**
 * description: Determines whether the series should look for the nearest point
 in both dimensions or just the x-dimension when hovering the series.

@@ -210,29 +210,8 @@
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
@@ -245,24 +224,6 @@
 	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
 	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;

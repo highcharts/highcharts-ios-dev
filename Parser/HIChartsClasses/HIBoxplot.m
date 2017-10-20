@@ -18,27 +18,6 @@
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
 	}
@@ -168,9 +147,6 @@
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
 	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
 	}
@@ -198,14 +174,8 @@
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -218,12 +188,6 @@
 			}
 		}
 		params[@"keys"] = array;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
 	}
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;

@@ -95,7 +95,6 @@ def clean_comment(comment):
                 if not demo_link.startswith("#"):
                     if demo_text in demos:
                         comment = comment.replace(a, "")
-                        print comment
                     else:
                         demos.append(demo_text)
                         comment = comment.replace(a, demo_link + " : " + demo_text, 1)
@@ -498,6 +497,11 @@ def format_to_h(name, source):
                     skip = True
             if skip:
                 continue
+
+        # delete when will be right json version with series class
+        if field.name.endswith((">.data", ">.id", ">.name", ">.yAxis", ">.legendIndex", ">.zIndex", ">.stack", ">.xAxis", ">.type", ">.dataURL", ">.index", ">.dataParser")):
+            continue
+
         if field.comment:
             htext += "{0}".format(field.comment)
         if field.data_type:
@@ -582,6 +586,9 @@ def format_to_m(name, source):
         if source.extends and field in structure[source.extends].properties:
             pass
         else:
+            #delete when will be right json version with series class
+            if field.name.endswith((">.data", ">.id", ">.name", ">.yAxis", ">.legendIndex", ">.zIndex", ">.stack", ">.xAxis", ">.type", ">.dataURL", ">.index", ">.dataParser")):
+                continue
             getParams += "\tif (self.{0})".format(get_last(field.name)) + " {\n"
             if structure[field.name].data_type:
                 data_type = structure[field.name].data_type

@@ -216,38 +216,14 @@
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
 	if (self.step) {
 		params[@"step"] = self.step;
 	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.stacking) {
 		params[@"stacking"] = self.stacking;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
@@ -263,9 +239,6 @@
 	}
 	if (self.baseSeries) {
 		params[@"baseSeries"] = self.baseSeries;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	return params;
 }

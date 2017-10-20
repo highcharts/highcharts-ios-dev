@@ -176,47 +176,8 @@
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.step) {
 		params[@"step"] = self.step;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
 	}
 	return params;
 }

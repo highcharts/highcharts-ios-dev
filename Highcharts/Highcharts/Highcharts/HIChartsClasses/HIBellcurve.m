@@ -182,35 +182,11 @@
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.baseSeries) {
 		params[@"baseSeries"] = self.baseSeries;
 	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
@@ -223,9 +199,6 @@
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.step) {
 		params[@"step"] = self.step;

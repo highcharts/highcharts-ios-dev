@@ -27,14 +27,8 @@
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.negativeColor) {
 		params[@"negativeColor"] = [self.negativeColor getData];
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -112,9 +106,6 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
 	if (self.exposeElementToA11y) {
 		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
 	}
@@ -160,32 +151,14 @@
 	if (self.cropThreshold) {
 		params[@"cropThreshold"] = self.cropThreshold;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
 	if (self.yOffset) {
 		params[@"yOffset"] = self.yOffset;
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -208,9 +181,6 @@
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
@@ -219,9 +189,6 @@
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.tooltip) {
 		params[@"tooltip"] = [self.tooltip getParams];
@@ -259,9 +226,6 @@
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
 	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
 	}
@@ -270,9 +234,6 @@
 	}
 	if (self.step) {
 		params[@"step"] = self.step;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
 	}
 	return params;
 }

@@ -30,9 +30,6 @@
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
@@ -56,9 +53,6 @@
 	}
 	if (self.allowPointSelect) {
 		params[@"allowPointSelect"] = self.allowPointSelect;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
@@ -111,12 +105,6 @@
 	if (self.step) {
 		params[@"step"] = self.step;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
 	}
@@ -144,32 +132,11 @@
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -215,9 +182,6 @@
 			}
 		}
 		params[@"keys"] = array;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.stacking) {
 		params[@"stacking"] = self.stacking;

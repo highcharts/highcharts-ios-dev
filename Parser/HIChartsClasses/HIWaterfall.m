@@ -24,14 +24,8 @@
 	if (self.upColor) {
 		params[@"upColor"] = [self.upColor getData];
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
 	}
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
@@ -87,9 +81,6 @@
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
 	}
@@ -110,9 +101,6 @@
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
 	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
@@ -138,26 +126,11 @@
 	if (self.skipKeyboardNavigation) {
 		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
 	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
 	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;
@@ -167,9 +140,6 @@
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
 	}
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;
@@ -182,9 +152,6 @@
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -207,9 +174,6 @@
 	}
 	if (self.exposeElementToA11y) {
 		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -246,9 +210,6 @@
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;

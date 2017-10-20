@@ -9,17 +9,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -54,32 +48,11 @@
 	if (self.skipKeyboardNavigation) {
 		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
@@ -95,9 +68,6 @@
 	}
 	if (self.rotation) {
 		params[@"rotation"] = [self.rotation getParams];
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
@@ -116,9 +86,6 @@
 	}
 	if (self.cropThreshold) {
 		params[@"cropThreshold"] = self.cropThreshold;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -153,12 +120,6 @@
 	}
 	if (self.exposeElementToA11y) {
 		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;

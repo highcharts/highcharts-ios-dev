@@ -48,14 +48,8 @@
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
@@ -90,26 +84,8 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
@@ -162,20 +138,8 @@
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
 	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
@@ -206,9 +170,6 @@
 	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;

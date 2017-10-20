@@ -180,9 +180,6 @@
 	if (self.stacking) {
 		params[@"stacking"] = self.stacking;
 	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
 	}
@@ -204,9 +201,6 @@
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
@@ -219,29 +213,8 @@
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
@@ -266,9 +239,6 @@
 	}
 	if (self.cropThreshold) {
 		params[@"cropThreshold"] = self.cropThreshold;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;

@@ -51,20 +51,11 @@
 	if (self.cropThreshold) {
 		params[@"cropThreshold"] = self.cropThreshold;
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
 	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
@@ -96,18 +87,6 @@
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
@@ -128,9 +107,6 @@
 	}
 	if (self.stacking) {
 		params[@"stacking"] = self.stacking;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
@@ -168,12 +144,6 @@
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
 	}
@@ -186,23 +156,14 @@
 	if (self.states) {
 		params[@"states"] = [self.states getParams];
 	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
 	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;

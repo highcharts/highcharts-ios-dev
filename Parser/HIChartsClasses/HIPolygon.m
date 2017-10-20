@@ -176,47 +176,11 @@
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
 	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
 	}
 	return params;
 }

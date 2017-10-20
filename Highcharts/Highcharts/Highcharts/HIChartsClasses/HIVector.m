@@ -27,15 +27,6 @@
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;
 	}
@@ -105,17 +96,11 @@
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
@@ -125,12 +110,6 @@
 	}
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.stacking) {
 		params[@"stacking"] = self.stacking;
@@ -174,12 +153,6 @@
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
@@ -194,18 +167,6 @@
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;

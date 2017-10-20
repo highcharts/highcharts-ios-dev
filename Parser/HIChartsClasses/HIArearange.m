@@ -194,42 +194,6 @@
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	return params;
 }
 

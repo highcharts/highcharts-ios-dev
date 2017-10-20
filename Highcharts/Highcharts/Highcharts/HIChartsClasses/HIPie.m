@@ -30,9 +30,6 @@
 		}
 		params[@"zones"] = array;
 	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
@@ -132,14 +129,8 @@
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -151,23 +142,8 @@
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
-	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
 	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;
@@ -205,9 +181,6 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.center) {
@@ -228,9 +201,6 @@
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;

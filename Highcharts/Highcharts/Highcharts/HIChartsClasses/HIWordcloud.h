@@ -29,16 +29,6 @@ wordcloud.
 @interface HIWordcloud: HISeries
 
 /**
-* description: When using dual or multiple y axes, this number defines which yAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the yAxis array, with
-0 being the first.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
-/**
 * description: The color of the border surrounding each column or bar.
 In styled mode, the border stroke can be set with the .highcharts-point
 rule.
@@ -52,15 +42,6 @@ rule.
 the chart wide configuration.
 */
 @property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
-/**
-* description: This option allows grouping series in a stacked chart. The stack
-option can be a string or a number or anything else, as long as the
-grouped series' stack options match each other.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *stack;
 /**
 * description: An array specifying which option maps to which key in the data point
 array. This makes it convenient to work with unstructured data arrays
@@ -136,15 +117,6 @@ in this series for keyboard navigation.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skipKeyboardNavigation;
 /**
-* description: Define the visual z index of the series.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : With a z index, the series with the highest z index is on top
-
-
-*/
-@property(nonatomic, readwrite) NSNumber *zIndex;
-/**
 * description: Sticky tracking of mouse events. When true, the mouseOut event
 on a series isn't triggered until the mouse moves over another series,
 or out of the plot area. When false, the mouseOut event on a
@@ -159,53 +131,11 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
 /**
-* description: An id for the series. This can be used after render time to get a
-pointer to the series object through chart.get().
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
-*/
-@property(nonatomic, readwrite) NSString *id;
-/**
 * description: Styled mode only. A specific color index to use for the series, so its
 graphic representations are given the class name highcharts-color-
 {n}.
 */
 @property(nonatomic, readwrite) NSNumber *colorIndex;
-/**
-* description: The index of the series in the chart, affecting the internal index
-in the chart.series array, the visible Z index as well as the order
-in the legend.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber *index;
-/**
-* description: An array of data points for the series. For the wordcloud series
-type, points can be given in the following ways:
-
-An array of arrays with 2 values. In this case, the values
-correspond to name,weight. 
-data: [
-    ['Lorem', 4],
-    ['Ipsum', 1]
-]
-
-
-An array of objects with named values. The objects are point
-configuration objects as seen below. If the total number of data
-points exceeds the series' turboThreshold,
-this option is not available.
-data: [{
-    name: "Lorem",
-    weight: 4
-}, {
-    name: "Ipsum",
-    weight: 1
-}]
-
-
-
-*/
-@property(nonatomic, readwrite) NSArray *data;
 /**
 * description: Whether to select the series initially. If showCheckbox is true,
 the checkbox next to the series name in the legend will be checked for a
@@ -242,12 +172,6 @@ function.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/wordcloud-rotation : Word cloud with rotation
 */
 @property(nonatomic, readwrite) HIRotation *rotation;
-/**
-* description: The sequential index of the series in the legend.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order
-*/
-@property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
 * description: Requires the Accessibility module.
 A description of the series to add to the screen reader information
@@ -301,17 +225,6 @@ points is to increase performance on large series. .
 * default: 50
 */
 @property(nonatomic, readwrite) NSNumber *cropThreshold;
-/**
-* description: The type of series, for example line or column.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/mapline-mappoint/ : Multiple types in the same map
-* accepted values: [null, "line", "spline", "column", "area", "areaspline",
-      "pie", "arearange", "areasplinerange", "boxplot", "bubble",
-      "columnrange", "errorbar", "funnel", "gauge", "scatter",
-      "waterfall"]
-*/
-@property(nonatomic, readwrite) NSString *type;
 /**
 * description: A series specific or series type specific color set to apply instead
 of the global colors when colorByPoint is true.
@@ -397,21 +310,6 @@ Requires the Accessibility module.
 * default: undefined
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *exposeElementToA11y;
-/**
-* description: When using dual or multiple x axes, this number defines which xAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the xAxis array, with
-0 being the first.
-* default: 0
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
-/**
-* description: The name of the series as shown in the legend, tooltip etc.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
-
-*/
-@property(nonatomic, readwrite) NSString *name;
 /**
 * description: A class name to apply to the series' graphical elements.
 */

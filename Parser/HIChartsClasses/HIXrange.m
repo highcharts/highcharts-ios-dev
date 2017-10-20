@@ -18,9 +18,6 @@
 	if (self.skipKeyboardNavigation) {
 		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
 	}
@@ -54,12 +51,6 @@
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;
 	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.step) {
 		params[@"step"] = self.step;
 	}
@@ -69,14 +60,8 @@
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
@@ -130,18 +115,6 @@
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
@@ -153,9 +126,6 @@
 	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.groupZPadding) {
 		params[@"groupZPadding"] = self.groupZPadding;
@@ -181,9 +151,6 @@
 	if (self.allowPointSelect) {
 		params[@"allowPointSelect"] = self.allowPointSelect;
 	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
@@ -198,9 +165,6 @@
 			}
 		}
 		params[@"keys"] = array;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -225,9 +189,6 @@
 	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;

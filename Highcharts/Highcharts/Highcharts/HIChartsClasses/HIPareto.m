@@ -113,9 +113,6 @@
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
 	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
 	}
@@ -140,23 +137,11 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
 	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
@@ -176,26 +161,14 @@
 		}
 		params[@"zones"] = array;
 	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;

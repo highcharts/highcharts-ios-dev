@@ -15,26 +15,11 @@
 	if (self.turboThreshold) {
 		params[@"turboThreshold"] = self.turboThreshold;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
 	if (self.pointPlacement) {
 		params[@"pointPlacement"] = self.pointPlacement;
 	}
 	if (self.showCheckbox) {
 		params[@"showCheckbox"] = self.showCheckbox;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
@@ -57,9 +42,6 @@
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
-	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
 	}
@@ -68,9 +50,6 @@
 	}
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
 	}
 	if (self.connectEnds) {
 		params[@"connectEnds"] = self.connectEnds;
@@ -96,26 +75,14 @@
 	if (self.exposeElementToA11y) {
 		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
 	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
 	if (self.zMax) {
 		params[@"zMax"] = self.zMax;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
@@ -140,9 +107,6 @@
 	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
-	}
-	if (self.name) {
-		params[@"name"] = self.name;
 	}
 	if (self.tooltip) {
 		params[@"tooltip"] = [self.tooltip getParams];

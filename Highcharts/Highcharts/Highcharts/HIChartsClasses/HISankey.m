@@ -135,26 +135,11 @@
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
 	}
-	if (self.data) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.data) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"data"] = array;
-	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
 	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
 	}
 	if (self.boostThreshold) {
 		params[@"boostThreshold"] = self.boostThreshold;
@@ -173,9 +158,6 @@
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
 	}
 	if (self.negativeColor) {
 		params[@"negativeColor"] = [self.negativeColor getData];
@@ -204,15 +186,6 @@
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
 	}
-	if (self.name) {
-		params[@"name"] = self.name;
-	}
-	if (self.index) {
-		params[@"index"] = self.index;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
 	if (self.nodes) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.nodes) {
@@ -225,17 +198,8 @@
 		}
 		params[@"nodes"] = array;
 	}
-	if (self.stack) {
-		params[@"stack"] = self.stack;
-	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
@@ -245,9 +209,6 @@
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
