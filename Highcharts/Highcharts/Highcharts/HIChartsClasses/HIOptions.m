@@ -20,16 +20,16 @@
 		params[@"credits"] = [self.credits getParams];
 	}
 	if (self.series) {
-        NSMutableArray *array = [[NSMutableArray alloc] init];
-        for (id obj in self.series) {
-            if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-                [array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-            }
-            else {
-                [array addObject: obj];
-            }
-        }
-        params[@"series"] = array;
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.series) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"series"] = array;
 	}
 	if (self.boost) {
 		params[@"boost"] = [self.boost getParams];
@@ -41,16 +41,16 @@
 		params[@"defs"] = [self.defs getParams];
 	}
 	if (self.yAxis) {
-        NSMutableArray *array = [[NSMutableArray alloc] init];
-        for (id obj in self.yAxis) {
-            if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-                [array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-            }
-            else {
-                [array addObject: obj];
-            }
-        }
-        params[@"yAxis"] = array;
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.yAxis) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"yAxis"] = array;
 	}
 	if (self.legend) {
 		params[@"legend"] = [self.legend getParams];
@@ -80,16 +80,16 @@
 		params[@"responsive"] = [self.responsive getParams];
 	}
 	if (self.xAxis) {
-        NSMutableArray *array = [[NSMutableArray alloc] init];
-        for (id obj in self.xAxis) {
-            if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-                [array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-            }
-            else {
-                [array addObject: obj];
-            }
-        }
-        params[@"xAxis"] = array;
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.xAxis) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"xAxis"] = array;
 	}
 	if (self.chart) {
 		params[@"chart"] = [self.chart getParams];

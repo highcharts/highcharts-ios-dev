@@ -51,6 +51,8 @@ class HIChartsClass:
             x = name.split("<")
             if len(x) > 1:
                 self.extends = x[0]
+        elif len(x) == 2 and x[0] == "plotOptions" and x[1] != "series":
+            self.extends = "series"
         if self.description:
             self.comment = "/**\n* description: {0}\n".format(self.description)
             if self.demo:
@@ -490,17 +492,24 @@ def format_to_h(name, source):
         htext += "@interface {0}: HIChartsJSONSerializable\n\n".format(class_name)
     bridge.add("#import \"{0}.h\"\n".format(class_name))
     for field in classes[class_name]:
+        # delete if when will be right json version with series class
+        if field.name.endswith((">.data", ">.id", ">.index", ">.legendIndex", ">.name", ">.type", ">.xAxis",
+                                ">.yAxis", ">.zIndex", ">.stack")):
+            continue
+
         if source.extends:
+            #delete if when will be right json version with series class
+            if source.extends == "series":
+                extends_name = "plotOptions.series"
+            else:
+                extends_name = source.extends
+
             skip = False
-            for i in structure[source.extends].properties:
+            for i in structure[extends_name].properties:
                 if get_last(field.name) == get_last(i.name):
                     skip = True
             if skip:
                 continue
-
-        # delete when will be right json version with series class
-        if field.name.endswith((">.data", ">.id", ">.name", ">.yAxis", ">.legendIndex", ">.zIndex", ">.stack", ">.xAxis", ">.type", ">.dataURL", ">.index", ">.dataParser", ">.dataLabels", ">.pointStart", ">.pointInterval", ">.stacking")):
-            continue
 
         if field.comment:
             htext += "{0}".format(field.comment)
@@ -583,12 +592,29 @@ def format_to_m(name, source):
         getParams += "@{}];\n"
 
     for field in classes[class_name]:
-        if source.extends and field in structure[source.extends].properties:
+        skip = False
+        # delete if when will be right json version with series class
+        if field.name.endswith((">.data", ">.id", ">.index", ">.legendIndex", ">.name", ">.type", ">.xAxis",
+                                ">.yAxis", ">.zIndex", ">.stack")):
+            skip = True
+
+        if source.extends:
+            #delete if when will be right json version with series class
+            if source.extends == "series":
+                extends_name = "plotOptions.series"
+            else:
+                extends_name = source.extends
+
+            for i in structure[extends_name].properties:
+                if get_last(field.name) == get_last(i.name):
+                    skip = True
+                    print "++++++++++++++++++++++++++++++++++++++"
+                    print field.name
+                    print i.name
+        if skip:
             pass
+
         else:
-            #delete when will be right json version with series class
-            if field.name.endswith((">.data", ">.id", ">.name", ">.yAxis", ">.legendIndex", ">.zIndex", ">.stack", ">.xAxis", ">.type", ">.dataURL", ">.index", ">.dataParser", ">.dataLabels", ">.pointStart", ">.pointInterval", ">.stacking")):
-                continue
             getParams += "\tif (self.{0})".format(get_last(field.name)) + " {\n"
             if structure[field.name].data_type:
                 data_type = structure[field.name].data_type
