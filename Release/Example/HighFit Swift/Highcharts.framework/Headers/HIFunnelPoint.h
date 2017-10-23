@@ -10,12 +10,12 @@
 
 
 /**
-* description: Properties for each single point
+* description: Properties for each single point.
 */
 @interface HIFunnelPoint: HIChartsJSONSerializable
 
 /**
-* description: Events for each single point
+* description: Events for each single point.
 */
 @property(nonatomic, readwrite) HIFunnelPointEvents *events;
 

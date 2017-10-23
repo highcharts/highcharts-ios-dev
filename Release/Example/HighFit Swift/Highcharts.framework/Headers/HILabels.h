@@ -7,6 +7,7 @@
 */
 
 #import "HILabelsItems.h"
+#import "HILabelsStyle.h"
 
 
 /**
@@ -22,7 +23,7 @@
 * description: Shared CSS styles for all labels.
 * default: { "color": "#333333" }
 */
-@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) HILabelsStyle *style;
 
 -(NSDictionary *)getParams;
 

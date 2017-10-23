@@ -11,12 +11,28 @@
 
 /**
 * description: The position of the button.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/ : Above the plot area
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/ : Above the plot area
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/ : Above the plot area
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/ : Above the plot area
 */
 @interface HIChartResetZoomButtonPosition: HIChartsJSONSerializable
 
 /**
-* description: The heatmap series type. This series type is available both in Highcharts and Highmaps.
+* description: The horizontal offset of the button.
+* default: -10
+*/
+@property(nonatomic, readwrite) NSNumber *x;
+/**
+* description: The vertical alignment of the button.
+
+* accepted values: ["top", "middle", "bottom"]
+* default: top
+*/
+@property(nonatomic, readwrite) NSString *verticalAlign;
+/**
+* description: The horizontal alignment of the button.
+* default: right
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
@@ -24,17 +40,6 @@
 * default: 10
 */
 @property(nonatomic, readwrite) NSNumber *y;
-/**
-* description: The horizontal offset of the button
-* default: -10
-*/
-@property(nonatomic, readwrite) NSNumber *x;
-/**
-* description: The vertical alignment of the button.
-* accepted values: ["top", "middle", "bottom"]
-* default: top
-*/
-@property(nonatomic, readwrite) NSString *verticalAlign;
 
 -(NSDictionary *)getParams;
 

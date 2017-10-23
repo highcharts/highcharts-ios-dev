@@ -2,7 +2,7 @@
 * (c) 2009-2017 Highsoft AS
 *
 * License: www.highcharts.com/license
-* Any commercial use of Highcharts iOS wrapper (beta version) is prohibited.
+* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
 * In case of questions, please contact sales@highsoft.com
 */
 
@@ -11,18 +11,22 @@
 
 /**
 * description: Position configuration for the credits label.
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/customized/ : Left aligned
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/credits/customized/ : Left aligned
 */
 @interface HICreditsPosition: HIChartsJSONSerializable
 
 /**
-* description: Vertical alignment of the credits.
-* accepted values: ["top", "middle", "bottom"]
-* default: bottom
+* description: Horizontal pixel offset of the credits.
+* default: -10
 */
-@property(nonatomic, readwrite) NSString *verticalAlign;
+@property(nonatomic, readwrite) NSNumber *x;
 /**
 * description: Horizontal alignment of the credits.
+
 * accepted values: ["left", "center", "right"]
 * default: right
 */
@@ -33,10 +37,12 @@
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
-* description: Horizontal pixel offset of the credits.
-* default: -10
+* description: Vertical alignment of the credits.
+
+* accepted values: ["top", "middle", "bottom"]
+* default: bottom
 */
-@property(nonatomic, readwrite) NSNumber *x;
+@property(nonatomic, readwrite) NSString *verticalAlign;
 
 -(NSDictionary *)getParams;
 

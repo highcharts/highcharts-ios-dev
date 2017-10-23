@@ -1,12 +1,12 @@
-//
-//  HIColor.h
-//  Highcharts
-//
-//  Created by krzysiek on 27.02.2017.
-//  Copyright © 2017 Highsoft AS. All rights reserved.
-//
+/**
+ * (c) 2009-2017 Highsoft AS
+ *
+ * License: www.highcharts.com/license
+ * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
+ * In case of questions, please contact sales@highsoft.com
+ */
 
-#import <Foundation/Foundation.h>
+@import UIKit;
 
 @interface HIColor : NSObject
 
@@ -36,6 +36,10 @@
  * CSS-style radial gradient
  */
 -(instancetype)initWithRadialGradient:(NSDictionary *)gradient stops:(NSArray *)stops;
+/**
+ * Init with UIKit's UIColor
+ */
+- (instancetype)initWithUIColor: (UIColor *) color;
 
 -(id)getData;
 

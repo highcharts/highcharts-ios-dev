@@ -2,7 +2,7 @@
 * (c) 2009-2017 Highsoft AS
 *
 * License: www.highcharts.com/license
-* Any commercial use of Highcharts iOS wrapper (beta version) is prohibited.
+* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
 * In case of questions, please contact sales@highsoft.com
 */
 
@@ -11,7 +11,9 @@
 
 
 /**
-* description: The side for the frame around a 3D chart.
+* description: Note: As of v5.0.12, frame.left or frame.right should be used
+instead.
+The side for the frame around a 3D chart.
 */
 @interface HIChartOptions3dFrameSide: HIChartsJSONSerializable
 
