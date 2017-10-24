@@ -12,7 +12,7 @@
 
 @property(nonatomic, readwrite) NSString *function;
 /**
- * Init with string
+ * Init with function's string representation
  */
 - (instancetype)initWithFunction: (NSString *) function;
 
