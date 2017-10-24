@@ -36,12 +36,6 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
-	if (self.rotationMode) {
-		params[@"rotationMode"] = self.rotationMode;
-	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
-	}
 	return params;
 }
 

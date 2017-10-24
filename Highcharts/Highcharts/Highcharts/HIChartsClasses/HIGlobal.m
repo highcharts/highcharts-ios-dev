@@ -25,7 +25,7 @@
 		params[@"canvasToolsURL"] = self.canvasToolsURL;
 	}
 	if (self.getTimezoneOffset) {
-		params[@"getTimezoneOffset"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.getTimezoneOffset];
+		params[@"getTimezoneOffset"] = [self.getTimezoneOffset getFunction];
 	}
 	if (self.useUTC) {
 		params[@"useUTC"] = self.useUTC;

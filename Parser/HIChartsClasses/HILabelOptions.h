@@ -8,6 +8,7 @@
 
 #import "HIStyle.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -153,7 +154,7 @@ and the formatter is ignored. This refers to a point object.
 	return defined(this.y) ? this.y : 'Annotation label';
 }
 */
-@property(nonatomic, readwrite) NSString /* Function */ *formatter;
+@property(nonatomic, readwrite) HIFunction *formatter;
 /**
 * description: The name of a symbol to use for the border around the label.
 Symbols are predefined functions on the Renderer object.

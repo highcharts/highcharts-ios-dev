@@ -13,7 +13,7 @@
 		params[@"textAlign"] = self.textAlign;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
+		params[@"formatter"] = [self.formatter getFunction];
 	}
 	if (self.align) {
 		params[@"align"] = self.align;

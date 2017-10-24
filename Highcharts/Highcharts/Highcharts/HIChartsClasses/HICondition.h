@@ -7,6 +7,7 @@
 */
 
 #import "HIChartsJSONSerializable.h"
+#import "HIFunction.h"
 
 
 /**
@@ -20,7 +21,7 @@ rule applies. Return true if it applies. This opens for checking
 against other metrics than the chart size, or example the document
 size or other elements.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *callback;
+@property(nonatomic, readwrite) HIFunction *callback;
 /**
 * description: The responsive rule applies if the chart width is less than this.
 

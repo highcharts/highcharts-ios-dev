@@ -8,13 +8,15 @@
 
 #import "HIStyle.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
-* description: Options for the data labels appearing on top of the nodes and links. For
-sankey charts, data labels are visible for the nodes by default, but 
-hidden for links. This is controlled by modifying the nodeFormat, and
-the format that applies to links and is an empty string by default.
+* description: Options for the series data labels, appearing next to each data
+point.
+In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
+net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
+datalabels : see example).
 */
 @interface HIDataLabels: HIChartsJSONSerializable
 
@@ -203,7 +205,7 @@ The y value.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/ : Formatted value
 */
-@property(nonatomic, readwrite) NSString /* Function */ *formatter;
+@property(nonatomic, readwrite) HIFunction *formatter;
 /**
 * description: The border width in pixels for the data label.
 
@@ -319,41 +321,6 @@ break.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/ : Non soft
 */
 @property(nonatomic, readwrite) NSNumber *softConnector;
-/**
-* description: X offset of the higher data labels relative to the point value.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *xHigh;
-/**
-* description: Y offset of the higher data labels relative to the point value.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
-* default: -6
-*/
-@property(nonatomic, readwrite) NSNumber *yHigh;
-/**
-* description: X offset of the lower data labels relative to the point value.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *xLow;
-/**
-* description: Y offset of the lower data labels relative to the point value.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
-* default: 16
-*/
-@property(nonatomic, readwrite) NSNumber *yLow;
-/**
-* description: The http://www.highcharts.com/docs/chart-concepts/labels-
-and-string-formatting : format string specifying what to show for nodes in the 
-sankey diagram.
-* default: {point.name}
-*/
-@property(nonatomic, readwrite) NSString *nodeFormat;
 
 -(NSDictionary *)getParams;
 

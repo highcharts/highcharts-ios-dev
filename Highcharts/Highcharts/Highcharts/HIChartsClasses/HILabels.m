@@ -28,7 +28,7 @@
 		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
+		params[@"formatter"] = [self.formatter getFunction];
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];

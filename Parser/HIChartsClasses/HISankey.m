@@ -39,18 +39,6 @@
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
 	}
-	if (self.nodes) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.nodes) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"nodes"] = array;
-	}
 	return params;
 }
 

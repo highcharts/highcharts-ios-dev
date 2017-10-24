@@ -10,85 +10,85 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.mouseOver) {
-		params[@"mouseOver"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.mouseOver];
+		params[@"mouseOver"] = [self.mouseOver getFunction];
 	}
 	if (self.click) {
-		params[@"click"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.click];
+		params[@"click"] = [self.click getFunction];
 	}
 	if (self.select) {
-		params[@"select"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.select];
+		params[@"select"] = [self.select getFunction];
 	}
 	if (self.mouseOut) {
-		params[@"mouseOut"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.mouseOut];
+		params[@"mouseOut"] = [self.mouseOut getFunction];
 	}
 	if (self.unselect) {
-		params[@"unselect"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.unselect];
+		params[@"unselect"] = [self.unselect getFunction];
 	}
 	if (self.update) {
-		params[@"update"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.update];
+		params[@"update"] = [self.update getFunction];
 	}
 	if (self.remove) {
-		params[@"remove"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.remove];
+		params[@"remove"] = [self.remove getFunction];
 	}
 	if (self.show) {
-		params[@"show"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.show];
+		params[@"show"] = [self.show getFunction];
 	}
 	if (self.checkboxClick) {
-		params[@"checkboxClick"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.checkboxClick];
+		params[@"checkboxClick"] = [self.checkboxClick getFunction];
 	}
 	if (self.hide) {
-		params[@"hide"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.hide];
+		params[@"hide"] = [self.hide getFunction];
 	}
 	if (self.afterAnimate) {
-		params[@"afterAnimate"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.afterAnimate];
+		params[@"afterAnimate"] = [self.afterAnimate getFunction];
 	}
 	if (self.legendItemClick) {
-		params[@"legendItemClick"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.legendItemClick];
+		params[@"legendItemClick"] = [self.legendItemClick getFunction];
 	}
 	if (self.afterSetExtremes) {
-		params[@"afterSetExtremes"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.afterSetExtremes];
+		params[@"afterSetExtremes"] = [self.afterSetExtremes getFunction];
 	}
 	if (self.pointInBreak) {
-		params[@"pointInBreak"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointInBreak];
+		params[@"pointInBreak"] = [self.pointInBreak getFunction];
 	}
 	if (self.setExtremes) {
-		params[@"setExtremes"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.setExtremes];
+		params[@"setExtremes"] = [self.setExtremes getFunction];
 	}
 	if (self.pointBreak) {
-		params[@"pointBreak"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointBreak];
+		params[@"pointBreak"] = [self.pointBreak getFunction];
 	}
 	if (self.afterBreaks) {
-		params[@"afterBreaks"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.afterBreaks];
+		params[@"afterBreaks"] = [self.afterBreaks getFunction];
 	}
 	if (self.selection) {
-		params[@"selection"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.selection];
+		params[@"selection"] = [self.selection getFunction];
 	}
 	if (self.render) {
-		params[@"render"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.render];
+		params[@"render"] = [self.render getFunction];
 	}
 	if (self.load) {
-		params[@"load"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.load];
+		params[@"load"] = [self.load getFunction];
 	}
 	if (self.drillupall) {
-		params[@"drillupall"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.drillupall];
+		params[@"drillupall"] = [self.drillupall getFunction];
 	}
 	if (self.addSeries) {
-		params[@"addSeries"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.addSeries];
+		params[@"addSeries"] = [self.addSeries getFunction];
 	}
 	if (self.drillup) {
-		params[@"drillup"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.drillup];
+		params[@"drillup"] = [self.drillup getFunction];
 	}
 	if (self.redraw) {
-		params[@"redraw"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.redraw];
+		params[@"redraw"] = [self.redraw getFunction];
 	}
 	if (self.drilldown) {
-		params[@"drilldown"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.drilldown];
+		params[@"drilldown"] = [self.drilldown getFunction];
 	}
 	if (self.afterPrint) {
-		params[@"afterPrint"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.afterPrint];
+		params[@"afterPrint"] = [self.afterPrint getFunction];
 	}
 	if (self.beforePrint) {
-		params[@"beforePrint"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.beforePrint];
+		params[@"beforePrint"] = [self.beforePrint getFunction];
 	}
 	return params;
 }

@@ -317,6 +317,8 @@
 		CD8C154F1F9794F600C2CD61 /* HIZAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C13C71F97947100C2CD61 /* HIZAxis.m */; };
 		CD8C15501F9794F600C2CD61 /* HIZones.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8C13E61F97947900C2CD61 /* HIZones.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8C15511F9794F600C2CD61 /* HIZones.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C13B61F97946C00C2CD61 /* HIZones.m */; };
+		CDDF95D51F9F5D260021A129 /* HIFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDF95D41F9F5D260021A129 /* HIFunction.m */; };
+		CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDF95D61F9F5D480021A129 /* HIFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC1449381F4A854900612B1C /* HIGChartViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC14493B1F4A926E00612B1C /* HIGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449391F4A926E00612B1C /* HIGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -630,6 +632,8 @@
 		CD8C14471F97949500C2CD61 /* HILeft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HILeft.h; sourceTree = "<group>"; };
 		CD8C14481F97949500C2CD61 /* HIDefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIDefs.m; sourceTree = "<group>"; };
 		CD8C14491F97949500C2CD61 /* HIBreaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIBreaks.h; sourceTree = "<group>"; };
+		CDDF95D41F9F5D260021A129 /* HIFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIFunction.m; sourceTree = "<group>"; };
+		CDDF95D61F9F5D480021A129 /* HIFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFunction.h; sourceTree = "<group>"; };
 		EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartViewDelegate.h; sourceTree = "<group>"; };
 		EC1449391F4A926E00612B1C /* HIGChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartView.h; sourceTree = "<group>"; };
 		EC14493A1F4A926E00612B1C /* HIGChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChartView.m; sourceTree = "<group>"; };
@@ -1013,6 +1017,8 @@
 				2029576F1E64175B002447E0 /* HIBridge.h */,
 				208980251E641223007280D7 /* HIColor.h */,
 				208980271E6412EA007280D7 /* HIColor.m */,
+				CDDF95D61F9F5D480021A129 /* HIFunction.h */,
+				CDDF95D41F9F5D260021A129 /* HIFunction.m */,
 			);
 			name = Public;
 			sourceTree = "<group>";
@@ -1089,6 +1095,7 @@
 				CD8C14921F9794F600C2CD61 /* HIDateTimeLabelFormats.h in Headers */,
 				CD8C14AA1F9794F600C2CD61 /* HIGauge.h in Headers */,
 				CD8C148E1F9794F600C2CD61 /* HIDataClasses.h in Headers */,
+				CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */,
 				CD8C14581F9794F600C2CD61 /* HIAreaspline.h in Headers */,
 				CD8C15121F9794F600C2CD61 /* HIScatter3d.h in Headers */,
 				CD8C14A81F9794F600C2CD61 /* HIFunnel.h in Headers */,
@@ -1324,6 +1331,7 @@
 				CD8C153B1F9794F600C2CD61 /* HITreemap.m in Sources */,
 				CD8C14EB1F9794F600C2CD61 /* HIPane.m in Sources */,
 				CD8C14711F9794F600C2CD61 /* HIBubble.m in Sources */,
+				CDDF95D51F9F5D260021A129 /* HIFunction.m in Sources */,
 				CD8C14751F9794F600C2CD61 /* HIButtonOptions.m in Sources */,
 				CD8C148D1F9794F600C2CD61 /* HIData.m in Sources */,
 				CD8C14C71F9794F600C2CD61 /* HILabels.m in Sources */,

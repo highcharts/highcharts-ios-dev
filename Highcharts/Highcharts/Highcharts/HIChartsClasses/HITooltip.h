@@ -9,6 +9,7 @@
 #import "HIDateTimeLabelFormats.h"
 #import "HIStyle.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -57,7 +58,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * description: A callback function for formatting the HTML output for a single point
 in the tooltip. Like the pointFormat string, but with more flexibility.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *pointFormatter;
+@property(nonatomic, readwrite) HIFunction *pointFormatter;
 /**
 * description: A string to append to the tooltip format.
 
@@ -182,7 +183,7 @@ The return should be an object containing x and y values, for example
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/ : A fixed tooltip position
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/positioner/ : A fixed tooltip position on top of the chart
 */
-@property(nonatomic, readwrite) NSString /* Function */ *positioner;
+@property(nonatomic, readwrite) HIFunction *positioner;
 /**
 * description: Whether to apply a drop shadow to the tooltip.
 
@@ -232,7 +233,7 @@ The y value.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-shared/ : Formatting with shared tooltip
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/formatter/ : String formatting
 */
-@property(nonatomic, readwrite) NSString /* Function */ *formatter;
+@property(nonatomic, readwrite) HIFunction *formatter;
 /**
 * description: The pixel width of the tooltip border.
 In styled mode, the stroke width is set in the .highcharts-tooltip-box class.

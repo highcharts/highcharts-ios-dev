@@ -11,6 +11,7 @@
 #import "HICrosshair.h"
 #import "HILabels.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -53,7 +54,7 @@ be modified by the callback.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSString /* Function */ *tickPositioner;
+@property(nonatomic, readwrite) HIFunction *tickPositioner;
 /**
 * description: Whether to allow decimals in this axis' ticks. When counting integers,
 like persons or hits on a web page, decimals should be avoided in

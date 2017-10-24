@@ -12,7 +12,7 @@
 	if (self.title) {
 	}
 	if (self.tickPositioner) {
-		params[@"tickPositioner"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.tickPositioner];
+		params[@"tickPositioner"] = [self.tickPositioner getFunction];
 	}
 	if (self.allowDecimals) {
 		params[@"allowDecimals"] = self.allowDecimals;

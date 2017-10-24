@@ -115,7 +115,7 @@
 		params[@"decimalPoint"] = self.decimalPoint;
 	}
 	if (self.parsed) {
-		params[@"parsed"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.parsed];
+		params[@"parsed"] = [self.parsed getFunction];
 	}
 	if (self.googleSpreadsheetWorksheet) {
 		params[@"googleSpreadsheetWorksheet"] = self.googleSpreadsheetWorksheet;
@@ -133,10 +133,10 @@
 		params[@"googleSpreadsheetKey"] = self.googleSpreadsheetKey;
 	}
 	if (self.complete) {
-		params[@"complete"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.complete];
+		params[@"complete"] = [self.complete getFunction];
 	}
 	if (self.parseDate) {
-		params[@"parseDate"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.parseDate];
+		params[@"parseDate"] = [self.parseDate getFunction];
 	}
 	if (self.switchRowsAndColumns) {
 		params[@"switchRowsAndColumns"] = self.switchRowsAndColumns;

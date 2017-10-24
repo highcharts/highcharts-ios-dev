@@ -43,7 +43,7 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.onclick) {
-		params[@"onclick"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.onclick];
+		params[@"onclick"] = [self.onclick getFunction];
 	}
 	if (self.symbolFill) {
 		params[@"symbolFill"] = [self.symbolFill getData];

@@ -11,6 +11,7 @@
 #import "HIEvents.h"
 #import "HIDataClasses.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -347,7 +348,7 @@ be modified by the callback.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSString /* Function */ *tickPositioner;
+@property(nonatomic, readwrite) HIFunction *tickPositioner;
 /**
 * description: For datetime axes, this decides where to put the tick between weeks.
  0 = Sunday, 1 = Monday.

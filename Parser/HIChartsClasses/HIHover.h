@@ -13,7 +13,8 @@
 
 
 /**
-* description: Options for the hovered series
+* description: Options for the hovered series. These settings override the normal
+state options when a series is moused over or touched.
 */
 @interface HIHover: HIChartsJSONSerializable
 
@@ -120,12 +121,6 @@ hover mode.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *linkOpacity;
-/**
-* description: The opacity of a point in treemap. When a point has children,
-the visibility of the children is determined by the opacity.
-* default: 0.75
-*/
-@property(nonatomic, readwrite) NSNumber *opacity;
 
 -(NSDictionary *)getParams;
 

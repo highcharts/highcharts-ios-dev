@@ -16,6 +16,7 @@
 #import "HITooltip.h"
 #import "HIPoint.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -193,7 +194,7 @@ Requires the Accessibility module.
 * description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
 the chart wide configuration.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
+@property(nonatomic, readwrite) HIFunction *pointDescriptionFormatter;
 /**
 * description: If no x values are given for the points in a series, pointInterval
 defines the interval of the x values. For example, if a series contains

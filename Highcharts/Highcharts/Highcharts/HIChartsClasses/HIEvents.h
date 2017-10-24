@@ -7,6 +7,7 @@
 */
 
 #import "HIChartsJSONSerializable.h"
+#import "HIFunction.h"
 
 
 /**
@@ -20,7 +21,7 @@ event, is passed to the function, containing common event information.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/ : Show values in the chart's corner on mouse over
 */
-@property(nonatomic, readwrite) NSString /* Function */ *mouseOver;
+@property(nonatomic, readwrite) HIFunction *mouseOver;
 /**
 * description: Fires when a point is clicked. One parameter, event, is passed
 to the function, containing common event information.
@@ -33,7 +34,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-url/ : Go to URL
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-point-events-click/ : Click marker to display values
 */
-@property(nonatomic, readwrite) NSString /* Function */ *click;
+@property(nonatomic, readwrite) HIFunction *click;
 /**
 * description: Fires when the point is selected either programmatically or following
 a click on the point. One parameter, event, is passed to the function.
@@ -42,14 +43,14 @@ a click on the point. One parameter, event, is passed to the function.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-select/ : Report the last selected point
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/ : Report select and unselect
 */
-@property(nonatomic, readwrite) NSString /* Function */ *select;
+@property(nonatomic, readwrite) HIFunction *select;
 /**
 * description: Fires when the mouse leaves the area close to the point. One parameter,
 event, is passed to the function, containing common event information.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/ : Show values in the chart's corner on mouse over
 */
-@property(nonatomic, readwrite) NSString /* Function */ *mouseOut;
+@property(nonatomic, readwrite) HIFunction *mouseOut;
 /**
 * description: Fires when the point is unselected either programmatically or following
 a click on the point. One parameter, event, is passed to the function.
@@ -58,7 +59,7 @@ a click on the point. One parameter, event, is passed to the function.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-unselect/ : Report the last unselected point
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/ : Report select and unselect
 */
-@property(nonatomic, readwrite) NSString /* Function */ *unselect;
+@property(nonatomic, readwrite) HIFunction *unselect;
 /**
 * description: Fires when the point is updated programmatically through the .update()
 method. One parameter, event, is passed to the function. The new
@@ -67,7 +68,7 @@ false cancels the operation.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-update/ : Confirm point updating
 */
-@property(nonatomic, readwrite) NSString /* Function */ *update;
+@property(nonatomic, readwrite) HIFunction *update;
 /**
 * description: Fires when the point is removed using the .remove() method. One
 parameter, event, is passed to the function. Returning false
@@ -75,14 +76,14 @@ cancels the operation.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-remove/ : Remove point and confirm
 */
-@property(nonatomic, readwrite) NSString /* Function */ *remove;
+@property(nonatomic, readwrite) HIFunction *remove;
 /**
 * description: Fires when the series is shown after chart generation time, either
 by clicking the legend item or by calling .show().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-show/ : Alert when the series is shown by clicking the legend item.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *show;
+@property(nonatomic, readwrite) HIFunction *show;
 /**
 * description: Fires when the checkbox next to the series' name in the legend is
 clicked. One parameter, event, is passed to the function. The state
@@ -92,21 +93,21 @@ which is to toggle the select state of the series.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-checkboxclick/ : Alert checkbox status
 */
-@property(nonatomic, readwrite) NSString /* Function */ *checkboxClick;
+@property(nonatomic, readwrite) HIFunction *checkboxClick;
 /**
 * description: Fires when the series is hidden after chart generation time, either
 by clicking the legend item or by calling .hide().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-hide/ : Alert when the series is hidden by clicking the legend item
 */
-@property(nonatomic, readwrite) NSString /* Function */ *hide;
+@property(nonatomic, readwrite) HIFunction *hide;
 /**
 * description: Fires after the series has finished its initial animation, or in
 case animation is disabled, immediately as the series is displayed.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/ : Show label after animate
 */
-@property(nonatomic, readwrite) NSString /* Function */ *afterAnimate;
+@property(nonatomic, readwrite) HIFunction *afterAnimate;
 /**
 * description: Fires when the legend item belonging to the series is clicked. One
 parameter, event, is passed to the function. The default action
@@ -115,7 +116,7 @@ by returning false or calling event.preventDefault().
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-legenditemclick/ : Confirm hiding and showing
 */
-@property(nonatomic, readwrite) NSString /* Function */ *legendItemClick;
+@property(nonatomic, readwrite) HIFunction *legendItemClick;
 /**
 * description: As opposed to the setExtremes event, this event fires after the
 final min and max values are computed and corrected for minRange.
@@ -127,11 +128,11 @@ min and event.max. These reflect the axis minimum and maximum
 in axis values. The actual data extremes are found in event.dataMin
 and event.dataMax.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *afterSetExtremes;
+@property(nonatomic, readwrite) HIFunction *afterSetExtremes;
 /**
 * description: An event fired when a point falls inside a break from this axis.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *pointInBreak;
+@property(nonatomic, readwrite) HIFunction *pointInBreak;
 /**
 * description: Fires when the minimum and maximum is set for the axis, either by
 calling the .setExtremes() method or by selecting an area in the
@@ -144,19 +145,19 @@ are set based on this.dataMin and this.dataMax.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/events-setextremes/ : Log new extremes on x axis
 */
-@property(nonatomic, readwrite) NSString /* Function */ *setExtremes;
+@property(nonatomic, readwrite) HIFunction *setExtremes;
 /**
 * description: An event fired when a break from this axis occurs on a point.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/ : Visualization of a Break
 */
-@property(nonatomic, readwrite) NSString /* Function */ *pointBreak;
+@property(nonatomic, readwrite) HIFunction *pointBreak;
 /**
 * description: An event fired after the breaks have rendered.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event// : AfterBreak Event
 */
-@property(nonatomic, readwrite) NSString /* Function */ *afterBreaks;
+@property(nonatomic, readwrite) HIFunction *afterBreaks;
 /**
 * description: Fires when an area of the chart has been selected. Selection is enabled
 by setting the chart's zoomType. One parameter, event, is passed
@@ -181,12 +182,12 @@ selection: function(event) {
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/ : Select a range of points through a drag selection
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/ : Select a range of points through a drag selection (Highcharts)
 */
-@property(nonatomic, readwrite) NSString /* Function */ *selection;
+@property(nonatomic, readwrite) HIFunction *selection;
 /**
 * description: Fires after initial load of the chart (directly after the load
 event), and after each redraw (directly after the redraw event).
 */
-@property(nonatomic, readwrite) NSString /* Function */ *render;
+@property(nonatomic, readwrite) HIFunction *render;
 /**
 * description: Fires when the chart is finished loading. Since v4.2.2, it also waits
 for images to be loaded, for example from point markers. One parameter,
@@ -197,12 +198,12 @@ callback function can be passed to be executed on chart.load.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-load/ : Alert on chart load
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-load/ : Add series on chart load
 */
-@property(nonatomic, readwrite) NSString /* Function */ *load;
+@property(nonatomic, readwrite) HIFunction *load;
 /**
 * description: In a chart with multiple drilldown series, this event fires after
 all the series have been drilled up.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *drillupall;
+@property(nonatomic, readwrite) HIFunction *drillupall;
 /**
 * description: Fires when a series is added to the chart after load time, using
 the addSeries method. One parameter, event, is passed to the
@@ -213,11 +214,11 @@ from being added.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/ : Alert on add series
 */
-@property(nonatomic, readwrite) NSString /* Function */ *addSeries;
+@property(nonatomic, readwrite) HIFunction *addSeries;
 /**
 * description: Fires when drilling up from a drilldown series.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *drillup;
+@property(nonatomic, readwrite) HIFunction *drillup;
 /**
 * description: Fires when the chart is redrawn, either after a call to chart.redraw()
 or after an axis, series or point is modified with the redraw option
@@ -227,7 +228,7 @@ set to true. One parameter, event, is passed to the function, containing common 
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/events-redraw/ : Alert on chart redraw when adding a series or moving the zoomed range
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-redraw/ : Set subtitle on chart redraw
 */
-@property(nonatomic, readwrite) NSString /* Function */ *redraw;
+@property(nonatomic, readwrite) HIFunction *redraw;
 /**
 * description: Fires when a drilldown point is clicked, before the new series is
 added. This event is also utilized for async drilldown, where the
@@ -251,7 +252,7 @@ Options for the new series
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/async/ : Async drilldown
 */
-@property(nonatomic, readwrite) NSString /* Function */ *drilldown;
+@property(nonatomic, readwrite) HIFunction *drilldown;
 /**
 * description: Fires after a chart is printed through the context menu item or the
 Chart.print method. Requires the exporting module.
@@ -259,7 +260,7 @@ Chart.print method. Requires the exporting module.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
 
 */
-@property(nonatomic, readwrite) NSString /* Function */ *afterPrint;
+@property(nonatomic, readwrite) HIFunction *afterPrint;
 /**
 * description: Fires before a chart is printed through the context menu item or
 the Chart.print method. Requires the exporting module.
@@ -267,7 +268,7 @@ the Chart.print method. Requires the exporting module.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
 
 */
-@property(nonatomic, readwrite) NSString /* Function */ *beforePrint;
+@property(nonatomic, readwrite) HIFunction *beforePrint;
 
 -(NSDictionary *)getParams;
 

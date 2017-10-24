@@ -7,6 +7,7 @@
 */
 
 #import "HIKeyboardNavigation.h"
+#import "HIFunction.h"
 
 
 /**
@@ -27,7 +28,7 @@ The link to view the chart as a data table will be added
 automatically after the custom HTML content.
 * default: undefined
 */
-@property(nonatomic, readwrite) NSString /* Function */ *screenReaderSectionFormatter;
+@property(nonatomic, readwrite) HIFunction *screenReaderSectionFormatter;
 /**
 * description: When a series contains more points than this, we no longer expose
 information about individual points to screen readers.
@@ -54,7 +55,7 @@ Receives one argument, point, referring to the point to describe.
 Should return a date format string compatible with
 dateFormat.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *pointDateFormatter;
+@property(nonatomic, readwrite) HIFunction *pointDateFormatter;
 /**
 * description: Formatter function to use instead of the default for point
 descriptions.
@@ -62,7 +63,7 @@ Receives one argument, point, referring to the point to describe.
 Should return a String with the description of the point for a screen
 reader user.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *pointDescriptionFormatter;
+@property(nonatomic, readwrite) HIFunction *pointDescriptionFormatter;
 /**
 * description: Enable accessibility features for the chart.
 * default: true
@@ -74,7 +75,7 @@ descriptions. Receives one argument, series, referring to the
 series to describe. Should return a String with the description of
 the series for a screen reader user.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *seriesDescriptionFormatter;
+@property(nonatomic, readwrite) HIFunction *seriesDescriptionFormatter;
 /**
 * description: Whether or not to add series descriptions to charts with a single
 series.
@@ -87,7 +88,7 @@ screen reader region.
 By default Highcharts will insert and set focus to a data table
 representation of the chart.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *onTableAnchorClick;
+@property(nonatomic, readwrite) HIFunction *onTableAnchorClick;
 
 -(NSDictionary *)getParams;
 

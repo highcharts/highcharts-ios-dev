@@ -8,48 +8,22 @@
 
 #import "HIMarker.h"
 #import "HIEvents.h"
-#import "HITargetOptions.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
-* description: An array of data points for the series. For the bullet series type,
-points can be given in the following ways:
+* description: The Data module provides a simplified interface for adding data to
+a chart from sources like CVS, HTML tables or grid views. See also
+the http://www.highcharts.com/docs/working-
+with-data/data-module : tutorial article on the Data module.
+It requires the modules/data.js file to be loaded.
+Please note that the default way of adding data in Highcharts, without
+the need of a module, is through the series.data
+option.
 
-An array of arrays with 3 or 2 values. In this case, the values
-correspond to x,y,target. If the first value is a string,
-it is applied as the name of the point, and the x value is inferred.
-The x value can also be omitted, in which case the inner arrays
-should be of length 2. Then the x value is automatically calculated,
-either starting at 0 and incremented by 1, or from pointStart
-and pointInterval given in the series options.
-data: [
-    [0, 40, 75],
-    [1, 50, 50],
-    [2, 60, 40]
-]
-
-
-An array of objects with named values. The objects are point
-configuration objects as seen below. If the total number of data
-points exceeds the series' turboThreshold,
-this option is not available.
-data: [{
-    x: 0,
-    y: 40,
-    target: 75,
-    name: "Point1",
-    color: "#00FF00"
-}, {
-    x: 1,
-    y: 60,
-    target: 40,
-    name: "Point2",
-    color: "#FF00FF"
-}]
-
-
-
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/ : HTML table
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/ : CSV
 */
 @interface HIData: HIChartsJSONSerializable
 
@@ -229,7 +203,7 @@ complete() to continue async.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/ : Modify data after parse
 */
-@property(nonatomic, readwrite) NSString /* Function */ *parsed;
+@property(nonatomic, readwrite) HIFunction *parsed;
 /**
 * description: The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id's from your sheet can be
 read from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic
@@ -285,12 +259,12 @@ directly to the chart constructor.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/complete/ : Modify data on complete
 */
-@property(nonatomic, readwrite) NSString /* Function */ *complete;
+@property(nonatomic, readwrite) HIFunction *complete;
 /**
 * description: A callback function to parse string representations of dates into
 JavaScript timestamps. Should return an integer timestamp on success.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *parseDate;
+@property(nonatomic, readwrite) HIFunction *parseDate;
 /**
 * description: Switch rows and columns of the input data, so that this.columns
 effectively becomes the rows of the data set, and the rows are interpreted
@@ -317,127 +291,6 @@ the delimiter automatically.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *startColumn;
-/**
-* description: The node that the link runs from.
-*/
-@property(nonatomic, readwrite) NSString *from;
-/**
-* description: The node that the link runs to.
-*/
-@property(nonatomic, readwrite) NSString *to;
-/**
-* description: The weight of the link.
-*/
-@property(nonatomic, readwrite) NSNumber *weight;
-/**
-* description: Whether the link goes out of the system.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing : Sankey chart with outgoing links
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *outgoing;
-/**
-* description: Serves a purpose only if a colorAxis object is defined in the chart
-options. This value will decide which color the point gets from the
-scale of the colorAxis.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber *colorValue;
-/**
-* description: Point padding for a single point.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding : Point padding on tiles
-*/
-@property(nonatomic, readwrite) NSNumber *pointPadding;
-/**
-* description: Only for treemap. Use this option to build a tree structure. The
-value should be the id of the point which is the parent. If no points
-has a matching id, or this option is undefined, then the parent will
-be set to the root.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/parent/ : Point parent
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/ : Example where parent id is not matching
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *parent;
-/**
-* description: When this property is true, the point display the total sum across
-the entire series. The y value is ignored.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/ : Waterfall
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *isSum;
-/**
-* description: When this property is true, the points acts as a summary column for
-the values added or substracted since the last intermediate sum,
-or since the start of the series. The y value is ignored.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/ : Waterfall
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *isIntermediateSum;
-/**
-* description: The median for each data point. This is drawn as a line through the
-middle area of the box.
-*/
-@property(nonatomic, readwrite) NSNumber *median;
-/**
-* description: The low value for each data point, signifying the lowest value
-in the sample set. The bottom whisker is drawn here.
-*/
-@property(nonatomic, readwrite) NSNumber *low;
-/**
-* description: The high value for each data point, signifying the highest value
-in the sample set. The top whisker is drawn here.
-*/
-@property(nonatomic, readwrite) NSNumber *high;
-/**
-* description: The lower quartile for each data point. This is the bottom of the
-box.
-*/
-@property(nonatomic, readwrite) NSNumber *q1;
-/**
-* description: The higher quartile for each data point. This is the top of the box.
-*/
-@property(nonatomic, readwrite) NSNumber *q3;
-/**
-* description: The sequential index of the data point in the legend.
-*/
-@property(nonatomic, readwrite) NSNumber *legendIndex;
-/**
-* description: Whether to display a slice offset from the center.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/ : One sliced point
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *sliced;
-/**
-* description: The length of the vector. The rendered length will relate to the
-vectorLength setting.
-*/
-@property(nonatomic, readwrite) NSNumber *length;
-/**
-* description: The outer radius of an individual point in a solid gauge. Can be
-given as a number (pixels) or percentage string.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/ : Individual radius and innerRadius
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ radius;
-/**
-* description: The inner radius of an individual point in a solid gauge. Can be
-given as a number (pixels) or percentage string.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/ : Individual radius and innerRadius
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ innerRadius;
-/**
-* description: Individual target options for each point.
-*/
-@property(nonatomic, readwrite) HITargetOptions *targetOptions;
-/**
-* description: The target value of a point.
-*/
-@property(nonatomic, readwrite) NSNumber *target;
 
 -(NSDictionary *)getParams;
 

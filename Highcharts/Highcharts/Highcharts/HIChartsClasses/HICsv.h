@@ -7,6 +7,7 @@
 */
 
 #import "HIChartsJSONSerializable.h"
+#import "HIFunction.h"
 
 
 /**
@@ -41,7 +42,7 @@ there is more than one key. For the axis it returns the axis
 title or "Category" or "DateTime" by default.
 Return false to use Highcharts' proposed header.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *columnHeaderFormatter;
+@property(nonatomic, readwrite) HIFunction *columnHeaderFormatter;
 /**
 * description: Which date format to use for exported dates on a datetime X axis.
 See Highcharts.dateFormat.

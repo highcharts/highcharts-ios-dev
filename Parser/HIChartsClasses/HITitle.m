@@ -48,15 +48,6 @@
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
-	if (self.floating) {
-		params[@"floating"] = self.floating;
-	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
-	}
-	if (self.widthAdjust) {
-		params[@"widthAdjust"] = self.widthAdjust;
-	}
 	return params;
 }
 

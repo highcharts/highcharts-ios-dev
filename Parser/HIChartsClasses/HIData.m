@@ -115,7 +115,7 @@
 		params[@"decimalPoint"] = self.decimalPoint;
 	}
 	if (self.parsed) {
-		params[@"parsed"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.parsed];
+		params[@"parsed"] = [self.parsed getFunction];
 	}
 	if (self.googleSpreadsheetWorksheet) {
 		params[@"googleSpreadsheetWorksheet"] = self.googleSpreadsheetWorksheet;
@@ -133,10 +133,10 @@
 		params[@"googleSpreadsheetKey"] = self.googleSpreadsheetKey;
 	}
 	if (self.complete) {
-		params[@"complete"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.complete];
+		params[@"complete"] = [self.complete getFunction];
 	}
 	if (self.parseDate) {
-		params[@"parseDate"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.parseDate];
+		params[@"parseDate"] = [self.parseDate getFunction];
 	}
 	if (self.switchRowsAndColumns) {
 		params[@"switchRowsAndColumns"] = self.switchRowsAndColumns;
@@ -146,69 +146,6 @@
 	}
 	if (self.startColumn) {
 		params[@"startColumn"] = self.startColumn;
-	}
-	if (self.from) {
-		params[@"from"] = self.from;
-	}
-	if (self.to) {
-		params[@"to"] = self.to;
-	}
-	if (self.weight) {
-		params[@"weight"] = self.weight;
-	}
-	if (self.outgoing) {
-		params[@"outgoing"] = self.outgoing;
-	}
-	if (self.colorValue) {
-		params[@"colorValue"] = self.colorValue;
-	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
-	}
-	if (self.parent) {
-		params[@"parent"] = self.parent;
-	}
-	if (self.isSum) {
-		params[@"isSum"] = self.isSum;
-	}
-	if (self.isIntermediateSum) {
-		params[@"isIntermediateSum"] = self.isIntermediateSum;
-	}
-	if (self.median) {
-		params[@"median"] = self.median;
-	}
-	if (self.low) {
-		params[@"low"] = self.low;
-	}
-	if (self.high) {
-		params[@"high"] = self.high;
-	}
-	if (self.q1) {
-		params[@"q1"] = self.q1;
-	}
-	if (self.q3) {
-		params[@"q3"] = self.q3;
-	}
-	if (self.legendIndex) {
-		params[@"legendIndex"] = self.legendIndex;
-	}
-	if (self.sliced) {
-		params[@"sliced"] = self.sliced;
-	}
-	if (self.length) {
-		params[@"length"] = self.length;
-	}
-	if (self.radius) {
-		params[@"radius"] = self.radius;
-	}
-	if (self.innerRadius) {
-		params[@"innerRadius"] = self.innerRadius;
-	}
-	if (self.targetOptions) {
-		params[@"targetOptions"] = [self.targetOptions getParams];
-	}
-	if (self.target) {
-		params[@"target"] = self.target;
 	}
 	return params;
 }

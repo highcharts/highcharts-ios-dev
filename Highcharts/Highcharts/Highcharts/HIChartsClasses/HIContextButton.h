@@ -8,6 +8,7 @@
 
 #import "HITheme.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -111,7 +112,7 @@ the popup menu.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-onclick/ : Skip the menu and export the chart directly
 
 */
-@property(nonatomic, readwrite) NSString /* Function */ *onclick;
+@property(nonatomic, readwrite) HIFunction *onclick;
 /**
 * description: See navigation.buttonOptions.symbolFill.
 

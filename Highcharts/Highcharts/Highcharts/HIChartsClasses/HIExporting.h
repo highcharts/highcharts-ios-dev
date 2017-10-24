@@ -8,6 +8,7 @@
 
 #import "HIButtons.h"
 #import "HICsv.h"
+#import "HIFunction.h"
 
 
 /**
@@ -39,7 +40,7 @@ a chart on the client side, and fallbackToExportServer is disabled. If left unde
 is thrown instead.
 * default: undefined
 */
-@property(nonatomic, readwrite) NSString /* Function */ *error;
+@property(nonatomic, readwrite) HIFunction *error;
 /**
 * description: Whether or not to fall back to the export server if the offline-exporting
 module is unable to export the chart on the client side.

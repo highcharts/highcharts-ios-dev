@@ -16,7 +16,7 @@
 		params[@"libURL"] = self.libURL;
 	}
 	if (self.error) {
-		params[@"error"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.error];
+		params[@"error"] = [self.error getFunction];
 	}
 	if (self.fallbackToExportServer) {
 		params[@"fallbackToExportServer"] = self.fallbackToExportServer;

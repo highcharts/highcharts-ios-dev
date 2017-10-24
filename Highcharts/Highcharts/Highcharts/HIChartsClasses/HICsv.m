@@ -13,7 +13,7 @@
 		params[@"lineDelimiter"] = self.lineDelimiter;
 	}
 	if (self.columnHeaderFormatter) {
-		params[@"columnHeaderFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.columnHeaderFormatter];
+		params[@"columnHeaderFormatter"] = [self.columnHeaderFormatter getFunction];
 	}
 	if (self.dateFormat) {
 		params[@"dateFormat"] = self.dateFormat;

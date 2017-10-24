@@ -22,7 +22,7 @@
 		params[@"headerFormat"] = self.headerFormat;
 	}
 	if (self.pointFormatter) {
-		params[@"pointFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointFormatter];
+		params[@"pointFormatter"] = [self.pointFormatter getFunction];
 	}
 	if (self.footerFormat) {
 		params[@"footerFormat"] = self.footerFormat;
@@ -56,51 +56,6 @@
 	}
 	if (self.distance) {
 		params[@"distance"] = self.distance;
-	}
-	if (self.style) {
-		params[@"style"] = [self.style getParams];
-	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
-	}
-	if (self.positioner) {
-		params[@"positioner"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.positioner];
-	}
-	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
-	}
-	if (self.formatter) {
-		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
-	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.shared) {
-		params[@"shared"] = self.shared;
-	}
-	if (self.animation) {
-		params[@"animation"] = self.animation;
-	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
-	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
-	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getData];
-	}
-	if (self.shape) {
-		params[@"shape"] = self.shape;
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.snap) {
-		params[@"snap"] = self.snap;
-	}
-	if (self.crosshairs) {
-		params[@"crosshairs"] = self.crosshairs;
 	}
 	return params;
 }

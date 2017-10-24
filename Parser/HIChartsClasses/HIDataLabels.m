@@ -58,7 +58,7 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
+		params[@"formatter"] = [self.formatter getFunction];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -101,21 +101,6 @@
 	}
 	if (self.softConnector) {
 		params[@"softConnector"] = self.softConnector;
-	}
-	if (self.xHigh) {
-		params[@"xHigh"] = self.xHigh;
-	}
-	if (self.yHigh) {
-		params[@"yHigh"] = self.yHigh;
-	}
-	if (self.xLow) {
-		params[@"xLow"] = self.xLow;
-	}
-	if (self.yLow) {
-		params[@"yLow"] = self.yLow;
-	}
-	if (self.nodeFormat) {
-		params[@"nodeFormat"] = self.nodeFormat;
 	}
 	return params;
 }

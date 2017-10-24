@@ -280,7 +280,7 @@
 		params[@"maxZoom"] = self.maxZoom;
 	}
 	if (self.tickPositioner) {
-		params[@"tickPositioner"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.tickPositioner];
+		params[@"tickPositioner"] = [self.tickPositioner getFunction];
 	}
 	return params;
 }

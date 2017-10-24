@@ -10,7 +10,17 @@
 
 
 /**
-* description: Text labels for the plot bands
+* description: Series labels are placed as close to the series as possible in a
+natural way, seeking to avoid other series. The goal of this
+feature is to make the chart more easily readable, like if a
+human designer placed the labels in the optimal position.
+The series labels currently work with series types having a
+graph or an area.
+Requires the series-label.js module.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart : Line chart
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
 */
 @interface HILabel: HIChartsJSONSerializable
 
@@ -59,66 +69,6 @@ color, or a contrast color if onArea.
 * default: True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
-/**
-* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
-and-string-formatting#html : use HTML to render the labels.
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
-/**
-* description: Horizontal position relative the alignment. Default varies by orientation.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-label-align/ : Aligned 10px from the right edge
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/ : Plot band with labels
-*/
-@property(nonatomic, readwrite) NSNumber *x;
-/**
-* description: Rotation of the text label in degrees .
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-label-rotation/ : Vertical text
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *rotation;
-/**
-* description: The string text itself. A subset of HTML is supported.
-*/
-@property(nonatomic, readwrite) NSString *text;
-/**
-* description: Vertical position of the text baseline relative to the alignment.
- Default varies by orientation.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-label-y/ : Label on x axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/ : Plot band with labels
-*/
-@property(nonatomic, readwrite) NSNumber *y;
-/**
-* description: Horizontal alignment of the label. Can be one of "left", "center"
-or "right".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-label-align/ : Aligned to the right
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/ : Plot band with labels
-* default: center
-*/
-@property(nonatomic, readwrite) NSString *align;
-/**
-* description: The text alignment for the label. While align determines where
-the texts anchor point is placed within the plot band, textAlign
-determines how the text is aligned against its anchor point. Possible
-values are "left", "center" and "right". Defaults to the same as
-the align option.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-label-rotation/ : Vertical text in center position but text-aligned left
-*/
-@property(nonatomic, readwrite) NSString *textAlign;
-/**
-* description: Vertical alignment of the label relative to the plot band. Can be
-one of "top", "middle" or "bottom".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-label-verticalalign/ : Vertically centered label
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/ : Plot band with labels
-* default: top
-*/
-@property(nonatomic, readwrite) NSString *verticalAlign;
 
 -(NSDictionary *)getParams;
 

@@ -13,7 +13,7 @@
 		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.tickPositioner) {
-		params[@"tickPositioner"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.tickPositioner];
+		params[@"tickPositioner"] = [self.tickPositioner getFunction];
 	}
 	if (self.floor) {
 		params[@"floor"] = self.floor;

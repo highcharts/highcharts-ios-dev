@@ -54,9 +54,6 @@
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
 	}
-	if (self.opacity) {
-		params[@"opacity"] = self.opacity;
-	}
 	return params;
 }
 

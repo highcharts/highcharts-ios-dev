@@ -67,7 +67,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.labelFormatter) {
-		params[@"labelFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.labelFormatter];
+		params[@"labelFormatter"] = [self.labelFormatter getFunction];
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;

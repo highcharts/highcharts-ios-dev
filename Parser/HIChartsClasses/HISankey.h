@@ -7,16 +7,15 @@
 */
 
 #import "HISeries.h"
-#import "HINodes.h"
 
 
 /**
-* description: A sankey series. If the type option is not
-specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-sankey.
+* description: A sankey diagram is a type of flow diagram, in which the width of the 
+link between two nodes is shown proportionally to the flow quantity.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sankey-diagram/ : Sankey diagram
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-inverted/ : Inverted sankey diagram
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing : Sankey diagram with outgoing links
 */
 @interface HISankey: HISeries
 
@@ -69,14 +68,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *minPointLength;
-/**
-* description: A collection of options for the individual nodes. The nodes in a sankey 
-diagram are auto-generated instances of Highcharts.Point, but options can
-be applied here and linked by the id.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/sankey/ : Sankey diagram with node options
-*/
-@property(nonatomic, readwrite) NSArray <HINodes *> *nodes;
 
 -(NSDictionary *)getParams;
 

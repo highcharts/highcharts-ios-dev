@@ -16,6 +16,7 @@
 #import "HIDateTimeLabelFormats.h"
 #import "HITitle.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -743,7 +744,7 @@ be modified by the callback.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
 */
-@property(nonatomic, readwrite) NSString /* Function */ *tickPositioner;
+@property(nonatomic, readwrite) HIFunction *tickPositioner;
 
 -(NSDictionary *)getParams;
 

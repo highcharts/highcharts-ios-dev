@@ -7,6 +7,7 @@
 */
 
 #import "HIChartsJSONSerializable.h"
+#import "HIFunction.h"
 
 
 /**
@@ -74,7 +75,7 @@ local DST crossover dates, with the help of external libraries.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/gettimezoneoffset/ : Use moment.js to draw Oslo time regardless of browser locale
 */
-@property(nonatomic, readwrite) NSString /* Function */ *getTimezoneOffset;
+@property(nonatomic, readwrite) HIFunction *getTimezoneOffset;
 /**
 * description: Whether to use UTC time for axis scaling, tickmark placement and
 time display in Highcharts.dateFormat. Advantages of using UTC

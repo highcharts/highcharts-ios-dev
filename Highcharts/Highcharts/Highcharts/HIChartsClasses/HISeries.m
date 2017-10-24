@@ -73,7 +73,7 @@
 		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
 	}
 	if (self.pointDescriptionFormatter) {
-		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
+		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;

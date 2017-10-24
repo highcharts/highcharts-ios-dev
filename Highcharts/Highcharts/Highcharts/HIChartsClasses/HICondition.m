@@ -10,7 +10,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.callback) {
-		params[@"callback"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.callback];
+		params[@"callback"] = [self.callback getFunction];
 	}
 	if (self.maxWidth) {
 		params[@"maxWidth"] = self.maxWidth;

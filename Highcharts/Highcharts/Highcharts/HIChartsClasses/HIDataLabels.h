@@ -8,6 +8,7 @@
 
 #import "HIStyle.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -203,7 +204,7 @@ The y value.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/ : Formatted value
 */
-@property(nonatomic, readwrite) NSString /* Function */ *formatter;
+@property(nonatomic, readwrite) HIFunction *formatter;
 /**
 * description: The border width in pixels for the data label.
 

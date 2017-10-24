@@ -61,7 +61,7 @@
 		params[@"text"] = self.text;
 	}
 	if (self.formatter) {
-		params[@"formatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.formatter];
+		params[@"formatter"] = [self.formatter getFunction];
 	}
 	if (self.shape) {
 		params[@"shape"] = self.shape;

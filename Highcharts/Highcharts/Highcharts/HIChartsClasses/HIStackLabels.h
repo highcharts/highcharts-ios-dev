@@ -7,6 +7,7 @@
 */
 
 #import "HIStyle.h"
+#import "HIFunction.h"
 
 
 /**
@@ -38,7 +39,7 @@ function() {
 }
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-formatter/ : Added units to stack total value
 */
-@property(nonatomic, readwrite) NSString /* Function */ *formatter;
+@property(nonatomic, readwrite) HIFunction *formatter;
 /**
 * description: Defines the horizontal alignment of the stack total label. Can be
 one of "left", "center" or "right". The default value is calculated

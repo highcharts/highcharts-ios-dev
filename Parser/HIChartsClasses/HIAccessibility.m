@@ -10,7 +10,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.screenReaderSectionFormatter) {
-		params[@"screenReaderSectionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.screenReaderSectionFormatter];
+		params[@"screenReaderSectionFormatter"] = [self.screenReaderSectionFormatter getFunction];
 	}
 	if (self.pointDescriptionThreshold) {
 		params[@"pointDescriptionThreshold"] = self.pointDescriptionThreshold;
@@ -22,22 +22,22 @@
 		params[@"keyboardNavigation"] = [self.keyboardNavigation getParams];
 	}
 	if (self.pointDateFormatter) {
-		params[@"pointDateFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDateFormatter];
+		params[@"pointDateFormatter"] = [self.pointDateFormatter getFunction];
 	}
 	if (self.pointDescriptionFormatter) {
-		params[@"pointDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.pointDescriptionFormatter];
+		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.seriesDescriptionFormatter) {
-		params[@"seriesDescriptionFormatter"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.seriesDescriptionFormatter];
+		params[@"seriesDescriptionFormatter"] = [self.seriesDescriptionFormatter getFunction];
 	}
 	if (self.describeSingleSeries) {
 		params[@"describeSingleSeries"] = self.describeSingleSeries;
 	}
 	if (self.onTableAnchorClick) {
-		params[@"onTableAnchorClick"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.onTableAnchorClick];
+		params[@"onTableAnchorClick"] = [self.onTableAnchorClick getFunction];
 	}
 	return params;
 }

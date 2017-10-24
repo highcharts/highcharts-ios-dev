@@ -10,6 +10,7 @@
 #import "HIEvents.h"
 #import "HITargetOptions.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -229,7 +230,7 @@ complete() to continue async.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/ : Modify data after parse
 */
-@property(nonatomic, readwrite) NSString /* Function */ *parsed;
+@property(nonatomic, readwrite) HIFunction *parsed;
 /**
 * description: The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id's from your sheet can be
 read from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic
@@ -285,12 +286,12 @@ directly to the chart constructor.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/complete/ : Modify data on complete
 */
-@property(nonatomic, readwrite) NSString /* Function */ *complete;
+@property(nonatomic, readwrite) HIFunction *complete;
 /**
 * description: A callback function to parse string representations of dates into
 JavaScript timestamps. Should return an integer timestamp on success.
 */
-@property(nonatomic, readwrite) NSString /* Function */ *parseDate;
+@property(nonatomic, readwrite) HIFunction *parseDate;
 /**
 * description: Switch rows and columns of the input data, so that this.columns
 effectively becomes the rows of the data set, and the rows are interpreted

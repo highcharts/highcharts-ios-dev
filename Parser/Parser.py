@@ -128,7 +128,7 @@ def get_type(x):
         "Color": 'HIColor',
         "String": 'NSString',
         "Object": 'id',
-        "Function": 'NSString /* Function */',
+        "Function": 'HIFunction',
         "Array<Number>": 'NSArray<NSNumber *>',
         "Array<Object>": 'NSArray',
         "Array": 'NSArray',
@@ -155,7 +155,7 @@ def get_type(x):
         "Object|Boolean": 'id /* id, Bool */',
         "String|Array.<String>": 'id',
         "Array.<String>": 'NSArray<NSString *>',
-        "function": 'NSString /* Function */',
+        "function": 'HIFunction',
         "String|function": 'NSString',
         "Array.<Object>": 'NSArray',
         "Array.<Number>": 'NSArray<NSNumber *>',
@@ -179,7 +179,7 @@ def get_type(x):
         "Array.<Array.<Mixed>>": 'NSArray<NSArray *>',
         "Object|Number": 'id /* id, NSNumber */',
         "umber": 'NSNumber',
-        "function|null": 'NSString /* Function */'
+        "function|null": 'HIFunction'
     }[str(x)]
 
 
@@ -488,10 +488,10 @@ def check_in_parent(field, source):
     return in_parent
 
 
-
 def format_to_h(name, source):
     imports = ""
     colorAdded = False
+    functionAdded = False
     htext = ""
 
     class_name = "HI" + upper_first(create_short_name(name))
@@ -551,6 +551,8 @@ def format_to_h(name, source):
             else:
                 if get_type(field.data_type) == "HIColor" and not colorAdded:
                     colorAdded = True
+                if get_type(field.data_type) == "HIFunction" and not functionAdded:
+                    functionAdded = True
                 if structure[field.name].properties:
                     htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(
                         "HI" + upper_first(create_short_name(field.name)), get_last(field.name))
@@ -573,6 +575,8 @@ def format_to_h(name, source):
         imports += "#import \"HIChartsJSONSerializable.h\"\n"
     if colorAdded:
         imports += "#import \"HIColor.h\"\n"
+    if functionAdded:
+        imports += "#import \"HIFunction.h\"\n"
     imports += "\n\n"
     return filelicense + imports + htext
 
@@ -600,14 +604,13 @@ def format_to_m(name, source):
 
         if check_in_parent(field, source):
             pass
-
         else:
             getParams += "\tif (self.{0})".format(get_last(field.name)) + " {\n"
             if structure[field.name].data_type:
                 data_type = structure[field.name].data_type
-                if data_type == 'Function' or data_type == 'function|null' or data_type == 'function':
-                    getParams += """\t\tparams[@\"{0}\"] = [NSString stringWithFormat: @"__xx__%@__xx__", self.{1}];\n""".format(
-                        get_last(field.name), get_last(field.name))
+                if get_type(data_type) == 'HIFunction':
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getFunction];\n".format(get_last(field.name),
+                                                                                       get_last(field.name))
                 elif get_type(data_type) == 'HIColor':
                     getParams += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(get_last(field.name),
                                                                                        get_last(field.name))
@@ -693,6 +696,9 @@ def create_options_files():
                 if get_type(field.data_type) == 'HIColor':
                     mtext += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(get_last(field.name),
                                                                                          get_last(field.name))
+                elif get_type(field.data_type) == 'HIFunction':
+                    mtext += "\t\tparams[@\"{0}\"] = [self.{1} getFunction];\n".format(get_last(field.name),
+                                                                                         get_last(field.name))
                 elif get_type(field.data_type) == 'NSArray<HIColor *>':
                     mtext += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     mtext += "\t\tfor (HIColor *obj in self.{0})".format(get_last(field.name)) + " {\n"
@@ -737,6 +743,7 @@ def create_bridge_file():
     for field in bridge:
         text += field
     text += "#import \"HIColor.h\"\n"
+    text += "#import \"HIFunction.h\"\n"
     text += "#import \"HIOptions.h\"\n"
     with open("HIBridge.h", "w") as b:
         b.write(text)

@@ -14,6 +14,7 @@
 #import "HIItemHoverStyle.h"
 #import "HIItemHiddenStyle.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 
 
 /**
@@ -187,7 +188,7 @@ of pie charts. By default the series or point name is printed.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/labelformatter/ : Add text
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/labelformatter/ : Data classes with label formatter
 */
-@property(nonatomic, readwrite) NSString /* Function */ *labelFormatter;
+@property(nonatomic, readwrite) HIFunction *labelFormatter;
 /**
 * description: Whether to apply a drop shadow to the legend. A backgroundColor
 also needs to be applied for this to take effect. The shadow can be

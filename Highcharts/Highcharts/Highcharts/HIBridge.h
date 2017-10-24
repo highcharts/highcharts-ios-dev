@@ -128,4 +128,5 @@
 #import "HIBubble.h"
 #import "HIFunnel.h"
 #import "HIColor.h"
+#import "HIFunction.h"
 #import "HIOptions.h"
