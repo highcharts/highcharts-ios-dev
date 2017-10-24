@@ -130,7 +130,6 @@ the global colors array.
 the ones for plotOptions.series.dataLabels
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/datalabels/ : Show a label for the last value
-
 */
 @property(nonatomic, readwrite) id dataLabels;
 /**
@@ -186,7 +185,6 @@ library.
 * description: Whether to use the first row in the data set as series names.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Don't get series names from the CSV
-
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *firstRowAsNames;

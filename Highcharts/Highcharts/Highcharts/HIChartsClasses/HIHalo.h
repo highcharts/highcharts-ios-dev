@@ -18,7 +18,6 @@ the halo option to false.
 In styled mode, the halo is styled with the .highcharts-halo class, with colors inherited from .highcharts-color-{n}.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/ : Halo options
-
 */
 @interface HIHalo: HIChartsJSONSerializable
 

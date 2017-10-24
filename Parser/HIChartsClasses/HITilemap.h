@@ -25,7 +25,6 @@ tilemap.
 should span. Works as in Heatmaps.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/ : One day
-
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *colsize;
@@ -41,7 +40,6 @@ should span. Works as in Heatmaps.
 Analogous to colsize.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/ : 1 by default
-
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *rowsize;

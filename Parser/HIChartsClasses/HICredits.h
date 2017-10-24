@@ -20,8 +20,6 @@ of the chart. This can be changed using these options.
 * description: Whether to show the credits text.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/ : Credits disabled
-
-
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
@@ -29,7 +27,6 @@ of the chart. This can be changed using these options.
 * description: The URL for the credits label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
-
 * default: http://www.highcharts.com
 */
 @property(nonatomic, readwrite) NSString *href;
@@ -37,8 +34,6 @@ of the chart. This can be changed using these options.
 * description: Position configuration for the credits label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
-
-
 
 */
 @property(nonatomic, readwrite) HIPosition *position;
@@ -51,7 +46,6 @@ of the chart. This can be changed using these options.
 * description: The text for the credits label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
-
 * default: Highcharts.com
 */
 @property(nonatomic, readwrite) NSString *text;

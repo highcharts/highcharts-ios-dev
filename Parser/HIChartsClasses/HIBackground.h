@@ -22,7 +22,6 @@
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pane/ : Panes styled by CSS
 
-
 */
 @property(nonatomic, readwrite) NSString *className;
 /**

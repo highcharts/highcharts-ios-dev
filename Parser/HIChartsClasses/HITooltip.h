@@ -25,7 +25,6 @@ to read.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/ : Split tooltip
 
-
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *split;
 /**
@@ -33,8 +32,6 @@ to read.
 series' tooltip options object.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/ : Set decimals, prefix and suffix for the value
-
-
 */
 @property(nonatomic, readwrite) NSString *valuePrefix;
 /**
@@ -52,7 +49,6 @@ value or datetime string depending on the type of axis. For datetime
 axes, the point.key date format can be set using tooltip.xDateFormat.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A HTML table in the tooltip
-
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/ : Format demo
 * default: <span style="font-size: 10px">{point.key}</span><br/>
 */
@@ -101,8 +97,6 @@ in each series' tooltip options object. The default is to preserve
 all decimals.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/ : Set decimals, prefix and suffix for the value
-
-
 */
 @property(nonatomic, readwrite) NSNumber *valueDecimals;
 /**
@@ -118,8 +112,6 @@ For touch moves to behave the same way, followTouchMove must be true also.
 tooltip options object.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/ : Set decimals, prefix and suffix for the value
-
-
 */
 @property(nonatomic, readwrite) NSString *valueSuffix;
 /**
@@ -174,8 +166,6 @@ bugs in early Firefox.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/fullhtml/ : Full HTML tooltip
-
-
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/usehtml/ : Pure HTML tooltip
 * default: false
 */
@@ -191,7 +181,6 @@ The return should be an object containing x and y values, for example
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/ : A fixed tooltip position
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/positioner/ : A fixed tooltip position on top of the chart
-
 */
 @property(nonatomic, readwrite) NSString /* Function */ *positioner;
 /**
@@ -241,7 +230,6 @@ The y value.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-simple/ : Simple string formatting
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-shared/ : Formatting with shared tooltip
-
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/formatter/ : String formatting
 */
 @property(nonatomic, readwrite) NSString /* Function */ *formatter;
@@ -253,7 +241,6 @@ In styled mode, the stroke width is set in the .highcharts-tooltip-box class.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderwidth/ : No border (shadow only)
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/ : Tooltip in styled mode
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/ : Custom tooltip
-
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/ : Background and border demo
 
 * default: 1
@@ -306,7 +293,6 @@ In styled mode, the stroke width is set in the .highcharts-tooltip-box class.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/ : Gradient
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/ : Tooltip in styled mode
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/ : Custom tooltip
-
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/ : Background and border demo
 
 * default: rgba(247,247,247,0.85)

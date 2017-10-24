@@ -15,7 +15,6 @@ icon is clicked. This menu is rendered in HTML.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/ : Light gray menu background
 
-
 * default: { "border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0" }
 */
 @interface HIMenuStyle: HIChartsJSONSerializable

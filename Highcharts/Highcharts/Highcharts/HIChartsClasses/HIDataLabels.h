@@ -23,8 +23,6 @@ the format that applies to links and is an empty string by default.
 this is the padding within the box.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
-
-
 * default: 5
 */
 @property(nonatomic, readwrite) NSNumber *padding;
@@ -32,14 +30,12 @@ this is the padding within the box.
 * description: The background color or gradient for the data label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
-
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: Enable or disable the data labels.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-enabled/ : Data labels enabled
-
 * default: True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
@@ -47,7 +43,6 @@ this is the padding within the box.
 * description: The border color for the data label. Defaults to undefined.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
-
 * default: undefined
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
@@ -78,8 +73,6 @@ the series. Use a Z index of 2 to display it behind the series.
 * description: The border radius in pixels for the data label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
-
-
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
@@ -92,7 +85,6 @@ net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css
 label-contrast/ : contrast text shadow.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/ : Styling by CSS
-
 
 */
 @property(nonatomic, readwrite) NSString *className;
@@ -113,7 +105,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 are predefined functions on the Renderer object.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/ : A callout for annotations
-
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/ : A callout for annotations (Highcharts demo)
 * default: square
 */
@@ -123,7 +114,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 sensitive for overlapping, the dataLabels.padding can be set to 0.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-allowoverlap-false/ : Don't allow overlap
-
 
 * default: false
 */
@@ -144,7 +134,6 @@ textOutline will not be picked up. In this, case, the same effect
 can be acheived through the text-shadow CSS property.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/ : Bold labels
-
 * default: {"color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "1px contrast" }
 */
 @property(nonatomic, readwrite) HIStyle *style;
@@ -173,7 +162,6 @@ Since 2.3 the shadow can be an object configuration containing color,
  offsetX, offsetY, opacity and width.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
-
 * default: false
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
@@ -220,7 +208,6 @@ The y value.
 * description: The border width in pixels for the data label.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/ : Data labels box options
-
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
@@ -263,7 +250,6 @@ and-string-formatting : format string for the data label. Available variables ar
 the same as for formatter.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-format/ : Add a unit
-
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/ : Formatted value in the data label
 */
 @property(nonatomic, readwrite) NSString *format;
@@ -337,7 +323,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: X offset of the higher data labels relative to the point value.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
-
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *xHigh;
@@ -345,7 +330,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: Y offset of the higher data labels relative to the point value.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
-
 * default: -6
 */
 @property(nonatomic, readwrite) NSNumber *yHigh;
@@ -353,7 +337,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: X offset of the lower data labels relative to the point value.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
-
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *xLow;
@@ -361,7 +344,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: Y offset of the lower data labels relative to the point value.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
-
 * default: 16
 */
 @property(nonatomic, readwrite) NSNumber *yLow;

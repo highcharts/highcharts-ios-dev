@@ -15,7 +15,6 @@ the top down.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis changes
 
-
 */
 @interface HIRules: HIChartsJSONSerializable
 

@@ -17,8 +17,6 @@ In styled mode, the crosshairs are styled in the .highcharts-crosshair, .highcha
 classes.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/ : Crosshair on both axes
-
-
 * default: false
 */
 @interface HICrosshair: HIChartsJSONSerializable
@@ -28,7 +26,6 @@ classes.
 axes, and for one category width for category axes.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/ : Customized crosshairs
-
 
 * default: 1
 */
@@ -48,7 +45,6 @@ crosshair on top of the series or behind the grid lines.
 independent of points.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/ : True by default
-
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/latlon-advanced/ : Snap is false
 * default: true
 */
@@ -58,7 +54,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/ : Dotted crosshair
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/crosshair-dashed/ : Dashed X axis crosshair
-
 * accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot", "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
@@ -69,7 +64,6 @@ datetime axes, and rgba(204,214,235,0.25) for category axes, where
 the crosshair by default highlights the whole category.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/ : Customized crosshairs
-
 
 * default: #cccccc
 */

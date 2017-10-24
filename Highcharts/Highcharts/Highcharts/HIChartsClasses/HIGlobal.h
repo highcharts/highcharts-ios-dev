@@ -30,7 +30,6 @@ this throws a Highcharts error in the console, but does not crash the
 chart.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/timezone/ : Europe/Oslo
-
 * default: undefined
 */
 @property(nonatomic, readwrite) NSString *timezone;
@@ -46,7 +45,6 @@ mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneO
 method. Use this to display UTC based data in a predefined time zone.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/timezoneoffset/ : Timezone offset
-
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *timezoneOffset;
@@ -75,7 +73,6 @@ for drawing time based charts in specific time zones using their
 local DST crossover dates, with the help of external libraries.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/gettimezoneoffset/ : Use moment.js to draw Oslo time regardless of browser locale
-
 */
 @property(nonatomic, readwrite) NSString /* Function */ *getTimezoneOffset;
 /**

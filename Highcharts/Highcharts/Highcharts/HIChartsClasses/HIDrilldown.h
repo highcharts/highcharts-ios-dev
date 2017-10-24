@@ -44,7 +44,6 @@ to interaction.
 on a series. The text for the button is defined in lang.drillUpText.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/ : Drill up button
-
 */
 @property(nonatomic, readwrite) HIDrillUpButton *drillUpButton;
 /**

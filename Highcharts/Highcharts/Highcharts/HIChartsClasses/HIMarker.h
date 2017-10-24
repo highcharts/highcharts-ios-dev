@@ -25,7 +25,6 @@ null.
 option, a width must also be set.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/ : Fixed width and height
-
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *height;
@@ -41,7 +40,6 @@ option, a width must also be set.
 option, a height must also be set.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/ : Fixed width and height
-
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *width;
@@ -93,7 +91,6 @@ Highcharts.SVGRenderer.prototype.symbols. The callback is then
 used by its method name, as shown in the demo.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-symbol/ : Predefined, graphic and custom markers
-
 * accepted values: [null, "circle", "square", "diamond", "triangle",
         "triangle-down"]
 * default: null

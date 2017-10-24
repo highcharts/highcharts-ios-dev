@@ -97,6 +97,8 @@ def clean_comment(comment):
                 if not demo_link.startswith("#"):
                     if demo_text in demos:
                         comment = comment.replace(a, "")
+                        replaced_text = demos[-1] + "\n"
+                        comment = comment.replace(replaced_text, demos[-1])
                     else:
                         demos.append(demo_text)
                         comment = comment.replace(a, demo_link + " : " + demo_text, 1)

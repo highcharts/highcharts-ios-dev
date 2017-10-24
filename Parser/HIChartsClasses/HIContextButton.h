@@ -22,7 +22,6 @@ In styled mode, export button styles can be applied with the
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
 
-
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *symbolStrokeWidth;
@@ -31,7 +30,6 @@ In styled mode, export button styles can be applied with the
 or "bottom".
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/ : Buttons at lower right
-
 
 * accepted values: ["top", "middle", "bottom"]
 * default: top
@@ -42,7 +40,6 @@ or "bottom".
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-align/ : Center aligned
 
-
 * accepted values: ["left", "center", "right"]
 * default: right
 */
@@ -52,7 +49,6 @@ or "bottom".
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
 
-
 * default: 14
 */
 @property(nonatomic, readwrite) NSNumber *symbolSize;
@@ -60,7 +56,6 @@ or "bottom".
 * description: The pixel width of the button.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
-
 
 * default: 24
 */
@@ -81,7 +76,6 @@ verticalAlign.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/ : Buttons at lower right
 
-
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *y;
@@ -98,7 +92,6 @@ function is part of the exporting module.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-symbol/ : Use a circle for symbol
 
-
 * accepted values: ["circle", "square", "diamond", "triangle", "triangle-down", "menu"]
 * default: menu
 */
@@ -107,7 +100,6 @@ function is part of the exporting module.
 * description: Whether to enable buttons.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-enabled/ : Exporting module loaded but buttons disabled
-
 
 * default: true
 */
@@ -118,14 +110,12 @@ the popup menu.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-onclick/ : Skip the menu and export the chart directly
 
-
 */
 @property(nonatomic, readwrite) NSString /* Function */ *onclick;
 /**
 * description: See navigation.buttonOptions.symbolFill.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolfill/ : Blue symbol stroke for one of the buttons
-
 
 * default: #666666
 */
@@ -135,7 +125,6 @@ the popup menu.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
 
-
 * default: 10.5
 */
 @property(nonatomic, readwrite) NSNumber *symbolY;
@@ -143,7 +132,6 @@ the popup menu.
 * description: The color of the symbol's stroke or line.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolstroke/ : Blue symbol stroke
-
 
 * default: #666666
 */
@@ -153,7 +141,6 @@ the popup menu.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
 
-
 * default: 22
 */
 @property(nonatomic, readwrite) NSNumber *height;
@@ -162,8 +149,6 @@ the popup menu.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-text/ : Full text button
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-text-symbol/ : Combined symbol and text
-
-
 
 
 * default: null
@@ -187,7 +172,6 @@ that defaults to "Chart context menu".
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
 
-
 * default: 12.5
 */
 @property(nonatomic, readwrite) NSNumber *symbolX;
@@ -198,7 +182,6 @@ button styles are supported by the states.hover and states.select
 objects.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-theme/ : Theming the buttons
-
 
 */
 @property(nonatomic, readwrite) HITheme *theme;
@@ -220,7 +203,6 @@ Defaults to
 ]
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/ : Menu item definitions
-
 
 */
 @property(nonatomic, readwrite) NSArray *menuItems;

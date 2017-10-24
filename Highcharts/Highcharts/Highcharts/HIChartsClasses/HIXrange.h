@@ -78,7 +78,6 @@ of a bar in a bar chart. This prevents the columns from becoming
 too wide when there is a small number of points in the chart.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/ : Limited to 50
-
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *maxPointWidth;

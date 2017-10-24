@@ -64,7 +64,6 @@ stroke is applied through lineWidth and lineColor options. Requires
 the highcharts-more.js file.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/polygon/ : Polygon
-
 */
 @property(nonatomic, readwrite) HIPolygon *polygon;
 /**
@@ -87,7 +86,6 @@ for each point along an X axis, where the area between the values is shaded.
 Requires highcharts-more.js.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange/ : Area range chart
-
 */
 @property(nonatomic, readwrite) HIArearange *arearange;
 /**
@@ -119,7 +117,6 @@ It requires that the modules/funnel.js file is loaded.
 the data points are smoothed.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/spline-irregular-time/ : Spline chart
-
 */
 @property(nonatomic, readwrite) HISpline *spline;
 /**
@@ -154,7 +151,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * description: The area series type.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/area-basic/ : Area chart
-
 */
 @property(nonatomic, readwrite) HIArea *area;
 /**
@@ -191,7 +187,6 @@ variable width expressing a third dimension.
 is smoothed into a spline.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/areaspline/ : Area spline chart
-
 */
 @property(nonatomic, readwrite) HIAreaspline *areaspline;
 /**
@@ -214,7 +209,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: Column series display one column per value along an X axis.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-basic/ : Column chart
-
 */
 @property(nonatomic, readwrite) HIColumn *column;
 /**
@@ -254,7 +248,6 @@ the graph outlining the area is a smoothed spline. Requires
 highcharts-more.js.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/areasplinerange/ : Area spline range
-
 */
 @property(nonatomic, readwrite) HIAreasplinerange *areasplinerange;
 /**
@@ -263,7 +256,6 @@ Y values along an X axis. Requires highcharts-more.js. To display
 horizontal bars, set chart.inverted to true.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/columnrange/ : Inverted column range
-
 */
 @property(nonatomic, readwrite) HIColumnrange *columnrange;
 /**
@@ -344,7 +336,6 @@ and the cumulative total is represented by the line.
 straight line segments.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/line-basic/ : Line chart
-
 */
 @property(nonatomic, readwrite) HILine *line;
 /**

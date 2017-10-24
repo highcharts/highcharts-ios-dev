@@ -44,7 +44,6 @@ set.
 * description: An id used for identifying the plot band in Axis.removePlotBand.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-id/ : Remove plot band by id
-
 * default: null
 */
 @property(nonatomic, readwrite) NSString *id;

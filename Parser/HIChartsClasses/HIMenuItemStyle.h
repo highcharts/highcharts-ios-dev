@@ -16,7 +16,6 @@ in HTML.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/ : Add a grey stripe to the left
 
-
 * default: { "padding": "0.5em 1em", "color": "#333333", "background": "none" }
 */
 @interface HIMenuItemStyle: HIChartsJSONSerializable

@@ -37,7 +37,6 @@ inherit the normal state border color.
 * description: The additional line width for the graph of a hovered series.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/ : 5 pixels wider
-
 */
 @property(nonatomic, readwrite) NSNumber *lineWidthPlus;
 /**
@@ -75,7 +74,6 @@ the halo option to false.
 In styled mode, the halo is styled with the .highcharts-halo class, with colors inherited from .highcharts-color-{n}.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/ : Halo options
-
 */
 @property(nonatomic, readwrite) HIHalo *halo;
 /**
@@ -99,7 +97,6 @@ normal state's radius + 2 as per the radiusPlus option.
 * description: The number of pixels to increase the radius of the hovered point.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/ : 5 pixels greater radius on hover
-
 * default: 2
 */
 @property(nonatomic, readwrite) NSNumber *radiusPlus;

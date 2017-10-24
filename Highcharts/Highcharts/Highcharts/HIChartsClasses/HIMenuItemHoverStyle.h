@@ -16,7 +16,6 @@ popup menu appearing by default when the export icon is clicked.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/ : Bold text on hover
 
-
 * default: { "background": "#335cad", "color": "#ffffff" }
 */
 @interface HIMenuItemHoverStyle: HIChartsJSONSerializable

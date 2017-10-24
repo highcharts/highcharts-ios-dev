@@ -65,7 +65,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 tooltips and other mouse or touch events.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/ : Display the tooltip when the area is hovered
-
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *trackByArea;

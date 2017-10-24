@@ -29,7 +29,6 @@ heatmap.
 * description: The row size - how many Y axis units each heatmap row should span.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/ : 1 by default
-
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *rowsize;
@@ -44,7 +43,6 @@ applied instead.
 should span.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/ : One day
-
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *colsize;
