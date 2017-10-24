@@ -471,6 +471,22 @@ def check_class_attributes(class_name, source):
     return True
 
 
+def check_in_parent(field, source):
+    in_parent = False
+    if source.extends:
+        if source.extends == "series":
+            extends_name = "plotOptions.series"
+            for i in structure[extends_name].properties:
+                if get_last(field.name) == get_last(i.name):
+                    in_parent = True
+
+        for i in structure[source.extends].properties:
+            if get_last(field.name) == get_last(i.name):
+                in_parent = True
+    return in_parent
+
+
+
 def format_to_h(name, source):
     imports = ""
     colorAdded = False
@@ -490,26 +506,13 @@ def format_to_h(name, source):
         if source.comment:
             htext += source.comment
         htext += "@interface {0}: HIChartsJSONSerializable\n\n".format(class_name)
+
     bridge.add("#import \"{0}.h\"\n".format(class_name))
+
     for field in classes[class_name]:
-        # delete if when will be right json version with series class
-        if field.name.endswith((">.data", ">.id", ">.index", ">.legendIndex", ">.name", ">.type", ">.xAxis",
-                                ">.yAxis", ">.zIndex", ">.stack")):
+
+        if check_in_parent(field, source):
             continue
-
-        if source.extends:
-            #delete if when will be right json version with series class
-            if source.extends == "series":
-                extends_name = "plotOptions.series"
-            else:
-                extends_name = source.extends
-
-            skip = False
-            for i in structure[extends_name].properties:
-                if get_last(field.name) == get_last(i.name):
-                    skip = True
-            if skip:
-                continue
 
         if field.comment:
             htext += "{0}".format(field.comment)
@@ -592,26 +595,8 @@ def format_to_m(name, source):
         getParams += "@{}];\n"
 
     for field in classes[class_name]:
-        skip = False
-        # delete if when will be right json version with series class
-        if field.name.endswith((">.data", ">.id", ">.index", ">.legendIndex", ">.name", ">.type", ">.xAxis",
-                                ">.yAxis", ">.zIndex", ">.stack")):
-            skip = True
 
-        if source.extends:
-            #delete if when will be right json version with series class
-            if source.extends == "series":
-                extends_name = "plotOptions.series"
-            else:
-                extends_name = source.extends
-
-            for i in structure[extends_name].properties:
-                if get_last(field.name) == get_last(i.name):
-                    skip = True
-                    print "++++++++++++++++++++++++++++++++++++++"
-                    print field.name
-                    print i.name
-        if skip:
+        if check_in_parent(field, source):
             pass
 
         else:

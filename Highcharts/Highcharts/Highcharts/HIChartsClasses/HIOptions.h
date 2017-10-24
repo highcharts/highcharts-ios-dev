@@ -1,5 +1,6 @@
 #import "HIColor.h"
 #import "HICredits.h"
+#import "HISeries.h"
 #import "HIBoost.h"
 #import "HIData.h"
 #import "HIDefs.h"

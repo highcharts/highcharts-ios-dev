@@ -1,5 +1,6 @@
 #import "HIColor.h"
 #import "HICredits.h"
+#import "HISeries.h"
 #import "HIBoost.h"
 #import "HIData.h"
 #import "HIDefs.h"
@@ -33,7 +34,7 @@ of the chart. This can be changed using these options.
 */
 @property(nonatomic, readwrite) HICredits *credits;
 
-@property(nonatomic, readwrite) HISeries *series;
+@property(nonatomic, readwrite) NSArray<HISeries *> *series;
 
 /**
 * description: Options for the Boost module. The Boost module allows certain series types
@@ -90,7 +91,7 @@ In case of multiple axes, the yAxis node is an array of
 configuration objects.
 See the Axis object for programmatic access to the axis.
 */
-@property(nonatomic, readwrite) HIYAxis *yAxis;
+@property(nonatomic, readwrite) NSArray<HIYAxis *> *yAxis;
 
 /**
 * description: The legend is a box containing a symbol and name for each series
@@ -175,7 +176,7 @@ though if the chart is inverted this is the vertical axis. In case of
 multiple axes, the xAxis node is an array of configuration objects.
 See the Axis object for programmatic access to the axis.
 */
-@property(nonatomic, readwrite) HIXAxis *xAxis;
+@property(nonatomic, readwrite) NSArray<HIXAxis *> *xAxis;
 
 /**
 * description: Options regarding the chart area and plot area as well as general
