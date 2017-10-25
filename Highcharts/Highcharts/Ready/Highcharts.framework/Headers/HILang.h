@@ -131,7 +131,6 @@ with null causes the full number to be written. Setting numericSymbols
 to null disables shortening altogether.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/ : Replacing the symbols with text
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/ : Replacing the symbols with text
 * default: [ "k" , "M" , "G" , "T" , "P" , "E"]
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *numericSymbols;

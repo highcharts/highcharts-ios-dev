@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIPaneBackground.h"
+#import "HIBackground.h"
 
 
 /**
@@ -20,7 +20,7 @@ gauges and polar charts.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/ : Speedometer gauge with multiple backgrounds
 */
-@property(nonatomic, readwrite) NSArray <HIPaneBackground *> *background;
+@property(nonatomic, readwrite) NSArray <HIBackground *> *background;
 /**
 * description: The size of the pane, either as a number defining pixels, or a
 percentage defining a percentage of the plot are.
@@ -28,7 +28,7 @@ percentage defining a percentage of the plot are.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/ : Smaller size
 * default: 85%
 */
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ size;
 /**
 * description: The end angle of the polar X axis or gauge value axis, given in degrees
 where 0 is north. Defaults to startAngle + 360.
