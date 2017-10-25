@@ -238,7 +238,7 @@ class DashboardViewController: UITableViewController, HIChartViewDelegate {
         self.data = tmpData
     }
     
-    func showDetailData(_ sender: UIButton) {
+    @objc func showDetailData(_ sender: UIButton) {
         self.tabBarController?.selectedIndex = 1
         
         let dataView = DataTableViewController(nibName: "DataTableViewController", bundle: nil)
