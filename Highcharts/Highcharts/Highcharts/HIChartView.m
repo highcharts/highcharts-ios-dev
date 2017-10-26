@@ -10,8 +10,8 @@
 #import <WebKit/WebKit.h>
 #import "HIGBundle.h"
 #import "HIGHTML.h"
-#import "HIGProtocol.h"
 #import "HIGDependency.h"
+#import "HIGExport.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
@@ -184,22 +184,13 @@ static BOOL preloaded = NO;
         }
     }
     
-    if ([url.scheme isEqualToString:@"hig"]) {
+    if ([url.scheme isEqualToString:@"data"]) {
         decisionHandler(WKNavigationActionPolicyCancel);
         
-        NSString *HIGClass = [NSString stringWithFormat:@"HIG%@", [url.host capitalizedString]];
+        HIGExport *export = [[HIGExport alloc] init];
+        export.viewController = self.viewController;
         
-        if (HIGClass) {
-            NSString *jsonString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-            NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
-            
-            id <HIGProtocol> hig = [[NSClassFromString(HIGClass) alloc] init];
-            
-            hig.viewController = self.viewController;
-            
-            [hig response:dict];
-        }
+        [export response:url.absoluteString];
         
         return;
     }
