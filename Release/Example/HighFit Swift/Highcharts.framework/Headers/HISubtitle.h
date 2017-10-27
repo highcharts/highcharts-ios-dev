@@ -25,27 +25,15 @@ In styled mode, the subtitle style is given in the .highcharts-subtitle class.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/style/ : Custom color and weight
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/ : Styled mode
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-style : Custom color and weight
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/ : Styled mode
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/ : Styled mode
+
 * default: { "color": "#666666" }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
-/**
-* description: The y position of the subtitle relative to the alignment within chart.
-spacingTop and chart.spacingBottom. By default the subtitle is laid
-out below the title unless the title is floating.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/ : Footnote at the bottom right of plot area
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote : Footnote at the bottom right of plot area
-*/
-@property(nonatomic, readwrite) NSNumber *y;
 /**
 * description: The vertical alignment of the title. Can be one of "top", "middle"
 and "bottom". When a value is given, the title behaves as floating.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/ : Footnote at the bottom right of plot area
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote : Footnote at the bottom right of plot area
 * accepted values: ["top", "middle", "bottom"]
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
@@ -54,8 +42,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/text/ : Custom subtitle
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/text-formatted/ : Formatted and linked text.
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-text : Custom subtitle
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-text-formatted : Formatted and linked text.
 */
 @property(nonatomic, readwrite) NSString *text;
 /**
@@ -93,12 +79,19 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
+* description: The y position of the subtitle relative to the alignment within chart.
+spacingTop and chart.spacingBottom. By default the subtitle is laid
+out below the title unless the title is floating.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/ : Footnote at the bottom right of plot area
+*/
+@property(nonatomic, readwrite) NSNumber *y;
+/**
 * description: Adjustment made to the subtitle width, normally to reserve space
 for the exporting burger menu.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/ : Wider menu, greater padding
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/ : Wider menu, greater padding
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/ : Wider menu, greater padding
+
 * default: -44
 */
 @property(nonatomic, readwrite) NSNumber *widthAdjust;

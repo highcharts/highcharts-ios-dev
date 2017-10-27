@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIResponsiveRules.h"
+#import "HIRules.h"
 
 
 /**
@@ -25,10 +25,9 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 the top down.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis changes
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis changes
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis changes
+
 */
-@property(nonatomic, readwrite) NSArray <HIResponsiveRules *> *rules;
+@property(nonatomic, readwrite) NSArray <HIRules *> *rules;
 
 -(NSDictionary *)getParams;
 

@@ -48,14 +48,14 @@ class OptionsProvider {
             hioptions.exporting = exporting
             
             let navigation = HINavigation()
-            navigation.buttonOptions = HINavigationButtonOptions()
+            navigation.buttonOptions = HIButtonOptions()
             navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
-            navigation.buttonOptions.theme = HINavigationButtonOptionsTheme()
+            navigation.buttonOptions.theme = HITheme()
             navigation.buttonOptions.theme.fill = "rgba(0,0,0,0.0)"
             hioptions.navigation = navigation
             
             let plotOptions = HIPlotOptions()
-            plotOptions.area = HIPlotOptionsArea()
+            plotOptions.area = HIArea()
             plotOptions.area.fillColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 150], stops: [[0, "rgba(255,255,255, 0.75)"], [1, "rgba(255,255,255, 0.02)"]])
             hioptions.plotOptions = plotOptions
             
@@ -66,7 +66,10 @@ class OptionsProvider {
             let title = HITitle()
             title.text = options["title"] as! String
             title.align = "left"
-            title.style = ["fontFamily": "Arial", "fontSize": "14px", "color": "rgba(255, 255, 255, 0.6)"]
+            title.style = HIStyle()
+            title.style.fontFamily = "Arial"
+            title.style.fontSize = "14px"
+            title.style.color = "rgba(255, 255, 255, 0.6)"
             title.y = 16
             hioptions.title = title
             
@@ -87,10 +90,10 @@ class OptionsProvider {
             let xaxis = HIXAxis()
             xaxis.tickColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.0)
             xaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
-            xaxis.labels = HIXAxisLabels()
-            xaxis.labels.style = HIXAxisLabelsStyle()
+            xaxis.labels = HILabels()
+            xaxis.labels.style = HIStyle()
             xaxis.labels.style.color = "rgb(255, 255, 255)"
-            xaxis.labels.style.fontSize = "10px Arial"
+            xaxis.labels.style.textOutline = "10px Arial"
             xaxis.labels.step = step
             xaxis.categories = categories
             hioptions.xAxis = [xaxis]
@@ -99,17 +102,17 @@ class OptionsProvider {
             yaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
             yaxis.lineWidth = 1
             yaxis.gridLineWidth = 0
-            yaxis.labels = HIYAxisLabels()
-            yaxis.labels.style = HIYAxisLabelsStyle()
+            yaxis.labels = HILabels()
+            yaxis.labels.style = HIStyle()
             yaxis.labels.style.color = "rgb(255, 255, 255)"
-            yaxis.labels.style.fontSize = "10px Arial"
+            yaxis.labels.style.textOutline = "10px Arial"
             yaxis.labels.x = -5
-            yaxis.title = HIYAxisTitle()
+            yaxis.title = HITitle()
             yaxis.title.text = ""
             hioptions.yAxis = [yaxis]
             
             let area = HIArea()
-            area.tooltip = HIAreaTooltip()
+            area.tooltip = HITooltip()
             area.tooltip.headerFormat = ""
             area.tooltip.valueSuffix = " steps"
             area.showInLegend = false
@@ -126,7 +129,7 @@ class OptionsProvider {
             let hioptions = HIOptions()
             
             let chart = HIChart()
-            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 300], stops: [[0, "rgb(66, 218, 113)"], [1, "rgb(80, 140, 200)"]])
+            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 1], stops: [[0, "rgb(66, 218, 113)"], [1, "rgb(80, 140, 200)"]])
             chart.borderRadius = 6
             chart.type = options["chartType"] as! String
             hioptions.chart = chart
@@ -136,14 +139,14 @@ class OptionsProvider {
             hioptions.exporting = exporting
             
             let navigation = HINavigation()
-            navigation.buttonOptions = HINavigationButtonOptions()
+            navigation.buttonOptions = HIButtonOptions()
             navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
-            navigation.buttonOptions.theme = HINavigationButtonOptionsTheme()
+            navigation.buttonOptions.theme = HITheme()
             navigation.buttonOptions.theme.fill = "rgba(0,0,0,0.0)"
             hioptions.navigation = navigation
             
             let plotOptions = HIPlotOptions()
-            plotOptions.column = HIPlotOptionsColumn()
+            plotOptions.column = HIColumn()
             plotOptions.column.color = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.6)
             plotOptions.column.borderRadius = 2
             plotOptions.column.borderWidth = 0
@@ -156,7 +159,10 @@ class OptionsProvider {
             let title = HITitle()
             title.text = options["title"] as! String
             title.align = "left"
-            title.style = ["fontFamily": "Arial", "fontSize": "14px", "color": "rgba(255, 255, 255, 0.6)"]
+            title.style = HIStyle()
+            title.style.fontFamily = "Arial"
+            title.style.fontSize = "14px"
+            title.style.color = "rgba(255, 255, 255, 0.6)"
             title.y = 16
             hioptions.title = title
             
@@ -177,10 +183,10 @@ class OptionsProvider {
             let xaxis = HIXAxis()
             xaxis.tickColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.0)
             xaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
-            xaxis.labels = HIXAxisLabels()
-            xaxis.labels.style = HIXAxisLabelsStyle()
+            xaxis.labels = HILabels()
+            xaxis.labels.style = HIStyle()
             xaxis.labels.style.color = "rgb(255, 255, 255)"
-            xaxis.labels.style.fontSize = "10px Arial"
+            xaxis.labels.style.textOutline = "10px Arial"
             xaxis.labels.step = step
             xaxis.categories = categories
             hioptions.xAxis = [xaxis]
@@ -189,17 +195,17 @@ class OptionsProvider {
             yaxis.lineWidth = 1
             yaxis.gridLineWidth = 0
             yaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
-            yaxis.labels = HIYAxisLabels()
-            yaxis.labels.style = HIYAxisLabelsStyle()
+            yaxis.labels = HILabels()
+            yaxis.labels.style = HIStyle()
             yaxis.labels.style.color = "rgb(255, 255, 255)"
-            yaxis.labels.style.fontSize = "10px Arial"
+            yaxis.labels.style.textOutline = "10px Arial"
             yaxis.labels.x = -5
-            yaxis.title = HIYAxisTitle()
+            yaxis.title = HITitle()
             yaxis.title.text = ""
             hioptions.yAxis = [yaxis]
             
             let column = HIColumn()
-            column.tooltip = HIColumnTooltip()
+            column.tooltip = HITooltip()
             column.tooltip.headerFormat = ""
             column.tooltip.valueSuffix = " kcal"
             column.showInLegend = false
@@ -214,7 +220,7 @@ class OptionsProvider {
             let hioptions = HIOptions()
             
             let chart = HIChart()
-            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 300], stops: [[0, "rgba(132, 103, 144, 1)"], [1, "rgba(163, 95, 103, 1)"]])
+            chart.backgroundColor = HIColor(linearGradient: ["x1": 0, "y1": 0, "x2": 0, "y2": 1], stops: [[0, "rgba(132, 103, 144, 1)"], [1, "rgba(163, 95, 103, 1)"]])
             chart.borderRadius = 6
             chart.type = options["chartType"] as! String
             hioptions.chart = chart
@@ -224,14 +230,14 @@ class OptionsProvider {
             hioptions.exporting = exporting
             
             let navigation = HINavigation()
-            navigation.buttonOptions = HINavigationButtonOptions()
+            navigation.buttonOptions = HIButtonOptions()
             navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
-            navigation.buttonOptions.theme = HINavigationButtonOptionsTheme()
+            navigation.buttonOptions.theme = HITheme()
             navigation.buttonOptions.theme.fill = "rgba(0,0,0,0.0)"
             hioptions.navigation = navigation
             
             let plotOptions = HIPlotOptions()
-            plotOptions.spline = HIPlotOptionsSpline()
+            plotOptions.spline = HISpline()
             plotOptions.spline.color = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.6)
             hioptions.plotOptions = plotOptions
             
@@ -242,7 +248,10 @@ class OptionsProvider {
             let title = HITitle()
             title.text = options["title"] as! String
             title.align = "left"
-            title.style = ["fontFamily": "Arial", "fontSize": "14px", "color": "rgba(255, 255, 255, 0.6)"]
+            title.style = HIStyle()
+            title.style.fontFamily = "Arial"
+            title.style.fontSize = "14px"
+            title.style.color = "rgba(255, 255, 255, 0.6)"
             title.y = 16
             hioptions.title = title
             
@@ -263,10 +272,10 @@ class OptionsProvider {
             let xaxis = HIXAxis()
             xaxis.tickColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.0)
             xaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
-            xaxis.labels = HIXAxisLabels()
-            xaxis.labels.style = HIXAxisLabelsStyle()
+            xaxis.labels = HILabels()
+            xaxis.labels.style = HIStyle()
             xaxis.labels.style.color = "rgb(255, 255, 255)"
-            xaxis.labels.style.fontSize = "10px Arial"
+            xaxis.labels.style.textOutline = "10px Arial"
             xaxis.labels.step = step
             xaxis.categories = categories
             hioptions.xAxis = [xaxis]
@@ -275,17 +284,18 @@ class OptionsProvider {
             yaxis.lineWidth = 1
             yaxis.gridLineWidth = 0
             yaxis.lineColor = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.3)
-            yaxis.labels = HIYAxisLabels()
-            yaxis.labels.style = HIYAxisLabelsStyle()
+            yaxis.labels = HILabels()
+            yaxis.labels = HILabels()
+            yaxis.labels.style = HIStyle()
             yaxis.labels.style.color = "rgb(255, 255, 255)"
-            yaxis.labels.style.fontSize = "10px Arial"
+            yaxis.labels.style.textOutline = "10px Arial"
             yaxis.labels.x = -5
-            yaxis.title = HIYAxisTitle()
+            yaxis.title = HITitle()
             yaxis.title.text = ""
             hioptions.yAxis = [yaxis]
             
             let spline = HISpline()
-            spline.tooltip = HISplineTooltip()
+            spline.tooltip = HITooltip()
             spline.tooltip.headerFormat = ""
             spline.tooltip.valueSuffix = " kcal"
             spline.showInLegend = false

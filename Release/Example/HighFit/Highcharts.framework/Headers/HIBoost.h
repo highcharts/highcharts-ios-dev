@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIBoostDebug.h"
+#import "HIDebug.h"
 
 
 /**
@@ -43,7 +43,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * description: Debugging options for boost.
 Useful for benchmarking, and general timing.
 */
-@property(nonatomic, readwrite) HIBoostDebug *debug;
+@property(nonatomic, readwrite) HIDebug *debug;
 /**
 * description: If set to true, the whole chart will be boosted if one of the series
 crosses its threshold, and all the series can be boosted.

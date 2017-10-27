@@ -10,15 +10,13 @@
 
 @interface HIGExport ()
 
-@property (weak, nonatomic) UIViewController *viewController;
-
 @end
 
 @implementation HIGExport
 
-- (void)response:(NSDictionary*)params;
+- (void)response:(NSString*)params;
 {
-    NSString *imageBase64 = [params[@"image"] stringByReplacingOccurrencesOfString:@"data:image/png;base64," withString:@""];
+    NSString *imageBase64 = [params stringByReplacingOccurrencesOfString:@"data:image/png;base64," withString:@""];
     
     NSData *data = [[NSData alloc] initWithBase64EncodedString:imageBase64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
     

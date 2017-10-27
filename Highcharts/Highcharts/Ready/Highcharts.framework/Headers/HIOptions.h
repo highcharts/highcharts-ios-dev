@@ -1,5 +1,6 @@
 #import "HIColor.h"
 #import "HICredits.h"
+#import "HISeries.h"
 #import "HIBoost.h"
 #import "HIData.h"
 #import "HIDefs.h"
@@ -23,7 +24,6 @@
 #import "HIColorAxis.h"
 #import "HIDrilldown.h"
 #import "HIExporting.h"
-#import "HISeries.h"
 
 
 @interface HIOptions: NSObject
@@ -85,7 +85,11 @@ patterns : gradients, shadows and patterns for more information and code example
 @property(nonatomic, readwrite) HIDefs *defs;
 
 /**
-* description: This option set extends the defaultOptions for Y axes.
+* description: The Y axis or value axis. Normally this is the vertical axis,
+though if the chart is inverted this is the horizontal axis.
+In case of multiple axes, the yAxis node is an array of
+configuration objects.
+See the Axis object for programmatic access to the axis.
 */
 @property(nonatomic, readwrite) NSArray<HIYAxis *> *yAxis;
 
@@ -167,7 +171,10 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 @property(nonatomic, readwrite) HIResponsive *responsive;
 
 /**
-* description: Options to render axis in 3 dimensions.
+* description: The X axis or category axis. Normally this is the horizontal axis,
+though if the chart is inverted this is the vertical axis. In case of
+multiple axes, the xAxis node is an array of configuration objects.
+See the Axis object for programmatic access to the axis.
 */
 @property(nonatomic, readwrite) NSArray<HIXAxis *> *xAxis;
 

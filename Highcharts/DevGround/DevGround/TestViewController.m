@@ -35,7 +35,7 @@
                         @"Pear",
                         @"Grape",
                         @"Banana", nil];
-    xaxis.labels = [HIXAxisLabels new];
+    xaxis.labels = [HILabels new];
     xaxis.labels.rotation = @0;
     xaxis.labels.useHTML = @NO;
     xaxis.labels.formatter = @"function() {  return this.value + 's';}";

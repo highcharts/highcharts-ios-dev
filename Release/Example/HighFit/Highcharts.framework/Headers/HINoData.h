@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HINoDataPosition.h"
-#import "HINoDataStyle.h"
+#import "HIPosition.h"
+#import "HIStyle.h"
 
 
 /**
@@ -27,7 +27,7 @@ SVG.
 * description: The position of the no-data label, relative to the plot area.
 * default: { "x": 0, "y": 0, "align": "center", "verticalAlign": "middle" }
 */
-@property(nonatomic, readwrite) HINoDataPosition *position;
+@property(nonatomic, readwrite) HIPosition *position;
 /**
 * description: An object of additional SVG attributes for the no-data label.
 */
@@ -35,7 +35,7 @@ SVG.
 /**
 * description: CSS styles for the no-data label.
 */
-@property(nonatomic, readwrite) HINoDataStyle *style;
+@property(nonatomic, readwrite) HIStyle *style;
 
 -(NSDictionary *)getParams;
 

@@ -33,21 +33,21 @@
         xaxis.allowDecimals = @false;
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Nuclear weapon states";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.pointFormat = @"{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}";
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-        plotOptions.area = [[HIPlotOptionsArea alloc]init];
+        plotOptions.area = [[HIArea alloc]init];
         plotOptions.area.pointStart = @1940;
-        plotOptions.area.marker = [[HIPlotOptionsAreaMarker alloc]init];
+        plotOptions.area.marker = [[HIMarker alloc]init];
         plotOptions.area.marker.enabled = @false;
         plotOptions.area.marker.symbol = @"circle";
         plotOptions.area.marker.radius = @2;
-        plotOptions.area.marker.states = [[HIPlotOptionsAreaMarkerStates alloc]init];
-        plotOptions.area.marker.states.hover = [[HIPlotOptionsAreaMarkerStatesHover alloc]init];
+        plotOptions.area.marker.states = [[HIStates alloc]init];
+        plotOptions.area.marker.states.hover = [[HIHover alloc]init];
         plotOptions.area.marker.states.hover.enabled = @true;
         
         HIArea *series1 = [[HIArea alloc]init];
@@ -226,7 +226,7 @@
                             @"Nov",
                             @"Dec", nil];
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Temperature (°C)";
         yaxis.plotLines = [NSMutableArray arrayWithObjects:@{
                                                              @"value": @0,
@@ -246,16 +246,16 @@
         HILine *line1 = [[HILine alloc]init];
         line1.name = @"Tokyo";
         line1.data = [NSMutableArray arrayWithObjects:@7,
-                     @6.9,
-                     @9.5,
-                     @14.5,
-                     @18.2,
-                     @21.5,
-                     @25.2,
-                     @26.5,
-                     @23.3,
-                     @18.3,
-                     @13.9,
+                      @6.9,
+                      @9.5,
+                      @14.5,
+                      @18.2,
+                      @21.5,
+                      @25.2,
+                      @26.5,
+                      @23.3,
+                      @18.3,
+                      @13.9,
                       @9.6, nil];
         
         HILine *line2 = [[HILine alloc]init];
@@ -338,18 +338,18 @@
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Population (millions)";
         yaxis.title.align = @"high";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         yaxis.labels.overflow = @"justify";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.valueSuffix = @" millions";
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-        plotOptions.bar = [[HIPlotOptionsBar alloc]init];
-        plotOptions.bar.dataLabels = [[HIPlotOptionsBarDataLabels alloc]init];
+        plotOptions.bar = [[HIBar alloc]init];
+        plotOptions.bar.dataLabels = [[HIDataLabels alloc]init];
         plotOptions.bar.dataLabels.enabled = @true;
         
         HILegend *legend = [[HILegend alloc]init];
@@ -369,26 +369,26 @@
         HIBar *bar1 = [[HIBar alloc]init];
         bar1.name = @"Year 1800";
         bar1.data = [NSMutableArray arrayWithObjects:@107,
-                        @31,
-                        @635,
-                        @203,
-                        @2, nil];
+                     @31,
+                     @635,
+                     @203,
+                     @2, nil];
         
         HIBar *bar2 = [[HIBar alloc]init];
         bar2.name = @"Year 1900";
         bar2.data = [NSMutableArray arrayWithObjects:@133,
-                        @156,
-                        @947,
-                        @408,
-                        @6, nil];
+                     @156,
+                     @947,
+                     @408,
+                     @6, nil];
         
         HIBar *bar3 = [[HIBar alloc]init];
         bar3.name = @"Year 2012";
         bar3.data = [NSMutableArray arrayWithObjects:@1052,
-                        @954,
-                        @4250,
-                        @740,
-                        @38, nil];
+                     @954,
+                     @4250,
+                     @740,
+                     @38, nil];
         
         HIOptions *options = [[HIOptions alloc]init];
         options.chart = chart;
@@ -428,11 +428,11 @@
                             @"Oct",
                             @"Nov",
                             @"Dec", nil];
-        xaxis.crosshair = [[HIXAxisCrosshair alloc]init];
+        xaxis.crosshair = [[HICrosshair alloc]init];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Rainfall (mm)";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -443,7 +443,7 @@
         tooltip.useHTML = @true;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-        plotOptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotOptions.column = [[HIColumn alloc]init];
         plotOptions.column.pointPadding = @0.2;
         plotOptions.column.borderWidth = @0;
         
@@ -532,13 +532,14 @@
         tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-        plotOptions.pie = [[HIPlotOptionsPie alloc]init];
+        plotOptions.pie = [[HIPie alloc]init];
         plotOptions.pie.allowPointSelect = @true;
         plotOptions.pie.cursor = @"pointer";
-        plotOptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
+        plotOptions.pie.dataLabels = [[HIDataLabels alloc]init];
         plotOptions.pie.dataLabels.enabled = @true;
         plotOptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
-        plotOptions.pie.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"black", @"color", nil];
+        plotOptions.pie.dataLabels.style = [[HIStyle alloc] init];
+        plotOptions.pie.dataLabels.style.color = @"black";
         
         HIPie *pie = [[HIPie alloc]init];
         pie.name = @"Brands";
@@ -596,19 +597,20 @@
         
         HIXAxis *xaxis = [[HIXAxis alloc]init];
         xaxis.gridLineWidth = @1;
-        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"Daily fat intake";
-        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels = [[HILabels alloc]init];
         xaxis.labels.format = @"{value} gr";
-        HIXAxisPlotLines *plotLines = [[HIXAxisPlotLines alloc]init];
+        HIPlotLines *plotLines = [[HIPlotLines alloc]init];
         plotLines.color = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
         plotLines.dashStyle = @"dot";
         plotLines.width = @2;
         plotLines.value = @65;
-        plotLines.label = [[HIXAxisPlotLinesLabel alloc]init];
+        plotLines.label = [[HILabel alloc]init];
         plotLines.label.rotation = @0;
         plotLines.label.y = @15;
-        plotLines.label.style = @{@"fontStyle": @"italic"};
+        plotLines.label.style = [[HIStyle alloc] init];
+        plotLines.label.style.fontWeight = @"italic";
         plotLines.label.text = @"Safe fat intake 65g/day";
         plotLines.zIndex = @3;
         xaxis.plotLines = [NSMutableArray arrayWithObject:plotLines];
@@ -616,20 +618,21 @@
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.startOnTick = @false;
         yaxis.endOnTick = @false;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Daily sugar intake";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         yaxis.labels.format = @"{value} gr";
         yaxis.maxPadding = @0.2;
-        HIYAxisPlotLines *yplotLines = [[HIYAxisPlotLines alloc]init];
+        HIPlotLines *yplotLines = [[HIPlotLines alloc]init];
         yplotLines.color = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
         yplotLines.dashStyle = @"dot";
         yplotLines.width = @2;
         yplotLines.value = @50;
-        yplotLines.label = [[HIYAxisPlotLinesLabel alloc]init];
+        yplotLines.label = [[HILabel alloc]init];
         yplotLines.label.align = @"right";
         yplotLines.label.x = @-10;
-        yplotLines.label.style = @{@"fontStyle": @"italic"};
+        yplotLines.label.style = [[HIStyle alloc] init];
+        yplotLines.label.style.fontWeight = @"italic";
         yplotLines.label.text = @"Safe sugar intake 50g/day";
         yplotLines.zIndex = @3;
         yaxis.plotLines = [NSMutableArray arrayWithObject:yplotLines];
@@ -642,8 +645,8 @@
         tooltip.followPointer = @true;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-        plotOptions.bubble = [[HIPlotOptionsBubble alloc]init];
-        plotOptions.bubble.dataLabels = [[HIPlotOptionsBubbleDataLabels alloc]init];
+        plotOptions.bubble = [[HIBubble alloc]init];
+        plotOptions.bubble.dataLabels = [[HIDataLabels alloc]init];
         plotOptions.bubble.dataLabels.enabled = @true;
         plotOptions.bubble.dataLabels.format = @"{point.name}";
         
@@ -784,17 +787,17 @@
         xaxis.tickInterval = @45;
         xaxis.min = @0;
         xaxis.max = @360;
-        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels = [[HILabels alloc]init];
         xaxis.labels.format = @"{value}°";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-        plotOptions.series = [[HIPlotOptionsSeries alloc]init];
+        plotOptions.series = [[HISeries alloc]init];
         plotOptions.series.pointStart = @0;
         plotOptions.series.pointInterval = @45;
-        plotOptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotOptions.column = [[HIColumn alloc]init];
         plotOptions.column.pointPadding = @0;
         plotOptions.column.groupPadding = @0;
         
@@ -840,7 +843,7 @@
         options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
         options.plotOptions = plotOptions;
         options.series = [NSMutableArray arrayWithObjects:column, line, area, nil];
-                
+        
         return options;
         
     }
@@ -857,8 +860,8 @@
         title.x = @-50;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-        plotOptions.funnel = [[HIPlotOptionsFunnel alloc]init];
-        plotOptions.funnel.dataLabels = [[HIPlotOptionsFunnelDataLabels alloc]init];
+        plotOptions.funnel = [[HIFunnel alloc]init];
+        plotOptions.funnel.dataLabels = [[HIDataLabels alloc]init];
         plotOptions.funnel.dataLabels.enabled = @true;
         plotOptions.funnel.dataLabels.format = @"<b>{point.name}</b> ({point.y:,.0f})";
         plotOptions.funnel.dataLabels.color = [[HIColor alloc]initWithName:@"black"];
@@ -898,7 +901,7 @@
         options.series = [NSMutableArray arrayWithObject:series];
         
         //NSLog(@"%@", [options getParams]);
-
+        
         return options;
     }
     //MARK: Scatter
@@ -916,14 +919,14 @@
         subtitle.text = @"Source: Heinz  2003";
         
         HIXAxis *xaxis = [[HIXAxis alloc]init];
-        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"Height (cm)";
         xaxis.startOnTick = @true;
         xaxis.endOnTick = @true;
         xaxis.showLastLabel = @true;
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Weight (kg)";
         
         HILegend *legend = [[HILegend alloc]init];
@@ -937,19 +940,20 @@
         legend.borderWidth = @1;
         
         HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-        plotOptions.scatter = [[HIPlotOptionsScatter alloc]init];
-        plotOptions.scatter.marker = [[HIPlotOptionsScatterMarker alloc]init];
+        plotOptions.scatter = [[HIScatter alloc]init];
+        plotOptions.scatter.marker = [[HIMarker alloc]init];
         plotOptions.scatter.marker.radius = @5;
-        plotOptions.scatter.marker.states = [[HIPlotOptionsScatterMarkerStates alloc]init];
-        plotOptions.scatter.marker.states.hover = [[HIPlotOptionsScatterMarkerStatesHover alloc]init];
+        plotOptions.scatter.marker.states = [[HIStates alloc]init];
+        plotOptions.scatter.marker.states.hover = [[HIHover alloc]init];
         plotOptions.scatter.marker.states.hover.enabled = @true;
         plotOptions.scatter.marker.states.hover.lineColor = [[HIColor alloc]initWithRGB:100 green:100 blue:100];
-        HIPlotOptionsScatterStates *state = [[HIPlotOptionsScatterStates alloc]init];
-        state.hover = [[HIPlotOptionsScatterStatesHover alloc]init];
-        state.hover.marker = [[HIPlotOptionsScatterStatesHoverMarker alloc]init];
+        HIStates *state = [[HIStates alloc]init];
+        state.hover = [[HIHover alloc]init];
+        state.hover.marker = [[HIMarker alloc]init];
         state.hover.marker.enabled = @false;
-        plotOptions.scatter.states = [NSMutableArray arrayWithObject:state];
-        plotOptions.scatter.tooltip = [[HIPlotOptionsScatterTooltip alloc]init];
+        plotOptions.scatter.states = state;
+        //[NSMutableArray arrayWithObject:state];
+        plotOptions.scatter.tooltip = [[HITooltip alloc]init];
         plotOptions.scatter.tooltip.headerFormat = @"<b>{series.name}</b><br>";
         plotOptions.scatter.tooltip.pointFormat = @"{point.x} cm, {point.y} kg";
         
@@ -1095,20 +1099,21 @@
                             @"3",
                             @"4",
                             @"5", nil];
-        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"Experiment No.";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Observations";
-        HIYAxisPlotLines *plotlines = [[HIYAxisPlotLines alloc]init];
+        HIPlotLines *plotlines = [[HIPlotLines alloc]init];
         plotlines.value = @932;
         plotlines.color = [[HIColor alloc]initWithName:@"red"];
         plotlines.width = @1;
-        plotlines.label = [[HIYAxisPlotLinesLabel alloc]init];
+        plotlines.label = [[HILabel alloc]init];
         plotlines.label.text = @"Theoretical mean: 932";
         plotlines.label.align = @"center";
-        plotlines.label.style = @{@"color": @"gray"};
+        plotlines.label.style = [[HIStyle alloc] init];
+        plotlines.label.style.color = @"gray";
         yaxis.plotLines = [NSMutableArray arrayWithObject:plotlines];
         
         HIBoxplot *series1 = [[HIBoxplot alloc]init];
@@ -1148,7 +1153,7 @@
                           @882,
                           @910
                           ], nil];
-        series1.tooltip = [[HIBoxplotTooltip alloc]init];
+        series1.tooltip = [[HITooltip alloc]init];
         series1.tooltip.headerFormat = @"<em>Experiment No {point.key}</em><br/>";
         
         HIScatter *series2 = [[HIScatter alloc]init];
@@ -1170,11 +1175,11 @@
                           @4,
                           @969
                           ], nil];
-        series2.marker = [[HIScatterMarker alloc]init];
+        series2.marker = [[HIMarker alloc]init];
         series2.marker.fillColor = [[HIColor alloc]initWithName:@"white"];
         series2.marker.lineWidth = @1;
         series2.marker.lineColor = [[HIColor alloc]initWithHexValue:@"7cb5ec"];
-        series2.tooltip = [[HIScatterTooltip alloc]init];
+        series2.tooltip = [[HITooltip alloc]init];
         series2.tooltip.pointFormat = @"Observation: {point.y}";
         
         options.chart = chart;
@@ -1201,9 +1206,9 @@
         xAxis.type = @"category";
         
         HIYAxis *yAxis = [[HIYAxis alloc]init];
-        yAxis.title = [[HIYAxisTitle alloc]init];
+        yAxis.title = [[HITitle alloc]init];
         yAxis.title.text = @"USD";
-        yAxis.labels = [[HIYAxisLabels alloc]init];
+        yAxis.labels = [[HILabels alloc]init];
         yAxis.labels.format = @"{value}k";
         
         HILegend *legend = [[HILegend alloc]init];
@@ -1218,7 +1223,7 @@
         
         //You can add objects by hand or creating data objects - one presented below:
         
-        HIWaterfallData *data = [[HIWaterfallData alloc]init];
+        HIData *data = [[HIData alloc]init];
         data.name = @"Positive Balance";
         data.isIntermediateSum = @true;
         data.color = [[HIColor alloc]initWithHexValue:@"434348"];
@@ -1252,10 +1257,11 @@
                          @"color": @"#434348"
                          }, nil];
         
-        series.dataLabels = [[HIWaterfallDataLabels alloc]init];
+        series.dataLabels = [[HIDataLabels alloc]init];
         series.dataLabels.enabled = @true;
         series.dataLabels.format = @"{point.y}k";
-        series.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold",@"fontWeight",  nil];
+        series.dataLabels.style = [[HIStyle alloc] init];
+        series.dataLabels.style.fontWeight = @"bold";
         series.pointPadding = @0;
         
         options.chart = chart;
@@ -1293,20 +1299,24 @@
                             @"Dec", nil];
         
         HIYAxis *yaxis1 = [[HIYAxis alloc]init];
-        yaxis1.labels = [[HIYAxisLabels alloc]init];
+        yaxis1.labels = [[HILabels alloc]init];
         yaxis1.labels.format = @"{value} °C";
-        yaxis1.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
-        yaxis1.title = [[HIYAxisTitle alloc]init];
+        yaxis1.labels.style = [[HIStyle alloc]init];
+        yaxis1.labels.style.color = @"#434348";
+        yaxis1.title = [[HITitle alloc]init];
         yaxis1.title.text = @"Temperature";
-        yaxis1.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
+        yaxis1.title.style = [[HIStyle alloc]init];
+        yaxis1.title.style.color = @"#434348";
         
         HIYAxis *yaxis2 = [[HIYAxis alloc]init];
-        yaxis2.labels = [[HIYAxisLabels alloc]init];
+        yaxis2.labels = [[HILabels alloc]init];
         yaxis2.labels.format = @"{value} mm";
-        yaxis2.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-        yaxis2.title = [[HIYAxisTitle alloc]init];
+        yaxis2.labels.style = [[HIStyle alloc]init];
+        yaxis2.labels.style.color = @"#7cb5ec";
+        yaxis2.title = [[HITitle alloc]init];
         yaxis2.title.text = @"Rainfall";
-        yaxis2.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
+        yaxis2.title.style = [[HIStyle alloc]init];
+        yaxis2.title.style.color = @"#7cb5ec";
         yaxis2.opposite = @true;
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -1327,62 +1337,62 @@
                        @194.1,
                        @95.6,
                        @54.4, nil];
-        column.tooltip = [[HIColumnTooltip alloc]init];
+        column.tooltip = [[HITooltip alloc]init];
         column.tooltip.pointFormat = @"<span style=\"font-weight: bold; color: {series.color}\">{series.name}</span>: <b>{point.y:.1f} mm</b> ";
         
         HIErrorbar *errorbar1 = [[HIErrorbar alloc]init];
         errorbar1.name = @"Rainfall error";
         errorbar1.yAxis = @1;
         errorbar1.data = [NSMutableArray arrayWithObjects:@[
-                                                           @48,
-                                                           @51
-                                                           ],
-                         @[
-                           @68,
-                           @73
-                           ],
-                         @[
-                           @92,
-                           @110
-                           ],
-                         @[
-                           @128,
-                           @136
-                           ],
-                         @[
-                           @140,
-                           @150
-                           ],
-                         @[
-                           @171,
-                           @179
-                           ],
-                         @[
-                           @135,
-                           @143
-                           ],
-                         @[
-                           @142,
-                           @149
-                           ],
-                         @[
-                           @204,
-                           @220
-                           ],
-                         @[
-                           @189,
-                           @199
-                           ],
-                         @[
-                           @95,
-                           @110
-                           ],
-                         @[
-                           @52,
-                           @56
-                           ]
-                         , nil];
-        errorbar1.tooltip = [[HIErrorbarTooltip alloc]init];
+                                                            @48,
+                                                            @51
+                                                            ],
+                          @[
+                            @68,
+                            @73
+                            ],
+                          @[
+                            @92,
+                            @110
+                            ],
+                          @[
+                            @128,
+                            @136
+                            ],
+                          @[
+                            @140,
+                            @150
+                            ],
+                          @[
+                            @171,
+                            @179
+                            ],
+                          @[
+                            @135,
+                            @143
+                            ],
+                          @[
+                            @142,
+                            @149
+                            ],
+                          @[
+                            @204,
+                            @220
+                            ],
+                          @[
+                            @189,
+                            @199
+                            ],
+                          @[
+                            @95,
+                            @110
+                            ],
+                          @[
+                            @52,
+                            @56
+                            ]
+                          , nil];
+        errorbar1.tooltip = [[HITooltip alloc]init];
         errorbar1.tooltip.pointFormat = @"(error range: {point.low}-{point.high} mm)<br/>";
         
         HISpline *spline = [[HISpline alloc]init];
@@ -1399,7 +1409,7 @@
                        @18.3,
                        @13.9,
                        @9.6, nil];
-        spline.tooltip = [[HISplineTooltip alloc]init];
+        spline.tooltip = [[HITooltip alloc]init];
         spline.tooltip.pointFormat = @"<span style=\"font-weight: bold; color: {series.color}\">{series.name}</span>: <b>{point.y:.1f}°C</b> ";
         
         
@@ -1454,7 +1464,7 @@
                             @10
                             ]
                           , nil];
-        errorbar2.tooltip = [[HIErrorbarTooltip alloc]init];
+        errorbar2.tooltip = [[HITooltip alloc]init];
         errorbar2.tooltip.pointFormat = @"(error range: {point.low}-{point.high}°C)<br/>";
         
         options.chart = chart;
@@ -1482,16 +1492,16 @@
         
         HIXAxis *xaxis = [[HIXAxis alloc]init];
         xaxis.reversed = @false;
-        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"Altitude";
-        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels = [[HILabels alloc]init];
         xaxis.maxPadding = @0.05;
         xaxis.showLastLabel = @true;
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Temperature";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         yaxis.lineWidth = @2;
         
         HILegend *legend = [[HILegend alloc]init];
@@ -1502,8 +1512,8 @@
         tooltip.pointFormat = @"{point.x} km: {point.y}°C";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.spline = [[HIPlotOptionsSpline alloc]init];
-        plotoptions.spline.marker = [[HIPlotOptionsSplineMarker alloc]init];
+        plotoptions.spline = [[HISpline alloc]init];
+        plotoptions.spline.marker = [[HIMarker alloc]init];
         plotoptions.spline.marker.enabled = @false;
         
         HISpline *series = [[HISpline alloc]init];
@@ -1585,14 +1595,14 @@
                             @"Friday",
                             @"Saturday",
                             @"Sunday", nil];
-        HIXAxisPlotBands *plotband = [[HIXAxisPlotBands alloc]init];
+        HIPlotBands *plotband = [[HIPlotBands alloc]init];
         plotband.from = @4.5;
         plotband.to = @6.5;
         plotband.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:.2];
         xaxis.plotBands = [NSMutableArray arrayWithObject:plotband];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Fruit unit";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -1603,7 +1613,7 @@
         credits.enabled = @false;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.areaspline = [[HIPlotOptionsAreaspline alloc]init];
+        plotoptions.areaspline = [[HIAreaspline alloc]init];
         plotoptions.areaspline.fillOpacity = @0.5;
         
         HIAreaspline *areaspline1 = [[HIAreaspline alloc]init];
@@ -1653,7 +1663,7 @@
         xaxis.type = @"datetime";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.crosshairs = @true;
@@ -3531,15 +3541,15 @@
                             @"Dec", nil];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Temperature ( °C )";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.valueSuffix = @"°C";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.columnrange = [[HIPlotOptionsColumnrange alloc]init];
-        plotoptions.columnrange.dataLabels = [[HIPlotOptionsColumnrangeDataLabels alloc]init];
+        plotoptions.columnrange = [[HIColumnrange alloc]init];
+        plotoptions.columnrange.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.columnrange.dataLabels.enabled = @true;
         plotoptions.columnrange.dataLabels.format = @"{point.y}°C";
         
@@ -3626,7 +3636,7 @@
         pane.size = @"140%";
         pane.startAngle = @-90;
         pane.endAngle = @90;
-        HIPaneBackground *background = [[HIPaneBackground alloc]init];
+        HIBackground *background = [[HIBackground alloc]init];
         background.backgroundColor = [[HIColor alloc]initWithHexValue:@"EEE"];
         background.innerRadius = @"60%";
         background.outerRadius = @"100%";
@@ -3637,11 +3647,11 @@
         tooltip.enabled = @false;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.solidgauge = [[HIPlotOptionsSolidgauge alloc]init];
-        plotoptions.solidgauge.dataLabels = [[HIPlotOptionsSolidgaugeDataLabels alloc]init];
+        plotoptions.solidgauge = [[HISolidgauge alloc]init];
+        plotoptions.solidgauge.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.solidgauge.dataLabels.y = @5;
         plotoptions.solidgauge.dataLabels.borderWidth = @0;
-        //plotoptions.solidgauge.dataLabels.useHTML = @true;
+        plotoptions.solidgauge.dataLabels.useHTML = @true;
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.stops = [NSMutableArray arrayWithObjects:@[
@@ -3658,9 +3668,9 @@
                          ], nil];
         yaxis.lineWidth = @0;
         yaxis.tickAmount = @2;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Speed";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         yaxis.labels.y = @16;
         yaxis.min = @0;
         yaxis.max = @200;
@@ -3671,9 +3681,9 @@
         HISolidgauge *series = [[HISolidgauge alloc]init];
         series.name = @"Speed";
         series.data = [NSMutableArray arrayWithObject:@80];
-        series.dataLabels = [[HISolidgaugeDataLabels alloc]init];
+        series.dataLabels = [[HIDataLabels alloc]init];
         series.dataLabels.format = @"<div style=\"text-align:center\"><span style=\"font-size:25px;color:black\">{y}</span><br/><span style=\"font-size:12px;color:silver\">km/h</span></div>";
-        series.tooltip = [[HISolidgaugeTooltip alloc]init];
+        series.tooltip = [[HITooltip alloc]init];
         series.tooltip.valueSuffix = @" km/h";
         
         options.chart = chart;
@@ -3701,7 +3711,7 @@
                             @"Bananas",
                             @"Plums", nil];
         
-        HILabelsItems *item = [[HILabelsItems alloc]init];
+        HIItems *item = [[HIItems alloc]init];
         item.html = @"Total fruit consumption";
         item.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"50px", @"left", @"18px", @"top", @"black", @"color", nil];
         
@@ -3739,7 +3749,7 @@
                        @3,
                        @6.33,
                        @3.33, nil];
-        spline.marker = [[HISplineMarker alloc]init];
+        spline.marker = [[HIMarker alloc]init];
         spline.marker.lineWidth = @2;
         spline.marker.fillColor = [[HIColor alloc]initWithName:@"white"];
         spline.marker.lineColor = [[HIColor alloc]initWithHexValue:@"f7a35c"];
@@ -3764,7 +3774,7 @@
         pie.center = [NSMutableArray arrayWithObjects:@100, @80, nil];
         pie.size = @"100";
         pie.showInLegend = @false;
-        pie.dataLabels = [[HIPieDataLabels alloc]init];
+        pie.dataLabels = [[HIDataLabels alloc]init];
         pie.dataLabels.enabled = @false;
         
         options.title = title;
@@ -3783,7 +3793,7 @@
         HIChart *chart = [[HIChart alloc]init];
         chart.renderTo = @"container";
         chart.type = @"column";
-        chart.options3d = [[HIChartOptions3d alloc]init];
+        chart.options3d = [[HIOptions3d alloc]init];
         chart.options3d.enabled = @true;
         chart.options3d.alpha = @15;
         chart.options3d.beta = @15;
@@ -3794,7 +3804,7 @@
         title.text = @"Chart rotation demo";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotoptions.column = [[HIColumn alloc]init];
         plotoptions.column.depth = @25;
         
         HIColumn *column = [[HIColumn alloc]init];
@@ -3826,7 +3836,7 @@
         
         HIChart *chart = [[HIChart alloc]init];
         chart.type = @"column";
-        chart.options3d = [[HIChartOptions3d alloc]init];
+        chart.options3d = [[HIOptions3d alloc]init];
         chart.options3d.enabled = @true;
         chart.options3d.alpha = @10;
         chart.options3d.beta = @25;
@@ -3851,11 +3861,11 @@
                             @"Oct", nil];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotoptions.column = [[HIColumn alloc]init];
         plotoptions.column.depth = @25;
         
         HIColumn *column = [[HIColumn alloc]init];
@@ -3879,7 +3889,7 @@
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: column, nil];
         
-
+        
         
         return options;
     }
@@ -3888,7 +3898,7 @@
         
         HIChart *chart = [[HIChart alloc]init];
         chart.type = @"column";
-        chart.options3d = [[HIChartOptions3d alloc]init];
+        chart.options3d = [[HIOptions3d alloc]init];
         chart.options3d.enabled = @true;
         chart.options3d.alpha = @15;
         chart.options3d.beta = @15;
@@ -3908,7 +3918,7 @@
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.allowDecimals = @false;
         yaxis.min = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Number of fruits";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -3916,7 +3926,7 @@
         tooltip.pointFormat = @"<span style=\"color:{series.color}\">●</span> {series.name}: {point.y} / {point.stackTotal}";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotoptions.column = [[HIColumn alloc]init];
         plotoptions.column.depth = @40;
         plotoptions.column.stacking = @"normal";
         
@@ -3973,7 +3983,7 @@
         
         HIChart *chart = [[HIChart alloc]init];
         chart.type = @"pie";
-        chart.options3d = [[HIChartOptions3d alloc]init];
+        chart.options3d = [[HIOptions3d alloc]init];
         chart.options3d.enabled = @true;
         chart.options3d.alpha = @45;
         chart.options3d.beta = @0;
@@ -3985,11 +3995,11 @@
         tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.pie = [[HIPlotOptionsPie alloc]init];
+        plotoptions.pie = [[HIPie alloc]init];
         plotoptions.pie.allowPointSelect = @true;
         plotoptions.pie.cursor = @"pointer";
         plotoptions.pie.depth = @35;
-        plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
+        plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.pie.dataLabels.enabled = @true;
         plotoptions.pie.dataLabels.format = @"{point.name}";
         
@@ -4027,7 +4037,7 @@
         options.tooltip = tooltip;
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: pie, nil];
-
+        
         
         
         return options;
@@ -4038,7 +4048,7 @@
         
         HIChart *chart = [[HIChart alloc]init];
         chart.type = @"pie";
-        chart.options3d = [[HIChartOptions3d alloc]init];
+        chart.options3d = [[HIOptions3d alloc]init];
         chart.options3d.enabled = @true;
         chart.options3d.alpha = @45;
         
@@ -4049,7 +4059,7 @@
         subtitle.text = @"3D donut in Highcharts";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.pie = [[HIPlotOptionsPie alloc]init];
+        plotoptions.pie = [[HIPie alloc]init];
         plotoptions.pie.innerSize = @100;
         plotoptions.pie.depth = @45;
         
@@ -4110,21 +4120,21 @@
         chart.renderTo = @"container";
         chart.margin = [NSMutableArray arrayWithObjects:@100, nil];
         chart.type = @"scatter";
-        chart.options3d = [[HIChartOptions3d alloc]init];
+        chart.options3d = [[HIOptions3d alloc]init];
         chart.options3d.enabled = @true;
         chart.options3d.alpha = @10;
         chart.options3d.beta = @30;
         chart.options3d.depth = @250;
         chart.options3d.viewDistance = @5;
         chart.options3d.fitToPlot = @false;
-        chart.options3d.frame = [[HIChartOptions3dFrame alloc]init];
-        chart.options3d.frame.bottom = [[HIChartOptions3dFrameBottom alloc]init];
+        chart.options3d.frame = [[HIFrame alloc]init];
+        chart.options3d.frame.bottom = [[HIBottom alloc]init];
         chart.options3d.frame.bottom.size = @1;
         chart.options3d.frame.bottom.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.02];
-        chart.options3d.frame.back = [[HIChartOptions3dFrameBack alloc]init];
+        chart.options3d.frame.back = [[HIBack alloc]init];
         chart.options3d.frame.back.size = @1;
         chart.options3d.frame.back.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.04];
-        chart.options3d.frame.side = [[HIChartOptions3dFrameSide alloc]init];
+        chart.options3d.frame.side = [[HISide alloc]init];
         chart.options3d.frame.side.size = @1;
         chart.options3d.frame.side.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.06];
         
@@ -4142,7 +4152,7 @@
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
         yaxis.max = @10;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"";
         
         HILegend *legend = [[HILegend alloc]init];
@@ -4661,7 +4671,7 @@
         options.legend = legend;
         options.series = [NSMutableArray arrayWithObjects: scatter, nil];
         
-
+        
         
         return options;
     }
@@ -4690,9 +4700,9 @@
                             @"Sunday", nil];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Number of units";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         yaxis.min = @0;
         
         HILegend *legend = [[HILegend alloc]init];
@@ -4706,7 +4716,7 @@
         legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.area = [[HIPlotOptionsArea alloc]init];
+        plotoptions.area = [[HIArea alloc]init];
         plotoptions.area.fillOpacity = @0.5;
         
         HIArea *area1 = [[HIArea alloc]init];
@@ -4737,7 +4747,7 @@
         options.legend = legend;
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: area1, area2, nil];
-
+        
         
         return options;
     }
@@ -4771,9 +4781,9 @@
                             @"Raspberries", nil];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Y-Axis";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         
@@ -4788,7 +4798,7 @@
         legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.area = [[HIPlotOptionsArea alloc]init];
+        plotoptions.area = [[HIArea alloc]init];
         plotoptions.area.fillOpacity = @0.5;
         
         HICredits *credits = [[HICredits alloc]init];
@@ -4827,7 +4837,7 @@
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: area1, area2, nil];
         
-
+        
         
         return options;
     }
@@ -4881,7 +4891,7 @@
         options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
         options.credits = credits;
         options.series = [NSMutableArray arrayWithObjects: area1, area2, area3, nil];
-
+        
         
         return options;
     }
@@ -4908,24 +4918,24 @@
                             @"1999",
                             @"2050", nil];
         xaxis.tickmarkPlacement = @"on";
-        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Billions";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.shared = @true;
         tooltip.valueSuffix = @" millions";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.area = [[HIPlotOptionsArea alloc]init];
+        plotoptions.area = [[HIArea alloc]init];
         plotoptions.area.stacking = @"normal";
         plotoptions.area.lineColor = [[HIColor alloc]initWithHexValue:@"666666"];
         plotoptions.area.lineWidth = @1;
-        plotoptions.area.marker = [[HIPlotOptionsAreaMarker alloc]init];
+        plotoptions.area.marker = [[HIMarker alloc]init];
         plotoptions.area.marker.lineWidth = @1;
         plotoptions.area.marker.lineColor = [[HIColor alloc]initWithHexValue:@"666666"];
         
@@ -4989,7 +4999,7 @@
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: area1, area2, area3, area4, area5, nil];
         
-
+        
         
         return options;
     }
@@ -5016,11 +5026,11 @@
                             @"1999",
                             @"2050", nil];
         xaxis.tickmarkPlacement = @"on";
-        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Percent";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -5028,11 +5038,11 @@
         tooltip.pointFormat = @"<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} millions)<br/>";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.area = [[HIPlotOptionsArea alloc]init];
+        plotoptions.area = [[HIArea alloc]init];
         plotoptions.area.stacking = @"percent";
         plotoptions.area.lineColor = [[HIColor alloc]initWithHexValue:@"ffffff"];
         plotoptions.area.lineWidth = @1;
-        plotoptions.area.marker = [[HIPlotOptionsAreaMarker alloc]init];
+        plotoptions.area.marker = [[HIMarker alloc]init];
         plotoptions.area.marker.lineWidth = @1;
         plotoptions.area.marker.lineColor = [[HIColor alloc]initWithHexValue:@"ffffff"];
         
@@ -5095,7 +5105,7 @@
         options.tooltip = tooltip;
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: area1, area2, area3, area4, area5, nil];
-                
+        
         return options;
     }
     
@@ -5115,7 +5125,7 @@
         xaxis.type = @"datetime";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.crosshairs = @true;
@@ -6962,7 +6972,7 @@
         options.legend = legend;
         options.series = [NSMutableArray arrayWithObjects:series, nil];
         
-
+        
         
         return options;
     }
@@ -6981,7 +6991,7 @@
         xaxis.type = @"daytime";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -6994,7 +7004,7 @@
         HILine *line = [[HILine alloc]init];
         line.name = @"Temperature";
         line.zIndex = @1;
-        line.marker = [[HILineMarker alloc]init];
+        line.marker = [[HIMarker alloc]init];
         line.marker.fillColor = [[HIColor alloc]initWithName:@"white"];
         line.marker.lineWidth = @2;
         line.marker.lineColor = [[HIColor alloc]initWithHexValue:@"7cb5ec"];
@@ -7077,7 +7087,7 @@
         options.legend = legend;
         options.series = [NSMutableArray arrayWithObjects: arearange, line, nil];
         
-
+        
         
         return options;
     }
@@ -7109,14 +7119,14 @@
                             @"Friday",
                             @"Saturday",
                             @"Sunday", nil];
-        HIXAxisPlotBands *plotband = [[HIXAxisPlotBands alloc]init];
+        HIPlotBands *plotband = [[HIPlotBands alloc]init];
         plotband.from = @4.5;
         plotband.to = @6.5;
         plotband.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:.2];
         xaxis.plotBands = [NSMutableArray arrayWithObject:plotband];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Fruit unit";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -7127,7 +7137,7 @@
         credits.enabled = @false;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.areaspline = [[HIPlotOptionsAreaspline alloc]init];
+        plotoptions.areaspline = [[HIAreaspline alloc]init];
         plotoptions.areaspline.fillOpacity = @0.5;
         
         HIAreaspline *areaspline1 = [[HIAreaspline alloc]init];
@@ -7180,14 +7190,14 @@
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Total fruit consumption";
         
         HILegend *legend = [[HILegend alloc]init];
         legend.reversed = @true;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.series = [[HIPlotOptionsSeries alloc]init];
+        plotoptions.series = [[HISeries alloc]init];
         plotoptions.series.stacking = @"normal";
         
         HIBar *bar1 = [[HIBar alloc]init];
@@ -7241,15 +7251,15 @@
         xaxis.type = @"category";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Total percent market share";
         
         HILegend *legend = [[HILegend alloc]init];
         legend.enabled = @false;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.series = [[HIPlotOptionsSeries alloc]init];
-        plotoptions.series.dataLabels = [[HIPlotOptionsSeriesDataLabels alloc]init];
+        plotoptions.series = [[HISeries alloc]init];
+        plotoptions.series.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.series.dataLabels.enabled = @true;
         plotoptions.series.dataLabels.format = @"{point.y:.1f}%";
         
@@ -7556,11 +7566,11 @@
         
         HIYAxis *yaxis1 = [[HIYAxis alloc]init];
         yaxis1.min = @0;
-        yaxis1.title = [[HIYAxisTitle alloc]init];
+        yaxis1.title = [[HITitle alloc]init];
         yaxis1.title.text = @"Employees";
         
         HIYAxis *yaxis2 = [[HIYAxis alloc]init];
-        yaxis2.title = [[HIYAxisTitle alloc]init];
+        yaxis2.title = [[HITitle alloc]init];
         yaxis2.title.text = @"Profit (millions)";
         yaxis2.opposite = @true;
         
@@ -7571,7 +7581,7 @@
         tooltip.shared = @true;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotoptions.column = [[HIColumn alloc]init];
         plotoptions.column.grouping = @false;
         plotoptions.column.shadow = @false;
         plotoptions.column.borderWidth = @0;
@@ -7597,7 +7607,7 @@
         HIColumn *column3 = [[HIColumn alloc]init];
         column3.name = @"Profit";
         column3.color = [[HIColor alloc]initWithRGBA:248 green:161 blue:63 alpha:1];
-        column3.tooltip = [[HIColumnTooltip alloc]init];
+        column3.tooltip = [[HITooltip alloc]init];
         column3.tooltip.valuePrefix = @"$";
         column3.tooltip.valueSuffix = @" M";
         column3.pointPadding = @0.3;
@@ -7610,7 +7620,7 @@
         HIColumn *column4 = [[HIColumn alloc]init];
         column4.name = @"Profit Optimized";
         column4.color = [[HIColor alloc]initWithRGBA:186 green:60 blue:61 alpha:0.9];
-        column4.tooltip = [[HIColumnTooltip alloc]init];
+        column4.tooltip = [[HITooltip alloc]init];
         column4.tooltip.valuePrefix = @"$";
         column4.tooltip.valueSuffix = @" M";
         column4.pointPadding = @0.4;
@@ -7646,13 +7656,15 @@
         
         HIXAxis *xaxis = [[HIXAxis alloc]init];
         xaxis.type = @"category";
-        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels = [[HILabels alloc]init];
         xaxis.labels.rotation = @-45;
-        xaxis.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"13px", @"fonSize", @"Verdana, sans-serif", @"fontFamily", nil];
+        xaxis.labels.style = [[HIStyle alloc] init];
+        xaxis.labels.style.fontSize = @"13px";
+        xaxis.labels.style.fontFamily = @"Verdana, sans-serif";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Population (millions)";
         
         HILegend *legend = [[HILegend alloc]init];
@@ -7744,14 +7756,16 @@
                          @8.9
                          ]
                        , nil];
-        column.dataLabels = [[HIColumnDataLabels alloc]init];
+        column.dataLabels = [[HIDataLabels alloc]init];
         column.dataLabels.enabled = @true;
         column.dataLabels.rotation = @-90;
         column.dataLabels.color = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
         column.dataLabels.align = @"right";
         column.dataLabels.format = @"{point.y:.1f}";
         column.dataLabels.y = @10;
-        column.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"13px", @"fonSize", @"Verdana, sans-serif", @"fontFamily", nil];
+        column.dataLabels.style = [[HIStyle alloc] init];
+        column.dataLabels.style.fontSize = @"13px";
+        column.dataLabels.style.fontFamily = @"Verdana, sans-serif";
         
         options.chart = chart;
         options.title = title;
@@ -7782,11 +7796,13 @@
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Total fruit consumption";
-        yaxis.stackLabels = [[HIYAxisStackLabels alloc]init];
+        yaxis.stackLabels = [[HIStackLabels alloc]init];
         yaxis.stackLabels.enabled = @true;
-        yaxis.stackLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold", @"fontWeight", @"gray", @"color", nil];
+        yaxis.stackLabels.style = [[HIStyle alloc] init];
+        yaxis.stackLabels.style.fontWeight = @"bold";
+        yaxis.stackLabels.style.color = @"gray";
         
         HILegend *legend = [[HILegend alloc]init];
         legend.align = @"right";
@@ -7804,12 +7820,13 @@
         tooltip.headerFormat = @"<b>{point.x}</b><br/>";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotoptions.column = [[HIColumn alloc]init];
         plotoptions.column.stacking = @"normal";
-        plotoptions.column.dataLabels = [[HIPlotOptionsColumnDataLabels alloc]init];
+        plotoptions.column.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.column.dataLabels.enabled = @true;
         plotoptions.column.dataLabels.color = [[HIColor alloc]initWithName:@"white"];
-        plotoptions.column.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"0 0 3px black", @"textShadow", nil];
+        plotoptions.column.dataLabels.style = [[HIStyle alloc] init];
+        plotoptions.column.dataLabels.style.textOutline = @"0 0 3px black";
         
         HIColumn *column1 = [[HIColumn alloc]init];
         column1.name = @"John";
@@ -7844,7 +7861,7 @@
         options.tooltip = tooltip;
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: column1, column2, column3, nil];
-
+        
         return options;
     }
     
@@ -7867,14 +7884,14 @@
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.allowDecimals = @false;
         yaxis.min = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Number of fruits";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
         tooltip.pointFormat = @"{series.name} :{point.y} <br/> Total: {point.stackTotal}";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotoptions.column = [[HIColumn alloc]init];
         plotoptions.column.stacking = @"normal";
         
         HIColumn *column1 = [[HIColumn alloc]init];
@@ -7942,7 +7959,7 @@
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Total fruit consumption";
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -7950,7 +7967,7 @@
         tooltip.shared = @true;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+        plotoptions.column = [[HIColumn alloc]init];
         plotoptions.column.stacking = @"percent";
         
         HIColumn *column1 = [[HIColumn alloc]init];
@@ -8014,23 +8031,27 @@
                             @"Nov",
                             @"Dec"
                             , nil];
-        xaxis.crosshair = [[HIXAxisCrosshair alloc]init];
+        xaxis.crosshair = [[HICrosshair alloc]init];
         
         HIYAxis *yaxis1 = [[HIYAxis alloc]init];
-        yaxis1.labels = [[HIYAxisLabels alloc]init];
+        yaxis1.labels = [[HILabels alloc]init];
         yaxis1.labels.format = @"{value}°C";
-        yaxis1.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
-        yaxis1.title = [[HIYAxisTitle alloc]init];
+        yaxis1.labels.style = [[HIStyle alloc] init];
+        yaxis1.labels.style.color = @"#434348";
+        yaxis1.title = [[HITitle alloc]init];
         yaxis1.title.text = @"Temperature";
-        yaxis1.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
+        yaxis1.title.style = [[HIStyle alloc] init];
+        yaxis1.title.style.color = @"#434348";
         
         HIYAxis *yaxis2 = [[HIYAxis alloc]init];
-        yaxis2.labels = [[HIYAxisLabels alloc]init];
+        yaxis2.labels = [[HILabels alloc]init];
         yaxis2.labels.format = @"{value} mm";
-        yaxis2.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-        yaxis2.title = [[HIYAxisTitle alloc]init];
+        yaxis2.labels.style = [[HIStyle alloc] init];
+        yaxis2.labels.style.color = @"#7cb5ec";
+        yaxis2.title = [[HITitle alloc]init];
         yaxis2.title.text = @"Rainfall";
-        yaxis2.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
+        yaxis2.title.style = [[HIStyle alloc] init];
+        yaxis2.labels.style.color = @"#7cb5ec";
         yaxis2.opposite = @true;
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -8061,7 +8082,7 @@
                        @95.6,
                        @54.4
                        , nil];
-        column.tooltip = [[HIColumnTooltip alloc]init];
+        column.tooltip = [[HITooltip alloc]init];
         column.tooltip.valueSuffix = @" mm";
         
         HISpline *spline = [[HISpline alloc]init];
@@ -8078,7 +8099,7 @@
                        @18.3,
                        @13.9,
                        @9.6, nil];
-        spline.tooltip = [[HISplineTooltip alloc]init];
+        spline.tooltip = [[HITooltip alloc]init];
         spline.tooltip.valueSuffix = @"°C";
         
         
@@ -8092,7 +8113,7 @@
         options.legend = legend;
         options.series = [NSMutableArray arrayWithObjects: column, spline, nil];
         
-
+        
         return options;
     }
     
@@ -8122,34 +8143,40 @@
                             @"Nov",
                             @"Dec"
                             , nil];
-        xaxis.crosshair = [[HIXAxisCrosshair alloc]init];
+        xaxis.crosshair = [[HICrosshair alloc]init];
         
         HIYAxis *yaxis1 = [[HIYAxis alloc]init];
-        yaxis1.labels = [[HIYAxisLabels alloc]init];
+        yaxis1.labels = [[HILabels alloc]init];
         yaxis1.labels.format = @"{value}°C";
-        yaxis1.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#90ed7d", @"color", nil];
-        yaxis1.title = [[HIYAxisTitle alloc]init];
+        yaxis1.labels.style = [[HIStyle alloc] init];
+        yaxis1.labels.style.color = @"#90ed7d";
+        yaxis1.title = [[HITitle alloc]init];
         yaxis1.title.text = @"Temperature";
-        yaxis1.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#90ed7d", @"color", nil];
+        yaxis1.title.style = [[HIStyle alloc] init];
+        yaxis1.title.style.color = @"#90ed7d";
         yaxis1.opposite = @true;
         
         HIYAxis *yaxis2 = [[HIYAxis alloc]init];
         yaxis2.gridLineWidth = @0;
-        yaxis2.labels = [[HIYAxisLabels alloc]init];
+        yaxis2.labels = [[HILabels alloc]init];
         yaxis2.labels.format = @"{value} mm";
-        yaxis2.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-        yaxis2.title = [[HIYAxisTitle alloc]init];
+        yaxis2.labels.style = [[HIStyle alloc] init];
+        yaxis2.labels.style.color = @"#7cb5ec";
+        yaxis2.title = [[HITitle alloc]init];
         yaxis2.title.text = @"Rainfall";
-        yaxis2.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
+        yaxis2.title.style = [[HIStyle alloc] init];
+        yaxis2.title.style.color = @"#7cb5ec";
         
         HIYAxis *yaxis3 = [[HIYAxis alloc]init];
         yaxis3.gridLineWidth = @0;
-        yaxis3.labels = [[HIYAxisLabels alloc]init];
+        yaxis3.labels = [[HILabels alloc]init];
         yaxis3.labels.format = @"{value} mb";
-        yaxis3.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
-        yaxis3.title = [[HIYAxisTitle alloc]init];
+        yaxis3.labels.style = [[HIStyle alloc] init];
+        yaxis3.labels.style.color = @"#434348";
+        yaxis3.title = [[HITitle alloc]init];
         yaxis3.title.text = @"Sea-Level Pressure";
-        yaxis3.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
+        yaxis3.title.style = [[HIStyle alloc] init];
+        yaxis3.title.style.color = @"#434348";
         yaxis3.opposite = @true;
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -8180,7 +8207,7 @@
                        @95.6,
                        @54.4
                        , nil];
-        column.tooltip = [[HIColumnTooltip alloc]init];
+        column.tooltip = [[HITooltip alloc]init];
         column.tooltip.valueSuffix = @" mm";
         
         HISpline *spline1 = [[HISpline alloc]init];
@@ -8198,10 +8225,10 @@
                         @1016.9,
                         @1018.2,
                         @1016.7, nil];
-        spline1.marker = [[HISplineMarker alloc]init];
+        spline1.marker = [[HIMarker alloc]init];
         spline1.marker.enabled = @false;
         spline1.dashStyle = @"shortdot";
-        spline1.tooltip = [[HISplineTooltip alloc]init];
+        spline1.tooltip = [[HITooltip alloc]init];
         spline1.tooltip.valueSuffix = @" mb";
         
         HISpline *spline2 = [[HISpline alloc]init];
@@ -8218,7 +8245,7 @@
                         @18.3,
                         @13.9,
                         @9.6, nil];
-        spline2.tooltip = [[HISplineTooltip alloc]init];
+        spline2.tooltip = [[HITooltip alloc]init];
         spline2.tooltip.valueSuffix = @"°C";
         
         
@@ -8232,7 +8259,7 @@
         options.legend = legend;
         options.series = [NSMutableArray arrayWithObjects: column, spline1, spline2, nil];
         
-
+        
         return options;
     }
     
@@ -8260,12 +8287,13 @@
                        @5,
                        @4.51
                        ] , nil];
-        line.marker = [[HILineMarker alloc]init];
+        line.marker = [[HIMarker alloc]init];
         line.marker.enabled = @false;
-        HILineStates *state = [[HILineStates alloc]init];
-        state.hover = [[HILineStatesHover alloc]init];
+        HIStates *state = [[HIStates alloc]init];
+        state.hover = [[HIHover alloc]init];
         state.hover.lineWidth = @0;
-        line.states = [NSMutableArray arrayWithObject:state];
+        line.states = state;
+        //[NSMutableArray arrayWithObject:state];
         line.enableMouseTracking = @false;
         
         HIScatter *scatter = [[HIScatter alloc]init];
@@ -8276,7 +8304,7 @@
                         @3.5,
                         @3.9,
                         @4.2, nil];
-        scatter.marker = [[HIScatterMarker alloc]init];
+        scatter.marker = [[HIMarker alloc]init];
         scatter.marker.radius = @4;
         
         options.title = title;
@@ -8284,7 +8312,7 @@
         options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
         options.series = [NSMutableArray arrayWithObjects: line, scatter, nil];
         
-
+        
         return options;
     }
     
@@ -8312,7 +8340,7 @@
         yaxis1.minorTickColor = [[HIColor alloc]initWithHexValue:@"339"];
         yaxis1.offset = @(-25);
         yaxis1.lineWidth = @2;
-        yaxis1.labels = [[HIYAxisLabels alloc]init];
+        yaxis1.labels = [[HILabels alloc]init];
         yaxis1.labels.distance = @-20;
         yaxis1.labels.rotation = @0;
         yaxis1.tickLength = @5;
@@ -8329,7 +8357,7 @@
         yaxis2.tickColor = [[HIColor alloc]initWithHexValue:@"933"];
         yaxis2.minorTickColor = [[HIColor alloc]initWithHexValue:@"933"];
         yaxis2.offset = @-20;
-        yaxis2.labels = [[HIYAxisLabels alloc]init];
+        yaxis2.labels = [[HILabels alloc]init];
         yaxis2.labels.distance = @12;
         yaxis2.labels.rotation = @0;
         yaxis2.tickLength = @5;
@@ -8338,7 +8366,7 @@
         
         HIGauge *gauge = [[HIGauge alloc]init];
         gauge.name = @"Speed";
-        gauge.tooltip = [[HIGaugeTooltip alloc]init];
+        gauge.tooltip = [[HITooltip alloc]init];
         gauge.tooltip.valueSuffix = @" km/h";
         gauge.data = [NSMutableArray arrayWithObjects:@80, nil];
         
@@ -8347,7 +8375,7 @@
         options.pane = pane;
         options.yAxis = [NSMutableArray arrayWithObjects:yaxis1, yaxis2, nil];
         options.series = [NSMutableArray arrayWithObjects: gauge, nil];
-
+        
         return options;
     }
     
@@ -8365,7 +8393,7 @@
         HIPane *pane = [[HIPane alloc]init];
         pane.startAngle = @-150;
         pane.endAngle = @150;
-        HIPaneBackground *background1 = [[HIPaneBackground alloc]init];
+        HIBackground *background1 = [[HIBackground alloc]init];
         background1.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
                                                                                @"x1": @0,
                                                                                @"y1": @0,
@@ -8384,8 +8412,8 @@
                                                                                ]];
         background1.borderWidth = @0;
         background1.outerRadius = @"109%";
-        HIPaneBackground *background2 = [[HIPaneBackground alloc]init];
-        background2.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
+        HIBackground *background2 = [[HIBackground alloc]init];
+        background1.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
                                                                                @"x1": @0,
                                                                                @"y1": @0,
                                                                                @"x2": @0,
@@ -8400,10 +8428,10 @@
                                                                                              @"#FFF"
                                                                                              ]
                                                                                          ]];
-        background2.borderWidth = @1;
+                            background2.borderWidth = @1;
         background2.outerRadius = @"107%";
-        HIPaneBackground *background3 = [[HIPaneBackground alloc]init];
-        HIPaneBackground *background4 = [[HIPaneBackground alloc]init];
+        HIBackground *background3 = [[HIBackground alloc]init];
+        HIBackground *background4 = [[HIBackground alloc]init];
         background4.backgroundColor = [[HIColor alloc]initWithHexValue:@"DDD"];
         background4.borderWidth = @0;
         background4.outerRadius = @"105%";
@@ -8413,7 +8441,7 @@
         HIYAxis *yaxis = [[HIYAxis alloc]init];
         yaxis.min = @0;
         yaxis.max = @200;
-        yaxis.minorTickInterval = @"auto";
+        //yaxis.minorTickInterval = @"auto";
         yaxis.minorTickWidth = @1;
         yaxis.minorTickLength = @10;
         yaxis.minorTickPosition = @"inside";
@@ -8423,20 +8451,20 @@
         yaxis.tickPosition = @"inside";
         yaxis.tickLength = @10;
         yaxis.tickColor = [[HIColor alloc]initWithHexValue:@"666"];
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         yaxis.labels.step = @2;
         yaxis.labels.rotation = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"km/h";
-        HIYAxisPlotBands *plotband1 = [[HIYAxisPlotBands alloc]init];
+        HIPlotBands *plotband1 = [[HIPlotBands alloc]init];
         plotband1.from = @0;
         plotband1.to = @120;
         plotband1.color = [[HIColor alloc]initWithHexValue:@"55BF3B"];
-        HIYAxisPlotBands *plotband2 = [[HIYAxisPlotBands alloc]init];
+        HIPlotBands *plotband2 = [[HIPlotBands alloc]init];
         plotband2.from = @120;
         plotband2.to = @160;
         plotband2.color = [[HIColor alloc]initWithHexValue:@"DDDF0D"];
-        HIYAxisPlotBands *plotband3 = [[HIYAxisPlotBands alloc]init];
+        HIPlotBands *plotband3 = [[HIPlotBands alloc]init];
         plotband3.from = @160;
         plotband3.to = @200;
         plotband3.color = [[HIColor alloc]initWithHexValue:@"DF5353"];
@@ -8445,7 +8473,7 @@
         
         HIGauge *gauge = [[HIGauge alloc]init];
         gauge.name = @"Speed";
-        gauge.tooltip = [[HIGaugeTooltip alloc]init];
+        gauge.tooltip = [[HITooltip alloc]init];
         gauge.tooltip.valueSuffix = @" km/h";
         gauge.data = [NSMutableArray arrayWithObject:@80];
         
@@ -8454,7 +8482,7 @@
         options.pane = pane;
         options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
         options.series = [NSMutableArray arrayWithObjects: gauge, nil];
-
+        
         return options;
     }
     
@@ -8503,13 +8531,13 @@
         yaxis.max = @6;
         yaxis.minorTickPosition = @"outside";
         yaxis.tickPosition = @"outside";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         yaxis.labels.distance = @20;
         yaxis.labels.rotation = @0;
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"VU<br/><span style=\"font-size:8px\">Channel</span>";
         yaxis.title.y = @-40;
-        HIYAxisPlotBands *plotband1 = [[HIYAxisPlotBands alloc]init];
+        HIPlotBands *plotband1 = [[HIPlotBands alloc]init];
         plotband1.from = @0;
         plotband1.to = @6;
         plotband1.color = [[HIColor alloc]initWithHexValue:@"C02316"];
@@ -8518,10 +8546,10 @@
         yaxis.plotBands = [NSMutableArray arrayWithObjects:plotband1, nil];
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.gauge = [[HIPlotOptionsGauge alloc]init];
-        plotoptions.gauge.dataLabels = [[HIPlotOptionsGaugeDataLabels alloc]init];
+        plotoptions.gauge = [[HIGauge alloc]init];
+        plotoptions.gauge.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.gauge.dataLabels.enabled = @false;
-        plotoptions.gauge.dial = [[HIPlotOptionsGaugeDial alloc]init];
+        plotoptions.gauge.dial = [[HIDial alloc]init];
         plotoptions.gauge.dial.radius = @"100%";
         
         
@@ -8566,12 +8594,12 @@
                             @"Dec", nil];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Temperature (°C)";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.line = [[HIPlotOptionsLine alloc]init];
-        plotoptions.line.dataLabels = [[HIPlotOptionsLineDataLabels alloc]init];
+        plotoptions.line = [[HILine alloc]init];
+        plotoptions.line.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.line.dataLabels.enabled = @true;
         
         HILine *line1 = [[HILine alloc]init];
@@ -8611,7 +8639,7 @@
         options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: line1, line2, nil];
-
+        
         return options;
     }
     
@@ -8651,7 +8679,7 @@
         options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
         options.series = [NSMutableArray arrayWithObjects: line1, nil];
         
-
+        
         return options;
     }
     
@@ -8671,22 +8699,23 @@
         xaxis.type = @"datetime";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Exchange rate";
         
         HILegend *legend = [[HILegend alloc]init];
         legend.enabled = @false;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.area = [[HIPlotOptionsArea alloc]init];
+        plotoptions.area = [[HIArea alloc]init];
         plotoptions.area.fillColor = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
-        plotoptions.area.marker = [[HIPlotOptionsAreaMarker alloc]init];
+        plotoptions.area.marker = [[HIMarker alloc]init];
         plotoptions.area.marker.radius = @2;
         plotoptions.area.lineWidth = @1;
-        HIPlotOptionsAreaStates *state = [[HIPlotOptionsAreaStates alloc]init];
-        state.hover = [[HIPlotOptionsAreaStatesHover alloc]init];
+        HIStates *state = [[HIStates alloc]init];
+        state.hover = [[HIHover alloc]init];
         state.hover.lineWidth = @1;
-        plotoptions.area.states = [NSMutableArray arrayWithObject:state];
+        plotoptions.area.states = state;
+        //[NSMutableArray arrayWithObject:state];
         
         HIArea *area = [[HIArea alloc]init];
         area.name = @"USD to EUR";
@@ -11321,11 +11350,11 @@
         subtitle.text = @"Source: <a href=\"http://netmarketshare.com/\">netmarketshare.com</a>";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Total percent market share";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.pie = [[HIPlotOptionsPie alloc]init];
+        plotoptions.pie = [[HIPie alloc]init];
         plotoptions.pie.shadow = @false;
         plotoptions.pie.center = [NSMutableArray arrayWithObjects:@"50%", @"50%", nil];
         
@@ -11335,7 +11364,7 @@
         HIPie *pie1 = [[HIPie alloc]init];
         pie1.name = @"Browsers";
         pie1.size = @"60%";
-        pie1.dataLabels = [[HIPieDataLabels alloc]init];
+        pie1.dataLabels = [[HIDataLabels alloc]init];
         pie1.dataLabels.enabled = @false;
         pie1.data = [NSMutableArray arrayWithObjects:
                      @{
@@ -11373,7 +11402,7 @@
         pie2.name = @"Versions";
         pie2.size = @"80%";
         pie2.innerSize = @"60%";
-        pie2.dataLabels = [[HIPieDataLabels alloc]init];
+        pie2.dataLabels = [[HIDataLabels alloc]init];
         pie2.dataLabels.format = @"<b>{point.name}: </b>{point.y}%";
         pie2.data = [NSMutableArray arrayWithObjects:@{
                                                        @"name": @"MSIE 6.0",
@@ -11579,7 +11608,7 @@
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: pie1, pie2, nil];
         
-
+        
         return options;
     }
     
@@ -11601,8 +11630,8 @@
         tooltip.pointFormat = @"<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.series = [[HIPlotOptionsSeries alloc]init];
-        plotoptions.series.dataLabels = [[HIPlotOptionsSeriesDataLabels alloc]init];
+        plotoptions.series = [[HISeries alloc]init];
+        plotoptions.series.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.series.dataLabels.enabled = @true;
         plotoptions.series.dataLabels.format = @"{point.name}: {point.y:.1f}%";
         
@@ -11830,7 +11859,7 @@
         options.drilldown = drilldown;
         options.series = [NSMutableArray arrayWithObjects: pie, nil];
         
-
+        
         return options;
     }
     
@@ -11993,13 +12022,14 @@
         tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.pie = [[HIPlotOptionsPie alloc]init];
+        plotoptions.pie = [[HIPie alloc]init];
         plotoptions.pie.allowPointSelect = @true;
         plotoptions.pie.cursor = @"pointer";
-        plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
+        plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.pie.dataLabels.enabled = @true;
         plotoptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
-        plotoptions.pie.dataLabels.style = @{@"color": @"black"};
+        plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
+        plotoptions.pie.dataLabels.style.color = @"black";
         plotoptions.pie.dataLabels.connectorColor = @"silver";
         
         HIPie *pie = [[HIPie alloc]init];
@@ -12040,7 +12070,7 @@
         options.tooltip = tooltip;
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects:pie,  nil];
-    
+        
         return options;
     }
     
@@ -12060,10 +12090,10 @@
         tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.pie = [[HIPlotOptionsPie alloc]init];
+        plotoptions.pie = [[HIPie alloc]init];
         plotoptions.pie.allowPointSelect = @true;
         plotoptions.pie.cursor = @"pointer";
-        plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
+        plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.pie.dataLabels.enabled = @false;
         plotoptions.pie.showInLegend = @true;
         
@@ -12104,7 +12134,7 @@
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects:pie,  nil];
         
-
+        
         return options;
     }
     
@@ -12137,13 +12167,14 @@
         tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.pie = [[HIPlotOptionsPie alloc]init];
+        plotoptions.pie = [[HIPie alloc]init];
         plotoptions.pie.allowPointSelect = @true;
         plotoptions.pie.cursor = @"pointer";
-        plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
+        plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.pie.dataLabels.enabled = @true;
         plotoptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
-        plotoptions.pie.dataLabels.style = @{@"color": @"black"};
+        plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
+        plotoptions.pie.dataLabels.style.color = @"black";
         
         HIPie *pie = [[HIPie alloc]init];
         pie.name = @"Brands";
@@ -12182,7 +12213,7 @@
         options.tooltip = tooltip;
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects:pie,  nil];
-
+        
         return options;
     }
     
@@ -12204,17 +12235,19 @@
         tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.pie = [[HIPlotOptionsPie alloc]init];
-        plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
+        plotoptions.pie = [[HIPie alloc]init];
+        plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.pie.dataLabels.enabled = @true;
         plotoptions.pie.dataLabels.distance = @-50;
-        plotoptions.pie.dataLabels.style = @{@"color": @"white", @"fontWeight" : @"bold", @"textShadow" : @"0px 1px 2px black"};
+        plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
+        plotoptions.pie.dataLabels.style.fontWeight = @"white";
+        plotoptions.pie.dataLabels.style.textOutline = @"0px 1px 2px black";
         plotoptions.pie.startAngle = @-90;
         plotoptions.pie.endAngle = @90;
         plotoptions.pie.center = @[@"50%", @"75%"];
         
         HIPie *pie = [[HIPie alloc]init];
-        HIPieData *data = [[HIPieData alloc]init];
+        HIData *data = [[HIData alloc]init];
         data.name = @"Proprietary or Undetectable";
         data.y = @0.2;
         data.dataLabels = @{@"enabled": @false};
@@ -12249,7 +12282,7 @@
         options.tooltip = tooltip;
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects:pie,  nil];
-
+        
         return options;
     }
     
@@ -12326,7 +12359,7 @@
         options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
         options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
         options.series = [NSMutableArray arrayWithObjects:line1, line2, nil];
-
+        
         return options;
     }
     
@@ -12341,14 +12374,14 @@
         
         HIXAxis *xaxis = [[HIXAxis alloc]init];
         xaxis.gridLineWidth = @1;
-        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"Height (cm)";
         xaxis.startOnTick = @true;
         xaxis.endOnTick = @true;
         xaxis.showLastLabel = @true;
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Weight (kg)";
         
         HILegend *legend = [[HILegend alloc]init];
@@ -13479,8 +13512,8 @@
         legend.enabled = @true;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.pyramid = [[HIPlotOptionsPyramid alloc]init];
-        plotoptions.pyramid.dataLabels = [[HIPlotOptionsPyramidDataLabels alloc]init];
+        plotoptions.pyramid = [[HIPyramid alloc]init];
+        plotoptions.pyramid.dataLabels = [[HIDataLabels alloc]init];
         plotoptions.pyramid.dataLabels.enabled = @true;
         plotoptions.pyramid.dataLabels.format = @"<b>{point.name}</b> ({point.y:,.0f})";
         plotoptions.pyramid.dataLabels.color = [[HIColor alloc]initWithName:@"black"];
@@ -13517,7 +13550,7 @@
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects: pyramind, nil];
         
-
+        
         return options;
     }
     
@@ -13536,15 +13569,14 @@
         
         HIXAxis *xaxis = [[HIXAxis alloc]init];
         xaxis.type = @"datetime";
-        xaxis.dateTimeLabelFormats = @{
-                                       @"month": @"%e. %b",
-                                       @"year": @"%b"
-                                       };
-        xaxis.title = [[HIXAxisTitle alloc]init];
+        xaxis.dateTimeLabelFormats = [[HIDateTimeLabelFormats alloc] init];
+        xaxis.dateTimeLabelFormats.month = @"%e. %b";
+        xaxis.dateTimeLabelFormats.year = @"%b";
+        xaxis.title = [[HITitle alloc]init];
         xaxis.title.text = @"Date";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Snow depth (m)";
         yaxis.min = @0;
         
@@ -13553,8 +13585,8 @@
         tooltip.pointFormat = @"{point.x:%e. %b}: {point.y:.2f} m";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.spline = [[HIPlotOptionsSpline alloc]init];
-        plotoptions.spline.marker = [[HIPlotOptionsSplineMarker alloc]init];
+        plotoptions.spline = [[HISpline alloc]init];
+        plotoptions.spline.marker = [[HIMarker alloc]init];
         plotoptions.spline.marker.enabled = @true;
         
         HISpline *spline1 = [[HISpline alloc]init];
@@ -13794,7 +13826,7 @@
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects:spline1, spline2, spline3, nil];
         
-
+        
         return options;
     }
     
@@ -13812,64 +13844,71 @@
         
         HIXAxis *xaxis = [[HIXAxis alloc]init];
         xaxis.type = @"datetime";
-        xaxis.labels = [[HIXAxisLabels alloc]init];
+        xaxis.labels = [[HILabels alloc]init];
         xaxis.labels.overflow = @"justify";
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Wind speed (m/s)";
         yaxis.minorGridLineWidth = @0;
         yaxis.gridLineWidth = @0;
         yaxis.alternateGridColor = [[HIColor alloc]init];
-        HIYAxisPlotBands *band1 = [[HIYAxisPlotBands alloc]init];
+        HIPlotBands *band1 = [[HIPlotBands alloc]init];
         band1.from = @0.3;
         band1.to = @1.5;
         band1.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:0.1];
-        band1.label = [[HIYAxisPlotBandsLabel alloc]init];
+        band1.label = [[HILabel alloc]init];
         band1.label.text = @"Light air";
-        band1.label.style = @{@"color": @"#606060"};
-        HIYAxisPlotBands *band2 = [[HIYAxisPlotBands alloc]init];
+        band1.label.style = [[HIStyle alloc] init];
+        band1.label.style.color = @"#606060";
+        HIPlotBands *band2 = [[HIPlotBands alloc]init];
         band2.from = @1.5;
         band2.to = @3.3;
         band2.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
-        band2.label = [[HIYAxisPlotBandsLabel alloc]init];
+        band2.label = [[HILabel alloc]init];
         band2.label.text = @"Light breeze";
-        band2.label.style = @{@"color": @"#606060"};
-        HIYAxisPlotBands *band3 = [[HIYAxisPlotBands alloc]init];
+        band2.label.style = [[HIStyle alloc] init];
+        band2.label.style.color = @"#606060";
+        HIPlotBands *band3 = [[HIPlotBands alloc]init];
         band3.from = @3.3;
         band3.to = @5.5;
         band3.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:0.1];
-        band3.label = [[HIYAxisPlotBandsLabel alloc]init];
+        band3.label = [[HILabel alloc]init];
         band3.label.text = @"Gentel breeze";
-        band3.label.style = @{@"color": @"#606060"};
-        HIYAxisPlotBands *band4 = [[HIYAxisPlotBands alloc]init];
+        band3.label.style = [[HIStyle alloc] init];
+        band3.label.style.color = @"#606060";
+        HIPlotBands *band4 = [[HIPlotBands alloc]init];
         band4.from = @5.5;
         band4.to = @8;
         band4.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
-        band4.label = [[HIYAxisPlotBandsLabel alloc]init];
+        band4.label = [[HILabel alloc]init];
         band4.label.text = @"Moderate breeze";
-        band4.label.style = @{@"color": @"#606060"};
-        HIYAxisPlotBands *band5 = [[HIYAxisPlotBands alloc]init];
+        band4.label.style = [[HIStyle alloc] init];
+        band4.label.style.color = @"#606060";
+        HIPlotBands *band5 = [[HIPlotBands alloc]init];
         band5.from = @8;
         band5.to = @11;
         band5.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:0.1];
-        band5.label = [[HIYAxisPlotBandsLabel alloc]init];
+        band5.label = [[HILabel alloc]init];
         band5.label.text = @"Fresh breeze";
-        band5.label.style = @{@"color": @"#606060"};
-        HIYAxisPlotBands *band6 = [[HIYAxisPlotBands alloc]init];
+        band5.label.style = [[HIStyle alloc] init];
+        band5.label.style.color = @"#606060";
+        HIPlotBands *band6 = [[HIPlotBands alloc]init];
         band6.from = @11;
         band6.to = @14;
         band6.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
-        band6.label = [[HIYAxisPlotBandsLabel alloc]init];
+        band6.label = [[HILabel alloc]init];
         band6.label.text = @"Strong breeze";
-        band6.label.style = @{@"color": @"#606060"};
-        HIYAxisPlotBands *band7 = [[HIYAxisPlotBands alloc]init];
+        band6.label.style = [[HIStyle alloc] init];
+        band6.label.style.color = @"#606060";
+        HIPlotBands *band7 = [[HIPlotBands alloc]init];
         band7.from = @14;
         band7.to = @15;
         band7.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:0.1];
-        band7.label = [[HIYAxisPlotBandsLabel alloc]init];
+        band7.label = [[HILabel alloc]init];
         band7.label.text = @"High wind";
-        band7.label.style = @{@"color": @"#606060"};
+        band7.label.style = [[HIStyle alloc] init];
+        band7.label.style.color = @"#606060";
         yaxis.plotBands = @[band1, band2, band3, band4, band5, band6, band7];
         
         
@@ -13877,13 +13916,13 @@
         tooltip.valueSuffix = @" m/s";
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.spline = [[HIPlotOptionsSpline alloc]init];
+        plotoptions.spline = [[HISpline alloc]init];
         plotoptions.spline.lineWidth = @4;
-        HIPlotOptionsSplineStates *state = [[HIPlotOptionsSplineStates alloc]init];
-        state.hover = [[HIPlotOptionsSplineStatesHover alloc]init];
+        HIStates *state = [[HIStates alloc]init];
+        state.hover = [[HIHover alloc]init];
         state.hover.lineWidth = @5;
-        plotoptions.spline.states = @[state];
-        plotoptions.spline.marker = [[HIPlotOptionsSplineMarker alloc]init];
+        plotoptions.spline.states = state;
+        plotoptions.spline.marker = [[HIMarker alloc]init];
         plotoptions.spline.marker.enabled = @false;
         plotoptions.spline.pointInterval = @3600000;
         plotoptions.spline.pointStart = @1433030400000;
@@ -13997,7 +14036,8 @@
                          ];
         
         HINavigation *navigation = [[HINavigation alloc]init];
-        navigation.menuItemStyle = @{@"fontSize": @"10px"};
+        navigation.menuItemStyle = [[HIMenuItemStyle alloc] init];
+        navigation.menuItemStyle.fontSize = @"10px";
         
         
         
@@ -14011,7 +14051,7 @@
         options.navigation = navigation;
         options.series = [NSMutableArray arrayWithObjects:spline1, spline2, nil];
         
-
+        
         return options;
     }
     
@@ -14044,9 +14084,9 @@
                              ];
         
         HIYAxis *yaxis = [[HIYAxis alloc]init];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"Temperature";
-        yaxis.labels = [[HIYAxisLabels alloc]init];
+        yaxis.labels = [[HILabels alloc]init];
         
         
         HITooltip *tooltip = [[HITooltip alloc]init];
@@ -14054,19 +14094,19 @@
         tooltip.shared = @true;
         
         HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-        plotoptions.spline = [[HIPlotOptionsSpline alloc]init];
-        plotoptions.spline.marker = [[HIPlotOptionsSplineMarker alloc]init];
+        plotoptions.spline = [[HISpline alloc]init];
+        plotoptions.spline.marker = [[HIMarker alloc]init];
         plotoptions.spline.marker.radius = @4;
         plotoptions.spline.marker.lineColor = [[HIColor alloc]initWithHexValue:@"666666"];
         plotoptions.spline.marker.lineWidth = @1;
         
         HISpline *spline1 = [[HISpline alloc]init];
         spline1.name = @"Tokyo";
-        spline1.marker = [[HISplineMarker alloc]init];
+        spline1.marker = [[HIMarker alloc]init];
         spline1.marker.symbol = @"square";
-        HISplineData *data1 = [[HISplineData alloc]init];
+        HIData *data1 = [[HIData alloc]init];
         data1.y = @26.5;
-        data1.marker = [[HISplineDataMarker alloc]init];
+        data1.marker = [[HIMarker alloc]init];
         data1.marker.symbol = @"url(https://www.highcharts.com/samples/graphics/sun.png)";
         spline1.data = @[
                          @7,
@@ -14086,11 +14126,11 @@
         
         HISpline *spline2 = [[HISpline alloc]init];
         spline2.name = @"London";
-        spline2.marker = [[HISplineMarker alloc]init];
+        spline2.marker = [[HIMarker alloc]init];
         spline2.marker.symbol = @"diamond";
-        HISplineData *data2 = [[HISplineData alloc]init];
+        HIData *data2 = [[HIData alloc]init];
         data2.y = @3.9;
-        data2.marker = [[HISplineDataMarker alloc]init];
+        data2.marker = [[HIMarker alloc]init];
         data2.marker.symbol = @"url(https://www.highcharts.com/samples/graphics/snow.png)";
         spline2.data = @[
                          data2,
@@ -14116,7 +14156,7 @@
         options.plotOptions = plotoptions;
         options.series = [NSMutableArray arrayWithObjects:spline1, spline2, nil];
         
-
+        
         return options;
     }
     else if ([type isEqualToString:@"Heatmap"]) {
@@ -14156,7 +14196,7 @@
                              @"Thursday",
                              @"Friday"
                              ];
-        yaxis.title = [[HIYAxisTitle alloc]init];
+        yaxis.title = [[HITitle alloc]init];
         yaxis.title.text = @"";
         options.yAxis = @[yaxis];
         
@@ -14176,7 +14216,7 @@
         HIHeatmap *heatmap = [[HIHeatmap alloc]init];
         heatmap.name = @"Sales per employee";
         heatmap.borderWidth = @1;
-        heatmap.dataLabels = [[HIHeatmapDataLabels alloc]init];
+        heatmap.dataLabels = [[HIDataLabels alloc]init];
         heatmap.dataLabels.enabled = @true;
         heatmap.dataLabels.color = [[HIColor alloc]initWithHexValue:@"000000"];
         heatmap.data = @[
@@ -14445,31 +14485,31 @@
         
         HITreemap *treemap = [[HITreemap alloc]init];
         treemap.layoutAlgorithm = @"squarified";
-        HITreemapData *data1 = [[HITreemapData alloc]init];
+        HIData *data1 = [[HIData alloc]init];
         data1.name = @"A";
         data1.value = @6;
         data1.colorValue = @1;
-        HITreemapData *data2 = [[HITreemapData alloc]init];
+        HIData *data2 = [[HIData alloc]init];
         data2.name = @"B";
         data2.value = @6;
         data2.colorValue = @2;
-        HITreemapData *data3 = [[HITreemapData alloc]init];
+        HIData *data3 = [[HIData alloc]init];
         data3.name = @"C";
         data3.value = @4;
         data3.colorValue = @3;
-        HITreemapData *data4 = [[HITreemapData alloc]init];
+        HIData *data4 = [[HIData alloc]init];
         data4.name = @"D";
         data4.value = @3;
         data4.colorValue = @4;
-        HITreemapData *data5 = [[HITreemapData alloc]init];
+        HIData *data5 = [[HIData alloc]init];
         data5.name = @"E";
         data5.value = @2;
         data5.colorValue = @5;
-        HITreemapData *data6 = [[HITreemapData alloc]init];
+        HIData *data6 = [[HIData alloc]init];
         data6.name = @"F";
         data6.value = @2;
         data6.colorValue = @6;
-        HITreemapData *data7 = [[HITreemapData alloc]init];
+        HIData *data7 = [[HIData alloc]init];
         data7.name = @"G";
         data7.value = @1;
         data7.colorValue = @7;
@@ -14501,10 +14541,10 @@
         treemap.layoutAlgorithm = @"squarified";
         treemap.allowDrillToNode = @true;
         treemap.animationLimit = @1000;
-        treemap.dataLabels = [[HITreemapDataLabels alloc]init];
+        treemap.dataLabels = [[HIDataLabels alloc]init];
         treemap.dataLabels.enabled = @false;
         treemap.levelIsConstant = @false;
-        HITreemapLevels *level = [[HITreemapLevels alloc]init];
+        HILevels *level = [[HILevels alloc]init];
         level.level = @1;
         level.dataLabels = @{
                              @"enabled": @true
@@ -14513,7 +14553,7 @@
         treemap.levels = @[level];
         treemap.data = [self data];
         options.series = @[treemap];
-
+        
         return options;
     }
     else if ([type isEqualToString:@"Treemap With Levels"]) {
@@ -14526,7 +14566,7 @@
         HITreemap *treemap = [[HITreemap alloc]init];
         treemap.layoutAlgorithm = @"stripes";
         treemap.alternateStartingDirection = @true;
-        HITreemapLevels *level = [[HITreemapLevels alloc]init];
+        HILevels *level = [[HILevels alloc]init];
         level.level = @1;
         level.layoutAlgorithm = @"sliceAndDice";
         level.dataLabels = @{
@@ -14610,7 +14650,7 @@
         
         
         options.series = @[treemap];
-
+        
         return options;
     }
     //MARK: Default
@@ -14632,7 +14672,7 @@
         HIXAxis *xAxis = [[HIXAxis alloc]init];
         
         HIYAxis *yAxis = [[HIYAxis alloc]init];
-        yAxis.title = [[HIYAxisTitle alloc]init];
+        yAxis.title = [[HITitle alloc]init];
         yAxis.title.text = @"";
         yAxis.tickAmount = @1;
         
@@ -14662,7 +14702,7 @@
         
         return options;
     }
-
+    
     
 }
 
@@ -18661,8 +18701,8 @@
                  @"value": @723
                  }
              ];
-    
 }
 
 
 @end
+

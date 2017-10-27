@@ -1,35 +1,33 @@
 # Highcharts Swift
 #### Blog article 
 
-The following article summarises how to use Highcharts iOS library in Swift. 
-
-We are going to visualize statistical data on four of the best Champions League teams in 2016/2017 season.
+The following article summarises how to use Highcharts iOS library in Swift.
+We are going to visualize statistical data on four best Champions League teams in 2016/2017 season.
 
 # How to create a Highcharts project
 
 ## Getting Started
 
 - Create a new Project in Xcode, and choose the **iOS\Application\Single View App** template.
-
-![alt text](https://github.com/highcharts/highcharts-ios/blob/master/Example/article/screen1.png)
-
+*screen1*
+![alt text](screen1)
 Name the project. Choose **Swift** for Language. Leave Use Core Data, Include Unit Tests, Include UI Tests unchecked and finish creating the project.
 
 - Download Highcharts framework from here: [Highcharts](https://github.com/highcharts/highcharts-ios) 
-or by using **Cocoapods** by adding 
+or by using Cocoapods by adding 
     ```
     pod 'Highcharts', '~> 1.1'
     ```
     to your Podfile
     
-    or **Carthage** by adding
+    or Carthage by adding
     ```
     github "https://github.com/highcharts/highcharts-ios" >= 1.1.0
     ```
     to your Cartfile
     
     
-- Now add Highcharts to your project by simply copying it to your project to the folder **Frameworks** (create if necessary) and remeber to check "**Copy items if needed**" option
+- Now add Highcharts to your project by simply copying it to your project to folder **Frameworks** (create it if necessary) and remeber to check "**Copy items if needed**" option
 
 ![alt text](https://github.com/highcharts/highcharts-ios/blob/master/Images/3.png "Files")
 
@@ -74,7 +72,7 @@ Let's start with creating the chart!
 
 We will create a basic column chart to visualize some stats of the top 4 teams in UEFA Champions League 2016/17.
 
-In **viewDidLoad** add the following lines
+In **viewDidLoad** add following lines
 ```swift
 self.chartView = HIChartView(frame: self.view.bounds)
 ```
@@ -88,7 +86,7 @@ Create instance of **HIOptions** class
 let options = HIOptions()
 ```
 
-Object of this class will be used to set up all needed options for the chart. It is worth noting that only a few of them are **neccesary** to create the chart (for example **series** - which will be discussed later in this article). Let’s start with configuring the **chart** variable. To do this, we will need **HIChart** class:
+Object of this class will be used to set up all needed options for the chart. It is worth noting that only few of them are **neccesary** to create the chart (for example **series** - which will be discussed later in this article). Let’s start with configuring **chart** variable. To do this, we will need **HIChart** class:
 
 ```swift
 let chart = HIChart()
@@ -97,9 +95,9 @@ chart.type = "column"
 options.chart = chart
 ```
 
-In the second line, in the above code we have chosen the chart type by **type** variable from **HIChart** class. **HIChart** class offers much more but in our example this lone variable is sufficient. In the last line, we added chart to the options. It is a good practice to add everything to your options object at once to avoid missing some of them.
+In the second line in above code we have chosen the chart type by **type** variable from **HIChart** class. **HIChart** class offers much more but in our example this lone variable is sufficient. In the last line we added chart to the options. It is a good practice to add everything to your options object at once to avoid missing some of them.
 
-At this moment it is worth giving our chart a proper name:
+At this moment it is worth to give our chart a proper name:
 
 ```swift
 let title = HITitle()
@@ -114,7 +112,7 @@ options.subtitle = subtitle
 
 Title of the chart managed by **HITitle** class while **HISubtitle** is responsible for subtitle. In the last two lines, again, we added set up objects to options.
 
-If there is a need to change default axes names, you need to do this yourself:
+If there is a need to change default axes names you need to do this yourself:
 
 ```swift
 let xAxis = HIXAxis()
@@ -133,7 +131,7 @@ yAxis.title.text = "Number"
 options.yAxis = [yAxis]
 ```
 
-As you can see, variable **categories** in the **HIXAxis** class is an array of 'String' elements. So, you need to initialize an array with the proper names. In the end, as usual, add this to the options class. Next, we defined Y axis. Variable **min** determines the start of the axis scale. You might notice that the field title type is **HIYAxisTitle** class, which is used to modify the Y axis title. Chart can have a few X and Y axes depending on needs, that’s why it is added to options as an array too.
+As you can see, variable **categories** in the **HIXAxis** class is an array of 'String' elements. So, you need to initialize an array with the proper names. In the end, as usual, add this to the options class. Next, we defined Y axis. Variable **min** determines the start of the axis scale. You might notice that field title type is **HIYAxisTitle** class, which is used to modify the Y axis title. Chart can have a few X and Y axes depends on needs, that’s why it is added to options as array too.
 
 Now, we will discuss the tooltip matters. Consider the following code:
 
@@ -147,7 +145,7 @@ tooltip.useHTML = true
 options.tooltip = tooltip
 ```
 
-To manage tooltip you need to create **HITooltip** class. Tooltip is the thing which is displayed when you tap the specific chart data. You have some variables here which let you format the tooltip. All formatters are were explained in the documentation. In this article it is worth noting that you must turn on the **useHTML** flag to let your chart use the HTML formatting. Whareas **share** flag lets you show one tooltip, no matter which of the series you tap from the same category.
+To manage tooltip you need to create **HITooltip** class. Tooltip is the thing which is showing up when you tap the specific chart data. You have some variables here which let you format the tooltip. All formatters are nice explained in the documentation. In this article it is worth noting that you must turn on the **useHTML** flag to let your chart use the HTML formatting. Whareas **share** flag let you show one tooltip no matter which of the series you tap from the same category.
 
 At this moment, we can add some chart type specific options:
 
@@ -159,9 +157,9 @@ plotOptions.column.borderWidth = 0
 options.plotOptions = plotOptions
 ```
 
-In the above code, we added the new **HIPlotOptions** class object. We use only the **column** field because this is the exact type of our chart - that is why we created assigned to it **HIPlotOptionsColumn** class instance. **poinPadding** is padding between each column and **borderWidth** is the width of the border surrounding each column.
+In the above code, we added new **HIPlotOptions** class object. We use only **column** field because this is the exact type of our chart - that is why we created assigned to it **HIPlotOptionsColumn** class instance. **poinPadding** is padding between each column and **borderWidth** the width of the border surrounding each column.
 
-For now, we were talking only about options in our column chart. You may ask: where are the columns in here exactly? Well, we will add them now!
+For know, we was talking only about options in our column chart. You may ask: where are the columns in here exactly? Well, we will add them now!
 
 ```swift
 let realMadrid = HIColumn()
@@ -183,7 +181,7 @@ atleticoMadrid.data = [15, 9, 55, 160]
 options.series = [realMadrid, juventus, monaco, atleticoMadrid]
 ```
 
-In the above code, you can see four different columns. Each of them contains data of different clubs. Let’s talk about first one (the rest is done in the same way). At first, we created **HIColumn** object which is responsible for column implementation. Next, we added name for it and initialized data's array with data to present. At this moment, you are probably curious why we didn’t add any of those columns to options. The answer is simple. Columns need to be added to the series first! **Series** is an special array containing **HISeries** objects. Each of chart type objects extends **HISeries** class, so we can add all our columns to the array without any trouble as you can see in the last line.
+In the above code you can see four different columns. Each of them contains data of different club. Let’s talk about first one (the rest is done in the same way). At first, we created **HIColumn** object which is responsible for column implementation. Next, we added name for it and initialized data's array with data to present. At this moment, you are probably curious why we didn’t add any of those columns to options. The answer is simple. Columns need to be added to the series first! **Series** is an special array containing **HISeries** objects. Each of chart type objects extends **HISeries** class, so we can add all our columns to the array without any trouble as you can see in the last line.
 
 Now, when everything is done, we can finish our work:
 
@@ -195,4 +193,5 @@ self.view.addSubview(self.chartView)
 
 We have added all our options to the **HIGChartView** created at the beginning. The last thing to do is add our **chartView** to the view hierarchy. That’s it! We created the chart. The result should look like this:
 
-![alt text](https://github.com/highcharts/highcharts-ios/blob/master/Example/article/screen2.png)
+*screen2*
+![alt text](screen2)

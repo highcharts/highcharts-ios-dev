@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HILoadingLabelStyle.h"
-#import "HILoadingStyle.h"
+#import "HILabelStyle.h"
+#import "HIStyle.h"
 
 
 /**
@@ -28,15 +28,14 @@ object, but part of the lang object.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/loading/general/ : Label styles
 * default: { "fontWeight": "bold", "position": "relative", "top": "45%" }
 */
-@property(nonatomic, readwrite) HILoadingLabelStyle *labelStyle;
+@property(nonatomic, readwrite) HILabelStyle *labelStyle;
 /**
 * description: CSS styles for the loading screen that covers the plot area.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/ : Gray plot area, white text
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/loading/general/ : Gray plot area, white text
 * default: { "position": "absolute", "backgroundColor": "#ffffff", "opacity": 0.5, "textAlign": "center" }
 */
-@property(nonatomic, readwrite) HILoadingStyle *style;
+@property(nonatomic, readwrite) HIStyle *style;
 /**
 * description: The duration in milliseconds of the fade in effect.
 

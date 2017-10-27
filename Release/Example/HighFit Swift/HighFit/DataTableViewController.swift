@@ -217,7 +217,7 @@ class DataTableViewController: UITableViewController, HIChartViewDelegate {
     
     // MARK: - Additional methods
     
-    func actionSwitch(_ actionSwitch: UISwitch) {
+    @objc func actionSwitch(_ actionSwitch: UISwitch) {
         // Show or hide chart on dashboard.
         if actionSwitch.isOn {
             DashboardViewController.sharedDashboard().dataSourceAdd(self.configuration)
