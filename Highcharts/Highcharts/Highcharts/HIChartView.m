@@ -143,6 +143,14 @@ static BOOL preloaded = NO;
         self.plugins = @[];
     }
     
+    if (!self.lang) {
+        self.lang = [[HILang alloc] init];
+    }
+    
+    if (!self.global) {
+        self.global = [[HIGlobal alloc] init];
+    }
+    
     // Load Highchart main scripts.
     [self.HTML prepareJavaScript:@"highcharts" prefix:@"js/" suffix:@".js"];
     [self.HTML prepareJavaScript:@"highcharts-more" prefix:@"js/" suffix:@".js"];
@@ -164,6 +172,7 @@ static BOOL preloaded = NO;
     
     // Load theme js, only one.
     [self.HTML prepareJavaScript:self.theme?:nil prefix:@"js/themes/" suffix:@".js"];
+    [self.HTML prepareLang:[self.lang getParams] Global:[self.global getParams]];
     [self.HTML prepareOptions:[self.options getParams]];
     [self.HTML injectJavaScriptToHTML];
     
