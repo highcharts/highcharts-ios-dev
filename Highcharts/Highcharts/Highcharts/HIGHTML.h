@@ -35,6 +35,16 @@
 @property (strong, nonatomic) NSString *options;
 
 /**
+ *  This is lang object injected to WebView.
+ */
+@property (strong, nonatomic) NSString *lang;
+
+/**
+ *  This is global object injected to WebView.
+ */
+@property (strong, nonatomic) NSString *global;
+
+/**
  *  Loads html from location.
  *
  *  @param path to HTML file to load.
@@ -56,6 +66,13 @@
  *  @param options NSDictionary object.
  */
 - (void)prepareOptions:(NSDictionary*)options;
+
+/**
+ *  Prepare lang and global objective-c objects to JS representation.
+ *
+ *  @params lang and global are NSDictionary objects.
+ */
+- (void)prepareLang:(NSDictionary*)lang Global:(NSDictionary*)global;
 
 /**
  *  Prepare width and height in htm for proper display.
