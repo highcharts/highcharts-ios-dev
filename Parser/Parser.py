@@ -821,7 +821,7 @@ def generate_documentation():
         fullname = tree[field].info["fullname"]
         if structure[field].properties:
             isParent = True
-            returnType = "HI" + upper_first(create_name(field))
+            returnType = "HI" + upper_first(create_short_name(field))
         elif structure[field].data_type:
             returnType = get_type(structure[field].data_type)
         parent = None
