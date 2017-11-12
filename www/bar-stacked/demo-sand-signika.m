@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -31,14 +31,14 @@
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Total fruit consumption";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.reversed = @true;
+    legend.reversed = [[NSNumber alloc] initWithBool:true];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.series = [[HIPlotOptionsSeries alloc]init];
+    plotoptions.series = [[HISeries alloc]init];
     plotoptions.series.stacking = @"normal";
     
     HIBar *bar1 = [[HIBar alloc]init];

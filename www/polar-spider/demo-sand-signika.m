@@ -10,12 +10,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
     HIChart *chart = [[HIChart alloc]init];
-    chart.polar = @true;
+    chart.polar = [[NSNumber alloc] initWithBool:true];
     chart.type = @"line";
     
     HITitle *title = [[HITitle alloc]init];
@@ -43,7 +43,7 @@
     yaxis.gridLineInterpolation = @"polygon";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     tooltip.pointFormat = @"<span style=\"color:{series.color}\">{series.name}: <b>${point.y:,.0f}</b><br/>";
     
     HILegend *legend = [[HILegend alloc]init];

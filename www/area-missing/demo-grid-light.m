@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -25,7 +25,7 @@
     
     HISubtitle *subtitle = [[HISubtitle alloc]init];
     subtitle.text = @"* Jane's banana consumption is unknown";
-    subtitle.floating = @true;
+    subtitle.floating = [[NSNumber alloc] initWithBool:true];
     subtitle.align = @"right";
     subtitle.verticalAlign = @"bottom";
     subtitle.y = @15;
@@ -41,9 +41,9 @@
                         @"Raspberries", nil];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Y-Axis";
-    yaxis.labels = [[HIYAxisLabels alloc]init];
+    yaxis.labels = [[HILabels alloc]init];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     
@@ -53,16 +53,16 @@
     legend.verticalAlign = @"top";
     legend.x = @150;
     legend.y = @100;
-    legend.floating = @true;
+    legend.floating = [[NSNumber alloc] initWithBool:true];
     legend.borderWidth = @1;
     legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.area = [[HIPlotOptionsArea alloc]init];
+    plotoptions.area = [[HIArea alloc]init];
     plotoptions.area.fillOpacity = @0.5;
     
     HICredits *credits = [[HICredits alloc]init];
-    credits.enabled = @false;
+    credits.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIArea *area1 = [[HIArea alloc]init];
     area1.name = @"John";

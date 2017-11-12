@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -18,7 +18,7 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"columnrange";
-    chart.inverted = @true;
+    chart.inverted = [[NSNumber alloc] initWithBool:true];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Temperature variation by month";
@@ -41,20 +41,20 @@
                         @"Dec", nil];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Temperature ( °C )";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.valueSuffix = @"°C";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.columnrange = [[HIPlotOptionsColumnrange alloc]init];
-    plotoptions.columnrange.dataLabels = [[HIPlotOptionsColumnrangeDataLabels alloc]init];
-    plotoptions.columnrange.dataLabels.enabled = @true;
+    plotoptions.columnrange = [[HIColumnrange alloc]init];
+    plotoptions.columnrange.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.columnrange.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.columnrange.dataLabels.format = @"{point.y}°C";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIColumnrange *series = [[HIColumnrange alloc]init];
     series.name = @"Temperatures";

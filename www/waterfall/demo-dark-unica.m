@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -26,9 +26,9 @@
     xAxis.type = @"category";
     
     HIYAxis *yAxis = [[HIYAxis alloc]init];
-    yAxis.title = [[HIYAxisTitle alloc]init];
+    yAxis.title = [[HITitle alloc]init];
     yAxis.title.text = @"USD";
-    yAxis.labels = [[HIYAxisLabels alloc]init];
+    yAxis.labels = [[HILabels alloc]init];
     yAxis.labels.format = @"{value}k";
     
     HILegend *legend = [[HILegend alloc]init];
@@ -43,7 +43,7 @@
     
     //You can add objects by hand or creating data objects - one presented below:
     
-    HIWaterfallData *data = [[HIWaterfallData alloc]init];
+    HIData *data = [[HIData alloc]init];
     data.name = @"Positive Balance";
     data.isIntermediateSum = @true;
     data.color = [[HIColor alloc]initWithHexValue:@"434348"];
@@ -77,7 +77,7 @@
                      @"color": @"#434348"
                      }, nil];
     
-    series.dataLabels = [[HIWaterfallDataLabels alloc]init];
+    series.dataLabels = [[HIDataLabels alloc]init];
     series.dataLabels.enabled = @true;
     series.dataLabels.format = @"{point.y}k";
     series.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold",@"fontWeight",  nil];
@@ -90,7 +90,7 @@
     options.legend = legend;
     options.tooltip = tooltip;
     options.series = [NSMutableArray arrayWithObject:series];
-    
+
     chartView.options = options;
     
     [self.view addSubview:chartView];

@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -39,38 +39,43 @@
                         @"Nov",
                         @"Dec"
                         , nil];
-    xaxis.crosshair = [[HIXAxisCrosshair alloc]init];
+    xaxis.crosshair = [[HICrosshair alloc]init];
     
     HIYAxis *yaxis1 = [[HIYAxis alloc]init];
-    yaxis1.labels = [[HIYAxisLabels alloc]init];
+    yaxis1.labels = [[HILabels alloc]init];
     yaxis1.labels.format = @"{value}°C";
-    yaxis1.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#90ed7d", @"color", nil];
-    yaxis1.title = [[HIYAxisTitle alloc]init];
+    yaxis1.labels.style = [[HIStyle alloc] init];
+    yaxis1.labels.style.color = @"#90ed7d";
+    yaxis1.title = [[HITitle alloc]init];
     yaxis1.title.text = @"Temperature";
-    yaxis1.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#90ed7d", @"color", nil];
-    yaxis1.opposite = @true;
+    yaxis1.title.style = [[HIStyle alloc] init];
+    yaxis1.title.style.color = @"#90ed7d";
+    yaxis1.opposite = [[NSNumber alloc] initWithBool:true];
     
     HIYAxis *yaxis2 = [[HIYAxis alloc]init];
     yaxis2.gridLineWidth = @0;
-    yaxis2.labels = [[HIYAxisLabels alloc]init];
+    yaxis2.labels = [[HILabels alloc]init];
     yaxis2.labels.format = @"{value} mm";
-    yaxis2.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-    yaxis2.title = [[HIYAxisTitle alloc]init];
+    yaxis2.labels.style = [[HIStyle alloc] init];
+    yaxis2.labels.style.color = @"#7cb5ec";
+    yaxis2.title = [[HITitle alloc]init];
     yaxis2.title.text = @"Rainfall";
-    yaxis2.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-    
+    yaxis2.title.style = [[HIStyle alloc] init];
+    yaxis2.title.style.color = @"#7cb5ec";
     HIYAxis *yaxis3 = [[HIYAxis alloc]init];
     yaxis3.gridLineWidth = @0;
-    yaxis3.labels = [[HIYAxisLabels alloc]init];
+    yaxis3.labels = [[HILabels alloc]init];
     yaxis3.labels.format = @"{value} mb";
-    yaxis3.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
-    yaxis3.title = [[HIYAxisTitle alloc]init];
+    yaxis3.labels.style = [[HIStyle alloc] init];
+    yaxis3.labels.style.color = @"#434348";
+    yaxis3.title = [[HITitle alloc]init];
     yaxis3.title.text = @"Sea-Level Pressure";
-    yaxis3.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
-    yaxis3.opposite = @true;
+    yaxis3.title.style = [[HIStyle alloc] init];
+    yaxis3.title.style.color = @"#434348";
+    yaxis3.opposite = [[NSNumber alloc] initWithBool:true];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     
     HILegend *legend = [[HILegend alloc]init];
     legend.layout = @"vertical";
@@ -78,7 +83,7 @@
     legend.x = @80;
     legend.verticalAlign = @"top";
     legend.y = @60;
-    legend.floating = @true;
+    legend.floating = [[NSNumber alloc] initWithBool:true];
     legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     
     HIColumn *column = [[HIColumn alloc]init];
@@ -97,7 +102,7 @@
                    @95.6,
                    @54.4
                    , nil];
-    column.tooltip = [[HIColumnTooltip alloc]init];
+    column.tooltip = [[HITooltip alloc]init];
     column.tooltip.valueSuffix = @" mm";
     
     HISpline *spline1 = [[HISpline alloc]init];
@@ -115,10 +120,10 @@
                     @1016.9,
                     @1018.2,
                     @1016.7, nil];
-    spline1.marker = [[HISplineMarker alloc]init];
-    spline1.marker.enabled = @false;
+    spline1.marker = [[HIMarker alloc]init];
+    spline1.marker.enabled = [[NSNumber alloc] initWithBool:false];
     spline1.dashStyle = @"shortdot";
-    spline1.tooltip = [[HISplineTooltip alloc]init];
+    spline1.tooltip = [[HITooltip alloc]init];
     spline1.tooltip.valueSuffix = @" mb";
     
     HISpline *spline2 = [[HISpline alloc]init];
@@ -135,7 +140,7 @@
                     @18.3,
                     @13.9,
                     @9.6, nil];
-    spline2.tooltip = [[HISplineTooltip alloc]init];
+    spline2.tooltip = [[HITooltip alloc]init];
     spline2.tooltip.valueSuffix = @"°C";
     
     

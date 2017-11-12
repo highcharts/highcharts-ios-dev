@@ -10,10 +10,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIChart *chart = [[HIChart alloc]init];
-    chart.polar = @true;
+    chart.polar = [[NSNumber alloc] initWithBool:true];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Highcharts Polar Chart";
@@ -26,17 +26,17 @@
     xaxis.tickInterval = @45;
     xaxis.min = @0;
     xaxis.max = @360;
-    xaxis.labels = [[HIXAxisLabels alloc]init];
+    xaxis.labels = [[HILabels alloc]init];
     xaxis.labels.format = @"{value}°";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
     
     HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-    plotOptions.series = [[HIPlotOptionsSeries alloc]init];
+    plotOptions.series = [[HISeries alloc]init];
     plotOptions.series.pointStart = @0;
     plotOptions.series.pointInterval = @45;
-    plotOptions.column = [[HIPlotOptionsColumn alloc]init];
+    plotOptions.column = [[HIColumn alloc]init];
     plotOptions.column.pointPadding = @0;
     plotOptions.column.groupPadding = @0;
     

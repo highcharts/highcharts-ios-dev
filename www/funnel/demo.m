@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -23,12 +23,12 @@
     title.x = @-50;
     
     HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-    plotOptions.funnel = [[HIPlotOptionsFunnel alloc]init];
-    plotOptions.funnel.dataLabels = [[HIPlotOptionsFunnelDataLabels alloc]init];
-    plotOptions.funnel.dataLabels.enabled = @true;
+    plotOptions.funnel = [[HIFunnel alloc]init];
+    plotOptions.funnel.dataLabels = [[HIDataLabels alloc]init];
+    plotOptions.funnel.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotOptions.funnel.dataLabels.format = @"<b>{point.name}</b> ({point.y:,.0f})";
     plotOptions.funnel.dataLabels.color = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
-    plotOptions.funnel.dataLabels.softConnector = @true;
+    plotOptions.funnel.dataLabels.softConnector = [[NSNumber alloc] initWithBool:true];
     plotOptions.funnel.neckWidth = @"30%";
     plotOptions.funnel.neckHeight = @"25%";
     

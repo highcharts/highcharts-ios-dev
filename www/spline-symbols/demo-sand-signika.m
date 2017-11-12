@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -42,29 +42,29 @@
                          ];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Temperature";
-    yaxis.labels = [[HIYAxisLabels alloc]init];
+    yaxis.labels = [[HILabels alloc]init];
     
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.crosshairs = @true;
-    tooltip.shared = @true;
+    tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.spline = [[HIPlotOptionsSpline alloc]init];
-    plotoptions.spline.marker = [[HIPlotOptionsSplineMarker alloc]init];
+    plotoptions.spline = [[HISpline alloc]init];
+    plotoptions.spline.marker = [[HIMarker alloc]init];
     plotoptions.spline.marker.radius = @4;
     plotoptions.spline.marker.lineColor = [[HIColor alloc]initWithHexValue:@"666666"];
     plotoptions.spline.marker.lineWidth = @1;
     
     HISpline *spline1 = [[HISpline alloc]init];
     spline1.name = @"Tokyo";
-    spline1.marker = [[HISplineMarker alloc]init];
+    spline1.marker = [[HIMarker alloc]init];
     spline1.marker.symbol = @"square";
-    HISplineData *data1 = [[HISplineData alloc]init];
+    HIData *data1 = [[HIData alloc]init];
     data1.y = @26.5;
-    data1.marker = [[HISplineDataMarker alloc]init];
+    data1.marker = [[HIMarker alloc]init];
     data1.marker.symbol = @"url(https://www.highcharts.com/samples/graphics/sun.png)";
     spline1.data = @[
                      @7,
@@ -84,11 +84,11 @@
     
     HISpline *spline2 = [[HISpline alloc]init];
     spline2.name = @"London";
-    spline2.marker = [[HISplineMarker alloc]init];
+    spline2.marker = [[HIMarker alloc]init];
     spline2.marker.symbol = @"diamond";
-    HISplineData *data2 = [[HISplineData alloc]init];
+    HIData *data2 = [[HIData alloc]init];
     data2.y = @3.9;
-    data2.marker = [[HISplineDataMarker alloc]init];
+    data2.marker = [[HIMarker alloc]init];
     data2.marker.symbol = @"url(https://www.highcharts.com/samples/graphics/snow.png)";
     spline2.data = @[
                      data2,

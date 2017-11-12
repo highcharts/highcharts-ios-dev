@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -19,7 +19,7 @@
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"gauge";
     chart.plotBorderWidth = @0;
-    chart.plotShadow = @false;
+    chart.plotShadow = [[NSNumber alloc] initWithBool:false];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Speedometer";
@@ -27,7 +27,7 @@
     HIPane *pane = [[HIPane alloc]init];
     pane.startAngle = @-150;
     pane.endAngle = @150;
-    HIPaneBackground *background1 = [[HIPaneBackground alloc]init];
+    HIBackground *background1 = [[HIBackground alloc]init];
     background1.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
                                                                            @"x1": @0,
                                                                            @"y1": @0,
@@ -46,7 +46,7 @@
                                                                            ]];
     background1.borderWidth = @0;
     background1.outerRadius = @"109%";
-    HIPaneBackground *background2 = [[HIPaneBackground alloc]init];
+    HIBackground *background2 = [[HIBackground alloc]init];
     background2.backgroundColor = [[HIColor alloc]initWithLinearGradient:@{
                                                                            @"x1": @0,
                                                                            @"y1": @0,
@@ -64,8 +64,8 @@
                                                                                      ]];
     background2.borderWidth = @1;
     background2.outerRadius = @"107%";
-    HIPaneBackground *background3 = [[HIPaneBackground alloc]init];
-    HIPaneBackground *background4 = [[HIPaneBackground alloc]init];
+    HIBackground *background3 = [[HIBackground alloc]init];
+    HIBackground *background4 = [[HIBackground alloc]init];
     background4.backgroundColor = [[HIColor alloc]initWithHexValue:@"DDD"];
     background4.borderWidth = @0;
     background4.outerRadius = @"105%";
@@ -75,7 +75,6 @@
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
     yaxis.max = @200;
-    yaxis.minorTickInterval = @"auto";
     yaxis.minorTickWidth = @1;
     yaxis.minorTickLength = @10;
     yaxis.minorTickPosition = @"inside";
@@ -85,20 +84,19 @@
     yaxis.tickPosition = @"inside";
     yaxis.tickLength = @10;
     yaxis.tickColor = [[HIColor alloc]initWithHexValue:@"666"];
-    yaxis.labels = [[HIYAxisLabels alloc]init];
+    yaxis.labels = [[HILabels alloc]init];
     yaxis.labels.step = @2;
-    yaxis.labels.rotation = @"auto";
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"km/h";
-    HIYAxisPlotBands *plotband1 = [[HIYAxisPlotBands alloc]init];
+    HIPlotBands *plotband1 = [[HIPlotBands alloc]init];
     plotband1.from = @0;
     plotband1.to = @120;
     plotband1.color = [[HIColor alloc]initWithHexValue:@"55BF3B"];
-    HIYAxisPlotBands *plotband2 = [[HIYAxisPlotBands alloc]init];
+    HIPlotBands *plotband2 = [[HIPlotBands alloc]init];
     plotband2.from = @120;
     plotband2.to = @160;
     plotband2.color = [[HIColor alloc]initWithHexValue:@"DDDF0D"];
-    HIYAxisPlotBands *plotband3 = [[HIYAxisPlotBands alloc]init];
+    HIPlotBands *plotband3 = [[HIPlotBands alloc]init];
     plotband3.from = @160;
     plotband3.to = @200;
     plotband3.color = [[HIColor alloc]initWithHexValue:@"DF5353"];
@@ -107,7 +105,7 @@
     
     HIGauge *gauge = [[HIGauge alloc]init];
     gauge.name = @"Speed";
-    gauge.tooltip = [[HIGaugeTooltip alloc]init];
+    gauge.tooltip = [[HITooltip alloc]init];
     gauge.tooltip.valueSuffix = @" km/h";
     gauge.data = [NSMutableArray arrayWithObject:@80];
     

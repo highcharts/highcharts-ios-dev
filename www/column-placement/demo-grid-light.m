@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -29,24 +29,24 @@
     
     HIYAxis *yaxis1 = [[HIYAxis alloc]init];
     yaxis1.min = @0;
-    yaxis1.title = [[HIYAxisTitle alloc]init];
+    yaxis1.title = [[HITitle alloc]init];
     yaxis1.title.text = @"Employees";
     
     HIYAxis *yaxis2 = [[HIYAxis alloc]init];
-    yaxis2.title = [[HIYAxisTitle alloc]init];
+    yaxis2.title = [[HITitle alloc]init];
     yaxis2.title.text = @"Profit (millions)";
-    yaxis2.opposite = @true;
+    yaxis2.opposite = [[NSNumber alloc] initWithBool:true];
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.shadow = @false;
+    legend.shadow = [[NSNumber alloc] initWithBool:false];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.column = [[HIPlotOptionsColumn alloc]init];
-    plotoptions.column.grouping = @false;
-    plotoptions.column.shadow = @false;
+    plotoptions.column = [[HIColumn alloc]init];
+    plotoptions.column.grouping = [[NSNumber alloc] initWithBool:false];
+    plotoptions.column.shadow = [[NSNumber alloc] initWithBool:false];
     plotoptions.column.borderWidth = @0;
     
     HIColumn *column1 = [[HIColumn alloc]init];
@@ -70,7 +70,7 @@
     HIColumn *column3 = [[HIColumn alloc]init];
     column3.name = @"Profit";
     column3.color = [[HIColor alloc]initWithRGBA:248 green:161 blue:63 alpha:1];
-    column3.tooltip = [[HIColumnTooltip alloc]init];
+    column3.tooltip = [[HITooltip alloc]init];
     column3.tooltip.valuePrefix = @"$";
     column3.tooltip.valueSuffix = @" M";
     column3.pointPadding = @0.3;
@@ -83,7 +83,7 @@
     HIColumn *column4 = [[HIColumn alloc]init];
     column4.name = @"Profit Optimized";
     column4.color = [[HIColor alloc]initWithRGBA:186 green:60 blue:61 alpha:0.9];
-    column4.tooltip = [[HIColumnTooltip alloc]init];
+    column4.tooltip = [[HITooltip alloc]init];
     column4.tooltip.valuePrefix = @"$";
     column4.tooltip.valueSuffix = @" M";
     column4.pointPadding = @0.4;

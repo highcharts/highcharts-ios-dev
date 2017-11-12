@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -26,7 +26,7 @@
                         @"Bananas",
                         @"Plums", nil];
     
-    HILabelsItems *item = [[HILabelsItems alloc]init];
+    HIItems *item = [[HIItems alloc]init];
     item.html = @"Total fruit consumption";
     item.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"50px", @"left", @"18px", @"top", @"black", @"color", nil];
     
@@ -64,7 +64,7 @@
                    @3,
                    @6.33,
                    @3.33, nil];
-    spline.marker = [[HISplineMarker alloc]init];
+    spline.marker = [[HIMarker alloc]init];
     spline.marker.lineWidth = @2;
     spline.marker.fillColor = [[HIColor alloc]initWithName:@"white"];
     spline.marker.lineColor = [[HIColor alloc]initWithHexValue:@"f7a35c"];
@@ -88,9 +88,9 @@
                   }, nil];
     pie.center = [NSMutableArray arrayWithObjects:@100, @80, nil];
     pie.size = @"100";
-    pie.showInLegend = @false;
-    pie.dataLabels = [[HIPieDataLabels alloc]init];
-    pie.dataLabels.enabled = @false;
+    pie.showInLegend = [[NSNumber alloc] initWithBool:true];
+    pie.dataLabels = [[HIDataLabels alloc]init];
+    pie.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     
     options.title = title;
     options.xAxis = [NSMutableArray arrayWithObject:xaxis];

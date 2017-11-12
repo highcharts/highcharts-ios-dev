@@ -7,13 +7,13 @@
 
 @implementation ViewController
 
-HIGChartView *chartView;
+HIChartView *chartView;
 NSString *currentButtonClicked;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height - 50)];
+    chartView = [[HIChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height - 50)];
     
     HIOptions *options = [[HIOptions alloc] init];
     
@@ -31,9 +31,9 @@ NSString *currentButtonClicked;
     xaxis.categories = [NSMutableArray arrayWithObjects:@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec", nil];
     
     HIColumn *column = [[HIColumn alloc] init];
-    column.colorByPoint = @true;
+    column.colorByPoint = [[NSNumber alloc] initWithBool:true];
     column.data = [NSMutableArray arrayWithObjects:@29.9, @71.5, @106.4, @129.2, @144.0, @176.0, @135.6, @148.5, @216.4, @194.1, @95.6, @54.4, nil];
-    column.showInLegend = @false;
+    column.showInLegend = [[NSNumber alloc] initWithBool:false];
     
     options.chart = chart;
     options.title = title;
@@ -72,20 +72,20 @@ NSString *currentButtonClicked;
     HISubtitle *subtitle = [[HISubtitle alloc] init];
     
     if([buttonTitle isEqualToString:@"Plain"]) {
-        chart.inverted = @false;
-        chart.polar = @false;
+        chart.inverted = [[NSNumber alloc] initWithBool:false];
+        chart.polar = [[NSNumber alloc] initWithBool:false];
         subtitle.text = buttonTitle;
         currentButtonClicked = buttonTitle;
     }
     else if ([buttonTitle isEqualToString:@"Inverted"]) {
-        chart.inverted = @true;
-        chart.polar = @false;
+        chart.inverted = [[NSNumber alloc] initWithBool:true];
+        chart.polar = [[NSNumber alloc] initWithBool:false];
         subtitle.text = buttonTitle;
         currentButtonClicked = buttonTitle;
     }
     else if ([buttonTitle isEqualToString:@"Polar"]) {
-        chart.inverted = @false;
-        chart.polar = @true;
+        chart.inverted = [[NSNumber alloc] initWithBool:false];
+        chart.polar = [[NSNumber alloc] initWithBool:true];
         subtitle.text = buttonTitle;
         currentButtonClicked = buttonTitle;
     }
@@ -97,9 +97,9 @@ NSString *currentButtonClicked;
     xaxis.categories = [NSMutableArray arrayWithObjects:@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec", nil];
     
     HIColumn *column = [[HIColumn alloc] init];
-    column.colorByPoint = @true;
+    column.colorByPoint = [[NSNumber alloc] initWithBool:true];
     column.data = [NSMutableArray arrayWithObjects:@29.9, @71.5, @106.4, @129.2, @144.0, @176.0, @135.6, @148.5, @216.4, @194.1, @95.6, @54.4, nil];
-    column.showInLegend = @false;
+    column.showInLegend = [[NSNumber alloc] initWithBool:false];
     
     newOptions.chart = chart;
     newOptions.title = title;

@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -51,20 +51,19 @@
     pane.center = [NSMutableArray arrayWithObjects:@"50%", @"130%", nil];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.enabled = @false;
+    tooltip.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @-20;
     yaxis.max = @6;
     yaxis.minorTickPosition = @"outside";
     yaxis.tickPosition = @"outside";
-    yaxis.labels = [[HIYAxisLabels alloc]init];
+    yaxis.labels = [[HILabels alloc]init];
     yaxis.labels.distance = @20;
-    yaxis.labels.rotation = @"auto";
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"VU<br/><span style=\"font-size:8px\">Channel</span>";
     yaxis.title.y = @-40;
-    HIYAxisPlotBands *plotband1 = [[HIYAxisPlotBands alloc]init];
+    HIPlotBands *plotband1 = [[HIPlotBands alloc]init];
     plotband1.from = @0;
     plotband1.to = @6;
     plotband1.color = [[HIColor alloc]initWithHexValue:@"C02316"];
@@ -73,10 +72,10 @@
     yaxis.plotBands = [NSMutableArray arrayWithObjects:plotband1, nil];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.gauge = [[HIPlotOptionsGauge alloc]init];
-    plotoptions.gauge.dataLabels = [[HIPlotOptionsGaugeDataLabels alloc]init];
-    plotoptions.gauge.dataLabels.enabled = @false;
-    plotoptions.gauge.dial = [[HIPlotOptionsGaugeDial alloc]init];
+    plotoptions.gauge = [[HIGauge alloc]init];
+    plotoptions.gauge.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.gauge.dataLabels.enabled = [[NSNumber alloc] initWithBool:false];
+    plotoptions.gauge.dial = [[HIDial alloc]init];
     plotoptions.gauge.dial.radius = @"100%";
     
     

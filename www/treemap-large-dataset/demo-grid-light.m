@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.plugins = @[ @"heatmap", @"treemap" ];    
 
@@ -28,15 +28,15 @@
     
     HITreemap *treemap = [[HITreemap alloc]init];
     treemap.layoutAlgorithm = @"squarified";
-    treemap.allowDrillToNode = @true;
+    treemap.allowDrillToNode = [[NSNumber alloc] initWithBool:true];
     treemap.animationLimit = @1000;
-    treemap.dataLabels = [[HITreemapDataLabels alloc]init];
-    treemap.dataLabels.enabled = @false;
-    treemap.levelIsConstant = @false;
-    HITreemapLevels *level = [[HITreemapLevels alloc]init];
+    treemap.dataLabels = [[HIDataLabels alloc]init];
+    treemap.dataLabels.enabled = [[NSNumber alloc] initWithBool:false];
+    treemap.levelIsConstant = [[NSNumber alloc] initWithBool:false];
+    HILevels *level = [[HILevels alloc]init];
     level.level = @1;
     level.dataLabels = @{
-                         @"enabled": @true
+                         @"enabled": [[NSNumber alloc] initWithBool:true]
                          };
     level.borderWidth = @3;
     treemap.levels = @[level];

@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -24,12 +24,12 @@
     subtitle.text = @"Source: <a href=\"http://netmarketshare.com/\">netmarketshare.com</a>";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Total percent market share";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.pie = [[HIPlotOptionsPie alloc]init];
-    plotoptions.pie.shadow = @false;
+    plotoptions.pie = [[HIPie alloc]init];
+    plotoptions.pie.shadow = [[NSNumber alloc] initWithBool:false];
     plotoptions.pie.center = [NSMutableArray arrayWithObjects:@"50%", @"50%", nil];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
@@ -38,8 +38,8 @@
     HIPie *pie1 = [[HIPie alloc]init];
     pie1.name = @"Browsers";
     pie1.size = @"60%";
-    pie1.dataLabels = [[HIPieDataLabels alloc]init];
-    pie1.dataLabels.enabled = @false;
+    pie1.dataLabels = [[HIDataLabels alloc]init];
+    pie1.dataLabels.enabled = [[NSNumber alloc] initWithBool:false];
     pie1.data = [NSMutableArray arrayWithObjects:
                  @{
                    @"name": @"MSIE",
@@ -76,7 +76,7 @@
     pie2.name = @"Versions";
     pie2.size = @"80%";
     pie2.innerSize = @"60%";
-    pie2.dataLabels = [[HIPieDataLabels alloc]init];
+    pie2.dataLabels = [[HIDataLabels alloc]init];
     pie2.dataLabels.format = @"<b>{point.name}: </b>{point.y}%";
     pie2.data = [NSMutableArray arrayWithObjects:@{
                                                    @"name": @"MSIE 6.0",

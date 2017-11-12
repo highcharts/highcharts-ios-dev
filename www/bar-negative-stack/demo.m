@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     NSMutableArray *categories = [NSMutableArray arrayWithObjects:@"0-4", @"5-9", @"10-14", @"15-19",
                                   @"20-24", @"25-29", @"30-34", @"35-39", @"40-44",
@@ -31,33 +31,33 @@
     
     HIXAxis *xaxisLeft = [[HIXAxis alloc] init];
     xaxisLeft.categories = categories;
-    xaxisLeft.reversed = @false;
+    xaxisLeft.reversed = [[NSNumber alloc] initWithBool:false];
     
-    HIXAxisLabels *xaxisLabelsLeft =[[HIXAxisLabels alloc] init];
+    HILabels *xaxisLabelsLeft =[[HILabels alloc] init];
     xaxisLabelsLeft.step = @1;
     xaxisLeft.labels = xaxisLabelsLeft;
     
     HIXAxis *xaxisRight = [[HIXAxis alloc] init];
-    xaxisRight.opposite = @true;
-    xaxisRight.reversed = @false;
+    xaxisRight.opposite = [[NSNumber alloc] initWithBool:true];
+    xaxisRight.reversed = [[NSNumber alloc] initWithBool:false];
     xaxisRight.categories = categories;
     xaxisRight.linkedTo = @0;
     
-    HIXAxisLabels *xaxisLabelsRight =[[HIXAxisLabels alloc] init];
+    HILabels *xaxisLabelsRight =[[HILabels alloc] init];
     xaxisLabelsRight.step = @1;
     xaxisRight.labels = xaxisLabelsRight;
     
     HIYAxis *yaxis = [[HIYAxis alloc] init];
-    yaxis.title = [[HIYAxisTitle alloc] init];
+    yaxis.title = [[HITitle alloc] init];
     yaxis.title.text = @"";
-    yaxis.labels = [[HIYAxisLabels alloc] init];
-    yaxis.labels.formatter = @"function () { return Math.abs(this.value) + '%'; }";
+    yaxis.labels = [[HILabels alloc] init];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return Math.abs(this.value) + '%'; }"];
     
     HITooltip *tooltip = [[HITooltip alloc] init];
-    tooltip.formatter = @"function () { return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' + 'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0); }";
+    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' + 'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0); }"];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc] init];
-    plotoptions.bar = [[HIPlotOptionsBar alloc] init];
+    plotoptions.bar = [[HIBar alloc] init];
     plotoptions.bar.stacking = @"normal";
     
     HIBar *barMale = [[HIBar alloc] init];

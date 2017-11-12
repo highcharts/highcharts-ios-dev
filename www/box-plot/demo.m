@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -21,7 +21,7 @@
     title.text = @"Highcharts Box Plot Example";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.categories = [NSMutableArray arrayWithObjects:@"1",
@@ -29,20 +29,21 @@
                         @"3",
                         @"4",
                         @"5", nil];
-    xaxis.title = [[HIXAxisTitle alloc]init];
+    xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"Experiment No.";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Observations";
-    HIYAxisPlotLines *plotlines = [[HIYAxisPlotLines alloc]init];
+    HIPlotLines *plotlines = [[HIPlotLines alloc]init];
     plotlines.value = @932;
     plotlines.color = [[HIColor alloc]initWithName:@"red"];
     plotlines.width = @1;
-    plotlines.label = [[HIYAxisPlotLinesLabel alloc]init];
+    plotlines.label = [[HILabel alloc]init];
     plotlines.label.text = @"Theoretical mean: 932";
     plotlines.label.align = @"center";
-    plotlines.label.style = @{@"color": @"gray"};
+    plotlines.label.style = [[HIStyle alloc] init];
+    plotlines.label.style.color = @"gray";
     yaxis.plotLines = [NSMutableArray arrayWithObject:plotlines];
     
     HIBoxplot *series1 = [[HIBoxplot alloc]init];
@@ -82,7 +83,7 @@
                       @882,
                       @910
                       ], nil];
-    series1.tooltip = [[HIBoxplotTooltip alloc]init];
+    series1.tooltip = [[HITooltip alloc]init];
     series1.tooltip.headerFormat = @"<em>Experiment No {point.key}</em><br/>";
     
     HIScatter *series2 = [[HIScatter alloc]init];
@@ -104,11 +105,11 @@
                       @4,
                       @969
                       ], nil];
-    series2.marker = [[HIScatterMarker alloc]init];
+    series2.marker = [[HIMarker alloc]init];
     series2.marker.fillColor = [[HIColor alloc]initWithName:@"white"];
     series2.marker.lineWidth = @1;
     series2.marker.lineColor = [[HIColor alloc]initWithHexValue:@"7cb5ec"];
-    series2.tooltip = [[HIScatterTooltip alloc]init];
+    series2.tooltip = [[HITooltip alloc]init];
     series2.tooltip.pointFormat = @"Observation: {point.y}";
     
     options.chart = chart;

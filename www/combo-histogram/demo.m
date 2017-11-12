@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     NSArray *data = [NSArray arrayWithObjects:@[@161.2, @51.6], @[@167.5, @59.0], @[@159.5, @49.2], @[@157.0, @63.0], @[@155.8, @53.6],
                      @[@170.0, @59.0], @[@159.1, @47.6], @[@166.0, @69.8], @[@176.2, @66.8], @[@160.2, @75.2],
@@ -103,12 +103,12 @@
     xaxis.gridLineWidth = @1;
     
     HIYAxis *yaxis1 = [[HIYAxis alloc] init];
-    yaxis1.title = [[HIYAxisTitle alloc] init];
+    yaxis1.title = [[HITitle alloc] init];
     yaxis1.title.text = @"Histogram Count";
     
     HIYAxis *yaxis2 = [[HIYAxis alloc] init];
-    yaxis2.opposite = @true;
-    yaxis2.title = [[HIYAxisTitle alloc] init];
+    yaxis2.opposite = [[NSNumber alloc] initWithBool:true];
+    yaxis2.title = [[HITitle alloc] init];
     yaxis2.title.text = @"Y value";
     
     HIColumn *column = [[HIColumn alloc] init];
@@ -122,7 +122,7 @@
     scatter.name = @"XY data";
     scatter.data = data;
     scatter.yAxis = @1;
-    scatter.marker = [[HIScatterMarker alloc] init];
+    scatter.marker = [[HIMarker alloc] init];
     scatter.marker.radius = @1.5;
     
     options.chart = chart;

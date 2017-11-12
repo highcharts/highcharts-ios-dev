@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -30,7 +30,7 @@
                         @"Bananas", nil];
     
     HICredits *credits = [[HICredits alloc]init];
-    credits.enabled = @false;
+    credits.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIArea *area1 = [[HIArea alloc]init];
     area1.name = @"John";

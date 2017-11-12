@@ -19,9 +19,9 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"gauge";
-    chart.alignTicks = @false;
+    chart.alignTicks = [[NSNumber alloc] initWithBool:false];
     chart.plotBorderWidth = @0;
-    chart.plotShadow = @false;
+    chart.plotShadow = [[NSNumber alloc] initWithBool:false];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Speedometer with dual axes";
@@ -38,12 +38,11 @@
     yaxis1.minorTickColor = [[HIColor alloc]initWithHexValue:@"339"];
     yaxis1.offset = @-25;
     yaxis1.lineWidth = @2;
-    yaxis1.labels = [[HIYAxisLabels alloc]init];
+    yaxis1.labels = [[HILabels alloc]init];
     yaxis1.labels.distance = @-20;
-    yaxis1.labels.rotation = @"auto";
     yaxis1.tickLength = @5;
     yaxis1.minorTickLength = @5;
-    yaxis1.endOnTick = @false;
+    yaxis1.endOnTick = [[NSNumber alloc] initWithBool:false];
     
     HIYAxis *yaxis2 = [[HIYAxis alloc]init];
     yaxis2.min = @0;
@@ -55,16 +54,15 @@
     yaxis2.tickColor = [[HIColor alloc]initWithHexValue:@"933"];
     yaxis2.minorTickColor = [[HIColor alloc]initWithHexValue:@"933"];
     yaxis2.offset = @-20;
-    yaxis2.labels = [[HIYAxisLabels alloc]init];
+    yaxis2.labels = [[HILabels alloc]init];
     yaxis2.labels.distance = @12;
-    yaxis2.labels.rotation = @"auto";
     yaxis2.tickLength = @5;
     yaxis2.minorTickLength = @5;
-    yaxis2.endOnTick = @false;
+    yaxis2.endOnTick = [[NSNumber alloc] initWithBool:false];
     
     HIGauge *gauge = [[HIGauge alloc]init];
     gauge.name = @"Speed";
-    gauge.tooltip = [[HIGaugeTooltip alloc]init];
+    gauge.tooltip = [[HITooltip alloc]init];
     gauge.tooltip.valueSuffix = @" km/h";
     gauge.data = [NSMutableArray arrayWithObjects:@80, nil];
     

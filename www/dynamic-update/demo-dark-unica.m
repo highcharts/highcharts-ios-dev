@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -21,8 +21,8 @@
     chart.animation = @"Highcharts.svg"; // don't animate in old IE
     chart.marginRight = @10;
     
-    HIChartEvents *events = [[HIChartEvents alloc] init];
-    events.load = @"function () { var series = this.series[0]; setInterval(function () { var x = (new Date()).getTime(), y = Math.random(); series.addPoint([x, y], true, true); }, 1000); }";
+    HIEvents *events = [[HIEvents alloc] init];
+    events.load = [[HIFunction alloc] initWithFunction:@"function () { var series = this.series[0]; setInterval(function () { var x = (new Date()).getTime(), y = Math.random(); series.addPoint([x, y], true, true); }, 1000); }"];
     chart.events = events;
     
     HITitle *title = [[HITitle alloc]init];
@@ -33,23 +33,23 @@
     xaxis.tickPixelInterval = @150;
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc] init];
+    yaxis.title = [[HITitle alloc] init];
     yaxis.title.text = @"Value";
     
-    HIYAxisPlotLines *plotLines = [[HIYAxisPlotLines alloc] init];
+    HIPlotLines *plotLines = [[HIPlotLines alloc] init];
     plotLines.value = @0;
     plotLines.width = @1;
     plotLines.color = [[HIColor alloc] initWithHexValue:@"808080"];
     yaxis.plotLines = [NSMutableArray arrayWithObjects:plotLines, nil];
     
     HITooltip *tooltip = [[HITooltip alloc] init];
-    tooltip.formatter = @"function () { return '<b>' + this.series.name + '</b><br/>' + Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' + Highcharts.numberFormat(this.y, 2); }";
-    
+    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.series.name + '</b><br/>' + Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' + Highcharts.numberFormat(this.y, 2); }"];
+
     HILegend *legend = [[HILegend alloc] init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIExporting *exporting = [[HIExporting alloc] init];
-    exporting.enabled = @false;
+    exporting.enabled = [[NSNumber alloc] initWithBool:false];
     
     HISpline *spline = [[HISpline alloc] init];
     spline.name = @"Random data";

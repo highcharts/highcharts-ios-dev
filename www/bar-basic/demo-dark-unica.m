@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -32,19 +32,19 @@
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Population (millions)";
     yaxis.title.align = @"high";
-    yaxis.labels = [[HIYAxisLabels alloc]init];
+    yaxis.labels = [[HILabels alloc]init];
     yaxis.labels.overflow = @"justify";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.valueSuffix = @" millions";
     
     HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-    plotOptions.bar = [[HIPlotOptionsBar alloc]init];
-    plotOptions.bar.dataLabels = [[HIPlotOptionsBarDataLabels alloc]init];
-    plotOptions.bar.dataLabels.enabled = @true;
+    plotOptions.bar = [[HIBar alloc]init];
+    plotOptions.bar.dataLabels = [[HIDataLabels alloc]init];
+    plotOptions.bar.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     
     HILegend *legend = [[HILegend alloc]init];
     legend.layout = @"vertical";
@@ -52,13 +52,13 @@
     legend.verticalAlign = @"top";
     legend.x = @-40;
     legend.y = @80;
-    legend.floating = @true;
+    legend.floating = [[NSNumber alloc] initWithBool:true];
     legend.borderWidth = @1;
     legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
-    legend.shadow = @true;
+    legend.shadow = [[NSNumber alloc] initWithBool:true];
     
     HICredits *credits = [[HICredits alloc]init];
-    credits.enabled = @false;
+    credits.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIBar *bar1 = [[HIBar alloc]init];
     bar1.name = @"Year 1800";
@@ -97,6 +97,7 @@
     options.series = [NSMutableArray arrayWithObjects:bar1, bar2, bar3, nil];
     
     chartView.options = options;
+    
     
     [self.view addSubview:chartView];
 }

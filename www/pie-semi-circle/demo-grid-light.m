@@ -10,16 +10,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
+    
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
     HIChart *chart = [[HIChart alloc]init];
     chart.plotBackgroundColor = [[HIColor alloc]init];
     chart.plotBorderWidth = @0;
-    chart.plotShadow = @false;
+    chart.plotShadow = [[NSNumber alloc] initWithBool:false];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Browser<br>shares<br>2015";
@@ -31,20 +33,23 @@
     tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.pie = [[HIPlotOptionsPie alloc]init];
-    plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
-    plotoptions.pie.dataLabels.enabled = @true;
+    plotoptions.pie = [[HIPie alloc]init];
+    plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.pie.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.pie.dataLabels.distance = @-50;
-    plotoptions.pie.dataLabels.style = @{@"color": @"white", @"fontWeight" : @"bold", @"textShadow" : @"0px 1px 2px black"};
+    plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
+    plotoptions.pie.dataLabels.style.color = @"white";
+    plotoptions.pie.dataLabels.style.fontWeight = @"bold";
+    plotoptions.pie.dataLabels.style.textOutline = @"0px 1px 2px black";
     plotoptions.pie.startAngle = @-90;
     plotoptions.pie.endAngle = @90;
     plotoptions.pie.center = @[@"50%", @"75%"];
     
     HIPie *pie = [[HIPie alloc]init];
-    HIPieData *data = [[HIPieData alloc]init];
+    HIData *data = [[HIData alloc]init];
     data.name = @"Proprietary or Undetectable";
     data.y = @0.2;
-    data.dataLabels = @{@"enabled": @false};
+    data.dataLabels = @{@"enabled": [[NSNumber alloc] initWithBool:false]};
     pie.name = @"Browser share";
     pie.innerSize = @"50%";
     pie.data = @[

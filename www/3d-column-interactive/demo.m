@@ -10,15 +10,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
     HIChart *chart = [[HIChart alloc]init];
     chart.renderTo = @"container";
     chart.type = @"column";
-    chart.options3d = [[HIChartOptions3d alloc]init];
-    chart.options3d.enabled = @true;
+    chart.options3d = [[HIOptions3d alloc]init];
+    chart.options3d.enabled = [[NSNumber alloc] initWithBool:true];
     chart.options3d.alpha = @15;
     chart.options3d.beta = @15;
     chart.options3d.depth = @50;
@@ -28,7 +28,7 @@
     title.text = @"Chart rotation demo";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+    plotoptions.column = [[HIColumn alloc]init];
     plotoptions.column.depth = @25;
     
     HIColumn *column = [[HIColumn alloc]init];

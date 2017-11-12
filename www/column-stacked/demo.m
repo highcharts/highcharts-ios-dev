@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -29,34 +29,37 @@
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Total fruit consumption";
-    yaxis.stackLabels = [[HIYAxisStackLabels alloc]init];
-    yaxis.stackLabels.enabled = @true;
-    yaxis.stackLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold", @"fontWeight", @"gray", @"color", nil];
+    yaxis.stackLabels = [[HIStackLabels alloc]init];
+    yaxis.stackLabels.enabled = [[NSNumber alloc] initWithBool:true];
+    yaxis.stackLabels.style = [[HIStyle alloc] init];
+    yaxis.stackLabels.style.fontWeight = @"bold";
+    yaxis.stackLabels.style.color = @"gray";
     
     HILegend *legend = [[HILegend alloc]init];
     legend.align = @"right";
     legend.x = @-30;
     legend.verticalAlign = @"top";
     legend.y = @25;
-    legend.floating = @true;
+    legend.floating = [[NSNumber alloc] initWithBool:true];
     legend.backgroundColor = [[HIColor alloc]initWithName:@"white"];
     legend.borderColor = [[HIColor alloc]initWithHexValue:@"ccc"];
     legend.borderWidth = @1;
-    legend.shadow = @false;
+    legend.shadow = [[NSNumber alloc] initWithBool:false];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.pointFormat = @"{series.name}: {point.y}<br/>Total: {point.stackTotal}";
     tooltip.headerFormat = @"<b>{point.x}</b><br/>";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+    plotoptions.column = [[HIColumn alloc]init];
     plotoptions.column.stacking = @"normal";
-    plotoptions.column.dataLabels = [[HIPlotOptionsColumnDataLabels alloc]init];
-    plotoptions.column.dataLabels.enabled = @true;
+    plotoptions.column.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.column.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.column.dataLabels.color = [[HIColor alloc]initWithName:@"white"];
-    plotoptions.column.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"0 0 3px black", @"textShadow", nil];
+    plotoptions.column.dataLabels.style = [[HIStyle alloc] init];
+    plotoptions.column.dataLabels.style.textOutline = @"0 0 3px black";
     
     HIColumn *column1 = [[HIColumn alloc]init];
     column1.name = @"John";
@@ -93,8 +96,6 @@
     options.series = [NSMutableArray arrayWithObjects: column1, column2, column3, nil];
     
     chartView.options = options;
-    
-    [self.view addSubview:chartView];
 }
 
 @end

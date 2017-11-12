@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -36,22 +36,22 @@
                         @"Oct",
                         @"Nov",
                         @"Dec", nil];
-    xaxis.crosshair = [[HIXAxisCrosshair alloc]init];
+    xaxis.crosshair = [[HICrosshair alloc]init];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Rainfall (mm)";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.headerFormat = @"<span style=\"font-size:10px\">{point.key}</span><table>";
     tooltip.pointFormat = @"<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td><td style=\"padding:0\"><b>{point.y:.1f} mm</b></td></tr>";
     tooltip.footerFormat = @"</table>";
-    tooltip.shared = @true;
-    tooltip.useHTML = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
+    tooltip.useHTML = [[NSNumber alloc] initWithBool:true];
     
     HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-    plotOptions.column = [[HIPlotOptionsColumn alloc]init];
+    plotOptions.column = [[HIColumn alloc]init];
     plotOptions.column.pointPadding = @0.2;
     plotOptions.column.borderWidth = @0;
     

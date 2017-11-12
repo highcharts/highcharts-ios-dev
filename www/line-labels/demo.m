@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -38,13 +38,13 @@
                         @"Dec", nil];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Temperature (°C)";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.line = [[HIPlotOptionsLine alloc]init];
-    plotoptions.line.dataLabels = [[HIPlotOptionsLineDataLabels alloc]init];
-    plotoptions.line.dataLabels.enabled = @true;
+    plotoptions.line = [[HILine alloc]init];
+    plotoptions.line.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.line.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     
     HILine *line1 = [[HILine alloc]init];
     line1.name = @"Tokyo";

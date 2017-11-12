@@ -10,9 +10,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
-    HIOptions *options = [[HIOptions alloc]init];
+     HIOptions *options = [[HIOptions alloc]init];
     
     HIChart *chart = [[HIChart alloc]init];
     chart.zoomType = @"xy";
@@ -37,27 +37,31 @@
                         @"Nov",
                         @"Dec"
                         , nil];
-    xaxis.crosshair = [[HIXAxisCrosshair alloc]init];
+    xaxis.crosshair = [[HICrosshair alloc]init];
     
     HIYAxis *yaxis1 = [[HIYAxis alloc]init];
-    yaxis1.labels = [[HIYAxisLabels alloc]init];
+    yaxis1.labels = [[HILabels alloc]init];
     yaxis1.labels.format = @"{value}°C";
-    yaxis1.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
-    yaxis1.title = [[HIYAxisTitle alloc]init];
+    yaxis1.labels.style = [[HIStyle alloc] init];
+    yaxis1.labels.style.color = @"#434348";
+    yaxis1.title = [[HITitle alloc]init];
     yaxis1.title.text = @"Temperature";
-    yaxis1.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
+    yaxis1.title.style = [[HIStyle alloc] init];
+    yaxis1.title.style.color = @"#434348";
     
     HIYAxis *yaxis2 = [[HIYAxis alloc]init];
-    yaxis2.labels = [[HIYAxisLabels alloc]init];
+    yaxis2.labels = [[HILabels alloc]init];
     yaxis2.labels.format = @"{value} mm";
-    yaxis2.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-    yaxis2.title = [[HIYAxisTitle alloc]init];
+    yaxis2.labels.style = [[HIStyle alloc] init];
+    yaxis2.labels.style.color = @"#7cb5ec";
+    yaxis2.title = [[HITitle alloc]init];
     yaxis2.title.text = @"Rainfall";
-    yaxis2.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-    yaxis2.opposite = @true;
+    yaxis2.title.style = [[HIStyle alloc] init];
+    yaxis2.title.style.color = @"#7cb5ec";
+    yaxis2.opposite = [[NSNumber alloc] initWithBool:true];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     
     HILegend *legend = [[HILegend alloc]init];
     legend.layout = @"vertical";
@@ -65,7 +69,7 @@
     legend.x = @120;
     legend.verticalAlign = @"top";
     legend.y = @100;
-    legend.floating = @true;
+    legend.floating = [[NSNumber alloc] initWithBool:true];
     legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     
     HIColumn *column = [[HIColumn alloc]init];
@@ -84,7 +88,7 @@
                    @95.6,
                    @54.4
                    , nil];
-    column.tooltip = [[HIColumnTooltip alloc]init];
+    column.tooltip = [[HITooltip alloc]init];
     column.tooltip.valueSuffix = @" mm";
     
     HISpline *spline = [[HISpline alloc]init];
@@ -101,7 +105,7 @@
                    @18.3,
                    @13.9,
                    @9.6, nil];
-    spline.tooltip = [[HISplineTooltip alloc]init];
+    spline.tooltip = [[HITooltip alloc]init];
     spline.tooltip.valueSuffix = @"°C";
     
     

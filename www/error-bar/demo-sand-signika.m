@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -37,24 +37,28 @@
                         @"Dec", nil];
     
     HIYAxis *yaxis1 = [[HIYAxis alloc]init];
-    yaxis1.labels = [[HIYAxisLabels alloc]init];
+    yaxis1.labels = [[HILabels alloc]init];
     yaxis1.labels.format = @"{value} °C";
-    yaxis1.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
-    yaxis1.title = [[HIYAxisTitle alloc]init];
+    yaxis1.labels.style = [[HIStyle alloc] init];
+    yaxis1.labels.style.color = @"#434348";
+    yaxis1.title = [[HITitle alloc]init];
     yaxis1.title.text = @"Temperature";
-    yaxis1.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#434348", @"color", nil];
+    yaxis1.title.style = [[HIStyle alloc] init];
+    yaxis1.title.style.color = @"#434348";
     
     HIYAxis *yaxis2 = [[HIYAxis alloc]init];
-    yaxis2.labels = [[HIYAxisLabels alloc]init];
+    yaxis2.labels = [[HILabels alloc]init];
     yaxis2.labels.format = @"{value} mm";
-    yaxis2.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-    yaxis2.title = [[HIYAxisTitle alloc]init];
+    yaxis2.labels.style = [[HIStyle alloc] init];
+    yaxis2.labels.style.color = @"#7cb5ec";
+    yaxis2.title = [[HITitle alloc]init];
     yaxis2.title.text = @"Rainfall";
-    yaxis2.title.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"#7cb5ec", @"color", nil];
-    yaxis2.opposite = @true;
+    yaxis2.title.style = [[HIStyle alloc] init];
+    yaxis2.title.style.color = @"#7cb5ec";
+    yaxis2.opposite = [[NSNumber alloc] initWithBool:true];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     
     HIColumn *column = [[HIColumn alloc]init];
     column.name = @"Rainfall";
@@ -71,7 +75,7 @@
                    @194.1,
                    @95.6,
                    @54.4, nil];
-    column.tooltip = [[HIColumnTooltip alloc]init];
+    column.tooltip = [[HITooltip alloc]init];
     column.tooltip.pointFormat = @"<span style=\"font-weight: bold; color: {series.color}\">{series.name}</span>: <b>{point.y:.1f} mm</b> ";
     
     HIErrorbar *errorbar1 = [[HIErrorbar alloc]init];
@@ -126,7 +130,7 @@
                         @56
                         ]
                       , nil];
-    errorbar1.tooltip = [[HIErrorbarTooltip alloc]init];
+    errorbar1.tooltip = [[HITooltip alloc]init];
     errorbar1.tooltip.pointFormat = @"(error range: {point.low}-{point.high} mm)<br/>";
     
     HISpline *spline = [[HISpline alloc]init];
@@ -143,7 +147,7 @@
                    @18.3,
                    @13.9,
                    @9.6, nil];
-    spline.tooltip = [[HISplineTooltip alloc]init];
+    spline.tooltip = [[HITooltip alloc]init];
     spline.tooltip.pointFormat = @"<span style=\"font-weight: bold; color: {series.color}\">{series.name}</span>: <b>{point.y:.1f}°C</b> ";
     
     
@@ -198,7 +202,7 @@
                         @10
                         ]
                       , nil];
-    errorbar2.tooltip = [[HIErrorbarTooltip alloc]init];
+    errorbar2.tooltip = [[HITooltip alloc]init];
     errorbar2.tooltip.pointFormat = @"(error range: {point.low}-{point.high}°C)<br/>";
     
     options.chart = chart;
