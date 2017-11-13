@@ -37,7 +37,7 @@
     yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Number of units";
     yaxis.labels = [[HILabels alloc]init];
-    yaxis.min = @0;
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value; }"];
     
     HILegend *legend = [[HILegend alloc]init];
     legend.layout = @"vertical";

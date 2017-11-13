@@ -41,7 +41,9 @@
     pie1.name = @"Browsers";
     pie1.size = @"60%";
     pie1.dataLabels = [[HIDataLabels alloc]init];
-    pie1.dataLabels.enabled = [[NSNumber alloc] initWithBool:false];
+    pie1.dataLabels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.y > 5 ? this.point.name : null; }"];
+    pie1.dataLabels.color = [[HIColor alloc] initWithHexValue:@"ffffff"];
+    pie1.dataLabels.distance = @-30;
     pie1.data = [NSMutableArray arrayWithObjects:
                  @{
                    @"name": @"MSIE",
@@ -79,7 +81,7 @@
     pie2.size = @"80%";
     pie2.innerSize = @"60%";
     pie2.dataLabels = [[HIDataLabels alloc]init];
-    pie2.dataLabels.format = @"<b>{point.name}: </b>{point.y}%";
+    pie2.dataLabels.formatter = [[HIFunction alloc] initWithFunction:@"function () { /* display only if larger than 1 */ return this.y > 1 ? '<b>' + this.point.name + ':</b> ' + this.y + '%' : null; }"];
     pie2.data = [NSMutableArray arrayWithObjects:@{
                                                    @"name": @"MSIE 6.0",
                                                    @"y": @1.06,

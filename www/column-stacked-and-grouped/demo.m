@@ -34,7 +34,7 @@
     yaxis.title.text = @"Number of fruits";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.pointFormat = @"{series.name} :{point.y} <br/> Total: {point.stackTotal}";
+    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + this.y + '<br/>' + 'Total: ' + this.point.stackTotal; }"];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
     plotoptions.column = [[HIColumn alloc]init];

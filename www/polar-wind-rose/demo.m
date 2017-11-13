@@ -37,7 +37,7 @@
     yaxis.title = [[HITitle alloc] init];
     yaxis.title.text = @"Frequency (%)";
     yaxis.labels = [[HILabels alloc] init];
-    yaxis.labels.format = @"{value}%";
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value + '%'; }"];
     yaxis.reversedStacks = [[NSNumber alloc] initWithBool:false];
     
     HITooltip *tooltip = [[HITooltip alloc]init];

@@ -31,6 +31,7 @@
     xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"Altitude";
     xaxis.labels = [[HILabels alloc]init];
+    xaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value + 'km'; }"];
     xaxis.maxPadding = @0.05;
     xaxis.showLastLabel = [[NSNumber alloc] initWithBool:true];
     
@@ -38,6 +39,7 @@
     yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Temperature";
     yaxis.labels = [[HILabels alloc]init];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value + '°'; }"];
     yaxis.lineWidth = @2;
     
     HILegend *legend = [[HILegend alloc]init];

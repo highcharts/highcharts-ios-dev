@@ -62,8 +62,7 @@
     options.legend = legend;
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.enabled = [[NSNumber alloc] initWithBool:false];
-    options.tooltip = tooltip;
+    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> sold <br><b>' + this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>'; }"];
     
     HIHeatmap *heatmap = [[HIHeatmap alloc]init];
     heatmap.name = @"Sales per employee";

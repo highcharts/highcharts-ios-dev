@@ -41,6 +41,7 @@
     yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Billions";
     yaxis.labels = [[HILabels alloc]init];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value / 1000; }"];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.shared = [[NSNumber alloc] initWithBool:true];

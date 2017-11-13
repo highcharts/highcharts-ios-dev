@@ -25,10 +25,14 @@
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.allowDecimals = [[NSNumber alloc] initWithBool:false];
-    
+    xaxis.labels = [[HILabels alloc] init];
+    xaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value; /* clean, unformatted number for year */ }"];
+   
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Nuclear weapon states";
+    yaxis.labels = [[HILabels alloc] init];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value / 1000 + 'k'; }"];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.pointFormat = @"{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}";
@@ -42,7 +46,7 @@
     plotOptions.area.marker.radius = @2;
     plotOptions.area.marker.states = [[HIStates alloc]init];
     plotOptions.area.marker.states.hover = [[HIHover alloc]init];
-    plotOptions.area.marker.states.hover.enabled = @true;
+    plotOptions.area.marker.states.hover.enabled = [[NSNumber alloc] initWithBool:true];
     
     HIArea *series1 = [[HIArea alloc]init];
     series1.name = @"USA";

@@ -14,117 +14,71 @@
 
     chartView.theme = @"dark-unica";
     
+    HIOptions *options = [[HIOptions alloc]init];
+    
     HITitle *title = [[HITitle alloc]init];
-    title.text = @"Monthly Average Temperature";
-    title.x = @-20;
+    title.text = @"Solar Employment Growth by Sector, 2010-2016";
     
     HISubtitle *subtitle = [[HISubtitle alloc]init];
-    subtitle.text = @"Source: WorldClimate.com";
-    subtitle.x = @-20;
+    subtitle.text = @"Source: thesolarfoundation.com";
     
-    HIXAxis *xaxis = [[HIXAxis alloc]init];
-    xaxis.categories = [NSMutableArray arrayWithObjects:@"Jan",
-                        @"Feb",
-                        @"Mar",
-                        @"Apr",
-                        @"May",
-                        @"Jun",
-                        @"Jul",
-                        @"Aug",
-                        @"Sep",
-                        @"Oct",
-                        @"Nov",
-                        @"Dec", nil];
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.title = [[HITitle alloc]init];
-    yaxis.title.text = @"Temperature (°C)";
-    yaxis.plotLines = [NSMutableArray arrayWithObjects:@{
-                                                         @"value": @0,
-                                                         @"width": @1,
-                                                         @"color": @"#808080"
-                                                         }, nil];
-    
-    HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.valueSuffix = @"°C";
+    yaxis.title.text = @"Number of Employees";
     
     HILegend *legend = [[HILegend alloc]init];
     legend.layout = @"vertical";
     legend.align = @"right";
     legend.verticalAlign = @"middle";
-    legend.borderWidth = @0;
+    
+    HIPlotOptions *plotoptions = [[HIPlotOptions alloc] init];
+    plotoptions.series = [[HISeries alloc] init];
+    plotoptions.series.label = [[HILabel alloc] init];
+    plotoptions.series.label.connectorAllowed = [[NSNumber alloc] initWithBool:false];
+    plotoptions.series.pointStart = @2010;
     
     HILine *line1 = [[HILine alloc]init];
-    line1.name = @"Tokyo";
-    line1.data = [NSMutableArray arrayWithObjects:@7,
-                  @6.9,
-                  @9.5,
-                  @14.5,
-                  @18.2,
-                  @21.5,
-                  @25.2,
-                  @26.5,
-                  @23.3,
-                  @18.3,
-                  @13.9,
-                  @9.6, nil];
+    line1.name = @"Installation";
+    line1.data = [NSMutableArray arrayWithObjects:@43934, @52503, @57177, @69658, @97031, @119931, @137133, @154175, nil];
     
     HILine *line2 = [[HILine alloc]init];
-    line2.name = @"New York";
-    line2.data = [NSMutableArray arrayWithObjects:@7,
-                  @-0.2,
-                  @0.8,
-                  @5.7,
-                  @11.3,
-                  @17,
-                  @22,
-                  @24.8,
-                  @24.1,
-                  @20.1,
-                  @14.1,
-                  @8.6,
-                  @2.5, nil];
+    line2.name = @"Manufacturing";
+    line2.data = [NSMutableArray arrayWithObjects:@24916, @24064, @29742, @29851, @32490, @30282, @38121, @40434, nil];
     
     HILine *line3 = [[HILine alloc]init];
-    line3.name = @"Berlin";
-    line3.data = [NSMutableArray arrayWithObjects:@7,
-                  @-0.9,
-                  @0.6,
-                  @3.5,
-                  @8.4,
-                  @13.5,
-                  @17,
-                  @18.6,
-                  @17.9,
-                  @14.3,
-                  @9,
-                  @3.9,
-                  @1, nil];
+    line3.name = @"Sales & Distribution";
+    line3.data = [NSMutableArray arrayWithObjects:@11744, @17722, @16005, @19771, @20185, @24377, @32147, @39387, nil];
     
     HILine *line4 = [[HILine alloc]init];
-    line4.name = @"London";
-    line4.data = [NSMutableArray arrayWithObjects:@7,
-                  @3.9,
-                  @4.2,
-                  @5.7,
-                  @8.5,
-                  @11.9,
-                  @15.2,
-                  @17,
-                  @16.6,
-                  @14.2,
-                  @10.3,
-                  @6.6,
-                  @4.8, nil];
+    line4.name = @"Project Development";
+    line4.data = [NSMutableArray arrayWithObjects:[NSNull null], [NSNull null], @7988, @12169, @15112, @22452, @34400, @34227, nil];
     
+    HILine *line5 = [[HILine alloc]init];
+    line5.name = @"Other";
+    line5.data = [NSMutableArray arrayWithObjects:@12908, @5948, @8105, @11248, @8989, @11816, @18274, @18111, nil];
     
-    HIOptions *options = [[HIOptions alloc]init];
+    HIResponsive *responsive = [[HIResponsive alloc] init];
+    
+    HIRules *rules1 = [[HIRules alloc] init];
+    rules1.condition = [[HICondition alloc] init];
+    rules1.condition.maxWidth = @500;
+    rules1.chartOptions = @{
+                            @"legend" : @{
+                                            @"layout": @"horizontal",
+                                            @"align": @"center",
+                                            @"verticalAlign": @"bottom"
+                                        }
+                            
+                            };
+    responsive.rules = [NSMutableArray arrayWithObjects:rules1, nil];
+    
     options.title = title;
     options.subtitle = subtitle;
-    options.xAxis = [NSMutableArray arrayWithObject:xaxis];
     options.yAxis = [NSMutableArray arrayWithObject:yaxis];
-    options.tooltip = tooltip;
     options.legend = legend;
-    options.series = [NSMutableArray arrayWithObjects:line1, line2, line3, line4, nil];
+    options.plotOptions = plotoptions;
+    options.series = [NSMutableArray arrayWithObjects:line1, line2, line3, line4, line5, nil];
+    options.responsive = responsive;
     
     chartView.options = options;
     

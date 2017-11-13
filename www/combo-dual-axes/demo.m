@@ -12,7 +12,7 @@
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
-     HIOptions *options = [[HIOptions alloc]init];
+    HIOptions *options = [[HIOptions alloc]init];
     
     HIChart *chart = [[HIChart alloc]init];
     chart.zoomType = @"xy";

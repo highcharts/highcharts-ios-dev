@@ -64,6 +64,12 @@
     gauge.name = @"Speed";
     gauge.tooltip = [[HITooltip alloc]init];
     gauge.tooltip.valueSuffix = @" km/h";
+    gauge.dataLabels = [[HIDataLabels alloc] init];
+    gauge.dataLabels.formatter = [[HIFunction alloc] initWithFunction:@"function () { var kmh = this.y, mph = Math.round(kmh * 0.621); return '<span style=\"color:#339\">' + kmh + ' km/h</span><br/>' + '<span style=\"color:#933\">' + mph + ' mph</span>'; }"];
+    gauge.dataLabels.backgroundColor = [[HIColor alloc] initWithLinearGradient:@{ @"x1": @0, @"x2": @0, @"y1": @0, @"y2": @1 } stops:@[
+                                                                                                                                       @[@0, @"#DDD"],
+                                                                                                                                       @[@1, @"#FFF"]
+                                                                                                                                       ]];
     gauge.data = [NSMutableArray arrayWithObjects:@80, nil];
     
     options.chart = chart;
