@@ -38,7 +38,7 @@
     xaxis.labels = [HILabels new];
     xaxis.labels.rotation = @0;
     xaxis.labels.useHTML = @NO;
-    xaxis.labels.formatter = @"function() {  return this.value + 's';}";
+    xaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function() {  return this.value + 's';}"];
     
     HICredits *credits = [[HICredits alloc]init];
     credits.enabled = @false;

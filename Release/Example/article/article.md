@@ -126,12 +126,12 @@ options.xAxis = [xAxis]
                 
 let yAxis = HIYAxis()
 yAxis.min = 0
-yAxis.title = HIYAxisTitle()
+yAxis.title = HITitle()
 yAxis.title.text = "Number"
 options.yAxis = [yAxis]
 ```
 
-As you can see, variable **categories** in the **HIXAxis** class is an array of 'String' elements. So, you need to initialize an array with the proper names. In the end, as usual, add this to the options class. Next, we defined Y axis. Variable **min** determines the start of the axis scale. You might notice that field title type is **HIYAxisTitle** class, which is used to modify the Y axis title. Chart can have a few X and Y axes depends on needs, that’s why it is added to options as array too.
+As you can see, variable **categories** in the **HIXAxis** class is an array of 'String' elements. So, you need to initialize an array with the proper names. In the end, as usual, add this to the options class. Next, we defined Y axis. Variable **min** determines the start of the axis scale. You might notice that field title type is **HITitle** class, which is used to modify the Y axis title. Chart can have a few X and Y axes depends on needs, that’s why it is added to options as array too.
 
 Now, we will discuss the tooltip matters. Consider the following code:
 
@@ -151,13 +151,13 @@ At this moment, we can add some chart type specific options:
 
 ```swift
 let plotOptions = HIPlotOptions()
-plotOptions.column = HIPlotOptionsColumn()
+plotOptions.column = HIColumn()
 plotOptions.column.pointPadding = 0.2
 plotOptions.column.borderWidth = 0
 options.plotOptions = plotOptions
 ```
 
-In the above code, we added new **HIPlotOptions** class object. We use only **column** field because this is the exact type of our chart - that is why we created assigned to it **HIPlotOptionsColumn** class instance. **poinPadding** is padding between each column and **borderWidth** the width of the border surrounding each column.
+In the above code, we added new **HIPlotOptions** class object. We use only **column** field because this is the exact type of our chart - that is why we created assigned to it **HIColumn** class instance. **poinPadding** is padding between each column and **borderWidth** the width of the border surrounding each column.
 
 For know, we was talking only about options in our column chart. You may ask: where are the columns in here exactly? Well, we will add them now!
 
