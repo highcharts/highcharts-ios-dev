@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -34,24 +34,25 @@
                         @"1999",
                         @"2050", nil];
     xaxis.tickmarkPlacement = @"on";
-    xaxis.title = [[HIXAxisTitle alloc]init];
+    xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Billions";
-    yaxis.labels = [[HIYAxisLabels alloc]init];
+    yaxis.labels = [[HILabels alloc]init];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value / 1000; }"];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     tooltip.valueSuffix = @" millions";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.area = [[HIPlotOptionsArea alloc]init];
+    plotoptions.area = [[HIArea alloc]init];
     plotoptions.area.stacking = @"normal";
     plotoptions.area.lineColor = [[HIColor alloc]initWithHexValue:@"666666"];
     plotoptions.area.lineWidth = @1;
-    plotoptions.area.marker = [[HIPlotOptionsAreaMarker alloc]init];
+    plotoptions.area.marker = [[HIMarker alloc]init];
     plotoptions.area.marker.lineWidth = @1;
     plotoptions.area.marker.lineColor = [[HIColor alloc]initWithHexValue:@"666666"];
     

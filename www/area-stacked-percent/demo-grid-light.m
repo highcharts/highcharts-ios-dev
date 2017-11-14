@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -34,23 +34,23 @@
                         @"1999",
                         @"2050", nil];
     xaxis.tickmarkPlacement = @"on";
-    xaxis.title = [[HIXAxisTitle alloc]init];
+    xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Percent";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     tooltip.pointFormat = @"<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} millions)<br/>";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.area = [[HIPlotOptionsArea alloc]init];
+    plotoptions.area = [[HIArea alloc]init];
     plotoptions.area.stacking = @"percent";
     plotoptions.area.lineColor = [[HIColor alloc]initWithHexValue:@"ffffff"];
     plotoptions.area.lineWidth = @1;
-    plotoptions.area.marker = [[HIPlotOptionsAreaMarker alloc]init];
+    plotoptions.area.marker = [[HIMarker alloc]init];
     plotoptions.area.marker.lineWidth = @1;
     plotoptions.area.marker.lineColor = [[HIColor alloc]initWithHexValue:@"ffffff"];
     

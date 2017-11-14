@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -26,13 +26,13 @@
     xAxis.type = @"category";
     
     HIYAxis *yAxis = [[HIYAxis alloc]init];
-    yAxis.title = [[HIYAxisTitle alloc]init];
+    yAxis.title = [[HITitle alloc]init];
     yAxis.title.text = @"USD";
-    yAxis.labels = [[HIYAxisLabels alloc]init];
+    yAxis.labels = [[HILabels alloc]init];
     yAxis.labels.format = @"{value}k";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.pointFormat = @"<b>${point.y:,.2f}</b> USD";
@@ -43,9 +43,9 @@
     
     //You can add objects by hand or creating data objects - one presented below:
     
-    HIWaterfallData *data = [[HIWaterfallData alloc]init];
+    HIData *data = [[HIData alloc]init];
     data.name = @"Positive Balance";
-    data.isIntermediateSum = @true;
+    data.isIntermediateSum = [[NSNumber alloc] initWithBool:true];
     data.color = [[HIColor alloc]initWithHexValue:@"434348"];
     
     series.data = [NSMutableArray arrayWithObjects:@{
@@ -60,9 +60,6 @@
                      @"name": @"Service Revenue",
                      @"y": @231
                      },
-                   
-                   data,
-                   
                    @{
                      @"name": @"Fixed Costs",
                      @"y": @-342
@@ -77,10 +74,11 @@
                      @"color": @"#434348"
                      }, nil];
     
-    series.dataLabels = [[HIWaterfallDataLabels alloc]init];
-    series.dataLabels.enabled = @true;
-    series.dataLabels.format = @"{point.y}k";
-    series.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold",@"fontWeight",  nil];
+    series.dataLabels = [[HIDataLabels alloc]init];
+    series.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
+    series.dataLabels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return Highcharts.numberFormat(this.y / 1000, 0, ',') + 'k'; }"];
+    series.dataLabels.style = [[HIStyle alloc] init];
+    series.dataLabels.style.fontWeight = @"bold";
     series.pointPadding = @0;
     
     options.chart = chart;

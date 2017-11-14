@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -27,15 +27,14 @@
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.type = @"datetime";
-    xaxis.dateTimeLabelFormats = @{
-                                   @"month": @"%e. %b",
-                                   @"year": @"%b"
-                                   };
-    xaxis.title = [[HIXAxisTitle alloc]init];
+    xaxis.dateTimeLabelFormats = [[HIDateTimeLabelFormats alloc] init];
+    xaxis.dateTimeLabelFormats.month = @"%e. %b";
+    xaxis.dateTimeLabelFormats.year = @"%b";
+    xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"Date";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Snow depth (m)";
     yaxis.min = @0;
     
@@ -44,9 +43,9 @@
     tooltip.pointFormat = @"{point.x:%e. %b}: {point.y:.2f} m";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.spline = [[HIPlotOptionsSpline alloc]init];
-    plotoptions.spline.marker = [[HIPlotOptionsSplineMarker alloc]init];
-    plotoptions.spline.marker.enabled = @true;
+    plotoptions.spline = [[HISpline alloc]init];
+    plotoptions.spline.marker = [[HIMarker alloc]init];
+    plotoptions.spline.marker.enabled = [[NSNumber alloc] initWithBool:true];
     
     HISpline *spline1 = [[HISpline alloc]init];
     spline1.name = @"Winter 2012-2013";
@@ -288,6 +287,7 @@
     chartView.options = options;
     
     [self.view addSubview:chartView];
+}
 }
 
 @end

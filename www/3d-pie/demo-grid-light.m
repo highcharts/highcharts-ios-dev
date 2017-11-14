@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -18,8 +18,8 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"pie";
-    chart.options3d = [[HIChartOptions3d alloc]init];
-    chart.options3d.enabled = @true;
+    chart.options3d = [[HIOptions3d alloc]init];
+    chart.options3d.enabled = [[NSNumber alloc] initWithBool:true];
     chart.options3d.alpha = @45;
     chart.options3d.beta = @0;
     
@@ -30,12 +30,12 @@
     tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.pie = [[HIPlotOptionsPie alloc]init];
-    plotoptions.pie.allowPointSelect = @true;
+    plotoptions.pie = [[HIPie alloc]init];
+    plotoptions.pie.allowPointSelect = [[NSNumber alloc] initWithBool:true];
     plotoptions.pie.cursor = @"pointer";
     plotoptions.pie.depth = @35;
-    plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
-    plotoptions.pie.dataLabels.enabled = @true;
+    plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.pie.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.pie.dataLabels.format = @"{point.name}";
     
     HIPie *pie = [[HIPie alloc]init];
@@ -73,7 +73,7 @@
     options.plotOptions = plotoptions;
     options.series = [NSMutableArray arrayWithObjects: pie, nil];
     
-    chartView.options = options
+    chartView.options = options;
     
     [self.view addSubview:chartView];
 }

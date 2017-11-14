@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -18,8 +18,8 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"column";
-    chart.options3d = [[HIChartOptions3d alloc]init];
-    chart.options3d.enabled = @true;
+    chart.options3d = [[HIOptions3d alloc]init];
+    chart.options3d.enabled = [[NSNumber alloc] initWithBool:true];
     chart.options3d.alpha = @15;
     chart.options3d.beta = @15;
     chart.options3d.depth = @40;
@@ -36,9 +36,9 @@
                         @"Bananas", nil];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.allowDecimals = @false;
+    yaxis.allowDecimals = [[NSNumber alloc] initWithBool:false];
     yaxis.min = @0;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Number of fruits";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
@@ -46,7 +46,7 @@
     tooltip.pointFormat = @"<span style=\"color:{series.color}\">●</span> {series.name}: {point.y} / {point.stackTotal}";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+    plotoptions.column = [[HIColumn alloc]init];
     plotoptions.column.depth = @40;
     plotoptions.column.stacking = @"normal";
     
@@ -95,6 +95,7 @@
     options.series = [NSMutableArray arrayWithObjects: column1, column2, column3, column4, nil];
     
     chartView.options = options;
+    
     [self.view addSubview:chartView];
 }
 

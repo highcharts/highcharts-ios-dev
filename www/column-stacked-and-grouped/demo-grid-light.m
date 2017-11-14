@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -30,16 +30,16 @@
                         @"Bananas", nil];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.allowDecimals = @false;
+    yaxis.allowDecimals = [[NSNumber alloc] initWithBool:false];
     yaxis.min = @0;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Number of fruits";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.pointFormat = @"{series.name} :{point.y} <br/> Total: {point.stackTotal}";
+    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + this.y + '<br/>' + 'Total: ' + this.point.stackTotal; }"];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+    plotoptions.column = [[HIColumn alloc]init];
     plotoptions.column.stacking = @"normal";
     
     HIColumn *column1 = [[HIColumn alloc]init];

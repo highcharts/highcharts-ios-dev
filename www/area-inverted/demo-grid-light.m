@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -18,7 +18,7 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"area";
-    chart.inverted = @true;
+    chart.inverted = [[NSNumber alloc] initWithBool:true];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Average fruit consumption during one week";
@@ -36,10 +36,10 @@
                         @"Sunday", nil];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Number of units";
-    yaxis.labels = [[HIYAxisLabels alloc]init];
-    yaxis.min = @0;
+    yaxis.labels = [[HILabels alloc]init];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value; }"];
     
     HILegend *legend = [[HILegend alloc]init];
     legend.layout = @"vertical";
@@ -47,12 +47,12 @@
     legend.verticalAlign = @"top";
     legend.x = @-150;
     legend.y = @100;
-    legend.floating = @true;
+    legend.floating = [[NSNumber alloc] initWithBool:true];
     legend.borderWidth = @1;
     legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.area = [[HIPlotOptionsArea alloc]init];
+    plotoptions.area = [[HIArea alloc]init];
     plotoptions.area.fillOpacity = @0.5;
     
     HIArea *area1 = [[HIArea alloc]init];

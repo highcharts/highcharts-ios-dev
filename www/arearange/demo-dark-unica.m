@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -27,15 +27,15 @@
     xaxis.type = @"datetime";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.crosshairs = @true;
-    tooltip.shared = @true;
+    tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     tooltip.valueSuffix = @"°C";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIArearange *series = [[HIArearange alloc]init];
     series.name = @"Temperatures";

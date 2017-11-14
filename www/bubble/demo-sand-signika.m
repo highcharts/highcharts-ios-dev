@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -30,19 +30,20 @@
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.gridLineWidth = @1;
-    xaxis.title = [[HIXAxisTitle alloc]init];
+    xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"Daily fat intake";
-    xaxis.labels = [[HIXAxisLabels alloc]init];
+    xaxis.labels = [[HILabels alloc]init];
     xaxis.labels.format = @"{value} gr";
-    HIXAxisPlotLines *plotLines = [[HIXAxisPlotLines alloc]init];
+    HIPlotLines *plotLines = [[HIPlotLines alloc]init];
     plotLines.color = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     plotLines.dashStyle = @"dot";
     plotLines.width = @2;
     plotLines.value = @65;
-    plotLines.label = [[HIXAxisPlotLinesLabel alloc]init];
+    plotLines.label = [[HILabel alloc]init];
     plotLines.label.rotation = @0;
     plotLines.label.y = @15;
-    plotLines.label.style = @{@"fontStyle": @"italic"};
+    plotLines.label.style = [[HIStyle alloc] init];
+    plotLines.label.style.fontWeight = @"italic";
     plotLines.label.text = @"Safe fat intake 65g/day";
     plotLines.zIndex = @3;
     xaxis.plotLines = [NSMutableArray arrayWithObject:plotLines];
@@ -50,20 +51,21 @@
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.startOnTick = @false;
     yaxis.endOnTick = @false;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Daily sugar intake";
-    yaxis.labels = [[HIYAxisLabels alloc]init];
+    yaxis.labels = [[HILabels alloc]init];
     yaxis.labels.format = @"{value} gr";
     yaxis.maxPadding = @0.2;
-    HIYAxisPlotLines *yplotLines = [[HIYAxisPlotLines alloc]init];
+    HIPlotLines *yplotLines = [[HIPlotLines alloc]init];
     yplotLines.color = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     yplotLines.dashStyle = @"dot";
     yplotLines.width = @2;
     yplotLines.value = @50;
-    yplotLines.label = [[HIYAxisPlotLinesLabel alloc]init];
+    yplotLines.label = [[HILabel alloc]init];
     yplotLines.label.align = @"right";
     yplotLines.label.x = @-10;
-    yplotLines.label.style = @{@"fontStyle": @"italic"};
+    yplotLines.label.style = [[HIStyle alloc] init];
+    yplotLines.label.style.fontWeight = @"italic";
     yplotLines.label.text = @"Safe sugar intake 50g/day";
     yplotLines.zIndex = @3;
     yaxis.plotLines = [NSMutableArray arrayWithObject:yplotLines];
@@ -76,8 +78,8 @@
     tooltip.followPointer = @true;
     
     HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-    plotOptions.bubble = [[HIPlotOptionsBubble alloc]init];
-    plotOptions.bubble.dataLabels = [[HIPlotOptionsBubbleDataLabels alloc]init];
+    plotOptions.bubble = [[HIBubble alloc]init];
+    plotOptions.bubble.dataLabels = [[HIDataLabels alloc]init];
     plotOptions.bubble.dataLabels.enabled = @true;
     plotOptions.bubble.dataLabels.format = @"{point.name}";
     
@@ -200,6 +202,7 @@
     options.series = [NSMutableArray arrayWithObjects:series, nil];
     
     chartView.options = options;
+    
     [self.view addSubview:chartView];
 }
 

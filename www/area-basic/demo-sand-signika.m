@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -24,25 +24,29 @@
     subtitle.text = @"Source: <a href=\"http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf\">thebulletin.metapress.com</a>";
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
-    xaxis.allowDecimals = @false;
-    
+    xaxis.allowDecimals = [[NSNumber alloc] initWithBool:false];
+    xaxis.labels = [[HILabels alloc] init];
+    xaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value; /* clean, unformatted number for year */ }"];
+   
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Nuclear weapon states";
+    yaxis.labels = [[HILabels alloc] init];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value / 1000 + 'k'; }"];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.pointFormat = @"{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}";
     
     HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-    plotOptions.area = [[HIPlotOptionsArea alloc]init];
+    plotOptions.area = [[HIArea alloc]init];
     plotOptions.area.pointStart = @1940;
-    plotOptions.area.marker = [[HIPlotOptionsAreaMarker alloc]init];
-    plotOptions.area.marker.enabled = @false;
+    plotOptions.area.marker = [[HIMarker alloc]init];
+    plotOptions.area.marker.enabled = [[NSNumber alloc] initWithBool:false];
     plotOptions.area.marker.symbol = @"circle";
     plotOptions.area.marker.radius = @2;
-    plotOptions.area.marker.states = [[HIPlotOptionsAreaMarkerStates alloc]init];
-    plotOptions.area.marker.states.hover = [[HIPlotOptionsAreaMarkerStatesHover alloc]init];
-    plotOptions.area.marker.states.hover.enabled = @true;
+    plotOptions.area.marker.states = [[HIStates alloc]init];
+    plotOptions.area.marker.states.hover = [[HIHover alloc]init];
+    plotOptions.area.marker.states.hover.enabled = [[NSNumber alloc] initWithBool:true];
     
     HIArea *series1 = [[HIArea alloc]init];
     series1.name = @"USA";

@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -28,7 +28,7 @@
     legend.verticalAlign = @"top";
     legend.x = @150;
     legend.y = @100;
-    legend.floating = @true;
+    legend.floating = [[NSNumber alloc] initWithBool:true];
     legend.borderWidth = @1;
     legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     
@@ -40,25 +40,25 @@
                         @"Friday",
                         @"Saturday",
                         @"Sunday", nil];
-    HIXAxisPlotBands *plotband = [[HIXAxisPlotBands alloc]init];
+    HIPlotBands *plotband = [[HIPlotBands alloc]init];
     plotband.from = @4.5;
     plotband.to = @6.5;
     plotband.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:.2];
     xaxis.plotBands = [NSMutableArray arrayWithObject:plotband];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Fruit unit";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     tooltip.valueSuffix = @" units";
     
     HICredits *credits = [[HICredits alloc]init];
-    credits.enabled = @false;
+    credits.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.areaspline = [[HIPlotOptionsAreaspline alloc]init];
+    plotoptions.areaspline = [[HIAreaspline alloc]init];
     plotoptions.areaspline.fillOpacity = @0.5;
     
     HIAreaspline *areaspline1 = [[HIAreaspline alloc]init];

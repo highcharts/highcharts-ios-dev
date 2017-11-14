@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -37,13 +37,13 @@
                    @5,
                    @4.51
                    ] , nil];
-    line.marker = [[HILineMarker alloc]init];
-    line.marker.enabled = @false;
-    HILineStates *state = [[HILineStates alloc]init];
-    state.hover = [[HILineStatesHover alloc]init];
+    line.marker = [[HIMarker alloc]init];
+    line.marker.enabled = [[NSNumber alloc] initWithBool:false];
+    HIStates *state = [[HIStates alloc]init];
+    state.hover = [[HIHover alloc]init];
     state.hover.lineWidth = @0;
-    line.states = [NSMutableArray arrayWithObject:state];
-    line.enableMouseTracking = @false;
+    line.states = state;
+    line.enableMouseTracking = [[NSNumber alloc] initWithBool:false];
     
     HIScatter *scatter = [[HIScatter alloc]init];
     scatter.name = @"Observations";
@@ -53,7 +53,7 @@
                     @3.5,
                     @3.9,
                     @4.2, nil];
-    scatter.marker = [[HIScatterMarker alloc]init];
+    scatter.marker = [[HIMarker alloc]init];
     scatter.marker.radius = @4;
     
     options.title = title;

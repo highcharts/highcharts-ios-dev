@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -27,14 +27,14 @@
     subtitle.text = @"Source: Heinz  2003";
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
-    xaxis.title = [[HIXAxisTitle alloc]init];
+    xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"Height (cm)";
-    xaxis.startOnTick = @true;
-    xaxis.endOnTick = @true;
-    xaxis.showLastLabel = @true;
+    xaxis.startOnTick = [[NSNumber alloc] initWithBool:true];
+    xaxis.endOnTick = [[NSNumber alloc] initWithBool:true];
+    xaxis.showLastLabel =[[NSNumber alloc] initWithBool:true];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Weight (kg)";
     
     HILegend *legend = [[HILegend alloc]init];
@@ -43,24 +43,25 @@
     legend.verticalAlign = @"top";
     legend.x = @100;
     legend.y = @70;
-    legend.floating = @true;
+    legend.floating = [[NSNumber alloc] initWithBool:true];
     legend.backgroundColor = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     legend.borderWidth = @1;
     
     HIPlotOptions *plotOptions = [[HIPlotOptions alloc]init];
-    plotOptions.scatter = [[HIPlotOptionsScatter alloc]init];
-    plotOptions.scatter.marker = [[HIPlotOptionsScatterMarker alloc]init];
+    plotOptions.scatter = [[HIScatter alloc]init];
+    plotOptions.scatter.marker = [[HIMarker alloc]init];
     plotOptions.scatter.marker.radius = @5;
-    plotOptions.scatter.marker.states = [[HIPlotOptionsScatterMarkerStates alloc]init];
-    plotOptions.scatter.marker.states.hover = [[HIPlotOptionsScatterMarkerStatesHover alloc]init];
-    plotOptions.scatter.marker.states.hover.enabled = @true;
+    plotOptions.scatter.marker.states = [[HIStates alloc]init];
+    plotOptions.scatter.marker.states.hover = [[HIHover alloc]init];
+    plotOptions.scatter.marker.states.hover.enabled = [[NSNumber alloc] initWithBool:true];
     plotOptions.scatter.marker.states.hover.lineColor = [[HIColor alloc]initWithRGB:100 green:100 blue:100];
-    HIPlotOptionsScatterStates *state = [[HIPlotOptionsScatterStates alloc]init];
-    state.hover = [[HIPlotOptionsScatterStatesHover alloc]init];
-    state.hover.marker = [[HIPlotOptionsScatterStatesHoverMarker alloc]init];
-    state.hover.marker.enabled = @false;
-    plotOptions.scatter.states = [NSMutableArray arrayWithObject:state];
-    plotOptions.scatter.tooltip = [[HIPlotOptionsScatterTooltip alloc]init];
+    HIStates *state = [[HIStates alloc]init];
+    state.hover = [[HIHover alloc]init];
+    state.hover.marker = [[HIMarker alloc]init];
+    state.hover.marker.enabled = [[NSNumber alloc] initWithBool:false];
+    plotOptions.scatter.states = [[HIStates alloc] init];
+    plotOptions.scatter.states = state;
+    plotOptions.scatter.tooltip = [[HITooltip alloc]init];
     plotOptions.scatter.tooltip.headerFormat = @"<b>{series.name}</b><br>";
     plotOptions.scatter.tooltip.pointFormat = @"{point.x} cm, {point.y} kg";
     

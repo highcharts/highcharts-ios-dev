@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -24,12 +24,12 @@
     xaxis.type = @"daytime";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.crosshairs = @true;
-    tooltip.shared = @true;
+    tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     tooltip.valueSuffix = @"°C";
     
     HILegend *legend = [[HILegend alloc]init];
@@ -37,7 +37,7 @@
     HILine *line = [[HILine alloc]init];
     line.name = @"Temperature";
     line.zIndex = @1;
-    line.marker = [[HILineMarker alloc]init];
+    line.marker = [[HIMarker alloc]init];
     line.marker.fillColor = [[HIColor alloc]initWithName:@"white"];
     line.marker.lineWidth = @2;
     line.marker.lineColor = [[HIColor alloc]initWithHexValue:@"7cb5ec"];

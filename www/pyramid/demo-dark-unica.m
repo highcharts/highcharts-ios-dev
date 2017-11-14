@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -25,15 +25,15 @@
     title.x = @-50;
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @true;
+    legend.enabled = [[NSNumber alloc] initWithBool:true];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.pyramid = [[HIPlotOptionsPyramid alloc]init];
-    plotoptions.pyramid.dataLabels = [[HIPlotOptionsPyramidDataLabels alloc]init];
-    plotoptions.pyramid.dataLabels.enabled = @true;
+    plotoptions.pyramid = [[HIPyramid alloc]init];
+    plotoptions.pyramid.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.pyramid.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.pyramid.dataLabels.format = @"<b>{point.name}</b> ({point.y:,.0f})";
     plotoptions.pyramid.dataLabels.color = [[HIColor alloc]initWithName:@"black"];
-    plotoptions.pyramid.dataLabels.softConnector = @true;
+    plotoptions.pyramid.dataLabels.softConnector = [[NSNumber alloc] initWithBool:true];
     
     HIPyramid *pyramind = [[HIPyramid alloc]init];
     pyramind.name = @"Unique users";

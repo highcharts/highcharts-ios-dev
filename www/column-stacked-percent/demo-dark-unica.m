@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -31,15 +31,15 @@
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Total fruit consumption";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.pointFormat = @"<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>";
-    tooltip.shared = @true;
+    tooltip.shared = [[NSNumber alloc] initWithBool:true];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.column = [[HIPlotOptionsColumn alloc]init];
+    plotoptions.column = [[HIColumn alloc]init];
     plotoptions.column.stacking = @"percent";
     
     HIColumn *column1 = [[HIColumn alloc]init];

@@ -11,7 +11,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -30,22 +30,22 @@
     xaxis.type = @"datetime";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Exchange rate";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.area = [[HIPlotOptionsArea alloc]init];
+    plotoptions.area = [[HIArea alloc]init];
     plotoptions.area.fillColor = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
-    plotoptions.area.marker = [[HIPlotOptionsAreaMarker alloc]init];
+    plotoptions.area.marker = [[HIMarker alloc]init];
     plotoptions.area.marker.radius = @2;
     plotoptions.area.lineWidth = @1;
-    HIPlotOptionsAreaStates *state = [[HIPlotOptionsAreaStates alloc]init];
-    state.hover = [[HIPlotOptionsAreaStatesHover alloc]init];
+    HIStates *state = [[HIStates alloc]init];
+    state.hover = [[HIHover alloc]init];
     state.hover.lineWidth = @1;
-    plotoptions.area.states = [NSMutableArray arrayWithObject:state];
+    plotoptions.area.states = state;
     
     HIArea *area = [[HIArea alloc]init];
     area.name = @"USD to EUR";

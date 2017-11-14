@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -27,16 +27,16 @@
     xaxis.type = @"category";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Total percent market share";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.series = [[HIPlotOptionsSeries alloc]init];
-    plotoptions.series.dataLabels = [[HIPlotOptionsSeriesDataLabels alloc]init];
-    plotoptions.series.dataLabels.enabled = @true;
+    plotoptions.series = [[HISeries alloc]init];
+    plotoptions.series.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.series.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.series.dataLabels.format = @"{point.y:.1f}%";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
@@ -45,7 +45,7 @@
     
     HIColumn *column = [[HIColumn alloc]init];
     column.name = @"Brands";
-    column.colorByPoint = @true;
+    column.colorByPoint = [[NSNumber alloc] initWithBool:true];
     column.data = [NSMutableArray arrayWithObjects:@{
                                                      @"name": @"Microsoft Internet Explorer",
                                                      @"y": @56.33,

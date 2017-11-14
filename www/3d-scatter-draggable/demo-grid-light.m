@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -20,21 +20,21 @@
     chart.renderTo = @"container";
     chart.margin = [NSMutableArray arrayWithObjects:@100, nil];
     chart.type = @"scatter";
-    chart.options3d = [[HIChartOptions3d alloc]init];
-    chart.options3d.enabled = @true;
+    chart.options3d = [[HIOptions3d alloc]init];
+    chart.options3d.enabled = [[NSNumber alloc] initWithBool:true];
     chart.options3d.alpha = @10;
     chart.options3d.beta = @30;
     chart.options3d.depth = @250;
     chart.options3d.viewDistance = @5;
-    chart.options3d.fitToPlot = @false;
-    chart.options3d.frame = [[HIChartOptions3dFrame alloc]init];
-    chart.options3d.frame.bottom = [[HIChartOptions3dFrameBottom alloc]init];
+    chart.options3d.fitToPlot = [[NSNumber alloc] initWithBool:false];
+    chart.options3d.frame = [[HIFrame alloc]init];
+    chart.options3d.frame.bottom = [[HIBottom alloc]init];
     chart.options3d.frame.bottom.size = @1;
     chart.options3d.frame.bottom.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.02];
-    chart.options3d.frame.back = [[HIChartOptions3dFrameBack alloc]init];
+    chart.options3d.frame.back = [[HIBack alloc]init];
     chart.options3d.frame.back.size = @1;
     chart.options3d.frame.back.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.04];
-    chart.options3d.frame.side = [[HIChartOptions3dFrameSide alloc]init];
+    chart.options3d.frame.side = [[HISide alloc]init];
     chart.options3d.frame.side.size = @1;
     chart.options3d.frame.side.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.06];
     
@@ -52,11 +52,11 @@
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
     yaxis.max = @10;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIScatter *scatter = [[HIScatter alloc]init];
     scatter.name = @"Reading";

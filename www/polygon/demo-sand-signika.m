@@ -10,28 +10,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
     HIOptions *options = [[HIOptions alloc]init];
     
     HITitle *title = [[HITitle alloc]init];
-    title.text  =@"Height vs Weight";
+    title.text = @"Height vs Weight";
     
     HISubtitle *subtitle = [[HISubtitle alloc]init];
     subtitle.text = @"Polygon series in Highcharts";
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.gridLineWidth = @1;
-    xaxis.title = [[HIXAxisTitle alloc]init];
+    xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"Height (cm)";
-    xaxis.startOnTick = @true;
-    xaxis.endOnTick = @true;
-    xaxis.showLastLabel = @true;
+    xaxis.startOnTick = [[NSNumber alloc] initWithBool:true];
+    xaxis.endOnTick = [[NSNumber alloc] initWithBool:true];
+    xaxis.showLastLabel = [[NSNumber alloc] initWithBool:true];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Weight (kg)";
     
     HILegend *legend = [[HILegend alloc]init];
@@ -42,7 +42,7 @@
     HIPolygon *polygon = [[HIPolygon alloc]init];
     polygon.name = @"Target";
     polygon.color = [[HIColor alloc]initWithRGBA:124 green:181 blue:236 alpha:0.5];
-    polygon.enableMouseTracking = @false;
+    polygon.enableMouseTracking = [[NSNumber alloc] initWithBool:false];
     polygon.data = @[
                      @[
                          @153,

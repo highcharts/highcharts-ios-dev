@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc]init];
     
@@ -48,7 +48,7 @@
                          @"Thursday",
                          @"Friday"
                          ];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"";
     options.yAxis = @[yaxis];
     
@@ -62,14 +62,13 @@
     options.legend = legend;
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.enabled = @false;
-    options.tooltip = tooltip;
+    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> sold <br><b>' + this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>'; }"];
     
     HIHeatmap *heatmap = [[HIHeatmap alloc]init];
     heatmap.name = @"Sales per employee";
     heatmap.borderWidth = @1;
-    heatmap.dataLabels = [[HIHeatmapDataLabels alloc]init];
-    heatmap.dataLabels.enabled = @true;
+    heatmap.dataLabels = [[HIDataLabels alloc]init];
+    heatmap.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     heatmap.dataLabels.color = [[HIColor alloc]initWithHexValue:@"000000"];
     heatmap.data = @[
                      @[

@@ -7,13 +7,13 @@
 
 @implementation ViewController
 
-HIGChartView *chartView;
+HIChartView *chartView;
 NSString *currentButtonClicked;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    chartView = [[HIGChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height - 50)];
+    chartView = [[HIChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height - 50)];
     
     chartView.theme = @"sand-signika";
     
@@ -37,12 +37,12 @@ NSString *currentButtonClicked;
     xaxis.categories = [NSMutableArray arrayWithObjects:@"Apples",
                         @"Oranges",
                         @"Bananas", nil];
-    xaxis.labels = [[HIXAxisLabels alloc] init];
+    xaxis.labels = [[HILabels alloc] init];
     xaxis.labels.x = @-10;
     
     HIYAxis *yaxis = [[HIYAxis alloc] init];
     yaxis.allowDecimals = @false;
-    yaxis.title = [[HIYAxisTitle alloc] init];
+    yaxis.title = [[HITitle alloc] init];
     yaxis.title.text = @"Amount";
     
     HIColumn *column1 =[[HIColumn alloc] init];
@@ -111,7 +111,7 @@ NSString *currentButtonClicked;
     xaxis.categories = [NSMutableArray arrayWithObjects:@"Apples",
                         @"Oranges",
                         @"Bananas", nil];
-    xaxis.labels = [[HIXAxisLabels alloc] init];
+    xaxis.labels = [[HILabels alloc] init];
     xaxis.labels.x = @-10;
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
@@ -146,7 +146,7 @@ NSString *currentButtonClicked;
         legend.layout = @"vertical";
         
         yaxis.allowDecimals = @false;
-        yaxis.title = [[HIYAxisTitle alloc] init];
+        yaxis.title = [[HITitle alloc] init];
         yaxis.title.text = @"Amount";
         
     }
@@ -164,9 +164,9 @@ NSString *currentButtonClicked;
         legend.verticalAlign = @"bottom";
         legend.layout = @"horizontal";
         
-        yaxis.title = [[HIYAxisTitle alloc] init];
+        yaxis.title = [[HITitle alloc] init];
         yaxis.title.text = @"";
-        yaxis.labels = [[HIYAxisLabels alloc] init];
+        yaxis.labels = [[HILabels alloc] init];
         yaxis.labels.align = @"left";
         yaxis.labels.x = @0;
         yaxis.labels.y = @-5;

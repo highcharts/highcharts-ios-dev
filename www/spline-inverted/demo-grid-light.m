@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
     
@@ -18,7 +18,7 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"spline";
-    chart.inverted = @true;
+    chart.inverted = [[NSNumber alloc] initWithBool:true];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Atmosphere Temperature by Altitude";
@@ -27,29 +27,31 @@
     subtitle.text = @"According to the Standard Atmosphere Model";
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
-    xaxis.reversed = @false;
-    xaxis.title = [[HIXAxisTitle alloc]init];
+    xaxis.reversed = [[NSNumber alloc] initWithBool:false];
+    xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"Altitude";
-    xaxis.labels = [[HIXAxisLabels alloc]init];
+    xaxis.labels = [[HILabels alloc]init];
+    xaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value + 'km'; }"];
     xaxis.maxPadding = @0.05;
-    xaxis.showLastLabel = @true;
+    xaxis.showLastLabel = [[NSNumber alloc] initWithBool:true];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Temperature";
-    yaxis.labels = [[HIYAxisLabels alloc]init];
+    yaxis.labels = [[HILabels alloc]init];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value + '°'; }"];
     yaxis.lineWidth = @2;
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.headerFormat = @"<b>{series.name}</b><br/>";
     tooltip.pointFormat = @"{point.x} km: {point.y}°C";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.spline = [[HIPlotOptionsSpline alloc]init];
-    plotoptions.spline.marker = [[HIPlotOptionsSplineMarker alloc]init];
+    plotoptions.spline = [[HISpline alloc]init];
+    plotoptions.spline.marker = [[HIMarker alloc]init];
     plotoptions.spline.marker.enabled = @false;
     
     HISpline *series = [[HISpline alloc]init];

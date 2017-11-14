@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -19,7 +19,7 @@
     HIChart *chart = [[HIChart alloc]init];
     chart.plotBackgroundColor = [[HIColor alloc]init];
     chart.plotBorderWidth = [[NSNumber alloc]init];
-    chart.plotShadow = @false;
+    chart.plotShadow = [[NSNumber alloc] initWithBool:false];
     chart.type = @"pie";
     
     NSArray *colors = @[
@@ -42,13 +42,14 @@
     tooltip.pointFormat = @"{series.name}: <b>{point.percentage:.1f}%</b>";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.pie = [[HIPlotOptionsPie alloc]init];
-    plotoptions.pie.allowPointSelect = @true;
+    plotoptions.pie = [[HIPie alloc]init];
+    plotoptions.pie.allowPointSelect = [[NSNumber alloc] initWithBool:true];
     plotoptions.pie.cursor = @"pointer";
-    plotoptions.pie.dataLabels = [[HIPlotOptionsPieDataLabels alloc]init];
-    plotoptions.pie.dataLabels.enabled = @true;
+    plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.pie.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
-    plotoptions.pie.dataLabels.style = @{@"color": @"black"};
+    plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
+    plotoptions.pie.dataLabels.style.color = @"black";
     
     HIPie *pie = [[HIPie alloc]init];
     pie.name = @"Brands";
@@ -60,8 +61,8 @@
                  @{
                      @"name": @"Chrome",
                      @"y": @24.03,
-                     @"sliced": @true,
-                     @"selected": @true
+                     @"sliced": [[NSNumber alloc] initWithBool:true],
+                     @"selected": [[NSNumber alloc] initWithBool:true]
                      },
                  @{
                      @"name": @"Firefox",

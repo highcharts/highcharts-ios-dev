@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
     
@@ -18,8 +18,8 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"pie";
-    chart.options3d = [[HIChartOptions3d alloc]init];
-    chart.options3d.enabled = @true;
+    chart.options3d = [[HIOptions3d alloc]init];
+    chart.options3d.enabled = [[NSNumber alloc] initWithBool:true];
     chart.options3d.alpha = @45;
     
     HITitle *title = [[HITitle alloc]init];
@@ -29,7 +29,7 @@
     subtitle.text = @"3D donut in Highcharts";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.pie = [[HIPlotOptionsPie alloc]init];
+    plotoptions.pie = [[HIPie alloc]init];
     plotoptions.pie.innerSize = @100;
     plotoptions.pie.depth = @45;
     

@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     chartView.plugins = @[ @"treemap" ];
 
@@ -24,8 +24,8 @@
     
     HITreemap *treemap = [[HITreemap alloc]init];
     treemap.layoutAlgorithm = @"stripes";
-    treemap.alternateStartingDirection = @true;
-    HITreemapLevels *level = [[HITreemapLevels alloc]init];
+    treemap.alternateStartingDirection = [[NSNumber alloc] initWithBool:true];
+    HILevels *level = [[HILevels alloc]init];
     level.level = @1;
     level.layoutAlgorithm = @"sliceAndDice";
     level.dataLabels = @{

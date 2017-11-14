@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
     
@@ -27,17 +27,19 @@
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.type = @"category";
-    xaxis.labels = [[HIXAxisLabels alloc]init];
+    xaxis.labels = [[HILabels alloc]init];
     xaxis.labels.rotation = @-45;
-    xaxis.labels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"13px", @"fonSize", @"Verdana, sans-serif", @"fontFamily", nil];
+    xaxis.labels.style = [[HIStyle alloc] init];
+    xaxis.labels.style.fontSize = @"13px";
+    xaxis.labels.style.fontFamily = @"Verdana, sans-serif";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;
-    yaxis.title = [[HIYAxisTitle alloc]init];
+    yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Population (millions)";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.pointFormat = @"Population in 2008: <b>{point.y:.1f} millions</b>";
@@ -125,14 +127,16 @@
                      @8.9
                      ]
                    , nil];
-    column.dataLabels = [[HIColumnDataLabels alloc]init];
-    column.dataLabels.enabled = @true;
+    column.dataLabels = [[HIDataLabels alloc]init];
+    column.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     column.dataLabels.rotation = @-90;
     column.dataLabels.color = [[HIColor alloc]initWithHexValue:@"FFFFFF"];
     column.dataLabels.align = @"right";
     column.dataLabels.format = @"{point.y:.1f}";
     column.dataLabels.y = @10;
-    column.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"13px", @"fonSize", @"Verdana, sans-serif", @"fontFamily", nil];
+    column.dataLabels.style = [[HIStyle alloc] init];
+    column.dataLabels.style.fontSize = @"13px";
+    column.dataLabels.style.fontFamily = @"Verdana, sans-serif";
     
     options.chart = chart;
     options.title = title;

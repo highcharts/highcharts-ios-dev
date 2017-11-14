@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     chartView.theme = @"dark-unica";
     
@@ -30,9 +30,9 @@
     tooltip.pointFormat = @"<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
-    plotoptions.series = [[HIPlotOptionsSeries alloc]init];
-    plotoptions.series.dataLabels = [[HIPlotOptionsSeriesDataLabels alloc]init];
-    plotoptions.series.dataLabels.enabled = @true;
+    plotoptions.series = [[HISeries alloc]init];
+    plotoptions.series.dataLabels = [[HIDataLabels alloc]init];
+    plotoptions.series.dataLabels.enabled = @[[NSNumber alloc] initWithBool:true];
     plotoptions.series.dataLabels.format = @"{point.name}: {point.y:.1f}%";
     
     HIPie *pie = [[HIPie alloc]init];

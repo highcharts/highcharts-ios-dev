@@ -10,7 +10,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
+    HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
     HIOptions *options = [[HIOptions alloc] init];
     
@@ -26,8 +26,8 @@
     xaxis.gridLineWidth = @1;
     
     HIYAxis *yaxis = [[HIYAxis alloc] init];
-    yaxis.startOnTick = @false;
-    yaxis.endOnTick = @false;
+    yaxis.startOnTick = [[NSNumber alloc] initWithBool:false];
+    yaxis.endOnTick = [[NSNumber alloc] initWithBool:false];
     
     HIBubble *bubble1 = [[HIBubble alloc] init];
     bubble1.data = [NSMutableArray arrayWithObjects:@[@9, @81, @63],
@@ -44,7 +44,7 @@
                     @[@79, @91, @63],
                     @[@93, @23, @23],
                     @[@44, @83, @22], nil];
-    bubble1.marker = [[HIBubbleMarker alloc] init];
+    bubble1.marker = [[HIMarker alloc] init];
     bubble1.marker.fillColor = [[HIColor alloc] initWithRadialGradient:[[NSDictionary alloc] initWithObjectsAndKeys:@0.4, @"cx", @0.3, @"cy", @0.7, @"r", nil] stops:@[
                                                                                                                                                                        @[@0, @"rgba(255,255,255,0.5)"],
                                                                                                                                                                        @[@1, @"rgba(124,181,236,0.5)"]
@@ -65,7 +65,7 @@
                     @[@22, @87, @89],
                     @[@57, @91, @82],
                     @[@45, @15, @98], nil];
-    bubble2.marker = [[HIBubbleMarker alloc] init];
+    bubble2.marker = [[HIMarker alloc] init];
     bubble2.marker.fillColor = [[HIColor alloc] initWithRadialGradient:[[NSDictionary alloc] initWithObjectsAndKeys:@0.4, @"cx", @0.3, @"cy", @0.7, @"r", nil] stops:@[
                                                                                                                                                                        @[@0, @"rgba(255,255,255,0.5)"],
                                                                                                                                                                        @[@1, @"rgba(67,67,72,0.5)"]
