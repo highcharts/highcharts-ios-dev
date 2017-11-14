@@ -12,9 +12,9 @@
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
-    chartView.plugins = @[ @"heatmap", @"treemap" ];
-
     chartView.theme = @"grid-light";
+
+    chartView.plugins = @[ @"heatmap", @"treemap" ];
     
     HIOptions *options = [[HIOptions alloc]init];
     

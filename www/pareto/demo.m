@@ -11,6 +11,8 @@
     [super viewDidLoad];
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.plugins = @[ @"pareto" ];
     
     HIOptions *options = [[HIOptions alloc] init];
     

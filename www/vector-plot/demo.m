@@ -12,6 +12,8 @@
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
+    chartView.plugins = @[ @"vector" ];
+
     HIOptions *options = [[HIOptions alloc] init];
     
     HIChart *chart = [[HIChart alloc] init];

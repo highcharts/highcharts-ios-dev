@@ -11,19 +11,20 @@
     [super viewDidLoad];
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.plugins = @[ @"funnel" ];
     
     HIOptions *options = [[HIOptions alloc]init];
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"pyramid";
-    chart.marginRight = @100;
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Sales pyramid";
     title.x = @-50;
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = [[NSNumber alloc] initWithBool:true];
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
     plotoptions.pyramid = [[HIPyramid alloc]init];
@@ -32,6 +33,8 @@
     plotoptions.pyramid.dataLabels.format = @"<b>{point.name}</b> ({point.y:,.0f})";
     plotoptions.pyramid.dataLabels.color = [[HIColor alloc]initWithName:@"black"];
     plotoptions.pyramid.dataLabels.softConnector = [[NSNumber alloc] initWithBool:true];
+    plotoptions.pyramid.center = @[@"40%", @"50%"];
+    plotoptions.pyramid.width = @"80%";
     
     HIPyramid *pyramind = [[HIPyramid alloc]init];
     pyramind.name = @"Unique users";

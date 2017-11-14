@@ -11,6 +11,8 @@
     [super viewDidLoad];
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
+
+    chartView.plugins = @[ @"heatmap", @"boost-canvas" ];
     
     HIOptions *options = [[HIOptions alloc]init];
     

@@ -12,6 +12,8 @@
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
+    chartView.plugins = @[ @"streamgraph", @"series-label", @"annotations" ];
+    
     HIOptions *options = [[HIOptions alloc]init];
     
     HIChart *chart = [[HIChart alloc]init];
@@ -50,6 +52,7 @@
     subtitle.text = @"Source: <a href=\"https://www.sports-reference.com/olympics/winter/1924/\">sports-reference.com</a>";
     subtitle.align = @"left";
     subtitle.floating = [[NSNumber alloc] initWithBool:true];
+    subtitle.y = @30;
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.maxPadding = @0;
@@ -112,7 +115,7 @@
     label2.point.y = @90;
     label2.point.yAxis = @0;
     label2.text = @"Soviet Union fell,<br>Germany united";
-   
+    
     annotations.labels = [NSMutableArray arrayWithObjects:label1, label2, nil];
     
     annotations.labelOptions = [[HILabelOptions alloc] init];
@@ -146,8 +149,8 @@
     HIStreamgraph *streamgraph3 = [[HIStreamgraph alloc] init];
     streamgraph3.name = @"Sweden";
     streamgraph3.data = @[
-                         @0, @2, @5, @3, @7, @0, @0, @10, @4, @10, @7, @7, @8, @4, @2, @4, @8, @6, @4, @3, @3, @7, @14, @11, @15
-                         ];
+                          @0, @2, @5, @3, @7, @0, @0, @10, @4, @10, @7, @7, @8, @4, @2, @4, @8, @6, @4, @3, @3, @7, @14, @11, @15
+                          ];
     
     HIStreamgraph *streamgraph4 = [[HIStreamgraph alloc] init];
     streamgraph4.name = @"Norway";
@@ -182,8 +185,8 @@
     HIStreamgraph *streamgraph9 = [[HIStreamgraph alloc] init];
     streamgraph9.name = @"Netherlands";
     streamgraph9.data = @[
-                         @0, @0, @0, @0, @0, @0, @0, @0, @3, @0, @2, @2, @9, @9, @6, @4, @0, @7, @4, @4, @11, @8, @9, @8, @24
-                         ];
+                          @0, @0, @0, @0, @0, @0, @0, @0, @3, @0, @2, @2, @9, @9, @6, @4, @0, @7, @4, @4, @11, @8, @9, @8, @24
+                          ];
     
     HIStreamgraph *streamgraph10 = [[HIStreamgraph alloc] init];
     streamgraph10.name = @"Italy";
@@ -362,8 +365,8 @@
     HIStreamgraph *streamgraph39 = [[HIStreamgraph alloc] init];
     streamgraph39.name = @"Slovakia";
     streamgraph39.data = @[
-                            @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @1, @3, @1
-                            ];
+                           @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @1, @3, @1
+                           ];
     
     HIStreamgraph *streamgraph40 = [[HIStreamgraph alloc] init];
     streamgraph40.name = @"Croatia";

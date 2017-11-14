@@ -98,6 +98,8 @@
     options.series = [NSMutableArray arrayWithObjects: column1, column2, column3, nil];
     
     chartView.options = options;
+
+    [self.view addSubview:chartView];
 }
 
 @end

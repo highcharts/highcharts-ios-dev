@@ -14,6 +14,8 @@
 
     chartView.theme = @"dark-unica";
     
+    chartView.plugins = @[ @"heatmap", @"tilemap" ];
+    
     HIOptions *options = [[HIOptions alloc] init];
     
     HIChart *chart = [[HIChart alloc] init];
@@ -38,24 +40,24 @@
     HIDataClasses *dataclasses1 = [[HIDataClasses alloc] init];
     dataclasses1.from = @0;
     dataclasses1.to = @1000000;
-    dataclasses1.color = [[HIColor alloc] initWithHexValue:@"#F9EDB3"];
+    dataclasses1.color = [[HIColor alloc] initWithHexValue:@"F9EDB3"];
     dataclasses1.name = @"< 1M";
     
     HIDataClasses *dataclasses2 = [[HIDataClasses alloc] init];
     dataclasses2.from = @1000000;
     dataclasses2.to = @5000000;
-    dataclasses2.color = [[HIColor alloc] initWithHexValue:@"#FFC428"];
+    dataclasses2.color = [[HIColor alloc] initWithHexValue:@"FFC428"];
     dataclasses2.name = @"1M - 5M";
     
     HIDataClasses *dataclasses3 = [[HIDataClasses alloc] init];
     dataclasses3.from = @5000000;
     dataclasses3.to = @20000000;
-    dataclasses3.color = [[HIColor alloc] initWithHexValue:@"#FF7987"];
+    dataclasses3.color = [[HIColor alloc] initWithHexValue:@"FF7987"];
     dataclasses3.name = @"5M - 20M";
     
     HIDataClasses *dataclasses4 = [[HIDataClasses alloc] init];
     dataclasses4.from = @20000000;
-    dataclasses4.color = [[HIColor alloc] initWithHexValue:@"#FF2371"];
+    dataclasses4.color = [[HIColor alloc] initWithHexValue:@"FF2371"];
     dataclasses4.name = @"> 20M";
     
     coloraxis.dataClasses = [NSMutableArray arrayWithObjects:dataclasses1, dataclasses2, dataclasses3, dataclasses4, nil];

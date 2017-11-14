@@ -18,7 +18,7 @@
     chart.type = @"waterfall";
     
     HITitle *title = [[HITitle alloc]init];
-    title.text = @"Waterfall";
+    title.text = @"Highcharts Waterfall";
     
     HIXAxis *xAxis = [[HIXAxis alloc]init];
     xAxis.type = @"category";
@@ -26,8 +26,6 @@
     HIYAxis *yAxis = [[HIYAxis alloc]init];
     yAxis.title = [[HITitle alloc]init];
     yAxis.title.text = @"USD";
-    yAxis.labels = [[HILabels alloc]init];
-    yAxis.labels.format = @"{value}k";
     
     HILegend *legend = [[HILegend alloc]init];
     legend.enabled = [[NSNumber alloc] initWithBool:false];
@@ -48,23 +46,24 @@
     
     series.data = [NSMutableArray arrayWithObjects:@{
                                                      @"name": @"Start",
-                                                     @"y": @120
+                                                     @"y": @120000
                                                      },
                    @{
                      @"name": @"Product Revenue",
-                     @"y": @569
+                     @"y": @569000
                      },
                    @{
                      @"name": @"Service Revenue",
-                     @"y": @231
+                     @"y": @231000
                      },
+                   data,
                    @{
                      @"name": @"Fixed Costs",
-                     @"y": @-342
+                     @"y": @-342000
                      },
                    @{
                      @"name": @"Variable Costs",
-                     @"y": @-233
+                     @"y": @-233000
                      },
                    @{
                      @"name": @"Balance",
