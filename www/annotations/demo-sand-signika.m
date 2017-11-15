@@ -13,6 +13,8 @@
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"sand-signika";
+
+    chartView.plugins = @[ @"annotations" ];
     
     HIOptions *options = [[HIOptions alloc]init];
     

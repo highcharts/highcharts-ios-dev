@@ -13,6 +13,8 @@
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"grid-light";
+
+    chartView.plugins = @[ @"funnel" ];
     
     HIOptions *options = [[HIOptions alloc]init];
     

@@ -12,9 +12,9 @@
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
     
-    chartView.plugins = @[ @"treemap" ];
-
     chartView.theme = @"dark-unica";
+
+    chartView.plugins = @[ @"treemap" ];
     
     HIOptions *options = [[HIOptions alloc]init];
     

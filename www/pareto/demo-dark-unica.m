@@ -13,6 +13,8 @@
     HIGChartView *chartView = [[HIGChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
+
+    chartView.plugins = @[ @"pareto" ];
     
     HIOptions *options = [[HIOptions alloc] init];
     

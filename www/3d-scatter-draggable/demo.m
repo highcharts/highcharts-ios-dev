@@ -17,7 +17,7 @@
     HIChart *chart = [[HIChart alloc]init];
     chart.renderTo = @"container";
     chart.margin = [NSMutableArray arrayWithObjects:@100, nil];
-    chart.type = @"scatter";
+    chart.type = @"scatter3d";
     chart.options3d = [[HIOptions3d alloc]init];
     chart.options3d.enabled = [[NSNumber alloc] initWithBool:true];
     chart.options3d.alpha = @10;
@@ -37,7 +37,7 @@
     chart.options3d.frame.side.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.06];
     
     HITitle *title = [[HITitle alloc]init];
-    title.text = @"3D Scatter";
+    title.text = @"Draggable box";
     
     HISubtitle *subtitle = [[HISubtitle alloc]init];
     subtitle.text = @"";
@@ -51,12 +51,11 @@
     yaxis.min = @0;
     yaxis.max = @10;
     yaxis.title = [[HITitle alloc]init];
-    yaxis.title.text = @"";
     
     HILegend *legend = [[HILegend alloc]init];
     legend.enabled = [[NSNumber alloc] initWithBool:false];
     
-    HIScatter *scatter = [[HIScatter alloc]init];
+    HIScatter3d *scatter = [[HIScatter3d alloc]init];
     scatter.name = @"Reading";
     scatter.data = [NSMutableArray arrayWithObjects:@[
                                                       @1,

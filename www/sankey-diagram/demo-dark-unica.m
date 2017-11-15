@@ -13,7 +13,9 @@
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
     chartView.theme = @"dark-unica";
-    
+
+    chartView.plugins = @[ @"sankey" ];
+        
     HIOptions *options = [[HIOptions alloc] init];
     
     HIChart *chart = [[HIChart alloc] init];

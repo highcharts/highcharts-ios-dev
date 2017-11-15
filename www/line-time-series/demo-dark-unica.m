@@ -38,7 +38,10 @@
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
     plotoptions.area = [[HIArea alloc]init];
-    plotoptions.area.fillColor = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
+    plotoptions.area.fillColor = [[HIColor alloc]initWithLinearGradient:@{ @"x1": @0, @"x2": @0, @"y1": @0, @"y2": @1 } stops:@[
+                                                                                                                                @[@0, @"rgb(47,126,216)"],
+                                                                                                                                 @[@1, @"rgba(47,126,216,0)"]
+                                                                                                                                 ]];
     plotoptions.area.marker = [[HIMarker alloc]init];
     plotoptions.area.marker.radius = @2;
     plotoptions.area.lineWidth = @1;

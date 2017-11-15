@@ -20,7 +20,7 @@
     chart.type = @"waterfall";
     
     HITitle *title = [[HITitle alloc]init];
-    title.text = @"Waterfall";
+    title.text = @"Highcharts Waterfall";
     
     HIXAxis *xAxis = [[HIXAxis alloc]init];
     xAxis.type = @"category";
@@ -28,11 +28,9 @@
     HIYAxis *yAxis = [[HIYAxis alloc]init];
     yAxis.title = [[HITitle alloc]init];
     yAxis.title.text = @"USD";
-    yAxis.labels = [[HILabels alloc]init];
-    yAxis.labels.format = @"{value}k";
     
     HILegend *legend = [[HILegend alloc]init];
-    legend.enabled = @false;
+    legend.enabled = [[NSNumber alloc] initWithBool:false];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.pointFormat = @"<b>${point.y:,.2f}</b> USD";
@@ -45,31 +43,29 @@
     
     HIData *data = [[HIData alloc]init];
     data.name = @"Positive Balance";
-    data.isIntermediateSum = @true;
+    data.isIntermediateSum = [[NSNumber alloc] initWithBool:true];
     data.color = [[HIColor alloc]initWithHexValue:@"434348"];
     
     series.data = [NSMutableArray arrayWithObjects:@{
                                                      @"name": @"Start",
-                                                     @"y": @120
+                                                     @"y": @120000
                                                      },
                    @{
                      @"name": @"Product Revenue",
-                     @"y": @569
+                     @"y": @569000
                      },
                    @{
                      @"name": @"Service Revenue",
-                     @"y": @231
+                     @"y": @231000
                      },
-                   
                    data,
-                   
                    @{
                      @"name": @"Fixed Costs",
-                     @"y": @-342
+                     @"y": @-342000
                      },
                    @{
                      @"name": @"Variable Costs",
-                     @"y": @-233
+                     @"y": @-233000
                      },
                    @{
                      @"name": @"Balance",
@@ -78,9 +74,10 @@
                      }, nil];
     
     series.dataLabels = [[HIDataLabels alloc]init];
-    series.dataLabels.enabled = @true;
+    series.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     series.dataLabels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return Highcharts.numberFormat(this.y / 1000, 0, ',') + 'k'; }"];
-    series.dataLabels.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bold",@"fontWeight",  nil];
+    series.dataLabels.style = [[HIStyle alloc] init];
+    series.dataLabels.style.fontWeight = @"bold";
     series.pointPadding = @0;
     
     options.chart = chart;
@@ -90,7 +87,7 @@
     options.legend = legend;
     options.tooltip = tooltip;
     options.series = [NSMutableArray arrayWithObject:series];
-
+    
     chartView.options = options;
     
     [self.view addSubview:chartView];
