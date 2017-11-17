@@ -40,7 +40,7 @@
     yaxis.title.text = @"Percent";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = [[NSNumber alloc] initWithBool:true];
+    tooltip.split = [[NSNumber alloc] initWithBool:true];
     tooltip.pointFormat = @"<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} millions)<br/>";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];

@@ -50,7 +50,7 @@
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
     plotoptions.spline = [[HISpline alloc]init];
     plotoptions.spline.marker = [[HIMarker alloc]init];
-    plotoptions.spline.marker.enabled = @false;
+    plotoptions.spline.marker.enabled = [[NSNumber alloc] initWithBool:false];
     
     HISpline *series = [[HISpline alloc]init];
     series.name = @"Temperature";

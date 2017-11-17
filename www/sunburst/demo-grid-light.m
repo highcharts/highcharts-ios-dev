@@ -25,9 +25,10 @@
     title.text = @"World population 2017";
     
     HISubtitle *subtitle = [[HISubtitle alloc] init];
-    subtitle.text = @"World population 2017";
+    subtitle.text = @"Source <href=\"https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)\">Wikipedia</a>";
     
     HISunburst *sunburst = [[HISunburst alloc] init];
+    sunburst.type = @"sunburst";
     sunburst.data = [self data];
     sunburst.allowDrillToNode = [[NSNumber alloc] initWithBool:true];
     sunburst.cursor = @"pointer";
