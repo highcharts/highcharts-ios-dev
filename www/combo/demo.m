@@ -86,7 +86,7 @@
                   }, nil];
     pie.center = [NSMutableArray arrayWithObjects:@100, @80, nil];
     pie.size = @"100";
-    pie.showInLegend = [[NSNumber alloc] initWithBool:true];
+    pie.showInLegend = [[NSNumber alloc] initWithBool:false];
     pie.dataLabels = [[HIDataLabels alloc]init];
     pie.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     

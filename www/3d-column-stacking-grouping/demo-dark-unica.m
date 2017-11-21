@@ -34,12 +34,17 @@
                         @"Pears",
                         @"Grapes",
                         @"Bananas", nil];
+    xaxis.labels = [[HILabels alloc] init];
+    xaxis.labels.skew3d = [[NSNumber alloc] initWithBool:true];
+    xaxis.labels.style = [[HIStyle alloc] init];
+    xaxis.labels.style.fontSize = @"16px";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.allowDecimals = [[NSNumber alloc] initWithBool:false];
     yaxis.min = @0;
     yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Number of fruits";
+    yaxis.title.skew3d = [[NSNumber alloc] initWithBool:true];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
     tooltip.headerFormat = @"<b>{point.key}</b><br>";

@@ -106,7 +106,7 @@
     state.hover.lineWidth = @5;
     plotoptions.spline.states = state;
     plotoptions.spline.marker = [[HIMarker alloc]init];
-    plotoptions.spline.marker.enabled = [[NSNumber alloc] initWithBool:true];
+    plotoptions.spline.marker.enabled = [[NSNumber alloc] initWithBool:false];
     plotoptions.spline.pointInterval = @3600000;
     plotoptions.spline.pointStart = @1433030400000;
     

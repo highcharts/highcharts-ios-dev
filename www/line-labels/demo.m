@@ -45,6 +45,7 @@
     plotoptions.line = [[HILine alloc]init];
     plotoptions.line.dataLabels = [[HIDataLabels alloc]init];
     plotoptions.line.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
+    plotoptions.line.enableMouseTracking = [[NSNumber alloc] initWithBool:false];
     
     HILine *line1 = [[HILine alloc]init];
     line1.name = @"Tokyo";

@@ -18,7 +18,7 @@
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Budget vs spending";
-    title.x = @-90;
+    title.x = @-80;
     
     HIPane *pane = [[HIPane alloc]init];
     pane.size = @"80%";

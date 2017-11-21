@@ -42,7 +42,7 @@
     yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value / 1000; }"];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.shared = [[NSNumber alloc] initWithBool:true];
+    tooltip.split = [[NSNumber alloc] initWithBool:true];
     tooltip.valueSuffix = @" millions";
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];

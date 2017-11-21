@@ -814,8 +814,8 @@ def generate_documentation():
     for field in structure:
         entry = dict()
         name = get_last(field)
-        if name == "global" or name == "lang":
-            continue
+        #if name == "global" or name == "lang":
+         #   continue
         returnType = ""
         isParent = False
         fullname = tree[field].info["fullname"]
@@ -827,8 +827,8 @@ def generate_documentation():
         parent = None
         if tree[field].parent:
             parent = tree[field].parent
-            if parent == "global" or parent == "lang":
-                continue
+          #  if parent == "global" or parent == "lang":
+           #     continue
         entry["_id"] = get_documentation_name(field)
         entry["fullname"] = fullname.replace("description", "definition")
         entry["title"] = name.replace("description", "definition")
@@ -874,7 +874,7 @@ def main():
     create_structure()
     # search_for_repetitions()
     # print_structure()
-    create_files()
+    #create_files()
     generate_documentation()
 
 

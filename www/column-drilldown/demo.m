@@ -15,7 +15,7 @@
     HIOptions *options = [[HIOptions alloc]init];
     
     HIChart *chart = [[HIChart alloc]init];
-    chart.type = @"drilldown";
+    chart.type = @"column";
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Browser market shares. January, 2015 to May, 2015";
@@ -35,6 +35,7 @@
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];
     plotoptions.series = [[HISeries alloc]init];
+    plotoptions.series.borderWidth = @0;
     plotoptions.series.dataLabels = [[HIDataLabels alloc]init];
     plotoptions.series.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.series.dataLabels.format = @"{point.y:.1f}%";

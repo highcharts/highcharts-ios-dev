@@ -15,7 +15,7 @@
     HIOptions *options = [[HIOptions alloc]init];
     
     HIChart *chart = [[HIChart alloc]init];
-    chart.type = @"drilldown";
+    chart.type = @"pie";
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Browser market shares. January, 2015 to May, 2015";
