@@ -9,10 +9,41 @@
 		credits.text = @"Highcharts iOS";
 		credits.href = @"http://www.highcharts.com/blog/mobile/";
 		self.credits = credits;
-		return self;
+        [self addObserver:self forKeyPath:@"title.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+        return self;
 	}
 	return nil;
 }
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"title.isUpdated"]) {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        if (value) {
+            NSLog(@"The title.isUpdated changed!");
+            NSLog(@"%@", change);
+            self.isUpdated = YES;
+        }
+        else {
+            self.isUpdated = NO;
+            NSLog(@"SET UP IS UPDATED TO FALSE IN HIOPTIONS!");
+        }
+    }
+    else if ([keyPath isEqualToString:@"yAxis.isUpdated"]) {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        if (value) {
+            NSLog(@"The ZAXIS title.isUpdated changed!");
+            NSLog(@"%@", change);
+            self.isUpdated = YES;
+        }
+        else {
+            self.isUpdated = NO;
+            NSLog(@"SET UP IS UPDATED TO FALSE IN HIOPTIONS ZAXIS!");
+        }
+    }
+}
+
 
 -(NSDictionary *)getParams {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
@@ -140,5 +171,19 @@
 
 	return params;
 }
+
+#pragma mark - Setters / Getters
+
+//-(void)setTitle:(HITitle *)title {
+//    if (self.title) {
+//        _title = title;
+//        //self.isUpdated = YES;
+//        NSLog(@"UPDATED TITLE OBJECT %d", self.isUpdated);
+//    }
+//    else {
+//        _title = title;
+//    }
+//    self.isUpdated = NO;
+//}
 
 @end

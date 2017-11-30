@@ -162,6 +162,8 @@ the exporting burger menu.
 */
 @property(nonatomic, readwrite) NSNumber *widthAdjust;
 
+@property (nonatomic, assign) BOOL isUpdated;
+
 -(NSDictionary *)getParams;
 
 @end

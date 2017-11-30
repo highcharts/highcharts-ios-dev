@@ -3,7 +3,24 @@
 @implementation HIZAxis
 
 -(instancetype)init {
+    [self addObserver:self forKeyPath:@"title.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
 	return [super init];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"title.isUpdated"]) {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        if (value) {
+            NSLog(@"The title.isUpdated changed!");
+            NSLog(@"%@", change);
+            self.isUpdated = YES;
+        }
+        else {
+            self.isUpdated = NO;
+            NSLog(@"SET UP IS UPDATED TO FALSE IN HIOPTIONS!");
+        }
+    }
 }
 
 -(NSDictionary *)getParams

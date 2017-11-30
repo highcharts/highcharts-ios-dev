@@ -287,6 +287,8 @@ found in the modules directory of the download package, or online at
 */
 @property(nonatomic, readwrite) NSDictionary *additionalOptions;
 
+@property (nonatomic, assign) BOOL isUpdated;
+
 
 -(NSDictionary *)getParams;
 

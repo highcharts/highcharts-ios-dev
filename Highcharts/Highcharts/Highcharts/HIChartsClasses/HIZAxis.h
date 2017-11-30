@@ -637,6 +637,8 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSNumber *minPadding;
 
+@property (nonatomic, assign) BOOL isUpdated;
+
 -(NSDictionary *)getParams;
 
 @end

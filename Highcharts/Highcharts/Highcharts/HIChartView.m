@@ -88,6 +88,26 @@ static BOOL preloaded = NO;
     self.webView.backgroundColor = [UIColor clearColor];
     self.webView.scrollView.backgroundColor = [UIColor clearColor];
     self.webView.scrollView.opaque = NO;
+    
+    [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"options.isUpdated"]) {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        if (value) {
+            NSLog(@"OPTIONS UPDATED!!!");
+            [self.HTML prepareOptions:[self.options getParams]];
+            NSString *modificationString = [NSString stringWithFormat:@"update(%@);", self.HTML.options];
+            [self.webView evaluateJavaScript:modificationString completionHandler:nil];
+        }
+        else {
+            NSLog(@"OPTIONS SET UP IS UPDATED TO FALSE IN HICHARTVIEW!!!");
+        }
+        NSLog(@"%@", change);
+        
+    }
 }
 
 
@@ -116,6 +136,20 @@ static BOOL preloaded = NO;
     _theme = theme;
     [self loadChartInternal];
     [self didChangeValueForKey:@"theme"];
+}
+
+- (void)setLang:(HILang *)lang
+{
+    [self willChangeValueForKey:@"lang"];
+    _lang = lang;
+    [self didChangeValueForKey:@"lang"];
+}
+
+- (void)setGlobal:(HILang *)global
+{
+    [self willChangeValueForKey:@"global"];
+    _global = global;
+    [self didChangeValueForKey:@"global"];
 }
 
 
@@ -175,6 +209,8 @@ static BOOL preloaded = NO;
     [self.HTML prepareLang:[self.lang getParams] Global:[self.global getParams]];
     [self.HTML prepareOptions:[self.options getParams]];
     [self.HTML injectJavaScriptToHTML];
+    
+    NSLog(@"%@", self.HTML.html);
     
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
 }

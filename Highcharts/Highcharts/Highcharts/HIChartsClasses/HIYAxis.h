@@ -746,6 +746,8 @@ be modified by the callback.
 */
 @property(nonatomic, readwrite) HIFunction *tickPositioner;
 
+@property (nonatomic, assign) BOOL isUpdated;
+
 -(NSDictionary *)getParams;
 
 @end

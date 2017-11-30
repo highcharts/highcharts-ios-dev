@@ -60,4 +60,25 @@
 	return params;
 }
 
+#pragma mark - Setters / Getters
+
+-(void)setText:(NSString *)text {
+    if (self.text) {
+        if (![self.text isEqualToString:text]) {
+            NSLog(@"IT IS NOT THE SAME TEXT!");
+            _text = text;
+            self.isUpdated = YES;
+            NSLog(@"UPDATED %d", self.isUpdated);
+        }
+        else {
+            NSLog(@"IT IS THE SAME TEXT! Not updated!");
+        }
+    }
+    else {
+        NSLog(@"FIRST SET TITLE TEXT");
+        _text = text;
+    }
+    self.isUpdated = NO;
+}
+
 @end
