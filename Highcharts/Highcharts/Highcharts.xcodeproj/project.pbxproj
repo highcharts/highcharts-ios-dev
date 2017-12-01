@@ -314,6 +314,7 @@
 		CD8C154F1F9794F600C2CD61 /* HIZAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C13C71F97947100C2CD61 /* HIZAxis.m */; };
 		CD8C15501F9794F600C2CD61 /* HIZones.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8C13E61F97947900C2CD61 /* HIZones.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8C15511F9794F600C2CD61 /* HIZones.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C13B61F97946C00C2CD61 /* HIZones.m */; };
+		CD9B91A51FD156F400A1EE10 /* Highcharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9B91A31FD1558A00A1EE10 /* Highcharts.framework */; };
 		CDDF95D51F9F5D260021A129 /* HIFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDF95D41F9F5D260021A129 /* HIFunction.m */; };
 		CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDF95D61F9F5D480021A129 /* HIFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC1449381F4A854900612B1C /* HIGChartViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -366,6 +367,7 @@
 		34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptionsTest.m; sourceTree = "<group>"; };
 		34F873FC1CDA134400674E6C /* HIGExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGExport.h; sourceTree = "<group>"; };
 		34F873FD1CDA134400674E6C /* HIGExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGExport.m; sourceTree = "<group>"; };
+		CD1F86781FD1502C00E03861 /* Highcharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Highcharts.xcodeproj; sourceTree = "<group>"; };
 		CD8C13421F97945000C2CD61 /* HIGauge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIGauge.m; sourceTree = "<group>"; };
 		CD8C13431F97945100C2CD61 /* HIPartialFill.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIPartialFill.m; sourceTree = "<group>"; };
 		CD8C13441F97945100C2CD61 /* HIRotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIRotation.m; sourceTree = "<group>"; };
@@ -626,6 +628,7 @@
 		CD8C14471F97949500C2CD61 /* HILeft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HILeft.h; sourceTree = "<group>"; };
 		CD8C14481F97949500C2CD61 /* HIDefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIDefs.m; sourceTree = "<group>"; };
 		CD8C14491F97949500C2CD61 /* HIBreaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIBreaks.h; sourceTree = "<group>"; };
+		CD9B91A31FD1558A00A1EE10 /* Highcharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Highcharts.framework; path = Ready/Highcharts.framework; sourceTree = "<group>"; };
 		CDDF95D41F9F5D260021A129 /* HIFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIFunction.m; sourceTree = "<group>"; };
 		CDDF95D61F9F5D480021A129 /* HIFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFunction.h; sourceTree = "<group>"; };
 		EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartViewDelegate.h; sourceTree = "<group>"; };
@@ -638,6 +641,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9B91A51FD156F400A1EE10 /* Highcharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,12 +934,14 @@
 		343E13801C38513D006DDD68 = {
 			isa = PBXGroup;
 			children = (
+				CD1F86781FD1502C00E03861 /* Highcharts.xcodeproj */,
 				3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */,
 				3408AFC41C4FD61000A37AF5 /* Supporting Files */,
 				343E138C1C38513D006DDD68 /* Highcharts */,
 				343E138D1C38513D006DDD68 /* Highcharts.h */,
 				348F281F1CDB790F005CA399 /* HighchartsTests */,
 				343E138B1C38513D006DDD68 /* Products */,
+				CD9B91A21FD1558900A1EE10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1012,6 +1018,19 @@
 				CDDF95D41F9F5D260021A129 /* HIFunction.m */,
 			);
 			name = Public;
+			sourceTree = "<group>";
+		};
+		CD1F86791FD1502C00E03861 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD9B91A21FD1558900A1EE10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD9B91A31FD1558A00A1EE10 /* Highcharts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1243,6 +1262,12 @@
 			mainGroup = 343E13801C38513D006DDD68;
 			productRefGroup = 343E138B1C38513D006DDD68 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CD1F86791FD1502C00E03861 /* Products */;
+					ProjectRef = CD1F86781FD1502C00E03861 /* Highcharts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				343E13891C38513D006DDD68 /* Highcharts */,
@@ -1563,6 +1588,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ready",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "TRIAL=1";
 				INFOPLIST_FILE = Highcharts/Info.plist;
@@ -1705,6 +1731,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ready",
 				);
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1734,6 +1761,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ready",
 				);
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
