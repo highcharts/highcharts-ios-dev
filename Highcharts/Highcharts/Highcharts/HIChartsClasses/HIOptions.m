@@ -1,5 +1,11 @@
 #import "HIOptions.h"
 
+@interface HIOptions ()
+@property (nonatomic, strong) NSMutableSet *allObservers;
+@property (nonatomic, strong) NSMutableArray *currentObservers;
+@property (nonatomic, assign) BOOL isUpdated;
+@end
+
 @implementation HIOptions
 
 -(instancetype)init {
@@ -9,41 +15,17 @@
 		credits.text = @"Highcharts iOS";
 		credits.href = @"http://www.highcharts.com/blog/mobile/";
 		self.credits = credits;
-        [self addObserver:self forKeyPath:@"title.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+        self.allObservers = [[NSMutableSet alloc] init];
+        self.currentObservers = [[NSMutableArray alloc] init];
         return self;
 	}
 	return nil;
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"title.isUpdated"]) {
-        NSString *kChangeNew = [change valueForKey:@"new"];
-        BOOL value = kChangeNew.boolValue;
-        if (value) {
-            NSLog(@"The title.isUpdated changed!");
-            NSLog(@"%@", change);
-            self.isUpdated = YES;
-        }
-        else {
-            self.isUpdated = NO;
-            NSLog(@"SET UP IS UPDATED TO FALSE IN HIOPTIONS!");
-        }
-    }
-    else if ([keyPath isEqualToString:@"yAxis.isUpdated"]) {
-        NSString *kChangeNew = [change valueForKey:@"new"];
-        BOOL value = kChangeNew.boolValue;
-        if (value) {
-            NSLog(@"The ZAXIS title.isUpdated changed!");
-            NSLog(@"%@", change);
-            self.isUpdated = YES;
-        }
-        else {
-            self.isUpdated = NO;
-            NSLog(@"SET UP IS UPDATED TO FALSE IN HIOPTIONS ZAXIS!");
-        }
-    }
+- (void)dealloc {
+    NSLog(@"DEALLOC!!!!!!!!!");
+    [self removeObservers];
 }
-
 
 -(NSDictionary *)getParams {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
@@ -172,18 +154,138 @@
 	return params;
 }
 
+#pragma mark - NSKeyValueObserving
+
+-(void)removeObservers {
+    for (NSString *property in self.currentObservers) {
+        NSString *keyPath = [NSString stringWithFormat:@"%@%@", property, @".isUpdated"];
+        [self removeObserver:self forKeyPath:keyPath];
+        NSLog(@"********* Remove observer for : %@", keyPath);
+    }
+}
+
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
+    return NO;
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"title.isUpdated"]) {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        if (value) {
+            NSLog(@"HIOPTIONS -- The title.isUpdated changed!");
+            NSLog(@"%@", change);
+            [self willChangeValueForKey:@"isUpdated"];
+            self.isUpdated = YES;
+            [self didChangeValueForKey:@"isUpdated"];
+        }
+        else {
+            NSLog(@"HIOPTIONS -- SET UP IS UPDATED TO FALSE IN HIOPTIONS TITLE!");
+            [self willChangeValueForKey:@"isUpdated"];
+            self.isUpdated = NO;
+            [self didChangeValueForKey:@"isUpdated"];
+        }
+    }
+    else if ([keyPath isEqualToString:@"subtitle.isUpdated"]) {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        if (value) {
+            NSLog(@"HIOPTIONS -- The subtitle.isUpdated changed!");
+            NSLog(@"%@", change);
+            [self willChangeValueForKey:@"isUpdated"];
+            self.isUpdated = YES;
+            [self didChangeValueForKey:@"isUpdated"];
+        }
+        else {
+            NSLog(@"HIOPTIONS -- SET UP IS UPDATED TO FALSE IN HIOPTIONS SUBTITLE!");
+            [self willChangeValueForKey:@"isUpdated"];
+            self.isUpdated = NO;
+            [self didChangeValueForKey:@"isUpdated"];
+        }
+    }
+}
+
 #pragma mark - Setters / Getters
 
-//-(void)setTitle:(HITitle *)title {
-//    if (self.title) {
-//        _title = title;
-//        //self.isUpdated = YES;
-//        NSLog(@"UPDATED TITLE OBJECT %d", self.isUpdated);
-//    }
-//    else {
-//        _title = title;
-//    }
-//    self.isUpdated = NO;
-//}
+-(void)setTitle:(HITitle *)title {
+    if (self.title) {
+        [self removeObserver:self forKeyPath:@"title.isUpdated"];
+        _title = title;
+        NSLog(@"HIOPTIONS -- UPDATED TITLE OBJECT!");
+        [self willChangeValueForKey:@"isUpdated"];
+        self.isUpdated = YES;
+        [self didChangeValueForKey:@"isUpdated"];
+        
+        if (title) {
+            [self addObserver:self forKeyPath:@"title.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+        }
+        else {
+            [self.currentObservers removeObject:@"title"];
+            NSLog(@"HIOPTIONS -- TITLE -- REMOVE OBSERVER");
+        }
+    }
+    else {
+        _title = title;
+        if (title) {
+            if ([self.allObservers containsObject:@"title"]) {
+                NSLog(@"HIOPTIONS -- UPDATED TITLE OBJECT!");
+                [self willChangeValueForKey:@"isUpdated"];
+                self.isUpdated = YES;
+                [self didChangeValueForKey:@"isUpdated"];
+            }
+            [self.allObservers addObject:@"title"];
+            [self.currentObservers addObject:@"title"];
+            [self addObserver:self forKeyPath:@"title.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+            NSLog(@"HIOPTIONS -- TITLE -- ADD OBSERVER");
+        }
+        else {
+            NSLog(@"HIOPTIONS -- TITLE -- NOT ADD OBSERVER BECAUSE NIL SET UP");
+        }
+    }
+    [self willChangeValueForKey:@"isUpdated"];
+    self.isUpdated = NO;
+    [self didChangeValueForKey:@"isUpdated"];
+}
+
+-(void)setSubtitle:(HISubtitle *)subtitle {
+    if (self.subtitle) {
+        [self removeObserver:self forKeyPath:@"subtitle.isUpdated"];
+        _subtitle = subtitle;
+        NSLog(@"HIOPTIONS -- UPDATED SUBTITLE OBJECT!");
+        [self willChangeValueForKey:@"isUpdated"];
+        self.isUpdated = YES;
+        [self didChangeValueForKey:@"isUpdated"];
+        
+        if (subtitle) {
+            [self addObserver:self forKeyPath:@"subtitle.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+        }
+        else {
+            [self.currentObservers removeObject:@"subtitle"];
+            [self removeObserver:self forKeyPath:@"subtitle.isUpdated"];
+            NSLog(@"HIOPTIONS -- SUBTITLE -- REMOVE OBSERVER");
+        }
+    }
+    else {
+        _subtitle = subtitle;
+        if (subtitle) {
+            if ([self.allObservers containsObject:@"subtitle"]) {
+                NSLog(@"HIOPTIONS -- UPDATED SUBTITLE OBJECT!");
+                [self willChangeValueForKey:@"isUpdated"];
+                self.isUpdated = YES;
+                [self didChangeValueForKey:@"isUpdated"];
+            }
+            [self.allObservers addObject:@"subtitle"];
+            [self.currentObservers addObject:@"subtitle"];
+            [self addObserver:self forKeyPath:@"subtitle.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+            NSLog(@"HIOPTIONS -- SUBTITLE -- ADD OBSERVER");
+        }
+        else {
+            NSLog(@"HIOPTIONS -- SUBTITLE -- NOT ADD OBSERVER BECAUSE NIL SET UP");
+        }
+    }
+    [self willChangeValueForKey:@"isUpdated"];
+    self.isUpdated = NO;
+    [self didChangeValueForKey:@"isUpdated"];
+}
 
 @end

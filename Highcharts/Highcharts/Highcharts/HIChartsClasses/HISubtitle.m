@@ -1,5 +1,9 @@
 #import "HISubtitle.h"
 
+@interface HISubtitle ()
+@property (nonatomic, assign) BOOL isUpdated;
+@end
+
 @implementation HISubtitle
 
 -(instancetype)init {
@@ -37,6 +41,36 @@
 		params[@"widthAdjust"] = self.widthAdjust;
 	}
 	return params;
+}
+
+#pragma mark - NSKeyValueObserving
+
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
+    return NO;
+}
+
+#pragma mark - Setters / Getters
+
+-(void)setText:(NSString *)text {
+    if (self.text) {
+        if (text) {
+            NSLog(@"HISUBTITLE -- IT IS NOT THE NIL NEW TEXT! TEXT UPDATED");
+            _text = text;
+            [self willChangeValueForKey:@"isUpdated"];
+            self.isUpdated = YES;
+            [self didChangeValueForKey:@"isUpdated"];
+        }
+        else {
+            NSLog(@"HISUBTITLE -- IT IS THE NIL NEW TEXT! Not updated!");
+        }
+    }
+    else {
+        NSLog(@"HISUBTITLE -- FIRST SET TITLE TEXT");
+        _text = text;
+    }
+    [self willChangeValueForKey:@"isUpdated"];
+    self.isUpdated = NO;
+    [self didChangeValueForKey:@"isUpdated"];
 }
 
 @end

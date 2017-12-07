@@ -20,7 +20,6 @@
 @property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) HIGHTML *HTML;
 @property (nonatomic, weak) NSTimer *reloadTimer;
-
 @end
 
 static BOOL preloaded = NO;
@@ -89,27 +88,13 @@ static BOOL preloaded = NO;
     self.webView.scrollView.backgroundColor = [UIColor clearColor];
     self.webView.scrollView.opaque = NO;
     
-    [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+    [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"options.isUpdated"]) {
-        NSString *kChangeNew = [change valueForKey:@"new"];
-        BOOL value = kChangeNew.boolValue;
-        if (value) {
-            NSLog(@"OPTIONS UPDATED!!!");
-            [self.HTML prepareOptions:[self.options getParams]];
-            NSString *modificationString = [NSString stringWithFormat:@"update(%@);", self.HTML.options];
-            [self.webView evaluateJavaScript:modificationString completionHandler:nil];
-        }
-        else {
-            NSLog(@"OPTIONS SET UP IS UPDATED TO FALSE IN HICHARTVIEW!!!");
-        }
-        NSLog(@"%@", change);
-        
-    }
+- (void)dealloc
+{
+    [self removeObserver:self forKeyPath:@"options.isUpdated"];
 }
-
 
 - (void)didMoveToSuperview {
     [super didMoveToSuperview];
@@ -121,12 +106,45 @@ static BOOL preloaded = NO;
     [self resize];
 }
 
+#pragma mark - NSKeyValueObserving
+
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
+    return NO;
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"options.isUpdated"]) {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        if (value) {
+            NSLog(@"HICHARTVIEW -- OPTIONS UPDATED!!!");
+            [self.HTML prepareOptions:[self.options getParams]];
+            NSString *modificationString = [NSString stringWithFormat:@"update(%@);", self.HTML.options];
+            NSLog(@"%@", modificationString);
+            [self.webView evaluateJavaScript:modificationString completionHandler:nil];
+        }
+        else {
+            NSLog(@"HICHARTVIEW -- OPTIONS SET UP IS UPDATED TO FALSE IN HICHARTVIEW!!!");
+        }
+    }
+}
+
 #pragma mark - Setters / Getters
 
 - (void)setOptions:(HIOptions *)options {
     [self willChangeValueForKey:@"options"];
-    _options = options;
-    [self loadChartInternal];
+    if(self.options) {
+        _options = options;
+        [self.HTML prepareOptions:[self.options getParams]];
+        NSString *modificationString = [NSString stringWithFormat:@"update(%@);", self.HTML.options];
+        [self.webView evaluateJavaScript:modificationString completionHandler:nil];
+        NSLog(@"OPTIONS UPDATED WITH EVALUATE JS NOT LOAD CHART!");
+        
+    }
+    else {
+         _options = options;
+        [self loadChartInternal];
+    }
     [self didChangeValueForKey:@"options"];
 }
 
@@ -145,7 +163,7 @@ static BOOL preloaded = NO;
     [self didChangeValueForKey:@"lang"];
 }
 
-- (void)setGlobal:(HILang *)global
+- (void)setGlobal:(HIGlobal *)global
 {
     [self willChangeValueForKey:@"global"];
     _global = global;
