@@ -4,6 +4,7 @@
 @property (nonatomic, strong) NSMutableSet *allObservers;
 @property (nonatomic, strong) NSMutableArray *currentObservers;
 @property (nonatomic, assign) BOOL isUpdated;
+-(void)updateForHIObject:(HIChartsJSONSerializable *)oldValue newValue:(HIChartsJSONSerializable *)newValue keyPathForObserver:(NSString *)keyPath;
 @end
 
 @implementation HIOptions
@@ -157,8 +158,7 @@
 #pragma mark - NSKeyValueObserving
 
 -(void)removeObservers {
-    for (NSString *property in self.currentObservers) {
-        NSString *keyPath = [NSString stringWithFormat:@"%@%@", property, @".isUpdated"];
+    for (NSString *keyPath in self.currentObservers) {
         [self removeObserver:self forKeyPath:keyPath];
         NSLog(@"********* Remove observer for : %@", keyPath);
     }
@@ -207,39 +207,36 @@
 
 #pragma mark - Setters / Getters
 
--(void)setTitle:(HITitle *)title {
-    if (self.title) {
-        [self removeObserver:self forKeyPath:@"title.isUpdated"];
-        _title = title;
-        NSLog(@"HIOPTIONS -- UPDATED TITLE OBJECT!");
+-(void)updateForHIObject:(HIChartsJSONSerializable *)oldValue newValue:(HIChartsJSONSerializable *)newValue keyPathForObserver:(NSString *)keyPath {
+    if (oldValue) {
+        NSLog(@"HIOPTIONS -- UPDATED %@ OBJECT!", keyPath);
         [self willChangeValueForKey:@"isUpdated"];
         self.isUpdated = YES;
         [self didChangeValueForKey:@"isUpdated"];
-        
-        if (title) {
-            [self addObserver:self forKeyPath:@"title.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+
+        if (newValue) {
+            [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
         }
         else {
-            [self.currentObservers removeObject:@"title"];
-            NSLog(@"HIOPTIONS -- TITLE -- REMOVE OBSERVER");
+            [self.currentObservers removeObject:keyPath];
+            NSLog(@"HIOPTIONS -- %@ -- REMOVE OBSERVER", keyPath);
         }
     }
     else {
-        _title = title;
-        if (title) {
-            if ([self.allObservers containsObject:@"title"]) {
-                NSLog(@"HIOPTIONS -- UPDATED TITLE OBJECT!");
+        if (newValue) {
+            if ([self.allObservers containsObject:keyPath]) {
+                NSLog(@"HIOPTIONS -- UPDATED %@ OBJECT!", keyPath);
                 [self willChangeValueForKey:@"isUpdated"];
                 self.isUpdated = YES;
                 [self didChangeValueForKey:@"isUpdated"];
             }
-            [self.allObservers addObject:@"title"];
-            [self.currentObservers addObject:@"title"];
-            [self addObserver:self forKeyPath:@"title.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
-            NSLog(@"HIOPTIONS -- TITLE -- ADD OBSERVER");
+            [self.allObservers addObject:keyPath];
+            [self.currentObservers addObject:keyPath];
+            [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
+            NSLog(@"HIOPTIONS -- %@ -- ADD OBSERVER", keyPath);
         }
         else {
-            NSLog(@"HIOPTIONS -- TITLE -- NOT ADD OBSERVER BECAUSE NIL SET UP");
+            NSLog(@"HIOPTIONS -- %@ -- NOT ADD OBSERVER BECAUSE NIL SET UP", keyPath);
         }
     }
     [self willChangeValueForKey:@"isUpdated"];
@@ -247,45 +244,135 @@
     [self didChangeValueForKey:@"isUpdated"];
 }
 
--(void)setSubtitle:(HISubtitle *)subtitle {
-    if (self.subtitle) {
-        [self removeObserver:self forKeyPath:@"subtitle.isUpdated"];
-        _subtitle = subtitle;
-        NSLog(@"HIOPTIONS -- UPDATED SUBTITLE OBJECT!");
-        [self willChangeValueForKey:@"isUpdated"];
-        self.isUpdated = YES;
-        [self didChangeValueForKey:@"isUpdated"];
-        
-        if (subtitle) {
-            [self addObserver:self forKeyPath:@"subtitle.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
-        }
-        else {
-            [self.currentObservers removeObject:@"subtitle"];
-            [self removeObserver:self forKeyPath:@"subtitle.isUpdated"];
-            NSLog(@"HIOPTIONS -- SUBTITLE -- REMOVE OBSERVER");
-        }
-    }
-    else {
-        _subtitle = subtitle;
-        if (subtitle) {
-            if ([self.allObservers containsObject:@"subtitle"]) {
-                NSLog(@"HIOPTIONS -- UPDATED SUBTITLE OBJECT!");
-                [self willChangeValueForKey:@"isUpdated"];
-                self.isUpdated = YES;
-                [self didChangeValueForKey:@"isUpdated"];
-            }
-            [self.allObservers addObject:@"subtitle"];
-            [self.currentObservers addObject:@"subtitle"];
-            [self addObserver:self forKeyPath:@"subtitle.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
-            NSLog(@"HIOPTIONS -- SUBTITLE -- ADD OBSERVER");
-        }
-        else {
-            NSLog(@"HIOPTIONS -- SUBTITLE -- NOT ADD OBSERVER BECAUSE NIL SET UP");
-        }
-    }
-    [self willChangeValueForKey:@"isUpdated"];
-    self.isUpdated = NO;
-    [self didChangeValueForKey:@"isUpdated"];
+/*
+-(void)setAccessibility:(HIAccessibility *)accessibility {
+    
 }
+
+-(void)setAnnotations:(NSArray<HIAnnotations *> *)annotations {
+    
+}
+
+-(void)setBoost:(HIBoost *)boost {
+    
+}*/
+
+-(void)setChart:(HIChart *)chart {
+    HIChart *oldValue = _chart;
+    NSString *keyPath = @"chart.isUpdated";
+    
+    if(self.chart) {
+        [self removeObserver:self forKeyPath:keyPath];
+    }
+    
+    _chart = chart;
+    
+    [self updateForHIObject:oldValue newValue:chart keyPathForObserver:keyPath];
+}
+/*
+-(void)setColorAxis:(HIColorAxis *)colorAxis {
+    
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+    
+}
+
+-(void)setCredits:(HICredits *)credits {
+    
+}
+
+-(void)setData:(HIData *)data {
+    
+}
+
+-(void)setDefs:(HIDefs *)defs {
+    
+}
+
+-(void)setDrilldown:(HIDrilldown *)drilldown {
+    
+}
+
+-(void)setExporting:(HIExporting *)exporting {
+    
+}
+
+-(void)setLabels:(HILabels *)labels {
+    
+}
+
+-(void)setLoading:(HILoading *)loading {
+    
+}
+
+-(void)setNavigation:(HINavigation *)navigation {
+    
+}
+
+-(void)setNoData:(HINoData *)noData {
+    
+}
+
+-(void)setPane:(HIPane *)pane {
+    
+}
+
+-(void)setPlotOptions:(HIPlotOptions *)plotOptions {
+    
+}
+
+-(void)setResponsive:(HIResponsive *)responsive {
+    
+}
+
+
+-(void)setSeries:(NSArray<HISeries *> *)series {
+    
+}
+*/
+
+-(void)setSubtitle:(HISubtitle *)subtitle {
+    HISubtitle *oldValue = _subtitle;
+    NSString *keyPath = @"subtitle.isUpdated";
+    
+    if(self.subtitle) {
+        [self removeObserver:self forKeyPath:keyPath];
+    }
+    
+    _subtitle = subtitle;
+    
+    [self updateForHIObject:oldValue newValue:subtitle keyPathForObserver:keyPath];
+}
+
+-(void)setTitle:(HITitle *)title {
+    HITitle *oldValue = _title;
+    NSString *keyPath = @"title.isUpdated";
+    
+    if(self.subtitle) {
+        [self removeObserver:self forKeyPath:keyPath];
+    }
+    
+    _title = title;
+    
+    [self updateForHIObject:oldValue newValue:title keyPathForObserver:keyPath];
+}
+/*
+-(void)setTooltip:(HITooltip *)tooltip {
+    
+}
+
+-(void)setXAxis:(NSArray<HIXAxis *> *)xAxis {
+    
+}
+
+-(void)setYAxis:(NSArray<HIYAxis *> *)yAxis {
+    
+}
+
+-(void)setZAxis:(HIZAxis *)zAxis {
+    
+}
+ */
 
 @end
