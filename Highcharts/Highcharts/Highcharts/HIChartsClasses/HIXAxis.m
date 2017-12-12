@@ -258,4 +258,18 @@
 	return params;
 }
 
+#pragma mark - Setters
+
+-(void)setTitle:(HITitle *)title {
+    HITitle *oldValue = _title;
+    
+    if(self.title) {
+        [self removeObserver:self forKeyPath:@"title.isUpdated"];
+    }
+    
+    _title = title;
+    
+    [self updateHIObject:oldValue newValue:title propertyName:@"title"];
+}
+
 @end

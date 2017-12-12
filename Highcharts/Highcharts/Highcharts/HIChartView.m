@@ -118,10 +118,7 @@ static BOOL preloaded = NO;
         BOOL value = kChangeNew.boolValue;
         if (value) {
             NSLog(@"HICHARTVIEW -- OPTIONS UPDATED!!!");
-            [self.HTML prepareOptions:[self.options getParams]];
-            NSString *modificationString = [NSString stringWithFormat:@"update(%@);", self.HTML.options];
-            NSLog(@"%@", modificationString);
-            [self.webView evaluateJavaScript:modificationString completionHandler:nil];
+            [self update];
         }
         else {
             NSLog(@"HICHARTVIEW -- OPTIONS SET UP IS UPDATED TO FALSE IN HICHARTVIEW!!!");
@@ -133,18 +130,8 @@ static BOOL preloaded = NO;
 
 - (void)setOptions:(HIOptions *)options {
     [self willChangeValueForKey:@"options"];
-    if(self.options) {
-        _options = options;
-        [self.HTML prepareOptions:[self.options getParams]];
-        NSString *modificationString = [NSString stringWithFormat:@"update(%@);", self.HTML.options];
-        [self.webView evaluateJavaScript:modificationString completionHandler:nil];
-        NSLog(@"OPTIONS UPDATED WITH EVALUATE JS NOT LOAD CHART!");
-        
-    }
-    else {
-         _options = options;
-        [self loadChartInternal];
-    }
+    _options = options;
+    [self loadChartInternal];
     [self didChangeValueForKey:@"options"];
 }
 
@@ -172,6 +159,13 @@ static BOOL preloaded = NO;
 
 
 #pragma mark - Helpers
+
+- (void)update {
+    [self.HTML prepareOptions:[self.options getParams]];
+    NSString *modificationString = [NSString stringWithFormat:@"update(%@);", self.HTML.options];
+    NSLog(@"%@", modificationString);
+    [self.webView evaluateJavaScript:modificationString completionHandler:nil];
+}
 
 - (void) resize {
     NSString *modificationString = [NSString stringWithFormat:@"modifySize(%f, %f);", CGRectGetWidth(self.webView.bounds), CGRectGetHeight(self.webView.bounds)];

@@ -22,6 +22,8 @@
  */
 + (void)preload;
 
+- (void)update;
+
 /**
  *  Options object that configures the chart.
  */

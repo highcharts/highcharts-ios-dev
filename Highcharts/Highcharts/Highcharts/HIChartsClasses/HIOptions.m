@@ -1,12 +1,5 @@
 #import "HIOptions.h"
 
-@interface HIOptions ()
-@property (nonatomic, strong) NSMutableSet *allObservers;
-@property (nonatomic, strong) NSMutableArray *currentObservers;
-@property (nonatomic, assign) BOOL isUpdated;
--(void)updateForHIObject:(HIChartsJSONSerializable *)oldValue newValue:(HIChartsJSONSerializable *)newValue keyPathForObserver:(NSString *)keyPath;
-@end
-
 @implementation HIOptions
 
 -(instancetype)init {
@@ -16,16 +9,9 @@
 		credits.text = @"Highcharts iOS";
 		credits.href = @"http://www.highcharts.com/blog/mobile/";
 		self.credits = credits;
-        self.allObservers = [[NSMutableSet alloc] init];
-        self.currentObservers = [[NSMutableArray alloc] init];
         return self;
 	}
 	return nil;
-}
-
-- (void)dealloc {
-    NSLog(@"DEALLOC!!!!!!!!!");
-    [self removeObservers];
 }
 
 -(NSDictionary *)getParams {
@@ -155,94 +141,7 @@
 	return params;
 }
 
-#pragma mark - NSKeyValueObserving
-
--(void)removeObservers {
-    for (NSString *keyPath in self.currentObservers) {
-        [self removeObserver:self forKeyPath:keyPath];
-        NSLog(@"********* Remove observer for : %@", keyPath);
-    }
-}
-
-+ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
-    return NO;
-}
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"title.isUpdated"]) {
-        NSString *kChangeNew = [change valueForKey:@"new"];
-        BOOL value = kChangeNew.boolValue;
-        if (value) {
-            NSLog(@"HIOPTIONS -- The title.isUpdated changed!");
-            NSLog(@"%@", change);
-            [self willChangeValueForKey:@"isUpdated"];
-            self.isUpdated = YES;
-            [self didChangeValueForKey:@"isUpdated"];
-        }
-        else {
-            NSLog(@"HIOPTIONS -- SET UP IS UPDATED TO FALSE IN HIOPTIONS TITLE!");
-            [self willChangeValueForKey:@"isUpdated"];
-            self.isUpdated = NO;
-            [self didChangeValueForKey:@"isUpdated"];
-        }
-    }
-    else if ([keyPath isEqualToString:@"subtitle.isUpdated"]) {
-        NSString *kChangeNew = [change valueForKey:@"new"];
-        BOOL value = kChangeNew.boolValue;
-        if (value) {
-            NSLog(@"HIOPTIONS -- The subtitle.isUpdated changed!");
-            NSLog(@"%@", change);
-            [self willChangeValueForKey:@"isUpdated"];
-            self.isUpdated = YES;
-            [self didChangeValueForKey:@"isUpdated"];
-        }
-        else {
-            NSLog(@"HIOPTIONS -- SET UP IS UPDATED TO FALSE IN HIOPTIONS SUBTITLE!");
-            [self willChangeValueForKey:@"isUpdated"];
-            self.isUpdated = NO;
-            [self didChangeValueForKey:@"isUpdated"];
-        }
-    }
-}
-
-#pragma mark - Setters / Getters
-
--(void)updateForHIObject:(HIChartsJSONSerializable *)oldValue newValue:(HIChartsJSONSerializable *)newValue keyPathForObserver:(NSString *)keyPath {
-    if (oldValue) {
-        NSLog(@"HIOPTIONS -- UPDATED %@ OBJECT!", keyPath);
-        [self willChangeValueForKey:@"isUpdated"];
-        self.isUpdated = YES;
-        [self didChangeValueForKey:@"isUpdated"];
-
-        if (newValue) {
-            [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
-        }
-        else {
-            [self.currentObservers removeObject:keyPath];
-            NSLog(@"HIOPTIONS -- %@ -- REMOVE OBSERVER", keyPath);
-        }
-    }
-    else {
-        if (newValue) {
-            if ([self.allObservers containsObject:keyPath]) {
-                NSLog(@"HIOPTIONS -- UPDATED %@ OBJECT!", keyPath);
-                [self willChangeValueForKey:@"isUpdated"];
-                self.isUpdated = YES;
-                [self didChangeValueForKey:@"isUpdated"];
-            }
-            [self.allObservers addObject:keyPath];
-            [self.currentObservers addObject:keyPath];
-            [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
-            NSLog(@"HIOPTIONS -- %@ -- ADD OBSERVER", keyPath);
-        }
-        else {
-            NSLog(@"HIOPTIONS -- %@ -- NOT ADD OBSERVER BECAUSE NIL SET UP", keyPath);
-        }
-    }
-    [self willChangeValueForKey:@"isUpdated"];
-    self.isUpdated = NO;
-    [self didChangeValueForKey:@"isUpdated"];
-}
+#pragma mark - Setters
 
 /*
 -(void)setAccessibility:(HIAccessibility *)accessibility {
@@ -259,16 +158,16 @@
 
 -(void)setChart:(HIChart *)chart {
     HIChart *oldValue = _chart;
-    NSString *keyPath = @"chart.isUpdated";
     
     if(self.chart) {
-        [self removeObserver:self forKeyPath:keyPath];
+        [self removeObserver:self forKeyPath:@"chart.isUpdated"];
     }
     
     _chart = chart;
     
-    [self updateForHIObject:oldValue newValue:chart keyPathForObserver:keyPath];
+    [self updateHIObject:oldValue newValue:chart propertyName:@"chart"];
 }
+
 /*
 -(void)setColorAxis:(HIColorAxis *)colorAxis {
     
@@ -334,42 +233,51 @@
 
 -(void)setSubtitle:(HISubtitle *)subtitle {
     HISubtitle *oldValue = _subtitle;
-    NSString *keyPath = @"subtitle.isUpdated";
     
     if(self.subtitle) {
-        [self removeObserver:self forKeyPath:keyPath];
+        [self removeObserver:self forKeyPath:@"subtitle.isUpdated"];
     }
     
     _subtitle = subtitle;
     
-    [self updateForHIObject:oldValue newValue:subtitle keyPathForObserver:keyPath];
+    [self updateHIObject:oldValue newValue:subtitle propertyName:@"subtitle"];
 }
 
 -(void)setTitle:(HITitle *)title {
     HITitle *oldValue = _title;
-    NSString *keyPath = @"title.isUpdated";
     
-    if(self.subtitle) {
-        [self removeObserver:self forKeyPath:keyPath];
+    if(self.title) {
+        [self removeObserver:self forKeyPath:@"title.isUpdated"];
     }
     
     _title = title;
     
-    [self updateForHIObject:oldValue newValue:title keyPathForObserver:keyPath];
+    [self updateHIObject:oldValue newValue:title propertyName:@"title"];
 }
+
 /*
 -(void)setTooltip:(HITooltip *)tooltip {
     
 }
+*/
 
 -(void)setXAxis:(NSArray<HIXAxis *> *)xAxis {
+    NSArray<HIXAxis *> *oldValue = _xAxis;
     
+    _xAxis = xAxis;
+    
+    [self updateArrayObject:oldValue newValue:xAxis propertyName:@"xAxis"];
 }
 
 -(void)setYAxis:(NSArray<HIYAxis *> *)yAxis {
+    NSArray<HIYAxis *> *oldValue = _yAxis;
     
+    _yAxis = yAxis;
+    
+    [self updateArrayObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }
 
+/*
 -(void)setZAxis:(HIZAxis *)zAxis {
     
 }

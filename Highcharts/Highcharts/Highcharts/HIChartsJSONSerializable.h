@@ -11,4 +11,11 @@
 
 @interface HIChartsJSONSerializable : NSObject
 -(NSDictionary *)getParams;
+-(void)removeObservers;
+@property (nonatomic, assign) BOOL isUpdated;
+@property (nonatomic, strong) NSMutableSet *setUppedAttributes;
+@property (nonatomic, strong) NSMutableArray *currentObservers;
+-(void)updateHIObject:(HIChartsJSONSerializable *)oldValue newValue:(HIChartsJSONSerializable *)newValue propertyName:(NSString *)propertyName;
+-(void)updateNSObject:(NSString *)propertyName;
+-(void)updateArrayObject:(NSArray<NSObject *> *)oldValue newValue:(NSArray<NSObject *> *)newValue propertyName:(NSString *)propertyName;
 @end

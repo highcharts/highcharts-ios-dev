@@ -26,7 +26,7 @@
 #import "HIExporting.h"
 
 
-@interface HIOptions: NSObject
+@interface HIOptions: HIChartsJSONSerializable
 
 /**
 * description: Highchart by default puts a credits label in the lower right corner

@@ -1,9 +1,5 @@
 #import "HITitle.h"
 
-@interface HITitle ()
-@property (nonatomic, assign) BOOL isUpdated;
-@end
-
 @implementation HITitle
 
 -(instancetype)init {
@@ -64,34 +60,11 @@
 	return params;
 }
 
-#pragma mark - NSKeyValueObserving
-
-+ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
-    return NO;
-}
-
-#pragma mark - Setters / Getters
+#pragma mark - Setters
 
 -(void)setText:(NSString *)text {
-    if (self.text) {
-        if (text) {
-            NSLog(@"HITITLE -- IT IS NOT THE NIL NEW TEXT! TEXT UPDATED");
-            _text = text;
-            [self willChangeValueForKey:@"isUpdated"];
-            self.isUpdated = YES;
-            [self didChangeValueForKey:@"isUpdated"];
-        }
-        else {
-            NSLog(@"HITITLE -- IT IS THE NIL NEW TEXT! Not updated!");
-        }
-    }
-    else {
-        NSLog(@"HITITLE -- FIRST SET TITLE TEXT");
-        _text = text;
-    }
-    [self willChangeValueForKey:@"isUpdated"];
-    self.isUpdated = NO;
-    [self didChangeValueForKey:@"isUpdated"];
+    _text = text;
+    [self updateNSObject:@"text"];
 }
 
 @end
