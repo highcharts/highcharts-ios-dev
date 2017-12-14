@@ -605,6 +605,31 @@ def format_to_h(name, source):
     return filelicense + imports + htext
 
 
+def create_setter(field):
+    setter_attribute = get_last(field.name)
+    setter_type = re.sub('\s/(.?)+/', '', types[field.name])
+
+    setter_text = "-(void)set{0}:({1}){2}".format(upper_first(setter_attribute), setter_type, setter_attribute) + " {\n"
+
+    if 'NSArray' in setter_type:
+        setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
+                        "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateArrayObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
+    elif 'HI' in setter_type:
+        setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
+                       "\tif(self.{0})".format(setter_attribute) + " {\n" + \
+                       "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
+                       "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateHIObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
+    else:
+        setter_text += "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateNSObject:@\"{0}\"];\n".format(setter_attribute)
+
+    setter_text += "}"
+
+    return setter_text
+
+
 def format_to_m(name, source):
     class_name = "HI" + upper_first(create_short_name(name))
 
@@ -619,7 +644,7 @@ def format_to_m(name, source):
         mtext += "-(instancetype)init {\n\treturn [super init];\n}\n"
     getParams = "\n-(NSDictionary *)getParams\n{\n\tNSMutableDictionary *params =" \
                 " [NSMutableDictionary dictionaryWithDictionary: "
-    setters = "\n# pragma mark - Setters\n"
+    setters_text = "\n# pragma mark - Setters\n"
     if source.extends:
         getParams += "[super getParams]];\n"
     else:
@@ -667,40 +692,15 @@ def format_to_m(name, source):
                                                                                      get_last(field.name))
             getParams += "\t}\n"
 
-            setters += "\n" + createSetter(field) + "\n"
+            setters_text += "\n" + create_setter(field) + "\n"
 
     getParams += "\treturn params;\n"
     getParams += "}\n"
     mtext += getParams
-    if setters != "\n# pragma mark - Setters\n":
-        mtext += setters
+    if setters_text != "\n# pragma mark - Setters\n":
+        mtext += setters_text
     mtext += "\n@end"
     return mtext
-
-def createSetter(field):
-    setter_attribute = get_last(field.name)
-    setter_type = re.sub('\s/(.?)+/', '', types[field.name])
-
-    setter_text = "-(void)set{0}:({1}){2}".format(upper_first(setter_attribute), setter_type, setter_attribute) + " {\n"
-
-    if 'NSArray' in setter_type:
-        setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
-                        "\t_{0} = {0};\n".format(setter_attribute) + \
-                       "\t[self updateArrayObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
-    elif 'HI' in setter_type:
-        setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
-                       "\tif(self.{0})".format(setter_attribute) + " {\n" + \
-                       "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
-                       "\t_{0} = {0};\n".format(setter_attribute) + \
-                       "\t[self updateHIObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
-    else:
-        setter_text += "\t_{0} = {0};\n".format(setter_attribute) + \
-                       "\t[self updateNSObject:@\"{0}\"];\n".format(setter_attribute)
-
-    setter_text += "}"
-
-    return setter_text
-
 
 
 def create_options_files():
@@ -718,6 +718,7 @@ def create_options_files():
              "\treturn nil;\n" \
              "}\n\n"
     mtext += "-(NSDictionary *)getParams {\n\tNSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];\n"
+    setters_text = "\n# pragma mark - Setters\n"
     for field in options:
         if field.name != 'global' and field.name != 'lang':
             if field.comment:
@@ -727,19 +728,30 @@ def create_options_files():
             if structure[field.name].data_type:
                 if "id" in str(get_type(field.data_type)) and "NSArray" not in str(get_type(field.data_type)):
                     if structure[field.name].properties:
-                        htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format("HI" + upper_first(create_name(field.name)), get_last(field.name))
+                        type = "{0} *".format("HI" + upper_first(create_name(field.name)))
+                        types[field.name] = type
+
+                        htext += "@property(nonatomic, readwrite) {0}{1};\n\n".format(type, get_last(field.name))
                     else:
-                        htext += "@property(nonatomic, readwrite) {0} {1};\n\n".format(get_type(field.data_type), get_last(field.name))
+                        type = "{0} ".format(get_type(field.data_type))
+                        types[field.name] = type
+
+                        htext += "@property(nonatomic, readwrite) {0}{1};\n\n".format(type, get_last(field.name))
                 elif "NSArray" in str(get_type(field.data_type)) and field.properties:
-                    htext += "@property(nonatomic, readwrite) {0}<{1} *> *{2};\n\n".format(get_type(field.data_type),
-                                                                                           "HI" + upper_first(create_name(field.name)),
-                                                                                           get_last(field.name))
+                    type = "{0}<{1} *> *".format(get_type(field.data_type), "HI" + upper_first(create_name(field.name)))
+                    types[field.name] = type
+
+                    htext += "@property(nonatomic, readwrite) {0}{1};\n\n".format(type, get_last(field.name))
                 else:
-                    htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format(get_type(field.data_type),
-                                                                                    get_last(field.name))
+                    type = "{0} *".format(get_type(field.data_type))
+                    types[field.name] = type
+
+                    htext += "@property(nonatomic, readwrite) {0}{1};\n\n".format(type, get_last(field.name))
             else:
-                htext += "@property(nonatomic, readwrite) {0} *{1};\n\n".format("HI" + upper_first(create_name(field.name)),
-                                                                                get_last(field.name))
+                type = "{0} *".format("HI" + upper_first(create_name(field.name)))
+                types[field.name] = type
+
+                htext += "@property(nonatomic, readwrite) {0}{1};\n\n".format(type, get_last(field.name))
     htext += "/**\n* Additional options that are not listed above but are accepted by API\n*/\n"
     htext += "@property(nonatomic, readwrite) NSDictionary *additionalOptions;\n"
     htext += "\n\n-(NSDictionary *)getParams;\n\n"
@@ -781,9 +793,13 @@ def create_options_files():
             elif structure[field.name].properties:
                 mtext += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(get_last(field.name), get_last(field.name))
             mtext += "\t}\n"
+
+            setters_text += "\n" + create_setter(field) + "\n"
+
     mtext += "\tif (self.additionalOptions) {\n\t\t[params addEntriesFromDictionary: self.additionalOptions];\n\t}\n\n"
     mtext += "\treturn params;\n"
     mtext += "}\n"
+    mtext += setters_text
     mtext += "\n@end"
     imports += "\n\n"
     htext += "\n@end\n"
