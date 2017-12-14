@@ -57,6 +57,29 @@
     return [self initWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:gradient, @"radialGradient", stops, @"stops", nil]];
 }
 
+- (instancetype)initWithUIColor:(UIColor *)color {
+    CGFloat r,g,b,a;
+    [color getRed:&r green:&g blue:&b alpha:&a];
+    int red = (int) r * 255,
+        green = (int) g * 255,
+        blue = (int) b * 255,
+        alpha = (int) a * 255;
+
+    return [self initWithRGBA:red green:green blue:blue alpha:alpha];
+}
+
+# pragma mark - Setters/Getters
+
+-(void)setString:(NSString *)string {
+    _string = string;
+    [self updateNSObject:@"string"];
+}
+
+-(void)setDictionary:(NSDictionary *)dictionary {
+    _dictionary = dictionary;
+    [self updateNSObject:@"dictionary"];
+}
+
 -(id)getData {
     if (self.dictionary) {
         return self.dictionary;
@@ -67,17 +90,6 @@
     else {
         return nil;
     }
-}
-
-- (instancetype)initWithUIColor:(UIColor *)color {
-    CGFloat r,g,b,a;
-    [color getRed:&r green:&g blue:&b alpha:&a];
-    int red = (int) r * 255,
-        green = (int) g * 255,
-        blue = (int) b * 255,
-        alpha = (int) a * 255;
-
-    return [self initWithRGBA:red green:green blue:blue alpha:alpha];
 }
 
 @end

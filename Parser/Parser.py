@@ -13,6 +13,7 @@
 import json
 import sys
 import os
+import re
 from bs4 import BeautifulSoup, SoupStrainer
 
 reload(sys)
@@ -26,6 +27,7 @@ bridge = set()
 options = list()
 notHichartsObjects = list()
 classes = dict()
+types = dict()
 filelicense = "/**\n* (c) 2009-2017 Highsoft AS\n*\n* License: www.highcharts.com/license\n" \
               "* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/\n" \
               "* In case of questions, please contact sales@highsoft.com\n*/\n\n"
@@ -522,31 +524,43 @@ def format_to_h(name, source):
             if "id" in str(get_type(field.data_type)) and "NSArray" not in str(get_type(field.data_type)) and not \
                     structure[
                         field.name].properties:
-                htext += "@property(nonatomic, readwrite) {0} {1};\n".format(get_type(field.data_type),
-                                                                             get_last(field.name))
+                type = "{0}".format(get_type(field.data_type))
+                types[field.name] = type
+
+                htext += "@property(nonatomic, readwrite) {0} {1};\n".format(type, get_last(field.name))
 
             elif "NSArray" in str(get_type(field.data_type)) and field.name.endswith(">.data"):
-                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(get_type(field.data_type),
-                                                                              get_last(field.name))
+                type = "{0} *".format(get_type(field.data_type))
+                types[field.name] = type
+
+                htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
 
             elif "NSArray" in str(get_type(field.data_type)) and structure[field.name].properties:
-                htext += "@property(nonatomic, readwrite) {0} <{1} *> *{2};\n".format(get_type(field.data_type),
-                                                                                      "HI" + upper_first(
+                type = "{0} <{1} *> *".format(get_type(field.data_type), "HI" + upper_first(
                                                                                           create_short_name(
-                                                                                              field.name)),
-                                                                                      get_last(field.name))
+                                                                                              field.name)))
+                types[field.name] = type
+
+                htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
                 imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_short_name(field.name)))
 
             elif "NSArray" in str(get_type(field.data_type)):
-                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(get_type(field.data_type),
-                                                                              get_last(field.name))
+                type = "{0} *".format(get_type(field.data_type))
+                types[field.name] = type
+
+                htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
             elif field.data_type == "Object":
                 if structure[field.name].properties:
-                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(
-                        "HI" + upper_first(create_short_name(field.name)), get_last(field.name))
+                    type = "{0} *".format("HI" + upper_first(create_short_name(field.name)))
+                    types[field.name] = type
+
+                    htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
                     imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_short_name(field.name)))
                 else:
-                    htext += "@property(nonatomic, readwrite) id {0};\n".format(get_last(field.name))
+                    type = "id"
+                    types[field.name] = type
+
+                    htext += "@property(nonatomic, readwrite) {0} {1};\n".format(type, get_last(field.name))
 
             else:
                 if get_type(field.data_type) == "HIColor" and not colorAdded:
@@ -554,19 +568,29 @@ def format_to_h(name, source):
                 if get_type(field.data_type) == "HIFunction" and not functionAdded:
                     functionAdded = True
                 if structure[field.name].properties:
-                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(
-                        "HI" + upper_first(create_short_name(field.name)), get_last(field.name))
+                    type = "{0} *".format("HI" + upper_first(create_short_name(field.name)))
+                    types[field.name] = type
+
+                    htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
                     imports += "#import \"{0}.h\"\n".format("HI" + upper_first(create_short_name(field.name)))
                 else:
-                    htext += "@property(nonatomic, readwrite) {0} *{1};\n".format(get_type(field.data_type),
-                                                                                  get_last(field.name))
+                    type = "{0} *".format(get_type(field.data_type))
+                    types[field.name] = type
+
+                    htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
         else:
             if not field.data_type and not structure[field.name].properties:
-                htext += "@property(nonatomic, readwrite) id {0};\n".format(get_last(field.name))
+                type = "id"
+                types[field.name] = type
+
+                htext += "@property(nonatomic, readwrite) {0} {1};\n".format(type, get_last(field.name))
             elif structure[field.name].properties:
                 name = create_short_name(field.name)
-                htext += "@property(nonatomic, readwrite) {0} *{1};\n".format("HI" + upper_first(name),
-                                                                              get_last(field.name))
+
+                type = "{0} *".format("HI" + upper_first(name))
+                types[field.name] = type
+
+                htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
                 imports += "#import \"{0}.h\"\n".format("HI" + upper_first(name))
 
     htext += "\n-(NSDictionary *)getParams;\n\n"
@@ -595,6 +619,7 @@ def format_to_m(name, source):
         mtext += "-(instancetype)init {\n\treturn [super init];\n}\n"
     getParams = "\n-(NSDictionary *)getParams\n{\n\tNSMutableDictionary *params =" \
                 " [NSMutableDictionary dictionaryWithDictionary: "
+    setters = "\n# pragma mark - Setters\n"
     if source.extends:
         getParams += "[super getParams]];\n"
     else:
@@ -641,11 +666,41 @@ def format_to_m(name, source):
                 getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(get_last(field.name),
                                                                                      get_last(field.name))
             getParams += "\t}\n"
+
+            setters += "\n" + createSetter(field) + "\n"
+
     getParams += "\treturn params;\n"
     getParams += "}\n"
     mtext += getParams
+    if setters != "\n# pragma mark - Setters\n":
+        mtext += setters
     mtext += "\n@end"
     return mtext
+
+def createSetter(field):
+    setter_attribute = get_last(field.name)
+    setter_type = re.sub('\s/(.?)+/', '', types[field.name])
+
+    setter_text = "-(void)set{0}:({1}){2}".format(upper_first(setter_attribute), setter_type, setter_attribute) + " {\n"
+
+    if 'NSArray' in setter_type:
+        setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
+                        "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateArrayObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
+    elif 'HI' in setter_type:
+        setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
+                       "\tif(self.{0})".format(setter_attribute) + " {\n" + \
+                       "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
+                       "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateHIObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
+    else:
+        setter_text += "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateNSObject:@\"{0}\"];\n".format(setter_attribute)
+
+    setter_text += "}"
+
+    return setter_text
+
 
 
 def create_options_files():
@@ -874,8 +929,8 @@ def main():
     create_structure()
     # search_for_repetitions()
     # print_structure()
-    #create_files()
-    generate_documentation()
+    create_files()
+    #generate_documentation()
 
 
 if __name__ == "__main__":
