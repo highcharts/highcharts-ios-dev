@@ -12,6 +12,8 @@
     
     HIChartView *chartView = [[HIChartView alloc] initWithFrame:self.view.bounds];
 
+    chartView.plugins = @[@"item-series"];
+
     chartView.theme = @"grid-light";
     
     HIOptions *options = [[HIOptions alloc] init];
