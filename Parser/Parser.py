@@ -797,6 +797,12 @@ def create_options_files():
             setters_text += "\n" + create_setter(field) + "\n"
 
     mtext += "\tif (self.additionalOptions) {\n\t\t[params addEntriesFromDictionary: self.additionalOptions];\n\t}\n\n"
+
+    setters_text += "\n-(void)set{0}:({1}){2}".format("AdditionalOptions", "NSDictionary *", "additionalOptions") + " {\n" + \
+                  "\t_{0} = {0};\n".format("additionalOptions") + \
+                  "\t[self updateNSObject:@\"{0}\"];\n".format("additionalOptions") + \
+                  "}\n"
+
     mtext += "\treturn params;\n"
     mtext += "}\n"
     mtext += setters_text
