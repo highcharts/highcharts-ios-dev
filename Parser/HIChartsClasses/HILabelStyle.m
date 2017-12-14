@@ -21,4 +21,21 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setTop:(NSString *)top {
+	_top = top;
+	[self updateNSObject:@"top"];
+}
+
+-(void)setFontWeight:(NSString *)fontWeight {
+	_fontWeight = fontWeight;
+	[self updateNSObject:@"fontWeight"];
+}
+
+-(void)setPosition:(NSString *)position {
+	_position = position;
+	[self updateNSObject:@"position"];
+}
+
 @end

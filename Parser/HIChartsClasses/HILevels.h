@@ -14,8 +14,7 @@
 * description: Set options on specific levels. Takes precedence over series options,
 but not point options.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/ : Styling dataLabels and borders
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/ : Different layoutAlgorithm
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst : Sunburst chart
 */
 @interface HILevels: HIChartsJSONSerializable
 
@@ -75,6 +74,14 @@ object.
 * description: Can set a borderColor on all points which lies on the same level.
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
+/**
+* description: Can set a rotationMode on all points which lies on the same level.
+*/
+@property(nonatomic, readwrite) NSString *rotationMode;
+/**
+* description: Can set a rotation on all points which lies on the same level.
+*/
+@property(nonatomic, readwrite) NSNumber *rotation;
 
 -(NSDictionary *)getParams;
 

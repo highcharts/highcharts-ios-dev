@@ -24,4 +24,26 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setFontWeight:(NSString *)fontWeight {
+	_fontWeight = fontWeight;
+	[self updateNSObject:@"fontWeight"];
+}
+
+-(void)setTextOverflow:(NSString *)textOverflow {
+	_textOverflow = textOverflow;
+	[self updateNSObject:@"textOverflow"];
+}
+
+-(void)setFontSize:(NSString *)fontSize {
+	_fontSize = fontSize;
+	[self updateNSObject:@"fontSize"];
+}
+
+-(void)setColor:(NSString *)color {
+	_color = color;
+	[self updateNSObject:@"color"];
+}
+
 @end

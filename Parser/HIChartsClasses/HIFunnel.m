@@ -78,4 +78,92 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
+}
+
+-(void)setWidth:(id)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	_slicedOffset = slicedOffset;
+	[self updateNSObject:@"slicedOffset"];
+}
+
+-(void)setCenter:(NSArray *)center {
+	NSArray *oldValue = _center;
+	_center = center;
+	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
+}
+
+-(void)setMinSize:(NSNumber *)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
+}
+
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
+}
+
+-(void)setNeckWidth:(id)neckWidth {
+	_neckWidth = neckWidth;
+	[self updateNSObject:@"neckWidth"];
+}
+
+-(void)setStartAngle:(NSNumber *)startAngle {
+	_startAngle = startAngle;
+	[self updateNSObject:@"startAngle"];
+}
+
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:@"ignoreHiddenPoint"];
+}
+
+-(void)setInnerSize:(id)innerSize {
+	_innerSize = innerSize;
+	[self updateNSObject:@"innerSize"];
+}
+
+-(void)setReversed:(NSNumber *)reversed {
+	_reversed = reversed;
+	[self updateNSObject:@"reversed"];
+}
+
+-(void)setHeight:(id)height {
+	_height = height;
+	[self updateNSObject:@"height"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setNeckHeight:(id)neckHeight {
+	_neckHeight = neckHeight;
+	[self updateNSObject:@"neckHeight"];
+}
+
+-(void)setClip:(NSNumber *)clip {
+	_clip = clip;
+	[self updateNSObject:@"clip"];
+}
+
 @end

@@ -12,10 +12,12 @@
 
 
 /**
-* description: Gauges are circular plots displaying one or more values with a dial pointing
-to values along the perimeter.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/ : Gauge chart
+* description: A gauge series. If the type option is not
+specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+gauge.
 */
 @interface HIGauge: HISeries
 

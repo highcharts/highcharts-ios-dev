@@ -33,4 +33,45 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setTimezone:(NSString *)timezone {
+	_timezone = timezone;
+	[self updateNSObject:@"timezone"];
+}
+
+-(void)setVMLRadialGradientURL:(NSString *)VMLRadialGradientURL {
+	_VMLRadialGradientURL = VMLRadialGradientURL;
+	[self updateNSObject:@"VMLRadialGradientURL"];
+}
+
+-(void)setTimezoneOffset:(NSNumber *)timezoneOffset {
+	_timezoneOffset = timezoneOffset;
+	[self updateNSObject:@"timezoneOffset"];
+}
+
+-(void)setDate:(id)Date {
+	_Date = Date;
+	[self updateNSObject:@"Date"];
+}
+
+-(void)setCanvasToolsURL:(NSString *)canvasToolsURL {
+	_canvasToolsURL = canvasToolsURL;
+	[self updateNSObject:@"canvasToolsURL"];
+}
+
+-(void)setGetTimezoneOffset:(HIFunction *)getTimezoneOffset {
+	HIFunction *oldValue = _getTimezoneOffset;
+	if(self.getTimezoneOffset) {
+		[self removeObserver:self forKeyPath:@"getTimezoneOffset.isUpdated"];
+	}
+	_getTimezoneOffset = getTimezoneOffset;
+	[self updateHIObject:oldValue newValue:getTimezoneOffset propertyName:@"getTimezoneOffset"];
+}
+
+-(void)setUseUTC:(NSNumber *)useUTC {
+	_useUTC = useUTC;
+	[self updateNSObject:@"useUTC"];
+}
+
 @end

@@ -27,4 +27,31 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setFontSize:(NSString *)fontSize {
+	_fontSize = fontSize;
+	[self updateNSObject:@"fontSize"];
+}
+
+-(void)setTransition:(NSString *)transition {
+	_transition = transition;
+	[self updateNSObject:@"transition"];
+}
+
+-(void)setColor:(NSString *)color {
+	_color = color;
+	[self updateNSObject:@"color"];
+}
+
+-(void)setPadding:(NSString *)padding {
+	_padding = padding;
+	[self updateNSObject:@"padding"];
+}
+
+-(void)setBackground:(NSString *)background {
+	_background = background;
+	[self updateNSObject:@"background"];
+}
+
 @end

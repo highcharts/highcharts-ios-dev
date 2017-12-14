@@ -24,4 +24,26 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setBreakSize:(NSNumber *)breakSize {
+	_breakSize = breakSize;
+	[self updateNSObject:@"breakSize"];
+}
+
+-(void)setRepeat:(NSNumber *)repeat {
+	_repeat = repeat;
+	[self updateNSObject:@"repeat"];
+}
+
+-(void)setTo:(NSNumber *)to {
+	_to = to;
+	[self updateNSObject:@"to"];
+}
+
+-(void)setFrom:(NSNumber *)from {
+	_from = from;
+	[self updateNSObject:@"from"];
+}
+
 @end

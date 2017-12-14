@@ -23,4 +23,16 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setVectorLength:(NSNumber *)vectorLength {
+	_vectorLength = vectorLength;
+	[self updateNSObject:@"vectorLength"];
+}
+
+-(void)setRotationOrigin:(NSString *)rotationOrigin {
+	_rotationOrigin = rotationOrigin;
+	[self updateNSObject:@"rotationOrigin"];
+}
+
 @end

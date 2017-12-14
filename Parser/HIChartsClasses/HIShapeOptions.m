@@ -33,4 +33,49 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setHeight:(NSNumber *)height {
+	_height = height;
+	[self updateNSObject:@"height"];
+}
+
+-(void)setType:(NSString *)type {
+	_type = type;
+	[self updateNSObject:@"type"];
+}
+
+-(void)setWidth:(NSNumber *)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setStrokeWidth:(NSNumber *)strokeWidth {
+	_strokeWidth = strokeWidth;
+	[self updateNSObject:@"strokeWidth"];
+}
+
+-(void)setStroke:(HIColor *)stroke {
+	HIColor *oldValue = _stroke;
+	if(self.stroke) {
+		[self removeObserver:self forKeyPath:@"stroke.isUpdated"];
+	}
+	_stroke = stroke;
+	[self updateHIObject:oldValue newValue:stroke propertyName:@"stroke"];
+}
+
+-(void)setR:(NSNumber *)r {
+	_r = r;
+	[self updateNSObject:@"r"];
+}
+
+-(void)setFill:(HIColor *)fill {
+	HIColor *oldValue = _fill;
+	if(self.fill) {
+		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
+	}
+	_fill = fill;
+	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
+}
+
 @end

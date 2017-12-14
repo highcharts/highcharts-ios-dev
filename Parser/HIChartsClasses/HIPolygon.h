@@ -10,12 +10,12 @@
 
 
 /**
-* description: A polygon series can be used to draw any freeform shape in the cartesian
-coordinate system. A fill is applied with the color option, and
-stroke is applied through lineWidth and lineColor options. Requires
-the highcharts-more.js file.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/polygon/ : Polygon
+* description: A polygon series. If the type option is
+not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+polygon.
 */
 @interface HIPolygon: HISeries
 

@@ -10,13 +10,11 @@
 
 
 /**
-* description: CSS styles for the label. Use whiteSpace: 'nowrap' to prevent
-wrapping of category labels. Use textOverflow: 'none' to
-prevent ellipsis (dots).
-In styled mode, the labels are styled with the
-.highcharts-axis-labels class.
+* description: CSS styles for the tooltip. The tooltip can also be styled through
+the CSS class .highcharts-tooltip.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-style/ : Red X axis labels
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/ : Greater padding, bold text
+* default: { "color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap" }
 */
 @interface HIStyle: HIChartsJSONSerializable
 
@@ -25,6 +23,18 @@ In styled mode, the labels are styled with the
 @property(nonatomic, readwrite) NSString *color;
 @property(nonatomic, readwrite) NSString *fontWeight;
 @property(nonatomic, readwrite) NSString *cursor;
+@property(nonatomic, readwrite) NSString *backgroundColor;
+@property(nonatomic, readwrite) NSString *textAlign;
+@property(nonatomic, readwrite) NSNumber *opacity;
+@property(nonatomic, readwrite) NSString *position;
+@property(nonatomic, readwrite) NSString *textOverflow;
+/**
+* description: The font family to use for the word cloud.
+* default: Impact, sans-serif
+*/
+@property(nonatomic, readwrite) NSString *fontFamily;
+@property(nonatomic, readwrite) NSString *pointerEvents;
+@property(nonatomic, readwrite) NSString *whiteSpace;
 
 -(NSDictionary *)getParams;
 

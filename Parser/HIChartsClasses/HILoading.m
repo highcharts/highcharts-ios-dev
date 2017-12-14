@@ -24,4 +24,34 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setLabelStyle:(HILabelStyle *)labelStyle {
+	HILabelStyle *oldValue = _labelStyle;
+	if(self.labelStyle) {
+		[self removeObserver:self forKeyPath:@"labelStyle.isUpdated"];
+	}
+	_labelStyle = labelStyle;
+	[self updateHIObject:oldValue newValue:labelStyle propertyName:@"labelStyle"];
+}
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setShowDuration:(NSNumber *)showDuration {
+	_showDuration = showDuration;
+	[self updateNSObject:@"showDuration"];
+}
+
+-(void)setHideDuration:(NSNumber *)hideDuration {
+	_hideDuration = hideDuration;
+	[self updateNSObject:@"hideDuration"];
+}
+
 @end

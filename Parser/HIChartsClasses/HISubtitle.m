@@ -39,4 +39,51 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setStyle:(NSDictionary *)style {
+	_style = style;
+	[self updateNSObject:@"style"];
+}
+
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
+}
+
+-(void)setText:(NSString *)text {
+	_text = text;
+	[self updateNSObject:@"text"];
+}
+
+-(void)setFloating:(NSNumber *)floating {
+	_floating = floating;
+	[self updateNSObject:@"floating"];
+}
+
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
+}
+
+-(void)setAlign:(NSString *)align {
+	_align = align;
+	[self updateNSObject:@"align"];
+}
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
+}
+
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
+}
+
+-(void)setWidthAdjust:(NSNumber *)widthAdjust {
+	_widthAdjust = widthAdjust;
+	[self updateNSObject:@"widthAdjust"];
+}
+
 @end

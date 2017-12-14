@@ -15,4 +15,11 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setMarkers:(id)markers {
+	_markers = markers;
+	[self updateNSObject:@"markers"];
+}
+
 @end

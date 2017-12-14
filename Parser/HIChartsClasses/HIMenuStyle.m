@@ -21,4 +21,21 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setPadding:(NSString *)padding {
+	_padding = padding;
+	[self updateNSObject:@"padding"];
+}
+
+-(void)setBackground:(NSString *)background {
+	_background = background;
+	[self updateNSObject:@"background"];
+}
+
+-(void)setBorder:(NSString *)border {
+	_border = border;
+	[self updateNSObject:@"border"];
+}
+
 @end

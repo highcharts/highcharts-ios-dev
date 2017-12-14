@@ -29,4 +29,34 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setWrap:(NSNumber *)wrap {
+	_wrap = wrap;
+	[self updateNSObject:@"wrap"];
+}
+
+-(void)setOvershoot:(NSNumber *)overshoot {
+	_overshoot = overshoot;
+	[self updateNSObject:@"overshoot"];
+}
+
+-(void)setDial:(HIDial *)dial {
+	HIDial *oldValue = _dial;
+	if(self.dial) {
+		[self removeObserver:self forKeyPath:@"dial.isUpdated"];
+	}
+	_dial = dial;
+	[self updateHIObject:oldValue newValue:dial propertyName:@"dial"];
+}
+
+-(void)setPivot:(HIPivot *)pivot {
+	HIPivot *oldValue = _pivot;
+	if(self.pivot) {
+		[self removeObserver:self forKeyPath:@"pivot.isUpdated"];
+	}
+	_pivot = pivot;
+	[self updateHIObject:oldValue newValue:pivot propertyName:@"pivot"];
+}
+
 @end

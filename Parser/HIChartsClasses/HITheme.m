@@ -24,4 +24,26 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setPadding:(NSNumber *)padding {
+	_padding = padding;
+	[self updateNSObject:@"padding"];
+}
+
+-(void)setFill:(NSString *)fill {
+	_fill = fill;
+	[self updateNSObject:@"fill"];
+}
+
+-(void)setStroke:(NSString *)stroke {
+	_stroke = stroke;
+	[self updateNSObject:@"stroke"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	_zIndex = zIndex;
+	[self updateNSObject:@"zIndex"];
+}
+
 @end

@@ -33,4 +33,49 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
+}
+
+-(void)setShape:(NSString *)shape {
+	_shape = shape;
+	[self updateNSObject:@"shape"];
+}
+
+-(void)setBackgroundColor:(HIColor *)backgroundColor {
+	HIColor *oldValue = _backgroundColor;
+	if(self.backgroundColor) {
+		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
+	}
+	_backgroundColor = backgroundColor;
+	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+}
+
+-(void)setOuterRadius:(id)outerRadius {
+	_outerRadius = outerRadius;
+	[self updateNSObject:@"outerRadius"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
+}
+
+-(void)setInnerRadius:(id)innerRadius {
+	_innerRadius = innerRadius;
+	[self updateNSObject:@"innerRadius"];
+}
+
 @end

@@ -48,7 +48,102 @@
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
+	if (self.floating) {
+		params[@"floating"] = self.floating;
+	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
+	if (self.widthAdjust) {
+		params[@"widthAdjust"] = self.widthAdjust;
+	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setReserveSpace:(NSNumber *)reserveSpace {
+	_reserveSpace = reserveSpace;
+	[self updateNSObject:@"reserveSpace"];
+}
+
+-(void)setMargin:(NSNumber *)margin {
+	_margin = margin;
+	[self updateNSObject:@"margin"];
+}
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
+}
+
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
+}
+
+-(void)setEnabled:(NSString *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setSkew3d:(NSNumber *)skew3d {
+	_skew3d = skew3d;
+	[self updateNSObject:@"skew3d"];
+}
+
+-(void)setOffset:(NSNumber *)offset {
+	_offset = offset;
+	[self updateNSObject:@"offset"];
+}
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setPosition3d:(NSString *)position3d {
+	_position3d = position3d;
+	[self updateNSObject:@"position3d"];
+}
+
+-(void)setRotation:(NSNumber *)rotation {
+	_rotation = rotation;
+	[self updateNSObject:@"rotation"];
+}
+
+-(void)setAlign:(NSString *)align {
+	_align = align;
+	[self updateNSObject:@"align"];
+}
+
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
+}
+
+-(void)setText:(NSString *)text {
+	_text = text;
+	[self updateNSObject:@"text"];
+}
+
+-(void)setFloating:(NSNumber *)floating {
+	_floating = floating;
+	[self updateNSObject:@"floating"];
+}
+
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
+}
+
+-(void)setWidthAdjust:(NSNumber *)widthAdjust {
+	_widthAdjust = widthAdjust;
+	[self updateNSObject:@"widthAdjust"];
 }
 
 @end

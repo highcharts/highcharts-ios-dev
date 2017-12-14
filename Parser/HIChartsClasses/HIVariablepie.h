@@ -11,12 +11,12 @@
 
 
 /**
-* description: A variable pie series is a two dimensional series type, where each point
-renders an Y and Z value.  Each point is drawn as a pie slice where the
-size (arc) of the slice relates to the Y value and the radius of pie
-slice relates to the Z value. Requires highcharts-more.js.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/variable-radius-pie/ : Variable-radius pie chart
+* description: A variablepie series. If the type option is not
+specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+variablepie.
 */
 @interface HIVariablepie: HISeries
 

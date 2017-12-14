@@ -10,7 +10,9 @@
 
 
 /**
-* description: The axis title, showing next to the axis line.
+* description: The chart's main title.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/title/title/ : Title options demonstrated
 */
 @interface HITitle: HIChartsJSONSerializable
 
@@ -133,6 +135,32 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * default: null
 */
 @property(nonatomic, readwrite) NSString *text;
+/**
+* description: When the title is floating, the plot area will not move to make space
+for it.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-none/ : False by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/floating/ : True - title on top of the plot area
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *floating;
+/**
+* description: The vertical alignment of the title. Can be one of "top", "middle"
+and "bottom". When a value is given, the title behaves as if floating were true.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/verticalalign/ : Chart title in bottom right corner
+* accepted values: ["top", "middle", "bottom"]
+*/
+@property(nonatomic, readwrite) NSString *verticalAlign;
+/**
+* description: Adjustment made to the title width, normally to reserve space for
+the exporting burger menu.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/ : Wider menu, greater padding
+
+* default: -44
+*/
+@property(nonatomic, readwrite) NSNumber *widthAdjust;
 
 -(NSDictionary *)getParams;
 

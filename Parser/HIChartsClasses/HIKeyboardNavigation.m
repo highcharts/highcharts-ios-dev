@@ -18,4 +18,16 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setSkipNullPoints:(NSNumber *)skipNullPoints {
+	_skipNullPoints = skipNullPoints;
+	[self updateNSObject:@"skipNullPoints"];
+}
+
 @end

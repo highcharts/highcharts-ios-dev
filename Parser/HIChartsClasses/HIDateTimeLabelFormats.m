@@ -36,4 +36,46 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setHour:(NSString *)hour {
+	_hour = hour;
+	[self updateNSObject:@"hour"];
+}
+
+-(void)setMonth:(NSString *)month {
+	_month = month;
+	[self updateNSObject:@"month"];
+}
+
+-(void)setYear:(NSString *)year {
+	_year = year;
+	[self updateNSObject:@"year"];
+}
+
+-(void)setSecond:(NSString *)second {
+	_second = second;
+	[self updateNSObject:@"second"];
+}
+
+-(void)setWeek:(NSString *)week {
+	_week = week;
+	[self updateNSObject:@"week"];
+}
+
+-(void)setMillisecond:(NSString *)millisecond {
+	_millisecond = millisecond;
+	[self updateNSObject:@"millisecond"];
+}
+
+-(void)setMinute:(NSString *)minute {
+	_minute = minute;
+	[self updateNSObject:@"minute"];
+}
+
+-(void)setDay:(NSString *)day {
+	_day = day;
+	[self updateNSObject:@"day"];
+}
+
 @end

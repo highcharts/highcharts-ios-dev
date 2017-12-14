@@ -7,13 +7,14 @@
 */
 
 #import "HIDateTimeLabelFormats.h"
+#import "HIStyle.h"
+#import "HIColor.h"
 #import "HIFunction.h"
 
 
 /**
-* description: A configuration object for the tooltip rendering of each single series.
-Properties are inherited from tooltip, but only the
-following properties can be defined on a series level.
+* description: Options for the tooltip that appears when the user hovers over a
+series or point.
 */
 @interface HITooltip: HIChartsJSONSerializable
 
@@ -150,6 +151,194 @@ of a sankey diagram series.
 */
 @property(nonatomic, readwrite) NSString *nodeFormat;
 @property(nonatomic, readwrite) NSNumber *distance;
+/**
+* description: CSS styles for the tooltip. The tooltip can also be styled through
+the CSS class .highcharts-tooltip.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/ : Greater padding, bold text
+* default: { "color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap" }
+*/
+@property(nonatomic, readwrite) HIStyle *style;
+/**
+* description: Use HTML to render the contents of the tooltip instead of SVG. Using
+HTML allows advanced formatting like tables and images in the tooltip.
+It is also recommended for rtl languages as it works around rtl
+bugs in early Firefox.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/fullhtml/ : Full HTML tooltip
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/usehtml/ : Pure HTML tooltip
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
+/**
+* description: A callback function to place the tooltip in a default position. The
+callback receives three parameters: labelWidth, labelHeight and
+point, where point contains values for plotX and plotY telling
+where the reference point is in the plot area. Add chart.plotLeft
+and chart.plotTop to get the full coordinates.
+The return should be an object containing x and y values, for example
+{ x: 100, y: 100 }.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/ : A fixed tooltip position
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/positioner/ : A fixed tooltip position on top of the chart
+*/
+@property(nonatomic, readwrite) HIFunction *positioner;
+/**
+* description: Whether to apply a drop shadow to the tooltip.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : True by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shadow/ : False
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/ : Fixed tooltip position, border and shadow disabled
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+/**
+* description: Callback function to format the text of the tooltip from scratch. Return
+false to disable tooltip for a specific point on series.
+A subset of HTML is supported. Unless useHTML is true, the HTML of the
+tooltip is parsed and converted to SVG, therefore this isn't a complete HTML
+renderer. The following tags are supported: <b>, <strong>, <i>, <em>,
+<br/>, <span>. Spans can be styled with a style attribute,
+but only text-related CSS that is shared with SVG is handled.
+Since version 2.1 the tooltip can be shared between multiple series
+through the shared option. The available data in the formatter
+differ a bit depending on whether the tooltip is shared or not. In
+a shared tooltip, all properties except x, which is common for
+all points, are kept in an array, this.points.
+Available data are:
+
+this.percentage (not shared) / this.points[i].percentage (shared)
+Stacked series and pies only. The point's percentage of the total.
+
+this.point (not shared) / this.points[i].point (shared)
+The point object. The point name, if defined, is available through
+this.point.name.
+this.points
+In a shared tooltip, this is an array containing all other properties
+for each point.
+this.series (not shared) / this.points[i].series (shared)
+The series object. The series name is available through
+this.series.name.
+this.total (not shared) / this.points[i].total (shared)
+Stacked series only. The total value at this point's x value.
+
+this.x
+The x value. This property is the same regardless of the tooltip
+being shared or not.
+this.y (not shared) / this.points[i].y (shared)
+The y value.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-simple/ : Simple string formatting
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-shared/ : Formatting with shared tooltip
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/formatter/ : String formatting
+*/
+@property(nonatomic, readwrite) HIFunction *formatter;
+/**
+* description: The pixel width of the tooltip border.
+In styled mode, the stroke width is set in the .highcharts-tooltip-box class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 2px by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderwidth/ : No border (shadow only)
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/ : Tooltip in styled mode
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/ : Custom tooltip
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/ : Background and border demo
+
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *borderWidth;
+/**
+* description: When the tooltip is shared, the entire plot area will capture mouse
+movement or touch events. Tooltip texts for series types with ordered
+data (not pie, scatter, flags etc) will be shown in a single bubble.
+This is recommended for single series charts and for tablet/mobile
+optimized charts.
+See also tooltip.split, that is better suited for
+charts with many series, especially line-type series.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-false/ : False by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true/ : True
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-x-crosshair/ : True with x axis crosshair
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true-mixed-types/ : True with mixed series types
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *shared;
+/**
+* description: Enable or disable animation of the tooltip. In slow legacy IE browsers
+the animation is disabled by default.
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
+/**
+* description: The radius of the rounded border corners.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 5px by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderradius-0/ : Square borders
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/ : Background and border demo
+* default: 3
+*/
+@property(nonatomic, readwrite) NSNumber *borderRadius;
+/**
+* description: Enable or disable the tooltip.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/ : Disabled
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/ : Disable tooltip and show values on chart instead
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+/**
+* description: The background color or gradient for the tooltip.
+In styled mode, the stroke width is set in the .highcharts-tooltip-box class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-solid/ : Yellowish background
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/ : Gradient
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/ : Tooltip in styled mode
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/ : Custom tooltip
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/ : Background and border demo
+
+* default: rgba(247,247,247,0.85)
+*/
+@property(nonatomic, readwrite) HIColor *backgroundColor;
+/**
+* description: The name of a symbol to use for the border around the tooltip.
+
+* accepted values: ["callout", "square"]
+* default: callout
+*/
+@property(nonatomic, readwrite) NSString *shape;
+/**
+* description: The color of the tooltip border. When null, the border takes the
+color of the corresponding series or point.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : Follow series by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/ : Black border
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/ : Styled tooltip
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/ : Background and border demo
+* default: null
+*/
+@property(nonatomic, readwrite) HIColor *borderColor;
+/**
+* description: Proximity snap for graphs or single points. It defaults to 10 for
+mouse-powered devices and 25 for touch devices.
+Note that in most cases the whole plot area captures the mouse
+movement, and in these cases tooltip.snap doesn't make sense.
+This applies when stickyTracking
+is true (default) and when the tooltip is shared
+or split.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 10 px by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/ : 50 px on graph
+* default: 10/25
+*/
+@property(nonatomic, readwrite) NSNumber *snap;
+/**
+* description: Since 4.1, the crosshair definitions are moved to the Axis object
+in order for a better separation from the tooltip. See xAxis.crosshair.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/crosshairs-x/ : Enable a crosshair for the x value
+* default: true
+*/
+@property(nonatomic, readwrite) id crosshairs;
 
 -(NSDictionary *)getParams;
 
