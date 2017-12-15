@@ -87,8 +87,6 @@ static BOOL preloaded = NO;
     self.webView.backgroundColor = [UIColor clearColor];
     self.webView.scrollView.backgroundColor = [UIColor clearColor];
     self.webView.scrollView.opaque = NO;
-    
-    [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
 }
 
 - (void)dealloc
@@ -106,60 +104,11 @@ static BOOL preloaded = NO;
     [self resize];
 }
 
-#pragma mark - NSKeyValueObserving
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"options.isUpdated"]) {
-        NSString *kChangeNew = [change valueForKey:@"new"];
-        BOOL value = kChangeNew.boolValue;
-        if (value) {
-            NSLog(@"HICHARTVIEW -- OPTIONS UPDATED!!!");
-            [self update];
-        }
-        else {
-            NSLog(@"HICHARTVIEW -- OPTIONS SET UP IS UPDATED TO FALSE IN HICHARTVIEW!!!");
-        }
-    }
-}
-
-#pragma mark - Setters / Getters
-
-- (void)setOptions:(HIOptions *)options {
-    [self willChangeValueForKey:@"options"];
-    _options = options;
-    [self loadChartInternal];
-    [self didChangeValueForKey:@"options"];
-}
-
-- (void)setTheme:(NSString *)theme
-{
-    [self willChangeValueForKey:@"theme"];
-    _theme = theme;
-    [self loadChartInternal];
-    [self didChangeValueForKey:@"theme"];
-}
-
-- (void)setLang:(HILang *)lang
-{
-    [self willChangeValueForKey:@"lang"];
-    _lang = lang;
-    [self didChangeValueForKey:@"lang"];
-}
-
-- (void)setGlobal:(HIGlobal *)global
-{
-    [self willChangeValueForKey:@"global"];
-    _global = global;
-    [self didChangeValueForKey:@"global"];
-}
-
-
 #pragma mark - Helpers
 
-- (void)update {
+- (void)updateOptions {
     [self.HTML prepareOptions:[self.options getParams]];
-    NSString *modificationString = [NSString stringWithFormat:@"update(%@);", self.HTML.options];
-    NSLog(@"%@", modificationString);
+    NSString *modificationString = [NSString stringWithFormat:@"updateOptions(%@);", self.HTML.options];
     [self.webView evaluateJavaScript:modificationString completionHandler:nil];
 }
 
@@ -218,9 +167,58 @@ static BOOL preloaded = NO;
     [self.HTML prepareOptions:[self.options getParams]];
     [self.HTML injectJavaScriptToHTML];
     
-    NSLog(@"%@", self.HTML.html);
-    
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
+}
+
+#pragma mark - NSKeyValueObserving
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"options.isUpdated"]) {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        if (value) {
+            [self updateOptions];
+        }
+    }
+}
+
+#pragma mark - Setters / Getters
+
+- (void)setOptions:(HIOptions *)options {
+    if (self.options) {
+        [self removeObserver:self forKeyPath:@"options.isUpdated"];
+    }
+    [self willChangeValueForKey:@"options"];
+    _options = options;
+    [self loadChartInternal];
+    [self didChangeValueForKey:@"options"];
+    if (options) {
+        [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
+    }
+}
+
+- (void)setTheme:(NSString *)theme
+{
+    [self willChangeValueForKey:@"theme"];
+    _theme = theme;
+    [self loadChartInternal];
+    [self didChangeValueForKey:@"theme"];
+}
+
+- (void)setLang:(HILang *)lang
+{
+    [self willChangeValueForKey:@"lang"];
+    _lang = lang;
+    [self loadChartInternal];
+    [self didChangeValueForKey:@"lang"];
+}
+
+- (void)setGlobal:(HIGlobal *)global
+{
+    [self willChangeValueForKey:@"global"];
+    _global = global;
+    [self loadChartInternal];
+    [self didChangeValueForKey:@"global"];
 }
 
 #pragma mark - WKWebViewDelegate
