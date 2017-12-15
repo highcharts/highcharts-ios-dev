@@ -108,10 +108,6 @@ static BOOL preloaded = NO;
 
 #pragma mark - NSKeyValueObserving
 
-+ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
-    return NO;
-}
-
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"options.isUpdated"]) {
         NSString *kChangeNew = [change valueForKey:@"new"];
