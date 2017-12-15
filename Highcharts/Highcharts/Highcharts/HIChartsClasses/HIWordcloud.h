@@ -53,7 +53,7 @@ resulting layout of the wordcloud.
 It is possible for users to add their own custom placement strategies
 for use in word cloud. Read more about it in our
 https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-placement-strategies : documentation
-* default: random
+* default: center
 */
 @property(nonatomic, readwrite) NSString *placementStrategy;
 /**
@@ -85,7 +85,7 @@ collision with either another word or the borders.
 It is possible for users to add their own custom spiralling algorithms
 for use in word cloud. Read more about it in our
 https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-spiralling-algorithm : documentation
-* default: archimedean
+* default: rectangular
 */
 @property(nonatomic, readwrite) NSString *spiral;
 

@@ -21,4 +21,25 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setColorIndex:(NSNumber *)colorIndex {
+	_colorIndex = colorIndex;
+	[self updateNSObject:@"colorIndex"];
+}
+
+-(void)setId:(NSString *)id {
+	_id = id;
+	[self updateNSObject:@"id"];
+}
+
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
+	_color = color;
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
 @end

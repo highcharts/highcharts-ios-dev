@@ -21,4 +21,21 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setWidth:(NSString *)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setPosition:(NSString *)position {
+	_position = position;
+	[self updateNSObject:@"position"];
+}
+
+-(void)setHeight:(NSString *)height {
+	_height = height;
+	[self updateNSObject:@"height"];
+}
+
 @end

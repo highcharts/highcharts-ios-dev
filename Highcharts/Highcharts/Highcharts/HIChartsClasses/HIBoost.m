@@ -27,4 +27,35 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setDebug:(HIDebug *)debug {
+	HIDebug *oldValue = _debug;
+	if(self.debug) {
+		[self removeObserver:self forKeyPath:@"debug.isUpdated"];
+	}
+	_debug = debug;
+	[self updateHIObject:oldValue newValue:debug propertyName:@"debug"];
+}
+
+-(void)setAllowForce:(NSNumber *)allowForce {
+	_allowForce = allowForce;
+	[self updateNSObject:@"allowForce"];
+}
+
+-(void)setUseGPUTranslations:(NSNumber *)useGPUTranslations {
+	_useGPUTranslations = useGPUTranslations;
+	[self updateNSObject:@"useGPUTranslations"];
+}
+
+-(void)setSeriesThreshold:(NSString *)seriesThreshold {
+	_seriesThreshold = seriesThreshold;
+	[self updateNSObject:@"seriesThreshold"];
+}
+
 @end

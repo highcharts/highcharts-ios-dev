@@ -54,4 +54,52 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setSize:(id)size {
+	_size = size;
+	[self updateNSObject:@"size"];
+}
+
+-(void)setRootId:(NSString *)rootId {
+	_rootId = rootId;
+	[self updateNSObject:@"rootId"];
+}
+
+-(void)setStartAngle:(NSNumber *)startAngle {
+	_startAngle = startAngle;
+	[self updateNSObject:@"startAngle"];
+}
+
+-(void)setLevels:(NSArray <HILevels *> *)levels {
+	NSArray <HILevels *> *oldValue = _levels;
+	_levels = levels;
+	[self updateArrayObject:oldValue newValue:levels propertyName:@"levels"];
+}
+
+-(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
+	_levelIsConstant = levelIsConstant;
+	[self updateNSObject:@"levelIsConstant"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
+	_allowDrillToNode = allowDrillToNode;
+	[self updateNSObject:@"allowDrillToNode"];
+}
+
 @end

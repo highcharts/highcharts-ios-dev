@@ -5,7 +5,6 @@
 #import "HIData.h"
 #import "HIDefs.h"
 #import "HIYAxis.h"
-#import "HILegend.h"
 #import "HIPane.h"
 #import "HITitle.h"
 #import "HIAccessibility.h"
@@ -19,6 +18,7 @@
 #import "HIAnnotations.h"
 #import "HIZAxis.h"
 #import "HILabels.h"
+#import "HILegend.h"
 #import "HINavigation.h"
 #import "HILoading.h"
 #import "HIColorAxis.h"
@@ -92,16 +92,6 @@ configuration objects.
 See the Axis object for programmatic access to the axis.
 */
 @property(nonatomic, readwrite) NSArray<HIYAxis *> *yAxis;
-
-/**
-* description: The legend is a box containing a symbol and name for each series
-item or point item in the chart. Each series (or points in case
-of pie charts) is represented by a symbol and its name in the legend.
-It is possible to override the symbol creator function and
-create http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-
-custom-symbol/ : custom legend symbols.
-*/
-@property(nonatomic, readwrite) HILegend *legend;
 
 /**
 * description: The pane serves as a container for axes and backgrounds for circular 
@@ -224,10 +214,19 @@ In Highcharts 2.x, the default colors were:
 colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE', 
    '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/ : Assign a global color theme
-* default: ["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9",
-         "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]
+* default: ["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9",         "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+
+/**
+* description: The legend is a box containing a symbol and name for each series
+item or point item in the chart. Each series (or points in case
+of pie charts) is represented by a symbol and its name in the legend.
+It is possible to override the symbol creator function and
+create http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-
+custom-symbol/ : custom legend symbols.
+*/
+@property(nonatomic, readwrite) HILegend *legend;
 
 /**
 * description: A collection of options for buttons and menus appearing in the exporting module.
@@ -286,6 +285,7 @@ found in the modules directory of the download package, or online at
 * Additional options that are not listed above but are accepted by API
 */
 @property(nonatomic, readwrite) NSDictionary *additionalOptions;
+
 
 -(NSDictionary *)getParams;
 

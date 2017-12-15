@@ -27,9 +27,7 @@ box to the whiskers.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/ : Box plot styling
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/ : Box plot in styled mode
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/ : Error bar styling
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
-        "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",
-        "LongDashDot", "LongDashDotDot"]
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",        "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",        "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
 @property(nonatomic, readwrite) NSString *stemDashStyle;

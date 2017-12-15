@@ -48,4 +48,64 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
+}
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setPlacementStrategy:(NSString *)placementStrategy {
+	_placementStrategy = placementStrategy;
+	[self updateNSObject:@"placementStrategy"];
+}
+
+-(void)setRotation:(HIRotation *)rotation {
+	HIRotation *oldValue = _rotation;
+	if(self.rotation) {
+		[self removeObserver:self forKeyPath:@"rotation.isUpdated"];
+	}
+	_rotation = rotation;
+	[self updateHIObject:oldValue newValue:rotation propertyName:@"rotation"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	_borderRadius = borderRadius;
+	[self updateNSObject:@"borderRadius"];
+}
+
+-(void)setEdgeWidth:(NSNumber *)edgeWidth {
+	_edgeWidth = edgeWidth;
+	[self updateNSObject:@"edgeWidth"];
+}
+
+-(void)setSpiral:(NSString *)spiral {
+	_spiral = spiral;
+	[self updateNSObject:@"spiral"];
+}
+
 @end

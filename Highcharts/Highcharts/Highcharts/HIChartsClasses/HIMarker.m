@@ -45,4 +45,81 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setHeight:(NSNumber *)height {
+	_height = height;
+	[self updateNSObject:@"height"];
+}
+
+-(void)setRadius:(NSNumber *)radius {
+	_radius = radius;
+	[self updateNSObject:@"radius"];
+}
+
+-(void)setWidth:(NSNumber *)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	if(self.fillColor) {
+		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
+	}
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setStates:(HIStates *)states {
+	HIStates *oldValue = _states;
+	if(self.states) {
+		[self removeObserver:self forKeyPath:@"states.isUpdated"];
+	}
+	_states = states;
+	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
+}
+
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	_lineWidth = lineWidth;
+	[self updateNSObject:@"lineWidth"];
+}
+
+-(void)setSymbol:(NSString *)symbol {
+	_symbol = symbol;
+	[self updateNSObject:@"symbol"];
+}
+
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
+	_color = color;
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setAnimation:(HIAnimation *)animation {
+	HIAnimation *oldValue = _animation;
+	if(self.animation) {
+		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
+	}
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
 @end

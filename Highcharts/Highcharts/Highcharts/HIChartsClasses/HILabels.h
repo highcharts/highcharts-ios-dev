@@ -72,9 +72,7 @@ if a format or text are defined, the format or text take precedence
 and the formatter is ignored. This refers to a point object.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/ : Set labels text
-* default: function () {
-	return defined(this.y) ? this.y : 'Annotation label';
-}
+* default: function () {	return defined(this.y) ? this.y : 'Annotation label';}
 */
 @property(nonatomic, readwrite) HIFunction *formatter;
 /**
@@ -202,13 +200,13 @@ The final appearance depends heavily on labels.position3d.
 /**
 * description: Rotation of the labels in degrees.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-rotation/ : X axis labels rotated 90°
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-rotation/ : X axis labels rotated 90Â°
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
 /**
-* description: Horizontal axes only. The number of lines to spread the labels over
-to make room or tighter labels. .
+* description: Horizontal axes only. The number of lines to spread the labels
+over to make room or tighter labels.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-staggerlines/ : Show labels over two lines
 * default: null
@@ -220,19 +218,20 @@ to make room or tighter labels. .
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
-* description: Whether to reserve space for the labels. This can be turned off when
-for example the labels are rendered inside the plot area instead
-of outside.
+* description: Whether to reserve space for the labels. This can be turned off
+when for example the labels are rendered inside the plot area
+instead of outside.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-reservespace/ : No reserved space, labels inside plot
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reserveSpace;
 /**
-* description: For horizontal axes, the allowed degrees of label rotation to prevent
-overlapping labels. If there is enough space, labels are not rotated.
-As the chart gets narrower, it will start rotating the labels -45
-degrees, then remove every second label and try again with rotations
-0 and -45 etc. Set it to false to disable rotation, which will
+* description: For horizontal axes, the allowed degrees of label rotation
+to prevent overlapping labels. If there is enough space,
+labels are not rotated. As the chart gets narrower, it
+will start rotating the labels -45 degrees, then remove
+every second label and try again with rotations 0 and -45 etc.
+Set it to false to disable rotation, which will
 cause the labels to word-wrap if possible.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-default/ : Default auto rotation of 0 or -45
@@ -273,10 +272,12 @@ forward-facing.
 /**
 * description: To show only every n'th label on the axis, set the step to n.
 Setting the step to 2 shows every other label.
-By default, the step is calculated automatically to avoid overlap.
-To prevent this, set it to 1. This usually only happens on a category
-axis, and is often a sign that you have chosen the wrong axis type.
-Read more at http://www.highcharts.com/docs/chart-concepts/axes : Axis docs
+By default, the step is calculated automatically to avoid
+overlap. To prevent this, set it to 1. This usually only
+happens on a category axis, and is often a sign that you have
+chosen the wrong axis type.
+Read more at
+http://www.highcharts.com/docs/chart-concepts/axes : Axis docs
 => What axis should I use?
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-step/ : Showing only every other axis label on a categorized x axis

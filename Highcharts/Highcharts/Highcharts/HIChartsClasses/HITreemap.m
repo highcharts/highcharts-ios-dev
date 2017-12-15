@@ -62,4 +62,75 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
+	_levelIsConstant = levelIsConstant;
+	[self updateNSObject:@"levelIsConstant"];
+}
+
+-(void)setDrillUpButton:(HIDrillUpButton *)drillUpButton {
+	HIDrillUpButton *oldValue = _drillUpButton;
+	if(self.drillUpButton) {
+		[self removeObserver:self forKeyPath:@"drillUpButton.isUpdated"];
+	}
+	_drillUpButton = drillUpButton;
+	[self updateHIObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setLayoutStartingDirection:(NSString *)layoutStartingDirection {
+	_layoutStartingDirection = layoutStartingDirection;
+	[self updateNSObject:@"layoutStartingDirection"];
+}
+
+-(void)setLevels:(NSArray <HILevels *> *)levels {
+	NSArray <HILevels *> *oldValue = _levels;
+	_levels = levels;
+	[self updateArrayObject:oldValue newValue:levels propertyName:@"levels"];
+}
+
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:@"ignoreHiddenPoint"];
+}
+
+-(void)setInteractByLeaf:(NSNumber *)interactByLeaf {
+	_interactByLeaf = interactByLeaf;
+	[self updateNSObject:@"interactByLeaf"];
+}
+
+-(void)setOpacity:(NSNumber *)opacity {
+	_opacity = opacity;
+	[self updateNSObject:@"opacity"];
+}
+
+-(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
+	_allowDrillToNode = allowDrillToNode;
+	[self updateNSObject:@"allowDrillToNode"];
+}
+
+-(void)setAlternateStartingDirection:(NSNumber *)alternateStartingDirection {
+	_alternateStartingDirection = alternateStartingDirection;
+	[self updateNSObject:@"alternateStartingDirection"];
+}
+
+-(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {
+	_layoutAlgorithm = layoutAlgorithm;
+	[self updateNSObject:@"layoutAlgorithm"];
+}
+
+-(void)setSortIndex:(NSNumber *)sortIndex {
+	_sortIndex = sortIndex;
+	[self updateNSObject:@"sortIndex"];
+}
+
 @end

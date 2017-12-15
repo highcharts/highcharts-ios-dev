@@ -24,4 +24,12 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setRules:(NSArray <HIRules *> *)rules {
+	NSArray <HIRules *> *oldValue = _rules;
+	_rules = rules;
+	[self updateArrayObject:oldValue newValue:rules propertyName:@"rules"];
+}
+
 @end

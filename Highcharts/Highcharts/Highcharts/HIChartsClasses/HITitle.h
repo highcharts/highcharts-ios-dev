@@ -77,6 +77,12 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
+* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html : use HTML to render the axis title.
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
+/**
 * description: Defines how the title is repositioned according to the 3D chart
 orientation.
 
@@ -120,12 +126,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * default: middle
 */
 @property(nonatomic, readwrite) NSString *align;
-/**
-* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
-and-string-formatting#html : use HTML to render the axis title.
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
 * description: The actual text of the axis title. It can contain basic HTML text
 markup like ,  and spans with style.

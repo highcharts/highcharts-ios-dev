@@ -69,4 +69,91 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setConnectorAllowed:(NSNumber *)connectorAllowed {
+	_connectorAllowed = connectorAllowed;
+	[self updateNSObject:@"connectorAllowed"];
+}
+
+-(void)setBoxesToAvoid:(NSArray *)boxesToAvoid {
+	NSArray *oldValue = _boxesToAvoid;
+	_boxesToAvoid = boxesToAvoid;
+	[self updateArrayObject:oldValue newValue:boxesToAvoid propertyName:@"boxesToAvoid"];
+}
+
+-(void)setOnArea:(NSNumber *)onArea {
+	_onArea = onArea;
+	[self updateNSObject:@"onArea"];
+}
+
+-(void)setMaxFontSize:(NSNumber *)maxFontSize {
+	_maxFontSize = maxFontSize;
+	[self updateNSObject:@"maxFontSize"];
+}
+
+-(void)setConnectorNeighbourDistance:(NSNumber *)connectorNeighbourDistance {
+	_connectorNeighbourDistance = connectorNeighbourDistance;
+	[self updateNSObject:@"connectorNeighbourDistance"];
+}
+
+-(void)setMinFontSize:(NSNumber *)minFontSize {
+	_minFontSize = minFontSize;
+	[self updateNSObject:@"minFontSize"];
+}
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
+}
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
+}
+
+-(void)setRotation:(NSNumber *)rotation {
+	_rotation = rotation;
+	[self updateNSObject:@"rotation"];
+}
+
+-(void)setText:(NSString *)text {
+	_text = text;
+	[self updateNSObject:@"text"];
+}
+
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
+}
+
+-(void)setAlign:(NSString *)align {
+	_align = align;
+	[self updateNSObject:@"align"];
+}
+
+-(void)setTextAlign:(NSString *)textAlign {
+	_textAlign = textAlign;
+	[self updateNSObject:@"textAlign"];
+}
+
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
+}
+
 @end

@@ -146,10 +146,15 @@ distance between points in the chart.
 /**
 * description: The http://www.highcharts.com/docs/chart-concepts/labels-
 and-string-formatting : format string specifying what to show for nodes in tooltip
-of a sankey diagram series.
+of a sankey diagram series, as opposed to links.
 * default: {point.name}: <b>{point.sum}</b><br/>
 */
 @property(nonatomic, readwrite) NSString *nodeFormat;
+/**
+* description: A callback for defining the format for nodes in the sankey chart's
+tooltip, as opposed to links.
+*/
+@property(nonatomic, readwrite) HIFunction *nodeFormatter;
 @property(nonatomic, readwrite) NSNumber *distance;
 /**
 * description: CSS styles for the tooltip. The tooltip can also be styled through
@@ -193,6 +198,20 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+/**
+* description: Proximity snap for graphs or single points. It defaults to 10 for
+mouse-powered devices and 25 for touch devices.
+Note that in most cases the whole plot area captures the mouse
+movement, and in these cases tooltip.snap doesn't make sense.
+This applies when stickyTracking
+is true (default) and when the tooltip is shared
+or split.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 10 px by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/ : 50 px on graph
+* default: 10/25
+*/
+@property(nonatomic, readwrite) NSNumber *snap;
 /**
 * description: Callback function to format the text of the tooltip from scratch. Return
 false to disable tooltip for a specific point on series.
@@ -317,20 +336,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * default: null
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
-/**
-* description: Proximity snap for graphs or single points. It defaults to 10 for
-mouse-powered devices and 25 for touch devices.
-Note that in most cases the whole plot area captures the mouse
-movement, and in these cases tooltip.snap doesn't make sense.
-This applies when stickyTracking
-is true (default) and when the tooltip is shared
-or split.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 10 px by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/ : 50 px on graph
-* default: 10/25
-*/
-@property(nonatomic, readwrite) NSNumber *snap;
 /**
 * description: Since 4.1, the crosshair definitions are moved to the Axis object
 in order for a better separation from the tooltip. See xAxis.crosshair.

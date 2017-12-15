@@ -15,4 +15,11 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setColor:(NSString *)color {
+	_color = color;
+	[self updateNSObject:@"color"];
+}
+
 @end

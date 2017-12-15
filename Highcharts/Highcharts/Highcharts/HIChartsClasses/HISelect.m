@@ -27,4 +27,39 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	_lineWidth = lineWidth;
+	[self updateNSObject:@"lineWidth"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	if(self.fillColor) {
+		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
+	}
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setRadius:(NSNumber *)radius {
+	_radius = radius;
+	[self updateNSObject:@"radius"];
+}
+
 @end

@@ -24,4 +24,26 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setColor:(NSString *)color {
+	_color = color;
+	[self updateNSObject:@"color"];
+}
+
+-(void)setFontWeight:(NSString *)fontWeight {
+	_fontWeight = fontWeight;
+	[self updateNSObject:@"fontWeight"];
+}
+
+-(void)setCursor:(NSString *)cursor {
+	_cursor = cursor;
+	[self updateNSObject:@"cursor"];
+}
+
+-(void)setTextDecoration:(NSString *)textDecoration {
+	_textDecoration = textDecoration;
+	[self updateNSObject:@"textDecoration"];
+}
+
 @end

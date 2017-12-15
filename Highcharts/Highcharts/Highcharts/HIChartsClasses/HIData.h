@@ -73,8 +73,8 @@ will be drawn.
 @property(nonatomic, readwrite) NSNumber *labelrank;
 /**
 * description: Styled mode only. A specific color index to use for the point, so its
-graphic representations are given the class name highcharts-color-
-{n}.
+graphic representations are given the class name
+highcharts-color-{n}.
 */
 @property(nonatomic, readwrite) NSNumber *colorIndex;
 /**
@@ -121,6 +121,8 @@ array to use for a drilldown for this point.
 /**
 * description: Individual color for the point. By default the color is pulled from
 the global colors array.
+In styled mode, the color option doesn't take effect. Instead, use 
+colorIndex.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/color/ : Mark the highest point
 * default: undefined
@@ -142,12 +144,6 @@ the ones for plotOptions.series.dataLabels
 * description: Individual point events
 */
 @property(nonatomic, readwrite) HIEvents *events;
-/**
-* description: The size value for each bubble. The bubbles' diameters are computed
-based on the z, and controlled by series options like minSize,
- maxSize, sizeBy, zMin and zMax.
-*/
-@property(nonatomic, readwrite) NSNumber *z;
 /**
 * description: An array containing object with Point property names along with what
 column id the property should be taken from.
@@ -259,7 +255,7 @@ to use to parse date values. Defaults to a best guess based on what
 format gives valid and ordered dates.
 Valid options include:
 
-YYYY-mm-dd
+YYYY/mm/dd
 dd/mm/YYYY
 mm/dd/YYYY
 dd/mm/YY
@@ -267,7 +263,7 @@ mm/dd/YY
 
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/dateformat-auto/ : Best guess date format
-* accepted values: [undefined, "YYYY-mm-dd", "dd/mm/YYYY", "mm/dd/YYYY", "dd/mm/YYYY", "dd/mm/YY", "mm/dd/YY"]
+* accepted values: [undefined, "YYYY/mm/dd", "dd/mm/YYYY", "mm/dd/YYYY", "dd/mm/YYYY", "dd/mm/YY", "mm/dd/YY"]
 */
 @property(nonatomic, readwrite) NSString *dateFormat;
 /**
@@ -318,6 +314,12 @@ the delimiter automatically.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *startColumn;
+/**
+* description: The size value for each bubble. The bubbles' diameters are computed
+based on the z, and controlled by series options like minSize,
+ maxSize, sizeBy, zMin and zMax.
+*/
+@property(nonatomic, readwrite) NSNumber *z;
 /**
 * description: The node that the link runs from.
 */

@@ -30,14 +30,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
-* description: The background color or gradient for the plot area.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/ : Color
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/ : Gradient
-* default: null
-*/
-@property(nonatomic, readwrite) HIColor *plotBackgroundColor;
-/**
 * description: When true, cartesian charts like line, spline, area and column are
 transformed into the polar coordinate system. Requires highcharts-
 more.js.
@@ -98,6 +90,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSNumber *marginBottom;
 /**
+* description: The background color or gradient for the plot area.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/ : Color
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/ : Gradient
+* default: null
+*/
+@property(nonatomic, readwrite) HIColor *plotBackgroundColor;
+/**
 * description: Common options for all yAxes rendered in a parallel coordinates plot.
 This feature requires modules/parallel-coordinates.js.
 The default options are:
@@ -155,6 +155,14 @@ to reset zoom.
 */
 @property(nonatomic, readwrite) HIResetZoomButton *resetZoomButton;
 /**
+* description: A text description of the chart.
+If the Accessibility module is loaded, this is included by default
+as a long description of the chart and its contents in the hidden
+screen reader information region.
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSString *definition;
+/**
 * description: The HTML element where the chart will be rendered. If it is a string,
 the element by that id is used. The HTML element can also be passed
 by direct reference, or as the first argument of the chart constructor,
@@ -183,14 +191,6 @@ to cartesian series.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/showaxes-true/ : True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showAxes;
-/**
-* description: A text description of the chart.
-If the Accessibility module is loaded, this is included by default
-as a long description of the chart and its contents in the hidden
-screen reader information region.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *definition;
 /**
 * description: Equivalent to zoomType, but for multitouch gestures
 only. By default, the pinchType is the same as the zoomType setting.

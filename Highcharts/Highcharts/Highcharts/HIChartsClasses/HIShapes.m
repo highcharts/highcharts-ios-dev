@@ -54,4 +54,74 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setStroke:(HIColor *)stroke {
+	HIColor *oldValue = _stroke;
+	if(self.stroke) {
+		[self removeObserver:self forKeyPath:@"stroke.isUpdated"];
+	}
+	_stroke = stroke;
+	[self updateHIObject:oldValue newValue:stroke propertyName:@"stroke"];
+}
+
+-(void)setHeight:(NSNumber *)height {
+	_height = height;
+	[self updateNSObject:@"height"];
+}
+
+-(void)setStrokeWidth:(NSNumber *)strokeWidth {
+	_strokeWidth = strokeWidth;
+	[self updateNSObject:@"strokeWidth"];
+}
+
+-(void)setFill:(HIColor *)fill {
+	HIColor *oldValue = _fill;
+	if(self.fill) {
+		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
+	}
+	_fill = fill;
+	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
+}
+
+-(void)setPoint:(HIPoint *)point {
+	HIPoint *oldValue = _point;
+	if(self.point) {
+		[self removeObserver:self forKeyPath:@"point.isUpdated"];
+	}
+	_point = point;
+	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+}
+
+-(void)setWidth:(NSNumber *)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setType:(NSString *)type {
+	_type = type;
+	[self updateNSObject:@"type"];
+}
+
+-(void)setMarkerEnd:(NSString *)markerEnd {
+	_markerEnd = markerEnd;
+	[self updateNSObject:@"markerEnd"];
+}
+
+-(void)setPoints:(NSArray *)points {
+	NSArray *oldValue = _points;
+	_points = points;
+	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
+}
+
+-(void)setMarkerStart:(NSString *)markerStart {
+	_markerStart = markerStart;
+	[self updateNSObject:@"markerStart"];
+}
+
+-(void)setR:(NSNumber *)r {
+	_r = r;
+	[self updateNSObject:@"r"];
+}
+
 @end

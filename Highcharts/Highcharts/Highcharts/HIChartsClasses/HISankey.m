@@ -54,4 +54,48 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setCurveFactor:(NSNumber *)curveFactor {
+	_curveFactor = curveFactor;
+	[self updateNSObject:@"curveFactor"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setLinkOpacity:(NSNumber *)linkOpacity {
+	_linkOpacity = linkOpacity;
+	[self updateNSObject:@"linkOpacity"];
+}
+
+-(void)setNodeWidth:(NSNumber *)nodeWidth {
+	_nodeWidth = nodeWidth;
+	[self updateNSObject:@"nodeWidth"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
+}
+
+-(void)setNodePadding:(NSNumber *)nodePadding {
+	_nodePadding = nodePadding;
+	[self updateNSObject:@"nodePadding"];
+}
+
+-(void)setMinPointLength:(NSNumber *)minPointLength {
+	_minPointLength = minPointLength;
+	[self updateNSObject:@"minPointLength"];
+}
+
+-(void)setNodes:(NSArray <HINodes *> *)nodes {
+	NSArray <HINodes *> *oldValue = _nodes;
+	_nodes = nodes;
+	[self updateArrayObject:oldValue newValue:nodes propertyName:@"nodes"];
+}
+
 @end

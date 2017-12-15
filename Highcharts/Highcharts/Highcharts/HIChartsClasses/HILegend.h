@@ -341,6 +341,15 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSNumber *symbolHeight;
 /**
+* description: The pixel width of the legend item symbol. When the squareSymbol
+option is set, this defaults to the symbolHeight, otherwise 16.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolwidth/ : Greater symbol width and padding
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/ : Padding and item margins demonstrated
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical-sized/ : Sized vertical gradient
+*/
+@property(nonatomic, readwrite) NSNumber *symbolWidth;
+/**
 * description: CSS styles for the legend area. In the 1.x versions the position
 of the legend area was determined by CSS. In 2.x, the position is
 determined by properties like align, verticalAlign, x and y,
@@ -354,15 +363,6 @@ determined by properties like align, verticalAlign, x and y,
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *width;
-/**
-* description: The pixel width of the legend item symbol. When the squareSymbol
-option is set, this defaults to the symbolHeight, otherwise 16.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolwidth/ : Greater symbol width and padding
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/ : Padding and item margins demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical-sized/ : Sized vertical gradient
-*/
-@property(nonatomic, readwrite) NSNumber *symbolWidth;
 
 -(NSDictionary *)getParams;
 

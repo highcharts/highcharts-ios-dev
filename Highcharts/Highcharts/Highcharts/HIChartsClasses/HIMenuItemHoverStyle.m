@@ -18,4 +18,16 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setBackground:(NSString *)background {
+	_background = background;
+	[self updateNSObject:@"background"];
+}
+
+-(void)setColor:(NSString *)color {
+	_color = color;
+	[self updateNSObject:@"color"];
+}
+
 @end

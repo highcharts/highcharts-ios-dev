@@ -705,7 +705,7 @@ def format_to_m(name, source):
 
 def create_options_files():
     imports = "#import \"HIColor.h\"\n"
-    htext = "@interface HIOptions: NSObject\n\n"
+    htext = "@interface HIOptions: HIChartsJSONSerializable\n\n"
     mtext = "#import \"HIOptions.h\"\n\n@implementation HIOptions\n\n"
     mtext += "-(instancetype)init {\n\tif (self = [super init]) {\n" \
              "\t\tHICredits *credits = [[HICredits alloc]init];\n" \

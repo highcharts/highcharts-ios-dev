@@ -15,4 +15,11 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setDuration:(NSNumber *)duration {
+	_duration = duration;
+	[self updateNSObject:@"duration"];
+}
+
 @end

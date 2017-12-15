@@ -7,6 +7,7 @@
 */
 
 #import "HIStyle.h"
+#import "HIFilter.h"
 #import "HIColor.h"
 #import "HIFunction.h"
 
@@ -150,6 +151,17 @@ or "right".
 * default: center
 */
 @property(nonatomic, readwrite) NSString *align;
+/**
+* description: A declarative filter for which data labels to display. The
+declarative filter is designed for use when callback functions are
+not available, like when the chart options require a pure JSON
+structure or for use with graphical editors. For programmatic
+control, use the formatter instead, and return false to disable
+a single data label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome : Data labels filtered by percentage
+*/
+@property(nonatomic, readwrite) HIFilter *filter;
 /**
 * description: The y position offset of the label relative to the point.
 
@@ -349,10 +361,15 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber *yLow;
 /**
+* description: Callback to format data labels for nodes in the sankey diagram. 
+The nodeFormat option takes precedence over the nodeFormatter.
+*/
+@property(nonatomic, readwrite) HIFunction *nodeFormatter;
+/**
 * description: The http://www.highcharts.com/docs/chart-concepts/labels-
 and-string-formatting : format string specifying what to show for nodes in the 
-sankey diagram.
-* default: {point.name}
+sankey diagram. By default the nodeFormatter returns
+{point.name}.
 */
 @property(nonatomic, readwrite) NSString *nodeFormat;
 

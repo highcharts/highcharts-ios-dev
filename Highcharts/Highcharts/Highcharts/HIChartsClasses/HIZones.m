@@ -27,4 +27,39 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
+}
+
+-(void)setDashStyle:(NSString *)dashStyle {
+	_dashStyle = dashStyle;
+	[self updateNSObject:@"dashStyle"];
+}
+
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
+	_color = color;
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setValue:(NSNumber *)value {
+	_value = value;
+	[self updateNSObject:@"value"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	if(self.fillColor) {
+		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
+	}
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
 @end

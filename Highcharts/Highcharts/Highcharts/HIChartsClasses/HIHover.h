@@ -55,7 +55,6 @@ the hovered series. For settings on the hover state of the individual
 point, see marker.states.hover.
 */
 @property(nonatomic, readwrite) HIMarker *marker;
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
 /**
 * description: Pixel with of the graph line. By default this property is
 undefined, and the lineWidthPlus property dictates how much
@@ -113,6 +112,7 @@ series' or point's color is used.
 * default: #ffffff
 */
 @property(nonatomic, readwrite) HIColor *lineColor;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
 /**
 * description: Opacity for the links between nodes in the sankey diagram in
 hover mode.

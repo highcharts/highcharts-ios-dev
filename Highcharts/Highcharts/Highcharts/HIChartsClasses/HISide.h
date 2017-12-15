@@ -18,15 +18,15 @@ The side for the frame around a 3D chart.
 @interface HISide: HIChartsJSONSerializable
 
 /**
-* description: The color of the panel.
-* default: transparent
-*/
-@property(nonatomic, readwrite) HIColor *color;
-/**
 * description: The thickness of the panel.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *size;
+/**
+* description: The color of the panel.
+* default: transparent
+*/
+@property(nonatomic, readwrite) HIColor *color;
 
 -(NSDictionary *)getParams;
 

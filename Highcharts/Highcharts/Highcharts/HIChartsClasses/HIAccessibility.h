@@ -44,9 +44,6 @@ For an overview of the replacement codes, see
 dateFormat.
 */
 @property(nonatomic, readwrite) NSString *pointDateFormat;
-/**
-* description: Options for keyboard navigation.
-*/
 @property(nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation;
 /**
 * description: Formatter function to determine the date/time format used with
@@ -56,6 +53,12 @@ Should return a date format string compatible with
 dateFormat.
 */
 @property(nonatomic, readwrite) HIFunction *pointDateFormatter;
+/**
+* description: Whether or not to add series descriptions to charts with a single
+series.
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *describeSingleSeries;
 /**
 * description: Formatter function to use instead of the default for point
 descriptions.
@@ -76,12 +79,6 @@ series to describe. Should return a String with the description of
 the series for a screen reader user.
 */
 @property(nonatomic, readwrite) HIFunction *seriesDescriptionFormatter;
-/**
-* description: Whether or not to add series descriptions to charts with a single
-series.
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *describeSingleSeries;
 /**
 * description: Function to run upon clicking the "View as Data Table" link in the
 screen reader region.

@@ -45,4 +45,33 @@
 	return params;
 }
 
+# pragma mark - Setters
+
+-(void)setBackground:(NSArray <HIBackground *> *)background {
+	NSArray <HIBackground *> *oldValue = _background;
+	_background = background;
+	[self updateArrayObject:oldValue newValue:background propertyName:@"background"];
+}
+
+-(void)setSize:(id)size {
+	_size = size;
+	[self updateNSObject:@"size"];
+}
+
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
+}
+
+-(void)setCenter:(NSArray *)center {
+	NSArray *oldValue = _center;
+	_center = center;
+	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
+}
+
+-(void)setStartAngle:(NSNumber *)startAngle {
+	_startAngle = startAngle;
+	[self updateNSObject:@"startAngle"];
+}
+
 @end
