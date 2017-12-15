@@ -22,7 +22,10 @@
  */
 + (void)preload;
 
-- (void)update;
+/**
+ *  An optional method to update current chart's options.
+ */
+- (void)updateOptions;
 
 /**
  *  Options object that configures the chart.
