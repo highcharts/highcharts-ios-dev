@@ -13,8 +13,9 @@
 /**
 * description: Configure a crosshair that follows either the mouse pointer or the
 hovered point.
-In styled mode, the crosshairs are styled in the .highcharts-crosshair, .highcharts-crosshair-thin or .highcharts-xaxis-category
-classes.
+In styled mode, the crosshairs are styled in the
+.highcharts-crosshair, .highcharts-crosshair-thin or
+.highcharts-xaxis-category classes.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/ : Crosshair on both axes
 * default: false
@@ -22,8 +23,8 @@ classes.
 @interface HICrosshair: HIChartsJSONSerializable
 
 /**
-* description: The pixel width of the crosshair. Defaults to 1 for numeric or datetime
-axes, and for one category width for category axes.
+* description: The pixel width of the crosshair. Defaults to 1 for numeric or
+datetime axes, and for one category width for category axes.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/ : Customized crosshairs
 
@@ -50,11 +51,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *snap;
 /**
-* description: The dash style for the crosshair. See series.dashStyle for possible values.
+* description: The dash style for the crosshair. See
+series.dashStyle
+for possible values.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/ : Dotted crosshair
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/crosshair-dashed/ : Dashed X axis crosshair
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot", "LongDashDot", "LongDashDotDot"]
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",             "DashDot", "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
@@ -64,7 +67,6 @@ datetime axes, and rgba(204,214,235,0.25) for category axes, where
 the crosshair by default highlights the whole category.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/ : Customized crosshairs
-
 * default: #cccccc
 */
 @property(nonatomic, readwrite) HIColor *color;

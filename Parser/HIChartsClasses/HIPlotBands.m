@@ -27,14 +27,14 @@
 	if (self.from) {
 		params[@"from"] = self.from;
 	}
-	if (self.events) {
-		params[@"events"] = self.events;
-	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
+	}
+	if (self.events) {
+		params[@"events"] = self.events;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
@@ -91,11 +91,6 @@
 	[self updateNSObject:@"from"];
 }
 
--(void)setEvents:(id)events {
-	_events = events;
-	[self updateNSObject:@"events"];
-}
-
 -(void)setClassName:(NSString *)className {
 	_className = className;
 	[self updateNSObject:@"className"];
@@ -104,6 +99,11 @@
 -(void)setZIndex:(NSNumber *)zIndex {
 	_zIndex = zIndex;
 	[self updateNSObject:@"zIndex"];
+}
+
+-(void)setEvents:(id)events {
+	_events = events;
+	[self updateNSObject:@"events"];
 }
 
 -(void)setColor:(HIColor *)color {

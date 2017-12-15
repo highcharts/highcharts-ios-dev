@@ -117,14 +117,14 @@
 	if (self.symbolHeight) {
 		params[@"symbolHeight"] = self.symbolHeight;
 	}
+	if (self.symbolWidth) {
+		params[@"symbolWidth"] = self.symbolWidth;
+	}
 	if (self.style) {
 		params[@"style"] = self.style;
 	}
 	if (self.width) {
 		params[@"width"] = self.width;
-	}
-	if (self.symbolWidth) {
-		params[@"symbolWidth"] = self.symbolWidth;
 	}
 	return params;
 }
@@ -351,6 +351,11 @@
 	[self updateNSObject:@"symbolHeight"];
 }
 
+-(void)setSymbolWidth:(NSNumber *)symbolWidth {
+	_symbolWidth = symbolWidth;
+	[self updateNSObject:@"symbolWidth"];
+}
+
 -(void)setStyle:(NSDictionary *)style {
 	_style = style;
 	[self updateNSObject:@"style"];
@@ -359,11 +364,6 @@
 -(void)setWidth:(NSNumber *)width {
 	_width = width;
 	[self updateNSObject:@"width"];
-}
-
--(void)setSymbolWidth:(NSNumber *)symbolWidth {
-	_symbolWidth = symbolWidth;
-	[self updateNSObject:@"symbolWidth"];
 }
 
 @end

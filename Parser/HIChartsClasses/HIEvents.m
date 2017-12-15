@@ -72,9 +72,6 @@
 	if (self.drillupall) {
 		params[@"drillupall"] = [self.drillupall getFunction];
 	}
-	if (self.addSeries) {
-		params[@"addSeries"] = [self.addSeries getFunction];
-	}
 	if (self.drillup) {
 		params[@"drillup"] = [self.drillup getFunction];
 	}
@@ -89,6 +86,9 @@
 	}
 	if (self.beforePrint) {
 		params[@"beforePrint"] = [self.beforePrint getFunction];
+	}
+	if (self.addSeries) {
+		params[@"addSeries"] = [self.addSeries getFunction];
 	}
 	return params;
 }
@@ -284,15 +284,6 @@
 	[self updateHIObject:oldValue newValue:drillupall propertyName:@"drillupall"];
 }
 
--(void)setAddSeries:(HIFunction *)addSeries {
-	HIFunction *oldValue = _addSeries;
-	if(self.addSeries) {
-		[self removeObserver:self forKeyPath:@"addSeries.isUpdated"];
-	}
-	_addSeries = addSeries;
-	[self updateHIObject:oldValue newValue:addSeries propertyName:@"addSeries"];
-}
-
 -(void)setDrillup:(HIFunction *)drillup {
 	HIFunction *oldValue = _drillup;
 	if(self.drillup) {
@@ -336,6 +327,15 @@
 	}
 	_beforePrint = beforePrint;
 	[self updateHIObject:oldValue newValue:beforePrint propertyName:@"beforePrint"];
+}
+
+-(void)setAddSeries:(HIFunction *)addSeries {
+	HIFunction *oldValue = _addSeries;
+	if(self.addSeries) {
+		[self removeObserver:self forKeyPath:@"addSeries.isUpdated"];
+	}
+	_addSeries = addSeries;
+	[self updateHIObject:oldValue newValue:addSeries propertyName:@"addSeries"];
 }
 
 @end

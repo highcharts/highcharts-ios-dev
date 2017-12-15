@@ -122,7 +122,8 @@ by returning false or calling event.preventDefault().
 final min and max values are computed and corrected for minRange.
 Fires when the minimum and maximum is set for the axis, either by
 calling the .setExtremes() method or by selecting an area in the
-chart. One parameter, event, is passed to the function, containing common event information.
+chart. One parameter, event, is passed to the function, containing
+common event information.
 The new user set minimum and maximum values can be found by event.
 min and event.max. These reflect the axis minimum and maximum
 in axis values. The actual data extremes are found in event.dataMin
@@ -136,12 +137,13 @@ and event.dataMax.
 /**
 * description: Fires when the minimum and maximum is set for the axis, either by
 calling the .setExtremes() method or by selecting an area in the
-chart. One parameter, event, is passed to the function, containing common event information.
+chart. One parameter, event, is passed to the function,
+containing common event information.
 The new user set minimum and maximum values can be found by event.
 min and event.max. These reflect the axis minimum and maximum
-in data values. When an axis is zoomed all the way out from the "Reset
-zoom" button, event.min and event.max are null, and the new extremes
-are set based on this.dataMin and this.dataMax.
+in data values. When an axis is zoomed all the way out from the 
+"Reset zoom" button, event.min and event.max are null, and
+the new extremes are set based on this.dataMin and this.dataMax.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/events-setextremes/ : Log new extremes on x axis
 */
@@ -155,7 +157,7 @@ are set based on this.dataMin and this.dataMax.
 /**
 * description: An event fired after the breaks have rendered.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event// : AfterBreak Event
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event/ : AfterBreak Event
 */
 @property(nonatomic, readwrite) HIFunction *afterBreaks;
 /**
@@ -204,17 +206,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 all the series have been drilled up.
 */
 @property(nonatomic, readwrite) HIFunction *drillupall;
-/**
-* description: Fires when a series is added to the chart after load time, using
-the addSeries method. One parameter, event, is passed to the
-function, containing common event information.
-Through event.options you can access the series options that was
-passed to the addSeries method. Returning false prevents the series
-from being added.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/ : Alert on add series
-*/
-@property(nonatomic, readwrite) HIFunction *addSeries;
 /**
 * description: Fires when drilling up from a drilldown series.
 */
@@ -269,6 +260,17 @@ the Chart.print method. Requires the exporting module.
 
 */
 @property(nonatomic, readwrite) HIFunction *beforePrint;
+/**
+* description: Fires when a series is added to the chart after load time, using
+the addSeries method. One parameter, event, is passed to the
+function, containing common event information.
+Through event.options you can access the series options that was
+passed to the addSeries method. Returning false prevents the series
+from being added.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/ : Alert on add series
+*/
+@property(nonatomic, readwrite) HIFunction *addSeries;
 
 -(NSDictionary *)getParams;
 

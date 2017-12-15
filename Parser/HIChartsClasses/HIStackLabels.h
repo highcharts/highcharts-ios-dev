@@ -33,11 +33,10 @@ stack is positive or negative.
 @property(nonatomic, readwrite) NSString *textAlign;
 /**
 * description: Callback JavaScript function to format the label. The value is
-given by this.total. Defaults to:
-function() {
-    return this.total;
-}
+given by this.total.
+
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-formatter/ : Added units to stack total value
+* default: function() { return this.total; }
 */
 @property(nonatomic, readwrite) HIFunction *formatter;
 /**
@@ -75,10 +74,16 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 /**
 * description: Rotation of the labels in degrees.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/ : Labels rotated 45°
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/ : Labels rotated 45Â°
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
+/**
+* description: Allow the stack labels to overlap.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-allowoverlap-false/ : Default false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *allowOverlap;
 /**
 * description: CSS styles for the label.
 In styled mode, the styles are set in the
@@ -101,12 +106,6 @@ and whether the stack is positive or negative.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-enabled/ : Enabled stack total labels
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
-/**
-* description: Allow the stack labels to overlap.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-allowoverlap-false/ : Default false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *allowOverlap;
 /**
 * description: A http://docs.highcharts.com/#formatting : format string for the
 data label. Available variables are the same as for formatter.

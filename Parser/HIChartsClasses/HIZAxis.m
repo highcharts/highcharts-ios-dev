@@ -114,9 +114,6 @@
 	if (self.tickAmount) {
 		params[@"tickAmount"] = self.tickAmount;
 	}
-	if (self.startOfWeek) {
-		params[@"startOfWeek"] = self.startOfWeek;
-	}
 	if (self.minorGridLineDashStyle) {
 		params[@"minorGridLineDashStyle"] = self.minorGridLineDashStyle;
 	}
@@ -198,6 +195,9 @@
 	if (self.tickInterval) {
 		params[@"tickInterval"] = self.tickInterval;
 	}
+	if (self.startOfWeek) {
+		params[@"startOfWeek"] = self.startOfWeek;
+	}
 	if (self.maxPadding) {
 		params[@"maxPadding"] = self.maxPadding;
 	}
@@ -236,7 +236,7 @@
 
 # pragma mark - Setters
 
--(void)setMinorTickInterval:(NSNumber *)minorTickInterval {
+-(void)setMinorTickInterval:(id)minorTickInterval {
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:@"minorTickInterval"];
 }
@@ -407,11 +407,6 @@
 	[self updateNSObject:@"tickAmount"];
 }
 
--(void)setStartOfWeek:(NSNumber *)startOfWeek {
-	_startOfWeek = startOfWeek;
-	[self updateNSObject:@"startOfWeek"];
-}
-
 -(void)setMinorGridLineDashStyle:(NSString *)minorGridLineDashStyle {
 	_minorGridLineDashStyle = minorGridLineDashStyle;
 	[self updateNSObject:@"minorGridLineDashStyle"];
@@ -533,6 +528,11 @@
 -(void)setTickInterval:(NSNumber *)tickInterval {
 	_tickInterval = tickInterval;
 	[self updateNSObject:@"tickInterval"];
+}
+
+-(void)setStartOfWeek:(NSNumber *)startOfWeek {
+	_startOfWeek = startOfWeek;
+	[self updateNSObject:@"startOfWeek"];
 }
 
 -(void)setMaxPadding:(NSNumber *)maxPadding {

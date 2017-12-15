@@ -57,9 +57,6 @@
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
-	if (self.z) {
-		params[@"z"] = self.z;
-	}
 	if (self.seriesMapping) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.seriesMapping) {
@@ -146,6 +143,9 @@
 	}
 	if (self.startColumn) {
 		params[@"startColumn"] = self.startColumn;
+	}
+	if (self.z) {
+		params[@"z"] = self.z;
 	}
 	if (self.from) {
 		params[@"from"] = self.from;
@@ -307,11 +307,6 @@
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
--(void)setZ:(NSNumber *)z {
-	_z = z;
-	[self updateNSObject:@"z"];
-}
-
 -(void)setSeriesMapping:(NSArray *)seriesMapping {
 	NSArray *oldValue = _seriesMapping;
 	_seriesMapping = seriesMapping;
@@ -425,6 +420,11 @@
 -(void)setStartColumn:(NSNumber *)startColumn {
 	_startColumn = startColumn;
 	[self updateNSObject:@"startColumn"];
+}
+
+-(void)setZ:(NSNumber *)z {
+	_z = z;
+	[self updateNSObject:@"z"];
 }
 
 -(void)setFrom:(NSString *)from {

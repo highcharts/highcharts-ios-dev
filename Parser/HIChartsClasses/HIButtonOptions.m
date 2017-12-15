@@ -12,6 +12,9 @@
 	if (self.theme) {
 		params[@"theme"] = [self.theme getParams];
 	}
+	if (self.y) {
+		params[@"y"] = self.y;
+	}
 	if (self.symbolFill) {
 		params[@"symbolFill"] = [self.symbolFill getData];
 	}
@@ -35,9 +38,6 @@
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
-	}
-	if (self.y) {
-		params[@"y"] = self.y;
 	}
 	if (self.symbolX) {
 		params[@"symbolX"] = self.symbolX;
@@ -66,6 +66,11 @@
 	}
 	_theme = theme;
 	[self updateHIObject:oldValue newValue:theme propertyName:@"theme"];
+}
+
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
 }
 
 -(void)setSymbolFill:(HIColor *)symbolFill {
@@ -114,11 +119,6 @@
 -(void)setAlign:(NSString *)align {
 	_align = align;
 	[self updateNSObject:@"align"];
-}
-
--(void)setY:(NSNumber *)y {
-	_y = y;
-	[self updateNSObject:@"y"];
 }
 
 -(void)setSymbolX:(NSNumber *)symbolX {

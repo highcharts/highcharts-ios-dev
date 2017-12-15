@@ -12,9 +12,6 @@
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
 	}
-	if (self.plotBackgroundColor) {
-		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getData];
-	}
 	if (self.polar) {
 		params[@"polar"] = self.polar;
 	}
@@ -36,6 +33,9 @@
 	if (self.marginBottom) {
 		params[@"marginBottom"] = self.marginBottom;
 	}
+	if (self.plotBackgroundColor) {
+		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getData];
+	}
 	if (self.parallelAxes) {
 		params[@"parallelAxes"] = [self.parallelAxes getParams];
 	}
@@ -51,6 +51,9 @@
 	if (self.resetZoomButton) {
 		params[@"resetZoomButton"] = [self.resetZoomButton getParams];
 	}
+	if (self.definition) {
+		params[@"definition"] = self.definition;
+	}
 	if (self.renderTo) {
 		params[@"renderTo"] = self.renderTo;
 	}
@@ -59,9 +62,6 @@
 	}
 	if (self.showAxes) {
 		params[@"showAxes"] = self.showAxes;
-	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
 	}
 	if (self.pinchType) {
 		params[@"pinchType"] = self.pinchType;
@@ -178,15 +178,6 @@
 	[self updateNSObject:@"shadow"];
 }
 
--(void)setPlotBackgroundColor:(HIColor *)plotBackgroundColor {
-	HIColor *oldValue = _plotBackgroundColor;
-	if(self.plotBackgroundColor) {
-		[self removeObserver:self forKeyPath:@"plotBackgroundColor.isUpdated"];
-	}
-	_plotBackgroundColor = plotBackgroundColor;
-	[self updateHIObject:oldValue newValue:plotBackgroundColor propertyName:@"plotBackgroundColor"];
-}
-
 -(void)setPolar:(NSNumber *)polar {
 	_polar = polar;
 	[self updateNSObject:@"polar"];
@@ -230,6 +221,15 @@
 	[self updateNSObject:@"marginBottom"];
 }
 
+-(void)setPlotBackgroundColor:(HIColor *)plotBackgroundColor {
+	HIColor *oldValue = _plotBackgroundColor;
+	if(self.plotBackgroundColor) {
+		[self removeObserver:self forKeyPath:@"plotBackgroundColor.isUpdated"];
+	}
+	_plotBackgroundColor = plotBackgroundColor;
+	[self updateHIObject:oldValue newValue:plotBackgroundColor propertyName:@"plotBackgroundColor"];
+}
+
 -(void)setParallelAxes:(HIParallelAxes *)parallelAxes {
 	HIParallelAxes *oldValue = _parallelAxes;
 	if(self.parallelAxes) {
@@ -263,6 +263,11 @@
 	[self updateHIObject:oldValue newValue:resetZoomButton propertyName:@"resetZoomButton"];
 }
 
+-(void)setDefinition:(NSString *)definition {
+	_definition = definition;
+	[self updateNSObject:@"definition"];
+}
+
 -(void)setRenderTo:(id)renderTo {
 	_renderTo = renderTo;
 	[self updateNSObject:@"renderTo"];
@@ -276,11 +281,6 @@
 -(void)setShowAxes:(NSNumber *)showAxes {
 	_showAxes = showAxes;
 	[self updateNSObject:@"showAxes"];
-}
-
--(void)setDefinition:(NSString *)definition {
-	_definition = definition;
-	[self updateNSObject:@"definition"];
 }
 
 -(void)setPinchType:(NSString *)pinchType {

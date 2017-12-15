@@ -9,11 +9,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.color) {
-		params[@"color"] = self.color;
-	}
 	if (self.fontWeight) {
 		params[@"fontWeight"] = self.fontWeight;
+	}
+	if (self.color) {
+		params[@"color"] = self.color;
 	}
 	if (self.textDecoration) {
 		params[@"textDecoration"] = self.textDecoration;
@@ -26,14 +26,14 @@
 
 # pragma mark - Setters
 
--(void)setColor:(NSString *)color {
-	_color = color;
-	[self updateNSObject:@"color"];
-}
-
 -(void)setFontWeight:(NSString *)fontWeight {
 	_fontWeight = fontWeight;
 	[self updateNSObject:@"fontWeight"];
+}
+
+-(void)setColor:(NSString *)color {
+	_color = color;
+	[self updateNSObject:@"color"];
 }
 
 -(void)setTextDecoration:(NSString *)textDecoration {

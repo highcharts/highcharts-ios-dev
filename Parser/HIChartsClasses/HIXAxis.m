@@ -120,9 +120,6 @@
 		}
 		params[@"units"] = array;
 	}
-	if (self.maxPadding) {
-		params[@"maxPadding"] = self.maxPadding;
-	}
 	if (self.minorTickLength) {
 		params[@"minorTickLength"] = self.minorTickLength;
 	}
@@ -137,6 +134,9 @@
 	}
 	if (self.floor) {
 		params[@"floor"] = self.floor;
+	}
+	if (self.gridLineDashStyle) {
+		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
 	}
 	if (self.minTickInterval) {
 		params[@"minTickInterval"] = self.minTickInterval;
@@ -164,6 +164,9 @@
 	}
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
+	}
+	if (self.maxPadding) {
+		params[@"maxPadding"] = self.maxPadding;
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -206,9 +209,6 @@
 	}
 	if (self.crosshair) {
 		params[@"crosshair"] = [self.crosshair getParams];
-	}
-	if (self.gridLineDashStyle) {
-		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
 	}
 	if (self.tickPositions) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -427,11 +427,6 @@
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
 }
 
--(void)setMaxPadding:(NSNumber *)maxPadding {
-	_maxPadding = maxPadding;
-	[self updateNSObject:@"maxPadding"];
-}
-
 -(void)setMinorTickLength:(NSNumber *)minorTickLength {
 	_minorTickLength = minorTickLength;
 	[self updateNSObject:@"minorTickLength"];
@@ -455,6 +450,11 @@
 -(void)setFloor:(NSNumber *)floor {
 	_floor = floor;
 	[self updateNSObject:@"floor"];
+}
+
+-(void)setGridLineDashStyle:(NSString *)gridLineDashStyle {
+	_gridLineDashStyle = gridLineDashStyle;
+	[self updateNSObject:@"gridLineDashStyle"];
 }
 
 -(void)setMinTickInterval:(NSNumber *)minTickInterval {
@@ -492,6 +492,11 @@
 	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
 }
 
+-(void)setMaxPadding:(NSNumber *)maxPadding {
+	_maxPadding = maxPadding;
+	[self updateNSObject:@"maxPadding"];
+}
+
 -(void)setPlotBands:(NSArray <HIPlotBands *> *)plotBands {
 	NSArray <HIPlotBands *> *oldValue = _plotBands;
 	_plotBands = plotBands;
@@ -513,7 +518,7 @@
 	[self updateNSObject:@"ceiling"];
 }
 
--(void)setMinorTickInterval:(NSNumber *)minorTickInterval {
+-(void)setMinorTickInterval:(id)minorTickInterval {
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:@"minorTickInterval"];
 }
@@ -554,11 +559,6 @@
 	}
 	_crosshair = crosshair;
 	[self updateHIObject:oldValue newValue:crosshair propertyName:@"crosshair"];
-}
-
--(void)setGridLineDashStyle:(NSString *)gridLineDashStyle {
-	_gridLineDashStyle = gridLineDashStyle;
-	[self updateNSObject:@"gridLineDashStyle"];
 }
 
 -(void)setTickPositions:(NSArray<NSNumber *> *)tickPositions {

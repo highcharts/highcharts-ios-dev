@@ -27,6 +27,9 @@
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
 	}
+	if (self.allowOverlap) {
+		params[@"allowOverlap"] = self.allowOverlap;
+	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
@@ -35,9 +38,6 @@
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
-	}
-	if (self.allowOverlap) {
-		params[@"allowOverlap"] = self.allowOverlap;
 	}
 	if (self.format) {
 		params[@"format"] = self.format;
@@ -84,6 +84,11 @@
 	[self updateNSObject:@"rotation"];
 }
 
+-(void)setAllowOverlap:(NSNumber *)allowOverlap {
+	_allowOverlap = allowOverlap;
+	[self updateNSObject:@"allowOverlap"];
+}
+
 -(void)setStyle:(HIStyle *)style {
 	HIStyle *oldValue = _style;
 	if(self.style) {
@@ -101,11 +106,6 @@
 -(void)setEnabled:(NSNumber *)enabled {
 	_enabled = enabled;
 	[self updateNSObject:@"enabled"];
-}
-
--(void)setAllowOverlap:(NSNumber *)allowOverlap {
-	_allowOverlap = allowOverlap;
-	[self updateNSObject:@"allowOverlap"];
 }
 
 -(void)setFormat:(NSString *)format {

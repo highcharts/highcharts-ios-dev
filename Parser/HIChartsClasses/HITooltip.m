@@ -54,6 +54,9 @@
 	if (self.nodeFormat) {
 		params[@"nodeFormat"] = self.nodeFormat;
 	}
+	if (self.nodeFormatter) {
+		params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
+	}
 	if (self.distance) {
 		params[@"distance"] = self.distance;
 	}
@@ -68,6 +71,9 @@
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
+	}
+	if (self.snap) {
+		params[@"snap"] = self.snap;
 	}
 	if (self.formatter) {
 		params[@"formatter"] = [self.formatter getFunction];
@@ -95,9 +101,6 @@
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.snap) {
-		params[@"snap"] = self.snap;
 	}
 	if (self.crosshairs) {
 		params[@"crosshairs"] = self.crosshairs;
@@ -190,6 +193,15 @@
 	[self updateNSObject:@"nodeFormat"];
 }
 
+-(void)setNodeFormatter:(HIFunction *)nodeFormatter {
+	HIFunction *oldValue = _nodeFormatter;
+	if(self.nodeFormatter) {
+		[self removeObserver:self forKeyPath:@"nodeFormatter.isUpdated"];
+	}
+	_nodeFormatter = nodeFormatter;
+	[self updateHIObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
+}
+
 -(void)setDistance:(NSNumber *)distance {
 	_distance = distance;
 	[self updateNSObject:@"distance"];
@@ -221,6 +233,11 @@
 -(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
+}
+
+-(void)setSnap:(NSNumber *)snap {
+	_snap = snap;
+	[self updateNSObject:@"snap"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {
@@ -278,11 +295,6 @@
 	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
--(void)setSnap:(NSNumber *)snap {
-	_snap = snap;
-	[self updateNSObject:@"snap"];
 }
 
 -(void)setCrosshairs:(id)crosshairs {

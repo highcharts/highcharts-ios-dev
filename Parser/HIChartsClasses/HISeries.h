@@ -303,13 +303,6 @@ large datasets it improves performance.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
-* description: The line cap used for line ends and line joins on the graph.
-
-* accepted values: ["round", "square"]
-* default: round
-*/
-@property(nonatomic, readwrite) NSString *linecap;
-/**
 * description: A wrapper object for all the series options in specific states.
 */
 @property(nonatomic, readwrite) HIStates *states;
@@ -583,9 +576,7 @@ LongDashDotDot
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle/ : Chart suitable for printing in black and white
 
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-dashstyle/ : Dotted borders on a map
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
-            "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",
-            "LongDashDot", "LongDashDotDot"]
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",            "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",            "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
@@ -616,6 +607,13 @@ the selected option.
 * description: Properties for each single point.
 */
 @property(nonatomic, readwrite) HIPoint *point;
+/**
+* description: The line cap used for line ends and line joins on the graph.
+
+* accepted values: ["round", "square"]
+* default: round
+*/
+@property(nonatomic, readwrite) NSString *linecap;
 
 -(NSDictionary *)getParams;
 

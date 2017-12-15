@@ -17,6 +17,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.minPointLength) {
+		params[@"minPointLength"] = self.minPointLength;
+	}
 	if (self.crisp) {
 		params[@"crisp"] = self.crisp;
 	}
@@ -25,9 +28,6 @@
 	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
-	}
-	if (self.minPointLength) {
-		params[@"minPointLength"] = self.minPointLength;
 	}
 	if (self.groupZPadding) {
 		params[@"groupZPadding"] = self.groupZPadding;
@@ -80,6 +80,11 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
+-(void)setMinPointLength:(NSNumber *)minPointLength {
+	_minPointLength = minPointLength;
+	[self updateNSObject:@"minPointLength"];
+}
+
 -(void)setCrisp:(NSNumber *)crisp {
 	_crisp = crisp;
 	[self updateNSObject:@"crisp"];
@@ -93,11 +98,6 @@
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
 	_colorByPoint = colorByPoint;
 	[self updateNSObject:@"colorByPoint"];
-}
-
--(void)setMinPointLength:(NSNumber *)minPointLength {
-	_minPointLength = minPointLength;
-	[self updateNSObject:@"minPointLength"];
 }
 
 -(void)setGroupZPadding:(NSNumber *)groupZPadding {

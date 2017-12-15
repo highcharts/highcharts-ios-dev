@@ -57,13 +57,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber *from;
 /**
-* description: An object defining mouse events for the plot band. Supported properties
-are click, mouseover, mouseout, mousemove.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-events/ : Mouse events demonstrated
-*/
-@property(nonatomic, readwrite) id events;
-/**
 * description: A custom class name, in addition to the default highcharts-plot-
 band, to apply to each individual band.
 */
@@ -80,6 +73,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
+/**
+* description: An object defining mouse events for the plot band. Supported properties
+are click, mouseover, mouseout, mousemove.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-events/ : Mouse events demonstrated
+*/
+@property(nonatomic, readwrite) id events;
 /**
 * description: The color of the plot band.
 

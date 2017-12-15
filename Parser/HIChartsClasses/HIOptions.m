@@ -52,9 +52,6 @@
 		}
 		params[@"yAxis"] = array;
 	}
-	if (self.legend) {
-		params[@"legend"] = [self.legend getParams];
-	}
 	if (self.pane) {
 		params[@"pane"] = [self.pane getParams];
 	}
@@ -118,6 +115,9 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
+	}
+	if (self.legend) {
+		params[@"legend"] = [self.legend getParams];
 	}
 	if (self.navigation) {
 		params[@"navigation"] = [self.navigation getParams];
@@ -189,15 +189,6 @@
 	NSArray<HIYAxis *> *oldValue = _yAxis;
 	_yAxis = yAxis;
 	[self updateArrayObject:oldValue newValue:yAxis propertyName:@"yAxis"];
-}
-
--(void)setLegend:(HILegend *)legend {
-	HILegend *oldValue = _legend;
-	if(self.legend) {
-		[self removeObserver:self forKeyPath:@"legend.isUpdated"];
-	}
-	_legend = legend;
-	[self updateHIObject:oldValue newValue:legend propertyName:@"legend"];
 }
 
 -(void)setPane:(HIPane *)pane {
@@ -315,6 +306,15 @@
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setLegend:(HILegend *)legend {
+	HILegend *oldValue = _legend;
+	if(self.legend) {
+		[self removeObserver:self forKeyPath:@"legend.isUpdated"];
+	}
+	_legend = legend;
+	[self updateHIObject:oldValue newValue:legend propertyName:@"legend"];
 }
 
 -(void)setNavigation:(HINavigation *)navigation {

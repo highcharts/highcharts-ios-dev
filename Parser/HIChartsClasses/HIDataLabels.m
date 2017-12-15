@@ -51,6 +51,9 @@
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
+	if (self.filter) {
+		params[@"filter"] = [self.filter getParams];
+	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
@@ -113,6 +116,9 @@
 	}
 	if (self.yLow) {
 		params[@"yLow"] = self.yLow;
+	}
+	if (self.nodeFormatter) {
+		params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
 	}
 	if (self.nodeFormat) {
 		params[@"nodeFormat"] = self.nodeFormat;
@@ -206,6 +212,15 @@
 -(void)setAlign:(NSString *)align {
 	_align = align;
 	[self updateNSObject:@"align"];
+}
+
+-(void)setFilter:(HIFilter *)filter {
+	HIFilter *oldValue = _filter;
+	if(self.filter) {
+		[self removeObserver:self forKeyPath:@"filter.isUpdated"];
+	}
+	_filter = filter;
+	[self updateHIObject:oldValue newValue:filter propertyName:@"filter"];
 }
 
 -(void)setY:(NSNumber *)y {
@@ -315,6 +330,15 @@
 -(void)setYLow:(NSNumber *)yLow {
 	_yLow = yLow;
 	[self updateNSObject:@"yLow"];
+}
+
+-(void)setNodeFormatter:(HIFunction *)nodeFormatter {
+	HIFunction *oldValue = _nodeFormatter;
+	if(self.nodeFormatter) {
+		[self removeObserver:self forKeyPath:@"nodeFormatter.isUpdated"];
+	}
+	_nodeFormatter = nodeFormatter;
+	[self updateHIObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
 }
 
 -(void)setNodeFormat:(NSString *)nodeFormat {

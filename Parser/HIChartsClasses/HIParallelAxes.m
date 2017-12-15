@@ -35,11 +35,11 @@
 	if (self.max) {
 		params[@"max"] = self.max;
 	}
-	if (self.tooltipValueFormat) {
-		params[@"tooltipValueFormat"] = self.tooltipValueFormat;
-	}
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
+	}
+	if (self.tooltipValueFormat) {
+		params[@"tooltipValueFormat"] = self.tooltipValueFormat;
 	}
 	if (self.minorTickLength) {
 		params[@"minorTickLength"] = self.minorTickLength;
@@ -245,11 +245,6 @@
 	[self updateNSObject:@"max"];
 }
 
--(void)setTooltipValueFormat:(NSString *)tooltipValueFormat {
-	_tooltipValueFormat = tooltipValueFormat;
-	[self updateNSObject:@"tooltipValueFormat"];
-}
-
 -(void)setMinorTickColor:(HIColor *)minorTickColor {
 	HIColor *oldValue = _minorTickColor;
 	if(self.minorTickColor) {
@@ -257,6 +252,11 @@
 	}
 	_minorTickColor = minorTickColor;
 	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
+}
+
+-(void)setTooltipValueFormat:(NSString *)tooltipValueFormat {
+	_tooltipValueFormat = tooltipValueFormat;
+	[self updateNSObject:@"tooltipValueFormat"];
 }
 
 -(void)setMinorTickLength:(NSNumber *)minorTickLength {
@@ -417,7 +417,7 @@
 	[self updateNSObject:@"endOnTick"];
 }
 
--(void)setMinorTickInterval:(NSNumber *)minorTickInterval {
+-(void)setMinorTickInterval:(id)minorTickInterval {
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:@"minorTickInterval"];
 }

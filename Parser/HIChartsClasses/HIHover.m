@@ -27,9 +27,6 @@
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
 	}
-	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
@@ -50,6 +47,9 @@
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.shadow) {
+		params[@"shadow"] = self.shadow;
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
@@ -108,11 +108,6 @@
 	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
-	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
-}
-
 -(void)setLineWidth:(NSNumber *)lineWidth {
 	_lineWidth = lineWidth;
 	[self updateNSObject:@"lineWidth"];
@@ -158,6 +153,11 @@
 	}
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setShadow:(NSNumber *)shadow {
+	_shadow = shadow;
+	[self updateNSObject:@"shadow"];
 }
 
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {

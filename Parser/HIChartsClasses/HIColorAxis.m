@@ -102,6 +102,9 @@
 	if (self.ceiling) {
 		params[@"ceiling"] = self.ceiling;
 	}
+	if (self.gridZIndex) {
+		params[@"gridZIndex"] = self.gridZIndex;
+	}
 	if (self.floor) {
 		params[@"floor"] = self.floor;
 	}
@@ -110,9 +113,6 @@
 	}
 	if (self.minorTickPosition) {
 		params[@"minorTickPosition"] = self.minorTickPosition;
-	}
-	if (self.gridZIndex) {
-		params[@"gridZIndex"] = self.gridZIndex;
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -286,7 +286,7 @@
 	[self updateHIObject:oldValue newValue:minorGridLineColor propertyName:@"minorGridLineColor"];
 }
 
--(void)setMinorTickInterval:(NSNumber *)minorTickInterval {
+-(void)setMinorTickInterval:(id)minorTickInterval {
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:@"minorTickInterval"];
 }
@@ -385,6 +385,11 @@
 	[self updateNSObject:@"ceiling"];
 }
 
+-(void)setGridZIndex:(NSNumber *)gridZIndex {
+	_gridZIndex = gridZIndex;
+	[self updateNSObject:@"gridZIndex"];
+}
+
 -(void)setFloor:(NSNumber *)floor {
 	_floor = floor;
 	[self updateNSObject:@"floor"];
@@ -402,11 +407,6 @@
 -(void)setMinorTickPosition:(NSString *)minorTickPosition {
 	_minorTickPosition = minorTickPosition;
 	[self updateNSObject:@"minorTickPosition"];
-}
-
--(void)setGridZIndex:(NSNumber *)gridZIndex {
-	_gridZIndex = gridZIndex;
-	[self updateNSObject:@"gridZIndex"];
 }
 
 -(void)setEvents:(HIEvents *)events {

@@ -48,9 +48,6 @@
 	if (self.crosshair) {
 		params[@"crosshair"] = [self.crosshair getParams];
 	}
-	if (self.minColor) {
-		params[@"minColor"] = [self.minColor getData];
-	}
 	if (self.tickInterval) {
 		params[@"tickInterval"] = self.tickInterval;
 	}
@@ -71,6 +68,9 @@
 	}
 	if (self.id) {
 		params[@"id"] = self.id;
+	}
+	if (self.maxZoom) {
+		params[@"maxZoom"] = self.maxZoom;
 	}
 	if (self.showLastLabel) {
 		params[@"showLastLabel"] = self.showLastLabel;
@@ -128,6 +128,9 @@
 	}
 	if (self.minorTickPosition) {
 		params[@"minorTickPosition"] = self.minorTickPosition;
+	}
+	if (self.minColor) {
+		params[@"minColor"] = [self.minColor getData];
 	}
 	if (self.endOnTick) {
 		params[@"endOnTick"] = self.endOnTick;
@@ -276,9 +279,6 @@
 	if (self.opposite) {
 		params[@"opposite"] = self.opposite;
 	}
-	if (self.maxZoom) {
-		params[@"maxZoom"] = self.maxZoom;
-	}
 	if (self.tickPositioner) {
 		params[@"tickPositioner"] = [self.tickPositioner getFunction];
 	}
@@ -364,15 +364,6 @@
 	[self updateHIObject:oldValue newValue:crosshair propertyName:@"crosshair"];
 }
 
--(void)setMinColor:(HIColor *)minColor {
-	HIColor *oldValue = _minColor;
-	if(self.minColor) {
-		[self removeObserver:self forKeyPath:@"minColor.isUpdated"];
-	}
-	_minColor = minColor;
-	[self updateHIObject:oldValue newValue:minColor propertyName:@"minColor"];
-}
-
 -(void)setTickInterval:(NSNumber *)tickInterval {
 	_tickInterval = tickInterval;
 	[self updateNSObject:@"tickInterval"];
@@ -418,6 +409,11 @@
 -(void)setId:(NSString *)id {
 	_id = id;
 	[self updateNSObject:@"id"];
+}
+
+-(void)setMaxZoom:(NSNumber *)maxZoom {
+	_maxZoom = maxZoom;
+	[self updateNSObject:@"maxZoom"];
 }
 
 -(void)setShowLastLabel:(NSNumber *)showLastLabel {
@@ -485,6 +481,15 @@
 -(void)setMinorTickPosition:(NSString *)minorTickPosition {
 	_minorTickPosition = minorTickPosition;
 	[self updateNSObject:@"minorTickPosition"];
+}
+
+-(void)setMinColor:(HIColor *)minColor {
+	HIColor *oldValue = _minColor;
+	if(self.minColor) {
+		[self removeObserver:self forKeyPath:@"minColor.isUpdated"];
+	}
+	_minColor = minColor;
+	[self updateHIObject:oldValue newValue:minColor propertyName:@"minColor"];
 }
 
 -(void)setEndOnTick:(NSNumber *)endOnTick {
@@ -652,7 +657,7 @@
 	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
--(void)setMinorTickInterval:(NSNumber *)minorTickInterval {
+-(void)setMinorTickInterval:(id)minorTickInterval {
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:@"minorTickInterval"];
 }
@@ -688,11 +693,6 @@
 -(void)setOpposite:(NSNumber *)opposite {
 	_opposite = opposite;
 	[self updateNSObject:@"opposite"];
-}
-
--(void)setMaxZoom:(NSNumber *)maxZoom {
-	_maxZoom = maxZoom;
-	[self updateNSObject:@"maxZoom"];
 }
 
 -(void)setTickPositioner:(HIFunction *)tickPositioner {

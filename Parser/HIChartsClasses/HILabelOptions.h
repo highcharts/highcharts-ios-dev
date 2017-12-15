@@ -150,9 +150,7 @@ if a format or text are defined, the format or text take precedence
 and the formatter is ignored. This refers to a point object.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/ : Set labels text
-* default: function () {
-	return defined(this.y) ? this.y : 'Annotation label';
-}
+* default: function () {	return defined(this.y) ? this.y : 'Annotation label';}
 */
 @property(nonatomic, readwrite) HIFunction *formatter;
 /**

@@ -16,9 +16,9 @@ set it before any chart is initialized.
 Highcharts.setOptions({
     lang: {
         months: [
-            'Janvier', 'Février', 'Mars', 'Avril',
-            'Mai', 'Juin', 'Juillet', 'Août',
-            'Septembre', 'Octobre', 'Novembre', 'Décembre'
+            'Janvier', 'FĂŠvrier', 'Mars', 'Avril',
+            'Mai', 'Juin', 'Juillet', 'AoĂťt',
+            'Septembre', 'Octobre', 'Novembre', 'DĂŠcembre'
         ],
         weekdays: [
             'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
@@ -37,8 +37,7 @@ Highcharts.setOptions({
 /**
 * description: An array containing the months names in abbreviated form. Corresponds
 to the %b format in Highcharts.dateFormat().
-* default: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" ,
-         "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+* default: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" ,         "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *shortMonths;
 /**
@@ -94,9 +93,7 @@ the first three letters of the lang.weekdays option.
 /**
 * description: An array containing the months names. Corresponds to the %B format
 in Highcharts.dateFormat().
-* default: [ "January" , "February" , "March" , "April" , "May" ,
-         "June" , "July" , "August" , "September" , "October" ,
-         "November" , "December"]
+* default: [ "January" , "February" , "March" , "April" , "May" ,         "June" , "July" , "August" , "September" , "October" ,         "November" , "December"]
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *months;
 /**
@@ -141,8 +138,7 @@ to null disables shortening altogether.
 @property(nonatomic, readwrite) NSString *downloadCSV;
 /**
 * description: An array containing the weekday names.
-* default: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-         "Friday", "Saturday"]
+* default: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",         "Friday", "Saturday"]
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *weekdays;
 /**

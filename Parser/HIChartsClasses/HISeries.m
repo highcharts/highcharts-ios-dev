@@ -102,9 +102,6 @@
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
 	}
-	if (self.linecap) {
-		params[@"linecap"] = self.linecap;
-	}
 	if (self.states) {
 		params[@"states"] = [self.states getParams];
 	}
@@ -212,6 +209,9 @@
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
+	}
+	if (self.linecap) {
+		params[@"linecap"] = self.linecap;
 	}
 	return params;
 }
@@ -377,11 +377,6 @@
 -(void)setEnableMouseTracking:(NSNumber *)enableMouseTracking {
 	_enableMouseTracking = enableMouseTracking;
 	[self updateNSObject:@"enableMouseTracking"];
-}
-
--(void)setLinecap:(NSString *)linecap {
-	_linecap = linecap;
-	[self updateNSObject:@"linecap"];
 }
 
 -(void)setStates:(HIStates *)states {
@@ -558,6 +553,11 @@
 	}
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+}
+
+-(void)setLinecap:(NSString *)linecap {
+	_linecap = linecap;
+	[self updateNSObject:@"linecap"];
 }
 
 @end

@@ -24,6 +24,9 @@
 	if (self.pointDateFormatter) {
 		params[@"pointDateFormatter"] = [self.pointDateFormatter getFunction];
 	}
+	if (self.describeSingleSeries) {
+		params[@"describeSingleSeries"] = self.describeSingleSeries;
+	}
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
 	}
@@ -32,9 +35,6 @@
 	}
 	if (self.seriesDescriptionFormatter) {
 		params[@"seriesDescriptionFormatter"] = [self.seriesDescriptionFormatter getFunction];
-	}
-	if (self.describeSingleSeries) {
-		params[@"describeSingleSeries"] = self.describeSingleSeries;
 	}
 	if (self.onTableAnchorClick) {
 		params[@"onTableAnchorClick"] = [self.onTableAnchorClick getFunction];
@@ -81,6 +81,11 @@
 	[self updateHIObject:oldValue newValue:pointDateFormatter propertyName:@"pointDateFormatter"];
 }
 
+-(void)setDescribeSingleSeries:(NSNumber *)describeSingleSeries {
+	_describeSingleSeries = describeSingleSeries;
+	[self updateNSObject:@"describeSingleSeries"];
+}
+
 -(void)setPointDescriptionFormatter:(HIFunction *)pointDescriptionFormatter {
 	HIFunction *oldValue = _pointDescriptionFormatter;
 	if(self.pointDescriptionFormatter) {
@@ -102,11 +107,6 @@
 	}
 	_seriesDescriptionFormatter = seriesDescriptionFormatter;
 	[self updateHIObject:oldValue newValue:seriesDescriptionFormatter propertyName:@"seriesDescriptionFormatter"];
-}
-
--(void)setDescribeSingleSeries:(NSNumber *)describeSingleSeries {
-	_describeSingleSeries = describeSingleSeries;
-	[self updateNSObject:@"describeSingleSeries"];
 }
 
 -(void)setOnTableAnchorClick:(HIFunction *)onTableAnchorClick {

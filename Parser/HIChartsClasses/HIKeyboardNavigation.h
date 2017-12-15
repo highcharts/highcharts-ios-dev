@@ -10,21 +10,22 @@
 
 
 /**
-* description: Options for keyboard navigation.
+* description: Keyboard navigation for the legend. Requires the Accessibility module.
 */
 @interface HIKeyboardNavigation: HIChartsJSONSerializable
 
-/**
-* description: Enable keyboard navigation for the chart.
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
 * description: Skip null points when navigating through points with the
 keyboard.
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skipNullPoints;
+/**
+* description: Enable/disable keyboard navigation for the legend. Requires the Accessibility
+module.
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 
 -(NSDictionary *)getParams;
 

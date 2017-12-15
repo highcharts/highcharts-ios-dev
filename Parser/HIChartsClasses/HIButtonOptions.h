@@ -27,6 +27,15 @@ objects.
 */
 @property(nonatomic, readwrite) HITheme *theme;
 /**
+* description: The vertical offset of the button's position relative to its
+verticalAlign.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/ : Buttons at lower right
+
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *y;
+/**
 * description: Fill color for the symbol within the button.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolfill/ : Blue symbol stroke for one of the buttons
@@ -95,15 +104,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: right
 */
 @property(nonatomic, readwrite) NSString *align;
-/**
-* description: The vertical offset of the button's position relative to its
-verticalAlign.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/ : Buttons at lower right
-
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *y;
 /**
 * description: The x position of the center of the symbol inside the button.
 
