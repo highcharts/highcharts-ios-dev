@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIMenuItemHoverStyle.h"
 
 @implementation HIMenuItemHoverStyle

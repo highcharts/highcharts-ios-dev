@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIHover.h"
 #import "HIMarker.h"
 

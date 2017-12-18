@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HITooltip.h"
 
 @implementation HITooltip

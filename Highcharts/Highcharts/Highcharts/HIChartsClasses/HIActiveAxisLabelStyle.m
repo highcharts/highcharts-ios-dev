@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIActiveAxisLabelStyle.h"
 
 @implementation HIActiveAxisLabelStyle

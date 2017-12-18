@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HIFunction.h"
+#import "HIChartsJSONSerializableSubclass.h"
 
 @implementation HIFunction
 

@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIHeatmap.h"
 
 @implementation HIHeatmap

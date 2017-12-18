@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HISolidgauge.h"
 
 @implementation HISolidgauge

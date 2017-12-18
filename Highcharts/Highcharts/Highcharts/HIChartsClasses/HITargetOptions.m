@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HITargetOptions.h"
 
 @implementation HITargetOptions

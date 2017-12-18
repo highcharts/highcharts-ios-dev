@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIKeyboardNavigation.h"
 
 @implementation HIKeyboardNavigation

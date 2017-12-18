@@ -633,7 +633,8 @@ def create_setter(field):
 def format_to_m(name, source):
     class_name = "HI" + upper_first(create_short_name(name))
 
-    mtext = "#import \"{0}.h\"\n\n".format(class_name)
+    mtext = "#import \"HIChartsJSONSerializableSubclass.h\"\n"
+    mtext += "#import \"{0}.h\"\n\n".format(class_name)
     mtext += "@implementation {0}\n\n".format(class_name)
 
     if source.extends:
@@ -706,7 +707,8 @@ def format_to_m(name, source):
 def create_options_files():
     imports = "#import \"HIColor.h\"\n"
     htext = "@interface HIOptions: HIChartsJSONSerializable\n\n"
-    mtext = "#import \"HIOptions.h\"\n\n@implementation HIOptions\n\n"
+    mtext = "#import \"HIChartsJSONSerializableSubclass.h\"\n"
+    mtext += "#import \"HIOptions.h\"\n\n@implementation HIOptions\n\n"
     mtext += "-(instancetype)init {\n\tif (self = [super init]) {\n" \
              "\t\tHICredits *credits = [[HICredits alloc]init];\n" \
              "\t\tcredits.enabled = @true;\n" \

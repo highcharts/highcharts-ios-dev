@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIPartialFill.h"
 
 @implementation HIPartialFill

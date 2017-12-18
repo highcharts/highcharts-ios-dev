@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HINavigation.h"
 
 @implementation HINavigation

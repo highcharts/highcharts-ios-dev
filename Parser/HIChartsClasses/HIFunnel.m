@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIFunnel.h"
 
 @implementation HIFunnel

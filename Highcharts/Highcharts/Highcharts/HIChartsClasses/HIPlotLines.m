@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIPlotLines.h"
 
 @implementation HIPlotLines

@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HICrosshair.h"
 
 @implementation HICrosshair

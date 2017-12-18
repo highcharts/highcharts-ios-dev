@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIAreaspline.h"
 
 @implementation HIAreaspline

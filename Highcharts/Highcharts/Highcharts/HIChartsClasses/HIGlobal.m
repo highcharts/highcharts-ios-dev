@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIGlobal.h"
 
 @implementation HIGlobal

@@ -7,6 +7,7 @@
 //
 
 #import "HIChartsJSONSerializable.h"
+#import "HIChartsJSONSerializableSubclass.h"
 
 @interface HIChartsJSONSerializable ()
 @property (nonatomic, assign) BOOL isUpdated;

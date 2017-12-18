@@ -43,6 +43,7 @@
 		34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34EC1CF61CDCC783001DB3A0 /* HIGOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */; };
 		34F873FE1CDA134400674E6C /* HIGExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F873FC1CDA134400674E6C /* HIGExport.h */; };
+		CD0FDCDA1FE7DE800029B4A3 /* HIChartsJSONSerializableSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0FDCD91FE7DE7F0029B4A3 /* HIChartsJSONSerializableSubclass.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CD5B358F1F90C44A006159D7 /* HIGBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA681CD3A6F500BE07CE /* HIGBundle.m */; };
 		CD5B35901F90C44C006159D7 /* HIGHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */; };
 		CD5B35911F90C44F006159D7 /* HIGDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA741CD3B3EE00BE07CE /* HIGDependency.m */; };
@@ -368,6 +369,7 @@
 		34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptionsTest.m; sourceTree = "<group>"; };
 		34F873FC1CDA134400674E6C /* HIGExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGExport.h; sourceTree = "<group>"; };
 		34F873FD1CDA134400674E6C /* HIGExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGExport.m; sourceTree = "<group>"; };
+		CD0FDCD91FE7DE7F0029B4A3 /* HIChartsJSONSerializableSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartsJSONSerializableSubclass.h; sourceTree = "<group>"; };
 		CD8C13421F97945000C2CD61 /* HIGauge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIGauge.m; sourceTree = "<group>"; };
 		CD8C13431F97945100C2CD61 /* HIPartialFill.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIPartialFill.m; sourceTree = "<group>"; };
 		CD8C13441F97945100C2CD61 /* HIRotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIRotation.m; sourceTree = "<group>"; };
@@ -1001,6 +1003,7 @@
 			children = (
 				2011ABB31E7013F30027DA10 /* HIChartsClasses */,
 				208C104F1E5C4BD8005C425F /* HIChartsJSONSerializable.h */,
+				CD0FDCD91FE7DE7F0029B4A3 /* HIChartsJSONSerializableSubclass.h */,
 				208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */,
 				EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */,
 				345BA00E1C39AFB9001DAB1B /* HIChartView.h */,
@@ -1149,6 +1152,7 @@
 				CD8C14B01F9794F600C2CD61 /* HIHeatmap.h in Headers */,
 				CD8C14E81F9794F600C2CD61 /* HIOptions3d.h in Headers */,
 				CD8C151C1F9794F600C2CD61 /* HISide.h in Headers */,
+				CD0FDCDA1FE7DE800029B4A3 /* HIChartsJSONSerializableSubclass.h in Headers */,
 				CD8C14DA1F9794F600C2CD61 /* HIMenuItemHoverStyle.h in Headers */,
 				CD8C14D61F9794F600C2CD61 /* HILoading.h in Headers */,
 				CD8C14F21F9794F600C2CD61 /* HIPie.h in Headers */,

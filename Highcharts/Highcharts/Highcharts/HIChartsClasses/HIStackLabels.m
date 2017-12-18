@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIStackLabels.h"
 
 @implementation HIStackLabels

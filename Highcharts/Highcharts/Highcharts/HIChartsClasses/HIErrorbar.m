@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIErrorbar.h"
 
 @implementation HIErrorbar

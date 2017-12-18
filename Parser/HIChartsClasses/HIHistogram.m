@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIHistogram.h"
 
 @implementation HIHistogram

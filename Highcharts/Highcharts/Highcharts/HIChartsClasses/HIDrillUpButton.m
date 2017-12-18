@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIDrillUpButton.h"
 
 @implementation HIDrillUpButton

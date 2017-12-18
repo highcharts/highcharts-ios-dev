@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIAnimation.h"
 
 @implementation HIAnimation

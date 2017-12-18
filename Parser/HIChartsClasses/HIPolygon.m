@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIPolygon.h"
 
 @implementation HIPolygon

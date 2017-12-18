@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIResponsive.h"
 
 @implementation HIResponsive

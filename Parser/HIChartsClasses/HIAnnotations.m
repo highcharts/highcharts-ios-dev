@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIAnnotations.h"
 
 @implementation HIAnnotations

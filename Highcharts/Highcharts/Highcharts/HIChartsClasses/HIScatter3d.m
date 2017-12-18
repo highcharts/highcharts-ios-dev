@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIScatter3d.h"
 
 @implementation HIScatter3d

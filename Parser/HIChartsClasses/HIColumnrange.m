@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIColumnrange.h"
 
 @implementation HIColumnrange

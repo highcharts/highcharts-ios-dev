@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIDateTimeLabelFormats.h"
 
 @implementation HIDateTimeLabelFormats

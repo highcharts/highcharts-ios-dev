@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HISubtitle.h"
 
 @implementation HISubtitle

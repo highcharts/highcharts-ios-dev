@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIYAxis.h"
 
 @implementation HIYAxis

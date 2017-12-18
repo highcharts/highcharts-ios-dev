@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HILabelStyle.h"
 
 @implementation HILabelStyle

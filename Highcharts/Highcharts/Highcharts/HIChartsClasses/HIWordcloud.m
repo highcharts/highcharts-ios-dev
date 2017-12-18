@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIWordcloud.h"
 
 @implementation HIWordcloud

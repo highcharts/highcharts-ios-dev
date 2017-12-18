@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIWaterfall.h"
 
 @implementation HIWaterfall
