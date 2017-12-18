@@ -172,6 +172,10 @@ static BOOL preloaded = NO;
 
 #pragma mark - NSKeyValueObserving
 
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
+    return NO;
+}
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"options.isUpdated"]) {
         NSString *kChangeNew = [change valueForKey:@"new"];
@@ -193,7 +197,7 @@ static BOOL preloaded = NO;
     [self loadChartInternal];
     [self didChangeValueForKey:@"options"];
     if (options) {
-        [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
+        [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
     }
 }
 

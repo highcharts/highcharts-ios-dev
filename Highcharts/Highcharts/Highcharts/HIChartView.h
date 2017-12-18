@@ -23,7 +23,7 @@
 + (void)preload;
 
 /**
- *  A method to update chart's options manually.
+ *  A method for update chart's options manually.
  */
 - (void)updateOptions;
 
