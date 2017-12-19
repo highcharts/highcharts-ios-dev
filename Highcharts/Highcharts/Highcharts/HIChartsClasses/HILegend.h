@@ -11,8 +11,8 @@
 #import "HIKeyboardNavigation.h"
 #import "HITitle.h"
 #import "HIItemStyle.h"
-#import "HIItemHoverStyle.h"
 #import "HIItemHiddenStyle.h"
+#import "HIItemHoverStyle.h"
 #import "HIColor.h"
 #import "HIFunction.h"
 
@@ -27,6 +27,13 @@ custom-symbol/ : custom legend symbols.
 */
 @interface HILegend: HIChartsJSONSerializable
 
+/**
+* description: In a legend with horizontal layout, the itemDistance defines the
+pixel distance between each item.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/ : 50px item distance
+*/
+@property(nonatomic, readwrite) NSNumber *itemDistance;
 /**
 * description: Maximum pixel height for the legend. When the maximum height is extended,
  navigation will show.
@@ -70,13 +77,6 @@ was disabled.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
-* description: The pixel bottom margin for each legend item.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/ : Padding and item margins demonstrated
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *itemMarginBottom;
-/**
 * description: Whether to reverse the order of the legend items compared to the
 order of the series or points as defined in the configuration object.
 
@@ -85,29 +85,25 @@ order of the series or points as defined in the configuration object.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reversed;
 /**
+* description: The layout of the legend items. Can be one of "horizontal" or "vertical".
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/ : Horizontal by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-vertical/ : Vertical
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/ : Vertical with data classes
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical/ : Vertical with color axis gradient
+* accepted values: ["horizontal", "vertical"]
+* default: horizontal
+*/
+@property(nonatomic, readwrite) NSString *layout;
+/**
 * description: Default styling for the checkbox next to a legend item when
 showCheckbox is true.
 */
 @property(nonatomic, readwrite) HIItemCheckboxStyle *itemCheckboxStyle;
 /**
-* description: The background color of the legend.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/backgroundcolor/ : Yellowish background
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/ : Various legend options
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/ : Border and background options
-*/
-@property(nonatomic, readwrite) HIColor *backgroundColor;
-/**
 * description: Keyboard navigation for the legend. Requires the Accessibility module.
 */
 @property(nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation;
-/**
-* description: In a legend with horizontal layout, the itemDistance defines the
-pixel distance between each item.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/ : 50px item distance
-*/
-@property(nonatomic, readwrite) NSNumber *itemDistance;
 /**
 * description: The width for each legend item. This is useful in a horizontal layout
 with many items when you want the items to align vertically. .
@@ -143,16 +139,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) HIItemStyle *itemStyle;
 /**
-* description: The layout of the legend items. Can be one of "horizontal" or "vertical".
+* description: The border corner radius of the legend.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/ : Horizontal by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-vertical/ : Vertical
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/ : Vertical with data classes
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical/ : Vertical with color axis gradient
-* accepted values: ["horizontal", "vertical"]
-* default: horizontal
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderradius-default/ : Square by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderradius-round/ : 5px rounded
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/ : Border and background options
+* default: 0
 */
-@property(nonatomic, readwrite) NSString *layout;
+@property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
 * description: The pixel padding between the legend item symbol and the legend
 item text.
@@ -161,16 +155,6 @@ item text.
 * default: 5
 */
 @property(nonatomic, readwrite) NSNumber *symbolPadding;
-/**
-* description: CSS styles for each legend item in hover mode. Only a subset of
-CSS is supported, notably those options related to text. Properties
-are inherited from style unless overridden here.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/ : Red on hover
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/itemstyle/ : Item text styles
-* default: { "color": "#000000" }
-*/
-@property(nonatomic, readwrite) HIItemHoverStyle *itemHoverStyle;
 /**
 * description: The width of the drawn border around the legend.
 
@@ -260,6 +244,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
 /**
+* description: The background color of the legend.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/backgroundcolor/ : Yellowish background
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/ : Various legend options
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/ : Border and background options
+*/
+@property(nonatomic, readwrite) HIColor *backgroundColor;
+/**
 * description: Whether to show the symbol on the right side of the text rather than
 the left side. This is common in Arabic and Hebraic.
 
@@ -267,6 +259,16 @@ the left side. This is common in Arabic and Hebraic.
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *rtl;
+/**
+* description: CSS styles for each legend item in hover mode. Only a subset of
+CSS is supported, notably those options related to text. Properties
+are inherited from style unless overridden here.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/ : Red on hover
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/itemstyle/ : Item text styles
+* default: { "color": "#000000" }
+*/
+@property(nonatomic, readwrite) HIItemHoverStyle *itemHoverStyle;
 /**
 * description: The border radius of the symbol for series types that use a rectangle
 in the legend. Defaults to half the symbolHeight.
@@ -276,14 +278,12 @@ in the legend. Defaults to half the symbolHeight.
 */
 @property(nonatomic, readwrite) NSNumber *symbolRadius;
 /**
-* description: The border corner radius of the legend.
+* description: The pixel bottom margin for each legend item.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderradius-default/ : Square by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderradius-round/ : 5px rounded
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/ : Border and background options
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/ : Padding and item margins demonstrated
 * default: 0
 */
-@property(nonatomic, readwrite) NSNumber *borderRadius;
+@property(nonatomic, readwrite) NSNumber *itemMarginBottom;
 /**
 * description: The horizontal alignment of the legend box within the chart area.
 Valid values are left, center and right.

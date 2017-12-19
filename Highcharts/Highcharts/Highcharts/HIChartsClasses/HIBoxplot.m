@@ -18,6 +18,9 @@
 	if (self.stemDashStyle) {
 		params[@"stemDashStyle"] = self.stemDashStyle;
 	}
+	if (self.grouping) {
+		params[@"grouping"] = self.grouping;
+	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
 	}
@@ -79,9 +82,6 @@
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
-	if (self.grouping) {
-		params[@"grouping"] = self.grouping;
-	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
@@ -102,6 +102,11 @@
 -(void)setStemDashStyle:(NSString *)stemDashStyle {
 	_stemDashStyle = stemDashStyle;
 	[self updateNSObject:@"stemDashStyle"];
+}
+
+-(void)setGrouping:(NSNumber *)grouping {
+	_grouping = grouping;
+	[self updateNSObject:@"grouping"];
 }
 
 -(void)setMinPointLength:(NSNumber *)minPointLength {
@@ -222,11 +227,6 @@
 	}
 	_edgeColor = edgeColor;
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
-}
-
--(void)setGrouping:(NSNumber *)grouping {
-	_grouping = grouping;
-	[self updateNSObject:@"grouping"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {

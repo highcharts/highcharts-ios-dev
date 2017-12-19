@@ -37,19 +37,19 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
-* description: The duration in milliseconds of the fade in effect.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
-* default: 100
-*/
-@property(nonatomic, readwrite) NSNumber *showDuration;
-/**
 * description: The duration in milliseconds of the fade out effect.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
 * default: 100
 */
 @property(nonatomic, readwrite) NSNumber *hideDuration;
+/**
+* description: The duration in milliseconds of the fade in effect.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
+* default: 100
+*/
+@property(nonatomic, readwrite) NSNumber *showDuration;
 
 -(NSDictionary *)getParams;
 

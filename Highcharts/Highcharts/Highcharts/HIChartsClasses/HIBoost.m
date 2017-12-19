@@ -54,7 +54,7 @@
 	[self updateNSObject:@"useGPUTranslations"];
 }
 
--(void)setSeriesThreshold:(NSString *)seriesThreshold {
+-(void)setSeriesThreshold:(NSNumber *)seriesThreshold {
 	_seriesThreshold = seriesThreshold;
 	[self updateNSObject:@"seriesThreshold"];
 }

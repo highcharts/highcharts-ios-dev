@@ -46,6 +46,14 @@ null.
 */
 @property(nonatomic, readwrite) HIMarker *marker;
 /**
+* description: The maximum value of the axis in terms of map point values. If null,
+the max value is automatically calculated. If the endOnTick option
+is true, the max value might be rounded up.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/coloraxis/gridlines/ : Explicit min and max to reduce the effect of outliers
+*/
+@property(nonatomic, readwrite) NSNumber *max;
+/**
 * description: Color for the minor tick marks.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/ : Black tick marks on Y axis
@@ -65,15 +73,13 @@ array.
 */
 @property(nonatomic, readwrite) NSString *dataClassColor;
 /**
-* description: Whether to force the axis to start on a tick. Use this option with
-the maxPadding option to control the axis start.
+* description: Refers to the index in the panes array. Used for circular
+gauges and polar charts. When the option is not set then first pane
+will be used.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-false/ : False by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-true/ : True
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/endontick/ : False for Y axis
-* default: true
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter : Two gauges with different center
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *startOnTick;
+@property(nonatomic, readwrite) NSNumber *pane;
 /**
 * description: The color to represent the minimum of the color axis. Unless dataClasses or stops are set, the gradient
 starts at this value.
@@ -126,16 +132,6 @@ Highcharts API.
 */
 @property(nonatomic, readwrite) HILabels *labels;
 /**
-* description: Color of the minor, secondary grid lines.
-In styled mode, the stroke width is given in the
-.highcharts-minor-grid-line class.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinecolor/ : Bright grey lines from Y axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode
-* default: #f2f2f2
-*/
-@property(nonatomic, readwrite) HIColor *minorGridLineColor;
-/**
 * description: Specific tick interval in axis units for the minor ticks.
 On a linear axis, if "auto", the minor tick interval is
 calculated as a fifth of the tickInterval. If null, minor
@@ -154,14 +150,23 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ minorTickInterval;
 /**
-* description: The pixel width of the major tick marks.
-In styled mode, the stroke width is given in the .highcharts-tick class.
+* description: Whether to force the axis to start on a tick. Use this option with
+the maxPadding option to control the axis start.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickwidth/ : 10 px width
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/ticks/ : Formatted ticks on X axis
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-false/ : False by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-true/ : True
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/endontick/ : False for Y axis
+* default: true
 */
-@property(nonatomic, readwrite) NSNumber *tickWidth;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *startOnTick;
+/**
+* description: The pixel width of the minor tick mark.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickwidth/ : 3px width
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/minorticks/ : 1px width
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *minorTickWidth;
 /**
 * description: Whether to force the axis to end on a tick. Use this option with
 the maxPadding option to control the axis
@@ -227,6 +232,17 @@ or category axes are not affected.
 */
 @property(nonatomic, readwrite) NSNumber *tickAmount;
 /**
+* description: The dash or dot style of the minor grid lines. For possible values,
+see http://jsfiddle.net/gh/get/library/pure/
+highcharts/highcharts/tree/master/samples/highcharts/plotoptions/
+series-dashstyle-all/ : this demonstration.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinedashstyle/ : Long dashes on minor grid lines
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",             "DashDot", "LongDashDot", "LongDashDotDot"]
+* default: Solid
+*/
+@property(nonatomic, readwrite) NSString *minorGridLineDashStyle;
+/**
 * description: Padding of the min value relative to the length of the axis. A
 padding of 0.05 will make a 100px axis 5px longer.
 
@@ -236,19 +252,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSNumber *minPadding;
 /**
-* description: Requires Accessibility module
-Description of the axis to screen reader users.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *definition;
-/**
-* description: The maximum value of the axis in terms of map point values. If null,
-the max value is automatically calculated. If the endOnTick option
-is true, the max value might be rounded up.
+* description: The pixel length of the main tick marks on the color axis.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/coloraxis/gridlines/ : Explicit min and max to reduce the effect of outliers
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/ticklength/ : 20 px tick length on the X axis
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/ticks/ : Formatted ticks on X axis
+* default: 5
 */
-@property(nonatomic, readwrite) NSNumber *max;
+@property(nonatomic, readwrite) NSNumber *tickLength;
 /**
 * description: The dash or dot style of the grid lines. For possible values, see
 http://jsfiddle.net/gh/get/library/pure/
@@ -261,6 +271,12 @@ series-dashstyle-all/ : this demonstration.
 */
 @property(nonatomic, readwrite) NSString *gridLineDashStyle;
 /**
+* description: Requires Accessibility module
+Description of the axis to screen reader users.
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSString *definition;
+/**
 * description: An id for the axis. This can be used after render time to get
 a pointer to the axis object through chart.get().
 
@@ -268,11 +284,6 @@ a pointer to the axis object through chart.get().
 * default: null
 */
 @property(nonatomic, readwrite) NSString *id;
-/**
-* description: Whether to display the colorAxis in the legend.
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
 /**
 * description: The minimum value of the axis in terms of map point values. If null,
 the min value is automatically calculated. If the startOnTick
@@ -331,9 +342,32 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSString *minorTickPosition;
 /**
+* description: The type of interpolation to use for the color axis. Can be linear
+or logarithmic.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/type-linear/ : Linear
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log/ : Logarithmic
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-minorgrid/ : Logarithmic with minor grid lines
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/type-log-both/ : Logarithmic on two axes
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-negative/ : Logarithmic with extension to emulate negative values
+* accepted values: ["linear", "logarithmic"]
+* default: linear
+*/
+@property(nonatomic, readwrite) NSString *type;
+/**
 * description: Event handlers for the axis.
 */
 @property(nonatomic, readwrite) HIEvents *events;
+/**
+* description: Width of the minor, secondary grid lines.
+In styled mode, the stroke width is given in the
+.highcharts-grid-line class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinewidth/ : 2px lines from Y axis
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *minorGridLineWidth;
 /**
 * description: Whether to reverse the axis so that the highest number is closest
 to the origin. Defaults to false in a horizontal legend and true
@@ -343,15 +377,6 @@ in a vertical legend, where the smallest value starts on top.
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reversed;
-/**
-* description: A callback function returning array defining where the ticks are
-laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
-tick positions are accessible through this.tickPositions and can
-be modified by the callback.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
-*/
-@property(nonatomic, readwrite) HIFunction *tickPositioner;
 /**
 * description: For datetime axes, this decides where to put the tick between weeks.
  0 = Sunday, 1 = Monday.
@@ -383,13 +408,10 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSString *tickmarkPlacement;
 /**
-* description: A soft maximum for the axis. If the series data maximum is less than
-this, the axis will stay at this maximum, but if the series data
-maximum is higher, the axis will flex to show all data.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/ : Soft min and max
+* description: Whether to display the colorAxis in the legend.
+* default: true
 */
-@property(nonatomic, readwrite) NSNumber *softMax;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
 /**
 * description: Applies only when the axis type is category. When uniqueNames
 is true, points are placed on the X axis according to their names.
@@ -412,26 +434,15 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber *minorTickLength;
 /**
-* description: The type of interpolation to use for the color axis. Can be linear
-or logarithmic.
+* description: Color of the minor, secondary grid lines.
+In styled mode, the stroke width is given in the
+.highcharts-minor-grid-line class.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/type-linear/ : Linear
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log/ : Logarithmic
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-minorgrid/ : Logarithmic with minor grid lines
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/type-log-both/ : Logarithmic on two axes
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-negative/ : Logarithmic with extension to emulate negative values
-* accepted values: ["linear", "logarithmic"]
-* default: linear
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinecolor/ : Bright grey lines from Y axis
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode
+* default: #f2f2f2
 */
-@property(nonatomic, readwrite) NSString *type;
-/**
-* description: The pixel length of the main tick marks on the color axis.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/ticklength/ : 20 px tick length on the X axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/ticks/ : Formatted ticks on X axis
-* default: 5
-*/
-@property(nonatomic, readwrite) NSNumber *tickLength;
+@property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
 * description: A soft minimum for the axis. If the series data minimum is greater
 than this, the axis will stay at this minimum, but if the series
@@ -442,16 +453,6 @@ data minimum is lower, the axis will flex to show all data.
 */
 @property(nonatomic, readwrite) NSNumber *softMin;
 /**
-* description: Width of the minor, secondary grid lines.
-In styled mode, the stroke width is given in the
-.highcharts-grid-line class.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinewidth/ : 2px lines from Y axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *minorGridLineWidth;
-/**
 * description: The width of the grid lines extending from the axis across the
 gradient of a scalar color axis.
 
@@ -459,6 +460,15 @@ gradient of a scalar color axis.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *gridLineWidth;
+/**
+* description: A callback function returning array defining where the ticks are
+laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
+tick positions are accessible through this.tickPositions and can
+be modified by the callback.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
+*/
+@property(nonatomic, readwrite) HIFunction *tickPositioner;
 /**
 * description: Padding of the max value relative to the length of the axis. A
 padding of 0.05 will make a 100px axis 5px longer.
@@ -468,6 +478,23 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/plotbackgroundcolor-gradient/ : Add some padding
 */
 @property(nonatomic, readwrite) NSNumber *maxPadding;
+/**
+* description: A soft maximum for the axis. If the series data maximum is less than
+this, the axis will stay at this maximum, but if the series data
+maximum is higher, the axis will flex to show all data.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/ : Soft min and max
+*/
+@property(nonatomic, readwrite) NSNumber *softMax;
+/**
+* description: The pixel width of the major tick marks.
+In styled mode, the stroke width is given in the .highcharts-tick class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickwidth/ : 10 px width
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/ : Styled mode
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/ticks/ : Formatted ticks on X axis
+*/
+@property(nonatomic, readwrite) NSNumber *tickWidth;
 /**
 * description: The interval of the tick marks in axis units. When null, the tick
 interval is computed to approximately follow the tickPixelInterval.
@@ -536,25 +563,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * default: outside
 */
 @property(nonatomic, readwrite) NSString *tickPosition;
-/**
-* description: The dash or dot style of the minor grid lines. For possible values,
-see http://jsfiddle.net/gh/get/library/pure/
-highcharts/highcharts/tree/master/samples/highcharts/plotoptions/
-series-dashstyle-all/ : this demonstration.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinedashstyle/ : Long dashes on minor grid lines
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",             "DashDot", "LongDashDot", "LongDashDotDot"]
-* default: Solid
-*/
-@property(nonatomic, readwrite) NSString *minorGridLineDashStyle;
-/**
-* description: The pixel width of the minor tick mark.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickwidth/ : 3px width
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/minorticks/ : 1px width
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *minorTickWidth;
 
 -(NSDictionary *)getParams;
 

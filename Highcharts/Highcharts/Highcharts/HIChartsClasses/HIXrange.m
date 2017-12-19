@@ -21,6 +21,9 @@
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
+	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
@@ -43,9 +46,6 @@
 	if (self.groupZPadding) {
 		params[@"groupZPadding"] = self.groupZPadding;
 	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
-	}
 	if (self.partialFill) {
 		params[@"partialFill"] = [self.partialFill getParams];
 	}
@@ -62,6 +62,11 @@
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
 	_colorByPoint = colorByPoint;
 	[self updateNSObject:@"colorByPoint"];
+}
+
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
@@ -97,11 +102,6 @@
 -(void)setGroupZPadding:(NSNumber *)groupZPadding {
 	_groupZPadding = groupZPadding;
 	[self updateNSObject:@"groupZPadding"];
-}
-
--(void)setPointPadding:(NSNumber *)pointPadding {
-	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
 }
 
 -(void)setPartialFill:(HIPartialFill *)partialFill {

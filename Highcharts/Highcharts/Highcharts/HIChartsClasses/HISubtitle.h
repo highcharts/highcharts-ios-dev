@@ -30,6 +30,23 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
+* description: The x position of the subtitle relative to the alignment within chart.
+spacingLeft and chart.spacingRight.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/align/ : Footnote at right of plot area
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote : Footnote at the bottom right of plot area
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *x;
+/**
+* description: The y position of the subtitle relative to the alignment within chart.
+spacingTop and chart.spacingBottom. By default the subtitle is laid
+out below the title unless the title is floating.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/ : Footnote at the bottom right of plot area
+*/
+@property(nonatomic, readwrite) NSNumber *y;
+/**
 * description: The vertical alignment of the title. Can be one of "top", "middle"
 and "bottom". When a value is given, the title behaves as floating.
 
@@ -69,23 +86,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * default: center
 */
 @property(nonatomic, readwrite) NSString *align;
-/**
-* description: The x position of the subtitle relative to the alignment within chart.
-spacingLeft and chart.spacingRight.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/align/ : Footnote at right of plot area
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote : Footnote at the bottom right of plot area
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *x;
-/**
-* description: The y position of the subtitle relative to the alignment within chart.
-spacingTop and chart.spacingBottom. By default the subtitle is laid
-out below the title unless the title is floating.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/ : Footnote at the bottom right of plot area
-*/
-@property(nonatomic, readwrite) NSNumber *y;
 /**
 * description: Adjustment made to the subtitle width, normally to reserve space
 for the exporting burger menu.

@@ -10,26 +10,17 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
-	}
-	if (self.polar) {
-		params[@"polar"] = self.polar;
-	}
 	if (self.panKey) {
 		params[@"panKey"] = self.panKey;
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
-	if (self.plotShadow) {
-		params[@"plotShadow"] = self.plotShadow;
-	}
-	if (self.ignoreHiddenSeries) {
-		params[@"ignoreHiddenSeries"] = self.ignoreHiddenSeries;
-	}
 	if (self.options3d) {
 		params[@"options3d"] = [self.options3d getParams];
+	}
+	if (self.inverted) {
+		params[@"inverted"] = self.inverted;
 	}
 	if (self.marginBottom) {
 		params[@"marginBottom"] = self.marginBottom;
@@ -39,6 +30,9 @@
 	}
 	if (self.parallelAxes) {
 		params[@"parallelAxes"] = [self.parallelAxes getParams];
+	}
+	if (self.ignoreHiddenSeries) {
+		params[@"ignoreHiddenSeries"] = self.ignoreHiddenSeries;
 	}
 	if (self.spacingTop) {
 		params[@"spacingTop"] = self.spacingTop;
@@ -54,9 +48,6 @@
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
-	}
-	if (self.renderTo) {
-		params[@"renderTo"] = self.renderTo;
 	}
 	if (self.plotBorderWidth) {
 		params[@"plotBorderWidth"] = self.plotBorderWidth;
@@ -81,6 +72,9 @@
 			}
 		}
 		params[@"margin"] = array;
+	}
+	if (self.parallelCoordinates) {
+		params[@"parallelCoordinates"] = self.parallelCoordinates;
 	}
 	if (self.typeDescription) {
 		params[@"typeDescription"] = self.typeDescription;
@@ -109,8 +103,11 @@
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
-	if (self.inverted) {
-		params[@"inverted"] = self.inverted;
+	if (self.renderTo) {
+		params[@"renderTo"] = self.renderTo;
+	}
+	if (self.polar) {
+		params[@"polar"] = self.polar;
 	}
 	if (self.plotBackgroundImage) {
 		params[@"plotBackgroundImage"] = self.plotBackgroundImage;
@@ -121,14 +118,17 @@
 	if (self.spacingBottom) {
 		params[@"spacingBottom"] = self.spacingBottom;
 	}
-	if (self.parallelCoordinates) {
-		params[@"parallelCoordinates"] = self.parallelCoordinates;
+	if (self.plotShadow) {
+		params[@"plotShadow"] = self.plotShadow;
 	}
 	if (self.selectionMarkerFill) {
 		params[@"selectionMarkerFill"] = [self.selectionMarkerFill getData];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.marginLeft) {
+		params[@"marginLeft"] = self.marginLeft;
 	}
 	if (self.spacing) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -141,6 +141,9 @@
 			}
 		}
 		params[@"spacing"] = array;
+	}
+	if (self.shadow) {
+		params[@"shadow"] = self.shadow;
 	}
 	if (self.plotBorderColor) {
 		params[@"plotBorderColor"] = [self.plotBorderColor getData];
@@ -163,9 +166,6 @@
 	if (self.height) {
 		params[@"height"] = self.height;
 	}
-	if (self.marginLeft) {
-		params[@"marginLeft"] = self.marginLeft;
-	}
 	if (self.spacingLeft) {
 		params[@"spacingLeft"] = self.spacingLeft;
 	}
@@ -173,16 +173,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setShadow:(id)shadow {
-	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
-}
-
--(void)setPolar:(NSNumber *)polar {
-	_polar = polar;
-	[self updateNSObject:@"polar"];
-}
 
 -(void)setPanKey:(NSString *)panKey {
 	_panKey = panKey;
@@ -198,16 +188,6 @@
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
--(void)setPlotShadow:(id)plotShadow {
-	_plotShadow = plotShadow;
-	[self updateNSObject:@"plotShadow"];
-}
-
--(void)setIgnoreHiddenSeries:(NSNumber *)ignoreHiddenSeries {
-	_ignoreHiddenSeries = ignoreHiddenSeries;
-	[self updateNSObject:@"ignoreHiddenSeries"];
-}
-
 -(void)setOptions3d:(HIOptions3d *)options3d {
 	HIOptions3d *oldValue = _options3d;
 	if(self.options3d) {
@@ -215,6 +195,11 @@
 	}
 	_options3d = options3d;
 	[self updateHIObject:oldValue newValue:options3d propertyName:@"options3d"];
+}
+
+-(void)setInverted:(NSNumber *)inverted {
+	_inverted = inverted;
+	[self updateNSObject:@"inverted"];
 }
 
 -(void)setMarginBottom:(NSNumber *)marginBottom {
@@ -238,6 +223,11 @@
 	}
 	_parallelAxes = parallelAxes;
 	[self updateHIObject:oldValue newValue:parallelAxes propertyName:@"parallelAxes"];
+}
+
+-(void)setIgnoreHiddenSeries:(NSNumber *)ignoreHiddenSeries {
+	_ignoreHiddenSeries = ignoreHiddenSeries;
+	[self updateNSObject:@"ignoreHiddenSeries"];
 }
 
 -(void)setSpacingTop:(NSNumber *)spacingTop {
@@ -269,11 +259,6 @@
 	[self updateNSObject:@"definition"];
 }
 
--(void)setRenderTo:(id)renderTo {
-	_renderTo = renderTo;
-	[self updateNSObject:@"renderTo"];
-}
-
 -(void)setPlotBorderWidth:(NSNumber *)plotBorderWidth {
 	_plotBorderWidth = plotBorderWidth;
 	[self updateNSObject:@"plotBorderWidth"];
@@ -298,6 +283,11 @@
 	NSArray *oldValue = _margin;
 	_margin = margin;
 	[self updateArrayObject:oldValue newValue:margin propertyName:@"margin"];
+}
+
+-(void)setParallelCoordinates:(NSNumber *)parallelCoordinates {
+	_parallelCoordinates = parallelCoordinates;
+	[self updateNSObject:@"parallelCoordinates"];
 }
 
 -(void)setTypeDescription:(NSString *)typeDescription {
@@ -349,9 +339,14 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
--(void)setInverted:(NSNumber *)inverted {
-	_inverted = inverted;
-	[self updateNSObject:@"inverted"];
+-(void)setRenderTo:(id)renderTo {
+	_renderTo = renderTo;
+	[self updateNSObject:@"renderTo"];
+}
+
+-(void)setPolar:(NSNumber *)polar {
+	_polar = polar;
+	[self updateNSObject:@"polar"];
 }
 
 -(void)setPlotBackgroundImage:(NSString *)plotBackgroundImage {
@@ -369,9 +364,9 @@
 	[self updateNSObject:@"spacingBottom"];
 }
 
--(void)setParallelCoordinates:(NSNumber *)parallelCoordinates {
-	_parallelCoordinates = parallelCoordinates;
-	[self updateNSObject:@"parallelCoordinates"];
+-(void)setPlotShadow:(id)plotShadow {
+	_plotShadow = plotShadow;
+	[self updateNSObject:@"plotShadow"];
 }
 
 -(void)setSelectionMarkerFill:(HIColor *)selectionMarkerFill {
@@ -388,10 +383,20 @@
 	[self updateNSObject:@"borderWidth"];
 }
 
+-(void)setMarginLeft:(NSNumber *)marginLeft {
+	_marginLeft = marginLeft;
+	[self updateNSObject:@"marginLeft"];
+}
+
 -(void)setSpacing:(NSArray<NSNumber *> *)spacing {
 	NSArray<NSNumber *> *oldValue = _spacing;
 	_spacing = spacing;
 	[self updateArrayObject:oldValue newValue:spacing propertyName:@"spacing"];
+}
+
+-(void)setShadow:(id)shadow {
+	_shadow = shadow;
+	[self updateNSObject:@"shadow"];
 }
 
 -(void)setPlotBorderColor:(HIColor *)plotBorderColor {
@@ -435,11 +440,6 @@
 -(void)setHeight:(id)height {
 	_height = height;
 	[self updateNSObject:@"height"];
-}
-
--(void)setMarginLeft:(NSNumber *)marginLeft {
-	_marginLeft = marginLeft;
-	[self updateNSObject:@"marginLeft"];
 }
 
 -(void)setSpacingLeft:(NSNumber *)spacingLeft {

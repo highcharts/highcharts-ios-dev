@@ -10,9 +10,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.resetZoom) {
-		params[@"resetZoom"] = self.resetZoom;
-	}
 	if (self.shortMonths) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.shortMonths) {
@@ -31,8 +28,8 @@
 	if (self.drillUpText) {
 		params[@"drillUpText"] = self.drillUpText;
 	}
-	if (self.noData) {
-		params[@"noData"] = self.noData;
+	if (self.resetZoom) {
+		params[@"resetZoom"] = self.resetZoom;
 	}
 	if (self.downloadPDF) {
 		params[@"downloadPDF"] = self.downloadPDF;
@@ -58,6 +55,9 @@
 	if (self.printChart) {
 		params[@"printChart"] = self.printChart;
 	}
+	if (self.downloadCSV) {
+		params[@"downloadCSV"] = self.downloadCSV;
+	}
 	if (self.months) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.months) {
@@ -69,6 +69,9 @@
 			}
 		}
 		params[@"months"] = array;
+	}
+	if (self.noData) {
+		params[@"noData"] = self.noData;
 	}
 	if (self.downloadSVG) {
 		params[@"downloadSVG"] = self.downloadSVG;
@@ -82,9 +85,6 @@
 	if (self.downloadJPEG) {
 		params[@"downloadJPEG"] = self.downloadJPEG;
 	}
-	if (self.downloadPNG) {
-		params[@"downloadPNG"] = self.downloadPNG;
-	}
 	if (self.numericSymbols) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.numericSymbols) {
@@ -97,8 +97,8 @@
 		}
 		params[@"numericSymbols"] = array;
 	}
-	if (self.downloadCSV) {
-		params[@"downloadCSV"] = self.downloadCSV;
+	if (self.downloadPNG) {
+		params[@"downloadPNG"] = self.downloadPNG;
 	}
 	if (self.weekdays) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -129,11 +129,6 @@
 
 # pragma mark - Setters
 
--(void)setResetZoom:(NSString *)resetZoom {
-	_resetZoom = resetZoom;
-	[self updateNSObject:@"resetZoom"];
-}
-
 -(void)setShortMonths:(NSArray<NSString *> *)shortMonths {
 	NSArray<NSString *> *oldValue = _shortMonths;
 	_shortMonths = shortMonths;
@@ -150,9 +145,9 @@
 	[self updateNSObject:@"drillUpText"];
 }
 
--(void)setNoData:(NSString *)noData {
-	_noData = noData;
-	[self updateNSObject:@"noData"];
+-(void)setResetZoom:(NSString *)resetZoom {
+	_resetZoom = resetZoom;
+	[self updateNSObject:@"resetZoom"];
 }
 
 -(void)setDownloadPDF:(NSString *)downloadPDF {
@@ -181,10 +176,20 @@
 	[self updateNSObject:@"printChart"];
 }
 
+-(void)setDownloadCSV:(NSString *)downloadCSV {
+	_downloadCSV = downloadCSV;
+	[self updateNSObject:@"downloadCSV"];
+}
+
 -(void)setMonths:(NSArray<NSString *> *)months {
 	NSArray<NSString *> *oldValue = _months;
 	_months = months;
 	[self updateArrayObject:oldValue newValue:months propertyName:@"months"];
+}
+
+-(void)setNoData:(NSString *)noData {
+	_noData = noData;
+	[self updateNSObject:@"noData"];
 }
 
 -(void)setDownloadSVG:(NSString *)downloadSVG {
@@ -207,20 +212,15 @@
 	[self updateNSObject:@"downloadJPEG"];
 }
 
--(void)setDownloadPNG:(NSString *)downloadPNG {
-	_downloadPNG = downloadPNG;
-	[self updateNSObject:@"downloadPNG"];
-}
-
 -(void)setNumericSymbols:(NSArray<NSString *> *)numericSymbols {
 	NSArray<NSString *> *oldValue = _numericSymbols;
 	_numericSymbols = numericSymbols;
 	[self updateArrayObject:oldValue newValue:numericSymbols propertyName:@"numericSymbols"];
 }
 
--(void)setDownloadCSV:(NSString *)downloadCSV {
-	_downloadCSV = downloadCSV;
-	[self updateNSObject:@"downloadCSV"];
+-(void)setDownloadPNG:(NSString *)downloadPNG {
+	_downloadPNG = downloadPNG;
+	[self updateNSObject:@"downloadPNG"];
 }
 
 -(void)setWeekdays:(NSArray<NSString *> *)weekdays {

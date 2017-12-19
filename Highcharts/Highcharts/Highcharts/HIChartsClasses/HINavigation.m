@@ -10,11 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
 	if (self.animation) {
 		params[@"animation"] = self.animation;
+	}
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
 	}
 	if (self.inactiveColor) {
 		params[@"inactiveColor"] = [self.inactiveColor getData];
@@ -45,14 +45,14 @@
 
 # pragma mark - Setters
 
--(void)setEnabled:(NSNumber *)enabled {
-	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
-}
-
 -(void)setAnimation:(id)animation {
 	_animation = animation;
 	[self updateNSObject:@"animation"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
 }
 
 -(void)setInactiveColor:(HIColor *)inactiveColor {

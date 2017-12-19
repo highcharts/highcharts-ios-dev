@@ -27,23 +27,23 @@
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
 	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
-	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
 	}
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
+	if (self.crisp) {
+		params[@"crisp"] = self.crisp;
+	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
 	}
-	if (self.maxPointWidth) {
-		params[@"maxPointWidth"] = self.maxPointWidth;
-	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.maxPointWidth) {
+		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
@@ -106,11 +106,6 @@
 	[self updateNSObject:@"grouping"];
 }
 
--(void)setCrisp:(NSNumber *)crisp {
-	_crisp = crisp;
-	[self updateNSObject:@"crisp"];
-}
-
 -(void)setEdgeWidth:(NSNumber *)edgeWidth {
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:@"edgeWidth"];
@@ -125,14 +120,14 @@
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
 }
 
+-(void)setCrisp:(NSNumber *)crisp {
+	_crisp = crisp;
+	[self updateNSObject:@"crisp"];
+}
+
 -(void)setPointRange:(NSNumber *)pointRange {
 	_pointRange = pointRange;
 	[self updateNSObject:@"pointRange"];
-}
-
--(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
-	_maxPointWidth = maxPointWidth;
-	[self updateNSObject:@"maxPointWidth"];
 }
 
 -(void)setLineColor:(HIColor *)lineColor {
@@ -142,6 +137,11 @@
 	}
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
+	_maxPointWidth = maxPointWidth;
+	[self updateNSObject:@"maxPointWidth"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {

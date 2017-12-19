@@ -43,7 +43,7 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 @property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
 * description: CSS styles for the words.
-* default: {"fontFamily":"Impact, sans-serif"}
+* default: {"fontFamily":"sans-serif", "fontWeight": "900"}
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**

@@ -16,11 +16,11 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
-	if (self.radius) {
-		params[@"radius"] = self.radius;
-	}
 	if (self.topWidth) {
 		params[@"topWidth"] = self.topWidth;
+	}
+	if (self.radius) {
+		params[@"radius"] = self.radius;
 	}
 	if (self.baseLength) {
 		params[@"baseLength"] = self.baseLength;
@@ -53,14 +53,14 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setRadius:(NSString *)radius {
-	_radius = radius;
-	[self updateNSObject:@"radius"];
-}
-
 -(void)setTopWidth:(NSNumber *)topWidth {
 	_topWidth = topWidth;
 	[self updateNSObject:@"topWidth"];
+}
+
+-(void)setRadius:(NSString *)radius {
+	_radius = radius;
+	[self updateNSObject:@"radius"];
 }
 
 -(void)setBaseLength:(NSString *)baseLength {

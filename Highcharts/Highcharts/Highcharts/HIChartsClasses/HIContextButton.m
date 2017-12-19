@@ -10,14 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.symbolStrokeWidth) {
-		params[@"symbolStrokeWidth"] = self.symbolStrokeWidth;
-	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
-	if (self.align) {
-		params[@"align"] = self.align;
+	if (self.menuClassName) {
+		params[@"menuClassName"] = self.menuClassName;
 	}
 	if (self.symbolSize) {
 		params[@"symbolSize"] = self.symbolSize;
@@ -27,6 +24,9 @@
 	}
 	if (self.buttonSpacing) {
 		params[@"buttonSpacing"] = self.buttonSpacing;
+	}
+	if (self.align) {
+		params[@"align"] = self.align;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -49,8 +49,17 @@
 	if (self.symbolFill) {
 		params[@"symbolFill"] = [self.symbolFill getData];
 	}
+	if (self.theme) {
+		params[@"theme"] = [self.theme getParams];
+	}
+	if (self.symbolStrokeWidth) {
+		params[@"symbolStrokeWidth"] = self.symbolStrokeWidth;
+	}
 	if (self.symbolY) {
 		params[@"symbolY"] = self.symbolY;
+	}
+	if (self.symbolX) {
+		params[@"symbolX"] = self.symbolX;
 	}
 	if (self.symbolStroke) {
 		params[@"symbolStroke"] = [self.symbolStroke getData];
@@ -61,17 +70,8 @@
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
-	if (self.menuClassName) {
-		params[@"menuClassName"] = self.menuClassName;
-	}
 	if (self._titleKey) {
 		params[@"_titleKey"] = self._titleKey;
-	}
-	if (self.symbolX) {
-		params[@"symbolX"] = self.symbolX;
-	}
-	if (self.theme) {
-		params[@"theme"] = [self.theme getParams];
 	}
 	if (self.menuItems) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -90,19 +90,14 @@
 
 # pragma mark - Setters
 
--(void)setSymbolStrokeWidth:(NSNumber *)symbolStrokeWidth {
-	_symbolStrokeWidth = symbolStrokeWidth;
-	[self updateNSObject:@"symbolStrokeWidth"];
-}
-
 -(void)setVerticalAlign:(NSString *)verticalAlign {
 	_verticalAlign = verticalAlign;
 	[self updateNSObject:@"verticalAlign"];
 }
 
--(void)setAlign:(NSString *)align {
-	_align = align;
-	[self updateNSObject:@"align"];
+-(void)setMenuClassName:(NSString *)menuClassName {
+	_menuClassName = menuClassName;
+	[self updateNSObject:@"menuClassName"];
 }
 
 -(void)setSymbolSize:(NSNumber *)symbolSize {
@@ -118,6 +113,11 @@
 -(void)setButtonSpacing:(NSNumber *)buttonSpacing {
 	_buttonSpacing = buttonSpacing;
 	[self updateNSObject:@"buttonSpacing"];
+}
+
+-(void)setAlign:(NSString *)align {
+	_align = align;
+	[self updateNSObject:@"align"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -163,9 +163,28 @@
 	[self updateHIObject:oldValue newValue:symbolFill propertyName:@"symbolFill"];
 }
 
+-(void)setTheme:(HITheme *)theme {
+	HITheme *oldValue = _theme;
+	if(self.theme) {
+		[self removeObserver:self forKeyPath:@"theme.isUpdated"];
+	}
+	_theme = theme;
+	[self updateHIObject:oldValue newValue:theme propertyName:@"theme"];
+}
+
+-(void)setSymbolStrokeWidth:(NSNumber *)symbolStrokeWidth {
+	_symbolStrokeWidth = symbolStrokeWidth;
+	[self updateNSObject:@"symbolStrokeWidth"];
+}
+
 -(void)setSymbolY:(NSNumber *)symbolY {
 	_symbolY = symbolY;
 	[self updateNSObject:@"symbolY"];
+}
+
+-(void)setSymbolX:(NSNumber *)symbolX {
+	_symbolX = symbolX;
+	[self updateNSObject:@"symbolX"];
 }
 
 -(void)setSymbolStroke:(HIColor *)symbolStroke {
@@ -187,28 +206,9 @@
 	[self updateNSObject:@"text"];
 }
 
--(void)setMenuClassName:(NSString *)menuClassName {
-	_menuClassName = menuClassName;
-	[self updateNSObject:@"menuClassName"];
-}
-
 -(void)set_titleKey:(NSString *)_titleKey {
 	__titleKey = _titleKey;
 	[self updateNSObject:@"_titleKey"];
-}
-
--(void)setSymbolX:(NSNumber *)symbolX {
-	_symbolX = symbolX;
-	[self updateNSObject:@"symbolX"];
-}
-
--(void)setTheme:(HITheme *)theme {
-	HITheme *oldValue = _theme;
-	if(self.theme) {
-		[self removeObserver:self forKeyPath:@"theme.isUpdated"];
-	}
-	_theme = theme;
-	[self updateHIObject:oldValue newValue:theme propertyName:@"theme"];
 }
 
 -(void)setMenuItems:(NSArray *)menuItems {

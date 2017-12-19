@@ -16,11 +16,11 @@
 	if (self.fontWeight) {
 		params[@"fontWeight"] = self.fontWeight;
 	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
-	}
 	if (self.textDecoration) {
 		params[@"textDecoration"] = self.textDecoration;
+	}
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
 	}
 	return params;
 }
@@ -37,14 +37,14 @@
 	[self updateNSObject:@"fontWeight"];
 }
 
--(void)setCursor:(NSString *)cursor {
-	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
-}
-
 -(void)setTextDecoration:(NSString *)textDecoration {
 	_textDecoration = textDecoration;
 	[self updateNSObject:@"textDecoration"];
+}
+
+-(void)setCursor:(NSString *)cursor {
+	_cursor = cursor;
+	[self updateNSObject:@"cursor"];
 }
 
 @end

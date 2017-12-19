@@ -60,6 +60,16 @@ to "none".
 */
 @property(nonatomic, readwrite) NSString *overflow;
 /**
+* description: The vertical alignment of a data label. Can be one of top, middle
+or bottom. The default value depends on the data, for instance
+in a column chart, the label is above positive values and below
+negative values.
+
+* accepted values: ["top", "middle", "bottom"]
+* default: middle
+*/
+@property(nonatomic, readwrite) NSString *verticalAlign;
+/**
 * description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
 and-string-formatting#html : use HTML to render the labels.
 * default: false
@@ -225,16 +235,6 @@ The y value.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: The vertical alignment of a data label. Can be one of top, middle
-or bottom. The default value depends on the data, for instance
-in a column chart, the label is above positive values and below
-negative values.
-
-* accepted values: ["top", "middle", "bottom"]
-* default: middle
-*/
-@property(nonatomic, readwrite) NSString *verticalAlign;
-/**
 * description: For points with an extent, like columns or map areas, whether to align the data
 label inside the box or to the actual value point. Defaults to false
 in most cases, true in stacked columns.
@@ -278,15 +278,15 @@ the data label is moved inside the plot area according to the overflow option.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *crop;
 /**
-* description: Decides how the data label will be rotated according to the perimeter
-of the sunburst. It can either be parallel or perpendicular to the
-perimeter.
-series.rotation takes precedence over rotationMode.
+* description: The width of the line connecting the data label to the pie slice.
+In styled mode, the connector stroke width is given in the
+.highcharts-data-label-connector class.
 
-* accepted values: ["perpendicular", "parallel"]
-* default: perpendicular
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/ : Disable the connector
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled connectors
+* default: 1
 */
-@property(nonatomic, readwrite) NSString *rotationMode;
+@property(nonatomic, readwrite) NSNumber *connectorWidth;
 /**
 * description: The distance from the data label to the connector.
 
@@ -315,15 +315,15 @@ shown for data labels outside the pie.
 */
 @property(nonatomic, readwrite) NSNumber *distance;
 /**
-* description: The width of the line connecting the data label to the pie slice.
-In styled mode, the connector stroke width is given in the
-.highcharts-data-label-connector class.
+* description: Decides how the data label will be rotated according to the perimeter
+of the sunburst. It can either be parallel or perpendicular to the
+perimeter.
+series.rotation takes precedence over rotationMode.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/ : Disable the connector
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled connectors
-* default: 1
+* accepted values: ["perpendicular", "parallel"]
+* default: perpendicular
 */
-@property(nonatomic, readwrite) NSNumber *connectorWidth;
+@property(nonatomic, readwrite) NSString *rotationMode;
 /**
 * description: Whether to render the connector as a soft arc or a line with sharp
 break.

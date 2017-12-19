@@ -25,15 +25,15 @@
 @interface HISeries: HIChartsJSONSerializable
 
 /**
-* description: An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
-* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
-*/
-@property(nonatomic, readwrite) NSString *id;
-/**
 * description: When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.
 * default: 0
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
+/**
+* description: An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id
+*/
+@property(nonatomic, readwrite) NSString *id;
 /**
 * description: The name of the series as shown in the legend, tooltip etc.
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name
@@ -303,6 +303,13 @@ large datasets it improves performance.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
+* description: The line cap used for line ends and line joins on the graph.
+
+* accepted values: ["round", "square"]
+* default: round
+*/
+@property(nonatomic, readwrite) NSString *linecap;
+/**
 * description: A wrapper object for all the series options in specific states.
 */
 @property(nonatomic, readwrite) HIStates *states;
@@ -525,6 +532,31 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber *pointStart;
 /**
+* description: A name for the dash style to use for the graph, or for some series types
+the outline of each shape. The value for the dashStyle include:
+
+Solid
+ShortDash
+ShortDot
+ShortDashDot
+ShortDashDotDot
+Dot
+Dash
+LongDash
+DashDot
+LongDashDot
+LongDashDotDot
+
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/ : Possible values demonstrated
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle/ : Chart suitable for printing in black and white
+
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-dashstyle/ : Dotted borders on a map
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",            "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",            "LongDashDot", "LongDashDotDot"]
+* default: Solid
+*/
+@property(nonatomic, readwrite) NSString *dashStyle;
+/**
 * description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
 can be an object configuration containing color, offsetX, offsetY,
  opacity and width.
@@ -556,31 +588,6 @@ in this series for keyboard navigation.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skipKeyboardNavigation;
 /**
-* description: A name for the dash style to use for the graph, or for some series types
-the outline of each shape. The value for the dashStyle include:
-
-Solid
-ShortDash
-ShortDot
-ShortDashDot
-ShortDashDotDot
-Dot
-Dash
-LongDash
-DashDot
-LongDashDot
-LongDashDotDot
-
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/ : Possible values demonstrated
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle/ : Chart suitable for printing in black and white
-
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-dashstyle/ : Dotted borders on a map
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",            "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",            "LongDashDot", "LongDashDotDot"]
-* default: Solid
-*/
-@property(nonatomic, readwrite) NSString *dashStyle;
-/**
 * description: Whether to apply steps to the line. Possible values are left, center
 and right.
 
@@ -607,13 +614,6 @@ the selected option.
 * description: Properties for each single point.
 */
 @property(nonatomic, readwrite) HIPoint *point;
-/**
-* description: The line cap used for line ends and line joins on the graph.
-
-* accepted values: ["round", "square"]
-* default: round
-*/
-@property(nonatomic, readwrite) NSString *linecap;
 
 -(NSDictionary *)getParams;
 

@@ -29,6 +29,13 @@ to read.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *split;
 /**
+* description: A string to append to the tooltip format.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/ : Format demo
+*/
+@property(nonatomic, readwrite) NSString *footerFormat;
+/**
 * description: A string to prepend to each series' y value. Overridable in each
 series' tooltip options object.
 
@@ -42,31 +49,10 @@ mouse out from a point or chart.
 */
 @property(nonatomic, readwrite) NSNumber *hideDelay;
 /**
-* description: The HTML of the tooltip header line. Variables are enclosed by
-curly brackets. Available variables are point.key, series.name,
-series.color and other members from the point and series
-objects. The point.key variable contains the category name, x
-value or datetime string depending on the type of axis. For datetime
-axes, the point.key date format can be set using tooltip.xDateFormat.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A HTML table in the tooltip
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/ : Format demo
-* default: <span style="font-size: 10px">{point.key}</span><br/>
-*/
-@property(nonatomic, readwrite) NSString *headerFormat;
-/**
 * description: A callback function for formatting the HTML output for a single point
 in the tooltip. Like the pointFormat string, but with more flexibility.
 */
 @property(nonatomic, readwrite) HIFunction *pointFormatter;
-/**
-* description: A string to append to the tooltip format.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A table for value alignment
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/ : Format demo
-* default: false
-*/
-@property(nonatomic, readwrite) NSString *footerFormat;
 /**
 * description: For series on a datetime axes, the date format in the tooltip's
 header will by default be guessed based on the closest data points.
@@ -85,6 +71,34 @@ Defaults to:
 }
 */
 @property(nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats;
+/**
+* description: The HTML of the point's line in the tooltip. Variables are enclosed
+by curly brackets. Available variables are point.x, point.y, series.
+name and series.color and other properties on the same form. Furthermore,
+point.y can be extended by the tooltip.valuePrefix and tooltip.
+valueSuffix variables. This can also be overridden for each series,
+which makes it a good hook for displaying units.
+In styled mode, the dot is colored by a class name rather
+than the point color.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/ : A different point format with value suffix
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/ : Format demo
+* default: <span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>
+*/
+@property(nonatomic, readwrite) NSString *pointFormat;
+/**
+* description: The HTML of the tooltip header line. Variables are enclosed by
+curly brackets. Available variables are point.key, series.name,
+series.color and other members from the point and series
+objects. The point.key variable contains the category name, x
+value or datetime string depending on the type of axis. For datetime
+axes, the point.key date format can be set using tooltip.xDateFormat.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/ : A HTML table in the tooltip
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/ : Format demo
+* default: <span style="font-size: 10px">{point.key}</span><br/>
+*/
+@property(nonatomic, readwrite) NSString *headerFormat;
 /**
 * description: Whether the tooltip should follow the finger as it moves on a touch
 device. If this is true and chart.panning is
@@ -121,21 +135,6 @@ tooltip options object.
 */
 @property(nonatomic, readwrite) NSNumber *padding;
 /**
-* description: The HTML of the point's line in the tooltip. Variables are enclosed
-by curly brackets. Available variables are point.x, point.y, series.
-name and series.color and other properties on the same form. Furthermore,
-point.y can be extended by the tooltip.valuePrefix and tooltip.
-valueSuffix variables. This can also be overridden for each series,
-which makes it a good hook for displaying units.
-In styled mode, the dot is colored by a class name rather
-than the point color.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/ : A different point format with value suffix
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/ : Format demo
-* default: <span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>
-*/
-@property(nonatomic, readwrite) NSString *pointFormat;
-/**
 * description: The format for the date in the tooltip header if the X axis is a
 datetime axis. The default is a best guess based on the smallest
 distance between points in the chart.
@@ -156,14 +155,6 @@ tooltip, as opposed to links.
 */
 @property(nonatomic, readwrite) HIFunction *nodeFormatter;
 @property(nonatomic, readwrite) NSNumber *distance;
-/**
-* description: CSS styles for the tooltip. The tooltip can also be styled through
-the CSS class .highcharts-tooltip.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/ : Greater padding, bold text
-* default: { "color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap" }
-*/
-@property(nonatomic, readwrite) HIStyle *style;
 /**
 * description: Use HTML to render the contents of the tooltip instead of SVG. Using
 HTML allows advanced formatting like tables and images in the tooltip.
@@ -189,29 +180,6 @@ The return should be an object containing x and y values, for example
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/positioner/ : A fixed tooltip position on top of the chart
 */
 @property(nonatomic, readwrite) HIFunction *positioner;
-/**
-* description: Whether to apply a drop shadow to the tooltip.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shadow/ : False
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/ : Fixed tooltip position, border and shadow disabled
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
-/**
-* description: Proximity snap for graphs or single points. It defaults to 10 for
-mouse-powered devices and 25 for touch devices.
-Note that in most cases the whole plot area captures the mouse
-movement, and in these cases tooltip.snap doesn't make sense.
-This applies when stickyTracking
-is true (default) and when the tooltip is shared
-or split.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 10 px by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/ : 50 px on graph
-* default: 10/25
-*/
-@property(nonatomic, readwrite) NSNumber *snap;
 /**
 * description: Callback function to format the text of the tooltip from scratch. Return
 false to disable tooltip for a specific point on series.
@@ -254,6 +222,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) HIFunction *formatter;
 /**
+* description: The name of a symbol to use for the border around the tooltip.
+
+* accepted values: ["callout", "square"]
+* default: callout
+*/
+@property(nonatomic, readwrite) NSString *shape;
+/**
 * description: The pixel width of the tooltip border.
 In styled mode, the stroke width is set in the .highcharts-tooltip-box class.
 
@@ -289,6 +264,14 @@ the animation is disabled by default.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
 /**
+* description: Enable or disable the tooltip.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/ : Disabled
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/ : Disable tooltip and show values on chart instead
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+/**
 * description: The radius of the rounded border corners.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 5px by default
@@ -297,14 +280,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 * default: 3
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
-/**
-* description: Enable or disable the tooltip.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/ : Disabled
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/ : Disable tooltip and show values on chart instead
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
 * description: The background color or gradient for the tooltip.
 In styled mode, the stroke width is set in the .highcharts-tooltip-box class.
@@ -319,13 +294,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
-* description: The name of a symbol to use for the border around the tooltip.
-
-* accepted values: ["callout", "square"]
-* default: callout
-*/
-@property(nonatomic, readwrite) NSString *shape;
-/**
 * description: The color of the tooltip border. When null, the border takes the
 color of the corresponding series or point.
 
@@ -337,6 +305,29 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
+* description: Proximity snap for graphs or single points. It defaults to 10 for
+mouse-powered devices and 25 for touch devices.
+Note that in most cases the whole plot area captures the mouse
+movement, and in these cases tooltip.snap doesn't make sense.
+This applies when stickyTracking
+is true (default) and when the tooltip is shared
+or split.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : 10 px by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/ : 50 px on graph
+* default: 10/25
+*/
+@property(nonatomic, readwrite) NSNumber *snap;
+/**
+* description: Whether to apply a drop shadow to the tooltip.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/ : True by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shadow/ : False
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/ : Fixed tooltip position, border and shadow disabled
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+/**
 * description: Since 4.1, the crosshair definitions are moved to the Axis object
 in order for a better separation from the tooltip. See xAxis.crosshair.
 
@@ -344,6 +335,14 @@ in order for a better separation from the tooltip. See xAxis.crosshair.
 * default: true
 */
 @property(nonatomic, readwrite) id crosshairs;
+/**
+* description: CSS styles for the tooltip. The tooltip can also be styled through
+the CSS class .highcharts-tooltip.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/ : Greater padding, bold text
+* default: { "color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap" }
+*/
+@property(nonatomic, readwrite) HIStyle *style;
 
 -(NSDictionary *)getParams;
 

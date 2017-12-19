@@ -10,14 +10,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.fontSize) {
-		params[@"fontSize"] = self.fontSize;
-	}
 	if (self.transition) {
 		params[@"transition"] = self.transition;
 	}
 	if (self.color) {
 		params[@"color"] = self.color;
+	}
+	if (self.fontSize) {
+		params[@"fontSize"] = self.fontSize;
 	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
@@ -30,11 +30,6 @@
 
 # pragma mark - Setters
 
--(void)setFontSize:(NSString *)fontSize {
-	_fontSize = fontSize;
-	[self updateNSObject:@"fontSize"];
-}
-
 -(void)setTransition:(NSString *)transition {
 	_transition = transition;
 	[self updateNSObject:@"transition"];
@@ -43,6 +38,11 @@
 -(void)setColor:(NSString *)color {
 	_color = color;
 	[self updateNSObject:@"color"];
+}
+
+-(void)setFontSize:(NSString *)fontSize {
+	_fontSize = fontSize;
+	[self updateNSObject:@"fontSize"];
 }
 
 -(void)setPadding:(NSString *)padding {

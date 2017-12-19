@@ -10,6 +10,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.itemDistance) {
+		params[@"itemDistance"] = self.itemDistance;
+	}
 	if (self.maxHeight) {
 		params[@"maxHeight"] = self.maxHeight;
 	}
@@ -25,23 +28,17 @@
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
-	if (self.itemMarginBottom) {
-		params[@"itemMarginBottom"] = self.itemMarginBottom;
-	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
+	}
+	if (self.layout) {
+		params[@"layout"] = self.layout;
 	}
 	if (self.itemCheckboxStyle) {
 		params[@"itemCheckboxStyle"] = [self.itemCheckboxStyle getParams];
 	}
-	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getData];
-	}
 	if (self.keyboardNavigation) {
 		params[@"keyboardNavigation"] = [self.keyboardNavigation getParams];
-	}
-	if (self.itemDistance) {
-		params[@"itemDistance"] = self.itemDistance;
 	}
 	if (self.itemWidth) {
 		params[@"itemWidth"] = self.itemWidth;
@@ -55,14 +52,11 @@
 	if (self.itemStyle) {
 		params[@"itemStyle"] = [self.itemStyle getParams];
 	}
-	if (self.layout) {
-		params[@"layout"] = self.layout;
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.symbolPadding) {
 		params[@"symbolPadding"] = self.symbolPadding;
-	}
-	if (self.itemHoverStyle) {
-		params[@"itemHoverStyle"] = [self.itemHoverStyle getParams];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -91,14 +85,20 @@
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
+	if (self.backgroundColor) {
+		params[@"backgroundColor"] = [self.backgroundColor getData];
+	}
 	if (self.rtl) {
 		params[@"rtl"] = self.rtl;
+	}
+	if (self.itemHoverStyle) {
+		params[@"itemHoverStyle"] = [self.itemHoverStyle getParams];
 	}
 	if (self.symbolRadius) {
 		params[@"symbolRadius"] = self.symbolRadius;
 	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+	if (self.itemMarginBottom) {
+		params[@"itemMarginBottom"] = self.itemMarginBottom;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
@@ -132,6 +132,11 @@
 
 # pragma mark - Setters
 
+-(void)setItemDistance:(NSNumber *)itemDistance {
+	_itemDistance = itemDistance;
+	[self updateNSObject:@"itemDistance"];
+}
+
 -(void)setMaxHeight:(NSNumber *)maxHeight {
 	_maxHeight = maxHeight;
 	[self updateNSObject:@"maxHeight"];
@@ -161,14 +166,14 @@
 	[self updateNSObject:@"useHTML"];
 }
 
--(void)setItemMarginBottom:(NSNumber *)itemMarginBottom {
-	_itemMarginBottom = itemMarginBottom;
-	[self updateNSObject:@"itemMarginBottom"];
-}
-
 -(void)setReversed:(NSNumber *)reversed {
 	_reversed = reversed;
 	[self updateNSObject:@"reversed"];
+}
+
+-(void)setLayout:(NSString *)layout {
+	_layout = layout;
+	[self updateNSObject:@"layout"];
 }
 
 -(void)setItemCheckboxStyle:(HIItemCheckboxStyle *)itemCheckboxStyle {
@@ -180,15 +185,6 @@
 	[self updateHIObject:oldValue newValue:itemCheckboxStyle propertyName:@"itemCheckboxStyle"];
 }
 
--(void)setBackgroundColor:(HIColor *)backgroundColor {
-	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
-	_backgroundColor = backgroundColor;
-	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
-}
-
 -(void)setKeyboardNavigation:(HIKeyboardNavigation *)keyboardNavigation {
 	HIKeyboardNavigation *oldValue = _keyboardNavigation;
 	if(self.keyboardNavigation) {
@@ -196,11 +192,6 @@
 	}
 	_keyboardNavigation = keyboardNavigation;
 	[self updateHIObject:oldValue newValue:keyboardNavigation propertyName:@"keyboardNavigation"];
-}
-
--(void)setItemDistance:(NSNumber *)itemDistance {
-	_itemDistance = itemDistance;
-	[self updateNSObject:@"itemDistance"];
 }
 
 -(void)setItemWidth:(NSNumber *)itemWidth {
@@ -231,23 +222,14 @@
 	[self updateHIObject:oldValue newValue:itemStyle propertyName:@"itemStyle"];
 }
 
--(void)setLayout:(NSString *)layout {
-	_layout = layout;
-	[self updateNSObject:@"layout"];
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	_borderRadius = borderRadius;
+	[self updateNSObject:@"borderRadius"];
 }
 
 -(void)setSymbolPadding:(NSNumber *)symbolPadding {
 	_symbolPadding = symbolPadding;
 	[self updateNSObject:@"symbolPadding"];
-}
-
--(void)setItemHoverStyle:(HIItemHoverStyle *)itemHoverStyle {
-	HIItemHoverStyle *oldValue = _itemHoverStyle;
-	if(self.itemHoverStyle) {
-		[self removeObserver:self forKeyPath:@"itemHoverStyle.isUpdated"];
-	}
-	_itemHoverStyle = itemHoverStyle;
-	[self updateHIObject:oldValue newValue:itemHoverStyle propertyName:@"itemHoverStyle"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
@@ -307,9 +289,27 @@
 	[self updateNSObject:@"verticalAlign"];
 }
 
+-(void)setBackgroundColor:(HIColor *)backgroundColor {
+	HIColor *oldValue = _backgroundColor;
+	if(self.backgroundColor) {
+		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
+	}
+	_backgroundColor = backgroundColor;
+	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+}
+
 -(void)setRtl:(NSNumber *)rtl {
 	_rtl = rtl;
 	[self updateNSObject:@"rtl"];
+}
+
+-(void)setItemHoverStyle:(HIItemHoverStyle *)itemHoverStyle {
+	HIItemHoverStyle *oldValue = _itemHoverStyle;
+	if(self.itemHoverStyle) {
+		[self removeObserver:self forKeyPath:@"itemHoverStyle.isUpdated"];
+	}
+	_itemHoverStyle = itemHoverStyle;
+	[self updateHIObject:oldValue newValue:itemHoverStyle propertyName:@"itemHoverStyle"];
 }
 
 -(void)setSymbolRadius:(NSNumber *)symbolRadius {
@@ -317,9 +317,9 @@
 	[self updateNSObject:@"symbolRadius"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+-(void)setItemMarginBottom:(NSNumber *)itemMarginBottom {
+	_itemMarginBottom = itemMarginBottom;
+	[self updateNSObject:@"itemMarginBottom"];
 }
 
 -(void)setAlign:(NSString *)align {

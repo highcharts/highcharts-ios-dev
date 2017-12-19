@@ -31,9 +31,6 @@
 	if (self.type) {
 		params[@"type"] = self.type;
 	}
-	if (self.markerEnd) {
-		params[@"markerEnd"] = self.markerEnd;
-	}
 	if (self.points) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.points) {
@@ -45,6 +42,9 @@
 			}
 		}
 		params[@"points"] = array;
+	}
+	if (self.markerEnd) {
+		params[@"markerEnd"] = self.markerEnd;
 	}
 	if (self.markerStart) {
 		params[@"markerStart"] = self.markerStart;
@@ -104,15 +104,15 @@
 	[self updateNSObject:@"type"];
 }
 
--(void)setMarkerEnd:(NSString *)markerEnd {
-	_markerEnd = markerEnd;
-	[self updateNSObject:@"markerEnd"];
-}
-
 -(void)setPoints:(NSArray *)points {
 	NSArray *oldValue = _points;
 	_points = points;
 	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
+}
+
+-(void)setMarkerEnd:(NSString *)markerEnd {
+	_markerEnd = markerEnd;
+	[self updateNSObject:@"markerEnd"];
 }
 
 -(void)setMarkerStart:(NSString *)markerStart {

@@ -53,6 +53,9 @@
 		}
 		params[@"yAxis"] = array;
 	}
+	if (self.legend) {
+		params[@"legend"] = [self.legend getParams];
+	}
 	if (self.pane) {
 		params[@"pane"] = [self.pane getParams];
 	}
@@ -117,8 +120,8 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.legend) {
-		params[@"legend"] = [self.legend getParams];
+	if (self.keyboardNavigation) {
+		params[@"keyboardNavigation"] = [self.keyboardNavigation getParams];
 	}
 	if (self.navigation) {
 		params[@"navigation"] = [self.navigation getParams];
@@ -190,6 +193,15 @@
 	NSArray<HIYAxis *> *oldValue = _yAxis;
 	_yAxis = yAxis;
 	[self updateArrayObject:oldValue newValue:yAxis propertyName:@"yAxis"];
+}
+
+-(void)setLegend:(HILegend *)legend {
+	HILegend *oldValue = _legend;
+	if(self.legend) {
+		[self removeObserver:self forKeyPath:@"legend.isUpdated"];
+	}
+	_legend = legend;
+	[self updateHIObject:oldValue newValue:legend propertyName:@"legend"];
 }
 
 -(void)setPane:(HIPane *)pane {
@@ -309,13 +321,13 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setLegend:(HILegend *)legend {
-	HILegend *oldValue = _legend;
-	if(self.legend) {
-		[self removeObserver:self forKeyPath:@"legend.isUpdated"];
+-(void)setKeyboardNavigation:(HIKeyboardNavigation *)keyboardNavigation {
+	HIKeyboardNavigation *oldValue = _keyboardNavigation;
+	if(self.keyboardNavigation) {
+		[self removeObserver:self forKeyPath:@"keyboardNavigation.isUpdated"];
 	}
-	_legend = legend;
-	[self updateHIObject:oldValue newValue:legend propertyName:@"legend"];
+	_keyboardNavigation = keyboardNavigation;
+	[self updateHIObject:oldValue newValue:keyboardNavigation propertyName:@"keyboardNavigation"];
 }
 
 -(void)setNavigation:(HINavigation *)navigation {

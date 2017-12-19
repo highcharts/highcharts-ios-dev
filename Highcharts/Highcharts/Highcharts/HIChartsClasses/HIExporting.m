@@ -10,14 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.width) {
-		params[@"width"] = self.width;
-	}
 	if (self.libURL) {
 		params[@"libURL"] = self.libURL;
 	}
-	if (self.error) {
-		params[@"error"] = [self.error getFunction];
+	if (self.chartOptions) {
+		params[@"chartOptions"] = self.chartOptions;
 	}
 	if (self.fallbackToExportServer) {
 		params[@"fallbackToExportServer"] = self.fallbackToExportServer;
@@ -33,6 +30,9 @@
 	}
 	if (self.url) {
 		params[@"url"] = self.url;
+	}
+	if (self.useMultiLevelHeaders) {
+		params[@"useMultiLevelHeaders"] = self.useMultiLevelHeaders;
 	}
 	if (self.buttons) {
 		params[@"buttons"] = [self.buttons getParams];
@@ -52,8 +52,14 @@
 	if (self.menuItemDefinitions) {
 		params[@"menuItemDefinitions"] = self.menuItemDefinitions;
 	}
-	if (self.chartOptions) {
-		params[@"chartOptions"] = self.chartOptions;
+	if (self.error) {
+		params[@"error"] = [self.error getFunction];
+	}
+	if (self.width) {
+		params[@"width"] = self.width;
+	}
+	if (self.useRowspanHeaders) {
+		params[@"useRowspanHeaders"] = self.useRowspanHeaders;
 	}
 	if (self.showTable) {
 		params[@"showTable"] = self.showTable;
@@ -67,28 +73,22 @@
 	if (self.filename) {
 		params[@"filename"] = self.filename;
 	}
+	if (self.tableCaption) {
+		params[@"tableCaption"] = self.tableCaption;
+	}
 	return params;
 }
 
 # pragma mark - Setters
-
--(void)setWidth:(NSNumber *)width {
-	_width = width;
-	[self updateNSObject:@"width"];
-}
 
 -(void)setLibURL:(NSString *)libURL {
 	_libURL = libURL;
 	[self updateNSObject:@"libURL"];
 }
 
--(void)setError:(HIFunction *)error {
-	HIFunction *oldValue = _error;
-	if(self.error) {
-		[self removeObserver:self forKeyPath:@"error.isUpdated"];
-	}
-	_error = error;
-	[self updateHIObject:oldValue newValue:error propertyName:@"error"];
+-(void)setChartOptions:(id)chartOptions {
+	_chartOptions = chartOptions;
+	[self updateNSObject:@"chartOptions"];
 }
 
 -(void)setFallbackToExportServer:(NSNumber *)fallbackToExportServer {
@@ -114,6 +114,11 @@
 -(void)setUrl:(NSString *)url {
 	_url = url;
 	[self updateNSObject:@"url"];
+}
+
+-(void)setUseMultiLevelHeaders:(NSNumber *)useMultiLevelHeaders {
+	_useMultiLevelHeaders = useMultiLevelHeaders;
+	[self updateNSObject:@"useMultiLevelHeaders"];
 }
 
 -(void)setButtons:(HIButtons *)buttons {
@@ -154,9 +159,23 @@
 	[self updateNSObject:@"menuItemDefinitions"];
 }
 
--(void)setChartOptions:(id)chartOptions {
-	_chartOptions = chartOptions;
-	[self updateNSObject:@"chartOptions"];
+-(void)setError:(HIFunction *)error {
+	HIFunction *oldValue = _error;
+	if(self.error) {
+		[self removeObserver:self forKeyPath:@"error.isUpdated"];
+	}
+	_error = error;
+	[self updateHIObject:oldValue newValue:error propertyName:@"error"];
+}
+
+-(void)setWidth:(NSNumber *)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setUseRowspanHeaders:(NSNumber *)useRowspanHeaders {
+	_useRowspanHeaders = useRowspanHeaders;
+	[self updateNSObject:@"useRowspanHeaders"];
 }
 
 -(void)setShowTable:(NSNumber *)showTable {
@@ -177,6 +196,11 @@
 -(void)setFilename:(NSString *)filename {
 	_filename = filename;
 	[self updateNSObject:@"filename"];
+}
+
+-(void)setTableCaption:(id)tableCaption {
+	_tableCaption = tableCaption;
+	[self updateNSObject:@"tableCaption"];
 }
 
 @end

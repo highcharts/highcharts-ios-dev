@@ -33,6 +33,9 @@
 	if (self.neckHeight) {
 		params[@"neckHeight"] = self.neckHeight;
 	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
@@ -65,9 +68,6 @@
 	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -111,6 +111,15 @@
 	[self updateNSObject:@"neckHeight"];
 }
 
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
 -(void)setDepth:(NSNumber *)depth {
 	_depth = depth;
 	[self updateNSObject:@"depth"];
@@ -150,15 +159,6 @@
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {
 	_slicedOffset = slicedOffset;
 	[self updateNSObject:@"slicedOffset"];
-}
-
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

@@ -32,6 +32,15 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSString *stemDashStyle;
 /**
+* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/ : Grouping disabled
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;
+/**
 * description: The minimal height for a column or width for a bar. By default,
 0 values are not shown. To visualize a 0 (or close to zero) point,
 set the minimal point length to a pixel value like 3. In stacked
@@ -193,15 +202,6 @@ of the global colors when colorByPoint is true.
  except it defaults to the same color as the column.
 */
 @property(nonatomic, readwrite) HIColor *edgeColor;
-/**
-* description: Whether to group non-stacked columns or to let them render independent
-of each other. Non-grouped columns will be laid out individually
-and overlap each other.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/ : Grouping disabled
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;
 /**
 * description: Padding between each column or bar, in x axis units.
 

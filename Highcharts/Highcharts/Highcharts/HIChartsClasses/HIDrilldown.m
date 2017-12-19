@@ -10,9 +10,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.allowPointDrilldown) {
-		params[@"allowPointDrilldown"] = self.allowPointDrilldown;
-	}
 	if (self.activeAxisLabelStyle) {
 		params[@"activeAxisLabelStyle"] = [self.activeAxisLabelStyle getParams];
 	}
@@ -21,6 +18,9 @@
 	}
 	if (self.activeDataLabelStyle) {
 		params[@"activeDataLabelStyle"] = [self.activeDataLabelStyle getParams];
+	}
+	if (self.allowPointDrilldown) {
+		params[@"allowPointDrilldown"] = self.allowPointDrilldown;
 	}
 	if (self.series) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -41,11 +41,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setAllowPointDrilldown:(NSNumber *)allowPointDrilldown {
-	_allowPointDrilldown = allowPointDrilldown;
-	[self updateNSObject:@"allowPointDrilldown"];
-}
 
 -(void)setActiveAxisLabelStyle:(HIActiveAxisLabelStyle *)activeAxisLabelStyle {
 	HIActiveAxisLabelStyle *oldValue = _activeAxisLabelStyle;
@@ -72,6 +67,11 @@
 	}
 	_activeDataLabelStyle = activeDataLabelStyle;
 	[self updateHIObject:oldValue newValue:activeDataLabelStyle propertyName:@"activeDataLabelStyle"];
+}
+
+-(void)setAllowPointDrilldown:(NSNumber *)allowPointDrilldown {
+	_allowPointDrilldown = allowPointDrilldown;
+	[self updateNSObject:@"allowPointDrilldown"];
 }
 
 -(void)setSeries:(NSArray *)series {

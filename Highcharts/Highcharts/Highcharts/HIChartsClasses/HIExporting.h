@@ -17,15 +17,6 @@
 @interface HIExporting: HIChartsJSONSerializable
 
 /**
-* description: The pixel width of charts exported to PNG or JPG. As of Highcharts
-3.0, the default pixel width is a function of the chart.width or exporting.sourceWidth and the
-exporting.scale.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/width/ : Export to 200px wide images
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSNumber *width;
-/**
 * description: Path where Highcharts will look for export module dependencies to
 load on demand if they don't already exist on window. Should currently
 point to location of https://github.com/canvg/canvg : CanVG library,
@@ -35,12 +26,14 @@ js : svg2pdf.js, required for client side export in certain browsers.
 */
 @property(nonatomic, readwrite) NSString *libURL;
 /**
-* description: Function to call if the offline-exporting module fails to export
-a chart on the client side, and fallbackToExportServer is disabled. If left undefined, an exception
-is thrown instead.
-* default: undefined
+* description: Additional chart options to be merged into an exported chart. For
+example, a common use case is to add data labels to improve readability
+of the exported chart, or to add a printer-friendly color scheme.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/ : Added data labels
+* default: null
 */
-@property(nonatomic, readwrite) HIFunction *error;
+@property(nonatomic, readwrite) id chartOptions;
 /**
 * description: Whether or not to fall back to the export server if the offline-exporting
 module is unable to export the chart on the client side.
@@ -79,6 +72,16 @@ format. By default this points to Highchart's free web service.
 * default: https://export.highcharts.com/
 */
 @property(nonatomic, readwrite) NSString *url;
+/**
+* description: Export-data module required. Use multi level headers in data table.
+If csv.columnHeaderFormatter
+is defined, it has to return objects in order for multi level headers
+to work.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table : Multiple table headers
+* default: True
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *useMultiLevelHeaders;
 /**
 * description: Options for the export related buttons, print and export. In addition
 to the default buttons listed here, custom buttons can be added.
@@ -145,14 +148,29 @@ If internationalization is required, the key to a language string
 */
 @property(nonatomic, readwrite) id menuItemDefinitions;
 /**
-* description: Additional chart options to be merged into an exported chart. For
-example, a common use case is to add data labels to improve readability
-of the exported chart, or to add a printer-friendly color scheme.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/ : Added data labels
-* default: null
+* description: Function to call if the offline-exporting module fails to export
+a chart on the client side, and fallbackToExportServer is disabled. If left undefined, an exception
+is thrown instead.
+* default: undefined
 */
-@property(nonatomic, readwrite) id chartOptions;
+@property(nonatomic, readwrite) HIFunction *error;
+/**
+* description: The pixel width of charts exported to PNG or JPG. As of Highcharts
+3.0, the default pixel width is a function of the chart.width or exporting.sourceWidth and the
+exporting.scale.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/width/ : Export to 200px wide images
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSNumber *width;
+/**
+* description: Export-data module required. If using multi level table headers, use
+rowspans for headers that have only one level.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table : Multiple table headers
+* default: True
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *useRowspanHeaders;
 /**
 * description: Export-data module required. Show a HTML table below the chart with 
 the chart's current data.
@@ -179,6 +197,14 @@ hide the context button, but API methods will still be available.
 * default: chart
 */
 @property(nonatomic, readwrite) NSString *filename;
+/**
+* description: Export-data module required. Caption for the data table. Same as
+chart title by default. Set to false to disable.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table : Multiple table headers
+* default: undefined
+*/
+@property(nonatomic, readwrite) id /* Bool, NSString */ tableCaption;
 
 -(NSDictionary *)getParams;
 

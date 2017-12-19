@@ -10,6 +10,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.showEmpty) {
+		params[@"showEmpty"] = self.showEmpty;
+	}
 	if (self.offset) {
 		params[@"offset"] = self.offset;
 	}
@@ -30,12 +33,6 @@
 			}
 		}
 		params[@"plotLines"] = array;
-	}
-	if (self.showEmpty) {
-		params[@"showEmpty"] = self.showEmpty;
-	}
-	if (self.endOnTick) {
-		params[@"endOnTick"] = self.endOnTick;
 	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
@@ -97,17 +94,35 @@
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
+	if (self.categories) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.categories) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"categories"] = array;
+	}
 	if (self.minRange) {
 		params[@"minRange"] = self.minRange;
 	}
 	if (self.minorTickPosition) {
 		params[@"minorTickPosition"] = self.minorTickPosition;
 	}
+	if (self.endOnTick) {
+		params[@"endOnTick"] = self.endOnTick;
+	}
 	if (self.gridLineWidth) {
 		params[@"gridLineWidth"] = self.gridLineWidth;
 	}
 	if (self.tickInterval) {
 		params[@"tickInterval"] = self.tickInterval;
+	}
+	if (self.pane) {
+		params[@"pane"] = self.pane;
 	}
 	if (self.units) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -121,11 +136,14 @@
 		}
 		params[@"units"] = array;
 	}
+	if (self.maxPadding) {
+		params[@"maxPadding"] = self.maxPadding;
+	}
 	if (self.minorTickLength) {
 		params[@"minorTickLength"] = self.minorTickLength;
 	}
-	if (self.minorTicks) {
-		params[@"minorTicks"] = self.minorTicks;
+	if (self.crosshair) {
+		params[@"crosshair"] = [self.crosshair getParams];
 	}
 	if (self.tickPixelInterval) {
 		params[@"tickPixelInterval"] = self.tickPixelInterval;
@@ -136,26 +154,14 @@
 	if (self.floor) {
 		params[@"floor"] = self.floor;
 	}
-	if (self.gridLineDashStyle) {
-		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
-	}
 	if (self.minTickInterval) {
 		params[@"minTickInterval"] = self.minTickInterval;
 	}
+	if (self.minorGridLineDashStyle) {
+		params[@"minorGridLineDashStyle"] = self.minorGridLineDashStyle;
+	}
 	if (self.tickmarkPlacement) {
 		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
-	}
-	if (self.categories) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.categories) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"categories"] = array;
 	}
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
@@ -163,11 +169,11 @@
 	if (self.minorTickWidth) {
 		params[@"minorTickWidth"] = self.minorTickWidth;
 	}
+	if (self.ceiling) {
+		params[@"ceiling"] = self.ceiling;
+	}
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
-	}
-	if (self.maxPadding) {
-		params[@"maxPadding"] = self.maxPadding;
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -181,17 +187,17 @@
 		}
 		params[@"plotBands"] = array;
 	}
+	if (self.minorTickInterval) {
+		params[@"minorTickInterval"] = self.minorTickInterval;
+	}
 	if (self.min) {
 		params[@"min"] = self.min;
 	}
+	if (self.minorTicks) {
+		params[@"minorTicks"] = self.minorTicks;
+	}
 	if (self.max) {
 		params[@"max"] = self.max;
-	}
-	if (self.ceiling) {
-		params[@"ceiling"] = self.ceiling;
-	}
-	if (self.minorTickInterval) {
-		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
@@ -199,17 +205,14 @@
 	if (self.opposite) {
 		params[@"opposite"] = self.opposite;
 	}
-	if (self.minorGridLineDashStyle) {
-		params[@"minorGridLineDashStyle"] = self.minorGridLineDashStyle;
-	}
 	if (self.tickAmount) {
 		params[@"tickAmount"] = self.tickAmount;
 	}
 	if (self.allowDecimals) {
 		params[@"allowDecimals"] = self.allowDecimals;
 	}
-	if (self.crosshair) {
-		params[@"crosshair"] = [self.crosshair getParams];
+	if (self.gridLineDashStyle) {
+		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
 	}
 	if (self.tickPositions) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -222,6 +225,9 @@
 			}
 		}
 		params[@"tickPositions"] = array;
+	}
+	if (self.definition) {
+		params[@"definition"] = self.definition;
 	}
 	if (self.showLastLabel) {
 		params[@"showLastLabel"] = self.showLastLabel;
@@ -241,9 +247,6 @@
 	if (self.tickPosition) {
 		params[@"tickPosition"] = self.tickPosition;
 	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
-	}
 	if (self.startOnTick) {
 		params[@"startOnTick"] = self.startOnTick;
 	}
@@ -260,6 +263,11 @@
 }
 
 # pragma mark - Setters
+
+-(void)setShowEmpty:(NSNumber *)showEmpty {
+	_showEmpty = showEmpty;
+	[self updateNSObject:@"showEmpty"];
+}
 
 -(void)setOffset:(NSNumber *)offset {
 	_offset = offset;
@@ -284,16 +292,6 @@
 	NSArray <HIPlotLines *> *oldValue = _plotLines;
 	_plotLines = plotLines;
 	[self updateArrayObject:oldValue newValue:plotLines propertyName:@"plotLines"];
-}
-
--(void)setShowEmpty:(NSNumber *)showEmpty {
-	_showEmpty = showEmpty;
-	[self updateNSObject:@"showEmpty"];
-}
-
--(void)setEndOnTick:(NSNumber *)endOnTick {
-	_endOnTick = endOnTick;
-	[self updateNSObject:@"endOnTick"];
 }
 
 -(void)setReversed:(NSNumber *)reversed {
@@ -402,6 +400,12 @@
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
+-(void)setCategories:(NSArray<NSString *> *)categories {
+	NSArray<NSString *> *oldValue = _categories;
+	_categories = categories;
+	[self updateArrayObject:oldValue newValue:categories propertyName:@"categories"];
+}
+
 -(void)setMinRange:(NSNumber *)minRange {
 	_minRange = minRange;
 	[self updateNSObject:@"minRange"];
@@ -410,6 +414,11 @@
 -(void)setMinorTickPosition:(NSString *)minorTickPosition {
 	_minorTickPosition = minorTickPosition;
 	[self updateNSObject:@"minorTickPosition"];
+}
+
+-(void)setEndOnTick:(NSNumber *)endOnTick {
+	_endOnTick = endOnTick;
+	[self updateNSObject:@"endOnTick"];
 }
 
 -(void)setGridLineWidth:(NSNumber *)gridLineWidth {
@@ -422,10 +431,20 @@
 	[self updateNSObject:@"tickInterval"];
 }
 
+-(void)setPane:(NSNumber *)pane {
+	_pane = pane;
+	[self updateNSObject:@"pane"];
+}
+
 -(void)setUnits:(NSArray *)units {
 	NSArray *oldValue = _units;
 	_units = units;
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
+}
+
+-(void)setMaxPadding:(NSNumber *)maxPadding {
+	_maxPadding = maxPadding;
+	[self updateNSObject:@"maxPadding"];
 }
 
 -(void)setMinorTickLength:(NSNumber *)minorTickLength {
@@ -433,9 +452,13 @@
 	[self updateNSObject:@"minorTickLength"];
 }
 
--(void)setMinorTicks:(NSNumber *)minorTicks {
-	_minorTicks = minorTicks;
-	[self updateNSObject:@"minorTicks"];
+-(void)setCrosshair:(HICrosshair *)crosshair {
+	HICrosshair *oldValue = _crosshair;
+	if(self.crosshair) {
+		[self removeObserver:self forKeyPath:@"crosshair.isUpdated"];
+	}
+	_crosshair = crosshair;
+	[self updateHIObject:oldValue newValue:crosshair propertyName:@"crosshair"];
 }
 
 -(void)setTickPixelInterval:(NSNumber *)tickPixelInterval {
@@ -453,25 +476,19 @@
 	[self updateNSObject:@"floor"];
 }
 
--(void)setGridLineDashStyle:(NSString *)gridLineDashStyle {
-	_gridLineDashStyle = gridLineDashStyle;
-	[self updateNSObject:@"gridLineDashStyle"];
-}
-
 -(void)setMinTickInterval:(NSNumber *)minTickInterval {
 	_minTickInterval = minTickInterval;
 	[self updateNSObject:@"minTickInterval"];
 }
 
+-(void)setMinorGridLineDashStyle:(NSString *)minorGridLineDashStyle {
+	_minorGridLineDashStyle = minorGridLineDashStyle;
+	[self updateNSObject:@"minorGridLineDashStyle"];
+}
+
 -(void)setTickmarkPlacement:(NSString *)tickmarkPlacement {
 	_tickmarkPlacement = tickmarkPlacement;
 	[self updateNSObject:@"tickmarkPlacement"];
-}
-
--(void)setCategories:(NSArray<NSString *> *)categories {
-	NSArray<NSString *> *oldValue = _categories;
-	_categories = categories;
-	[self updateArrayObject:oldValue newValue:categories propertyName:@"categories"];
 }
 
 -(void)setGridZIndex:(NSNumber *)gridZIndex {
@@ -484,6 +501,11 @@
 	[self updateNSObject:@"minorTickWidth"];
 }
 
+-(void)setCeiling:(NSNumber *)ceiling {
+	_ceiling = ceiling;
+	[self updateNSObject:@"ceiling"];
+}
+
 -(void)setMinorTickColor:(HIColor *)minorTickColor {
 	HIColor *oldValue = _minorTickColor;
 	if(self.minorTickColor) {
@@ -493,15 +515,15 @@
 	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
 }
 
--(void)setMaxPadding:(NSNumber *)maxPadding {
-	_maxPadding = maxPadding;
-	[self updateNSObject:@"maxPadding"];
-}
-
 -(void)setPlotBands:(NSArray <HIPlotBands *> *)plotBands {
 	NSArray <HIPlotBands *> *oldValue = _plotBands;
 	_plotBands = plotBands;
 	[self updateArrayObject:oldValue newValue:plotBands propertyName:@"plotBands"];
+}
+
+-(void)setMinorTickInterval:(id)minorTickInterval {
+	_minorTickInterval = minorTickInterval;
+	[self updateNSObject:@"minorTickInterval"];
 }
 
 -(void)setMin:(NSNumber *)min {
@@ -509,19 +531,14 @@
 	[self updateNSObject:@"min"];
 }
 
+-(void)setMinorTicks:(NSNumber *)minorTicks {
+	_minorTicks = minorTicks;
+	[self updateNSObject:@"minorTicks"];
+}
+
 -(void)setMax:(NSNumber *)max {
 	_max = max;
 	[self updateNSObject:@"max"];
-}
-
--(void)setCeiling:(NSNumber *)ceiling {
-	_ceiling = ceiling;
-	[self updateNSObject:@"ceiling"];
-}
-
--(void)setMinorTickInterval:(id)minorTickInterval {
-	_minorTickInterval = minorTickInterval;
-	[self updateNSObject:@"minorTickInterval"];
 }
 
 -(void)setLineColor:(HIColor *)lineColor {
@@ -538,11 +555,6 @@
 	[self updateNSObject:@"opposite"];
 }
 
--(void)setMinorGridLineDashStyle:(NSString *)minorGridLineDashStyle {
-	_minorGridLineDashStyle = minorGridLineDashStyle;
-	[self updateNSObject:@"minorGridLineDashStyle"];
-}
-
 -(void)setTickAmount:(NSNumber *)tickAmount {
 	_tickAmount = tickAmount;
 	[self updateNSObject:@"tickAmount"];
@@ -553,19 +565,20 @@
 	[self updateNSObject:@"allowDecimals"];
 }
 
--(void)setCrosshair:(HICrosshair *)crosshair {
-	HICrosshair *oldValue = _crosshair;
-	if(self.crosshair) {
-		[self removeObserver:self forKeyPath:@"crosshair.isUpdated"];
-	}
-	_crosshair = crosshair;
-	[self updateHIObject:oldValue newValue:crosshair propertyName:@"crosshair"];
+-(void)setGridLineDashStyle:(NSString *)gridLineDashStyle {
+	_gridLineDashStyle = gridLineDashStyle;
+	[self updateNSObject:@"gridLineDashStyle"];
 }
 
 -(void)setTickPositions:(NSArray<NSNumber *> *)tickPositions {
 	NSArray<NSNumber *> *oldValue = _tickPositions;
 	_tickPositions = tickPositions;
 	[self updateArrayObject:oldValue newValue:tickPositions propertyName:@"tickPositions"];
+}
+
+-(void)setDefinition:(NSString *)definition {
+	_definition = definition;
+	[self updateNSObject:@"definition"];
 }
 
 -(void)setShowLastLabel:(NSNumber *)showLastLabel {
@@ -604,11 +617,6 @@
 -(void)setTickPosition:(NSString *)tickPosition {
 	_tickPosition = tickPosition;
 	[self updateNSObject:@"tickPosition"];
-}
-
--(void)setDefinition:(NSString *)definition {
-	_definition = definition;
-	[self updateNSObject:@"definition"];
 }
 
 -(void)setStartOnTick:(NSNumber *)startOnTick {

@@ -10,14 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.textAlign) {
-		params[@"textAlign"] = self.textAlign;
+	if (self.align) {
+		params[@"align"] = self.align;
 	}
 	if (self.formatter) {
 		params[@"formatter"] = [self.formatter getFunction];
-	}
-	if (self.align) {
-		params[@"align"] = self.align;
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
@@ -31,14 +28,14 @@
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
-	if (self.style) {
-		params[@"style"] = [self.style getParams];
-	}
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
+	}
+	if (self.textAlign) {
+		params[@"textAlign"] = self.textAlign;
 	}
 	if (self.format) {
 		params[@"format"] = self.format;
@@ -46,14 +43,17 @@
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
+	if (self.style) {
+		params[@"style"] = [self.style getParams];
+	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setTextAlign:(NSString *)textAlign {
-	_textAlign = textAlign;
-	[self updateNSObject:@"textAlign"];
+-(void)setAlign:(NSString *)align {
+	_align = align;
+	[self updateNSObject:@"align"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {
@@ -63,11 +63,6 @@
 	}
 	_formatter = formatter;
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
-}
-
--(void)setAlign:(NSString *)align {
-	_align = align;
-	[self updateNSObject:@"align"];
 }
 
 -(void)setY:(NSNumber *)y {
@@ -90,15 +85,6 @@
 	[self updateNSObject:@"allowOverlap"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
-	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
-}
-
 -(void)setX:(NSNumber *)x {
 	_x = x;
 	[self updateNSObject:@"x"];
@@ -109,6 +95,11 @@
 	[self updateNSObject:@"enabled"];
 }
 
+-(void)setTextAlign:(NSString *)textAlign {
+	_textAlign = textAlign;
+	[self updateNSObject:@"textAlign"];
+}
+
 -(void)setFormat:(NSString *)format {
 	_format = format;
 	[self updateNSObject:@"format"];
@@ -117,6 +108,15 @@
 -(void)setUseHTML:(NSNumber *)useHTML {
 	_useHTML = useHTML;
 	[self updateNSObject:@"useHTML"];
+}
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 @end

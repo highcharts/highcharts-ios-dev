@@ -27,6 +27,9 @@
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
 	}
+	if (self.levelIsConstant) {
+		params[@"levelIsConstant"] = self.levelIsConstant;
+	}
 	if (self.levels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.levels) {
@@ -39,15 +42,15 @@
 		}
 		params[@"levels"] = array;
 	}
-	if (self.levelIsConstant) {
-		params[@"levelIsConstant"] = self.levelIsConstant;
-	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
+	}
+	if (self.slicedOffset) {
+		params[@"slicedOffset"] = self.slicedOffset;
 	}
 	if (self.allowDrillToNode) {
 		params[@"allowDrillToNode"] = self.allowDrillToNode;
@@ -81,21 +84,26 @@
 	[self updateNSObject:@"startAngle"];
 }
 
+-(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
+	_levelIsConstant = levelIsConstant;
+	[self updateNSObject:@"levelIsConstant"];
+}
+
 -(void)setLevels:(NSArray <HILevels *> *)levels {
 	NSArray <HILevels *> *oldValue = _levels;
 	_levels = levels;
 	[self updateArrayObject:oldValue newValue:levels propertyName:@"levels"];
 }
 
--(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
-	_levelIsConstant = levelIsConstant;
-	[self updateNSObject:@"levelIsConstant"];
-}
-
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	_slicedOffset = slicedOffset;
+	[self updateNSObject:@"slicedOffset"];
 }
 
 -(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {

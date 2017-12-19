@@ -13,29 +13,29 @@
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
+	if (self.bottom) {
+		params[@"bottom"] = [self.bottom getParams];
+	}
 	if (self.size) {
 		params[@"size"] = self.size;
 	}
-	if (self.right) {
-		params[@"right"] = [self.right getParams];
+	if (self.side) {
+		params[@"side"] = [self.side getParams];
 	}
 	if (self.top) {
 		params[@"top"] = [self.top getParams];
 	}
+	if (self.right) {
+		params[@"right"] = [self.right getParams];
+	}
 	if (self.back) {
 		params[@"back"] = [self.back getParams];
-	}
-	if (self.side) {
-		params[@"side"] = [self.side getParams];
 	}
 	if (self.front) {
 		params[@"front"] = [self.front getParams];
 	}
 	if (self.left) {
 		params[@"left"] = [self.left getParams];
-	}
-	if (self.bottom) {
-		params[@"bottom"] = [self.bottom getParams];
 	}
 	return params;
 }
@@ -47,18 +47,27 @@
 	[self updateNSObject:@"visible"];
 }
 
+-(void)setBottom:(HIBottom *)bottom {
+	HIBottom *oldValue = _bottom;
+	if(self.bottom) {
+		[self removeObserver:self forKeyPath:@"bottom.isUpdated"];
+	}
+	_bottom = bottom;
+	[self updateHIObject:oldValue newValue:bottom propertyName:@"bottom"];
+}
+
 -(void)setSize:(NSNumber *)size {
 	_size = size;
 	[self updateNSObject:@"size"];
 }
 
--(void)setRight:(HIRight *)right {
-	HIRight *oldValue = _right;
-	if(self.right) {
-		[self removeObserver:self forKeyPath:@"right.isUpdated"];
+-(void)setSide:(HISide *)side {
+	HISide *oldValue = _side;
+	if(self.side) {
+		[self removeObserver:self forKeyPath:@"side.isUpdated"];
 	}
-	_right = right;
-	[self updateHIObject:oldValue newValue:right propertyName:@"right"];
+	_side = side;
+	[self updateHIObject:oldValue newValue:side propertyName:@"side"];
 }
 
 -(void)setTop:(HITop *)top {
@@ -70,6 +79,15 @@
 	[self updateHIObject:oldValue newValue:top propertyName:@"top"];
 }
 
+-(void)setRight:(HIRight *)right {
+	HIRight *oldValue = _right;
+	if(self.right) {
+		[self removeObserver:self forKeyPath:@"right.isUpdated"];
+	}
+	_right = right;
+	[self updateHIObject:oldValue newValue:right propertyName:@"right"];
+}
+
 -(void)setBack:(HIBack *)back {
 	HIBack *oldValue = _back;
 	if(self.back) {
@@ -77,15 +95,6 @@
 	}
 	_back = back;
 	[self updateHIObject:oldValue newValue:back propertyName:@"back"];
-}
-
--(void)setSide:(HISide *)side {
-	HISide *oldValue = _side;
-	if(self.side) {
-		[self removeObserver:self forKeyPath:@"side.isUpdated"];
-	}
-	_side = side;
-	[self updateHIObject:oldValue newValue:side propertyName:@"side"];
 }
 
 -(void)setFront:(HIFront *)front {
@@ -104,15 +113,6 @@
 	}
 	_left = left;
 	[self updateHIObject:oldValue newValue:left propertyName:@"left"];
-}
-
--(void)setBottom:(HIBottom *)bottom {
-	HIBottom *oldValue = _bottom;
-	if(self.bottom) {
-		[self removeObserver:self forKeyPath:@"bottom.isUpdated"];
-	}
-	_bottom = bottom;
-	[self updateHIObject:oldValue newValue:bottom propertyName:@"bottom"];
 }
 
 @end

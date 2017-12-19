@@ -19,14 +19,14 @@
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
-	if (self.outerRadius) {
-		params[@"outerRadius"] = self.outerRadius;
-	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.outerRadius) {
+		params[@"outerRadius"] = self.outerRadius;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -55,11 +55,6 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
--(void)setOuterRadius:(id)outerRadius {
-	_outerRadius = outerRadius;
-	[self updateNSObject:@"outerRadius"];
-}
-
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
 	if(self.borderColor) {
@@ -72,6 +67,11 @@
 -(void)setBorderWidth:(NSNumber *)borderWidth {
 	_borderWidth = borderWidth;
 	[self updateNSObject:@"borderWidth"];
+}
+
+-(void)setOuterRadius:(id)outerRadius {
+	_outerRadius = outerRadius;
+	[self updateNSObject:@"outerRadius"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {

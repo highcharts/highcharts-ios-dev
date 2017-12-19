@@ -49,17 +49,20 @@
 	if (self.afterSetExtremes) {
 		params[@"afterSetExtremes"] = [self.afterSetExtremes getFunction];
 	}
-	if (self.pointInBreak) {
-		params[@"pointInBreak"] = [self.pointInBreak getFunction];
-	}
 	if (self.setExtremes) {
 		params[@"setExtremes"] = [self.setExtremes getFunction];
+	}
+	if (self.afterBreaks) {
+		params[@"afterBreaks"] = [self.afterBreaks getFunction];
 	}
 	if (self.pointBreak) {
 		params[@"pointBreak"] = [self.pointBreak getFunction];
 	}
-	if (self.afterBreaks) {
-		params[@"afterBreaks"] = [self.afterBreaks getFunction];
+	if (self.pointInBreak) {
+		params[@"pointInBreak"] = [self.pointInBreak getFunction];
+	}
+	if (self.beforePrint) {
+		params[@"beforePrint"] = [self.beforePrint getFunction];
 	}
 	if (self.selection) {
 		params[@"selection"] = [self.selection getFunction];
@@ -70,8 +73,8 @@
 	if (self.load) {
 		params[@"load"] = [self.load getFunction];
 	}
-	if (self.drillupall) {
-		params[@"drillupall"] = [self.drillupall getFunction];
+	if (self.afterPrint) {
+		params[@"afterPrint"] = [self.afterPrint getFunction];
 	}
 	if (self.drillup) {
 		params[@"drillup"] = [self.drillup getFunction];
@@ -79,14 +82,11 @@
 	if (self.redraw) {
 		params[@"redraw"] = [self.redraw getFunction];
 	}
+	if (self.drillupall) {
+		params[@"drillupall"] = [self.drillupall getFunction];
+	}
 	if (self.drilldown) {
 		params[@"drilldown"] = [self.drilldown getFunction];
-	}
-	if (self.afterPrint) {
-		params[@"afterPrint"] = [self.afterPrint getFunction];
-	}
-	if (self.beforePrint) {
-		params[@"beforePrint"] = [self.beforePrint getFunction];
 	}
 	if (self.addSeries) {
 		params[@"addSeries"] = [self.addSeries getFunction];
@@ -213,15 +213,6 @@
 	[self updateHIObject:oldValue newValue:afterSetExtremes propertyName:@"afterSetExtremes"];
 }
 
--(void)setPointInBreak:(HIFunction *)pointInBreak {
-	HIFunction *oldValue = _pointInBreak;
-	if(self.pointInBreak) {
-		[self removeObserver:self forKeyPath:@"pointInBreak.isUpdated"];
-	}
-	_pointInBreak = pointInBreak;
-	[self updateHIObject:oldValue newValue:pointInBreak propertyName:@"pointInBreak"];
-}
-
 -(void)setSetExtremes:(HIFunction *)setExtremes {
 	HIFunction *oldValue = _setExtremes;
 	if(self.setExtremes) {
@@ -229,6 +220,15 @@
 	}
 	_setExtremes = setExtremes;
 	[self updateHIObject:oldValue newValue:setExtremes propertyName:@"setExtremes"];
+}
+
+-(void)setAfterBreaks:(HIFunction *)afterBreaks {
+	HIFunction *oldValue = _afterBreaks;
+	if(self.afterBreaks) {
+		[self removeObserver:self forKeyPath:@"afterBreaks.isUpdated"];
+	}
+	_afterBreaks = afterBreaks;
+	[self updateHIObject:oldValue newValue:afterBreaks propertyName:@"afterBreaks"];
 }
 
 -(void)setPointBreak:(HIFunction *)pointBreak {
@@ -240,13 +240,22 @@
 	[self updateHIObject:oldValue newValue:pointBreak propertyName:@"pointBreak"];
 }
 
--(void)setAfterBreaks:(HIFunction *)afterBreaks {
-	HIFunction *oldValue = _afterBreaks;
-	if(self.afterBreaks) {
-		[self removeObserver:self forKeyPath:@"afterBreaks.isUpdated"];
+-(void)setPointInBreak:(HIFunction *)pointInBreak {
+	HIFunction *oldValue = _pointInBreak;
+	if(self.pointInBreak) {
+		[self removeObserver:self forKeyPath:@"pointInBreak.isUpdated"];
 	}
-	_afterBreaks = afterBreaks;
-	[self updateHIObject:oldValue newValue:afterBreaks propertyName:@"afterBreaks"];
+	_pointInBreak = pointInBreak;
+	[self updateHIObject:oldValue newValue:pointInBreak propertyName:@"pointInBreak"];
+}
+
+-(void)setBeforePrint:(HIFunction *)beforePrint {
+	HIFunction *oldValue = _beforePrint;
+	if(self.beforePrint) {
+		[self removeObserver:self forKeyPath:@"beforePrint.isUpdated"];
+	}
+	_beforePrint = beforePrint;
+	[self updateHIObject:oldValue newValue:beforePrint propertyName:@"beforePrint"];
 }
 
 -(void)setSelection:(HIFunction *)selection {
@@ -276,13 +285,13 @@
 	[self updateHIObject:oldValue newValue:load propertyName:@"load"];
 }
 
--(void)setDrillupall:(HIFunction *)drillupall {
-	HIFunction *oldValue = _drillupall;
-	if(self.drillupall) {
-		[self removeObserver:self forKeyPath:@"drillupall.isUpdated"];
+-(void)setAfterPrint:(HIFunction *)afterPrint {
+	HIFunction *oldValue = _afterPrint;
+	if(self.afterPrint) {
+		[self removeObserver:self forKeyPath:@"afterPrint.isUpdated"];
 	}
-	_drillupall = drillupall;
-	[self updateHIObject:oldValue newValue:drillupall propertyName:@"drillupall"];
+	_afterPrint = afterPrint;
+	[self updateHIObject:oldValue newValue:afterPrint propertyName:@"afterPrint"];
 }
 
 -(void)setDrillup:(HIFunction *)drillup {
@@ -303,6 +312,15 @@
 	[self updateHIObject:oldValue newValue:redraw propertyName:@"redraw"];
 }
 
+-(void)setDrillupall:(HIFunction *)drillupall {
+	HIFunction *oldValue = _drillupall;
+	if(self.drillupall) {
+		[self removeObserver:self forKeyPath:@"drillupall.isUpdated"];
+	}
+	_drillupall = drillupall;
+	[self updateHIObject:oldValue newValue:drillupall propertyName:@"drillupall"];
+}
+
 -(void)setDrilldown:(HIFunction *)drilldown {
 	HIFunction *oldValue = _drilldown;
 	if(self.drilldown) {
@@ -310,24 +328,6 @@
 	}
 	_drilldown = drilldown;
 	[self updateHIObject:oldValue newValue:drilldown propertyName:@"drilldown"];
-}
-
--(void)setAfterPrint:(HIFunction *)afterPrint {
-	HIFunction *oldValue = _afterPrint;
-	if(self.afterPrint) {
-		[self removeObserver:self forKeyPath:@"afterPrint.isUpdated"];
-	}
-	_afterPrint = afterPrint;
-	[self updateHIObject:oldValue newValue:afterPrint propertyName:@"afterPrint"];
-}
-
--(void)setBeforePrint:(HIFunction *)beforePrint {
-	HIFunction *oldValue = _beforePrint;
-	if(self.beforePrint) {
-		[self removeObserver:self forKeyPath:@"beforePrint.isUpdated"];
-	}
-	_beforePrint = beforePrint;
-	[self updateHIObject:oldValue newValue:beforePrint propertyName:@"beforePrint"];
 }
 
 -(void)setAddSeries:(HIFunction *)addSeries {

@@ -13,23 +13,23 @@
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
-	if (self.className) {
-		params[@"className"] = self.className;
-	}
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
+	if (self.className) {
+		params[@"className"] = self.className;
+	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
+	}
+	if (self.events) {
+		params[@"events"] = self.events;
 	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];
 	}
 	if (self.id) {
 		params[@"id"] = self.id;
-	}
-	if (self.events) {
-		params[@"events"] = self.events;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
@@ -47,19 +47,24 @@
 	[self updateNSObject:@"zIndex"];
 }
 
--(void)setClassName:(NSString *)className {
-	_className = className;
-	[self updateNSObject:@"className"];
-}
-
 -(void)setWidth:(NSNumber *)width {
 	_width = width;
 	[self updateNSObject:@"width"];
 }
 
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
+}
+
 -(void)setDashStyle:(NSString *)dashStyle {
 	_dashStyle = dashStyle;
 	[self updateNSObject:@"dashStyle"];
+}
+
+-(void)setEvents:(id)events {
+	_events = events;
+	[self updateNSObject:@"events"];
 }
 
 -(void)setLabel:(HILabel *)label {
@@ -74,11 +79,6 @@
 -(void)setId:(NSString *)id {
 	_id = id;
 	[self updateNSObject:@"id"];
-}
-
--(void)setEvents:(id)events {
-	_events = events;
-	[self updateNSObject:@"events"];
 }
 
 -(void)setColor:(HIColor *)color {

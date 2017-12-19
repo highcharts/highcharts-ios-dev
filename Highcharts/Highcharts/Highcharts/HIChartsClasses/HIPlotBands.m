@@ -10,14 +10,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.to) {
-		params[@"to"] = self.to;
-	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.to) {
+		params[@"to"] = self.to;
 	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];
@@ -28,14 +28,14 @@
 	if (self.from) {
 		params[@"from"] = self.from;
 	}
-	if (self.className) {
-		params[@"className"] = self.className;
+	if (self.events) {
+		params[@"events"] = self.events;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
-	if (self.events) {
-		params[@"events"] = self.events;
+	if (self.className) {
+		params[@"className"] = self.className;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
@@ -54,11 +54,6 @@
 
 # pragma mark - Setters
 
--(void)setTo:(NSNumber *)to {
-	_to = to;
-	[self updateNSObject:@"to"];
-}
-
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
 	if(self.borderColor) {
@@ -71,6 +66,11 @@
 -(void)setBorderWidth:(NSNumber *)borderWidth {
 	_borderWidth = borderWidth;
 	[self updateNSObject:@"borderWidth"];
+}
+
+-(void)setTo:(NSNumber *)to {
+	_to = to;
+	[self updateNSObject:@"to"];
 }
 
 -(void)setLabel:(HILabel *)label {
@@ -92,9 +92,9 @@
 	[self updateNSObject:@"from"];
 }
 
--(void)setClassName:(NSString *)className {
-	_className = className;
-	[self updateNSObject:@"className"];
+-(void)setEvents:(id)events {
+	_events = events;
+	[self updateNSObject:@"events"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
@@ -102,9 +102,9 @@
 	[self updateNSObject:@"zIndex"];
 }
 
--(void)setEvents:(id)events {
-	_events = events;
-	[self updateNSObject:@"events"];
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
 }
 
 -(void)setColor:(HIColor *)color {
