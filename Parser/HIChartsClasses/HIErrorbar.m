@@ -30,9 +30,6 @@
 	if (self.whiskerWidth) {
 		params[@"whiskerWidth"] = self.whiskerWidth;
 	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
-	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
@@ -50,6 +47,9 @@
 	}
 	if (self.medianColor) {
 		params[@"medianColor"] = [self.medianColor getData];
+	}
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.stemColor) {
 		params[@"stemColor"] = [self.stemColor getData];
@@ -79,6 +79,9 @@
 	if (self.whiskerLength) {
 		params[@"whiskerLength"] = self.whiskerLength;
 	}
+	if (self.stemDashStyle) {
+		params[@"stemDashStyle"] = self.stemDashStyle;
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
@@ -90,9 +93,6 @@
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
-	}
-	if (self.stemDashStyle) {
-		params[@"stemDashStyle"] = self.stemDashStyle;
 	}
 	return params;
 }
@@ -126,11 +126,6 @@
 -(void)setWhiskerWidth:(NSNumber *)whiskerWidth {
 	_whiskerWidth = whiskerWidth;
 	[self updateNSObject:@"whiskerWidth"];
-}
-
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
@@ -173,6 +168,11 @@
 	}
 	_medianColor = medianColor;
 	[self updateHIObject:oldValue newValue:medianColor propertyName:@"medianColor"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setStemColor:(HIColor *)stemColor {
@@ -224,6 +224,11 @@
 	[self updateNSObject:@"whiskerLength"];
 }
 
+-(void)setStemDashStyle:(NSString *)stemDashStyle {
+	_stemDashStyle = stemDashStyle;
+	[self updateNSObject:@"stemDashStyle"];
+}
+
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
 	_maxPointWidth = maxPointWidth;
 	[self updateNSObject:@"maxPointWidth"];
@@ -242,11 +247,6 @@
 -(void)setGroupPadding:(NSNumber *)groupPadding {
 	_groupPadding = groupPadding;
 	[self updateNSObject:@"groupPadding"];
-}
-
--(void)setStemDashStyle:(NSString *)stemDashStyle {
-	_stemDashStyle = stemDashStyle;
-	[self updateNSObject:@"stemDashStyle"];
 }
 
 @end

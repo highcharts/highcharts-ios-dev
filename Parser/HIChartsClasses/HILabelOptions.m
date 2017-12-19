@@ -13,14 +13,20 @@
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
+	if (self.crop) {
+		params[@"crop"] = self.crop;
+	}
+	if (self.x) {
+		params[@"x"] = self.x;
+	}
 	if (self.overflow) {
 		params[@"overflow"] = self.overflow;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.distance) {
 		params[@"distance"] = self.distance;
@@ -28,14 +34,8 @@
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
-	if (self.crop) {
-		params[@"crop"] = self.crop;
-	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
-	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
@@ -49,14 +49,14 @@
 	if (self.padding) {
 		params[@"padding"] = self.padding;
 	}
-	if (self.x) {
-		params[@"x"] = self.x;
-	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.text) {
 		params[@"text"] = self.text;
@@ -84,6 +84,21 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
+}
+
+-(void)setCrop:(NSNumber *)crop {
+	_crop = crop;
+	[self updateNSObject:@"crop"];
+}
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
+}
+
 -(void)setOverflow:(NSString *)overflow {
 	_overflow = overflow;
 	[self updateNSObject:@"overflow"];
@@ -92,15 +107,6 @@
 -(void)setBorderWidth:(NSNumber *)borderWidth {
 	_borderWidth = borderWidth;
 	[self updateNSObject:@"borderWidth"];
-}
-
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setDistance:(NSNumber *)distance {
@@ -113,19 +119,9 @@
 	[self updateNSObject:@"useHTML"];
 }
 
--(void)setCrop:(NSNumber *)crop {
-	_crop = crop;
-	[self updateNSObject:@"crop"];
-}
-
 -(void)setShadow:(id)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
-}
-
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
 }
 
 -(void)setAlign:(NSString *)align {
@@ -152,11 +148,6 @@
 	[self updateNSObject:@"padding"];
 }
 
--(void)setX:(NSNumber *)x {
-	_x = x;
-	[self updateNSObject:@"x"];
-}
-
 -(void)setY:(NSNumber *)y {
 	_y = y;
 	[self updateNSObject:@"y"];
@@ -165,6 +156,15 @@
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	_borderRadius = borderRadius;
 	[self updateNSObject:@"borderRadius"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setText:(NSString *)text {

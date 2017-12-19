@@ -13,11 +13,11 @@
 	if (self.fontSize) {
 		params[@"fontSize"] = self.fontSize;
 	}
-	if (self.textOutline) {
-		params[@"textOutline"] = self.textOutline;
-	}
 	if (self.color) {
 		params[@"color"] = self.color;
+	}
+	if (self.textOutline) {
+		params[@"textOutline"] = self.textOutline;
 	}
 	if (self.fontWeight) {
 		params[@"fontWeight"] = self.fontWeight;
@@ -28,20 +28,20 @@
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = self.backgroundColor;
 	}
-	if (self.textAlign) {
-		params[@"textAlign"] = self.textAlign;
-	}
 	if (self.opacity) {
 		params[@"opacity"] = self.opacity;
+	}
+	if (self.textAlign) {
+		params[@"textAlign"] = self.textAlign;
 	}
 	if (self.position) {
 		params[@"position"] = self.position;
 	}
-	if (self.textOverflow) {
-		params[@"textOverflow"] = self.textOverflow;
-	}
 	if (self.fontFamily) {
 		params[@"fontFamily"] = self.fontFamily;
+	}
+	if (self.textOverflow) {
+		params[@"textOverflow"] = self.textOverflow;
 	}
 	if (self.pointerEvents) {
 		params[@"pointerEvents"] = self.pointerEvents;
@@ -59,14 +59,14 @@
 	[self updateNSObject:@"fontSize"];
 }
 
--(void)setTextOutline:(NSString *)textOutline {
-	_textOutline = textOutline;
-	[self updateNSObject:@"textOutline"];
-}
-
 -(void)setColor:(NSString *)color {
 	_color = color;
 	[self updateNSObject:@"color"];
+}
+
+-(void)setTextOutline:(NSString *)textOutline {
+	_textOutline = textOutline;
+	[self updateNSObject:@"textOutline"];
 }
 
 -(void)setFontWeight:(NSString *)fontWeight {
@@ -84,14 +84,14 @@
 	[self updateNSObject:@"backgroundColor"];
 }
 
--(void)setTextAlign:(NSString *)textAlign {
-	_textAlign = textAlign;
-	[self updateNSObject:@"textAlign"];
-}
-
 -(void)setOpacity:(NSNumber *)opacity {
 	_opacity = opacity;
 	[self updateNSObject:@"opacity"];
+}
+
+-(void)setTextAlign:(NSString *)textAlign {
+	_textAlign = textAlign;
+	[self updateNSObject:@"textAlign"];
 }
 
 -(void)setPosition:(NSString *)position {
@@ -99,14 +99,14 @@
 	[self updateNSObject:@"position"];
 }
 
--(void)setTextOverflow:(NSString *)textOverflow {
-	_textOverflow = textOverflow;
-	[self updateNSObject:@"textOverflow"];
-}
-
 -(void)setFontFamily:(NSString *)fontFamily {
 	_fontFamily = fontFamily;
 	[self updateNSObject:@"fontFamily"];
+}
+
+-(void)setTextOverflow:(NSString *)textOverflow {
+	_textOverflow = textOverflow;
+	[self updateNSObject:@"textOverflow"];
 }
 
 -(void)setPointerEvents:(NSString *)pointerEvents {

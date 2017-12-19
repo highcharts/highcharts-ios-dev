@@ -13,6 +13,12 @@
 	if (self.style) {
 		params[@"style"] = self.style;
 	}
+	if (self.x) {
+		params[@"x"] = self.x;
+	}
+	if (self.y) {
+		params[@"y"] = self.y;
+	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
@@ -28,12 +34,6 @@
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
-	if (self.x) {
-		params[@"x"] = self.x;
-	}
-	if (self.y) {
-		params[@"y"] = self.y;
-	}
 	if (self.widthAdjust) {
 		params[@"widthAdjust"] = self.widthAdjust;
 	}
@@ -45,6 +45,16 @@
 -(void)setStyle:(NSDictionary *)style {
 	_style = style;
 	[self updateNSObject:@"style"];
+}
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
+}
+
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
@@ -70,16 +80,6 @@
 -(void)setAlign:(NSString *)align {
 	_align = align;
 	[self updateNSObject:@"align"];
-}
-
--(void)setX:(NSNumber *)x {
-	_x = x;
-	[self updateNSObject:@"x"];
-}
-
--(void)setY:(NSNumber *)y {
-	_y = y;
-	[self updateNSObject:@"y"];
 }
 
 -(void)setWidthAdjust:(NSNumber *)widthAdjust {

@@ -24,6 +24,13 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.colors) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
+		}
+		params[@"colors"] = array;
+	}
 	if (self.layoutStartingDirection) {
 		params[@"layoutStartingDirection"] = self.layoutStartingDirection;
 	}
@@ -41,6 +48,9 @@
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.interactByLeaf) {
 		params[@"interactByLeaf"] = self.interactByLeaf;
@@ -88,6 +98,12 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
 -(void)setLayoutStartingDirection:(NSString *)layoutStartingDirection {
 	_layoutStartingDirection = layoutStartingDirection;
 	[self updateNSObject:@"layoutStartingDirection"];
@@ -102,6 +118,11 @@
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
 	_ignoreHiddenPoint = ignoreHiddenPoint;
 	[self updateNSObject:@"ignoreHiddenPoint"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setInteractByLeaf:(NSNumber *)interactByLeaf {

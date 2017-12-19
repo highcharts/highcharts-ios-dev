@@ -10,11 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.callback) {
-		params[@"callback"] = [self.callback getFunction];
-	}
 	if (self.maxWidth) {
 		params[@"maxWidth"] = self.maxWidth;
+	}
+	if (self.callback) {
+		params[@"callback"] = [self.callback getFunction];
 	}
 	if (self.maxHeight) {
 		params[@"maxHeight"] = self.maxHeight;
@@ -30,6 +30,11 @@
 
 # pragma mark - Setters
 
+-(void)setMaxWidth:(NSNumber *)maxWidth {
+	_maxWidth = maxWidth;
+	[self updateNSObject:@"maxWidth"];
+}
+
 -(void)setCallback:(HIFunction *)callback {
 	HIFunction *oldValue = _callback;
 	if(self.callback) {
@@ -37,11 +42,6 @@
 	}
 	_callback = callback;
 	[self updateHIObject:oldValue newValue:callback propertyName:@"callback"];
-}
-
--(void)setMaxWidth:(NSNumber *)maxWidth {
-	_maxWidth = maxWidth;
-	[self updateNSObject:@"maxWidth"];
 }
 
 -(void)setMaxHeight:(NSNumber *)maxHeight {

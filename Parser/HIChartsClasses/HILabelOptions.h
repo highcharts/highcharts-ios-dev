@@ -26,6 +26,28 @@ overwritten by config for a specific label.
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
+* description: The vertical alignment of the annotation's label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/ : Set labels position
+* accepted values: ["top", "middle", "bottom"]
+* default: bottom
+*/
+@property(nonatomic, readwrite) NSString *verticalAlign;
+/**
+* description: Whether to hide the annotation's label that is outside the plot area.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/ : Crop or justify labels
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *crop;
+/**
+* description: The x position offset of the label relative to the point.
+Note that if a distance is defined, the distance takes
+precedence over x and y options.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/ : Set labels position
+*/
+@property(nonatomic, readwrite) NSNumber *x;
+/**
 * description: How to handle the annotation's label that flow outside the plot
 area. The justify option aligns the label inside the plot area.
 
@@ -42,13 +64,6 @@ area. The justify option aligns the label inside the plot area.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: The border color for the annotation's label.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/ : Set labels graphic options
-* default: black
-*/
-@property(nonatomic, readwrite) HIColor *borderColor;
-/**
 * description: The label's pixel distance from the point.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/ : Set labels position
@@ -62,26 +77,12 @@ and-string-formatting#html : use HTML to render the annotation's label.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
-* description: Whether to hide the annotation's label that is outside the plot area.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/ : Crop or justify labels
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *crop;
-/**
 * description: The shadow of the box. The shadow can be an object configuration
 containing color, offsetX, offsetY, opacity and width.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/ : Set labels graphic options
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
-/**
-* description: The vertical alignment of the annotation's label.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/ : Set labels position
-* accepted values: ["top", "middle", "bottom"]
-* default: bottom
-*/
-@property(nonatomic, readwrite) NSString *verticalAlign;
 /**
 * description: The alignment of the annotation's label. If right,
 the right side of the label should be touching the point.
@@ -114,14 +115,6 @@ this    is the padding within the box.
 */
 @property(nonatomic, readwrite) NSNumber *padding;
 /**
-* description: The x position offset of the label relative to the point.
-Note that if a distance is defined, the distance takes
-precedence over x and y options.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/ : Set labels position
-*/
-@property(nonatomic, readwrite) NSNumber *x;
-/**
 * description: The y position offset of the label relative to the point.
 Note that if a distance is defined, the distance takes
 precedence over x and y options.
@@ -137,6 +130,13 @@ precedence over x and y options.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
+/**
+* description: The border color for the annotation's label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/ : Set labels graphic options
+* default: black
+*/
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: Alias for the format option.
 

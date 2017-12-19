@@ -55,17 +55,6 @@ data: [{
 @interface HIData: HIChartsJSONSerializable
 
 /**
-* description: The wind speed in meters per second.
-*/
-@property(nonatomic, readwrite) NSNumber *value;
-/**
-* description: The name of the point as shown in the legend, tooltip, dataLabel
-etc.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Point names
-*/
-@property(nonatomic, readwrite) NSString *name;
-/**
 * description: The rank for this point's data label in case of collision. If two
 data labels are about to overlap, only the one with the highest labelrank
 will be drawn.
@@ -81,6 +70,13 @@ highcharts-color-{n}.
 * description: The wind direction in degrees, where 0 is north (pointing towards south).
 */
 @property(nonatomic, readwrite) NSNumber *direction;
+/**
+* description: The name of the point as shown in the legend, tooltip, dataLabel
+etc.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/ : Point names
+*/
+@property(nonatomic, readwrite) NSString *name;
 /**
 * description: An additional, individual class name for the data point's graphic
 representation.
@@ -111,6 +107,10 @@ about the point. Requires the Accessibility module.
 * default: undefined
 */
 @property(nonatomic, readwrite) NSString *definition;
+/**
+* description: The wind speed in meters per second.
+*/
+@property(nonatomic, readwrite) NSNumber *value;
 /**
 * description: The id of a series in the drilldown.series
 array to use for a drilldown for this point.
@@ -152,25 +152,19 @@ column id the property should be taken from.
 */
 @property(nonatomic, readwrite) NSArray *seriesMapping;
 /**
+* description: In tabular input data, the first column (indexed by 0) to use.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Limited data
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *startColumn;
+/**
 * description: In tabular input data, the last row (indexed by 0) to use. Defaults
 to the last row containing data.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Limited data
 */
 @property(nonatomic, readwrite) NSNumber *endRow;
-/**
-* description: A comma delimited string to be parsed. Related options are startRow, endRow, startColumn
-and endColumn to delimit what part of the table
-is used. The lineDelimiter and itemDelimiter options define the CSV delimiter formats.
-The built-in CSV parser doesn't support all flavours of CSV, so in
-some cases it may be necessary to use an external CSV parser. See
-http://jsfiddle.net/highcharts/u59176h4/ : this example of parsing
-CSV through the MIT licensed http://papaparse.com/ : Papa Parse
-library.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/ : Data from CSV
-*/
-@property(nonatomic, readwrite) NSString *csv;
 /**
 * description: In tabular input data, the first row (indexed by 0) to use.
 
@@ -193,22 +187,25 @@ columns.
 */
 @property(nonatomic, readwrite) NSArray<NSArray *> *rows;
 /**
-* description: In tabular input data, the last column (indexed by 0) to use. Defaults
-to the last column containing data.
+* description: The key for a Google Spreadsheet to load. See https://developers.google.com/gdata/samples/spreadsheet_sample : general information
+on GS.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Limited data
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/ : Load a Google Spreadsheet
 */
-@property(nonatomic, readwrite) NSNumber *endColumn;
+@property(nonatomic, readwrite) NSString *googleSpreadsheetKey;
 /**
-* description: A two-dimensional array representing the input data on tabular form.
-This input can be used when the data is already parsed, for example
-from a grid view component. Each cell can be a string or number.
-If not switchRowsAndColumns is set, the columns are interpreted as
-series.
+* description: A comma delimited string to be parsed. Related options are startRow, endRow, startColumn
+and endColumn to delimit what part of the table
+is used. The lineDelimiter and itemDelimiter options define the CSV delimiter formats.
+The built-in CSV parser doesn't support all flavours of CSV, so in
+some cases it may be necessary to use an external CSV parser. See
+http://jsfiddle.net/highcharts/u59176h4/ : this example of parsing
+CSV through the MIT licensed http://papaparse.com/ : Papa Parse
+library.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/columns/ : Columns
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/ : Data from CSV
 */
-@property(nonatomic, readwrite) NSArray<NSArray *> *columns;
+@property(nonatomic, readwrite) NSString *csv;
 /**
 * description: The decimal point used for parsing numbers in the CSV.
 If both this and data.delimiter is set to false, the parser will
@@ -219,6 +216,13 @@ attempt to deduce the decimal point automatically.
 */
 @property(nonatomic, readwrite) NSString *decimalPoint;
 /**
+* description: The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id's from your sheet can be
+read from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/ : Load a Google Spreadsheet
+*/
+@property(nonatomic, readwrite) NSString *googleSpreadsheetWorksheet;
+/**
 * description: A callback function to access the parsed columns, the two-dimentional
 input data array directly, before they are interpreted into series
 data and categories. Return false to stop completion, or call this.
@@ -227,13 +231,6 @@ complete() to continue async.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/ : Modify data after parse
 */
 @property(nonatomic, readwrite) HIFunction *parsed;
-/**
-* description: The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id's from your sheet can be
-read from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/ : Load a Google Spreadsheet
-*/
-@property(nonatomic, readwrite) NSString *googleSpreadsheetWorksheet;
 /**
 * description: A HTML table or the id of such to be parsed as input data. Related
 options are startRow, endRow, startColumn and endColumn to
@@ -267,13 +264,6 @@ mm/dd/YY
 */
 @property(nonatomic, readwrite) NSString *dateFormat;
 /**
-* description: The key for a Google Spreadsheet to load. See https://developers.google.com/gdata/samples/spreadsheet_sample : general information
-on GS.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/ : Load a Google Spreadsheet
-*/
-@property(nonatomic, readwrite) NSString *googleSpreadsheetKey;
-/**
 * description: The callback that is evaluated when the data is finished loading,
 optionally from an external source, and parsed. The first argument
 passed is a finished chart options object, containing the series.
@@ -284,10 +274,27 @@ directly to the chart constructor.
 */
 @property(nonatomic, readwrite) HIFunction *complete;
 /**
+* description: A two-dimensional array representing the input data on tabular form.
+This input can be used when the data is already parsed, for example
+from a grid view component. Each cell can be a string or number.
+If not switchRowsAndColumns is set, the columns are interpreted as
+series.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/columns/ : Columns
+*/
+@property(nonatomic, readwrite) NSArray<NSArray *> *columns;
+/**
 * description: A callback function to parse string representations of dates into
 JavaScript timestamps. Should return an integer timestamp on success.
 */
 @property(nonatomic, readwrite) HIFunction *parseDate;
+/**
+* description: In tabular input data, the last column (indexed by 0) to use. Defaults
+to the last column containing data.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Limited data
+*/
+@property(nonatomic, readwrite) NSNumber *endColumn;
 /**
 * description: Switch rows and columns of the input data, so that this.columns
 effectively becomes the rows of the data set, and the rows are interpreted
@@ -308,18 +315,15 @@ the delimiter automatically.
 */
 @property(nonatomic, readwrite) NSString *itemDelimiter;
 /**
-* description: In tabular input data, the first column (indexed by 0) to use.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/ : Limited data
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *startColumn;
-/**
 * description: The size value for each bubble. The bubbles' diameters are computed
 based on the z, and controlled by series options like minSize,
  maxSize, sizeBy, zMin and zMax.
 */
 @property(nonatomic, readwrite) NSNumber *z;
+/**
+* description: The weight of the link.
+*/
+@property(nonatomic, readwrite) NSNumber *weight;
 /**
 * description: The node that the link runs from.
 */
@@ -329,16 +333,20 @@ based on the z, and controlled by series options like minSize,
 */
 @property(nonatomic, readwrite) NSString *to;
 /**
-* description: The weight of the link.
-*/
-@property(nonatomic, readwrite) NSNumber *weight;
-/**
 * description: Whether the link goes out of the system.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing : Sankey chart with outgoing links
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *outgoing;
+/**
+* description: Whether to display a slice offset from the center. When a sunburst point is 
+sliced, its children are also offset.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-sliced : Sliced sunburst
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *sliced;
 /**
 * description: Serves a purpose only if a colorAxis object is defined in the chart
 options. This value will decide which color the point gets from the
@@ -409,23 +417,10 @@ box.
 */
 @property(nonatomic, readwrite) NSNumber *legendIndex;
 /**
-* description: Whether to display a slice offset from the center.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/ : One sliced point
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *sliced;
-/**
 * description: The length of the vector. The rendered length will relate to the
 vectorLength setting.
 */
 @property(nonatomic, readwrite) NSNumber *length;
-/**
-* description: The outer radius of an individual point in a solid gauge. Can be
-given as a number (pixels) or percentage string.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/ : Individual radius and innerRadius
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ radius;
 /**
 * description: The inner radius of an individual point in a solid gauge. Can be
 given as a number (pixels) or percentage string.
@@ -433,6 +428,13 @@ given as a number (pixels) or percentage string.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/ : Individual radius and innerRadius
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ innerRadius;
+/**
+* description: The outer radius of an individual point in a solid gauge. Can be
+given as a number (pixels) or percentage string.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/ : Individual radius and innerRadius
+*/
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ radius;
 /**
 * description: Individual target options for each point.
 */

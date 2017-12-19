@@ -10,11 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.breakSize) {
-		params[@"breakSize"] = self.breakSize;
-	}
 	if (self.repeat) {
 		params[@"repeat"] = self.repeat;
+	}
+	if (self.breakSize) {
+		params[@"breakSize"] = self.breakSize;
 	}
 	if (self.to) {
 		params[@"to"] = self.to;
@@ -27,14 +27,14 @@
 
 # pragma mark - Setters
 
--(void)setBreakSize:(NSNumber *)breakSize {
-	_breakSize = breakSize;
-	[self updateNSObject:@"breakSize"];
-}
-
 -(void)setRepeat:(NSNumber *)repeat {
 	_repeat = repeat;
 	[self updateNSObject:@"repeat"];
+}
+
+-(void)setBreakSize:(NSNumber *)breakSize {
+	_breakSize = breakSize;
+	[self updateNSObject:@"breakSize"];
 }
 
 -(void)setTo:(NSNumber *)to {

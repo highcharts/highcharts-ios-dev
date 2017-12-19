@@ -10,21 +10,16 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.size) {
-		params[@"size"] = self.size;
-	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
+	}
+	if (self.size) {
+		params[@"size"] = self.size;
 	}
 	return params;
 }
 
 # pragma mark - Setters
-
--(void)setSize:(NSNumber *)size {
-	_size = size;
-	[self updateNSObject:@"size"];
-}
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
@@ -33,6 +28,11 @@
 	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setSize:(NSNumber *)size {
+	_size = size;
+	[self updateNSObject:@"size"];
 }
 
 @end

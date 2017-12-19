@@ -19,6 +19,9 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
+	if (self.fill) {
+		params[@"fill"] = [self.fill getData];
+	}
 	if (self.strokeWidth) {
 		params[@"strokeWidth"] = self.strokeWidth;
 	}
@@ -27,9 +30,6 @@
 	}
 	if (self.r) {
 		params[@"r"] = self.r;
-	}
-	if (self.fill) {
-		params[@"fill"] = [self.fill getData];
 	}
 	return params;
 }
@@ -51,6 +51,15 @@
 	[self updateNSObject:@"width"];
 }
 
+-(void)setFill:(HIColor *)fill {
+	HIColor *oldValue = _fill;
+	if(self.fill) {
+		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
+	}
+	_fill = fill;
+	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
+}
+
 -(void)setStrokeWidth:(NSNumber *)strokeWidth {
 	_strokeWidth = strokeWidth;
 	[self updateNSObject:@"strokeWidth"];
@@ -68,15 +77,6 @@
 -(void)setR:(NSNumber *)r {
 	_r = r;
 	[self updateNSObject:@"r"];
-}
-
--(void)setFill:(HIColor *)fill {
-	HIColor *oldValue = _fill;
-	if(self.fill) {
-		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
-	}
-	_fill = fill;
-	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 @end

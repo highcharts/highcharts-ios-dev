@@ -13,14 +13,17 @@
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
-	if (self.format) {
-		params[@"format"] = self.format;
-	}
 	if (self.overflow) {
 		params[@"overflow"] = self.overflow;
 	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
+	}
+	if (self.format) {
+		params[@"format"] = self.format;
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
@@ -46,9 +49,6 @@
 	if (self.distance) {
 		params[@"distance"] = self.distance;
 	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
-	}
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
@@ -73,9 +73,6 @@
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
-	if (self.autoRotationLimit) {
-		params[@"autoRotationLimit"] = self.autoRotationLimit;
-	}
 	if (self.skew3d) {
 		params[@"skew3d"] = self.skew3d;
 	}
@@ -84,6 +81,9 @@
 	}
 	if (self.staggerLines) {
 		params[@"staggerLines"] = self.staggerLines;
+	}
+	if (self.autoRotationLimit) {
+		params[@"autoRotationLimit"] = self.autoRotationLimit;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -134,19 +134,24 @@
 	[self updateNSObject:@"allowOverlap"];
 }
 
--(void)setFormat:(NSString *)format {
-	_format = format;
-	[self updateNSObject:@"format"];
-}
-
 -(void)setOverflow:(NSString *)overflow {
 	_overflow = overflow;
 	[self updateNSObject:@"overflow"];
 }
 
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
+}
+
 -(void)setPadding:(NSNumber *)padding {
 	_padding = padding;
 	[self updateNSObject:@"padding"];
+}
+
+-(void)setFormat:(NSString *)format {
+	_format = format;
+	[self updateNSObject:@"format"];
 }
 
 -(void)setPoint:(HIPoint *)point {
@@ -201,11 +206,6 @@
 	[self updateNSObject:@"distance"];
 }
 
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
-}
-
 -(void)setText:(NSString *)text {
 	_text = text;
 	[self updateNSObject:@"text"];
@@ -254,11 +254,6 @@
 	[self updateNSObject:@"align"];
 }
 
--(void)setAutoRotationLimit:(NSNumber *)autoRotationLimit {
-	_autoRotationLimit = autoRotationLimit;
-	[self updateNSObject:@"autoRotationLimit"];
-}
-
 -(void)setSkew3d:(NSNumber *)skew3d {
 	_skew3d = skew3d;
 	[self updateNSObject:@"skew3d"];
@@ -272,6 +267,11 @@
 -(void)setStaggerLines:(NSNumber *)staggerLines {
 	_staggerLines = staggerLines;
 	[self updateNSObject:@"staggerLines"];
+}
+
+-(void)setAutoRotationLimit:(NSNumber *)autoRotationLimit {
+	_autoRotationLimit = autoRotationLimit;
+	[self updateNSObject:@"autoRotationLimit"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {

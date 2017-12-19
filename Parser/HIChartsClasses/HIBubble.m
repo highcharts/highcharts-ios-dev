@@ -18,14 +18,14 @@
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
 	}
+	if (self.zMin) {
+		params[@"zMin"] = self.zMin;
+	}
 	if (self.maxSize) {
 		params[@"maxSize"] = self.maxSize;
 	}
 	if (self.zMax) {
 		params[@"zMax"] = self.zMax;
-	}
-	if (self.zMin) {
-		params[@"zMin"] = self.zMin;
 	}
 	if (self.displayNegative) {
 		params[@"displayNegative"] = self.displayNegative;
@@ -49,6 +49,11 @@
 	[self updateNSObject:@"minSize"];
 }
 
+-(void)setZMin:(NSNumber *)zMin {
+	_zMin = zMin;
+	[self updateNSObject:@"zMin"];
+}
+
 -(void)setMaxSize:(NSString *)maxSize {
 	_maxSize = maxSize;
 	[self updateNSObject:@"maxSize"];
@@ -57,11 +62,6 @@
 -(void)setZMax:(NSNumber *)zMax {
 	_zMax = zMax;
 	[self updateNSObject:@"zMax"];
-}
-
--(void)setZMin:(NSNumber *)zMin {
-	_zMin = zMin;
-	[self updateNSObject:@"zMin"];
 }
 
 -(void)setDisplayNegative:(NSNumber *)displayNegative {

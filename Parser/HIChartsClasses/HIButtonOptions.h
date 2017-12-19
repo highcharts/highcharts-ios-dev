@@ -27,15 +27,6 @@ objects.
 */
 @property(nonatomic, readwrite) HITheme *theme;
 /**
-* description: The vertical offset of the button's position relative to its
-verticalAlign.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/ : Buttons at lower right
-
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *y;
-/**
 * description: Fill color for the symbol within the button.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolfill/ : Blue symbol stroke for one of the buttons
@@ -52,6 +43,11 @@ verticalAlign.
 */
 @property(nonatomic, readwrite) HIColor *symbolStroke;
 /**
+* description: The pixel spacing between buttons.
+* default: 3
+*/
+@property(nonatomic, readwrite) NSNumber *buttonSpacing;
+/**
 * description: The pixel width of the button.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
@@ -59,16 +55,6 @@ verticalAlign.
 * default: 24
 */
 @property(nonatomic, readwrite) NSNumber *width;
-/**
-* description: The vertical alignment of the buttons. Can be one of "top", "middle"
-or "bottom".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/ : Buttons at lower right
-
-* accepted values: ["top", "middle", "bottom"]
-* default: top
-*/
-@property(nonatomic, readwrite) NSString *verticalAlign;
 /**
 * description: The pixel size of the symbol on the button.
 
@@ -85,6 +71,24 @@ or "bottom".
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *symbolStrokeWidth;
+/**
+* description: The vertical alignment of the buttons. Can be one of "top", "middle"
+or "bottom".
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/ : Buttons at lower right
+
+* accepted values: ["top", "middle", "bottom"]
+* default: top
+*/
+@property(nonatomic, readwrite) NSString *verticalAlign;
+/**
+* description: Whether to enable buttons.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-enabled/ : Exporting module loaded but buttons disabled
+
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
 * description: A text string to add to the individual button.
 
@@ -104,6 +108,15 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: right
 */
 @property(nonatomic, readwrite) NSString *align;
+/**
+* description: The vertical offset of the button's position relative to its
+verticalAlign.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/ : Buttons at lower right
+
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *y;
 /**
 * description: The x position of the center of the symbol inside the button.
 
@@ -128,19 +141,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: 22
 */
 @property(nonatomic, readwrite) NSNumber *height;
-/**
-* description: Whether to enable buttons.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-enabled/ : Exporting module loaded but buttons disabled
-
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
-/**
-* description: The pixel spacing between buttons.
-* default: 3
-*/
-@property(nonatomic, readwrite) NSNumber *buttonSpacing;
 
 -(NSDictionary *)getParams;
 

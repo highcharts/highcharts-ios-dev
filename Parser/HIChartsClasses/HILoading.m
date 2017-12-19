@@ -16,11 +16,11 @@
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
-	if (self.showDuration) {
-		params[@"showDuration"] = self.showDuration;
-	}
 	if (self.hideDuration) {
 		params[@"hideDuration"] = self.hideDuration;
+	}
+	if (self.showDuration) {
+		params[@"showDuration"] = self.showDuration;
 	}
 	return params;
 }
@@ -45,14 +45,14 @@
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
--(void)setShowDuration:(NSNumber *)showDuration {
-	_showDuration = showDuration;
-	[self updateNSObject:@"showDuration"];
-}
-
 -(void)setHideDuration:(NSNumber *)hideDuration {
 	_hideDuration = hideDuration;
 	[self updateNSObject:@"hideDuration"];
+}
+
+-(void)setShowDuration:(NSNumber *)showDuration {
+	_showDuration = showDuration;
+	[self updateNSObject:@"showDuration"];
 }
 
 @end

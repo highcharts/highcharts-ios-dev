@@ -25,6 +25,9 @@
 	if (self.overflow) {
 		params[@"overflow"] = self.overflow;
 	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
@@ -67,9 +70,6 @@
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
-	}
 	if (self.inside) {
 		params[@"inside"] = self.inside;
 	}
@@ -88,8 +88,8 @@
 	if (self.crop) {
 		params[@"crop"] = self.crop;
 	}
-	if (self.rotationMode) {
-		params[@"rotationMode"] = self.rotationMode;
+	if (self.connectorWidth) {
+		params[@"connectorWidth"] = self.connectorWidth;
 	}
 	if (self.connectorPadding) {
 		params[@"connectorPadding"] = self.connectorPadding;
@@ -100,8 +100,8 @@
 	if (self.distance) {
 		params[@"distance"] = self.distance;
 	}
-	if (self.connectorWidth) {
-		params[@"connectorWidth"] = self.connectorWidth;
+	if (self.rotationMode) {
+		params[@"rotationMode"] = self.rotationMode;
 	}
 	if (self.softConnector) {
 		params[@"softConnector"] = self.softConnector;
@@ -160,6 +160,11 @@
 -(void)setOverflow:(NSString *)overflow {
 	_overflow = overflow;
 	[self updateNSObject:@"overflow"];
+}
+
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
@@ -248,11 +253,6 @@
 	[self updateNSObject:@"borderWidth"];
 }
 
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
-}
-
 -(void)setInside:(NSNumber *)inside {
 	_inside = inside;
 	[self updateNSObject:@"inside"];
@@ -283,9 +283,9 @@
 	[self updateNSObject:@"crop"];
 }
 
--(void)setRotationMode:(NSString *)rotationMode {
-	_rotationMode = rotationMode;
-	[self updateNSObject:@"rotationMode"];
+-(void)setConnectorWidth:(NSNumber *)connectorWidth {
+	_connectorWidth = connectorWidth;
+	[self updateNSObject:@"connectorWidth"];
 }
 
 -(void)setConnectorPadding:(NSNumber *)connectorPadding {
@@ -303,9 +303,9 @@
 	[self updateNSObject:@"distance"];
 }
 
--(void)setConnectorWidth:(NSNumber *)connectorWidth {
-	_connectorWidth = connectorWidth;
-	[self updateNSObject:@"connectorWidth"];
+-(void)setRotationMode:(NSString *)rotationMode {
+	_rotationMode = rotationMode;
+	[self updateNSObject:@"rotationMode"];
 }
 
 -(void)setSoftConnector:(NSNumber *)softConnector {

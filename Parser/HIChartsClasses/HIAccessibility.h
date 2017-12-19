@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIKeyboardNavigation.h"
+#import "HIChartsJSONSerializable.h"
 #import "HIFunction.h"
 
 
@@ -33,18 +33,8 @@ automatically after the custom HTML content.
 * description: When a series contains more points than this, we no longer expose
 information about individual points to screen readers.
 Set to false to disable.
-* default: 30
 */
 @property(nonatomic, readwrite) NSNumber *pointDescriptionThreshold;
-/**
-* description: Date format to use for points on datetime axes when describing them
-to screen reader users.
-Defaults to the same format as in tooltip.
-For an overview of the replacement codes, see
-dateFormat.
-*/
-@property(nonatomic, readwrite) NSString *pointDateFormat;
-@property(nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation;
 /**
 * description: Formatter function to determine the date/time format used with
 points on datetime axes when describing them to screen reader users.
@@ -54,11 +44,20 @@ dateFormat.
 */
 @property(nonatomic, readwrite) HIFunction *pointDateFormatter;
 /**
-* description: Whether or not to add series descriptions to charts with a single
-series.
-* default: false
+* description: Date format to use for points on datetime axes when describing them
+to screen reader users.
+Defaults to the same format as in tooltip.
+For an overview of the replacement codes, see
+dateFormat.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *describeSingleSeries;
+@property(nonatomic, readwrite) NSString *pointDateFormat;
+/**
+* description: Function to run upon clicking the "View as Data Table" link in the
+screen reader region.
+By default Highcharts will insert and set focus to a data table
+representation of the chart.
+*/
+@property(nonatomic, readwrite) HIFunction *onTableAnchorClick;
 /**
 * description: Formatter function to use instead of the default for point
 descriptions.
@@ -67,6 +66,12 @@ Should return a String with the description of the point for a screen
 reader user.
 */
 @property(nonatomic, readwrite) HIFunction *pointDescriptionFormatter;
+/**
+* description: Whether or not to add series descriptions to charts with a single
+series.
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *describeSingleSeries;
 /**
 * description: Enable accessibility features for the chart.
 * default: true
@@ -79,13 +84,6 @@ series to describe. Should return a String with the description of
 the series for a screen reader user.
 */
 @property(nonatomic, readwrite) HIFunction *seriesDescriptionFormatter;
-/**
-* description: Function to run upon clicking the "View as Data Table" link in the
-screen reader region.
-By default Highcharts will insert and set focus to a data table
-representation of the chart.
-*/
-@property(nonatomic, readwrite) HIFunction *onTableAnchorClick;
 
 -(NSDictionary *)getParams;
 

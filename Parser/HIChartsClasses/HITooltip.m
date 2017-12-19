@@ -13,23 +13,26 @@
 	if (self.split) {
 		params[@"split"] = self.split;
 	}
+	if (self.footerFormat) {
+		params[@"footerFormat"] = self.footerFormat;
+	}
 	if (self.valuePrefix) {
 		params[@"valuePrefix"] = self.valuePrefix;
 	}
 	if (self.hideDelay) {
 		params[@"hideDelay"] = self.hideDelay;
 	}
-	if (self.headerFormat) {
-		params[@"headerFormat"] = self.headerFormat;
-	}
 	if (self.pointFormatter) {
 		params[@"pointFormatter"] = [self.pointFormatter getFunction];
 	}
-	if (self.footerFormat) {
-		params[@"footerFormat"] = self.footerFormat;
-	}
 	if (self.dateTimeLabelFormats) {
 		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+	}
+	if (self.pointFormat) {
+		params[@"pointFormat"] = self.pointFormat;
+	}
+	if (self.headerFormat) {
+		params[@"headerFormat"] = self.headerFormat;
 	}
 	if (self.followTouchMove) {
 		params[@"followTouchMove"] = self.followTouchMove;
@@ -46,9 +49,6 @@
 	if (self.padding) {
 		params[@"padding"] = self.padding;
 	}
-	if (self.pointFormat) {
-		params[@"pointFormat"] = self.pointFormat;
-	}
 	if (self.xDateFormat) {
 		params[@"xDateFormat"] = self.xDateFormat;
 	}
@@ -61,23 +61,17 @@
 	if (self.distance) {
 		params[@"distance"] = self.distance;
 	}
-	if (self.style) {
-		params[@"style"] = [self.style getParams];
-	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.positioner) {
 		params[@"positioner"] = [self.positioner getFunction];
 	}
-	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
-	}
-	if (self.snap) {
-		params[@"snap"] = self.snap;
-	}
 	if (self.formatter) {
 		params[@"formatter"] = [self.formatter getFunction];
+	}
+	if (self.shape) {
+		params[@"shape"] = self.shape;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -88,23 +82,29 @@
 	if (self.animation) {
 		params[@"animation"] = self.animation;
 	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
-	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
-	if (self.shape) {
-		params[@"shape"] = self.shape;
-	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.snap) {
+		params[@"snap"] = self.snap;
+	}
+	if (self.shadow) {
+		params[@"shadow"] = self.shadow;
+	}
 	if (self.crosshairs) {
 		params[@"crosshairs"] = self.crosshairs;
+	}
+	if (self.style) {
+		params[@"style"] = [self.style getParams];
 	}
 	return params;
 }
@@ -114,6 +114,11 @@
 -(void)setSplit:(NSNumber *)split {
 	_split = split;
 	[self updateNSObject:@"split"];
+}
+
+-(void)setFooterFormat:(NSString *)footerFormat {
+	_footerFormat = footerFormat;
+	[self updateNSObject:@"footerFormat"];
 }
 
 -(void)setValuePrefix:(NSString *)valuePrefix {
@@ -126,11 +131,6 @@
 	[self updateNSObject:@"hideDelay"];
 }
 
--(void)setHeaderFormat:(NSString *)headerFormat {
-	_headerFormat = headerFormat;
-	[self updateNSObject:@"headerFormat"];
-}
-
 -(void)setPointFormatter:(HIFunction *)pointFormatter {
 	HIFunction *oldValue = _pointFormatter;
 	if(self.pointFormatter) {
@@ -140,11 +140,6 @@
 	[self updateHIObject:oldValue newValue:pointFormatter propertyName:@"pointFormatter"];
 }
 
--(void)setFooterFormat:(NSString *)footerFormat {
-	_footerFormat = footerFormat;
-	[self updateNSObject:@"footerFormat"];
-}
-
 -(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
 	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
 	if(self.dateTimeLabelFormats) {
@@ -152,6 +147,16 @@
 	}
 	_dateTimeLabelFormats = dateTimeLabelFormats;
 	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
+}
+
+-(void)setPointFormat:(NSString *)pointFormat {
+	_pointFormat = pointFormat;
+	[self updateNSObject:@"pointFormat"];
+}
+
+-(void)setHeaderFormat:(NSString *)headerFormat {
+	_headerFormat = headerFormat;
+	[self updateNSObject:@"headerFormat"];
 }
 
 -(void)setFollowTouchMove:(NSNumber *)followTouchMove {
@@ -179,11 +184,6 @@
 	[self updateNSObject:@"padding"];
 }
 
--(void)setPointFormat:(NSString *)pointFormat {
-	_pointFormat = pointFormat;
-	[self updateNSObject:@"pointFormat"];
-}
-
 -(void)setXDateFormat:(NSString *)xDateFormat {
 	_xDateFormat = xDateFormat;
 	[self updateNSObject:@"xDateFormat"];
@@ -208,15 +208,6 @@
 	[self updateNSObject:@"distance"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
-	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
-}
-
 -(void)setUseHTML:(NSNumber *)useHTML {
 	_useHTML = useHTML;
 	[self updateNSObject:@"useHTML"];
@@ -231,16 +222,6 @@
 	[self updateHIObject:oldValue newValue:positioner propertyName:@"positioner"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
-	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
-}
-
--(void)setSnap:(NSNumber *)snap {
-	_snap = snap;
-	[self updateNSObject:@"snap"];
-}
-
 -(void)setFormatter:(HIFunction *)formatter {
 	HIFunction *oldValue = _formatter;
 	if(self.formatter) {
@@ -248,6 +229,11 @@
 	}
 	_formatter = formatter;
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
+}
+
+-(void)setShape:(NSString *)shape {
+	_shape = shape;
+	[self updateNSObject:@"shape"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
@@ -265,14 +251,14 @@
 	[self updateNSObject:@"animation"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
-}
-
 -(void)setEnabled:(NSNumber *)enabled {
 	_enabled = enabled;
 	[self updateNSObject:@"enabled"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	_borderRadius = borderRadius;
+	[self updateNSObject:@"borderRadius"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
@@ -284,11 +270,6 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
--(void)setShape:(NSString *)shape {
-	_shape = shape;
-	[self updateNSObject:@"shape"];
-}
-
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
 	if(self.borderColor) {
@@ -298,9 +279,28 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
+-(void)setSnap:(NSNumber *)snap {
+	_snap = snap;
+	[self updateNSObject:@"snap"];
+}
+
+-(void)setShadow:(NSNumber *)shadow {
+	_shadow = shadow;
+	[self updateNSObject:@"shadow"];
+}
+
 -(void)setCrosshairs:(id)crosshairs {
 	_crosshairs = crosshairs;
 	[self updateNSObject:@"crosshairs"];
+}
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 @end

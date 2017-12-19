@@ -37,6 +37,13 @@ overwritten by config for a specific shape.
 */
 @property(nonatomic, readwrite) NSNumber *width;
 /**
+* description: The color of the shape's fill.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+* default: rgba(0, 0, 0, 0.75)
+*/
+@property(nonatomic, readwrite) HIColor *fill;
+/**
 * description: The pixel stroke width of the shape.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
@@ -56,13 +63,6 @@ overwritten by config for a specific shape.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
 */
 @property(nonatomic, readwrite) NSNumber *r;
-/**
-* description: The color of the shape's fill.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-* default: rgba(0, 0, 0, 0.75)
-*/
-@property(nonatomic, readwrite) HIColor *fill;
 
 -(NSDictionary *)getParams;
 

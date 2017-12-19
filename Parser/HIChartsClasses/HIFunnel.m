@@ -27,6 +27,9 @@
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
 	}
+	if (self.ignoreHiddenPoint) {
+		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.center) {
@@ -50,9 +53,6 @@
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
-	}
-	if (self.ignoreHiddenPoint) {
-		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
 	}
 	if (self.innerSize) {
 		params[@"innerSize"] = self.innerSize;
@@ -105,6 +105,11 @@
 	[self updateNSObject:@"slicedOffset"];
 }
 
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:@"ignoreHiddenPoint"];
+}
+
 -(void)setCenter:(NSArray *)center {
 	NSArray *oldValue = _center;
 	_center = center;
@@ -129,11 +134,6 @@
 -(void)setStartAngle:(NSNumber *)startAngle {
 	_startAngle = startAngle;
 	[self updateNSObject:@"startAngle"];
-}
-
--(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
-	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:@"ignoreHiddenPoint"];
 }
 
 -(void)setInnerSize:(id)innerSize {

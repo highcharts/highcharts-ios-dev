@@ -6,13 +6,13 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIRight.h"
-#import "HITop.h"
-#import "HIBack.h"
+#import "HIBottom.h"
 #import "HISide.h"
+#import "HITop.h"
+#import "HIRight.h"
+#import "HIBack.h"
 #import "HIFront.h"
 #import "HILeft.h"
-#import "HIBottom.h"
 
 
 /**
@@ -27,28 +27,32 @@ a bottom, front and back panel.
 */
 @property(nonatomic, readwrite) NSString *visible;
 /**
+* description: The bottom of the frame around a 3D chart.
+*/
+@property(nonatomic, readwrite) HIBottom *bottom;
+/**
 * description: General pixel thickness for the frame faces.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *size;
-/**
-* description: The right of the frame around a 3D chart.
-*/
-@property(nonatomic, readwrite) HIRight *right;
-/**
-* description: The top of the frame around a 3D chart.
-*/
-@property(nonatomic, readwrite) HITop *top;
-/**
-* description: The back side of the frame around a 3D chart.
-*/
-@property(nonatomic, readwrite) HIBack *back;
 /**
 * description: Note: As of v5.0.12, frame.left or frame.right should be used
 instead.
 The side for the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HISide *side;
+/**
+* description: The top of the frame around a 3D chart.
+*/
+@property(nonatomic, readwrite) HITop *top;
+/**
+* description: The right of the frame around a 3D chart.
+*/
+@property(nonatomic, readwrite) HIRight *right;
+/**
+* description: The back side of the frame around a 3D chart.
+*/
+@property(nonatomic, readwrite) HIBack *back;
 /**
 * description: The front of the frame around a 3D chart.
 */
@@ -57,10 +61,6 @@ The side for the frame around a 3D chart.
 * description: The left side of the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HILeft *left;
-/**
-* description: The bottom of the frame around a 3D chart.
-*/
-@property(nonatomic, readwrite) HIBottom *bottom;
 
 -(NSDictionary *)getParams;
 

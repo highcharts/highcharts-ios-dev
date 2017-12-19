@@ -10,11 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.xAxis) {
 		params[@"xAxis"] = self.xAxis;
+	}
+	if (self.id) {
+		params[@"id"] = self.id;
 	}
 	if (self.name) {
 		params[@"name"] = self.name;
@@ -103,6 +103,9 @@
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
 	}
+	if (self.linecap) {
+		params[@"linecap"] = self.linecap;
+	}
 	if (self.states) {
 		params[@"states"] = [self.states getParams];
 	}
@@ -184,6 +187,9 @@
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
 	}
+	if (self.dashStyle) {
+		params[@"dashStyle"] = self.dashStyle;
+	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
 	}
@@ -195,9 +201,6 @@
 	}
 	if (self.skipKeyboardNavigation) {
 		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
-	}
-	if (self.dashStyle) {
-		params[@"dashStyle"] = self.dashStyle;
 	}
 	if (self.step) {
 		params[@"step"] = self.step;
@@ -211,22 +214,19 @@
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
 	}
-	if (self.linecap) {
-		params[@"linecap"] = self.linecap;
-	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setId:(NSString *)id {
-	_id = id;
-	[self updateNSObject:@"id"];
-}
-
 -(void)setXAxis:(id)xAxis {
 	_xAxis = xAxis;
 	[self updateNSObject:@"xAxis"];
+}
+
+-(void)setId:(NSString *)id {
+	_id = id;
+	[self updateNSObject:@"id"];
 }
 
 -(void)setName:(NSString *)name {
@@ -380,6 +380,11 @@
 	[self updateNSObject:@"enableMouseTracking"];
 }
 
+-(void)setLinecap:(NSString *)linecap {
+	_linecap = linecap;
+	[self updateNSObject:@"linecap"];
+}
+
 -(void)setStates:(HIStates *)states {
 	HIStates *oldValue = _states;
 	if(self.states) {
@@ -507,6 +512,11 @@
 	[self updateNSObject:@"pointStart"];
 }
 
+-(void)setDashStyle:(NSString *)dashStyle {
+	_dashStyle = dashStyle;
+	[self updateNSObject:@"dashStyle"];
+}
+
 -(void)setShadow:(id)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
@@ -525,11 +535,6 @@
 -(void)setSkipKeyboardNavigation:(NSNumber *)skipKeyboardNavigation {
 	_skipKeyboardNavigation = skipKeyboardNavigation;
 	[self updateNSObject:@"skipKeyboardNavigation"];
-}
-
--(void)setDashStyle:(NSString *)dashStyle {
-	_dashStyle = dashStyle;
-	[self updateNSObject:@"dashStyle"];
 }
 
 -(void)setStep:(NSString *)step {
@@ -554,11 +559,6 @@
 	}
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
-}
-
--(void)setLinecap:(NSString *)linecap {
-	_linecap = linecap;
-	[self updateNSObject:@"linecap"];
 }
 
 @end

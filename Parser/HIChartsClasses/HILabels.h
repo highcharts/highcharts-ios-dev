@@ -27,13 +27,6 @@ the can be set to 0.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowOverlap;
 /**
-* description: A https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting : format string for the data label.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/ : Set labels text
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *format;
-/**
 * description: How to handle the annotation's label that flow outside the plot
 area. The justify option aligns the label inside the plot area.
 
@@ -43,6 +36,13 @@ area. The justify option aligns the label inside the plot area.
 */
 @property(nonatomic, readwrite) NSString *overflow;
 /**
+* description: The border width in pixels for the annotation's label
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/ : Set labels graphic options
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *borderWidth;
+/**
 * description: When either the borderWidth or the backgroundColor is set,
 this    is the padding within the box.
 
@@ -50,6 +50,13 @@ this    is the padding within the box.
 * default: 5
 */
 @property(nonatomic, readwrite) NSNumber *padding;
+/**
+* description: A https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting : format string for the data label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/ : Set labels text
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSString *format;
 /**
 * description: This option defines the point to which the label will be connected.
 It can be either the point which exists in the series - it is referenced
@@ -108,13 +115,6 @@ and-string-formatting#html : use HTML to render the annotation's label.
 * default: undefined
 */
 @property(nonatomic, readwrite) NSNumber *distance;
-/**
-* description: The border width in pixels for the annotation's label
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/ : Set labels graphic options
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
 * description: Alias for the format option.
 
@@ -178,17 +178,6 @@ the right side of the label should be touching the point.
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
-* description: When each category width is more than this many pixels, we don't
-apply auto rotation. Instead, we lay out the axis label with word
-wrap. A lower limit makes sense when the label contains multiple
-short words that don't extend the available horizontal space for
-each label.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotationlimit/ : Lower limit
-* default: 80
-*/
-@property(nonatomic, readwrite) NSNumber *autoRotationLimit;
-/**
 * description: If enabled, the axis labels will skewed to follow the perspective. 
 This will fix overlapping labels and titles, but texts become less
 legible due to the distortion.
@@ -213,16 +202,35 @@ over to make room or tighter labels.
 */
 @property(nonatomic, readwrite) NSNumber *staggerLines;
 /**
+* description: When each category width is more than this many pixels, we don't
+apply auto rotation. Instead, we lay out the axis label with word
+wrap. A lower limit makes sense when the label contains multiple
+short words that don't extend the available horizontal space for
+each label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotationlimit/ : Lower limit
+* default: 80
+*/
+@property(nonatomic, readwrite) NSNumber *autoRotationLimit;
+/**
 * description: The Z index for the axis labels.
 * default: 7
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
-* description: Whether to reserve space for the labels. This can be turned off
-when for example the labels are rendered inside the plot area
-instead of outside.
+* description: Whether to reserve space for the labels. By default, space is
+reserved for the labels in these cases:
+
+On all horizontal axes.
+On vertical axes if label.align is right on a left-side
+axis or left on a right-side axis.
+On vertical axes if label.align is center.
+
+This can be turned off when for example the labels are rendered
+inside the plot area instead of outside.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-reservespace/ : No reserved space, labels inside plot
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-reservespace-true/ : Left-aligned labels on a vertical category axis
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reserveSpace;
 /**

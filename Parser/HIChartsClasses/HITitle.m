@@ -34,17 +34,17 @@
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
-	}
 	if (self.position3d) {
 		params[@"position3d"] = self.position3d;
 	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
+	}
+	if (self.rotation) {
+		params[@"rotation"] = self.rotation;
 	}
 	if (self.text) {
 		params[@"text"] = self.text;
@@ -107,24 +107,24 @@
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
--(void)setUseHTML:(NSNumber *)useHTML {
-	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
-}
-
 -(void)setPosition3d:(NSString *)position3d {
 	_position3d = position3d;
 	[self updateNSObject:@"position3d"];
 }
 
--(void)setRotation:(NSNumber *)rotation {
-	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
 }
 
 -(void)setAlign:(NSString *)align {
 	_align = align;
 	[self updateNSObject:@"align"];
+}
+
+-(void)setRotation:(NSNumber *)rotation {
+	_rotation = rotation;
+	[self updateNSObject:@"rotation"];
 }
 
 -(void)setText:(NSString *)text {

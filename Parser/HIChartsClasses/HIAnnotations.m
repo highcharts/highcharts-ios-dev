@@ -10,6 +10,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.shapeOptions) {
+		params[@"shapeOptions"] = [self.shapeOptions getParams];
+	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
@@ -27,9 +30,6 @@
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.shapeOptions) {
-		params[@"shapeOptions"] = [self.shapeOptions getParams];
 	}
 	if (self.shapes) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -51,6 +51,15 @@
 
 # pragma mark - Setters
 
+-(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
+	HIShapeOptions *oldValue = _shapeOptions;
+	if(self.shapeOptions) {
+		[self removeObserver:self forKeyPath:@"shapeOptions.isUpdated"];
+	}
+	_shapeOptions = shapeOptions;
+	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
+}
+
 -(void)setVisible:(NSNumber *)visible {
 	_visible = visible;
 	[self updateNSObject:@"visible"];
@@ -65,15 +74,6 @@
 -(void)setZIndex:(NSNumber *)zIndex {
 	_zIndex = zIndex;
 	[self updateNSObject:@"zIndex"];
-}
-
--(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
-	HIShapeOptions *oldValue = _shapeOptions;
-	if(self.shapeOptions) {
-		[self removeObserver:self forKeyPath:@"shapeOptions.isUpdated"];
-	}
-	_shapeOptions = shapeOptions;
-	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
 }
 
 -(void)setShapes:(NSArray <HIShapes *> *)shapes {

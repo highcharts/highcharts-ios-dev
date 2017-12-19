@@ -10,11 +10,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.columnHeaderFormatter) {
+		params[@"columnHeaderFormatter"] = [self.columnHeaderFormatter getFunction];
+	}
 	if (self.lineDelimiter) {
 		params[@"lineDelimiter"] = self.lineDelimiter;
 	}
-	if (self.columnHeaderFormatter) {
-		params[@"columnHeaderFormatter"] = [self.columnHeaderFormatter getFunction];
+	if (self.decimalPoint) {
+		params[@"decimalPoint"] = self.decimalPoint;
 	}
 	if (self.dateFormat) {
 		params[@"dateFormat"] = self.dateFormat;
@@ -27,11 +30,6 @@
 
 # pragma mark - Setters
 
--(void)setLineDelimiter:(NSString *)lineDelimiter {
-	_lineDelimiter = lineDelimiter;
-	[self updateNSObject:@"lineDelimiter"];
-}
-
 -(void)setColumnHeaderFormatter:(HIFunction *)columnHeaderFormatter {
 	HIFunction *oldValue = _columnHeaderFormatter;
 	if(self.columnHeaderFormatter) {
@@ -39,6 +37,16 @@
 	}
 	_columnHeaderFormatter = columnHeaderFormatter;
 	[self updateHIObject:oldValue newValue:columnHeaderFormatter propertyName:@"columnHeaderFormatter"];
+}
+
+-(void)setLineDelimiter:(NSString *)lineDelimiter {
+	_lineDelimiter = lineDelimiter;
+	[self updateNSObject:@"lineDelimiter"];
+}
+
+-(void)setDecimalPoint:(NSString *)decimalPoint {
+	_decimalPoint = decimalPoint;
+	[self updateNSObject:@"decimalPoint"];
 }
 
 -(void)setDateFormat:(NSString *)dateFormat {

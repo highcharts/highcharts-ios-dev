@@ -13,20 +13,17 @@
 	if (self.theme) {
 		params[@"theme"] = [self.theme getParams];
 	}
-	if (self.y) {
-		params[@"y"] = self.y;
-	}
 	if (self.symbolFill) {
 		params[@"symbolFill"] = [self.symbolFill getData];
 	}
 	if (self.symbolStroke) {
 		params[@"symbolStroke"] = [self.symbolStroke getData];
 	}
+	if (self.buttonSpacing) {
+		params[@"buttonSpacing"] = self.buttonSpacing;
+	}
 	if (self.width) {
 		params[@"width"] = self.width;
-	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.symbolSize) {
 		params[@"symbolSize"] = self.symbolSize;
@@ -34,11 +31,20 @@
 	if (self.symbolStrokeWidth) {
 		params[@"symbolStrokeWidth"] = self.symbolStrokeWidth;
 	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
+	}
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
+	}
+	if (self.y) {
+		params[@"y"] = self.y;
 	}
 	if (self.symbolX) {
 		params[@"symbolX"] = self.symbolX;
@@ -48,12 +54,6 @@
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
-	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
-	if (self.buttonSpacing) {
-		params[@"buttonSpacing"] = self.buttonSpacing;
 	}
 	return params;
 }
@@ -67,11 +67,6 @@
 	}
 	_theme = theme;
 	[self updateHIObject:oldValue newValue:theme propertyName:@"theme"];
-}
-
--(void)setY:(NSNumber *)y {
-	_y = y;
-	[self updateNSObject:@"y"];
 }
 
 -(void)setSymbolFill:(HIColor *)symbolFill {
@@ -92,14 +87,14 @@
 	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
 }
 
+-(void)setButtonSpacing:(NSNumber *)buttonSpacing {
+	_buttonSpacing = buttonSpacing;
+	[self updateNSObject:@"buttonSpacing"];
+}
+
 -(void)setWidth:(NSNumber *)width {
 	_width = width;
 	[self updateNSObject:@"width"];
-}
-
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
 }
 
 -(void)setSymbolSize:(NSNumber *)symbolSize {
@@ -112,6 +107,16 @@
 	[self updateNSObject:@"symbolStrokeWidth"];
 }
 
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
 -(void)setText:(NSString *)text {
 	_text = text;
 	[self updateNSObject:@"text"];
@@ -120,6 +125,11 @@
 -(void)setAlign:(NSString *)align {
 	_align = align;
 	[self updateNSObject:@"align"];
+}
+
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
 }
 
 -(void)setSymbolX:(NSNumber *)symbolX {
@@ -135,16 +145,6 @@
 -(void)setHeight:(NSNumber *)height {
 	_height = height;
 	[self updateNSObject:@"height"];
-}
-
--(void)setEnabled:(NSNumber *)enabled {
-	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
-}
-
--(void)setButtonSpacing:(NSNumber *)buttonSpacing {
-	_buttonSpacing = buttonSpacing;
-	[self updateNSObject:@"buttonSpacing"];
 }
 
 @end
