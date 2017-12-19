@@ -58,13 +58,6 @@ right.
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
 /**
-* description: Set options on specific levels. Takes precedence over series options,
-but not point options.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst : Sunburst chart
-*/
-@property(nonatomic, readwrite) NSArray <HILevels *> *levels;
-/**
 * description: Used together with the levels and allowDrillToNode options. When
 set to false the first level visible when drilling is considered
 to be level one. Otherwise the level will be the same as the tree
@@ -73,12 +66,27 @@ structure.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *levelIsConstant;
 /**
+* description: Set options on specific levels. Takes precedence over series options,
+but not point options.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst : Sunburst chart
+*/
+@property(nonatomic, readwrite) NSArray <HILevels *> *levels;
+/**
 * description: A series specific or series type specific color set to use instead
 of the global colors.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+/**
+* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-sliced : Sliced sunburst
+* default: 10
+*/
+@property(nonatomic, readwrite) NSNumber *slicedOffset;
 /**
 * description: When enabled the user can click on a point which is a parent and
 zoom in on its children.

@@ -21,8 +21,8 @@ to interaction.
 
 @property(nonatomic, readwrite) NSString *color;
 @property(nonatomic, readwrite) NSString *fontWeight;
-@property(nonatomic, readwrite) NSString *cursor;
 @property(nonatomic, readwrite) NSString *textDecoration;
+@property(nonatomic, readwrite) NSString *cursor;
 
 -(NSDictionary *)getParams;
 

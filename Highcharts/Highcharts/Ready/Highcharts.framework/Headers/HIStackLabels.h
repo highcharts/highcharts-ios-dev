@@ -20,27 +20,6 @@ bars and to the left of negative bars.
 @interface HIStackLabels: HIChartsJSONSerializable
 
 /**
-* description: The text alignment for the label. While align determines where
-the texts anchor point is placed with regards to the stack, textAlign
-determines how the text is aligned against its anchor point. Possible
-values are "left", "center" and "right". The default value
-is calculated at runtime and depends on orientation and whether the
-stack is positive or negative.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-textalign-left/ : Label in center position but text-aligned left
-* accepted values: ["left", "center", "right"]
-*/
-@property(nonatomic, readwrite) NSString *textAlign;
-/**
-* description: Callback JavaScript function to format the label. The value is
-given by this.total. Defaults to:
-function() {
-    return this.total;
-}
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-formatter/ : Added units to stack total value
-*/
-@property(nonatomic, readwrite) HIFunction *formatter;
-/**
 * description: Defines the horizontal alignment of the stack total label. Can be
 one of "left", "center" or "right". The default value is calculated
 at runtime and depends on orientation and whether the stack is positive
@@ -52,6 +31,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * accepted values: ["left", "center", "right"]
 */
 @property(nonatomic, readwrite) NSString *align;
+/**
+* description: Callback JavaScript function to format the label. The value is
+given by this.total.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-formatter/ : Added units to stack total value
+* default: function() { return this.total; }
+*/
+@property(nonatomic, readwrite) HIFunction *formatter;
 /**
 * description: The y position offset of the label relative to the tick position
 on the axis. The default value is calculated at runtime and depends
@@ -75,18 +62,16 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 /**
 * description: Rotation of the labels in degrees.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/ : Labels rotated 45°
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/ : Labels rotated 45Â°
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
 /**
-* description: CSS styles for the label.
-In styled mode, the styles are set in the
-.highcharts-stack-label class.
+* description: Allow the stack labels to overlap.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-style/ : Red stack total labels
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-allowoverlap-false/ : Default false
 */
-@property(nonatomic, readwrite) HIStyle *style;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *allowOverlap;
 /**
 * description: The x position offset of the label relative to the left of the stacked
 bar. The default value is calculated at runtime and depends on orientation
@@ -102,11 +87,17 @@ and whether the stack is positive or negative.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
-* description: Allow the stack labels to overlap.
+* description: The text alignment for the label. While align determines where
+the texts anchor point is placed with regards to the stack, textAlign
+determines how the text is aligned against its anchor point. Possible
+values are "left", "center" and "right". The default value
+is calculated at runtime and depends on orientation and whether the
+stack is positive or negative.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-allowoverlap-false/ : Default false
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-textalign-left/ : Label in center position but text-aligned left
+* accepted values: ["left", "center", "right"]
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *allowOverlap;
+@property(nonatomic, readwrite) NSString *textAlign;
 /**
 * description: A http://docs.highcharts.com/#formatting : format string for the
 data label. Available variables are the same as for formatter.
@@ -119,6 +110,14 @@ to render the labels.
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
+/**
+* description: CSS styles for the label.
+In styled mode, the styles are set in the
+.highcharts-stack-label class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-style/ : Red stack total labels
+*/
+@property(nonatomic, readwrite) HIStyle *style;
 
 -(NSDictionary *)getParams;
 

@@ -14,7 +14,9 @@
 to be rendered by WebGL instead of the default SVG. This allows hundreds of
 thousands of data points to be rendered in milliseconds. In addition to the
 WebGL rendering it saves time by skipping processing and inspection of the
-data wherever possible.
+data wherever possible. This introduces some limitations to what features are
+available in Boost mode. See https://www.highcharts.com/docs/advanced-chart-features/boost-module : the docs
+for details.
 In addition to the global boost option, each series has a
 boostThreshold that defines when the
 boost should kick in.
@@ -69,7 +71,7 @@ a significant speed improvment in charts with a very high
 amount of series.
 * default: null
 */
-@property(nonatomic, readwrite) NSString *seriesThreshold;
+@property(nonatomic, readwrite) NSNumber *seriesThreshold;
 
 -(NSDictionary *)getParams;
 

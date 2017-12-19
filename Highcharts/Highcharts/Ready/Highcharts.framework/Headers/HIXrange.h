@@ -40,6 +40,15 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
+* description: Padding between each column or bar, in x axis units.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/ : 0.1 by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/ : 0.25
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/ : 0 for tightly packed columns
+* default: 0.1
+*/
+@property(nonatomic, readwrite) NSNumber *pointPadding;
+/**
 * description: The corner radius of the border surrounding each column or bar.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/ : Rounded columns
@@ -87,15 +96,6 @@ highcharts-3d.js.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *groupZPadding;
-/**
-* description: Padding between each column or bar, in x axis units.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/ : 0.1 by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/ : 0.25
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/ : 0 for tightly packed columns
-* default: 0.1
-*/
-@property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
 * description: A partial fill for each point, typically used to visualize how much of
 a task is performed. The partial fill object can be set either on series

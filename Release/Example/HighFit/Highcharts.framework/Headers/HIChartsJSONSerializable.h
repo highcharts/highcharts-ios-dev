@@ -10,5 +10,4 @@
 
 
 @interface HIChartsJSONSerializable : NSObject
--(NSDictionary *)getParams;
 @end

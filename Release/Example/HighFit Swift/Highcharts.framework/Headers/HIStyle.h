@@ -19,20 +19,16 @@ the CSS class .highcharts-tooltip.
 @interface HIStyle: HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) NSString *fontSize;
-@property(nonatomic, readwrite) NSString *textOutline;
 @property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) NSString *textOutline;
 @property(nonatomic, readwrite) NSString *fontWeight;
 @property(nonatomic, readwrite) NSString *cursor;
 @property(nonatomic, readwrite) NSString *backgroundColor;
-@property(nonatomic, readwrite) NSString *textAlign;
 @property(nonatomic, readwrite) NSNumber *opacity;
+@property(nonatomic, readwrite) NSString *textAlign;
 @property(nonatomic, readwrite) NSString *position;
-@property(nonatomic, readwrite) NSString *textOverflow;
-/**
-* description: The font family to use for the word cloud.
-* default: Impact, sans-serif
-*/
 @property(nonatomic, readwrite) NSString *fontFamily;
+@property(nonatomic, readwrite) NSString *textOverflow;
 @property(nonatomic, readwrite) NSString *pointerEvents;
 @property(nonatomic, readwrite) NSString *whiteSpace;
 

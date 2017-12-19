@@ -1,5 +1,5 @@
 /*
-  Highcharts JS v6.0.2 (2017-10-20)
+  Highcharts JS v6.0.4 (2017-12-15)
 
  Item series type for Highcharts
 

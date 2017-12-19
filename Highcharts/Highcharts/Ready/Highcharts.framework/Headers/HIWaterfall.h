@@ -57,6 +57,16 @@ and overlap each other.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;
 /**
+* description: 3D columns only. The width of the colored edges.
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *edgeWidth;
+/**
+* description: 3D columns only. The color of the edges. Similar to borderColor,
+ except it defaults to the same color as the column.
+*/
+@property(nonatomic, readwrite) HIColor *edgeColor;
+/**
 * description: When true, each column edge is rounded to its nearest pixel in order
 to render sharp on screen. In some cases, when there are a lot of
 densely packed columns, this leads to visible difference in column
@@ -68,16 +78,6 @@ blurry.
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *crisp;
-/**
-* description: 3D columns only. The width of the colored edges.
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *edgeWidth;
-/**
-* description: 3D columns only. The color of the edges. Similar to borderColor,
- except it defaults to the same color as the column.
-*/
-@property(nonatomic, readwrite) HIColor *edgeColor;
 /**
 * description: The X axis range that each point is valid for. This determines the
 width of the column. On a categorized axis, the range will be 1
@@ -92,6 +92,12 @@ can be used to override the automatic value.
 */
 @property(nonatomic, readwrite) NSNumber *pointRange;
 /**
+* description: The color of the line that connects columns in a waterfall series.
+In styled mode, the stroke can be set with the .highcharts-graph class.
+* default: #333333
+*/
+@property(nonatomic, readwrite) HIColor *lineColor;
+/**
 * description: The maximum allowed pixel width for a column, translated to the height
 of a bar in a bar chart. This prevents the columns from becoming
 too wide when there is a small number of points in the chart.
@@ -100,12 +106,6 @@ too wide when there is a small number of points in the chart.
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *maxPointWidth;
-/**
-* description: The color of the line that connects columns in a waterfall series.
-In styled mode, the stroke can be set with the .highcharts-graph class.
-* default: #333333
-*/
-@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 * description: Padding between each column or bar, in x axis units.
 

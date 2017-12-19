@@ -20,8 +20,8 @@ icon is clicked. This menu is rendered in HTML.
 @interface HIMenuStyle: HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) NSString *padding;
-@property(nonatomic, readwrite) NSString *background;
 @property(nonatomic, readwrite) NSString *border;
+@property(nonatomic, readwrite) NSString *background;
 
 -(NSDictionary *)getParams;
 

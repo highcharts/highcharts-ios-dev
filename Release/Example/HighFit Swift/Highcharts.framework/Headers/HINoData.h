@@ -18,6 +18,10 @@ The actual text to display is set in the lang.noData option.
 @interface HINoData: HIChartsJSONSerializable
 
 /**
+* description: An object of additional SVG attributes for the no-data label.
+*/
+@property(nonatomic, readwrite) id attr;
+/**
 * description: Whether to insert the label as HTML, or as pseudo-HTML rendered with
 SVG.
 * default: false
@@ -28,10 +32,6 @@ SVG.
 * default: { "x": 0, "y": 0, "align": "center", "verticalAlign": "middle" }
 */
 @property(nonatomic, readwrite) HIPosition *position;
-/**
-* description: An object of additional SVG attributes for the no-data label.
-*/
-@property(nonatomic, readwrite) id attr;
 /**
 * description: CSS styles for the no-data label.
 */

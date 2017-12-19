@@ -16,9 +16,9 @@ set it before any chart is initialized.
 Highcharts.setOptions({
     lang: {
         months: [
-            'Janvier', 'Février', 'Mars', 'Avril',
-            'Mai', 'Juin', 'Juillet', 'Août',
-            'Septembre', 'Octobre', 'Novembre', 'Décembre'
+            'Janvier', 'FĂŠvrier', 'Mars', 'Avril',
+            'Mai', 'Juin', 'Juillet', 'AoĂťt',
+            'Septembre', 'Octobre', 'Novembre', 'DĂŠcembre'
         ],
         weekdays: [
             'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
@@ -30,15 +30,9 @@ Highcharts.setOptions({
 @interface HILang: HIChartsJSONSerializable
 
 /**
-* description: The text for the label appearing when a chart is zoomed.
-* default: Reset zoom
-*/
-@property(nonatomic, readwrite) NSString *resetZoom;
-/**
 * description: An array containing the months names in abbreviated form. Corresponds
 to the %b format in Highcharts.dateFormat().
-* default: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" ,
-         "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+* default: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" ,         "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *shortMonths;
 /**
@@ -58,11 +52,10 @@ back to the parent series. The parent series' name is inserted for
 */
 @property(nonatomic, readwrite) NSString *drillUpText;
 /**
-* description: The text to display when the chart contains no data. Requires the
-no-data module, see noData.
-* default: No data to display
+* description: The text for the label appearing when a chart is zoomed.
+* default: Reset zoom
 */
-@property(nonatomic, readwrite) NSString *noData;
+@property(nonatomic, readwrite) NSString *resetZoom;
 /**
 * description: Exporting module only. The text for the PDF download menu item.
 * default: Download PDF document
@@ -92,13 +85,22 @@ the first three letters of the lang.weekdays option.
 */
 @property(nonatomic, readwrite) NSString *printChart;
 /**
+* description: Export-data module only. The text for the menu item.
+* default: Download CSV
+*/
+@property(nonatomic, readwrite) NSString *downloadCSV;
+/**
 * description: An array containing the months names. Corresponds to the %B format
 in Highcharts.dateFormat().
-* default: [ "January" , "February" , "March" , "April" , "May" ,
-         "June" , "July" , "August" , "September" , "October" ,
-         "November" , "December"]
+* default: [ "January" , "February" , "March" , "April" , "May" ,         "June" , "July" , "August" , "September" , "October" ,         "November" , "December"]
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *months;
+/**
+* description: The text to display when the chart contains no data. Requires the
+no-data module, see noData.
+* default: No data to display
+*/
+@property(nonatomic, readwrite) NSString *noData;
 /**
 * description: Exporting module only. The text for the SVG download menu item.
 * default: Download SVG vector image
@@ -120,11 +122,6 @@ string.
 */
 @property(nonatomic, readwrite) NSString *downloadJPEG;
 /**
-* description: Exporting module only. The text for the PNG download menu item.
-* default: Download PNG image
-*/
-@property(nonatomic, readwrite) NSString *downloadPNG;
-/**
 * description: http://en.wikipedia.org/wiki/Metric_prefix : Metric prefixes used
 to shorten high numbers in axis labels. Replacing any of the positions
 with null causes the full number to be written. Setting numericSymbols
@@ -135,14 +132,13 @@ to null disables shortening altogether.
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *numericSymbols;
 /**
-* description: Export-data module only. The text for the menu item.
-* default: Download CSV
+* description: Exporting module only. The text for the PNG download menu item.
+* default: Download PNG image
 */
-@property(nonatomic, readwrite) NSString *downloadCSV;
+@property(nonatomic, readwrite) NSString *downloadPNG;
 /**
 * description: An array containing the weekday names.
-* default: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-         "Friday", "Saturday"]
+* default: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",         "Friday", "Saturday"]
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *weekdays;
 /**

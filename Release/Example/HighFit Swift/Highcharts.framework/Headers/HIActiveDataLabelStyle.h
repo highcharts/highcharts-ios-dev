@@ -19,8 +19,8 @@ interaction.
 */
 @interface HIActiveDataLabelStyle: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) NSString *color;
 @property(nonatomic, readwrite) NSString *fontWeight;
+@property(nonatomic, readwrite) NSString *color;
 @property(nonatomic, readwrite) NSString *textDecoration;
 @property(nonatomic, readwrite) NSString *cursor;
 

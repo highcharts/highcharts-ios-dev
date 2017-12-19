@@ -7,8 +7,9 @@
  */
 
 @import UIKit;
+#import "HIChartsJSONSerializable.h"
 
-@interface HIFunction : NSObject
+@interface HIFunction : HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) NSString *function;
 /**

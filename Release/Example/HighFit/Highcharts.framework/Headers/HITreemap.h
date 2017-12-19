@@ -42,6 +42,11 @@ structure.
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
+* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.
+*/
+@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+/**
 * description: Defines which direction the layout algorithm will start drawing.
  Possible values are "vertical" and "horizontal".
 
@@ -63,6 +68,13 @@ If false, hidden points will leave open spaces.
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
+/**
+* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
 * description: This option decides if the user can interact with the parent nodes
 or just the leaf nodes. When this option is undefined, it will be

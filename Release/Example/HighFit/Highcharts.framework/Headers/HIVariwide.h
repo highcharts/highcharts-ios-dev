@@ -21,6 +21,11 @@ variwide.
 @interface HIVariwide: HISeries
 
 /**
+* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.
+*/
+@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+/**
 * description: In a variwide chart, the group padding is 0 in order to express the 
 horizontal stacking of items.
 
@@ -38,13 +43,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
-/**
-* description: The corner radius of the border surrounding each column or bar.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/ : Rounded columns
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
 * description: The color of the border surrounding each column or bar.
 In styled mode, the border stroke can be set with the .highcharts-point
@@ -67,6 +65,13 @@ can be used to override the automatic value.
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *pointRange;
+/**
+* description: The corner radius of the border surrounding each column or bar.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/ : Rounded columns
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
 * description: The minimal height for a column or width for a bar. By default,
 0 values are not shown. To visualize a 0 (or close to zero) point,
@@ -97,11 +102,6 @@ and overlap each other.
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;
-/**
-* description: A series specific or series type specific color set to apply instead
-of the global colors when colorByPoint is true.
-*/
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 /**
 * description: In a variwide chart, the point padding is 0 in order to express the 
 horizontal stacking of items.
