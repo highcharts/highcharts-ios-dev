@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HISunburst.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HISunburst</TokenIdentifier>
+			<Abstract type="html">* description: A sunburst series. If the type option is
+not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+sunburst.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+            
+			
+			<NodeRef refid="122"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISunburst/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/setSize:</TokenIdentifier>
+			<Abstract type="html">* description: The diameter of the pie relative to the plot area. Can be a percentage
+or pixel value. Pixel values are given as integers. The default
+behaviour (as of 3.0) is to scale to the plot area and give room
+for data labels within the plot area. As a consequence, the size
+of the pie may vary when points are updated and data labels more
+around. In that case it is best to set a fixed value, for example
+&quot;75%&quot;.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/size</TokenIdentifier>
+			<Abstract type="html">* description: The diameter of the pie relative to the plot area. Can be a percentage
+or pixel value. Pixel values are given as integers. The default
+behaviour (as of 3.0) is to scale to the plot area and give room
+for data labels within the plot area. As a consequence, the size
+of the pie may vary when points are updated and data labels more
+around. In that case it is best to set a fixed value, for example
+&quot;75%&quot;.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISunburst/size</TokenIdentifier>
+			<Abstract type="html">* description: The diameter of the pie relative to the plot area. Can be a percentage
+or pixel value. Pixel values are given as integers. The default
+behaviour (as of 3.0) is to scale to the plot area and give room
+for data labels within the plot area. As a consequence, the size
+of the pie may vary when points are updated and data labels more
+around. In that case it is best to set a fixed value, for example
+&quot;75%&quot;.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/setRootId:</TokenIdentifier>
+			<Abstract type="html">description: Which point to use as a root in the visualization.
+default: undefined</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rootId</Declaration>
+			
+			
+			<Anchor>//api/name/rootId</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/rootId</TokenIdentifier>
+			<Abstract type="html">description: Which point to use as a root in the visualization.
+default: undefined</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rootId</Declaration>
+			
+			
+			<Anchor>//api/name/rootId</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISunburst/rootId</TokenIdentifier>
+			<Abstract type="html">description: Which point to use as a root in the visualization.
+default: undefined</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rootId</Declaration>
+			
+			
+			<Anchor>//api/name/rootId</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/setStartAngle:</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/startAngle</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISunburst/startAngle</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/setLevels:</TokenIdentifier>
+			<Abstract type="html">* description: Set options on specific levels. Takes precedence over series options,
+but not point options.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</Declaration>
+			
+			
+			<Anchor>//api/name/levels</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/levels</TokenIdentifier>
+			<Abstract type="html">* description: Set options on specific levels. Takes precedence over series options,
+but not point options.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</Declaration>
+			
+			
+			<Anchor>//api/name/levels</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISunburst/levels</TokenIdentifier>
+			<Abstract type="html">* description: Set options on specific levels. Takes precedence over series options,
+but not point options.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</Declaration>
+			
+			
+			<Anchor>//api/name/levels</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/setLevelIsConstant:</TokenIdentifier>
+			<Abstract type="html">* description: Used together with the levels and allowDrillToNode options. When
+set to false the first level visible when drilling is considered
+to be level one. Otherwise the level will be the same as the tree
+structure.
+* default: True</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *levelIsConstant</Declaration>
+			
+			
+			<Anchor>//api/name/levelIsConstant</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/levelIsConstant</TokenIdentifier>
+			<Abstract type="html">* description: Used together with the levels and allowDrillToNode options. When
+set to false the first level visible when drilling is considered
+to be level one. Otherwise the level will be the same as the tree
+structure.
+* default: True</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *levelIsConstant</Declaration>
+			
+			
+			<Anchor>//api/name/levelIsConstant</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISunburst/levelIsConstant</TokenIdentifier>
+			<Abstract type="html">* description: Used together with the levels and allowDrillToNode options. When
+set to false the first level visible when drilling is considered
+to be level one. Otherwise the level will be the same as the tree
+structure.
+* default: True</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *levelIsConstant</Declaration>
+			
+			
+			<Anchor>//api/name/levelIsConstant</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/setColors:</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISunburst/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/setAllowDrillToNode:</TokenIdentifier>
+			<Abstract type="html">* description: When enabled the user can click on a point which is a parent and
+zoom in on its children.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowDrillToNode</Declaration>
+			
+			
+			<Anchor>//api/name/allowDrillToNode</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISunburst/allowDrillToNode</TokenIdentifier>
+			<Abstract type="html">* description: When enabled the user can click on a point which is a parent and
+zoom in on its children.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowDrillToNode</Declaration>
+			
+			
+			<Anchor>//api/name/allowDrillToNode</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISunburst/allowDrillToNode</TokenIdentifier>
+			<Abstract type="html">* description: When enabled the user can click on a point which is a parent and
+zoom in on its children.</Abstract>
+			<DeclaredIn>HISunburst.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowDrillToNode</Declaration>
+			
+			
+			<Anchor>//api/name/allowDrillToNode</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

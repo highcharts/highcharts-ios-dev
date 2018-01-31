@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>HILang Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Highcharts </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Highcharts</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/contextButtonTitle">contextButtonTitle</option>
+		
+		<option value="//api/name/decimalPoint">decimalPoint</option>
+		
+		<option value="//api/name/downloadCSV">downloadCSV</option>
+		
+		<option value="//api/name/downloadJPEG">downloadJPEG</option>
+		
+		<option value="//api/name/downloadPDF">downloadPDF</option>
+		
+		<option value="//api/name/downloadPNG">downloadPNG</option>
+		
+		<option value="//api/name/downloadSVG">downloadSVG</option>
+		
+		<option value="//api/name/downloadXLS">downloadXLS</option>
+		
+		<option value="//api/name/drillUpText">drillUpText</option>
+		
+		<option value="//api/name/invalidDate">invalidDate</option>
+		
+		<option value="//api/name/loading">loading</option>
+		
+		<option value="//api/name/months">months</option>
+		
+		<option value="//api/name/noData">noData</option>
+		
+		<option value="//api/name/numericSymbolMagnitude">numericSymbolMagnitude</option>
+		
+		<option value="//api/name/numericSymbols">numericSymbols</option>
+		
+		<option value="//api/name/printChart">printChart</option>
+		
+		<option value="//api/name/resetZoom">resetZoom</option>
+		
+		<option value="//api/name/resetZoomTitle">resetZoomTitle</option>
+		
+		<option value="//api/name/shortMonths">shortMonths</option>
+		
+		<option value="//api/name/shortWeekdays">shortWeekdays</option>
+		
+		<option value="//api/name/thousandsSep">thousandsSep</option>
+		
+		<option value="//api/name/viewData">viewData</option>
+		
+		<option value="//api/name/weekdays">weekdays</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">HILang Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>HILang.h<br />HILang.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<ul>
+<li>description: Language object. The language object is global and it can&rsquo;t be set
+on each chart initiation. Instead, use Highcharts.setOptions to
+set it before any chart is initialized.
+Highcharts.setOptions({
+  lang: {
+      months: [
+          &lsquo;Janvier&rsquo;, &lsquo;Février&rsquo;, &lsquo;Mars&rsquo;, &lsquo;Avril&rsquo;,
+          &lsquo;Mai&rsquo;, &lsquo;Juin&rsquo;, &lsquo;Juillet&rsquo;, &lsquo;Août&rsquo;,
+          &lsquo;Septembre&rsquo;, &lsquo;Octobre&rsquo;, &lsquo;Novembre&rsquo;, &lsquo;Décembre&rsquo;
+      ],
+      weekdays: [
+          &lsquo;Dimanche&rsquo;, &lsquo;Lundi&rsquo;, &lsquo;Mardi&rsquo;, &lsquo;Mercredi&rsquo;,
+          &lsquo;Jeudi&rsquo;, &lsquo;Vendredi&rsquo;, &lsquo;Samedi&rsquo;
+      ]
+  }
+});</li>
+</ul>
+
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/resetZoom" title="resetZoom"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resetZoom">&nbsp;&nbsp;resetZoom</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: The text for the label appearing when a chart is zoomed.
+default: Reset zoom</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *resetZoom</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shortMonths" title="shortMonths"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shortMonths">&nbsp;&nbsp;shortMonths</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: An array containing the <a href="#//api/name/months">months</a> names in abbreviated form. Corresponds
+to the %b format in Highcharts.dateFormat().</li>
+<li>default: [ &ldquo;Jan&rdquo; , &ldquo;Feb&rdquo; , &ldquo;Mar&rdquo; , &ldquo;Apr&rdquo; , &ldquo;May&rdquo; , &ldquo;Jun&rdquo; ,
+       &ldquo;Jul&rdquo; , &ldquo;Aug&rdquo; , &ldquo;Sep&rdquo; , &ldquo;Oct&rdquo; , &ldquo;Nov&rdquo; , &ldquo;Dec&rdquo;]</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *shortMonths</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/numericSymbolMagnitude" title="numericSymbolMagnitude"></a>
+	<h3 class="method-title"><code><a href="#//api/name/numericSymbolMagnitude">&nbsp;&nbsp;numericSymbolMagnitude</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The magnitude of <a href="#//api/name/numericSymbols">numericSymbols</a> replacements.
+Use 10000 for Japanese, Korean and various Chinese locales, which
+use symbols for 10<sup>4</sup>, 10<sup>8</sup> and 10<sup>12</sup>.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *numericSymbolMagnitude</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbolmagnitude/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbolmagnitude/</a> : 10000 magnitude for Japanese</li>
+<li>default: 1000</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drillUpText" title="drillUpText"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drillUpText">&nbsp;&nbsp;drillUpText</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The text for the button that appears when drilling down, linking
+back to the parent series. The parent series' name is inserted for
+{series.name}.</li>
+<li>default: Back to {series.name}</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *drillUpText</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/noData" title="noData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/noData">&nbsp;&nbsp;noData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The text to display when the chart contains no data. Requires the
+no-data module, see noData.</li>
+<li>default: No data to display</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *noData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadPDF" title="downloadPDF"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadPDF">&nbsp;&nbsp;downloadPDF</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Exporting module only. The text for the PDF download menu item.
+default: Download PDF document</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadPDF</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/contextButtonTitle" title="contextButtonTitle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/contextButtonTitle">&nbsp;&nbsp;contextButtonTitle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Exporting module menu. The tooltip title for the context menu holding
+print and export menu items.</li>
+<li>default: Chart context menu</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *contextButtonTitle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shortWeekdays" title="shortWeekdays"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shortWeekdays">&nbsp;&nbsp;shortWeekdays</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Short week days, starting Sunday. If not specified, Highcharts uses
+the first three letters of the lang.<a href="#//api/name/weekdays">weekdays</a> option.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *shortWeekdays</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/</a> : Finnish two-letter abbreviations</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resetZoomTitle" title="resetZoomTitle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resetZoomTitle">&nbsp;&nbsp;resetZoomTitle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: The tooltip title for the label appearing when a chart is zoomed.
+default: Reset zoom level 1:1</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *resetZoomTitle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/printChart" title="printChart"></a>
+	<h3 class="method-title"><code><a href="#//api/name/printChart">&nbsp;&nbsp;printChart</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Exporting module only. The text for the menu item to print the chart.
+default: Print chart</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *printChart</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/months" title="months"></a>
+	<h3 class="method-title"><code><a href="#//api/name/months">&nbsp;&nbsp;months</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: An array containing the months names. Corresponds to the %B format
+in Highcharts.dateFormat().</li>
+<li>default: [ &ldquo;January&rdquo; , &ldquo;February&rdquo; , &ldquo;March&rdquo; , &ldquo;April&rdquo; , &ldquo;May&rdquo; ,
+       &ldquo;June&rdquo; , &ldquo;July&rdquo; , &ldquo;August&rdquo; , &ldquo;September&rdquo; , &ldquo;October&rdquo; ,
+       &ldquo;November&rdquo; , &ldquo;December&rdquo;]</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *months</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadSVG" title="downloadSVG"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadSVG">&nbsp;&nbsp;downloadSVG</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Exporting module only. The text for the SVG download menu item.
+default: Download SVG vector image</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadSVG</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/invalidDate" title="invalidDate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/invalidDate">&nbsp;&nbsp;invalidDate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: What to show in a date field for invalid dates. Defaults to an empty
+string.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *invalidDate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadXLS" title="downloadXLS"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadXLS">&nbsp;&nbsp;downloadXLS</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Export-data module only. The text for the menu item.
+default: Download XLS</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadXLS</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadJPEG" title="downloadJPEG"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadJPEG">&nbsp;&nbsp;downloadJPEG</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Exporting module only. The text for the JPEG download menu item.
+default: Download JPEG image</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadJPEG</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadPNG" title="downloadPNG"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadPNG">&nbsp;&nbsp;downloadPNG</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Exporting module only. The text for the PNG download menu item.
+default: Download PNG image</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadPNG</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/numericSymbols" title="numericSymbols"></a>
+	<h3 class="method-title"><code><a href="#//api/name/numericSymbols">&nbsp;&nbsp;numericSymbols</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: <a href="http://en.wikipedia.org/wiki/Metric_prefix">http://en.wikipedia.org/wiki/Metric_prefix</a> : Metric prefixes used
+to shorten high numbers in axis labels. Replacing any of the positions
+with null causes the full number to be written. Setting numericSymbols
+to null disables shortening altogether.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *numericSymbols</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/</a> : Replacing the symbols with text</li>
+<li>default: [ &ldquo;k&rdquo; , &ldquo;M&rdquo; , &ldquo;G&rdquo; , &ldquo;T&rdquo; , &ldquo;P&rdquo; , &ldquo;E&rdquo;]</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadCSV" title="downloadCSV"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadCSV">&nbsp;&nbsp;downloadCSV</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Export-data module only. The text for the menu item.
+default: Download CSV</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadCSV</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/weekdays" title="weekdays"></a>
+	<h3 class="method-title"><code><a href="#//api/name/weekdays">&nbsp;&nbsp;weekdays</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: An array containing the weekday names.</li>
+<li>default: [&ldquo;Sunday&rdquo;, &ldquo;Monday&rdquo;, &ldquo;Tuesday&rdquo;, &ldquo;Wednesday&rdquo;, &ldquo;Thursday&rdquo;,
+       &ldquo;Friday&rdquo;, &ldquo;Saturday&rdquo;]</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *weekdays</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/viewData" title="viewData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/viewData">&nbsp;&nbsp;viewData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Export-data module only. The text for the menu item.
+default: View data table</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *viewData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loading" title="loading"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loading">&nbsp;&nbsp;loading</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The loading text that appears when the chart is set into the loading
+state following a call to chart.showLoading.</li>
+<li>default: Loading&hellip;</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *loading</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/decimalPoint" title="decimalPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/decimalPoint">&nbsp;&nbsp;decimalPoint</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The default decimal point used in the Highcharts.numberFormat
+method unless otherwise specified in the function arguments.</li>
+<li>default: .</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *decimalPoint</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/thousandsSep" title="thousandsSep"></a>
+	<h3 class="method-title"><code><a href="#//api/name/thousandsSep">&nbsp;&nbsp;thousandsSep</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The default thousands separator used in the Highcharts.numberFormat
+method unless otherwise specified in the function arguments. Since
+Highcharts 4.1 it defaults to a single space character, which is
+compatible with ISO and works across Anglo-American and continental
+European languages.
+The default is a single space.</li>
+<li>default:</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *thousandsSep</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

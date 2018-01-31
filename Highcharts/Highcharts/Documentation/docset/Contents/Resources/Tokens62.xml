@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIHistogram.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIHistogram</TokenIdentifier>
+			<Abstract type="html">* description: A histogram series. If the type option is not
+specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+histogram.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+            
+			
+			<NodeRef refid="62"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setGroupZPadding:</TokenIdentifier>
+			<Abstract type="html">* description: The spacing between columns on the Z Axis in a 3D chart. Requires
+highcharts-3d.js.
+* default: 1</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupZPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupZPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/groupZPadding</TokenIdentifier>
+			<Abstract type="html">* description: The spacing between columns on the Z Axis in a 3D chart. Requires
+highcharts-3d.js.
+* default: 1</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupZPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupZPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/groupZPadding</TokenIdentifier>
+			<Abstract type="html">* description: The spacing between columns on the Z Axis in a 3D chart. Requires
+highcharts-3d.js.
+* default: 1</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupZPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupZPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setPointWidth:</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/pointWidth</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/pointWidth</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setEdgeWidth:</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/edgeWidth</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/edgeWidth</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setDepth:</TokenIdentifier>
+			<Abstract type="html">* description: Depth of the columns in a 3D column chart. Requires highcharts-3d.
+js.
+* default: 25</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/depth</TokenIdentifier>
+			<Abstract type="html">* description: Depth of the columns in a 3D column chart. Requires highcharts-3d.
+js.
+* default: 25</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/depth</TokenIdentifier>
+			<Abstract type="html">* description: Depth of the columns in a 3D column chart. Requires highcharts-3d.
+js.
+* default: 25</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setGroupPadding:</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each value groups, in x axis units.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/groupPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each value groups, in x axis units.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/groupPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each value groups, in x axis units.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setMaxPointWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/maxPointWidth</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/maxPointWidth</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setPointRange:</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/pointRange</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/pointRange</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setMinPointLength:</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/minPointLength</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/minPointLength</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setEdgeColor:</TokenIdentifier>
+			<Abstract type="html">* description: 3D columns only. The color of the edges. Similar to borderColor,
+except it defaults to the same color as the column.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *edgeColor</Declaration>
+			
+			
+			<Anchor>//api/name/edgeColor</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/edgeColor</TokenIdentifier>
+			<Abstract type="html">* description: 3D columns only. The color of the edges. Similar to borderColor,
+except it defaults to the same color as the column.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *edgeColor</Declaration>
+			
+			
+			<Anchor>//api/name/edgeColor</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/edgeColor</TokenIdentifier>
+			<Abstract type="html">* description: 3D columns only. The color of the edges. Similar to borderColor,
+except it defaults to the same color as the column.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *edgeColor</Declaration>
+			
+			
+			<Anchor>//api/name/edgeColor</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setColorByPoint:</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/colorByPoint</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/colorByPoint</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setBorderRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setBinWidth:</TokenIdentifier>
+			<Abstract type="html">* description: Width of each bin. By default the bin&apos;s width is calculated as (max - min) / number of bins.
+This option takes precedence over binsNumber.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *binWidth</Declaration>
+			
+			
+			<Anchor>//api/name/binWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/binWidth</TokenIdentifier>
+			<Abstract type="html">* description: Width of each bin. By default the bin&apos;s width is calculated as (max - min) / number of bins.
+This option takes precedence over binsNumber.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *binWidth</Declaration>
+			
+			
+			<Anchor>//api/name/binWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/binWidth</TokenIdentifier>
+			<Abstract type="html">* description: Width of each bin. By default the bin&apos;s width is calculated as (max - min) / number of bins.
+This option takes precedence over binsNumber.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *binWidth</Declaration>
+			
+			
+			<Anchor>//api/name/binWidth</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setGrouping:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/grouping</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/grouping</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setPointPadding:</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each column or bar, in x axis units.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/pointPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each column or bar, in x axis units.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/pointPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each column or bar, in x axis units.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setColors:</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setCrisp:</TokenIdentifier>
+			<Abstract type="html">* description: When true, each column edge is rounded to its nearest pixel in order
+to render sharp on screen. In some cases, when there are a lot of
+densely packed columns, this leads to visible difference in column
+widths or distance between columns. In these cases, setting crisp
+to false may look better, even though each column is rendered
+blurry.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crisp</Declaration>
+			
+			
+			<Anchor>//api/name/crisp</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/crisp</TokenIdentifier>
+			<Abstract type="html">* description: When true, each column edge is rounded to its nearest pixel in order
+to render sharp on screen. In some cases, when there are a lot of
+densely packed columns, this leads to visible difference in column
+widths or distance between columns. In these cases, setting crisp
+to false may look better, even though each column is rendered
+blurry.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crisp</Declaration>
+			
+			
+			<Anchor>//api/name/crisp</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/crisp</TokenIdentifier>
+			<Abstract type="html">* description: When true, each column edge is rounded to its nearest pixel in order
+to render sharp on screen. In some cases, when there are a lot of
+densely packed columns, this leads to visible difference in column
+widths or distance between columns. In these cases, setting crisp
+to false may look better, even though each column is rendered
+blurry.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crisp</Declaration>
+			
+			
+			<Anchor>//api/name/crisp</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setBinsNumber:</TokenIdentifier>
+			<Abstract type="html">* description: A preferable number of bins. It is a suggestion, so a histogram may have
+a different number of bins. By default it is set to the square of the
+base series&apos; data length. Available options are: square-root,
+sturges, rice. You can also define a function which takes a
+baseSeries as a parameter and should return a positive integer.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id binsNumber</Declaration>
+			
+			
+			<Anchor>//api/name/binsNumber</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/binsNumber</TokenIdentifier>
+			<Abstract type="html">* description: A preferable number of bins. It is a suggestion, so a histogram may have
+a different number of bins. By default it is set to the square of the
+base series&apos; data length. Available options are: square-root,
+sturges, rice. You can also define a function which takes a
+baseSeries as a parameter and should return a positive integer.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id binsNumber</Declaration>
+			
+			
+			<Anchor>//api/name/binsNumber</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/binsNumber</TokenIdentifier>
+			<Abstract type="html">* description: A preferable number of bins. It is a suggestion, so a histogram may have
+a different number of bins. By default it is set to the square of the
+base series&apos; data length. Available options are: square-root,
+sturges, rice. You can also define a function which takes a
+baseSeries as a parameter and should return a positive integer.</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id binsNumber</Declaration>
+			
+			
+			<Anchor>//api/name/binsNumber</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/setBaseSeries:</TokenIdentifier>
+			<Abstract type="html">* description: An integer identifying the index to use for the base series, or a string
+representing the id of the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id baseSeries</Declaration>
+			
+			
+			<Anchor>//api/name/baseSeries</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIHistogram/baseSeries</TokenIdentifier>
+			<Abstract type="html">* description: An integer identifying the index to use for the base series, or a string
+representing the id of the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id baseSeries</Declaration>
+			
+			
+			<Anchor>//api/name/baseSeries</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIHistogram/baseSeries</TokenIdentifier>
+			<Abstract type="html">* description: An integer identifying the index to use for the base series, or a string
+representing the id of the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIHistogram.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id baseSeries</Declaration>
+			
+			
+			<Anchor>//api/name/baseSeries</Anchor>
+            <NodeRef refid="62"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

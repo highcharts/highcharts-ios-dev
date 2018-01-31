@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIDial.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIDial</TokenIdentifier>
+			<Abstract type="html">* description: Options for the dial or arrow pointer of the gauge.
+In styled mode, the dial is styled with the .highcharts-gauge-
+series .highcharts-dial rule.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+            
+			
+			<NodeRef refid="42"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/setRearLength:</TokenIdentifier>
+			<Abstract type="html">* description: The length of the dial&apos;s rear end, the part that extends out on the
+other side of the pivot. Relative to the dial&apos;s length.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rearLength</Declaration>
+			
+			
+			<Anchor>//api/name/rearLength</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/rearLength</TokenIdentifier>
+			<Abstract type="html">* description: The length of the dial&apos;s rear end, the part that extends out on the
+other side of the pivot. Relative to the dial&apos;s length.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rearLength</Declaration>
+			
+			
+			<Anchor>//api/name/rearLength</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDial/rearLength</TokenIdentifier>
+			<Abstract type="html">* description: The length of the dial&apos;s rear end, the part that extends out on the
+other side of the pivot. Relative to the dial&apos;s length.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rearLength</Declaration>
+			
+			
+			<Anchor>//api/name/rearLength</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The border color or stroke of the gauge&apos;s dial. By default, the borderWidth
+is 0, so this must be set in addition to a custom border color.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The border color or stroke of the gauge&apos;s dial. By default, the borderWidth
+is 0, so this must be set in addition to a custom border color.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDial/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The border color or stroke of the gauge&apos;s dial. By default, the borderWidth
+is 0, so this must be set in addition to a custom border color.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/setRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The radius or length of the dial, in percentages relative to the
+radius of the gauge itself.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/radius</TokenIdentifier>
+			<Abstract type="html">* description: The radius or length of the dial, in percentages relative to the
+radius of the gauge itself.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDial/radius</TokenIdentifier>
+			<Abstract type="html">* description: The radius or length of the dial, in percentages relative to the
+radius of the gauge itself.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/setTopWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the top of the dial, closest to the perimeter. The pivot
+narrows in from the base to the top.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *topWidth</Declaration>
+			
+			
+			<Anchor>//api/name/topWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/topWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the top of the dial, closest to the perimeter. The pivot
+narrows in from the base to the top.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *topWidth</Declaration>
+			
+			
+			<Anchor>//api/name/topWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDial/topWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the top of the dial, closest to the perimeter. The pivot
+narrows in from the base to the top.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *topWidth</Declaration>
+			
+			
+			<Anchor>//api/name/topWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/setBaseLength:</TokenIdentifier>
+			<Abstract type="html">* description: The length of the dial&apos;s base part, relative to the total radius
+or length of the dial.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *baseLength</Declaration>
+			
+			
+			<Anchor>//api/name/baseLength</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/baseLength</TokenIdentifier>
+			<Abstract type="html">* description: The length of the dial&apos;s base part, relative to the total radius
+or length of the dial.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *baseLength</Declaration>
+			
+			
+			<Anchor>//api/name/baseLength</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDial/baseLength</TokenIdentifier>
+			<Abstract type="html">* description: The length of the dial&apos;s base part, relative to the total radius
+or length of the dial.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *baseLength</Declaration>
+			
+			
+			<Anchor>//api/name/baseLength</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/setBaseWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the base of the gauge dial. The base is the part
+closest to the pivot, defined by baseLength.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *baseWidth</Declaration>
+			
+			
+			<Anchor>//api/name/baseWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/baseWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the base of the gauge dial. The base is the part
+closest to the pivot, defined by baseLength.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *baseWidth</Declaration>
+			
+			
+			<Anchor>//api/name/baseWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDial/baseWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the base of the gauge dial. The base is the part
+closest to the pivot, defined by baseLength.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *baseWidth</Declaration>
+			
+			
+			<Anchor>//api/name/baseWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/setBorderWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the gauge dial border in pixels.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the gauge dial border in pixels.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDial/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the gauge dial border in pixels.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/setBackgroundColor:</TokenIdentifier>
+			<Abstract type="html">* description: The background or fill color of the gauge&apos;s dial.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDial/backgroundColor</TokenIdentifier>
+			<Abstract type="html">* description: The background or fill color of the gauge&apos;s dial.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDial/backgroundColor</TokenIdentifier>
+			<Abstract type="html">* description: The background or fill color of the gauge&apos;s dial.</Abstract>
+			<DeclaredIn>HIDial.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIBellcurve.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIBellcurve</TokenIdentifier>
+			<Abstract type="html">* description: A bellcurve series. If the type option is not
+specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+bellcurve.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+            
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/setFillOpacity:</TokenIdentifier>
+			<Abstract type="html">* description: Fill opacity for the area. When you set an explicit fillColor,
+the fillOpacity is not applied. Instead, you should define the
+opacity in the fillColor with an rgba color definition. The fillOpacity
+setting, also the default setting, overrides the alpha component
+of the color setting.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fillOpacity</Declaration>
+			
+			
+			<Anchor>//api/name/fillOpacity</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/fillOpacity</TokenIdentifier>
+			<Abstract type="html">* description: Fill opacity for the area. When you set an explicit fillColor,
+the fillOpacity is not applied. Instead, you should define the
+opacity in the fillColor with an rgba color definition. The fillOpacity
+setting, also the default setting, overrides the alpha component
+of the color setting.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fillOpacity</Declaration>
+			
+			
+			<Anchor>//api/name/fillOpacity</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBellcurve/fillOpacity</TokenIdentifier>
+			<Abstract type="html">* description: Fill opacity for the area. When you set an explicit fillColor,
+the fillOpacity is not applied. Instead, you should define the
+opacity in the fillColor with an rgba color definition. The fillOpacity
+setting, also the default setting, overrides the alpha component
+of the color setting.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fillOpacity</Declaration>
+			
+			
+			<Anchor>//api/name/fillOpacity</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/setPointsInInterval:</TokenIdentifier>
+			<Abstract type="html">* description: Defines how many points should be plotted within 1 interval. See
+plotOptions.bellcurve.intervals.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointsInInterval</Declaration>
+			
+			
+			<Anchor>//api/name/pointsInInterval</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/pointsInInterval</TokenIdentifier>
+			<Abstract type="html">* description: Defines how many points should be plotted within 1 interval. See
+plotOptions.bellcurve.intervals.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointsInInterval</Declaration>
+			
+			
+			<Anchor>//api/name/pointsInInterval</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBellcurve/pointsInInterval</TokenIdentifier>
+			<Abstract type="html">* description: Defines how many points should be plotted within 1 interval. See
+plotOptions.bellcurve.intervals.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointsInInterval</Declaration>
+			
+			
+			<Anchor>//api/name/pointsInInterval</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/setLineColor:</TokenIdentifier>
+			<Abstract type="html">* description: A separate color for the graph line. By default the line takes the
+color of the series, but the lineColor setting allows setting a
+separate color for the line without altering the fillColor.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: A separate color for the graph line. By default the line takes the
+color of the series, but the lineColor setting allows setting a
+separate color for the line without altering the fillColor.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBellcurve/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: A separate color for the graph line. By default the line takes the
+color of the series, but the lineColor setting allows setting a
+separate color for the line without altering the fillColor.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/setNegativeFillColor:</TokenIdentifier>
+			<Abstract type="html">description: A separate color for the negative part of the area.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeFillColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeFillColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/negativeFillColor</TokenIdentifier>
+			<Abstract type="html">description: A separate color for the negative part of the area.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeFillColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeFillColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBellcurve/negativeFillColor</TokenIdentifier>
+			<Abstract type="html">description: A separate color for the negative part of the area.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeFillColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeFillColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/setFillColor:</TokenIdentifier>
+			<Abstract type="html">* description: Fill color or gradient for the area. When null, the series&apos; color
+is used with the series&apos; fillOpacity.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/fillColor</TokenIdentifier>
+			<Abstract type="html">* description: Fill color or gradient for the area. When null, the series&apos; color
+is used with the series&apos; fillOpacity.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBellcurve/fillColor</TokenIdentifier>
+			<Abstract type="html">* description: Fill color or gradient for the area. When null, the series&apos; color
+is used with the series&apos; fillOpacity.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/setTrackByArea:</TokenIdentifier>
+			<Abstract type="html">* description: Whether the whole area or just the line should respond to mouseover
+tooltips and other mouse or touch events.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *trackByArea</Declaration>
+			
+			
+			<Anchor>//api/name/trackByArea</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/trackByArea</TokenIdentifier>
+			<Abstract type="html">* description: Whether the whole area or just the line should respond to mouseover
+tooltips and other mouse or touch events.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *trackByArea</Declaration>
+			
+			
+			<Anchor>//api/name/trackByArea</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBellcurve/trackByArea</TokenIdentifier>
+			<Abstract type="html">* description: Whether the whole area or just the line should respond to mouseover
+tooltips and other mouse or touch events.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *trackByArea</Declaration>
+			
+			
+			<Anchor>//api/name/trackByArea</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/setIntervals:</TokenIdentifier>
+			<Abstract type="html">* description: This option allows to define the length of the bell curve. A unit of the
+length of the bell curve is standard deviation.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *intervals</Declaration>
+			
+			
+			<Anchor>//api/name/intervals</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/intervals</TokenIdentifier>
+			<Abstract type="html">* description: This option allows to define the length of the bell curve. A unit of the
+length of the bell curve is standard deviation.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *intervals</Declaration>
+			
+			
+			<Anchor>//api/name/intervals</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBellcurve/intervals</TokenIdentifier>
+			<Abstract type="html">* description: This option allows to define the length of the bell curve. A unit of the
+length of the bell curve is standard deviation.</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *intervals</Declaration>
+			
+			
+			<Anchor>//api/name/intervals</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/setBaseSeries:</TokenIdentifier>
+			<Abstract type="html">* description: An integer identifying the index to use for the base series, or a string
+representing the id of the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id baseSeries</Declaration>
+			
+			
+			<Anchor>//api/name/baseSeries</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBellcurve/baseSeries</TokenIdentifier>
+			<Abstract type="html">* description: An integer identifying the index to use for the base series, or a string
+representing the id of the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id baseSeries</Declaration>
+			
+			
+			<Anchor>//api/name/baseSeries</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBellcurve/baseSeries</TokenIdentifier>
+			<Abstract type="html">* description: An integer identifying the index to use for the base series, or a string
+representing the id of the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIBellcurve.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id baseSeries</Declaration>
+			
+			
+			<Anchor>//api/name/baseSeries</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

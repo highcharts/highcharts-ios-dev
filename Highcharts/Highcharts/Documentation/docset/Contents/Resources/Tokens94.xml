@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIPivot.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIPivot</TokenIdentifier>
+			<Abstract type="html">* description: Options for the pivot or the center point of the gauge.
+In styled mode, the pivot is styled with the .highcharts-gauge-
+series .highcharts-pivot rule.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+            
+			
+			<NodeRef refid="94"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPivot/setRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel radius of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPivot/radius</TokenIdentifier>
+			<Abstract type="html">* description: The pixel radius of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPivot/radius</TokenIdentifier>
+			<Abstract type="html">* description: The pixel radius of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPivot/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The border or stroke color of the pivot. In able to change this,
+the borderWidth must also be set to something other than the default
+0.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPivot/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The border or stroke color of the pivot. In able to change this,
+the borderWidth must also be set to something other than the default
+0.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPivot/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The border or stroke color of the pivot. In able to change this,
+the borderWidth must also be set to something other than the default
+0.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPivot/setBackgroundColor:</TokenIdentifier>
+			<Abstract type="html">* description: The background color or fill of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPivot/backgroundColor</TokenIdentifier>
+			<Abstract type="html">* description: The background color or fill of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPivot/backgroundColor</TokenIdentifier>
+			<Abstract type="html">* description: The background color or fill of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPivot/setBorderWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The border or stroke width of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPivot/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The border or stroke width of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPivot/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The border or stroke width of the pivot.</Abstract>
+			<DeclaredIn>HIPivot.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="94"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

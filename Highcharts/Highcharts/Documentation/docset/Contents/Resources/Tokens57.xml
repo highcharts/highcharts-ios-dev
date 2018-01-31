@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIGJavaScript.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIGJavaScript</TokenIdentifier>
+			<Abstract type="html">This class is needed to JSON operations.</Abstract>
+			<DeclaredIn>HIGJavaScript.h</DeclaredIn>
+            
+			
+			<NodeRef refid="57"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIGJavaScript/JSObject:</TokenIdentifier>
+			<Abstract type="html">Prepares object and returns as JSON representation.</Abstract>
+			<DeclaredIn>HIGJavaScript.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)JSObject:(id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">NSArray or NSDictionary object to return.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSString JSON representaion.</Abstract></ReturnValue>
+			<Anchor>//api/name/JSObject:</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

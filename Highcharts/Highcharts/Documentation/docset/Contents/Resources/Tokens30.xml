@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIColumnrange.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIColumnrange</TokenIdentifier>
+			<Abstract type="html">* description: A columnrange series. If the type
+option is not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+columnrange.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+            
+			
+			<NodeRef refid="30"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setColorByPoint:</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/colorByPoint</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/colorByPoint</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setCrisp:</TokenIdentifier>
+			<Abstract type="html">* description: When true, each column edge is rounded to its nearest pixel in order
+to render sharp on screen. In some cases, when there are a lot of
+densely packed columns, this leads to visible difference in column
+widths or distance between columns. In these cases, setting crisp
+to false may look better, even though each column is rendered
+blurry.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crisp</Declaration>
+			
+			
+			<Anchor>//api/name/crisp</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/crisp</TokenIdentifier>
+			<Abstract type="html">* description: When true, each column edge is rounded to its nearest pixel in order
+to render sharp on screen. In some cases, when there are a lot of
+densely packed columns, this leads to visible difference in column
+widths or distance between columns. In these cases, setting crisp
+to false may look better, even though each column is rendered
+blurry.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crisp</Declaration>
+			
+			
+			<Anchor>//api/name/crisp</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/crisp</TokenIdentifier>
+			<Abstract type="html">* description: When true, each column edge is rounded to its nearest pixel in order
+to render sharp on screen. In some cases, when there are a lot of
+densely packed columns, this leads to visible difference in column
+widths or distance between columns. In these cases, setting crisp
+to false may look better, even though each column is rendered
+blurry.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crisp</Declaration>
+			
+			
+			<Anchor>//api/name/crisp</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setPointRange:</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/pointRange</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/pointRange</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setMinPointLength:</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/minPointLength</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/minPointLength</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setPointWidth:</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/pointWidth</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/pointWidth</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setGroupPadding:</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each value groups, in x axis units.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/groupPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each value groups, in x axis units.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/groupPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each value groups, in x axis units.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setColors:</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setDepth:</TokenIdentifier>
+			<Abstract type="html">* description: Depth of the columns in a 3D column chart. Requires highcharts-3d.
+js.
+* default: 25</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/depth</TokenIdentifier>
+			<Abstract type="html">* description: Depth of the columns in a 3D column chart. Requires highcharts-3d.
+js.
+* default: 25</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/depth</TokenIdentifier>
+			<Abstract type="html">* description: Depth of the columns in a 3D column chart. Requires highcharts-3d.
+js.
+* default: 25</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setBorderRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setGrouping:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/grouping</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/grouping</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setEdgeWidth:</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/edgeWidth</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/edgeWidth</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setMaxPointWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/maxPointWidth</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/maxPointWidth</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setGroupZPadding:</TokenIdentifier>
+			<Abstract type="html">* description: The spacing between columns on the Z Axis in a 3D chart. Requires
+highcharts-3d.js.
+* default: 1</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupZPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupZPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/groupZPadding</TokenIdentifier>
+			<Abstract type="html">* description: The spacing between columns on the Z Axis in a 3D chart. Requires
+highcharts-3d.js.
+* default: 1</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupZPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupZPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/groupZPadding</TokenIdentifier>
+			<Abstract type="html">* description: The spacing between columns on the Z Axis in a 3D chart. Requires
+highcharts-3d.js.
+* default: 1</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupZPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupZPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setEdgeColor:</TokenIdentifier>
+			<Abstract type="html">* description: 3D columns only. The color of the edges. Similar to borderColor,
+except it defaults to the same color as the column.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *edgeColor</Declaration>
+			
+			
+			<Anchor>//api/name/edgeColor</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/edgeColor</TokenIdentifier>
+			<Abstract type="html">* description: 3D columns only. The color of the edges. Similar to borderColor,
+except it defaults to the same color as the column.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *edgeColor</Declaration>
+			
+			
+			<Anchor>//api/name/edgeColor</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/edgeColor</TokenIdentifier>
+			<Abstract type="html">* description: 3D columns only. The color of the edges. Similar to borderColor,
+except it defaults to the same color as the column.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *edgeColor</Declaration>
+			
+			
+			<Anchor>//api/name/edgeColor</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/setPointPadding:</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each column or bar, in x axis units.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColumnrange/pointPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each column or bar, in x axis units.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColumnrange/pointPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding between each column or bar, in x axis units.</Abstract>
+			<DeclaredIn>HIColumnrange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIStyle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the tooltip. The tooltip can also be styled through
+the CSS class .highcharts-tooltip.</Abstract>
+			<DeclaredIn>HIStyle.h</DeclaredIn>
+            
+			
+			<NodeRef refid="120"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIStyle/setFontFamily:</TokenIdentifier>
+			<Abstract type="html">description: The font family to use for the word cloud.
+default: Impact, sans-serif</Abstract>
+			<DeclaredIn>HIStyle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fontFamily</Declaration>
+			
+			
+			<Anchor>//api/name/fontFamily</Anchor>
+            <NodeRef refid="120"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIStyle/fontFamily</TokenIdentifier>
+			<Abstract type="html">description: The font family to use for the word cloud.
+default: Impact, sans-serif</Abstract>
+			<DeclaredIn>HIStyle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fontFamily</Declaration>
+			
+			
+			<Anchor>//api/name/fontFamily</Anchor>
+            <NodeRef refid="120"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIStyle/fontFamily</TokenIdentifier>
+			<Abstract type="html">description: The font family to use for the word cloud.
+default: Impact, sans-serif</Abstract>
+			<DeclaredIn>HIStyle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fontFamily</Declaration>
+			
+			
+			<Anchor>//api/name/fontFamily</Anchor>
+            <NodeRef refid="120"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

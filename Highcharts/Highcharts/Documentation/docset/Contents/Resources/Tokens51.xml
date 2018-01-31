@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIFunnel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIFunnel</TokenIdentifier>
+			<Abstract type="html">* description: A funnel series. If the type option is
+not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+funnel.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="51"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setDepth:</TokenIdentifier>
+			<Abstract type="html">description: The thickness of a 3D pie. Requires highcharts-3d.js
+default: 0</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/depth</TokenIdentifier>
+			<Abstract type="html">description: The thickness of a 3D pie. Requires highcharts-3d.js
+default: 0</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/depth</TokenIdentifier>
+			<Abstract type="html">description: The thickness of a 3D pie. Requires highcharts-3d.js
+default: 0</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the funnel compared to the width of the plot area,
+or the pixel width if it is a number.
+* default: 90%</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/width</TokenIdentifier>
+			<Abstract type="html">* description: The width of the funnel compared to the width of the plot area,
+or the pixel width if it is a number.
+* default: 90%</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/width</TokenIdentifier>
+			<Abstract type="html">* description: The width of the funnel compared to the width of the plot area,
+or the pixel width if it is a number.
+* default: 90%</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setSlicedOffset:</TokenIdentifier>
+			<Abstract type="html">* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *slicedOffset</Declaration>
+			
+			
+			<Anchor>//api/name/slicedOffset</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/slicedOffset</TokenIdentifier>
+			<Abstract type="html">* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *slicedOffset</Declaration>
+			
+			
+			<Anchor>//api/name/slicedOffset</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/slicedOffset</TokenIdentifier>
+			<Abstract type="html">* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *slicedOffset</Declaration>
+			
+			
+			<Anchor>//api/name/slicedOffset</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setCenter:</TokenIdentifier>
+			<Abstract type="html">* description: The center of the series. By default, it is centered in the middle
+of the plot area, so it fills the plot area height.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/center</TokenIdentifier>
+			<Abstract type="html">* description: The center of the series. By default, it is centered in the middle
+of the plot area, so it fills the plot area height.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/center</TokenIdentifier>
+			<Abstract type="html">* description: The center of the series. By default, it is centered in the middle
+of the plot area, so it fills the plot area height.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setMinSize:</TokenIdentifier>
+			<Abstract type="html">* description: The minimum size for a pie in response to auto margins. The pie will
+try to shrink to make room for data labels in side the plot area,
+but only to this size.
+* default: 80</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minSize</Declaration>
+			
+			
+			<Anchor>//api/name/minSize</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/minSize</TokenIdentifier>
+			<Abstract type="html">* description: The minimum size for a pie in response to auto margins. The pie will
+try to shrink to make room for data labels in side the plot area,
+but only to this size.
+* default: 80</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minSize</Declaration>
+			
+			
+			<Anchor>//api/name/minSize</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/minSize</TokenIdentifier>
+			<Abstract type="html">* description: The minimum size for a pie in response to auto margins. The pie will
+try to shrink to make room for data labels in side the plot area,
+but only to this size.
+* default: 80</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minSize</Declaration>
+			
+			
+			<Anchor>//api/name/minSize</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setEndAngle:</TokenIdentifier>
+			<Abstract type="html">* description: The end angle of the pie in degrees where 0 is top and 90 is right.
+Defaults to startAngle plus 360.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endAngle</Declaration>
+			
+			
+			<Anchor>//api/name/endAngle</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/endAngle</TokenIdentifier>
+			<Abstract type="html">* description: The end angle of the pie in degrees where 0 is top and 90 is right.
+Defaults to startAngle plus 360.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endAngle</Declaration>
+			
+			
+			<Anchor>//api/name/endAngle</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/endAngle</TokenIdentifier>
+			<Abstract type="html">* description: The end angle of the pie in degrees where 0 is top and 90 is right.
+Defaults to startAngle plus 360.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endAngle</Declaration>
+			
+			
+			<Anchor>//api/name/endAngle</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setNeckWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the neck, the lower part of the funnel. A number defines
+pixel width, a percentage string defines a percentage of the plot
+area width.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id neckWidth</Declaration>
+			
+			
+			<Anchor>//api/name/neckWidth</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/neckWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the neck, the lower part of the funnel. A number defines
+pixel width, a percentage string defines a percentage of the plot
+area width.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id neckWidth</Declaration>
+			
+			
+			<Anchor>//api/name/neckWidth</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/neckWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the neck, the lower part of the funnel. A number defines
+pixel width, a percentage string defines a percentage of the plot
+area width.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id neckWidth</Declaration>
+			
+			
+			<Anchor>//api/name/neckWidth</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setStartAngle:</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/startAngle</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/startAngle</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setIgnoreHiddenPoint:</TokenIdentifier>
+			<Abstract type="html">* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+The default value changed from false to true with Highcharts
+3.0.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/ignoreHiddenPoint</TokenIdentifier>
+			<Abstract type="html">* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+The default value changed from false to true with Highcharts
+3.0.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/ignoreHiddenPoint</TokenIdentifier>
+			<Abstract type="html">* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+The default value changed from false to true with Highcharts
+3.0.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setInnerSize:</TokenIdentifier>
+			<Abstract type="html">* description: The size of the inner diameter for the pie. A size greater than 0
+renders a donut chart. Can be a percentage or pixel value. Percentages
+are relative to the pie size. Pixel values are given as integers.
+Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plot
+area, not the pie size.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerSize</Declaration>
+			
+			
+			<Anchor>//api/name/innerSize</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/innerSize</TokenIdentifier>
+			<Abstract type="html">* description: The size of the inner diameter for the pie. A size greater than 0
+renders a donut chart. Can be a percentage or pixel value. Percentages
+are relative to the pie size. Pixel values are given as integers.
+Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plot
+area, not the pie size.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerSize</Declaration>
+			
+			
+			<Anchor>//api/name/innerSize</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/innerSize</TokenIdentifier>
+			<Abstract type="html">* description: The size of the inner diameter for the pie. A size greater than 0
+renders a donut chart. Can be a percentage or pixel value. Percentages
+are relative to the pie size. Pixel values are given as integers.
+Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plot
+area, not the pie size.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerSize</Declaration>
+			
+			
+			<Anchor>//api/name/innerSize</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setReversed:</TokenIdentifier>
+			<Abstract type="html">* description: A reversed funnel has the widest area down. A reversed funnel with
+no neck width and neck height is a pyramid.
+* default: false</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reversed</Declaration>
+			
+			
+			<Anchor>//api/name/reversed</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/reversed</TokenIdentifier>
+			<Abstract type="html">* description: A reversed funnel has the widest area down. A reversed funnel with
+no neck width and neck height is a pyramid.
+* default: false</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reversed</Declaration>
+			
+			
+			<Anchor>//api/name/reversed</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/reversed</TokenIdentifier>
+			<Abstract type="html">* description: A reversed funnel has the widest area down. A reversed funnel with
+no neck width and neck height is a pyramid.
+* default: false</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reversed</Declaration>
+			
+			
+			<Anchor>//api/name/reversed</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setHeight:</TokenIdentifier>
+			<Abstract type="html">* description: The height of the funnel or pyramid. If it is a number it defines
+the pixel height, if it is a percentage string it is the percentage
+of the plot area height.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/height</TokenIdentifier>
+			<Abstract type="html">* description: The height of the funnel or pyramid. If it is a number it defines
+the pixel height, if it is a percentage string it is the percentage
+of the plot area height.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/height</TokenIdentifier>
+			<Abstract type="html">* description: The height of the funnel or pyramid. If it is a number it defines
+the pixel height, if it is a percentage string it is the percentage
+of the plot area height.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setColors:</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/setNeckHeight:</TokenIdentifier>
+			<Abstract type="html">* description: The height of the neck, the lower part of the funnel. A number defines
+pixel width, a percentage string defines a percentage of the plot
+area height.
+* default: 25%</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id neckHeight</Declaration>
+			
+			
+			<Anchor>//api/name/neckHeight</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFunnel/neckHeight</TokenIdentifier>
+			<Abstract type="html">* description: The height of the neck, the lower part of the funnel. A number defines
+pixel width, a percentage string defines a percentage of the plot
+area height.
+* default: 25%</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id neckHeight</Declaration>
+			
+			
+			<Anchor>//api/name/neckHeight</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFunnel/neckHeight</TokenIdentifier>
+			<Abstract type="html">* description: The height of the neck, the lower part of the funnel. A number defines
+pixel width, a percentage string defines a percentage of the plot
+area height.
+* default: 25%</Abstract>
+			<DeclaredIn>HIFunnel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id neckHeight</Declaration>
+			
+			
+			<Anchor>//api/name/neckHeight</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

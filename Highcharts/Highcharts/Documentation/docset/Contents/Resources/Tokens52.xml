@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIGBundle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIGBundle</TokenIdentifier>
+			<Abstract type="html">This clas preloads and returns bundle assets needed.</Abstract>
+			<DeclaredIn>HIGBundle.h</DeclaredIn>
+            
+			
+			<NodeRef refid="52"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/HIGBundle/preloadBundle:</TokenIdentifier>
+			<Abstract type="html">Preloads bundle with specified name.</Abstract>
+			<DeclaredIn>HIGBundle.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)preloadBundle:(NSString *)bundleName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>bundleName</Name>
+					<Abstract type="html">bundle name to preload in reverse domain egz &apos;com.higsoft.bundle&apos;</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">return status of preload.</Abstract></ReturnValue>
+			<Anchor>//api/name/preloadBundle:</Anchor>
+            <NodeRef refid="52"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/HIGBundle/bundle:</TokenIdentifier>
+			<Abstract type="html">Returns bundle object that need to be preload.</Abstract>
+			<DeclaredIn>HIGBundle.h</DeclaredIn>
+			
+			<Declaration>+ (NSBundle *)bundle:(NSString *)bundleName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>bundleName</Name>
+					<Abstract type="html">bundle name to preload in reverse domain egz &apos;com.higsoft.bundle&apos;</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">bundle object specified name. Returns nil if object is not found.</Abstract></ReturnValue>
+			<Anchor>//api/name/bundle:</Anchor>
+            <NodeRef refid="52"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

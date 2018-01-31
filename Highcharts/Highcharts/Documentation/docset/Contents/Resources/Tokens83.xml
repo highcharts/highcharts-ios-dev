@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIMenuStyle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIMenuStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the popup menu appearing by default when the export
+icon is clicked. This menu is rendered in HTML.</Abstract>
+			<DeclaredIn>HIMenuStyle.h</DeclaredIn>
+            
+			
+			<NodeRef refid="83"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

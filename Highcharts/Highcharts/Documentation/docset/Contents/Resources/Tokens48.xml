@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIFrame.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIFrame</TokenIdentifier>
+			<Abstract type="html">* description: Provides the option to draw a frame around the charts by defining
+a bottom, front and back panel.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+            
+			
+			<NodeRef refid="48"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setVisible:</TokenIdentifier>
+			<Abstract type="html">description: Whether the frames are visible.
+default: default</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/visible</TokenIdentifier>
+			<Abstract type="html">description: Whether the frames are visible.
+default: default</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/visible</TokenIdentifier>
+			<Abstract type="html">description: Whether the frames are visible.
+default: default</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setSize:</TokenIdentifier>
+			<Abstract type="html">description: General pixel thickness for the frame faces.
+default: 1</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/size</TokenIdentifier>
+			<Abstract type="html">description: General pixel thickness for the frame faces.
+default: 1</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/size</TokenIdentifier>
+			<Abstract type="html">description: General pixel thickness for the frame faces.
+default: 1</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setRight:</TokenIdentifier>
+			<Abstract type="html">description: The right of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIRight *right</Declaration>
+			
+			
+			<Anchor>//api/name/right</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/right</TokenIdentifier>
+			<Abstract type="html">description: The right of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIRight *right</Declaration>
+			
+			
+			<Anchor>//api/name/right</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/right</TokenIdentifier>
+			<Abstract type="html">description: The right of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIRight *right</Declaration>
+			
+			
+			<Anchor>//api/name/right</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setTop:</TokenIdentifier>
+			<Abstract type="html">description: The top of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITop *top</Declaration>
+			
+			
+			<Anchor>//api/name/top</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/top</TokenIdentifier>
+			<Abstract type="html">description: The top of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITop *top</Declaration>
+			
+			
+			<Anchor>//api/name/top</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/top</TokenIdentifier>
+			<Abstract type="html">description: The top of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITop *top</Declaration>
+			
+			
+			<Anchor>//api/name/top</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setBack:</TokenIdentifier>
+			<Abstract type="html">description: The back side of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIBack *back</Declaration>
+			
+			
+			<Anchor>//api/name/back</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/back</TokenIdentifier>
+			<Abstract type="html">description: The back side of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIBack *back</Declaration>
+			
+			
+			<Anchor>//api/name/back</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/back</TokenIdentifier>
+			<Abstract type="html">description: The back side of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIBack *back</Declaration>
+			
+			
+			<Anchor>//api/name/back</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setSide:</TokenIdentifier>
+			<Abstract type="html">* description: Note: As of v5.0.12, frame.left or frame.right should be used
+instead.
+The side for the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HISide *side</Declaration>
+			
+			
+			<Anchor>//api/name/side</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/side</TokenIdentifier>
+			<Abstract type="html">* description: Note: As of v5.0.12, frame.left or frame.right should be used
+instead.
+The side for the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HISide *side</Declaration>
+			
+			
+			<Anchor>//api/name/side</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/side</TokenIdentifier>
+			<Abstract type="html">* description: Note: As of v5.0.12, frame.left or frame.right should be used
+instead.
+The side for the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HISide *side</Declaration>
+			
+			
+			<Anchor>//api/name/side</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setFront:</TokenIdentifier>
+			<Abstract type="html">description: The front of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFront *front</Declaration>
+			
+			
+			<Anchor>//api/name/front</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/front</TokenIdentifier>
+			<Abstract type="html">description: The front of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFront *front</Declaration>
+			
+			
+			<Anchor>//api/name/front</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/front</TokenIdentifier>
+			<Abstract type="html">description: The front of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFront *front</Declaration>
+			
+			
+			<Anchor>//api/name/front</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setLeft:</TokenIdentifier>
+			<Abstract type="html">description: The left side of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILeft *left</Declaration>
+			
+			
+			<Anchor>//api/name/left</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/left</TokenIdentifier>
+			<Abstract type="html">description: The left side of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILeft *left</Declaration>
+			
+			
+			<Anchor>//api/name/left</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/left</TokenIdentifier>
+			<Abstract type="html">description: The left side of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILeft *left</Declaration>
+			
+			
+			<Anchor>//api/name/left</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/setBottom:</TokenIdentifier>
+			<Abstract type="html">description: The bottom of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIBottom *bottom</Declaration>
+			
+			
+			<Anchor>//api/name/bottom</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIFrame/bottom</TokenIdentifier>
+			<Abstract type="html">description: The bottom of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIBottom *bottom</Declaration>
+			
+			
+			<Anchor>//api/name/bottom</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIFrame/bottom</TokenIdentifier>
+			<Abstract type="html">description: The bottom of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HIFrame.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIBottom *bottom</Declaration>
+			
+			
+			<Anchor>//api/name/bottom</Anchor>
+            <NodeRef refid="48"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIZones.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIZones</TokenIdentifier>
+			<Abstract type="html">* description: An array defining zones within a series. Zones can be applied to
+the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
+option.
+In styled mode, the color zones are styled with the .highcharts-
+zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-
+zones/ : view
+live demo).</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+            
+			
+			<NodeRef refid="140"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/setClassName:</TokenIdentifier>
+			<Abstract type="html">* description: Styled mode only. A custom class name for the zone.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/className</TokenIdentifier>
+			<Abstract type="html">* description: Styled mode only. A custom class name for the zone.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIZones/className</TokenIdentifier>
+			<Abstract type="html">* description: Styled mode only. A custom class name for the zone.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/setDashStyle:</TokenIdentifier>
+			<Abstract type="html">* description: A name for the dash style to use for the graph.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/dashStyle</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/dashStyle</TokenIdentifier>
+			<Abstract type="html">* description: A name for the dash style to use for the graph.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/dashStyle</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIZones/dashStyle</TokenIdentifier>
+			<Abstract type="html">* description: A name for the dash style to use for the graph.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/dashStyle</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/setColor:</TokenIdentifier>
+			<Abstract type="html">description: Defines the color of the series.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/color</TokenIdentifier>
+			<Abstract type="html">description: Defines the color of the series.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIZones/color</TokenIdentifier>
+			<Abstract type="html">description: Defines the color of the series.</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/setValue:</TokenIdentifier>
+			<Abstract type="html">* description: The value up to where the zone extends, if undefined the zones stretches
+to the last value in the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/value</TokenIdentifier>
+			<Abstract type="html">* description: The value up to where the zone extends, if undefined the zones stretches
+to the last value in the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIZones/value</TokenIdentifier>
+			<Abstract type="html">* description: The value up to where the zone extends, if undefined the zones stretches
+to the last value in the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/setFillColor:</TokenIdentifier>
+			<Abstract type="html">description: Defines the fill color for the series (in area type series)</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIZones/fillColor</TokenIdentifier>
+			<Abstract type="html">description: Defines the fill color for the series (in area type series)</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIZones/fillColor</TokenIdentifier>
+			<Abstract type="html">description: Defines the fill color for the series (in area type series)</Abstract>
+			<DeclaredIn>HIZones.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="140"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

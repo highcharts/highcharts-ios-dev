@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HISelect.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HISelect</TokenIdentifier>
+			<Abstract type="html">* description: The appearance of the point marker when selected. In order to
+allow a point to be selected, set the series.allowPointSelect
+option to true.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+            
+			
+			<NodeRef refid="110"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/setEnabled:</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable visible feedback for selection.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable visible feedback for selection.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISelect/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable visible feedback for selection.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/setLineColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the point marker&apos;s outline. When null, the series&apos;
+or point&apos;s color is used.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the point marker&apos;s outline. When null, the series&apos;
+or point&apos;s color is used.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISelect/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the point marker&apos;s outline. When null, the series&apos;
+or point&apos;s color is used.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/setLineWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the point marker&apos;s outline.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/lineWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the point marker&apos;s outline.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISelect/lineWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the point marker&apos;s outline.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/setFillColor:</TokenIdentifier>
+			<Abstract type="html">* description: The fill color of the point marker.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/fillColor</TokenIdentifier>
+			<Abstract type="html">* description: The fill color of the point marker.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISelect/fillColor</TokenIdentifier>
+			<Abstract type="html">* description: The fill color of the point marker.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/setRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the point marker. In hover state, it defaults to the
+normal state&apos;s radius + 2.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISelect/radius</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the point marker. In hover state, it defaults to the
+normal state&apos;s radius + 2.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISelect/radius</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the point marker. In hover state, it defaults to the
+normal state&apos;s radius + 2.</Abstract>
+			<DeclaredIn>HISelect.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="110"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

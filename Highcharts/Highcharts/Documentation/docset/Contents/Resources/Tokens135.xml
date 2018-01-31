@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIWordcloud.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIWordcloud</TokenIdentifier>
+			<Abstract type="html">* description: A wordcloud series. If the type option is
+not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+wordcloud.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+            
+			
+			<NodeRef refid="135"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setColorByPoint:</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/colorByPoint</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/colorByPoint</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setStyle:</TokenIdentifier>
+			<Abstract type="html">description: CSS styles for the words.
+default: {&quot;fontFamily&quot;:&quot;Impact, sans-serif&quot;}</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/style</TokenIdentifier>
+			<Abstract type="html">description: CSS styles for the words.
+default: {&quot;fontFamily&quot;:&quot;Impact, sans-serif&quot;}</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/style</TokenIdentifier>
+			<Abstract type="html">description: CSS styles for the words.
+default: {&quot;fontFamily&quot;:&quot;Impact, sans-serif&quot;}</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setPlacementStrategy:</TokenIdentifier>
+			<Abstract type="html">* description: This option decides which algorithm is used for placement, and rotation
+of a word. The choice of algorith is therefore a crucial part of the
+resulting layout of the wordcloud.
+It is possible for users to add their own custom placement strategies
+for use in word cloud. Read more about it in our
+https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-placement-strategies : documentation
+* default: random</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *placementStrategy</Declaration>
+			
+			
+			<Anchor>//api/name/placementStrategy</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/placementStrategy</TokenIdentifier>
+			<Abstract type="html">* description: This option decides which algorithm is used for placement, and rotation
+of a word. The choice of algorith is therefore a crucial part of the
+resulting layout of the wordcloud.
+It is possible for users to add their own custom placement strategies
+for use in word cloud. Read more about it in our
+https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-placement-strategies : documentation
+* default: random</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *placementStrategy</Declaration>
+			
+			
+			<Anchor>//api/name/placementStrategy</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/placementStrategy</TokenIdentifier>
+			<Abstract type="html">* description: This option decides which algorithm is used for placement, and rotation
+of a word. The choice of algorith is therefore a crucial part of the
+resulting layout of the wordcloud.
+It is possible for users to add their own custom placement strategies
+for use in word cloud. Read more about it in our
+https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-placement-strategies : documentation
+* default: random</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *placementStrategy</Declaration>
+			
+			
+			<Anchor>//api/name/placementStrategy</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setRotation:</TokenIdentifier>
+			<Abstract type="html">* description: Rotation options for the words in the wordcloud.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIRotation *rotation</Declaration>
+			
+			
+			<Anchor>//api/name/rotation</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/rotation</TokenIdentifier>
+			<Abstract type="html">* description: Rotation options for the words in the wordcloud.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIRotation *rotation</Declaration>
+			
+			
+			<Anchor>//api/name/rotation</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/rotation</TokenIdentifier>
+			<Abstract type="html">* description: Rotation options for the words in the wordcloud.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIRotation *rotation</Declaration>
+			
+			
+			<Anchor>//api/name/rotation</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setColors:</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setBorderRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setEdgeWidth:</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/edgeWidth</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/edgeWidth</TokenIdentifier>
+			<Abstract type="html">description: 3D columns only. The width of the colored edges.
+default: 1</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *edgeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/edgeWidth</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/setSpiral:</TokenIdentifier>
+			<Abstract type="html">* description: Spiral used for placing a word after the inital position experienced a
+collision with either another word or the borders.
+It is possible for users to add their own custom spiralling algorithms
+for use in word cloud. Read more about it in our
+https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-spiralling-algorithm : documentation
+* default: archimedean</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *spiral</Declaration>
+			
+			
+			<Anchor>//api/name/spiral</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIWordcloud/spiral</TokenIdentifier>
+			<Abstract type="html">* description: Spiral used for placing a word after the inital position experienced a
+collision with either another word or the borders.
+It is possible for users to add their own custom spiralling algorithms
+for use in word cloud. Read more about it in our
+https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-spiralling-algorithm : documentation
+* default: archimedean</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *spiral</Declaration>
+			
+			
+			<Anchor>//api/name/spiral</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIWordcloud/spiral</TokenIdentifier>
+			<Abstract type="html">* description: Spiral used for placing a word after the inital position experienced a
+collision with either another word or the borders.
+It is possible for users to add their own custom spiralling algorithms
+for use in word cloud. Read more about it in our
+https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-spiralling-algorithm : documentation
+* default: archimedean</Abstract>
+			<DeclaredIn>HIWordcloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *spiral</Declaration>
+			
+			
+			<Anchor>//api/name/spiral</Anchor>
+            <NodeRef refid="135"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

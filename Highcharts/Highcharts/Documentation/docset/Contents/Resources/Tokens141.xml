@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIColor+HIG.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIColor(HIG)</TokenIdentifier>
+			<Abstract type="html">(c) 2009-2017 Highsoft AS</Abstract>
+			<DeclaredIn>UIColor+HIG.h</DeclaredIn>
+            
+			
+			<NodeRef refid="141"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/color</TokenIdentifier>
+			<Abstract type="html">Color class category. Creating HTML string representation of UIColor object.</Abstract>
+			<DeclaredIn>UIColor+HIG.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)color</Declaration>
+			
+			<ReturnValue><Abstract type="html">UIColor as rgba color string egz. [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0].color to rgba(255, 255, 255, 1.0)</Abstract></ReturnValue>
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="141"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

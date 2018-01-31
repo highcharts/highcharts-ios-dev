@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIDefs.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIDefs</TokenIdentifier>
+			<Abstract type="html">* description: Styled mode only. Configuration object for adding SVG definitions for
+reusable elements. See http://www.
+highcharts.com/docs/chart-design-and-style/gradients-shadows-and-
+patterns : gradients, shadows and patterns for more information and code examples.</Abstract>
+			<DeclaredIn>HIDefs.h</DeclaredIn>
+            
+			
+			<NodeRef refid="41"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDefs/setMarkers:</TokenIdentifier>
+			<Abstract type="html">* description: Options for configuring markers for annotations.
+An example of the arrow marker:</Abstract>
+			<DeclaredIn>HIDefs.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id markers</Declaration>
+			
+			
+			<Anchor>//api/name/markers</Anchor>
+            <NodeRef refid="41"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDefs/markers</TokenIdentifier>
+			<Abstract type="html">* description: Options for configuring markers for annotations.
+An example of the arrow marker:</Abstract>
+			<DeclaredIn>HIDefs.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id markers</Declaration>
+			
+			
+			<Anchor>//api/name/markers</Anchor>
+            <NodeRef refid="41"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDefs/markers</TokenIdentifier>
+			<Abstract type="html">* description: Options for configuring markers for annotations.
+An example of the arrow marker:</Abstract>
+			<DeclaredIn>HIDefs.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id markers</Declaration>
+			
+			
+			<Anchor>//api/name/markers</Anchor>
+            <NodeRef refid="41"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

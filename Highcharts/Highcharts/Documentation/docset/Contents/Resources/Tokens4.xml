@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIAnimation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIAnimation</TokenIdentifier>
+			<Abstract type="html">description: Animation setting for hovering the graph in line-type series.
+default: { &quot;duration&quot;: 50 }</Abstract>
+			<DeclaredIn>HIAnimation.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAnimation/setDuration:</TokenIdentifier>
+			<Abstract type="html">* description: The duration of the hover animation in milliseconds. By
+default the hover state animates quickly in, and slowly back
+to normal.
+* default: 50</Abstract>
+			<DeclaredIn>HIAnimation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *duration</Declaration>
+			
+			
+			<Anchor>//api/name/duration</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAnimation/duration</TokenIdentifier>
+			<Abstract type="html">* description: The duration of the hover animation in milliseconds. By
+default the hover state animates quickly in, and slowly back
+to normal.
+* default: 50</Abstract>
+			<DeclaredIn>HIAnimation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *duration</Declaration>
+			
+			
+			<Anchor>//api/name/duration</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAnimation/duration</TokenIdentifier>
+			<Abstract type="html">* description: The duration of the hover animation in milliseconds. By
+default the hover state animates quickly in, and slowly back
+to normal.
+* default: 50</Abstract>
+			<DeclaredIn>HIAnimation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *duration</Declaration>
+			
+			
+			<Anchor>//api/name/duration</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

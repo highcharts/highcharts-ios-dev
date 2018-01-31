@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIGExport.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIGExport</TokenIdentifier>
+			<Abstract type="html">Plugin Class Required to export functionality.</Abstract>
+			<DeclaredIn>HIGExport.h</DeclaredIn>
+            
+			
+			<NodeRef refid="55"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIGExport/response:</TokenIdentifier>
+			<Abstract type="html">Parse objects from JS and create objective-c representations.</Abstract>
+			<DeclaredIn>HIGExport.h</DeclaredIn>
+			
+			<Declaration>- (void)response:(NSString *)params</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>params</Name>
+					<Abstract type="html">from JS runtime.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/response:</Anchor>
+            <NodeRef refid="55"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIGExport/action:</TokenIdentifier>
+			<Abstract type="html">This method take action for specified objects.</Abstract>
+			<DeclaredIn>HIGExport.h</DeclaredIn>
+			
+			<Declaration>- (void)action:(NSArray *)objects</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objects</Name>
+					<Abstract type="html">to take actions from JS runtime.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/action:</Anchor>
+            <NodeRef refid="55"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIOptions3d.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIOptions3d</TokenIdentifier>
+			<Abstract type="html">* description: Options to render charts in 3 dimensions. This feature requires
+highcharts-3d.js, found in the download package or online at
+http://code.highcharts.com/highcharts-
+3d.js : code.highcharts.com/highcharts-3d.js.</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+            
+			
+			<NodeRef refid="88"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/setBeta:</TokenIdentifier>
+			<Abstract type="html">description: One of the two rotation angles for the chart.
+default: 0</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *beta</Declaration>
+			
+			
+			<Anchor>//api/name/beta</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/beta</TokenIdentifier>
+			<Abstract type="html">description: One of the two rotation angles for the chart.
+default: 0</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *beta</Declaration>
+			
+			
+			<Anchor>//api/name/beta</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIOptions3d/beta</TokenIdentifier>
+			<Abstract type="html">description: One of the two rotation angles for the chart.
+default: 0</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *beta</Declaration>
+			
+			
+			<Anchor>//api/name/beta</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/setAxisLabelPosition:</TokenIdentifier>
+			<Abstract type="html">* description: Set it to &quot;auto&quot; to automatically move the labels to the best
+edge.</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *axisLabelPosition</Declaration>
+			
+			
+			<Anchor>//api/name/axisLabelPosition</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/axisLabelPosition</TokenIdentifier>
+			<Abstract type="html">* description: Set it to &quot;auto&quot; to automatically move the labels to the best
+edge.</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *axisLabelPosition</Declaration>
+			
+			
+			<Anchor>//api/name/axisLabelPosition</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIOptions3d/axisLabelPosition</TokenIdentifier>
+			<Abstract type="html">* description: Set it to &quot;auto&quot; to automatically move the labels to the best
+edge.</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *axisLabelPosition</Declaration>
+			
+			
+			<Anchor>//api/name/axisLabelPosition</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/setFitToPlot:</TokenIdentifier>
+			<Abstract type="html">* description: Whether the 3d box should automatically adjust to the chart plot
+area.
+* default: true</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fitToPlot</Declaration>
+			
+			
+			<Anchor>//api/name/fitToPlot</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/fitToPlot</TokenIdentifier>
+			<Abstract type="html">* description: Whether the 3d box should automatically adjust to the chart plot
+area.
+* default: true</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fitToPlot</Declaration>
+			
+			
+			<Anchor>//api/name/fitToPlot</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIOptions3d/fitToPlot</TokenIdentifier>
+			<Abstract type="html">* description: Whether the 3d box should automatically adjust to the chart plot
+area.
+* default: true</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fitToPlot</Declaration>
+			
+			
+			<Anchor>//api/name/fitToPlot</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/setDepth:</TokenIdentifier>
+			<Abstract type="html">description: The total depth of the chart.
+default: 100</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/depth</TokenIdentifier>
+			<Abstract type="html">description: The total depth of the chart.
+default: 100</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIOptions3d/depth</TokenIdentifier>
+			<Abstract type="html">description: The total depth of the chart.
+default: 100</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/setViewDistance:</TokenIdentifier>
+			<Abstract type="html">* description: Defines the distance the viewer is standing in front of the chart,
+this setting is important to calculate the perspective effect
+in column and scatter charts. It is not used for 3D pie charts.
+* default: 100</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *viewDistance</Declaration>
+			
+			
+			<Anchor>//api/name/viewDistance</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/viewDistance</TokenIdentifier>
+			<Abstract type="html">* description: Defines the distance the viewer is standing in front of the chart,
+this setting is important to calculate the perspective effect
+in column and scatter charts. It is not used for 3D pie charts.
+* default: 100</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *viewDistance</Declaration>
+			
+			
+			<Anchor>//api/name/viewDistance</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIOptions3d/viewDistance</TokenIdentifier>
+			<Abstract type="html">* description: Defines the distance the viewer is standing in front of the chart,
+this setting is important to calculate the perspective effect
+in column and scatter charts. It is not used for 3D pie charts.
+* default: 100</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *viewDistance</Declaration>
+			
+			
+			<Anchor>//api/name/viewDistance</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/setFrame:</TokenIdentifier>
+			<Abstract type="html">* description: Provides the option to draw a frame around the charts by defining
+a bottom, front and back panel.</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFrame *frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/frame</TokenIdentifier>
+			<Abstract type="html">* description: Provides the option to draw a frame around the charts by defining
+a bottom, front and back panel.</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFrame *frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIOptions3d/frame</TokenIdentifier>
+			<Abstract type="html">* description: Provides the option to draw a frame around the charts by defining
+a bottom, front and back panel.</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFrame *frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/setAlpha:</TokenIdentifier>
+			<Abstract type="html">description: One of the two rotation angles for the chart.
+default: 0</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *alpha</Declaration>
+			
+			
+			<Anchor>//api/name/alpha</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/alpha</TokenIdentifier>
+			<Abstract type="html">description: One of the two rotation angles for the chart.
+default: 0</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *alpha</Declaration>
+			
+			
+			<Anchor>//api/name/alpha</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIOptions3d/alpha</TokenIdentifier>
+			<Abstract type="html">description: One of the two rotation angles for the chart.
+default: 0</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *alpha</Declaration>
+			
+			
+			<Anchor>//api/name/alpha</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/setEnabled:</TokenIdentifier>
+			<Abstract type="html">description: Wether to render the chart using the 3D functionality.
+default: false</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIOptions3d/enabled</TokenIdentifier>
+			<Abstract type="html">description: Wether to render the chart using the 3D functionality.
+default: false</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIOptions3d/enabled</TokenIdentifier>
+			<Abstract type="html">description: Wether to render the chart using the 3D functionality.
+default: false</Abstract>
+			<DeclaredIn>HIOptions3d.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="88"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

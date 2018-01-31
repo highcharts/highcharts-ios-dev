@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/HIChartViewDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/HIChartViewDelegate</TokenIdentifier>
+			<Abstract type="html">(c) 2009-2017 Highsoft AS</Abstract>
+			<DeclaredIn>HIGChartViewDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="143"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/HIChartViewDelegate/chartViewDidLoad:</TokenIdentifier>
+			<Abstract type="html">Called when drawing is complete.</Abstract>
+			<DeclaredIn>HIGChartViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)chartViewDidLoad:(HIChartView *)chart</Declaration>
+			
+			
+			<Anchor>//api/name/chartViewDidLoad:</Anchor>
+            <NodeRef refid="143"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

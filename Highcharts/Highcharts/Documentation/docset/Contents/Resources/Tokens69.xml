@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIKeyboardNavigation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIKeyboardNavigation</TokenIdentifier>
+			<Abstract type="html">description: Options for keyboard navigation.</Abstract>
+			<DeclaredIn>HIKeyboardNavigation.h</DeclaredIn>
+            
+			
+			<NodeRef refid="69"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIKeyboardNavigation/setEnabled:</TokenIdentifier>
+			<Abstract type="html">description: Enable keyboard navigation for the chart.
+default: true</Abstract>
+			<DeclaredIn>HIKeyboardNavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="69"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIKeyboardNavigation/enabled</TokenIdentifier>
+			<Abstract type="html">description: Enable keyboard navigation for the chart.
+default: true</Abstract>
+			<DeclaredIn>HIKeyboardNavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="69"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIKeyboardNavigation/enabled</TokenIdentifier>
+			<Abstract type="html">description: Enable keyboard navigation for the chart.
+default: true</Abstract>
+			<DeclaredIn>HIKeyboardNavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="69"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIKeyboardNavigation/setSkipNullPoints:</TokenIdentifier>
+			<Abstract type="html">* description: Skip null points when navigating through points with the
+keyboard.
+* default: false</Abstract>
+			<DeclaredIn>HIKeyboardNavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skipNullPoints</Declaration>
+			
+			
+			<Anchor>//api/name/skipNullPoints</Anchor>
+            <NodeRef refid="69"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIKeyboardNavigation/skipNullPoints</TokenIdentifier>
+			<Abstract type="html">* description: Skip null points when navigating through points with the
+keyboard.
+* default: false</Abstract>
+			<DeclaredIn>HIKeyboardNavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skipNullPoints</Declaration>
+			
+			
+			<Anchor>//api/name/skipNullPoints</Anchor>
+            <NodeRef refid="69"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIKeyboardNavigation/skipNullPoints</TokenIdentifier>
+			<Abstract type="html">* description: Skip null points when navigating through points with the
+keyboard.
+* default: false</Abstract>
+			<DeclaredIn>HIKeyboardNavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skipNullPoints</Declaration>
+			
+			
+			<Anchor>//api/name/skipNullPoints</Anchor>
+            <NodeRef refid="69"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIItemHiddenStyle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIItemHiddenStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for each legend item when the corresponding series or
+point is hidden. Only a subset of CSS is supported, notably those
+options related to text. Properties are inherited from style
+unless overridden here.</Abstract>
+			<DeclaredIn>HIItemHiddenStyle.h</DeclaredIn>
+            
+			
+			<NodeRef refid="65"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

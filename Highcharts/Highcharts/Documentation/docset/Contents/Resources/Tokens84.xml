@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HINavigation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HINavigation</TokenIdentifier>
+			<Abstract type="html">description: A collection of options for buttons and menus appearing in the exporting module.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+            
+			
+			<NodeRef refid="84"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setEnabled:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to enable the legend navigation. In most cases, disabling
+the navigation results in an unwanted overflow.
+See also the http://www.highcharts.com/plugin-
+registry/single/8/Adapt-Chart-To-Legend : adapt chart to legend plugin for a solution to
+extend the chart height to make room for the legend, optionally in
+exported charts only.
+* default: true</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Whether to enable the legend navigation. In most cases, disabling
+the navigation results in an unwanted overflow.
+See also the http://www.highcharts.com/plugin-
+registry/single/8/Adapt-Chart-To-Legend : adapt chart to legend plugin for a solution to
+extend the chart height to make room for the legend, optionally in
+exported charts only.
+* default: true</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Whether to enable the legend navigation. In most cases, disabling
+the navigation results in an unwanted overflow.
+See also the http://www.highcharts.com/plugin-
+registry/single/8/Adapt-Chart-To-Legend : adapt chart to legend plugin for a solution to
+extend the chart height to make room for the legend, optionally in
+exported charts only.
+* default: true</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setAnimation:</TokenIdentifier>
+			<Abstract type="html">* description: How to animate the pages when navigating up or down. A value of true
+applies the default navigation given in the chart.animation option.
+Additional options can be given as an object containing values for
+easing and duration.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/animation</TokenIdentifier>
+			<Abstract type="html">* description: How to animate the pages when navigating up or down. A value of true
+applies the default navigation given in the chart.animation option.
+Additional options can be given as an object containing values for
+easing and duration.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/animation</TokenIdentifier>
+			<Abstract type="html">* description: How to animate the pages when navigating up or down. A value of true
+applies the default navigation given in the chart.animation option.
+Additional options can be given as an object containing values for
+easing and duration.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setInactiveColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the inactive up or down arrow in the legend page
+navigation. .</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *inactiveColor</Declaration>
+			
+			
+			<Anchor>//api/name/inactiveColor</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/inactiveColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the inactive up or down arrow in the legend page
+navigation. .</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *inactiveColor</Declaration>
+			
+			
+			<Anchor>//api/name/inactiveColor</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/inactiveColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the inactive up or down arrow in the legend page
+navigation. .</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *inactiveColor</Declaration>
+			
+			
+			<Anchor>//api/name/inactiveColor</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setArrowSize:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel size of the up and down arrows in the legend paging
+navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *arrowSize</Declaration>
+			
+			
+			<Anchor>//api/name/arrowSize</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/arrowSize</TokenIdentifier>
+			<Abstract type="html">* description: The pixel size of the up and down arrows in the legend paging
+navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *arrowSize</Declaration>
+			
+			
+			<Anchor>//api/name/arrowSize</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/arrowSize</TokenIdentifier>
+			<Abstract type="html">* description: The pixel size of the up and down arrows in the legend paging
+navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *arrowSize</Declaration>
+			
+			
+			<Anchor>//api/name/arrowSize</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setStyle:</TokenIdentifier>
+			<Abstract type="html">* description: Text styles for the legend page navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSDictionary *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/style</TokenIdentifier>
+			<Abstract type="html">* description: Text styles for the legend page navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSDictionary *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/style</TokenIdentifier>
+			<Abstract type="html">* description: Text styles for the legend page navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSDictionary *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setActiveColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color for the active up or down arrow in the legend page navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *activeColor</Declaration>
+			
+			
+			<Anchor>//api/name/activeColor</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/activeColor</TokenIdentifier>
+			<Abstract type="html">* description: The color for the active up or down arrow in the legend page navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *activeColor</Declaration>
+			
+			
+			<Anchor>//api/name/activeColor</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/activeColor</TokenIdentifier>
+			<Abstract type="html">* description: The color for the active up or down arrow in the legend page navigation.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *activeColor</Declaration>
+			
+			
+			<Anchor>//api/name/activeColor</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setButtonOptions:</TokenIdentifier>
+			<Abstract type="html">* description: A collection of options for buttons appearing in the exporting module.
+In styled mode, the buttons are styled with the .highcharts-contextbutton and .highcharts-button-symbol class.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIButtonOptions *buttonOptions</Declaration>
+			
+			
+			<Anchor>//api/name/buttonOptions</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/buttonOptions</TokenIdentifier>
+			<Abstract type="html">* description: A collection of options for buttons appearing in the exporting module.
+In styled mode, the buttons are styled with the .highcharts-contextbutton and .highcharts-button-symbol class.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIButtonOptions *buttonOptions</Declaration>
+			
+			
+			<Anchor>//api/name/buttonOptions</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/buttonOptions</TokenIdentifier>
+			<Abstract type="html">* description: A collection of options for buttons appearing in the exporting module.
+In styled mode, the buttons are styled with the .highcharts-contextbutton and .highcharts-button-symbol class.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIButtonOptions *buttonOptions</Declaration>
+			
+			
+			<Anchor>//api/name/buttonOptions</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setMenuItemStyle:</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the individual items within the popup menu appearing
+by default when the export icon is clicked. The menu items are rendered
+in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuItemStyle *menuItemStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuItemStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/menuItemStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the individual items within the popup menu appearing
+by default when the export icon is clicked. The menu items are rendered
+in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuItemStyle *menuItemStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuItemStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/menuItemStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the individual items within the popup menu appearing
+by default when the export icon is clicked. The menu items are rendered
+in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuItemStyle *menuItemStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuItemStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setMenuStyle:</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the popup menu appearing by default when the export
+icon is clicked. This menu is rendered in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuStyle *menuStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/menuStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the popup menu appearing by default when the export
+icon is clicked. This menu is rendered in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuStyle *menuStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/menuStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the popup menu appearing by default when the export
+icon is clicked. This menu is rendered in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuStyle *menuStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/setMenuItemHoverStyle:</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the hover state of the individual items within the
+popup menu appearing by default when the export icon is clicked.
+The menu items are rendered in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuItemHoverStyle *menuItemHoverStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuItemHoverStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HINavigation/menuItemHoverStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the hover state of the individual items within the
+popup menu appearing by default when the export icon is clicked.
+The menu items are rendered in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuItemHoverStyle *menuItemHoverStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuItemHoverStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HINavigation/menuItemHoverStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the hover state of the individual items within the
+popup menu appearing by default when the export icon is clicked.
+The menu items are rendered in HTML.</Abstract>
+			<DeclaredIn>HINavigation.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMenuItemHoverStyle *menuItemHoverStyle</Declaration>
+			
+			
+			<Anchor>//api/name/menuItemHoverStyle</Anchor>
+            <NodeRef refid="84"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

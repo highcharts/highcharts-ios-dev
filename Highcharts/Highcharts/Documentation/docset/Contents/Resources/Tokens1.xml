@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIAccessibility.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIAccessibility</TokenIdentifier>
+			<Abstract type="html">* description: Options for configuring accessibility for the chart. Requires the
+//code.highcharts.com/modules/accessibility.
+js : accessibility module to be loaded. For a description of the module and information
+on its features, see http://www.highcharts.
+com/docs/chart-concepts/accessibility : Highcharts Accessibility.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setScreenReaderSectionFormatter:</TokenIdentifier>
+			<Abstract type="html">* description: A formatter function to create the HTML contents of the hidden screen
+reader information region. Receives one argument, chart, referring
+to the chart object. Should return a String with the HTML content
+of the region.
+The link to view the chart as a data table will be added
+automatically after the custom HTML content.
+* default: undefined</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *screenReaderSectionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/screenReaderSectionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/screenReaderSectionFormatter</TokenIdentifier>
+			<Abstract type="html">* description: A formatter function to create the HTML contents of the hidden screen
+reader information region. Receives one argument, chart, referring
+to the chart object. Should return a String with the HTML content
+of the region.
+The link to view the chart as a data table will be added
+automatically after the custom HTML content.
+* default: undefined</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *screenReaderSectionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/screenReaderSectionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/screenReaderSectionFormatter</TokenIdentifier>
+			<Abstract type="html">* description: A formatter function to create the HTML contents of the hidden screen
+reader information region. Receives one argument, chart, referring
+to the chart object. Should return a String with the HTML content
+of the region.
+The link to view the chart as a data table will be added
+automatically after the custom HTML content.
+* default: undefined</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *screenReaderSectionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/screenReaderSectionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setPointDescriptionThreshold:</TokenIdentifier>
+			<Abstract type="html">* description: When a series contains more points than this, we no longer expose
+information about individual points to screen readers.
+Set to false to disable.
+* default: 30</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointDescriptionThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionThreshold</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/pointDescriptionThreshold</TokenIdentifier>
+			<Abstract type="html">* description: When a series contains more points than this, we no longer expose
+information about individual points to screen readers.
+Set to false to disable.
+* default: 30</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointDescriptionThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionThreshold</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/pointDescriptionThreshold</TokenIdentifier>
+			<Abstract type="html">* description: When a series contains more points than this, we no longer expose
+information about individual points to screen readers.
+Set to false to disable.
+* default: 30</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointDescriptionThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionThreshold</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setPointDateFormat:</TokenIdentifier>
+			<Abstract type="html">* description: Date format to use for points on datetime axes when describing them
+to screen reader users.
+Defaults to the same format as in tooltip.
+For an overview of the replacement codes, see
+dateFormat.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *pointDateFormat</Declaration>
+			
+			
+			<Anchor>//api/name/pointDateFormat</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/pointDateFormat</TokenIdentifier>
+			<Abstract type="html">* description: Date format to use for points on datetime axes when describing them
+to screen reader users.
+Defaults to the same format as in tooltip.
+For an overview of the replacement codes, see
+dateFormat.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *pointDateFormat</Declaration>
+			
+			
+			<Anchor>//api/name/pointDateFormat</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/pointDateFormat</TokenIdentifier>
+			<Abstract type="html">* description: Date format to use for points on datetime axes when describing them
+to screen reader users.
+Defaults to the same format as in tooltip.
+For an overview of the replacement codes, see
+dateFormat.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *pointDateFormat</Declaration>
+			
+			
+			<Anchor>//api/name/pointDateFormat</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setKeyboardNavigation:</TokenIdentifier>
+			<Abstract type="html">description: Options for keyboard navigation.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation</Declaration>
+			
+			
+			<Anchor>//api/name/keyboardNavigation</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/keyboardNavigation</TokenIdentifier>
+			<Abstract type="html">description: Options for keyboard navigation.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation</Declaration>
+			
+			
+			<Anchor>//api/name/keyboardNavigation</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/keyboardNavigation</TokenIdentifier>
+			<Abstract type="html">description: Options for keyboard navigation.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation</Declaration>
+			
+			
+			<Anchor>//api/name/keyboardNavigation</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setPointDateFormatter:</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to determine the date/time format used with
+points on datetime axes when describing them to screen reader users.
+Receives one argument, point, referring to the point to describe.
+Should return a date format string compatible with
+dateFormat.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDateFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDateFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/pointDateFormatter</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to determine the date/time format used with
+points on datetime axes when describing them to screen reader users.
+Receives one argument, point, referring to the point to describe.
+Should return a date format string compatible with
+dateFormat.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDateFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDateFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/pointDateFormatter</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to determine the date/time format used with
+points on datetime axes when describing them to screen reader users.
+Receives one argument, point, referring to the point to describe.
+Should return a date format string compatible with
+dateFormat.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDateFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDateFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setPointDescriptionFormatter:</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to use instead of the default for point
+descriptions.
+Receives one argument, point, referring to the point to describe.
+Should return a String with the description of the point for a screen
+reader user.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/pointDescriptionFormatter</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to use instead of the default for point
+descriptions.
+Receives one argument, point, referring to the point to describe.
+Should return a String with the description of the point for a screen
+reader user.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/pointDescriptionFormatter</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to use instead of the default for point
+descriptions.
+Receives one argument, point, referring to the point to describe.
+Should return a String with the description of the point for a screen
+reader user.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setEnabled:</TokenIdentifier>
+			<Abstract type="html">description: Enable accessibility features for the chart.
+default: true</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/enabled</TokenIdentifier>
+			<Abstract type="html">description: Enable accessibility features for the chart.
+default: true</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/enabled</TokenIdentifier>
+			<Abstract type="html">description: Enable accessibility features for the chart.
+default: true</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setSeriesDescriptionFormatter:</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to use instead of the default for series
+descriptions. Receives one argument, series, referring to the
+series to describe. Should return a String with the description of
+the series for a screen reader user.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *seriesDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/seriesDescriptionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/seriesDescriptionFormatter</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to use instead of the default for series
+descriptions. Receives one argument, series, referring to the
+series to describe. Should return a String with the description of
+the series for a screen reader user.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *seriesDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/seriesDescriptionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/seriesDescriptionFormatter</TokenIdentifier>
+			<Abstract type="html">* description: Formatter function to use instead of the default for series
+descriptions. Receives one argument, series, referring to the
+series to describe. Should return a String with the description of
+the series for a screen reader user.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *seriesDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/seriesDescriptionFormatter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setDescribeSingleSeries:</TokenIdentifier>
+			<Abstract type="html">* description: Whether or not to add series descriptions to charts with a single
+series.
+* default: false</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *describeSingleSeries</Declaration>
+			
+			
+			<Anchor>//api/name/describeSingleSeries</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/describeSingleSeries</TokenIdentifier>
+			<Abstract type="html">* description: Whether or not to add series descriptions to charts with a single
+series.
+* default: false</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *describeSingleSeries</Declaration>
+			
+			
+			<Anchor>//api/name/describeSingleSeries</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/describeSingleSeries</TokenIdentifier>
+			<Abstract type="html">* description: Whether or not to add series descriptions to charts with a single
+series.
+* default: false</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *describeSingleSeries</Declaration>
+			
+			
+			<Anchor>//api/name/describeSingleSeries</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/setOnTableAnchorClick:</TokenIdentifier>
+			<Abstract type="html">* description: Function to run upon clicking the &quot;View as Data Table&quot; link in the
+screen reader region.
+By default Highcharts will insert and set focus to a data table
+representation of the chart.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *onTableAnchorClick</Declaration>
+			
+			
+			<Anchor>//api/name/onTableAnchorClick</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIAccessibility/onTableAnchorClick</TokenIdentifier>
+			<Abstract type="html">* description: Function to run upon clicking the &quot;View as Data Table&quot; link in the
+screen reader region.
+By default Highcharts will insert and set focus to a data table
+representation of the chart.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *onTableAnchorClick</Declaration>
+			
+			
+			<Anchor>//api/name/onTableAnchorClick</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIAccessibility/onTableAnchorClick</TokenIdentifier>
+			<Abstract type="html">* description: Function to run upon clicking the &quot;View as Data Table&quot; link in the
+screen reader region.
+By default Highcharts will insert and set focus to a data table
+representation of the chart.</Abstract>
+			<DeclaredIn>HIAccessibility.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *onTableAnchorClick</Declaration>
+			
+			
+			<Anchor>//api/name/onTableAnchorClick</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

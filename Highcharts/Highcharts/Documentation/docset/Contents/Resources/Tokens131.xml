@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIVariwide.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIVariwide</TokenIdentifier>
+			<Abstract type="html">* description: A variwide series. If the type option is
+not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+variwide.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+            
+			
+			<NodeRef refid="131"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setGroupPadding:</TokenIdentifier>
+			<Abstract type="html">* description: In a variwide chart, the group padding is 0 in order to express the
+horizontal stacking of items.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/groupPadding</TokenIdentifier>
+			<Abstract type="html">* description: In a variwide chart, the group padding is 0 in order to express the
+horizontal stacking of items.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/groupPadding</TokenIdentifier>
+			<Abstract type="html">* description: In a variwide chart, the group padding is 0 in order to express the
+horizontal stacking of items.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *groupPadding</Declaration>
+			
+			
+			<Anchor>//api/name/groupPadding</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setColorByPoint:</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/colorByPoint</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/colorByPoint</TokenIdentifier>
+			<Abstract type="html">* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorByPoint</Declaration>
+			
+			
+			<Anchor>//api/name/colorByPoint</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setBorderRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The corner radius of the border surrounding each column or bar.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setPointRange:</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/pointRange</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/pointRange</TokenIdentifier>
+			<Abstract type="html">* description: The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this option
+can be used to override the automatic value.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointRange</Declaration>
+			
+			
+			<Anchor>//api/name/pointRange</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setMinPointLength:</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/minPointLength</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/minPointLength</TokenIdentifier>
+			<Abstract type="html">* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPointLength</Declaration>
+			
+			
+			<Anchor>//api/name/minPointLength</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setPointWidth:</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/pointWidth</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/pointWidth</TokenIdentifier>
+			<Abstract type="html">* description: A pixel value specifying a fixed width for each column or bar. When
+null, the width is calculated from the pointPadding and
+groupPadding.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pointWidth</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setGrouping:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/grouping</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/grouping</TokenIdentifier>
+			<Abstract type="html">* description: Whether to group non-stacked columns or to let them render independent
+of each other. Non-grouped columns will be laid out individually
+and overlap each other.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *grouping</Declaration>
+			
+			
+			<Anchor>//api/name/grouping</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setColors:</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to apply instead
+of the global colors when colorByPoint is true.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setPointPadding:</TokenIdentifier>
+			<Abstract type="html">* description: In a variwide chart, the point padding is 0 in order to express the
+horizontal stacking of items.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/pointPadding</TokenIdentifier>
+			<Abstract type="html">* description: In a variwide chart, the point padding is 0 in order to express the
+horizontal stacking of items.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/pointPadding</TokenIdentifier>
+			<Abstract type="html">* description: In a variwide chart, the point padding is 0 in order to express the
+horizontal stacking of items.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/setMaxPointWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVariwide/maxPointWidth</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVariwide/maxPointWidth</TokenIdentifier>
+			<Abstract type="html">* description: The maximum allowed pixel width for a column, translated to the height
+of a bar in a bar chart. This prevents the columns from becoming
+too wide when there is a small number of points in the chart.</Abstract>
+			<DeclaredIn>HIVariwide.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPointWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxPointWidth</Anchor>
+            <NodeRef refid="131"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

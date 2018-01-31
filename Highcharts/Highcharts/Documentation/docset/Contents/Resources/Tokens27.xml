@@ -1,0 +1,2349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIColorAxis.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIColorAxis</TokenIdentifier>
+			<Abstract type="html">* description: A color axis for choropleth maps and heat maps. Visually, the color axis
+will appear as a gradient or as separate items inside the legend,
+depending on whether the axis is scalar or based on data classes.
+For supported color formats, see the
+http://www.highcharts.com/docs/chart-design-and-style/colors : docs article about colors.
+A scalar color axis is represented by a gradient. The colors either range
+between the minColor and the maxColor,
+or for more fine grained control the colors can be
+defined in stops. Often times, the color axis needs
+to be adjusted to get the right color spread for the data. In addition to
+stops, consider using a logarithmic axis type, or
+setting min and max to avoid the
+colors being determined by outliers.
+When dataClasses are used, the ranges are
+subdivided into separate classes like categories based on their values.
+This can be used for ranges between two values, but also for a true
+category. However, when your data is categorized, it may be as convenient
+to add each category to a separate series.
+See the Axis object for programmatic access to the axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+            
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMarker:</TokenIdentifier>
+			<Abstract type="html">* description: The triangular marker on a scalar color axis that points to the
+value of the hovered area. To disable the marker, set marker:
+null.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMarker *marker</Declaration>
+			
+			
+			<Anchor>//api/name/marker</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/marker</TokenIdentifier>
+			<Abstract type="html">* description: The triangular marker on a scalar color axis that points to the
+value of the hovered area. To disable the marker, set marker:
+null.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMarker *marker</Declaration>
+			
+			
+			<Anchor>//api/name/marker</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/marker</TokenIdentifier>
+			<Abstract type="html">* description: The triangular marker on a scalar color axis that points to the
+value of the hovered area. To disable the marker, set marker:
+null.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMarker *marker</Declaration>
+			
+			
+			<Anchor>//api/name/marker</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorTickColor:</TokenIdentifier>
+			<Abstract type="html">* description: Color for the minor tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minorTickColor</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorTickColor</TokenIdentifier>
+			<Abstract type="html">* description: Color for the minor tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minorTickColor</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorTickColor</TokenIdentifier>
+			<Abstract type="html">* description: Color for the minor tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minorTickColor</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setDataClassColor:</TokenIdentifier>
+			<Abstract type="html">* description: Determines how to set each data class&apos; color if no individual color
+is set. The default value, tween, computes intermediate colors
+between minColor and maxColor. The other possible value, category,
+pulls colors from the global or chart specific colors
+array.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dataClassColor</Declaration>
+			
+			
+			<Anchor>//api/name/dataClassColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/dataClassColor</TokenIdentifier>
+			<Abstract type="html">* description: Determines how to set each data class&apos; color if no individual color
+is set. The default value, tween, computes intermediate colors
+between minColor and maxColor. The other possible value, category,
+pulls colors from the global or chart specific colors
+array.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dataClassColor</Declaration>
+			
+			
+			<Anchor>//api/name/dataClassColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/dataClassColor</TokenIdentifier>
+			<Abstract type="html">* description: Determines how to set each data class&apos; color if no individual color
+is set. The default value, tween, computes intermediate colors
+between minColor and maxColor. The other possible value, category,
+pulls colors from the global or chart specific colors
+array.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dataClassColor</Declaration>
+			
+			
+			<Anchor>//api/name/dataClassColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setStartOnTick:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to force the axis to start on a tick. Use this option with
+the maxPadding option to control the axis start.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startOnTick</Declaration>
+			
+			
+			<Anchor>//api/name/startOnTick</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/startOnTick</TokenIdentifier>
+			<Abstract type="html">* description: Whether to force the axis to start on a tick. Use this option with
+the maxPadding option to control the axis start.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startOnTick</Declaration>
+			
+			
+			<Anchor>//api/name/startOnTick</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/startOnTick</TokenIdentifier>
+			<Abstract type="html">* description: Whether to force the axis to start on a tick. Use this option with
+the maxPadding option to control the axis start.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startOnTick</Declaration>
+			
+			
+			<Anchor>//api/name/startOnTick</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color to represent the minimum of the color axis. Unless dataClasses or stops are set, the gradient
+starts at this value.
+If dataClasses are set, the color is based on minColor and maxColor
+unless a color is set for each data class, or the dataClassColor is set.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minColor</Declaration>
+			
+			
+			<Anchor>//api/name/minColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minColor</TokenIdentifier>
+			<Abstract type="html">* description: The color to represent the minimum of the color axis. Unless dataClasses or stops are set, the gradient
+starts at this value.
+If dataClasses are set, the color is based on minColor and maxColor
+unless a color is set for each data class, or the dataClassColor is set.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minColor</Declaration>
+			
+			
+			<Anchor>//api/name/minColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minColor</TokenIdentifier>
+			<Abstract type="html">* description: The color to represent the minimum of the color axis. Unless dataClasses or stops are set, the gradient
+starts at this value.
+If dataClasses are set, the color is based on minColor and maxColor
+unless a color is set for each data class, or the dataClassColor is set.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minColor</Declaration>
+			
+			
+			<Anchor>//api/name/minColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setLineColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the line marking the axis itself.
+In styled mode, the line stroke is given in the
+.highcharts-axis-line or .highcharts-xaxis-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the line marking the axis itself.
+In styled mode, the line stroke is given in the
+.highcharts-axis-line or .highcharts-xaxis-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the line marking the axis itself.
+In styled mode, the line stroke is given in the
+.highcharts-axis-line or .highcharts-xaxis-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorTicks:</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable minor ticks. Unless
+minorTickInterval is set, the tick interval is
+calculated as a fifth of the tickInterval.
+On a logarithmic axis, minor ticks are laid out based on a best guess,
+attempting to enter approximately 5 minor ticks between each major tick.
+Prior to v6.0.0, ticks were unabled in auto layout by setting
+minorTickInterval to &quot;auto&quot;.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTicks</Declaration>
+			
+			
+			<Anchor>//api/name/minorTicks</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorTicks</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable minor ticks. Unless
+minorTickInterval is set, the tick interval is
+calculated as a fifth of the tickInterval.
+On a logarithmic axis, minor ticks are laid out based on a best guess,
+attempting to enter approximately 5 minor ticks between each major tick.
+Prior to v6.0.0, ticks were unabled in auto layout by setting
+minorTickInterval to &quot;auto&quot;.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTicks</Declaration>
+			
+			
+			<Anchor>//api/name/minorTicks</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorTicks</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable minor ticks. Unless
+minorTickInterval is set, the tick interval is
+calculated as a fifth of the tickInterval.
+On a logarithmic axis, minor ticks are laid out based on a best guess,
+attempting to enter approximately 5 minor ticks between each major tick.
+Prior to v6.0.0, ticks were unabled in auto layout by setting
+minorTickInterval to &quot;auto&quot;.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTicks</Declaration>
+			
+			
+			<Anchor>//api/name/minorTicks</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickPixelInterval:</TokenIdentifier>
+			<Abstract type="html">* description: If tickInterval is null this option
+sets the approximate pixel interval of the tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickPixelInterval</Declaration>
+			
+			
+			<Anchor>//api/name/tickPixelInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickPixelInterval</TokenIdentifier>
+			<Abstract type="html">* description: If tickInterval is null this option
+sets the approximate pixel interval of the tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickPixelInterval</Declaration>
+			
+			
+			<Anchor>//api/name/tickPixelInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickPixelInterval</TokenIdentifier>
+			<Abstract type="html">* description: If tickInterval is null this option
+sets the approximate pixel interval of the tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickPixelInterval</Declaration>
+			
+			
+			<Anchor>//api/name/tickPixelInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setLabels:</TokenIdentifier>
+			<Abstract type="html">* description: The axis labels show the number for each tick.
+For more live examples on label options, see /highcharts#xAxis.labels : xAxis.labels in the
+Highcharts API.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILabels *labels</Declaration>
+			
+			
+			<Anchor>//api/name/labels</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/labels</TokenIdentifier>
+			<Abstract type="html">* description: The axis labels show the number for each tick.
+For more live examples on label options, see /highcharts#xAxis.labels : xAxis.labels in the
+Highcharts API.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILabels *labels</Declaration>
+			
+			
+			<Anchor>//api/name/labels</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/labels</TokenIdentifier>
+			<Abstract type="html">* description: The axis labels show the number for each tick.
+For more live examples on label options, see /highcharts#xAxis.labels : xAxis.labels in the
+Highcharts API.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILabels *labels</Declaration>
+			
+			
+			<Anchor>//api/name/labels</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorGridLineColor:</TokenIdentifier>
+			<Abstract type="html">* description: Color of the minor, secondary grid lines.
+In styled mode, the stroke width is given in the
+.highcharts-minor-grid-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minorGridLineColor</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorGridLineColor</TokenIdentifier>
+			<Abstract type="html">* description: Color of the minor, secondary grid lines.
+In styled mode, the stroke width is given in the
+.highcharts-minor-grid-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minorGridLineColor</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorGridLineColor</TokenIdentifier>
+			<Abstract type="html">* description: Color of the minor, secondary grid lines.
+In styled mode, the stroke width is given in the
+.highcharts-minor-grid-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *minorGridLineColor</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorTickInterval:</TokenIdentifier>
+			<Abstract type="html">* description: Specific tick interval in axis units for the minor ticks. On a linear axis,
+if &quot;auto&quot;, the minor tick interval is calculated as a fifth of
+the tickInterval. If null, minor ticks are not shown.
+On logarithmic axes, the unit is the power of the value. For example,
+setting the minorTickInterval to 1 puts one tick on each of 0.1,
+1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9
+ticks between 1 and 10, 10 and 100 etc.
+If user settings dictate minor ticks to become too dense, they don&apos;t
+make sense, and will be ignored to prevent performance problems.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickInterval</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorTickInterval</TokenIdentifier>
+			<Abstract type="html">* description: Specific tick interval in axis units for the minor ticks. On a linear axis,
+if &quot;auto&quot;, the minor tick interval is calculated as a fifth of
+the tickInterval. If null, minor ticks are not shown.
+On logarithmic axes, the unit is the power of the value. For example,
+setting the minorTickInterval to 1 puts one tick on each of 0.1,
+1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9
+ticks between 1 and 10, 10 and 100 etc.
+If user settings dictate minor ticks to become too dense, they don&apos;t
+make sense, and will be ignored to prevent performance problems.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickInterval</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorTickInterval</TokenIdentifier>
+			<Abstract type="html">* description: Specific tick interval in axis units for the minor ticks. On a linear axis,
+if &quot;auto&quot;, the minor tick interval is calculated as a fifth of
+the tickInterval. If null, minor ticks are not shown.
+On logarithmic axes, the unit is the power of the value. For example,
+setting the minorTickInterval to 1 puts one tick on each of 0.1,
+1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9
+ticks between 1 and 10, 10 and 100 etc.
+If user settings dictate minor ticks to become too dense, they don&apos;t
+make sense, and will be ignored to prevent performance problems.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickInterval</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the major tick marks.
+In styled mode, the stroke width is given in the .highcharts-tick class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickWidth</Declaration>
+			
+			
+			<Anchor>//api/name/tickWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the major tick marks.
+In styled mode, the stroke width is given in the .highcharts-tick class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickWidth</Declaration>
+			
+			
+			<Anchor>//api/name/tickWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the major tick marks.
+In styled mode, the stroke width is given in the .highcharts-tick class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickWidth</Declaration>
+			
+			
+			<Anchor>//api/name/tickWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setEndOnTick:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to force the axis to end on a tick. Use this option with
+the maxPadding option to control the axis
+end.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endOnTick</Declaration>
+			
+			
+			<Anchor>//api/name/endOnTick</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/endOnTick</TokenIdentifier>
+			<Abstract type="html">* description: Whether to force the axis to end on a tick. Use this option with
+the maxPadding option to control the axis
+end.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endOnTick</Declaration>
+			
+			
+			<Anchor>//api/name/endOnTick</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/endOnTick</TokenIdentifier>
+			<Abstract type="html">* description: Whether to force the axis to end on a tick. Use this option with
+the maxPadding option to control the axis
+end.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endOnTick</Declaration>
+			
+			
+			<Anchor>//api/name/endOnTick</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setShowLastLabel:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the last tick label.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showLastLabel</Declaration>
+			
+			
+			<Anchor>//api/name/showLastLabel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/showLastLabel</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the last tick label.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showLastLabel</Declaration>
+			
+			
+			<Anchor>//api/name/showLastLabel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/showLastLabel</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the last tick label.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showLastLabel</Declaration>
+			
+			
+			<Anchor>//api/name/showLastLabel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setShowFirstLabel:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the first tick label.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showFirstLabel</Declaration>
+			
+			
+			<Anchor>//api/name/showFirstLabel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/showFirstLabel</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the first tick label.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showFirstLabel</Declaration>
+			
+			
+			<Anchor>//api/name/showFirstLabel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/showFirstLabel</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the first tick label.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showFirstLabel</Declaration>
+			
+			
+			<Anchor>//api/name/showFirstLabel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickPositions:</TokenIdentifier>
+			<Abstract type="html">* description: An array defining where the ticks are laid out on the axis. This
+overrides the default behaviour of tickPixelInterval
+and tickInterval.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSNumber*&gt; *tickPositions</Declaration>
+			
+			
+			<Anchor>//api/name/tickPositions</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickPositions</TokenIdentifier>
+			<Abstract type="html">* description: An array defining where the ticks are laid out on the axis. This
+overrides the default behaviour of tickPixelInterval
+and tickInterval.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSNumber*&gt; *tickPositions</Declaration>
+			
+			
+			<Anchor>//api/name/tickPositions</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickPositions</TokenIdentifier>
+			<Abstract type="html">* description: An array defining where the ticks are laid out on the axis. This
+overrides the default behaviour of tickPixelInterval
+and tickInterval.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSNumber*&gt; *tickPositions</Declaration>
+			
+			
+			<Anchor>//api/name/tickPositions</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setClassName:</TokenIdentifier>
+			<Abstract type="html">* description: A class name that opens for styling the axis by CSS, especially in
+Highcharts styled mode. The class name is applied to group elements
+for the grid, axis elements and labels.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/className</TokenIdentifier>
+			<Abstract type="html">* description: A class name that opens for styling the axis by CSS, especially in
+Highcharts styled mode. The class name is applied to group elements
+for the grid, axis elements and labels.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/className</TokenIdentifier>
+			<Abstract type="html">* description: A class name that opens for styling the axis by CSS, especially in
+Highcharts styled mode. The class name is applied to group elements
+for the grid, axis elements and labels.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickColor:</TokenIdentifier>
+			<Abstract type="html">* description: Color for the main tick marks.
+In styled mode, the stroke is given in the .highcharts-tick
+class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *tickColor</Declaration>
+			
+			
+			<Anchor>//api/name/tickColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickColor</TokenIdentifier>
+			<Abstract type="html">* description: Color for the main tick marks.
+In styled mode, the stroke is given in the .highcharts-tick
+class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *tickColor</Declaration>
+			
+			
+			<Anchor>//api/name/tickColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickColor</TokenIdentifier>
+			<Abstract type="html">* description: Color for the main tick marks.
+In styled mode, the stroke is given in the .highcharts-tick
+class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *tickColor</Declaration>
+			
+			
+			<Anchor>//api/name/tickColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickAmount:</TokenIdentifier>
+			<Abstract type="html">* description: The amount of ticks to draw on the axis. This opens up for aligning
+the ticks of multiple charts or panes within a chart. This option
+overrides the tickPixelInterval option.
+This option only has an effect on linear axes. Datetime, logarithmic
+or category axes are not affected.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickAmount</Declaration>
+			
+			
+			<Anchor>//api/name/tickAmount</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickAmount</TokenIdentifier>
+			<Abstract type="html">* description: The amount of ticks to draw on the axis. This opens up for aligning
+the ticks of multiple charts or panes within a chart. This option
+overrides the tickPixelInterval option.
+This option only has an effect on linear axes. Datetime, logarithmic
+or category axes are not affected.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickAmount</Declaration>
+			
+			
+			<Anchor>//api/name/tickAmount</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickAmount</TokenIdentifier>
+			<Abstract type="html">* description: The amount of ticks to draw on the axis. This opens up for aligning
+the ticks of multiple charts or panes within a chart. This option
+overrides the tickPixelInterval option.
+This option only has an effect on linear axes. Datetime, logarithmic
+or category axes are not affected.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickAmount</Declaration>
+			
+			
+			<Anchor>//api/name/tickAmount</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinPadding:</TokenIdentifier>
+			<Abstract type="html">* description: Padding of the min value relative to the length of the axis. A
+padding of 0.05 will make a 100px axis 5px longer.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPadding</Declaration>
+			
+			
+			<Anchor>//api/name/minPadding</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding of the min value relative to the length of the axis. A
+padding of 0.05 will make a 100px axis 5px longer.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPadding</Declaration>
+			
+			
+			<Anchor>//api/name/minPadding</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding of the min value relative to the length of the axis. A
+padding of 0.05 will make a 100px axis 5px longer.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minPadding</Declaration>
+			
+			
+			<Anchor>//api/name/minPadding</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setDefinition:</TokenIdentifier>
+			<Abstract type="html">* description: Requires Accessibility module
+Description of the axis to screen reader users.
+* default: undefined</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *definition</Declaration>
+			
+			
+			<Anchor>//api/name/definition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/definition</TokenIdentifier>
+			<Abstract type="html">* description: Requires Accessibility module
+Description of the axis to screen reader users.
+* default: undefined</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *definition</Declaration>
+			
+			
+			<Anchor>//api/name/definition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/definition</TokenIdentifier>
+			<Abstract type="html">* description: Requires Accessibility module
+Description of the axis to screen reader users.
+* default: undefined</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *definition</Declaration>
+			
+			
+			<Anchor>//api/name/definition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMax:</TokenIdentifier>
+			<Abstract type="html">* description: The maximum value of the axis in terms of map point values. If null,
+the max value is automatically calculated. If the endOnTick option
+is true, the max value might be rounded up.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *max</Declaration>
+			
+			
+			<Anchor>//api/name/max</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/max</TokenIdentifier>
+			<Abstract type="html">* description: The maximum value of the axis in terms of map point values. If null,
+the max value is automatically calculated. If the endOnTick option
+is true, the max value might be rounded up.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *max</Declaration>
+			
+			
+			<Anchor>//api/name/max</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/max</TokenIdentifier>
+			<Abstract type="html">* description: The maximum value of the axis in terms of map point values. If null,
+the max value is automatically calculated. If the endOnTick option
+is true, the max value might be rounded up.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *max</Declaration>
+			
+			
+			<Anchor>//api/name/max</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setGridLineDashStyle:</TokenIdentifier>
+			<Abstract type="html">* description: The dash or dot style of the grid lines. For possible values, see
+http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-
+dashstyle-all/ : this demonstration.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *gridLineDashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineDashStyle</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/gridLineDashStyle</TokenIdentifier>
+			<Abstract type="html">* description: The dash or dot style of the grid lines. For possible values, see
+http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-
+dashstyle-all/ : this demonstration.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *gridLineDashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineDashStyle</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/gridLineDashStyle</TokenIdentifier>
+			<Abstract type="html">* description: The dash or dot style of the grid lines. For possible values, see
+http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-
+dashstyle-all/ : this demonstration.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *gridLineDashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineDashStyle</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setId:</TokenIdentifier>
+			<Abstract type="html">* description: An id for the axis. This can be used after render time to get a pointer
+to the axis object through chart.get().</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *id</Declaration>
+			
+			
+			<Anchor>//api/name/id</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/id</TokenIdentifier>
+			<Abstract type="html">* description: An id for the axis. This can be used after render time to get a pointer
+to the axis object through chart.get().</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *id</Declaration>
+			
+			
+			<Anchor>//api/name/id</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/id</TokenIdentifier>
+			<Abstract type="html">* description: An id for the axis. This can be used after render time to get a pointer
+to the axis object through chart.get().</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *id</Declaration>
+			
+			
+			<Anchor>//api/name/id</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setShowInLegend:</TokenIdentifier>
+			<Abstract type="html">description: Whether to display the colorAxis in the legend.
+default: true</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showInLegend</Declaration>
+			
+			
+			<Anchor>//api/name/showInLegend</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/showInLegend</TokenIdentifier>
+			<Abstract type="html">description: Whether to display the colorAxis in the legend.
+default: true</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showInLegend</Declaration>
+			
+			
+			<Anchor>//api/name/showInLegend</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/showInLegend</TokenIdentifier>
+			<Abstract type="html">description: Whether to display the colorAxis in the legend.
+default: true</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showInLegend</Declaration>
+			
+			
+			<Anchor>//api/name/showInLegend</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMin:</TokenIdentifier>
+			<Abstract type="html">* description: The minimum value of the axis in terms of map point values. If null,
+the min value is automatically calculated. If the startOnTick
+option is true, the min value might be rounded down.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *min</Declaration>
+			
+			
+			<Anchor>//api/name/min</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/min</TokenIdentifier>
+			<Abstract type="html">* description: The minimum value of the axis in terms of map point values. If null,
+the min value is automatically calculated. If the startOnTick
+option is true, the min value might be rounded down.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *min</Declaration>
+			
+			
+			<Anchor>//api/name/min</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/min</TokenIdentifier>
+			<Abstract type="html">* description: The minimum value of the axis in terms of map point values. If null,
+the min value is automatically calculated. If the startOnTick
+option is true, the min value might be rounded down.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *min</Declaration>
+			
+			
+			<Anchor>//api/name/min</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMaxColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color to represent the maximum of the color axis. Unless dataClasses or stops are set, the gradient
+ends at this value.
+If dataClasses are set, the color is based on minColor and maxColor
+unless a color is set for each data class, or the dataClassColor is set.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *maxColor</Declaration>
+			
+			
+			<Anchor>//api/name/maxColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/maxColor</TokenIdentifier>
+			<Abstract type="html">* description: The color to represent the maximum of the color axis. Unless dataClasses or stops are set, the gradient
+ends at this value.
+If dataClasses are set, the color is based on minColor and maxColor
+unless a color is set for each data class, or the dataClassColor is set.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *maxColor</Declaration>
+			
+			
+			<Anchor>//api/name/maxColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/maxColor</TokenIdentifier>
+			<Abstract type="html">* description: The color to represent the maximum of the color axis. Unless dataClasses or stops are set, the gradient
+ends at this value.
+If dataClasses are set, the color is based on minColor and maxColor
+unless a color is set for each data class, or the dataClassColor is set.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *maxColor</Declaration>
+			
+			
+			<Anchor>//api/name/maxColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setCeiling:</TokenIdentifier>
+			<Abstract type="html">* description: The highest allowed value for automatically computed axis extremes.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ceiling</Declaration>
+			
+			
+			<Anchor>//api/name/ceiling</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/ceiling</TokenIdentifier>
+			<Abstract type="html">* description: The highest allowed value for automatically computed axis extremes.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ceiling</Declaration>
+			
+			
+			<Anchor>//api/name/ceiling</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/ceiling</TokenIdentifier>
+			<Abstract type="html">* description: The highest allowed value for automatically computed axis extremes.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ceiling</Declaration>
+			
+			
+			<Anchor>//api/name/ceiling</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setFloor:</TokenIdentifier>
+			<Abstract type="html">* description: The lowest allowed value for automatically computed axis extremes.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *floor</Declaration>
+			
+			
+			<Anchor>//api/name/floor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/floor</TokenIdentifier>
+			<Abstract type="html">* description: The lowest allowed value for automatically computed axis extremes.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *floor</Declaration>
+			
+			
+			<Anchor>//api/name/floor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/floor</TokenIdentifier>
+			<Abstract type="html">* description: The lowest allowed value for automatically computed axis extremes.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *floor</Declaration>
+			
+			
+			<Anchor>//api/name/floor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setGridLineColor:</TokenIdentifier>
+			<Abstract type="html">* description: Color of the grid lines extending from the axis across the gradient.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *gridLineColor</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/gridLineColor</TokenIdentifier>
+			<Abstract type="html">* description: Color of the grid lines extending from the axis across the gradient.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *gridLineColor</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/gridLineColor</TokenIdentifier>
+			<Abstract type="html">* description: Color of the grid lines extending from the axis across the gradient.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *gridLineColor</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineColor</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorTickPosition:</TokenIdentifier>
+			<Abstract type="html">* description: The position of the minor tick marks relative to the axis line.
+Can be one of inside and outside.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *minorTickPosition</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickPosition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorTickPosition</TokenIdentifier>
+			<Abstract type="html">* description: The position of the minor tick marks relative to the axis line.
+Can be one of inside and outside.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *minorTickPosition</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickPosition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorTickPosition</TokenIdentifier>
+			<Abstract type="html">* description: The position of the minor tick marks relative to the axis line.
+Can be one of inside and outside.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *minorTickPosition</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickPosition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setGridZIndex:</TokenIdentifier>
+			<Abstract type="html">* description: The Z index of the grid lines.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *gridZIndex</Declaration>
+			
+			
+			<Anchor>//api/name/gridZIndex</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/gridZIndex</TokenIdentifier>
+			<Abstract type="html">* description: The Z index of the grid lines.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *gridZIndex</Declaration>
+			
+			
+			<Anchor>//api/name/gridZIndex</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/gridZIndex</TokenIdentifier>
+			<Abstract type="html">* description: The Z index of the grid lines.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *gridZIndex</Declaration>
+			
+			
+			<Anchor>//api/name/gridZIndex</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setEvents:</TokenIdentifier>
+			<Abstract type="html">description: Event handlers for the axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/events</TokenIdentifier>
+			<Abstract type="html">description: Event handlers for the axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/events</TokenIdentifier>
+			<Abstract type="html">description: Event handlers for the axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setReversed:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to reverse the axis so that the highest number is closest
+to the origin. Defaults to false in a horizontal legend and true
+in a vertical legend, where the smallest value starts on top.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reversed</Declaration>
+			
+			
+			<Anchor>//api/name/reversed</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/reversed</TokenIdentifier>
+			<Abstract type="html">* description: Whether to reverse the axis so that the highest number is closest
+to the origin. Defaults to false in a horizontal legend and true
+in a vertical legend, where the smallest value starts on top.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reversed</Declaration>
+			
+			
+			<Anchor>//api/name/reversed</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/reversed</TokenIdentifier>
+			<Abstract type="html">* description: Whether to reverse the axis so that the highest number is closest
+to the origin. Defaults to false in a horizontal legend and true
+in a vertical legend, where the smallest value starts on top.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reversed</Declaration>
+			
+			
+			<Anchor>//api/name/reversed</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickPositioner:</TokenIdentifier>
+			<Abstract type="html">* description: A callback function returning array defining where the ticks are
+laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
+tick positions are accessible through this.tickPositions and can
+be modified by the callback.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *tickPositioner</Declaration>
+			
+			
+			<Anchor>//api/name/tickPositioner</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickPositioner</TokenIdentifier>
+			<Abstract type="html">* description: A callback function returning array defining where the ticks are
+laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
+tick positions are accessible through this.tickPositions and can
+be modified by the callback.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *tickPositioner</Declaration>
+			
+			
+			<Anchor>//api/name/tickPositioner</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickPositioner</TokenIdentifier>
+			<Abstract type="html">* description: A callback function returning array defining where the ticks are
+laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
+tick positions are accessible through this.tickPositions and can
+be modified by the callback.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *tickPositioner</Declaration>
+			
+			
+			<Anchor>//api/name/tickPositioner</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setStartOfWeek:</TokenIdentifier>
+			<Abstract type="html">* description: For datetime axes, this decides where to put the tick between weeks.
+0 = Sunday, 1 = Monday.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startOfWeek</Declaration>
+			
+			
+			<Anchor>//api/name/startOfWeek</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/startOfWeek</TokenIdentifier>
+			<Abstract type="html">* description: For datetime axes, this decides where to put the tick between weeks.
+0 = Sunday, 1 = Monday.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startOfWeek</Declaration>
+			
+			
+			<Anchor>//api/name/startOfWeek</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/startOfWeek</TokenIdentifier>
+			<Abstract type="html">* description: For datetime axes, this decides where to put the tick between weeks.
+0 = Sunday, 1 = Monday.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startOfWeek</Declaration>
+			
+			
+			<Anchor>//api/name/startOfWeek</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setDataClasses:</TokenIdentifier>
+			<Abstract type="html">* description: An array of data classes or ranges for the choropleth map. If none
+given, the color axis is scalar and values are distributed as a gradient
+between the minimum and maximum colors.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIDataClasses*&gt; *dataClasses</Declaration>
+			
+			
+			<Anchor>//api/name/dataClasses</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/dataClasses</TokenIdentifier>
+			<Abstract type="html">* description: An array of data classes or ranges for the choropleth map. If none
+given, the color axis is scalar and values are distributed as a gradient
+between the minimum and maximum colors.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIDataClasses*&gt; *dataClasses</Declaration>
+			
+			
+			<Anchor>//api/name/dataClasses</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/dataClasses</TokenIdentifier>
+			<Abstract type="html">* description: An array of data classes or ranges for the choropleth map. If none
+given, the color axis is scalar and values are distributed as a gradient
+between the minimum and maximum colors.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIDataClasses*&gt; *dataClasses</Declaration>
+			
+			
+			<Anchor>//api/name/dataClasses</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickmarkPlacement:</TokenIdentifier>
+			<Abstract type="html">* description: For categorized axes only. If on the tick mark is placed in the
+center of the category, if between the tick mark is placed between
+categories. The default is between if the tickInterval is 1,
+else on.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tickmarkPlacement</Declaration>
+			
+			
+			<Anchor>//api/name/tickmarkPlacement</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickmarkPlacement</TokenIdentifier>
+			<Abstract type="html">* description: For categorized axes only. If on the tick mark is placed in the
+center of the category, if between the tick mark is placed between
+categories. The default is between if the tickInterval is 1,
+else on.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tickmarkPlacement</Declaration>
+			
+			
+			<Anchor>//api/name/tickmarkPlacement</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickmarkPlacement</TokenIdentifier>
+			<Abstract type="html">* description: For categorized axes only. If on the tick mark is placed in the
+center of the category, if between the tick mark is placed between
+categories. The default is between if the tickInterval is 1,
+else on.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tickmarkPlacement</Declaration>
+			
+			
+			<Anchor>//api/name/tickmarkPlacement</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setSoftMax:</TokenIdentifier>
+			<Abstract type="html">* description: A soft maximum for the axis. If the series data maximum is less than
+this, the axis will stay at this maximum, but if the series data
+maximum is higher, the axis will flex to show all data.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softMax</Declaration>
+			
+			
+			<Anchor>//api/name/softMax</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/softMax</TokenIdentifier>
+			<Abstract type="html">* description: A soft maximum for the axis. If the series data maximum is less than
+this, the axis will stay at this maximum, but if the series data
+maximum is higher, the axis will flex to show all data.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softMax</Declaration>
+			
+			
+			<Anchor>//api/name/softMax</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/softMax</TokenIdentifier>
+			<Abstract type="html">* description: A soft maximum for the axis. If the series data maximum is less than
+this, the axis will stay at this maximum, but if the series data
+maximum is higher, the axis will flex to show all data.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softMax</Declaration>
+			
+			
+			<Anchor>//api/name/softMax</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setUniqueNames:</TokenIdentifier>
+			<Abstract type="html">* description: Applies only when the axis type is category. When uniqueNames
+is true, points are placed on the X axis according to their names.
+If the same point name is repeated in the same or another series,
+the point is placed on the same X position as other points of the
+same name. When uniqueNames is false, the points are laid out in
+increasing X positions regardless of their names, and the X axis
+category will take the name of the last point in each position.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *uniqueNames</Declaration>
+			
+			
+			<Anchor>//api/name/uniqueNames</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/uniqueNames</TokenIdentifier>
+			<Abstract type="html">* description: Applies only when the axis type is category. When uniqueNames
+is true, points are placed on the X axis according to their names.
+If the same point name is repeated in the same or another series,
+the point is placed on the same X position as other points of the
+same name. When uniqueNames is false, the points are laid out in
+increasing X positions regardless of their names, and the X axis
+category will take the name of the last point in each position.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *uniqueNames</Declaration>
+			
+			
+			<Anchor>//api/name/uniqueNames</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/uniqueNames</TokenIdentifier>
+			<Abstract type="html">* description: Applies only when the axis type is category. When uniqueNames
+is true, points are placed on the X axis according to their names.
+If the same point name is repeated in the same or another series,
+the point is placed on the same X position as other points of the
+same name. When uniqueNames is false, the points are laid out in
+increasing X positions regardless of their names, and the X axis
+category will take the name of the last point in each position.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *uniqueNames</Declaration>
+			
+			
+			<Anchor>//api/name/uniqueNames</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorTickLength:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel length of the minor tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickLength</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickLength</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorTickLength</TokenIdentifier>
+			<Abstract type="html">* description: The pixel length of the minor tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickLength</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickLength</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorTickLength</TokenIdentifier>
+			<Abstract type="html">* description: The pixel length of the minor tick marks.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickLength</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickLength</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setType:</TokenIdentifier>
+			<Abstract type="html">* description: The type of interpolation to use for the color axis. Can be linear
+or logarithmic.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/type</TokenIdentifier>
+			<Abstract type="html">* description: The type of interpolation to use for the color axis. Can be linear
+or logarithmic.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/type</TokenIdentifier>
+			<Abstract type="html">* description: The type of interpolation to use for the color axis. Can be linear
+or logarithmic.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickLength:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel length of the main tick marks on the color axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickLength</Declaration>
+			
+			
+			<Anchor>//api/name/tickLength</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickLength</TokenIdentifier>
+			<Abstract type="html">* description: The pixel length of the main tick marks on the color axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickLength</Declaration>
+			
+			
+			<Anchor>//api/name/tickLength</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickLength</TokenIdentifier>
+			<Abstract type="html">* description: The pixel length of the main tick marks on the color axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickLength</Declaration>
+			
+			
+			<Anchor>//api/name/tickLength</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setSoftMin:</TokenIdentifier>
+			<Abstract type="html">* description: A soft minimum for the axis. If the series data minimum is greater
+than this, the axis will stay at this minimum, but if the series
+data minimum is lower, the axis will flex to show all data.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softMin</Declaration>
+			
+			
+			<Anchor>//api/name/softMin</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/softMin</TokenIdentifier>
+			<Abstract type="html">* description: A soft minimum for the axis. If the series data minimum is greater
+than this, the axis will stay at this minimum, but if the series
+data minimum is lower, the axis will flex to show all data.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softMin</Declaration>
+			
+			
+			<Anchor>//api/name/softMin</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/softMin</TokenIdentifier>
+			<Abstract type="html">* description: A soft minimum for the axis. If the series data minimum is greater
+than this, the axis will stay at this minimum, but if the series
+data minimum is lower, the axis will flex to show all data.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softMin</Declaration>
+			
+			
+			<Anchor>//api/name/softMin</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorGridLineWidth:</TokenIdentifier>
+			<Abstract type="html">* description: Width of the minor, secondary grid lines.
+In styled mode, the stroke width is given in the
+.highcharts-grid-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorGridLineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorGridLineWidth</TokenIdentifier>
+			<Abstract type="html">* description: Width of the minor, secondary grid lines.
+In styled mode, the stroke width is given in the
+.highcharts-grid-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorGridLineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorGridLineWidth</TokenIdentifier>
+			<Abstract type="html">* description: Width of the minor, secondary grid lines.
+In styled mode, the stroke width is given in the
+.highcharts-grid-line class.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorGridLineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setGridLineWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the grid lines extending from the axis across the
+gradient of a scalar color axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *gridLineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/gridLineWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the grid lines extending from the axis across the
+gradient of a scalar color axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *gridLineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/gridLineWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the grid lines extending from the axis across the
+gradient of a scalar color axis.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *gridLineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/gridLineWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMaxPadding:</TokenIdentifier>
+			<Abstract type="html">* description: Padding of the max value relative to the length of the axis. A
+padding of 0.05 will make a 100px axis 5px longer.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPadding</Declaration>
+			
+			
+			<Anchor>//api/name/maxPadding</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/maxPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding of the max value relative to the length of the axis. A
+padding of 0.05 will make a 100px axis 5px longer.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPadding</Declaration>
+			
+			
+			<Anchor>//api/name/maxPadding</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/maxPadding</TokenIdentifier>
+			<Abstract type="html">* description: Padding of the max value relative to the length of the axis. A
+padding of 0.05 will make a 100px axis 5px longer.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *maxPadding</Declaration>
+			
+			
+			<Anchor>//api/name/maxPadding</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickInterval:</TokenIdentifier>
+			<Abstract type="html">* description: The interval of the tick marks in axis units. When null, the tick
+interval is computed to approximately follow the tickPixelInterval.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickInterval</Declaration>
+			
+			
+			<Anchor>//api/name/tickInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickInterval</TokenIdentifier>
+			<Abstract type="html">* description: The interval of the tick marks in axis units. When null, the tick
+interval is computed to approximately follow the tickPixelInterval.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickInterval</Declaration>
+			
+			
+			<Anchor>//api/name/tickInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickInterval</TokenIdentifier>
+			<Abstract type="html">* description: The interval of the tick marks in axis units. When null, the tick
+interval is computed to approximately follow the tickPixelInterval.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *tickInterval</Declaration>
+			
+			
+			<Anchor>//api/name/tickInterval</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setVisible:</TokenIdentifier>
+			<Abstract type="html">* description: Whether axis, including axis title, line, ticks and labels, should
+be visible.
+* default: true</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/visible</TokenIdentifier>
+			<Abstract type="html">* description: Whether axis, including axis title, line, ticks and labels, should
+be visible.
+* default: true</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/visible</TokenIdentifier>
+			<Abstract type="html">* description: Whether axis, including axis title, line, ticks and labels, should
+be visible.
+* default: true</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setUnits:</TokenIdentifier>
+			<Abstract type="html">* description: Datetime axis only. An array determining what time intervals the
+ticks are allowed to fall on. Each array item is an array where the
+first value is the time unit and the second value another array of
+allowed multiples. Defaults to:
+units: [[
+    &apos;millisecond&apos;, // unit name
+    [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
+], [
+    &apos;second&apos;,
+    [1, 2, 5, 10, 15, 30]
+], [
+    &apos;minute&apos;,
+    [1, 2, 5, 10, 15, 30]
+], [
+    &apos;hour&apos;,
+    [1, 2, 3, 4, 6, 8, 12]
+], [
+    &apos;day&apos;,
+    [1]
+], [
+    &apos;week&apos;,
+    [1]
+], [
+    &apos;month&apos;,
+    [1, 3, 6]
+], [
+    &apos;year&apos;,
+    null
+]]</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *units</Declaration>
+			
+			
+			<Anchor>//api/name/units</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/units</TokenIdentifier>
+			<Abstract type="html">* description: Datetime axis only. An array determining what time intervals the
+ticks are allowed to fall on. Each array item is an array where the
+first value is the time unit and the second value another array of
+allowed multiples. Defaults to:
+units: [[
+    &apos;millisecond&apos;, // unit name
+    [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
+], [
+    &apos;second&apos;,
+    [1, 2, 5, 10, 15, 30]
+], [
+    &apos;minute&apos;,
+    [1, 2, 5, 10, 15, 30]
+], [
+    &apos;hour&apos;,
+    [1, 2, 3, 4, 6, 8, 12]
+], [
+    &apos;day&apos;,
+    [1]
+], [
+    &apos;week&apos;,
+    [1]
+], [
+    &apos;month&apos;,
+    [1, 3, 6]
+], [
+    &apos;year&apos;,
+    null
+]]</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *units</Declaration>
+			
+			
+			<Anchor>//api/name/units</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/units</TokenIdentifier>
+			<Abstract type="html">* description: Datetime axis only. An array determining what time intervals the
+ticks are allowed to fall on. Each array item is an array where the
+first value is the time unit and the second value another array of
+allowed multiples. Defaults to:
+units: [[
+    &apos;millisecond&apos;, // unit name
+    [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
+], [
+    &apos;second&apos;,
+    [1, 2, 5, 10, 15, 30]
+], [
+    &apos;minute&apos;,
+    [1, 2, 5, 10, 15, 30]
+], [
+    &apos;hour&apos;,
+    [1, 2, 3, 4, 6, 8, 12]
+], [
+    &apos;day&apos;,
+    [1]
+], [
+    &apos;week&apos;,
+    [1]
+], [
+    &apos;month&apos;,
+    [1, 3, 6]
+], [
+    &apos;year&apos;,
+    null
+]]</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *units</Declaration>
+			
+			
+			<Anchor>//api/name/units</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setStops:</TokenIdentifier>
+			<Abstract type="html">* description: Color stops for the gradient of a scalar color axis. Use this in
+cases where a linear gradient between a minColor and maxColor
+is not sufficient. The stops is an array of tuples, where the first
+item is a float between 0 and 1 assigning the relative position in
+the gradient, and the second item is the color.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSArray*&gt; *stops</Declaration>
+			
+			
+			<Anchor>//api/name/stops</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/stops</TokenIdentifier>
+			<Abstract type="html">* description: Color stops for the gradient of a scalar color axis. Use this in
+cases where a linear gradient between a minColor and maxColor
+is not sufficient. The stops is an array of tuples, where the first
+item is a float between 0 and 1 assigning the relative position in
+the gradient, and the second item is the color.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSArray*&gt; *stops</Declaration>
+			
+			
+			<Anchor>//api/name/stops</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/stops</TokenIdentifier>
+			<Abstract type="html">* description: Color stops for the gradient of a scalar color axis. Use this in
+cases where a linear gradient between a minColor and maxColor
+is not sufficient. The stops is an array of tuples, where the first
+item is a float between 0 and 1 assigning the relative position in
+the gradient, and the second item is the color.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSArray*&gt; *stops</Declaration>
+			
+			
+			<Anchor>//api/name/stops</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setTickPosition:</TokenIdentifier>
+			<Abstract type="html">* description: The position of the major tick marks relative to the axis line.
+Can be one of inside and outside.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tickPosition</Declaration>
+			
+			
+			<Anchor>//api/name/tickPosition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/tickPosition</TokenIdentifier>
+			<Abstract type="html">* description: The position of the major tick marks relative to the axis line.
+Can be one of inside and outside.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tickPosition</Declaration>
+			
+			
+			<Anchor>//api/name/tickPosition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/tickPosition</TokenIdentifier>
+			<Abstract type="html">* description: The position of the major tick marks relative to the axis line.
+Can be one of inside and outside.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tickPosition</Declaration>
+			
+			
+			<Anchor>//api/name/tickPosition</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorGridLineDashStyle:</TokenIdentifier>
+			<Abstract type="html">* description: The dash or dot style of the minor grid lines. For possible values,
+see http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-
+dashstyle-all/ : this demonstration.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *minorGridLineDashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineDashStyle</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorGridLineDashStyle</TokenIdentifier>
+			<Abstract type="html">* description: The dash or dot style of the minor grid lines. For possible values,
+see http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-
+dashstyle-all/ : this demonstration.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *minorGridLineDashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineDashStyle</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorGridLineDashStyle</TokenIdentifier>
+			<Abstract type="html">* description: The dash or dot style of the minor grid lines. For possible values,
+see http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-
+dashstyle-all/ : this demonstration.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *minorGridLineDashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/minorGridLineDashStyle</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/setMinorTickWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the minor tick mark.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIColorAxis/minorTickWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the minor tick mark.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIColorAxis/minorTickWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the minor tick mark.</Abstract>
+			<DeclaredIn>HIColorAxis.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minorTickWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minorTickWidth</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIMarker.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIMarker</TokenIdentifier>
+			<Abstract type="html">* description: The triangular marker on a scalar color axis that points to the
+value of the hovered area. To disable the marker, set marker:
+null.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+            
+			
+			<NodeRef refid="80"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setHeight:</TokenIdentifier>
+			<Abstract type="html">* description: Image markers only. Set the image width explicitly. When using this
+option, a width must also be set.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/height</TokenIdentifier>
+			<Abstract type="html">* description: Image markers only. Set the image width explicitly. When using this
+option, a width must also be set.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/height</TokenIdentifier>
+			<Abstract type="html">* description: Image markers only. Set the image width explicitly. When using this
+option, a width must also be set.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the point marker.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/radius</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the point marker.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/radius</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the point marker.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *radius</Declaration>
+			
+			
+			<Anchor>//api/name/radius</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setWidth:</TokenIdentifier>
+			<Abstract type="html">* description: Image markers only. Set the image width explicitly. When using this
+option, a height must also be set.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/width</TokenIdentifier>
+			<Abstract type="html">* description: Image markers only. Set the image width explicitly. When using this
+option, a height must also be set.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/width</TokenIdentifier>
+			<Abstract type="html">* description: Image markers only. Set the image width explicitly. When using this
+option, a height must also be set.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setEnabled:</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the point marker. If null, the markers are hidden
+when the data is dense, and shown for more widespread data points.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the point marker. If null, the markers are hidden
+when the data is dense, and shown for more widespread data points.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the point marker. If null, the markers are hidden
+when the data is dense, and shown for more widespread data points.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setLineColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the point marker&apos;s outline. When null, the series&apos;
+or point&apos;s color is used.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the point marker&apos;s outline. When null, the series&apos;
+or point&apos;s color is used.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the point marker&apos;s outline. When null, the series&apos;
+or point&apos;s color is used.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setFillColor:</TokenIdentifier>
+			<Abstract type="html">* description: The fill color of the point marker. When null, the series&apos; or
+point&apos;s color is used.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/fillColor</TokenIdentifier>
+			<Abstract type="html">* description: The fill color of the point marker. When null, the series&apos; or
+point&apos;s color is used.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/fillColor</TokenIdentifier>
+			<Abstract type="html">* description: The fill color of the point marker. When null, the series&apos; or
+point&apos;s color is used.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setStates:</TokenIdentifier>
+			<Abstract type="html">description: States for a single point marker.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStates *states</Declaration>
+			
+			
+			<Anchor>//api/name/states</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/states</TokenIdentifier>
+			<Abstract type="html">description: States for a single point marker.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStates *states</Declaration>
+			
+			
+			<Anchor>//api/name/states</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/states</TokenIdentifier>
+			<Abstract type="html">description: States for a single point marker.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStates *states</Declaration>
+			
+			
+			<Anchor>//api/name/states</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setLineWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the point marker&apos;s outline.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/lineWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the point marker&apos;s outline.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/lineWidth</TokenIdentifier>
+			<Abstract type="html">* description: The width of the point marker&apos;s outline.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setSymbol:</TokenIdentifier>
+			<Abstract type="html">* description: A predefined shape or symbol for the marker. When null, the symbol
+is pulled from options.symbols. Other possible values are &quot;circle&quot;,
+&quot;square&quot;, &quot;diamond&quot;, &quot;triangle&quot; and &quot;triangle-down&quot;.
+Additionally, the URL to a graphic can be given on this form:
+&quot;url(graphic.png)&quot;. Note that for the image to be applied to exported
+charts, its URL needs to be accessible by the export server.
+Custom callbacks for symbol path generation can also be added to
+Highcharts.SVGRenderer.prototype.symbols. The callback is then
+used by its method name, as shown in the demo.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *symbol</Declaration>
+			
+			
+			<Anchor>//api/name/symbol</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/symbol</TokenIdentifier>
+			<Abstract type="html">* description: A predefined shape or symbol for the marker. When null, the symbol
+is pulled from options.symbols. Other possible values are &quot;circle&quot;,
+&quot;square&quot;, &quot;diamond&quot;, &quot;triangle&quot; and &quot;triangle-down&quot;.
+Additionally, the URL to a graphic can be given on this form:
+&quot;url(graphic.png)&quot;. Note that for the image to be applied to exported
+charts, its URL needs to be accessible by the export server.
+Custom callbacks for symbol path generation can also be added to
+Highcharts.SVGRenderer.prototype.symbols. The callback is then
+used by its method name, as shown in the demo.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *symbol</Declaration>
+			
+			
+			<Anchor>//api/name/symbol</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/symbol</TokenIdentifier>
+			<Abstract type="html">* description: A predefined shape or symbol for the marker. When null, the symbol
+is pulled from options.symbols. Other possible values are &quot;circle&quot;,
+&quot;square&quot;, &quot;diamond&quot;, &quot;triangle&quot; and &quot;triangle-down&quot;.
+Additionally, the URL to a graphic can be given on this form:
+&quot;url(graphic.png)&quot;. Note that for the image to be applied to exported
+charts, its URL needs to be accessible by the export server.
+Custom callbacks for symbol path generation can also be added to
+Highcharts.SVGRenderer.prototype.symbols. The callback is then
+used by its method name, as shown in the demo.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *symbol</Declaration>
+			
+			
+			<Anchor>//api/name/symbol</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setColor:</TokenIdentifier>
+			<Abstract type="html">description: The color of the marker.
+default: #999999</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/color</TokenIdentifier>
+			<Abstract type="html">description: The color of the marker.
+default: #999999</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/color</TokenIdentifier>
+			<Abstract type="html">description: The color of the marker.
+default: #999999</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/setAnimation:</TokenIdentifier>
+			<Abstract type="html">* description: Animation for the marker as it moves between values. Set to false
+to disable animation. Defaults to { duration: 50 }.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMarker/animation</TokenIdentifier>
+			<Abstract type="html">* description: Animation for the marker as it moves between values. Set to false
+to disable animation. Defaults to { duration: 50 }.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMarker/animation</TokenIdentifier>
+			<Abstract type="html">* description: Animation for the marker as it moves between values. Set to false
+to disable animation. Defaults to { duration: 50 }.</Abstract>
+			<DeclaredIn>HIMarker.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

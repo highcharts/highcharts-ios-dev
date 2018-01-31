@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HILeft.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HILeft</TokenIdentifier>
+			<Abstract type="html">description: The left side of the frame around a 3D chart.</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+            
+			
+			<NodeRef refid="75"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILeft/setVisible:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to display the frame. Possible values are true, false,
+&quot;auto&quot; to display only the frames behind the data, and &quot;default&quot;
+to display faces behind the data based on the axis layout, ignoring
+the point of view.</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILeft/visible</TokenIdentifier>
+			<Abstract type="html">* description: Whether to display the frame. Possible values are true, false,
+&quot;auto&quot; to display only the frames behind the data, and &quot;default&quot;
+to display faces behind the data based on the axis layout, ignoring
+the point of view.</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILeft/visible</TokenIdentifier>
+			<Abstract type="html">* description: Whether to display the frame. Possible values are true, false,
+&quot;auto&quot; to display only the frames behind the data, and &quot;default&quot;
+to display faces behind the data based on the axis layout, ignoring
+the point of view.</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILeft/setColor:</TokenIdentifier>
+			<Abstract type="html">description: The color of the panel.
+default: transparent</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILeft/color</TokenIdentifier>
+			<Abstract type="html">description: The color of the panel.
+default: transparent</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILeft/color</TokenIdentifier>
+			<Abstract type="html">description: The color of the panel.
+default: transparent</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILeft/setSize:</TokenIdentifier>
+			<Abstract type="html">description: The thickness of the panel.
+default: 1</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILeft/size</TokenIdentifier>
+			<Abstract type="html">description: The thickness of the panel.
+default: 1</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILeft/size</TokenIdentifier>
+			<Abstract type="html">description: The thickness of the panel.
+default: 1</Abstract>
+			<DeclaredIn>HILeft.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="75"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

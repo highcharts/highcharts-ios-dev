@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIDrillUpButton.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIDrillUpButton</TokenIdentifier>
+			<Abstract type="html">* description: Options for the drill up button that appears when drilling down
+on a series. The text for the button is defined in lang.drillUpText.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+            
+			
+			<NodeRef refid="43"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrillUpButton/setPosition:</TokenIdentifier>
+			<Abstract type="html">description: The position of the button.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPosition *position</Declaration>
+			
+			
+			<Anchor>//api/name/position</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrillUpButton/position</TokenIdentifier>
+			<Abstract type="html">description: The position of the button.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPosition *position</Declaration>
+			
+			
+			<Anchor>//api/name/position</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrillUpButton/position</TokenIdentifier>
+			<Abstract type="html">description: The position of the button.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPosition *position</Declaration>
+			
+			
+			<Anchor>//api/name/position</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrillUpButton/setTheme:</TokenIdentifier>
+			<Abstract type="html">* description: A collection of attributes for the button. The object takes SVG attributes
+like fill, stroke, stroke-width or r, the border radius.
+The theme also supports style, a collection of CSS properties for
+the text. Equivalent attributes for the hover state are given in
+theme.states.hover.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id theme</Declaration>
+			
+			
+			<Anchor>//api/name/theme</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrillUpButton/theme</TokenIdentifier>
+			<Abstract type="html">* description: A collection of attributes for the button. The object takes SVG attributes
+like fill, stroke, stroke-width or r, the border radius.
+The theme also supports style, a collection of CSS properties for
+the text. Equivalent attributes for the hover state are given in
+theme.states.hover.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id theme</Declaration>
+			
+			
+			<Anchor>//api/name/theme</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrillUpButton/theme</TokenIdentifier>
+			<Abstract type="html">* description: A collection of attributes for the button. The object takes SVG attributes
+like fill, stroke, stroke-width or r, the border radius.
+The theme also supports style, a collection of CSS properties for
+the text. Equivalent attributes for the hover state are given in
+theme.states.hover.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id theme</Declaration>
+			
+			
+			<Anchor>//api/name/theme</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrillUpButton/setRelativeTo:</TokenIdentifier>
+			<Abstract type="html">* description: What box to align the button to. Can be either plotBox or
+`spacingBox.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *relativeTo</Declaration>
+			
+			
+			<Anchor>//api/name/relativeTo</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrillUpButton/relativeTo</TokenIdentifier>
+			<Abstract type="html">* description: What box to align the button to. Can be either plotBox or
+`spacingBox.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *relativeTo</Declaration>
+			
+			
+			<Anchor>//api/name/relativeTo</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrillUpButton/relativeTo</TokenIdentifier>
+			<Abstract type="html">* description: What box to align the button to. Can be either plotBox or
+`spacingBox.</Abstract>
+			<DeclaredIn>HIDrillUpButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *relativeTo</Declaration>
+			
+			
+			<Anchor>//api/name/relativeTo</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

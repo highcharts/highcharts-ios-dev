@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIArearange.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIArearange</TokenIdentifier>
+			<Abstract type="html">* description: A arearange series. If the type option
+is not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+arearange.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/setFillOpacity:</TokenIdentifier>
+			<Abstract type="html">* description: Fill opacity for the area. When you set an explicit fillColor,
+the fillOpacity is not applied. Instead, you should define the
+opacity in the fillColor with an rgba color definition. The fillOpacity
+setting, also the default setting, overrides the alpha component
+of the color setting.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fillOpacity</Declaration>
+			
+			
+			<Anchor>//api/name/fillOpacity</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/fillOpacity</TokenIdentifier>
+			<Abstract type="html">* description: Fill opacity for the area. When you set an explicit fillColor,
+the fillOpacity is not applied. Instead, you should define the
+opacity in the fillColor with an rgba color definition. The fillOpacity
+setting, also the default setting, overrides the alpha component
+of the color setting.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fillOpacity</Declaration>
+			
+			
+			<Anchor>//api/name/fillOpacity</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIArearange/fillOpacity</TokenIdentifier>
+			<Abstract type="html">* description: Fill opacity for the area. When you set an explicit fillColor,
+the fillOpacity is not applied. Instead, you should define the
+opacity in the fillColor with an rgba color definition. The fillOpacity
+setting, also the default setting, overrides the alpha component
+of the color setting.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *fillOpacity</Declaration>
+			
+			
+			<Anchor>//api/name/fillOpacity</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/setNegativeFillColor:</TokenIdentifier>
+			<Abstract type="html">description: A separate color for the negative part of the area.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeFillColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeFillColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/negativeFillColor</TokenIdentifier>
+			<Abstract type="html">description: A separate color for the negative part of the area.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeFillColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeFillColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIArearange/negativeFillColor</TokenIdentifier>
+			<Abstract type="html">description: A separate color for the negative part of the area.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeFillColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeFillColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/setLineColor:</TokenIdentifier>
+			<Abstract type="html">* description: A separate color for the graph line. By default the line takes the
+color of the series, but the lineColor setting allows setting a
+separate color for the line without altering the fillColor.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: A separate color for the graph line. By default the line takes the
+color of the series, but the lineColor setting allows setting a
+separate color for the line without altering the fillColor.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIArearange/lineColor</TokenIdentifier>
+			<Abstract type="html">* description: A separate color for the graph line. By default the line takes the
+color of the series, but the lineColor setting allows setting a
+separate color for the line without altering the fillColor.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *lineColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/setTrackByArea:</TokenIdentifier>
+			<Abstract type="html">* description: Whether the whole area or just the line should respond to mouseover
+tooltips and other mouse or touch events.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *trackByArea</Declaration>
+			
+			
+			<Anchor>//api/name/trackByArea</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/trackByArea</TokenIdentifier>
+			<Abstract type="html">* description: Whether the whole area or just the line should respond to mouseover
+tooltips and other mouse or touch events.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *trackByArea</Declaration>
+			
+			
+			<Anchor>//api/name/trackByArea</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIArearange/trackByArea</TokenIdentifier>
+			<Abstract type="html">* description: Whether the whole area or just the line should respond to mouseover
+tooltips and other mouse or touch events.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *trackByArea</Declaration>
+			
+			
+			<Anchor>//api/name/trackByArea</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/setFillColor:</TokenIdentifier>
+			<Abstract type="html">* description: Fill color or gradient for the area. When null, the series&apos; color
+is used with the series&apos; fillOpacity.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIArearange/fillColor</TokenIdentifier>
+			<Abstract type="html">* description: Fill color or gradient for the area. When null, the series&apos; color
+is used with the series&apos; fillOpacity.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIArearange/fillColor</TokenIdentifier>
+			<Abstract type="html">* description: Fill color or gradient for the area. When null, the series&apos; color
+is used with the series&apos; fillOpacity.</Abstract>
+			<DeclaredIn>HIArearange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fillColor</Declaration>
+			
+			
+			<Anchor>//api/name/fillColor</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

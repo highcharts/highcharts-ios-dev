@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIPosition.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIPosition</TokenIdentifier>
+			<Abstract type="html">description: The position of the button.</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+            
+			
+			<NodeRef refid="100"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPosition/setVerticalAlign:</TokenIdentifier>
+			<Abstract type="html">* description: Vertical alignment of the button.</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPosition/verticalAlign</TokenIdentifier>
+			<Abstract type="html">* description: Vertical alignment of the button.</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPosition/verticalAlign</TokenIdentifier>
+			<Abstract type="html">* description: Vertical alignment of the button.</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPosition/setX:</TokenIdentifier>
+			<Abstract type="html">description: Horizontal offset of the button.
+default: -10</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPosition/x</TokenIdentifier>
+			<Abstract type="html">description: Horizontal offset of the button.
+default: -10</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPosition/x</TokenIdentifier>
+			<Abstract type="html">description: Horizontal offset of the button.
+default: -10</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPosition/setY:</TokenIdentifier>
+			<Abstract type="html">description: Vertical offset of the button.
+default: 10</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPosition/y</TokenIdentifier>
+			<Abstract type="html">description: Vertical offset of the button.
+default: 10</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPosition/y</TokenIdentifier>
+			<Abstract type="html">description: Vertical offset of the button.
+default: 10</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPosition/setAlign:</TokenIdentifier>
+			<Abstract type="html">* description: Horizontal alignment of the button.</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPosition/align</TokenIdentifier>
+			<Abstract type="html">* description: Horizontal alignment of the button.</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPosition/align</TokenIdentifier>
+			<Abstract type="html">* description: Horizontal alignment of the button.</Abstract>
+			<DeclaredIn>HIPosition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="100"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

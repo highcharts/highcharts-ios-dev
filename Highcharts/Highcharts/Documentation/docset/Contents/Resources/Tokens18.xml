@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIBreaks.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIBreaks</TokenIdentifier>
+			<Abstract type="html">* description: An array defining breaks in the axis, the sections defined will be
+left out and all the points shifted closer to each other.</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBreaks/setBreakSize:</TokenIdentifier>
+			<Abstract type="html">* description: A number indicating how much space should be left between the start
+and the end of the break. The break size is given in axis units,
+so for instance on a datetime axis, a break size of 3600000 would
+indicate the equivalent of an hour.
+* default: 0</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *breakSize</Declaration>
+			
+			
+			<Anchor>//api/name/breakSize</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBreaks/breakSize</TokenIdentifier>
+			<Abstract type="html">* description: A number indicating how much space should be left between the start
+and the end of the break. The break size is given in axis units,
+so for instance on a datetime axis, a break size of 3600000 would
+indicate the equivalent of an hour.
+* default: 0</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *breakSize</Declaration>
+			
+			
+			<Anchor>//api/name/breakSize</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBreaks/breakSize</TokenIdentifier>
+			<Abstract type="html">* description: A number indicating how much space should be left between the start
+and the end of the break. The break size is given in axis units,
+so for instance on a datetime axis, a break size of 3600000 would
+indicate the equivalent of an hour.
+* default: 0</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *breakSize</Declaration>
+			
+			
+			<Anchor>//api/name/breakSize</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBreaks/setRepeat:</TokenIdentifier>
+			<Abstract type="html">* description: Defines an interval after which the break appears again. By default
+the breaks do not repeat.
+* default: 0</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *repeat</Declaration>
+			
+			
+			<Anchor>//api/name/repeat</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBreaks/repeat</TokenIdentifier>
+			<Abstract type="html">* description: Defines an interval after which the break appears again. By default
+the breaks do not repeat.
+* default: 0</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *repeat</Declaration>
+			
+			
+			<Anchor>//api/name/repeat</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBreaks/repeat</TokenIdentifier>
+			<Abstract type="html">* description: Defines an interval after which the break appears again. By default
+the breaks do not repeat.
+* default: 0</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *repeat</Declaration>
+			
+			
+			<Anchor>//api/name/repeat</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBreaks/setTo:</TokenIdentifier>
+			<Abstract type="html">description: The point where the break ends.</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *to</Declaration>
+			
+			
+			<Anchor>//api/name/to</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBreaks/to</TokenIdentifier>
+			<Abstract type="html">description: The point where the break ends.</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *to</Declaration>
+			
+			
+			<Anchor>//api/name/to</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBreaks/to</TokenIdentifier>
+			<Abstract type="html">description: The point where the break ends.</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *to</Declaration>
+			
+			
+			<Anchor>//api/name/to</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBreaks/setFrom:</TokenIdentifier>
+			<Abstract type="html">description: The point where the break starts.</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *from</Declaration>
+			
+			
+			<Anchor>//api/name/from</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBreaks/from</TokenIdentifier>
+			<Abstract type="html">description: The point where the break starts.</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *from</Declaration>
+			
+			
+			<Anchor>//api/name/from</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBreaks/from</TokenIdentifier>
+			<Abstract type="html">description: The point where the break starts.</Abstract>
+			<DeclaredIn>HIBreaks.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *from</Declaration>
+			
+			
+			<Anchor>//api/name/from</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HITreemap.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HITreemap</TokenIdentifier>
+			<Abstract type="html">* description: A treemap series. If the type option is
+not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+treemap.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+            
+			
+			<NodeRef refid="129"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setLevelIsConstant:</TokenIdentifier>
+			<Abstract type="html">* description: Used together with the levels and allowDrillToNode options. When
+set to false the first level visible when drilling is considered
+to be level one. Otherwise the level will be the same as the tree
+structure.
+* default: true</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *levelIsConstant</Declaration>
+			
+			
+			<Anchor>//api/name/levelIsConstant</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/levelIsConstant</TokenIdentifier>
+			<Abstract type="html">* description: Used together with the levels and allowDrillToNode options. When
+set to false the first level visible when drilling is considered
+to be level one. Otherwise the level will be the same as the tree
+structure.
+* default: true</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *levelIsConstant</Declaration>
+			
+			
+			<Anchor>//api/name/levelIsConstant</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/levelIsConstant</TokenIdentifier>
+			<Abstract type="html">* description: Used together with the levels and allowDrillToNode options. When
+set to false the first level visible when drilling is considered
+to be level one. Otherwise the level will be the same as the tree
+structure.
+* default: true</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *levelIsConstant</Declaration>
+			
+			
+			<Anchor>//api/name/levelIsConstant</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setDrillUpButton:</TokenIdentifier>
+			<Abstract type="html">description: Options for the button appearing when drilling down in a treemap.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</Declaration>
+			
+			
+			<Anchor>//api/name/drillUpButton</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/drillUpButton</TokenIdentifier>
+			<Abstract type="html">description: Options for the button appearing when drilling down in a treemap.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</Declaration>
+			
+			
+			<Anchor>//api/name/drillUpButton</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/drillUpButton</TokenIdentifier>
+			<Abstract type="html">description: Options for the button appearing when drilling down in a treemap.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</Declaration>
+			
+			
+			<Anchor>//api/name/drillUpButton</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each tree map item.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each tree map item.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each tree map item.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setLayoutStartingDirection:</TokenIdentifier>
+			<Abstract type="html">* description: Defines which direction the layout algorithm will start drawing.
+Possible values are &quot;vertical&quot; and &quot;horizontal&quot;.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *layoutStartingDirection</Declaration>
+			
+			
+			<Anchor>//api/name/layoutStartingDirection</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/layoutStartingDirection</TokenIdentifier>
+			<Abstract type="html">* description: Defines which direction the layout algorithm will start drawing.
+Possible values are &quot;vertical&quot; and &quot;horizontal&quot;.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *layoutStartingDirection</Declaration>
+			
+			
+			<Anchor>//api/name/layoutStartingDirection</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/layoutStartingDirection</TokenIdentifier>
+			<Abstract type="html">* description: Defines which direction the layout algorithm will start drawing.
+Possible values are &quot;vertical&quot; and &quot;horizontal&quot;.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *layoutStartingDirection</Declaration>
+			
+			
+			<Anchor>//api/name/layoutStartingDirection</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setLevels:</TokenIdentifier>
+			<Abstract type="html">* description: Set options on specific levels. Takes precedence over series options,
+but not point options.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</Declaration>
+			
+			
+			<Anchor>//api/name/levels</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/levels</TokenIdentifier>
+			<Abstract type="html">* description: Set options on specific levels. Takes precedence over series options,
+but not point options.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</Declaration>
+			
+			
+			<Anchor>//api/name/levels</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/levels</TokenIdentifier>
+			<Abstract type="html">* description: Set options on specific levels. Takes precedence over series options,
+but not point options.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</Declaration>
+			
+			
+			<Anchor>//api/name/levels</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setIgnoreHiddenPoint:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to ignore hidden points when the layout algorithm runs.
+If false, hidden points will leave open spaces.
+* default: true</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/ignoreHiddenPoint</TokenIdentifier>
+			<Abstract type="html">* description: Whether to ignore hidden points when the layout algorithm runs.
+If false, hidden points will leave open spaces.
+* default: true</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/ignoreHiddenPoint</TokenIdentifier>
+			<Abstract type="html">* description: Whether to ignore hidden points when the layout algorithm runs.
+If false, hidden points will leave open spaces.
+* default: true</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setInteractByLeaf:</TokenIdentifier>
+			<Abstract type="html">* description: This option decides if the user can interact with the parent nodes
+or just the leaf nodes. When this option is undefined, it will be
+true by default. However when allowDrillToNode is true, then it will
+be false by default.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *interactByLeaf</Declaration>
+			
+			
+			<Anchor>//api/name/interactByLeaf</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/interactByLeaf</TokenIdentifier>
+			<Abstract type="html">* description: This option decides if the user can interact with the parent nodes
+or just the leaf nodes. When this option is undefined, it will be
+true by default. However when allowDrillToNode is true, then it will
+be false by default.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *interactByLeaf</Declaration>
+			
+			
+			<Anchor>//api/name/interactByLeaf</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/interactByLeaf</TokenIdentifier>
+			<Abstract type="html">* description: This option decides if the user can interact with the parent nodes
+or just the leaf nodes. When this option is undefined, it will be
+true by default. However when allowDrillToNode is true, then it will
+be false by default.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *interactByLeaf</Declaration>
+			
+			
+			<Anchor>//api/name/interactByLeaf</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setOpacity:</TokenIdentifier>
+			<Abstract type="html">* description: The opacity of a point in treemap. When a point has children, the
+visibility of the children is determined by the opacity.
+* default: 0.15</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *opacity</Declaration>
+			
+			
+			<Anchor>//api/name/opacity</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/opacity</TokenIdentifier>
+			<Abstract type="html">* description: The opacity of a point in treemap. When a point has children, the
+visibility of the children is determined by the opacity.
+* default: 0.15</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *opacity</Declaration>
+			
+			
+			<Anchor>//api/name/opacity</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/opacity</TokenIdentifier>
+			<Abstract type="html">* description: The opacity of a point in treemap. When a point has children, the
+visibility of the children is determined by the opacity.
+* default: 0.15</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *opacity</Declaration>
+			
+			
+			<Anchor>//api/name/opacity</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setAllowDrillToNode:</TokenIdentifier>
+			<Abstract type="html">* description: When enabled the user can click on a point which is a parent and
+zoom in on its children.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowDrillToNode</Declaration>
+			
+			
+			<Anchor>//api/name/allowDrillToNode</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/allowDrillToNode</TokenIdentifier>
+			<Abstract type="html">* description: When enabled the user can click on a point which is a parent and
+zoom in on its children.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowDrillToNode</Declaration>
+			
+			
+			<Anchor>//api/name/allowDrillToNode</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/allowDrillToNode</TokenIdentifier>
+			<Abstract type="html">* description: When enabled the user can click on a point which is a parent and
+zoom in on its children.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowDrillToNode</Declaration>
+			
+			
+			<Anchor>//api/name/allowDrillToNode</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setAlternateStartingDirection:</TokenIdentifier>
+			<Abstract type="html">* description: Enabling this option will make the treemap alternate the drawing
+direction between vertical and horizontal. The next levels starting
+direction will always be the opposite of the previous.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *alternateStartingDirection</Declaration>
+			
+			
+			<Anchor>//api/name/alternateStartingDirection</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/alternateStartingDirection</TokenIdentifier>
+			<Abstract type="html">* description: Enabling this option will make the treemap alternate the drawing
+direction between vertical and horizontal. The next levels starting
+direction will always be the opposite of the previous.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *alternateStartingDirection</Declaration>
+			
+			
+			<Anchor>//api/name/alternateStartingDirection</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/alternateStartingDirection</TokenIdentifier>
+			<Abstract type="html">* description: Enabling this option will make the treemap alternate the drawing
+direction between vertical and horizontal. The next levels starting
+direction will always be the opposite of the previous.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *alternateStartingDirection</Declaration>
+			
+			
+			<Anchor>//api/name/alternateStartingDirection</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setLayoutAlgorithm:</TokenIdentifier>
+			<Abstract type="html">* description: This option decides which algorithm is used for setting position
+and dimensions of the points. Can be one of sliceAndDice, stripes,
+squarified or strip.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *layoutAlgorithm</Declaration>
+			
+			
+			<Anchor>//api/name/layoutAlgorithm</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/layoutAlgorithm</TokenIdentifier>
+			<Abstract type="html">* description: This option decides which algorithm is used for setting position
+and dimensions of the points. Can be one of sliceAndDice, stripes,
+squarified or strip.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *layoutAlgorithm</Declaration>
+			
+			
+			<Anchor>//api/name/layoutAlgorithm</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/layoutAlgorithm</TokenIdentifier>
+			<Abstract type="html">* description: This option decides which algorithm is used for setting position
+and dimensions of the points. Can be one of sliceAndDice, stripes,
+squarified or strip.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *layoutAlgorithm</Declaration>
+			
+			
+			<Anchor>//api/name/layoutAlgorithm</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/setSortIndex:</TokenIdentifier>
+			<Abstract type="html">* description: The sort index of the point inside the treemap level.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *sortIndex</Declaration>
+			
+			
+			<Anchor>//api/name/sortIndex</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITreemap/sortIndex</TokenIdentifier>
+			<Abstract type="html">* description: The sort index of the point inside the treemap level.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *sortIndex</Declaration>
+			
+			
+			<Anchor>//api/name/sortIndex</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITreemap/sortIndex</TokenIdentifier>
+			<Abstract type="html">* description: The sort index of the point inside the treemap level.</Abstract>
+			<DeclaredIn>HITreemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *sortIndex</Declaration>
+			
+			
+			<Anchor>//api/name/sortIndex</Anchor>
+            <NodeRef refid="129"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

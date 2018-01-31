@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIDrilldown.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIDrilldown</TokenIdentifier>
+			<Abstract type="html">* description: Options for drill down, the concept of inspecting increasingly high
+resolution data through clicking on chart items like columns or pie slices.
+The drilldown feature requires the drilldown.js file to be loaded,
+found in the modules directory of the download package, or online at
+(code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/drilldown.js].</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+            
+			
+			<NodeRef refid="44"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/setAllowPointDrilldown:</TokenIdentifier>
+			<Abstract type="html">* description: When this option is false, clicking a single point will drill down
+all points in the same category, equivalent to clicking the X axis
+label.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowPointDrilldown</Declaration>
+			
+			
+			<Anchor>//api/name/allowPointDrilldown</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/allowPointDrilldown</TokenIdentifier>
+			<Abstract type="html">* description: When this option is false, clicking a single point will drill down
+all points in the same category, equivalent to clicking the X axis
+label.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowPointDrilldown</Declaration>
+			
+			
+			<Anchor>//api/name/allowPointDrilldown</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrilldown/allowPointDrilldown</TokenIdentifier>
+			<Abstract type="html">* description: When this option is false, clicking a single point will drill down
+all points in the same category, equivalent to clicking the X axis
+label.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowPointDrilldown</Declaration>
+			
+			
+			<Anchor>//api/name/allowPointDrilldown</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/setActiveAxisLabelStyle:</TokenIdentifier>
+			<Abstract type="html">* description: Additional styles to apply to the X axis label for a point that
+has drilldown data. By default it is underlined and blue to invite
+to interaction.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIActiveAxisLabelStyle *activeAxisLabelStyle</Declaration>
+			
+			
+			<Anchor>//api/name/activeAxisLabelStyle</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/activeAxisLabelStyle</TokenIdentifier>
+			<Abstract type="html">* description: Additional styles to apply to the X axis label for a point that
+has drilldown data. By default it is underlined and blue to invite
+to interaction.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIActiveAxisLabelStyle *activeAxisLabelStyle</Declaration>
+			
+			
+			<Anchor>//api/name/activeAxisLabelStyle</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrilldown/activeAxisLabelStyle</TokenIdentifier>
+			<Abstract type="html">* description: Additional styles to apply to the X axis label for a point that
+has drilldown data. By default it is underlined and blue to invite
+to interaction.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIActiveAxisLabelStyle *activeAxisLabelStyle</Declaration>
+			
+			
+			<Anchor>//api/name/activeAxisLabelStyle</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/setDrillUpButton:</TokenIdentifier>
+			<Abstract type="html">* description: Options for the drill up button that appears when drilling down
+on a series. The text for the button is defined in lang.drillUpText.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</Declaration>
+			
+			
+			<Anchor>//api/name/drillUpButton</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/drillUpButton</TokenIdentifier>
+			<Abstract type="html">* description: Options for the drill up button that appears when drilling down
+on a series. The text for the button is defined in lang.drillUpText.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</Declaration>
+			
+			
+			<Anchor>//api/name/drillUpButton</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrilldown/drillUpButton</TokenIdentifier>
+			<Abstract type="html">* description: Options for the drill up button that appears when drilling down
+on a series. The text for the button is defined in lang.drillUpText.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</Declaration>
+			
+			
+			<Anchor>//api/name/drillUpButton</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/setActiveDataLabelStyle:</TokenIdentifier>
+			<Abstract type="html">* description: Additional styles to apply to the data label of a point that has
+drilldown data. By default it is underlined and blue to invite to
+interaction.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIActiveDataLabelStyle *activeDataLabelStyle</Declaration>
+			
+			
+			<Anchor>//api/name/activeDataLabelStyle</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/activeDataLabelStyle</TokenIdentifier>
+			<Abstract type="html">* description: Additional styles to apply to the data label of a point that has
+drilldown data. By default it is underlined and blue to invite to
+interaction.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIActiveDataLabelStyle *activeDataLabelStyle</Declaration>
+			
+			
+			<Anchor>//api/name/activeDataLabelStyle</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrilldown/activeDataLabelStyle</TokenIdentifier>
+			<Abstract type="html">* description: Additional styles to apply to the data label of a point that has
+drilldown data. By default it is underlined and blue to invite to
+interaction.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIActiveDataLabelStyle *activeDataLabelStyle</Declaration>
+			
+			
+			<Anchor>//api/name/activeDataLabelStyle</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/setSeries:</TokenIdentifier>
+			<Abstract type="html">* description: An array of series configurations for the drill down. Each series
+configuration uses the same syntax as the series option
+set. These drilldown series are hidden by default. The drilldown
+series is linked to the parent series&apos; point by its id.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *series</Declaration>
+			
+			
+			<Anchor>//api/name/series</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/series</TokenIdentifier>
+			<Abstract type="html">* description: An array of series configurations for the drill down. Each series
+configuration uses the same syntax as the series option
+set. These drilldown series are hidden by default. The drilldown
+series is linked to the parent series&apos; point by its id.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *series</Declaration>
+			
+			
+			<Anchor>//api/name/series</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrilldown/series</TokenIdentifier>
+			<Abstract type="html">* description: An array of series configurations for the drill down. Each series
+configuration uses the same syntax as the series option
+set. These drilldown series are hidden by default. The drilldown
+series is linked to the parent series&apos; point by its id.</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *series</Declaration>
+			
+			
+			<Anchor>//api/name/series</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/setAnimation:</TokenIdentifier>
+			<Abstract type="html">* description: Set the animation for all drilldown animations. Animation of a drilldown
+occurs when drilling between a column point and a column series,
+or a pie slice and a full pie series. Drilldown can still be used
+between series and points of different types, but animation will
+not occur.
+The animation can either be set as a boolean or a configuration
+object. If true, it will use the &apos;swing&apos; jQuery easing and a duration
+of 500 ms. If used as a configuration object, the following properties
+are supported:</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIDrilldown/animation</TokenIdentifier>
+			<Abstract type="html">* description: Set the animation for all drilldown animations. Animation of a drilldown
+occurs when drilling between a column point and a column series,
+or a pie slice and a full pie series. Drilldown can still be used
+between series and points of different types, but animation will
+not occur.
+The animation can either be set as a boolean or a configuration
+object. If true, it will use the &apos;swing&apos; jQuery easing and a duration
+of 500 ms. If used as a configuration object, the following properties
+are supported:</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIDrilldown/animation</TokenIdentifier>
+			<Abstract type="html">* description: Set the animation for all drilldown animations. Animation of a drilldown
+occurs when drilling between a column point and a column series,
+or a pie slice and a full pie series. Drilldown can still be used
+between series and points of different types, but animation will
+not occur.
+The animation can either be set as a boolean or a configuration
+object. If true, it will use the &apos;swing&apos; jQuery easing and a duration
+of 500 ms. If used as a configuration object, the following properties
+are supported:</Abstract>
+			<DeclaredIn>HIDrilldown.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

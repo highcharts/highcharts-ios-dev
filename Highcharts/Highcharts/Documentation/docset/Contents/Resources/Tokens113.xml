@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIShapes.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIShapes</TokenIdentifier>
+			<Abstract type="html">* description: An array of shapes for the annotation. For options that apply to multiple
+shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+            
+			
+			<NodeRef refid="113"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setStroke:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s stroke.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *stroke</Declaration>
+			
+			
+			<Anchor>//api/name/stroke</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/stroke</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s stroke.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *stroke</Declaration>
+			
+			
+			<Anchor>//api/name/stroke</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/stroke</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s stroke.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *stroke</Declaration>
+			
+			
+			<Anchor>//api/name/stroke</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setHeight:</TokenIdentifier>
+			<Abstract type="html">* description: The height of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/height</TokenIdentifier>
+			<Abstract type="html">* description: The height of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/height</TokenIdentifier>
+			<Abstract type="html">* description: The height of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setStrokeWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *strokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/strokeWidth</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/strokeWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *strokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/strokeWidth</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/strokeWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *strokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/strokeWidth</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setFill:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s fill.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/fill</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s fill.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/fill</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s fill.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setPoint:</TokenIdentifier>
+			<Abstract type="html">* description: This option defines the point to which the shape will be connected.
+It can be either the point which exists in the series - it is referenced
+by the point&apos;s id - or a new point with defined x, y properties
+and optionally axes.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/point</TokenIdentifier>
+			<Abstract type="html">* description: This option defines the point to which the shape will be connected.
+It can be either the point which exists in the series - it is referenced
+by the point&apos;s id - or a new point with defined x, y properties
+and optionally axes.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/point</TokenIdentifier>
+			<Abstract type="html">* description: This option defines the point to which the shape will be connected.
+It can be either the point which exists in the series - it is referenced
+by the point&apos;s id - or a new point with defined x, y properties
+and optionally axes.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/width</TokenIdentifier>
+			<Abstract type="html">* description: The width of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/width</TokenIdentifier>
+			<Abstract type="html">* description: The width of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setType:</TokenIdentifier>
+			<Abstract type="html">* description: The type of the shape, e.g. circle or rectangle.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/type</TokenIdentifier>
+			<Abstract type="html">* description: The type of the shape, e.g. circle or rectangle.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/type</TokenIdentifier>
+			<Abstract type="html">* description: The type of the shape, e.g. circle or rectangle.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setMarkerEnd:</TokenIdentifier>
+			<Abstract type="html">* description: Id of the marker which will be drawn at the final vertex of the path.
+Custom markers can be defined in defs property.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *markerEnd</Declaration>
+			
+			
+			<Anchor>//api/name/markerEnd</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/markerEnd</TokenIdentifier>
+			<Abstract type="html">* description: Id of the marker which will be drawn at the final vertex of the path.
+Custom markers can be defined in defs property.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *markerEnd</Declaration>
+			
+			
+			<Anchor>//api/name/markerEnd</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/markerEnd</TokenIdentifier>
+			<Abstract type="html">* description: Id of the marker which will be drawn at the final vertex of the path.
+Custom markers can be defined in defs property.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *markerEnd</Declaration>
+			
+			
+			<Anchor>//api/name/markerEnd</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setPoints:</TokenIdentifier>
+			<Abstract type="html">* description: An array of points for the shape. This option is available for shapes
+which can use multiple points such as path. A point can be either
+a point object or a point&apos;s id.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *points</Declaration>
+			
+			
+			<Anchor>//api/name/points</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/points</TokenIdentifier>
+			<Abstract type="html">* description: An array of points for the shape. This option is available for shapes
+which can use multiple points such as path. A point can be either
+a point object or a point&apos;s id.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *points</Declaration>
+			
+			
+			<Anchor>//api/name/points</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/points</TokenIdentifier>
+			<Abstract type="html">* description: An array of points for the shape. This option is available for shapes
+which can use multiple points such as path. A point can be either
+a point object or a point&apos;s id.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *points</Declaration>
+			
+			
+			<Anchor>//api/name/points</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setMarkerStart:</TokenIdentifier>
+			<Abstract type="html">* description: Id of the marker which will be drawn at the first vertex of the path.
+Custom markers can be defined in defs property.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *markerStart</Declaration>
+			
+			
+			<Anchor>//api/name/markerStart</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/markerStart</TokenIdentifier>
+			<Abstract type="html">* description: Id of the marker which will be drawn at the first vertex of the path.
+Custom markers can be defined in defs property.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *markerStart</Declaration>
+			
+			
+			<Anchor>//api/name/markerStart</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/markerStart</TokenIdentifier>
+			<Abstract type="html">* description: Id of the marker which will be drawn at the first vertex of the path.
+Custom markers can be defined in defs property.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *markerStart</Declaration>
+			
+			
+			<Anchor>//api/name/markerStart</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/setR:</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *r</Declaration>
+			
+			
+			<Anchor>//api/name/r</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapes/r</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *r</Declaration>
+			
+			
+			<Anchor>//api/name/r</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapes/r</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the shape.</Abstract>
+			<DeclaredIn>HIShapes.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *r</Declaration>
+			
+			
+			<Anchor>//api/name/r</Anchor>
+            <NodeRef refid="113"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

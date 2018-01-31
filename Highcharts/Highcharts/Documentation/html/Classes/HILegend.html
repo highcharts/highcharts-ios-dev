@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>HILegend Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Highcharts </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Highcharts</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/align">align</option>
+		
+		<option value="//api/name/backgroundColor">backgroundColor</option>
+		
+		<option value="//api/name/borderColor">borderColor</option>
+		
+		<option value="//api/name/borderRadius">borderRadius</option>
+		
+		<option value="//api/name/borderWidth">borderWidth</option>
+		
+		<option value="//api/name/enabled">enabled</option>
+		
+		<option value="//api/name/floating">floating</option>
+		
+		<option value="//api/name/itemCheckboxStyle">itemCheckboxStyle</option>
+		
+		<option value="//api/name/itemDistance">itemDistance</option>
+		
+		<option value="//api/name/itemHiddenStyle">itemHiddenStyle</option>
+		
+		<option value="//api/name/itemHoverStyle">itemHoverStyle</option>
+		
+		<option value="//api/name/itemMarginBottom">itemMarginBottom</option>
+		
+		<option value="//api/name/itemMarginTop">itemMarginTop</option>
+		
+		<option value="//api/name/itemStyle">itemStyle</option>
+		
+		<option value="//api/name/itemWidth">itemWidth</option>
+		
+		<option value="//api/name/keyboardNavigation">keyboardNavigation</option>
+		
+		<option value="//api/name/labelFormat">labelFormat</option>
+		
+		<option value="//api/name/labelFormatter">labelFormatter</option>
+		
+		<option value="//api/name/layout">layout</option>
+		
+		<option value="//api/name/lineHeight">lineHeight</option>
+		
+		<option value="//api/name/margin">margin</option>
+		
+		<option value="//api/name/maxHeight">maxHeight</option>
+		
+		<option value="//api/name/navigation">navigation</option>
+		
+		<option value="//api/name/padding">padding</option>
+		
+		<option value="//api/name/reversed">reversed</option>
+		
+		<option value="//api/name/rtl">rtl</option>
+		
+		<option value="//api/name/shadow">shadow</option>
+		
+		<option value="//api/name/squareSymbol">squareSymbol</option>
+		
+		<option value="//api/name/style">style</option>
+		
+		<option value="//api/name/symbolHeight">symbolHeight</option>
+		
+		<option value="//api/name/symbolPadding">symbolPadding</option>
+		
+		<option value="//api/name/symbolRadius">symbolRadius</option>
+		
+		<option value="//api/name/symbolWidth">symbolWidth</option>
+		
+		<option value="//api/name/title">title</option>
+		
+		<option value="//api/name/useHTML">useHTML</option>
+		
+		<option value="//api/name/verticalAlign">verticalAlign</option>
+		
+		<option value="//api/name/width">width</option>
+		
+		<option value="//api/name/x">x</option>
+		
+		<option value="//api/name/y">y</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">HILegend Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>HILegend.h<br />HILegend.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<ul>
+<li>description: The legend is a box containing a symbol and name for each series
+item or point item in the chart. Each series (or points in case
+of pie charts) is represented by a symbol and its name in the legend.
+It is possible to override the symbol creator function and
+create <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-">http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-</a>
+custom-symbol/ : custom legend symbols.</li>
+</ul>
+
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/maxHeight" title="maxHeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxHeight">&nbsp;&nbsp;maxHeight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Maximum pixel height for the legend. When the maximum height is extended,
+<a href="#//api/name/navigation">navigation</a> will show.</li>
+<li>default: undefined</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *maxHeight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/navigation" title="navigation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/navigation">&nbsp;&nbsp;navigation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Options for the paging or navigation appearing when the legend
+is overflown. Navigation works well on screen, but not in static
+exported images. One way of working around that is to <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation-">http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation-</a>
+enabled-false/ : increase
+the chart height in export.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINavigation *navigation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The vertical offset of the legend relative to it&rsquo;s vertical alignment
+<a href="#//api/name/verticalAlign">verticalAlign</a> within chart.spacingTop and chart.spacingBottom.
+Negative y moves it up, positive y moves it down.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/verticalalign/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/verticalalign/</a> : Legend 100px from the top of the chart
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/</a> : Various legend options
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/</a> : Legend alignment</li>
+<li>default: 0</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The x offset of the legend relative to its horizontal alignment
+<a href="#//api/name/align">align</a> within chart.spacingLeft and chart.spacingRight. Negative
+x moves it to the left, positive x moves it to the right.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/width/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/width/</a> : Aligned to the plot area</li>
+<li>default: 0</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/useHTML" title="useHTML"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-">http://www.highcharts.com/docs/chart-concepts/labels-</a>
+and-string-formatting#html : use HTML to render the legend item texts. Prior
+to 4.1.7, when using HTML, legend.<a href="#//api/name/navigation">navigation</a>
+was disabled.</li>
+<li>default: false</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemMarginBottom" title="itemMarginBottom"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemMarginBottom">&nbsp;&nbsp;itemMarginBottom</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The pixel bottom <a href="#//api/name/margin">margin</a> for each legend item.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *itemMarginBottom</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/</a> : Padding and item margins demonstrated</li>
+<li>default: 0</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reversed" title="reversed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reversed">&nbsp;&nbsp;reversed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Whether to reverse the order of the legend items compared to the
+order of the series or points as defined in the configuration object.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversed</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/reversed/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/reversed/</a> : Stacked bar with reversed legend</li>
+<li>default: false</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemCheckboxStyle" title="itemCheckboxStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemCheckboxStyle">&nbsp;&nbsp;itemCheckboxStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Default styling for the checkbo<a href="#//api/name/x">x</a> next to a legend item when
+showCheckbo<a href="#//api/name/x">x</a> is true.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIItemCheckboxStyle *itemCheckboxStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/backgroundColor" title="backgroundColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/backgroundColor">&nbsp;&nbsp;backgroundColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The background color of the legend.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *backgroundColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/backgroundcolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/backgroundcolor/</a> : Yellowish background
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/</a> : Various legend options
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/</a> : Border and background options</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/keyboardNavigation" title="keyboardNavigation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/keyboardNavigation">&nbsp;&nbsp;keyboardNavigation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>description: Keyboard <a href="#//api/name/navigation">navigation</a> for the legend. Requires the Accessibilit<a href="#//api/name/y">y</a> module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemDistance" title="itemDistance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemDistance">&nbsp;&nbsp;itemDistance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: In a legend with horizontal <a href="#//api/name/layout">layout</a>, the itemDistance defines the
+pixel distance between each item.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *itemDistance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/</a> : 50p<a href="#//api/name/x">x</a> item distance</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemWidth" title="itemWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemWidth">&nbsp;&nbsp;itemWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The <a href="#//api/name/width">width</a> for each legend item. This is useful in a horizontal <a href="#//api/name/layout">layout</a>
+with man<a href="#//api/name/y">y</a> items when you want the items to <a href="#//api/name/align">align</a> verticall<a href="#//api/name/y">y</a>. .</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *itemWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemwidth-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemwidth-default/</a> : Null by default
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemwidth-80/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemwidth-80/</a> : 80 for aligned legend items</li>
+<li>default: null</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/labelFormat" title="labelFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labelFormat">&nbsp;&nbsp;labelFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: A <a href="http://www.highcharts.com/docs/chart-concepts/labels-">http://www.highcharts.com/docs/chart-concepts/labels-</a>
+and-string-formatting : format string for each legend label. Available variables
+relates to properties on the series, or the point in case of pies.</li>
+<li>default: {name}</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *labelFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/title" title="title"></a>
+	<h3 class="method-title"><code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: A title to be added on top of the legend.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITitle *title</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/title/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/title/</a> : Legend title
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/</a> : Legend with title</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemStyle" title="itemStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemStyle">&nbsp;&nbsp;itemStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: CSS styles for each legend item. Onl<a href="#//api/name/y">y</a> a subset of CSS is supported,
+notabl<a href="#//api/name/y">y</a> those options related to text. The default textOverflow
+propert<a href="#//api/name/y">y</a> makes long texts truncate. Set it to null to wrap text
+instead. A <a href="#//api/name/width">width</a> propert<a href="#//api/name/y">y</a> can be added to control the text <a href="#//api/name/width">width</a>.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIItemStyle *itemStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemstyle/</a> : Bold black text
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/itemstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/itemstyle/</a> : Item text styles</li>
+<li>default: { &ldquo;color&rdquo;: &ldquo;#333333&rdquo;, &ldquo;cursor&rdquo;: &ldquo;pointer&rdquo;, &ldquo;fontSize&rdquo;: &ldquo;12px&rdquo;, &ldquo;fontWeight&rdquo;: &ldquo;bold&rdquo;, &ldquo;textOverflow&rdquo;: &ldquo;ellipsis&rdquo; }</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/layout" title="layout"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layout">&nbsp;&nbsp;layout</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The layout of the legend items. Can be one of &ldquo;horizontal&rdquo; or &ldquo;vertical&rdquo;.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layout</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/</a> : Horizontal by default
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-vertical/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-vertical/</a> : Vertical
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/</a> : Vertical with data classes
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical/</a> : Vertical with color axis gradient</li>
+<li>accepted values: [&ldquo;horizontal&rdquo;, &ldquo;vertical&rdquo;]</li>
+<li>default: horizontal</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/symbolPadding" title="symbolPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbolPadding">&nbsp;&nbsp;symbolPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The pixel <a href="#//api/name/padding">padding</a> between the legend item symbol and the legend
+item text.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *symbolPadding</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolpadding/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolpadding/</a> : Greater symbol <a href="#//api/name/width">width</a> and <a href="#//api/name/padding">padding</a></li>
+<li>default: 5</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemHoverStyle" title="itemHoverStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemHoverStyle">&nbsp;&nbsp;itemHoverStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: CSS styles for each legend item in hover mode. Onl<a href="#//api/name/y">y</a> a subset of
+CSS is supported, notabl<a href="#//api/name/y">y</a> those options related to text. Properties
+are inherited from <a href="#//api/name/style">style</a> unless overridden here.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIItemHoverStyle *itemHoverStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/</a> : Red on hover
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/itemstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/itemstyle/</a> : Item text styles</li>
+<li>default: { &ldquo;color&rdquo;: &ldquo;#000000&rdquo; }</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderWidth" title="borderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The <a href="#//api/name/width">width</a> of the drawn border around the legend.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderwidth/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderwidth/</a> : 2px border width
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/</a> : Various legend options
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/</a> : Border and background options</li>
+<li>default: 0</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/labelFormatter" title="labelFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labelFormatter">&nbsp;&nbsp;labelFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Callback function to format each of the series' labels. The this
+keyword refers to the series object, or the point object in case
+of pie charts. B<a href="#//api/name/y">y</a> default the series or point name is printed.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *labelFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/labelformatter/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/labelformatter/</a> : Add text
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/labelformatter/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/labelformatter/</a> : Data classes with label formatter</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shadow" title="shadow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shadow">&nbsp;&nbsp;shadow</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Whether to appl<a href="#//api/name/y">y</a> a drop shadow to the legend. A <a href="#//api/name/backgroundColor">backgroundColor</a>
+also needs to be applied for this to take effect. The shadow can be
+an object configuration containing color, offsetX, offsetY,
+opacit<a href="#//api/name/y">y</a> and <a href="#//api/name/width">width</a>.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id shadow</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/shadow/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/shadow/</a> : White background and drop shadow
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/</a> : Various legend options
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/</a> : Border and background options</li>
+<li>default: false</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/floating" title="floating"></a>
+	<h3 class="method-title"><code><a href="#//api/name/floating">&nbsp;&nbsp;floating</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: When the legend is floating, the plot area ignores it and is allowed
+to be placed below it.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *floating</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/floating-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/floating-false/</a> : False by default
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/floating-true/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/floating-true/</a> : True
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/</a> : Floating legend</li>
+<li>default: false</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/squareSymbol" title="squareSymbol"></a>
+	<h3 class="method-title"><code><a href="#//api/name/squareSymbol">&nbsp;&nbsp;squareSymbol</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: When this is true, the legend symbol <a href="#//api/name/width">width</a> will be the same as
+the symbol height, which in turn defaults to the font size of the
+legend items.</li>
+<li>default: true</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *squareSymbol</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemHiddenStyle" title="itemHiddenStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemHiddenStyle">&nbsp;&nbsp;itemHiddenStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: CSS styles for each legend item when the corresponding series or
+point is hidden. Onl<a href="#//api/name/y">y</a> a subset of CSS is supported, notabl<a href="#//api/name/y">y</a> those
+options related to text. Properties are inherited from <a href="#//api/name/style">style</a>
+unless overridden here.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIItemHiddenStyle *itemHiddenStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhiddenstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhiddenstyle/</a> : Darker gra<a href="#//api/name/y">y</a> color</li>
+<li>default: { &ldquo;color&rdquo;: &ldquo;#cccccc&rdquo; }</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemMarginTop" title="itemMarginTop"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemMarginTop">&nbsp;&nbsp;itemMarginTop</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The pixel top <a href="#//api/name/margin">margin</a> for each legend item.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *itemMarginTop</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/</a> : Padding and item margins demonstrated</li>
+<li>default: 0</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The color of the drawn border around the legend.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/bordercolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/bordercolor/</a> : Brown border
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/</a> : Various legend options
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/</a> : Border and background options</li>
+<li>default: #999999</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/verticalAlign" title="verticalAlign"></a>
+	<h3 class="method-title"><code><a href="#//api/name/verticalAlign">&nbsp;&nbsp;verticalAlign</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The vertical alignment of the legend bo<a href="#//api/name/x">x</a>. Can be one of top,
+middle or bottom. Vertical position can be further determined
+b<a href="#//api/name/y">y</a> the <a href="#//api/name/y">y</a> option.
+In the case that the legend is aligned in a corner position, the
+<a href="#//api/name/layout">layout</a> option will determine whether to place it above/below
+or on the side of the plot area.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *verticalAlign</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/verticalalign/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/verticalalign/</a> : Legend 100px from the top of the chart
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/</a> : Various legend options
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/</a> : Legend alignment</li>
+<li>accepted values: [&ldquo;top&rdquo;, &ldquo;middle&rdquo;, &ldquo;bottom&rdquo;]</li>
+<li>default: bottom</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rtl" title="rtl"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rtl">&nbsp;&nbsp;rtl</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Whether to show the symbol on the right side of the text rather than
+the left side. This is common in Arabic and Hebraic.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *rtl</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/rtl/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/rtl/</a> : Symbol to the right</li>
+<li>default: false</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/symbolRadius" title="symbolRadius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbolRadius">&nbsp;&nbsp;symbolRadius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The border radius of the symbol for series types that use a rectangle
+in the legend. Defaults to half the <a href="#//api/name/symbolHeight">symbolHeight</a>.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *symbolRadius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolradius/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolradius/</a> : Round symbols</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderRadius" title="borderRadius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderRadius">&nbsp;&nbsp;borderRadius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The border corner radius of the legend.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderRadius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderradius-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderradius-default/</a> : Square by default
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderradius-round/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/borderradius-round/</a> : 5px rounded
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/border-background/</a> : Border and background options</li>
+<li>default: 0</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/align" title="align"></a>
+	<h3 class="method-title"><code><a href="#//api/name/align">&nbsp;&nbsp;align</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The horizontal alignment of the legend bo<a href="#//api/name/x">x</a> within the chart area.
+Valid values are left, center and right.
+In the case that the legend is aligned in a corner position, the
+<a href="#//api/name/layout">layout</a> option will determine whether to place it above/below
+or on the side of the plot area.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *align</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/align/</a> : Legend at the right of the chart
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/</a> : Various legend options
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/alignment/</a> : Legend alignment</li>
+<li>accepted values: [&ldquo;left&rdquo;, &ldquo;center&rdquo;, &ldquo;right&rdquo;]</li>
+<li>default: center</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/margin" title="margin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/margin">&nbsp;&nbsp;margin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: If the plot area sized is calculated automaticall<a href="#//api/name/y">y</a> and the legend
+is not <a href="#//api/name/floating">floating</a>, the legend margin is the space between the legend
+and the axis labels or plot area.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *margin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-default/</a> : 12 pixels by default
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-30/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-30/</a> : 30 pixels</li>
+<li>default: 12</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lineHeight" title="lineHeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineHeight">&nbsp;&nbsp;lineHeight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Line height for the legend items. Deprecated as of 2.1. Instead,
+the line height for each item can be set using <a href="#//api/name/itemStyle">itemStyle</a>.lineHeight,
+and the <a href="#//api/name/padding">padding</a> between items using <a href="#//api/name/itemMarginTop">itemMarginTop</a> and <a href="#//api/name/itemMarginBottom">itemMarginBottom</a>.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineHeight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/lineheight/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/lineheight/</a> : Setting <a href="#//api/name/padding">padding</a></li>
+<li>default: 16</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: Enable or disable the legend.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/enabled-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/enabled-false/</a> : Legend disabled
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/</a> : Various legend options</li>
+<li>default: True</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/padding" title="padding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The inner padding of the legend bo<a href="#//api/name/x">x</a>.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *padding</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/</a> : Padding and item margins demonstrated</li>
+<li>default: 8</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/symbolHeight" title="symbolHeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbolHeight">&nbsp;&nbsp;symbolHeight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The pixel height of the symbol for series types that use a rectangle
+in the legend. Defaults to the font size of legend items.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *symbolHeight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical-sized/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical-sized/</a> : Sized vertical gradient
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/</a> : No distance between data classes</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: CSS styles for the legend area. In the 1.<a href="#//api/name/x">x</a> versions the position
+of the legend area was determined b<a href="#//api/name/y">y</a> CSS. In 2.<a href="#//api/name/x">x</a>, the position is
+determined b<a href="#//api/name/y">y</a> properties like <a href="#//api/name/align">align</a>, <a href="#//api/name/verticalAlign">verticalAlign</a>, <a href="#//api/name/x">x</a> and <a href="#//api/name/y">y</a>,
+but the styles are still parsed for backwards compatibilit<a href="#//api/name/y">y</a>.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *style</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The width of the legend bo<a href="#//api/name/x">x</a>.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/width/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/width/</a> : Aligned to the plot area</li>
+<li>default: null</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/symbolWidth" title="symbolWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbolWidth">&nbsp;&nbsp;symbolWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>description: The pixel <a href="#//api/name/width">width</a> of the legend item symbol. When the <a href="#//api/name/squareSymbol">squareSymbol</a>
+option is set, this defaults to the <a href="#//api/name/symbolHeight">symbolHeight</a>, otherwise 16.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *symbolWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolwidth/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolwidth/</a> : Greater symbol width and padding
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/padding-itemmargin/</a> : Padding and item margins demonstrated
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical-sized/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/legend/layout-vertical-sized/</a> : Sized vertical gradient</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

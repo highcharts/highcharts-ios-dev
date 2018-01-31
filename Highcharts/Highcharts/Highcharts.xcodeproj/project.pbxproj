@@ -18,6 +18,17 @@
 			name = "Build framework";
 			productName = "Build framework";
 		};
+		CDDCE6C320208316007482CF /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CDDCE6C420208316007482CF /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				CDDCE6C820208327007482CF /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -626,6 +637,7 @@
 		CD8C14471F97949500C2CD61 /* HILeft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HILeft.h; sourceTree = "<group>"; };
 		CD8C14481F97949500C2CD61 /* HIDefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIDefs.m; sourceTree = "<group>"; };
 		CD8C14491F97949500C2CD61 /* HIBreaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIBreaks.h; sourceTree = "<group>"; };
+		CDDCE6C220208204007482CF /* Highcharts copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Highcharts copy-Info.plist"; path = "/Users/ignat/Documents/Source Tree/Highcharts/Highcharts/Highcharts/Highcharts copy-Info.plist"; sourceTree = "<absolute>"; };
 		CDDF95D41F9F5D260021A129 /* HIFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIFunction.m; sourceTree = "<group>"; };
 		CDDF95D61F9F5D480021A129 /* HIFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFunction.h; sourceTree = "<group>"; };
 		EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartViewDelegate.h; sourceTree = "<group>"; };
@@ -936,6 +948,7 @@
 				343E138D1C38513D006DDD68 /* Highcharts.h */,
 				348F281F1CDB790F005CA399 /* HighchartsTests */,
 				343E138B1C38513D006DDD68 /* Products */,
+				CDDCE6C220208204007482CF /* Highcharts copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1231,6 +1244,11 @@
 					348F281D1CDB790F005CA399 = {
 						CreatedOnToolsVersion = 7.1;
 					};
+					CDDCE6C320208316007482CF = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = BK36LKB8JF;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 343E13841C38513D006DDD68 /* Build configuration list for PBXProject "Highcharts" */;
@@ -1248,6 +1266,7 @@
 				343E13891C38513D006DDD68 /* Highcharts */,
 				348F281D1CDB790F005CA399 /* HighchartsTests */,
 				20B0FEC21E7068490049A5E5 /* Build framework */,
+				CDDCE6C320208316007482CF /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -1300,6 +1319,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${GCC_PREPROCESSOR_DEFINITIONS}\" = \"TRIAL=1\" ]; then\n    uuidgen >> ${BUILT_PRODUCTS_DIR}/$TARGET_NAME.framework/VERSION.txt\nfi";
+		};
+		CDDCE6C820208327007482CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Highcharts\";\ncompanyID=\"com.highcharts.highcharts\";\ncompanyURL=\"https://www.highcharts.com\";\ntarget=\"iphoneos\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${PROJECT_DIR}/Documentation\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1773,6 +1805,33 @@
 			};
 			name = Release;
 		};
+		CDDCE6C520208316007482CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BK36LKB8JF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CDDCE6C620208316007482CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BK36LKB8JF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CDDCE6C720208316007482CF /* Trial */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BK36LKB8JF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Trial;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1812,6 +1871,16 @@
 				348F28261CDB790F005CA399 /* Debug */,
 				348F28271CDB790F005CA399 /* Release */,
 				341A67441D256CC800C234A6 /* Trial */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDDCE6C420208316007482CF /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDDCE6C520208316007482CF /* Debug */,
+				CDDCE6C620208316007482CF /* Release */,
+				CDDCE6C720208316007482CF /* Trial */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

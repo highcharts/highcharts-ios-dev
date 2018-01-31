@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIBackground.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIBackground</TokenIdentifier>
+			<Abstract type="html">* description: An array of background items for the pane.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+            
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/setClassName:</TokenIdentifier>
+			<Abstract type="html">* description: The class name for this background.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/className</TokenIdentifier>
+			<Abstract type="html">* description: The class name for this background.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBackground/className</TokenIdentifier>
+			<Abstract type="html">* description: The class name for this background.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/setShape:</TokenIdentifier>
+			<Abstract type="html">* description: Tha shape of the pane background. When solid, the background
+is circular. When arc, the background extends only from the min
+to the max of the value axis.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *shape</Declaration>
+			
+			
+			<Anchor>//api/name/shape</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/shape</TokenIdentifier>
+			<Abstract type="html">* description: Tha shape of the pane background. When solid, the background
+is circular. When arc, the background extends only from the min
+to the max of the value axis.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *shape</Declaration>
+			
+			
+			<Anchor>//api/name/shape</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBackground/shape</TokenIdentifier>
+			<Abstract type="html">* description: Tha shape of the pane background. When solid, the background
+is circular. When arc, the background extends only from the min
+to the max of the value axis.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *shape</Declaration>
+			
+			
+			<Anchor>//api/name/shape</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/setBackgroundColor:</TokenIdentifier>
+			<Abstract type="html">description: The background color or gradient for the pane.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/backgroundColor</TokenIdentifier>
+			<Abstract type="html">description: The background color or gradient for the pane.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBackground/backgroundColor</TokenIdentifier>
+			<Abstract type="html">description: The background color or gradient for the pane.</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/setOuterRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The outer radius of the circular pane background. Can be either
+numeric (pixels) or a percentage string.
+* default: 105%</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id outerRadius</Declaration>
+			
+			
+			<Anchor>//api/name/outerRadius</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/outerRadius</TokenIdentifier>
+			<Abstract type="html">* description: The outer radius of the circular pane background. Can be either
+numeric (pixels) or a percentage string.
+* default: 105%</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id outerRadius</Declaration>
+			
+			
+			<Anchor>//api/name/outerRadius</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBackground/outerRadius</TokenIdentifier>
+			<Abstract type="html">* description: The outer radius of the circular pane background. Can be either
+numeric (pixels) or a percentage string.
+* default: 105%</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id outerRadius</Declaration>
+			
+			
+			<Anchor>//api/name/outerRadius</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">description: The pane background border color.
+default: #cccccc</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/borderColor</TokenIdentifier>
+			<Abstract type="html">description: The pane background border color.
+default: #cccccc</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBackground/borderColor</TokenIdentifier>
+			<Abstract type="html">description: The pane background border color.
+default: #cccccc</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/setBorderWidth:</TokenIdentifier>
+			<Abstract type="html">description: The pixel border width of the pane background.
+default: 1</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/borderWidth</TokenIdentifier>
+			<Abstract type="html">description: The pixel border width of the pane background.
+default: 1</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBackground/borderWidth</TokenIdentifier>
+			<Abstract type="html">description: The pixel border width of the pane background.
+default: 1</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/setInnerRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The inner radius of the pane background. Can be either numeric
+(pixels) or a percentage string.
+* default: 0</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerRadius</Declaration>
+			
+			
+			<Anchor>//api/name/innerRadius</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIBackground/innerRadius</TokenIdentifier>
+			<Abstract type="html">* description: The inner radius of the pane background. Can be either numeric
+(pixels) or a percentage string.
+* default: 0</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerRadius</Declaration>
+			
+			
+			<Anchor>//api/name/innerRadius</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIBackground/innerRadius</TokenIdentifier>
+			<Abstract type="html">* description: The inner radius of the pane background. Can be either numeric
+(pixels) or a percentage string.
+* default: 0</Abstract>
+			<DeclaredIn>HIBackground.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerRadius</Declaration>
+			
+			
+			<Anchor>//api/name/innerRadius</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

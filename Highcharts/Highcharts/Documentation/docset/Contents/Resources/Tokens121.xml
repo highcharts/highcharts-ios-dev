@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HISubtitle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HISubtitle</TokenIdentifier>
+			<Abstract type="html">* description: The chart&apos;s subtitle. This can be used both to display a subtitle below
+the main title, and to display random text anywhere in the chart. The
+subtitle can be updated after chart initialization through the
+Chart.setTitle method.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+            
+			
+			<NodeRef refid="121"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setStyle:</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the title.
+In styled mode, the subtitle style is given in the .highcharts-subtitle class.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSDictionary *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/style</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the title.
+In styled mode, the subtitle style is given in the .highcharts-subtitle class.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSDictionary *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/style</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the title.
+In styled mode, the subtitle style is given in the .highcharts-subtitle class.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSDictionary *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setVerticalAlign:</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the title. Can be one of &quot;top&quot;, &quot;middle&quot;
+and &quot;bottom&quot;. When a value is given, the title behaves as floating.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/verticalAlign</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the title. Can be one of &quot;top&quot;, &quot;middle&quot;
+and &quot;bottom&quot;. When a value is given, the title behaves as floating.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/verticalAlign</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the title. Can be one of &quot;top&quot;, &quot;middle&quot;
+and &quot;bottom&quot;. When a value is given, the title behaves as floating.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setText:</TokenIdentifier>
+			<Abstract type="html">* description: The subtitle of the chart.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/text</TokenIdentifier>
+			<Abstract type="html">* description: The subtitle of the chart.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/text</TokenIdentifier>
+			<Abstract type="html">* description: The subtitle of the chart.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setFloating:</TokenIdentifier>
+			<Abstract type="html">* description: When the subtitle is floating, the plot area will not move to make
+space for it.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *floating</Declaration>
+			
+			
+			<Anchor>//api/name/floating</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/floating</TokenIdentifier>
+			<Abstract type="html">* description: When the subtitle is floating, the plot area will not move to make
+space for it.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *floating</Declaration>
+			
+			
+			<Anchor>//api/name/floating</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/floating</TokenIdentifier>
+			<Abstract type="html">* description: When the subtitle is floating, the plot area will not move to make
+space for it.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *floating</Declaration>
+			
+			
+			<Anchor>//api/name/floating</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setUseHTML:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html : use HTML to render the text.
+* default: false</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *useHTML</Declaration>
+			
+			
+			<Anchor>//api/name/useHTML</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/useHTML</TokenIdentifier>
+			<Abstract type="html">* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html : use HTML to render the text.
+* default: false</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *useHTML</Declaration>
+			
+			
+			<Anchor>//api/name/useHTML</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/useHTML</TokenIdentifier>
+			<Abstract type="html">* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html : use HTML to render the text.
+* default: false</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *useHTML</Declaration>
+			
+			
+			<Anchor>//api/name/useHTML</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setAlign:</TokenIdentifier>
+			<Abstract type="html">* description: The horizontal alignment of the subtitle. Can be one of &quot;left&quot;,
+&quot;center&quot; and &quot;right&quot;.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/align</TokenIdentifier>
+			<Abstract type="html">* description: The horizontal alignment of the subtitle. Can be one of &quot;left&quot;,
+&quot;center&quot; and &quot;right&quot;.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/align</TokenIdentifier>
+			<Abstract type="html">* description: The horizontal alignment of the subtitle. Can be one of &quot;left&quot;,
+&quot;center&quot; and &quot;right&quot;.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setX:</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the subtitle relative to the alignment within chart.
+spacingLeft and chart.spacingRight.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/x</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the subtitle relative to the alignment within chart.
+spacingLeft and chart.spacingRight.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/x</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the subtitle relative to the alignment within chart.
+spacingLeft and chart.spacingRight.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setY:</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the subtitle relative to the alignment within chart.
+spacingTop and chart.spacingBottom. By default the subtitle is laid
+out below the title unless the title is floating.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/y</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the subtitle relative to the alignment within chart.
+spacingTop and chart.spacingBottom. By default the subtitle is laid
+out below the title unless the title is floating.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/y</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the subtitle relative to the alignment within chart.
+spacingTop and chart.spacingBottom. By default the subtitle is laid
+out below the title unless the title is floating.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/setWidthAdjust:</TokenIdentifier>
+			<Abstract type="html">* description: Adjustment made to the subtitle width, normally to reserve space
+for the exporting burger menu.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *widthAdjust</Declaration>
+			
+			
+			<Anchor>//api/name/widthAdjust</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISubtitle/widthAdjust</TokenIdentifier>
+			<Abstract type="html">* description: Adjustment made to the subtitle width, normally to reserve space
+for the exporting burger menu.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *widthAdjust</Declaration>
+			
+			
+			<Anchor>//api/name/widthAdjust</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISubtitle/widthAdjust</TokenIdentifier>
+			<Abstract type="html">* description: Adjustment made to the subtitle width, normally to reserve space
+for the exporting burger menu.</Abstract>
+			<DeclaredIn>HISubtitle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *widthAdjust</Declaration>
+			
+			
+			<Anchor>//api/name/widthAdjust</Anchor>
+            <NodeRef refid="121"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

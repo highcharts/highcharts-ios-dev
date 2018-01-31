@@ -1,0 +1,2637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HISeries.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HISeries</TokenIdentifier>
+			<Abstract type="html">description: General options for all series types.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+            
+			
+			<NodeRef refid="111"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setId:</TokenIdentifier>
+			<Abstract type="html">description: An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *id</Declaration>
+			
+			
+			<Anchor>//api/name/id</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/id</TokenIdentifier>
+			<Abstract type="html">description: An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *id</Declaration>
+			
+			
+			<Anchor>//api/name/id</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/id</TokenIdentifier>
+			<Abstract type="html">description: An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/ : Get series by id</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *id</Declaration>
+			
+			
+			<Anchor>//api/name/id</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setXAxis:</TokenIdentifier>
+			<Abstract type="html">description: When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.
+default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id xAxis</Declaration>
+			
+			
+			<Anchor>//api/name/xAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/xAxis</TokenIdentifier>
+			<Abstract type="html">description: When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.
+default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id xAxis</Declaration>
+			
+			
+			<Anchor>//api/name/xAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/xAxis</TokenIdentifier>
+			<Abstract type="html">description: When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.
+default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id xAxis</Declaration>
+			
+			
+			<Anchor>//api/name/xAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setName:</TokenIdentifier>
+			<Abstract type="html">description: The name of the series as shown in the legend, tooltip etc.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/name</TokenIdentifier>
+			<Abstract type="html">description: The name of the series as shown in the legend, tooltip etc.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/name</TokenIdentifier>
+			<Abstract type="html">description: The name of the series as shown in the legend, tooltip etc.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/name/ : Series name</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setData:</TokenIdentifier>
+			<Abstract type="html">* description: An array of data points for the series. The points can be given in three ways:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/data</TokenIdentifier>
+			<Abstract type="html">* description: An array of data points for the series. The points can be given in three ways:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/data</TokenIdentifier>
+			<Abstract type="html">* description: An array of data points for the series. The points can be given in three ways:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setIndex:</TokenIdentifier>
+			<Abstract type="html">description: The index of the series in the chart, affecting the internal index in the chart.series array, the visible Z index as well as the order in the legend.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *index</Declaration>
+			
+			
+			<Anchor>//api/name/index</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/index</TokenIdentifier>
+			<Abstract type="html">description: The index of the series in the chart, affecting the internal index in the chart.series array, the visible Z index as well as the order in the legend.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *index</Declaration>
+			
+			
+			<Anchor>//api/name/index</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/index</TokenIdentifier>
+			<Abstract type="html">description: The index of the series in the chart, affecting the internal index in the chart.series array, the visible Z index as well as the order in the legend.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *index</Declaration>
+			
+			
+			<Anchor>//api/name/index</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setYAxis:</TokenIdentifier>
+			<Abstract type="html">description: When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the yAxis array, with 0 being the first.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
+default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id yAxis</Declaration>
+			
+			
+			<Anchor>//api/name/yAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/yAxis</TokenIdentifier>
+			<Abstract type="html">description: When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the yAxis array, with 0 being the first.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
+default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id yAxis</Declaration>
+			
+			
+			<Anchor>//api/name/yAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/yAxis</TokenIdentifier>
+			<Abstract type="html">description: When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the yAxis array, with 0 being the first.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/ : Apply the column series to the secondary Y axis
+default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id yAxis</Declaration>
+			
+			
+			<Anchor>//api/name/yAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setLegendIndex:</TokenIdentifier>
+			<Abstract type="html">description: The sequential index of the series in the legend.  Try it:  	http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order .</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *legendIndex</Declaration>
+			
+			
+			<Anchor>//api/name/legendIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/legendIndex</TokenIdentifier>
+			<Abstract type="html">description: The sequential index of the series in the legend.  Try it:  	http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order .</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *legendIndex</Declaration>
+			
+			
+			<Anchor>//api/name/legendIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/legendIndex</TokenIdentifier>
+			<Abstract type="html">description: The sequential index of the series in the legend.  Try it:  	http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/ : Legend in opposite order .</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *legendIndex</Declaration>
+			
+			
+			<Anchor>//api/name/legendIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setZIndex:</TokenIdentifier>
+			<Abstract type="html">* description: Define the visual z index of the series.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top,</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/zIndex</TokenIdentifier>
+			<Abstract type="html">* description: Define the visual z index of the series.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top,</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/zIndex</TokenIdentifier>
+			<Abstract type="html">* description: Define the visual z index of the series.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top,</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setType:</TokenIdentifier>
+			<Abstract type="html">* description: The type of series. Can be one of area, areaspline,
+bar, column, line, pie,
+scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
+* accepted values: [null, &quot;line&quot;, &quot;spline&quot;, &quot;column&quot;, &quot;area&quot;, &quot;areaspline&quot;, &quot;pie&quot;, &quot;arearange&quot;, &quot;areasplinerange&quot;, &quot;boxplot&quot;, &quot;bubble&quot;, &quot;columnrange&quot;, &quot;errorbar&quot;, &quot;funnel&quot;, &quot;gauge&quot;, &quot;scatter&quot;, &quot;waterfall&quot;]</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/type</TokenIdentifier>
+			<Abstract type="html">* description: The type of series. Can be one of area, areaspline,
+bar, column, line, pie,
+scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
+* accepted values: [null, &quot;line&quot;, &quot;spline&quot;, &quot;column&quot;, &quot;area&quot;, &quot;areaspline&quot;, &quot;pie&quot;, &quot;arearange&quot;, &quot;areasplinerange&quot;, &quot;boxplot&quot;, &quot;bubble&quot;, &quot;columnrange&quot;, &quot;errorbar&quot;, &quot;funnel&quot;, &quot;gauge&quot;, &quot;scatter&quot;, &quot;waterfall&quot;]</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/type</TokenIdentifier>
+			<Abstract type="html">* description: The type of series. Can be one of area, areaspline,
+bar, column, line, pie,
+scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
+* demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/type/ : Line and column in the same chart
+* accepted values: [null, &quot;line&quot;, &quot;spline&quot;, &quot;column&quot;, &quot;area&quot;, &quot;areaspline&quot;, &quot;pie&quot;, &quot;arearange&quot;, &quot;areasplinerange&quot;, &quot;boxplot&quot;, &quot;bubble&quot;, &quot;columnrange&quot;, &quot;errorbar&quot;, &quot;funnel&quot;, &quot;gauge&quot;, &quot;scatter&quot;, &quot;waterfall&quot;]</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setStack:</TokenIdentifier>
+			<Abstract type="html">description: This option allows grouping series in a stacked chart. The stack option can be a string  or a number or anything else, as long as the grouped series&apos; stack options match each other.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *stack</Declaration>
+			
+			
+			<Anchor>//api/name/stack</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/stack</TokenIdentifier>
+			<Abstract type="html">description: This option allows grouping series in a stacked chart. The stack option can be a string  or a number or anything else, as long as the grouped series&apos; stack options match each other.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *stack</Declaration>
+			
+			
+			<Anchor>//api/name/stack</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/stack</TokenIdentifier>
+			<Abstract type="html">description: This option allows grouping series in a stacked chart. The stack option can be a string  or a number or anything else, as long as the grouped series&apos; stack options match each other.
+demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/stack/ : Stacked and grouped columns</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *stack</Declaration>
+			
+			
+			<Anchor>//api/name/stack</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setShowInLegend:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to display this particular series or series type in the legend.
+The default value is true for standalone series, false for linked
+series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showInLegend</Declaration>
+			
+			
+			<Anchor>//api/name/showInLegend</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/showInLegend</TokenIdentifier>
+			<Abstract type="html">* description: Whether to display this particular series or series type in the legend.
+The default value is true for standalone series, false for linked
+series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showInLegend</Declaration>
+			
+			
+			<Anchor>//api/name/showInLegend</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/showInLegend</TokenIdentifier>
+			<Abstract type="html">* description: Whether to display this particular series or series type in the legend.
+The default value is true for standalone series, false for linked
+series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showInLegend</Declaration>
+			
+			
+			<Anchor>//api/name/showInLegend</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setConnectNulls:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to connect a graph line across null points, or render a gap
+between the two points on either side of the null.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *connectNulls</Declaration>
+			
+			
+			<Anchor>//api/name/connectNulls</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/connectNulls</TokenIdentifier>
+			<Abstract type="html">* description: Whether to connect a graph line across null points, or render a gap
+between the two points on either side of the null.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *connectNulls</Declaration>
+			
+			
+			<Anchor>//api/name/connectNulls</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/connectNulls</TokenIdentifier>
+			<Abstract type="html">* description: Whether to connect a graph line across null points, or render a gap
+between the two points on either side of the null.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *connectNulls</Declaration>
+			
+			
+			<Anchor>//api/name/connectNulls</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setEvents:</TokenIdentifier>
+			<Abstract type="html">* description: General event handlers for the series items. These event hooks can also
+be attached to the series at run time using the Highcharts.addEvent
+function.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/events</TokenIdentifier>
+			<Abstract type="html">* description: General event handlers for the series items. These event hooks can also
+be attached to the series at run time using the Highcharts.addEvent
+function.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/events</TokenIdentifier>
+			<Abstract type="html">* description: General event handlers for the series items. These event hooks can also
+be attached to the series at run time using the Highcharts.addEvent
+function.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setLineWidth:</TokenIdentifier>
+			<Abstract type="html">* description: Pixel with of the graph line.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/lineWidth</TokenIdentifier>
+			<Abstract type="html">* description: Pixel with of the graph line.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/lineWidth</TokenIdentifier>
+			<Abstract type="html">* description: Pixel with of the graph line.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/lineWidth</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setMarker:</TokenIdentifier>
+			<Abstract type="html">* description: Options for the point markers of line-like series. Properties like
+fillColor, lineColor and lineWidth define the visual appearance
+of the markers. Other series types, like column series, don&apos;t have
+markers, but have visual options on the series level instead.
+In styled mode, the markers can be styled with the .highchartspoint,
+.highcharts-point-hover and .highcharts-point-select
+class names.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMarker *marker</Declaration>
+			
+			
+			<Anchor>//api/name/marker</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/marker</TokenIdentifier>
+			<Abstract type="html">* description: Options for the point markers of line-like series. Properties like
+fillColor, lineColor and lineWidth define the visual appearance
+of the markers. Other series types, like column series, don&apos;t have
+markers, but have visual options on the series level instead.
+In styled mode, the markers can be styled with the .highchartspoint,
+.highcharts-point-hover and .highcharts-point-select
+class names.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMarker *marker</Declaration>
+			
+			
+			<Anchor>//api/name/marker</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/marker</TokenIdentifier>
+			<Abstract type="html">* description: Options for the point markers of line-like series. Properties like
+fillColor, lineColor and lineWidth define the visual appearance
+of the markers. Other series types, like column series, don&apos;t have
+markers, but have visual options on the series level instead.
+In styled mode, the markers can be styled with the .highchartspoint,
+.highcharts-point-hover and .highcharts-point-select
+class names.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIMarker *marker</Declaration>
+			
+			
+			<Anchor>//api/name/marker</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setFindNearestPointBy:</TokenIdentifier>
+			<Abstract type="html">* description: Determines whether the series should look for the nearest point
+in both dimensions or just the x-dimension when hovering the series.
+Defaults to &apos;xy&apos; for scatter series and &apos;x&apos; for most other
+series. If the data has duplicate x-values, it is recommended to
+set this to &apos;xy&apos; to allow hovering over all points.
+Applies only to series types using nearest neighbor search (not
+direct hover) for tooltip.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *findNearestPointBy</Declaration>
+			
+			
+			<Anchor>//api/name/findNearestPointBy</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/findNearestPointBy</TokenIdentifier>
+			<Abstract type="html">* description: Determines whether the series should look for the nearest point
+in both dimensions or just the x-dimension when hovering the series.
+Defaults to &apos;xy&apos; for scatter series and &apos;x&apos; for most other
+series. If the data has duplicate x-values, it is recommended to
+set this to &apos;xy&apos; to allow hovering over all points.
+Applies only to series types using nearest neighbor search (not
+direct hover) for tooltip.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *findNearestPointBy</Declaration>
+			
+			
+			<Anchor>//api/name/findNearestPointBy</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/findNearestPointBy</TokenIdentifier>
+			<Abstract type="html">* description: Determines whether the series should look for the nearest point
+in both dimensions or just the x-dimension when hovering the series.
+Defaults to &apos;xy&apos; for scatter series and &apos;x&apos; for most other
+series. If the data has duplicate x-values, it is recommended to
+set this to &apos;xy&apos; to allow hovering over all points.
+Applies only to series types using nearest neighbor search (not
+direct hover) for tooltip.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *findNearestPointBy</Declaration>
+			
+			
+			<Anchor>//api/name/findNearestPointBy</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setGetExtremesFromAll:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to use the Y extremes of the total chart width or only the
+zoomed area when zooming in on parts of the X axis. By default, the
+Y axis adjusts to the min and max of the visible data. Cartesian
+series only.
+* default: false</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *getExtremesFromAll</Declaration>
+			
+			
+			<Anchor>//api/name/getExtremesFromAll</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/getExtremesFromAll</TokenIdentifier>
+			<Abstract type="html">* description: Whether to use the Y extremes of the total chart width or only the
+zoomed area when zooming in on parts of the X axis. By default, the
+Y axis adjusts to the min and max of the visible data. Cartesian
+series only.
+* default: false</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *getExtremesFromAll</Declaration>
+			
+			
+			<Anchor>//api/name/getExtremesFromAll</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/getExtremesFromAll</TokenIdentifier>
+			<Abstract type="html">* description: Whether to use the Y extremes of the total chart width or only the
+zoomed area when zooming in on parts of the X axis. By default, the
+Y axis adjusts to the min and max of the visible data. Cartesian
+series only.
+* default: false</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *getExtremesFromAll</Declaration>
+			
+			
+			<Anchor>//api/name/getExtremesFromAll</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setExposeElementToA11y:</TokenIdentifier>
+			<Abstract type="html">* description: By default, series are exposed to screen readers as regions. By enabling
+this option, the series element itself will be exposed in the same
+way as the data points. This is useful if the series is not used
+as a grouping entity in the chart, but you still want to attach a
+description to the series.
+Requires the Accessibility module.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *exposeElementToA11y</Declaration>
+			
+			
+			<Anchor>//api/name/exposeElementToA11y</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/exposeElementToA11y</TokenIdentifier>
+			<Abstract type="html">* description: By default, series are exposed to screen readers as regions. By enabling
+this option, the series element itself will be exposed in the same
+way as the data points. This is useful if the series is not used
+as a grouping entity in the chart, but you still want to attach a
+description to the series.
+Requires the Accessibility module.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *exposeElementToA11y</Declaration>
+			
+			
+			<Anchor>//api/name/exposeElementToA11y</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/exposeElementToA11y</TokenIdentifier>
+			<Abstract type="html">* description: By default, series are exposed to screen readers as regions. By enabling
+this option, the series element itself will be exposed in the same
+way as the data points. This is useful if the series is not used
+as a grouping entity in the chart, but you still want to attach a
+description to the series.
+Requires the Accessibility module.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *exposeElementToA11y</Declaration>
+			
+			
+			<Anchor>//api/name/exposeElementToA11y</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setPointDescriptionFormatter:</TokenIdentifier>
+			<Abstract type="html">* description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
+the chart wide configuration.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionFormatter</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/pointDescriptionFormatter</TokenIdentifier>
+			<Abstract type="html">* description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
+the chart wide configuration.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionFormatter</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/pointDescriptionFormatter</TokenIdentifier>
+			<Abstract type="html">* description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
+the chart wide configuration.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/pointDescriptionFormatter</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setPointInterval:</TokenIdentifier>
+			<Abstract type="html">* description: If no x values are given for the points in a series, pointInterval
+defines the interval of the x values. For example, if a series contains
+one value every decade starting from year 0, set pointInterval to
+10. In true datetime axes, the pointInterval is set in
+milliseconds.
+It can be also be combined with pointIntervalUnit to draw irregular
+time intervals.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointInterval</Declaration>
+			
+			
+			<Anchor>//api/name/pointInterval</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/pointInterval</TokenIdentifier>
+			<Abstract type="html">* description: If no x values are given for the points in a series, pointInterval
+defines the interval of the x values. For example, if a series contains
+one value every decade starting from year 0, set pointInterval to
+10. In true datetime axes, the pointInterval is set in
+milliseconds.
+It can be also be combined with pointIntervalUnit to draw irregular
+time intervals.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointInterval</Declaration>
+			
+			
+			<Anchor>//api/name/pointInterval</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/pointInterval</TokenIdentifier>
+			<Abstract type="html">* description: If no x values are given for the points in a series, pointInterval
+defines the interval of the x values. For example, if a series contains
+one value every decade starting from year 0, set pointInterval to
+10. In true datetime axes, the pointInterval is set in
+milliseconds.
+It can be also be combined with pointIntervalUnit to draw irregular
+time intervals.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointInterval</Declaration>
+			
+			
+			<Anchor>//api/name/pointInterval</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setNegativeColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color for the parts of the graph or points that are below the
+threshold.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeColor</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/negativeColor</TokenIdentifier>
+			<Abstract type="html">* description: The color for the parts of the graph or points that are below the
+threshold.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeColor</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/negativeColor</TokenIdentifier>
+			<Abstract type="html">* description: The color for the parts of the graph or points that are below the
+threshold.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *negativeColor</Declaration>
+			
+			
+			<Anchor>//api/name/negativeColor</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setConnectEnds:</TokenIdentifier>
+			<Abstract type="html">* description: Polar charts only. Whether to connect the ends of a line series plot
+across the extremes.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *connectEnds</Declaration>
+			
+			
+			<Anchor>//api/name/connectEnds</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/connectEnds</TokenIdentifier>
+			<Abstract type="html">* description: Polar charts only. Whether to connect the ends of a line series plot
+across the extremes.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *connectEnds</Declaration>
+			
+			
+			<Anchor>//api/name/connectEnds</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/connectEnds</TokenIdentifier>
+			<Abstract type="html">* description: Polar charts only. Whether to connect the ends of a line series plot
+across the extremes.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *connectEnds</Declaration>
+			
+			
+			<Anchor>//api/name/connectEnds</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setZoneAxis:</TokenIdentifier>
+			<Abstract type="html">* description: Defines the Axis on which the zones are applied.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *zoneAxis</Declaration>
+			
+			
+			<Anchor>//api/name/zoneAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/zoneAxis</TokenIdentifier>
+			<Abstract type="html">* description: Defines the Axis on which the zones are applied.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *zoneAxis</Declaration>
+			
+			
+			<Anchor>//api/name/zoneAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/zoneAxis</TokenIdentifier>
+			<Abstract type="html">* description: Defines the Axis on which the zones are applied.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *zoneAxis</Declaration>
+			
+			
+			<Anchor>//api/name/zoneAxis</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setAnimationLimit:</TokenIdentifier>
+			<Abstract type="html">* description: For some series, there is a limit that shuts down initial animation
+by default when the total number of points in the chart is too high.
+For example, for a column chart and its derivatives, animation doesn&apos;t
+run if there is more than 250 points totally. To disable this cap, set
+animationLimit to Infinity.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *animationLimit</Declaration>
+			
+			
+			<Anchor>//api/name/animationLimit</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/animationLimit</TokenIdentifier>
+			<Abstract type="html">* description: For some series, there is a limit that shuts down initial animation
+by default when the total number of points in the chart is too high.
+For example, for a column chart and its derivatives, animation doesn&apos;t
+run if there is more than 250 points totally. To disable this cap, set
+animationLimit to Infinity.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *animationLimit</Declaration>
+			
+			
+			<Anchor>//api/name/animationLimit</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/animationLimit</TokenIdentifier>
+			<Abstract type="html">* description: For some series, there is a limit that shuts down initial animation
+by default when the total number of points in the chart is too high.
+For example, for a column chart and its derivatives, animation doesn&apos;t
+run if there is more than 250 points totally. To disable this cap, set
+animationLimit to Infinity.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *animationLimit</Declaration>
+			
+			
+			<Anchor>//api/name/animationLimit</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setStacking:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to stack the values of each series on top of each other.
+Possible values are null to disable, &quot;normal&quot; to stack by value or
+&quot;percent&quot;. When stacking is enabled, data must be sorted in ascending
+X order. A special stacking option is with the streamgraph series type,
+where the stacking option is set to &quot;stream&quot;.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *stacking</Declaration>
+			
+			
+			<Anchor>//api/name/stacking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/stacking</TokenIdentifier>
+			<Abstract type="html">* description: Whether to stack the values of each series on top of each other.
+Possible values are null to disable, &quot;normal&quot; to stack by value or
+&quot;percent&quot;. When stacking is enabled, data must be sorted in ascending
+X order. A special stacking option is with the streamgraph series type,
+where the stacking option is set to &quot;stream&quot;.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *stacking</Declaration>
+			
+			
+			<Anchor>//api/name/stacking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/stacking</TokenIdentifier>
+			<Abstract type="html">* description: Whether to stack the values of each series on top of each other.
+Possible values are null to disable, &quot;normal&quot; to stack by value or
+&quot;percent&quot;. When stacking is enabled, data must be sorted in ascending
+X order. A special stacking option is with the streamgraph series type,
+where the stacking option is set to &quot;stream&quot;.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *stacking</Declaration>
+			
+			
+			<Anchor>//api/name/stacking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setPointIntervalUnit:</TokenIdentifier>
+			<Abstract type="html">* description: On datetime series, this allows for setting the
+pointInterval to irregular time
+units, day, month and year. A day is usually the same as 24 hours,
+but pointIntervalUnit also takes the DST crossover into consideration
+when dealing with local time. Combine this option with pointInterval
+to draw weeks, quarters, 6 months, 10 years etc.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *pointIntervalUnit</Declaration>
+			
+			
+			<Anchor>//api/name/pointIntervalUnit</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/pointIntervalUnit</TokenIdentifier>
+			<Abstract type="html">* description: On datetime series, this allows for setting the
+pointInterval to irregular time
+units, day, month and year. A day is usually the same as 24 hours,
+but pointIntervalUnit also takes the DST crossover into consideration
+when dealing with local time. Combine this option with pointInterval
+to draw weeks, quarters, 6 months, 10 years etc.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *pointIntervalUnit</Declaration>
+			
+			
+			<Anchor>//api/name/pointIntervalUnit</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/pointIntervalUnit</TokenIdentifier>
+			<Abstract type="html">* description: On datetime series, this allows for setting the
+pointInterval to irregular time
+units, day, month and year. A day is usually the same as 24 hours,
+but pointIntervalUnit also takes the DST crossover into consideration
+when dealing with local time. Combine this option with pointInterval
+to draw weeks, quarters, 6 months, 10 years etc.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *pointIntervalUnit</Declaration>
+			
+			
+			<Anchor>//api/name/pointIntervalUnit</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setAnimation:</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the initial animation when a series is displayed.
+The animation can also be set as a configuration object. Please
+note that this option only applies to the initial animation of the
+series itself. For other animations, see chart.animation and the animation parameter under the API methods. The
+following properties are supported:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/animation</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the initial animation when a series is displayed.
+The animation can also be set as a configuration object. Please
+note that this option only applies to the initial animation of the
+series itself. For other animations, see chart.animation and the animation parameter under the API methods. The
+following properties are supported:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/animation</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the initial animation when a series is displayed.
+The animation can also be set as a configuration object. Please
+note that this option only applies to the initial animation of the
+series itself. For other animations, see chart.animation and the animation parameter under the API methods. The
+following properties are supported:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIAnimation *animation</Declaration>
+			
+			
+			<Anchor>//api/name/animation</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setEnableMouseTracking:</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the mouse tracking for a specific series. This
+includes point tooltips and click events on graphs and points. For
+large datasets it improves performance.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enableMouseTracking</Declaration>
+			
+			
+			<Anchor>//api/name/enableMouseTracking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/enableMouseTracking</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the mouse tracking for a specific series. This
+includes point tooltips and click events on graphs and points. For
+large datasets it improves performance.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enableMouseTracking</Declaration>
+			
+			
+			<Anchor>//api/name/enableMouseTracking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/enableMouseTracking</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the mouse tracking for a specific series. This
+includes point tooltips and click events on graphs and points. For
+large datasets it improves performance.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enableMouseTracking</Declaration>
+			
+			
+			<Anchor>//api/name/enableMouseTracking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setLinecap:</TokenIdentifier>
+			<Abstract type="html">* description: The line cap used for line ends and line joins on the graph.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *linecap</Declaration>
+			
+			
+			<Anchor>//api/name/linecap</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/linecap</TokenIdentifier>
+			<Abstract type="html">* description: The line cap used for line ends and line joins on the graph.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *linecap</Declaration>
+			
+			
+			<Anchor>//api/name/linecap</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/linecap</TokenIdentifier>
+			<Abstract type="html">* description: The line cap used for line ends and line joins on the graph.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *linecap</Declaration>
+			
+			
+			<Anchor>//api/name/linecap</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setStates:</TokenIdentifier>
+			<Abstract type="html">description: A wrapper object for all the series options in specific states.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStates *states</Declaration>
+			
+			
+			<Anchor>//api/name/states</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/states</TokenIdentifier>
+			<Abstract type="html">description: A wrapper object for all the series options in specific states.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStates *states</Declaration>
+			
+			
+			<Anchor>//api/name/states</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/states</TokenIdentifier>
+			<Abstract type="html">description: A wrapper object for all the series options in specific states.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStates *states</Declaration>
+			
+			
+			<Anchor>//api/name/states</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setTurboThreshold:</TokenIdentifier>
+			<Abstract type="html">* description: When a series contains a data array that is longer than this, only
+one dimensional arrays of numbers, or two dimensional arrays with
+x and y values are allowed. Also, only the first point is tested,
+and the rest are assumed to be the same format. This saves expensive
+data checking and indexing in long series. Set it to 0 disable.
+* default: 1000</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *turboThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/turboThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/turboThreshold</TokenIdentifier>
+			<Abstract type="html">* description: When a series contains a data array that is longer than this, only
+one dimensional arrays of numbers, or two dimensional arrays with
+x and y values are allowed. Also, only the first point is tested,
+and the rest are assumed to be the same format. This saves expensive
+data checking and indexing in long series. Set it to 0 disable.
+* default: 1000</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *turboThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/turboThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/turboThreshold</TokenIdentifier>
+			<Abstract type="html">* description: When a series contains a data array that is longer than this, only
+one dimensional arrays of numbers, or two dimensional arrays with
+x and y values are allowed. Also, only the first point is tested,
+and the rest are assumed to be the same format. This saves expensive
+data checking and indexing in long series. Set it to 0 disable.
+* default: 1000</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *turboThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/turboThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setSelected:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to select the series initially. If showCheckbox is true,
+the checkbox next to the series name in the legend will be checked for a
+selected series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *selected</Declaration>
+			
+			
+			<Anchor>//api/name/selected</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/selected</TokenIdentifier>
+			<Abstract type="html">* description: Whether to select the series initially. If showCheckbox is true,
+the checkbox next to the series name in the legend will be checked for a
+selected series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *selected</Declaration>
+			
+			
+			<Anchor>//api/name/selected</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/selected</TokenIdentifier>
+			<Abstract type="html">* description: Whether to select the series initially. If showCheckbox is true,
+the checkbox next to the series name in the legend will be checked for a
+selected series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *selected</Declaration>
+			
+			
+			<Anchor>//api/name/selected</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setSoftThreshold:</TokenIdentifier>
+			<Abstract type="html">* description: When this is true, the series will not cause the Y axis to cross
+the zero plane (or threshold option)
+unless the data actually crosses the plane.
+For example, if softThreshold is false, a series of 0, 1, 2,
+3 will make the Y axis show negative values according to the minPadding
+option. If softThreshold is true, the Y axis starts at 0.
+* default: true</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/softThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/softThreshold</TokenIdentifier>
+			<Abstract type="html">* description: When this is true, the series will not cause the Y axis to cross
+the zero plane (or threshold option)
+unless the data actually crosses the plane.
+For example, if softThreshold is false, a series of 0, 1, 2,
+3 will make the Y axis show negative values according to the minPadding
+option. If softThreshold is true, the Y axis starts at 0.
+* default: true</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/softThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/softThreshold</TokenIdentifier>
+			<Abstract type="html">* description: When this is true, the series will not cause the Y axis to cross
+the zero plane (or threshold option)
+unless the data actually crosses the plane.
+For example, if softThreshold is false, a series of 0, 1, 2,
+3 will make the Y axis show negative values according to the minPadding
+option. If softThreshold is true, the Y axis starts at 0.
+* default: true</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *softThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/softThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setDefinition:</TokenIdentifier>
+			<Abstract type="html">* description: Requires the Accessibility module.
+A description of the series to add to the screen reader information
+about the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *definition</Declaration>
+			
+			
+			<Anchor>//api/name/definition</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/definition</TokenIdentifier>
+			<Abstract type="html">* description: Requires the Accessibility module.
+A description of the series to add to the screen reader information
+about the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *definition</Declaration>
+			
+			
+			<Anchor>//api/name/definition</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/definition</TokenIdentifier>
+			<Abstract type="html">* description: Requires the Accessibility module.
+A description of the series to add to the screen reader information
+about the series.
+* default: undefined</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *definition</Declaration>
+			
+			
+			<Anchor>//api/name/definition</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setAllowPointSelect:</TokenIdentifier>
+			<Abstract type="html">* description: Allow this series&apos; points to be selected by clicking on the graphic
+(columns, point markers, pie slices, map areas etc).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowPointSelect</Declaration>
+			
+			
+			<Anchor>//api/name/allowPointSelect</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/allowPointSelect</TokenIdentifier>
+			<Abstract type="html">* description: Allow this series&apos; points to be selected by clicking on the graphic
+(columns, point markers, pie slices, map areas etc).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowPointSelect</Declaration>
+			
+			
+			<Anchor>//api/name/allowPointSelect</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/allowPointSelect</TokenIdentifier>
+			<Abstract type="html">* description: Allow this series&apos; points to be selected by clicking on the graphic
+(columns, point markers, pie slices, map areas etc).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowPointSelect</Declaration>
+			
+			
+			<Anchor>//api/name/allowPointSelect</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setZones:</TokenIdentifier>
+			<Abstract type="html">* description: An array defining zones within a series. Zones can be applied to
+the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
+option.
+In styled mode, the color zones are styled with the .highcharts-
+zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-
+zones/ : view
+live demo).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIZones*&gt; *zones</Declaration>
+			
+			
+			<Anchor>//api/name/zones</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/zones</TokenIdentifier>
+			<Abstract type="html">* description: An array defining zones within a series. Zones can be applied to
+the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
+option.
+In styled mode, the color zones are styled with the .highcharts-
+zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-
+zones/ : view
+live demo).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIZones*&gt; *zones</Declaration>
+			
+			
+			<Anchor>//api/name/zones</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/zones</TokenIdentifier>
+			<Abstract type="html">* description: An array defining zones within a series. Zones can be applied to
+the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
+option.
+In styled mode, the color zones are styled with the .highcharts-
+zone-{n} class, or custom classed from the className option (http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-
+zones/ : view
+live demo).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIZones*&gt; *zones</Declaration>
+			
+			
+			<Anchor>//api/name/zones</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setDataLabels:</TokenIdentifier>
+			<Abstract type="html">* description: Options for the series data labels, appearing next to each data
+point.
+In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
+net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
+datalabels : see example).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDataLabels *dataLabels</Declaration>
+			
+			
+			<Anchor>//api/name/dataLabels</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/dataLabels</TokenIdentifier>
+			<Abstract type="html">* description: Options for the series data labels, appearing next to each data
+point.
+In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
+net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
+datalabels : see example).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDataLabels *dataLabels</Declaration>
+			
+			
+			<Anchor>//api/name/dataLabels</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/dataLabels</TokenIdentifier>
+			<Abstract type="html">* description: Options for the series data labels, appearing next to each data
+point.
+In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
+net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
+datalabels : see example).</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIDataLabels *dataLabels</Declaration>
+			
+			
+			<Anchor>//api/name/dataLabels</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setThreshold:</TokenIdentifier>
+			<Abstract type="html">* description: The threshold, also called zero level or base level. For line type
+series this is only used in conjunction with
+negativeColor.
+* default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *threshold</Declaration>
+			
+			
+			<Anchor>//api/name/threshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/threshold</TokenIdentifier>
+			<Abstract type="html">* description: The threshold, also called zero level or base level. For line type
+series this is only used in conjunction with
+negativeColor.
+* default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *threshold</Declaration>
+			
+			
+			<Anchor>//api/name/threshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/threshold</TokenIdentifier>
+			<Abstract type="html">* description: The threshold, also called zero level or base level. For line type
+series this is only used in conjunction with
+negativeColor.
+* default: 0</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *threshold</Declaration>
+			
+			
+			<Anchor>//api/name/threshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setLabel:</TokenIdentifier>
+			<Abstract type="html">* description: Series labels are placed as close to the series as possible in a
+natural way, seeking to avoid other series. The goal of this
+feature is to make the chart more easily readable, like if a
+human designer placed the labels in the optimal position.
+The series labels currently work with series types having a
+graph or an area.
+Requires the series-label.js module.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILabel *label</Declaration>
+			
+			
+			<Anchor>//api/name/label</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/label</TokenIdentifier>
+			<Abstract type="html">* description: Series labels are placed as close to the series as possible in a
+natural way, seeking to avoid other series. The goal of this
+feature is to make the chart more easily readable, like if a
+human designer placed the labels in the optimal position.
+The series labels currently work with series types having a
+graph or an area.
+Requires the series-label.js module.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILabel *label</Declaration>
+			
+			
+			<Anchor>//api/name/label</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/label</TokenIdentifier>
+			<Abstract type="html">* description: Series labels are placed as close to the series as possible in a
+natural way, seeking to avoid other series. The goal of this
+feature is to make the chart more easily readable, like if a
+human designer placed the labels in the optimal position.
+The series labels currently work with series types having a
+graph or an area.
+Requires the series-label.js module.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HILabel *label</Declaration>
+			
+			
+			<Anchor>//api/name/label</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setBoostThreshold:</TokenIdentifier>
+			<Abstract type="html">* description: Set the point threshold for when a series should enter boost mode.
+Setting it to e.g. 2000 will cause the series to enter boost mode when there
+are 2000 or more points in the series.
+To disable boosting on the series, set the boostThreshold to 0. Setting it
+to 1 will force boosting.
+Requires modules/boost.js.
+* default: 5000</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *boostThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/boostThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/boostThreshold</TokenIdentifier>
+			<Abstract type="html">* description: Set the point threshold for when a series should enter boost mode.
+Setting it to e.g. 2000 will cause the series to enter boost mode when there
+are 2000 or more points in the series.
+To disable boosting on the series, set the boostThreshold to 0. Setting it
+to 1 will force boosting.
+Requires modules/boost.js.
+* default: 5000</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *boostThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/boostThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/boostThreshold</TokenIdentifier>
+			<Abstract type="html">* description: Set the point threshold for when a series should enter boost mode.
+Setting it to e.g. 2000 will cause the series to enter boost mode when there
+are 2000 or more points in the series.
+To disable boosting on the series, set the boostThreshold to 0. Setting it
+to 1 will force boosting.
+Requires modules/boost.js.
+* default: 5000</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *boostThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/boostThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setCursor:</TokenIdentifier>
+			<Abstract type="html">* description: You can set the cursor to &quot;pointer&quot; if you have click events attached
+to the series, to signal to the user that the points and lines can
+be clicked.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *cursor</Declaration>
+			
+			
+			<Anchor>//api/name/cursor</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/cursor</TokenIdentifier>
+			<Abstract type="html">* description: You can set the cursor to &quot;pointer&quot; if you have click events attached
+to the series, to signal to the user that the points and lines can
+be clicked.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *cursor</Declaration>
+			
+			
+			<Anchor>//api/name/cursor</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/cursor</TokenIdentifier>
+			<Abstract type="html">* description: You can set the cursor to &quot;pointer&quot; if you have click events attached
+to the series, to signal to the user that the points and lines can
+be clicked.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *cursor</Declaration>
+			
+			
+			<Anchor>//api/name/cursor</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setPointPlacement:</TokenIdentifier>
+			<Abstract type="html">* description: Possible values: null, &quot;on&quot;, &quot;between&quot;.
+In a column chart, when pointPlacement is &quot;on&quot;, the point will
+not create any padding of the X axis. In a polar column chart this
+means that the first column points directly north. If the pointPlacement
+is &quot;between&quot;, the columns will be laid out between ticks. This
+is useful for example for visualising an amount between two points
+in time or in a certain sector of a polar chart.
+Since Highcharts 3.0.2, the point placement can also be numeric,
+where 0 is on the axis value, -0.5 is between this value and the
+previous, and 0.5 is between this value and the next. Unlike the
+textual options, numeric point placement options won&apos;t affect axis
+padding.
+Note that pointPlacement needs a pointRange to work. For column series this is computed, but for
+linetype series it needs to be set.
+Defaults to null in cartesian charts, &quot;between&quot; in polar charts.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id pointPlacement</Declaration>
+			
+			
+			<Anchor>//api/name/pointPlacement</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/pointPlacement</TokenIdentifier>
+			<Abstract type="html">* description: Possible values: null, &quot;on&quot;, &quot;between&quot;.
+In a column chart, when pointPlacement is &quot;on&quot;, the point will
+not create any padding of the X axis. In a polar column chart this
+means that the first column points directly north. If the pointPlacement
+is &quot;between&quot;, the columns will be laid out between ticks. This
+is useful for example for visualising an amount between two points
+in time or in a certain sector of a polar chart.
+Since Highcharts 3.0.2, the point placement can also be numeric,
+where 0 is on the axis value, -0.5 is between this value and the
+previous, and 0.5 is between this value and the next. Unlike the
+textual options, numeric point placement options won&apos;t affect axis
+padding.
+Note that pointPlacement needs a pointRange to work. For column series this is computed, but for
+linetype series it needs to be set.
+Defaults to null in cartesian charts, &quot;between&quot; in polar charts.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id pointPlacement</Declaration>
+			
+			
+			<Anchor>//api/name/pointPlacement</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/pointPlacement</TokenIdentifier>
+			<Abstract type="html">* description: Possible values: null, &quot;on&quot;, &quot;between&quot;.
+In a column chart, when pointPlacement is &quot;on&quot;, the point will
+not create any padding of the X axis. In a polar column chart this
+means that the first column points directly north. If the pointPlacement
+is &quot;between&quot;, the columns will be laid out between ticks. This
+is useful for example for visualising an amount between two points
+in time or in a certain sector of a polar chart.
+Since Highcharts 3.0.2, the point placement can also be numeric,
+where 0 is on the axis value, -0.5 is between this value and the
+previous, and 0.5 is between this value and the next. Unlike the
+textual options, numeric point placement options won&apos;t affect axis
+padding.
+Note that pointPlacement needs a pointRange to work. For column series this is computed, but for
+linetype series it needs to be set.
+Defaults to null in cartesian charts, &quot;between&quot; in polar charts.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id pointPlacement</Declaration>
+			
+			
+			<Anchor>//api/name/pointPlacement</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setBorderWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The border width of each map area.
+In styled mode, the border stroke width is given in the .highchartspoint class.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The border width of each map area.
+In styled mode, the border stroke width is given in the .highchartspoint class.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The border width of each map area.
+In styled mode, the border stroke width is given in the .highchartspoint class.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setColor:</TokenIdentifier>
+			<Abstract type="html">* description: The main color of the series. In line type series it applies to the
+line and the point markers unless otherwise specified. In bar type
+series it applies to the bars unless a color is specified per point.
+The default value is pulled from the options.colors array.
+In styled mode, the color can be defined by the
+colorIndex option. Also, the series
+color can be set with the .highcharts-series, .highcharts-color-{n},
+.highcharts-{type}-series or .highcharts-series-{n} class, or
+individual classes given by the className option.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/color</TokenIdentifier>
+			<Abstract type="html">* description: The main color of the series. In line type series it applies to the
+line and the point markers unless otherwise specified. In bar type
+series it applies to the bars unless a color is specified per point.
+The default value is pulled from the options.colors array.
+In styled mode, the color can be defined by the
+colorIndex option. Also, the series
+color can be set with the .highcharts-series, .highcharts-color-{n},
+.highcharts-{type}-series or .highcharts-series-{n} class, or
+individual classes given by the className option.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/color</TokenIdentifier>
+			<Abstract type="html">* description: The main color of the series. In line type series it applies to the
+line and the point markers unless otherwise specified. In bar type
+series it applies to the bars unless a color is specified per point.
+The default value is pulled from the options.colors array.
+In styled mode, the color can be defined by the
+colorIndex option. Also, the series
+color can be set with the .highcharts-series, .highcharts-color-{n},
+.highcharts-{type}-series or .highcharts-series-{n} class, or
+individual classes given by the className option.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setCropThreshold:</TokenIdentifier>
+			<Abstract type="html">* description: When the series contains less points than the crop threshold, all
+points are drawn, even if the points fall outside the visible plot
+area at the current zoom. The advantage of drawing all points (including
+markers and columns), is that animation is performed on updates.
+On the other hand, when the series contains more points than the
+crop threshold, the series data is cropped to only contain points
+that fall within the plot area. The advantage of cropping away invisible
+points is to increase performance on large series.
+* default: 300</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *cropThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/cropThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/cropThreshold</TokenIdentifier>
+			<Abstract type="html">* description: When the series contains less points than the crop threshold, all
+points are drawn, even if the points fall outside the visible plot
+area at the current zoom. The advantage of drawing all points (including
+markers and columns), is that animation is performed on updates.
+On the other hand, when the series contains more points than the
+crop threshold, the series data is cropped to only contain points
+that fall within the plot area. The advantage of cropping away invisible
+points is to increase performance on large series.
+* default: 300</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *cropThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/cropThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/cropThreshold</TokenIdentifier>
+			<Abstract type="html">* description: When the series contains less points than the crop threshold, all
+points are drawn, even if the points fall outside the visible plot
+area at the current zoom. The advantage of drawing all points (including
+markers and columns), is that animation is performed on updates.
+On the other hand, when the series contains more points than the
+crop threshold, the series data is cropped to only contain points
+that fall within the plot area. The advantage of cropping away invisible
+points is to increase performance on large series.
+* default: 300</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *cropThreshold</Declaration>
+			
+			
+			<Anchor>//api/name/cropThreshold</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setTooltip:</TokenIdentifier>
+			<Abstract type="html">* description: A configuration object for the tooltip rendering of each single series.
+Properties are inherited from tooltip, but only the
+following properties can be defined on a series level.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITooltip *tooltip</Declaration>
+			
+			
+			<Anchor>//api/name/tooltip</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/tooltip</TokenIdentifier>
+			<Abstract type="html">* description: A configuration object for the tooltip rendering of each single series.
+Properties are inherited from tooltip, but only the
+following properties can be defined on a series level.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITooltip *tooltip</Declaration>
+			
+			
+			<Anchor>//api/name/tooltip</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/tooltip</TokenIdentifier>
+			<Abstract type="html">* description: A configuration object for the tooltip rendering of each single series.
+Properties are inherited from tooltip, but only the
+following properties can be defined on a series level.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITooltip *tooltip</Declaration>
+			
+			
+			<Anchor>//api/name/tooltip</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setKeys:</TokenIdentifier>
+			<Abstract type="html">* description: An array specifying which option maps to which key in the data point
+array. This makes it convenient to work with unstructured data arrays
+from different sources.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *keys</Declaration>
+			
+			
+			<Anchor>//api/name/keys</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/keys</TokenIdentifier>
+			<Abstract type="html">* description: An array specifying which option maps to which key in the data point
+array. This makes it convenient to work with unstructured data arrays
+from different sources.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *keys</Declaration>
+			
+			
+			<Anchor>//api/name/keys</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/keys</TokenIdentifier>
+			<Abstract type="html">* description: An array specifying which option maps to which key in the data point
+array. This makes it convenient to work with unstructured data arrays
+from different sources.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *keys</Declaration>
+			
+			
+			<Anchor>//api/name/keys</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setColorIndex:</TokenIdentifier>
+			<Abstract type="html">* description: Styled mode only. A specific color index to use for the series, so its
+graphic representations are given the class name highcharts-color-
+{n}.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorIndex</Declaration>
+			
+			
+			<Anchor>//api/name/colorIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/colorIndex</TokenIdentifier>
+			<Abstract type="html">* description: Styled mode only. A specific color index to use for the series, so its
+graphic representations are given the class name highcharts-color-
+{n}.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorIndex</Declaration>
+			
+			
+			<Anchor>//api/name/colorIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/colorIndex</TokenIdentifier>
+			<Abstract type="html">* description: Styled mode only. A specific color index to use for the series, so its
+graphic representations are given the class name highcharts-color-
+{n}.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colorIndex</Declaration>
+			
+			
+			<Anchor>//api/name/colorIndex</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setStickyTracking:</TokenIdentifier>
+			<Abstract type="html">* description: Sticky tracking of mouse events. When true, the mouseOut event
+on a series isn&apos;t triggered until the mouse moves over another series,
+or out of the plot area. When false, the mouseOut event on a
+series is triggered when the mouse leaves the area around the series&apos;
+graph or markers. This also implies the tooltip when not shared. When
+stickyTracking is false and tooltip.shared is false, the tooltip will
+be hidden when moving the mouse between series. Defaults to true for line
+and area type series, but to false for columns, pies etc.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *stickyTracking</Declaration>
+			
+			
+			<Anchor>//api/name/stickyTracking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/stickyTracking</TokenIdentifier>
+			<Abstract type="html">* description: Sticky tracking of mouse events. When true, the mouseOut event
+on a series isn&apos;t triggered until the mouse moves over another series,
+or out of the plot area. When false, the mouseOut event on a
+series is triggered when the mouse leaves the area around the series&apos;
+graph or markers. This also implies the tooltip when not shared. When
+stickyTracking is false and tooltip.shared is false, the tooltip will
+be hidden when moving the mouse between series. Defaults to true for line
+and area type series, but to false for columns, pies etc.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *stickyTracking</Declaration>
+			
+			
+			<Anchor>//api/name/stickyTracking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/stickyTracking</TokenIdentifier>
+			<Abstract type="html">* description: Sticky tracking of mouse events. When true, the mouseOut event
+on a series isn&apos;t triggered until the mouse moves over another series,
+or out of the plot area. When false, the mouseOut event on a
+series is triggered when the mouse leaves the area around the series&apos;
+graph or markers. This also implies the tooltip when not shared. When
+stickyTracking is false and tooltip.shared is false, the tooltip will
+be hidden when moving the mouse between series. Defaults to true for line
+and area type series, but to false for columns, pies etc.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *stickyTracking</Declaration>
+			
+			
+			<Anchor>//api/name/stickyTracking</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setPointStart:</TokenIdentifier>
+			<Abstract type="html">* description: If no x values are given for the points in a series, pointStart defines
+on what value to start. For example, if a series contains one yearly
+value starting from 1945, set pointStart to 1945.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointStart</Declaration>
+			
+			
+			<Anchor>//api/name/pointStart</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/pointStart</TokenIdentifier>
+			<Abstract type="html">* description: If no x values are given for the points in a series, pointStart defines
+on what value to start. For example, if a series contains one yearly
+value starting from 1945, set pointStart to 1945.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointStart</Declaration>
+			
+			
+			<Anchor>//api/name/pointStart</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/pointStart</TokenIdentifier>
+			<Abstract type="html">* description: If no x values are given for the points in a series, pointStart defines
+on what value to start. For example, if a series contains one yearly
+value starting from 1945, set pointStart to 1945.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointStart</Declaration>
+			
+			
+			<Anchor>//api/name/pointStart</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setShadow:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
+can be an object configuration containing color, offsetX, offsetY,
+opacity and width.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id shadow</Declaration>
+			
+			
+			<Anchor>//api/name/shadow</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/shadow</TokenIdentifier>
+			<Abstract type="html">* description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
+can be an object configuration containing color, offsetX, offsetY,
+opacity and width.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id shadow</Declaration>
+			
+			
+			<Anchor>//api/name/shadow</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/shadow</TokenIdentifier>
+			<Abstract type="html">* description: Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
+can be an object configuration containing color, offsetX, offsetY,
+opacity and width.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id shadow</Declaration>
+			
+			
+			<Anchor>//api/name/shadow</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setVisible:</TokenIdentifier>
+			<Abstract type="html">* description: Set the initial visibility of the series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/visible</TokenIdentifier>
+			<Abstract type="html">* description: Set the initial visibility of the series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/visible</TokenIdentifier>
+			<Abstract type="html">* description: Set the initial visibility of the series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *visible</Declaration>
+			
+			
+			<Anchor>//api/name/visible</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setLinkedTo:</TokenIdentifier>
+			<Abstract type="html">* description: The id of another series to link to. Additionally,
+the value can be &quot;:previous&quot; to link to the previous series. When
+two series are linked, only the first one appears in the legend.
+Toggling the visibility of this also toggles the linked series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *linkedTo</Declaration>
+			
+			
+			<Anchor>//api/name/linkedTo</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/linkedTo</TokenIdentifier>
+			<Abstract type="html">* description: The id of another series to link to. Additionally,
+the value can be &quot;:previous&quot; to link to the previous series. When
+two series are linked, only the first one appears in the legend.
+Toggling the visibility of this also toggles the linked series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *linkedTo</Declaration>
+			
+			
+			<Anchor>//api/name/linkedTo</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/linkedTo</TokenIdentifier>
+			<Abstract type="html">* description: The id of another series to link to. Additionally,
+the value can be &quot;:previous&quot; to link to the previous series. When
+two series are linked, only the first one appears in the legend.
+Toggling the visibility of this also toggles the linked series.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *linkedTo</Declaration>
+			
+			
+			<Anchor>//api/name/linkedTo</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setSkipKeyboardNavigation:</TokenIdentifier>
+			<Abstract type="html">* description: If set to True, the accessibility module will skip past the points
+in this series for keyboard navigation.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skipKeyboardNavigation</Declaration>
+			
+			
+			<Anchor>//api/name/skipKeyboardNavigation</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/skipKeyboardNavigation</TokenIdentifier>
+			<Abstract type="html">* description: If set to True, the accessibility module will skip past the points
+in this series for keyboard navigation.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skipKeyboardNavigation</Declaration>
+			
+			
+			<Anchor>//api/name/skipKeyboardNavigation</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/skipKeyboardNavigation</TokenIdentifier>
+			<Abstract type="html">* description: If set to True, the accessibility module will skip past the points
+in this series for keyboard navigation.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skipKeyboardNavigation</Declaration>
+			
+			
+			<Anchor>//api/name/skipKeyboardNavigation</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setDashStyle:</TokenIdentifier>
+			<Abstract type="html">* description: A name for the dash style to use for the graph, or for some series types
+the outline of each shape. The value for the dashStyle include:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/dashStyle</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/dashStyle</TokenIdentifier>
+			<Abstract type="html">* description: A name for the dash style to use for the graph, or for some series types
+the outline of each shape. The value for the dashStyle include:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/dashStyle</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/dashStyle</TokenIdentifier>
+			<Abstract type="html">* description: A name for the dash style to use for the graph, or for some series types
+the outline of each shape. The value for the dashStyle include:</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *dashStyle</Declaration>
+			
+			
+			<Anchor>//api/name/dashStyle</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setStep:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to apply steps to the line. Possible values are left, center
+and right.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *step</Declaration>
+			
+			
+			<Anchor>//api/name/step</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/step</TokenIdentifier>
+			<Abstract type="html">* description: Whether to apply steps to the line. Possible values are left, center
+and right.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *step</Declaration>
+			
+			
+			<Anchor>//api/name/step</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/step</TokenIdentifier>
+			<Abstract type="html">* description: Whether to apply steps to the line. Possible values are left, center
+and right.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *step</Declaration>
+			
+			
+			<Anchor>//api/name/step</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setShowCheckbox:</TokenIdentifier>
+			<Abstract type="html">* description: If true, a checkbox is displayed next to the legend item to allow
+selecting the series. The state of the checkbox is determined by
+the selected option.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showCheckbox</Declaration>
+			
+			
+			<Anchor>//api/name/showCheckbox</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/showCheckbox</TokenIdentifier>
+			<Abstract type="html">* description: If true, a checkbox is displayed next to the legend item to allow
+selecting the series. The state of the checkbox is determined by
+the selected option.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showCheckbox</Declaration>
+			
+			
+			<Anchor>//api/name/showCheckbox</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/showCheckbox</TokenIdentifier>
+			<Abstract type="html">* description: If true, a checkbox is displayed next to the legend item to allow
+selecting the series. The state of the checkbox is determined by
+the selected option.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *showCheckbox</Declaration>
+			
+			
+			<Anchor>//api/name/showCheckbox</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setClassName:</TokenIdentifier>
+			<Abstract type="html">description: A class name to apply to the series&apos; graphical elements.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/className</TokenIdentifier>
+			<Abstract type="html">description: A class name to apply to the series&apos; graphical elements.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/className</TokenIdentifier>
+			<Abstract type="html">description: A class name to apply to the series&apos; graphical elements.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *className</Declaration>
+			
+			
+			<Anchor>//api/name/className</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/setPoint:</TokenIdentifier>
+			<Abstract type="html">description: Properties for each single point.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HISeries/point</TokenIdentifier>
+			<Abstract type="html">description: Properties for each single point.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HISeries/point</TokenIdentifier>
+			<Abstract type="html">description: Properties for each single point.</Abstract>
+			<DeclaredIn>HISeries.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="111"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

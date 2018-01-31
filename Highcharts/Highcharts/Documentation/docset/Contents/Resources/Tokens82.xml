@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIMenuItemStyle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIMenuItemStyle</TokenIdentifier>
+			<Abstract type="html">* description: CSS styles for the individual items within the popup menu appearing
+by default when the export icon is clicked. The menu items are rendered
+in HTML.</Abstract>
+			<DeclaredIn>HIMenuItemStyle.h</DeclaredIn>
+            
+			
+			<NodeRef refid="82"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMenuItemStyle/setFontSize:</TokenIdentifier>
+			<Abstract type="html">description: Defaults to 14px on touch devices and 11px on desktop.</Abstract>
+			<DeclaredIn>HIMenuItemStyle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fontSize</Declaration>
+			
+			
+			<Anchor>//api/name/fontSize</Anchor>
+            <NodeRef refid="82"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIMenuItemStyle/fontSize</TokenIdentifier>
+			<Abstract type="html">description: Defaults to 14px on touch devices and 11px on desktop.</Abstract>
+			<DeclaredIn>HIMenuItemStyle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fontSize</Declaration>
+			
+			
+			<Anchor>//api/name/fontSize</Anchor>
+            <NodeRef refid="82"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIMenuItemStyle/fontSize</TokenIdentifier>
+			<Abstract type="html">description: Defaults to 14px on touch devices and 11px on desktop.</Abstract>
+			<DeclaredIn>HIMenuItemStyle.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fontSize</Declaration>
+			
+			
+			<Anchor>//api/name/fontSize</Anchor>
+            <NodeRef refid="82"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HITargetOptions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HITargetOptions</TokenIdentifier>
+			<Abstract type="html">description: Individual target options for each point.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="123"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/setColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the rectangle representing the target. When not set,
+point&apos;s color (if set in point&apos;s options -
+color) or zone of the target value
+(if zones or
+negativeColor are set)
+or the same color as the point has is used.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/color</TokenIdentifier>
+			<Abstract type="html">* description: The color of the rectangle representing the target. When not set,
+point&apos;s color (if set in point&apos;s options -
+color) or zone of the target value
+(if zones or
+negativeColor are set)
+or the same color as the point has is used.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITargetOptions/color</TokenIdentifier>
+			<Abstract type="html">* description: The color of the rectangle representing the target. When not set,
+point&apos;s color (if set in point&apos;s options -
+color) or zone of the target value
+(if zones or
+negativeColor are set)
+or the same color as the point has is used.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/setBorderWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The border width of the rectangle representing the target.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The border width of the rectangle representing the target.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITargetOptions/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The border width of the rectangle representing the target.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The border color of the rectangle representing the target. When
+not set, the  point&apos;s border color is used.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The border color of the rectangle representing the target. When
+not set, the  point&apos;s border color is used.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITargetOptions/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The border color of the rectangle representing the target. When
+not set, the  point&apos;s border color is used.
+In styled mode, use class highcharts-bullet-target instead.</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/setWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the rectangle representing the target. Could be set as
+a pixel value or as a percentage of a column width.
+* default: 140%</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/width</TokenIdentifier>
+			<Abstract type="html">* description: The width of the rectangle representing the target. Could be set as
+a pixel value or as a percentage of a column width.
+* default: 140%</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITargetOptions/width</TokenIdentifier>
+			<Abstract type="html">* description: The width of the rectangle representing the target. Could be set as
+a pixel value or as a percentage of a column width.
+* default: 140%</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/setHeight:</TokenIdentifier>
+			<Abstract type="html">description: The height of the rectangle representing the target.
+default: 3</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITargetOptions/height</TokenIdentifier>
+			<Abstract type="html">description: The height of the rectangle representing the target.
+default: 3</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITargetOptions/height</TokenIdentifier>
+			<Abstract type="html">description: The height of the rectangle representing the target.
+default: 3</Abstract>
+			<DeclaredIn>HITargetOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="123"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

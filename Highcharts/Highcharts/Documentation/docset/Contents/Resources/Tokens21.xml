@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIButtonOptions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIButtonOptions</TokenIdentifier>
+			<Abstract type="html">* description: A collection of options for buttons appearing in the exporting module.
+In styled mode, the buttons are styled with the .highcharts-contextbutton and .highcharts-button-symbol class.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setTheme:</TokenIdentifier>
+			<Abstract type="html">* description: A configuration object for the button theme. The object accepts
+SVG properties like strokewidth, stroke and fill. Tri-state
+button styles are supported by the states.hover and states.select
+objects.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITheme *theme</Declaration>
+			
+			
+			<Anchor>//api/name/theme</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/theme</TokenIdentifier>
+			<Abstract type="html">* description: A configuration object for the button theme. The object accepts
+SVG properties like strokewidth, stroke and fill. Tri-state
+button styles are supported by the states.hover and states.select
+objects.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITheme *theme</Declaration>
+			
+			
+			<Anchor>//api/name/theme</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/theme</TokenIdentifier>
+			<Abstract type="html">* description: A configuration object for the button theme. The object accepts
+SVG properties like strokewidth, stroke and fill. Tri-state
+button styles are supported by the states.hover and states.select
+objects.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HITheme *theme</Declaration>
+			
+			
+			<Anchor>//api/name/theme</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setSymbolFill:</TokenIdentifier>
+			<Abstract type="html">* description: Fill color for the symbol within the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *symbolFill</Declaration>
+			
+			
+			<Anchor>//api/name/symbolFill</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/symbolFill</TokenIdentifier>
+			<Abstract type="html">* description: Fill color for the symbol within the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *symbolFill</Declaration>
+			
+			
+			<Anchor>//api/name/symbolFill</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/symbolFill</TokenIdentifier>
+			<Abstract type="html">* description: Fill color for the symbol within the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *symbolFill</Declaration>
+			
+			
+			<Anchor>//api/name/symbolFill</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setSymbolStroke:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the symbol&apos;s stroke or line.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *symbolStroke</Declaration>
+			
+			
+			<Anchor>//api/name/symbolStroke</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/symbolStroke</TokenIdentifier>
+			<Abstract type="html">* description: The color of the symbol&apos;s stroke or line.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *symbolStroke</Declaration>
+			
+			
+			<Anchor>//api/name/symbolStroke</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/symbolStroke</TokenIdentifier>
+			<Abstract type="html">* description: The color of the symbol&apos;s stroke or line.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *symbolStroke</Declaration>
+			
+			
+			<Anchor>//api/name/symbolStroke</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/width</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/width</TokenIdentifier>
+			<Abstract type="html">* description: The pixel width of the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setVerticalAlign:</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the buttons. Can be one of &quot;top&quot;, &quot;middle&quot;
+or &quot;bottom&quot;.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/verticalAlign</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the buttons. Can be one of &quot;top&quot;, &quot;middle&quot;
+or &quot;bottom&quot;.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/verticalAlign</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the buttons. Can be one of &quot;top&quot;, &quot;middle&quot;
+or &quot;bottom&quot;.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setSymbolSize:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel size of the symbol on the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolSize</Declaration>
+			
+			
+			<Anchor>//api/name/symbolSize</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/symbolSize</TokenIdentifier>
+			<Abstract type="html">* description: The pixel size of the symbol on the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolSize</Declaration>
+			
+			
+			<Anchor>//api/name/symbolSize</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/symbolSize</TokenIdentifier>
+			<Abstract type="html">* description: The pixel size of the symbol on the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolSize</Declaration>
+			
+			
+			<Anchor>//api/name/symbolSize</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setSymbolStrokeWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the symbol on the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolStrokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/symbolStrokeWidth</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/symbolStrokeWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the symbol on the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolStrokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/symbolStrokeWidth</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/symbolStrokeWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the symbol on the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolStrokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/symbolStrokeWidth</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setText:</TokenIdentifier>
+			<Abstract type="html">* description: A text string to add to the individual button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/text</TokenIdentifier>
+			<Abstract type="html">* description: A text string to add to the individual button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/text</TokenIdentifier>
+			<Abstract type="html">* description: A text string to add to the individual button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setAlign:</TokenIdentifier>
+			<Abstract type="html">* description: Alignment for the buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/align</TokenIdentifier>
+			<Abstract type="html">* description: Alignment for the buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/align</TokenIdentifier>
+			<Abstract type="html">* description: Alignment for the buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setY:</TokenIdentifier>
+			<Abstract type="html">* description: The vertical offset of the button&apos;s position relative to its
+verticalAlign.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/y</TokenIdentifier>
+			<Abstract type="html">* description: The vertical offset of the button&apos;s position relative to its
+verticalAlign.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/y</TokenIdentifier>
+			<Abstract type="html">* description: The vertical offset of the button&apos;s position relative to its
+verticalAlign.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setSymbolX:</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the center of the symbol inside the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolX</Declaration>
+			
+			
+			<Anchor>//api/name/symbolX</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/symbolX</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the center of the symbol inside the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolX</Declaration>
+			
+			
+			<Anchor>//api/name/symbolX</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/symbolX</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the center of the symbol inside the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolX</Declaration>
+			
+			
+			<Anchor>//api/name/symbolX</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setSymbolY:</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the center of the symbol inside the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolY</Declaration>
+			
+			
+			<Anchor>//api/name/symbolY</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/symbolY</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the center of the symbol inside the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolY</Declaration>
+			
+			
+			<Anchor>//api/name/symbolY</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/symbolY</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the center of the symbol inside the button.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *symbolY</Declaration>
+			
+			
+			<Anchor>//api/name/symbolY</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setHeight:</TokenIdentifier>
+			<Abstract type="html">* description: Pixel height of the buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/height</TokenIdentifier>
+			<Abstract type="html">* description: Pixel height of the buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/height</TokenIdentifier>
+			<Abstract type="html">* description: Pixel height of the buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setEnabled:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to enable buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Whether to enable buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Whether to enable buttons.</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/setButtonSpacing:</TokenIdentifier>
+			<Abstract type="html">description: The pixel spacing between buttons.
+default: 3</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *buttonSpacing</Declaration>
+			
+			
+			<Anchor>//api/name/buttonSpacing</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIButtonOptions/buttonSpacing</TokenIdentifier>
+			<Abstract type="html">description: The pixel spacing between buttons.
+default: 3</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *buttonSpacing</Declaration>
+			
+			
+			<Anchor>//api/name/buttonSpacing</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIButtonOptions/buttonSpacing</TokenIdentifier>
+			<Abstract type="html">description: The pixel spacing between buttons.
+default: 3</Abstract>
+			<DeclaredIn>HIButtonOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *buttonSpacing</Declaration>
+			
+			
+			<Anchor>//api/name/buttonSpacing</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

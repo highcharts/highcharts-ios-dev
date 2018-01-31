@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIShapeOptions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIShapeOptions</TokenIdentifier>
+			<Abstract type="html">* description: Options for annotation&apos;s shapes. Each shape inherits options
+from the shapeOptions object. An option from the shapeOptions can be
+overwritten by config for a specific shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="112"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/setHeight:</TokenIdentifier>
+			<Abstract type="html">* description: The height of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/height</TokenIdentifier>
+			<Abstract type="html">* description: The height of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapeOptions/height</TokenIdentifier>
+			<Abstract type="html">* description: The height of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/setType:</TokenIdentifier>
+			<Abstract type="html">* description: The type of the shape, e.g. circle or rectangle.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/type</TokenIdentifier>
+			<Abstract type="html">* description: The type of the shape, e.g. circle or rectangle.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapeOptions/type</TokenIdentifier>
+			<Abstract type="html">* description: The type of the shape, e.g. circle or rectangle.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/setWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The width of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/width</TokenIdentifier>
+			<Abstract type="html">* description: The width of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapeOptions/width</TokenIdentifier>
+			<Abstract type="html">* description: The width of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/setStrokeWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *strokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/strokeWidth</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/strokeWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *strokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/strokeWidth</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapeOptions/strokeWidth</TokenIdentifier>
+			<Abstract type="html">* description: The pixel stroke width of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *strokeWidth</Declaration>
+			
+			
+			<Anchor>//api/name/strokeWidth</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/setStroke:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s stroke.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *stroke</Declaration>
+			
+			
+			<Anchor>//api/name/stroke</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/stroke</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s stroke.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *stroke</Declaration>
+			
+			
+			<Anchor>//api/name/stroke</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapeOptions/stroke</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s stroke.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *stroke</Declaration>
+			
+			
+			<Anchor>//api/name/stroke</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/setR:</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *r</Declaration>
+			
+			
+			<Anchor>//api/name/r</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/r</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *r</Declaration>
+			
+			
+			<Anchor>//api/name/r</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapeOptions/r</TokenIdentifier>
+			<Abstract type="html">* description: The radius of the shape.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *r</Declaration>
+			
+			
+			<Anchor>//api/name/r</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/setFill:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s fill.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIShapeOptions/fill</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s fill.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIShapeOptions/fill</TokenIdentifier>
+			<Abstract type="html">* description: The color of the shape&apos;s fill.</Abstract>
+			<DeclaredIn>HIShapeOptions.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="112"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

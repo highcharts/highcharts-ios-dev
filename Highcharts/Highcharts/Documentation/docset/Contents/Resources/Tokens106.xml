@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIRules.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIRules</TokenIdentifier>
+			<Abstract type="html">* description: A set of rules for responsive settings. The rules are executed from
+the top down.</Abstract>
+			<DeclaredIn>HIRules.h</DeclaredIn>
+            
+			
+			<NodeRef refid="106"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIRules/setChartOptions:</TokenIdentifier>
+			<Abstract type="html">* description: A full set of chart options to apply as overrides to the general
+chart options. The chart options are applied when the given rule
+is active.
+A special case is configuration objects that take arrays, for example
+xAxis, yAxis or series. For these
+collections, an id option is used to map the new option set to
+an existing object. If an existing object of the same id is not found,
+the item of the same indexupdated. So for example, setting chartOptions
+with two series items without an id, will cause the existing chart&apos;s
+two series to be updated with respective options.</Abstract>
+			<DeclaredIn>HIRules.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id chartOptions</Declaration>
+			
+			
+			<Anchor>//api/name/chartOptions</Anchor>
+            <NodeRef refid="106"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIRules/chartOptions</TokenIdentifier>
+			<Abstract type="html">* description: A full set of chart options to apply as overrides to the general
+chart options. The chart options are applied when the given rule
+is active.
+A special case is configuration objects that take arrays, for example
+xAxis, yAxis or series. For these
+collections, an id option is used to map the new option set to
+an existing object. If an existing object of the same id is not found,
+the item of the same indexupdated. So for example, setting chartOptions
+with two series items without an id, will cause the existing chart&apos;s
+two series to be updated with respective options.</Abstract>
+			<DeclaredIn>HIRules.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id chartOptions</Declaration>
+			
+			
+			<Anchor>//api/name/chartOptions</Anchor>
+            <NodeRef refid="106"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIRules/chartOptions</TokenIdentifier>
+			<Abstract type="html">* description: A full set of chart options to apply as overrides to the general
+chart options. The chart options are applied when the given rule
+is active.
+A special case is configuration objects that take arrays, for example
+xAxis, yAxis or series. For these
+collections, an id option is used to map the new option set to
+an existing object. If an existing object of the same id is not found,
+the item of the same indexupdated. So for example, setting chartOptions
+with two series items without an id, will cause the existing chart&apos;s
+two series to be updated with respective options.</Abstract>
+			<DeclaredIn>HIRules.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id chartOptions</Declaration>
+			
+			
+			<Anchor>//api/name/chartOptions</Anchor>
+            <NodeRef refid="106"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIRules/setCondition:</TokenIdentifier>
+			<Abstract type="html">description: Under which conditions the rule applies.</Abstract>
+			<DeclaredIn>HIRules.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HICondition *condition</Declaration>
+			
+			
+			<Anchor>//api/name/condition</Anchor>
+            <NodeRef refid="106"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIRules/condition</TokenIdentifier>
+			<Abstract type="html">description: Under which conditions the rule applies.</Abstract>
+			<DeclaredIn>HIRules.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HICondition *condition</Declaration>
+			
+			
+			<Anchor>//api/name/condition</Anchor>
+            <NodeRef refid="106"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIRules/condition</TokenIdentifier>
+			<Abstract type="html">description: Under which conditions the rule applies.</Abstract>
+			<DeclaredIn>HIRules.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HICondition *condition</Declaration>
+			
+			
+			<Anchor>//api/name/condition</Anchor>
+            <NodeRef refid="106"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

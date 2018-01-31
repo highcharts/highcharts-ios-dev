@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HICredits.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HICredits</TokenIdentifier>
+			<Abstract type="html">* description: Highchart by default puts a credits label in the lower right corner
+of the chart. This can be changed using these options.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+            
+			
+			<NodeRef refid="33"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/setEnabled:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the credits text.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the credits text.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HICredits/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Whether to show the credits text.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/setHref:</TokenIdentifier>
+			<Abstract type="html">* description: The URL for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *href</Declaration>
+			
+			
+			<Anchor>//api/name/href</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/href</TokenIdentifier>
+			<Abstract type="html">* description: The URL for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *href</Declaration>
+			
+			
+			<Anchor>//api/name/href</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HICredits/href</TokenIdentifier>
+			<Abstract type="html">* description: The URL for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *href</Declaration>
+			
+			
+			<Anchor>//api/name/href</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/setPosition:</TokenIdentifier>
+			<Abstract type="html">* description: Position configuration for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPosition *position</Declaration>
+			
+			
+			<Anchor>//api/name/position</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/position</TokenIdentifier>
+			<Abstract type="html">* description: Position configuration for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPosition *position</Declaration>
+			
+			
+			<Anchor>//api/name/position</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HICredits/position</TokenIdentifier>
+			<Abstract type="html">* description: Position configuration for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPosition *position</Declaration>
+			
+			
+			<Anchor>//api/name/position</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/setStyle:</TokenIdentifier>
+			<Abstract type="html">description: CSS styles for the credits label.
+default: { &quot;cursor&quot;: &quot;pointer&quot;, &quot;color&quot;: &quot;#999999&quot;, &quot;fontSize&quot;: &quot;10px&quot; }</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/style</TokenIdentifier>
+			<Abstract type="html">description: CSS styles for the credits label.
+default: { &quot;cursor&quot;: &quot;pointer&quot;, &quot;color&quot;: &quot;#999999&quot;, &quot;fontSize&quot;: &quot;10px&quot; }</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HICredits/style</TokenIdentifier>
+			<Abstract type="html">description: CSS styles for the credits label.
+default: { &quot;cursor&quot;: &quot;pointer&quot;, &quot;color&quot;: &quot;#999999&quot;, &quot;fontSize&quot;: &quot;10px&quot; }</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/setText:</TokenIdentifier>
+			<Abstract type="html">* description: The text for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HICredits/text</TokenIdentifier>
+			<Abstract type="html">* description: The text for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HICredits/text</TokenIdentifier>
+			<Abstract type="html">* description: The text for the credits label.</Abstract>
+			<DeclaredIn>HICredits.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

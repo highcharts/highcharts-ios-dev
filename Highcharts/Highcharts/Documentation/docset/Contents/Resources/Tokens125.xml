@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HITilemap.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HITilemap</TokenIdentifier>
+			<Abstract type="html">* description: A tilemap series. If the type option is
+not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+tilemap.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+            
+			
+			<NodeRef refid="125"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/setColsize:</TokenIdentifier>
+			<Abstract type="html">* description: The column size - how many X axis units each column in the tilemap
+should span. Works as in Heatmaps.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colsize</Declaration>
+			
+			
+			<Anchor>//api/name/colsize</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/colsize</TokenIdentifier>
+			<Abstract type="html">* description: The column size - how many X axis units each column in the tilemap
+should span. Works as in Heatmaps.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colsize</Declaration>
+			
+			
+			<Anchor>//api/name/colsize</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITilemap/colsize</TokenIdentifier>
+			<Abstract type="html">* description: The column size - how many X axis units each column in the tilemap
+should span. Works as in Heatmaps.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *colsize</Declaration>
+			
+			
+			<Anchor>//api/name/colsize</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/setPointPadding:</TokenIdentifier>
+			<Abstract type="html">* description: The padding between points in the tilemap.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/pointPadding</TokenIdentifier>
+			<Abstract type="html">* description: The padding between points in the tilemap.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITilemap/pointPadding</TokenIdentifier>
+			<Abstract type="html">* description: The padding between points in the tilemap.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *pointPadding</Declaration>
+			
+			
+			<Anchor>//api/name/pointPadding</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/setRowsize:</TokenIdentifier>
+			<Abstract type="html">* description: The row size - how many Y axis units each tilemap row should span.
+Analogous to colsize.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *rowsize</Declaration>
+			
+			
+			<Anchor>//api/name/rowsize</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/rowsize</TokenIdentifier>
+			<Abstract type="html">* description: The row size - how many Y axis units each tilemap row should span.
+Analogous to colsize.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *rowsize</Declaration>
+			
+			
+			<Anchor>//api/name/rowsize</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITilemap/rowsize</TokenIdentifier>
+			<Abstract type="html">* description: The row size - how many Y axis units each tilemap row should span.
+Analogous to colsize.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *rowsize</Declaration>
+			
+			
+			<Anchor>//api/name/rowsize</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/setNullColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color applied to null points. In styled mode, a general CSS class is
+applied instead.
+* default: #f7f7f7</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *nullColor</Declaration>
+			
+			
+			<Anchor>//api/name/nullColor</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/nullColor</TokenIdentifier>
+			<Abstract type="html">* description: The color applied to null points. In styled mode, a general CSS class is
+applied instead.
+* default: #f7f7f7</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *nullColor</Declaration>
+			
+			
+			<Anchor>//api/name/nullColor</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITilemap/nullColor</TokenIdentifier>
+			<Abstract type="html">* description: The color applied to null points. In styled mode, a general CSS class is
+applied instead.
+* default: #f7f7f7</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *nullColor</Declaration>
+			
+			
+			<Anchor>//api/name/nullColor</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/setTileShape:</TokenIdentifier>
+			<Abstract type="html">* description: The shape of the tiles in the tilemap. Possible values are hexagon,
+circle, diamond, and square.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tileShape</Declaration>
+			
+			
+			<Anchor>//api/name/tileShape</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITilemap/tileShape</TokenIdentifier>
+			<Abstract type="html">* description: The shape of the tiles in the tilemap. Possible values are hexagon,
+circle, diamond, and square.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tileShape</Declaration>
+			
+			
+			<Anchor>//api/name/tileShape</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITilemap/tileShape</TokenIdentifier>
+			<Abstract type="html">* description: The shape of the tiles in the tilemap. Possible values are hexagon,
+circle, diamond, and square.</Abstract>
+			<DeclaredIn>HITilemap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *tileShape</Declaration>
+			
+			
+			<Anchor>//api/name/tileShape</Anchor>
+            <NodeRef refid="125"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

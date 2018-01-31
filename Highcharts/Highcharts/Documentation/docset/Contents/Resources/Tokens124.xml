@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HITheme.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HITheme</TokenIdentifier>
+			<Abstract type="html">* description: A collection of attributes for the button. The object takes SVG
+attributes like fill, stroke, stroke-width or r, the border
+radius. The theme also supports style, a collection of CSS properties
+for the text. Equivalent attributes for the hover state are given
+in theme.states.hover.</Abstract>
+			<DeclaredIn>HITheme.h</DeclaredIn>
+            
+			
+			<NodeRef refid="124"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITheme/setFill:</TokenIdentifier>
+			<Abstract type="html">description: The default fill exists only to capture hover events.
+default: #ffffff</Abstract>
+			<DeclaredIn>HITheme.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="124"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITheme/fill</TokenIdentifier>
+			<Abstract type="html">description: The default fill exists only to capture hover events.
+default: #ffffff</Abstract>
+			<DeclaredIn>HITheme.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="124"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITheme/fill</TokenIdentifier>
+			<Abstract type="html">description: The default fill exists only to capture hover events.
+default: #ffffff</Abstract>
+			<DeclaredIn>HITheme.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *fill</Declaration>
+			
+			
+			<Anchor>//api/name/fill</Anchor>
+            <NodeRef refid="124"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITheme/setZIndex:</TokenIdentifier>
+			<Abstract type="html">description: The Z index for the reset zoom button.
+default: 20</Abstract>
+			<DeclaredIn>HITheme.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="124"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HITheme/zIndex</TokenIdentifier>
+			<Abstract type="html">description: The Z index for the reset zoom button.
+default: 20</Abstract>
+			<DeclaredIn>HITheme.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="124"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HITheme/zIndex</TokenIdentifier>
+			<Abstract type="html">description: The Z index for the reset zoom button.
+default: 20</Abstract>
+			<DeclaredIn>HITheme.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="124"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

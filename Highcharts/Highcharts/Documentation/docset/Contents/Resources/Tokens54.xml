@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIGDependency.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIGDependency</TokenIdentifier>
+			<Abstract type="html">Options to prepare before inserting to html/js variables.</Abstract>
+			<DeclaredIn>HIGDependency.h</DeclaredIn>
+            
+			
+			<NodeRef refid="54"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/HIGDependency/addOptions:</TokenIdentifier>
+			<Abstract type="html">Prepares options object and adds requireds params.</Abstract>
+			<DeclaredIn>HIGDependency.h</DeclaredIn>
+			
+			<Declaration>+ (NSDictionary *)addOptions:(NSDictionary *)options</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>options</Name>
+					<Abstract type="html">object to prepare.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">prepared options object.</Abstract></ReturnValue>
+			<Anchor>//api/name/addOptions:</Anchor>
+            <NodeRef refid="54"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/HIGDependency/pluginsForOptions:</TokenIdentifier>
+			<Abstract type="html">Return plugins required to chart render.</Abstract>
+			<DeclaredIn>HIGDependency.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)pluginsForOptions:(NSDictionary *)options</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>options</Name>
+					<Abstract type="html">object for searching.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">return plugin name to load.</Abstract></ReturnValue>
+			<Anchor>//api/name/pluginsForOptions:</Anchor>
+            <NodeRef refid="54"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/HIGDependency/pluginsForPlugin:</TokenIdentifier>
+			<Abstract type="html">Returns additional plugins if are required to plugin dependency.</Abstract>
+			<DeclaredIn>HIGDependency.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)pluginsForPlugin:(NSString *)plugin</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>plugin</Name>
+					<Abstract type="html">name to search for dependency.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">list of plugins dependency.</Abstract></ReturnValue>
+			<Anchor>//api/name/pluginsForPlugin:</Anchor>
+            <NodeRef refid="54"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

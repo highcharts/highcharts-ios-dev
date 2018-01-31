@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIPoint.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIPoint</TokenIdentifier>
+			<Abstract type="html">* description: This option defines the point to which the shape will be connected.
+It can be either the point which exists in the series - it is referenced
+by the point&apos;s id - or a new point with defined x, y properties
+and optionally axes.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+            
+			
+			<NodeRef refid="98"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/setEvents:</TokenIdentifier>
+			<Abstract type="html">description: Events for each single point.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/events</TokenIdentifier>
+			<Abstract type="html">description: Events for each single point.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPoint/events</TokenIdentifier>
+			<Abstract type="html">description: Events for each single point.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIEvents *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/setX:</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the point. Units can be either in axis
+or chart pixel coordinates.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/x</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the point. Units can be either in axis
+or chart pixel coordinates.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPoint/x</TokenIdentifier>
+			<Abstract type="html">* description: The x position of the point. Units can be either in axis
+or chart pixel coordinates.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/setY:</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the point. Units can be either in axis
+or chart pixel coordinates.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/y</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the point. Units can be either in axis
+or chart pixel coordinates.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPoint/y</TokenIdentifier>
+			<Abstract type="html">* description: The y position of the point. Units can be either in axis
+or chart pixel coordinates.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/setXAxis:</TokenIdentifier>
+			<Abstract type="html">* description: This number defines which xAxis the point is connected to. It refers
+to either the axis id or the index of the axis in the xAxis array.
+If the option is not configured or the axis is not found the point&apos;s
+x coordinate refers to the chart pixels.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id xAxis</Declaration>
+			
+			
+			<Anchor>//api/name/xAxis</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/xAxis</TokenIdentifier>
+			<Abstract type="html">* description: This number defines which xAxis the point is connected to. It refers
+to either the axis id or the index of the axis in the xAxis array.
+If the option is not configured or the axis is not found the point&apos;s
+x coordinate refers to the chart pixels.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id xAxis</Declaration>
+			
+			
+			<Anchor>//api/name/xAxis</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPoint/xAxis</TokenIdentifier>
+			<Abstract type="html">* description: This number defines which xAxis the point is connected to. It refers
+to either the axis id or the index of the axis in the xAxis array.
+If the option is not configured or the axis is not found the point&apos;s
+x coordinate refers to the chart pixels.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id xAxis</Declaration>
+			
+			
+			<Anchor>//api/name/xAxis</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/setYAxis:</TokenIdentifier>
+			<Abstract type="html">* description: This number defines which yAxis the point is connected to. It refers
+to either the axis id or the index of the axis in the yAxis array.
+If the option is not configured or the axis is not found the point&apos;s
+y coordinate refers to the chart pixels.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id yAxis</Declaration>
+			
+			
+			<Anchor>//api/name/yAxis</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPoint/yAxis</TokenIdentifier>
+			<Abstract type="html">* description: This number defines which yAxis the point is connected to. It refers
+to either the axis id or the index of the axis in the yAxis array.
+If the option is not configured or the axis is not found the point&apos;s
+y coordinate refers to the chart pixels.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id yAxis</Declaration>
+			
+			
+			<Anchor>//api/name/yAxis</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPoint/yAxis</TokenIdentifier>
+			<Abstract type="html">* description: This number defines which yAxis the point is connected to. It refers
+to either the axis id or the index of the axis in the yAxis array.
+If the option is not configured or the axis is not found the point&apos;s
+y coordinate refers to the chart pixels.</Abstract>
+			<DeclaredIn>HIPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id yAxis</Declaration>
+			
+			
+			<Anchor>//api/name/yAxis</Anchor>
+            <NodeRef refid="98"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

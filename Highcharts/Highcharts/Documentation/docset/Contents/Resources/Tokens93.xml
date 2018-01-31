@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIPie.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIPie</TokenIdentifier>
+			<Abstract type="html">* description: A pie series. If the type option is not specified,
+it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+pie.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+            
+			
+			<NodeRef refid="93"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setDepth:</TokenIdentifier>
+			<Abstract type="html">description: The thickness of a 3D pie. Requires highcharts-3d.js
+default: 0</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/depth</TokenIdentifier>
+			<Abstract type="html">description: The thickness of a 3D pie. Requires highcharts-3d.js
+default: 0</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/depth</TokenIdentifier>
+			<Abstract type="html">description: The thickness of a 3D pie. Requires highcharts-3d.js
+default: 0</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *depth</Declaration>
+			
+			
+			<Anchor>//api/name/depth</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setSlicedOffset:</TokenIdentifier>
+			<Abstract type="html">* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *slicedOffset</Declaration>
+			
+			
+			<Anchor>//api/name/slicedOffset</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/slicedOffset</TokenIdentifier>
+			<Abstract type="html">* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *slicedOffset</Declaration>
+			
+			
+			<Anchor>//api/name/slicedOffset</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/slicedOffset</TokenIdentifier>
+			<Abstract type="html">* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *slicedOffset</Declaration>
+			
+			
+			<Anchor>//api/name/slicedOffset</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setMinSize:</TokenIdentifier>
+			<Abstract type="html">* description: The minimum size for a pie in response to auto margins. The pie will
+try to shrink to make room for data labels in side the plot area,
+but only to this size.
+* default: 80</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minSize</Declaration>
+			
+			
+			<Anchor>//api/name/minSize</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/minSize</TokenIdentifier>
+			<Abstract type="html">* description: The minimum size for a pie in response to auto margins. The pie will
+try to shrink to make room for data labels in side the plot area,
+but only to this size.
+* default: 80</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minSize</Declaration>
+			
+			
+			<Anchor>//api/name/minSize</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/minSize</TokenIdentifier>
+			<Abstract type="html">* description: The minimum size for a pie in response to auto margins. The pie will
+try to shrink to make room for data labels in side the plot area,
+but only to this size.
+* default: 80</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *minSize</Declaration>
+			
+			
+			<Anchor>//api/name/minSize</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setSize:</TokenIdentifier>
+			<Abstract type="html">* description: The diameter of the pie relative to the plot area. Can be a percentage
+or pixel value. Pixel values are given as integers. The default
+behaviour (as of 3.0) is to scale to the plot area and give room
+for data labels within the plot area. As a consequence, the size
+of the pie may vary when points are updated and data labels more
+around. In that case it is best to set a fixed value, for example
+&quot;75%&quot;.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/size</TokenIdentifier>
+			<Abstract type="html">* description: The diameter of the pie relative to the plot area. Can be a percentage
+or pixel value. Pixel values are given as integers. The default
+behaviour (as of 3.0) is to scale to the plot area and give room
+for data labels within the plot area. As a consequence, the size
+of the pie may vary when points are updated and data labels more
+around. In that case it is best to set a fixed value, for example
+&quot;75%&quot;.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/size</TokenIdentifier>
+			<Abstract type="html">* description: The diameter of the pie relative to the plot area. Can be a percentage
+or pixel value. Pixel values are given as integers. The default
+behaviour (as of 3.0) is to scale to the plot area and give room
+for data labels within the plot area. As a consequence, the size
+of the pie may vary when points are updated and data labels more
+around. In that case it is best to set a fixed value, for example
+&quot;75%&quot;.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setColors:</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/colors</TokenIdentifier>
+			<Abstract type="html">* description: A series specific or series type specific color set to use instead
+of the global colors.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</Declaration>
+			
+			
+			<Anchor>//api/name/colors</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setStartAngle:</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/startAngle</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/startAngle</TokenIdentifier>
+			<Abstract type="html">* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *startAngle</Declaration>
+			
+			
+			<Anchor>//api/name/startAngle</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setInnerSize:</TokenIdentifier>
+			<Abstract type="html">* description: The size of the inner diameter for the pie. A size greater than 0
+renders a donut chart. Can be a percentage or pixel value. Percentages
+are relative to the pie size. Pixel values are given as integers.
+Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plot
+area, not the pie size.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerSize</Declaration>
+			
+			
+			<Anchor>//api/name/innerSize</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/innerSize</TokenIdentifier>
+			<Abstract type="html">* description: The size of the inner diameter for the pie. A size greater than 0
+renders a donut chart. Can be a percentage or pixel value. Percentages
+are relative to the pie size. Pixel values are given as integers.
+Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plot
+area, not the pie size.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerSize</Declaration>
+			
+			
+			<Anchor>//api/name/innerSize</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/innerSize</TokenIdentifier>
+			<Abstract type="html">* description: The size of the inner diameter for the pie. A size greater than 0
+renders a donut chart. Can be a percentage or pixel value. Percentages
+are relative to the pie size. Pixel values are given as integers.
+Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plot
+area, not the pie size.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id innerSize</Declaration>
+			
+			
+			<Anchor>//api/name/innerSize</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setCenter:</TokenIdentifier>
+			<Abstract type="html">* description: The center of the pie chart relative to the plot area. Can be percentages
+or pixel values. The default behaviour (as of 3.0) is to center
+the pie so that all slices and data labels are within the plot area.
+As a consequence, the pie may actually jump around in a chart with
+dynamic values, as the data labels move. In that case, the center
+should be explicitly set, for example to [&quot;50%&quot;, &quot;50%&quot;].</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/center</TokenIdentifier>
+			<Abstract type="html">* description: The center of the pie chart relative to the plot area. Can be percentages
+or pixel values. The default behaviour (as of 3.0) is to center
+the pie so that all slices and data labels are within the plot area.
+As a consequence, the pie may actually jump around in a chart with
+dynamic values, as the data labels move. In that case, the center
+should be explicitly set, for example to [&quot;50%&quot;, &quot;50%&quot;].</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/center</TokenIdentifier>
+			<Abstract type="html">* description: The center of the pie chart relative to the plot area. Can be percentages
+or pixel values. The default behaviour (as of 3.0) is to center
+the pie so that all slices and data labels are within the plot area.
+As a consequence, the pie may actually jump around in a chart with
+dynamic values, as the data labels move. In that case, the center
+should be explicitly set, for example to [&quot;50%&quot;, &quot;50%&quot;].</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray *center</Declaration>
+			
+			
+			<Anchor>//api/name/center</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setEndAngle:</TokenIdentifier>
+			<Abstract type="html">* description: The end angle of the pie in degrees where 0 is top and 90 is right.
+Defaults to startAngle plus 360.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endAngle</Declaration>
+			
+			
+			<Anchor>//api/name/endAngle</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/endAngle</TokenIdentifier>
+			<Abstract type="html">* description: The end angle of the pie in degrees where 0 is top and 90 is right.
+Defaults to startAngle plus 360.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endAngle</Declaration>
+			
+			
+			<Anchor>//api/name/endAngle</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/endAngle</TokenIdentifier>
+			<Abstract type="html">* description: The end angle of the pie in degrees where 0 is top and 90 is right.
+Defaults to startAngle plus 360.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *endAngle</Declaration>
+			
+			
+			<Anchor>//api/name/endAngle</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/setIgnoreHiddenPoint:</TokenIdentifier>
+			<Abstract type="html">* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+The default value changed from false to true with Highcharts
+3.0.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIPie/ignoreHiddenPoint</TokenIdentifier>
+			<Abstract type="html">* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+The default value changed from false to true with Highcharts
+3.0.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIPie/ignoreHiddenPoint</TokenIdentifier>
+			<Abstract type="html">* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+The default value changed from false to true with Highcharts
+3.0.</Abstract>
+			<DeclaredIn>HIPie.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreHiddenPoint</Anchor>
+            <NodeRef refid="93"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

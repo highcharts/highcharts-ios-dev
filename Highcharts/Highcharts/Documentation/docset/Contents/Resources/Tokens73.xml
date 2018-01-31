@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HILabels.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HILabels</TokenIdentifier>
+			<Abstract type="html">description: HTML labels that can be positioned anywhere in the chart area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+            
+			
+			<NodeRef refid="73"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setAllowOverlap:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to allow the annotation&apos;s labels to overlap.
+To make the labels less sensitive for overlapping,
+the can be set to 0.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowOverlap</Declaration>
+			
+			
+			<Anchor>//api/name/allowOverlap</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/allowOverlap</TokenIdentifier>
+			<Abstract type="html">* description: Whether to allow the annotation&apos;s labels to overlap.
+To make the labels less sensitive for overlapping,
+the can be set to 0.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowOverlap</Declaration>
+			
+			
+			<Anchor>//api/name/allowOverlap</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/allowOverlap</TokenIdentifier>
+			<Abstract type="html">* description: Whether to allow the annotation&apos;s labels to overlap.
+To make the labels less sensitive for overlapping,
+the can be set to 0.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *allowOverlap</Declaration>
+			
+			
+			<Anchor>//api/name/allowOverlap</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setFormat:</TokenIdentifier>
+			<Abstract type="html">* description: A https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting : format string for the data label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *format</Declaration>
+			
+			
+			<Anchor>//api/name/format</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/format</TokenIdentifier>
+			<Abstract type="html">* description: A https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting : format string for the data label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *format</Declaration>
+			
+			
+			<Anchor>//api/name/format</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/format</TokenIdentifier>
+			<Abstract type="html">* description: A https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting : format string for the data label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *format</Declaration>
+			
+			
+			<Anchor>//api/name/format</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setOverflow:</TokenIdentifier>
+			<Abstract type="html">* description: How to handle the annotation&apos;s label that flow outside the plot
+area. The justify option aligns the label inside the plot area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *overflow</Declaration>
+			
+			
+			<Anchor>//api/name/overflow</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/overflow</TokenIdentifier>
+			<Abstract type="html">* description: How to handle the annotation&apos;s label that flow outside the plot
+area. The justify option aligns the label inside the plot area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *overflow</Declaration>
+			
+			
+			<Anchor>//api/name/overflow</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/overflow</TokenIdentifier>
+			<Abstract type="html">* description: How to handle the annotation&apos;s label that flow outside the plot
+area. The justify option aligns the label inside the plot area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *overflow</Declaration>
+			
+			
+			<Anchor>//api/name/overflow</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setPadding:</TokenIdentifier>
+			<Abstract type="html">* description: When either the borderWidth or the backgroundColor is set,
+this    is the padding within the box.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *padding</Declaration>
+			
+			
+			<Anchor>//api/name/padding</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/padding</TokenIdentifier>
+			<Abstract type="html">* description: When either the borderWidth or the backgroundColor is set,
+this    is the padding within the box.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *padding</Declaration>
+			
+			
+			<Anchor>//api/name/padding</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/padding</TokenIdentifier>
+			<Abstract type="html">* description: When either the borderWidth or the backgroundColor is set,
+this    is the padding within the box.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *padding</Declaration>
+			
+			
+			<Anchor>//api/name/padding</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setPoint:</TokenIdentifier>
+			<Abstract type="html">* description: This option defines the point to which the label will be connected.
+It can be either the point which exists in the series - it is referenced
+by the point&apos;s id - or a new point with defined x, y properies
+and optionally axes.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/point</TokenIdentifier>
+			<Abstract type="html">* description: This option defines the point to which the label will be connected.
+It can be either the point which exists in the series - it is referenced
+by the point&apos;s id - or a new point with defined x, y properies
+and optionally axes.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/point</TokenIdentifier>
+			<Abstract type="html">* description: This option defines the point to which the label will be connected.
+It can be either the point which exists in the series - it is referenced
+by the point&apos;s id - or a new point with defined x, y properies
+and optionally axes.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIPoint *point</Declaration>
+			
+			
+			<Anchor>//api/name/point</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setBorderRadius:</TokenIdentifier>
+			<Abstract type="html">* description: The border radius in pixels for the annotaiton&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The border radius in pixels for the annotaiton&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/borderRadius</TokenIdentifier>
+			<Abstract type="html">* description: The border radius in pixels for the annotaiton&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderRadius</Declaration>
+			
+			
+			<Anchor>//api/name/borderRadius</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setFormatter:</TokenIdentifier>
+			<Abstract type="html">* description: Callback JavaScript function to format the annotation&apos;s label. Note that
+if a format or text are defined, the format or text take precedence
+and the formatter is ignored. This refers to a point object.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *formatter</Declaration>
+			
+			
+			<Anchor>//api/name/formatter</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/formatter</TokenIdentifier>
+			<Abstract type="html">* description: Callback JavaScript function to format the annotation&apos;s label. Note that
+if a format or text are defined, the format or text take precedence
+and the formatter is ignored. This refers to a point object.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *formatter</Declaration>
+			
+			
+			<Anchor>//api/name/formatter</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/formatter</TokenIdentifier>
+			<Abstract type="html">* description: Callback JavaScript function to format the annotation&apos;s label. Note that
+if a format or text are defined, the format or text take precedence
+and the formatter is ignored. This refers to a point object.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIFunction *formatter</Declaration>
+			
+			
+			<Anchor>//api/name/formatter</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setStyle:</TokenIdentifier>
+			<Abstract type="html">* description: Styles for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/style</TokenIdentifier>
+			<Abstract type="html">* description: Styles for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/style</TokenIdentifier>
+			<Abstract type="html">* description: Styles for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIStyle *style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setCrop:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to hide the annotation&apos;s label that is outside the plot area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crop</Declaration>
+			
+			
+			<Anchor>//api/name/crop</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/crop</TokenIdentifier>
+			<Abstract type="html">* description: Whether to hide the annotation&apos;s label that is outside the plot area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crop</Declaration>
+			
+			
+			<Anchor>//api/name/crop</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/crop</TokenIdentifier>
+			<Abstract type="html">* description: Whether to hide the annotation&apos;s label that is outside the plot area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *crop</Declaration>
+			
+			
+			<Anchor>//api/name/crop</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setUseHTML:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html : use HTML to render the annotation&apos;s label.
+* default: false</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *useHTML</Declaration>
+			
+			
+			<Anchor>//api/name/useHTML</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/useHTML</TokenIdentifier>
+			<Abstract type="html">* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html : use HTML to render the annotation&apos;s label.
+* default: false</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *useHTML</Declaration>
+			
+			
+			<Anchor>//api/name/useHTML</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/useHTML</TokenIdentifier>
+			<Abstract type="html">* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html : use HTML to render the annotation&apos;s label.
+* default: false</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *useHTML</Declaration>
+			
+			
+			<Anchor>//api/name/useHTML</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setVerticalAlign:</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/verticalAlign</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/verticalAlign</TokenIdentifier>
+			<Abstract type="html">* description: The vertical alignment of the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *verticalAlign</Declaration>
+			
+			
+			<Anchor>//api/name/verticalAlign</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setDistance:</TokenIdentifier>
+			<Abstract type="html">* description: The label&apos;s pixel distance from the point.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/distance</TokenIdentifier>
+			<Abstract type="html">* description: The label&apos;s pixel distance from the point.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/distance</TokenIdentifier>
+			<Abstract type="html">* description: The label&apos;s pixel distance from the point.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setBorderWidth:</TokenIdentifier>
+			<Abstract type="html">* description: The border width in pixels for the annotation&apos;s label</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The border width in pixels for the annotation&apos;s label</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/borderWidth</TokenIdentifier>
+			<Abstract type="html">* description: The border width in pixels for the annotation&apos;s label</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *borderWidth</Declaration>
+			
+			
+			<Anchor>//api/name/borderWidth</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setText:</TokenIdentifier>
+			<Abstract type="html">* description: Alias for the format option.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/text</TokenIdentifier>
+			<Abstract type="html">* description: Alias for the format option.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/text</TokenIdentifier>
+			<Abstract type="html">* description: Alias for the format option.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setShadow:</TokenIdentifier>
+			<Abstract type="html">* description: The shadow of the box. The shadow can be an object configuration
+containing color, offsetX, offsetY, opacity and width.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id shadow</Declaration>
+			
+			
+			<Anchor>//api/name/shadow</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/shadow</TokenIdentifier>
+			<Abstract type="html">* description: The shadow of the box. The shadow can be an object configuration
+containing color, offsetX, offsetY, opacity and width.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id shadow</Declaration>
+			
+			
+			<Anchor>//api/name/shadow</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/shadow</TokenIdentifier>
+			<Abstract type="html">* description: The shadow of the box. The shadow can be an object configuration
+containing color, offsetX, offsetY, opacity and width.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) id shadow</Declaration>
+			
+			
+			<Anchor>//api/name/shadow</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setY:</TokenIdentifier>
+			<Abstract type="html">* description: The y position offset of the label relative to the point.
+Note that if a distance is defined, the distance takes
+precedence over x and y options.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/y</TokenIdentifier>
+			<Abstract type="html">* description: The y position offset of the label relative to the point.
+Note that if a distance is defined, the distance takes
+precedence over x and y options.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/y</TokenIdentifier>
+			<Abstract type="html">* description: The y position offset of the label relative to the point.
+Note that if a distance is defined, the distance takes
+precedence over x and y options.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *y</Declaration>
+			
+			
+			<Anchor>//api/name/y</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setX:</TokenIdentifier>
+			<Abstract type="html">* description: The x position offset of the label relative to the point.
+Note that if a distance is defined, the distance takes
+precedence over x and y options.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/x</TokenIdentifier>
+			<Abstract type="html">* description: The x position offset of the label relative to the point.
+Note that if a distance is defined, the distance takes
+precedence over x and y options.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/x</TokenIdentifier>
+			<Abstract type="html">* description: The x position offset of the label relative to the point.
+Note that if a distance is defined, the distance takes
+precedence over x and y options.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *x</Declaration>
+			
+			
+			<Anchor>//api/name/x</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setShape:</TokenIdentifier>
+			<Abstract type="html">* description: The name of a symbol to use for the border around the label.
+Symbols are predefined functions on the Renderer object.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *shape</Declaration>
+			
+			
+			<Anchor>//api/name/shape</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/shape</TokenIdentifier>
+			<Abstract type="html">* description: The name of a symbol to use for the border around the label.
+Symbols are predefined functions on the Renderer object.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *shape</Declaration>
+			
+			
+			<Anchor>//api/name/shape</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/shape</TokenIdentifier>
+			<Abstract type="html">* description: The name of a symbol to use for the border around the label.
+Symbols are predefined functions on the Renderer object.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *shape</Declaration>
+			
+			
+			<Anchor>//api/name/shape</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setBackgroundColor:</TokenIdentifier>
+			<Abstract type="html">* description: The background color or gradient for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/backgroundColor</TokenIdentifier>
+			<Abstract type="html">* description: The background color or gradient for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/backgroundColor</TokenIdentifier>
+			<Abstract type="html">* description: The background color or gradient for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setBorderColor:</TokenIdentifier>
+			<Abstract type="html">* description: The border color for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The border color for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/borderColor</TokenIdentifier>
+			<Abstract type="html">* description: The border color for the annotation&apos;s label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) HIColor *borderColor</Declaration>
+			
+			
+			<Anchor>//api/name/borderColor</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setAlign:</TokenIdentifier>
+			<Abstract type="html">* description: The alignment of the annotation&apos;s label. If right,
+the right side of the label should be touching the point.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/align</TokenIdentifier>
+			<Abstract type="html">* description: The alignment of the annotation&apos;s label. If right,
+the right side of the label should be touching the point.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/align</TokenIdentifier>
+			<Abstract type="html">* description: The alignment of the annotation&apos;s label. If right,
+the right side of the label should be touching the point.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *align</Declaration>
+			
+			
+			<Anchor>//api/name/align</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setAutoRotationLimit:</TokenIdentifier>
+			<Abstract type="html">* description: When each category width is more than this many pixels, we don&apos;t
+apply auto rotation. Instead, we lay out the axis label with word
+wrap. A lower limit makes sense when the label contains multiple
+short words that don&apos;t extend the available horizontal space for
+each label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *autoRotationLimit</Declaration>
+			
+			
+			<Anchor>//api/name/autoRotationLimit</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/autoRotationLimit</TokenIdentifier>
+			<Abstract type="html">* description: When each category width is more than this many pixels, we don&apos;t
+apply auto rotation. Instead, we lay out the axis label with word
+wrap. A lower limit makes sense when the label contains multiple
+short words that don&apos;t extend the available horizontal space for
+each label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *autoRotationLimit</Declaration>
+			
+			
+			<Anchor>//api/name/autoRotationLimit</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/autoRotationLimit</TokenIdentifier>
+			<Abstract type="html">* description: When each category width is more than this many pixels, we don&apos;t
+apply auto rotation. Instead, we lay out the axis label with word
+wrap. A lower limit makes sense when the label contains multiple
+short words that don&apos;t extend the available horizontal space for
+each label.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *autoRotationLimit</Declaration>
+			
+			
+			<Anchor>//api/name/autoRotationLimit</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setSkew3d:</TokenIdentifier>
+			<Abstract type="html">* description: If enabled, the axis labels will skewed to follow the perspective.
+This will fix overlapping labels and titles, but texts become less
+legible due to the distortion.
+The final appearance depends heavily on labels.position3d.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skew3d</Declaration>
+			
+			
+			<Anchor>//api/name/skew3d</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/skew3d</TokenIdentifier>
+			<Abstract type="html">* description: If enabled, the axis labels will skewed to follow the perspective.
+This will fix overlapping labels and titles, but texts become less
+legible due to the distortion.
+The final appearance depends heavily on labels.position3d.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skew3d</Declaration>
+			
+			
+			<Anchor>//api/name/skew3d</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/skew3d</TokenIdentifier>
+			<Abstract type="html">* description: If enabled, the axis labels will skewed to follow the perspective.
+This will fix overlapping labels and titles, but texts become less
+legible due to the distortion.
+The final appearance depends heavily on labels.position3d.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *skew3d</Declaration>
+			
+			
+			<Anchor>//api/name/skew3d</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setRotation:</TokenIdentifier>
+			<Abstract type="html">* description: Rotation of the labels in degrees.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *rotation</Declaration>
+			
+			
+			<Anchor>//api/name/rotation</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/rotation</TokenIdentifier>
+			<Abstract type="html">* description: Rotation of the labels in degrees.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *rotation</Declaration>
+			
+			
+			<Anchor>//api/name/rotation</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/rotation</TokenIdentifier>
+			<Abstract type="html">* description: Rotation of the labels in degrees.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *rotation</Declaration>
+			
+			
+			<Anchor>//api/name/rotation</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setStaggerLines:</TokenIdentifier>
+			<Abstract type="html">* description: Horizontal axes only. The number of lines to spread the labels over
+to make room or tighter labels. .</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *staggerLines</Declaration>
+			
+			
+			<Anchor>//api/name/staggerLines</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/staggerLines</TokenIdentifier>
+			<Abstract type="html">* description: Horizontal axes only. The number of lines to spread the labels over
+to make room or tighter labels. .</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *staggerLines</Declaration>
+			
+			
+			<Anchor>//api/name/staggerLines</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/staggerLines</TokenIdentifier>
+			<Abstract type="html">* description: Horizontal axes only. The number of lines to spread the labels over
+to make room or tighter labels. .</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *staggerLines</Declaration>
+			
+			
+			<Anchor>//api/name/staggerLines</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setZIndex:</TokenIdentifier>
+			<Abstract type="html">description: The Z index for the axis labels.
+default: 7</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/zIndex</TokenIdentifier>
+			<Abstract type="html">description: The Z index for the axis labels.
+default: 7</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/zIndex</TokenIdentifier>
+			<Abstract type="html">description: The Z index for the axis labels.
+default: 7</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *zIndex</Declaration>
+			
+			
+			<Anchor>//api/name/zIndex</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setReserveSpace:</TokenIdentifier>
+			<Abstract type="html">* description: Whether to reserve space for the labels. This can be turned off when
+for example the labels are rendered inside the plot area instead
+of outside.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reserveSpace</Declaration>
+			
+			
+			<Anchor>//api/name/reserveSpace</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/reserveSpace</TokenIdentifier>
+			<Abstract type="html">* description: Whether to reserve space for the labels. This can be turned off when
+for example the labels are rendered inside the plot area instead
+of outside.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reserveSpace</Declaration>
+			
+			
+			<Anchor>//api/name/reserveSpace</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/reserveSpace</TokenIdentifier>
+			<Abstract type="html">* description: Whether to reserve space for the labels. This can be turned off when
+for example the labels are rendered inside the plot area instead
+of outside.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *reserveSpace</Declaration>
+			
+			
+			<Anchor>//api/name/reserveSpace</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setAutoRotation:</TokenIdentifier>
+			<Abstract type="html">* description: For horizontal axes, the allowed degrees of label rotation to prevent
+overlapping labels. If there is enough space, labels are not rotated.
+As the chart gets narrower, it will start rotating the labels -45
+degrees, then remove every second label and try again with rotations
+0 and -45 etc. Set it to false to disable rotation, which will
+cause the labels to word-wrap if possible.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSNumber*&gt; *autoRotation</Declaration>
+			
+			
+			<Anchor>//api/name/autoRotation</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/autoRotation</TokenIdentifier>
+			<Abstract type="html">* description: For horizontal axes, the allowed degrees of label rotation to prevent
+overlapping labels. If there is enough space, labels are not rotated.
+As the chart gets narrower, it will start rotating the labels -45
+degrees, then remove every second label and try again with rotations
+0 and -45 etc. Set it to false to disable rotation, which will
+cause the labels to word-wrap if possible.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSNumber*&gt; *autoRotation</Declaration>
+			
+			
+			<Anchor>//api/name/autoRotation</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/autoRotation</TokenIdentifier>
+			<Abstract type="html">* description: For horizontal axes, the allowed degrees of label rotation to prevent
+overlapping labels. If there is enough space, labels are not rotated.
+As the chart gets narrower, it will start rotating the labels -45
+degrees, then remove every second label and try again with rotations
+0 and -45 etc. Set it to false to disable rotation, which will
+cause the labels to word-wrap if possible.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;NSNumber*&gt; *autoRotation</Declaration>
+			
+			
+			<Anchor>//api/name/autoRotation</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setEnabled:</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the axis labels.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the axis labels.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/enabled</TokenIdentifier>
+			<Abstract type="html">* description: Enable or disable the axis labels.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setPosition3d:</TokenIdentifier>
+			<Abstract type="html">* description: Defines how the labels are be repositioned according to the 3D chart
+orientation.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *position3d</Declaration>
+			
+			
+			<Anchor>//api/name/position3d</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/position3d</TokenIdentifier>
+			<Abstract type="html">* description: Defines how the labels are be repositioned according to the 3D chart
+orientation.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *position3d</Declaration>
+			
+			
+			<Anchor>//api/name/position3d</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/position3d</TokenIdentifier>
+			<Abstract type="html">* description: Defines how the labels are be repositioned according to the 3D chart
+orientation.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *position3d</Declaration>
+			
+			
+			<Anchor>//api/name/position3d</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setStep:</TokenIdentifier>
+			<Abstract type="html">* description: To show only every n&apos;th label on the axis, set the step to n.
+Setting the step to 2 shows every other label.
+By default, the step is calculated automatically to avoid overlap.
+To prevent this, set it to 1. This usually only happens on a category
+axis, and is often a sign that you have chosen the wrong axis type.
+Read more at http://www.highcharts.com/docs/chart-concepts/axes : Axis docs
+=&gt; What axis should I use?</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *step</Declaration>
+			
+			
+			<Anchor>//api/name/step</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/step</TokenIdentifier>
+			<Abstract type="html">* description: To show only every n&apos;th label on the axis, set the step to n.
+Setting the step to 2 shows every other label.
+By default, the step is calculated automatically to avoid overlap.
+To prevent this, set it to 1. This usually only happens on a category
+axis, and is often a sign that you have chosen the wrong axis type.
+Read more at http://www.highcharts.com/docs/chart-concepts/axes : Axis docs
+=&gt; What axis should I use?</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *step</Declaration>
+			
+			
+			<Anchor>//api/name/step</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/step</TokenIdentifier>
+			<Abstract type="html">* description: To show only every n&apos;th label on the axis, set the step to n.
+Setting the step to 2 shows every other label.
+By default, the step is calculated automatically to avoid overlap.
+To prevent this, set it to 1. This usually only happens on a category
+axis, and is often a sign that you have chosen the wrong axis type.
+Read more at http://www.highcharts.com/docs/chart-concepts/axes : Axis docs
+=&gt; What axis should I use?</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *step</Declaration>
+			
+			
+			<Anchor>//api/name/step</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/setItems:</TokenIdentifier>
+			<Abstract type="html">description: A HTML label that can be positioned anywhere in the chart area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIItems*&gt; *items</Declaration>
+			
+			
+			<Anchor>//api/name/items</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HILabels/items</TokenIdentifier>
+			<Abstract type="html">description: A HTML label that can be positioned anywhere in the chart area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIItems*&gt; *items</Declaration>
+			
+			
+			<Anchor>//api/name/items</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HILabels/items</TokenIdentifier>
+			<Abstract type="html">description: A HTML label that can be positioned anywhere in the chart area.</Abstract>
+			<DeclaredIn>HILabels.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSArray&lt;HIItems*&gt; *items</Declaration>
+			
+			
+			<Anchor>//api/name/items</Anchor>
+            <NodeRef refid="73"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

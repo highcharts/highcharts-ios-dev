@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/HIVector.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/HIVector</TokenIdentifier>
+			<Abstract type="html">* description: A vector series. If the type option is not
+specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+vector.</Abstract>
+			<DeclaredIn>HIVector.h</DeclaredIn>
+            
+			
+			<NodeRef refid="132"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVector/setVectorLength:</TokenIdentifier>
+			<Abstract type="html">* description: Maximum length of the arrows in the vector plot. The individual arrow
+length is computed between 0 and this value.
+* default: 20</Abstract>
+			<DeclaredIn>HIVector.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *vectorLength</Declaration>
+			
+			
+			<Anchor>//api/name/vectorLength</Anchor>
+            <NodeRef refid="132"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVector/vectorLength</TokenIdentifier>
+			<Abstract type="html">* description: Maximum length of the arrows in the vector plot. The individual arrow
+length is computed between 0 and this value.
+* default: 20</Abstract>
+			<DeclaredIn>HIVector.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *vectorLength</Declaration>
+			
+			
+			<Anchor>//api/name/vectorLength</Anchor>
+            <NodeRef refid="132"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVector/vectorLength</TokenIdentifier>
+			<Abstract type="html">* description: Maximum length of the arrows in the vector plot. The individual arrow
+length is computed between 0 and this value.
+* default: 20</Abstract>
+			<DeclaredIn>HIVector.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSNumber *vectorLength</Declaration>
+			
+			
+			<Anchor>//api/name/vectorLength</Anchor>
+            <NodeRef refid="132"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVector/setRotationOrigin:</TokenIdentifier>
+			<Abstract type="html">* description: What part of the vector it should be rotated around. Can be one of
+start, center and end. When start, the vectors will start from
+the given [x, y] position, and when end the vectors will end in the
+[x, y] position.</Abstract>
+			<DeclaredIn>HIVector.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rotationOrigin</Declaration>
+			
+			
+			<Anchor>//api/name/rotationOrigin</Anchor>
+            <NodeRef refid="132"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HIVector/rotationOrigin</TokenIdentifier>
+			<Abstract type="html">* description: What part of the vector it should be rotated around. Can be one of
+start, center and end. When start, the vectors will start from
+the given [x, y] position, and when end the vectors will end in the
+[x, y] position.</Abstract>
+			<DeclaredIn>HIVector.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rotationOrigin</Declaration>
+			
+			
+			<Anchor>//api/name/rotationOrigin</Anchor>
+            <NodeRef refid="132"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HIVector/rotationOrigin</TokenIdentifier>
+			<Abstract type="html">* description: What part of the vector it should be rotated around. Can be one of
+start, center and end. When start, the vectors will start from
+the given [x, y] position, and when end the vectors will end in the
+[x, y] position.</Abstract>
+			<DeclaredIn>HIVector.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSString *rotationOrigin</Declaration>
+			
+			
+			<Anchor>//api/name/rotationOrigin</Anchor>
+            <NodeRef refid="132"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
