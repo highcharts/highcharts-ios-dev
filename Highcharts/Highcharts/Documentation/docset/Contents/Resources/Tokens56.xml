@@ -115,15 +115,8 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/HIGHTML/setBaseURL:</TokenIdentifier>
-			<Abstract type="html">Options for the Boost module. The Boost module allows certain series types
-to be rendered by WebGL instead of the default SVG. This allows hundreds of
-thousands of data points to be rendered in milliseconds. In addition to the
-WebGL rendering it saves time by skipping processing and inspection of the
-data wherever possible.
-In addition to the global boost option, each series has a
-boostThreshold that defines when the
-boost should kick in.
-Requires the modules/boost.js module.</Abstract>
+			<Abstract type="html">Vertical alignment of the label relative to the plot line. Can be
+one of &quot;top&quot;, &quot;middle&quot; or &quot;bottom&quot;.</Abstract>
 			<DeclaredIn>HIGHTML.h</DeclaredIn>
 			
 			<Declaration>@property (strong, nonatomic) NSString *baseURL</Declaration>
@@ -135,15 +128,8 @@ Requires the modules/boost.js module.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/HIGHTML/baseURL</TokenIdentifier>
-			<Abstract type="html">Options for the Boost module. The Boost module allows certain series types
-to be rendered by WebGL instead of the default SVG. This allows hundreds of
-thousands of data points to be rendered in milliseconds. In addition to the
-WebGL rendering it saves time by skipping processing and inspection of the
-data wherever possible.
-In addition to the global boost option, each series has a
-boostThreshold that defines when the
-boost should kick in.
-Requires the modules/boost.js module.</Abstract>
+			<Abstract type="html">Vertical alignment of the label relative to the plot line. Can be
+one of &quot;top&quot;, &quot;middle&quot; or &quot;bottom&quot;.</Abstract>
 			<DeclaredIn>HIGHTML.h</DeclaredIn>
 			
 			<Declaration>@property (strong, nonatomic) NSString *baseURL</Declaration>
@@ -155,15 +141,8 @@ Requires the modules/boost.js module.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/HIGHTML/baseURL</TokenIdentifier>
-			<Abstract type="html">Options for the Boost module. The Boost module allows certain series types
-to be rendered by WebGL instead of the default SVG. This allows hundreds of
-thousands of data points to be rendered in milliseconds. In addition to the
-WebGL rendering it saves time by skipping processing and inspection of the
-data wherever possible.
-In addition to the global boost option, each series has a
-boostThreshold that defines when the
-boost should kick in.
-Requires the modules/boost.js module.</Abstract>
+			<Abstract type="html">Vertical alignment of the label relative to the plot line. Can be
+one of &quot;top&quot;, &quot;middle&quot; or &quot;bottom&quot;.</Abstract>
 			<DeclaredIn>HIGHTML.h</DeclaredIn>
 			
 			<Declaration>@property (strong, nonatomic) NSString *baseURL</Declaration>
@@ -175,7 +154,14 @@ Requires the modules/boost.js module.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/HIGHTML/setHtml:</TokenIdentifier>
-			<Abstract type="html">This is parsed HTML.</Abstract>
+			<Abstract type="html">Whether to reserve space for the labels. By default, space is
+reserved for the labels in these cases:
+* On all horizontal axes.
+* On vertical axes if label.align is right on a left-side
+axis or left on a right-side axis.
+* On vertical axes if label.align is center.
+This can be turned off when for example the labels are rendered
+inside the plot area instead of outside.</Abstract>
 			<DeclaredIn>HIGHTML.h</DeclaredIn>
 			
 			<Declaration>@property (strong, readonly) NSString *html</Declaration>
@@ -187,7 +173,14 @@ Requires the modules/boost.js module.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/HIGHTML/html</TokenIdentifier>
-			<Abstract type="html">This is parsed HTML.</Abstract>
+			<Abstract type="html">Whether to reserve space for the labels. By default, space is
+reserved for the labels in these cases:
+* On all horizontal axes.
+* On vertical axes if label.align is right on a left-side
+axis or left on a right-side axis.
+* On vertical axes if label.align is center.
+This can be turned off when for example the labels are rendered
+inside the plot area instead of outside.</Abstract>
 			<DeclaredIn>HIGHTML.h</DeclaredIn>
 			
 			<Declaration>@property (strong, readonly) NSString *html</Declaration>
@@ -199,7 +192,14 @@ Requires the modules/boost.js module.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/HIGHTML/html</TokenIdentifier>
-			<Abstract type="html">This is parsed HTML.</Abstract>
+			<Abstract type="html">Whether to reserve space for the labels. By default, space is
+reserved for the labels in these cases:
+* On all horizontal axes.
+* On vertical axes if label.align is right on a left-side
+axis or left on a right-side axis.
+* On vertical axes if label.align is center.
+This can be turned off when for example the labels are rendered
+inside the plot area instead of outside.</Abstract>
 			<DeclaredIn>HIGHTML.h</DeclaredIn>
 			
 			<Declaration>@property (strong, readonly) NSString *html</Declaration>
