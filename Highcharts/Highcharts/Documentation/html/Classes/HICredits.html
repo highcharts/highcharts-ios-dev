@@ -94,7 +94,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HICredits.h<br />HICredits.m</td>
+	<td>HICredits.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,11 +104,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: Highchart by default puts a credits label in the lower right corner
-of the chart. This can be changed using these options.</li>
-</ul>
-
+						<p>Highchart by default puts a credits label in the lower right cornerof the chart. This can be changed using these options.</p>
 					</div>
 					
 					
@@ -124,6 +120,103 @@ of the chart. This can be changed using these options.</li>
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>CSS styles for the credits label.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>{ &ldquo;cursor&rdquo;: &ldquo;pointer&rdquo;, &ldquo;color&rdquo;: &ldquo;#999999&rdquo;, &ldquo;fontSize&rdquo;: &ldquo;10px&rdquo; }</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HICredits.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/text" title="text"></a>
+	<h3 class="method-title"><code><a href="#//api/name/text">&nbsp;&nbsp;text</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The text for the credits label.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *text</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>Highcharts.com</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/">Custom URL and text</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HICredits.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/enabled" title="enabled"></a>
 	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
@@ -135,10 +228,7 @@ of the chart. This can be changed using these options.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether to show the credits <a href="#//api/name/text">text</a>.</li>
-</ul>
-
+				<p>Whether to show the credits text.</p>
 			</div>
 			
 		    
@@ -154,9 +244,12 @@ of the chart. This can be changed using these options.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/</a> : Credits disabled</li>
-<li>default: true</li>
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/">Credits disabled</a></li>
 </ul>
 
 			</div>
@@ -187,10 +280,7 @@ of the chart. This can be changed using these options.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The URL for the credits label.</li>
-</ul>
-
+				<p>The URL for the credits label.</p>
 			</div>
 			
 		    
@@ -206,9 +296,12 @@ of the chart. This can be changed using these options.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/</a> : Custom URL and <a href="#//api/name/text">text</a></li>
-<li>default: <a href="http://www.highcharts.com">http://www.highcharts.com</a></li>
+				<p><strong>Defaults to</strong> <em>http://www.highcharts.com</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/">Custom URL and text</a></li>
 </ul>
 
 			</div>
@@ -239,10 +332,7 @@ of the chart. This can be changed using these options.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Position configuration for the credits label.</li>
-</ul>
-
+				<p>Position configuration for the credits label.</p>
 			</div>
 			
 		    
@@ -258,102 +348,11 @@ of the chart. This can be changed using these options.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/</a> : Left aligned</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HICredits.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/style" title="style"></a>
-	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: CSS styles for the credits label.
-default: { &ldquo;cursor&rdquo;: &ldquo;pointer&rdquo;, &ldquo;color&rdquo;: &ldquo;#999999&rdquo;, &ldquo;fontSize&rdquo;: &ldquo;10px&rdquo; }</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HICredits.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/text" title="text"></a>
-	<h3 class="method-title"><code><a href="#//api/name/text">&nbsp;&nbsp;text</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The text for the credits label.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *text</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/</a> : Custom URL and text</li>
-<li>default: Highcharts.com</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/">Left aligned</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/">Left aligned</a></li>
 </ul>
 
 			</div>
@@ -387,7 +386,7 @@ default: { &ldquo;cursor&rdquo;: &ldquo;pointer&rdquo;, &ldquo;color&rdquo;: &ld
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

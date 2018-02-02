@@ -94,7 +94,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIArea.h<br />HIArea.m</td>
+	<td>HIArea.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,15 +104,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A area series. If the type option is not
-specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-area.</li>
-</ul>
-
+						<p>A area series. If the type option is notspecified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.area.</p>
 					</div>
 					
 					
@@ -128,60 +120,6 @@ area.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/lineColor" title="lineColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A separate color for the graph line. By default the line takes the
-color of the series, but the lineColor setting allows setting a
-separate color for the line without altering the <a href="#//api/name/fillColor">fillColor</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/</a> : Dark gray line</li>
-<li>default: null</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIArea.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/negativeFillColor" title="negativeFillColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/negativeFillColor">&nbsp;&nbsp;negativeFillColor</a></code>
 </h3>
@@ -193,7 +131,7 @@ separate color for the line without altering the <a href="#//api/name/fillColor"
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: A separate color for the negative part of the area.</p>
+				<p>A separate color for the negative part of the area.</p>
 			</div>
 			
 		    
@@ -234,11 +172,7 @@ separate color for the line without altering the <a href="#//api/name/fillColor"
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether the whole area or just the line should respond to mouseover
-tooltips and other mouse or touch events.</li>
-</ul>
-
+				<p>Whether the whole area or just the line should respond to mouseovertooltips and other mouse or touch events.</p>
 			</div>
 			
 		    
@@ -254,64 +188,12 @@ tooltips and other mouse or touch events.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/</a> : Display the tooltip when the area is hovered</li>
-<li>default: false</li>
-</ul>
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
 
-			</div>
-			
+<h4>Try it</h4>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIArea.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fillOpacity" title="fillOpacity"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fillOpacity">&nbsp;&nbsp;fillOpacity</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fill opacity for the area. When you set an explicit <a href="#//api/name/fillColor">fillColor</a>,
-the fillOpacity is not applied. Instead, you should define the
-opacity in the <a href="#//api/name/fillColor">fillColor</a> with an rgba color definition. The fillOpacity
-setting, also the default setting, overrides the alpha component
-of the color setting.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *fillOpacity</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/</a> : Automatic fill color and fill opacity of 0.1</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/">Display the tooltip when the area is hovered</a></li>
 </ul>
 
 			</div>
@@ -342,11 +224,7 @@ of the color setting.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fill color or gradient for the area. When null, the series' color
-is used with the series' <a href="#//api/name/fillOpacity">fillOpacity</a>.</li>
-</ul>
-
+				<p>Fill color or gradient for the area. When null, the series' coloris used with the series' fillOpacity.</p>
 			</div>
 			
 		    
@@ -362,10 +240,117 @@ is used with the series' <a href="#//api/name/fillOpacity">fillOpacity</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/</a> : Null by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/</a> : Gradient</li>
-<li>default: null</li>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/">Null by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/">Gradient</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIArea.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lineColor" title="lineColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A separate color for the graph line. By default the line takes thecolor of the series, but the lineColor setting allows setting aseparate color for the line without altering the fillColor.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/">Dark gray line</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIArea.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fillOpacity" title="fillOpacity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fillOpacity">&nbsp;&nbsp;fillOpacity</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fill opacity for the area. When you set an explicit fillColor,the fillOpacity is not applied. Instead, you should define theopacity in the fillColor with an rgba color definition. The fillOpacitysetting, also the default setting, overrides the alpha componentof the color setting.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *fillOpacity</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0.75</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/">Automatic fill color and fill opacity of 0.1</a></li>
 </ul>
 
 			</div>
@@ -399,7 +384,7 @@ is used with the series' <a href="#//api/name/fillOpacity">fillOpacity</a>.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

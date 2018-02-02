@@ -88,7 +88,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIColorVariation.h<br />HIColorVariation.m</td>
+	<td>HIColorVariation.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -98,15 +98,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li><p>description: A configuration object <a href="#//api/name/to">to</a> define how the color of a child varies from the
-parent&rsquo;s color. The variation is distributed among the children of node.
-For example when setting brightness, the brightness change will range
-from the parent&rsquo;s original brightness on the first child, <a href="#//api/name/to">to</a> the amount
-set in the <a href="#//api/name/to">to</a> setting on the last node. This allows a gradient-like
-color scheme that sets children out from each other while highlighting
-the grouping on treemaps and sectors on sunburst charts.</p></li>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst/</a> : Sunburst with color variation</p></li>
+						<p>A configuration object to define how the color of a child varies from theparent&rsquo;s color. The variation is distributed among the children of node.For example when setting brightness, the brightness change will rangefrom the parent&rsquo;s original brightness on the first child, to the amountset in the to setting on the last node. This allows a gradient-likecolor scheme that sets children out from each other while highlightingthe grouping on treemaps and sectors on sunburst charts.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst/">Sunburst with color variation</a></li>
 </ul>
 
 					</div>
@@ -124,8 +121,8 @@ the grouping on treemaps and sectors on sunburst charts.</p></li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/key" title="key"></a>
-	<h3 class="method-title"><code><a href="#//api/name/key">&nbsp;&nbsp;key</a></code>
+	<a name="//api/name/to" title="to"></a>
+	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
 </h3>
 
 	<div class="method-info">
@@ -135,15 +132,12 @@ the grouping on treemaps and sectors on sunburst charts.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The key of a color variation. Currently supports brightness only.</li>
-</ul>
-
+				<p>The ending value of a color variation. The last sibling will receive thisvalue.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *key</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *to</code></div>
 
 		    
 			
@@ -152,13 +146,6 @@ the grouping on treemaps and sectors on sunburst charts.</p></li>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>accepted values: [&ldquo;brightness&rdquo;]</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -175,8 +162,8 @@ the grouping on treemaps and sectors on sunburst charts.</p></li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/to" title="to"></a>
-	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
+	<a name="//api/name/key" title="key"></a>
+	<h3 class="method-title"><code><a href="#//api/name/key">&nbsp;&nbsp;key</a></code>
 </h3>
 
 	<div class="method-info">
@@ -186,16 +173,12 @@ the grouping on treemaps and sectors on sunburst charts.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The ending value of a color variation. The last sibling will receive this
-value.</li>
-</ul>
-
+				<p>The key of a color variation. Currently supports brightness only.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *to</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *key</code></div>
 
 		    
 			
@@ -204,6 +187,10 @@ value.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;brightness&rdquo;]</em>.</p>
+			</div>
 			
 
 			
@@ -234,7 +221,7 @@ value.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

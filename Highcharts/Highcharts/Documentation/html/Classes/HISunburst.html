@@ -70,6 +70,8 @@
 		
 		<option value="//api/name/size">size</option>
 		
+		<option value="//api/name/slicedOffset">slicedOffset</option>
+		
 		<option value="//api/name/startAngle">startAngle</option>
 		
 	</optgroup>
@@ -100,7 +102,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISunburst.h<br />HISunburst.m</td>
+	<td>HISunburst.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,15 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A sunburst series. If the type option is
-not specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-sunburst.</li>
-</ul>
-
+						<p>A sunburst series. If the type option isnot specified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.sunburst.</p>
 					</div>
 					
 					
@@ -134,119 +128,6 @@ sunburst.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the border surrounding each slice. When null, the
-border takes the same color as the slice fill. This can be used
-together with a borderWidth to fill drawing gaps created by antialiazing
-artefacts in borderless pies.
-In styled mode, the border stroke is given in the .highcharts-point class.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/</a> : Black border</li>
-<li>default: #ffffff</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISunburst.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/size" title="size"></a>
-	<h3 class="method-title"><code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The diameter of the pie relative to the plot area. Can be a percentage
-or pixel value. Pixel values are given as integers. The default
-behaviour (as of 3.0) is to scale to the plot area and give room
-for data labels within the plot area. As a consequence, the size
-of the pie may vary when points are updated and data labels more
-around. In that case it is best to set a fixed value, for example
-&ldquo;75%&rdquo;.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id size</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/</a> : Smaller pie</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISunburst.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/rootId" title="rootId"></a>
 	<h3 class="method-title"><code><a href="#//api/name/rootId">&nbsp;&nbsp;rootId</a></code>
 </h3>
@@ -258,8 +139,7 @@ around. In that case it is best to set a fixed value, for example
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Which point to use as a root in the visualization.
-default: undefined</p>
+				<p>Which point to use as a root in the visualization.</p>
 			</div>
 			
 		    
@@ -274,57 +154,8 @@ default: undefined</p>
 			
 
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISunburst.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/startAngle" title="startAngle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startAngle">&nbsp;&nbsp;startAngle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The start angle of the pie slices in degrees where 0 is top and 90
-right.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startAngle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/</a> : Start from right</li>
-<li>default: 0</li>
-</ul>
-
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
 			</div>
 			
 
@@ -342,8 +173,8 @@ right.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/levels" title="levels"></a>
-	<h3 class="method-title"><code><a href="#//api/name/levels">&nbsp;&nbsp;levels</a></code>
+	<a name="//api/name/slicedOffset" title="slicedOffset"></a>
+	<h3 class="method-title"><code><a href="#//api/name/slicedOffset">&nbsp;&nbsp;slicedOffset</a></code>
 </h3>
 
 	<div class="method-info">
@@ -353,16 +184,12 @@ right.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Set options on specific levels. Takes precedence over series options,
-but not point options.</li>
-</ul>
-
+				<p>If a point is sliced, moved out from the center, how many pixelsshould it be moved?.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id slicedOffset</code></div>
 
 		    
 			
@@ -373,8 +200,10 @@ but not point options.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst</a> : Sunburst chart</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-sliced">Sliced sunburst</a></li>
 </ul>
 
 			</div>
@@ -405,19 +234,12 @@ but not point options.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Used together with the <a href="#//api/name/levels">levels</a> and <a href="#//api/name/allowDrillToNode">allowDrillToNode</a> options. When
-set to false the first level visible when drilling is considered
-to be level one. Otherwise the level will be the same as the tree
-structure.</li>
-<li>default: True</li>
-</ul>
-
+				<p>Used together with the levels and allowDrillToNode options. Whenset to false the first level visible when drilling is consideredto be level one. Otherwise the level will be the same as the treestructure.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *levelIsConstant</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id levelIsConstant</code></div>
 
 		    
 			
@@ -442,8 +264,8 @@ structure.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/colors" title="colors"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
+	<a name="//api/name/levels" title="levels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/levels">&nbsp;&nbsp;levels</a></code>
 </h3>
 
 	<div class="method-info">
@@ -453,16 +275,12 @@ structure.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A series specific or series type specific color set to use instead
-of the global colors.</li>
-</ul>
-
+				<p>Set options on specific levels. Takes precedence over series options,but not point options.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</code></div>
 
 		    
 			
@@ -473,8 +291,10 @@ of the global colors.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/</a> : Set default colors for all pies</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">Sunburst chart</a></li>
 </ul>
 
 			</div>
@@ -505,11 +325,7 @@ of the global colors.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When enabled the user can click on a point which is a parent and
-zoom in on its children.</li>
-</ul>
-
+				<p>When enabled the user can click on a point which is a parent andzoom in on its children.</p>
 			</div>
 			
 		    
@@ -525,9 +341,216 @@ zoom in on its children.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst</a> : Allow drill to node</li>
-<li>default: false</li>
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">Allow drill to node</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISunburst.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the border surrounding each slice. When null, theborder takes the same color as the slice fill. This can be usedtogether with a borderWidth to fill drawing gaps created by antialiazingartefacts in borderless pies.In styled mode, the border stroke is given in the .highcharts-point class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>#ffffff</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/">Black border</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISunburst.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colors" title="colors"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A series specific or series type specific color set to use insteadof the global colors.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/">Set default colors for all pies</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISunburst.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startAngle" title="startAngle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startAngle">&nbsp;&nbsp;startAngle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The start angle of the pie slices in degrees where 0 is top and 90right.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startAngle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/">Start from right</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISunburst.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/size" title="size"></a>
+	<h3 class="method-title"><code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The diameter of the pie relative to the plot area. Can be a percentageor pixel value. Pixel values are given as integers. The defaultbehaviour (as of 3.0) is to scale to the plot area and give roomfor data labels within the plot area. As a consequence, the sizeof the pie may vary when points are updated and data labels morearound. In that case it is best to set a fixed value, for example"75%&ldquo;.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id size</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/">Smaller pie</a></li>
 </ul>
 
 			</div>
@@ -561,7 +584,7 @@ zoom in on its children.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -102,7 +102,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPlotLines.h<br />HIPlotLines.m</td>
+	<td>HIPlotLines.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,7 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>description: An array of objects representing plot lines on the X axis</p>
+						<p>An array of objects representing plot lines on the X axis</p>
 					</div>
 					
 					
@@ -139,10 +139,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The z index of the plot line within the chart.</li>
-</ul>
-
+				<p>The z index of the plot line within the chart.</p>
 			</div>
 			
 		    
@@ -158,11 +155,224 @@
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-behind/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-behind/</a> : Behind plot lines by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above/</a> : Above plot lines
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above-all/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above-all/</a> : Above plot lines and series</li>
-<li>default: null</li>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-behind/">Behind plot lines by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above/">Above plot lines</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above-all/">Above plot lines and series</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotLines.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dashStyle" title="dashStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dashStyle">&nbsp;&nbsp;dashStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The dashing or dot style for the plot line. For possible values see<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this overview</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dashStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;Solid&rdquo;, &ldquo;ShortDash&rdquo;, &ldquo;ShortDot&rdquo;, &ldquo;ShortDashDot&rdquo;, &ldquo;ShortDashDotDot&rdquo;, &ldquo;Dot&rdquo;, &ldquo;Dash&rdquo; ,&ldquo;LongDash&rdquo;, &ldquo;DashDot&rdquo;, &ldquo;LongDashDot&rdquo;, &ldquo;LongDashDotDot&rdquo;]</em>.</p>
+
+<p><strong>Defaults to</strong> <em>Solid</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-dashstyle/">Dash and dot pattern</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotLines.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the line.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/">A red line from X axis</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotLines.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/value" title="value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The position of the line in axis units.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *value</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/">Between two categories on X axis</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotLines.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An id used for identifying the plot line in Axis.removePlotLine.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-id/">Remove plot line by id</a></li>
 </ul>
 
 			</div>
@@ -193,11 +403,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A custom class name, in addition to the default highcharts-plot-
-line, to apply to each individual line.</li>
-</ul>
-
+				<p>A custom class name, in addition to the default highcharts-plot-line, to apply to each individual line.</p>
 			</div>
 			
 		    
@@ -238,10 +444,7 @@ line, to apply to each individual line.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The width or thickness of the plot line.</li>
-</ul>
-
+				<p>The width or thickness of the plot line.</p>
 			</div>
 			
 		    
@@ -257,66 +460,12 @@ line, to apply to each individual line.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/</a> : 2px wide line from X axis
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/</a> : Plot line on Y axis</li>
-<li>default: null</li>
-</ul>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
 
-			</div>
-			
+<h4>Try it</h4>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotLines.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/dashStyle" title="dashStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dashStyle">&nbsp;&nbsp;dashStyle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The dashing or dot style for the plot line. For possible values see
-<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-">http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-</a>
-dashstyle-all/ : this overview.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dashStyle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-dashstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-dashstyle/</a> : Dash and dot pattern
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/</a> : Plot line on Y axis</li>
-<li>accepted values: [&ldquo;Solid&rdquo;, &ldquo;ShortDash&rdquo;, &ldquo;ShortDot&rdquo;, &ldquo;ShortDashDot&rdquo;, &ldquo;ShortDashDotDot&rdquo;, &ldquo;Dot&rdquo;, &ldquo;Dash&rdquo; ,&ldquo;LongDash&rdquo;, &ldquo;DashDot&rdquo;, &ldquo;LongDashDot&rdquo;, &ldquo;LongDashDotDot&rdquo;]</li>
-<li>default: Sol<a href="#//api/name/id">id</a></li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/">2px wide line from X axis</a></li>
 </ul>
 
 			</div>
@@ -347,7 +496,7 @@ dashstyle-all/ : this overview.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Text labels for the plot bands</p>
+				<p>Text labels for the plot bands</p>
 			</div>
 			
 		    
@@ -377,58 +526,6 @@ dashstyle-all/ : this overview.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/id" title="id"></a>
-	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An id used for identifying the plot line in Axis.removePlotLine.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-id/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-id/</a> : Remove plot line by id</li>
-<li>default: null</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotLines.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/events" title="events"></a>
 	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
 </h3>
@@ -440,11 +537,7 @@ dashstyle-all/ : this overview.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An object defining mouse events for the plot line. Supported properties
-are click, mouseover, mouseout, mousemove.</li>
-</ul>
-
+				<p>An object defining mouse events for the plot line. Supported propertiesare click, mouseover, mouseout, mousemove.</p>
 			</div>
 			
 		    
@@ -460,114 +553,10 @@ are click, mouseover, mouseout, mousemove.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-events/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-events/</a> : Mouse events demonstrated</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotLines.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the line.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/</a> : A red line from X axis
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/</a> : Plot line on Y axis</li>
-<li>default: null</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotLines.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/value" title="value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The position of the line in axis units.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *value</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/</a> : Between two categories on X axis
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/</a> : Plot line on Y axis</li>
-<li>default: null</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-events/">Mouse events demonstrated</a></li>
 </ul>
 
 			</div>
@@ -601,7 +590,7 @@ are click, mouseover, mouseout, mousemove.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

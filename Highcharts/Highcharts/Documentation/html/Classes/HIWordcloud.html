@@ -102,7 +102,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIWordcloud.h<br />HIWordcloud.m</td>
+	<td>HIWordcloud.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,13 +112,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A wordcloud series. If the type option is
-not specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-wordcloud.</li>
+						<p>A word cloud is a visualization of a set of words, where the size andplacement of a word is determined by how it is weighted.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/wordcloud">Word Cloud chart</a></li>
 </ul>
 
 					</div>
@@ -136,60 +135,6 @@ wordcloud.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the border surrounding each column or bar.
-In styled mode, the border stroke can be set with the .highcharts-point
-rule.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/</a> : Dark gray border</li>
-<li>default: #ffffff</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIWordcloud.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/colorByPoint" title="colorByPoint"></a>
 	<h3 class="method-title"><code><a href="#//api/name/colorByPoint">&nbsp;&nbsp;colorByPoint</a></code>
 </h3>
@@ -201,17 +146,12 @@ rule.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When using automatic point <a href="#//api/name/colors">colors</a> pulled from the options.<a href="#//api/name/colors">colors</a>
-collection, this option determines whether the chart should receive
-one color per series or one color per point.</li>
-</ul>
-
+				<p>When using automatic point colors pulled from the options.colorscollection, this option determines whether the chart should receiveone color per series or one color per point.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorByPoint</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id colorByPoint</code></div>
 
 		    
 			
@@ -220,15 +160,6 @@ one color per series or one color per point.</li>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/</a> : False by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/</a> : True</li>
-<li>default: True</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -256,8 +187,7 @@ one color per series or one color per point.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: CSS styles for the words.
-default: {&ldquo;fontFamily&rdquo;:&ldquo;Impact, sans-serif&rdquo;}</p>
+				<p>CSS styles for the words.</p>
 			</div>
 			
 		    
@@ -271,6 +201,10 @@ default: {&ldquo;fontFamily&rdquo;:&ldquo;Impact, sans-serif&rdquo;}</p>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>{&ldquo;fontFamily&rdquo;:&ldquo;sans-serif&rdquo;, &ldquo;fontWeight&rdquo;: &ldquo;900&rdquo;}</em>.</p>
+			</div>
 			
 
 			
@@ -287,8 +221,8 @@ default: {&ldquo;fontFamily&rdquo;:&ldquo;Impact, sans-serif&rdquo;}</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/placementStrategy" title="placementStrategy"></a>
-	<h3 class="method-title"><code><a href="#//api/name/placementStrategy">&nbsp;&nbsp;placementStrategy</a></code>
+	<a name="//api/name/spiral" title="spiral"></a>
+	<h3 class="method-title"><code><a href="#//api/name/spiral">&nbsp;&nbsp;spiral</a></code>
 </h3>
 
 	<div class="method-info">
@@ -298,21 +232,12 @@ default: {&ldquo;fontFamily&rdquo;:&ldquo;Impact, sans-serif&rdquo;}</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: This option decides which algorithm is used for placement, and rotation
-of a word. The choice of algorith is therefore a crucial part of the
-resulting layout of the wordcloud.
-It is possible for users to add their own custom placement strategies
-for use in word cloud. Read more about it in our
-<a href="https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series">https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series</a>#custom-placement-strategies : documentation</li>
-<li>default: random</li>
-</ul>
-
+				<p>Spiral used for placing a word after the inital position experienced acollision with either another word or the borders.It is possible for users to add their own custom spiralling algorithmsfor use in word cloud. Read more about it in our<a href="https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-spiralling-algorithm">documentation</a></p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *placementStrategy</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id spiral</code></div>
 
 		    
 			
@@ -348,10 +273,7 @@ for use in word cloud. Read more about it in our
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Rotation options for the words in the wordcloud.</li>
-</ul>
-
+				<p>Rotation options for the words in the wordcloud.</p>
 			</div>
 			
 		    
@@ -367,8 +289,10 @@ for use in word cloud. Read more about it in our
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/wordcloud-rotation">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/wordcloud-rotation</a> : Word cloud with rotation</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/wordcloud-rotation">Word cloud with rotation</a></li>
 </ul>
 
 			</div>
@@ -388,8 +312,8 @@ for use in word cloud. Read more about it in our
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/colors" title="colors"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
+	<a name="//api/name/placementStrategy" title="placementStrategy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/placementStrategy">&nbsp;&nbsp;placementStrategy</a></code>
 </h3>
 
 	<div class="method-info">
@@ -399,16 +323,12 @@ for use in word cloud. Read more about it in our
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A series specific or series type specific color set to apply instead
-of the global colors when <a href="#//api/name/colorByPoint">colorByPoint</a> is true.</li>
-</ul>
-
+				<p>This option decides which algorithm is used for placement, and rotationof a word. The choice of algorith is therefore a crucial part of theresulting layout of the wordcloud.It is possible for users to add their own custom placement strategiesfor use in word cloud. Read more about it in our<a href="https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-placement-strategies">documentation</a></p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id placementStrategy</code></div>
 
 		    
 			
@@ -444,10 +364,7 @@ of the global colors when <a href="#//api/name/colorByPoint">colorByPoint</a> is
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The corner radius of the border surrounding each column or bar.</li>
-</ul>
-
+				<p>The corner radius of the border surrounding each column or bar.</p>
 			</div>
 			
 		    
@@ -463,9 +380,105 @@ of the global colors when <a href="#//api/name/colorByPoint">colorByPoint</a> is
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/</a> : Rounded columns</li>
-<li>default: 0</li>
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/">Rounded columns</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIWordcloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colors" title="colors"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A series specific or series type specific color set to apply insteadof the global colors when colorByPoint is true.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIWordcloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the border surrounding each column or bar.In styled mode, the border stroke can be set with the .highcharts-pointrule.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>#ffffff</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/">Dark gray border</a></li>
 </ul>
 
 			</div>
@@ -496,8 +509,7 @@ of the global colors when <a href="#//api/name/colorByPoint">colorByPoint</a> is
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: 3D columns only. The width of the colored edges.
-default: 1</p>
+				<p>3D columns only. The width of the colored edges.</p>
 			</div>
 			
 		    
@@ -512,54 +524,9 @@ default: 1</p>
 			
 
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIWordcloud.h</code></p>
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
 			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/spiral" title="spiral"></a>
-	<h3 class="method-title"><code><a href="#//api/name/spiral">&nbsp;&nbsp;spiral</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Spiral used for placing a word after the inital position experienced a
-collision with either another word or the borders.
-It is possible for users to add their own custom spiralling algorithms
-for use in word cloud. Read more about it in our
-<a href="https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series">https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series</a>#custom-spiralling-algorithm : documentation</li>
-<li>default: archimedean</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *spiral</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -590,7 +557,7 @@ for use in word cloud. Read more about it in our
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -62,6 +62,10 @@
 		
 		<option value="//api/name/borderColor">borderColor</option>
 		
+		<option value="//api/name/colorByPoint">colorByPoint</option>
+		
+		<option value="//api/name/colors">colors</option>
+		
 		<option value="//api/name/drillUpButton">drillUpButton</option>
 		
 		<option value="//api/name/ignoreHiddenPoint">ignoreHiddenPoint</option>
@@ -108,7 +112,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HITreemap.h<br />HITreemap.m</td>
+	<td>HITreemap.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -118,15 +122,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A treemap series. If the type option is
-not specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-treemap.</li>
-</ul>
-
+						<p>A treemap series. If the type option isnot specified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.treemap.</p>
 					</div>
 					
 					
@@ -142,95 +138,6 @@ treemap.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/levelIsConstant" title="levelIsConstant"></a>
-	<h3 class="method-title"><code><a href="#//api/name/levelIsConstant">&nbsp;&nbsp;levelIsConstant</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Used together with the <a href="#//api/name/levels">levels</a> and <a href="#//api/name/allowDrillToNode">allowDrillToNode</a> options. When
-set to false the first level visible when drilling is considered
-to be level one. Otherwise the level will be the same as the tree
-structure.</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *levelIsConstant</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITreemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/drillUpButton" title="drillUpButton"></a>
-	<h3 class="method-title"><code><a href="#//api/name/drillUpButton">&nbsp;&nbsp;drillUpButton</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Options for the button appearing when drilling down in a treemap.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITreemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/borderColor" title="borderColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
 </h3>
@@ -242,10 +149,7 @@ structure.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the border surrounding each tree map item.</li>
-</ul>
-
+				<p>The color of the border surrounding each tree map item.</p>
 			</div>
 			
 		    
@@ -261,218 +165,7 @@ structure.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-border/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-border/</a> : Borders demo</li>
-<li>default: #e6e6e6</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITreemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/layoutStartingDirection" title="layoutStartingDirection"></a>
-	<h3 class="method-title"><code><a href="#//api/name/layoutStartingDirection">&nbsp;&nbsp;layoutStartingDirection</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Defines which direction the layout algorithm will start drawing.
-Possible values are &ldquo;vertical&rdquo; and &ldquo;horizontal&rdquo;.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutStartingDirection</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>accepted values: [&ldquo;vertical&rdquo;, &ldquo;horizontal&rdquo;]</li>
-<li>default: vertical</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITreemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/levels" title="levels"></a>
-	<h3 class="method-title"><code><a href="#//api/name/levels">&nbsp;&nbsp;levels</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Set options on specific levels. Takes precedence over series options,
-but not point options.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/</a> : Styling dataLabels and borders
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/</a> : Different <a href="#//api/name/layoutAlgorithm">layoutAlgorithm</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITreemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
-	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether to ignore hidden points when the layout algorithm runs.
-If false, hidden points will leave open spaces.</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITreemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/interactByLeaf" title="interactByLeaf"></a>
-	<h3 class="method-title"><code><a href="#//api/name/interactByLeaf">&nbsp;&nbsp;interactByLeaf</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: This option decides if the user can interact with the parent nodes
-or just the leaf nodes. When this option is undefined, it will be
-true by default. However when <a href="#//api/name/allowDrillToNode">allowDrillToNode</a> is true, then it will
-be false by default.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *interactByLeaf</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-false/</a> : False
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-true-and-allowdrilltonode/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-true-and-allowdrilltonode/</a> : InteractByLeaf and <a href="#//api/name/allowDrillToNode">allowDrillToNode</a> is true</li>
-</ul>
-
+				<p><strong>Defaults to</strong> <em>#e6e6e6</em>.</p>
 			</div>
 			
 
@@ -501,12 +194,7 @@ be false by default.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The opacity of a point in treemap. When a point has children, the
-visibility of the children is determined by the opacity.</li>
-<li>default: 0.15</li>
-</ul>
-
+				<p>The opacity of a point in treemap. When a point has children, thevisibility of the children is determined by the opacity.</p>
 			</div>
 			
 		    
@@ -520,6 +208,100 @@ visibility of the children is determined by the opacity.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0.15</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colorByPoint" title="colorByPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorByPoint">&nbsp;&nbsp;colorByPoint</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When using automatic point colors pulled from the options.colorscollection, this option determines whether the chart should receiveone color per series or one color per point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorByPoint</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to ignore hidden points when the layout algorithm runs.If false, hidden points will leave open spaces.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
 			
 
 			
@@ -547,11 +329,7 @@ visibility of the children is determined by the opacity.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When enabled the user can click on a point which is a parent and
-zoom in on its children.</li>
-</ul>
-
+				<p>When enabled the user can click on a point which is a parent andzoom in on its children.</p>
 			</div>
 			
 		    
@@ -567,121 +345,12 @@ zoom in on its children.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-allowdrilltonode/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-allowdrilltonode/</a> : Enabled</li>
-<li>default: false</li>
-</ul>
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
 
-			</div>
-			
+<h4>Try it</h4>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITreemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/alternateStartingDirection" title="alternateStartingDirection"></a>
-	<h3 class="method-title"><code><a href="#//api/name/alternateStartingDirection">&nbsp;&nbsp;alternateStartingDirection</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Enabling this option will make the treemap alternate the drawing
-direction between vertical and horizontal. The next <a href="#//api/name/levels">levels</a> starting
-direction will always be the opposite of the previous.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alternateStartingDirection</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-alternatestartingdirection-true/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-alternatestartingdirection-true/</a> : Enabled</li>
-<li>default: false</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITreemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/layoutAlgorithm" title="layoutAlgorithm"></a>
-	<h3 class="method-title"><code><a href="#//api/name/layoutAlgorithm">&nbsp;&nbsp;layoutAlgorithm</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: This option decides which algorithm is used for setting position
-and dimensions of the points. Can be one of sliceAndDice, stripes,
-squarified or strip.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutAlgorithm</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-sliceanddice/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-sliceanddice/</a> : SliceAndDice by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-stripes/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-stripes/</a> : Stripes
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-squarified/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-squarified/</a> : Squarified
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-strip/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-strip/</a> : Strip</li>
-<li>accepted values: [&ldquo;sliceAndDice&rdquo;, &ldquo;stripes&rdquo;, &ldquo;squarified&rdquo;, &ldquo;strip&rdquo;]</li>
-<li>default: sliceAndDice</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-allowdrilltonode/">Enabled</a></li>
 </ul>
 
 			</div>
@@ -712,10 +381,7 @@ squarified or strip.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The sort index of the point inside the treemap level.</li>
-</ul>
-
+				<p>The sort index of the point inside the treemap level.</p>
 			</div>
 			
 		    
@@ -731,8 +397,395 @@ squarified or strip.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-sortindex/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-sortindex/</a> : Sort by years</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-sortindex/">Sort by years</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interactByLeaf" title="interactByLeaf"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interactByLeaf">&nbsp;&nbsp;interactByLeaf</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This option decides if the user can interact with the parent nodesor just the leaf nodes. When this option is undefined, it will betrue by default. However when allowDrillToNode is true, then it willbe false by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *interactByLeaf</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-false/">False</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-true-and-allowdrilltonode/">InteractByLeaf and allowDrillToNode is true</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colors" title="colors"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A series specific or series type specific color set to apply insteadof the global colors when colorByPoint is true.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/layoutAlgorithm" title="layoutAlgorithm"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layoutAlgorithm">&nbsp;&nbsp;layoutAlgorithm</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This option decides which algorithm is used for setting positionand dimensions of the points. Can be one of sliceAndDice, stripes, squarified or strip.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutAlgorithm</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;sliceAndDice&rdquo;, &ldquo;stripes&rdquo;, &ldquo;squarified&rdquo;, &ldquo;strip&rdquo;]</em>.</p>
+
+<p><strong>Defaults to</strong> <em>sliceAndDice</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-sliceanddice/">SliceAndDice by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-stripes/">Stripes</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-squarified/">Squarified</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-strip/">Strip</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/levelIsConstant" title="levelIsConstant"></a>
+	<h3 class="method-title"><code><a href="#//api/name/levelIsConstant">&nbsp;&nbsp;levelIsConstant</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used together with the levels and allowDrillToNode options. Whenset to false the first level visible when drilling is consideredto be level one. Otherwise the level will be the same as the treestructure.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *levelIsConstant</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/layoutStartingDirection" title="layoutStartingDirection"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layoutStartingDirection">&nbsp;&nbsp;layoutStartingDirection</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines which direction the layout algorithm will start drawing. Possible values are &ldquo;vertical&rdquo; and &ldquo;horizontal&rdquo;.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutStartingDirection</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;vertical&rdquo;, &ldquo;horizontal&rdquo;]</em>.</p>
+
+<p><strong>Defaults to</strong> <em>vertical</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/levels" title="levels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/levels">&nbsp;&nbsp;levels</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set options on specific levels. Takes precedence over series options,but not point options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/">Styling dataLabels and borders</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/">Different layoutAlgorithm</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drillUpButton" title="drillUpButton"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drillUpButton">&nbsp;&nbsp;drillUpButton</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the button appearing when drilling down in a treemap.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/alternateStartingDirection" title="alternateStartingDirection"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alternateStartingDirection">&nbsp;&nbsp;alternateStartingDirection</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enabling this option will make the treemap alternate the drawingdirection between vertical and horizontal. The next levels startingdirection will always be the opposite of the previous.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alternateStartingDirection</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-alternatestartingdirection-true/">Enabled</a></li>
 </ul>
 
 			</div>
@@ -766,7 +819,7 @@ squarified or strip.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

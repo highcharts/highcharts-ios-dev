@@ -114,7 +114,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPyramid.h<br />HIPyramid.m</td>
+	<td>HIPyramid.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -124,15 +124,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A pyramid series. If the type option is
-not specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-pyramid.</li>
-</ul>
-
+						<p>A pyramid series. If the type option isnot specified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.pyramid.</p>
 					</div>
 					
 					
@@ -148,6 +140,96 @@ pyramid.</li>
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/reversed" title="reversed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reversed">&nbsp;&nbsp;reversed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pyramid is reversed by default, as opposed to the funnel, whichshares the layout engine, and is not reversed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversed</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPyramid.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/neckHeight" title="neckHeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/neckHeight">&nbsp;&nbsp;neckHeight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pyramid neck width is zero by default, as opposed to the funnel, which shares the same layout logic.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *neckHeight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0%</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPyramid.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/neckWidth" title="neckWidth"></a>
 	<h3 class="method-title"><code><a href="#//api/name/neckWidth">&nbsp;&nbsp;neckWidth</a></code>
 </h3>
@@ -159,11 +241,7 @@ pyramid.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pyramid neck <a href="#//api/name/width">width</a> is zero by default, as opposed to the funnel,
-which shares the same layout logic.</li>
-</ul>
-
+				<p>The pyramid neck width is zero by default, as opposed to the funnel, which shares the same layout logic.</p>
 			</div>
 			
 		    
@@ -179,11 +257,7 @@ which shares the same layout logic.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/</a> : Funnel demo</li>
-<li>default: 0%</li>
-</ul>
-
+				<p><strong>Defaults to</strong> <em>0%</em>.</p>
 			</div>
 			
 
@@ -201,8 +275,8 @@ which shares the same layout logic.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/minSize" title="minSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minSize">&nbsp;&nbsp;minSize</a></code>
+	<a name="//api/name/center" title="center"></a>
+	<h3 class="method-title"><code><a href="#//api/name/center">&nbsp;&nbsp;center</a></code>
 </h3>
 
 	<div class="method-info">
@@ -212,66 +286,12 @@ which shares the same layout logic.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The minimum size for a pie in response to auto margins. The pie will
-try to shrink to make room for data labels in side the plot area,
-but only to this size.</li>
-<li>default: 80</li>
-</ul>
-
+				<p>The center of the series. By default, it is centered in the middleof the plot area, so it fills the plot area height.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minSize</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPyramid.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
-	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Equivalent to chart.ignoreHiddenSeries,
-this option tells whether the series shall be redrawn as if the
-hidden point were null.
-The default value changed from false to true with Highcharts
-3.0.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *center</code></div>
 
 		    
 			
@@ -282,9 +302,55 @@ The default value changed from false to true with Highcharts
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/</a> : True, the hiddden point is ignored</li>
-<li>default: true</li>
+				<p><strong>Defaults to</strong> <em>[&ldquo;50%&rdquo;, &ldquo;50%&rdquo;]</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPyramid.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The height of the funnel or pyramid. If it is a number it definesthe pixel height, if it is a percentage string it is the percentageof the plot area height.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id height</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/">Funnel demo</a></li>
 </ul>
 
 			</div>
@@ -315,12 +381,7 @@ The default value changed from false to true with Highcharts
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The width of the funnel compared to the width of the plot area,
-or the pixel width if it is a number.</li>
-<li>default: 90%</li>
-</ul>
-
+				<p>The width of the funnel compared to the width of the plot area,or the pixel width if it is a number.</p>
 			</div>
 			
 		    
@@ -335,6 +396,10 @@ or the pixel width if it is a number.</li>
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>90%</em>.</p>
+			</div>
+			
 
 			
 
@@ -350,8 +415,8 @@ or the pixel width if it is a number.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/innerSize" title="innerSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/innerSize">&nbsp;&nbsp;innerSize</a></code>
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -361,19 +426,12 @@ or the pixel width if it is a number.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The size of the inner diameter for the pie. A size greater than 0
-renders a donut chart. Can be a percentage or pixel value. Percentages
-are relative to the pie size. Pixel values are given as integers.
-Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plot
-area, not the pie size.</li>
-</ul>
-
+				<p>The color of the border surrounding each slice. When null, theborder takes the same color as the slice fill. This can be usedtogether with a borderWidth to fill drawing gaps created by antialiazingartefacts in borderless pies.In styled mode, the border stroke is given in the .highcharts-point class.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerSize</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
 
 		    
 			
@@ -384,148 +442,15 @@ area, not the pie size.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/</a> : 80px inner size
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/</a> : 50% of the plot area
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/</a> : 3D donut</li>
-<li>default: 0</li>
+				<p><strong>Defaults to</strong> <em>#ffffff</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/">Black border</a></li>
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPyramid.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/neckHeight" title="neckHeight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/neckHeight">&nbsp;&nbsp;neckHeight</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pyramid neck <a href="#//api/name/width">width</a> is zero by default, as opposed to the funnel,
-which shares the same layout logic.</li>
-<li>default: 0%</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *neckHeight</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPyramid.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/depth" title="depth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: The thickness of a 3D pie. Requires highcharts-3d.js
-default: 0</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPyramid.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/reversed" title="reversed"></a>
-	<h3 class="method-title"><code><a href="#//api/name/reversed">&nbsp;&nbsp;reversed</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pyramid is reversed by default, as opposed to the funnel, which
-shares the layout engine, and is not reversed.</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversed</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -553,11 +478,7 @@ shares the layout engine, and is not reversed.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The end angle of the pie in degrees where 0 is top and 90 is right.
-Defaults to <a href="#//api/name/startAngle">startAngle</a> plus 360.</li>
-</ul>
-
+				<p>The end angle of the pie in degrees where 0 is top and 90 is right.Defaults to startAngle plus 360.</p>
 			</div>
 			
 		    
@@ -573,9 +494,12 @@ Defaults to <a href="#//api/name/startAngle">startAngle</a> plus 360.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/</a> : Semi-circle donut</li>
-<li>default: null</li>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/">Semi-circle donut</a></li>
 </ul>
 
 			</div>
@@ -595,8 +519,8 @@ Defaults to <a href="#//api/name/startAngle">startAngle</a> plus 360.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/startAngle" title="startAngle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startAngle">&nbsp;&nbsp;startAngle</a></code>
+	<a name="//api/name/innerSize" title="innerSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/innerSize">&nbsp;&nbsp;innerSize</a></code>
 </h3>
 
 	<div class="method-info">
@@ -606,16 +530,12 @@ Defaults to <a href="#//api/name/startAngle">startAngle</a> plus 360.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The start angle of the pie slices in degrees where 0 is top and 90
-right.</li>
-</ul>
-
+				<p>The size of the inner diameter for the pie. A size greater than 0renders a donut chart. Can be a percentage or pixel value. Percentagesare relative to the pie size. Pixel values are given as integers.Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plotarea, not the pie size.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startAngle</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerSize</code></div>
 
 		    
 			
@@ -626,116 +546,14 @@ right.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/</a> : Start from right</li>
-<li>default: 0</li>
-</ul>
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
 
-			</div>
-			
+<h4>Try it</h4>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPyramid.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/height" title="height"></a>
-	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The height of the funnel or pyramid. If it is a number it defines
-the pixel height, if it is a percentage string it is the percentage
-of the plot area height.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id height</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/</a> : Funnel demo</li>
-<li>default: 100%</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPyramid.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/center" title="center"></a>
-	<h3 class="method-title"><code><a href="#//api/name/center">&nbsp;&nbsp;center</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The center of the series. By default, it is centered in the middle
-of the plot area, so it fills the plot area <a href="#//api/name/height">height</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *center</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/</a> : Centered at 100, 100</li>
-<li>default: [&ldquo;50%&rdquo;, &ldquo;50%&rdquo;]</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/">80px inner size</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/">50% of the plot area</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/">3D donut</a></li>
 </ul>
 
 			</div>
@@ -766,11 +584,7 @@ of the plot area, so it fills the plot area <a href="#//api/name/height">height<
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: If a point is sliced, moved out from the <a href="#//api/name/center">center</a>, how many pixels
-should it be moved?.</li>
-</ul>
-
+				<p>If a point is sliced, moved out from the center, how many pixelsshould it be moved?.</p>
 			</div>
 			
 		    
@@ -786,9 +600,12 @@ should it be moved?.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/</a> : 20px offset</li>
-<li>default: 10</li>
+				<p><strong>Defaults to</strong> <em>10</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/">20px offset</a></li>
 </ul>
 
 			</div>
@@ -808,8 +625,8 @@ should it be moved?.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -819,19 +636,12 @@ should it be moved?.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the border surrounding each slice. When null, the
-border takes the same color as the slice fill. This can be used
-together with a borderWidth to fill drawing gaps created by antialiazing
-artefacts in borderless pies.
-In styled mode, the border stroke is given in the .highcharts-point class.</li>
-</ul>
-
+				<p>Equivalent to chart.ignoreHiddenSeries,this option tells whether the series shall be redrawn as if thehidden point were null.The default value changed from false to true with Highcharts3.0.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
 
 		    
 			
@@ -842,11 +652,59 @@ In styled mode, the border stroke is given in the .highcharts-point class.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/</a> : Black border</li>
-<li>default: #ffffff</li>
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/">True, the hiddden point is ignored</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPyramid.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/depth" title="depth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The thickness of a 3D pie. Requires highcharts-3d.js</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
 			</div>
 			
 
@@ -875,11 +733,7 @@ In styled mode, the border stroke is given in the .highcharts-point class.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A series specific or series type specific color set to use instead
-of the global colors.</li>
-</ul>
-
+				<p>A series specific or series type specific color set to use insteadof the global colors.</p>
 			</div>
 			
 		    
@@ -895,8 +749,107 @@ of the global colors.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/</a> : Set default colors for all pies</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/">Set default colors for all pies</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPyramid.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minSize" title="minSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minSize">&nbsp;&nbsp;minSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The minimum size for a pie in response to auto margins. The pie willtry to shrink to make room for data labels in side the plot area, but only to this size.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>80</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPyramid.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startAngle" title="startAngle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startAngle">&nbsp;&nbsp;startAngle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The start angle of the pie slices in degrees where 0 is top and 90right.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startAngle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/">Start from right</a></li>
 </ul>
 
 			</div>
@@ -930,7 +883,7 @@ of the global colors.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

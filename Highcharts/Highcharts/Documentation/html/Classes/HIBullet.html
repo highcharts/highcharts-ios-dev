@@ -118,7 +118,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIBullet.h<br />HIBullet.m</td>
+	<td>HIBullet.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -128,15 +128,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A bullet series. If the type option is not
-specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-bullet.</li>
-</ul>
-
+						<p>A bullet series. If the type option is notspecified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.bullet.</p>
 					</div>
 					
 					
@@ -152,8 +144,8 @@ bullet.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/pointPadding" title="pointPadding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
+	<a name="//api/name/targetOptions" title="targetOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/targetOptions">&nbsp;&nbsp;targetOptions</a></code>
 </h3>
 
 	<div class="method-info">
@@ -163,15 +155,12 @@ bullet.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Padding between each column or bar, in x axis units.</li>
-</ul>
-
+				<p>All options related with look and positiong of targets.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITargetOptions *targetOptions</code></div>
 
 		    
 			
@@ -182,11 +171,114 @@ bullet.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/</a> : 0.1 by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/</a> : 0.25
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/</a> : 0 for tightly packed columns</li>
-<li>default: 0.1</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bullet-targetoptions/">Target options</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBullet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderRadius" title="borderRadius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderRadius">&nbsp;&nbsp;borderRadius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The corner radius of the border surrounding each column or bar.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderRadius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/">Rounded columns</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBullet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointRange" title="pointRange"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointRange">&nbsp;&nbsp;pointRange</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The X axis range that each point is valid for. This determines thewidth of the column. On a categorized axis, the range will be 1by default (one category unit). On linear and datetime axes, therange will be computed as the distance between the two closest datapoints.The default null means it is computed automatically, but this optioncan be used to override the automatic value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointRange</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/">Set the point range to one day on a data set with one week between the points</a></li>
 </ul>
 
 			</div>
@@ -217,14 +309,7 @@ bullet.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The minimal height for a column or width for a bar. By default,
-0 values are not shown. To visualize a 0 (or close to zero) point,
-set the minimal point length to a pixel value like 3. In stacked
-column charts, minPointLength might not be respected for tightly
-packed values.</li>
-</ul>
-
+				<p>The minimal height for a column or width for a bar. By default,0 values are not shown. To visualize a 0 (or close to zero) point,set the minimal point length to a pixel value like 3. In stackedcolumn charts, minPointLength might not be respected for tightlypacked values.</p>
 			</div>
 			
 		    
@@ -240,10 +325,13 @@ packed values.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/</a> : Zero base value
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/</a> : Positive and negative close to zero values</li>
-<li>default: 0</li>
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/">Zero base value</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/">Positive and negative close to zero values</a></li>
 </ul>
 
 			</div>
@@ -274,12 +362,7 @@ packed values.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The spacing between columns on the Z Axis in a 3D chart. Requires
-highcharts-3d.js.</li>
-<li>default: 1</li>
-</ul>
-
+				<p>The spacing between columns on the Z Axis in a 3D chart. Requireshighcharts-3d.js.</p>
 			</div>
 			
 		    
@@ -293,6 +376,10 @@ highcharts-3d.js.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+			</div>
 			
 
 			
@@ -309,8 +396,8 @@ highcharts-3d.js.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/crisp" title="crisp"></a>
-	<h3 class="method-title"><code><a href="#//api/name/crisp">&nbsp;&nbsp;crisp</a></code>
+	<a name="//api/name/colors" title="colors"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
 </h3>
 
 	<div class="method-info">
@@ -320,20 +407,12 @@ highcharts-3d.js.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When true, each column edge is rounded to its nearest pixel in order
-to render sharp on screen. In some cases, when there are a lot of
-densely packed columns, this leads to visible difference in column
-widths or distance between columns. In these cases, setting crisp
-to false may look better, even though each column is rendered
-blurry.</li>
-</ul>
-
+				<p>A series specific or series type specific color set to apply insteadof the global colors when colorByPoint is true.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *crisp</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
 
 		    
 			
@@ -342,14 +421,6 @@ blurry.</li>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/</a> : Crisp is false</li>
-<li>default: true</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -377,12 +448,7 @@ blurry.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the border surrounding each column or bar.
-In styled mode, the border stroke can be set with the .highcharts-point
-rule.</li>
-</ul>
-
+				<p>The color of the border surrounding each column or bar.In styled mode, the border stroke can be set with the .highcharts-pointrule.</p>
 			</div>
 			
 		    
@@ -398,9 +464,12 @@ rule.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/</a> : Dark gray border</li>
-<li>default: #ffffff</li>
+				<p><strong>Defaults to</strong> <em>#ffffff</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/">Dark gray border</a></li>
 </ul>
 
 			</div>
@@ -420,8 +489,8 @@ rule.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/grouping" title="grouping"></a>
-	<h3 class="method-title"><code><a href="#//api/name/grouping">&nbsp;&nbsp;grouping</a></code>
+	<a name="//api/name/edgeColor" title="edgeColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/edgeColor">&nbsp;&nbsp;edgeColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -431,113 +500,12 @@ rule.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether to group non-stacked columns or to let them render independent
-of each other. Non-grouped columns will be laid out individually
-and overlap each other.</li>
-</ul>
-
+				<p>3D columns only. The color of the edges. Similar to borderColor, except it defaults to the same color as the column.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *grouping</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/</a> : Grouping disabled</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBullet.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/depth" title="depth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Depth of the columns in a 3D column chart. Requires highcharts-3d.
-js.</li>
-<li>default: 25</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBullet.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/edgeWidth" title="edgeWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/edgeWidth">&nbsp;&nbsp;edgeWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: 3D columns only. The width of the colored edges.
-default: 1</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *edgeWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *edgeColor</code></div>
 
 		    
 			
@@ -573,12 +541,7 @@ default: 1</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When using automatic point <a href="#//api/name/colors">colors</a> pulled from the options.<a href="#//api/name/colors">colors</a>
-collection, this option determines whether the chart should receive
-one color per series or one color per point.</li>
-</ul>
-
+				<p>When using automatic point colors pulled from the options.colorscollection, this option determines whether the chart should receiveone color per series or one color per point.</p>
 			</div>
 			
 		    
@@ -594,10 +557,13 @@ one color per series or one color per point.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/</a> : False by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/</a> : True</li>
-<li>default: false</li>
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/">False by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/">True</a></li>
 </ul>
 
 			</div>
@@ -628,12 +594,7 @@ one color per series or one color per point.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The maximum allowed pixel width for a column, translated to the height
-of a bar in a bar chart. This prevents the columns from becoming
-too wide when there is a small number of points in the chart.</li>
-</ul>
-
+				<p>The maximum allowed pixel width for a column, translated to the heightof a bar in a bar chart. This prevents the columns from becomingtoo wide when there is a small number of points in the chart.</p>
 			</div>
 			
 		    
@@ -649,208 +610,12 @@ too wide when there is a small number of points in the chart.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/</a> : Limited to 50</li>
-<li>default: null</li>
-</ul>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
 
-			</div>
-			
+<h4>Try it</h4>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBullet.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/edgeColor" title="edgeColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/edgeColor">&nbsp;&nbsp;edgeColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: 3D columns only. The color of the edges. Similar to <a href="#//api/name/borderColor">borderColor</a>,
-except it defaults to the same color as the column.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *edgeColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBullet.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/colors" title="colors"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A series specific or series type specific color set to apply instead
-of the global colors when <a href="#//api/name/colorByPoint">colorByPoint</a> is true.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBullet.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointRange" title="pointRange"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointRange">&nbsp;&nbsp;pointRange</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The X axis range that each point is valid for. This determines the
-width of the column. On a categorized axis, the range will be 1
-by default (one category unit). On linear and datetime axes, the
-range will be computed as the distance between the two closest data
-points.
-The default null means it is computed automatically, but this option
-can be used to override the automatic value.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointRange</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/</a> : Set the point range to one day on a data set with one week between the points</li>
-<li>default: null</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBullet.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/targetOptions" title="targetOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/targetOptions">&nbsp;&nbsp;targetOptions</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: All options related with look and positiong of targets.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITargetOptions *targetOptions</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bullet-targetoptions/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bullet-targetoptions/</a> : Target options</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/">Limited to 50</a></li>
 </ul>
 
 			</div>
@@ -881,12 +646,7 @@ can be used to override the automatic value.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A pixel value specifying a fixed width for each column or bar. When
-null, the width is calculated from the <a href="#//api/name/pointPadding">pointPadding</a> and
-<a href="#//api/name/groupPadding">groupPadding</a>.</li>
-</ul>
-
+				<p>A pixel value specifying a fixed width for each column or bar. Whennull, the width is calculated from the pointPadding andgroupPadding.</p>
 			</div>
 			
 		    
@@ -902,9 +662,66 @@ null, the width is calculated from the <a href="#//api/name/pointPadding">pointP
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/</a> : 20px wide columns regardless of chart width or the amount of data points</li>
-<li>default: null</li>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/">20px wide columns regardless of chart width or the amount of data points</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBullet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointPadding" title="pointPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Padding between each column or bar, in x axis units.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0.1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/">0.1 by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/">0.25</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/">0 for tightly packed columns</a></li>
 </ul>
 
 			</div>
@@ -935,10 +752,7 @@ null, the width is calculated from the <a href="#//api/name/pointPadding">pointP
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Padding between each value groups, in x axis units.</li>
-</ul>
-
+				<p>Padding between each value groups, in x axis units.</p>
 			</div>
 			
 		    
@@ -954,10 +768,13 @@ null, the width is calculated from the <a href="#//api/name/pointPadding">pointP
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/</a> : 0.2 by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/</a> : No group padding - all columns are evenly spaced</li>
-<li>default: 0.2</li>
+				<p><strong>Defaults to</strong> <em>0.2</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/">0.2 by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/">No group padding - all columns are evenly spaced</a></li>
 </ul>
 
 			</div>
@@ -977,8 +794,8 @@ null, the width is calculated from the <a href="#//api/name/pointPadding">pointP
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/borderRadius" title="borderRadius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderRadius">&nbsp;&nbsp;borderRadius</a></code>
+	<a name="//api/name/edgeWidth" title="edgeWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/edgeWidth">&nbsp;&nbsp;edgeWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -988,15 +805,12 @@ null, the width is calculated from the <a href="#//api/name/pointPadding">pointP
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The corner radius of the border surrounding each column or bar.</li>
-</ul>
-
+				<p>3D columns only. The width of the colored edges.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderRadius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *edgeWidth</code></div>
 
 		    
 			
@@ -1007,9 +821,154 @@ null, the width is calculated from the <a href="#//api/name/pointPadding">pointP
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/</a> : Rounded columns</li>
-<li>default: 0</li>
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBullet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/crisp" title="crisp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/crisp">&nbsp;&nbsp;crisp</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When true, each column edge is rounded to its nearest pixel in orderto render sharp on screen. In some cases, when there are a lot ofdensely packed columns, this leads to visible difference in columnwidths or distance between columns. In these cases, setting crispto false may look better, even though each column is renderedblurry.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *crisp</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/">Crisp is false</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBullet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/depth" title="depth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Depth of the columns in a 3D column chart. Requires highcharts-3d.js.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>25</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBullet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/grouping" title="grouping"></a>
+	<h3 class="method-title"><code><a href="#//api/name/grouping">&nbsp;&nbsp;grouping</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to group non-stacked columns or to let them render independentof each other. Non-grouped columns will be laid out individuallyand overlap each other.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *grouping</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/">Grouping disabled</a></li>
 </ul>
 
 			</div>
@@ -1043,7 +1002,7 @@ null, the width is calculated from the <a href="#//api/name/pointPadding">pointP
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

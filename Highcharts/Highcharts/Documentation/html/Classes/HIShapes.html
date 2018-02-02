@@ -106,7 +106,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIShapes.h<br />HIShapes.m</td>
+	<td>HIShapes.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -116,11 +116,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: An array of shapes fo<a href="#//api/name/r">r</a> the annotation. Fo<a href="#//api/name/r">r</a> options that apply to multiple
-shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</li>
-</ul>
-
+						<p>An array of shapes for the annotation. For options that apply to multipleshapes, then can be added to the <a href="annotations.shapeOptions.html">shapeOptions</a>.</p>
 					</div>
 					
 					
@@ -136,8 +132,8 @@ shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/stroke" title="stroke"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stroke">&nbsp;&nbsp;stroke</a></code>
+	<a name="//api/name/points" title="points"></a>
+	<h3 class="method-title"><code><a href="#//api/name/points">&nbsp;&nbsp;points</a></code>
 </h3>
 
 	<div class="method-info">
@@ -147,15 +143,53 @@ shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The colo<a href="#//api/name/r">r</a> of the shape&rsquo;s stroke.</li>
-</ul>
-
+				<p>An array of points for the shape. This option is available for shapeswhich can use multiple points such as path. A point can be either a point object or a point&rsquo;s id.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *stroke</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *points</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIShapes.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/markerEnd" title="markerEnd"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markerEnd">&nbsp;&nbsp;markerEnd</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Id of the marker which will be drawn at the final vertex of the path.Custom markers can be defined in defs property.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *markerEnd</code></div>
 
 		    
 			
@@ -166,9 +200,10 @@ shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/</a> : Basic shape annotation</li>
-<li>default: rgba(0, 0, 0, 0.75)</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/">Define a custom marker for annotations</a></li>
 </ul>
 
 			</div>
@@ -188,8 +223,8 @@ shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/height" title="height"></a>
-	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+	<a name="//api/name/markerStart" title="markerStart"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markerStart">&nbsp;&nbsp;markerStart</a></code>
 </h3>
 
 	<div class="method-info">
@@ -199,15 +234,12 @@ shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The height of the shape.</li>
-</ul>
-
+				<p>Id of the marker which will be drawn at the first vertex of the path.Custom markers can be defined in defs property.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *height</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *markerStart</code></div>
 
 		    
 			
@@ -218,112 +250,10 @@ shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/</a> : Basic shape annotation</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIShapes.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/strokeWidth" title="strokeWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/strokeWidth">&nbsp;&nbsp;strokeWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pixel <a href="#//api/name/stroke">stroke</a> <a href="#//api/name/width">width</a> of the shape.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *strokeWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/</a> : Basic shape annotation</li>
-<li>default: 1</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIShapes.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fill" title="fill"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fill">&nbsp;&nbsp;fill</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The colo<a href="#//api/name/r">r</a> of the shape&rsquo;s fill.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fill</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/</a> : Basic shape annotation</li>
-<li>default: rgba(0, 0, 0, 0.75)</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/">Define a custom marker for annotations</a></li>
 </ul>
 
 			</div>
@@ -354,18 +284,12 @@ shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.</
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: This option defines the point to which the shape will be connected.
-It can be eithe<a href="#//api/name/r">r</a> the point which exists in the series - it is referenced
-by the point&rsquo;s id - o<a href="#//api/name/r">r</a> a new point with defined x, y properties
-and optionally axes.</li>
-</ul>
-
+				<p>This option defines the point to which the shape will be connected.It can be either the point which exists in the series - it is referencedby the point&rsquo;s id - or a new point with defined x, y propertiesand optionally axes.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPoint *point</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id point</code></div>
 
 		    
 			
@@ -374,6 +298,106 @@ and optionally axes.</li>
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIShapes.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/strokeWidth" title="strokeWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/strokeWidth">&nbsp;&nbsp;strokeWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel stroke width of the shape.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id strokeWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">Basic shape annotation</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIShapes.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The height of the shape.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *height</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">Basic shape annotation</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -401,10 +425,7 @@ and optionally axes.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The width of the shape.</li>
-</ul>
-
+				<p>The width of the shape.</p>
 			</div>
 			
 		    
@@ -420,8 +441,10 @@ and optionally axes.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/</a> : Basic shape annotation</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">Basic shape annotation</a></li>
 </ul>
 
 			</div>
@@ -441,8 +464,8 @@ and optionally axes.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/type" title="type"></a>
-	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+	<a name="//api/name/stroke" title="stroke"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stroke">&nbsp;&nbsp;stroke</a></code>
 </h3>
 
 	<div class="method-info">
@@ -452,15 +475,12 @@ and optionally axes.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The type of the shape, e.g. circle o<a href="#//api/name/r">r</a> rectangle.</li>
-</ul>
-
+				<p>The color of the shape&rsquo;s stroke.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *type</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *stroke</code></div>
 
 		    
 			
@@ -471,159 +491,10 @@ and optionally axes.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/</a> : Basic shape annotation</li>
-<li>default: &lsquo;rect&rsquo;</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIShapes.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/markerEnd" title="markerEnd"></a>
-	<h3 class="method-title"><code><a href="#//api/name/markerEnd">&nbsp;&nbsp;markerEnd</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Id of the marke<a href="#//api/name/r">r</a> which will be drawn at the final vertex of the path.
-Custom markers can be defined in defs property.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *markerEnd</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/</a> : Define a custom marke<a href="#//api/name/r">r</a> fo<a href="#//api/name/r">r</a> annotations</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIShapes.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/points" title="points"></a>
-	<h3 class="method-title"><code><a href="#//api/name/points">&nbsp;&nbsp;points</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An array of points fo<a href="#//api/name/r">r</a> the shape. This option is available fo<a href="#//api/name/r">r</a> shapes
-which can use multiple points such as path. A <a href="#//api/name/point">point</a> can be eithe<a href="#//api/name/r">r</a>
-a <a href="#//api/name/point">point</a> object o<a href="#//api/name/r">r</a> a point&rsquo;s id.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *points</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIShapes.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/markerStart" title="markerStart"></a>
-	<h3 class="method-title"><code><a href="#//api/name/markerStart">&nbsp;&nbsp;markerStart</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Id of the marke<a href="#//api/name/r">r</a> which will be drawn at the first vertex of the path.
-Custom markers can be defined in defs property.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *markerStart</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/</a> : Define a custom marke<a href="#//api/name/r">r</a> fo<a href="#//api/name/r">r</a> annotations</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">Basic shape annotation</a></li>
 </ul>
 
 			</div>
@@ -654,15 +525,12 @@ Custom markers can be defined in defs property.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The radius of the shape.</li>
-</ul>
-
+				<p>The radius of the shape.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *r</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id r</code></div>
 
 		    
 			
@@ -673,8 +541,112 @@ Custom markers can be defined in defs property.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/</a> : Basic shape annotation</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">Basic shape annotation</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIShapes.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The type of the shape, e.g. circle or rectangle.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *type</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>&lsquo;rect&rsquo;</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">Basic shape annotation</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIShapes.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fill" title="fill"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fill">&nbsp;&nbsp;fill</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the shape&rsquo;s fill.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fill</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/">Basic shape annotation</a></li>
 </ul>
 
 			</div>
@@ -708,7 +680,7 @@ Custom markers can be defined in defs property.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

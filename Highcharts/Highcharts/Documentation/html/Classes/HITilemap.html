@@ -94,7 +94,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HITilemap.h<br />HITilemap.m</td>
+	<td>HITilemap.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,15 +104,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A tilemap series. If the type option is
-not specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-tilemap.</li>
-</ul>
-
+						<p>A tilemap series. If the type option isnot specified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.tilemap.</p>
 					</div>
 					
 					
@@ -128,8 +120,8 @@ tilemap.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/colsize" title="colsize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colsize">&nbsp;&nbsp;colsize</a></code>
+	<a name="//api/name/pointPadding" title="pointPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
 </h3>
 
 	<div class="method-info">
@@ -139,16 +131,12 @@ tilemap.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The column size - how many X axis units each column in the tilemap
-should span. Works as in Heatmaps.</li>
-</ul>
-
+				<p>The padding between points in the tilemap.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colsize</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id pointPadding</code></div>
 
 		    
 			
@@ -159,9 +147,10 @@ should span. Works as in Heatmaps.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/</a> : One day</li>
-<li>default: 1</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding">Point padding on tiles</a></li>
 </ul>
 
 			</div>
@@ -181,8 +170,8 @@ should span. Works as in Heatmaps.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pointPadding" title="pointPadding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
+	<a name="//api/name/colsize" title="colsize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colsize">&nbsp;&nbsp;colsize</a></code>
 </h3>
 
 	<div class="method-info">
@@ -192,15 +181,12 @@ should span. Works as in Heatmaps.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The padding between points in the tilemap.</li>
-</ul>
-
+				<p>The column size - how many X axis units each column in the tilemapshould span. Works as in Heatmaps.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colsize</code></div>
 
 		    
 			
@@ -211,9 +197,12 @@ should span. Works as in Heatmaps.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding</a> : Point padding on tiles</li>
-<li>default: 2</li>
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">One day</a></li>
 </ul>
 
 			</div>
@@ -244,11 +233,7 @@ should span. Works as in Heatmaps.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The row size - how many Y axis units each tilemap row should span.
-Analogous to <a href="#//api/name/colsize">colsize</a>.</li>
-</ul>
-
+				<p>The row size - how many Y axis units each tilemap row should span.Analogous to colsize.</p>
 			</div>
 			
 		    
@@ -264,9 +249,63 @@ Analogous to <a href="#//api/name/colsize">colsize</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/</a> : 1 by default</li>
-<li>default: 1</li>
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">1 by default</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITilemap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tileShape" title="tileShape"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tileShape">&nbsp;&nbsp;tileShape</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The shape of the tiles in the tilemap. Possible values are hexagon,circle, diamond, and square.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id tileShape</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa">Circular tile shapes</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap">Diamond tile shapes</a></li>
 </ul>
 
 			</div>
@@ -297,12 +336,7 @@ Analogous to <a href="#//api/name/colsize">colsize</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color applied to null points. In styled mode, a general CSS class is
-applied instead.</li>
-<li>default: #f7f7f7</li>
-</ul>
-
+				<p>The color applied to null points. In styled mode, a general CSS class isapplied instead.</p>
 			</div>
 			
 		    
@@ -316,60 +350,6 @@ applied instead.</li>
 
 			
 
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITilemap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/tileShape" title="tileShape"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tileShape">&nbsp;&nbsp;tileShape</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The shape of the tiles in the tilemap. Possible values are hexagon,
-circle, diamond, and square.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tileShape</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa</a> : Circular tile shapes
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap</a> : Diamond tile shapes</li>
-<li>default: hexagon</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -400,7 +380,7 @@ circle, diamond, and square.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

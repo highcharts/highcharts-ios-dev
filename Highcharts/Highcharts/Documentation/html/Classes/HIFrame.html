@@ -102,7 +102,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIFrame.h<br />HIFrame.m</td>
+	<td>HIFrame.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,11 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: Provides the option to draw a frame around the charts by defining
-a <a href="#//api/name/bottom">bottom</a>, <a href="#//api/name/front">front</a> and <a href="#//api/name/back">back</a> panel.</li>
-</ul>
-
+						<p>Provides the option to draw a frame around the charts by defininga bottom, front and back panel.</p>
 					</div>
 					
 					
@@ -132,90 +128,6 @@ a <a href="#//api/name/bottom">bottom</a>, <a href="#//api/name/front">front</a>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/visible" title="visible"></a>
-	<h3 class="method-title"><code><a href="#//api/name/visible">&nbsp;&nbsp;visible</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Whether the frames are visible.
-default: default</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *visible</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIFrame.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/size" title="size"></a>
-	<h3 class="method-title"><code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: General pixel thickness for the frame faces.
-default: 1</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *size</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIFrame.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/right" title="right"></a>
 	<h3 class="method-title"><code><a href="#//api/name/right">&nbsp;&nbsp;right</a></code>
 </h3>
@@ -227,12 +139,53 @@ default: 1</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The right of the frame around a 3D chart.</p>
+				<p>The right of the frame around a 3D chart.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIRight *right</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id right</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIFrame.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bottom" title="bottom"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bottom">&nbsp;&nbsp;bottom</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The bottom of the frame around a 3D chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBottom *bottom</code></div>
 
 		    
 			
@@ -268,7 +221,7 @@ default: 1</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The top of the frame around a 3D chart.</p>
+				<p>The top of the frame around a 3D chart.</p>
 			</div>
 			
 		    
@@ -309,7 +262,7 @@ default: 1</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The back <a href="#//api/name/side">side</a> of the frame around a 3D chart.</p>
+				<p>The back side of the frame around a 3D chart.</p>
 			</div>
 			
 		    
@@ -339,8 +292,8 @@ default: 1</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/side" title="side"></a>
-	<h3 class="method-title"><code><a href="#//api/name/side">&nbsp;&nbsp;side</a></code>
+	<a name="//api/name/visible" title="visible"></a>
+	<h3 class="method-title"><code><a href="#//api/name/visible">&nbsp;&nbsp;visible</a></code>
 </h3>
 
 	<div class="method-info">
@@ -350,17 +303,12 @@ default: 1</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Note: As of v5.0.12, frame.<a href="#//api/name/left">left</a> or frame.<a href="#//api/name/right">right</a> should be used
-instead.
-The side for the frame around a 3D chart.</li>
-</ul>
-
+				<p>Whether the frames are visible.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISide *side</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id visible</code></div>
 
 		    
 			
@@ -396,12 +344,94 @@ The side for the frame around a 3D chart.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The front of the frame around a 3D chart.</p>
+				<p>The front of the frame around a 3D chart.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFront *front</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIFrame.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/size" title="size"></a>
+	<h3 class="method-title"><code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>General pixel thickness for the frame faces.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id size</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIFrame.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/side" title="side"></a>
+	<h3 class="method-title"><code><a href="#//api/name/side">&nbsp;&nbsp;side</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Note: As of v5.0.12, frame.left or frame.right should be usedinstead.The side for the frame around a 3D chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISide *side</code></div>
 
 		    
 			
@@ -437,53 +467,12 @@ The side for the frame around a 3D chart.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The left <a href="#//api/name/side">side</a> of the frame around a 3D chart.</p>
+				<p>The left side of the frame around a 3D chart.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILeft *left</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIFrame.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/bottom" title="bottom"></a>
-	<h3 class="method-title"><code><a href="#//api/name/bottom">&nbsp;&nbsp;bottom</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: The bottom of the frame around a 3D chart.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBottom *bottom</code></div>
 
 		    
 			
@@ -522,7 +511,7 @@ The side for the frame around a 3D chart.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

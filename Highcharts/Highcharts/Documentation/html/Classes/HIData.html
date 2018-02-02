@@ -198,7 +198,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIData.h<br />HIData.m</td>
+	<td>HIData.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -208,42 +208,15 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: An arra<a href="#//api/name/y">y</a> of data points for the series. For the bullet series type,
-points can be given in the following ways:</li>
+						<p>The Data module provides a simplified interface for adding data toa chart from sources like CVS, HTML tables or grid views. See alsothe tutorial article on the Data module](http://www.highcharts.com/docs/working-with-data/data-module).It requires the modules/data.js file to be loaded.Please note that the default way of adding data in Highcharts, withoutthe need of a module, is through the ~!@[series.dataoption.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/">HTML table</a>@!~</li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/">CSV</a></li>
 </ul>
 
-
-<p>An arra<a href="#//api/name/y">y</a> of arrays with 3 or 2 values. In this case, the values
-correspond <a href="#//api/name/to">to</a> <a href="#//api/name/x">x</a>,<a href="#//api/name/y">y</a>,<a href="#//api/name/target">target</a>. If the first <a href="#//api/name/value">value</a> is a string,
-it is applied as the <a href="#//api/name/name">name</a> of the point, and the <a href="#//api/name/x">x</a> <a href="#//api/name/value">value</a> is inferred.
-The <a href="#//api/name/x">x</a> <a href="#//api/name/value">value</a> can also be omitted, in which case the inner arrays
-should be of <a href="#//api/name/length">length</a> 2. Then the <a href="#//api/name/x">x</a> <a href="#//api/name/value">value</a> is automaticall<a href="#//api/name/y">y</a> calculated,
-either starting at 0 and incremented b<a href="#//api/name/y">y</a> 1, or <a href="#//api/name/from">from</a> pointStart
-and pointInterval given in the series options.
-data: [
-    [0, 40, 75],
-    [1, 50, 50],
-    [2, 60, 40]
-]</p>
-
-<p>An arra<a href="#//api/name/y">y</a> of objects with named values. The objects are point
-configuration objects as seen be<a href="#//api/name/low">low</a>. If the total number of data
-points exceeds the series' turboThreshold,
-this option is not available.
-data: [{
-    x: 0,
-    y: 40,
-    target: 75,
-    name: &ldquo;Point1&rdquo;,
-    color: &ldquo;#00FF00&rdquo;
-}, {
-    x: 1,
-    y: 60,
-    target: 40,
-    name: &ldquo;Point2&rdquo;,
-    color: &ldquo;#FF00FF&rdquo;
-}]</p>
 					</div>
 					
 					
@@ -259,8 +232,8 @@ data: [{
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/value" title="value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+	<a name="//api/name/parseDate" title="parseDate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parseDate">&nbsp;&nbsp;parseDate</a></code>
 </h3>
 
 	<div class="method-info">
@@ -270,57 +243,12 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The wind speed in meters per second.</p>
+				<p>A callback function to parse string representations of dates intoJavaScript timestamps. Should return an integer timestamp on success.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *value</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/name" title="name"></a>
-	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The name of the point as shown in the legend, tooltip, dataLabel
-etc.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *name</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *parseDate</code></div>
 
 		    
 			
@@ -329,877 +257,6 @@ etc.</li>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/</a> : Point names</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/labelrank" title="labelrank"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labelrank">&nbsp;&nbsp;labelrank</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The rank for this point&rsquo;s data label in case of collision. If two
-data labels are about <a href="#//api/name/to">to</a> overlap, onl<a href="#//api/name/y">y</a> the one with the highest labelrank
-will be drawn.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *labelrank</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/colorIndex" title="colorIndex"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colorIndex">&nbsp;&nbsp;colorIndex</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Styled mode onl<a href="#//api/name/y">y</a>. A specific <a href="#//api/name/color">color</a> inde<a href="#//api/name/x">x</a> <a href="#//api/name/to">to</a> use for the point, so its
-graphic representations are given the class <a href="#//api/name/name">name</a> highcharts-color-
-{n}.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorIndex</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/direction" title="direction"></a>
-	<h3 class="method-title"><code><a href="#//api/name/direction">&nbsp;&nbsp;direction</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: The wind direction in degrees, where 0 is north (pointing towards south).</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *direction</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/className" title="className"></a>
-	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An additional, individual class <a href="#//api/name/name">name</a> for the data point&rsquo;s graphic
-representation.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/id" title="id"></a>
-	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An id for the point. This can be used after render time <a href="#//api/name/to">to</a> get a
-pointer <a href="#//api/name/to">to</a> the point object through chart.get().</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/id/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/id/</a> : Remove an id&rsquo;d point</li>
-<li>default: null</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/y" title="y"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: The y <a href="#//api/name/value">value</a> of the point.
-default: null</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/x" title="x"></a>
-	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The x <a href="#//api/name/value">value</a> of the point. For datetime axes, the X <a href="#//api/name/value">value</a> is the timestamp
-in milliseconds since 1970.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/definition" title="definition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A description of the point <a href="#//api/name/to">to</a> add <a href="#//api/name/to">to</a> the screen reader information
-about the point. Requires the Accessibilit<a href="#//api/name/y">y</a> module.</li>
-<li>default: undefined</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/drilldown" title="drilldown"></a>
-	<h3 class="method-title"><code><a href="#//api/name/drilldown">&nbsp;&nbsp;drilldown</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The <a href="#//api/name/id">id</a> of a series in the drilldown.series
-arra<a href="#//api/name/y">y</a> <a href="#//api/name/to">to</a> use for a drilldown for this point.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *drilldown</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/basic/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/basic/</a> : Basic drilldown</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Individual color for the point. B<a href="#//api/name/y">y</a> default the color is pulled <a href="#//api/name/from">from</a>
-the global colors arra<a href="#//api/name/y">y</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/color/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/color/</a> : Mark the highest point</li>
-<li>default: undefined</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/dataLabels" title="dataLabels"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dataLabels">&nbsp;&nbsp;dataLabels</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id dataLabels</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/datalabels/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/datalabels/</a> : Show a label for the last <a href="#//api/name/value">value</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/selected" title="selected"></a>
-	<h3 class="method-title"><code><a href="#//api/name/selected">&nbsp;&nbsp;selected</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Whether the data point is selected initiall<a href="#//api/name/y">y</a>.
-default: false</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *selected</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/events" title="events"></a>
-	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Individual point events</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/z" title="z"></a>
-	<h3 class="method-title"><code><a href="#//api/name/z">&nbsp;&nbsp;z</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The size <a href="#//api/name/value">value</a> for each bubble. The bubbles' diameters are computed
-based on the z, and controlled b<a href="#//api/name/y">y</a> series options like minSize,
-maxSize, sizeB<a href="#//api/name/y">y</a>, zMin and zMa<a href="#//api/name/x">x</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *z</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/seriesMapping" title="seriesMapping"></a>
-	<h3 class="method-title"><code><a href="#//api/name/seriesMapping">&nbsp;&nbsp;seriesMapping</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An arra<a href="#//api/name/y">y</a> containing object with Point propert<a href="#//api/name/y">y</a> names along with what
-column <a href="#//api/name/id">id</a> the propert<a href="#//api/name/y">y</a> should be taken <a href="#//api/name/from">from</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *seriesMapping</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/seriesmapping-label/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/seriesmapping-label/</a> : Label <a href="#//api/name/from">from</a> data set</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/endRow" title="endRow"></a>
-	<h3 class="method-title"><code><a href="#//api/name/endRow">&nbsp;&nbsp;endRow</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: In tabular input data, the last row (indexed b<a href="#//api/name/y">y</a> 0) <a href="#//api/name/to">to</a> use. Defaults
-<a href="#//api/name/to">to</a> the last row containing data.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *endRow</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/</a> : Limited data</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/csv" title="csv"></a>
-	<h3 class="method-title"><code><a href="#//api/name/csv">&nbsp;&nbsp;csv</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A comma delimited string to be parsed. Related options are startRow, endRow, startColumn
-and endColumn to delimit what part of the table
-is used. The lineDelimiter and itemDelimiter options define the CSV delimiter formats.
-The built-in CSV parser doesn&rsquo;t support all flavours of CSV, so in
-some cases it may be necessary to use an external CSV parser. See
-<a href="http://jsfiddle.net/highcharts/u59176h4/">http://jsfiddle.net/highcharts/u59176h4/</a> : this example of parsing
-CSV through the MIT licensed <a href="http://papaparse.com/">http://papaparse.com/</a> : Papa Parse
-librar<a href="#//api/name/y">y</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *csv</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/</a> : Data <a href="#//api/name/from">from</a> CSV</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/startRow" title="startRow"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startRow">&nbsp;&nbsp;startRow</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: In tabular input data, the first row (indexed b<a href="#//api/name/y">y</a> 0) <a href="#//api/name/to">to</a> use.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startRow</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/</a> : Limited data</li>
-<li>default: 0</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -1227,10 +284,7 @@ librar<a href="#//api/name/y">y</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether <a href="#//api/name/to">to</a> use the first row in the data set as series names.</li>
-</ul>
-
+				<p>Whether to use the first row in the data set as series names.</p>
 			</div>
 			
 		    
@@ -1246,9 +300,62 @@ librar<a href="#//api/name/y">y</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/</a> : Don&rsquo;t get series names <a href="#//api/name/from">from</a> the CSV</li>
-<li>default: true</li>
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">Don&rsquo;t get series names from the CSV</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/seriesMapping" title="seriesMapping"></a>
+	<h3 class="method-title"><code><a href="#//api/name/seriesMapping">&nbsp;&nbsp;seriesMapping</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An array containing object with Point property names along with whatcolumn id the property should be taken from.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *seriesMapping</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/seriesmapping-label/">Label from data set</a></li>
 </ul>
 
 			</div>
@@ -1279,11 +386,7 @@ librar<a href="#//api/name/y">y</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The same as the <a href="#//api/name/columns">columns</a> input option, but defining rows intead of
-<a href="#//api/name/columns">columns</a>.</li>
-</ul>
-
+				<p>The same as the columns input option, but defining rows intead ofcolumns.</p>
 			</div>
 			
 		    
@@ -1299,493 +402,10 @@ librar<a href="#//api/name/y">y</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/rows/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/rows/</a> : Data in rows</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/endColumn" title="endColumn"></a>
-	<h3 class="method-title"><code><a href="#//api/name/endColumn">&nbsp;&nbsp;endColumn</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: In tabular input data, the last column (indexed b<a href="#//api/name/y">y</a> 0) <a href="#//api/name/to">to</a> use. Defaults
-<a href="#//api/name/to">to</a> the last column containing data.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *endColumn</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/</a> : Limited data</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/columns" title="columns"></a>
-	<h3 class="method-title"><code><a href="#//api/name/columns">&nbsp;&nbsp;columns</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A two-dimensional arra<a href="#//api/name/y">y</a> representing the input data on tabular form.
-This input can be used when the data is alread<a href="#//api/name/y">y</a> <a href="#//api/name/parsed">parsed</a>, for example
-<a href="#//api/name/from">from</a> a gr<a href="#//api/name/id">id</a> view component. Each cell can be a string or number.
-If not <a href="#//api/name/switchRowsAndColumns">switchRowsAndColumns</a> is set, the columns are interpreted as
-series.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSArray*&gt; *columns</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/columns/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/columns/</a> : Columns</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/decimalPoint" title="decimalPoint"></a>
-	<h3 class="method-title"><code><a href="#//api/name/decimalPoint">&nbsp;&nbsp;decimalPoint</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The decimal point used for parsing numbers in the CSV.
-If both this and data.delimiter is set <a href="#//api/name/to">to</a> false, the parser will
-attempt <a href="#//api/name/to">to</a> deduce the decimal point automaticall<a href="#//api/name/y">y</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *decimalPoint</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/</a> : Comma as decimal point</li>
-<li>default: .</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/parsed" title="parsed"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parsed">&nbsp;&nbsp;parsed</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A callback function <a href="#//api/name/to">to</a> access the parsed <a href="#//api/name/columns">columns</a>, the two-dimentional
-input data arra<a href="#//api/name/y">y</a> directl<a href="#//api/name/y">y</a>, before the<a href="#//api/name/y">y</a> are interpreted in<a href="#//api/name/to">to</a> series
-data and categories. Return false <a href="#//api/name/to">to</a> stop completion, or call this.
-<a href="#//api/name/complete">complete</a>() <a href="#//api/name/to">to</a> continue async.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *parsed</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/</a> : Modif<a href="#//api/name/y">y</a> data after parse</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/googleSpreadsheetWorksheet" title="googleSpreadsheetWorksheet"></a>
-	<h3 class="method-title"><code><a href="#//api/name/googleSpreadsheetWorksheet">&nbsp;&nbsp;googleSpreadsheetWorksheet</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id&rsquo;s from your sheet can be
-read from <a href="https://spreadsheets.google.com/feeds/worksheets/">https://spreadsheets.google.com/feeds/worksheets/</a>{key}/public/basic</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *googleSpreadsheetWorksheet</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/</a> : Load a Google Spreadsheet</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/table" title="table"></a>
-	<h3 class="method-title"><code><a href="#//api/name/table">&nbsp;&nbsp;table</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A HTML table or the <a href="#//api/name/id">id</a> of such <a href="#//api/name/to">to</a> be <a href="#//api/name/parsed">parsed</a> as input data. Related
-options are <a href="#//api/name/startRow">startRow</a>, <a href="#//api/name/endRow">endRow</a>, <a href="#//api/name/startColumn">startColumn</a> and <a href="#//api/name/endColumn">endColumn</a> <a href="#//api/name/to">to</a>
-delimit what part of the table is used.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id table</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/</a> : Parsed table</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lineDelimiter" title="lineDelimiter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineDelimiter">&nbsp;&nbsp;lineDelimiter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Line delimiter for parsing CSV.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *lineDelimiter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/</a> : Delimiters</li>
-<li>default: \n</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/dateFormat" title="dateFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dateFormat">&nbsp;&nbsp;dateFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Which of the predefined date formats in Date.prototype.dateFormats
-<a href="#//api/name/to">to</a> use <a href="#//api/name/to">to</a> parse date values. Defaults <a href="#//api/name/to">to</a> a best guess based on what
-format gives val<a href="#//api/name/id">id</a> and ordered dates.
-Val<a href="#//api/name/id">id</a> options include:</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dateFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<p>YYYY-mm-dd
-dd/mm/YYYY
-mm/dd/YYYY
-dd/mm/YY
-mm/dd/YY</p>
+				<h4>Try it</h4>
 
 <ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/dateformat-auto/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/dateformat-auto/</a> : Best guess date format</li>
-<li>accepted values: [undefined, &ldquo;YYYY-mm-dd&rdquo;, &ldquo;dd/mm/YYYY&rdquo;, &ldquo;mm/dd/YYYY&rdquo;, &ldquo;dd/mm/YYYY&rdquo;, &ldquo;dd/mm/YY&rdquo;, &ldquo;mm/dd/YY&rdquo;]</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/googleSpreadsheetKey" title="googleSpreadsheetKey"></a>
-	<h3 class="method-title"><code><a href="#//api/name/googleSpreadsheetKey">&nbsp;&nbsp;googleSpreadsheetKey</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The key for a Google Spreadsheet to load. See <a href="https://developers.google.com/gdata/samples/spreadsheet_sample">https://developers.google.com/gdata/samples/spreadsheet_sample</a> : general information
-on GS.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *googleSpreadsheetKey</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/</a> : Load a Google Spreadsheet</li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/rows/">Data in rows</a></li>
 </ul>
 
 			</div>
@@ -1816,14 +436,7 @@ on GS.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The callback that is evaluated when the data is finished loading,
-optionall<a href="#//api/name/y">y</a> <a href="#//api/name/from">from</a> an external source, and <a href="#//api/name/parsed">parsed</a>. The first argument
-passed is a finished chart options object, containing the series.
-These options can be extended with additional options and passed
-directl<a href="#//api/name/y">y</a> <a href="#//api/name/to">to</a> the chart constructor.</li>
-</ul>
-
+				<p>The callback that is evaluated when the data is finished loading,optionally from an external source, and parsed. The first argumentpassed is a finished chart options object, containing the series.These options can be extended with additional options and passeddirectly to the chart constructor.</p>
 			</div>
 			
 		    
@@ -1839,107 +452,10 @@ directl<a href="#//api/name/y">y</a> <a href="#//api/name/to">to</a> the chart c
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/complete/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/complete/</a> : Modif<a href="#//api/name/y">y</a> data on complete</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/parseDate" title="parseDate"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parseDate">&nbsp;&nbsp;parseDate</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A callback function <a href="#//api/name/to">to</a> parse string representations of dates in<a href="#//api/name/to">to</a>
-JavaScript timestamps. Should return an integer timestamp on success.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *parseDate</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/switchRowsAndColumns" title="switchRowsAndColumns"></a>
-	<h3 class="method-title"><code><a href="#//api/name/switchRowsAndColumns">&nbsp;&nbsp;switchRowsAndColumns</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Switch <a href="#//api/name/rows">rows</a> and <a href="#//api/name/columns">columns</a> of the input data, so that this.<a href="#//api/name/columns">columns</a>
-effectivel<a href="#//api/name/y">y</a> becomes the <a href="#//api/name/rows">rows</a> of the data set, and the <a href="#//api/name/rows">rows</a> are interpreted
-as series.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *switchRowsAndColumns</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/switchrowsandcolumns/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/switchrowsandcolumns/</a> : Switch <a href="#//api/name/rows">rows</a> and <a href="#//api/name/columns">columns</a></li>
-<li>default: false</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/complete/">Modify data on complete</a></li>
 </ul>
 
 			</div>
@@ -1970,14 +486,7 @@ as series.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Item or cell delimiter for parsing CSV. Defaults <a href="#//api/name/to">to</a> the tab character
-\t if a tab character is found in the CSV string, if not it defaults
-<a href="#//api/name/to">to</a> ,.
-If this is set <a href="#//api/name/to">to</a> false or undefined, the parser will attempt <a href="#//api/name/to">to</a> deduce
-the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
-</ul>
-
+				<p>Item or cell delimiter for parsing CSV. Defaults to the tab character\t if a tab character is found in the CSV string, if not it defaultsto ,.If this is set to false or undefined, the parser will attempt to deducethe delimiter automatically.</p>
 			</div>
 			
 		    
@@ -1993,8 +502,266 @@ the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/</a> : Delimiters</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/">Delimiters</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateFormat" title="dateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateFormat">&nbsp;&nbsp;dateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Which of the predefined date formats in Date.prototype.dateFormatsto use to parse date values. Defaults to a best guess based on whatformat gives valid and ordered dates.Valid options include:<em>   YYYY/mm/dd</em>   dd/mm/YYYY<em>   mm/dd/YYYY</em>   dd/mm/YY*   mm/dd/YY</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dateFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[undefined, &ldquo;YYYY/mm/dd&rdquo;, &ldquo;dd/mm/YYYY&rdquo;, &ldquo;mm/dd/YYYY&rdquo;, &ldquo;dd/mm/YYYY&rdquo;, &ldquo;dd/mm/YY&rdquo;, &ldquo;mm/dd/YY&rdquo;]</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/dateformat-auto/">Best guess date format</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/googleSpreadsheetWorksheet" title="googleSpreadsheetWorksheet"></a>
+	<h3 class="method-title"><code><a href="#//api/name/googleSpreadsheetWorksheet">&nbsp;&nbsp;googleSpreadsheetWorksheet</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id&rsquo;s from your sheet can beread from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *googleSpreadsheetWorksheet</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/">Load a Google Spreadsheet</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/googleSpreadsheetKey" title="googleSpreadsheetKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/googleSpreadsheetKey">&nbsp;&nbsp;googleSpreadsheetKey</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The key for a Google Spreadsheet to load. See <a href="https://developers.google.com/gdata/samples/spreadsheet_sample">general informationon GS</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *googleSpreadsheetKey</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/">Load a Google Spreadsheet</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/switchRowsAndColumns" title="switchRowsAndColumns"></a>
+	<h3 class="method-title"><code><a href="#//api/name/switchRowsAndColumns">&nbsp;&nbsp;switchRowsAndColumns</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Switch rows and columns of the input data, so that this.columnseffectively becomes the rows of the data set, and the rows are interpretedas series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *switchRowsAndColumns</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/switchrowsandcolumns/">Switch rows and columns</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startRow" title="startRow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startRow">&nbsp;&nbsp;startRow</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>In tabular input data, the first row (indexed by 0) to use.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startRow</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">Limited data</a></li>
 </ul>
 
 			</div>
@@ -2025,10 +792,7 @@ the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: In tabular input data, the first column (indexed b<a href="#//api/name/y">y</a> 0) <a href="#//api/name/to">to</a> use.</li>
-</ul>
-
+				<p>In tabular input data, the first column (indexed by 0) to use.</p>
 			</div>
 			
 		    
@@ -2044,9 +808,12 @@ the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/</a> : Limited data</li>
-<li>default: 0</li>
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">Limited data</a></li>
 </ul>
 
 			</div>
@@ -2066,8 +833,8 @@ the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/from" title="from"></a>
-	<h3 class="method-title"><code><a href="#//api/name/from">&nbsp;&nbsp;from</a></code>
+	<a name="//api/name/endColumn" title="endColumn"></a>
+	<h3 class="method-title"><code><a href="#//api/name/endColumn">&nbsp;&nbsp;endColumn</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2077,138 +844,12 @@ the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The node that the link runs from.</p>
+				<p>In tabular input data, the last column (indexed by 0) to use. Defaultsto the last column containing data.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *from</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/to" title="to"></a>
-	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: The node that the link runs to.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *to</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/weight" title="weight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: The weight of the link.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *weight</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/outgoing" title="outgoing"></a>
-	<h3 class="method-title"><code><a href="#//api/name/outgoing">&nbsp;&nbsp;outgoing</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether the link goes out of the system.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *outgoing</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *endColumn</code></div>
 
 		    
 			
@@ -2219,9 +860,10 @@ the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing</a> : Sanke<a href="#//api/name/y">y</a> chart with outgoing links</li>
-<li>default: false</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">Limited data</a></li>
 </ul>
 
 			</div>
@@ -2241,8 +883,8 @@ the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/colorValue" title="colorValue"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colorValue">&nbsp;&nbsp;colorValue</a></code>
+	<a name="//api/name/table" title="table"></a>
+	<h3 class="method-title"><code><a href="#//api/name/table">&nbsp;&nbsp;table</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2252,62 +894,12 @@ the delimiter automaticall<a href="#//api/name/y">y</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Serves a purpose onl<a href="#//api/name/y">y</a> if a colorAxis object is defined in the chart
-options. This <a href="#//api/name/value">value</a> will decide which <a href="#//api/name/color">color</a> the point gets <a href="#//api/name/from">from</a> the
-scale of the colorAxis.</li>
-<li>default: undefined</li>
-</ul>
-
+				<p>A HTML table or the id of such to be parsed as input data. Relatedoptions are startRow, endRow, startColumn and endColumn todelimit what part of the table is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorValue</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointPadding" title="pointPadding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Point padding for a single point.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id table</code></div>
 
 		    
 			
@@ -2318,8 +910,10 @@ scale of the colorAxis.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding</a> : Point padding on tiles</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/">Parsed table</a></li>
 </ul>
 
 			</div>
@@ -2339,8 +933,8 @@ scale of the colorAxis.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/parent" title="parent"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parent">&nbsp;&nbsp;parent</a></code>
+	<a name="//api/name/decimalPoint" title="decimalPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/decimalPoint">&nbsp;&nbsp;decimalPoint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2350,18 +944,12 @@ scale of the colorAxis.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Onl<a href="#//api/name/y">y</a> for treemap. Use this option <a href="#//api/name/to">to</a> build a tree structure. The
-<a href="#//api/name/value">value</a> should be the <a href="#//api/name/id">id</a> of the point which is the parent. If no points
-has a matching <a href="#//api/name/id">id</a>, or this option is undefined, then the parent will
-be set <a href="#//api/name/to">to</a> the root.</li>
-</ul>
-
+				<p>The decimal point used for parsing numbers in the CSV.If both this and data.delimiter is set to false, the parser willattempt to deduce the decimal point automatically.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *parent</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *decimalPoint</code></div>
 
 		    
 			
@@ -2372,10 +960,12 @@ be set <a href="#//api/name/to">to</a> the root.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/parent/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/parent/</a> : Point parent
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/</a> : Example where parent <a href="#//api/name/id">id</a> is not matching</li>
-<li>default: undefined</li>
+				<p><strong>Defaults to</strong> <em>.</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/">Comma as decimal point</a></li>
 </ul>
 
 			</div>
@@ -2395,8 +985,8 @@ be set <a href="#//api/name/to">to</a> the root.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/isSum" title="isSum"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isSum">&nbsp;&nbsp;isSum</a></code>
+	<a name="//api/name/lineDelimiter" title="lineDelimiter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineDelimiter">&nbsp;&nbsp;lineDelimiter</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2406,16 +996,12 @@ be set <a href="#//api/name/to">to</a> the root.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When this propert<a href="#//api/name/y">y</a> is true, the point displa<a href="#//api/name/y">y</a> the total sum across
-the entire series. The <a href="#//api/name/y">y</a> <a href="#//api/name/value">value</a> is ignored.</li>
-</ul>
-
+				<p>Line delimiter for parsing CSV.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *isSum</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *lineDelimiter</code></div>
 
 		    
 			
@@ -2426,9 +1012,12 @@ the entire series. The <a href="#//api/name/y">y</a> <a href="#//api/name/value"
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/</a> : Waterfall</li>
-<li>default: false</li>
+				<p><strong>Defaults to</strong> <em>\n</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/">Delimiters</a></li>
 </ul>
 
 			</div>
@@ -2448,8 +1037,8 @@ the entire series. The <a href="#//api/name/y">y</a> <a href="#//api/name/value"
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/isIntermediateSum" title="isIntermediateSum"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isIntermediateSum">&nbsp;&nbsp;isIntermediateSum</a></code>
+	<a name="//api/name/csv" title="csv"></a>
+	<h3 class="method-title"><code><a href="#//api/name/csv">&nbsp;&nbsp;csv</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2459,17 +1048,12 @@ the entire series. The <a href="#//api/name/y">y</a> <a href="#//api/name/value"
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When this propert<a href="#//api/name/y">y</a> is true, the points acts as a summar<a href="#//api/name/y">y</a> column for
-the values added or substracted since the last intermediate sum,
-or since the start of the series. The <a href="#//api/name/y">y</a> <a href="#//api/name/value">value</a> is ignored.</li>
-</ul>
-
+				<p>A comma delimited string to be parsed. Related options are startRow, endRow, startColumnand endColumn to delimit what part of the tableis used. The lineDelimiter and itemDelimiter options define the CSV delimiter formats.The built-in CSV parser doesn&rsquo;t support all flavours of CSV, so insome cases it may be necessary to use an external CSV parser. See<a href="http://jsfiddle.net/highcharts/u59176h4/">this example</a> of parsingCSV through the MIT licensed <a href="http://papaparse.com/">Papa Parse</a>library.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *isIntermediateSum</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *csv</code></div>
 
 		    
 			
@@ -2480,9 +1064,10 @@ or since the start of the series. The <a href="#//api/name/y">y</a> <a href="#//
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/</a> : Waterfall</li>
-<li>default: false</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/">Data from CSV</a></li>
 </ul>
 
 			</div>
@@ -2502,8 +1087,8 @@ or since the start of the series. The <a href="#//api/name/y">y</a> <a href="#//
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/median" title="median"></a>
-	<h3 class="method-title"><code><a href="#//api/name/median">&nbsp;&nbsp;median</a></code>
+	<a name="//api/name/parsed" title="parsed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parsed">&nbsp;&nbsp;parsed</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2513,16 +1098,12 @@ or since the start of the series. The <a href="#//api/name/y">y</a> <a href="#//
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The median for each data point. This is drawn as a line through the
-middle area of the bo<a href="#//api/name/x">x</a>.</li>
-</ul>
-
+				<p>A callback function to access the parsed columns, the two-dimentionalinput data array directly, before they are interpreted into seriesdata and categories. Return false to stop completion, or call this.complete() to continue async.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *median</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *parsed</code></div>
 
 		    
 			
@@ -2531,6 +1112,15 @@ middle area of the bo<a href="#//api/name/x">x</a>.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/">Modify data after parse</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -2547,8 +1137,8 @@ middle area of the bo<a href="#//api/name/x">x</a>.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/low" title="low"></a>
-	<h3 class="method-title"><code><a href="#//api/name/low">&nbsp;&nbsp;low</a></code>
+	<a name="//api/name/columns" title="columns"></a>
+	<h3 class="method-title"><code><a href="#//api/name/columns">&nbsp;&nbsp;columns</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2558,16 +1148,12 @@ middle area of the bo<a href="#//api/name/x">x</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The low <a href="#//api/name/value">value</a> for each data point, signifying the lowest <a href="#//api/name/value">value</a>
-in the sample set. The bottom whisker is drawn here.</li>
-</ul>
-
+				<p>A two-dimensional array representing the input data on tabular form.This input can be used when the data is already parsed, for examplefrom a grid view component. Each cell can be a string or number.If not switchRowsAndColumns is set, the columns are interpreted asseries.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *low</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSArray*&gt; *columns</code></div>
 
 		    
 			
@@ -2576,6 +1162,65 @@ in the sample set. The bottom whisker is drawn here.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/columns/">Columns</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/endRow" title="endRow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/endRow">&nbsp;&nbsp;endRow</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>In tabular input data, the last row (indexed by 0) to use. Defaultsto the last row containing data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *endRow</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/">Limited data</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -2603,11 +1248,7 @@ in the sample set. The bottom whisker is drawn here.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The high <a href="#//api/name/value">value</a> for each data point, signifying the highest <a href="#//api/name/value">value</a>
-in the sample set. The top whisker is drawn here.</li>
-</ul>
-
+				<p>The high value for each data point, signifying the highest valuein the sample set. The top whisker is drawn here.</p>
 			</div>
 			
 		    
@@ -2648,11 +1289,7 @@ in the sample set. The top whisker is drawn here.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The lower quartile for each data point. This is the bottom of the
-bo<a href="#//api/name/x">x</a>.</li>
-</ul>
-
+				<p>The lower quartile for each data point. This is the bottom of thebox.</p>
 			</div>
 			
 		    
@@ -2693,12 +1330,688 @@ bo<a href="#//api/name/x">x</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The higher quartile for each data point. This is the top of the bo<a href="#//api/name/x">x</a>.</p>
+				<p>The higher quartile for each data point. This is the top of the box.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *q3</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/median" title="median"></a>
+	<h3 class="method-title"><code><a href="#//api/name/median">&nbsp;&nbsp;median</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The median for each data point. This is drawn as a line through themiddle area of the box.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *median</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/low" title="low"></a>
+	<h3 class="method-title"><code><a href="#//api/name/low">&nbsp;&nbsp;low</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The low value for each data point, signifying the lowest valuein the sample set. The bottom whisker is drawn here.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *low</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/labelrank" title="labelrank"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labelrank">&nbsp;&nbsp;labelrank</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The rank for this point&rsquo;s data label in case of collision. If twodata labels are about to overlap, only the one with the highest labelrankwill be drawn.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *labelrank</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/definition" title="definition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A description of the point to add to the screen reader informationabout the point. Requires the Accessibility module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The name of the point as shown in the legend, tooltip, dataLabeletc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *name</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/">Point names</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Individual color for the point. By default the color is pulled fromthe global colors array.In styled mode, the color option doesn&rsquo;t take effect. Instead, use colorIndex.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/color/">Mark the highest point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/selected" title="selected"></a>
+	<h3 class="method-title"><code><a href="#//api/name/selected">&nbsp;&nbsp;selected</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether the data point is selected initially.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *selected</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLabels" title="dataLabels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLabels">&nbsp;&nbsp;dataLabels</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Individual data label for each point. The options are the same asthe ones for plotOptions.series.dataLabels</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id dataLabels</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/datalabels/">Show a label for the last value</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/className" title="className"></a>
+	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An additional, individual class name for the data point&rsquo;s graphicrepresentation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/events" title="events"></a>
+	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Individual point events</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The y value of the point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The x value of the point. For datetime axes, the X value is the timestampin milliseconds since 1970.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drilldown" title="drilldown"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drilldown">&nbsp;&nbsp;drilldown</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The id of a series in the drilldown.seriesarray to use for a drilldown for this point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *drilldown</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/basic/">Basic drilldown</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An id for the point. This can be used after render time to get apointer to the point object through chart.get().</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/id/">Remove an id&rsquo;d point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colorIndex" title="colorIndex"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorIndex">&nbsp;&nbsp;colorIndex</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Styled mode only. A specific color index to use for the point, so itsgraphic representations are given the class namehighcharts-color-{n}.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorIndex</code></div>
 
 		    
 			
@@ -2734,7 +2047,7 @@ bo<a href="#//api/name/x">x</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The sequential inde<a href="#//api/name/x">x</a> of the data point in the legend.</p>
+				<p>The sequential index of the data point in the legend.</p>
 			</div>
 			
 		    
@@ -2764,57 +2077,6 @@ bo<a href="#//api/name/x">x</a>.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sliced" title="sliced"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sliced">&nbsp;&nbsp;sliced</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether <a href="#//api/name/to">to</a> displa<a href="#//api/name/y">y</a> a slice offset <a href="#//api/name/from">from</a> the center.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sliced</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/</a> : One sliced point</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/length" title="length"></a>
 	<h3 class="method-title"><code><a href="#//api/name/length">&nbsp;&nbsp;length</a></code>
 </h3>
@@ -2826,11 +2088,7 @@ bo<a href="#//api/name/x">x</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The length of the vector. The rendered length will relate <a href="#//api/name/to">to</a> the
-vectorLength setting.</li>
-</ul>
-
+				<p>The length of the vector. The rendered length will relate to thevectorLength setting.</p>
 			</div>
 			
 		    
@@ -2860,8 +2118,8 @@ vectorLength setting.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/radius" title="radius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
+	<a name="//api/name/direction" title="direction"></a>
+	<h3 class="method-title"><code><a href="#//api/name/direction">&nbsp;&nbsp;direction</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2871,116 +2129,12 @@ vectorLength setting.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The outer radius of an individual point in a sol<a href="#//api/name/id">id</a> gauge. Can be
-given as a number (pixels) or percentage string.</li>
-</ul>
-
+				<p>The vector direction in degrees, where 0 is north (pointing towards south).</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id radius</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/</a> : Individual radius and <a href="#//api/name/innerRadius">innerRadius</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/innerRadius" title="innerRadius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/innerRadius">&nbsp;&nbsp;innerRadius</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The inner <a href="#//api/name/radius">radius</a> of an individual point in a sol<a href="#//api/name/id">id</a> gauge. Can be
-given as a number (pixels) or percentage string.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerRadius</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/</a> : Individual <a href="#//api/name/radius">radius</a> and innerRadius</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/targetOptions" title="targetOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/targetOptions">&nbsp;&nbsp;targetOptions</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Individual <a href="#//api/name/target">target</a> options for each point.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITargetOptions *targetOptions</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *direction</code></div>
 
 		    
 			
@@ -3016,7 +2170,7 @@ given as a number (pixels) or percentage string.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The target <a href="#//api/name/value">value</a> of a point.</p>
+				<p>The target value of a point.</p>
 			</div>
 			
 		    
@@ -3030,6 +2184,706 @@ given as a number (pixels) or percentage string.</li>
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/targetOptions" title="targetOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/targetOptions">&nbsp;&nbsp;targetOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Individual target options for each point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id targetOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/value" title="value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The value of the point, resulting in a color controled by optionsas set in the colorAxis configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *value</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointPadding" title="pointPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Point padding for a single point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding">Point padding on tiles</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isIntermediateSum" title="isIntermediateSum"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isIntermediateSum">&nbsp;&nbsp;isIntermediateSum</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When this property is true, the points acts as a summary column forthe values added or substracted since the last intermediate sum,or since the start of the series. The y value is ignored.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *isIntermediateSum</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/">Waterfall</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isSum" title="isSum"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isSum">&nbsp;&nbsp;isSum</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When this property is true, the point display the total sum acrossthe entire series. The y value is ignored.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *isSum</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/">Waterfall</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sliced" title="sliced"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sliced">&nbsp;&nbsp;sliced</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to display a slice offset from the center.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sliced</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/">One sliced point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/innerRadius" title="innerRadius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/innerRadius">&nbsp;&nbsp;innerRadius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The inner radius of an individual point in a solid gauge. Can begiven as a number (pixels) or percentage string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerRadius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/">Individual radius and innerRadius</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/radius" title="radius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The outer radius of an individual point in a solid gauge. Can begiven as a number (pixels) or percentage string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id radius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/">Individual radius and innerRadius</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/to" title="to"></a>
+	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The node that the link runs to.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *to</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/outgoing" title="outgoing"></a>
+	<h3 class="method-title"><code><a href="#//api/name/outgoing">&nbsp;&nbsp;outgoing</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether the link goes out of the system.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *outgoing</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing">Sankey chart with outgoing links</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/from" title="from"></a>
+	<h3 class="method-title"><code><a href="#//api/name/from">&nbsp;&nbsp;from</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The node that the link runs from.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *from</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/weight" title="weight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The weight of the link.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *weight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/z" title="z"></a>
+	<h3 class="method-title"><code><a href="#//api/name/z">&nbsp;&nbsp;z</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The size value for each bubble. The bubbles' diameters are computedbased on the z, and controlled by series options like minSize, maxSize, sizeBy, zMin and zMax.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *z</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colorValue" title="colorValue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorValue">&nbsp;&nbsp;colorValue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Serves a purpose only if a colorAxis object is defined in the chartoptions. This value will decide which color the point gets from thescale of the colorAxis.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorValue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parent" title="parent"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parent">&nbsp;&nbsp;parent</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Only for treemap. Use this option to build a tree structure. Thevalue should be the id of the point which is the parent. If no pointshas a matching id, or this option is undefined, then the parent willbe set to the root.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *parent</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/parent/">Point parent</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/">Example where parent id is not matching</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -3060,7 +2914,7 @@ given as a number (pixels) or percentage string.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

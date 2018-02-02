@@ -100,7 +100,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIOptions3d.h<br />HIOptions3d.m</td>
+	<td>HIOptions3d.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,13 +110,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: Options to render charts in 3 dimensions. This feature requires
-highcharts-3d.js, found in the download package or online at
-<a href="http://code.highcharts.com/highcharts-">http://code.highcharts.com/highcharts-</a>
-3d.js : code.highcharts.com/highcharts-3d.js.</li>
-</ul>
-
+						<p>Options to render charts in 3 dimensions. This feature requireshighcharts-3d.js, found in the download package or online at<a href="http://code.highcharts.com/highcharts-3d.js">code.highcharts.com/highcharts-3d.js</a>.</p>
 					</div>
 					
 					
@@ -132,8 +126,8 @@ highcharts-3d.js, found in the download package or online at
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/beta" title="beta"></a>
-	<h3 class="method-title"><code><a href="#//api/name/beta">&nbsp;&nbsp;beta</a></code>
+	<a name="//api/name/fitToPlot" title="fitToPlot"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fitToPlot">&nbsp;&nbsp;fitToPlot</a></code>
 </h3>
 
 	<div class="method-info">
@@ -143,13 +137,57 @@ highcharts-3d.js, found in the download package or online at
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: One of the two rotation angles for the chart.
-default: 0</p>
+				<p>Whether the 3d box should automatically adjust to the chart plotarea.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *beta</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *fitToPlot</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/frame" title="frame"></a>
+	<h3 class="method-title"><code><a href="#//api/name/frame">&nbsp;&nbsp;frame</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Provides the option to draw a frame around the charts by defininga bottom, front and back panel.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFrame *frame</code></div>
 
 		    
 			
@@ -185,11 +223,7 @@ default: 0</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Set it to &ldquo;auto&rdquo; to automatically move the labels to the best
-edge.</li>
-</ul>
-
+				<p>Set it to &ldquo;auto&rdquo; to automatically move the labels to the bestedge.</p>
 			</div>
 			
 		    
@@ -205,234 +239,10 @@ edge.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>accepted values: [null, &ldquo;auto&rdquo;]</li>
-<li>default: null</li>
-</ul>
+				<p><strong>Accepted values:</strong> <em>[null, &ldquo;auto&rdquo;]</em>.</p>
 
+<p><strong>Defaults to</strong> <em>null</em>.</p>
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fitToPlot" title="fitToPlot"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fitToPlot">&nbsp;&nbsp;fitToPlot</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether the 3d box should automatically adjust to the chart plot
-area.</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *fitToPlot</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/depth" title="depth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: The total depth of the chart.
-default: 100</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/viewDistance" title="viewDistance"></a>
-	<h3 class="method-title"><code><a href="#//api/name/viewDistance">&nbsp;&nbsp;viewDistance</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Defines the distance the viewer is standing in front of the chart,
-this setting is important to calculate the perspective effect
-in column and scatter charts. It is not used for 3D pie charts.</li>
-<li>default: 100</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *viewDistance</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/frame" title="frame"></a>
-	<h3 class="method-title"><code><a href="#//api/name/frame">&nbsp;&nbsp;frame</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Provides the option to draw a frame around the charts by defining
-a bottom, front and back panel.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFrame *frame</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/alpha" title="alpha"></a>
-	<h3 class="method-title"><code><a href="#//api/name/alpha">&nbsp;&nbsp;alpha</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: One of the two rotation angles for the chart.
-default: 0</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alpha</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -460,8 +270,7 @@ default: 0</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Wether to render the chart using the 3D functionality.
-default: false</p>
+				<p>Wether to render the chart using the 3D functionality.</p>
 			</div>
 			
 		    
@@ -475,6 +284,190 @@ default: false</p>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/depth" title="depth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The total depth of the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>100</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/beta" title="beta"></a>
+	<h3 class="method-title"><code><a href="#//api/name/beta">&nbsp;&nbsp;beta</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>One of the two rotation angles for the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *beta</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/viewDistance" title="viewDistance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/viewDistance">&nbsp;&nbsp;viewDistance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines the distance the viewer is standing in front of the chart,this setting is important to calculate the perspective effectin column and scatter charts. It is not used for 3D pie charts.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *viewDistance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>100</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions3d.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/alpha" title="alpha"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alpha">&nbsp;&nbsp;alpha</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>One of the two rotation angles for the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alpha</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+			</div>
 			
 
 			
@@ -505,7 +498,7 @@ default: false</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

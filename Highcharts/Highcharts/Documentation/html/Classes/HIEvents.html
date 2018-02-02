@@ -138,7 +138,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIEvents.h<br />HIEvents.m</td>
+	<td>HIEvents.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -148,7 +148,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>description: Event listeners for the chart.</p>
+						<p>Event handlers for the axis.</p>
 					</div>
 					
 					
@@ -164,8 +164,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/mouseOver" title="mouseOver"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mouseOver">&nbsp;&nbsp;mouseOver</a></code>
+	<a name="//api/name/legendItemClick" title="legendItemClick"></a>
+	<h3 class="method-title"><code><a href="#//api/name/legendItemClick">&nbsp;&nbsp;legendItemClick</a></code>
 </h3>
 
 	<div class="method-info">
@@ -175,16 +175,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the mouse enters the area close to the point. One parameter,
-event, is passed to the function, containing common event information.</li>
-</ul>
-
+				<p>Not applicable to pies, as the legend item is per point. See point.events.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *mouseOver</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *legendItemClick</code></div>
 
 		    
 			
@@ -193,390 +189,6 @@ event, is passed to the function, containing common event information.</li>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/</a> : Show values in the chart&rsquo;s corner on mouse over</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/click" title="click"></a>
-	<h3 class="method-title"><code><a href="#//api/name/click">&nbsp;&nbsp;click</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when a point is clicked. One parameter, event, is passed
-to the function, containing common event information.
-If the series.allowPointSelect option is true, the default action
-for the point&rsquo;s click event is to toggle the point&rsquo;s <a href="#//api/name/select">select</a> state.
-Returning false cancels this action.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *click</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click/</a> : Click marker to alert values
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-column/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-column/</a> : Click column
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-url/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-url/</a> : Go to URL
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-point-events-click/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-point-events-click/</a> : Click marker to display values</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/select" title="select"></a>
-	<h3 class="method-title"><code><a href="#//api/name/select">&nbsp;&nbsp;select</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the point is selected either programmatically or following
-a <a href="#//api/name/click">click</a> on the point. One parameter, event, is passed to the function.
-Returning false cancels the operation.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *select</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-select/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-select/</a> : Report the last selected point
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/</a> : Report select and <a href="#//api/name/unselect">unselect</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/mouseOut" title="mouseOut"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mouseOut">&nbsp;&nbsp;mouseOut</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the mouse leaves the area close to the point. One parameter,
-event, is passed to the function, containing common event information.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *mouseOut</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/</a> : Show values in the chart&rsquo;s corner on mouse over</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/unselect" title="unselect"></a>
-	<h3 class="method-title"><code><a href="#//api/name/unselect">&nbsp;&nbsp;unselect</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the point is unselected either programmatically or following
-a <a href="#//api/name/click">click</a> on the point. One parameter, event, is passed to the function.
-Returning false cancels the operation.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *unselect</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-unselect/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-unselect/</a> : Report the last unselected point
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/</a> : Report <a href="#//api/name/select">select</a> and un<a href="#//api/name/select">select</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/update" title="update"></a>
-	<h3 class="method-title"><code><a href="#//api/name/update">&nbsp;&nbsp;update</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the point is updated programmatically through the .update()
-method. One parameter, event, is passed to the function. The new
-point options can be accessed through event.options. Returning
-false cancels the operation.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *update</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-update/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-update/</a> : Confirm point updating</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/remove" title="remove"></a>
-	<h3 class="method-title"><code><a href="#//api/name/remove">&nbsp;&nbsp;remove</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the point is removed using the .remove() method. One
-parameter, event, is passed to the function. Returning false
-cancels the operation.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *remove</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-remove/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-remove/</a> : Remove point and confirm</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/show" title="show"></a>
-	<h3 class="method-title"><code><a href="#//api/name/show">&nbsp;&nbsp;show</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the series is shown after chart generation time, either
-by clicking the legend item or by calling .show().</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *show</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-show/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-show/</a> : Alert when the series is shown by clicking the legend item.</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -604,14 +216,7 @@ by clicking the legend item or by calling .show().</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the checkbox next to the series' name in the legend is
-clicked. One parameter, event, is passed to the function. The state
-of the checkbox is found by event.checked. The checked item is
-found by event.item. Return false to prevent the default action
-which is to toggle the <a href="#//api/name/select">select</a> state of the series.</li>
-</ul>
-
+				<p>Fires when the checkbox next to the point name in the legend is clicked.One parameter, event, is passed to the function. The state of thecheckbox is found by event.checked. The checked item is found byevent.item. Return false to prevent the default action which is totoggle the select state of the series.</p>
 			</div>
 			
 		    
@@ -627,221 +232,13 @@ which is to toggle the <a href="#//api/name/select">select</a> state of the seri
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-checkboxclick/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-checkboxclick/</a> : Alert checkbox status</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-checkboxclick/">Alert checkbox status</a></li>
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/hide" title="hide"></a>
-	<h3 class="method-title"><code><a href="#//api/name/hide">&nbsp;&nbsp;hide</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the series is hidden after chart generation time, either
-by clicking the legend item or by calling .hide().</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *hide</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-hide/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-hide/</a> : Alert when the series is hidden by clicking the legend item</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/afterAnimate" title="afterAnimate"></a>
-	<h3 class="method-title"><code><a href="#//api/name/afterAnimate">&nbsp;&nbsp;afterAnimate</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires after the series has finished its initial animation, or in
-case animation is disabled, immediately as the series is displayed.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterAnimate</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/</a> : Show label after animate</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/legendItemClick" title="legendItemClick"></a>
-	<h3 class="method-title"><code><a href="#//api/name/legendItemClick">&nbsp;&nbsp;legendItemClick</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the legend item belonging to the series is clicked. One
-parameter, event, is passed to the function. The default action
-is to toggle the visibility of the series. This can be prevented
-by returning false or calling event.preventDefault().</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *legendItemClick</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-legenditemclick/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-legenditemclick/</a> : Confirm hiding and showing</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/afterSetExtremes" title="afterSetExtremes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/afterSetExtremes">&nbsp;&nbsp;afterSetExtremes</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: As opposed to the <a href="#//api/name/setExtremes">setExtremes</a> event, this event fires after the
-final min and max values are computed and corrected for minRange.
-Fires when the minimum and maximum is set for the axis, either by
-calling the .<a href="#//api/name/setExtremes">setExtremes</a>() method or by selecting an area in the
-chart. One parameter, event, is passed to the function, containing common event information.
-The new user set minimum and maximum values can be found by event.
-min and event.max. These reflect the axis minimum and maximum
-in axis values. The actual data extremes are found in event.dataMin
-and event.dataMax.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterSetExtremes</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -869,7 +266,7 @@ and event.dataMax.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: An event fired when a point falls inside a break from this axis.</p>
+				<p>An event fired when a point falls inside a break from this axis.</p>
 			</div>
 			
 		    
@@ -899,8 +296,8 @@ and event.dataMax.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/setExtremes" title="setExtremes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setExtremes">&nbsp;&nbsp;setExtremes</a></code>
+	<a name="//api/name/afterBreaks" title="afterBreaks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/afterBreaks">&nbsp;&nbsp;afterBreaks</a></code>
 </h3>
 
 	<div class="method-info">
@@ -910,22 +307,12 @@ and event.dataMax.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the minimum and maximum is set for the axis, either by
-calling the .setExtremes() method or by selecting an area in the
-chart. One parameter, event, is passed to the function, containing common event information.
-The new user set minimum and maximum values can be found by event.
-min and event.max. These reflect the axis minimum and maximum
-in data values. When an axis is zoomed all the way out from the &ldquo;Reset
-zoom&rdquo; button, event.min and event.max are null, and the new extremes
-are set based on this.dataMin and this.dataMax.</li>
-</ul>
-
+				<p>An event fired after the breaks have rendered.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *setExtremes</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterBreaks</code></div>
 
 		    
 			
@@ -936,8 +323,10 @@ are set based on this.dataMin and this.dataMax.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/events-setextremes/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/events-setextremes/</a> : Log new extremes on x axis</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event/">AfterBreak Event</a></li>
 </ul>
 
 			</div>
@@ -968,10 +357,7 @@ are set based on this.dataMin and this.dataMax.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An event fired when a break from this axis occurs on a point.</li>
-</ul>
-
+				<p>An event fired when a break from this axis occurs on a point.</p>
 			</div>
 			
 		    
@@ -987,8 +373,10 @@ are set based on this.dataMin and this.dataMax.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/</a> : Visualization of a Break</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/">Visualization of a Break</a></li>
 </ul>
 
 			</div>
@@ -1008,8 +396,8 @@ are set based on this.dataMin and this.dataMax.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/afterBreaks" title="afterBreaks"></a>
-	<h3 class="method-title"><code><a href="#//api/name/afterBreaks">&nbsp;&nbsp;afterBreaks</a></code>
+	<a name="//api/name/setExtremes" title="setExtremes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtremes">&nbsp;&nbsp;setExtremes</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1019,15 +407,94 @@ are set based on this.dataMin and this.dataMax.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An event fired after the breaks have rendered.</li>
-</ul>
-
+				<p>Fires when the minimum and maximum is set for the axis, either bycalling the .setExtremes() method or by selecting an area in thechart. One parameter, event, is passed to the function,containing common event information.The new user set minimum and maximum values can be found by event.min and event.max. These reflect the axis minimum and maximumin data values. When an axis is zoomed all the way out from the &ldquo;Reset zoom&rdquo; button, event.min and event.max are null, andthe new extremes are set based on this.dataMin and this.dataMax.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterBreaks</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *setExtremes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/afterSetExtremes" title="afterSetExtremes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/afterSetExtremes">&nbsp;&nbsp;afterSetExtremes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>As opposed to the setExtremes event, this event fires after thefinal min and max values are computed and corrected for minRange.Fires when the minimum and maximum is set for the axis, either bycalling the .setExtremes() method or by selecting an area in thechart. One parameter, event, is passed to the function, containingcommon event information.The new user set minimum and maximum values can be found by event.min and event.max. These reflect the axis minimum and maximumin axis values. The actual data extremes are found in event.dataMinand event.dataMax.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterSetExtremes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unselect" title="unselect"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unselect">&nbsp;&nbsp;unselect</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the point is unselected either programmatically or followinga click on the point. One parameter, event, is passed to the function. Returning false cancels the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *unselect</code></div>
 
 		    
 			
@@ -1038,8 +505,512 @@ are set based on this.dataMin and this.dataMax.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event//">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event//</a> : AfterBreak Event</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-unselect/">Report the last unselected point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update" title="update"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update">&nbsp;&nbsp;update</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the point is updated programmatically through the .update()method. One parameter, event, is passed to the function. The newpoint options can be accessed through event.options. Returningfalse cancels the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *update</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-update/">Confirm point updating</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove" title="remove"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove">&nbsp;&nbsp;remove</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the point is removed using the .remove() method. Oneparameter, event, is passed to the function. Returning falsecancels the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *remove</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-remove/">Remove point and confirm</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mouseOut" title="mouseOut"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mouseOut">&nbsp;&nbsp;mouseOut</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the mouse leaves the area close to the point. One parameter,event, is passed to the function, containing common event information.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *mouseOut</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/">Show values in the chart&rsquo;s corner on mouse over</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mouseOver" title="mouseOver"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mouseOver">&nbsp;&nbsp;mouseOver</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the mouse enters the area close to the point. One parameter,event, is passed to the function, containing common event information.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *mouseOver</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/">Show values in the chart&rsquo;s corner on mouse over</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/click" title="click"></a>
+	<h3 class="method-title"><code><a href="#//api/name/click">&nbsp;&nbsp;click</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when a point is clicked. One parameter, event, is passedto the function, containing common event information.If the series.allowPointSelect option is true, the default actionfor the point&rsquo;s click event is to toggle the point&rsquo;s select state. Returning false cancels this action.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *click</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click/">Click marker to alert values</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-column/">Click column</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-click-url/">Go to URL</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/select" title="select"></a>
+	<h3 class="method-title"><code><a href="#//api/name/select">&nbsp;&nbsp;select</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the point is selected either programmatically or followinga click on the point. One parameter, event, is passed to the function. Returning false cancels the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *select</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-select/">Report the last selected point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hide" title="hide"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hide">&nbsp;&nbsp;hide</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the series is hidden after chart generation time, eitherby clicking the legend item or by calling .hide().</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *hide</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-hide/">Alert when the series is hidden by clicking the legend item</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/show" title="show"></a>
+	<h3 class="method-title"><code><a href="#//api/name/show">&nbsp;&nbsp;show</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the series is shown after chart generation time, eitherby clicking the legend item or by calling .show().</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *show</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-show/">Alert when the series is shown by clicking the legend item.</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/afterAnimate" title="afterAnimate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/afterAnimate">&nbsp;&nbsp;afterAnimate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires after the series has finished its initial animation, or incase animation is disabled, immediately as the series is displayed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterAnimate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/">Show label after animate</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/load" title="load"></a>
+	<h3 class="method-title"><code><a href="#//api/name/load">&nbsp;&nbsp;load</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the chart is finished loading. Since v4.2.2, it also waitsfor images to be loaded, for example from point markers. One parameter,event, is passed to the function, containing common event information.There is also a second parameter to the chart constructor where acallback function can be passed to be executed on chart.load.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *load</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-load/">Alert on chart load</a></li>
 </ul>
 
 			</div>
@@ -1070,31 +1041,7 @@ are set based on this.dataMin and this.dataMax.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when an area of the chart has been selected. Selection is enabled
-by setting the chart&rsquo;s zoomType. One parameter, event, is passed
-to the function, containing common event information. The default action for the selection event is to
-zoom the chart to the selected area. It can be prevented by calling
-event.preventDefault().
-Information on the selected area can be found through event.xAxis
-and event.yAxis, which are arrays containing the axes of each dimension
-and each axis' min and max values. The primary axes are event.xAxis[0]
-and event.yAxis[0]. Remember the unit of a datetime axis is milliseconds
-since 1970-01-01 00:00:00.
-selection: function(event) {
-  // log the min and max of the primary, datetime x-axis
-  console.log(
-      Highcharts.dateFormat(&lsquo;%Y-%m-%d %H:%M:%S&rsquo;, event.xAxis[0].min),
-      Highcharts.dateFormat(&lsquo;%Y-%m-%d %H:%M:%S&rsquo;, event.xAxis[0].max)
-  );
-  // log the min and max of the y axis
-  console.log(event.yAxis[0].min, event.yAxis[0].max);
-}</li>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection/</a> : Report on selection and reset
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/</a> : Select a range of points through a drag selection
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/</a> : Select a range of points through a drag selection (Highcharts)</li>
-</ul>
-
+				<p>Fires when an area of the chart has been selected. Selection is enabledby setting the chart&rsquo;s zoomType. One parameter, event, is passedto the function, containing common event information. The default action for the selection event is tozoom the chart to the selected area. It can be prevented by callingevent.preventDefault().Information on the selected area can be found through event.xAxisand event.yAxis, which are arrays containing the axes of each dimensionand each axis' min and max values. The primary axes are event.xAxis[0]and event.yAxis[0]. Remember the unit of a datetime axis is millisecondssince 1970-01-01 00:00:00.selection: function(event) {    // log the min and max of the primary, datetime x-axis    console.log(        Highcharts.dateFormat(&lsquo;%Y-%m-%d %H:%M:%S&rsquo;, event.xAxis[0].min),        Highcharts.dateFormat(&lsquo;%Y-%m-%d %H:%M:%S&rsquo;, event.xAxis[0].max)    );    // log the min and max of the y axis    console.log(event.yAxis[0].min, event.yAxis[0].max);}</p>
 			</div>
 			
 		    
@@ -1108,6 +1055,16 @@ selection: function(event) {
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection/">Report on selection and reset</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/">Select a range of points through a drag selection</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -1135,117 +1092,12 @@ selection: function(event) {
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires after initial <a href="#//api/name/load">load</a> of the chart (directly after the <a href="#//api/name/load">load</a>
-event), and after each <a href="#//api/name/redraw">redraw</a> (directly after the <a href="#//api/name/redraw">redraw</a> event).</li>
-</ul>
-
+				<p>Fires after initial load of the chart (directly after the loadevent), and after each redraw (directly after the redraw event).</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *render</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/load" title="load"></a>
-	<h3 class="method-title"><code><a href="#//api/name/load">&nbsp;&nbsp;load</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the chart is finished loading. Since v4.2.2, it also waits
-for images to be loaded, for example from point markers. One parameter,
-event, is passed to the function, containing common event information.
-There is also a second parameter to the chart constructor where a
-callback function can be passed to be executed on chart.load.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *load</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-load/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-load/</a> : Alert on chart load
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-load/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-load/</a> : Add series on chart load</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/drillupall" title="drillupall"></a>
-	<h3 class="method-title"><code><a href="#//api/name/drillupall">&nbsp;&nbsp;drillupall</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: In a chart with multiple <a href="#//api/name/drilldown">drilldown</a> series, this event fires after
-all the series have been drilled up.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *drillupall</code></div>
 
 		    
 			
@@ -1281,15 +1133,7 @@ all the series have been drilled up.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when a series is added to the chart after <a href="#//api/name/load">load</a> time, using
-the addSeries method. One parameter, event, is passed to the
-function, containing common event information.
-Through event.options you can access the series options that was
-passed to the addSeries method. Returning false prevents the series
-from being added.</li>
-</ul>
-
+				<p>Fires when a series is added to the chart after load time, usingthe addSeries method. One parameter, event, is passed to thefunction, containing common event information.Through event.options you can access the series options that waspassed to the addSeries method. Returning false prevents the seriesfrom being added.</p>
 			</div>
 			
 		    
@@ -1305,8 +1149,10 @@ from being added.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/</a> : Alert on add series</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/">Alert on add series</a></li>
 </ul>
 
 			</div>
@@ -1337,7 +1183,7 @@ from being added.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Fires when drilling up from a <a href="#//api/name/drilldown">drilldown</a> series.</p>
+				<p>Fires when drilling up from a drilldown series.</p>
 			</div>
 			
 		    
@@ -1367,8 +1213,8 @@ from being added.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/redraw" title="redraw"></a>
-	<h3 class="method-title"><code><a href="#//api/name/redraw">&nbsp;&nbsp;redraw</a></code>
+	<a name="//api/name/beforePrint" title="beforePrint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/beforePrint">&nbsp;&nbsp;beforePrint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1378,17 +1224,12 @@ from being added.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when the chart is redrawn, either after a call to chart.redraw()
-or after an axis, series or point is modified with the redraw option
-set to true. One parameter, event, is passed to the function, containing common event information.</li>
-</ul>
-
+				<p>Fires before a chart is printed through the context menu item orthe Chart.print method. Requires the exporting module.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *redraw</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *beforePrint</code></div>
 
 		    
 			
@@ -1399,13 +1240,54 @@ set to true. One parameter, event, is passed to the function, containing common 
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-redraw/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-redraw/</a> : Alert on chart redraw
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/events-redraw/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/events-redraw/</a> : Alert on chart redraw when adding a series or moving the zoomed range
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-redraw/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-redraw/</a> : Set subtitle on chart redraw</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/">Rescale the chart to print</a></li>
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drillupall" title="drillupall"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drillupall">&nbsp;&nbsp;drillupall</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>In a chart with multiple drilldown series, this event fires afterall the series have been drilled up.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *drillupall</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1433,15 +1315,7 @@ set to true. One parameter, event, is passed to the function, containing common 
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires when a drilldown point is clicked, before the new series is
-added. This event is also utilized for async drilldown, where the
-seriesOptions are not added by option, but rather loaded async. Note
-that when clicking a category label to trigger multiple series drilldown,
-one drilldown event is triggered per point in the category.
-Event arguments:</li>
-</ul>
-
+				<p>Fires when a drilldown point is clicked, before the new series isadded. This event is also utilized for async drilldown, where theseriesOptions are not added by option, but rather loaded async. Notethat when clicking a category label to trigger multiple series drilldown,one drilldown event is triggered per point in the category.Event arguments:categoryIf a category label was clicked, which index.pointThe originating point.originalEventThe original browser event (usually click) that triggered thedrilldown.pointsIf a category label was clicked, this array holds all pointscorresponing to the category.seriesOptionsOptions for the new series</p>
 			</div>
 			
 		    
@@ -1457,21 +1331,60 @@ Event arguments:</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<p>category
-If a category label was clicked, which index.
-point
-The originating point.
-originalEvent
-The original browser event (usually click) that triggered the
-drilldown.
-points
-If a category label was clicked, this array holds all points
-corresponing to the category.
-seriesOptions
-Options for the new series</p>
+				<h4>Try it</h4>
 
 <ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/async/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/async/</a> : Async drilldown</li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/async/">Async drilldown</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redraw" title="redraw"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redraw">&nbsp;&nbsp;redraw</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the chart is redrawn, either after a call to chart.redraw()or after an axis, series or point is modified with the redraw optionset to true. One parameter, event, is passed to the function, containing common event information.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *redraw</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-redraw/">Alert on chart redraw</a></li>
 </ul>
 
 			</div>
@@ -1502,11 +1415,7 @@ Options for the new series</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires after a chart is printed through the context menu item or the
-Chart.print method. Requires the exporting module.</li>
-</ul>
-
+				<p>Fires after a chart is printed through the context menu item or theChart.print method. Requires the exporting module.</p>
 			</div>
 			
 		    
@@ -1522,60 +1431,10 @@ Chart.print method. Requires the exporting module.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/</a> : Rescale the chart to print</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/beforePrint" title="beforePrint"></a>
-	<h3 class="method-title"><code><a href="#//api/name/beforePrint">&nbsp;&nbsp;beforePrint</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fires before a chart is printed through the context menu item or
-the Chart.print method. Requires the exporting module.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *beforePrint</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/</a> : Rescale the chart to print</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/">Rescale the chart to print</a></li>
 </ul>
 
 			</div>
@@ -1609,7 +1468,7 @@ the Chart.print method. Requires the exporting module.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

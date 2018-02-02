@@ -92,7 +92,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPosition.h<br />HIPosition.m</td>
+	<td>HIPosition.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,7 +102,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>description: The position of the button.</p>
+						<p>The position of the button.</p>
 					</div>
 					
 					
@@ -118,8 +118,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/verticalAlign" title="verticalAlign"></a>
-	<h3 class="method-title"><code><a href="#//api/name/verticalAlign">&nbsp;&nbsp;verticalAlign</a></code>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
 
 	<div class="method-info">
@@ -129,15 +129,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Vertical alignment of the button.</li>
-</ul>
-
+				<p>Vertical offset of the button.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *verticalAlign</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id y</code></div>
 
 		    
 			
@@ -146,14 +143,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>accepted values: [&ldquo;top&rdquo;, &ldquo;middle&rdquo;, &ldquo;bottom&rdquo;]</li>
-<li>default: top</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -181,8 +170,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Horizontal offset of the button.
-default: -10</p>
+				<p>Horizontal offset of the button.</p>
 			</div>
 			
 		    
@@ -197,47 +185,9 @@ default: -10</p>
 			
 
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPosition.h</code></p>
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>-10</em>.</p>
 			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/y" title="y"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Vertical offset of the button.
-default: 10</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -265,15 +215,12 @@ default: 10</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Horizontal alignment of the button.</li>
-</ul>
-
+				<p>Horizontal alignment of the button.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *align</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id align</code></div>
 
 		    
 			
@@ -284,11 +231,54 @@ default: 10</p>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>accepted values: [&ldquo;left&rdquo;, &ldquo;center&rdquo;, &ldquo;right&rdquo;]</li>
-<li>default: right</li>
-</ul>
+				<p><strong>Accepted values:</strong> <em>[&ldquo;left&rdquo;, &ldquo;center&rdquo;, &ldquo;right&rdquo;]</em>.</p>
+			</div>
+			
 
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPosition.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/verticalAlign" title="verticalAlign"></a>
+	<h3 class="method-title"><code><a href="#//api/name/verticalAlign">&nbsp;&nbsp;verticalAlign</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Vertical alignment of the button.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id verticalAlign</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;top&rdquo;, &ldquo;middle&rdquo;, &ldquo;bottom&rdquo;]</em>.</p>
+
+<p><strong>Defaults to</strong> <em>top</em>.</p>
 			</div>
 			
 
@@ -320,7 +310,7 @@ default: 10</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -96,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HICrosshair.h<br />HICrosshair.m</td>
+	<td>HICrosshair.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,13 +106,14 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li><p>description: Configure a crosshair that follows either the mouse pointer or the
-hovered point.
-In styled mode, the crosshairs are styled in the .highcharts-crosshair, .highcharts-crosshair-thin or .highcharts-xaxis-category
-classes.</p></li>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/</a> : Crosshair on both axes</p></li>
-<li>default: false</li>
+						<p>Configure a crosshair that follows either the mouse pointer or thehovered point.In styled mode, the crosshairs are styled in the.highcharts-crosshair, .highcharts-crosshair-thin or.highcharts-xaxis-category classes.</p>
+
+<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/">Crosshair on both axes</a></li>
 </ul>
 
 					</div>
@@ -130,100 +131,6 @@ classes.</p></li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/width" title="width"></a>
-	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pixel width of the crosshair. Defaults to 1 for numeric or datetime
-axes, and for one category width for category axes.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/</a> : Customized crosshairs</p></li>
-<li><p>default: 1</p></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HICrosshair.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/className" title="className"></a>
-	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: A class name for the crosshair, especially as a hook for styling.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HICrosshair.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/zIndex" title="zIndex"></a>
 	<h3 class="method-title"><code><a href="#//api/name/zIndex">&nbsp;&nbsp;zIndex</a></code>
 </h3>
@@ -235,12 +142,7 @@ axes, and for one category width for category axes.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The Z index of the crosshair. Higher Z indices allow drawing the
-crosshair on top of the series or behind the grid lines.</li>
-<li>default: 2</li>
-</ul>
-
+				<p>The Z index of the crosshair. Higher Z indices allow drawing thecrosshair on top of the series or behind the grid lines.</p>
 			</div>
 			
 		    
@@ -255,58 +157,8 @@ crosshair on top of the series or behind the grid lines.</li>
 			
 
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HICrosshair.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/snap" title="snap"></a>
-	<h3 class="method-title"><code><a href="#//api/name/snap">&nbsp;&nbsp;snap</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether the crosshair should snap to the point or follow the pointer
-independent of points.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *snap</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/</a> : True by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/latlon-advanced/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/latlon-advanced/</a> : Snap is false</li>
-<li>default: true</li>
-</ul>
-
+				<p><strong>Defaults to</strong> <em>2</em>.</p>
 			</div>
 			
 
@@ -335,10 +187,7 @@ independent of points.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The dash style for the crosshair. See series.dashStyle for possible values.</li>
-</ul>
-
+				<p>The dash style for the crosshair. Seeseries.dashStylefor possible values.</p>
 			</div>
 			
 		    
@@ -354,11 +203,16 @@ independent of points.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/</a> : Dotted crosshair
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/crosshair-dashed/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/crosshair-dashed/</a> : Dashed X axis crosshair</li>
-<li>accepted values: [&ldquo;Solid&rdquo;, &ldquo;ShortDash&rdquo;, &ldquo;ShortDot&rdquo;, &ldquo;ShortDashDot&rdquo;, &ldquo;ShortDashDotDot&rdquo;, &ldquo;Dot&rdquo;, &ldquo;Dash&rdquo; ,&ldquo;LongDash&rdquo;, &ldquo;DashDot&rdquo;, &ldquo;LongDashDot&rdquo;, &ldquo;LongDashDotDot&rdquo;]</li>
-<li>default: Solid</li>
+				<p><strong>Accepted values:</strong> <em>[&ldquo;Solid&rdquo;, &ldquo;ShortDash&rdquo;, &ldquo;ShortDot&rdquo;, &ldquo;ShortDashDot&rdquo;,
+             &ldquo;ShortDashDotDot&rdquo;, &ldquo;Dot&rdquo;, &ldquo;Dash&rdquo; ,&ldquo;LongDash&rdquo;,
+             &ldquo;DashDot&rdquo;, &ldquo;LongDashDot&rdquo;, &ldquo;LongDashDotDot&rdquo;]</em>.</p>
+
+<p><strong>Defaults to</strong> <em>Solid</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/">Dotted crosshair</a></li>
 </ul>
 
 			</div>
@@ -389,12 +243,7 @@ independent of points.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the crosshair. Defaults to #cccccc for numeric and
-datetime axes, and rgba(204,214,235,0.25) for category axes, where
-the crosshair by default highlights the whole category.</li>
-</ul>
-
+				<p>The color of the crosshair. Defaults to #cccccc for numeric anddatetime axes, and rgba(204,214,235,0.25) for category axes, wherethe crosshair by default highlights the whole category.</p>
 			</div>
 			
 		    
@@ -410,9 +259,157 @@ the crosshair by default highlights the whole category.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/</a> : Customized crosshairs</p></li>
-<li><p>default: #cccccc</p></li>
+				<p><strong>Defaults to</strong> <em>#cccccc</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/">Customized crosshairs</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HICrosshair.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/className" title="className"></a>
+	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A class name for the crosshair, especially as a hook for styling.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HICrosshair.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel width of the crosshair. Defaults to 1 for numeric ordatetime axes, and for one category width for category axes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/">Customized crosshairs</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HICrosshair.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/snap" title="snap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/snap">&nbsp;&nbsp;snap</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether the crosshair should snap to the point or follow the pointerindependent of points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *snap</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/">True by default</a></li>
 </ul>
 
 			</div>
@@ -446,7 +443,7 @@ the crosshair by default highlights the whole category.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -92,7 +92,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIHeatmap.h<br />HIHeatmap.m</td>
+	<td>HIHeatmap.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,15 +102,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A heatmap series. If the type option is
-not specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-heatmap.</li>
-</ul>
-
+						<p>A heatmap series. If the type option isnot specified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.heatmap.</p>
 					</div>
 					
 					
@@ -137,8 +129,7 @@ heatmap.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Padding between the points in the heatmap.
-default: 0</p>
+				<p>Padding between the points in the heatmap.</p>
 			</div>
 			
 		    
@@ -152,6 +143,62 @@ default: 0</p>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIHeatmap.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colsize" title="colsize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colsize">&nbsp;&nbsp;colsize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The column size - how many X axis units each column in the heatmapshould span.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colsize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">One day</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -179,10 +226,7 @@ default: 0</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The row size - how many Y axis units each heatmap row should span.</li>
-</ul>
-
+				<p>The row size - how many Y axis units each heatmap row should span.</p>
 			</div>
 			
 		    
@@ -198,9 +242,12 @@ default: 0</p>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/</a> : 1 by default</li>
-<li>default: 1</li>
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">1 by default</a></li>
 </ul>
 
 			</div>
@@ -231,12 +278,7 @@ default: 0</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color applied to null points. In styled mode, a general CSS class is
-applied instead.</li>
-<li>default: #f7f7f7</li>
-</ul>
-
+				<p>The color applied to null points. In styled mode, a general CSS class isapplied instead.</p>
 			</div>
 			
 		    
@@ -250,59 +292,6 @@ applied instead.</li>
 
 			
 
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIHeatmap.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/colsize" title="colsize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colsize">&nbsp;&nbsp;colsize</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The column size - how many X axis units each column in the heatmap
-should span.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colsize</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/</a> : One day</li>
-<li>default: 1</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -333,7 +322,7 @@ should span.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

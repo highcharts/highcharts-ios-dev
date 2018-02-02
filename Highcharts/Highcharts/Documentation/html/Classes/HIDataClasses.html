@@ -92,7 +92,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDataClasses.h<br />HIDataClasses.m</td>
+	<td>HIDataClasses.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,14 +102,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li><p>description: An array of data classes or ranges for the choropleth map. If none
-given, the <a href="#//api/name/color">color</a> axis is scalar and values are distributed as a gradient
-between the minimum and maximum colors.</p></li>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/data-class-ranges/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/data-class-ranges/</a> : Multiple ranges
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/data-class-two-ranges/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/data-class-two-ranges/</a> : Two ranges</p></li>
-</ul>
-
+						<p>An array of data classes or ranges for the choropleth map. If nonegiven, the color axis is scalar and values are distributed as a gradientbetween the minimum and maximum colors.</p>
 					</div>
 					
 					
@@ -125,8 +118,8 @@ between the minimum and maximum colors.</p></li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/name" title="name"></a>
-	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
 </h3>
 
 	<div class="method-info">
@@ -136,18 +129,12 @@ between the minimum and maximum colors.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The name of the data class as it appears in the legend. If no name
-is given, it is automatically created based on the <a href="#//api/name/from">from</a> and <a href="#//api/name/to">to</a>
-values. For full programmatic control, legend.labelFormatter can be used. In the formatter, this.<a href="#//api/name/from">from</a> and this.
-<a href="#//api/name/to">to</a> can be accessed.</li>
-</ul>
-
+				<p>The color of each data class. If not set, the color is pulled fromthe global or chart-specific colors array. In styled mode, this option is ignored. Instead, use colors defined inCSS.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *name</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
 
 		    
 			
@@ -156,14 +143,6 @@ values. For full programmatic control, legend.labelFormatter can be used. In the
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/coloraxis/dataclasses-name/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/coloraxis/dataclasses-name/</a> : Named data classes
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/coloraxis/dataclasses-labelformatter/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/coloraxis/dataclasses-labelformatter/</a> : Formatted data classes</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -191,11 +170,7 @@ values. For full programmatic control, legend.labelFormatter can be used. In the
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The end of the value range that the data class represents, relating
-to the point value.</li>
-</ul>
-
+				<p>The end of the value range that the data class represents, relatingto the point value.</p>
 			</div>
 			
 		    
@@ -225,8 +200,8 @@ to the point value.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+	<a name="//api/name/from" title="from"></a>
+	<h3 class="method-title"><code><a href="#//api/name/from">&nbsp;&nbsp;from</a></code>
 </h3>
 
 	<div class="method-info">
@@ -236,18 +211,12 @@ to the point value.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of each data class. If not set, the color is pulled <a href="#//api/name/from">from</a>
-the global or chart-specific colors array. In
-styled mode, this option is ignored. Instead, use colors defined in
-CSS.</li>
-</ul>
-
+				<p>The start of the value range that the data class represents, relatingto the point value.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *from</code></div>
 
 		    
 			
@@ -256,13 +225,6 @@ CSS.</li>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/data-class-two-ranges/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/data-class-two-ranges/</a> : Explicit colors</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -279,8 +241,8 @@ CSS.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/from" title="from"></a>
-	<h3 class="method-title"><code><a href="#//api/name/from">&nbsp;&nbsp;from</a></code>
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
 </h3>
 
 	<div class="method-info">
@@ -290,16 +252,12 @@ CSS.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The start of the value range that the data class represents, relating
-<a href="#//api/name/to">to</a> the point value.</li>
-</ul>
-
+				<p>The name of the data class as it appears in the legend. If no nameis given, it is automatically created based on the from and tovalues. For full programmatic control, legend.labelFormatter can be used. In the formatter, this.from and this.to can be accessed.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *from</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *name</code></div>
 
 		    
 			
@@ -338,7 +296,7 @@ CSS.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

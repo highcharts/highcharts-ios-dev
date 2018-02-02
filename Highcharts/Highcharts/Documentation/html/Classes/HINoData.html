@@ -92,7 +92,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HINoData.h<br />HINoData.m</td>
+	<td>HINoData.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,12 +102,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: Options for displaying a message like &ldquo;No data to display&rdquo;.
-This feature requires the file no-data-to-display.js to be loaded in the page.
-The actual text to display is set in the lang.noData option.</li>
-</ul>
-
+						<p>Options for displaying a message like &ldquo;No data to display&rdquo;. This feature requires the file no-data-to-display.js to be loaded in the page. The actual text to display is set in the lang.noData option.</p>
 					</div>
 					
 					
@@ -123,8 +118,8 @@ The actual text to display is set in the lang.noData option.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/useHTML" title="useHTML"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
+	<a name="//api/name/position" title="position"></a>
+	<h3 class="method-title"><code><a href="#//api/name/position">&nbsp;&nbsp;position</a></code>
 </h3>
 
 	<div class="method-info">
@@ -134,17 +129,12 @@ The actual text to display is set in the lang.noData option.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether to insert the label as HTML, or as pseudo-HTML rendered with
-SVG.</li>
-<li>default: false</li>
-</ul>
-
+				<p>The position of the no-data label, relative to the plot area.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPosition *position</code></div>
 
 		    
 			
@@ -153,6 +143,10 @@ SVG.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>{ &ldquo;x&rdquo;: 0, &ldquo;y&rdquo;: 0, &ldquo;align&rdquo;: &ldquo;center&rdquo;, &ldquo;verticalAlign&rdquo;: &ldquo;middle&rdquo; }</em>.</p>
+			</div>
 			
 
 			
@@ -169,8 +163,8 @@ SVG.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/position" title="position"></a>
-	<h3 class="method-title"><code><a href="#//api/name/position">&nbsp;&nbsp;position</a></code>
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
 </h3>
 
 	<div class="method-info">
@@ -180,13 +174,12 @@ SVG.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The position of the no-data label, relative to the plot area.
-default: { &ldquo;x&rdquo;: 0, &ldquo;y&rdquo;: 0, &ldquo;align&rdquo;: &ldquo;center&rdquo;, &ldquo;verticalAlign&rdquo;: &ldquo;middle&rdquo; }</p>
+				<p>CSS styles for the no-data label.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPosition *position</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
 
 		    
 			
@@ -222,7 +215,7 @@ default: { &ldquo;x&rdquo;: 0, &ldquo;y&rdquo;: 0, &ldquo;align&rdquo;: &ldquo;c
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: An object of additional SVG attributes for the no-data label.</p>
+				<p>An object of additional SVG attributes for the no-data label.</p>
 			</div>
 			
 		    
@@ -252,8 +245,8 @@ default: { &ldquo;x&rdquo;: 0, &ldquo;y&rdquo;: 0, &ldquo;align&rdquo;: &ldquo;c
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/style" title="style"></a>
-	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+	<a name="//api/name/useHTML" title="useHTML"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
 </h3>
 
 	<div class="method-info">
@@ -263,12 +256,12 @@ default: { &ldquo;x&rdquo;: 0, &ldquo;y&rdquo;: 0, &ldquo;align&rdquo;: &ldquo;c
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: CSS styles for the no-data label.</p>
+				<p>Whether to insert the label as HTML, or as pseudo-HTML rendered withSVG.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
 
 		    
 			
@@ -277,6 +270,10 @@ default: { &ldquo;x&rdquo;: 0, &ldquo;y&rdquo;: 0, &ldquo;align&rdquo;: &ldquo;c
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
 			
 
 			
@@ -307,7 +304,7 @@ default: { &ldquo;x&rdquo;: 0, &ldquo;y&rdquo;: 0, &ldquo;align&rdquo;: &ldquo;c
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

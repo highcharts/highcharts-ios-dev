@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/ignat/Library/Developer/Shared/Documentation/DocSets/com.highcharts.highcharts.Highcharts.docset
-Time: 2018-01-31 13:57:04 +0000

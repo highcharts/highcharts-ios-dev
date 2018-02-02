@@ -60,6 +60,8 @@
 		
 		<option value="//api/name/dateFormat">dateFormat</option>
 		
+		<option value="//api/name/decimalPoint">decimalPoint</option>
+		
 		<option value="//api/name/itemDelimiter">itemDelimiter</option>
 		
 		<option value="//api/name/lineDelimiter">lineDelimiter</option>
@@ -92,7 +94,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HICsv.h<br />HICsv.m</td>
+	<td>HICsv.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,14 +104,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li><p>description: Options for exporting data to CSV or ExCel, or displaying the data
-in a HTML table or a JavaScript structure. Requires the
-export-data.js module. This module adds data export options to the
-export menu and provides functions like Chart.getCSV,
-Chart.getTable, Chart.getDataRows and Chart.viewData.</p></li>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/</a> : Categorized data
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/</a> : Highstock time axis</p></li>
+						<p>Options for exporting data to CSV or ExCel, or displaying the datain a HTML table or a JavaScript structure. Requires theexport-data.js module. This module adds data export options to theexport menu and provides functions like Chart.getCSV,Chart.getTable, Chart.getDataRows and Chart.viewData.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/">Categorized data</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/">Highstock time axis</a></li>
 </ul>
 
 					</div>
@@ -127,51 +128,6 @@ Chart.getTable, Chart.getDataRows and Chart.viewData.</p></li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/lineDelimiter" title="lineDelimiter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineDelimiter">&nbsp;&nbsp;lineDelimiter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The line delimiter in the exported data, defaults to a newline.</li>
-<li>default:</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *lineDelimiter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HICsv.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/columnHeaderFormatter" title="columnHeaderFormatter"></a>
 	<h3 class="method-title"><code><a href="#//api/name/columnHeaderFormatter">&nbsp;&nbsp;columnHeaderFormatter</a></code>
 </h3>
@@ -183,10 +139,7 @@ Chart.getTable, Chart.getDataRows and Chart.viewData.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Formatter callback for the column headers. Parameters are:</li>
-</ul>
-
+				<p>Formatter callback for the column headers. Parameters are:- item - The series or axis object)- key -  The point key, for example y or z- keyLength - The amount of value keys for this item, for  example a range series has the keys low and high so the  key length is 2.If useMultiLevelHeaders is true, columnHeaderFormatter by default returns an object withcolumnTitle and topLevelColumnTitle for each key. Columns withthe same topLevelColumnTitle have their titles merged into a single cell with colspan for table/Excel export.If useMultiLevelHeaders is false, or for CSV export, it returnsthe series name, followed by the key if there is more than onekey.For the axis it returns the axis title or &ldquo;Category&rdquo; or"DateTime" by default.Return false to use Highcharts' proposed header.</p>
 			</div>
 			
 		    
@@ -202,16 +155,12 @@ Chart.getTable, Chart.getDataRows and Chart.viewData.</p></li>
 
 			
 			<div class="method-subsection discussion-section">
-				<p>item - The series or axis object)
-key -  The point key, for example y or z
-keyLength - The amount of value keys for this item, for
-example a range series has the keys low and high so the
-key length is 2.</p>
+				<h4>Try it</h4>
 
-<p>By default it returns the series name, followed by the key if
-there is more than one key. For the axis it returns the axis
-title or &ldquo;Category&rdquo; or &ldquo;DateTime&rdquo; by default.
-Return false to use Highcharts' proposed header.</p>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table">Multiple table headers</a></li>
+</ul>
+
 			</div>
 			
 
@@ -229,8 +178,8 @@ Return false to use Highcharts' proposed header.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dateFormat" title="dateFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dateFormat">&nbsp;&nbsp;dateFormat</a></code>
+	<a name="//api/name/decimalPoint" title="decimalPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/decimalPoint">&nbsp;&nbsp;decimalPoint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -240,17 +189,53 @@ Return false to use Highcharts' proposed header.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Which date format to use for exported dates on a datetime X axis.
-See Highcharts.dateFormat.</li>
-<li>default: %Y-%m-%d %H:%M:%S</li>
-</ul>
-
+				<p>Which decimal point to use for exported CSV. Defaults to the sameas the browser locale, typically . (English) or , (German,French etc).</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dateFormat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *decimalPoint</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HICsv.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lineDelimiter" title="lineDelimiter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineDelimiter">&nbsp;&nbsp;lineDelimiter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The line delimiter in the exported data, defaults to a newline.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id lineDelimiter</code></div>
 
 		    
 			
@@ -286,17 +271,53 @@ See Highcharts.dateFormat.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The item delimiter in the exported data. Use ; for direct
-exporting to Excel.</li>
-<li>default: ,</li>
-</ul>
-
+				<p>The item delimiter in the exported data. Use ; for directexporting to Excel. Defaults to a best guess based on the browserlocale. If the locale <em>decimal point</em> is ,, the itemDelimiterdefaults to ;, otherwise the itemDelimiter defaults to ,.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *itemDelimiter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HICsv.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateFormat" title="dateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateFormat">&nbsp;&nbsp;dateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Which date format to use for exported dates on a datetime X axis.See Highcharts.dateFormat.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id dateFormat</code></div>
 
 		    
 			
@@ -335,7 +356,7 @@ exporting to Excel.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

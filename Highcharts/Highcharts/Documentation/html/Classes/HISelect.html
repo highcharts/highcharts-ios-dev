@@ -56,6 +56,10 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/borderColor">borderColor</option>
+		
+		<option value="//api/name/color">color</option>
+		
 		<option value="//api/name/enabled">enabled</option>
 		
 		<option value="//api/name/fillColor">fillColor</option>
@@ -94,7 +98,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISelect.h<br />HISelect.m</td>
+	<td>HISelect.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,12 +108,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: The appearance of the point marker when selected. In order to
-allow a point to be selected, set the series.allowPointSelect
-option to true.</li>
-</ul>
-
+						<p>The appearance of the point marker when selected. In order toallow a point to be selected, set the series.allowPointSelectoption to true.</p>
 					</div>
 					
 					
@@ -125,8 +124,8 @@ option to true.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+	<a name="//api/name/radius" title="radius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
 </h3>
 
 	<div class="method-info">
@@ -136,15 +135,12 @@ option to true.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Enable or disable visible feedback for selection.</li>
-</ul>
-
+				<p>The radius of the point marker. In hover state, it defaults to thenormal state&rsquo;s radius + 2.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
 
 		    
 			
@@ -155,62 +151,10 @@ option to true.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-enabled/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-enabled/</a> : Disabled select state</li>
-<li>default: true</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISelect.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lineColor" title="lineColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the point marker&rsquo;s outline. When null, the series'
-or point&rsquo;s color is used.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linecolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linecolor/</a> : Red line color for selected points</li>
-<li>default: #000000</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-radius/">10px radius for selected points</a></li>
 </ul>
 
 			</div>
@@ -241,10 +185,7 @@ or point&rsquo;s color is used.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The width of the point marker&rsquo;s outline.</li>
-</ul>
-
+				<p>The width of the point marker&rsquo;s outline.</p>
 			</div>
 			
 		    
@@ -260,9 +201,64 @@ or point&rsquo;s color is used.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linewidth/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linewidth/</a> : 3px line width for selected points</li>
-<li>default: 0</li>
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linewidth/">3px line width for selected points</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISelect.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable visible feedback for selection.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-enabled/">Disabled select state</a></li>
 </ul>
 
 			</div>
@@ -293,10 +289,7 @@ or point&rsquo;s color is used.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The fill color of the point marker.</li>
-</ul>
-
+				<p>The fill color of the point marker.</p>
 			</div>
 			
 		    
@@ -312,9 +305,12 @@ or point&rsquo;s color is used.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-fillcolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-fillcolor/</a> : Solid red discs for selected points</li>
-<li>default: null</li>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-fillcolor/">Solid red discs for selected points</a></li>
 </ul>
 
 			</div>
@@ -334,8 +330,8 @@ or point&rsquo;s color is used.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/radius" title="radius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
+	<a name="//api/name/lineColor" title="lineColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -345,16 +341,12 @@ or point&rsquo;s color is used.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The radius of the point marker. In hover state, it defaults to the
-normal state&rsquo;s radius + 2.</li>
-</ul>
-
+				<p>The color of the point marker&rsquo;s outline. When null, the series'or point&rsquo;s color is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
 
 		    
 			
@@ -365,10 +357,104 @@ normal state&rsquo;s radius + 2.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-radius/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-radius/</a> : 10px radius for selected points</li>
+				<p><strong>Defaults to</strong> <em>#000000</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linecolor/">Red line color for selected points</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISelect.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A specific color for the selected point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>#cccccc</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISelect.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A specific border color for the selected point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>#000000</em>.</p>
 			</div>
 			
 
@@ -400,7 +486,7 @@ normal state&rsquo;s radius + 2.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -100,7 +100,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDial.h<br />HIDial.m</td>
+	<td>HIDial.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,11 +110,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li><p>description: Options for the dial or arrow pointer of the gauge.
-In styled mode, the dial is styled with the .highcharts-gauge-
-series .highcharts-dial rule.</p></li>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/</a> : Styled mode</p></li>
+						<p>Options for the dial or arrow pointer of the gauge.In styled mode, the dial is styled with the .highcharts-gauge-series .highcharts-dial rule.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/">Styled mode</a></li>
 </ul>
 
 					</div>
@@ -132,59 +133,6 @@ series .highcharts-dial rule.</p></li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/rearLength" title="rearLength"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rearLength">&nbsp;&nbsp;rearLength</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The length of the dial&rsquo;s rear end, the part that extends out on the
-other side of the pivot. Relative to the dial&rsquo;s length.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rearLength</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/</a> : Dial options demonstrated</li>
-<li>default: 10%</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/borderColor" title="borderColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
 </h3>
@@ -196,11 +144,7 @@ other side of the pivot. Relative to the dial&rsquo;s length.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The border color or stroke of the gauge&rsquo;s dial. By default, the <a href="#//api/name/borderWidth">borderWidth</a>
-is 0, so this must be set in addition to a custom border color.</li>
-</ul>
-
+				<p>The border color or stroke of the gauge&rsquo;s dial. By default, the borderWidthis 0, so this must be set in addition to a custom border color.</p>
 			</div>
 			
 		    
@@ -216,9 +160,12 @@ is 0, so this must be set in addition to a custom border color.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/</a> : Dial options demonstrated</li>
-<li>default: #cccccc</li>
+				<p><strong>Defaults to</strong> <em>#cccccc</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
 </ul>
 
 			</div>
@@ -238,8 +185,8 @@ is 0, so this must be set in addition to a custom border color.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/radius" title="radius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
+	<a name="//api/name/rearLength" title="rearLength"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rearLength">&nbsp;&nbsp;rearLength</a></code>
 </h3>
 
 	<div class="method-info">
@@ -249,16 +196,12 @@ is 0, so this must be set in addition to a custom border color.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The radius or length of the dial, in percentages relative to the
-radius of the gauge itself.</li>
-</ul>
-
+				<p>The length of the dial&rsquo;s rear end, the part that extends out on theother side of the pivot. Relative to the dial&rsquo;s length.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *radius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rearLength</code></div>
 
 		    
 			
@@ -269,62 +212,12 @@ radius of the gauge itself.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/</a> : Dial options demonstrated</li>
-<li>default: 80%</li>
-</ul>
+				<p><strong>Defaults to</strong> <em>10%</em>.</p>
 
-			</div>
-			
+<h4>Try it</h4>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/topWidth" title="topWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/topWidth">&nbsp;&nbsp;topWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The width of the top of the dial, closest to the perimeter. The pivot
-narrows in from the base to the top.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *topWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/</a> : Dial options demonstrated</li>
-<li>default: 1</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
 </ul>
 
 			</div>
@@ -355,11 +248,7 @@ narrows in from the base to the top.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The length of the dial&rsquo;s base part, relative to the total <a href="#//api/name/radius">radius</a>
-or length of the dial.</li>
-</ul>
-
+				<p>The length of the dial&rsquo;s base part, relative to the total radiusor length of the dial.</p>
 			</div>
 			
 		    
@@ -375,9 +264,12 @@ or length of the dial.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/</a> : Dial options demonstrated</li>
-<li>default: 70%</li>
+				<p><strong>Defaults to</strong> <em>70%</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
 </ul>
 
 			</div>
@@ -397,8 +289,8 @@ or length of the dial.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/baseWidth" title="baseWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/baseWidth">&nbsp;&nbsp;baseWidth</a></code>
+	<a name="//api/name/radius" title="radius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
 </h3>
 
 	<div class="method-info">
@@ -408,16 +300,12 @@ or length of the dial.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pixel width of the base of the gauge dial. The base is the part
-closest to the pivot, defined by <a href="#//api/name/baseLength">baseLength</a>.</li>
-</ul>
-
+				<p>The radius or length of the dial, in percentages relative to theradius of the gauge itself.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *baseWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *radius</code></div>
 
 		    
 			
@@ -428,9 +316,12 @@ closest to the pivot, defined by <a href="#//api/name/baseLength">baseLength</a>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/</a> : Dial options demonstrated</li>
-<li>default: 3</li>
+				<p><strong>Defaults to</strong> <em>80%</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
 </ul>
 
 			</div>
@@ -461,10 +352,7 @@ closest to the pivot, defined by <a href="#//api/name/baseLength">baseLength</a>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The width of the gauge dial border in pixels.</li>
-</ul>
-
+				<p>The width of the gauge dial border in pixels.</p>
 			</div>
 			
 		    
@@ -480,9 +368,12 @@ closest to the pivot, defined by <a href="#//api/name/baseLength">baseLength</a>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/</a> : Dial options demonstrated</li>
-<li>default: 0</li>
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
 </ul>
 
 			</div>
@@ -513,10 +404,7 @@ closest to the pivot, defined by <a href="#//api/name/baseLength">baseLength</a>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The background or fill color of the gauge&rsquo;s dial.</li>
-</ul>
-
+				<p>The background or fill color of the gauge&rsquo;s dial.</p>
 			</div>
 			
 		    
@@ -532,9 +420,116 @@ closest to the pivot, defined by <a href="#//api/name/baseLength">baseLength</a>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/</a> : Dial options demonstrated</li>
-<li>default: #000000</li>
+				<p><strong>Defaults to</strong> <em>#000000</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDial.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/topWidth" title="topWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/topWidth">&nbsp;&nbsp;topWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width of the top of the dial, closest to the perimeter. The pivotnarrows in from the base to the top.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *topWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDial.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/baseWidth" title="baseWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/baseWidth">&nbsp;&nbsp;baseWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel width of the base of the gauge dial. The base is the partclosest to the pivot, defined by baseLength.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *baseWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>3</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
 </ul>
 
 			</div>
@@ -568,7 +563,7 @@ closest to the pivot, defined by <a href="#//api/name/baseLength">baseLength</a>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

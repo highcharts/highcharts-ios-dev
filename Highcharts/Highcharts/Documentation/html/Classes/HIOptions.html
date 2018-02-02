@@ -131,10 +131,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
+	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIOptions.h<br />HIOptions.m</td>
+	<td>HIOptions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -152,8 +152,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/credits" title="credits"></a>
-	<h3 class="method-title"><code><a href="#//api/name/credits">&nbsp;&nbsp;credits</a></code>
+	<a name="//api/name/subtitle" title="subtitle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/subtitle">&nbsp;&nbsp;subtitle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -163,191 +163,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: High<a href="#//api/name/chart">chart</a> by default puts a credits label in the lower right corner
-of the <a href="#//api/name/chart">chart</a>. This can be changed using these options.</li>
-</ul>
-
+				<p>The chart&rsquo;s subtitle. This can be used both to display a subtitle belowthe main title, and to display random text anywhere in the chart. Thesubtitle can be updated after chart initialization through the Chart.setTitle method.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICredits *credits</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/boost" title="boost"></a>
-	<h3 class="method-title"><code><a href="#//api/name/boost">&nbsp;&nbsp;boost</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options for the Boost module. The Boost module allows certain series types
-to be rendered by WebGL instead of the default SVG. This allows hundreds of
-thousands of <a href="#//api/name/data">data</a> points to be rendered in milliseconds. In addition to the
-WebGL rendering it saves time by skipping processing and inspection of the
-<a href="#//api/name/data">data</a> wherever possible.
-In addition to the global boost option, each series has a
-boostThreshold that defines when the
-boost should kick in.
-Requires the modules/boost.js module.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBoost *boost</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy-stock">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy-stock</a> : Stock chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy-dynamic">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy-dynamic</a> : Dynamic stock chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line</a> : Line chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy</a> : Line chart with hundreds of series
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter</a> : Scatter chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/area">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/area</a> : Area chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange</a> : Arearange chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/column">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/column</a> : Column chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/bubble">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/bubble</a> : Bubble chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/heatmap">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/heatmap</a> : Heat map
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/treemap">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/treemap</a> : Tree map</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/data" title="data"></a>
-	<h3 class="method-title"><code><a href="#//api/name/data">&nbsp;&nbsp;data</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The Data module provides a simplified interface for adding data to
-a chart from sources like CVS, HTML tables or grid views. See also
-the <a href="http://www.highcharts.com/docs/working-">http://www.highcharts.com/docs/working-</a>
-with-data/data-module : tutorial article on the Data module.
-It requires the modules/data.js file to be loaded.
-Please note that the default way of adding data in Highcharts, without
-the need of a module, is through the series.data
-option.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIData *data</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/</a> : HTML table
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/</a> : CSV</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/defs" title="defs"></a>
-	<h3 class="method-title"><code><a href="#//api/name/defs">&nbsp;&nbsp;defs</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Styled mode only. Configuration object for adding SVG definitions for
-reusable elements. See <a href="http://www.">http://www.</a>
-highcharts.com/docs/chart-design-and-style/gradients-shadows-and-
-patterns : gradients, shadows and patterns for more information and code examples.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDefs *defs</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISubtitle *subtitle</code></div>
 
 		    
 			
@@ -383,19 +204,12 @@ patterns : gradients, shadows and patterns for more information and code example
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The Y axis or value axis. Normally this is the vertical axis,
-though if the <a href="#//api/name/chart">chart</a> is inverted this is the horizontal axis.
-In case of multiple axes, the yAxis node is an array of
-configuration objects.
-See the Axis object for programmatic access to the axis.</li>
-</ul>
-
+				<p>The Y axis or value axis. Normally this is the vertical axis,though if the chart is inverted this is the horizontal axis.In case of multiple axes, the yAxis node is an array ofconfiguration objects.See the Axis object for programmatic access to the axis.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIYAxis*&gt; *yAxis</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIYAxis *yAxis</code></div>
 
 		    
 			
@@ -404,151 +218,6 @@ See the Axis object for programmatic access to the axis.</li>
 
 			
 
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/legend" title="legend"></a>
-	<h3 class="method-title"><code><a href="#//api/name/legend">&nbsp;&nbsp;legend</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The legend is a box containing a symbol and name for each series
-item or point item in the chart. Each series (or points in case
-of pie charts) is represented by a symbol and its name in the legend.
-It is possible to override the symbol creator function and
-create <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-">http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-</a>
-custom-symbol/ : custom legend symbols.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILegend *legend</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pane" title="pane"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pane">&nbsp;&nbsp;pane</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pane serves as a container for axes and backgrounds for circular
-gauges and polar charts.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPane *pane</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/title" title="title"></a>
-	<h3 class="method-title"><code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The chart&rsquo;s main title.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITitle *title</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/title/title/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/title/title/</a> : Title options demonstrated</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -576,509 +245,12 @@ gauges and polar charts.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options for configuring accessibility for the chart. Requires the
-//code.highcharts.com/modules/accessibility.
-js : accessibility module to be loaded. For a description of the module and information
-on its features, see <a href="http://www.highcharts.">http://www.highcharts.</a>
-com/docs/chart-concepts/accessibility : Highcharts Accessibility.</li>
-</ul>
-
+				<p>Options for configuring accessibility for the chart. Requires the<a href="//code.highcharts.com/modules/accessibility.js">accessibility module</a> to be loaded. For a description of the module and informationon its features, see <a href="http://www.highcharts.com/docs/chart-concepts/accessibility">Highcharts Accessibility</a>.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAccessibility *accessibility</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/noData" title="noData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/noData">&nbsp;&nbsp;noData</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options for displaying a message like &ldquo;No <a href="#//api/name/data">data</a> to display&rdquo;.
-This feature requires the file no-data-to-display.js to be loaded in the page.
-The actual text to display is set in the lang.noData option.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINoData *noData</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/plotOptions" title="plotOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/plotOptions">&nbsp;&nbsp;plotOptions</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The plotOptions is a wrapper object for config objects for each series
-type. The config objects for each series can also be overridden for
-each series item as given in the series array.
-Configuration options for the series are given in three levels. Options
-for all series in a <a href="#//api/name/chart">chart</a> are given in the plotOptions.series object. Then options for all series of a specific type are
-given in the plotOptions of that type, for example plotOptions.line.
-Next, options for one single series are given in the series array.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPlotOptions *plotOptions</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/subtitle" title="subtitle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/subtitle">&nbsp;&nbsp;subtitle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The chart&rsquo;s sub<a href="#//api/name/title">title</a>. This can be used both to display a sub<a href="#//api/name/title">title</a> below
-the main <a href="#//api/name/title">title</a>, and to display random text anywhere in the <a href="#//api/name/chart">chart</a>. The
-sub<a href="#//api/name/title">title</a> can be updated after <a href="#//api/name/chart">chart</a> initialization through the
-Chart.setTitle method.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISubtitle *subtitle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/title/subtitle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/title/subtitle/</a> : Sub<a href="#//api/name/title">title</a> options demonstrated</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/tooltip" title="tooltip"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tooltip">&nbsp;&nbsp;tooltip</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options for the tooltip that appears when the user hovers over a
-series or point.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITooltip *tooltip</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/responsive" title="responsive"></a>
-	<h3 class="method-title"><code><a href="#//api/name/responsive">&nbsp;&nbsp;responsive</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Allows setting a set of rules to apply for different screen or <a href="#//api/name/chart">chart</a>
-sizes. Each rule specifies additional <a href="#//api/name/chart">chart</a> options.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIResponsive *responsive</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/responsive/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/responsive/</a> : Stock chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/</a> : Axis
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/</a> : Legend
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/</a> : Class name</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/xAxis" title="xAxis"></a>
-	<h3 class="method-title"><code><a href="#//api/name/xAxis">&nbsp;&nbsp;xAxis</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The X axis or category axis. Normally this is the horizontal axis,
-though if the <a href="#//api/name/chart">chart</a> is inverted this is the vertical axis. In case of
-multiple axes, the xAxis node is an array of configuration objects.
-See the Axis object for programmatic access to the axis.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIXAxis*&gt; *xAxis</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/chart" title="chart"></a>
-	<h3 class="method-title"><code><a href="#//api/name/chart">&nbsp;&nbsp;chart</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options regarding the chart area and plot area as well as general
-chart options.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIChart *chart</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/annotations" title="annotations"></a>
-	<h3 class="method-title"><code><a href="#//api/name/annotations">&nbsp;&nbsp;annotations</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options for configuring annotations, for example <a href="#//api/name/labels">labels</a>, arrows or
-shapes. Annotations can be tied to points, axis coordinates or <a href="#//api/name/chart">chart</a>
-pixel coordinates.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIAnnotations*&gt; *annotations</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/basic/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/basic/</a> : Basic annotations
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/annotations/fibonacci-retracements">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/annotations/fibonacci-retracements</a> : Custom annotation, Fibonacci retracement</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/zAxis" title="zAxis"></a>
-	<h3 class="method-title"><code><a href="#//api/name/zAxis">&nbsp;&nbsp;zAxis</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The Z axis or depth axis for 3D plots.
-See the Axis object for programmatic access to the axis.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIZAxis *zAxis</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-zaxis-categories/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-zaxis-categories/</a> : Z-Axis with Categories
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-zaxis-grid/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-zaxis-grid/</a> : Z-Axis with styling</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/labels" title="labels"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: HTML labels that can be positioned anywhere in the <a href="#//api/name/chart">chart</a> area.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabels *labels</code></div>
 
 		    
 			
@@ -1114,31 +286,65 @@ See the Axis object for programmatic access to the axis.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An array containing the default colors for the chart&rsquo;s series. When
-all colors are used, new colors are pulled from the start again.
-Default colors can also be set on a series or series.type basis,
-see column.colors, pie.colors.
-In styled mode, the colors option doesn&rsquo;t exist. Instead, colors
-are defined in CSS and applied either through series or point class
-names, or through the <a href="#//api/name/chart">chart</a>.colorCount option.
-Legacy
-In Highcharts 3.x, the default colors were:
-colors: [&lsquo;#2f7ed8&rsquo;, &lsquo;#0d233a&rsquo;, &lsquo;#8bbc21&rsquo;, &lsquo;#910000&rsquo;, &lsquo;#1aadce&rsquo;,
-  &lsquo;#492970&rsquo;, &lsquo;#f28f43&rsquo;, &lsquo;#77a1e5&rsquo;, &lsquo;#c42525&rsquo;, &lsquo;#a6c96a&rsquo;]
-In Highcharts 2.x, the default colors were:
-colors: [&lsquo;#4572A7&rsquo;, &lsquo;#AA4643&rsquo;, &lsquo;#89A54E&rsquo;, &lsquo;#80699B&rsquo;, &lsquo;#3D96AE&rsquo;,
- &lsquo;#DB843D&rsquo;, &lsquo;#92A8CD&rsquo;, &lsquo;#A47D7C&rsquo;, &lsquo;#B5CA92&rsquo;]</li>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/</a> : Assign a global color theme</li>
-<li>default: [&ldquo;#7cb5ec&rdquo;, &ldquo;#434348&rdquo;, &ldquo;#90ed7d&rdquo;, &ldquo;#f7a35c&rdquo;, &ldquo;#8085e9&rdquo;,
-       &ldquo;#f15c80&rdquo;, &ldquo;#e4d354&rdquo;, &ldquo;#2b908f&rdquo;, &ldquo;#f45b5b&rdquo;, &ldquo;#91e8e1&rdquo;]</li>
-</ul>
-
+				<p>An array containing the default colors for the chart&rsquo;s series. Whenall colors are used, new colors are pulled from the start again.Default colors can also be set on a series or series.type basis,see column.colors, pie.colors.In styled mode, the colors option doesn&rsquo;t exist. Instead, colorsare defined in CSS and applied either through series or point classnames, or through the chart.colorCount option.### LegacyIn Highcharts 3.x, the default colors were:colors: [&lsquo;#2f7ed8&rsquo;, &lsquo;#0d233a&rsquo;, &lsquo;#8bbc21&rsquo;, &lsquo;#910000&rsquo;, &lsquo;#1aadce&rsquo;,     &lsquo;#492970&rsquo;, &lsquo;#f28f43&rsquo;, &lsquo;#77a1e5&rsquo;, &lsquo;#c42525&rsquo;, &lsquo;#a6c96a&rsquo;] In Highcharts 2.x, the default colors were:colors: [&lsquo;#4572A7&rsquo;, &lsquo;#AA4643&rsquo;, &lsquo;#89A54E&rsquo;, &lsquo;#80699B&rsquo;, &lsquo;#3D96AE&rsquo;,    &lsquo;#DB843D&rsquo;, &lsquo;#92A8CD&rsquo;, &lsquo;#A47D7C&rsquo;, &lsquo;#B5CA92&rsquo;]</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>[&ldquo;#7cb5ec&rdquo;, &ldquo;#434348&rdquo;, &ldquo;#90ed7d&rdquo;, &ldquo;#f7a35c&rdquo;, &ldquo;#8085e9&rdquo;,
+         &ldquo;#f15c80&rdquo;, &ldquo;#e4d354&rdquo;, &ldquo;#2b908f&rdquo;, &ldquo;#f45b5b&rdquo;, &ldquo;#91e8e1&rdquo;]</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/">Assign a global color theme</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pane" title="pane"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pane">&nbsp;&nbsp;pane</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pane serves as a container for axes and backgrounds for circular gauges and polar charts.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPane *pane</code></div>
 
 		    
 			
@@ -1163,8 +369,8 @@ colors: [&lsquo;#4572A7&rsquo;, &lsquo;#AA4643&rsquo;, &lsquo;#89A54E&rsquo;, &l
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/navigation" title="navigation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/navigation">&nbsp;&nbsp;navigation</a></code>
+	<a name="//api/name/responsive" title="responsive"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responsive">&nbsp;&nbsp;responsive</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1174,12 +380,64 @@ colors: [&lsquo;#4572A7&rsquo;, &lsquo;#AA4643&rsquo;, &lsquo;#89A54E&rsquo;, &l
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: A collection of options for buttons and menus appearing in the <a href="#//api/name/exporting">exporting</a> module.</p>
+				<p>Allows setting a set of rules to apply for different screen or chartsizes. Each rule specifies additional chart options.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINavigation *navigation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIResponsive *responsive</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">Axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/">Legend</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/">Class name</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/noData" title="noData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/noData">&nbsp;&nbsp;noData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for displaying a message like &ldquo;No data to display&rdquo;. This feature requires the file no-data-to-display.js to be loaded in the page. The actual text to display is set in the lang.noData option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINoData *noData</code></div>
 
 		    
 			
@@ -1215,16 +473,7 @@ colors: [&lsquo;#4572A7&rsquo;, &lsquo;#AA4643&rsquo;, &lsquo;#89A54E&rsquo;, &l
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The loading options control the appearance of the loading screen
-that covers the plot area on <a href="#//api/name/chart">chart</a> operations. This screen only
-appears after an explicit call to <a href="#//api/name/chart">chart</a>.showLoading(). It is a
-utility for developers to communicate to the end user that something
-is going on, for example while retrieving new <a href="#//api/name/data">data</a> via an XHR connection.
-The &ldquo;Loading&hellip;&rdquo; text itself is not part of this configuration
-object, but part of the lang object.</li>
-</ul>
-
+				<p>The loading options control the appearance of the loading screenthat covers the plot area on chart operations. This screen onlyappears after an explicit call to chart.showLoading(). It is autility for developers to communicate to the end user that somethingis going on, for example while retrieving new data via an XHR connection.The &ldquo;Loading&hellip;&rdquo; text itself is not part of this configurationobject, but part of the lang object.</p>
 			</div>
 			
 		    
@@ -1254,8 +503,8 @@ object, but part of the lang object.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/colorAxis" title="colorAxis"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colorAxis">&nbsp;&nbsp;colorAxis</a></code>
+	<a name="//api/name/title" title="title"></a>
+	<h3 class="method-title"><code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1265,33 +514,12 @@ object, but part of the lang object.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A color axis for choropleth maps and heat maps. Visually, the color axis
-will appear as a gradient or as separate items inside the legend,
-depending on whether the axis is scalar or based on data classes.
-For supported color formats, see the
-<a href="http://www.highcharts.com/docs/chart-design-and-style/colors">http://www.highcharts.com/docs/chart-design-and-style/colors</a> : docs article about <a href="#//api/name/colors">colors</a>.
-A scalar color axis is represented by a gradient. The <a href="#//api/name/colors">colors</a> either range
-between the minColor and the maxColor,
-or for more fine grained control the <a href="#//api/name/colors">colors</a> can be
-defined in stops. Often times, the color axis needs
-to be adjusted to get the right color spread for the <a href="#//api/name/data">data</a>. In addition to
-stops, consider using a logarithmic axis type, or
-setting min and max to avoid the
-<a href="#//api/name/colors">colors</a> being determined by outliers.
-When dataClasses are used, the ranges are
-subdivided into separate classes like categories based on their values.
-This can be used for ranges between two values, but also for a true
-category. However, when your <a href="#//api/name/data">data</a> is categorized, it may be as convenient
-to add each category to a separate series.
-See the Axis object for programmatic access to the axis.</li>
-</ul>
-
+				<p>The chart&rsquo;s main title.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColorAxis *colorAxis</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITitle *title</code></div>
 
 		    
 			
@@ -1316,8 +544,8 @@ See the Axis object for programmatic access to the axis.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/drilldown" title="drilldown"></a>
-	<h3 class="method-title"><code><a href="#//api/name/drilldown">&nbsp;&nbsp;drilldown</a></code>
+	<a name="//api/name/tooltip" title="tooltip"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tooltip">&nbsp;&nbsp;tooltip</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1327,19 +555,53 @@ See the Axis object for programmatic access to the axis.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options for drill down, the concept of inspecting increasingly high
-resolution <a href="#//api/name/data">data</a> through clicking on <a href="#//api/name/chart">chart</a> items like columns or pie slices.
-The drilldown feature requires the drilldown.js file to be loaded,
-found in the modules directory of the download package, or online at
-(code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/drilldown.js].</li>
-</ul>
-
+				<p>Options for the tooltip that appears when the user hovers over aseries or point.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDrilldown *drilldown</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITooltip *tooltip</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/plotOptions" title="plotOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/plotOptions">&nbsp;&nbsp;plotOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The plotOptions is a wrapper object for config objects for each seriestype. The config objects for each series can also be overridden foreach series item as given in the series array.Configuration options for the series are given in three levels. Optionsfor all series in a chart are given in the plotOptions.series object. Then options for all series of a specific type aregiven in the plotOptions of that type, for example plotOptions.line.Next, options for one single series are given in the series array.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPlotOptions *plotOptions</code></div>
 
 		    
 			
@@ -1375,12 +637,591 @@ found in the modules directory of the download package, or online at
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Options for the exporting module. For an overview on the matter, see <a href="http://www.highcharts.com/docs/export-module/export-module-overview">http://www.highcharts.com/docs/export-module/export-module-overview</a> : the docs.</p>
+				<p>Options for the exporting module. For an overview on the matter, see <a href="http://www.highcharts.com/docs/export-module/export-module-overview">the docs</a>.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIExporting *exporting</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/boost" title="boost"></a>
+	<h3 class="method-title"><code><a href="#//api/name/boost">&nbsp;&nbsp;boost</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the Boost module. The Boost module allows certain series typesto be rendered by WebGL instead of the default SVG. This allows hundreds ofthousands of data points to be rendered in milliseconds. In addition to theWebGL rendering it saves time by skipping processing and inspection of thedata wherever possible. This introduces some limitations to what features areavailable in Boost mode. See the docs](https://www.highcharts.com/docs/advanced-chart-features/boost-module)for details.In addition to the global boost option, each series has a[boostThreshold that defines when theboost should kick in.Requires the modules/boost.js module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBoost *boost</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line">Line chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy">Line chart with hundreds of series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter">Scatter chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/area">Area chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange">Arearange chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/column">Column chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/bubble">Bubble chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/heatmap">Heat map</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/treemap">Tree map</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/annotations" title="annotations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/annotations">&nbsp;&nbsp;annotations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for configuring annotations, for example labels, arrows or shapes. Annotations can be tied to points, axis coordinates or chartpixel coordinates.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIAnnotations*&gt; *annotations</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/basic/">Basic annotations</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defs" title="defs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defs">&nbsp;&nbsp;defs</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Styled mode only. Configuration object for adding SVG definitions forreusable elements. See <a href="http://www.highcharts.com/docs/chart-design-and-style/gradients-shadows-and-patterns">gradients, shadows and patterns</a> for more information and code examples.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDefs *defs</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/labels" title="labels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>HTML labels that can be positioned anywhere in the chart area.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabels *labels</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/chart" title="chart"></a>
+	<h3 class="method-title"><code><a href="#//api/name/chart">&nbsp;&nbsp;chart</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options regarding the chart area and plot area as well as generalchart options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIChart *chart</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/credits" title="credits"></a>
+	<h3 class="method-title"><code><a href="#//api/name/credits">&nbsp;&nbsp;credits</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Highchart by default puts a credits label in the lower right cornerof the chart. This can be changed using these options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICredits *credits</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/zAxis" title="zAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zAxis">&nbsp;&nbsp;zAxis</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The Z axis or depth axis for 3D plots.See the Axis object for programmatic access to the axis.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIZAxis *zAxis</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-zaxis-categories/">Z-Axis with Categories</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-zaxis-grid/">Z-Axis with styling</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/xAxis" title="xAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/xAxis">&nbsp;&nbsp;xAxis</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The X axis or category axis. Normally this is the horizontal axis,though if the chart is inverted this is the vertical axis. In case ofmultiple axes, the xAxis node is an array of configuration objects.See the Axis object for programmatic access to the axis.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIXAxis *xAxis</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drilldown" title="drilldown"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drilldown">&nbsp;&nbsp;drilldown</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices.The drilldown feature requires the drilldown.js file to be loaded, found in the modules directory of the download package, or online at (code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/drilldown.js].</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDrilldown *drilldown</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/data" title="data"></a>
+	<h3 class="method-title"><code><a href="#//api/name/data">&nbsp;&nbsp;data</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The Data module provides a simplified interface for adding data toa chart from sources like CVS, HTML tables or grid views. See alsothe tutorial article on the Data module](http://www.highcharts.com/docs/working-with-data/data-module).It requires the modules/data.js file to be loaded.Please note that the default way of adding data in Highcharts, withoutthe need of a module, is through the [series.dataoption.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIData *data</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/">HTML table</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/">CSV</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/legend" title="legend"></a>
+	<h3 class="method-title"><code><a href="#//api/name/legend">&nbsp;&nbsp;legend</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The legend is a box containing a symbol and name for each seriesitem or point item in the chart. Each series (or points in caseof pie charts) is represented by a symbol and its name in the legend. It is possible to override the symbol creator function andcreate <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-custom-symbol/">custom legend symbols</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILegend *legend</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colorAxis" title="colorAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorAxis">&nbsp;&nbsp;colorAxis</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A color axis for choropleth maps and heat maps. Visually, the color axiswill appear as a gradient or as separate items inside the legend,depending on whether the axis is scalar or based on data classes.For supported color formats, see the docs article about colors](http://www.highcharts.com/docs/chart-design-and-style/colors).A scalar color axis is represented by a gradient. The colors either rangebetween the [minColor and the maxColor,or for more fine grained control the colors can bedefined in stops. Often times, the color axis needsto be adjusted to get the right color spread for the data. In addition tostops, consider using a logarithmic axis type, orsetting min and max to avoid thecolors being determined by outliers.When dataClasses are used, the ranges aresubdivided into separate classes like categories based on their values.This can be used for ranges between two values, but also for a truecategory. However, when your data is categorized, it may be as convenientto add each category to a separate series.See the Axis object for programmatic access to the axis.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColorAxis *colorAxis</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/navigation" title="navigation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/navigation">&nbsp;&nbsp;navigation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A collection of options for buttons and menus appearing in the exporting module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINavigation *navigation</code></div>
 
 		    
 			
@@ -1460,7 +1301,7 @@ found in the modules directory of the download package, or online at
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

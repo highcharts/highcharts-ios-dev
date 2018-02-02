@@ -60,8 +60,6 @@
 		
 		<option value="//api/name/borderColor">borderColor</option>
 		
-		<option value="//api/name/brightness">brightness</option>
-		
 		<option value="//api/name/color">color</option>
 		
 		<option value="//api/name/enabled">enabled</option>
@@ -83,8 +81,6 @@
 		<option value="//api/name/opacity">opacity</option>
 		
 		<option value="//api/name/radius">radius</option>
-		
-		<option value="//api/name/radiusPlus">radiusPlus</option>
 		
 	</optgroup>
 	
@@ -114,7 +110,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIHover.h<br />HIHover.m</td>
+	<td>HIHover.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -124,7 +120,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>description: Options for the hovered series</p>
+						<p>Options for the hovered series. These settings override the normalstate options when a series is moused over or touched.</p>
 					</div>
 					
 					
@@ -140,8 +136,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -151,15 +147,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A specific color for the hovered point.</li>
-</ul>
-
+				<p>Enable separate styles for the hovered series to visualize that theuser hovers either the series itself or the legend. .</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
 
 		    
 			
@@ -170,57 +163,17 @@
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-hover/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-hover/</a> : Hover options</li>
-<li>default: undefined</li>
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/">Line</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/">Column</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/">Pie</a></li>
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIHover.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A specific border <a href="#//api/name/color">color</a> for the hovered point. Defaults to
-inherit the normal state border <a href="#//api/name/color">color</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -248,8 +201,7 @@ inherit the normal state border <a href="#//api/name/color">color</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Animation setting for hovering the graph in line-type series.
-default: { &ldquo;duration&rdquo;: 50 }</p>
+				<p>Animation setting for hovering the graph in line-type series.</p>
 			</div>
 			
 		    
@@ -264,110 +216,8 @@ default: { &ldquo;duration&rdquo;: 50 }</p>
 			
 
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIHover.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lineWidthPlus" title="lineWidthPlus"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineWidthPlus">&nbsp;&nbsp;lineWidthPlus</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The additional line width for the graph of a hovered series.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidthPlus</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/</a> : 5 pixels wider</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIHover.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/brightness" title="brightness"></a>
-	<h3 class="method-title"><code><a href="#//api/name/brightness">&nbsp;&nbsp;brightness</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: How much to brighten the point on interaction. Requires the main
-<a href="#//api/name/color">color</a> to be defined in hex or rgb(a) format.
-In styled mode, the hover brightening is by default replaced
-with a fill<a href="#//api/name/opacity">opacity</a> set in the .highcharts-point:hover rule.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *brightness</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-states-hover-brightness/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-states-hover-brightness/</a> : Brighten by 0.5</li>
-<li>default: 0.1</li>
-</ul>
-
+				<p><strong>Defaults to</strong> <em>{ &ldquo;duration&rdquo;: 50 }</em>.</p>
 			</div>
 			
 
@@ -396,12 +246,7 @@ with a fill<a href="#//api/name/opacity">opacity</a> set in the .highcharts-poin
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: In Highcharts 1.0, the appearance of all markers belonging to
-the hovered series. For settings on the hover state of the individual
-point, see marker.states.hover.</li>
-</ul>
-
+				<p>In Highcharts 1.0, the appearance of all markers belonging tothe hovered series. For settings on the hover state of the individualpoint, see marker.states.hover.</p>
 			</div>
 			
 		    
@@ -442,12 +287,7 @@ point, see marker.states.hover.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Pixel with of the graph line. By default this property is
-undefined, and the <a href="#//api/name/lineWidthPlus">lineWidthPlus</a> property dictates how much
-to increase the linewidth from normal state.</li>
-</ul>
-
+				<p>Pixel with of the graph line. By default this property isundefined, and the lineWidthPlus property dictates how muchto increase the linewidth from normal state.</p>
 			</div>
 			
 		    
@@ -463,9 +303,64 @@ to increase the linewidth from normal state.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/</a> : 5px line on hover</li>
-<li>default: undefined</li>
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/">5px line on hover</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIHover.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lineWidthPlus" title="lineWidthPlus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineWidthPlus">&nbsp;&nbsp;lineWidthPlus</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The additional line width for the graph of a hovered series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidthPlus</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/">5 pixels wider</a></li>
 </ul>
 
 			</div>
@@ -496,15 +391,7 @@ to increase the linewidth from normal state.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options for the halo appearing around the hovered point in line-
-type series as well as outside the hovered slice in pie charts.
-By default the halo is filled by the current point or series
-<a href="#//api/name/color">color</a> with an <a href="#//api/name/opacity">opacity</a> of 0.25. The halo can be disabled by setting
-the halo option to false.
-In styled mode, the halo is styled with the .highcharts-halo class, with colors inherited from .highcharts-color-{n}.</li>
-</ul>
-
+				<p>Options for the halo appearing around the hovered point in line-type series as well as outside the hovered slice in pie charts.By default the halo is filled by the current point or seriescolor with an opacity of 0.25. The halo can be disabled by settingthe halo option to false.In styled mode, the halo is styled with the .highcharts-halo class, with colors inherited from .highcharts-color-{n}.</p>
 			</div>
 			
 		    
@@ -520,167 +407,10 @@ In styled mode, the halo is styled with the .highcharts-halo class, with colors 
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/</a> : Halo options</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIHover.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Enable separate styles for the hovered series to visualize that the
-user hovers either the series itself or the legend. .</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/</a> : Line
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/</a> : Column
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/</a> : Pie</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIHover.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/radius" title="radius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The radius of the point <a href="#//api/name/marker">marker</a>. In hover state, it defaults to the
-normal state&rsquo;s radius + 2 as per the <a href="#//api/name/radiusPlus">radiusPlus</a> option.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-radius/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-radius/</a> : 10px radius</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIHover.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/radiusPlus" title="radiusPlus"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radiusPlus">&nbsp;&nbsp;radiusPlus</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The number of pixels to increase the <a href="#//api/name/radius">radius</a> of the hovered point.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radiusPlus</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/</a> : 5 pixels greater <a href="#//api/name/radius">radius</a> on hover</li>
-<li>default: 2</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/">Halo options</a></li>
 </ul>
 
 			</div>
@@ -711,8 +441,7 @@ normal state&rsquo;s radius + 2 as per the <a href="#//api/name/radiusPlus">radi
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The fill <a href="#//api/name/color">color</a> of the <a href="#//api/name/marker">marker</a> in hover state.
-default: null</p>
+				<p>The fill color of the marker in hover state.</p>
 			</div>
 			
 		    
@@ -726,6 +455,10 @@ default: null</p>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+			</div>
 			
 
 			
@@ -753,11 +486,7 @@ default: null</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The <a href="#//api/name/color">color</a> of the point marker&rsquo;s outline. When null, the
-series' or point&rsquo;s <a href="#//api/name/color">color</a> is used.</li>
-</ul>
-
+				<p>The color of the point marker&rsquo;s outline. When null, theseries' or point&rsquo;s color is used.</p>
 			</div>
 			
 		    
@@ -773,9 +502,62 @@ series' or point&rsquo;s <a href="#//api/name/color">color</a> is used.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-linecolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-linecolor/</a> : White fill <a href="#//api/name/color">color</a>, black line <a href="#//api/name/color">color</a></li>
-<li>default: #ffffff</li>
+				<p><strong>Defaults to</strong> <em>#ffffff</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-linecolor/">White fill color, black line color</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIHover.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/radius" title="radius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The radius of the point marker. In hover state, it defaults to thenormal state&rsquo;s radius + 2 as per the radiusPlus option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-radius/">10px radius</a></li>
 </ul>
 
 			</div>
@@ -806,17 +588,53 @@ series' or point&rsquo;s <a href="#//api/name/color">color</a> is used.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Opacity for the links between nodes in the sankey diagram in
-hover mode.</li>
-<li>default: 1</li>
-</ul>
-
+				<p>Opacity for the links between nodes in the sankey diagram inhover mode.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *linkOpacity</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id linkOpacity</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIHover.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The border color for the hovered state.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id borderColor</code></div>
 
 		    
 			
@@ -852,12 +670,7 @@ hover mode.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The opacity of a point in treemap. When a point has children,
-the visibility of the children is determined by the opacity.</li>
-<li>default: 0.75</li>
-</ul>
-
+				<p>The opacity of a point in treemap. When a point has children,the visibility of the children is determined by the opacity.</p>
 			</div>
 			
 		    
@@ -871,6 +684,55 @@ the visibility of the children is determined by the opacity.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0.75</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIHover.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A specific color for the hovered point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
+			</div>
 			
 
 			
@@ -901,7 +763,7 @@ the visibility of the children is determined by the opacity.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

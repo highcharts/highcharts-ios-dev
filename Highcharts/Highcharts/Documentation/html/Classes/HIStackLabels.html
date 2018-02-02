@@ -108,7 +108,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIStackLabels.h<br />HIStackLabels.m</td>
+	<td>HIStackLabels.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -118,14 +118,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: The stack labels show the total value for each bar in a stacked
-column or bar chart. The label will be placed on top of positive
-columns and below negative columns. In case of an inverted column
-chart or a bar chart the label is placed to the right of positive
-bars and to the left of negative bars.</li>
-</ul>
-
+						<p>The stack labels show the total value for each bar in a stackedcolumn or bar chart. The label will be placed on top of positivecolumns and below negative columns. In case of an inverted columnchart or a bar chart the label is placed to the right of positivebars and to the left of negative bars.</p>
 					</div>
 					
 					
@@ -141,8 +134,8 @@ bars and to the left of negative bars.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/textAlign" title="textAlign"></a>
-	<h3 class="method-title"><code><a href="#//api/name/textAlign">&nbsp;&nbsp;textAlign</a></code>
+	<a name="//api/name/allowOverlap" title="allowOverlap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowOverlap">&nbsp;&nbsp;allowOverlap</a></code>
 </h3>
 
 	<div class="method-info">
@@ -152,20 +145,12 @@ bars and to the left of negative bars.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The text alignment for the label. While <a href="#//api/name/align">align</a> determines where
-the texts anchor point is placed with regards to the stack, textAlign
-determines how the text is aligned against its anchor point. Possible
-values are &ldquo;left&rdquo;, &ldquo;center&rdquo; and &ldquo;right&rdquo;. The default value
-is calculated at runtime and depends on orientation and whether the
-stack is positive or negative.</li>
-</ul>
-
+				<p>Allow the stack labels to overlap.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *textAlign</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id allowOverlap</code></div>
 
 		    
 			
@@ -176,277 +161,10 @@ stack is positive or negative.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-textalign-left/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-textalign-left/</a> : Label in center position but text-aligned left</li>
-<li>accepted values: [&ldquo;left&rdquo;, &ldquo;center&rdquo;, &ldquo;right&rdquo;]</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/formatter" title="formatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Callback JavaScript function to <a href="#//api/name/format">format</a> the label. The value is
-given b<a href="#//api/name/y">y</a> this.total. Defaults to:
-function() {
-  return this.total;
-}</li>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-formatter/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-formatter/</a> : Added units to stack total value</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/align" title="align"></a>
-	<h3 class="method-title"><code><a href="#//api/name/align">&nbsp;&nbsp;align</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Defines the horizontal alignment of the stack total label. Can be
-one of &ldquo;left&rdquo;, &ldquo;center&rdquo; or &ldquo;right&rdquo;. The default value is calculated
-at runtime and depends on orientation and whether the stack is positive
-or negative.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *align</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-left/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-left/</a> : Aligned to the left
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-center/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-center/</a> : Aligned in center
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-right/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-right/</a> : Aligned to the right</li>
-<li>accepted values: [&ldquo;left&rdquo;, &ldquo;center&rdquo;, &ldquo;right&rdquo;]</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/y" title="y"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The y position offset of the label relative to the tick position
-on the axis. The default value is calculated at runtime and depends
-on orientation and whether the stack is positive or negative.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-y/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-y/</a> : Stack total labels with y offset</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/verticalAlign" title="verticalAlign"></a>
-	<h3 class="method-title"><code><a href="#//api/name/verticalAlign">&nbsp;&nbsp;verticalAlign</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Defines the vertical alignment of the stack total label. Can be one
-of &ldquo;top&rdquo;, &ldquo;middle&rdquo; or &ldquo;bottom&rdquo;. The default value is calculated
-at runtime and depends on orientation and whether the stack is positive
-or negative.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *verticalAlign</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-top/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-top/</a> : &ldquo;Vertically aligned top&rdquo;
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-middle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-middle/</a> : &ldquo;Vertically aligned middle&rdquo;
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-bottom/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-bottom/</a> : &ldquo;Verticall<a href="#//api/name/y">y</a> aligned bottom&rdquo;</li>
-<li>accepted values: [&ldquo;top&rdquo;, &ldquo;middle&rdquo;, &ldquo;bottom&rdquo;]</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/rotation" title="rotation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rotation">&nbsp;&nbsp;rotation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Rotation of the labels in degrees.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *rotation</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/</a> : Labels rotated 45°</li>
-<li>default: 0</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-allowoverlap-false/">Default false</a></li>
 </ul>
 
 			</div>
@@ -477,12 +195,7 @@ or negative.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: CSS styles for the label.
-In styled mode, the styles are set in the
-.highcharts-stack-label class.</li>
-</ul>
-
+				<p>CSS styles for the label.In styled mode, the styles are set in the.highcharts-stack-label class.</p>
 			</div>
 			
 		    
@@ -498,8 +211,10 @@ In styled mode, the styles are set in the
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-style/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-style/</a> : Red stack total labels</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-style/">Red stack total labels</a></li>
 </ul>
 
 			</div>
@@ -519,8 +234,8 @@ In styled mode, the styles are set in the
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/x" title="x"></a>
-	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
+	<a name="//api/name/verticalAlign" title="verticalAlign"></a>
+	<h3 class="method-title"><code><a href="#//api/name/verticalAlign">&nbsp;&nbsp;verticalAlign</a></code>
 </h3>
 
 	<div class="method-info">
@@ -530,17 +245,12 @@ In styled mode, the styles are set in the
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The x position offset of the label relative to the left of the stacked
-bar. The default value is calculated at runtime and depends on orientation
-and whether the stack is positive or negative.</li>
-</ul>
-
+				<p>Defines the vertical alignment of the stack total label. Can be oneof &ldquo;top&rdquo;, &ldquo;middle&rdquo; or &ldquo;bottom&rdquo;. The default value is calculatedat runtime and depends on orientation and whether the stack is positiveor negative.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *verticalAlign</code></div>
 
 		    
 			
@@ -551,110 +261,14 @@ and whether the stack is positive or negative.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-x/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-x/</a> : Stack total labels with x offset</li>
-</ul>
+				<p><strong>Accepted values:</strong> <em>[&ldquo;top&rdquo;, &ldquo;middle&rdquo;, &ldquo;bottom&rdquo;]</em>.</p>
 
-			</div>
-			
+<h4>Try it</h4>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Enable or disable the stack total labels.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-enabled/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-enabled/</a> : Enabled stack total labels</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/allowOverlap" title="allowOverlap"></a>
-	<h3 class="method-title"><code><a href="#//api/name/allowOverlap">&nbsp;&nbsp;allowOverlap</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Allow the stack labels to overlap.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowOverlap</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-allowoverlap-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-allowoverlap-false/</a> : Default false</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-top/">&ldquo;Vertically aligned top&rdquo;</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-middle/">&ldquo;Vertically aligned middle&rdquo;</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-verticalalign-bottom/">&ldquo;Vertically aligned bottom&rdquo;</a></li>
 </ul>
 
 			</div>
@@ -685,12 +299,7 @@ and whether the stack is positive or negative.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A <a href="http://docs.highcharts.com/">http://docs.highcharts.com/</a>#formatting : format string for the
-data label. Available variables are the same as for <a href="#//api/name/formatter">formatter</a>.</li>
-<li>default: {total}</li>
-</ul>
-
+				<p>A <a href="http://docs.highcharts.com/#formatting">format string</a> for thedata label. Available variables are the same as for formatter.</p>
 			</div>
 			
 		    
@@ -704,6 +313,114 @@ data label. Available variables are the same as for <a href="#//api/name/formatt
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>{total}</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/align" title="align"></a>
+	<h3 class="method-title"><code><a href="#//api/name/align">&nbsp;&nbsp;align</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines the horizontal alignment of the stack total label. Can beone of &ldquo;left&rdquo;, &ldquo;center&rdquo; or &ldquo;right&rdquo;. The default value is calculatedat runtime and depends on orientation and whether the stack is positiveor negative.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *align</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;left&rdquo;, &ldquo;center&rdquo;, &ldquo;right&rdquo;]</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-left/">Aligned to the left</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-center/">Aligned in center</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-align-right/">Aligned to the right</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable the stack total labels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-enabled/">Enabled stack total labels</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -731,12 +448,7 @@ data label. Available variables are the same as for <a href="#//api/name/formatt
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting</a>#html : use HTML
-to render the labels.</li>
-<li>default: false</li>
-</ul>
-
+				<p>Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a>to render the labels.</p>
 			</div>
 			
 		    
@@ -750,6 +462,266 @@ to render the labels.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The y position offset of the label relative to the tick positionon the axis. The default value is calculated at runtime and dependson orientation and whether the stack is positive or negative.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-y/">Stack total labels with y offset</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The x position offset of the label relative to the left of the stackedbar. The default value is calculated at runtime and depends on orientationand whether the stack is positive or negative.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-x/">Stack total labels with x offset</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rotation" title="rotation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rotation">&nbsp;&nbsp;rotation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Rotation of the labels in degrees.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *rotation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/">Labels rotated 45Â°</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/formatter" title="formatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback JavaScript function to format the label. The value isgiven by this.total.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>function() { return this.total; }</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-formatter/">Added units to stack total value</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStackLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/textAlign" title="textAlign"></a>
+	<h3 class="method-title"><code><a href="#//api/name/textAlign">&nbsp;&nbsp;textAlign</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The text alignment for the label. While align determines wherethe texts anchor point is placed with regards to the stack, textAligndetermines how the text is aligned against its anchor point. Possiblevalues are &ldquo;left&rdquo;, &ldquo;center&rdquo; and &ldquo;right&rdquo;. The default valueis calculated at runtime and depends on orientation and whether thestack is positive or negative.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *textAlign</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;left&rdquo;, &ldquo;center&rdquo;, &ldquo;right&rdquo;]</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-textalign-left/">Label in center position but text-aligned left</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -780,7 +752,7 @@ to render the labels.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

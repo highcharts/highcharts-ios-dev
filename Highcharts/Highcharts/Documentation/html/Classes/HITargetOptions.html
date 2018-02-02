@@ -94,7 +94,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HITargetOptions.h<br />HITargetOptions.m</td>
+	<td>HITargetOptions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,7 +104,14 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>description: Individual target options for each point.</p>
+						<p>All options related with look and positiong of targets.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bullet-targetoptions/">Target options</a></li>
+</ul>
+
 					</div>
 					
 					
@@ -120,101 +127,6 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the rectangle representing the target. When not set,
-point&rsquo;s color (if set in point&rsquo;s options -
-color) or zone of the target value
-(if zones or
-negativeColor are set)
-or the same color as the point has is used.
-In styled mode, use class highcharts-bullet-target instead.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITargetOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/borderWidth" title="borderWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The border <a href="#//api/name/width">width</a> of the rectangle representing the target.
-In styled mode, use class highcharts-bullet-target instead.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITargetOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/borderColor" title="borderColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
 </h3>
@@ -226,12 +138,7 @@ In styled mode, use class highcharts-bullet-target instead.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The border <a href="#//api/name/color">color</a> of the rectangle representing the target. When
-not set, the  point&rsquo;s border <a href="#//api/name/color">color</a> is used.
-In styled mode, use class highcharts-bullet-target instead.</li>
-</ul>
-
+				<p>The border color of the rectangle representing the target. Whennot set, the  point&rsquo;s border color is used.In styled mode, use class highcharts-bullet-target instead.</p>
 			</div>
 			
 		    
@@ -272,17 +179,94 @@ In styled mode, use class highcharts-bullet-target instead.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The width of the rectangle representing the target. Could be set as
-a pixel value or as a percentage of a column width.</li>
-<li>default: 140%</li>
-</ul>
-
+				<p>The width of the rectangle representing the target. Could be set asa pixel value or as a percentage of a column width.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id width</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITargetOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderWidth" title="borderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The border width of the rectangle representing the target.In styled mode, use class highcharts-bullet-target instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id borderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITargetOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the rectangle representing the target. When not set,point&rsquo;s color (if set in point&rsquo;s options -color) or zone of the target value(if zones ornegativeColor are set)or the same color as the point has is used.In styled mode, use class highcharts-bullet-target instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
 
 		    
 			
@@ -318,13 +302,12 @@ a pixel value or as a percentage of a column width.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: The height of the rectangle representing the target.
-default: 3</p>
+				<p>The height of the rectangle representing the target.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *height</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id height</code></div>
 
 		    
 			
@@ -363,7 +346,7 @@ default: 3</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

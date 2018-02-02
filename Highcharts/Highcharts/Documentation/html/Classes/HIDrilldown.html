@@ -96,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDrilldown.h<br />HIDrilldown.m</td>
+	<td>HIDrilldown.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,14 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: Options for drill down, the concept of inspecting increasingly high
-resolution data through clicking on chart items like columns or pie slices.
-The drilldown feature requires the drilldown.js file to be loaded,
-found in the modules directory of the download package, or online at
-(code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/drilldown.js].</li>
-</ul>
-
+						<p>Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices.The drilldown feature requires the drilldown.js file to be loaded, found in the modules directory of the download package, or online at (code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/drilldown.js].</p>
 					</div>
 					
 					
@@ -129,166 +122,6 @@ found in the modules directory of the download package, or online at
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/allowPointDrilldown" title="allowPointDrilldown"></a>
-	<h3 class="method-title"><code><a href="#//api/name/allowPointDrilldown">&nbsp;&nbsp;allowPointDrilldown</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When this option is false, clicking a single point will drill down
-all points in the same category, equivalent to clicking the X axis
-label.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowPointDrilldown</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/allowpointdrilldown-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/allowpointdrilldown-false/</a> : Don&rsquo;t allow point drilldown</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDrilldown.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/activeAxisLabelStyle" title="activeAxisLabelStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/activeAxisLabelStyle">&nbsp;&nbsp;activeAxisLabelStyle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Additional styles to apply to the X axis label for a point that
-has drilldown data. By default it is underlined and blue to invite
-to interaction.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIActiveAxisLabelStyle *activeAxisLabelStyle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/</a> : Label styles</li>
-<li>default: { &ldquo;cursor&rdquo;: &ldquo;pointer&rdquo;, &ldquo;color&rdquo;: &ldquo;#003399&rdquo;, &ldquo;fontWeight&rdquo;: &ldquo;bold&rdquo;, &ldquo;textDecoration&rdquo;: &ldquo;underline&rdquo; }</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDrilldown.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/drillUpButton" title="drillUpButton"></a>
-	<h3 class="method-title"><code><a href="#//api/name/drillUpButton">&nbsp;&nbsp;drillUpButton</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Options for the drill up button that appears when drilling down
-on a <a href="#//api/name/series">series</a>. The text for the button is defined in lang.drillUpText.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/</a> : Drill up button</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDrilldown.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/activeDataLabelStyle" title="activeDataLabelStyle"></a>
 	<h3 class="method-title"><code><a href="#//api/name/activeDataLabelStyle">&nbsp;&nbsp;activeDataLabelStyle</a></code>
 </h3>
@@ -300,12 +133,7 @@ on a <a href="#//api/name/series">series</a>. The text for the button is defined
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Additional styles to apply to the data label of a point that has
-drilldown data. By default it is underlined and blue to invite to
-interaction.</li>
-</ul>
-
+				<p>Additional styles to apply to the data label of a point that hasdrilldown data. By default it is underlined and blue to invite tointeraction.</p>
 			</div>
 			
 		    
@@ -321,9 +149,12 @@ interaction.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/</a> : Label styles</li>
-<li>default: { &ldquo;cursor&rdquo;: &ldquo;pointer&rdquo;, &ldquo;color&rdquo;: &ldquo;#003399&rdquo;, &ldquo;fontWeight&rdquo;: &ldquo;bold&rdquo;, &ldquo;textDecoration&rdquo;: &ldquo;underline&rdquo; }</li>
+				<p><strong>Defaults to</strong> <em>{ &ldquo;cursor&rdquo;: &ldquo;pointer&rdquo;, &ldquo;color&rdquo;: &ldquo;#003399&rdquo;, &ldquo;fontWeight&rdquo;: &ldquo;bold&rdquo;, &ldquo;textDecoration&rdquo;: &ldquo;underline&rdquo; }</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/">Label styles</a></li>
 </ul>
 
 			</div>
@@ -354,13 +185,7 @@ interaction.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An array of series configurations for the drill down. Each series
-configuration uses the same syntax as the series option
-set. These drilldown series are hidden by default. The drilldown
-series is linked to the parent series' point by its id.</li>
-</ul>
-
+				<p>An array of series configurations for the drill down. Each seriesconfiguration uses the same syntax as the series optionset. These drilldown series are hidden by default. The drilldownseries is linked to the parent series' point by its id.</p>
 			</div>
 			
 		    
@@ -390,6 +215,58 @@ series is linked to the parent series' point by its id.</li>
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/allowPointDrilldown" title="allowPointDrilldown"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowPointDrilldown">&nbsp;&nbsp;allowPointDrilldown</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When this option is false, clicking a single point will drill downall points in the same category, equivalent to clicking the X axislabel.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowPointDrilldown</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/allowpointdrilldown-false/">Don&rsquo;t allow point drilldown</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDrilldown.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/animation" title="animation"></a>
 	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
 </h3>
@@ -401,18 +278,7 @@ series is linked to the parent series' point by its id.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Set the animation for all drilldown animations. Animation of a drilldown
-occurs when drilling between a column point and a column <a href="#//api/name/series">series</a>,
-or a pie slice and a full pie <a href="#//api/name/series">series</a>. Drilldown can still be used
-between <a href="#//api/name/series">series</a> and points of different types, but animation will
-not occur.
-The animation can either be set as a boolean or a configuration
-object. If true, it will use the &lsquo;swing&rsquo; jQuery easing and a duration
-of 500 ms. If used as a configuration object, the following properties
-are supported:</li>
-</ul>
-
+				<p>Set the animation for all drilldown animations. Animation of a drilldownoccurs when drilling between a column point and a column series,or a pie slice and a full pie series. Drilldown can still be usedbetween series and points of different types, but animation willnot occur.The animation can either be set as a boolean or a configurationobject. If true, it will use the &lsquo;swing&rsquo; jQuery easing and a durationof 500 ms. If used as a configuration object, the following propertiesare supported:durationThe duration of the animation in milliseconds.easingA string reference to an easing function set on the Math object.See <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</p>
 			</div>
 			
 		    
@@ -427,13 +293,106 @@ are supported:</li>
 			
 
 			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDrilldown.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drillUpButton" title="drillUpButton"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drillUpButton">&nbsp;&nbsp;drillUpButton</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the drill up button that appears when drilling downon a series. The text for the button is defined in lang.drillUpText.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
 			<div class="method-subsection discussion-section">
-				<p>duration
-The duration of the animation in milliseconds.
-easing
-A string reference to an easing function set on the Math object.
-See <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-">http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-</a>
-animation-easing/ : the easing demo.</p>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/">Drill up button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDrilldown.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/activeAxisLabelStyle" title="activeAxisLabelStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activeAxisLabelStyle">&nbsp;&nbsp;activeAxisLabelStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Additional styles to apply to the X axis label for a point thathas drilldown data. By default it is underlined and blue to inviteto interaction.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIActiveAxisLabelStyle *activeAxisLabelStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>{ &ldquo;cursor&rdquo;: &ldquo;pointer&rdquo;, &ldquo;color&rdquo;: &ldquo;#003399&rdquo;, &ldquo;fontWeight&rdquo;: &ldquo;bold&rdquo;, &ldquo;textDecoration&rdquo;: &ldquo;underline&rdquo; }</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/">Label styles</a></li>
+</ul>
+
 			</div>
 			
 
@@ -465,7 +424,7 @@ animation-easing/ : the easing demo.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

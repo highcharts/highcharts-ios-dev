@@ -86,6 +86,8 @@
 		
 		<option value="//api/name/nodeFormat">nodeFormat</option>
 		
+		<option value="//api/name/nodeFormatter">nodeFormatter</option>
+		
 		<option value="//api/name/padding">padding</option>
 		
 		<option value="//api/name/pointFormat">pointFormat</option>
@@ -144,7 +146,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HITooltip.h<br />HITooltip.m</td>
+	<td>HITooltip.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -154,11 +156,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: Options for the tooltip that appears when the user hovers over a
-series or point.</li>
-</ul>
-
+						<p>Options for the tooltip that appears when the user hovers over aseries or point.</p>
 					</div>
 					
 					
@@ -174,8 +172,8 @@ series or point.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/split" title="split"></a>
-	<h3 class="method-title"><code><a href="#//api/name/split">&nbsp;&nbsp;split</a></code>
+	<a name="//api/name/followTouchMove" title="followTouchMove"></a>
+	<h3 class="method-title"><code><a href="#//api/name/followTouchMove">&nbsp;&nbsp;followTouchMove</a></code>
 </h3>
 
 	<div class="method-info">
@@ -185,18 +183,12 @@ series or point.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Split the tooltip into one label per series, with the header close
-to the axis. This is recommended over <a href="#//api/name/shared">shared</a> tooltips
-for charts with multiple line series, generally making them easier
-to read.</li>
-</ul>
-
+				<p>Whether the tooltip should follow the finger as it moves on a touchdevice. If this is true and chart.panning isset,followTouchMove will take over one-finger touches, so the userneeds to use two fingers for zooming and panning.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *split</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *followTouchMove</code></div>
 
 		    
 			
@@ -207,8 +199,158 @@ to read.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/</a> : Split tooltip</li>
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderRadius" title="borderRadius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderRadius">&nbsp;&nbsp;borderRadius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The radius of the rounded border corners.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderRadius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>3</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">5px by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderradius-0/">Square borders</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/headerFormat" title="headerFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/headerFormat">&nbsp;&nbsp;headerFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The HTML of the tooltip header line. Variables are enclosed bycurly brackets. Available variables are point.key, series.name,series.color and other members from the point and seriesobjects. The point.key variable contains the category name, xvalue or datetime string depending on the type of axis. For datetimeaxes, the point.key date format can be set using tooltip.xDateFormat.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *headerFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/">A HTML table in the tooltip</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valueSuffix" title="valueSuffix"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueSuffix">&nbsp;&nbsp;valueSuffix</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A string to append to each series' y value. Overridable in each series'tooltip options object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valueSuffix</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/">Set decimals, prefix and suffix for the value</a></li>
 </ul>
 
 			</div>
@@ -239,11 +381,7 @@ to read.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A string to prepend to each series' y value. Overridable in each
-series' tooltip options object.</li>
-</ul>
-
+				<p>A string to prepend to each series' y value. Overridable in eachseries' tooltip options object.</p>
 			</div>
 			
 		    
@@ -259,210 +397,10 @@ series' tooltip options object.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/</a> : Set decimals, prefix and suffix for the value</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/hideDelay" title="hideDelay"></a>
-	<h3 class="method-title"><code><a href="#//api/name/hideDelay">&nbsp;&nbsp;hideDelay</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The number of milliseconds to wait until the tooltip is hidden when
-mouse out from a point or chart.</li>
-<li>default: 500</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *hideDelay</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/headerFormat" title="headerFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/headerFormat">&nbsp;&nbsp;headerFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The HTML of the tooltip header line. Variables are enclosed by
-curly brackets. Available variables are point.key, series.name,
-series.color and other members from the point and series
-objects. The point.key variable contains the category name, x
-value or datetime string depending on the type of axis. For datetime
-axes, the point.key date format can be set using tooltip.<a href="#//api/name/xDateFormat">xDateFormat</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *headerFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/</a> : A HTML table in the tooltip
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/</a> : Format demo</li>
-<li>default: <span style="font-size: 10px">{point.key}</span><br/></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointFormatter" title="pointFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointFormatter">&nbsp;&nbsp;pointFormatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A callback function for formatting the HTML output for a single point
-in the tooltip. Like the <a href="#//api/name/pointFormat">pointFormat</a> string, but with more flexibility.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointFormatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/footerFormat" title="footerFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/footerFormat">&nbsp;&nbsp;footerFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A string to append to the tooltip format.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *footerFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/</a> : A table for value alignment
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/</a> : Format demo</li>
-<li>default: false</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/">Set decimals, prefix and suffix for the value</a></li>
 </ul>
 
 			</div>
@@ -493,24 +431,7 @@ in the tooltip. Like the <a href="#//api/name/pointFormat">pointFormat</a> strin
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: For series on a datetime axes, the date format in the tooltip&rsquo;s
-header will by default be guessed based on the closest data points.
-This member gives the default string representations used for
-each unit. For an overview of the replacement codes, see dateFormat.
-Defaults to:
-{
-  millisecond:&ldquo;%A, %b %e, %H:%M:%S.%L&rdquo;,
-  second:&ldquo;%A, %b %e, %H:%M:%S&rdquo;,
-  minute:&ldquo;%A, %b %e, %H:%M&rdquo;,
-  hour:&ldquo;%A, %b %e, %H:%M&rdquo;,
-  day:&ldquo;%A, %b %e, %Y&rdquo;,
-  week:&ldquo;Week from %A, %b %e, %Y&rdquo;,
-  month:&ldquo;%B %Y&rdquo;,
-  year:&ldquo;%Y&rdquo;
-}</li>
-</ul>
-
+				<p>For series on a datetime axes, the date format in the tooltip'sheader will by default be guessed based on the closest data points.This member gives the default string representations used foreach unit. For an overview of the replacement codes, see dateFormat.Defaults to:{    millisecond:&ldquo;%A, %b %e, %H:%M:%S.%L&rdquo;,    second:&ldquo;%A, %b %e, %H:%M:%S&rdquo;,    minute:&ldquo;%A, %b %e, %H:%M&rdquo;,    hour:&ldquo;%A, %b %e, %H:%M&rdquo;,    day:&ldquo;%A, %b %e, %Y&rdquo;,    week:&ldquo;Week from %A, %b %e, %Y&rdquo;,    month:&ldquo;%B %Y&rdquo;,    year:&ldquo;%Y&rdquo;}</p>
 			</div>
 			
 		    
@@ -540,8 +461,8 @@ Defaults to:
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/followTouchMove" title="followTouchMove"></a>
-	<h3 class="method-title"><code><a href="#//api/name/followTouchMove">&nbsp;&nbsp;followTouchMove</a></code>
+	<a name="//api/name/shape" title="shape"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shape">&nbsp;&nbsp;shape</a></code>
 </h3>
 
 	<div class="method-info">
@@ -551,64 +472,12 @@ Defaults to:
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether the tooltip should follow the finger as it moves on a touch
-device. If this is true and chart.panning is
-set,followTouchMove will take over one-finger touches, so the user
-needs to use two fingers for zooming and panning.</li>
-</ul>
-
+				<p>The name of a symbol to use for the border around the tooltip.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *followTouchMove</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/valueDecimals" title="valueDecimals"></a>
-	<h3 class="method-title"><code><a href="#//api/name/valueDecimals">&nbsp;&nbsp;valueDecimals</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: How many decimals to show in each series' y value. This is overridable
-in each series' tooltip options object. The default is to preserve
-all decimals.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *valueDecimals</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *shape</code></div>
 
 		    
 			
@@ -619,10 +488,9 @@ all decimals.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/</a> : Set decimals, prefix and suffix for the value</li>
-</ul>
+				<p><strong>Accepted values:</strong> <em>[&ldquo;callout&rdquo;, &ldquo;square&rdquo;]</em>.</p>
 
+<p><strong>Defaults to</strong> <em>callout</em>.</p>
 			</div>
 			
 
@@ -640,8 +508,8 @@ all decimals.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/followPointer" title="followPointer"></a>
-	<h3 class="method-title"><code><a href="#//api/name/followPointer">&nbsp;&nbsp;followPointer</a></code>
+	<a name="//api/name/positioner" title="positioner"></a>
+	<h3 class="method-title"><code><a href="#//api/name/positioner">&nbsp;&nbsp;positioner</a></code>
 </h3>
 
 	<div class="method-info">
@@ -651,64 +519,12 @@ all decimals.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether the tooltip should follow the mouse as it moves across columns,
-pie slices and other point types with an extent. By default it behaves
-this way for scatter, bubble and pie series by override in the plotOptions
-for those series types.
-For touch moves to behave the same way, <a href="#//api/name/followTouchMove">followTouchMove</a> must be true also.</li>
-</ul>
-
+				<p>A callback function to place the tooltip in a default position. Thecallback receives three parameters: labelWidth, labelHeight andpoint, where point contains values for plotX and plotY tellingwhere the reference point is in the plot area. Add chart.plotLeftand chart.plotTop to get the full coordinates.The return should be an object containing x and y values, for example{ x: 100, y: 100 }.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *followPointer</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/valueSuffix" title="valueSuffix"></a>
-	<h3 class="method-title"><code><a href="#//api/name/valueSuffix">&nbsp;&nbsp;valueSuffix</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A string to append to each series' y value. Overridable in each series'
-tooltip options object.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valueSuffix</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *positioner</code></div>
 
 		    
 			
@@ -719,263 +535,10 @@ tooltip options object.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/</a> : Set decimals, prefix and suffix for the value</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/padding" title="padding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Padding inside the tooltip, in pixels.
-default: 8</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *padding</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointFormat" title="pointFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointFormat">&nbsp;&nbsp;pointFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The HTML of the point&rsquo;s line in the tooltip. Variables are enclosed
-by curly brackets. Available variables are point.x, point.y, series.
-name and series.color and other properties on the same form. Furthermore,
-point.y can be extended by the tooltip.<a href="#//api/name/valuePrefix">valuePrefix</a> and tooltip.
-<a href="#//api/name/valueSuffix">valueSuffix</a> variables. This can also be overridden for each series,
-which makes it a good hook for displaying units.
-In styled mode, the dot is colored by a class name rather
-than the point color.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/</a> : A different point format with value suffix
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/</a> : Format demo</li>
-<li>default: <span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/xDateFormat" title="xDateFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/xDateFormat">&nbsp;&nbsp;xDateFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The format for the date in the tooltip header if the X axis is a
-datetime axis. The default is a best guess based on the smallest
-<a href="#//api/name/distance">distance</a> between points in the chart.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *xDateFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/xdateformat/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/xdateformat/</a> : A different format</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/nodeFormat" title="nodeFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nodeFormat">&nbsp;&nbsp;nodeFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The <a href="http://www.highcharts.com/docs/chart-concepts/labels-">http://www.highcharts.com/docs/chart-concepts/labels-</a>
-and-string-formatting : format string specifying what to show for nodes in tooltip
-of a sankey diagram series.</li>
-<li>default: {point.name}: <b>{point.sum}</b><br/></li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nodeFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/style" title="style"></a>
-	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: CSS styles for the tooltip. The tooltip can also be styled through
-the CSS class .highcharts-tooltip.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/</a> : Greater <a href="#//api/name/padding">padding</a>, bold text</li>
-<li>default: { &ldquo;color&rdquo;: &ldquo;#333333&rdquo;, &ldquo;cursor&rdquo;: &ldquo;default&rdquo;, &ldquo;fontSize&rdquo;: &ldquo;12px&rdquo;, &ldquo;pointerEvents&rdquo;: &ldquo;none&rdquo;, &ldquo;whiteSpace&rdquo;: &ldquo;nowrap&rdquo; }</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/">A fixed tooltip position</a></li>
 </ul>
 
 			</div>
@@ -1006,13 +569,7 @@ the CSS class .highcharts-tooltip.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Use HTML to render the contents of the tooltip instead of SVG. Using
-HTML allows advanced formatting like tables and images in the tooltip.
-It is also recommended for rtl languages as it works around rtl
-bugs in early Firefox.</li>
-</ul>
-
+				<p>Use HTML to render the contents of the tooltip instead of SVG. UsingHTML allows advanced formatting like tables and images in the tooltip.It is also recommended for rtl languages as it works around rtlbugs in early Firefox.</p>
 			</div>
 			
 		    
@@ -1028,589 +585,13 @@ bugs in early Firefox.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/</a> : A table for value alignment
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/fullhtml/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/fullhtml/</a> : Full HTML tooltip
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/usehtml/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/usehtml/</a> : Pure HTML tooltip</li>
-<li>default: false</li>
-</ul>
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/positioner" title="positioner"></a>
-	<h3 class="method-title"><code><a href="#//api/name/positioner">&nbsp;&nbsp;positioner</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A callback function to place the tooltip in a default position. The
-callback receives three parameters: labelWidth, labelHeight and
-point, where point contains values for plotX and plotY telling
-where the reference point is in the plot area. Add chart.plotLeft
-and chart.plotTop to get the full coordinates.
-The return should be an object containing x and y values, for example
-{ x: 100, y: 100 }.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *positioner</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/</a> : A fixed tooltip position
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/positioner/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/positioner/</a> : A fixed tooltip position on top of the chart</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/shadow" title="shadow"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shadow">&nbsp;&nbsp;shadow</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether to apply a drop shadow to the tooltip.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/</a> : True by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shadow/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shadow/</a> : False
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/</a> : Fixed tooltip position, border and shadow disabled</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/formatter" title="formatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Callback function to format the text of the tooltip from scratch. Return
-false to disable tooltip for a specific point on series.
-A subset of HTML is supported. Unless <a href="#//api/name/useHTML">useHTML</a> is true, the HTML of the
-tooltip is parsed and converted to SVG, therefore this isn&rsquo;t a complete HTML
-renderer. The following tags are supported: <b>, <strong>, <i>, <em>,
-<br/>, <span>. Spans can be styled with a <a href="#//api/name/style">style</a> attribute,
-but only text-related CSS that is <a href="#//api/name/shared">shared</a> with SVG is handled.
-Since version 2.1 the tooltip can be <a href="#//api/name/shared">shared</a> between multiple series
-through the <a href="#//api/name/shared">shared</a> option. The available data in the formatter
-differ a bit depending on whether the tooltip is <a href="#//api/name/shared">shared</a> or not. In
-a <a href="#//api/name/shared">shared</a> tooltip, all properties except x, which is common for
-all points, are kept in an array, this.points.
-Available data are:</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<p>this.percentage (not shared) / this.points[i].percentage (shared)
-Stacked series and pies only. The point&rsquo;s percentage of the total.</p>
-
-<p>this.point (not shared) / this.points[i].point (shared)
-The point object. The point name, if defined, is available through
-this.point.name.
-this.points
-In a shared tooltip, this is an array containing all other properties
-for each point.
-this.series (not shared) / this.points[i].series (shared)
-The series object. The series name is available through
-this.series.name.
-this.total (not shared) / this.points[i].total (shared)
-Stacked series only. The total value at this point&rsquo;s x value.</p>
-
-<p>this.x
-The x value. This property is the same regardless of the tooltip
-being shared or not.
-this.y (not shared) / this.points[i].y (shared)
-The y value.</p>
+<h4>Try it</h4>
 
 <ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-simple/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-simple/</a> : Simple string formatting
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-shared/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-shared/</a> : Formatting with shared tooltip
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/formatter/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/formatter/</a> : String formatting</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/borderWidth" title="borderWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pixel width of the tooltip border.
-In styled mode, the stroke width is set in the .highcharts-tooltip-box class.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/</a> : 2px by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderwidth/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderwidth/</a> : No border (shadow only)
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/</a> : Tooltip in styled mode
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/</a> : Custom tooltip
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/</a> : Background and border demo</p></li>
-<li><p>default: 1</p></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/shared" title="shared"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shared">&nbsp;&nbsp;shared</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When the tooltip is shared, the entire plot area will capture mouse
-movement or touch events. Tooltip texts for series types with ordered
-data (not pie, scatter, flags etc) will be shown in a single bubble.
-This is recommended for single series charts and for tablet/mobile
-optimized charts.
-See also tooltip.<a href="#//api/name/split">split</a>, that is better suited for
-charts with many series, especially line-type series.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shared</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-false/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-false/</a> : False by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true/</a> : True
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-x-crosshair/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-x-crosshair/</a> : True with x axis crosshair
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true-mixed-types/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true-mixed-types/</a> : True with mixed series types</li>
-<li>default: false</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/animation" title="animation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Enable or disable animation of the tooltip. In slow legacy IE browsers
-the animation is disabled by default.</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *animation</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/borderRadius" title="borderRadius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderRadius">&nbsp;&nbsp;borderRadius</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The radius of the rounded border corners.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderRadius</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/</a> : 5px by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderradius-0/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderradius-0/</a> : Square borders
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/</a> : Background and border demo</li>
-<li>default: 3</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Enable or disable the tooltip.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/</a> : Disabled
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/</a> : Disable tooltip and show values on chart instead</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/backgroundColor" title="backgroundColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/backgroundColor">&nbsp;&nbsp;backgroundColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The background color or gradient for the tooltip.
-In styled mode, the stroke width is set in the .highcharts-tooltip-box class.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *backgroundColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-solid/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-solid/</a> : Yellowish background
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/</a> : Gradient
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/</a> : Tooltip in styled mode
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/</a> : Custom tooltip
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/</a> : Background and border demo</p></li>
-<li><p>default: rgba(247,247,247,0.85)</p></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/shape" title="shape"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shape">&nbsp;&nbsp;shape</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The name of a symbol to use for the border around the tooltip.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *shape</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>accepted values: [&ldquo;callout&rdquo;, &ldquo;square&rdquo;]</li>
-<li>default: callout</li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/">A table for value alignment</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/fullhtml/">Full HTML tooltip</a></li>
 </ul>
 
 			</div>
@@ -1641,11 +622,7 @@ In styled mode, the stroke width is set in the .highcharts-tooltip-box class.</l
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the tooltip border. When null, the border takes the
-color of the corresponding series or point.</li>
-</ul>
-
+				<p>The color of the tooltip border. When null, the border takes thecolor of the corresponding series or point.</p>
 			</div>
 			
 		    
@@ -1661,12 +638,266 @@ color of the corresponding series or point.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/</a> : Follow series by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/</a> : Black border
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/tooltip/general/</a> : Styled tooltip
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/</a> : Background and border demo</li>
-<li>default: null</li>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">Follow series by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/">Black border</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>CSS styles for the tooltip. The tooltip can also be styled throughthe CSS class .highcharts-tooltip.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>{ &ldquo;color&rdquo;: &ldquo;#333333&rdquo;, &ldquo;cursor&rdquo;: &ldquo;default&rdquo;, &ldquo;fontSize&rdquo;: &ldquo;12px&rdquo;, &ldquo;pointerEvents&rdquo;: &ldquo;none&rdquo;, &ldquo;whiteSpace&rdquo;: &ldquo;nowrap&rdquo; }</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/">Greater padding, bold text</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/footerFormat" title="footerFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/footerFormat">&nbsp;&nbsp;footerFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A string to append to the tooltip format.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id footerFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/">A table for value alignment</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/animation" title="animation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable animation of the tooltip. In slow legacy IE browsersthe animation is disabled by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *animation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/split" title="split"></a>
+	<h3 class="method-title"><code><a href="#//api/name/split">&nbsp;&nbsp;split</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Split the tooltip into one label per series, with the header closeto the axis. This is recommended over shared tooltipsfor charts with multiple line series, generally making them easierto read.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *split</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/">Split tooltip</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/backgroundColor" title="backgroundColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/backgroundColor">&nbsp;&nbsp;backgroundColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The background color or gradient for the tooltip.In styled mode, the stroke width is set in the .highcharts-tooltip-box class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *backgroundColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>rgba(247,247,247,0.85)</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-solid/">Yellowish background</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/">Gradient</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/">Tooltip in styled mode</a></li>
 </ul>
 
 			</div>
@@ -1697,16 +928,7 @@ color of the corresponding series or point.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Proximity snap for graphs or single points. It defaults to 10 for
-mouse-powered devices and 25 for touch devices.
-Note that in most cases the whole plot area captures the mouse
-movement, and in these cases tooltip.snap doesn&rsquo;t make sense.
-This applies when stickyTracking
-is true (default) and when the tooltip is <a href="#//api/name/shared">shared</a>
-or <a href="#//api/name/split">split</a>.</li>
-</ul>
-
+				<p>Proximity snap for graphs or single points. It defaults to 10 formouse-powered devices and 25 for touch devices.Note that in most cases the whole plot area captures the mousemovement, and in these cases tooltip.snap doesn&rsquo;t make sense.This applies when stickyTrackingis true (default) and when the tooltip is sharedor split.</p>
 			</div>
 			
 		    
@@ -1722,10 +944,221 @@ or <a href="#//api/name/split">split</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/</a> : 10 px by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/</a> : 50 px on graph</li>
-<li>default: 10/25</li>
+				<p><strong>Defaults to</strong> <em>10/25</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">10 px by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/">50 px on graph</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shared" title="shared"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shared">&nbsp;&nbsp;shared</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When the tooltip is shared, the entire plot area will capture mousemovement or touch events. Tooltip texts for series types with ordereddata (not pie, scatter, flags etc) will be shown in a single bubble.This is recommended for single series charts and for tablet/mobileoptimized charts.See also tooltip.split, that is better suited forcharts with many series, especially line-type series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shared</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-false/">False by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true/">True</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-x-crosshair/">True with x axis crosshair</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true-mixed-types/">True with mixed series types</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/formatter" title="formatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback function to format the text of the tooltip from scratch. Returnfalse to disable tooltip for a specific point on series.A subset of HTML is supported. Unless useHTML is true, the HTML of thetooltip is parsed and converted to SVG, therefore this isn&rsquo;t a complete HTMLrenderer. The following tags are supported: , , , ,, . Spans can be styled with a style attribute,but only text-related CSS that is shared with SVG is handled.Since version 2.1 the tooltip can be shared between multiple seriesthrough the shared option. The available data in the formatterdiffer a bit depending on whether the tooltip is shared or not. Ina shared tooltip, all properties except x, which is common forall points, are kept in an array, this.points.Available data are:this.percentage (not shared) / this.points[i].percentage (shared)Stacked series and pies only. The point&rsquo;s percentage of the total.this.point (not shared) / this.points[i].point (shared)The point object. The point name, if defined, is available throughthis.point.name.this.pointsIn a shared tooltip, this is an array containing all other propertiesfor each point.this.series (not shared) / this.points[i].series (shared)The series object. The series name is available throughthis.series.name.this.total (not shared) / this.points[i].total (shared)Stacked series only. The total value at this point&rsquo;s x value.this.xThe x value. This property is the same regardless of the tooltipbeing shared or not.this.y (not shared) / this.points[i].y (shared)The y value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-simple/">Simple string formatting</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-shared/">Formatting with shared tooltip</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointFormat" title="pointFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointFormat">&nbsp;&nbsp;pointFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The HTML of the point&rsquo;s line in the tooltip. Variables are enclosedby curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore,point.y can be extended by the tooltip.valuePrefix and tooltip.valueSuffix variables. This can also be overridden for each series,which makes it a good hook for displaying units.In styled mode, the dot is colored by a class name ratherthan the point color.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em><span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/></em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/">A different point format with value suffix</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/xDateFormat" title="xDateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/xDateFormat">&nbsp;&nbsp;xDateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The format for the date in the tooltip header if the X axis is adatetime axis. The default is a best guess based on the smallestdistance between points in the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *xDateFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/xdateformat/">A different format</a></li>
 </ul>
 
 			</div>
@@ -1756,11 +1189,7 @@ or <a href="#//api/name/split">split</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Since 4.1, the crosshair definitions are moved to the Axis object
-in order for a better separation from the tooltip. See xAxis.crosshair.</li>
-</ul>
-
+				<p>Since 4.1, the crosshair definitions are moved to the Axis objectin order for a better separation from the tooltip. See xAxis.crosshair.</p>
 			</div>
 			
 		    
@@ -1776,12 +1205,483 @@ in order for a better separation from the tooltip. See xAxis.crosshair.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/crosshairs-x/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/crosshairs-x/</a> : Enable a crosshair for the x value</li>
-<li>default: true</li>
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/crosshairs-x/">Enable a crosshair for the x value</a></li>
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/padding" title="padding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Padding inside the tooltip, in pixels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *padding</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>8</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shadow" title="shadow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shadow">&nbsp;&nbsp;shadow</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to apply a drop shadow to the tooltip.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">True by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shadow/">False</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable the tooltip.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/">Disabled</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/">Disable tooltip and show values on chart instead</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointFormatter" title="pointFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointFormatter">&nbsp;&nbsp;pointFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A callback function for formatting the HTML output for a single pointin the tooltip. Like the pointFormat string, but with more flexibility.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderWidth" title="borderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel width of the tooltip border.In styled mode, the stroke width is set in the .highcharts-tooltip-box class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>1</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">2px by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderwidth/">No border (shadow only)</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/">Tooltip in styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/followPointer" title="followPointer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/followPointer">&nbsp;&nbsp;followPointer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether the tooltip should follow the mouse as it moves across columns,pie slices and other point types with an extent. By default it behavesthis way for scatter, bubble and pie series by override in the plotOptionsfor those series types.For touch moves to behave the same way, followTouchMove must be true also.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *followPointer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hideDelay" title="hideDelay"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hideDelay">&nbsp;&nbsp;hideDelay</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The number of milliseconds to wait until the tooltip is hidden whenmouse out from a point or chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *hideDelay</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>500</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valueDecimals" title="valueDecimals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueDecimals">&nbsp;&nbsp;valueDecimals</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>How many decimals to show in each series' y value. This is overridablein each series' tooltip options object. The default is to preserveall decimals.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *valueDecimals</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/">Set decimals, prefix and suffix for the value</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nodeFormatter" title="nodeFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeFormatter">&nbsp;&nbsp;nodeFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A callback for defining the format for <em>nodes</em> in the sankey chart'stooltip, as opposed to links.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *nodeFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nodeFormat" title="nodeFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeFormat">&nbsp;&nbsp;nodeFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>nodes</em> in tooltipof a sankey diagram series, as opposed to links.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id nodeFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1812,7 +1712,7 @@ in order for a better separation from the tooltip. See xAxis.crosshair.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

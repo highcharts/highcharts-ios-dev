@@ -104,7 +104,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HINavigation.h<br />HINavigation.m</td>
+	<td>HINavigation.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -114,7 +114,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>description: A collection of options for buttons and menus appearing in the exporting module.</p>
+						<p>A collection of options for buttons and menus appearing in the exporting module.</p>
 					</div>
 					
 					
@@ -130,8 +130,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+	<a name="//api/name/menuStyle" title="menuStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/menuStyle">&nbsp;&nbsp;menuStyle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -141,68 +141,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether to enable the legend navigation. In most cases, disabling
-the navigation results in an unwanted overflow.
-See also the <a href="http://www.highcharts.com/plugin-">http://www.highcharts.com/plugin-</a>
-registry/single/8/Adapt-Chart-To-Legend : adapt chart to legend plugin for a solution to
-extend the chart height to make room for the legend, optionally in
-exported charts only.</li>
-<li>default: true</li>
-</ul>
-
+				<p>CSS styles for the popup menu appearing by default when the exporticon is clicked. This menu is rendered in HTML.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/animation" title="animation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: How to animate the pages when navigating up or down. A value of true
-applies the default navigation given in the chart.animation option.
-Additional options can be given as an object containing values for
-easing and duration.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id animation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMenuStyle *menuStyle</code></div>
 
 		    
 			
@@ -213,9 +157,12 @@ easing and duration.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/</a> : Legend page navigation demonstrated</li>
-<li>default: true</li>
+				<p><strong>Defaults to</strong> <em>{ &ldquo;border&rdquo;: &ldquo;1px solid #999999&rdquo;, &ldquo;background&rdquo;: &ldquo;#ffffff&rdquo;, &ldquo;padding&rdquo;: &ldquo;5px 0&rdquo; }</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/">Light gray menu background</a></li>
 </ul>
 
 			</div>
@@ -235,8 +182,8 @@ easing and duration.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/inactiveColor" title="inactiveColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/inactiveColor">&nbsp;&nbsp;inactiveColor</a></code>
+	<a name="//api/name/menuItemStyle" title="menuItemStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/menuItemStyle">&nbsp;&nbsp;menuItemStyle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -246,16 +193,12 @@ easing and duration.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the inactive up or down arrow in the legend page
-navigation. .</li>
-</ul>
-
+				<p>CSS styles for the individual items within the popup menu appearingby default when the export icon is clicked. The menu items are renderedin HTML.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *inactiveColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMenuItemStyle *menuItemStyle</code></div>
 
 		    
 			
@@ -266,165 +209,12 @@ navigation. .</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/</a> : Legend page navigation demonstrated</li>
-<li>default: #cccccc</li>
-</ul>
+				<p><strong>Defaults to</strong> <em>{ &ldquo;padding&rdquo;: &ldquo;0.5em 1em&rdquo;, &ldquo;color&rdquo;: &ldquo;#333333&rdquo;, &ldquo;background&rdquo;: &ldquo;none&rdquo; }</em>.</p>
 
-			</div>
-			
+<h4>Try it</h4>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/arrowSize" title="arrowSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/arrowSize">&nbsp;&nbsp;arrowSize</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The pixel size of the up and down arrows in the legend paging
-navigation.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *arrowSize</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/</a> : Legend page navigation demonstrated</li>
-<li>default: 12</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/style" title="style"></a>
-	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Text styles for the legend page navigation.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *style</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/</a> : Legend page navigation demonstrated</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/activeColor" title="activeColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/activeColor">&nbsp;&nbsp;activeColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color for the active up or down arrow in the legend page navigation.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *activeColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/</a> : Legend page navigation demonstrated</li>
-<li>default: #003399</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/">Add a grey stripe to the left</a></li>
 </ul>
 
 			</div>
@@ -455,11 +245,7 @@ navigation.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A collection of options for buttons appearing in the exporting module.
-In styled mode, the buttons are styled with the .highcharts-contextbutton and .highcharts-button-symbol class.</li>
-</ul>
-
+				<p>A collection of options for buttons appearing in the exporting module.In styled mode, the buttons are styled with the .highcharts-contextbutton and .highcharts-button-symbol class.</p>
 			</div>
 			
 		    
@@ -489,113 +275,6 @@ In styled mode, the buttons are styled with the .highcharts-contextbutton and .h
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/menuItemStyle" title="menuItemStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/menuItemStyle">&nbsp;&nbsp;menuItemStyle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: CSS styles for the individual items within the popup menu appearing
-by default when the export icon is clicked. The menu items are rendered
-in HTML.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMenuItemStyle *menuItemStyle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/</a> : Add a grey stripe to the left</p></li>
-<li><p>default: { &ldquo;padding&rdquo;: &ldquo;0.5em 1em&rdquo;, &ldquo;color&rdquo;: &ldquo;#333333&rdquo;, &ldquo;background&rdquo;: &ldquo;none&rdquo; }</p></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/menuStyle" title="menuStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/menuStyle">&nbsp;&nbsp;menuStyle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: CSS styles for the popup menu appearing by default when the export
-icon is clicked. This menu is rendered in HTML.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMenuStyle *menuStyle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/</a> : Light gray menu background</p></li>
-<li><p>default: { &ldquo;border&rdquo;: &ldquo;1px solid #999999&rdquo;, &ldquo;background&rdquo;: &ldquo;#ffffff&rdquo;, &ldquo;padding&rdquo;: &ldquo;5px 0&rdquo; }</p></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/menuItemHoverStyle" title="menuItemHoverStyle"></a>
 	<h3 class="method-title"><code><a href="#//api/name/menuItemHoverStyle">&nbsp;&nbsp;menuItemHoverStyle</a></code>
 </h3>
@@ -607,12 +286,7 @@ icon is clicked. This menu is rendered in HTML.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: CSS styles for the hover state of the individual items within the
-popup menu appearing by default when the export icon is clicked.
-The menu items are rendered in HTML.</li>
-</ul>
-
+				<p>CSS styles for the hover state of the individual items within thepopup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML.</p>
 			</div>
 			
 		    
@@ -628,9 +302,315 @@ The menu items are rendered in HTML.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/</a> : Bold text on hover</p></li>
-<li><p>default: { &ldquo;background&rdquo;: &ldquo;#335cad&rdquo;, &ldquo;color&rdquo;: &ldquo;#ffffff&rdquo; }</p></li>
+				<p><strong>Defaults to</strong> <em>{ &ldquo;background&rdquo;: &ldquo;#335cad&rdquo;, &ldquo;color&rdquo;: &ldquo;#ffffff&rdquo; }</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/">Bold text on hover</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Text styles for the legend page navigation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *style</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">Legend page navigation demonstrated</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/arrowSize" title="arrowSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/arrowSize">&nbsp;&nbsp;arrowSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel size of the up and down arrows in the legend pagingnavigation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *arrowSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>12</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">Legend page navigation demonstrated</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to enable the legend navigation. In most cases, disablingthe navigation results in an unwanted overflow.See also the <a href="http://www.highcharts.com/plugin-registry/single/8/Adapt-Chart-To-Legend">adapt chart to legend</a> plugin for a solution toextend the chart height to make room for the legend, optionally inexported charts only.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/inactiveColor" title="inactiveColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/inactiveColor">&nbsp;&nbsp;inactiveColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the inactive up or down arrow in the legend pagenavigation. .</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *inactiveColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>#cccccc</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">Legend page navigation demonstrated</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/animation" title="animation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>How to animate the pages when navigating up or down. A value of trueapplies the default navigation given in the chart.animation option.Additional options can be given as an object containing values foreasing and duration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id animation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">Legend page navigation demonstrated</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/activeColor" title="activeColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activeColor">&nbsp;&nbsp;activeColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color for the active up or down arrow in the legend page navigation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *activeColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>#003399</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">Legend page navigation demonstrated</a></li>
 </ul>
 
 			</div>
@@ -664,7 +644,7 @@ The menu items are rendered in HTML.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

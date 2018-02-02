@@ -88,7 +88,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIRules.h<br />HIRules.m</td>
+	<td>HIRules.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -98,10 +98,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li><p>description: A set of rules for responsive settings. The rules are executed from
-the top down.</p></li>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/</a> : Axis changes</p></li>
+						<p>A set of rules for responsive settings. The rules are executed fromthe top down.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">Axis changes</a></li>
 </ul>
 
 					</div>
@@ -119,8 +121,8 @@ the top down.</p></li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/chartOptions" title="chartOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
+	<a name="//api/name/condition" title="condition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/condition">&nbsp;&nbsp;condition</a></code>
 </h3>
 
 	<div class="method-info">
@@ -130,24 +132,12 @@ the top down.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A full set of chart options to apply as overrides to the general
-chart options. The chart options are applied when the given rule
-is active.
-A special case is configuration objects that take arrays, for example
-xAxis, yAxis or series. For these
-collections, an id option is used to map the new option set to
-an existing object. If an existing object of the same id is not found,
-the item of the same indexupdated. So for example, setting chartOptions
-with two series items without an id, will cause the existing chart&rsquo;s
-two series to be updated with respective options.</li>
-</ul>
-
+				<p>Under which conditions the rule applies.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id chartOptions</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICondition *condition</code></div>
 
 		    
 			
@@ -156,16 +146,6 @@ two series to be updated with respective options.</li>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/responsive/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/responsive/</a> : Stock chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/</a> : Axis
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/</a> : Legend
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/</a> : Class name</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -182,8 +162,8 @@ two series to be updated with respective options.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/condition" title="condition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/condition">&nbsp;&nbsp;condition</a></code>
+	<a name="//api/name/chartOptions" title="chartOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
 </h3>
 
 	<div class="method-info">
@@ -193,12 +173,12 @@ two series to be updated with respective options.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Under which conditions the rule applies.</p>
+				<p>A full set of chart options to apply as overrides to the generalchart options. The chart options are applied when the given ruleis active.A special case is configuration objects that take arrays, for examplexAxis, yAxis or series. For thesecollections, an id option is used to map the new option set toan existing object. If an existing object of the same id is not found,the item of the same indexupdated. So for example, setting chartOptionswith two series items without an id, will cause the existing chart'stwo series to be updated with respective options.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICondition *condition</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id chartOptions</code></div>
 
 		    
 			
@@ -207,6 +187,17 @@ two series to be updated with respective options.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">Axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/">Legend</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/">Class name</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -237,7 +228,7 @@ two series to be updated with respective options.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

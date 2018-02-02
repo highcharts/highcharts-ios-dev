@@ -92,7 +92,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISolidgauge.h<br />HISolidgauge.m</td>
+	<td>HISolidgauge.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,15 +102,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A solidgauge series. If the type option
-is not specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-solidgauge.</li>
-</ul>
-
+						<p>A solidgauge series. If the type optionis not specified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.solidgauge.</p>
 					</div>
 					
 					
@@ -126,8 +118,8 @@ solidgauge.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/wrap" title="wrap"></a>
-	<h3 class="method-title"><code><a href="#//api/name/wrap">&nbsp;&nbsp;wrap</a></code>
+	<a name="//api/name/colorByPoint" title="colorByPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorByPoint">&nbsp;&nbsp;colorByPoint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -137,18 +129,12 @@ solidgauge.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When this option is true, the dial will wrap around the axes. For
-instance, in a full-range gauge going from 0 to 360, a value of 400
-will point to 40. When wrap is false, the dial stops at 360.</li>
-<li>default: true</li>
-</ul>
-
+				<p>Whether to give each point an individual color.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *wrap</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id colorByPoint</code></div>
 
 		    
 			
@@ -157,60 +143,6 @@ will point to 40. When wrap is false, the dial stops at 360.</li>
 
 			
 
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISolidgauge.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/overshoot" title="overshoot"></a>
-	<h3 class="method-title"><code><a href="#//api/name/overshoot">&nbsp;&nbsp;overshoot</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Allow the dial to overshoot the end of the perimeter axis by this
-many degrees. Say if the gauge axis goes from 0 to 60, a value of
-100, or 1000, will show 5 degrees beyond the end of the axis.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *overshoot</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-overshoot/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-overshoot/</a> : Allow 5 degrees overshoot</li>
-<li>default: 0</li>
-</ul>
-
-			</div>
 			
 
 			
@@ -238,10 +170,7 @@ many degrees. Say if the gauge axis goes from 0 to 60, a value of
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Wether to draw rounded edges on the gauge.</li>
-</ul>
-
+				<p>Wether to draw rounded edges on the gauge.</p>
 			</div>
 			
 		    
@@ -257,9 +186,12 @@ many degrees. Say if the gauge axis goes from 0 to 60, a value of
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-activity/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-activity/</a> : Activity Gauge</li>
-<li>default: false</li>
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-activity/">Activity Gauge</a></li>
 </ul>
 
 			</div>
@@ -279,8 +211,8 @@ many degrees. Say if the gauge axis goes from 0 to 60, a value of
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/colorByPoint" title="colorByPoint"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colorByPoint">&nbsp;&nbsp;colorByPoint</a></code>
+	<a name="//api/name/overshoot" title="overshoot"></a>
+	<h3 class="method-title"><code><a href="#//api/name/overshoot">&nbsp;&nbsp;overshoot</a></code>
 </h3>
 
 	<div class="method-info">
@@ -290,13 +222,12 @@ many degrees. Say if the gauge axis goes from 0 to 60, a value of
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Whether to give each point an individual color.
-default: True</p>
+				<p>Allow the dial to overshoot the end of the perimeter axis by thismany degrees. Say if the gauge axis goes from 0 to 60, a value of100, or 1000, will show 5 degrees beyond the end of the axis.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorByPoint</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *overshoot</code></div>
 
 		    
 			
@@ -305,6 +236,62 @@ default: True</p>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-overshoot/">Allow 5 degrees overshoot</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISolidgauge.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/wrap" title="wrap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wrap">&nbsp;&nbsp;wrap</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When this option is true, the dial will wrap around the axes. Forinstance, in a full-range gauge going from 0 to 360, a value of 400will point to 40. When wrap is false, the dial stops at 360.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *wrap</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
 			
 
 			
@@ -335,7 +322,7 @@ default: True</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -116,7 +116,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIVariablepie.h<br />HIVariablepie.m</td>
+	<td>HIVariablepie.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -126,15 +126,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A variablepie series. If the type option is not
-specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-variablepie.</li>
-</ul>
-
+						<p>A variablepie series. If the type option is notspecified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.variablepie.</p>
 					</div>
 					
 					
@@ -150,8 +142,8 @@ variablepie.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/zMin" title="zMin"></a>
-	<h3 class="method-title"><code><a href="#//api/name/zMin">&nbsp;&nbsp;zMin</a></code>
+	<a name="//api/name/zMax" title="zMax"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zMax">&nbsp;&nbsp;zMax</a></code>
 </h3>
 
 	<div class="method-info">
@@ -161,17 +153,12 @@ variablepie.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The minimum possible z value for the point&rsquo;s radius calculation.
-If the point&rsquo;s Z value is smaller than zMin, the slice will be drawn
-according to the zMin value.</li>
-</ul>
-
+				<p>The maximum possible z value for the point&rsquo;s radius calculation. Ifthe point&rsquo;s Z value is bigger than zMax, the slice will be drawnaccording to the zMax value</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zMin</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zMax</code></div>
 
 		    
 			
@@ -182,346 +169,10 @@ according to the zMin value.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-5/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-5/</a> : zMin set to 5, smaller z values are treated as 5
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/</a> : Series limited by both zMin and <a href="#//api/name/zMax">zMax</a></li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
-	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Equivalent to chart.ignoreHiddenSeries,
-this option tells whether the series shall be redrawn as if the
-hidden point were null.
-The default value changed from false to true with Highcharts
-3.0.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/</a> : True, the hiddden point is ignored</li>
-<li>default: true</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/maxPointSize" title="maxPointSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/maxPointSize">&nbsp;&nbsp;maxPointSize</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The maximum <a href="#//api/name/size">size</a> of the points' radius related to chart&rsquo;s plotArea.
-If a number is set, it applies in pixels.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id maxPointSize</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/</a> : Example of <a href="#//api/name/minPointSize">minPointSize</a> and maxPointSize</li>
-<li>default: 100%</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/size" title="size"></a>
-	<h3 class="method-title"><code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The diameter of the pie relative to the plot area. Can be a percentage
-or pixel value. Pixel values are given as integers. The default
-behaviour (as of 3.0) is to scale to the plot area and give room
-for data labels within the plot area. As a consequence, the size
-of the pie may vary when points are updated and data labels more
-around. In that case it is best to set a fixed value, for example
-&ldquo;75%&rdquo;.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id size</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/</a> : Smaller pie</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/center" title="center"></a>
-	<h3 class="method-title"><code><a href="#//api/name/center">&nbsp;&nbsp;center</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The center of the pie chart relative to the plot area. Can be percentages
-or pixel values. The default behaviour (as of 3.0) is to center
-the pie so that all slices and data labels are within the plot area.
-As a consequence, the pie may actually jump around in a chart with
-dynamic values, as the data labels move. In that case, the center
-should be explicitly set, for example to [&ldquo;50%&rdquo;, &ldquo;50%&rdquo;].</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *center</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/</a> : Centered at 100, 100</li>
-<li>default: [null, null]</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The color of the border surrounding each slice. When null, the
-border takes the same color as the slice fill. This can be used
-together with a borderWidth to fill drawing gaps created by antialiazing
-artefacts in borderless pies.
-In styled mode, the border stroke is given in the .highcharts-point class.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/</a> : Black border</li>
-<li>default: #ffffff</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/innerSize" title="innerSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/innerSize">&nbsp;&nbsp;innerSize</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The <a href="#//api/name/size">size</a> of the inner diameter for the pie. A <a href="#//api/name/size">size</a> greater than 0
-renders a donut chart. Can be a percentage or pixel value. Percentages
-are relative to the pie <a href="#//api/name/size">size</a>. Pixel values are given as integers.
-Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plot
-area, not the pie <a href="#//api/name/size">size</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerSize</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/</a> : 80px inner size
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/</a> : 50% of the plot area
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/</a> : 3D donut</li>
-<li>default: 0</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/">Series limited by both zMin and zMax</a></li>
 </ul>
 
 			</div>
@@ -552,11 +203,7 @@ area, not the pie <a href="#//api/name/size">size</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The minimum <a href="#//api/name/size">size</a> of the points' radius related to chart&rsquo;s plotArea.
-If a number is set, it applies in pixels.</li>
-</ul>
-
+				<p>The minimum size of the points' radius related to chart&rsquo;s plotArea.If a number is set, it applies in pixels.</p>
 			</div>
 			
 		    
@@ -572,204 +219,11 @@ If a number is set, it applies in pixels.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/</a> : Example of minPointSize and maxPointSize
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-point-size-100/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-point-size-100/</a> : minPointSize set to 100</li>
-<li>default: 10%</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/depth" title="depth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: The thickness of a 3D pie. Requires highcharts-3d.js
-default: 0</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/startAngle" title="startAngle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startAngle">&nbsp;&nbsp;startAngle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The start angle of the pie slices in degrees where 0 is top and 90
-right.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startAngle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/</a> : Start from right</li>
-<li>default: 0</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/minSize" title="minSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minSize">&nbsp;&nbsp;minSize</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The minimum <a href="#//api/name/size">size</a> for a pie in response to auto margins. The pie will
-try to shrink to make room for data labels in side the plot area,
-but only to this <a href="#//api/name/size">size</a>.</li>
-<li>default: 80</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minSize</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/colors" title="colors"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A series specific or series type specific color set to use instead
-of the global colors.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/</a> : Set default colors for all pies</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/">Example of minPointSize and maxPointSize</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-point-size-100/">minPointSize set to 100</a></li>
 </ul>
 
 			</div>
@@ -800,13 +254,7 @@ of the global colors.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether the pie slice&rsquo;s value should be represented by the area
-or the radius of the slice. Can be either area or radius. The
-default, area, corresponds best to the human perception of the <a href="#//api/name/size">size</a>
-of each pie slice.</li>
-</ul>
-
+				<p>Whether the pie slice&rsquo;s value should be represented by the area or the radius of the slice. Can be either area or radius. Thedefault, area, corresponds best to the human perception of the sizeof each pie slice.</p>
 			</div>
 			
 		    
@@ -822,10 +270,165 @@ of each pie slice.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/sizeby/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/sizeby/</a> : Difference between area and radius sizeBy</li>
-<li>accepted values: [&ldquo;area&rdquo;, &ldquo;radius&rdquo;]</li>
-<li>default: area</li>
+				<p><strong>Accepted values:</strong> <em>[&ldquo;area&rdquo;, &ldquo;radius&rdquo;]</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/sizeby/">Difference between area and radius sizeBy</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/zMin" title="zMin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zMin">&nbsp;&nbsp;zMin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The minimum possible z value for the point&rsquo;s radius calculation. If the point&rsquo;s Z value is smaller than zMin, the slice will be drawnaccording to the zMin value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zMin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-5/">zMin set to 5, smaller z values are treated as 5</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/">Series limited by both zMin and zMax</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/maxPointSize" title="maxPointSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxPointSize">&nbsp;&nbsp;maxPointSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The maximum size of the points' radius related to chart&rsquo;s plotArea.If a number is set, it applies in pixels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id maxPointSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/min-max-point-size/">Example of minPointSize and maxPointSize</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the border surrounding each slice. When null, theborder takes the same color as the slice fill. This can be usedtogether with a borderWidth to fill drawing gaps created by antialiazingartefacts in borderless pies.In styled mode, the border stroke is given in the .highcharts-point class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>#ffffff</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/">Black border</a></li>
 </ul>
 
 			</div>
@@ -856,11 +459,7 @@ of each pie slice.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The end angle of the pie in degrees where 0 is top and 90 is right.
-Defaults to <a href="#//api/name/startAngle">startAngle</a> plus 360.</li>
-</ul>
-
+				<p>The end angle of the pie in degrees where 0 is top and 90 is right.Defaults to startAngle plus 360.</p>
 			</div>
 			
 		    
@@ -876,9 +475,66 @@ Defaults to <a href="#//api/name/startAngle">startAngle</a> plus 360.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/</a> : Semi-circle donut</li>
-<li>default: null</li>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/">Semi-circle donut</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/innerSize" title="innerSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/innerSize">&nbsp;&nbsp;innerSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The size of the inner diameter for the pie. A size greater than 0renders a donut chart. Can be a percentage or pixel value. Percentagesare relative to the pie size. Pixel values are given as integers.Note: in Highcharts &lt; 4.1.2, the percentage was relative to the plotarea, not the pie size.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/">80px inner size</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/">50% of the plot area</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/">3D donut</a></li>
 </ul>
 
 			</div>
@@ -909,11 +565,7 @@ Defaults to <a href="#//api/name/startAngle">startAngle</a> plus 360.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: If a point is sliced, moved out from the <a href="#//api/name/center">center</a>, how many pixels
-should it be moved?.</li>
-</ul>
-
+				<p>If a point is sliced, moved out from the center, how many pixelsshould it be moved?.</p>
 			</div>
 			
 		    
@@ -929,9 +581,12 @@ should it be moved?.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/</a> : 20px offset</li>
-<li>default: 10</li>
+				<p><strong>Defaults to</strong> <em>10</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/">20px offset</a></li>
 </ul>
 
 			</div>
@@ -951,8 +606,8 @@ should it be moved?.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/zMax" title="zMax"></a>
-	<h3 class="method-title"><code><a href="#//api/name/zMax">&nbsp;&nbsp;zMax</a></code>
+	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -962,17 +617,12 @@ should it be moved?.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The maximum possible z value for the point&rsquo;s radius calculation. If
-the point&rsquo;s Z value is bigger than zMax, the slice will be drawn
-according to the zMax value</li>
-</ul>
-
+				<p>Equivalent to chart.ignoreHiddenSeries,this option tells whether the series shall be redrawn as if thehidden point were null.The default value changed from false to true with Highcharts3.0.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zMax</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
 
 		    
 			
@@ -983,8 +633,306 @@ according to the zMax value</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/variable-radius-pie/zmin-zmax/</a> : Series limited by both <a href="#//api/name/zMin">zMin</a> and zMax</li>
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/">True, the hiddden point is ignored</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/center" title="center"></a>
+	<h3 class="method-title"><code><a href="#//api/name/center">&nbsp;&nbsp;center</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The center of the pie chart relative to the plot area. Can be percentagesor pixel values. The default behaviour (as of 3.0) is to centerthe pie so that all slices and data labels are within the plot area.As a consequence, the pie may actually jump around in a chart withdynamic values, as the data labels move. In that case, the centershould be explicitly set, for example to [&ldquo;50%&rdquo;, &ldquo;50%&rdquo;].</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *center</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>[null, null]</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/">Centered at 100, 100</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/depth" title="depth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The thickness of a 3D pie. Requires highcharts-3d.js</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/colors" title="colors"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A series specific or series type specific color set to use insteadof the global colors.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIColor*&gt; *colors</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/">Set default colors for all pies</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minSize" title="minSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minSize">&nbsp;&nbsp;minSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The minimum size for a pie in response to auto margins. The pie willtry to shrink to make room for data labels in side the plot area, but only to this size.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>80</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startAngle" title="startAngle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startAngle">&nbsp;&nbsp;startAngle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The start angle of the pie slices in degrees where 0 is top and 90right.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startAngle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/">Start from right</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVariablepie.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/size" title="size"></a>
+	<h3 class="method-title"><code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The diameter of the pie relative to the plot area. Can be a percentageor pixel value. Pixel values are given as integers. The defaultbehaviour (as of 3.0) is to scale to the plot area and give roomfor data labels within the plot area. As a consequence, the sizeof the pie may vary when points are updated and data labels morearound. In that case it is best to set a fixed value, for example"75%&ldquo;.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id size</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/">Smaller pie</a></li>
 </ul>
 
 			</div>
@@ -1018,7 +966,7 @@ according to the zMax value</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

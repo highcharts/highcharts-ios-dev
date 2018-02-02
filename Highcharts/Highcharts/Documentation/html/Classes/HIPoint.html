@@ -56,8 +56,6 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/events">events</option>
-		
 		<option value="//api/name/x">x</option>
 		
 		<option value="//api/name/xAxis">xAxis</option>
@@ -94,7 +92,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPoint.h<br />HIPoint.m</td>
+	<td>HIPoint.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,11 +102,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: This option defines the point to which the shape will be connected.
-It can be either the point which exists in the series - it is referenced
-b<a href="#//api/name/y">y</a> the point&rsquo;s id - or a new point with defined <a href="#//api/name/x">x</a>, <a href="#//api/name/y">y</a> properties
-and optionall<a href="#//api/name/y">y</a> axes.</li>
+						<p>This option defines the point to which the label will be connected.It can be either the point which exists in the series - it is referencedby the point&rsquo;s id - or a new point with defined x, y properiesand optionally axes.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-point/">Attach annotation to a mock point</a></li>
 </ul>
 
 					</div>
@@ -126,8 +125,8 @@ and optionall<a href="#//api/name/y">y</a> axes.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/events" title="events"></a>
-	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
 
 	<div class="method-info">
@@ -137,12 +136,12 @@ and optionall<a href="#//api/name/y">y</a> axes.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Events for each single point.</p>
+				<p>The y position of the point. Units can be either in axisor chart pixel coordinates.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
 
 		    
 			
@@ -178,61 +177,12 @@ and optionall<a href="#//api/name/y">y</a> axes.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The x position of the point. Units can be either in axis
-or chart pixel coordinates.</li>
-</ul>
-
+				<p>The x position of the point. Units can be either in axis or chart pixel coordinates.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPoint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/y" title="y"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The y position of the point. Units can be either in axis
-or chart pixel coordinates.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
 
 		    
 			
@@ -268,13 +218,7 @@ or chart pixel coordinates.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: This number defines which xAxis the point is connected to. It refers
-to either the axis id or the inde<a href="#//api/name/x">x</a> of the axis in the xAxis arra<a href="#//api/name/y">y</a>.
-If the option is not configured or the axis is not found the point&rsquo;s
-<a href="#//api/name/x">x</a> coordinate refers to the chart pixels.</li>
-</ul>
-
+				<p>This number defines which xAxis the point is connected to. It refersto either the axis id or the index of the axis in the xAxis array.If the option is not configured or the axis is not found the point'sx coordinate refers to the chart pixels.</p>
 			</div>
 			
 		    
@@ -315,13 +259,7 @@ If the option is not configured or the axis is not found the point&rsquo;s
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: This number defines which yAxis the point is connected to. It refers
-to either the axis id or the inde<a href="#//api/name/x">x</a> of the axis in the yAxis arra<a href="#//api/name/y">y</a>.
-If the option is not configured or the axis is not found the point&rsquo;s
-<a href="#//api/name/y">y</a> coordinate refers to the chart pixels.</li>
-</ul>
-
+				<p>This number defines which yAxis the point is connected to. It refersto either the axis id or the index of the axis in the yAxis array.If the option is not configured or the axis is not found the point'sy coordinate refers to the chart pixels.</p>
 			</div>
 			
 		    
@@ -365,7 +303,7 @@ If the option is not configured or the axis is not found the point&rsquo;s
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -106,7 +106,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HILevels.h<br />HILevels.m</td>
+	<td>HILevels.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -116,10 +116,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li><p>description: Set options on specific levels. Takes precedence over series options,
-but not point options.</p></li>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst</a> : Sunburst chart</p></li>
+						<p>Set options on specific levels. Takes precedence over series options,but not point options.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">Sunburst chart</a></li>
 </ul>
 
 					</div>
@@ -137,8 +139,8 @@ but not point options.</p></li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/borderWidth" title="borderWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -148,12 +150,12 @@ but not point options.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Can set the borderWidth on all points which lies on the same <a href="#//api/name/level">level</a>.</p>
+				<p>Can set a borderColor on all points which lies on the same level.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
 
 		    
 			
@@ -178,8 +180,8 @@ but not point options.</p></li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/layoutStartingDirection" title="layoutStartingDirection"></a>
-	<h3 class="method-title"><code><a href="#//api/name/layoutStartingDirection">&nbsp;&nbsp;layoutStartingDirection</a></code>
+	<a name="//api/name/colorVariation" title="colorVariation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorVariation">&nbsp;&nbsp;colorVariation</a></code>
 </h3>
 
 	<div class="method-info">
@@ -189,15 +191,12 @@ but not point options.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Can set the layoutStartingDirection option on a specific <a href="#//api/name/level">level</a>.</li>
-</ul>
-
+				<p>Can set a colorVariation on all points which lies on the same level.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutStartingDirection</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColorVariation *colorVariation</code></div>
 
 		    
 			
@@ -207,12 +206,46 @@ but not point options.</p></li>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>accepted values: [&ldquo;vertical&rdquo;, &ldquo;horizontal&rdquo;]</li>
-</ul>
 
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILevels.h</code></p>
 			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderDashStyle" title="borderDashStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderDashStyle">&nbsp;&nbsp;borderDashStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Can set a borderDashStyle on all points which lies on the same level.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *borderDashStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -240,7 +273,7 @@ but not point options.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Can set a color on all points which lies on the same <a href="#//api/name/level">level</a>.</p>
+				<p>Can set a color on all points which lies on the same level.</p>
 			</div>
 			
 		    
@@ -281,265 +314,12 @@ but not point options.</p></li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Can set the options of dataLabels on each point which lies on the
-<a href="#//api/name/level">level</a>. plotOptions.treemap.dataLabels
-for possible values.</li>
-<li>default: undefined</li>
-</ul>
-
+				<p>Can set a dataLabels on all points which lies on the same level.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id dataLabels</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILevels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/borderDashStyle" title="borderDashStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderDashStyle">&nbsp;&nbsp;borderDashStyle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Set the dash style of the border of all the point which lies on the
-<a href="#//api/name/level">level</a>. See
-plotOptions.scatter.dashStyle for possible options.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *borderDashStyle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILevels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/colorVariation" title="colorVariation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colorVariation">&nbsp;&nbsp;colorVariation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A configuration object to define how the <a href="#//api/name/color">color</a> of a child varies from the
-parent&rsquo;s <a href="#//api/name/color">color</a>. The variation is distributed among the children of node.
-For example when setting brightness, the brightness change will range
-from the parent&rsquo;s original brightness on the first child, to the amount
-set in the to setting on the last node. This allows a gradient-like
-<a href="#//api/name/color">color</a> scheme that sets children out from each other while highlighting
-the grouping on treemaps and sectors on sunburst charts.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColorVariation *colorVariation</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst/</a> : Sunburst with <a href="#//api/name/color">color</a> variation</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILevels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/level" title="level"></a>
-	<h3 class="method-title"><code><a href="#//api/name/level">&nbsp;&nbsp;level</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Decides which level takes effect from the options set in the levels
-object.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *level</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/</a> : Styling of both levels</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILevels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/layoutAlgorithm" title="layoutAlgorithm"></a>
-	<h3 class="method-title"><code><a href="#//api/name/layoutAlgorithm">&nbsp;&nbsp;layoutAlgorithm</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Can set the layoutAlgorithm option on a specific <a href="#//api/name/level">level</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutAlgorithm</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>accepted values: [&ldquo;sliceAndDice&rdquo;, &ldquo;stripes&rdquo;, &ldquo;squarified&rdquo;, &ldquo;strip&rdquo;]</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILevels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Can set a borderColor on all points which lies on the same <a href="#//api/name/level">level</a>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
 
 		    
 			
@@ -575,12 +355,53 @@ object.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Can set a rotationMode on all points which lies on the same <a href="#//api/name/level">level</a>.</p>
+				<p>Can set a rotationMode on all points which lies on the same level.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rotationMode</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILevels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderWidth" title="borderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Can set a borderWidth on all points which lies on the same level.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
 
 		    
 			
@@ -616,7 +437,7 @@ object.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Can set a rotation on all points which lies on the same <a href="#//api/name/level">level</a>.</p>
+				<p>Can set a rotation on all points which lies on the same level.</p>
 			</div>
 			
 		    
@@ -630,6 +451,146 @@ object.</li>
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILevels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/level" title="level"></a>
+	<h3 class="method-title"><code><a href="#//api/name/level">&nbsp;&nbsp;level</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decides which level takes effect from the options set in the levelsobject.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *level</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/">Styling of both levels</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILevels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/layoutAlgorithm" title="layoutAlgorithm"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layoutAlgorithm">&nbsp;&nbsp;layoutAlgorithm</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Can set the layoutAlgorithm option on a specific level.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutAlgorithm</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;sliceAndDice&rdquo;, &ldquo;stripes&rdquo;, &ldquo;squarified&rdquo;, &ldquo;strip&rdquo;]</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILevels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/layoutStartingDirection" title="layoutStartingDirection"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layoutStartingDirection">&nbsp;&nbsp;layoutStartingDirection</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Can set the layoutStartingDirection option on a specific level.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutStartingDirection</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Accepted values:</strong> <em>[&ldquo;vertical&rdquo;, &ldquo;horizontal&rdquo;]</em>.</p>
+			</div>
 			
 
 			
@@ -660,7 +621,7 @@ object.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

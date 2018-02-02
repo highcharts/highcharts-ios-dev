@@ -92,7 +92,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HILoading.h<br />HILoading.m</td>
+	<td>HILoading.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,16 +102,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: The loading options control the appearance of the loading screen
-that covers the plot area on chart operations. This screen only
-appears after an explicit call to chart.showLoading(). It is a
-utility for developers to communicate to the end user that something
-is going on, for example while retrieving new data via an XHR connection.
-The &ldquo;Loading&hellip;&rdquo; text itself is not part of this configuration
-object, but part of the lang object.</li>
-</ul>
-
+						<p>The loading options control the appearance of the loading screenthat covers the plot area on chart operations. This screen onlyappears after an explicit call to chart.showLoading(). It is autility for developers to communicate to the end user that somethingis going on, for example while retrieving new data via an XHR connection.The &ldquo;Loading&hellip;&rdquo; text itself is not part of this configurationobject, but part of the lang object.</p>
 					</div>
 					
 					
@@ -127,59 +118,6 @@ object, but part of the lang object.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/labelStyle" title="labelStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labelStyle">&nbsp;&nbsp;labelStyle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: CSS styles for the loading label span.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabelStyle *labelStyle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/</a> : Vertically centered
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/loading/general/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/loading/general/</a> : Label styles</li>
-<li>default: { &ldquo;fontWeight&rdquo;: &ldquo;bold&rdquo;, &ldquo;position&rdquo;: &ldquo;relative&rdquo;, &ldquo;top&rdquo;: &ldquo;45%&rdquo; }</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILoading.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/style" title="style"></a>
 	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
 </h3>
@@ -191,10 +129,7 @@ object, but part of the lang object.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: CSS styles for the loading screen that covers the plot area.</li>
-</ul>
-
+				<p>CSS styles for the loading screen that covers the plot area.</p>
 			</div>
 			
 		    
@@ -210,9 +145,12 @@ object, but part of the lang object.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/</a> : Gray plot area, white text</li>
-<li>default: { &ldquo;position&rdquo;: &ldquo;absolute&rdquo;, &ldquo;backgroundColor&rdquo;: &ldquo;#ffffff&rdquo;, &ldquo;opacity&rdquo;: 0.5, &ldquo;textAlign&rdquo;: &ldquo;center&rdquo; }</li>
+				<p><strong>Defaults to</strong> <em>{ &ldquo;position&rdquo;: &ldquo;absolute&rdquo;, &ldquo;backgroundColor&rdquo;: &ldquo;#ffffff&rdquo;, &ldquo;opacity&rdquo;: 0.5, &ldquo;textAlign&rdquo;: &ldquo;center&rdquo; }</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/">Gray plot area, white text</a></li>
 </ul>
 
 			</div>
@@ -232,8 +170,8 @@ object, but part of the lang object.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/showDuration" title="showDuration"></a>
-	<h3 class="method-title"><code><a href="#//api/name/showDuration">&nbsp;&nbsp;showDuration</a></code>
+	<a name="//api/name/labelStyle" title="labelStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labelStyle">&nbsp;&nbsp;labelStyle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -243,15 +181,12 @@ object, but part of the lang object.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The duration in milliseconds of the fade in effect.</li>
-</ul>
-
+				<p>CSS styles for the loading label span.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showDuration</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabelStyle *labelStyle</code></div>
 
 		    
 			
@@ -262,9 +197,12 @@ object, but part of the lang object.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/</a> : Fade in and out over a second</li>
-<li>default: 100</li>
+				<p><strong>Defaults to</strong> <em>{ &ldquo;fontWeight&rdquo;: &ldquo;bold&rdquo;, &ldquo;position&rdquo;: &ldquo;relative&rdquo;, &ldquo;top&rdquo;: &ldquo;45%&rdquo; }</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/">Vertically centered</a></li>
 </ul>
 
 			</div>
@@ -295,10 +233,7 @@ object, but part of the lang object.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: The duration in milliseconds of the fade out effect.</li>
-</ul>
-
+				<p>The duration in milliseconds of the fade out effect.</p>
 			</div>
 			
 		    
@@ -314,9 +249,64 @@ object, but part of the lang object.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/</a> : Fade in and out over a second</li>
-<li>default: 100</li>
+				<p><strong>Defaults to</strong> <em>100</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/">Fade in and out over a second</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILoading.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showDuration" title="showDuration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showDuration">&nbsp;&nbsp;showDuration</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The duration in milliseconds of the fade in effect.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showDuration</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>100</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/">Fade in and out over a second</a></li>
 </ul>
 
 			</div>
@@ -350,7 +340,7 @@ object, but part of the lang object.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

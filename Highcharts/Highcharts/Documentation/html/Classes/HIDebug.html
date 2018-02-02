@@ -96,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDebug.h<br />HIDebug.m</td>
+	<td>HIDebug.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,11 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: Debugging options for boost.
-Useful for benchmarking, and general timing.</li>
-</ul>
-
+						<p>Debugging options for boost.Useful for benchmarking, and general timing.</p>
 					</div>
 					
 					
@@ -137,15 +133,7 @@ Useful for benchmarking, and general timing.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Time the building of the k-d tree.
-This outputs the time spent building the k-d tree used for
-markers etc.
-Note that the k-d tree is built async, and runs post-rendering.
-Following, it does not affect the performance of the rendering itself.</li>
-<li>default: false</li>
-</ul>
-
+				<p>Time the building of the k-d tree.This outputs the time spent building the k-d tree used formarkers etc.Note that the k-d tree is built async, and runs post-rendering.Following, it does not affect the performance of the rendering itself.</p>
 			</div>
 			
 		    
@@ -160,149 +148,9 @@ Following, it does not affect the performance of the rendering itself.</li>
 			
 
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDebug.h</code></p>
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
 			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/timeBufferCopy" title="timeBufferCopy"></a>
-	<h3 class="method-title"><code><a href="#//api/name/timeBufferCopy">&nbsp;&nbsp;timeBufferCopy</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Time the WebGL to SVG buffer copy
-After rendering, the result is copied to an image which is injected
-into the SVG.
-If this property is set to true, the time it takes for the buffer copy
-to complete is outputted.</li>
-<li>default: false</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *timeBufferCopy</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDebug.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/timeRendering" title="timeRendering"></a>
-	<h3 class="method-title"><code><a href="#//api/name/timeRendering">&nbsp;&nbsp;timeRendering</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Time the series rendering.
-This outputs the time spent on actual rendering in the console when
-set to true.</li>
-<li>default: false</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *timeRendering</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDebug.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/showSkipSummary" title="showSkipSummary"></a>
-	<h3 class="method-title"><code><a href="#//api/name/showSkipSummary">&nbsp;&nbsp;showSkipSummary</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Show the number of points skipped through culling.
-When set to true, the number of points skipped in series processing
-is outputted. Points are skipped if they are closer than 1 pixel from
-each other.</li>
-<li>default: false</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showSkipSummary</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -330,13 +178,7 @@ each other.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Time the series processing.
-This outputs the time spent on transforming the series data to
-vertex buffers when set to true.</li>
-<li>default: false</li>
-</ul>
-
+				<p>Time the series processing.This outputs the time spent on transforming the series data tovertex buffers when set to true.</p>
 			</div>
 			
 		    
@@ -350,6 +192,55 @@ vertex buffers when set to true.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDebug.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/timeBufferCopy" title="timeBufferCopy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timeBufferCopy">&nbsp;&nbsp;timeBufferCopy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Time the WebGL to SVG buffer copyAfter rendering, the result is copied to an image which is injectedinto the SVG.If this property is set to true, the time it takes for the buffer copyto complete is outputted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *timeBufferCopy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
 			
 
 			
@@ -377,13 +268,7 @@ vertex buffers when set to true.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Time the the WebGL setup.
-This outputs the time spent on setting up the WebGL context,
-creating shaders, and textures.</li>
-<li>default: false</li>
-</ul>
-
+				<p>Time the the WebGL setup.This outputs the time spent on setting up the WebGL context,creating shaders, and textures.</p>
 			</div>
 			
 		    
@@ -397,6 +282,100 @@ creating shaders, and textures.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDebug.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/timeRendering" title="timeRendering"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timeRendering">&nbsp;&nbsp;timeRendering</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Time the series rendering.This outputs the time spent on actual rendering in the console whenset to true.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *timeRendering</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDebug.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showSkipSummary" title="showSkipSummary"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showSkipSummary">&nbsp;&nbsp;showSkipSummary</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Show the number of points skipped through culling.When set to true, the number of points skipped in series processingis outputted. Points are skipped if they are closer than 1 pixel fromeach other.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showSkipSummary</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
 			
 
 			
@@ -427,7 +406,7 @@ creating shaders, and textures.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

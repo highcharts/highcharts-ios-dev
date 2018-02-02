@@ -94,7 +94,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIBoost.h<br />HIBoost.m</td>
+	<td>HIBoost.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,27 +104,20 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li><p>description: Options for the Boost module. The Boost module allows certain series types
-to be rendered by WebGL instead of the default SVG. This allows hundreds of
-thousands of data points to be rendered in milliseconds. In addition to the
-WebGL rendering it saves time by skipping processing and inspection of the
-data wherever possible.
-In addition to the global boost option, each series has a
-boostThreshold that defines when the
-boost should kick in.
-Requires the modules/boost.js module.</p></li>
-<li><p>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy-stock">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy-stock</a> : Stock chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy-dynamic">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy-dynamic</a> : Dynamic stock chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line</a> : Line chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy</a> : Line chart with hundreds of series
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter</a> : Scatter chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/area">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/area</a> : Area chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange</a> : Arearange chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/column">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/column</a> : Column chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/bubble">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/bubble</a> : Bubble chart
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/heatmap">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/heatmap</a> : Heat map
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/treemap">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/treemap</a> : Tree map</p></li>
+						<p>Options for the Boost module. The Boost module allows certain series typesto be rendered by WebGL instead of the default SVG. This allows hundreds ofthousands of data points to be rendered in milliseconds. In addition to theWebGL rendering it saves time by skipping processing and inspection of thedata wherever possible. This introduces some limitations to what features areavailable in Boost mode. See the docs](https://www.highcharts.com/docs/advanced-chart-features/boost-module)for details.In addition to the global boost option, each series has a~!@[boostThreshold that defines when theboost should kick in.Requires the modules/boost.js module.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line">Line chart</a>@!~</li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy">Line chart with hundreds of series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter">Scatter chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/area">Area chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange">Arearange chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/column">Column chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/bubble">Bubble chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/heatmap">Heat map</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/treemap">Tree map</a></li>
 </ul>
 
 					</div>
@@ -142,48 +135,6 @@ Requires the modules/boost.js module.</p></li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Enable or disable boost on a chart.
-default: true</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBoost.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/debug" title="debug"></a>
 	<h3 class="method-title"><code><a href="#//api/name/debug">&nbsp;&nbsp;debug</a></code>
 </h3>
@@ -195,11 +146,7 @@ default: true</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Debugging options for boost.
-Useful for benchmarking, and general timing.</li>
-</ul>
-
+				<p>Debugging options for boost.Useful for benchmarking, and general timing.</p>
 			</div>
 			
 		    
@@ -240,12 +187,7 @@ Useful for benchmarking, and general timing.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: If set to true, the whole chart will be boosted if one of the series
-crosses its threshold, and all the series can be boosted.</li>
-<li>default: true</li>
-</ul>
-
+				<p>If set to true, the whole chart will be boosted if one of the seriescrosses its threshold, and all the series can be boosted.</p>
 			</div>
 			
 		    
@@ -259,6 +201,10 @@ crosses its threshold, and all the series can be boosted.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
 			
 
 			
@@ -286,16 +232,7 @@ crosses its threshold, and all the series can be boosted.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Enable or disable GPU translations. GPU translations are faster than doing
-the translation in JavaScript.
-This option may cause rendering issues with certain datasets.
-Namely, if your dataset has large numbers with small increments (such as
-timestamps), it won&rsquo;t work correctly. This is due to floating point
-precission.</li>
-<li>default: false</li>
-</ul>
-
+				<p>Enable or disable GPU translations. GPU translations are faster than doingthe translation in JavaScript.This option may cause rendering issues with certain datasets.Namely, if your dataset has large numbers with small increments (such astimestamps), it won&rsquo;t work correctly. This is due to floating pointprecission.</p>
 			</div>
 			
 		    
@@ -309,6 +246,55 @@ precission.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBoost.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable boost on a chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
 			
 
 			
@@ -336,21 +322,12 @@ precission.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Set the series threshold for when the boost should kick in globally.
-Setting to e.g. 20 will cause the whole chart to enter boost mode
-if there are 20 or more series active. When the chart is in boost mode,
-every series in it will be rendered to a common canvas. This offers
-a significant speed improvment in charts with a very high
-amount of series.</li>
-<li>default: null</li>
-</ul>
-
+				<p>Set the series threshold for when the boost should kick in globally.Setting to e.g. 20 will cause the whole chart to enter boost modeif there are 20 or more series active. When the chart is in boost mode,every series in it will be rendered to a common canvas. This offersa significant speed improvment in charts with a very highamount of series.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *seriesThreshold</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *seriesThreshold</code></div>
 
 		    
 			
@@ -359,6 +336,10 @@ amount of series.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+			</div>
 			
 
 			
@@ -389,7 +370,7 @@ amount of series.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

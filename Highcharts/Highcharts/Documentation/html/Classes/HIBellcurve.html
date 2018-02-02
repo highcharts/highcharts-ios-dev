@@ -100,7 +100,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIBellcurve.h<br />HIBellcurve.m</td>
+	<td>HIBellcurve.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,15 +110,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: A bellcurve series. If the type option is not
-specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-bellcurve.</li>
-</ul>
-
+						<p>A bellcurve series. If the type option is notspecified, it is inherited from chart.type.For options that apply to multiple series, it is recommended to addthem to the plotOptions.series options structure.To apply to all series of this specific type, apply it to plotOptions.bellcurve.</p>
 					</div>
 					
 					
@@ -134,8 +126,8 @@ bellcurve.</li>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/fillOpacity" title="fillOpacity"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fillOpacity">&nbsp;&nbsp;fillOpacity</a></code>
+	<a name="//api/name/intervals" title="intervals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/intervals">&nbsp;&nbsp;intervals</a></code>
 </h3>
 
 	<div class="method-info">
@@ -145,19 +137,12 @@ bellcurve.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fill opacity for the area. When you set an explicit <a href="#//api/name/fillColor">fillColor</a>,
-the fillOpacity is not applied. Instead, you should define the
-opacity in the <a href="#//api/name/fillColor">fillColor</a> with an rgba color definition. The fillOpacity
-setting, also the default setting, overrides the alpha component
-of the color setting.</li>
-</ul>
-
+				<p>This option allows to define the length of the bell curve. A unit of thelength of the bell curve is standard deviation.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *fillOpacity</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id intervals</code></div>
 
 		    
 			
@@ -168,8 +153,10 @@ of the color setting.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/</a> : Automatic fill color and fill opacity of 0.1</li>
+				<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bellcurve-intervals-pointsininterval">Intervals and points in interval</a></li>
 </ul>
 
 			</div>
@@ -200,16 +187,12 @@ of the color setting.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Defines how many points should be plotted within 1 interval. See
-plotOptions.bellcurve.<a href="#//api/name/intervals">intervals</a>.</li>
-</ul>
-
+				<p>Defines how many points should be plotted within 1 interval. See plotOptions.bellcurve.intervals.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointsInInterval</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id pointsInInterval</code></div>
 
 		    
 			
@@ -220,63 +203,10 @@ plotOptions.bellcurve.<a href="#//api/name/intervals">intervals</a>.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bellcurve-intervals-pointsininterval">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bellcurve-intervals-pointsininterval</a> : Intervals and points in interval</li>
-<li>default: 3</li>
-</ul>
+				<h4>Try it</h4>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBellcurve.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lineColor" title="lineColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A separate color for the graph line. By default the line takes the
-color of the series, but the lineColor setting allows setting a
-separate color for the line without altering the <a href="#//api/name/fillColor">fillColor</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/</a> : Dark gray line</li>
-<li>default: null</li>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bellcurve-intervals-pointsininterval">Intervals and points in interval</a></li>
 </ul>
 
 			</div>
@@ -307,7 +237,7 @@ separate color for the line without altering the <a href="#//api/name/fillColor"
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: A separate color for the negative part of the area.</p>
+				<p>A separate color for the negative part of the area.</p>
 			</div>
 			
 		    
@@ -337,60 +267,6 @@ separate color for the line without altering the <a href="#//api/name/fillColor"
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fillColor" title="fillColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Fill color or gradient for the area. When null, the series' color
-is used with the series' <a href="#//api/name/fillOpacity">fillOpacity</a>.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/</a> : Null by default
-<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/</a> : Gradient</li>
-<li>default: null</li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBellcurve.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/trackByArea" title="trackByArea"></a>
 	<h3 class="method-title"><code><a href="#//api/name/trackByArea">&nbsp;&nbsp;trackByArea</a></code>
 </h3>
@@ -402,11 +278,7 @@ is used with the series' <a href="#//api/name/fillOpacity">fillOpacity</a>.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether the whole area or just the line should respond to mouseover
-tooltips and other mouse or touch events.</li>
-</ul>
-
+				<p>Whether the whole area or just the line should respond to mouseovertooltips and other mouse or touch events.</p>
 			</div>
 			
 		    
@@ -422,9 +294,12 @@ tooltips and other mouse or touch events.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/</a> : Display the tooltip when the area is hovered</li>
-<li>default: false</li>
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/">Display the tooltip when the area is hovered</a></li>
 </ul>
 
 			</div>
@@ -444,8 +319,8 @@ tooltips and other mouse or touch events.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/intervals" title="intervals"></a>
-	<h3 class="method-title"><code><a href="#//api/name/intervals">&nbsp;&nbsp;intervals</a></code>
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -455,16 +330,12 @@ tooltips and other mouse or touch events.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: This option allows to define the length of the bell curve. A unit of the
-length of the bell curve is standard deviation.</li>
-</ul>
-
+				<p>Fill color or gradient for the area. When null, the series' coloris used with the series' fillOpacity.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *intervals</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
 
 		    
 			
@@ -475,9 +346,117 @@ length of the bell curve is standard deviation.</li>
 
 			
 			<div class="method-subsection discussion-section">
-				<ul>
-<li>demo: <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bellcurve-intervals-pointsininterval">https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bellcurve-intervals-pointsininterval</a> : Intervals and points in interval</li>
-<li>default: 3</li>
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/">Null by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/">Gradient</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBellcurve.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lineColor" title="lineColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A separate color for the graph line. By default the line takes thecolor of the series, but the lineColor setting allows setting aseparate color for the line without altering the fillColor.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>null</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/">Dark gray line</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBellcurve.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fillOpacity" title="fillOpacity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fillOpacity">&nbsp;&nbsp;fillOpacity</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fill opacity for the area. When you set an explicit fillColor,the fillOpacity is not applied. Instead, you should define theopacity in the fillColor with an rgba color definition. The fillOpacitysetting, also the default setting, overrides the alpha componentof the color setting.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *fillOpacity</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>0.75</em>.</p>
+
+<h4>Try it</h4>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/">Automatic fill color and fill opacity of 0.1</a></li>
 </ul>
 
 			</div>
@@ -508,12 +487,7 @@ length of the bell curve is standard deviation.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: An integer identifying the index to use for the base series, or a string
-representing the id of the series.</li>
-<li>default: undefined</li>
-</ul>
-
+				<p>An integer identifying the index to use for the base series, or a stringrepresenting the id of the series.</p>
 			</div>
 			
 		    
@@ -527,6 +501,10 @@ representing the id of the series.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
+			</div>
 			
 
 			
@@ -557,7 +535,7 @@ representing the id of the series.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

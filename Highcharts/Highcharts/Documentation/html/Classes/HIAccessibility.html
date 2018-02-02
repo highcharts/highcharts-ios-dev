@@ -60,8 +60,6 @@
 		
 		<option value="//api/name/enabled">enabled</option>
 		
-		<option value="//api/name/keyboardNavigation">keyboardNavigation</option>
-		
 		<option value="//api/name/onTableAnchorClick">onTableAnchorClick</option>
 		
 		<option value="//api/name/pointDateFormat">pointDateFormat</option>
@@ -104,7 +102,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIAccessibility.h<br />HIAccessibility.m</td>
+	<td>HIAccessibility.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -114,14 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<ul>
-<li>description: Options for configuring accessibility for the chart. Requires the
-//code.highcharts.com/modules/accessibility.
-js : accessibility module to be loaded. For a description of the module and information
-on its features, see <a href="http://www.highcharts.">http://www.highcharts.</a>
-com/docs/chart-concepts/accessibility : Highcharts Accessibility.</li>
-</ul>
-
+						<p>Options for configuring accessibility for the chart. Requires the<a href="//code.highcharts.com/modules/accessibility.js">accessibility module</a> to be loaded. For a description of the module and informationon its features, see <a href="http://www.highcharts.com/docs/chart-concepts/accessibility">Highcharts Accessibility</a>.</p>
 					</div>
 					
 					
@@ -148,16 +139,7 @@ com/docs/chart-concepts/accessibility : Highcharts Accessibility.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: A formatter function to create the HTML contents of the hidden screen
-reader information region. Receives one argument, chart, referring
-to the chart object. Should return a String with the HTML content
-of the region.
-The link to view the chart as a data table will be added
-automatically after the custom HTML content.</li>
-<li>default: undefined</li>
-</ul>
-
+				<p>A formatter function to create the HTML contents of the hidden screenreader information region. Receives one argument, chart, referringto the chart object. Should return a String with the HTML contentof the region.The link to view the chart as a data table will be addedautomatically after the custom HTML content.</p>
 			</div>
 			
 		    
@@ -172,52 +154,9 @@ automatically after the custom HTML content.</li>
 			
 
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>undefined</em>.</p>
 			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointDescriptionThreshold" title="pointDescriptionThreshold"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionThreshold">&nbsp;&nbsp;pointDescriptionThreshold</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: When a series contains more points than this, we no longer expose
-information about individual points to screen readers.
-Set to false to disable.</li>
-<li>default: 30</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointDescriptionThreshold</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -234,8 +173,8 @@ Set to false to disable.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pointDateFormat" title="pointDateFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointDateFormat">&nbsp;&nbsp;pointDateFormat</a></code>
+	<a name="//api/name/onTableAnchorClick" title="onTableAnchorClick"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onTableAnchorClick">&nbsp;&nbsp;onTableAnchorClick</a></code>
 </h3>
 
 	<div class="method-info">
@@ -245,156 +184,12 @@ Set to false to disable.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Date format to use for points on datetime axes when describing them
-to screen reader users.
-Defaults to the same format as in tooltip.
-For an overview of the replacement codes, see
-dateFormat.</li>
-</ul>
-
+				<p>Function to run upon clicking the &ldquo;View as Data Table&rdquo; link in thescreen reader region.By default Highcharts will insert and set focus to a data tablerepresentation of the chart.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointDateFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/keyboardNavigation" title="keyboardNavigation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/keyboardNavigation">&nbsp;&nbsp;keyboardNavigation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>description: Options for keyboard navigation.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointDateFormatter" title="pointDateFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointDateFormatter">&nbsp;&nbsp;pointDateFormatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Formatter function to determine the date/time format used with
-points on datetime axes when describing them to screen reader users.
-Receives one argument, point, referring to the point to describe.
-Should return a date format string compatible with
-dateFormat.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDateFormatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointDescriptionFormatter" title="pointDescriptionFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionFormatter">&nbsp;&nbsp;pointDescriptionFormatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Formatter function to use instead of the default for point
-descriptions.
-Receives one argument, point, referring to the point to describe.
-Should return a String with the description of the point for a screen
-reader user.</li>
-</ul>
-
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onTableAnchorClick</code></div>
 
 		    
 			
@@ -430,13 +225,139 @@ reader user.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>description: Enable accessibility features for the chart.
-default: true</p>
+				<p>Enable accessibility features for the chart.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>true</em>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDescriptionThreshold" title="pointDescriptionThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionThreshold">&nbsp;&nbsp;pointDescriptionThreshold</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When a series contains more points than this, we no longer exposeinformation about individual points to screen readers.Set to false to disable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointDescriptionThreshold</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDescriptionFormatter" title="pointDescriptionFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionFormatter">&nbsp;&nbsp;pointDescriptionFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to use instead of the default for pointdescriptions.Receives one argument, point, referring to the point to describe.Should return a String with the description of the point for a screenreader user.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDateFormat" title="pointDateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDateFormat">&nbsp;&nbsp;pointDateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Date format to use for points on datetime axes when describing themto screen reader users.Defaults to the same format as in tooltip.For an overview of the replacement codes, seedateFormat.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointDateFormat</code></div>
 
 		    
 			
@@ -472,13 +393,7 @@ default: true</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Formatter function to use instead of the default for series
-descriptions. Receives one argument, series, referring to the
-series to describe. Should return a String with the description of
-the series for a screen reader user.</li>
-</ul>
-
+				<p>Formatter function to use instead of the default for seriesdescriptions. Receives one argument, series, referring to theseries to describe. Should return a String with the description ofthe series for a screen reader user.</p>
 			</div>
 			
 		    
@@ -519,12 +434,7 @@ the series for a screen reader user.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Whether or not to add series descriptions to charts with a single
-series.</li>
-<li>default: false</li>
-</ul>
-
+				<p>Whether or not to add series descriptions to charts with a singleseries.</p>
 			</div>
 			
 		    
@@ -538,6 +448,10 @@ series.</li>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<p><strong>Defaults to</strong> <em>false</em>.</p>
+			</div>
 			
 
 			
@@ -554,8 +468,8 @@ series.</li>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/onTableAnchorClick" title="onTableAnchorClick"></a>
-	<h3 class="method-title"><code><a href="#//api/name/onTableAnchorClick">&nbsp;&nbsp;onTableAnchorClick</a></code>
+	<a name="//api/name/pointDateFormatter" title="pointDateFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDateFormatter">&nbsp;&nbsp;pointDateFormatter</a></code>
 </h3>
 
 	<div class="method-info">
@@ -565,18 +479,12 @@ series.</li>
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>description: Function to run upon clicking the &ldquo;View as Data Table&rdquo; link in the
-screen reader region.
-By default Highcharts will insert and set focus to a data table
-representation of the chart.</li>
-</ul>
-
+				<p>Formatter function to determine the date/time format used withpoints on datetime axes when describing them to screen reader users.Receives one argument, point, referring to the point to describe.Should return a date format string compatible withdateFormat.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onTableAnchorClick</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDateFormatter</code></div>
 
 		    
 			
@@ -615,7 +523,7 @@ representation of the chart.</li>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-01-31</p>
+						<p class="copyright">Copyright &copy; 2018 Highcharts. All rights reserved. Updated: 2018-02-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
