@@ -60,16 +60,35 @@ class HIChartsClass:
                 self.comment += "* default: {0}\n".format(self.defaults)
             self.comment += "*/\n"
 
-    def update(self, source):
-        self.data_type = source.data_type
-        self.description = source.description
-        self.demo = source.demo
-        self.values = source.values
-        self.defaults = source.defaults
+    def update(self, data_type, description, demo, values, defaults, products, extends, exclude):
+        if self.data_type is None:
+            self.data_type = data_type
+
+        if self.description is None:
+            self.description = description
+
+        if self.demo is None:
+            self.demo = demo
+
+        if self.values is None:
+            self.values = values
+
+        if self.defaults is None:
+            self.defaults = defaults
+
+        if self.products is None:
+            self.products = products
+
+        if self.extends is None:
+            self.extends = extends
+
+        if self.exclude is None:
+            self.exclude = exclude
+
         if self.description:
             self.comment = "/**\n* description: {0}\n".format(self.description)
             if self.demo:
-                self.comment += "* demo: {0}\n".format(self.demo)
+                self.comment += "* demo: {0}".format(self.demo)
             if self.values:
                 self.comment += "* accepted values: {0}\n".format(self.values)
             self.comment = clean_comment(self.comment)
@@ -182,7 +201,9 @@ def get_type(x):
         "Array.<Array.<Mixed>>": 'NSArray<NSArray *>',
         "Object|Number": 'id /* id, NSNumber */',
         "umber": 'NSNumber',
-        "function|null": 'HIFunction'
+        "function|null": 'HIFunction',
+        #6.0.6
+        "Undefined|Number": 'NSNumber'
     }[str(x)]
 
 
@@ -612,42 +633,6 @@ def create_bridge_file():
         b.write(text)
 
 
-def merge_extends_properties(field):
-    class_name = structure[field].name
-    if structure[field].extends and not structure[field].checkedExtends:
-        for extends in structure[field].extends.split(","):
-            parent = structure[extends]
-            structure[field].not_highcharts_properties += parent.not_highcharts_properties
-            if parent.extends:
-                merge_extends_properties(parent.name)
-            for parent_property in parent.properties:
-                property_name = "{0}.{1}".format(class_name, get_last(parent_property.name))
-                isExist = False
-                for property in structure[field].properties:
-                    if property.name == property_name:
-                        isExist = True
-
-                    if get_last(property.name) in parent.not_highcharts_properties:
-                        if property.products:
-                            if 'highcharts' not in property.products:
-                                structure[field].remove_property(property)
-                        else:
-                            structure[field].remove_property(property)
-
-                if structure[field].exclude:
-                    if get_last(parent_property.name) not in structure[field].exclude and not isExist:
-                        structure[field].add_property(parent_property)
-                elif not isExist:
-                    structure[field].add_property(parent_property)
-
-    structure[field].checkedExtends = True
-    structure[field].extends = None
-    x = class_name.split(".")
-    if len(x) == 2:
-        if x[0] == "series" or x[0] == "plotOptions" and x[1] != "series":
-            structure[field].extends = "series"
-
-
 def create_files_for_main_class(field):
     main = create_name(field)
     class_name = "HI" + upper_first(main)
@@ -655,11 +640,11 @@ def create_files_for_main_class(field):
         create_h_file(main)
         create_m_file(main)
 
+
 def create_files():
     if not os.path.exists("HIChartsClasses"):
         os.makedirs("HIChartsClasses")
     for field in structure:
-        merge_extends_properties(field)
         create_files_for_main_class(field)
         create_h_file(field)
         create_m_file(field)
@@ -764,6 +749,7 @@ def add_entry_to_documentation(documentation, field, source):
         entry["parent"] = parent
     documentation.append(entry)
 
+
 def add_to_documentation(documentation, field, parent):
     add_entry_to_documentation(documentation, field, structure[parent])
     if structure[parent].properties:
@@ -789,6 +775,46 @@ def generate_documentation():
     documentation.append(entry)
     with open('APIDocs.json', 'w') as json_file:
         json.dump(documentation, json_file)
+
+
+def merge_extended_properties(field):
+    class_name = structure[field].name
+    if structure[field].extends and not structure[field].checkedExtends:
+        for extends in structure[field].extends.split(","):
+            parent = structure[extends]
+            structure[field].not_highcharts_properties += parent.not_highcharts_properties
+            if parent.extends:
+                merge_extended_properties(parent.name)
+            for parent_property in parent.properties:
+                property_name = "{0}.{1}".format(class_name, get_last(parent_property.name))
+                isExist = False
+                for property in structure[field].properties:
+                    if property.name == property_name:
+                        isExist = True
+                        property.update(parent_property.data_type, parent_property.description, parent_property.demo,
+                                        parent_property.values, parent_property.defaults, parent_property.products,
+                                        parent_property.extends, parent_property.exclude)
+
+                    if get_last(property.name) in parent.not_highcharts_properties:
+                        if property.products:
+                            if 'highcharts' not in property.products:
+                                structure[field].remove_property(property)
+                        else:
+                            structure[field].remove_property(property)
+
+                if structure[field].exclude:
+                    if get_last(parent_property.name) not in structure[field].exclude and not isExist:
+                        structure[field].add_property(parent_property)
+                elif not isExist:
+                    structure[field].add_property(parent_property)
+
+    structure[field].checkedExtends = True
+    structure[field].extends = None
+    x = class_name.split(".")
+    if len(x) == 2:
+        if x[0] == "series" or x[0] == "plotOptions" and x[1] != "series":
+            structure[field].extends = "series"
+
 
 def create_class(node):
     source = node.info
@@ -862,6 +888,10 @@ def create_class(node):
 
             if "exclude" in doclet:
                 exclude = doclet["exclude"]
+
+            if "deprecated" in doclet:
+                if doclet["deprecated"]:
+                    return None
 
         name = node.name
         if name == "id":
@@ -962,6 +992,9 @@ def create_structure():
         add_to_structure(field, data[field], None)
 
     add_additions_to_series()
+
+    for field in structure:
+        merge_extended_properties(field)
 
 
 def main():
