@@ -261,6 +261,9 @@ def added_new_properties(class_name, source):
             for class_property in class_properties:
                 if get_last(property.name) == get_last(class_property.name):
                     isExists = True
+                    if not class_property.properties and property.properties:
+                        class_property.properties = property.properties
+                        isUpdated = True
                     if class_property.data_type is None and property.data_type is not None:
                         class_property.data_type = property.data_type
                         isUpdated = True
@@ -943,7 +946,7 @@ def add_additions_to_series():
         data = json.load(data_file)
 
     if "series" not in structure:
-        structure["series"] = HIChartsClass("series", "", "General options for all series types.", None, None, None, ["highcharts"], None, None)
+        structure["series"] = HIChartsClass("series", "Array.<Object>", "General options for all series types.", None, None, None, ["highcharts"], None, None)
 
     for field in data:
         name = None

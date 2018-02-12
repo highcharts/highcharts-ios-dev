@@ -34253,7 +34253,7 @@
     "doclet": {
       "type": {
         "names": [
-          "Object"
+          "Array.<Object>"
         ]
       }
     },
@@ -39025,7 +39025,7 @@
       ],
       "type": {
         "names": [
-          "Object"
+          "Array.<Object>"
         ]
       }
     },
@@ -48987,7 +48987,7 @@
       },
       "type": {
         "names": [
-          "Object"
+          "Array.<Object>"
         ]
       }
     },
