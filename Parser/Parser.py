@@ -261,6 +261,9 @@ def added_new_properties(class_name, source):
             for class_property in class_properties:
                 if get_last(property.name) == get_last(class_property.name):
                     isExists = True
+                    if class_property.data_type is None and property.data_type is not None:
+                        class_property.data_type = property.data_type
+                        isUpdated = True
             if not isExists:
                 class_properties.append(property)
                 isUpdated = True
