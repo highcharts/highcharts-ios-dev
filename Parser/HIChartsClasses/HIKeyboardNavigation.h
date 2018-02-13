@@ -1,28 +1,49 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIChartsJSONSerializable.h"
+#import "HIFocusBorder.h"
 
 
 /**
-* description: Options for keyboard navigation.
+* description: Keyboard navigation for the legend. Requires the Accessibility module.
 */
 @interface HIKeyboardNavigation: HIChartsJSONSerializable
 
 /**
-* description: Enable keyboard navigation for the chart.
+* description: Enable/disable keyboard navigation for the legend. Requires the Accessibility
+module.
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
+* description: Options for the focus border drawn around elements while
+navigating through them.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/custom-focus : Custom focus ring
+*/
+@property(nonatomic, readwrite) HIFocusBorder *focusBorder;
+/**
+* description: Set the keyboard navigation mode for the chart. Can be "normal"
+or "serialize". In normal mode, left/right arrow keys move
+between points in a series, while up/down arrow keys move between
+series. Up/down navigation acts intelligently to figure out which
+series makes sense to move to from any given point.
+
+In "serialize" mode, points are instead navigated as a single 
+list. Left/right behaves as in "normal" mode. Up/down arrow keys
+will behave like left/right. This is useful for unifying 
+navigation behavior with/without screen readers enabled.
+* default: normal
+*/
+@property(nonatomic, readwrite) NSString *mode;
+/**
 * description: Skip null points when navigating through points with the
 keyboard.
-* default: false
+* default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skipNullPoints;
 

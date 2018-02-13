@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIResponsive.h"
 
 @implementation HIResponsive
@@ -22,6 +23,14 @@
 		params[@"rules"] = array;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setRules:(NSArray <HIRules *> *)rules {
+	NSArray <HIRules *> *oldValue = _rules;
+	_rules = rules;
+	[self updateArrayObject:oldValue newValue:rules propertyName:@"rules"];
 }
 
 @end

@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HISelect.h"
 
 @implementation HISelect
@@ -12,19 +13,78 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.radius) {
 		params[@"radius"] = self.radius;
 	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	_lineWidth = lineWidth;
+	[self updateNSObject:@"lineWidth"];
+}
+
+-(void)setRadius:(NSNumber *)radius {
+	_radius = radius;
+	[self updateNSObject:@"radius"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	if(self.fillColor) {
+		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
+	}
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
+	_color = color;
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 @end

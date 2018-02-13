@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIItems.h"
 
 @implementation HIItems
@@ -16,6 +17,18 @@
 		params[@"html"] = self.html;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setStyle:(NSDictionary *)style {
+	_style = style;
+	[self updateNSObject:@"style"];
+}
+
+-(void)setHtml:(NSString *)html {
+	_html = html;
+	[self updateNSObject:@"html"];
 }
 
 @end

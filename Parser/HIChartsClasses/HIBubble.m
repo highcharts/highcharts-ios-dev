@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIBubble.h"
 
 @implementation HIBubble
@@ -14,20 +15,20 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.zMax) {
+		params[@"zMax"] = self.zMax;
+	}
+	if (self.sizeBy) {
+		params[@"sizeBy"] = self.sizeBy;
+	}
+	if (self.zMin) {
+		params[@"zMin"] = self.zMin;
+	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
 	}
 	if (self.maxSize) {
 		params[@"maxSize"] = self.maxSize;
-	}
-	if (self.zMax) {
-		params[@"zMax"] = self.zMax;
-	}
-	if (self.zMin) {
-		params[@"zMin"] = self.zMin;
-	}
-	if (self.displayNegative) {
-		params[@"displayNegative"] = self.displayNegative;
 	}
 	if (self.zThreshold) {
 		params[@"zThreshold"] = self.zThreshold;
@@ -35,10 +36,52 @@
 	if (self.sizeByAbsoluteValue) {
 		params[@"sizeByAbsoluteValue"] = self.sizeByAbsoluteValue;
 	}
-	if (self.sizeBy) {
-		params[@"sizeBy"] = self.sizeBy;
+	if (self.displayNegative) {
+		params[@"displayNegative"] = self.displayNegative;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setZMax:(NSNumber *)zMax {
+	_zMax = zMax;
+	[self updateNSObject:@"zMax"];
+}
+
+-(void)setSizeBy:(NSString *)sizeBy {
+	_sizeBy = sizeBy;
+	[self updateNSObject:@"sizeBy"];
+}
+
+-(void)setZMin:(NSNumber *)zMin {
+	_zMin = zMin;
+	[self updateNSObject:@"zMin"];
+}
+
+-(void)setMinSize:(id)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
+}
+
+-(void)setMaxSize:(NSString *)maxSize {
+	_maxSize = maxSize;
+	[self updateNSObject:@"maxSize"];
+}
+
+-(void)setZThreshold:(NSNumber *)zThreshold {
+	_zThreshold = zThreshold;
+	[self updateNSObject:@"zThreshold"];
+}
+
+-(void)setSizeByAbsoluteValue:(NSNumber *)sizeByAbsoluteValue {
+	_sizeByAbsoluteValue = sizeByAbsoluteValue;
+	[self updateNSObject:@"sizeByAbsoluteValue"];
+}
+
+-(void)setDisplayNegative:(NSNumber *)displayNegative {
+	_displayNegative = displayNegative;
+	[self updateNSObject:@"displayNegative"];
 }
 
 @end

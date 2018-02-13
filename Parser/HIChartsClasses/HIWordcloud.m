@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIWordcloud.h"
 
 @implementation HIWordcloud
@@ -14,20 +15,26 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
-	if (self.placementStrategy) {
-		params[@"placementStrategy"] = self.placementStrategy;
+	if (self.spiral) {
+		params[@"spiral"] = self.spiral;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.rotation) {
 		params[@"rotation"] = [self.rotation getParams];
+	}
+	if (self.placementStrategy) {
+		params[@"placementStrategy"] = self.placementStrategy;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -36,16 +43,78 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
 	}
-	if (self.spiral) {
-		params[@"spiral"] = self.spiral;
-	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
+}
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setSpiral:(NSString *)spiral {
+	_spiral = spiral;
+	[self updateNSObject:@"spiral"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
+}
+
+-(void)setRotation:(HIRotation *)rotation {
+	HIRotation *oldValue = _rotation;
+	if(self.rotation) {
+		[self removeObserver:self forKeyPath:@"rotation.isUpdated"];
+	}
+	_rotation = rotation;
+	[self updateHIObject:oldValue newValue:rotation propertyName:@"rotation"];
+}
+
+-(void)setPlacementStrategy:(NSString *)placementStrategy {
+	_placementStrategy = placementStrategy;
+	[self updateNSObject:@"placementStrategy"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	_borderRadius = borderRadius;
+	[self updateNSObject:@"borderRadius"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setEdgeWidth:(NSNumber *)edgeWidth {
+	_edgeWidth = edgeWidth;
+	[self updateNSObject:@"edgeWidth"];
 }
 
 @end

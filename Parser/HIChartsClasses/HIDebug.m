@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIDebug.h"
 
 @implementation HIDebug
@@ -12,8 +13,14 @@
 	if (self.timeKDTree) {
 		params[@"timeKDTree"] = self.timeKDTree;
 	}
+	if (self.timeSeriesProcessing) {
+		params[@"timeSeriesProcessing"] = self.timeSeriesProcessing;
+	}
 	if (self.timeBufferCopy) {
 		params[@"timeBufferCopy"] = self.timeBufferCopy;
+	}
+	if (self.timeSetup) {
+		params[@"timeSetup"] = self.timeSetup;
 	}
 	if (self.timeRendering) {
 		params[@"timeRendering"] = self.timeRendering;
@@ -21,13 +28,39 @@
 	if (self.showSkipSummary) {
 		params[@"showSkipSummary"] = self.showSkipSummary;
 	}
-	if (self.timeSeriesProcessing) {
-		params[@"timeSeriesProcessing"] = self.timeSeriesProcessing;
-	}
-	if (self.timeSetup) {
-		params[@"timeSetup"] = self.timeSetup;
-	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setTimeKDTree:(NSNumber *)timeKDTree {
+	_timeKDTree = timeKDTree;
+	[self updateNSObject:@"timeKDTree"];
+}
+
+-(void)setTimeSeriesProcessing:(NSNumber *)timeSeriesProcessing {
+	_timeSeriesProcessing = timeSeriesProcessing;
+	[self updateNSObject:@"timeSeriesProcessing"];
+}
+
+-(void)setTimeBufferCopy:(NSNumber *)timeBufferCopy {
+	_timeBufferCopy = timeBufferCopy;
+	[self updateNSObject:@"timeBufferCopy"];
+}
+
+-(void)setTimeSetup:(NSNumber *)timeSetup {
+	_timeSetup = timeSetup;
+	[self updateNSObject:@"timeSetup"];
+}
+
+-(void)setTimeRendering:(NSNumber *)timeRendering {
+	_timeRendering = timeRendering;
+	[self updateNSObject:@"timeRendering"];
+}
+
+-(void)setShowSkipSummary:(NSNumber *)showSkipSummary {
+	_showSkipSummary = showSkipSummary;
+	[self updateNSObject:@"showSkipSummary"];
 }
 
 @end

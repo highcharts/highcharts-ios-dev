@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIShapes.h"
 
 @implementation HIShapes
@@ -9,30 +10,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.stroke) {
-		params[@"stroke"] = [self.stroke getData];
-	}
-	if (self.height) {
-		params[@"height"] = self.height;
-	}
-	if (self.strokeWidth) {
-		params[@"strokeWidth"] = self.strokeWidth;
-	}
-	if (self.fill) {
-		params[@"fill"] = [self.fill getData];
-	}
-	if (self.point) {
-		params[@"point"] = [self.point getParams];
-	}
-	if (self.width) {
-		params[@"width"] = self.width;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
-	if (self.markerEnd) {
-		params[@"markerEnd"] = self.markerEnd;
-	}
 	if (self.points) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.points) {
@@ -45,13 +22,107 @@
 		}
 		params[@"points"] = array;
 	}
+	if (self.markerEnd) {
+		params[@"markerEnd"] = self.markerEnd;
+	}
 	if (self.markerStart) {
 		params[@"markerStart"] = self.markerStart;
+	}
+	if (self.point) {
+		params[@"point"] = [self.point getParams];
+	}
+	if (self.strokeWidth) {
+		params[@"strokeWidth"] = self.strokeWidth;
+	}
+	if (self.height) {
+		params[@"height"] = self.height;
+	}
+	if (self.width) {
+		params[@"width"] = self.width;
+	}
+	if (self.stroke) {
+		params[@"stroke"] = [self.stroke getData];
 	}
 	if (self.r) {
 		params[@"r"] = self.r;
 	}
+	if (self.type) {
+		params[@"type"] = self.type;
+	}
+	if (self.fill) {
+		params[@"fill"] = [self.fill getData];
+	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setPoints:(NSArray *)points {
+	NSArray *oldValue = _points;
+	_points = points;
+	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
+}
+
+-(void)setMarkerEnd:(NSString *)markerEnd {
+	_markerEnd = markerEnd;
+	[self updateNSObject:@"markerEnd"];
+}
+
+-(void)setMarkerStart:(NSString *)markerStart {
+	_markerStart = markerStart;
+	[self updateNSObject:@"markerStart"];
+}
+
+-(void)setPoint:(HIPoint *)point {
+	HIPoint *oldValue = _point;
+	if(self.point) {
+		[self removeObserver:self forKeyPath:@"point.isUpdated"];
+	}
+	_point = point;
+	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+}
+
+-(void)setStrokeWidth:(NSNumber *)strokeWidth {
+	_strokeWidth = strokeWidth;
+	[self updateNSObject:@"strokeWidth"];
+}
+
+-(void)setHeight:(NSNumber *)height {
+	_height = height;
+	[self updateNSObject:@"height"];
+}
+
+-(void)setWidth:(NSNumber *)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setStroke:(HIColor *)stroke {
+	HIColor *oldValue = _stroke;
+	if(self.stroke) {
+		[self removeObserver:self forKeyPath:@"stroke.isUpdated"];
+	}
+	_stroke = stroke;
+	[self updateHIObject:oldValue newValue:stroke propertyName:@"stroke"];
+}
+
+-(void)setR:(NSNumber *)r {
+	_r = r;
+	[self updateNSObject:@"r"];
+}
+
+-(void)setType:(NSString *)type {
+	_type = type;
+	[self updateNSObject:@"type"];
+}
+
+-(void)setFill:(HIColor *)fill {
+	HIColor *oldValue = _fill;
+	if(self.fill) {
+		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
+	}
+	_fill = fill;
+	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 @end

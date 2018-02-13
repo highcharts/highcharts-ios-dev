@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -13,16 +13,15 @@
 * description: Additional styles to apply to the X axis label for a point that
 has drilldown data. By default it is underlined and blue to invite
 to interaction.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/ : Label styles
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/ : Label styles
 * default: { "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }
 */
 @interface HIActiveAxisLabelStyle: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) NSString *color;
-@property(nonatomic, readwrite) NSString *fontWeight;
 @property(nonatomic, readwrite) NSString *cursor;
+@property(nonatomic, readwrite) NSString *color;
 @property(nonatomic, readwrite) NSString *textDecoration;
+@property(nonatomic, readwrite) NSString *fontWeight;
 
 -(NSDictionary *)getParams;
 

@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -12,10 +12,10 @@
 
 /**
 * description: Options for configuring accessibility for the chart. Requires the
-//code.highcharts.com/modules/accessibility.
-js : accessibility module to be loaded. For a description of the module and information
-on its features, see http://www.highcharts.
-com/docs/chart-concepts/accessibility : Highcharts Accessibility.
+[accessibility module](//code.highcharts.com/modules/accessibility.
+js) to be loaded. For a description of the module and information
+on its features, see [Highcharts Accessibility](http://www.highcharts.
+com/docs/chart-concepts/accessibility).
 */
 @interface HIAccessibility: HIChartsJSONSerializable
 
@@ -24,38 +24,36 @@ com/docs/chart-concepts/accessibility : Highcharts Accessibility.
 reader information region. Receives one argument, chart, referring
 to the chart object. Should return a String with the HTML content
 of the region.
+
 The link to view the chart as a data table will be added
 automatically after the custom HTML content.
 * default: undefined
 */
 @property(nonatomic, readwrite) HIFunction *screenReaderSectionFormatter;
 /**
-* description: When a series contains more points than this, we no longer expose
-information about individual points to screen readers.
-Set to false to disable.
-* default: 30
+* description: Function to run upon clicking the "View as Data Table" link in the
+screen reader region.
+
+By default Highcharts will insert and set focus to a data table
+representation of the chart.
 */
-@property(nonatomic, readwrite) NSNumber *pointDescriptionThreshold;
-/**
-* description: Date format to use for points on datetime axes when describing them
-to screen reader users.
-Defaults to the same format as in tooltip.
-For an overview of the replacement codes, see
-dateFormat.
-*/
-@property(nonatomic, readwrite) NSString *pointDateFormat;
+@property(nonatomic, readwrite) HIFunction *onTableAnchorClick;
 /**
 * description: Options for keyboard navigation.
 */
 @property(nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation;
 /**
-* description: Formatter function to determine the date/time format used with
-points on datetime axes when describing them to screen reader users.
-Receives one argument, point, referring to the point to describe.
-Should return a date format string compatible with
-dateFormat.
+* description: Enable accessibility features for the chart.
+* default: true
 */
-@property(nonatomic, readwrite) HIFunction *pointDateFormatter;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+/**
+* description: When a series contains more points than this, we no longer expose
+information about individual points to screen readers.
+
+Set to false to disable.
+*/
+@property(nonatomic, readwrite) NSNumber *pointDescriptionThreshold;
 /**
 * description: Formatter function to use instead of the default for point
 descriptions.
@@ -65,10 +63,15 @@ reader user.
 */
 @property(nonatomic, readwrite) HIFunction *pointDescriptionFormatter;
 /**
-* description: Enable accessibility features for the chart.
-* default: true
+* description: Date format to use for points on datetime axes when describing them
+to screen reader users.
+
+Defaults to the same format as in tooltip.
+
+For an overview of the replacement codes, see
+dateFormat.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+@property(nonatomic, readwrite) NSString *pointDateFormat;
 /**
 * description: Formatter function to use instead of the default for series
 descriptions. Receives one argument, series, referring to the
@@ -83,12 +86,13 @@ series.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *describeSingleSeries;
 /**
-* description: Function to run upon clicking the "View as Data Table" link in the
-screen reader region.
-By default Highcharts will insert and set focus to a data table
-representation of the chart.
+* description: Formatter function to determine the date/time format used with
+points on datetime axes when describing them to screen reader users.
+Receives one argument, point, referring to the point to describe.
+Should return a date format string compatible with
+dateFormat.
 */
-@property(nonatomic, readwrite) HIFunction *onTableAnchorClick;
+@property(nonatomic, readwrite) HIFunction *pointDateFormatter;
 
 -(NSDictionary *)getParams;
 

@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -10,49 +10,69 @@
 
 
 /**
-* description: Series labels are placed as close to the series as possible in a
-natural way, seeking to avoid other series. The goal of this
-feature is to make the chart more easily readable, like if a
-human designer placed the labels in the optimal position.
-The series labels currently work with series types having a
-graph or an area.
-Requires the series-label.js module.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart : Line chart
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph : Stream graph
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart : Stock chart
+* description: Text labels for the plot bands
 */
 @interface HILabel: HIChartsJSONSerializable
 
 /**
-* description: Allow labels to be placed distant to the graph if necessary,
-and draw a connector line to the graph.
-* default: True
+* description: CSS styles for the text label.
+
+In styled mode, the labels are styled by the
+.highcharts-plot-line-label class.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-style/ : Blue and bold label
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *connectorAllowed;
+@property(nonatomic, readwrite) HIStyle *style;
 /**
-* description: An array of boxes to avoid when laying out the labels. Each 
-item has a left, right, top and bottom property.
+* description: Vertical alignment of the label relative to the plot line. Can be
+one of "top", "middle" or "bottom".
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-verticalalign-middle/ : Vertically centered label
+* accepted values: ["top", "middle", "bottom"]
+* default: top
 */
-@property(nonatomic, readwrite) NSArray *boxesToAvoid;
+@property(nonatomic, readwrite) NSString *verticalAlign;
 /**
-* description: Draw the label on the area of an area series. By default it
-is drawn on the area. Set it to false to draw it next to
-the graph instead.
+* description: The text itself. A subset of HTML is supported.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *onArea;
+@property(nonatomic, readwrite) NSString *text;
 /**
-* description: For area-like series, allow the font size to vary so that
-small areas get a smaller font size. The default applies this
-effect to area-like series but not line-like series.
+* description: Horizontal alignment of the label. Can be one of "left", "center"
+or "right".
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-align-right/ : Aligned to the right
+* default: left
 */
-@property(nonatomic, readwrite) NSNumber *maxFontSize;
+@property(nonatomic, readwrite) NSString *align;
 /**
-* description: If the label is closer than this to a neighbour graph, draw a
-connector.
-* default: 24
+* description: The text alignment for the label. While align determines where
+the texts anchor point is placed within the plot band, textAlign
+determines how the text is aligned against its anchor point. Possible
+values are "left", "center" and "right". Defaults to the same as
+the align option.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-textalign/ : Text label in bottom position
 */
-@property(nonatomic, readwrite) NSNumber *connectorNeighbourDistance;
+@property(nonatomic, readwrite) NSString *textAlign;
+/**
+* description: Vertical position of the text baseline relative to the alignment.
+ Default varies by orientation.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-y/ : Label below the plot line
+*/
+@property(nonatomic, readwrite) NSNumber *y;
+/**
+* description: Horizontal position relative the alignment. Default varies by orientation.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-align-right/ : Aligned 10px from the right edge
+*/
+@property(nonatomic, readwrite) NSNumber *x;
+/**
+* description: Rotation of the text label in degrees. Defaults to 0 for horizontal
+plot lines and 90 for vertical lines.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-verticalalign-middle/ : Slanted text
+*/
+@property(nonatomic, readwrite) NSNumber *rotation;
+/**
+* description: Whether to [use HTML](http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html) to render the labels.
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
 * description: For area-like series, allow the font size to vary so that
 small areas get a smaller font size. The default applies this
@@ -60,15 +80,36 @@ effect to area-like series but not line-like series.
 */
 @property(nonatomic, readwrite) NSNumber *minFontSize;
 /**
-* description: Styles for the series label. The color defaults to the series
-color, or a contrast color if onArea.
+* description: For area-like series, allow the font size to vary so that
+small areas get a smaller font size. The default applies this
+effect to area-like series but not line-like series.
 */
-@property(nonatomic, readwrite) HIStyle *style;
+@property(nonatomic, readwrite) NSNumber *maxFontSize;
 /**
 * description: Enable the series label per series.
-* default: True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+/**
+* description: If the label is closer than this to a neighbour graph, draw a
+connector.
+*/
+@property(nonatomic, readwrite) NSNumber *connectorNeighbourDistance;
+/**
+* description: Draw the label on the area of an area series. By default it
+is drawn on the area. Set it to false to draw it next to
+the graph instead.
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *onArea;
+/**
+* description: An array of boxes to avoid when laying out the labels. Each 
+item has a left, right, top and bottom property.
+*/
+@property(nonatomic, readwrite) NSArray *boxesToAvoid;
+/**
+* description: Allow labels to be placed distant to the graph if necessary,
+and draw a connector line to the graph.
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *connectorAllowed;
 
 -(NSDictionary *)getParams;
 

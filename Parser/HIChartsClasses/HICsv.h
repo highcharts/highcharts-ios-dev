@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -16,45 +16,58 @@ in a HTML table or a JavaScript structure. Requires the
 export-data.js module. This module adds data export options to the
 export menu and provides functions like Chart.getCSV,
 Chart.getTable, Chart.getDataRows and Chart.viewData.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/ : Categorized data
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/ : Highstock time axis
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/ : Categorized data
+https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/ : Highstock time axis
 */
 @interface HICsv: HIChartsJSONSerializable
 
 /**
-* description: The line delimiter in the exported data, defaults to a newline.
-* default: 
-
-*/
-@property(nonatomic, readwrite) NSString *lineDelimiter;
-/**
 * description: Formatter callback for the column headers. Parameters are:
+- item - The series or axis object)
+- key -  The point key, for example y or z
+- keyLength - The amount of value keys for this item, for
+  example a range series has the keys low and high so the
+  key length is 2.
 
-item - The series or axis object)
-key -  The point key, for example y or z
-keyLength - The amount of value keys for this item, for
-example a range series has the keys low and high so the
-key length is 2.
+If useMultiLevelHeaders is
+true, columnHeaderFormatter by default returns an object with
+columnTitle and topLevelColumnTitle for each key. Columns with
+the same topLevelColumnTitle have their titles merged into a
+single cell with colspan for table/Excel export.
 
-By default it returns the series name, followed by the key if
-there is more than one key. For the axis it returns the axis
-title or "Category" or "DateTime" by default.
+If useMultiLevelHeaders is false, or for CSV export, it returns
+the series name, followed by the key if there is more than one
+key.
+
+For the axis it returns the axis title or "Category" or
+"DateTime" by default.
+
 Return false to use Highcharts' proposed header.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table : Multiple table headers
 */
 @property(nonatomic, readwrite) HIFunction *columnHeaderFormatter;
 /**
-* description: Which date format to use for exported dates on a datetime X axis.
-See Highcharts.dateFormat.
-* default: %Y-%m-%d %H:%M:%S
+* description: Which decimal point to use for exported CSV. Defaults to the same
+as the browser locale, typically . (English) or , (German,
+French etc).
 */
-@property(nonatomic, readwrite) NSString *dateFormat;
+@property(nonatomic, readwrite) NSString *decimalPoint;
+/**
+* description: The line delimiter in the exported data, defaults to a newline.
+*/
+@property(nonatomic, readwrite) NSString *lineDelimiter;
 /**
 * description: The item delimiter in the exported data. Use ; for direct
-exporting to Excel.
-* default: ,
+exporting to Excel. Defaults to a best guess based on the browser
+locale. If the locale _decimal point_ is ,, the itemDelimiter
+defaults to ;, otherwise the itemDelimiter defaults to ,.
 */
 @property(nonatomic, readwrite) NSString *itemDelimiter;
+/**
+* description: Which date format to use for exported dates on a datetime X axis.
+See Highcharts.dateFormat.
+*/
+@property(nonatomic, readwrite) NSString *dateFormat;
 
 -(NSDictionary *)getParams;
 

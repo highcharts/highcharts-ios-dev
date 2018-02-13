@@ -1,13 +1,13 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HILabelStyle.h"
 #import "HIStyle.h"
+#import "HILabelStyle.h"
 
 
 /**
@@ -22,34 +22,29 @@ object, but part of the lang object.
 @interface HILoading: HIChartsJSONSerializable
 
 /**
-* description: CSS styles for the loading label span.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/ : Vertically centered
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/loading/general/ : Label styles
-* default: { "fontWeight": "bold", "position": "relative", "top": "45%" }
-*/
-@property(nonatomic, readwrite) HILabelStyle *labelStyle;
-/**
 * description: CSS styles for the loading screen that covers the plot area.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/ : Gray plot area, white text
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/ : Gray plot area, white text
 * default: { "position": "absolute", "backgroundColor": "#ffffff", "opacity": 0.5, "textAlign": "center" }
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
-* description: The duration in milliseconds of the fade in effect.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
-* default: 100
+* description: CSS styles for the loading label span.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/ : Vertically centered
+* default: { "fontWeight": "bold", "position": "relative", "top": "45%" }
 */
-@property(nonatomic, readwrite) NSNumber *showDuration;
+@property(nonatomic, readwrite) HILabelStyle *labelStyle;
 /**
 * description: The duration in milliseconds of the fade out effect.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
 * default: 100
 */
 @property(nonatomic, readwrite) NSNumber *hideDuration;
+/**
+* description: The duration in milliseconds of the fade in effect.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
+* default: 100
+*/
+@property(nonatomic, readwrite) NSNumber *showDuration;
 
 -(NSDictionary *)getParams;
 

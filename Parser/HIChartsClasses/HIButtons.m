@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIButtons.h"
 
 @implementation HIButtons
@@ -13,6 +14,17 @@
 		params[@"contextButton"] = [self.contextButton getParams];
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setContextButton:(HIContextButton *)contextButton {
+	HIContextButton *oldValue = _contextButton;
+	if(self.contextButton) {
+		[self removeObserver:self forKeyPath:@"contextButton.isUpdated"];
+	}
+	_contextButton = contextButton;
+	[self updateHIObject:oldValue newValue:contextButton propertyName:@"contextButton"];
 }
 
 @end
