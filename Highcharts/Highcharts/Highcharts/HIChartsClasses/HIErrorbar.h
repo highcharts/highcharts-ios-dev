@@ -62,16 +62,6 @@ and high values. When null, the general lineWidth applies.
 */
 @property(nonatomic, readwrite) NSNumber *whiskerWidth;
 /**
-* description: When using automatic point colors pulled from the options.colors
-collection, this option determines whether the chart should receive
-one color per series or one color per point.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/ : False by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/ : True
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
-/**
 * description: Padding between each column or bar, in x axis units.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/ : 0.1 by default
@@ -126,6 +116,16 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: null
 */
 @property(nonatomic, readwrite) HIColor *medianColor;
+/**
+* description: When using automatic point colors pulled from the options.colors
+collection, this option determines whether the chart should receive
+one color per series or one color per point.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/ : False by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/ : True
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
 * description: The color of the stem, the vertical line extending from the box to
 the whiskers. If null, the series color is used.
@@ -196,6 +196,17 @@ value of the box width. Set 0 to disable whiskers.
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ whiskerLength;
 /**
+* description: The dash style of the stem, the vertical line extending from the
+box to the whiskers.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/ : Box plot styling
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/ : Box plot in styled mode
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/ : Error bar styling
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",        "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",        "LongDashDot", "LongDashDotDot"]
+* default: Solid
+*/
+@property(nonatomic, readwrite) NSString *stemDashStyle;
+/**
 * description: The maximum allowed pixel width for a column, translated to the height
 of a bar in a bar chart. This prevents the columns from becoming
 too wide when there is a small number of points in the chart.
@@ -224,19 +235,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: 0.2
 */
 @property(nonatomic, readwrite) NSNumber *groupPadding;
-/**
-* description: The dash style of the stem, the vertical line extending from the
-box to the whiskers.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/ : Box plot styling
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/ : Box plot in styled mode
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/ : Error bar styling
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
-        "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",
-        "LongDashDot", "LongDashDotDot"]
-* default: Solid
-*/
-@property(nonatomic, readwrite) NSString *stemDashStyle;
 
 -(NSDictionary *)getParams;
 

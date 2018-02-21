@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIOptions3d.h"
 
 @implementation HIOptions3d
@@ -34,6 +35,52 @@
 		params[@"enabled"] = self.enabled;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setBeta:(NSNumber *)beta {
+	_beta = beta;
+	[self updateNSObject:@"beta"];
+}
+
+-(void)setAxisLabelPosition:(NSString *)axisLabelPosition {
+	_axisLabelPosition = axisLabelPosition;
+	[self updateNSObject:@"axisLabelPosition"];
+}
+
+-(void)setFitToPlot:(NSNumber *)fitToPlot {
+	_fitToPlot = fitToPlot;
+	[self updateNSObject:@"fitToPlot"];
+}
+
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
+}
+
+-(void)setViewDistance:(NSNumber *)viewDistance {
+	_viewDistance = viewDistance;
+	[self updateNSObject:@"viewDistance"];
+}
+
+-(void)setFrame:(HIFrame *)frame {
+	HIFrame *oldValue = _frame;
+	if(self.frame) {
+		[self removeObserver:self forKeyPath:@"frame.isUpdated"];
+	}
+	_frame = frame;
+	[self updateHIObject:oldValue newValue:frame propertyName:@"frame"];
+}
+
+-(void)setAlpha:(NSNumber *)alpha {
+	_alpha = alpha;
+	[self updateNSObject:@"alpha"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
 }
 
 @end

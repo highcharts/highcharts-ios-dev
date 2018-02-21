@@ -15,13 +15,6 @@
 @interface HIPosition: HIChartsJSONSerializable
 
 /**
-* description: Vertical alignment of the button.
-
-* accepted values: ["top", "middle", "bottom"]
-* default: top
-*/
-@property(nonatomic, readwrite) NSString *verticalAlign;
-/**
 * description: Horizontal offset of the button.
 * default: -10
 */
@@ -38,6 +31,13 @@
 * default: right
 */
 @property(nonatomic, readwrite) NSString *align;
+/**
+* description: Vertical alignment of the button.
+
+* accepted values: ["top", "middle", "bottom"]
+* default: top
+*/
+@property(nonatomic, readwrite) NSString *verticalAlign;
 
 -(NSDictionary *)getParams;
 

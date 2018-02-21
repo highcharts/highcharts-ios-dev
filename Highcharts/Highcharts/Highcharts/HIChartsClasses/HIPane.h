@@ -16,6 +16,13 @@ gauges and polar charts.
 @interface HIPane: HIChartsJSONSerializable
 
 /**
+* description: The start angle of the polar X axis or gauge axis, given in degrees
+where 0 is north. Defaults to 0.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/ : VU-meter with custom start and end angle
+*/
+@property(nonatomic, readwrite) NSNumber *startAngle;
+/**
 * description: An array of background items for the pane.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/ : Speedometer gauge with multiple backgrounds
@@ -45,13 +52,6 @@ to pixels, or as percentages of the plot area size.
 * default: ["50%", "50%"]
 */
 @property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
-/**
-* description: The start angle of the polar X axis or gauge axis, given in degrees
-where 0 is north. Defaults to 0.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/ : VU-meter with custom start and end angle
-*/
-@property(nonatomic, readwrite) NSNumber *startAngle;
 
 -(NSDictionary *)getParams;
 

@@ -23,6 +23,11 @@
 + (void)preload;
 
 /**
+ *  A method for update chart's options manually.
+ */
+- (void)updateOptions;
+
+/**
  *  Options object that configures the chart.
  */
 @property (strong, nonatomic) HIOptions *options;

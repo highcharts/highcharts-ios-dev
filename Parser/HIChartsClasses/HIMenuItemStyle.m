@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIMenuItemStyle.h"
 
 @implementation HIMenuItemStyle
@@ -9,14 +10,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.fontSize) {
-		params[@"fontSize"] = self.fontSize;
-	}
 	if (self.transition) {
 		params[@"transition"] = self.transition;
 	}
 	if (self.color) {
 		params[@"color"] = self.color;
+	}
+	if (self.fontSize) {
+		params[@"fontSize"] = self.fontSize;
 	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
@@ -25,6 +26,33 @@
 		params[@"background"] = self.background;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setTransition:(NSString *)transition {
+	_transition = transition;
+	[self updateNSObject:@"transition"];
+}
+
+-(void)setColor:(NSString *)color {
+	_color = color;
+	[self updateNSObject:@"color"];
+}
+
+-(void)setFontSize:(NSString *)fontSize {
+	_fontSize = fontSize;
+	[self updateNSObject:@"fontSize"];
+}
+
+-(void)setPadding:(NSString *)padding {
+	_padding = padding;
+	[self updateNSObject:@"padding"];
+}
+
+-(void)setBackground:(NSString *)background {
+	_background = background;
+	[self updateNSObject:@"background"];
 }
 
 @end

@@ -30,6 +30,14 @@ the smallest one of the plot width and height.
 */
 @property(nonatomic, readwrite) NSString *minSize;
 /**
+* description: The minimum for the Z value range. Defaults to the lowest Z value
+in the data.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-zmin-zmax/ : Z has a possible range of 0-100
+* default: null
+*/
+@property(nonatomic, readwrite) NSNumber *zMin;
+/**
 * description: Maximum bubble size. Bubbles will automatically size between the
 minSize and maxSize to reflect the z value of each bubble.
 Can be either pixels (when no unit is given), or a percentage of
@@ -47,14 +55,6 @@ in the data.
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *zMax;
-/**
-* description: The minimum for the Z value range. Defaults to the lowest Z value
-in the data.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-zmin-zmax/ : Z has a possible range of 0-100
-* default: null
-*/
-@property(nonatomic, readwrite) NSNumber *zMin;
 /**
 * description: Whether to display negative sized bubbles. The threshold is given
 by the zThreshold option, and negative

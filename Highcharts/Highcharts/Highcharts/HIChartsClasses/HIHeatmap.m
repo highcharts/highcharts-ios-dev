@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIHeatmap.h"
 
 @implementation HIHeatmap
@@ -27,6 +28,32 @@
 		params[@"colsize"] = self.colsize;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
+}
+
+-(void)setRowsize:(NSNumber *)rowsize {
+	_rowsize = rowsize;
+	[self updateNSObject:@"rowsize"];
+}
+
+-(void)setNullColor:(HIColor *)nullColor {
+	HIColor *oldValue = _nullColor;
+	if(self.nullColor) {
+		[self removeObserver:self forKeyPath:@"nullColor.isUpdated"];
+	}
+	_nullColor = nullColor;
+	[self updateHIObject:oldValue newValue:nullColor propertyName:@"nullColor"];
+}
+
+-(void)setColsize:(NSNumber *)colsize {
+	_colsize = colsize;
+	[self updateNSObject:@"colsize"];
 }
 
 @end

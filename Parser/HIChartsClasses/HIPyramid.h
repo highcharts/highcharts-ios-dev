@@ -11,10 +11,12 @@
 
 
 /**
-* description: A pyramid series is a special type of funnel, without neck and reversed by
-default.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pyramid/ : Pyramid chart
+* description: A pyramid series. If the type option is
+not specified, it is inherited from chart.type.
+For options that apply to multiple series, it is recommended to add
+them to the plotOptions.series options structure.
+To apply to all series of this specific type, apply it to plotOptions.
+pyramid.
 */
 @interface HIPyramid: HISeries
 
@@ -70,6 +72,17 @@ which shares the same layout logic.
 */
 @property(nonatomic, readwrite) NSString *neckHeight;
 /**
+* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/ : Black border
+* default: #ffffff
+*/
+@property(nonatomic, readwrite) HIColor *borderColor;
+/**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * default: 0
 */
@@ -122,17 +135,6 @@ should it be moved?.
 * default: 10
 */
 @property(nonatomic, readwrite) NSNumber *slicedOffset;
-/**
-* description: The color of the border surrounding each slice. When null, the
-border takes the same color as the slice fill. This can be used
-together with a borderWidth to fill drawing gaps created by antialiazing
-artefacts in borderless pies.
-In styled mode, the border stroke is given in the .highcharts-point class.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/ : Black border
-* default: #ffffff
-*/
-@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: A series specific or series type specific color set to use instead
 of the global colors.

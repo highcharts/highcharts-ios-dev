@@ -20,16 +20,17 @@ in theme.states.hover.
 */
 @interface HITheme: HIChartsJSONSerializable
 
+@property(nonatomic, readwrite) NSString *stroke;
 @property(nonatomic, readwrite) NSNumber *padding;
 /**
 * description: The default fill exists only to capture hover events.
 * default: #ffffff
 */
 @property(nonatomic, readwrite) NSString *fill;
-@property(nonatomic, readwrite) NSString *stroke;
 /**
-* description: The Z index for the reset zoom button.
-* default: 20
+* description: The Z index for the reset zoom button. The default value 
+places it below the tooltip that has Z index 7.
+* default: 6
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 

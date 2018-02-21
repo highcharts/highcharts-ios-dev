@@ -19,6 +19,7 @@
 #import "HIAnnotations.h"
 #import "HIZAxis.h"
 #import "HILabels.h"
+#import "HIKeyboardNavigation.h"
 #import "HINavigation.h"
 #import "HILoading.h"
 #import "HIColorAxis.h"
@@ -26,7 +27,7 @@
 #import "HIExporting.h"
 
 
-@interface HIOptions: NSObject
+@interface HIOptions: HIChartsJSONSerializable
 
 /**
 * description: Highchart by default puts a credits label in the lower right corner
@@ -41,7 +42,9 @@ of the chart. This can be changed using these options.
 to be rendered by WebGL instead of the default SVG. This allows hundreds of
 thousands of data points to be rendered in milliseconds. In addition to the
 WebGL rendering it saves time by skipping processing and inspection of the
-data wherever possible.
+data wherever possible. This introduces some limitations to what features are
+available in Boost mode. See https://www.highcharts.com/docs/advanced-chart-features/boost-module : the docs
+for details.
 In addition to the global boost option, each series has a
 boostThreshold that defines when the
 boost should kick in.
@@ -224,10 +227,11 @@ In Highcharts 2.x, the default colors were:
 colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE', 
    '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/ : Assign a global color theme
-* default: ["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9",
-         "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]
+* default: ["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9",         "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+
+@property(nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation;
 
 /**
 * description: A collection of options for buttons and menus appearing in the exporting module.

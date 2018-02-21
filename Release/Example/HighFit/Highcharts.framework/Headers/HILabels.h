@@ -27,13 +27,6 @@ the can be set to 0.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowOverlap;
 /**
-* description: A https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting : format string for the data label.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/ : Set labels text
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *format;
-/**
 * description: How to handle the annotation's label that flow outside the plot
 area. The justify option aligns the label inside the plot area.
 
@@ -43,6 +36,13 @@ area. The justify option aligns the label inside the plot area.
 */
 @property(nonatomic, readwrite) NSString *overflow;
 /**
+* description: The border width in pixels for the annotation's label
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/ : Set labels graphic options
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *borderWidth;
+/**
 * description: When either the borderWidth or the backgroundColor is set,
 this    is the padding within the box.
 
@@ -50,6 +50,13 @@ this    is the padding within the box.
 * default: 5
 */
 @property(nonatomic, readwrite) NSNumber *padding;
+/**
+* description: A https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting : format string for the data label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/ : Set labels text
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSString *format;
 /**
 * description: This option defines the point to which the label will be connected.
 It can be either the point which exists in the series - it is referenced
@@ -72,9 +79,7 @@ if a format or text are defined, the format or text take precedence
 and the formatter is ignored. This refers to a point object.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/ : Set labels text
-* default: function () {
-	return defined(this.y) ? this.y : 'Annotation label';
-}
+* default: function () {	return defined(this.y) ? this.y : 'Annotation label';}
 */
 @property(nonatomic, readwrite) HIFunction *formatter;
 /**
@@ -110,13 +115,6 @@ and-string-formatting#html : use HTML to render the annotation's label.
 * default: undefined
 */
 @property(nonatomic, readwrite) NSNumber *distance;
-/**
-* description: The border width in pixels for the annotation's label
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/ : Set labels graphic options
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
 * description: Alias for the format option.
 
@@ -180,17 +178,6 @@ the right side of the label should be touching the point.
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
-* description: When each category width is more than this many pixels, we don't
-apply auto rotation. Instead, we lay out the axis label with word
-wrap. A lower limit makes sense when the label contains multiple
-short words that don't extend the available horizontal space for
-each label.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotationlimit/ : Lower limit
-* default: 80
-*/
-@property(nonatomic, readwrite) NSNumber *autoRotationLimit;
-/**
 * description: If enabled, the axis labels will skewed to follow the perspective. 
 This will fix overlapping labels and titles, but texts become less
 legible due to the distortion.
@@ -202,37 +189,57 @@ The final appearance depends heavily on labels.position3d.
 /**
 * description: Rotation of the labels in degrees.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-rotation/ : X axis labels rotated 90°
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-rotation/ : X axis labels rotated 90Â°
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
 /**
-* description: Horizontal axes only. The number of lines to spread the labels over
-to make room or tighter labels. .
+* description: Horizontal axes only. The number of lines to spread the labels
+over to make room or tighter labels.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-staggerlines/ : Show labels over two lines
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *staggerLines;
 /**
+* description: When each category width is more than this many pixels, we don't
+apply auto rotation. Instead, we lay out the axis label with word
+wrap. A lower limit makes sense when the label contains multiple
+short words that don't extend the available horizontal space for
+each label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotationlimit/ : Lower limit
+* default: 80
+*/
+@property(nonatomic, readwrite) NSNumber *autoRotationLimit;
+/**
 * description: The Z index for the axis labels.
 * default: 7
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
-* description: Whether to reserve space for the labels. This can be turned off when
-for example the labels are rendered inside the plot area instead
-of outside.
+* description: Whether to reserve space for the labels. By default, space is
+reserved for the labels in these cases:
+
+On all horizontal axes.
+On vertical axes if label.align is right on a left-side
+axis or left on a right-side axis.
+On vertical axes if label.align is center.
+
+This can be turned off when for example the labels are rendered
+inside the plot area instead of outside.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-reservespace/ : No reserved space, labels inside plot
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-reservespace-true/ : Left-aligned labels on a vertical category axis
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reserveSpace;
 /**
-* description: For horizontal axes, the allowed degrees of label rotation to prevent
-overlapping labels. If there is enough space, labels are not rotated.
-As the chart gets narrower, it will start rotating the labels -45
-degrees, then remove every second label and try again with rotations
-0 and -45 etc. Set it to false to disable rotation, which will
+* description: For horizontal axes, the allowed degrees of label rotation
+to prevent overlapping labels. If there is enough space,
+labels are not rotated. As the chart gets narrower, it
+will start rotating the labels -45 degrees, then remove
+every second label and try again with rotations 0 and -45 etc.
+Set it to false to disable rotation, which will
 cause the labels to word-wrap if possible.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-default/ : Default auto rotation of 0 or -45
@@ -273,10 +280,12 @@ forward-facing.
 /**
 * description: To show only every n'th label on the axis, set the step to n.
 Setting the step to 2 shows every other label.
-By default, the step is calculated automatically to avoid overlap.
-To prevent this, set it to 1. This usually only happens on a category
-axis, and is often a sign that you have chosen the wrong axis type.
-Read more at http://www.highcharts.com/docs/chart-concepts/axes : Axis docs
+By default, the step is calculated automatically to avoid
+overlap. To prevent this, set it to 1. This usually only
+happens on a category axis, and is often a sign that you have
+chosen the wrong axis type.
+Read more at
+http://www.highcharts.com/docs/chart-concepts/axes : Axis docs
 => What axis should I use?
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-step/ : Showing only every other axis label on a categorized x axis

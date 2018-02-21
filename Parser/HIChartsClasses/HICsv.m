@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HICsv.h"
 
 @implementation HICsv
@@ -9,11 +10,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.columnHeaderFormatter) {
+		params[@"columnHeaderFormatter"] = [self.columnHeaderFormatter getFunction];
+	}
 	if (self.lineDelimiter) {
 		params[@"lineDelimiter"] = self.lineDelimiter;
 	}
-	if (self.columnHeaderFormatter) {
-		params[@"columnHeaderFormatter"] = [self.columnHeaderFormatter getFunction];
+	if (self.decimalPoint) {
+		params[@"decimalPoint"] = self.decimalPoint;
 	}
 	if (self.dateFormat) {
 		params[@"dateFormat"] = self.dateFormat;
@@ -22,6 +26,37 @@
 		params[@"itemDelimiter"] = self.itemDelimiter;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setColumnHeaderFormatter:(HIFunction *)columnHeaderFormatter {
+	HIFunction *oldValue = _columnHeaderFormatter;
+	if(self.columnHeaderFormatter) {
+		[self removeObserver:self forKeyPath:@"columnHeaderFormatter.isUpdated"];
+	}
+	_columnHeaderFormatter = columnHeaderFormatter;
+	[self updateHIObject:oldValue newValue:columnHeaderFormatter propertyName:@"columnHeaderFormatter"];
+}
+
+-(void)setLineDelimiter:(NSString *)lineDelimiter {
+	_lineDelimiter = lineDelimiter;
+	[self updateNSObject:@"lineDelimiter"];
+}
+
+-(void)setDecimalPoint:(NSString *)decimalPoint {
+	_decimalPoint = decimalPoint;
+	[self updateNSObject:@"decimalPoint"];
+}
+
+-(void)setDateFormat:(NSString *)dateFormat {
+	_dateFormat = dateFormat;
+	[self updateNSObject:@"dateFormat"];
+}
+
+-(void)setItemDelimiter:(NSString *)itemDelimiter {
+	_itemDelimiter = itemDelimiter;
+	[self updateNSObject:@"itemDelimiter"];
 }
 
 @end

@@ -7,16 +7,16 @@
 */
 
 #import "HIStyle.h"
+#import "HIFilter.h"
 #import "HIColor.h"
 #import "HIFunction.h"
 
 
 /**
-* description: Options for the series data labels, appearing next to each data
-point.
-In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (http://jsfiddle.
-net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-
-datalabels : see example).
+* description: Options for the data labels appearing on top of the nodes and links. For
+sankey charts, data labels are visible for the nodes by default, but 
+hidden for links. This is controlled by modifying the nodeFormat, and
+the format that applies to links and is an empty string by default.
 */
 @interface HIDataLabels: HIChartsJSONSerializable
 
@@ -59,6 +59,16 @@ to "none".
 * default: justify
 */
 @property(nonatomic, readwrite) NSString *overflow;
+/**
+* description: The vertical alignment of a data label. Can be one of top, middle
+or bottom. The default value depends on the data, for instance
+in a column chart, the label is above positive values and below
+negative values.
+
+* accepted values: ["top", "middle", "bottom"]
+* default: middle
+*/
+@property(nonatomic, readwrite) NSString *verticalAlign;
 /**
 * description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
 and-string-formatting#html : use HTML to render the labels.
@@ -152,6 +162,17 @@ or "right".
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
+* description: A declarative filter for which data labels to display. The
+declarative filter is designed for use when callback functions are
+not available, like when the chart options require a pure JSON
+structure or for use with graphical editors. For programmatic
+control, use the formatter instead, and return false to disable
+a single data label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome : Data labels filtered by percentage
+*/
+@property(nonatomic, readwrite) HIFilter *filter;
+/**
 * description: The y position offset of the label relative to the point.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/ : Vertical and positioned
@@ -214,16 +235,6 @@ The y value.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: The vertical alignment of a data label. Can be one of top, middle
-or bottom. The default value depends on the data, for instance
-in a column chart, the label is above positive values and below
-negative values.
-
-* accepted values: ["top", "middle", "bottom"]
-* default: middle
-*/
-@property(nonatomic, readwrite) NSString *verticalAlign;
-/**
 * description: For points with an extent, like columns or map areas, whether to align the data
 label inside the box or to the actual value point. Defaults to false
 in most cases, true in stacked columns.
@@ -267,15 +278,15 @@ the data label is moved inside the plot area according to the overflow option.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *crop;
 /**
-* description: Decides how the data label will be rotated according to the perimeter
-of the sunburst. It can either be parallel or perpendicular to the
-perimeter.
-series.rotation takes precedence over rotationMode.
+* description: The width of the line connecting the data label to the pie slice.
+In styled mode, the connector stroke width is given in the
+.highcharts-data-label-connector class.
 
-* accepted values: ["perpendicular", "parallel"]
-* default: perpendicular
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/ : Disable the connector
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled connectors
+* default: 1
 */
-@property(nonatomic, readwrite) NSString *rotationMode;
+@property(nonatomic, readwrite) NSNumber *connectorWidth;
 /**
 * description: The distance from the data label to the connector.
 
@@ -304,15 +315,15 @@ shown for data labels outside the pie.
 */
 @property(nonatomic, readwrite) NSNumber *distance;
 /**
-* description: The width of the line connecting the data label to the pie slice.
-In styled mode, the connector stroke width is given in the
-.highcharts-data-label-connector class.
+* description: Decides how the data label will be rotated according to the perimeter
+of the sunburst. It can either be parallel or perpendicular to the
+perimeter.
+series.rotation takes precedence over rotationMode.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/ : Disable the connector
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/ : Styled connectors
-* default: 1
+* accepted values: ["perpendicular", "parallel"]
+* default: perpendicular
 */
-@property(nonatomic, readwrite) NSNumber *connectorWidth;
+@property(nonatomic, readwrite) NSString *rotationMode;
 /**
 * description: Whether to render the connector as a soft arc or a line with sharp
 break.
@@ -321,6 +332,46 @@ break.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/ : Non soft
 */
 @property(nonatomic, readwrite) NSNumber *softConnector;
+/**
+* description: X offset of the higher data labels relative to the point value.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *xHigh;
+/**
+* description: Y offset of the higher data labels relative to the point value.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
+* default: -6
+*/
+@property(nonatomic, readwrite) NSNumber *yHigh;
+/**
+* description: X offset of the lower data labels relative to the point value.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *xLow;
+/**
+* description: Y offset of the lower data labels relative to the point value.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/ : Data labels on range series
+* default: 16
+*/
+@property(nonatomic, readwrite) NSNumber *yLow;
+/**
+* description: Callback to format data labels for nodes in the sankey diagram. 
+The nodeFormat option takes precedence over the nodeFormatter.
+*/
+@property(nonatomic, readwrite) HIFunction *nodeFormatter;
+/**
+* description: The http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting : format string specifying what to show for nodes in the 
+sankey diagram. By default the nodeFormatter returns
+{point.name}.
+*/
+@property(nonatomic, readwrite) NSString *nodeFormat;
 
 -(NSDictionary *)getParams;
 

@@ -64,18 +64,18 @@ and optionally axes.
 */
 @property(nonatomic, readwrite) NSString *type;
 /**
+* description: An array of points for the shape. This option is available for shapes
+which can use multiple points such as path. A point can be either 
+a point object or a point's id.
+*/
+@property(nonatomic, readwrite) NSArray *points;
+/**
 * description: Id of the marker which will be drawn at the final vertex of the path.
 Custom markers can be defined in defs property.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/ : Define a custom marker for annotations
 */
 @property(nonatomic, readwrite) NSString *markerEnd;
-/**
-* description: An array of points for the shape. This option is available for shapes
-which can use multiple points such as path. A point can be either 
-a point object or a point's id.
-*/
-@property(nonatomic, readwrite) NSArray *points;
 /**
 * description: Id of the marker which will be drawn at the first vertex of the path.
 Custom markers can be defined in defs property.

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HIFunction.h"
+#import "HIChartsJSONSerializableSubclass.h"
 
 @implementation HIFunction
 
@@ -21,13 +22,16 @@
     }
 }
 
-- (void)setFunction:(NSString *)function {
+# pragma mark - Setters/Getters
+
+-(void)setFunction:(NSString *)function {
     if (function) {
         _function = [NSString stringWithFormat: @"__xx__%@__xx__", function];
     }
-    else{
+    else {
         _function = nil;
     }
+    [self updateNSObject:@"function"];
 }
 
 -(id)getFunction {

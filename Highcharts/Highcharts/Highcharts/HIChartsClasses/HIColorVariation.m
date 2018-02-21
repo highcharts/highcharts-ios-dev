@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIColorVariation.h"
 
 @implementation HIColorVariation
@@ -16,6 +17,18 @@
 		params[@"to"] = self.to;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setKey:(NSString *)key {
+	_key = key;
+	[self updateNSObject:@"key"];
+}
+
+-(void)setTo:(NSNumber *)to {
+	_to = to;
+	[self updateNSObject:@"to"];
 }
 
 @end

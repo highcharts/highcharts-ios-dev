@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIAttributes.h"
 
 @implementation HIAttributes
@@ -13,6 +14,13 @@
 		params[@"zIndex"] = self.zIndex;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	_zIndex = zIndex;
+	[self updateNSObject:@"zIndex"];
 }
 
 @end

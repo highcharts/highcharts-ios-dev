@@ -20,31 +20,6 @@ chart options.
 @interface HIChart: HIChartsJSONSerializable
 
 /**
-* description: Whether to apply a drop shadow to the outer chart area. Requires
-that backgroundColor be set. The shadow can be an object configuration
-containing color, offsetX, offsetY, opacity and width.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/shadow/ : Shadow
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/border/ : Chart border and shadow
-* default: false
-*/
-@property(nonatomic, readwrite) id /* Bool, id */ shadow;
-/**
-* description: The background color or gradient for the plot area.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/ : Color
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/ : Gradient
-* default: null
-*/
-@property(nonatomic, readwrite) HIColor *plotBackgroundColor;
-/**
-* description: When true, cartesian charts like line, spline, area and column are
-transformed into the polar coordinate system. Requires highcharts-
-more.js.
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *polar;
-/**
 * description: Allows setting a key to switch between zooming and panning. Can be
 one of alt, ctrl, meta (the command key on Mac and Windows
 key on Windows) or shift. The keys are mapped directly to the key
@@ -59,35 +34,22 @@ event.metaKey and event.shiftKey).
 */
 @property(nonatomic, readwrite) HIEvents *events;
 /**
-* description: Whether to apply a drop shadow to the plot area. Requires that
-plotBackgroundColor be set. The shadow can be an object configuration
-containing color, offsetX, offsetY, opacity and width.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotshadow/ : Plot shadow
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/plotborder/ : Plot border options
-* default: false
-*/
-@property(nonatomic, readwrite) id /* Bool, id */ plotShadow;
-/**
-* description: If true, the axes will scale to the remaining visible series once
-one series is hidden. If false, hiding and showing a series will
-not affect the axes or the other series. For stacks, once one series
-within the stack is hidden, the rest of the stack will close in
-around it even if the axis is not affected.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-false/ : False
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true-stacked/ : True with stack
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenSeries;
-/**
 * description: Options to render charts in 3 dimensions. This feature requires
 highcharts-3d.js, found in the download package or online at
 http://code.highcharts.com/highcharts-
 3d.js : code.highcharts.com/highcharts-3d.js.
 */
 @property(nonatomic, readwrite) HIOptions3d *options3d;
+/**
+* description: Whether to invert the axes so that the x axis is vertical and y axis
+is horizontal. When true, the x axis is reversed
+by default.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/inverted/ : Inverted line
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/navigator/inverted/ : Inverted stock chart
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *inverted;
 /**
 * description: The margin between the bottom outer edge of the chart and the plot
 area. Use this to set a fixed pixel value for the margin as opposed
@@ -97,6 +59,14 @@ to the default dynamic margin. See also spacingBottom.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/margin/ : 100px margins
 */
 @property(nonatomic, readwrite) NSNumber *marginBottom;
+/**
+* description: The background color or gradient for the plot area.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/ : Color
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/ : Gradient
+* default: null
+*/
+@property(nonatomic, readwrite) HIColor *plotBackgroundColor;
 /**
 * description: Common options for all yAxes rendered in a parallel coordinates plot.
 This feature requires modules/parallel-coordinates.js.
@@ -120,6 +90,19 @@ parallelAxes: {
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/parallel-coordinates/parallelaxes/ : Set the same tickAmount for all yAxes
 */
 @property(nonatomic, readwrite) HIParallelAxes *parallelAxes;
+/**
+* description: If true, the axes will scale to the remaining visible series once
+one series is hidden. If false, hiding and showing a series will
+not affect the axes or the other series. For stacks, once one series
+within the stack is hidden, the rest of the stack will close in
+around it even if the axis is not affected.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true/ : True by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-false/ : False
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true-stacked/ : True with stack
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenSeries;
 /**
 * description: The space between the top edge of the chart and the content (plot
 area, axis title and labels, title, subtitle or legend in top
@@ -155,16 +138,13 @@ to reset zoom.
 */
 @property(nonatomic, readwrite) HIResetZoomButton *resetZoomButton;
 /**
-* description: The HTML element where the chart will be rendered. If it is a string,
-the element by that id is used. The HTML element can also be passed
-by direct reference, or as the first argument of the chart constructor,
- in which case the option is not needed.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : String
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-object/ : Object reference
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-jquery/ : Object reference through jQuery
+* description: A text description of the chart.
+If the Accessibility module is loaded, this is included by default
+as a long description of the chart and its contents in the hidden
+screen reader information region.
+* default: undefined
 */
-@property(nonatomic, readwrite) id /* NSString, id */ renderTo;
+@property(nonatomic, readwrite) NSString *definition;
 /**
 * description: The pixel width of the plot area border.
 
@@ -183,14 +163,6 @@ to cartesian series.
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/showaxes-true/ : True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showAxes;
-/**
-* description: A text description of the chart.
-If the Accessibility module is loaded, this is included by default
-as a long description of the chart and its contents in the hidden
-screen reader information region.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *definition;
 /**
 * description: Equivalent to zoomType, but for multitouch gestures
 only. By default, the pinchType is the same as the zoomType setting.
@@ -225,6 +197,15 @@ and spacingLeft options.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/margins-zero/ : Zero margins
 */
 @property(nonatomic, readwrite) NSArray *margin;
+/**
+* description: Flag to render charts as a parallel coordinates plot. In a parallel
+coordinates plot (||-coords) by default all required yAxes are generated
+and the legend is disabled. This feature requires
+modules/parallel-coordinates.js.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples//highcharts/demo/parallel-coordinates/ : Parallel coordinates demo
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *parallelCoordinates;
 /**
 * description: A text description of the chart type.
 If the Accessibility module is loaded, this will be included in the
@@ -323,15 +304,23 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
-* description: Whether to invert the axes so that the x axis is vertical and y axis
-is horizontal. When true, the x axis is reversed
-by default.
+* description: The HTML element where the chart will be rendered. If it is a string,
+the element by that id is used. The HTML element can also be passed
+by direct reference, or as the first argument of the chart constructor,
+ in which case the option is not needed.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/inverted/ : Inverted line
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/navigator/inverted/ : Inverted stock chart
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : String
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-object/ : Object reference
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-jquery/ : Object reference through jQuery
+*/
+@property(nonatomic, readwrite) id /* NSString, id */ renderTo;
+/**
+* description: When true, cartesian charts like line, spline, area and column are
+transformed into the polar coordinate system. Requires highcharts-
+more.js.
 * default: false
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *inverted;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *polar;
 /**
 * description: The URL for an image to use as the plot background. To set an image
 as the background for the entire chart, set a CSS background image
@@ -361,14 +350,15 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSNumber *spacingBottom;
 /**
-* description: Flag to render charts as a parallel coordinates plot. In a parallel
-coordinates plot (||-coords) by default all required yAxes are generated
-and the legend is disabled. This feature requires
-modules/parallel-coordinates.js.
+* description: Whether to apply a drop shadow to the plot area. Requires that
+plotBackgroundColor be set. The shadow can be an object configuration
+containing color, offsetX, offsetY, opacity and width.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples//highcharts/demo/parallel-coordinates/ : Parallel coordinates demo
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotshadow/ : Plot shadow
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/plotborder/ : Plot border options
+* default: false
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *parallelCoordinates;
+@property(nonatomic, readwrite) id /* Bool, id */ plotShadow;
 /**
 * description: The background color of the marker square when selecting (zooming
 in on) an area of the chart.
@@ -385,6 +375,16 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
+* description: The margin between the left outer edge of the chart and the plot
+area. Use this to set a fixed pixel value for the margin as opposed
+to the default dynamic margin. See also spacingLeft.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginleft/ : 150px left margin
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/margin/ : 100px margins
+* default: null
+*/
+@property(nonatomic, readwrite) NSNumber *marginLeft;
+/**
 * description: The distance between the outer edge of the chart and the content,
 like title or legend, or axis title and labels if present. The
 numbers in the array designate top, right, bottom and left respectively.
@@ -393,6 +393,16 @@ options for shorthand setting of one option.
 * default: [10, 10, 15, 10]
 */
 @property(nonatomic, readwrite) NSArray<NSNumber *> *spacing;
+/**
+* description: Whether to apply a drop shadow to the outer chart area. Requires
+that backgroundColor be set. The shadow can be an object configuration
+containing color, offsetX, offsetY, opacity and width.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/shadow/ : Shadow
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/border/ : Chart border and shadow
+* default: false
+*/
+@property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
 * description: The color of the inner chart or plot area border.
 
@@ -469,16 +479,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: null
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ height;
-/**
-* description: The margin between the left outer edge of the chart and the plot
-area. Use this to set a fixed pixel value for the margin as opposed
-to the default dynamic margin. See also spacingLeft.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginleft/ : 150px left margin
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/margin/ : 100px margins
-* default: null
-*/
-@property(nonatomic, readwrite) NSNumber *marginLeft;
 /**
 * description: The space between the left edge of the chart and the content (plot
 area, axis title and labels, title, subtitle or legend in top position).

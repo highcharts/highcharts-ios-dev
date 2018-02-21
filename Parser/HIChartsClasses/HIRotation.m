@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIRotation.h"
 
 @implementation HIRotation
@@ -19,6 +20,23 @@
 		params[@"from"] = self.from;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setTo:(NSNumber *)to {
+	_to = to;
+	[self updateNSObject:@"to"];
+}
+
+-(void)setOrientations:(NSNumber *)orientations {
+	_orientations = orientations;
+	[self updateNSObject:@"orientations"];
+}
+
+-(void)setFrom:(NSNumber *)from {
+	_from = from;
+	[self updateNSObject:@"from"];
 }
 
 @end

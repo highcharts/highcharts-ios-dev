@@ -9,22 +9,27 @@
 #import "HIChartsJSONSerializable.h"
 
 
-/**
-* description: Options for keyboard navigation.
-*/
 @interface HIKeyboardNavigation: HIChartsJSONSerializable
 
 /**
-* description: Enable keyboard navigation for the chart.
+* description: Enable/disable keyboard navigation for the legend. Requires the Accessibility
+module.
 * default: true
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
-* description: Skip null points when navigating through points with the
-keyboard.
-* default: false
+* description: Set the keyboard navigation mode for the chart. Can be "normal"
+or "serialize". In normal mode, left/right arrow keys move
+between points in a series, while up/down arrow keys move between
+series. Up/down navigation acts intelligently to figure out which
+series makes sense to move to from any given point.
+In "serialize" mode, points are instead navigated as a single 
+list. Left/right behaves as in "normal" mode. Up/down arrow keys
+will behave like left/right. This is useful for unifying 
+navigation behavior with/without screen readers enabled.
+* default: normal
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *skipNullPoints;
+@property(nonatomic, readwrite) NSString *mode;
 
 -(NSDictionary *)getParams;
 

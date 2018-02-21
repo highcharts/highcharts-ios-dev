@@ -36,14 +36,6 @@ is 0, so this must be set in addition to a custom border color.
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
-* description: The radius or length of the dial, in percentages relative to the
-radius of the gauge itself.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/ : Dial options demonstrated
-* default: 80%
-*/
-@property(nonatomic, readwrite) NSString *radius;
-/**
 * description: The width of the top of the dial, closest to the perimeter. The pivot
 narrows in from the base to the top.
 
@@ -51,6 +43,14 @@ narrows in from the base to the top.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *topWidth;
+/**
+* description: The radius or length of the dial, in percentages relative to the
+radius of the gauge itself.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/ : Dial options demonstrated
+* default: 80%
+*/
+@property(nonatomic, readwrite) NSString *radius;
 /**
 * description: The length of the dial's base part, relative to the total radius
 or length of the dial.

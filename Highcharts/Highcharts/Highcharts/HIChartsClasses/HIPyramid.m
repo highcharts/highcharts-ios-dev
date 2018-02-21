@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIPyramid.h"
 
 @implementation HIPyramid
@@ -32,6 +33,9 @@
 	if (self.neckHeight) {
 		params[@"neckHeight"] = self.neckHeight;
 	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
@@ -65,9 +69,6 @@
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
 	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -76,6 +77,94 @@
 		params[@"colors"] = array;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setNeckWidth:(NSString *)neckWidth {
+	_neckWidth = neckWidth;
+	[self updateNSObject:@"neckWidth"];
+}
+
+-(void)setMinSize:(NSNumber *)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
+}
+
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:@"ignoreHiddenPoint"];
+}
+
+-(void)setWidth:(id)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setInnerSize:(id)innerSize {
+	_innerSize = innerSize;
+	[self updateNSObject:@"innerSize"];
+}
+
+-(void)setNeckHeight:(NSString *)neckHeight {
+	_neckHeight = neckHeight;
+	[self updateNSObject:@"neckHeight"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
+}
+
+-(void)setClip:(NSNumber *)clip {
+	_clip = clip;
+	[self updateNSObject:@"clip"];
+}
+
+-(void)setReversed:(NSNumber *)reversed {
+	_reversed = reversed;
+	[self updateNSObject:@"reversed"];
+}
+
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
+}
+
+-(void)setStartAngle:(NSNumber *)startAngle {
+	_startAngle = startAngle;
+	[self updateNSObject:@"startAngle"];
+}
+
+-(void)setHeight:(id)height {
+	_height = height;
+	[self updateNSObject:@"height"];
+}
+
+-(void)setCenter:(NSArray *)center {
+	NSArray *oldValue = _center;
+	_center = center;
+	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
+}
+
+-(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	_slicedOffset = slicedOffset;
+	[self updateNSObject:@"slicedOffset"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
 @end

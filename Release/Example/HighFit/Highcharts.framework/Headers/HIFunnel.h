@@ -51,6 +51,17 @@ should it be moved?.
 */
 @property(nonatomic, readwrite) NSNumber *slicedOffset;
 /**
+* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+The default value changed from false to true with Highcharts
+3.0.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
+/**
 * description: The center of the series. By default, it is centered in the middle
 of the plot area, so it fills the plot area height.
 
@@ -90,17 +101,6 @@ right.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
-/**
-* description: Equivalent to chart.ignoreHiddenSeries,
-this option tells whether the series shall be redrawn as if the
-hidden point were null.
-The default value changed from false to true with Highcharts
-3.0.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
 /**
 * description: The size of the inner diameter for the pie. A size greater than 0
 renders a donut chart. Can be a percentage or pixel value. Percentages

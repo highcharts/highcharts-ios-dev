@@ -25,11 +25,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
-* description: A custom class name, in addition to the default highcharts-plot-
-line, to apply to each individual line.
-*/
-@property(nonatomic, readwrite) NSString *className;
-/**
 * description: The width or thickness of the plot line.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/ : 2px wide line from X axis
@@ -37,6 +32,11 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *width;
+/**
+* description: A custom class name, in addition to the default highcharts-plot-
+line, to apply to each individual line.
+*/
+@property(nonatomic, readwrite) NSString *className;
 /**
 * description: The dashing or dot style for the plot line. For possible values see
 http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-
@@ -49,6 +49,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
+* description: An object defining mouse events for the plot line. Supported properties
+are click, mouseover, mouseout, mousemove.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-events/ : Mouse events demonstrated
+*/
+@property(nonatomic, readwrite) id events;
+/**
 * description: Text labels for the plot bands
 */
 @property(nonatomic, readwrite) HILabel *label;
@@ -59,13 +66,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 * default: null
 */
 @property(nonatomic, readwrite) NSString *id;
-/**
-* description: An object defining mouse events for the plot line. Supported properties
-are click, mouseover, mouseout, mousemove.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-events/ : Mouse events demonstrated
-*/
-@property(nonatomic, readwrite) id events;
 /**
 * description: The color of the line.
 

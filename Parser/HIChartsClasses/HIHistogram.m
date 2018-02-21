@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIHistogram.h"
 
 @implementation HIHistogram
@@ -76,6 +77,112 @@
 		params[@"baseSeries"] = self.baseSeries;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setGroupZPadding:(NSNumber *)groupZPadding {
+	_groupZPadding = groupZPadding;
+	[self updateNSObject:@"groupZPadding"];
+}
+
+-(void)setPointWidth:(NSNumber *)pointWidth {
+	_pointWidth = pointWidth;
+	[self updateNSObject:@"pointWidth"];
+}
+
+-(void)setEdgeWidth:(NSNumber *)edgeWidth {
+	_edgeWidth = edgeWidth;
+	[self updateNSObject:@"edgeWidth"];
+}
+
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
+}
+
+-(void)setGroupPadding:(NSNumber *)groupPadding {
+	_groupPadding = groupPadding;
+	[self updateNSObject:@"groupPadding"];
+}
+
+-(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
+	_maxPointWidth = maxPointWidth;
+	[self updateNSObject:@"maxPointWidth"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setPointRange:(NSNumber *)pointRange {
+	_pointRange = pointRange;
+	[self updateNSObject:@"pointRange"];
+}
+
+-(void)setMinPointLength:(NSNumber *)minPointLength {
+	_minPointLength = minPointLength;
+	[self updateNSObject:@"minPointLength"];
+}
+
+-(void)setEdgeColor:(HIColor *)edgeColor {
+	HIColor *oldValue = _edgeColor;
+	if(self.edgeColor) {
+		[self removeObserver:self forKeyPath:@"edgeColor.isUpdated"];
+	}
+	_edgeColor = edgeColor;
+	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	_borderRadius = borderRadius;
+	[self updateNSObject:@"borderRadius"];
+}
+
+-(void)setBinWidth:(NSNumber *)binWidth {
+	_binWidth = binWidth;
+	[self updateNSObject:@"binWidth"];
+}
+
+-(void)setGrouping:(NSNumber *)grouping {
+	_grouping = grouping;
+	[self updateNSObject:@"grouping"];
+}
+
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setCrisp:(NSNumber *)crisp {
+	_crisp = crisp;
+	[self updateNSObject:@"crisp"];
+}
+
+-(void)setBinsNumber:(id)binsNumber {
+	_binsNumber = binsNumber;
+	[self updateNSObject:@"binsNumber"];
+}
+
+-(void)setBaseSeries:(id)baseSeries {
+	_baseSeries = baseSeries;
+	[self updateNSObject:@"baseSeries"];
 }
 
 @end

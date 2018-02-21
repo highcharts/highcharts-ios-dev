@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIItemHoverStyle.h"
 
 @implementation HIItemHoverStyle
@@ -13,6 +14,13 @@
 		params[@"color"] = self.color;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setColor:(NSString *)color {
+	_color = color;
+	[self updateNSObject:@"color"];
 }
 
 @end

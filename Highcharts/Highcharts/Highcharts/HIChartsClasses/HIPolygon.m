@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIPolygon.h"
 
 @implementation HIPolygon
@@ -18,6 +19,13 @@
 		params[@"trackByArea"] = self.trackByArea;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setTrackByArea:(NSNumber *)trackByArea {
+	_trackByArea = trackByArea;
+	[self updateNSObject:@"trackByArea"];
 }
 
 @end

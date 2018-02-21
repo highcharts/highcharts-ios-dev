@@ -122,7 +122,8 @@ by returning false or calling event.preventDefault().
 final min and max values are computed and corrected for minRange.
 Fires when the minimum and maximum is set for the axis, either by
 calling the .setExtremes() method or by selecting an area in the
-chart. One parameter, event, is passed to the function, containing common event information.
+chart. One parameter, event, is passed to the function, containing
+common event information.
 The new user set minimum and maximum values can be found by event.
 min and event.max. These reflect the axis minimum and maximum
 in axis values. The actual data extremes are found in event.dataMin
@@ -130,22 +131,25 @@ and event.dataMax.
 */
 @property(nonatomic, readwrite) HIFunction *afterSetExtremes;
 /**
-* description: An event fired when a point falls inside a break from this axis.
-*/
-@property(nonatomic, readwrite) HIFunction *pointInBreak;
-/**
 * description: Fires when the minimum and maximum is set for the axis, either by
 calling the .setExtremes() method or by selecting an area in the
-chart. One parameter, event, is passed to the function, containing common event information.
+chart. One parameter, event, is passed to the function,
+containing common event information.
 The new user set minimum and maximum values can be found by event.
 min and event.max. These reflect the axis minimum and maximum
-in data values. When an axis is zoomed all the way out from the "Reset
-zoom" button, event.min and event.max are null, and the new extremes
-are set based on this.dataMin and this.dataMax.
+in data values. When an axis is zoomed all the way out from the 
+"Reset zoom" button, event.min and event.max are null, and
+the new extremes are set based on this.dataMin and this.dataMax.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/events-setextremes/ : Log new extremes on x axis
 */
 @property(nonatomic, readwrite) HIFunction *setExtremes;
+/**
+* description: An event fired after the breaks have rendered.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event/ : AfterBreak Event
+*/
+@property(nonatomic, readwrite) HIFunction *afterBreaks;
 /**
 * description: An event fired when a break from this axis occurs on a point.
 
@@ -153,11 +157,17 @@ are set based on this.dataMin and this.dataMax.
 */
 @property(nonatomic, readwrite) HIFunction *pointBreak;
 /**
-* description: An event fired after the breaks have rendered.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event// : AfterBreak Event
+* description: An event fired when a point falls inside a break from this axis.
 */
-@property(nonatomic, readwrite) HIFunction *afterBreaks;
+@property(nonatomic, readwrite) HIFunction *pointInBreak;
+/**
+* description: Fires before a chart is printed through the context menu item or
+the Chart.print method. Requires the exporting module.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
+
+*/
+@property(nonatomic, readwrite) HIFunction *beforePrint;
 /**
 * description: Fires when an area of the chart has been selected. Selection is enabled
 by setting the chart's zoomType. One parameter, event, is passed
@@ -200,21 +210,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/m
 */
 @property(nonatomic, readwrite) HIFunction *load;
 /**
-* description: In a chart with multiple drilldown series, this event fires after
-all the series have been drilled up.
-*/
-@property(nonatomic, readwrite) HIFunction *drillupall;
-/**
-* description: Fires when a series is added to the chart after load time, using
-the addSeries method. One parameter, event, is passed to the
-function, containing common event information.
-Through event.options you can access the series options that was
-passed to the addSeries method. Returning false prevents the series
-from being added.
+* description: Fires after a chart is printed through the context menu item or the
+Chart.print method. Requires the exporting module.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/ : Alert on add series
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
+
 */
-@property(nonatomic, readwrite) HIFunction *addSeries;
+@property(nonatomic, readwrite) HIFunction *afterPrint;
 /**
 * description: Fires when drilling up from a drilldown series.
 */
@@ -229,6 +231,11 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-redraw/ : Set subtitle on chart redraw
 */
 @property(nonatomic, readwrite) HIFunction *redraw;
+/**
+* description: In a chart with multiple drilldown series, this event fires after
+all the series have been drilled up.
+*/
+@property(nonatomic, readwrite) HIFunction *drillupall;
 /**
 * description: Fires when a drilldown point is clicked, before the new series is
 added. This event is also utilized for async drilldown, where the
@@ -254,21 +261,16 @@ Options for the new series
 */
 @property(nonatomic, readwrite) HIFunction *drilldown;
 /**
-* description: Fires after a chart is printed through the context menu item or the
-Chart.print method. Requires the exporting module.
+* description: Fires when a series is added to the chart after load time, using
+the addSeries method. One parameter, event, is passed to the
+function, containing common event information.
+Through event.options you can access the series options that was
+passed to the addSeries method. Returning false prevents the series
+from being added.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
-
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/ : Alert on add series
 */
-@property(nonatomic, readwrite) HIFunction *afterPrint;
-/**
-* description: Fires before a chart is printed through the context menu item or
-the Chart.print method. Requires the exporting module.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/ : Rescale the chart to print
-
-*/
-@property(nonatomic, readwrite) HIFunction *beforePrint;
+@property(nonatomic, readwrite) HIFunction *addSeries;
 
 -(NSDictionary *)getParams;
 

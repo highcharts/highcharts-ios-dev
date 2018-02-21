@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HILabels.h"
 #import "HIShapeOptions.h"
+#import "HILabels.h"
 #import "HIShapes.h"
 #import "HILabelOptions.h"
 
@@ -22,6 +22,12 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @interface HIAnnotations: HIChartsJSONSerializable
 
+/**
+* description: Options for annotation's shapes. Each shape inherits options
+from the shapeOptions object. An option from the shapeOptions can be
+overwritten by config for a specific shape.
+*/
+@property(nonatomic, readwrite) HIShapeOptions *shapeOptions;
 /**
 * description: Whether the annotation is visible.
 
@@ -39,12 +45,6 @@ labels, they can be added to the annotations.labelOptions.html : labelOptions.
 * default: 6
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
-/**
-* description: Options for annotation's shapes. Each shape inherits options
-from the shapeOptions object. An option from the shapeOptions can be
-overwritten by config for a specific shape.
-*/
-@property(nonatomic, readwrite) HIShapeOptions *shapeOptions;
 /**
 * description: An array of shapes for the annotation. For options that apply to multiple
 shapes, then can be added to the annotations.shapeOptions.html : shapeOptions.

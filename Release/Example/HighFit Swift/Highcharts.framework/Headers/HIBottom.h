@@ -16,11 +16,6 @@
 @interface HIBottom: HIChartsJSONSerializable
 
 /**
-* description: The thickness of the panel.
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *size;
-/**
 * description: Whether to display the frame. Possible values are true, false,
 "auto" to display only the frames behind the data, and "default"
 to display faces behind the data based on the axis layout, ignoring
@@ -31,6 +26,11 @@ the point of view.
 * default: default
 */
 @property(nonatomic, readwrite) id /* Bool, NSString */ visible;
+/**
+* description: The thickness of the panel.
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *size;
 /**
 * description: The color of the panel.
 * default: transparent

@@ -22,15 +22,6 @@ found in the modules directory of the download package, or online at
 @interface HIDrilldown: HIChartsJSONSerializable
 
 /**
-* description: When this option is false, clicking a single point will drill down
-all points in the same category, equivalent to clicking the X axis
-label.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/allowpointdrilldown-false/ : Don't allow point drilldown
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointDrilldown;
-/**
 * description: Additional styles to apply to the X axis label for a point that
 has drilldown data. By default it is underlined and blue to invite
 to interaction.
@@ -55,6 +46,15 @@ interaction.
 * default: { "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }
 */
 @property(nonatomic, readwrite) HIActiveDataLabelStyle *activeDataLabelStyle;
+/**
+* description: When this option is false, clicking a single point will drill down
+all points in the same category, equivalent to clicking the X axis
+label.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/allowpointdrilldown-false/ : Don't allow point drilldown
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointDrilldown;
 /**
 * description: An array of series configurations for the drill down. Each series
 configuration uses the same syntax as the series option

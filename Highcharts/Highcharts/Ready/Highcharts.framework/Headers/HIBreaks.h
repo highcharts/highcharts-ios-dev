@@ -16,10 +16,15 @@ left out and all the points shifted closer to each other.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-simple/ : Simple break
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/ : Advanced with callback
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/intraday-breaks/ : Break on nights and weekends
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/ : Broken Y axis
 */
 @interface HIBreaks: HIChartsJSONSerializable
 
+/**
+* description: Defines an interval after which the break appears again. By default
+the breaks do not repeat.
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *repeat;
 /**
 * description: A number indicating how much space should be left between the start
 and the end of the break. The break size is given in axis units,
@@ -28,12 +33,6 @@ indicate the equivalent of an hour.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *breakSize;
-/**
-* description: Defines an interval after which the break appears again. By default
-the breaks do not repeat.
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *repeat;
 /**
 * description: The point where the break ends.
 */

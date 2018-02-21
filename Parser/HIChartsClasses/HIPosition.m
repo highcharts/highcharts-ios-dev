@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIPosition.h"
 
 @implementation HIPosition
@@ -9,9 +10,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
-	}
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
@@ -21,7 +19,32 @@
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
+}
+
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
+}
+
+-(void)setAlign:(NSString *)align {
+	_align = align;
+	[self updateNSObject:@"align"];
+}
+
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
 }
 
 @end

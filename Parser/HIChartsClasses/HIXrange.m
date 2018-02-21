@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIXrange.h"
 
 @implementation HIXrange
@@ -19,6 +20,9 @@
 	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
+	}
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -42,13 +46,71 @@
 	if (self.groupZPadding) {
 		params[@"groupZPadding"] = self.groupZPadding;
 	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
-	}
 	if (self.partialFill) {
 		params[@"partialFill"] = [self.partialFill getParams];
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setPointWidth:(NSNumber *)pointWidth {
+	_pointWidth = pointWidth;
+	[self updateNSObject:@"pointWidth"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
+}
+
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	_borderRadius = borderRadius;
+	[self updateNSObject:@"borderRadius"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setMinPointLength:(NSNumber *)minPointLength {
+	_minPointLength = minPointLength;
+	[self updateNSObject:@"minPointLength"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
+	_maxPointWidth = maxPointWidth;
+	[self updateNSObject:@"maxPointWidth"];
+}
+
+-(void)setGroupZPadding:(NSNumber *)groupZPadding {
+	_groupZPadding = groupZPadding;
+	[self updateNSObject:@"groupZPadding"];
+}
+
+-(void)setPartialFill:(HIPartialFill *)partialFill {
+	HIPartialFill *oldValue = _partialFill;
+	if(self.partialFill) {
+		[self removeObserver:self forKeyPath:@"partialFill.isUpdated"];
+	}
+	_partialFill = partialFill;
+	[self updateHIObject:oldValue newValue:partialFill propertyName:@"partialFill"];
 }
 
 @end
