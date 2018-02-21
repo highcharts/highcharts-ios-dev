@@ -10,11 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.x) {
-		params[@"x"] = self.x;
-	}
 	if (self.y) {
 		params[@"y"] = self.y;
+	}
+	if (self.x) {
+		params[@"x"] = self.x;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
@@ -27,14 +27,14 @@
 
 # pragma mark - Setters
 
--(void)setX:(NSNumber *)x {
-	_x = x;
-	[self updateNSObject:@"x"];
-}
-
 -(void)setY:(NSNumber *)y {
 	_y = y;
 	[self updateNSObject:@"y"];
+}
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
 }
 
 -(void)setAlign:(NSString *)align {

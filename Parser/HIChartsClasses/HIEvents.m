@@ -10,17 +10,26 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.mouseOver) {
-		params[@"mouseOver"] = [self.mouseOver getFunction];
+	if (self.legendItemClick) {
+		params[@"legendItemClick"] = [self.legendItemClick getFunction];
 	}
-	if (self.click) {
-		params[@"click"] = [self.click getFunction];
+	if (self.checkboxClick) {
+		params[@"checkboxClick"] = [self.checkboxClick getFunction];
 	}
-	if (self.select) {
-		params[@"select"] = [self.select getFunction];
+	if (self.pointInBreak) {
+		params[@"pointInBreak"] = [self.pointInBreak getFunction];
 	}
-	if (self.mouseOut) {
-		params[@"mouseOut"] = [self.mouseOut getFunction];
+	if (self.afterBreaks) {
+		params[@"afterBreaks"] = [self.afterBreaks getFunction];
+	}
+	if (self.pointBreak) {
+		params[@"pointBreak"] = [self.pointBreak getFunction];
+	}
+	if (self.setExtremes) {
+		params[@"setExtremes"] = [self.setExtremes getFunction];
+	}
+	if (self.afterSetExtremes) {
+		params[@"afterSetExtremes"] = [self.afterSetExtremes getFunction];
 	}
 	if (self.unselect) {
 		params[@"unselect"] = [self.unselect getFunction];
@@ -31,38 +40,29 @@
 	if (self.remove) {
 		params[@"remove"] = [self.remove getFunction];
 	}
-	if (self.show) {
-		params[@"show"] = [self.show getFunction];
+	if (self.mouseOut) {
+		params[@"mouseOut"] = [self.mouseOut getFunction];
 	}
-	if (self.checkboxClick) {
-		params[@"checkboxClick"] = [self.checkboxClick getFunction];
+	if (self.mouseOver) {
+		params[@"mouseOver"] = [self.mouseOver getFunction];
+	}
+	if (self.click) {
+		params[@"click"] = [self.click getFunction];
+	}
+	if (self.select) {
+		params[@"select"] = [self.select getFunction];
 	}
 	if (self.hide) {
 		params[@"hide"] = [self.hide getFunction];
 	}
+	if (self.show) {
+		params[@"show"] = [self.show getFunction];
+	}
 	if (self.afterAnimate) {
 		params[@"afterAnimate"] = [self.afterAnimate getFunction];
 	}
-	if (self.legendItemClick) {
-		params[@"legendItemClick"] = [self.legendItemClick getFunction];
-	}
-	if (self.afterSetExtremes) {
-		params[@"afterSetExtremes"] = [self.afterSetExtremes getFunction];
-	}
-	if (self.setExtremes) {
-		params[@"setExtremes"] = [self.setExtremes getFunction];
-	}
-	if (self.afterBreaks) {
-		params[@"afterBreaks"] = [self.afterBreaks getFunction];
-	}
-	if (self.pointBreak) {
-		params[@"pointBreak"] = [self.pointBreak getFunction];
-	}
-	if (self.pointInBreak) {
-		params[@"pointInBreak"] = [self.pointInBreak getFunction];
-	}
-	if (self.beforePrint) {
-		params[@"beforePrint"] = [self.beforePrint getFunction];
+	if (self.load) {
+		params[@"load"] = [self.load getFunction];
 	}
 	if (self.selection) {
 		params[@"selection"] = [self.selection getFunction];
@@ -70,17 +70,14 @@
 	if (self.render) {
 		params[@"render"] = [self.render getFunction];
 	}
-	if (self.load) {
-		params[@"load"] = [self.load getFunction];
-	}
-	if (self.afterPrint) {
-		params[@"afterPrint"] = [self.afterPrint getFunction];
+	if (self.addSeries) {
+		params[@"addSeries"] = [self.addSeries getFunction];
 	}
 	if (self.drillup) {
 		params[@"drillup"] = [self.drillup getFunction];
 	}
-	if (self.redraw) {
-		params[@"redraw"] = [self.redraw getFunction];
+	if (self.beforePrint) {
+		params[@"beforePrint"] = [self.beforePrint getFunction];
 	}
 	if (self.drillupall) {
 		params[@"drillupall"] = [self.drillupall getFunction];
@@ -88,48 +85,78 @@
 	if (self.drilldown) {
 		params[@"drilldown"] = [self.drilldown getFunction];
 	}
-	if (self.addSeries) {
-		params[@"addSeries"] = [self.addSeries getFunction];
+	if (self.redraw) {
+		params[@"redraw"] = [self.redraw getFunction];
+	}
+	if (self.afterPrint) {
+		params[@"afterPrint"] = [self.afterPrint getFunction];
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setMouseOver:(HIFunction *)mouseOver {
-	HIFunction *oldValue = _mouseOver;
-	if(self.mouseOver) {
-		[self removeObserver:self forKeyPath:@"mouseOver.isUpdated"];
+-(void)setLegendItemClick:(HIFunction *)legendItemClick {
+	HIFunction *oldValue = _legendItemClick;
+	if(self.legendItemClick) {
+		[self removeObserver:self forKeyPath:@"legendItemClick.isUpdated"];
 	}
-	_mouseOver = mouseOver;
-	[self updateHIObject:oldValue newValue:mouseOver propertyName:@"mouseOver"];
+	_legendItemClick = legendItemClick;
+	[self updateHIObject:oldValue newValue:legendItemClick propertyName:@"legendItemClick"];
 }
 
--(void)setClick:(HIFunction *)click {
-	HIFunction *oldValue = _click;
-	if(self.click) {
-		[self removeObserver:self forKeyPath:@"click.isUpdated"];
+-(void)setCheckboxClick:(HIFunction *)checkboxClick {
+	HIFunction *oldValue = _checkboxClick;
+	if(self.checkboxClick) {
+		[self removeObserver:self forKeyPath:@"checkboxClick.isUpdated"];
 	}
-	_click = click;
-	[self updateHIObject:oldValue newValue:click propertyName:@"click"];
+	_checkboxClick = checkboxClick;
+	[self updateHIObject:oldValue newValue:checkboxClick propertyName:@"checkboxClick"];
 }
 
--(void)setSelect:(HIFunction *)select {
-	HIFunction *oldValue = _select;
-	if(self.select) {
-		[self removeObserver:self forKeyPath:@"select.isUpdated"];
+-(void)setPointInBreak:(HIFunction *)pointInBreak {
+	HIFunction *oldValue = _pointInBreak;
+	if(self.pointInBreak) {
+		[self removeObserver:self forKeyPath:@"pointInBreak.isUpdated"];
 	}
-	_select = select;
-	[self updateHIObject:oldValue newValue:select propertyName:@"select"];
+	_pointInBreak = pointInBreak;
+	[self updateHIObject:oldValue newValue:pointInBreak propertyName:@"pointInBreak"];
 }
 
--(void)setMouseOut:(HIFunction *)mouseOut {
-	HIFunction *oldValue = _mouseOut;
-	if(self.mouseOut) {
-		[self removeObserver:self forKeyPath:@"mouseOut.isUpdated"];
+-(void)setAfterBreaks:(HIFunction *)afterBreaks {
+	HIFunction *oldValue = _afterBreaks;
+	if(self.afterBreaks) {
+		[self removeObserver:self forKeyPath:@"afterBreaks.isUpdated"];
 	}
-	_mouseOut = mouseOut;
-	[self updateHIObject:oldValue newValue:mouseOut propertyName:@"mouseOut"];
+	_afterBreaks = afterBreaks;
+	[self updateHIObject:oldValue newValue:afterBreaks propertyName:@"afterBreaks"];
+}
+
+-(void)setPointBreak:(HIFunction *)pointBreak {
+	HIFunction *oldValue = _pointBreak;
+	if(self.pointBreak) {
+		[self removeObserver:self forKeyPath:@"pointBreak.isUpdated"];
+	}
+	_pointBreak = pointBreak;
+	[self updateHIObject:oldValue newValue:pointBreak propertyName:@"pointBreak"];
+}
+
+-(void)setSetExtremes:(HIFunction *)setExtremes {
+	HIFunction *oldValue = _setExtremes;
+	if(self.setExtremes) {
+		[self removeObserver:self forKeyPath:@"setExtremes.isUpdated"];
+	}
+	_setExtremes = setExtremes;
+	[self updateHIObject:oldValue newValue:setExtremes propertyName:@"setExtremes"];
+}
+
+-(void)setAfterSetExtremes:(HIFunction *)afterSetExtremes {
+	HIFunction *oldValue = _afterSetExtremes;
+	if(self.afterSetExtremes) {
+		[self removeObserver:self forKeyPath:@"afterSetExtremes.isUpdated"];
+	}
+	_afterSetExtremes = afterSetExtremes;
+	[self updateHIObject:oldValue newValue:afterSetExtremes propertyName:@"afterSetExtremes"];
 }
 
 -(void)setUnselect:(HIFunction *)unselect {
@@ -159,22 +186,40 @@
 	[self updateHIObject:oldValue newValue:remove propertyName:@"remove"];
 }
 
--(void)setShow:(HIFunction *)show {
-	HIFunction *oldValue = _show;
-	if(self.show) {
-		[self removeObserver:self forKeyPath:@"show.isUpdated"];
+-(void)setMouseOut:(HIFunction *)mouseOut {
+	HIFunction *oldValue = _mouseOut;
+	if(self.mouseOut) {
+		[self removeObserver:self forKeyPath:@"mouseOut.isUpdated"];
 	}
-	_show = show;
-	[self updateHIObject:oldValue newValue:show propertyName:@"show"];
+	_mouseOut = mouseOut;
+	[self updateHIObject:oldValue newValue:mouseOut propertyName:@"mouseOut"];
 }
 
--(void)setCheckboxClick:(HIFunction *)checkboxClick {
-	HIFunction *oldValue = _checkboxClick;
-	if(self.checkboxClick) {
-		[self removeObserver:self forKeyPath:@"checkboxClick.isUpdated"];
+-(void)setMouseOver:(HIFunction *)mouseOver {
+	HIFunction *oldValue = _mouseOver;
+	if(self.mouseOver) {
+		[self removeObserver:self forKeyPath:@"mouseOver.isUpdated"];
 	}
-	_checkboxClick = checkboxClick;
-	[self updateHIObject:oldValue newValue:checkboxClick propertyName:@"checkboxClick"];
+	_mouseOver = mouseOver;
+	[self updateHIObject:oldValue newValue:mouseOver propertyName:@"mouseOver"];
+}
+
+-(void)setClick:(HIFunction *)click {
+	HIFunction *oldValue = _click;
+	if(self.click) {
+		[self removeObserver:self forKeyPath:@"click.isUpdated"];
+	}
+	_click = click;
+	[self updateHIObject:oldValue newValue:click propertyName:@"click"];
+}
+
+-(void)setSelect:(HIFunction *)select {
+	HIFunction *oldValue = _select;
+	if(self.select) {
+		[self removeObserver:self forKeyPath:@"select.isUpdated"];
+	}
+	_select = select;
+	[self updateHIObject:oldValue newValue:select propertyName:@"select"];
 }
 
 -(void)setHide:(HIFunction *)hide {
@@ -186,6 +231,15 @@
 	[self updateHIObject:oldValue newValue:hide propertyName:@"hide"];
 }
 
+-(void)setShow:(HIFunction *)show {
+	HIFunction *oldValue = _show;
+	if(self.show) {
+		[self removeObserver:self forKeyPath:@"show.isUpdated"];
+	}
+	_show = show;
+	[self updateHIObject:oldValue newValue:show propertyName:@"show"];
+}
+
 -(void)setAfterAnimate:(HIFunction *)afterAnimate {
 	HIFunction *oldValue = _afterAnimate;
 	if(self.afterAnimate) {
@@ -195,67 +249,13 @@
 	[self updateHIObject:oldValue newValue:afterAnimate propertyName:@"afterAnimate"];
 }
 
--(void)setLegendItemClick:(HIFunction *)legendItemClick {
-	HIFunction *oldValue = _legendItemClick;
-	if(self.legendItemClick) {
-		[self removeObserver:self forKeyPath:@"legendItemClick.isUpdated"];
+-(void)setLoad:(HIFunction *)load {
+	HIFunction *oldValue = _load;
+	if(self.load) {
+		[self removeObserver:self forKeyPath:@"load.isUpdated"];
 	}
-	_legendItemClick = legendItemClick;
-	[self updateHIObject:oldValue newValue:legendItemClick propertyName:@"legendItemClick"];
-}
-
--(void)setAfterSetExtremes:(HIFunction *)afterSetExtremes {
-	HIFunction *oldValue = _afterSetExtremes;
-	if(self.afterSetExtremes) {
-		[self removeObserver:self forKeyPath:@"afterSetExtremes.isUpdated"];
-	}
-	_afterSetExtremes = afterSetExtremes;
-	[self updateHIObject:oldValue newValue:afterSetExtremes propertyName:@"afterSetExtremes"];
-}
-
--(void)setSetExtremes:(HIFunction *)setExtremes {
-	HIFunction *oldValue = _setExtremes;
-	if(self.setExtremes) {
-		[self removeObserver:self forKeyPath:@"setExtremes.isUpdated"];
-	}
-	_setExtremes = setExtremes;
-	[self updateHIObject:oldValue newValue:setExtremes propertyName:@"setExtremes"];
-}
-
--(void)setAfterBreaks:(HIFunction *)afterBreaks {
-	HIFunction *oldValue = _afterBreaks;
-	if(self.afterBreaks) {
-		[self removeObserver:self forKeyPath:@"afterBreaks.isUpdated"];
-	}
-	_afterBreaks = afterBreaks;
-	[self updateHIObject:oldValue newValue:afterBreaks propertyName:@"afterBreaks"];
-}
-
--(void)setPointBreak:(HIFunction *)pointBreak {
-	HIFunction *oldValue = _pointBreak;
-	if(self.pointBreak) {
-		[self removeObserver:self forKeyPath:@"pointBreak.isUpdated"];
-	}
-	_pointBreak = pointBreak;
-	[self updateHIObject:oldValue newValue:pointBreak propertyName:@"pointBreak"];
-}
-
--(void)setPointInBreak:(HIFunction *)pointInBreak {
-	HIFunction *oldValue = _pointInBreak;
-	if(self.pointInBreak) {
-		[self removeObserver:self forKeyPath:@"pointInBreak.isUpdated"];
-	}
-	_pointInBreak = pointInBreak;
-	[self updateHIObject:oldValue newValue:pointInBreak propertyName:@"pointInBreak"];
-}
-
--(void)setBeforePrint:(HIFunction *)beforePrint {
-	HIFunction *oldValue = _beforePrint;
-	if(self.beforePrint) {
-		[self removeObserver:self forKeyPath:@"beforePrint.isUpdated"];
-	}
-	_beforePrint = beforePrint;
-	[self updateHIObject:oldValue newValue:beforePrint propertyName:@"beforePrint"];
+	_load = load;
+	[self updateHIObject:oldValue newValue:load propertyName:@"load"];
 }
 
 -(void)setSelection:(HIFunction *)selection {
@@ -276,22 +276,13 @@
 	[self updateHIObject:oldValue newValue:render propertyName:@"render"];
 }
 
--(void)setLoad:(HIFunction *)load {
-	HIFunction *oldValue = _load;
-	if(self.load) {
-		[self removeObserver:self forKeyPath:@"load.isUpdated"];
+-(void)setAddSeries:(HIFunction *)addSeries {
+	HIFunction *oldValue = _addSeries;
+	if(self.addSeries) {
+		[self removeObserver:self forKeyPath:@"addSeries.isUpdated"];
 	}
-	_load = load;
-	[self updateHIObject:oldValue newValue:load propertyName:@"load"];
-}
-
--(void)setAfterPrint:(HIFunction *)afterPrint {
-	HIFunction *oldValue = _afterPrint;
-	if(self.afterPrint) {
-		[self removeObserver:self forKeyPath:@"afterPrint.isUpdated"];
-	}
-	_afterPrint = afterPrint;
-	[self updateHIObject:oldValue newValue:afterPrint propertyName:@"afterPrint"];
+	_addSeries = addSeries;
+	[self updateHIObject:oldValue newValue:addSeries propertyName:@"addSeries"];
 }
 
 -(void)setDrillup:(HIFunction *)drillup {
@@ -303,13 +294,13 @@
 	[self updateHIObject:oldValue newValue:drillup propertyName:@"drillup"];
 }
 
--(void)setRedraw:(HIFunction *)redraw {
-	HIFunction *oldValue = _redraw;
-	if(self.redraw) {
-		[self removeObserver:self forKeyPath:@"redraw.isUpdated"];
+-(void)setBeforePrint:(HIFunction *)beforePrint {
+	HIFunction *oldValue = _beforePrint;
+	if(self.beforePrint) {
+		[self removeObserver:self forKeyPath:@"beforePrint.isUpdated"];
 	}
-	_redraw = redraw;
-	[self updateHIObject:oldValue newValue:redraw propertyName:@"redraw"];
+	_beforePrint = beforePrint;
+	[self updateHIObject:oldValue newValue:beforePrint propertyName:@"beforePrint"];
 }
 
 -(void)setDrillupall:(HIFunction *)drillupall {
@@ -330,13 +321,22 @@
 	[self updateHIObject:oldValue newValue:drilldown propertyName:@"drilldown"];
 }
 
--(void)setAddSeries:(HIFunction *)addSeries {
-	HIFunction *oldValue = _addSeries;
-	if(self.addSeries) {
-		[self removeObserver:self forKeyPath:@"addSeries.isUpdated"];
+-(void)setRedraw:(HIFunction *)redraw {
+	HIFunction *oldValue = _redraw;
+	if(self.redraw) {
+		[self removeObserver:self forKeyPath:@"redraw.isUpdated"];
 	}
-	_addSeries = addSeries;
-	[self updateHIObject:oldValue newValue:addSeries propertyName:@"addSeries"];
+	_redraw = redraw;
+	[self updateHIObject:oldValue newValue:redraw propertyName:@"redraw"];
+}
+
+-(void)setAfterPrint:(HIFunction *)afterPrint {
+	HIFunction *oldValue = _afterPrint;
+	if(self.afterPrint) {
+		[self removeObserver:self forKeyPath:@"afterPrint.isUpdated"];
+	}
+	_afterPrint = afterPrint;
+	[self updateHIObject:oldValue newValue:afterPrint propertyName:@"afterPrint"];
 }
 
 @end

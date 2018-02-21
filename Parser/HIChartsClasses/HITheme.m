@@ -10,26 +10,26 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.stroke) {
-		params[@"stroke"] = self.stroke;
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
 	}
+	if (self.stroke) {
+		params[@"stroke"] = self.stroke;
+	}
 	if (self.fill) {
 		params[@"fill"] = self.fill;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setStroke:(NSString *)stroke {
-	_stroke = stroke;
-	[self updateNSObject:@"stroke"];
+-(void)setZIndex:(NSNumber *)zIndex {
+	_zIndex = zIndex;
+	[self updateNSObject:@"zIndex"];
 }
 
 -(void)setPadding:(NSNumber *)padding {
@@ -37,14 +37,14 @@
 	[self updateNSObject:@"padding"];
 }
 
+-(void)setStroke:(NSString *)stroke {
+	_stroke = stroke;
+	[self updateNSObject:@"stroke"];
+}
+
 -(void)setFill:(NSString *)fill {
 	_fill = fill;
 	[self updateNSObject:@"fill"];
-}
-
--(void)setZIndex:(NSNumber *)zIndex {
-	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
 }
 
 @end

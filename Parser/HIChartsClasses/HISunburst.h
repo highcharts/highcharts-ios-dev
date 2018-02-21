@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -7,6 +7,7 @@
 */
 
 #import "HISeries.h"
+#import "HILevelSize.h"
 #import "HILevels.h"
 #import "HIColor.h"
 
@@ -14,6 +15,7 @@
 /**
 * description: A sunburst series. If the type option is
 not specified, it is inherited from chart.type.
+
 For options that apply to multiple series, it is recommended to add
 them to the plotOptions.series options structure.
 To apply to all series of this specific type, apply it to plotOptions.
@@ -21,17 +23,88 @@ sunburst.
 */
 @interface HISunburst: HISeries
 
+@property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
+/**
+* description: Which point to use as a root in the visualization.
+* default: undefined
+*/
+@property(nonatomic, readwrite) NSString *rootId;
+/**
+* description: Determines the width of the ring per level.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-levelsize/ : Sunburst with various sizes per level
+*/
+@property(nonatomic, readwrite) HILevelSize *levelSize;
+/**
+* description: The center of the sunburst chart relative to the plot area. Can be
+percentages or pixel values.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/ : Centered at 100, 100
+* default: [null, null]
+*/
+@property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
+/**
+* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-sliced : Sliced sunburst
+* default: 10
+*/
+@property(nonatomic, readwrite) NSNumber *slicedOffset;
+/**
+* description: Used together with the levels and allowDrillToNode options. When
+set to false the first level visible when drilling is considered
+to be level one. Otherwise the level will be the same as the tree
+structure.
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *levelIsConstant;
+/**
+* description: Set options on specific levels. Takes precedence over series options,
+but not point options.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst : Sunburst chart
+*/
+@property(nonatomic, readwrite) NSArray <HILevels *> *levels;
+/**
+* description: When enabled the user can click on a point which is a parent and
+zoom in on its children.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst : Allow drill to node
+* default: false
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *allowDrillToNode;
 /**
 * description: The color of the border surrounding each slice. When null, the
 border takes the same color as the slice fill. This can be used
 together with a borderWidth to fill drawing gaps created by antialiazing
 artefacts in borderless pies.
-In styled mode, the border stroke is given in the .highcharts-point class.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/ : Black border
+In styled mode, the border stroke is given in the .highcharts-point class.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/ : Black border
 * default: #ffffff
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
+/**
+* description: A series specific or series type specific color set to use instead
+of the global colors.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
+*/
+@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+/**
+* description: The width of the border surrounding each slice.
+
+When setting the border width to 0, there may be small gaps between
+the slices due to SVG antialiasing artefacts. To work around this,
+keep the border width at 0.5 or 1, but set the borderColor to
+null instead.
+
+In styled mode, the border stroke width is given in the .highcharts-point class.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-borderwidth/ : 3px border
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *borderWidth;
+/**
+* description: The start angle of the pie slices in degrees where 0 is top and 90
+right.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/ : Start from right
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *startAngle;
 /**
 * description: The diameter of the pie relative to the plot area. Can be a percentage
 or pixel value. Pixel values are given as integers. The default
@@ -40,61 +113,9 @@ for data labels within the plot area. As a consequence, the size
 of the pie may vary when points are updated and data labels more
 around. In that case it is best to set a fixed value, for example
 "75%".
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/ : Smaller pie
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/ : Smaller pie
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
-/**
-* description: Which point to use as a root in the visualization.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *rootId;
-/**
-* description: The start angle of the pie slices in degrees where 0 is top and 90
-right.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/ : Start from right
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *startAngle;
-/**
-* description: Used together with the levels and allowDrillToNode options. When
-set to false the first level visible when drilling is considered
-to be level one. Otherwise the level will be the same as the tree
-structure.
-* default: True
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *levelIsConstant;
-/**
-* description: Set options on specific levels. Takes precedence over series options,
-but not point options.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst : Sunburst chart
-*/
-@property(nonatomic, readwrite) NSArray <HILevels *> *levels;
-/**
-* description: A series specific or series type specific color set to use instead
-of the global colors.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/ : Set default colors for all pies
-*/
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
-/**
-* description: If a point is sliced, moved out from the center, how many pixels
-should it be moved?.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-sliced : Sliced sunburst
-* default: 10
-*/
-@property(nonatomic, readwrite) NSNumber *slicedOffset;
-/**
-* description: When enabled the user can click on a point which is a parent and
-zoom in on its children.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst : Allow drill to node
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *allowDrillToNode;
 
 -(NSDictionary *)getParams;
 

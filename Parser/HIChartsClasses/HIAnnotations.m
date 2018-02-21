@@ -10,11 +10,17 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.shapeOptions) {
-		params[@"shapeOptions"] = [self.shapeOptions getParams];
-	}
-	if (self.visible) {
-		params[@"visible"] = self.visible;
+	if (self.shapes) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.shapes) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"shapes"] = array;
 	}
 	if (self.labels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -28,58 +34,33 @@
 		}
 		params[@"labels"] = array;
 	}
+	if (self.labelOptions) {
+		params[@"labelOptions"] = [self.labelOptions getParams];
+	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
-	if (self.shapes) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.shapes) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"shapes"] = array;
+	if (self.visible) {
+		params[@"visible"] = self.visible;
 	}
-	if (self.labelOptions) {
-		params[@"labelOptions"] = [self.labelOptions getParams];
+	if (self.shapeOptions) {
+		params[@"shapeOptions"] = [self.shapeOptions getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
-	HIShapeOptions *oldValue = _shapeOptions;
-	if(self.shapeOptions) {
-		[self removeObserver:self forKeyPath:@"shapeOptions.isUpdated"];
-	}
-	_shapeOptions = shapeOptions;
-	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
-}
-
--(void)setVisible:(NSNumber *)visible {
-	_visible = visible;
-	[self updateNSObject:@"visible"];
+-(void)setShapes:(NSArray <HIShapes *> *)shapes {
+	NSArray <HIShapes *> *oldValue = _shapes;
+	_shapes = shapes;
+	[self updateArrayObject:oldValue newValue:shapes propertyName:@"shapes"];
 }
 
 -(void)setLabels:(NSArray <HILabels *> *)labels {
 	NSArray <HILabels *> *oldValue = _labels;
 	_labels = labels;
 	[self updateArrayObject:oldValue newValue:labels propertyName:@"labels"];
-}
-
--(void)setZIndex:(NSNumber *)zIndex {
-	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
-}
-
--(void)setShapes:(NSArray <HIShapes *> *)shapes {
-	NSArray <HIShapes *> *oldValue = _shapes;
-	_shapes = shapes;
-	[self updateArrayObject:oldValue newValue:shapes propertyName:@"shapes"];
 }
 
 -(void)setLabelOptions:(HILabelOptions *)labelOptions {
@@ -89,6 +70,25 @@
 	}
 	_labelOptions = labelOptions;
 	[self updateHIObject:oldValue newValue:labelOptions propertyName:@"labelOptions"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	_zIndex = zIndex;
+	[self updateNSObject:@"zIndex"];
+}
+
+-(void)setVisible:(NSNumber *)visible {
+	_visible = visible;
+	[self updateNSObject:@"visible"];
+}
+
+-(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
+	HIShapeOptions *oldValue = _shapeOptions;
+	if(self.shapeOptions) {
+		[self removeObserver:self forKeyPath:@"shapeOptions.isUpdated"];
+	}
+	_shapeOptions = shapeOptions;
+	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
 }
 
 @end

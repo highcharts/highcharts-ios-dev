@@ -10,16 +10,28 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.hover) {
+		params[@"hover"] = [self.hover getParams];
+	}
 	if (self.select) {
 		params[@"select"] = [self.select getParams];
 	}
-	if (self.hover) {
-		params[@"hover"] = [self.hover getParams];
+	if (self.normal) {
+		params[@"normal"] = [self.normal getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setHover:(HIHover *)hover {
+	HIHover *oldValue = _hover;
+	if(self.hover) {
+		[self removeObserver:self forKeyPath:@"hover.isUpdated"];
+	}
+	_hover = hover;
+	[self updateHIObject:oldValue newValue:hover propertyName:@"hover"];
+}
 
 -(void)setSelect:(HISelect *)select {
 	HISelect *oldValue = _select;
@@ -30,13 +42,13 @@
 	[self updateHIObject:oldValue newValue:select propertyName:@"select"];
 }
 
--(void)setHover:(HIHover *)hover {
-	HIHover *oldValue = _hover;
-	if(self.hover) {
-		[self removeObserver:self forKeyPath:@"hover.isUpdated"];
+-(void)setNormal:(HINormal *)normal {
+	HINormal *oldValue = _normal;
+	if(self.normal) {
+		[self removeObserver:self forKeyPath:@"normal.isUpdated"];
 	}
-	_hover = hover;
-	[self updateHIObject:oldValue newValue:hover propertyName:@"hover"];
+	_normal = normal;
+	[self updateHIObject:oldValue newValue:normal propertyName:@"normal"];
 }
 
 @end

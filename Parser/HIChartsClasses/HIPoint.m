@@ -13,11 +13,11 @@
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
-	if (self.x) {
-		params[@"x"] = self.x;
-	}
 	if (self.y) {
 		params[@"y"] = self.y;
+	}
+	if (self.x) {
+		params[@"x"] = self.x;
 	}
 	if (self.xAxis) {
 		params[@"xAxis"] = self.xAxis;
@@ -39,14 +39,14 @@
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
--(void)setX:(NSNumber *)x {
-	_x = x;
-	[self updateNSObject:@"x"];
-}
-
 -(void)setY:(NSNumber *)y {
 	_y = y;
 	[self updateNSObject:@"y"];
+}
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
 }
 
 -(void)setXAxis:(id)xAxis {

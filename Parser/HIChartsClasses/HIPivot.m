@@ -10,27 +10,22 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.radius) {
-		params[@"radius"] = self.radius;
-	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
-	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getData];
+	if (self.radius) {
+		params[@"radius"] = self.radius;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.backgroundColor) {
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	return params;
 }
 
 # pragma mark - Setters
-
--(void)setRadius:(NSNumber *)radius {
-	_radius = radius;
-	[self updateNSObject:@"radius"];
-}
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
@@ -41,6 +36,16 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
+-(void)setRadius:(NSNumber *)radius {
+	_radius = radius;
+	[self updateNSObject:@"radius"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
+}
+
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
 	HIColor *oldValue = _backgroundColor;
 	if(self.backgroundColor) {
@@ -48,11 +53,6 @@
 	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
-}
-
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
 }
 
 @end
