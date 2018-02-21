@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIVariablepie.h"
 
 @implementation HIVariablepie
@@ -79,6 +80,99 @@
 		params[@"zMax"] = self.zMax;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setZMin:(NSNumber *)zMin {
+	_zMin = zMin;
+	[self updateNSObject:@"zMin"];
+}
+
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:@"ignoreHiddenPoint"];
+}
+
+-(void)setMaxPointSize:(id)maxPointSize {
+	_maxPointSize = maxPointSize;
+	[self updateNSObject:@"maxPointSize"];
+}
+
+-(void)setSize:(id)size {
+	_size = size;
+	[self updateNSObject:@"size"];
+}
+
+-(void)setCenter:(NSArray *)center {
+	NSArray *oldValue = _center;
+	_center = center;
+	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setInnerSize:(id)innerSize {
+	_innerSize = innerSize;
+	[self updateNSObject:@"innerSize"];
+}
+
+-(void)setMinPointSize:(id)minPointSize {
+	_minPointSize = minPointSize;
+	[self updateNSObject:@"minPointSize"];
+}
+
+-(void)setClip:(NSNumber *)clip {
+	_clip = clip;
+	[self updateNSObject:@"clip"];
+}
+
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
+}
+
+-(void)setStartAngle:(NSNumber *)startAngle {
+	_startAngle = startAngle;
+	[self updateNSObject:@"startAngle"];
+}
+
+-(void)setMinSize:(NSNumber *)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setSizeBy:(NSString *)sizeBy {
+	_sizeBy = sizeBy;
+	[self updateNSObject:@"sizeBy"];
+}
+
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
+}
+
+-(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	_slicedOffset = slicedOffset;
+	[self updateNSObject:@"slicedOffset"];
+}
+
+-(void)setZMax:(NSNumber *)zMax {
+	_zMax = zMax;
+	[self updateNSObject:@"zMax"];
 }
 
 @end

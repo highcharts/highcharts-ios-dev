@@ -7,8 +7,9 @@
  */
 
 @import UIKit;
+#import "HIChartsJSONSerializable.h"
 
-@interface HIColor : NSObject
+@interface HIColor : HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) NSString *string;
 @property(nonatomic, readwrite) NSDictionary *dictionary;

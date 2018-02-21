@@ -19,6 +19,12 @@ pareto.
 */
 @interface HIPareto: HISeries
 
+/**
+* description: An integer identifying the index to use for the base series, or a string
+representing the id of the series.
+* default: undefined
+*/
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ baseSeries;
 
 -(NSDictionary *)getParams;
 

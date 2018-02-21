@@ -56,9 +56,9 @@ be modified by the callback.
 */
 @property(nonatomic, readwrite) HIFunction *tickPositioner;
 /**
-* description: Whether to allow decimals in this axis' ticks. When counting integers,
-like persons or hits on a web page, decimals should be avoided in
-the labels.
+* description: Whether to allow decimals in this axis' ticks. When counting
+integers, like persons or hits on a web page, decimals should
+be avoided in the labels.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/allowdecimals-true/ : True by default
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/allowdecimals-false/ : False
@@ -75,10 +75,10 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 @property(nonatomic, readwrite) NSNumber *minorTickWidth;
 /**
 * description: Index of another axis that this axis is linked to. When an axis is
-linked to a master axis, it will take the same extremes as the master,
-but as assigned by min or max or by setExtremes. It can be used
-to show additional info, or to ease reading the chart by duplicating
-the scales.
+linked to a master axis, it will take the same extremes as
+the master, but as assigned by min or max or by setExtremes.
+It can be used to show additional info, or to ease reading the
+chart by duplicating the scales.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/linkedto/ : Different string formats of the same date
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linkedto/ : Y values on both sides
@@ -93,30 +93,20 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showEmpty;
 /**
-* description: Applies only when the axis type is category. When uniqueNames
-is true, points are placed on the X axis according to their names.
-If the same point name is repeated in the same or another series,
-the point is placed on the same X position as other points of the
-same name. When uniqueNames is false, the points are laid out in
-increasing X positions regardless of their names, and the X axis
-category will take the name of the last point in each position.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/uniquenames-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/uniquenames-false/ : False
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *uniqueNames;
-/**
 * description: The width of the line marking the axis itself.
+In styled mode, the stroke width is given in the
+.highcharts-axis-line or .highcharts-xaxis-line class.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/ : A 1px line on Y axis
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/ : Axes in styled mode
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/linewidth/ : A 2px line on X axis
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
-* description: The maximum value of the axis. If null, the max value is automatically
-calculated. If the endOnTick option is true, the max value might
+* description: The maximum value of the axis. If null, the max value is
+automatically calculated.
+If the endOnTick option is true, the max value might
 be rounded up.
 If a tickAmount is set, the axis may be extended
 beyond the set max in order to reach the given number of ticks. The
@@ -125,10 +115,34 @@ alignTicks, where a tickAmount is applied internally.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/ : Y axis max of 200
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-logarithmic/ : Y axis max on logarithmic axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/min-max/ : Fixed min and max
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/yaxis/min-max/ : Fixed min and max on Y axis
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/axis/min-max/ : Pre-zoomed to a specific area
 */
 @property(nonatomic, readwrite) NSNumber *max;
+/**
+* description: Color for the minor tick marks.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/ : Black tick marks on Y axis
+* default: #999999
+*/
+@property(nonatomic, readwrite) HIColor *minorTickColor;
+/**
+* description: The minimum value of the axis. If null the min value is 
+automatically calculated.
+If the startOnTick option is true (default), the min value might
+be rounded down.
+The automatically calculated minimum value is also affected by
+floor, softMin,
+minPadding, minRange
+as well as series.threshold
+and series.softThreshold.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/ : -50 with startOnTick to false
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-true/ : -50 with startOnTick true by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/yaxis/min-max/ : Fixed min and max on Y axis
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/axis/min-max/ : Pre-zoomed to a specific area
+*/
+@property(nonatomic, readwrite) NSNumber *min;
 /**
 * description: Parallel coordinates only. Format that will be used for point.y
 and available in tooltip.pointFormat as
@@ -149,19 +163,23 @@ used
 */
 @property(nonatomic, readwrite) NSString *tooltipValueFormat;
 /**
-* description: Color for the minor tick marks.
+* description: Refers to the index in the panes array. Used for circular
+gauges and polar charts. When the option is not set then first pane
+will be used.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/ : Black tick marks on Y axis
-* default: #999999
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter : Two gauges with different center
 */
-@property(nonatomic, readwrite) HIColor *minorTickColor;
+@property(nonatomic, readwrite) NSNumber *pane;
 /**
-* description: The pixel length of the minor tick marks.
+* description: The amount of ticks to draw on the axis. This opens up for aligning
+the ticks of multiple charts or panes within a chart. This option
+overrides the tickPixelInterval option.
+This option only has an effect on linear axes. Datetime, logarithmic
+or category axes are not affected.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorticklength/ : 10px on Y axis
-* default: 2
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/tickamount/ : 8 ticks on Y axis
 */
-@property(nonatomic, readwrite) NSNumber *minorTickLength;
+@property(nonatomic, readwrite) NSNumber *tickAmount;
 /**
 * description: The color of the line marking the axis itself.
 In styled mode, the line stroke is given in the
@@ -178,13 +196,14 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 be allowed to span over a smaller interval than this. For example,
 for a datetime axis the main unit is milliseconds. If minRange is
 set to 3600000, you can't zoom in more than to one hour.
-The default minRange for the x axis is five times the smallest interval
-between any of the data points.
+The default minRange for the x axis is five times the smallest
+interval between any of the data points.
 On a logarithmic axis, the unit for the minimum range is the power.
 So a minRange of 1 means that the axis can be zoomed to 10-100,
 100-1000, 1000-10000 etc.
-Note that the minPadding, maxPadding, startOnTick and endOnTick
-settings also affect how the extremes of the axis are computed.
+Note that the minPadding, maxPadding, startOnTick and
+endOnTick settings also affect how the extremes of the axis
+are computed.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/minrange/ : Minimum range of 5
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/minrange/ : Max zoom of 6 months overrides user selections
@@ -214,12 +233,12 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats;
 /**
-* description: The distance in pixels from the plot area to the axis line. A positive
-offset moves the axis with it's line, labels and ticks away from
-the plot area. This is typically used when two or more axes are displayed
-on the same side of the plot. With multiple axes the offset is dynamically
-adjusted to avoid collision, this can be overridden by setting offset
-explicitly.
+* description: The distance in pixels from the plot area to the axis line.
+A positive offset moves the axis with it's line, labels and ticks
+away from the plot area. This is typically used when two or more
+axes are displayed on the same side of the plot. With multiple
+axes the offset is dynamically adjusted to avoid collision, this
+can be overridden by setting offset explicitly.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/offset/ : Y axis offset of 70
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/offset-centered/ : Axes positioned in the center of the plot
@@ -301,7 +320,7 @@ the maxPadding option to control the axis start.
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-false/ : False by default
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-true/ : True
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/endontick/ : False for Y axis
-* default: true
+* default: True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startOnTick;
 /**
@@ -319,17 +338,24 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showFirstLabel;
 /**
-* description: Padding of the max value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer. This is useful
-when you don't want the highest data value to appear on the edge
-of the plot area. When the axis' max option is set or a max extreme
-is set using axis.setExtremes(), the maxPadding will be ignored.
+* description: For categorized axes only. If on the tick mark is placed in the
+center of the category, if between the tick mark is placed between
+categories. The default is between if the tickInterval is 1,
+ else on.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/maxpadding-02/ : Max padding of 0.2
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/minpadding-maxpadding/ : Greater min- and maxPadding
-* default: 0.05
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-between/ : "between" by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-on/ : "on"
+* accepted values: [null, "on", "between"]
+* default: between
 */
-@property(nonatomic, readwrite) NSNumber *maxPadding;
+@property(nonatomic, readwrite) NSString *tickmarkPlacement;
+/**
+* description: The pixel length of the minor tick marks.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorticklength/ : 10px on Y axis
+* default: 2
+*/
+@property(nonatomic, readwrite) NSNumber *minorTickLength;
 /**
 * description: Datetime axis only. An array determining what time intervals the
 ticks are allowed to fall on. Each array item is an array where the
@@ -365,8 +391,9 @@ units: [[
 /**
 * description: Configure a crosshair that follows either the mouse pointer or the
 hovered point.
-In styled mode, the crosshairs are styled in the .highcharts-crosshair, .highcharts-crosshair-thin or .highcharts-xaxis-category
-classes.
+In styled mode, the crosshairs are styled in the
+.highcharts-crosshair, .highcharts-crosshair-thin or
+.highcharts-xaxis-category classes.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/ : Crosshair on both axes
 * default: false
@@ -374,7 +401,7 @@ classes.
 @property(nonatomic, readwrite) HICrosshair *crosshair;
 /**
 * description: The position of the major tick marks relative to the axis line.
- Can be one of inside and outside.
+Can be one of inside and outside.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-outside/ : "outside" by default
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-inside/ : "inside"
@@ -384,32 +411,30 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSString *tickPosition;
 /**
-* description: For categorized axes only. If on the tick mark is placed in the
-center of the category, if between the tick mark is placed between
-categories. The default is between if the tickInterval is 1,
- else on.
+* description: The Z index of the grid lines.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-between/ : "between" by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-on/ : "on"
-* accepted values: [null, "on", "between"]
-* default: null
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/gridzindex/ : A Z index of 4 renders the grid above the graph
+* default: 1
 */
-@property(nonatomic, readwrite) NSString *tickmarkPlacement;
+@property(nonatomic, readwrite) NSNumber *gridZIndex;
 /**
 * description: Whether to display the axis on the opposite side of the normal. The
-normal is on the left side for vertical axes and bottom for horizontal,
-so the opposite sides will be right and top respectively.
+normal is on the left side for vertical axes and bottom for
+horizontal, so the opposite sides will be right and top respectively.
+This is typically used with dual or multiple axes.
 
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/opposite/ : Y axis on left side
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/opposite/ : Secondary Y axis opposite
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/opposite/ : Y axis on left side
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *opposite;
 /**
 * description: Enable or disable minor ticks. Unless
-minorTickInterval is set, the tick interval is
-calculated as a fifth of the tickInterval.
-On a logarithmic axis, minor ticks are laid out based on a best guess,
-attempting to enter approximately 5 minor ticks between each major tick.
+minorTickInterval is set, the tick
+interval is calculated as a fifth of the tickInterval.
+On a logarithmic axis, minor ticks are laid out based on a best
+guess, attempting to enter approximately 5 minor ticks between
+each major tick.
 Prior to v6.0.0, ticks were unabled in auto layout by setting
 minorTickInterval to "auto".
 
@@ -433,21 +458,8 @@ Highcharts styled mode. The class name is applied to group elements
 for the grid, axis elements and labels.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/ : Multiple axes with separate styling
-
 */
 @property(nonatomic, readwrite) NSString *className;
-/**
-* description: The minimum value of the axis. If null the min value is automatically
-calculated.
-If the startOnTick option is true (default), the min value might
-be rounded down.
-The automatically calculated minimum value is also affected by floor, softMin, minPadding,
-minRange as well as series.threshold and series.softThreshold.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/ : -50 with startOnTick to false
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-true/ : -50 with startOnTick true by default
-*/
-@property(nonatomic, readwrite) NSNumber *min;
 /**
 * description: Requires Accessibility module
 Description of the axis to screen reader users.
@@ -465,27 +477,10 @@ Description of the axis to screen reader users.
 the maxPadding option to control the axis end.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : True by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/endontick-false/ : False
-* default: true
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/endontick/ : False
+* default: True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *endOnTick;
-/**
-* description: Specific tick interval in axis units for the minor ticks. On a linear axis,
-if "auto", the minor tick interval is calculated as a fifth of
-the tickInterval. If null, minor ticks are not shown.
-On logarithmic axes, the unit is the power of the value. For example,
-setting the minorTickInterval to 1 puts one tick on each of 0.1,
-1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9
-ticks between 1 and 10, 10 and 100 etc.
-If user settings dictate minor ticks to become too dense, they don't
-make sense, and will be ignored to prevent performance problems.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-null/ : Null by default
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-5/ : 5 units
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/ : "auto"
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/ : 0.1
-*/
-@property(nonatomic, readwrite) NSNumber *minorTickInterval;
 /**
 * description: The interval of the tick marks in axis units. When null, the tick
 interval is computed to approximately follow the tickPixelInterval on linear and datetime axes. On categorized axes,
@@ -507,6 +502,24 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber *tickInterval;
 /**
+* description: Specific tick interval in axis units for the minor ticks.
+On a linear axis, if "auto", the minor tick interval is
+calculated as a fifth of the tickInterval. If null, minor
+ticks are not shown.
+On logarithmic axes, the unit is the power of the value. For example,
+setting the minorTickInterval to 1 puts one tick on each of 0.1,
+1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9
+ticks between 1 and 10, 10 and 100 etc.
+If user settings dictate minor ticks to become too dense, they don't
+make sense, and will be ignored to prevent performance problems.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-null/ : Null by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-5/ : 5 units
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/ : "auto"
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/ : 0.1
+*/
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ minorTickInterval;
+/**
 * description: The axis labels show the number or category for each tick.
 */
 @property(nonatomic, readwrite) HILabels *labels;
@@ -516,7 +529,7 @@ charts, and false on polar charts.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/showlastlabel-true/ : Set to true on X axis
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/showfirstlabel/ : Labels below plot lines on Y axis
-* default: false
+* default: True
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showLastLabel;
 /**
@@ -539,24 +552,28 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber *tickWidth;
 /**
+* description: Padding of the max value relative to the length of the axis. A
+padding of 0.05 will make a 100px axis 5px longer. This is useful
+when you don't want the highest data value to appear on the edge
+of the plot area. When the axis' max option is set or a max extreme
+is set using axis.setExtremes(), the maxPadding will be ignored.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/maxpadding-02/ : Max padding of 0.2
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/minpadding-maxpadding/ : Greater min- and maxPadding
+* default: 0.05
+*/
+@property(nonatomic, readwrite) NSNumber *maxPadding;
+/**
 * description: If tickInterval is null this option sets the approximate pixel
 interval of the tick marks. Not applicable to categorized axis.
 The tick interval is also influenced by the minTickInterval option, that, by default prevents ticks from being
 denser than the data points.
-Defaults to 72 for the Y axis and 100 for the X axis.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/ : 50 px on X axis
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/tickpixelinterval/ : 200 px on X axis
 * default: 72
 */
 @property(nonatomic, readwrite) NSNumber *tickPixelInterval;
-/**
-* description: The Z index of the grid lines.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/gridzindex/ : A Z index of 4 renders the grid above the graph
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *gridZIndex;
 /**
 * description: The pixel length of the main tick marks.
 
@@ -566,16 +583,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSNumber *tickLength;
 /**
-* description: The amount of ticks to draw on the axis. This opens up for aligning
-the ticks of multiple charts or panes within a chart. This option
-overrides the tickPixelInterval option.
-This option only has an effect on linear axes. Datetime, logarithmic
-or category axes are not affected.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/tickamount/ : 8 ticks on Y axis
-*/
-@property(nonatomic, readwrite) NSNumber *tickAmount;
-/**
 * description: If categories are present for the xAxis, names are used instead of
 numbers for that axis. Since Highcharts 3.0, categories can also
 be extracted by giving each point a name and setting
@@ -583,10 +590,9 @@ axis type to category. However, if you have multiple
 series, best practice remains defining the categories array.
 Example:
 categories: ['Apples', 'Bananas', 'Oranges']
-Defaults to null
-
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/ : With
 https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/categories/ : Without
+* default: null
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *categories;
 /**
@@ -596,6 +602,20 @@ the axis from showing hours. Defaults to the closest distance between
 two points on the axis.
 */
 @property(nonatomic, readwrite) NSNumber *minTickInterval;
+/**
+* description: Applies only when the axis type is category. When uniqueNames
+is true, points are placed on the X axis according to their names.
+If the same point name is repeated in the same or another series,
+the point is placed on the same X position as other points of the
+same name. When uniqueNames is false, the points are laid out in
+increasing X positions regardless of their names, and the X axis
+category will take the name of the last point in each position.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/uniquenames-true/ : True by default
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/uniquenames-false/ : False
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *uniqueNames;
 /**
 * description: Whether to reverse the axis so that the highest number is closest
 to the origin. If the chart is inverted, the x axis is reversed by

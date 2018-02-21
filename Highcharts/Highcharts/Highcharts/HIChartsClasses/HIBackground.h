@@ -38,12 +38,6 @@ to the max of the value axis.
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
-* description: The outer radius of the circular pane background. Can be either
-numeric (pixels) or a percentage string.
-* default: 105%
-*/
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ outerRadius;
-/**
 * description: The pane background border color.
 * default: #cccccc
 */
@@ -53,6 +47,12 @@ numeric (pixels) or a percentage string.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
+/**
+* description: The outer radius of the circular pane background. Can be either
+numeric (pixels) or a percentage string.
+* default: 105%
+*/
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ outerRadius;
 /**
 * description: The inner radius of the pane background. Can be either numeric
 (pixels) or a percentage string.

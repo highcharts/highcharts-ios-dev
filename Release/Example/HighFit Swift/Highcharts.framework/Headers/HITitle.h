@@ -100,13 +100,11 @@ null: Will use the config from labels.position3d
 */
 @property(nonatomic, readwrite) NSString *position3d;
 /**
-* description: The rotation of the text in degrees. 0 is horizontal, 270 is vertical
-reading from bottom to top.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/title-offset/ : Horizontal
-* default: 0
+* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
+and-string-formatting#html : use HTML to render the axis title.
+* default: false
 */
-@property(nonatomic, readwrite) NSNumber *rotation;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
 * description: Alignment of the title relative to the axis values. Possible
 values are "low", "middle" or "high".
@@ -121,11 +119,13 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/s
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
-* description: Whether to http://www.highcharts.com/docs/chart-concepts/labels-
-and-string-formatting#html : use HTML to render the axis title.
-* default: false
+* description: The rotation of the text in degrees. 0 is horizontal, 270 is vertical
+reading from bottom to top.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/title-offset/ : Horizontal
+* default: 0
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
+@property(nonatomic, readwrite) NSNumber *rotation;
 /**
 * description: The actual text of the axis title. It can contain basic HTML text
 markup like ,  and spans with style.

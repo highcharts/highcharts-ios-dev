@@ -16,15 +16,6 @@
 @interface HIPlotBands: HIChartsJSONSerializable
 
 /**
-* description: The end position of the plot band in axis units.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/ : Datetime axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-from/ : Categorized axis
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands/ : Plot band on Y axis
-* default: null
-*/
-@property(nonatomic, readwrite) NSNumber *to;
-/**
 * description: Border color for the plot band. Also requires borderWidth to be
 set.
 * default: null
@@ -36,6 +27,15 @@ set.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
+/**
+* description: The end position of the plot band in axis units.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/ : Datetime axis
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-from/ : Categorized axis
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands/ : Plot band on Y axis
+* default: null
+*/
+@property(nonatomic, readwrite) NSNumber *to;
 /**
 * description: Text labels for the plot bands
 */
@@ -64,11 +64,6 @@ are click, mouseover, mouseout, mousemove.
 */
 @property(nonatomic, readwrite) id events;
 /**
-* description: A custom class name, in addition to the default highcharts-plot-
-band, to apply to each individual band.
-*/
-@property(nonatomic, readwrite) NSString *className;
-/**
 * description: The z index of the plot band within the chart, relative to other
 elements. Using the same z index as another element may give unpredictable
 results, as the last rendered element will be on top. Values from
@@ -80,6 +75,11 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: null
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
+/**
+* description: A custom class name, in addition to the default highcharts-plot-
+band, to apply to each individual band.
+*/
+@property(nonatomic, readwrite) NSString *className;
 /**
 * description: The color of the plot band.
 

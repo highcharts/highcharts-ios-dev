@@ -20,12 +20,12 @@ in HTML.
 */
 @interface HIMenuItemStyle: HIChartsJSONSerializable
 
+@property(nonatomic, readwrite) NSString *transition;
+@property(nonatomic, readwrite) NSString *color;
 /**
 * description: Defaults to 14px on touch devices and 11px on desktop.
 */
 @property(nonatomic, readwrite) NSString *fontSize;
-@property(nonatomic, readwrite) NSString *transition;
-@property(nonatomic, readwrite) NSString *color;
 @property(nonatomic, readwrite) NSString *padding;
 @property(nonatomic, readwrite) NSString *background;
 

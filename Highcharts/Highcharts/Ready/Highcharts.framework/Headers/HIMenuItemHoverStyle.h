@@ -20,8 +20,8 @@ popup menu appearing by default when the export icon is clicked.
 */
 @interface HIMenuItemHoverStyle: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) NSString *background;
 @property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) NSString *background;
 
 -(NSDictionary *)getParams;
 

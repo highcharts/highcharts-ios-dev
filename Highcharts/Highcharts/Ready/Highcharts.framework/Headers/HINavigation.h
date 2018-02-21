@@ -19,16 +19,6 @@
 @interface HINavigation: HIChartsJSONSerializable
 
 /**
-* description: Whether to enable the legend navigation. In most cases, disabling
-the navigation results in an unwanted overflow.
-See also the http://www.highcharts.com/plugin-
-registry/single/8/Adapt-Chart-To-Legend : adapt chart to legend plugin for a solution to
-extend the chart height to make room for the legend, optionally in
-exported charts only.
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
-/**
 * description: How to animate the pages when navigating up or down. A value of true
 applies the default navigation given in the chart.animation option.
 Additional options can be given as an object containing values for
@@ -38,6 +28,16 @@ easing and duration.
 * default: true
 */
 @property(nonatomic, readwrite) id /* Bool, id */ animation;
+/**
+* description: Whether to enable the legend navigation. In most cases, disabling
+the navigation results in an unwanted overflow.
+See also the http://www.highcharts.com/plugin-
+registry/single/8/Adapt-Chart-To-Legend : adapt chart to legend plugin for a solution to
+extend the chart height to make room for the legend, optionally in
+exported charts only.
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
 * description: The color of the inactive up or down arrow in the legend page
 navigation. .

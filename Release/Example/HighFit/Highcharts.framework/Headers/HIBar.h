@@ -30,6 +30,18 @@ rule.
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
+* description: The minimal height for a column or width for a bar. By default,
+0 values are not shown. To visualize a 0 (or close to zero) point,
+set the minimal point length to a pixel value like 3. In stacked
+column charts, minPointLength might not be respected for tightly
+packed values.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/ : Zero base value
+https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/ : Positive and negative close to zero values
+* default: 0
+*/
+@property(nonatomic, readwrite) NSNumber *minPointLength;
+/**
 * description: When true, each column edge is rounded to its nearest pixel in order
 to render sharp on screen. In some cases, when there are a lot of
 densely packed columns, this leads to visible difference in column
@@ -60,18 +72,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 * default: false
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
-/**
-* description: The minimal height for a column or width for a bar. By default,
-0 values are not shown. To visualize a 0 (or close to zero) point,
-set the minimal point length to a pixel value like 3. In stacked
-column charts, minPointLength might not be respected for tightly
-packed values.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/ : Zero base value
-https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/ : Positive and negative close to zero values
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *minPointLength;
 /**
 * description: The spacing between columns on the Z Axis in a 3D chart. Requires
 highcharts-3d.js.

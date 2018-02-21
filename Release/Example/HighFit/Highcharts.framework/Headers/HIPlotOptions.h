@@ -340,7 +340,8 @@ straight line segments.
 @property(nonatomic, readwrite) HILine *line;
 /**
 * description: A histogram is a column series which represents the distribution of the data
-set in the base series. Histogram splits data into bins and shows their frequencies.
+set in the base series. Histogram splits data into bins and shows their
+frequencies.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/histogram/ : Histogram
 */

@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIBackground.h"
 
 @implementation HIBackground
@@ -18,19 +19,64 @@
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
-	if (self.outerRadius) {
-		params[@"outerRadius"] = self.outerRadius;
-	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
+	if (self.outerRadius) {
+		params[@"outerRadius"] = self.outerRadius;
+	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
+}
+
+-(void)setShape:(NSString *)shape {
+	_shape = shape;
+	[self updateNSObject:@"shape"];
+}
+
+-(void)setBackgroundColor:(HIColor *)backgroundColor {
+	HIColor *oldValue = _backgroundColor;
+	if(self.backgroundColor) {
+		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
+	}
+	_backgroundColor = backgroundColor;
+	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
+}
+
+-(void)setOuterRadius:(id)outerRadius {
+	_outerRadius = outerRadius;
+	[self updateNSObject:@"outerRadius"];
+}
+
+-(void)setInnerRadius:(id)innerRadius {
+	_innerRadius = innerRadius;
+	[self updateNSObject:@"innerRadius"];
 }
 
 @end

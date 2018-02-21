@@ -1,3 +1,4 @@
+#import "HIChartsJSONSerializableSubclass.h"
 #import "HIKeyboardNavigation.h"
 
 @implementation HIKeyboardNavigation
@@ -12,10 +13,22 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.skipNullPoints) {
-		params[@"skipNullPoints"] = self.skipNullPoints;
+	if (self.mode) {
+		params[@"mode"] = self.mode;
 	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setMode:(NSString *)mode {
+	_mode = mode;
+	[self updateNSObject:@"mode"];
 }
 
 @end

@@ -37,6 +37,10 @@ live demo).
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
+* description: Defines the fill color for the series (in area type series)
+*/
+@property(nonatomic, readwrite) HIColor *fillColor;
+/**
 * description: Defines the color of the series.
 */
 @property(nonatomic, readwrite) HIColor *color;
@@ -46,10 +50,6 @@ to the last value in the series.
 * default: undefined
 */
 @property(nonatomic, readwrite) NSNumber *value;
-/**
-* description: Defines the fill color for the series (in area type series)
-*/
-@property(nonatomic, readwrite) HIColor *fillColor;
 
 -(NSDictionary *)getParams;
 

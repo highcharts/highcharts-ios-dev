@@ -19,14 +19,6 @@ In styled mode, export button styles can be applied with the
 @interface HIContextButton: HIChartsJSONSerializable
 
 /**
-* description: The pixel stroke width of the symbol on the button.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
-
-* default: 1
-*/
-@property(nonatomic, readwrite) NSNumber *symbolStrokeWidth;
-/**
 * description: The vertical alignment of the buttons. Can be one of "top", "middle"
 or "bottom".
 
@@ -37,14 +29,10 @@ or "bottom".
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
 /**
-* description: Alignment for the buttons.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-align/ : Center aligned
-
-* accepted values: ["left", "center", "right"]
-* default: right
+* description: The class name of the menu appearing from the button.
+* default: highcharts-contextmenu
 */
-@property(nonatomic, readwrite) NSString *align;
+@property(nonatomic, readwrite) NSString *menuClassName;
 /**
 * description: The pixel size of the symbol on the button.
 
@@ -66,6 +54,15 @@ or "bottom".
 * default: 3
 */
 @property(nonatomic, readwrite) NSNumber *buttonSpacing;
+/**
+* description: Alignment for the buttons.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-align/ : Center aligned
+
+* accepted values: ["left", "center", "right"]
+* default: right
+*/
+@property(nonatomic, readwrite) NSString *align;
 /**
 * description: The class name of the context button.
 * default: highcharts-contextbutton
@@ -122,6 +119,24 @@ the popup menu.
 */
 @property(nonatomic, readwrite) HIColor *symbolFill;
 /**
+* description: A configuration object for the button theme. The object accepts
+SVG properties like stroke-width, stroke and fill. Tri-state
+button styles are supported by the states.hover and states.select
+objects.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-theme/ : Theming the buttons
+
+*/
+@property(nonatomic, readwrite) HITheme *theme;
+/**
+* description: The pixel stroke width of the symbol on the button.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
+
+* default: 1
+*/
+@property(nonatomic, readwrite) NSNumber *symbolStrokeWidth;
+/**
 * description: The y position of the center of the symbol inside the button.
 
 * demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
@@ -129,6 +144,14 @@ the popup menu.
 * default: 10.5
 */
 @property(nonatomic, readwrite) NSNumber *symbolY;
+/**
+* description: The x position of the center of the symbol inside the button.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
+
+* default: 12.5
+*/
+@property(nonatomic, readwrite) NSNumber *symbolX;
 /**
 * description: The color of the symbol's stroke or line.
 
@@ -156,11 +179,6 @@ https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/h
 */
 @property(nonatomic, readwrite) NSString *text;
 /**
-* description: The class name of the menu appearing from the button.
-* default: highcharts-contextmenu
-*/
-@property(nonatomic, readwrite) NSString *menuClassName;
-/**
 * description: The key to a lang option setting that is used for the
 buttons title tooltip. When the key iscontextButtonTitle`, it
 refers to lang.contextButtonTitle
@@ -168,24 +186,6 @@ that defaults to "Chart context menu".
 * default: contextButtonTitle
 */
 @property(nonatomic, readwrite) NSString *_titleKey;
-/**
-* description: The x position of the center of the symbol inside the button.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/ : Bigger buttons
-
-* default: 12.5
-*/
-@property(nonatomic, readwrite) NSNumber *symbolX;
-/**
-* description: A configuration object for the button theme. The object accepts
-SVG properties like stroke-width, stroke and fill. Tri-state
-button styles are supported by the states.hover and states.select
-objects.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-theme/ : Theming the buttons
-
-*/
-@property(nonatomic, readwrite) HITheme *theme;
 /**
 * description: A collection of strings pointing to config options for the menu
 items. The config options are defined in the

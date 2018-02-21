@@ -72,6 +72,17 @@ which shares the same layout logic.
 */
 @property(nonatomic, readwrite) NSString *neckHeight;
 /**
+* description: The color of the border surrounding each slice. When null, the
+border takes the same color as the slice fill. This can be used
+together with a borderWidth to fill drawing gaps created by antialiazing
+artefacts in borderless pies.
+In styled mode, the border stroke is given in the .highcharts-point class.
+
+* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/ : Black border
+* default: #ffffff
+*/
+@property(nonatomic, readwrite) HIColor *borderColor;
+/**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * default: 0
 */
@@ -124,17 +135,6 @@ should it be moved?.
 * default: 10
 */
 @property(nonatomic, readwrite) NSNumber *slicedOffset;
-/**
-* description: The color of the border surrounding each slice. When null, the
-border takes the same color as the slice fill. This can be used
-together with a borderWidth to fill drawing gaps created by antialiazing
-artefacts in borderless pies.
-In styled mode, the border stroke is given in the .highcharts-point class.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/ : Black border
-* default: #ffffff
-*/
-@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: A series specific or series type specific color set to use instead
 of the global colors.
