@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -15,9 +15,9 @@ showCheckbox is true.
 */
 @interface HIItemCheckboxStyle: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) NSString *width;
 @property(nonatomic, readwrite) NSString *position;
 @property(nonatomic, readwrite) NSString *height;
+@property(nonatomic, readwrite) NSString *width;
 
 -(NSDictionary *)getParams;
 
