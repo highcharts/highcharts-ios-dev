@@ -10,49 +10,64 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.to) {
-		params[@"to"] = self.to;
-	}
-	if (self.label) {
-		params[@"label"] = [self.label getParams];
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.from) {
-		params[@"from"] = self.from;
-	}
-	if (self.events) {
-		params[@"events"] = self.events;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.className) {
-		params[@"className"] = self.className;
-	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
-	}
-	if (self.thickness) {
-		params[@"thickness"] = self.thickness;
-	}
 	if (self.outerRadius) {
 		params[@"outerRadius"] = self.outerRadius;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
 	}
+	if (self.thickness) {
+		params[@"thickness"] = self.thickness;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
+	}
+	if (self.from) {
+		params[@"from"] = self.from;
+	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
+	if (self.id) {
+		params[@"id"] = self.id;
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
+	}
+	if (self.to) {
+		params[@"to"] = self.to;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.label) {
+		params[@"label"] = [self.label getParams];
+	}
+	if (self.events) {
+		params[@"events"] = self.events;
+	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setOuterRadius:(id)outerRadius {
+	_outerRadius = outerRadius;
+	[self updateNSObject:@"outerRadius"];
+}
+
+-(void)setInnerRadius:(id)innerRadius {
+	_innerRadius = innerRadius;
+	[self updateNSObject:@"innerRadius"];
+}
+
+-(void)setThickness:(id)thickness {
+	_thickness = thickness;
+	[self updateNSObject:@"thickness"];
+}
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
@@ -63,48 +78,14 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
-}
-
--(void)setTo:(NSNumber *)to {
-	_to = to;
-	[self updateNSObject:@"to"];
-}
-
--(void)setLabel:(HILabel *)label {
-	HILabel *oldValue = _label;
-	if(self.label) {
-		[self removeObserver:self forKeyPath:@"label.isUpdated"];
-	}
-	_label = label;
-	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
-}
-
--(void)setId:(NSString *)id {
-	_id = id;
-	[self updateNSObject:@"id"];
-}
-
--(void)setFrom:(NSNumber *)from {
-	_from = from;
-	[self updateNSObject:@"from"];
-}
-
--(void)setEvents:(id)events {
-	_events = events;
-	[self updateNSObject:@"events"];
-}
-
 -(void)setZIndex:(NSNumber *)zIndex {
 	_zIndex = zIndex;
 	[self updateNSObject:@"zIndex"];
 }
 
--(void)setClassName:(NSString *)className {
-	_className = className;
-	[self updateNSObject:@"className"];
+-(void)setFrom:(NSNumber *)from {
+	_from = from;
+	[self updateNSObject:@"from"];
 }
 
 -(void)setColor:(HIColor *)color {
@@ -116,19 +97,38 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setThickness:(id)thickness {
-	_thickness = thickness;
-	[self updateNSObject:@"thickness"];
+-(void)setId:(NSString *)id {
+	_id = id;
+	[self updateNSObject:@"id"];
 }
 
--(void)setOuterRadius:(id)outerRadius {
-	_outerRadius = outerRadius;
-	[self updateNSObject:@"outerRadius"];
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
 }
 
--(void)setInnerRadius:(id)innerRadius {
-	_innerRadius = innerRadius;
-	[self updateNSObject:@"innerRadius"];
+-(void)setTo:(NSNumber *)to {
+	_to = to;
+	[self updateNSObject:@"to"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
+}
+
+-(void)setLabel:(HILabel *)label {
+	HILabel *oldValue = _label;
+	if(self.label) {
+		[self removeObserver:self forKeyPath:@"label.isUpdated"];
+	}
+	_label = label;
+	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
+}
+
+-(void)setEvents:(id)events {
+	_events = events;
+	[self updateNSObject:@"events"];
 }
 
 @end

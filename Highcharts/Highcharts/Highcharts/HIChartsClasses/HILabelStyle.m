@@ -10,11 +10,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.top) {
-		params[@"top"] = self.top;
-	}
 	if (self.fontWeight) {
 		params[@"fontWeight"] = self.fontWeight;
+	}
+	if (self.top) {
+		params[@"top"] = self.top;
 	}
 	if (self.position) {
 		params[@"position"] = self.position;
@@ -24,14 +24,14 @@
 
 # pragma mark - Setters
 
--(void)setTop:(NSString *)top {
-	_top = top;
-	[self updateNSObject:@"top"];
-}
-
 -(void)setFontWeight:(NSString *)fontWeight {
 	_fontWeight = fontWeight;
 	[self updateNSObject:@"fontWeight"];
+}
+
+-(void)setTop:(NSString *)top {
+	_top = top;
+	[self updateNSObject:@"top"];
 }
 
 -(void)setPosition:(NSString *)position {

@@ -15,8 +15,23 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
+	}
 	if (self.curveFactor) {
 		params[@"curveFactor"] = self.curveFactor;
+	}
+	if (self.nodePadding) {
+		params[@"nodePadding"] = self.nodePadding;
+	}
+	if (self.nodeWidth) {
+		params[@"nodeWidth"] = self.nodeWidth;
+	}
+	if (self.linkOpacity) {
+		params[@"linkOpacity"] = self.linkOpacity;
+	}
+	if (self.minPointLength) {
+		params[@"minPointLength"] = self.minPointLength;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -25,20 +40,8 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.linkOpacity) {
-		params[@"linkOpacity"] = self.linkOpacity;
-	}
-	if (self.nodeWidth) {
-		params[@"nodeWidth"] = self.nodeWidth;
-	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
-	}
-	if (self.nodePadding) {
-		params[@"nodePadding"] = self.nodePadding;
-	}
-	if (self.minPointLength) {
-		params[@"minPointLength"] = self.minPointLength;
+	if (self.startFromThreshold) {
+		params[@"startFromThreshold"] = self.startFromThreshold;
 	}
 	if (self.nodes) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -57,9 +60,34 @@
 
 # pragma mark - Setters
 
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
+}
+
 -(void)setCurveFactor:(NSNumber *)curveFactor {
 	_curveFactor = curveFactor;
 	[self updateNSObject:@"curveFactor"];
+}
+
+-(void)setNodePadding:(NSNumber *)nodePadding {
+	_nodePadding = nodePadding;
+	[self updateNSObject:@"nodePadding"];
+}
+
+-(void)setNodeWidth:(NSNumber *)nodeWidth {
+	_nodeWidth = nodeWidth;
+	[self updateNSObject:@"nodeWidth"];
+}
+
+-(void)setLinkOpacity:(NSNumber *)linkOpacity {
+	_linkOpacity = linkOpacity;
+	[self updateNSObject:@"linkOpacity"];
+}
+
+-(void)setMinPointLength:(NSNumber *)minPointLength {
+	_minPointLength = minPointLength;
+	[self updateNSObject:@"minPointLength"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {
@@ -68,29 +96,9 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setLinkOpacity:(NSNumber *)linkOpacity {
-	_linkOpacity = linkOpacity;
-	[self updateNSObject:@"linkOpacity"];
-}
-
--(void)setNodeWidth:(NSNumber *)nodeWidth {
-	_nodeWidth = nodeWidth;
-	[self updateNSObject:@"nodeWidth"];
-}
-
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
-}
-
--(void)setNodePadding:(NSNumber *)nodePadding {
-	_nodePadding = nodePadding;
-	[self updateNSObject:@"nodePadding"];
-}
-
--(void)setMinPointLength:(NSNumber *)minPointLength {
-	_minPointLength = minPointLength;
-	[self updateNSObject:@"minPointLength"];
+-(void)setStartFromThreshold:(NSNumber *)startFromThreshold {
+	_startFromThreshold = startFromThreshold;
+	[self updateNSObject:@"startFromThreshold"];
 }
 
 -(void)setNodes:(NSArray <HINodes *> *)nodes {

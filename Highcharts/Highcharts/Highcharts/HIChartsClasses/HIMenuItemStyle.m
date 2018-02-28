@@ -10,17 +10,17 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.transition) {
-		params[@"transition"] = self.transition;
+	if (self.padding) {
+		params[@"padding"] = self.padding;
 	}
 	if (self.color) {
 		params[@"color"] = self.color;
 	}
+	if (self.transition) {
+		params[@"transition"] = self.transition;
+	}
 	if (self.fontSize) {
 		params[@"fontSize"] = self.fontSize;
-	}
-	if (self.padding) {
-		params[@"padding"] = self.padding;
 	}
 	if (self.background) {
 		params[@"background"] = self.background;
@@ -30,9 +30,9 @@
 
 # pragma mark - Setters
 
--(void)setTransition:(NSString *)transition {
-	_transition = transition;
-	[self updateNSObject:@"transition"];
+-(void)setPadding:(NSString *)padding {
+	_padding = padding;
+	[self updateNSObject:@"padding"];
 }
 
 -(void)setColor:(NSString *)color {
@@ -40,14 +40,14 @@
 	[self updateNSObject:@"color"];
 }
 
+-(void)setTransition:(NSString *)transition {
+	_transition = transition;
+	[self updateNSObject:@"transition"];
+}
+
 -(void)setFontSize:(NSString *)fontSize {
 	_fontSize = fontSize;
 	[self updateNSObject:@"fontSize"];
-}
-
--(void)setPadding:(NSString *)padding {
-	_padding = padding;
-	[self updateNSObject:@"padding"];
 }
 
 -(void)setBackground:(NSString *)background {

@@ -13,29 +13,29 @@
 	if (self.style) {
 		params[@"style"] = self.style;
 	}
-	if (self.x) {
-		params[@"x"] = self.x;
-	}
-	if (self.y) {
-		params[@"y"] = self.y;
-	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
-	if (self.floating) {
-		params[@"floating"] = self.floating;
+	if (self.align) {
+		params[@"align"] = self.align;
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
-	if (self.align) {
-		params[@"align"] = self.align;
+	if (self.y) {
+		params[@"y"] = self.y;
+	}
+	if (self.x) {
+		params[@"x"] = self.x;
 	}
 	if (self.widthAdjust) {
 		params[@"widthAdjust"] = self.widthAdjust;
+	}
+	if (self.floating) {
+		params[@"floating"] = self.floating;
 	}
 	return params;
 }
@@ -45,16 +45,6 @@
 -(void)setStyle:(NSDictionary *)style {
 	_style = style;
 	[self updateNSObject:@"style"];
-}
-
--(void)setX:(NSNumber *)x {
-	_x = x;
-	[self updateNSObject:@"x"];
-}
-
--(void)setY:(NSNumber *)y {
-	_y = y;
-	[self updateNSObject:@"y"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
@@ -67,9 +57,9 @@
 	[self updateNSObject:@"text"];
 }
 
--(void)setFloating:(NSNumber *)floating {
-	_floating = floating;
-	[self updateNSObject:@"floating"];
+-(void)setAlign:(NSString *)align {
+	_align = align;
+	[self updateNSObject:@"align"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
@@ -77,14 +67,24 @@
 	[self updateNSObject:@"useHTML"];
 }
 
--(void)setAlign:(NSString *)align {
-	_align = align;
-	[self updateNSObject:@"align"];
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
+}
+
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
 }
 
 -(void)setWidthAdjust:(NSNumber *)widthAdjust {
 	_widthAdjust = widthAdjust;
 	[self updateNSObject:@"widthAdjust"];
+}
+
+-(void)setFloating:(NSNumber *)floating {
+	_floating = floating;
+	[self updateNSObject:@"floating"];
 }
 
 @end

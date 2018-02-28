@@ -10,24 +10,19 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.relativeTo) {
-		params[@"relativeTo"] = self.relativeTo;
-	}
 	if (self.position) {
 		params[@"position"] = [self.position getParams];
 	}
 	if (self.theme) {
 		params[@"theme"] = [self.theme getParams];
 	}
+	if (self.relativeTo) {
+		params[@"relativeTo"] = self.relativeTo;
+	}
 	return params;
 }
 
 # pragma mark - Setters
-
--(void)setRelativeTo:(NSString *)relativeTo {
-	_relativeTo = relativeTo;
-	[self updateNSObject:@"relativeTo"];
-}
 
 -(void)setPosition:(HIPosition *)position {
 	HIPosition *oldValue = _position;
@@ -45,6 +40,11 @@
 	}
 	_theme = theme;
 	[self updateHIObject:oldValue newValue:theme propertyName:@"theme"];
+}
+
+-(void)setRelativeTo:(NSString *)relativeTo {
+	_relativeTo = relativeTo;
+	[self updateNSObject:@"relativeTo"];
 }
 
 @end

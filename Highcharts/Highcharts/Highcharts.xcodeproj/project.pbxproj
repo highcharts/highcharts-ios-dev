@@ -55,6 +55,26 @@
 		CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
 		CD5B359A1F90C478006159D7 /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		CD5B359B1F90C47A006159D7 /* HIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 208980271E6412EA007280D7 /* HIColor.m */; };
+		CD87DC632046DED5009309A5 /* HIChartTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC4F2046DECE009309A5 /* HIChartTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC642046DED5009309A5 /* HILevelSize.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC502046DECF009309A5 /* HILevelSize.m */; };
+		CD87DC652046DED5009309A5 /* HINormal.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC512046DECF009309A5 /* HINormal.m */; };
+		CD87DC662046DED5009309A5 /* HITime.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC522046DECF009309A5 /* HITime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC672046DED5009309A5 /* HITime.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC532046DED0009309A5 /* HITime.m */; };
+		CD87DC682046DED5009309A5 /* HIFocusBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC542046DED0009309A5 /* HIFocusBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC692046DED5009309A5 /* HISeriesTypeDescriptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC552046DED1009309A5 /* HISeriesTypeDescriptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC6A2046DED5009309A5 /* HISummary.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC562046DED1009309A5 /* HISummary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC6B2046DED5009309A5 /* HIChartTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC572046DED1009309A5 /* HIChartTypes.m */; };
+		CD87DC6C2046DED5009309A5 /* HILinearGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC582046DED2009309A5 /* HILinearGradient.m */; };
+		CD87DC6D2046DED5009309A5 /* HIAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC592046DED2009309A5 /* HIAxis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC6E2046DED5009309A5 /* HINormal.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC5A2046DED2009309A5 /* HINormal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC6F2046DED5009309A5 /* HIBackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC5B2046DED2009309A5 /* HIBackgroundColor.m */; };
+		CD87DC702046DED5009309A5 /* HIAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC5C2046DED3009309A5 /* HIAxis.m */; };
+		CD87DC712046DED5009309A5 /* HISeriesTypeDescriptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC5D2046DED3009309A5 /* HISeriesTypeDescriptions.m */; };
+		CD87DC722046DED5009309A5 /* HIBackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC5E2046DED3009309A5 /* HIBackgroundColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC732046DED5009309A5 /* HIFocusBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC5F2046DED4009309A5 /* HIFocusBorder.m */; };
+		CD87DC742046DED5009309A5 /* HISummary.m in Sources */ = {isa = PBXBuildFile; fileRef = CD87DC602046DED4009309A5 /* HISummary.m */; };
+		CD87DC752046DED5009309A5 /* HILinearGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC612046DED4009309A5 /* HILinearGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD87DC762046DED5009309A5 /* HILevelSize.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87DC622046DED4009309A5 /* HILevelSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8C144A1F9794F600C2CD61 /* HIAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8C13E21F97947800C2CD61 /* HIAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8C144B1F9794F600C2CD61 /* HIAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C13A61F97946800C2CD61 /* HIAccessibility.m */; };
 		CD8C144C1F9794F600C2CD61 /* HIActiveAxisLabelStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8C13ED1F97947B00C2CD61 /* HIActiveAxisLabelStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -370,6 +390,26 @@
 		34F873FC1CDA134400674E6C /* HIGExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGExport.h; sourceTree = "<group>"; };
 		34F873FD1CDA134400674E6C /* HIGExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGExport.m; sourceTree = "<group>"; };
 		CD0FDCD91FE7DE7F0029B4A3 /* HIChartsJSONSerializableSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartsJSONSerializableSubclass.h; sourceTree = "<group>"; };
+		CD87DC4F2046DECE009309A5 /* HIChartTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIChartTypes.h; sourceTree = "<group>"; };
+		CD87DC502046DECF009309A5 /* HILevelSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILevelSize.m; sourceTree = "<group>"; };
+		CD87DC512046DECF009309A5 /* HINormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HINormal.m; sourceTree = "<group>"; };
+		CD87DC522046DECF009309A5 /* HITime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITime.h; sourceTree = "<group>"; };
+		CD87DC532046DED0009309A5 /* HITime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITime.m; sourceTree = "<group>"; };
+		CD87DC542046DED0009309A5 /* HIFocusBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFocusBorder.h; sourceTree = "<group>"; };
+		CD87DC552046DED1009309A5 /* HISeriesTypeDescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISeriesTypeDescriptions.h; sourceTree = "<group>"; };
+		CD87DC562046DED1009309A5 /* HISummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISummary.h; sourceTree = "<group>"; };
+		CD87DC572046DED1009309A5 /* HIChartTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIChartTypes.m; sourceTree = "<group>"; };
+		CD87DC582046DED2009309A5 /* HILinearGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILinearGradient.m; sourceTree = "<group>"; };
+		CD87DC592046DED2009309A5 /* HIAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAxis.h; sourceTree = "<group>"; };
+		CD87DC5A2046DED2009309A5 /* HINormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HINormal.h; sourceTree = "<group>"; };
+		CD87DC5B2046DED2009309A5 /* HIBackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBackgroundColor.m; sourceTree = "<group>"; };
+		CD87DC5C2046DED3009309A5 /* HIAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAxis.m; sourceTree = "<group>"; };
+		CD87DC5D2046DED3009309A5 /* HISeriesTypeDescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISeriesTypeDescriptions.m; sourceTree = "<group>"; };
+		CD87DC5E2046DED3009309A5 /* HIBackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBackgroundColor.h; sourceTree = "<group>"; };
+		CD87DC5F2046DED4009309A5 /* HIFocusBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFocusBorder.m; sourceTree = "<group>"; };
+		CD87DC602046DED4009309A5 /* HISummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISummary.m; sourceTree = "<group>"; };
+		CD87DC612046DED4009309A5 /* HILinearGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILinearGradient.h; sourceTree = "<group>"; };
+		CD87DC622046DED4009309A5 /* HILevelSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILevelSize.h; sourceTree = "<group>"; };
 		CD8C13421F97945000C2CD61 /* HIGauge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIGauge.m; sourceTree = "<group>"; };
 		CD8C13431F97945100C2CD61 /* HIPartialFill.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIPartialFill.m; sourceTree = "<group>"; };
 		CD8C13441F97945100C2CD61 /* HIRotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIRotation.m; sourceTree = "<group>"; };
@@ -661,6 +701,26 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				CD87DC592046DED2009309A5 /* HIAxis.h */,
+				CD87DC5C2046DED3009309A5 /* HIAxis.m */,
+				CD87DC5E2046DED3009309A5 /* HIBackgroundColor.h */,
+				CD87DC5B2046DED2009309A5 /* HIBackgroundColor.m */,
+				CD87DC4F2046DECE009309A5 /* HIChartTypes.h */,
+				CD87DC572046DED1009309A5 /* HIChartTypes.m */,
+				CD87DC542046DED0009309A5 /* HIFocusBorder.h */,
+				CD87DC5F2046DED4009309A5 /* HIFocusBorder.m */,
+				CD87DC622046DED4009309A5 /* HILevelSize.h */,
+				CD87DC502046DECF009309A5 /* HILevelSize.m */,
+				CD87DC612046DED4009309A5 /* HILinearGradient.h */,
+				CD87DC582046DED2009309A5 /* HILinearGradient.m */,
+				CD87DC5A2046DED2009309A5 /* HINormal.h */,
+				CD87DC512046DECF009309A5 /* HINormal.m */,
+				CD87DC552046DED1009309A5 /* HISeriesTypeDescriptions.h */,
+				CD87DC5D2046DED3009309A5 /* HISeriesTypeDescriptions.m */,
+				CD87DC562046DED1009309A5 /* HISummary.h */,
+				CD87DC602046DED4009309A5 /* HISummary.m */,
+				CD87DC522046DECF009309A5 /* HITime.h */,
+				CD87DC532046DED0009309A5 /* HITime.m */,
 				CD8C13E21F97947800C2CD61 /* HIAccessibility.h */,
 				CD8C13A61F97946800C2CD61 /* HIAccessibility.m */,
 				CD8C13ED1F97947B00C2CD61 /* HIActiveAxisLabelStyle.h */,
@@ -1044,6 +1104,7 @@
 				CD8C14B41F9794F600C2CD61 /* HIHover.h in Headers */,
 				34AFDA751CD3B3EE00BE07CE /* HIGDependency.h in Headers */,
 				CD8C14C81F9794F600C2CD61 /* HILabelStyle.h in Headers */,
+				CD87DC682046DED5009309A5 /* HIFocusBorder.h in Headers */,
 				CD8C14A21F9794F600C2CD61 /* HIExporting.h in Headers */,
 				CD8C14BA1F9794F600C2CD61 /* HIItemHoverStyle.h in Headers */,
 				CD8C15341F9794F600C2CD61 /* HITitle.h in Headers */,
@@ -1075,7 +1136,9 @@
 				CD8C14EC1F9794F600C2CD61 /* HIParallelAxes.h in Headers */,
 				CD8C14941F9794F600C2CD61 /* HIDebug.h in Headers */,
 				CD8C153A1F9794F600C2CD61 /* HITreemap.h in Headers */,
+				CD87DC762046DED5009309A5 /* HILevelSize.h in Headers */,
 				CD8C14EA1F9794F600C2CD61 /* HIPane.h in Headers */,
+				CD87DC692046DED5009309A5 /* HISeriesTypeDescriptions.h in Headers */,
 				CD8C14C61F9794F600C2CD61 /* HILabels.h in Headers */,
 				CD8C152A1F9794F600C2CD61 /* HISubtitle.h in Headers */,
 				34AFDA691CD3A6F500BE07CE /* HIGBundle.h in Headers */,
@@ -1109,6 +1172,7 @@
 				CD8C15281F9794F600C2CD61 /* HIStyle.h in Headers */,
 				CD8C146E1F9794F600C2CD61 /* HIBreaks.h in Headers */,
 				CD8C145A1F9794F600C2CD61 /* HIAreasplinerange.h in Headers */,
+				CD87DC662046DED5009309A5 /* HITime.h in Headers */,
 				CD8C14801F9794F600C2CD61 /* HIColumnrange.h in Headers */,
 				CD8C14761F9794F600C2CD61 /* HIButtons.h in Headers */,
 				CD8C14741F9794F600C2CD61 /* HIButtonOptions.h in Headers */,
@@ -1123,6 +1187,7 @@
 				CD8C15181F9794F600C2CD61 /* HIShapeOptions.h in Headers */,
 				CD8C146A1F9794F600C2CD61 /* HIBottom.h in Headers */,
 				CD8C14661F9794F600C2CD61 /* HIBellcurve.h in Headers */,
+				CD87DC6D2046DED5009309A5 /* HIAxis.h in Headers */,
 				CD8C147C1F9794F600C2CD61 /* HIColorVariation.h in Headers */,
 				CD8C149E1F9794F600C2CD61 /* HIErrorbar.h in Headers */,
 				CD8C149A1F9794F600C2CD61 /* HIDrilldown.h in Headers */,
@@ -1139,17 +1204,20 @@
 				CD8C14A01F9794F600C2CD61 /* HIEvents.h in Headers */,
 				CD8C14681F9794F600C2CD61 /* HIBoost.h in Headers */,
 				CD8C14821F9794F600C2CD61 /* HICondition.h in Headers */,
+				CD87DC722046DED5009309A5 /* HIBackgroundColor.h in Headers */,
 				CD8C15101F9794F600C2CD61 /* HIScatter.h in Headers */,
 				CD8C14A61F9794F600C2CD61 /* HIFront.h in Headers */,
 				CD8C14721F9794F600C2CD61 /* HIBullet.h in Headers */,
 				CD8C15361F9794F600C2CD61 /* HITooltip.h in Headers */,
 				CD8C14861F9794F600C2CD61 /* HICredits.h in Headers */,
+				CD87DC6E2046DED5009309A5 /* HINormal.h in Headers */,
 				CD8C14C21F9794F600C2CD61 /* HILabel.h in Headers */,
 				CD8C15161F9794F600C2CD61 /* HISeries.h in Headers */,
 				CD8C14AE1F9794F600C2CD61 /* HIHalo.h in Headers */,
 				CD8C14841F9794F600C2CD61 /* HIContextButton.h in Headers */,
 				CD8C14501F9794F600C2CD61 /* HIAnimation.h in Headers */,
 				CD8C14B01F9794F600C2CD61 /* HIHeatmap.h in Headers */,
+				CD87DC632046DED5009309A5 /* HIChartTypes.h in Headers */,
 				CD8C14E81F9794F600C2CD61 /* HIOptions3d.h in Headers */,
 				CD8C151C1F9794F600C2CD61 /* HISide.h in Headers */,
 				CD0FDCDA1FE7DE800029B4A3 /* HIChartsJSONSerializableSubclass.h in Headers */,
@@ -1162,12 +1230,14 @@
 				CD8C15381F9794F600C2CD61 /* HITop.h in Headers */,
 				CD8C14EE1F9794F600C2CD61 /* HIPareto.h in Headers */,
 				CD8C144C1F9794F600C2CD61 /* HIActiveAxisLabelStyle.h in Headers */,
+				CD87DC6A2046DED5009309A5 /* HISummary.h in Headers */,
 				CD8C14B61F9794F600C2CD61 /* HIItemCheckboxStyle.h in Headers */,
 				CD8C153E1F9794F600C2CD61 /* HIVariwide.h in Headers */,
 				CD8C15081F9794F600C2CD61 /* HIRight.h in Headers */,
 				CD8C15481F9794F600C2CD61 /* HIXAxis.h in Headers */,
 				CD8C151E1F9794F600C2CD61 /* HISolidgauge.h in Headers */,
 				CD8C145E1F9794F600C2CD61 /* HIBack.h in Headers */,
+				CD87DC752046DED5009309A5 /* HILinearGradient.h in Headers */,
 				EC14493B1F4A926E00612B1C /* HIGChartView.h in Headers */,
 				EC1449381F4A854900612B1C /* HIGChartViewDelegate.h in Headers */,
 				202957701E64175B002447E0 /* HIBridge.h in Headers */,
@@ -1334,6 +1404,7 @@
 				CDDF95D51F9F5D260021A129 /* HIFunction.m in Sources */,
 				CD8C14751F9794F600C2CD61 /* HIButtonOptions.m in Sources */,
 				CD8C148D1F9794F600C2CD61 /* HIData.m in Sources */,
+				CD87DC652046DED5009309A5 /* HINormal.m in Sources */,
 				CD8C14C71F9794F600C2CD61 /* HILabels.m in Sources */,
 				CD8C14AD1F9794F600C2CD61 /* HIGlobal.m in Sources */,
 				CD5B358F1F90C44A006159D7 /* HIGBundle.m in Sources */,
@@ -1342,6 +1413,9 @@
 				CD8C15091F9794F600C2CD61 /* HIRight.m in Sources */,
 				CD8C14771F9794F600C2CD61 /* HIButtons.m in Sources */,
 				CD8C14CB1F9794F600C2CD61 /* HILang.m in Sources */,
+				CD87DC712046DED5009309A5 /* HISeriesTypeDescriptions.m in Sources */,
+				CD87DC742046DED5009309A5 /* HISummary.m in Sources */,
+				CD87DC732046DED5009309A5 /* HIFocusBorder.m in Sources */,
 				CD8C14ED1F9794F600C2CD61 /* HIParallelAxes.m in Sources */,
 				CD8C14F31F9794F600C2CD61 /* HIPie.m in Sources */,
 				CD5B35901F90C44C006159D7 /* HIGHTML.m in Sources */,
@@ -1349,10 +1423,12 @@
 				CD8C15251F9794F600C2CD61 /* HIStates.m in Sources */,
 				CD8C14AF1F9794F600C2CD61 /* HIHalo.m in Sources */,
 				CD8C14891F9794F600C2CD61 /* HICrosshair.m in Sources */,
+				CD87DC702046DED5009309A5 /* HIAxis.m in Sources */,
 				CD8C14E11F9794F600C2CD61 /* HINavigation.m in Sources */,
 				CD5B35911F90C44F006159D7 /* HIGDependency.m in Sources */,
 				CD8C14F51F9794F600C2CD61 /* HIPivot.m in Sources */,
 				CD8C150D1F9794F600C2CD61 /* HIRules.m in Sources */,
+				CD87DC672046DED5009309A5 /* HITime.m in Sources */,
 				CD8C14A11F9794F600C2CD61 /* HIEvents.m in Sources */,
 				CD8C14C51F9794F600C2CD61 /* HILabelOptions.m in Sources */,
 				CD8C14B51F9794F600C2CD61 /* HIHover.m in Sources */,
@@ -1384,6 +1460,7 @@
 				CD8C14931F9794F600C2CD61 /* HIDateTimeLabelFormats.m in Sources */,
 				CD8C14A31F9794F600C2CD61 /* HIExporting.m in Sources */,
 				CD5B35961F90C469006159D7 /* HIChartsJSONSerializable.m in Sources */,
+				CD87DC6C2046DED5009309A5 /* HILinearGradient.m in Sources */,
 				CD8C14B31F9794F600C2CD61 /* HIHistogram.m in Sources */,
 				CD8C14791F9794F600C2CD61 /* HIChart.m in Sources */,
 				CD8C14E51F9794F600C2CD61 /* HINodes.m in Sources */,
@@ -1411,8 +1488,10 @@
 				CD8C144F1F9794F600C2CD61 /* HIActiveDataLabelStyle.m in Sources */,
 				CD8C14AB1F9794F600C2CD61 /* HIGauge.m in Sources */,
 				CD8C14C91F9794F600C2CD61 /* HILabelStyle.m in Sources */,
+				CD87DC6F2046DED5009309A5 /* HIBackgroundColor.m in Sources */,
 				CD8C14831F9794F600C2CD61 /* HICondition.m in Sources */,
 				CD8C14F71F9794F600C2CD61 /* HIPlotBands.m in Sources */,
+				CD87DC6B2046DED5009309A5 /* HIChartTypes.m in Sources */,
 				CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */,
 				CD5B359A1F90C478006159D7 /* UIImage+HIG.m in Sources */,
 				CD8C15431F9794F600C2CD61 /* HIWaterfall.m in Sources */,
@@ -1459,6 +1538,7 @@
 				CD8C14BD1F9794F600C2CD61 /* HIItems.m in Sources */,
 				CD8C14CD1F9794F600C2CD61 /* HILeft.m in Sources */,
 				CD8C14811F9794F600C2CD61 /* HIColumnrange.m in Sources */,
+				CD87DC642046DED5009309A5 /* HILevelSize.m in Sources */,
 				CD8C15111F9794F600C2CD61 /* HIScatter.m in Sources */,
 				CD8C145D1F9794F600C2CD61 /* HIAttributes.m in Sources */,
 				CD8C14FB1F9794F600C2CD61 /* HIPlotOptions.m in Sources */,

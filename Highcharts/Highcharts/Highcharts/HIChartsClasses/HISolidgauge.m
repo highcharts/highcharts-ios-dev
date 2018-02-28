@@ -15,8 +15,8 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.wrap) {
-		params[@"wrap"] = self.wrap;
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.overshoot) {
 		params[@"overshoot"] = self.overshoot;
@@ -24,17 +24,14 @@
 	if (self.rounded) {
 		params[@"rounded"] = self.rounded;
 	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
-	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setWrap:(NSNumber *)wrap {
-	_wrap = wrap;
-	[self updateNSObject:@"wrap"];
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setOvershoot:(NSNumber *)overshoot {
@@ -45,11 +42,6 @@
 -(void)setRounded:(NSNumber *)rounded {
 	_rounded = rounded;
 	[self updateNSObject:@"rounded"];
-}
-
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
 }
 
 @end

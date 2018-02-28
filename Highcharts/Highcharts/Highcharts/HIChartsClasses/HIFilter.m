@@ -10,23 +10,23 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.value) {
-		params[@"value"] = self.value;
+	if (self.operator) {
+		params[@"operator"] = self.operator;
 	}
 	if (self.property) {
 		params[@"property"] = self.property;
 	}
-	if (self.operator) {
-		params[@"operator"] = self.operator;
+	if (self.value) {
+		params[@"value"] = self.value;
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setValue:(id)value {
-	_value = value;
-	[self updateNSObject:@"value"];
+-(void)setOperator:(NSString *)operator {
+	_operator = operator;
+	[self updateNSObject:@"operator"];
 }
 
 -(void)setProperty:(NSString *)property {
@@ -34,9 +34,9 @@
 	[self updateNSObject:@"property"];
 }
 
--(void)setOperator:(NSString *)operator {
-	_operator = operator;
-	[self updateNSObject:@"operator"];
+-(void)setValue:(id)value {
+	_value = value;
+	[self updateNSObject:@"value"];
 }
 
 @end

@@ -10,31 +10,31 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
+	}
 	if (self.color) {
 		params[@"color"] = self.color;
-	}
-	if (self.fontWeight) {
-		params[@"fontWeight"] = self.fontWeight;
 	}
 	if (self.textDecoration) {
 		params[@"textDecoration"] = self.textDecoration;
 	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
+	if (self.fontWeight) {
+		params[@"fontWeight"] = self.fontWeight;
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
+-(void)setCursor:(NSString *)cursor {
+	_cursor = cursor;
+	[self updateNSObject:@"cursor"];
+}
+
 -(void)setColor:(NSString *)color {
 	_color = color;
 	[self updateNSObject:@"color"];
-}
-
--(void)setFontWeight:(NSString *)fontWeight {
-	_fontWeight = fontWeight;
-	[self updateNSObject:@"fontWeight"];
 }
 
 -(void)setTextDecoration:(NSString *)textDecoration {
@@ -42,9 +42,9 @@
 	[self updateNSObject:@"textDecoration"];
 }
 
--(void)setCursor:(NSString *)cursor {
-	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
+-(void)setFontWeight:(NSString *)fontWeight {
+	_fontWeight = fontWeight;
+	[self updateNSObject:@"fontWeight"];
 }
 
 @end

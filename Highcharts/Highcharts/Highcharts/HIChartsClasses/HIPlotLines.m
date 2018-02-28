@@ -13,29 +13,29 @@
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
-	if (self.width) {
-		params[@"width"] = self.width;
-	}
-	if (self.className) {
-		params[@"className"] = self.className;
-	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
-	}
-	if (self.events) {
-		params[@"events"] = self.events;
-	}
-	if (self.label) {
-		params[@"label"] = [self.label getParams];
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
 	if (self.value) {
 		params[@"value"] = self.value;
+	}
+	if (self.id) {
+		params[@"id"] = self.id;
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
+	}
+	if (self.width) {
+		params[@"width"] = self.width;
+	}
+	if (self.label) {
+		params[@"label"] = [self.label getParams];
+	}
+	if (self.events) {
+		params[@"events"] = self.events;
 	}
 	return params;
 }
@@ -47,38 +47,9 @@
 	[self updateNSObject:@"zIndex"];
 }
 
--(void)setWidth:(NSNumber *)width {
-	_width = width;
-	[self updateNSObject:@"width"];
-}
-
--(void)setClassName:(NSString *)className {
-	_className = className;
-	[self updateNSObject:@"className"];
-}
-
 -(void)setDashStyle:(NSString *)dashStyle {
 	_dashStyle = dashStyle;
 	[self updateNSObject:@"dashStyle"];
-}
-
--(void)setEvents:(id)events {
-	_events = events;
-	[self updateNSObject:@"events"];
-}
-
--(void)setLabel:(HILabel *)label {
-	HILabel *oldValue = _label;
-	if(self.label) {
-		[self removeObserver:self forKeyPath:@"label.isUpdated"];
-	}
-	_label = label;
-	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
-}
-
--(void)setId:(NSString *)id {
-	_id = id;
-	[self updateNSObject:@"id"];
 }
 
 -(void)setColor:(HIColor *)color {
@@ -93,6 +64,35 @@
 -(void)setValue:(NSNumber *)value {
 	_value = value;
 	[self updateNSObject:@"value"];
+}
+
+-(void)setId:(NSString *)id {
+	_id = id;
+	[self updateNSObject:@"id"];
+}
+
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
+}
+
+-(void)setWidth:(NSNumber *)width {
+	_width = width;
+	[self updateNSObject:@"width"];
+}
+
+-(void)setLabel:(HILabel *)label {
+	HILabel *oldValue = _label;
+	if(self.label) {
+		[self removeObserver:self forKeyPath:@"label.isUpdated"];
+	}
+	_label = label;
+	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
+}
+
+-(void)setEvents:(id)events {
+	_events = events;
+	[self updateNSObject:@"events"];
 }
 
 @end
