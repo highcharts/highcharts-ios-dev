@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2017 Highsoft AS
+* (c) 2009-2018 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -16,11 +16,10 @@
 @interface HICondition: HIChartsJSONSerializable
 
 /**
-* description: The responsive rule applies if the chart width is less than this.
-
-* demo: https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Max width is 500
+* description: The responsive rule applies if the chart width is greater than this.
+* default: 0
 */
-@property(nonatomic, readwrite) NSNumber *maxWidth;
+@property(nonatomic, readwrite) NSNumber *minWidth;
 /**
 * description: A callback function to gain complete control on when the responsive
 rule applies. Return true if it applies. This opens for checking
@@ -29,19 +28,19 @@ size or other elements.
 */
 @property(nonatomic, readwrite) HIFunction *callback;
 /**
-* description: The responsive rule applies if the chart height is less than this.
-*/
-@property(nonatomic, readwrite) NSNumber *maxHeight;
-/**
-* description: The responsive rule applies if the chart width is greater than this.
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *minWidth;
-/**
 * description: The responsive rule applies if the chart height is greater than this.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *minHeight;
+/**
+* description: The responsive rule applies if the chart width is less than this.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Max width is 500
+*/
+@property(nonatomic, readwrite) NSNumber *maxWidth;
+/**
+* description: The responsive rule applies if the chart height is less than this.
+*/
+@property(nonatomic, readwrite) NSNumber *maxHeight;
 
 -(NSDictionary *)getParams;
 
