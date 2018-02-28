@@ -33,7 +33,8 @@ In styled mode, the dial is styled with the
 /**
 * description: Allow the dial to overshoot the end of the perimeter axis by this
 many degrees. Say if the gauge axis goes from 0 to 60, a value of
-100, or 1000, will show 5 degrees beyond the end of the axis.
+100, or 1000, will show 5 degrees beyond the end of the axis when this
+option is set to 5.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-overshoot/ : Allow 5 degrees overshoot
 * default: 0
 */

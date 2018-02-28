@@ -27,6 +27,7 @@ numeric (pixels) or a percentage string.
 * default: 105%
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ outerRadius;
+@property(nonatomic, readwrite) id from;
 /**
 * description: The inner radius of the pane background. Can be either numeric
 (pixels) or a percentage string.

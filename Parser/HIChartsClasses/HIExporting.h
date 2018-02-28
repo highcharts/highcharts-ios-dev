@@ -73,7 +73,8 @@ options.
 @property(nonatomic, readwrite) HIButtons *buttons;
 /**
 * description: The pixel width of charts exported to PNG or JPG. As of Highcharts
-3.0, the default pixel width is a function of the chart.width or exporting.sourceWidth and the
+3.0, the default pixel width is a function of the [chart.width](#chart.
+width) or exporting.sourceWidth and the
 exporting.scale.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/width/ : Export to 200px wide images
 * default: undefined
@@ -175,7 +176,8 @@ chart title by default. Set to false to disable.
 @property(nonatomic, readwrite) id /* Bool, NSString */ tableCaption;
 /**
 * description: Function to call if the offline-exporting module fails to export
-a chart on the client side, and fallbackToExportServer is disabled. If left undefined, an exception
+a chart on the client side, and [fallbackToExportServer](#exporting.
+fallbackToExportServer) is disabled. If left undefined, an exception
 is thrown instead.
 * default: undefined
 */
@@ -189,6 +191,9 @@ com/yWorks/jsPDF) and [svg2pdf.js](https://github.com/yWorks/svg2pdf.
 js), required for client side export in certain browsers.
 */
 @property(nonatomic, readwrite) NSString *libURL;
+@property(nonatomic, readwrite) NSString *exportRegionLabel;
+@property(nonatomic, readwrite) NSString *menuButtonLabel;
+@property(nonatomic, readwrite) NSString *chartMenuLabel;
 
 -(NSDictionary *)getParams;
 

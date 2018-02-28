@@ -25,8 +25,8 @@
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
-	if (self.format) {
-		params[@"format"] = self.format;
+	if (self.distance) {
+		params[@"distance"] = self.distance;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -36,6 +36,9 @@
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
+	}
+	if (self.format) {
+		params[@"format"] = self.format;
 	}
 	if (self.crop) {
 		params[@"crop"] = self.crop;
@@ -69,9 +72,6 @@
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
-	}
-	if (self.distance) {
-		params[@"distance"] = self.distance;
 	}
 	return params;
 }
@@ -111,9 +111,9 @@
 	[self updateNSObject:@"verticalAlign"];
 }
 
--(void)setFormat:(NSString *)format {
-	_format = format;
-	[self updateNSObject:@"format"];
+-(void)setDistance:(NSNumber *)distance {
+	_distance = distance;
+	[self updateNSObject:@"distance"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
@@ -129,6 +129,11 @@
 -(void)setAlign:(NSString *)align {
 	_align = align;
 	[self updateNSObject:@"align"];
+}
+
+-(void)setFormat:(NSString *)format {
+	_format = format;
+	[self updateNSObject:@"format"];
 }
 
 -(void)setCrop:(NSNumber *)crop {
@@ -192,11 +197,6 @@
 -(void)setShadow:(id)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
-}
-
--(void)setDistance:(NSNumber *)distance {
-	_distance = distance;
-	[self updateNSObject:@"distance"];
 }
 
 @end

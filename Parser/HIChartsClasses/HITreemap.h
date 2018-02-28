@@ -18,8 +18,8 @@ not specified, it is inherited from chart.type.
 
 For options that apply to multiple series, it is recommended to add
 them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-treemap.
+To apply to all series of this specific type, apply it to [plotOptions.
+treemap](#plotOptions.treemap).
 */
 @interface HITreemap: HISeries
 
@@ -70,7 +70,8 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @property(nonatomic, readwrite) NSNumber /* Bool */ *interactByLeaf;
 /**
 * description: A series specific or series type specific color set to apply instead
-of the global colors when colorByPoint is true.
+of the global colors when [colorByPoint](#plotOptions.
+treemap.colorByPoint) is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 /**

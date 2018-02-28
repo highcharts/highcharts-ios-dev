@@ -76,6 +76,15 @@
 	if (self.libURL) {
 		params[@"libURL"] = self.libURL;
 	}
+	if (self.exportRegionLabel) {
+		params[@"exportRegionLabel"] = self.exportRegionLabel;
+	}
+	if (self.menuButtonLabel) {
+		params[@"menuButtonLabel"] = self.menuButtonLabel;
+	}
+	if (self.chartMenuLabel) {
+		params[@"chartMenuLabel"] = self.chartMenuLabel;
+	}
 	return params;
 }
 
@@ -201,6 +210,21 @@
 -(void)setLibURL:(NSString *)libURL {
 	_libURL = libURL;
 	[self updateNSObject:@"libURL"];
+}
+
+-(void)setExportRegionLabel:(NSString *)exportRegionLabel {
+	_exportRegionLabel = exportRegionLabel;
+	[self updateNSObject:@"exportRegionLabel"];
+}
+
+-(void)setMenuButtonLabel:(NSString *)menuButtonLabel {
+	_menuButtonLabel = menuButtonLabel;
+	[self updateNSObject:@"menuButtonLabel"];
+}
+
+-(void)setChartMenuLabel:(NSString *)chartMenuLabel {
+	_chartMenuLabel = chartMenuLabel;
+	[self updateNSObject:@"chartMenuLabel"];
 }
 
 @end

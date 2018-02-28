@@ -26,7 +26,8 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @property(nonatomic, readwrite) HIStyle *style;
 /**
 * description: The vertical alignment of the title. Can be one of "top", "middle"
-and "bottom". When a value is given, the title behaves as if floating were true.
+and "bottom". When a value is given, the title behaves as if [floating](#title.
+floating) were true.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/verticalalign/ : Chart title in bottom right corner
 * accepted values: ["top", "middle", "bottom"]
 */
@@ -53,8 +54,8 @@ and-string-formatting#html) to render the text.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
-* description: The y position of the title relative to the alignment within chart.
-spacingTop and chart.spacingBottom.
+* description: The y position of the title relative to the alignment within [chart.
+spacingTop](#chart.spacingTop) and chart.spacingBottom.
  By default it depends on the font size.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/y/ : Title inside the plot area
 */

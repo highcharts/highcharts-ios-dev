@@ -87,7 +87,7 @@ and whether the stack is positive or negative.
 @property(nonatomic, readwrite) NSNumber *x;
 /**
 * description: Rotation of the labels in degrees.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/ : Labels rotated 45°
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-rotation/ : Labels rotated 45Â°
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;

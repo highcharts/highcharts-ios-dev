@@ -25,20 +25,27 @@ CSS.
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**
-* description: The end of the value range that the data class represents, relating
-to the point value.
+* description: The end of the value range that the data class represents,
+relating to the point value.
+
+The range of each dataClass is closed in both ends, but can be
+overridden by the next dataClass.
 */
 @property(nonatomic, readwrite) NSNumber *to;
 /**
-* description: The start of the value range that the data class represents, relating
-to the point value.
+* description: The start of the value range that the data class represents,
+relating to the point value.
+
+The range of each dataClass is closed in both ends, but can be
+overridden by the next dataClass.
 */
 @property(nonatomic, readwrite) NSNumber *from;
 /**
-* description: The name of the data class as it appears in the legend. If no name
-is given, it is automatically created based on the from and to
-values. For full programmatic control, legend.labelFormatter can be used. In the formatter, this.from and
-this.to can be accessed.
+* description: The name of the data class as it appears in the legend.
+If no name is given, it is automatically created based on the
+from and to values. For full programmatic control,
+legend.labelFormatter can be used.
+In the formatter, this.from and this.to can be accessed.
 */
 @property(nonatomic, readwrite) NSString *name;
 

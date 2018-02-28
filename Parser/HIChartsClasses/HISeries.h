@@ -6,6 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
+#import "HISummary.h"
 #import "HIPoint.h"
 #import "HIStates.h"
 #import "HITooltip.h"
@@ -20,7 +21,10 @@
 
 
 /**
-* description: General options for all series types.
+* description: Lang configuration for different series types. For more dynamic
+control over the series element descriptions, see
+[accessibility.seriesDescriptionFormatter](accessibility.
+seriesDescriptionFormatter).
 */
 @interface HISeries: HIChartsJSONSerializable
 
@@ -107,6 +111,32 @@ http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/sample
 * demo: http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/ : With no z index, the series defined last are on top,
 			http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/ : with a z index, the series with the highest z index is on top.*/
 @property(nonatomic, readwrite) NSNumber *zIndex;
+/**
+* description: yAxis description for series if there are multiple yAxes in
+the chart.
+*/
+@property(nonatomic, readwrite) NSString *yAxisDescription;
+/**
+* description: xAxis description for series if there are multiple xAxes in
+the chart.
+*/
+@property(nonatomic, readwrite) NSString *xAxisDescription;
+/**
+* description: User supplied description text. This is added after the main
+summary if present.
+*/
+@property(nonatomic, readwrite) NSString *definition;
+/**
+* description: Lang configuration for the series main summary. Each series
+type has two modes:
+	1. This series type is the only series type used in the
+		chart
+	2. This is a combination chart with multiple series types
+
+If a definition does not exist for the specific series type
+and mode, the 'default' lang definitions are used.
+*/
+@property(nonatomic, readwrite) HISummary *summary;
 /**
 * description: Whether to select the series initially. If showCheckbox is true,
 the checkbox next to the series name in the legend will be checked for a
@@ -208,7 +238,8 @@ class names.
 */
 @property(nonatomic, readwrite) HIMarker *marker;
 /**
-* description: Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
+* description: Same as [accessibility.pointDescriptionFormatter](#accessibility.
+pointDescriptionFormatter), but for an individual series. Overrides
 the chart wide configuration.
 */
 @property(nonatomic, readwrite) HIFunction *pointDescriptionFormatter;
@@ -239,7 +270,9 @@ the outline of each shape. The value for the dashStyle include:
 *   LongDashDotDot
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/ : Possible values demonstrated
 https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle/ : Chart suitable for printing in black and white
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",            "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",            "LongDashDot", "LongDashDotDot"]
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
+            "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",
+            "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
@@ -259,7 +292,8 @@ previous, and 0.5 is between this value and the next. Unlike the
 textual options, numeric point placement options won't affect axis
 padding.
 
-Note that pointPlacement needs a pointRange to work. For column series this is computed, but for
+Note that pointPlacement needs a [pointRange](#plotOptions.series.
+pointRange) to work. For column series this is computed, but for
 line-type series it needs to be set.
 
 Defaults to null in cartesian charts, "between" in polar charts.
@@ -358,14 +392,6 @@ animationLimit to Infinity.
 */
 @property(nonatomic, readwrite) NSNumber *animationLimit;
 /**
-* description: Requires the Accessibility module.
-
-A description of the series to add to the screen reader information
-about the series.
-* default: undefined
-*/
-@property(nonatomic, readwrite) NSString *definition;
-/**
 * description: An array specifying which option maps to which key in the data point
 array. This makes it convenient to work with unstructured data arrays
 from different sources.
@@ -436,7 +462,8 @@ can be an object configuration containing color, offsetX, offsetY,
 * description: Enable or disable the initial animation when a series is displayed.
 The animation can also be set as a configuration object. Please
 note that this option only applies to the initial animation of the
-series itself. For other animations, see chart.animation and the animation parameter under the API methods. The
+series itself. For other animations, see [chart.animation](#chart.
+animation) and the animation parameter under the API methods. The
 following properties are supported:
 
 
@@ -488,8 +515,8 @@ interval of the axis ticks, which is independent.
 */
 @property(nonatomic, readwrite) NSString *pointIntervalUnit;
 /**
-* description: Polar charts only. Whether to connect the ends of a line series plot
-across the extremes.
+* description: Polar charts only. Whether to connect the ends of a line series
+plot across the extremes.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-connectends-false/ : Do not connect
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectEnds;

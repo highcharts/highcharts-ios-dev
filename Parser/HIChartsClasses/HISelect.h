@@ -26,7 +26,6 @@ option to true.
 /**
 * description: The width of the point marker's outline.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linewidth/ : 3px line width for selected points
-* default: 0
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
@@ -38,7 +37,7 @@ to the normal state's radius + 2.
 /**
 * description: The fill color of the point marker.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-fillcolor/ : Solid red discs for selected points
-* default: null
+* default: #cccccc
 */
 @property(nonatomic, readwrite) HIColor *fillColor;
 /**

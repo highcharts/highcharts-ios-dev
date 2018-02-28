@@ -16,13 +16,13 @@
 /**
 * description: The Data module provides a simplified interface for adding data to
 a chart from sources like CVS, HTML tables or grid views. See also
-the tutorial article on the Data module](http://www.highcharts.com/docs/working-
+the [tutorial article on the Data module](http://www.highcharts.com/docs/working-
 with-data/data-module).
 
 It requires the modules/data.js file to be loaded.
 
 Please note that the default way of adding data in Highcharts, without
-the need of a module, is through the [series.data
+the need of a module, is through the series.data
 option.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/ : HTML table
 https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/ : CSV
@@ -84,12 +84,14 @@ Valid options include:
 *   dd/mm/YY
 *   mm/dd/YY
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/dateformat-auto/ : Best guess date format
-* accepted values: [undefined, "YYYY/mm/dd", "dd/mm/YYYY", "mm/dd/YYYY", "dd/mm/YYYY", "dd/mm/YY", "mm/dd/YY"]
+* accepted values: [undefined, "YYYY/mm/dd", "dd/mm/YYYY", "mm/dd/YYYY",
+            "dd/mm/YYYY", "dd/mm/YY", "mm/dd/YY"]
 */
 @property(nonatomic, readwrite) NSString *dateFormat;
 /**
-* description: The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id's from your sheet can be
-read from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic
+* description: The Google Spreadsheet worksheet to use in combination with
+googleSpreadsheetKey. The available id's from
+your sheet can be read from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/ : Load a Google Spreadsheet
 */
 @property(nonatomic, readwrite) NSString *googleSpreadsheetWorksheet;
@@ -148,9 +150,11 @@ attempt to deduce the decimal point automatically.
 */
 @property(nonatomic, readwrite) NSString *lineDelimiter;
 /**
-* description: A comma delimited string to be parsed. Related options are startRow, endRow, startColumn
+* description: A comma delimited string to be parsed. Related options are [startRow](#data.
+startRow), endRow, startColumn
 and endColumn to delimit what part of the table
-is used. The lineDelimiter and itemDelimiter options define the CSV delimiter formats.
+is used. The lineDelimiter and [itemDelimiter](#data.
+itemDelimiter) options define the CSV delimiter formats.
 
 The built-in CSV parser doesn't support all flavours of CSV, so in
 some cases it may be necessary to use an external CSV parser. See
@@ -242,7 +246,8 @@ colorIndex.
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
 * description: Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+the ones for [plotOptions.series.dataLabels](#plotOptions.series.
+dataLabels)
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/datalabels/ : Show a label for the last value
 */
 @property(nonatomic, readwrite) id dataLabels;

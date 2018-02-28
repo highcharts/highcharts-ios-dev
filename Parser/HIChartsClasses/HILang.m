@@ -19,6 +19,9 @@
 	if (self.downloadPNG) {
 		params[@"downloadPNG"] = self.downloadPNG;
 	}
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
+	}
 	if (self.shortWeekdays) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.shortWeekdays) {
@@ -142,6 +145,15 @@
 -(void)setDownloadPNG:(NSString *)downloadPNG {
 	_downloadPNG = downloadPNG;
 	[self updateNSObject:@"downloadPNG"];
+}
+
+-(void)setAccessibility:(HIAccessibility *)accessibility {
+	HIAccessibility *oldValue = _accessibility;
+	if(self.accessibility) {
+		[self removeObserver:self forKeyPath:@"accessibility.isUpdated"];
+	}
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
 -(void)setShortWeekdays:(NSArray<NSString *> *)shortWeekdays {

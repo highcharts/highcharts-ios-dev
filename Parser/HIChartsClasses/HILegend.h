@@ -85,9 +85,9 @@ option is set, this defaults to the symbolHeight, otherwise 16.
 */
 @property(nonatomic, readwrite) NSNumber *symbolWidth;
 /**
-* description: Whether to use HTML](http://www.highcharts.com/docs/chart-concepts/labels-
+* description: Whether to [use HTML](http://www.highcharts.com/docs/chart-concepts/labels-
 and-string-formatting#html) to render the legend item texts. Prior
-to 4.1.7, when using HTML, [legend.navigation
+to 4.1.7, when using HTML, legend.navigation
 was disabled.
 * default: false
 */

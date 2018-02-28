@@ -184,7 +184,7 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @property(nonatomic, readwrite) HIFunction *formatter;
 /**
 * description: Rotation of the labels in degrees.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-rotation/ : X axis labels rotated 90°
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-rotation/ : X axis labels rotated 90Â°
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
@@ -203,9 +203,9 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @property(nonatomic, readwrite) NSArray<NSNumber *> *autoRotation;
 /**
 * description: This option defines the point to which the label will be connected.
-It can be either the point which exists in the series - it is referenced
-by the point's id - or a new point with defined x, y properies
-and optionally axes.
+It can be either the point which exists in the series - it is
+referenced by the point's id - or a new point with defined x, y
+properies and optionally axes.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-point/ : Attach annotation to a mock point
 */
 @property(nonatomic, readwrite) HIPoint *point;
@@ -223,7 +223,8 @@ the can be set to 0.
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
 * description: The vertical alignment of the annotation's label.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/ : Set labels position*
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/ : Set labels position
+*
 * accepted values: ["top", "middle", "bottom"]
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
@@ -239,7 +240,8 @@ the can be set to 0.
 */
 @property(nonatomic, readwrite) NSString *text;
 /**
-* description: Whether to hide the annotation's label that is outside the plot area.
+* description: Whether to hide the annotation's label that is outside the plot
+area.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/ : Crop or justify labels
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *crop;
@@ -251,7 +253,8 @@ the can be set to 0.
 /**
 * description: The name of a symbol to use for the border around the label.
 Symbols are predefined functions on the Renderer object.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shapes/ : Available shapes for labels*
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shapes/ : Available shapes for labels
+*
 */
 @property(nonatomic, readwrite) NSString *shape;
 /**
@@ -267,7 +270,8 @@ Symbols are predefined functions on the Renderer object.
 /**
 * description: How to handle the annotation's label that flow outside the plot
 area. The justify option aligns the label inside the plot area.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/ : Crop or justify labels*
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/ : Crop or justify labels
+*
 * accepted values: ["none", "justify"]
 */
 @property(nonatomic, readwrite) NSString *overflow;

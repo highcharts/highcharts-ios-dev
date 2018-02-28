@@ -145,7 +145,8 @@ the dataLabels.style option.
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 * description: Whether to allow data labels to overlap. To make the labels less
-sensitive for overlapping, the dataLabels.padding can be set to 0.
+sensitive for overlapping, the [dataLabels.padding](#plotOptions.
+series.dataLabels.padding) can be set to 0.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-allowoverlap-false/ : Don't allow overlap
 * default: false
 */

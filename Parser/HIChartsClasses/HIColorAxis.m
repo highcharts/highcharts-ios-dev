@@ -58,6 +58,9 @@
 	if (self.type) {
 		params[@"type"] = self.type;
 	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
 	if (self.tickPixelInterval) {
 		params[@"tickPixelInterval"] = self.tickPixelInterval;
 	}
@@ -156,9 +159,6 @@
 	}
 	if (self.softMin) {
 		params[@"softMin"] = self.softMin;
-	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
 	}
 	if (self.ceiling) {
 		params[@"ceiling"] = self.ceiling;
@@ -278,6 +278,15 @@
 -(void)setType:(NSString *)type {
 	_type = type;
 	[self updateNSObject:@"type"];
+}
+
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	if(self.events) {
+		[self removeObserver:self forKeyPath:@"events.isUpdated"];
+	}
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setTickPixelInterval:(NSNumber *)tickPixelInterval {
@@ -431,15 +440,6 @@
 -(void)setSoftMin:(NSNumber *)softMin {
 	_softMin = softMin;
 	[self updateNSObject:@"softMin"];
-}
-
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
-	if(self.events) {
-		[self removeObserver:self forKeyPath:@"events.isUpdated"];
-	}
-	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setCeiling:(NSNumber *)ceiling {

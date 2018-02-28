@@ -10,6 +10,9 @@
 #import "HIColor.h"
 
 
+/**
+* description: The bottom of the frame around a 3D chart.
+*/
 @interface HIBottom: HIChartsJSONSerializable
 
 /**

@@ -39,15 +39,6 @@
 	if (self.innerSize) {
 		params[@"innerSize"] = self.innerSize;
 	}
-	if (self.slicedOffset) {
-		params[@"slicedOffset"] = self.slicedOffset;
-	}
-	if (self.ignoreHiddenPoint) {
-		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
-	}
-	if (self.clip) {
-		params[@"clip"] = self.clip;
-	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.center) {
@@ -59,6 +50,12 @@
 			}
 		}
 		params[@"center"] = array;
+	}
+	if (self.clip) {
+		params[@"clip"] = self.clip;
+	}
+	if (self.slicedOffset) {
+		params[@"slicedOffset"] = self.slicedOffset;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -76,11 +73,17 @@
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
+	if (self.legendType) {
+		params[@"legendType"] = self.legendType;
+	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
 	}
 	if (self.size) {
 		params[@"size"] = self.size;
+	}
+	if (self.ignoreHiddenPoint) {
+		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
 	}
 	return params;
 }
@@ -131,14 +134,10 @@
 	[self updateNSObject:@"innerSize"];
 }
 
--(void)setSlicedOffset:(NSNumber *)slicedOffset {
-	_slicedOffset = slicedOffset;
-	[self updateNSObject:@"slicedOffset"];
-}
-
--(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
-	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:@"ignoreHiddenPoint"];
+-(void)setCenter:(NSArray *)center {
+	NSArray *oldValue = _center;
+	_center = center;
+	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
 }
 
 -(void)setClip:(NSNumber *)clip {
@@ -146,10 +145,9 @@
 	[self updateNSObject:@"clip"];
 }
 
--(void)setCenter:(NSArray *)center {
-	NSArray *oldValue = _center;
-	_center = center;
-	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
+-(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	_slicedOffset = slicedOffset;
+	[self updateNSObject:@"slicedOffset"];
 }
 
 -(void)setDepth:(NSNumber *)depth {
@@ -173,6 +171,11 @@
 	[self updateNSObject:@"borderWidth"];
 }
 
+-(void)setLegendType:(NSString *)legendType {
+	_legendType = legendType;
+	[self updateNSObject:@"legendType"];
+}
+
 -(void)setStartAngle:(NSNumber *)startAngle {
 	_startAngle = startAngle;
 	[self updateNSObject:@"startAngle"];
@@ -181,6 +184,11 @@
 -(void)setSize:(id)size {
 	_size = size;
 	[self updateNSObject:@"size"];
+}
+
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:@"ignoreHiddenPoint"];
 }
 
 @end

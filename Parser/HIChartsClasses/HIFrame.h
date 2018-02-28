@@ -25,6 +25,9 @@ a bottom, front and back panel.
 * description: The right of the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HIRight *right;
+/**
+* description: The bottom of the frame around a 3D chart.
+*/
 @property(nonatomic, readwrite) HIBottom *bottom;
 /**
 * description: The top of the frame around a 3D chart.

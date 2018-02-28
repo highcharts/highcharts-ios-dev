@@ -23,13 +23,15 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @interface HIAnnotations: HIChartsJSONSerializable
 
 /**
-* description: An array of shapes for the annotation. For options that apply to multiple
-shapes, then can be added to the [shapeOptions](annotations.shapeOptions.html).
+* description: An array of shapes for the annotation. For options that apply to
+multiple shapes, then can be added to the
+[shapeOptions](annotations.shapeOptions.html).
 */
 @property(nonatomic, readwrite) NSArray <HIShapes *> *shapes;
 /**
-* description: An array of labels for the annotation. For options that apply to multiple
-labels, they can be added to the [labelOptions](annotations.labelOptions.html).
+* description: An array of labels for the annotation. For options that apply to
+multiple labels, they can be added to the
+[labelOptions](annotations.labelOptions.html).
 */
 @property(nonatomic, readwrite) NSArray <HILabels *> *labels;
 /**

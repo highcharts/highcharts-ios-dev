@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIChartsJSONSerializable.h"
+#import "HIAccessibility.h"
 
 
 /**
@@ -17,9 +17,9 @@ set it before any chart is initialized.
 Highcharts.setOptions({
     lang: {
         months: [
-            'Janvier', 'Février', 'Mars', 'Avril',
-            'Mai', 'Juin', 'Juillet', 'Août',
-            'Septembre', 'Octobre', 'Novembre', 'Décembre'
+            'Janvier', 'FĂŠvrier', 'Mars', 'Avril',
+            'Mai', 'Juin', 'Juillet', 'AoĂťt',
+            'Septembre', 'Octobre', 'Novembre', 'DĂŠcembre'
         ],
         weekdays: [
             'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
@@ -44,6 +44,22 @@ Highcharts.setOptions({
 */
 @property(nonatomic, readwrite) NSString *downloadPNG;
 /**
+* description: Configure the accessibility strings in the chart. Requires the 
+[accessibility module](//code.highcharts.com/modules/accessibility.
+js) to be loaded. For a description of the module and information
+on its features, see [Highcharts Accessibility](http://www.highcharts.
+com/docs/chart-concepts/accessibility).
+
+For more dynamic control over the accessibility functionality, see
+[accessibility.pointDescriptionFormatter](accessibility.
+pointDescriptionFormatter),
+[accessibility.seriesDescriptionFormatter](accessibility.
+seriesDescriptionFormatter), and
+[accessibility.screenReaderSectionFormatter](accessibility.
+screenReaderSectionFormatter).
+*/
+@property(nonatomic, readwrite) HIAccessibility *accessibility;
+/**
 * description: Short week days, starting Sunday. If not specified, Highcharts uses
 the first three letters of the lang.weekdays option.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/ : Finnish two-letter abbreviations
@@ -52,6 +68,7 @@ the first three letters of the lang.weekdays option.
 /**
 * description: The text to display when the chart contains no data. Requires the
 no-data module, see noData.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line : No-data text
 * default: No data to display
 */
 @property(nonatomic, readwrite) NSString *noData;

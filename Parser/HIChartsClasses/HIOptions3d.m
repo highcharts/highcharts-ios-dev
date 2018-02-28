@@ -10,8 +10,8 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.fitToPlot) {
-		params[@"fitToPlot"] = self.fitToPlot;
+	if (self.viewDistance) {
+		params[@"viewDistance"] = self.viewDistance;
 	}
 	if (self.frame) {
 		params[@"frame"] = [self.frame getParams];
@@ -22,14 +22,14 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.depth) {
-		params[@"depth"] = self.depth;
-	}
 	if (self.beta) {
 		params[@"beta"] = self.beta;
 	}
-	if (self.viewDistance) {
-		params[@"viewDistance"] = self.viewDistance;
+	if (self.depth) {
+		params[@"depth"] = self.depth;
+	}
+	if (self.fitToPlot) {
+		params[@"fitToPlot"] = self.fitToPlot;
 	}
 	if (self.alpha) {
 		params[@"alpha"] = self.alpha;
@@ -39,9 +39,9 @@
 
 # pragma mark - Setters
 
--(void)setFitToPlot:(NSNumber *)fitToPlot {
-	_fitToPlot = fitToPlot;
-	[self updateNSObject:@"fitToPlot"];
+-(void)setViewDistance:(NSNumber *)viewDistance {
+	_viewDistance = viewDistance;
+	[self updateNSObject:@"viewDistance"];
 }
 
 -(void)setFrame:(HIFrame *)frame {
@@ -63,19 +63,19 @@
 	[self updateNSObject:@"enabled"];
 }
 
--(void)setDepth:(NSNumber *)depth {
-	_depth = depth;
-	[self updateNSObject:@"depth"];
-}
-
 -(void)setBeta:(NSNumber *)beta {
 	_beta = beta;
 	[self updateNSObject:@"beta"];
 }
 
--(void)setViewDistance:(NSNumber *)viewDistance {
-	_viewDistance = viewDistance;
-	[self updateNSObject:@"viewDistance"];
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
+}
+
+-(void)setFitToPlot:(NSNumber *)fitToPlot {
+	_fitToPlot = fitToPlot;
+	[self updateNSObject:@"fitToPlot"];
 }
 
 -(void)setAlpha:(NSNumber *)alpha {

@@ -27,7 +27,8 @@ a percentage string, like "100%", or as a pixel number, like 100.
 * description: In a gauge chart, this option determines the inner radius of the
 plot band that stretches along the perimeter. It can be given as
 a percentage string, like "100%", or as a pixel number, like 100.
-By default, the inner radius is controlled by the thickness option.
+By default, the inner radius is controlled by the [thickness](#yAxis.
+plotBands.thickness) option.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge : Gauge plot band
 * default: null
 */

@@ -19,7 +19,8 @@ overwritten by config for a specific shape.
 
 /**
 * description: The pixel stroke width of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation*
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+*
 */
 @property(nonatomic, readwrite) NSNumber *strokeWidth;
 /**
@@ -34,12 +35,14 @@ overwritten by config for a specific shape.
 @property(nonatomic, readwrite) NSNumber *width;
 /**
 * description: The color of the shape's stroke.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation*
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+*
 */
 @property(nonatomic, readwrite) HIColor *stroke;
 /**
 * description: The radius of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation*
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+*
 */
 @property(nonatomic, readwrite) NSNumber *r;
 /**
@@ -50,7 +53,8 @@ overwritten by config for a specific shape.
 @property(nonatomic, readwrite) NSString *type;
 /**
 * description: The color of the shape's fill.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation*
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+*
 */
 @property(nonatomic, readwrite) HIColor *fill;
 

@@ -16,8 +16,8 @@ it is inherited from chart.type.
 
 For options that apply to multiple series, it is recommended to add
 them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-pie.
+To apply to all series of this specific type, apply it to [plotOptions.
+pie](#plotOptions.pie).
 */
 @interface HIPie: HISeries
 
@@ -54,25 +54,6 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ innerSize;
 /**
-* description: If a point is sliced, moved out from the center, how many pixels
-should it be moved?.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/ : 20px offset
-* default: 10
-*/
-@property(nonatomic, readwrite) NSNumber *slicedOffset;
-/**
-* description: Equivalent to chart.ignoreHiddenSeries,
-this option tells whether the series shall be redrawn as if the
-hidden point were null.
-
-The default value changed from false to true with Highcharts
-3.0.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
-@property(nonatomic, readwrite) NSNumber /* Bool */ *clip;
-/**
 * description: The center of the pie chart relative to the plot area. Can be percentages
 or pixel values. The default behaviour (as of 3.0) is to center
 the pie so that all slices and data labels are within the plot area.
@@ -83,6 +64,14 @@ should be explicitly set, for example to ["50%", "50%"].
 * default: [null, null]
 */
 @property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *clip;
+/**
+* description: If a point is sliced, moved out from the center, how many pixels
+should it be moved?.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/ : 20px offset
+* default: 10
+*/
+@property(nonatomic, readwrite) NSNumber *slicedOffset;
 /**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * default: 0
@@ -114,6 +103,7 @@ In styled mode, the border stroke width is given in the .highcharts-point class.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
+@property(nonatomic, readwrite) NSString *legendType;
 /**
 * description: The start angle of the pie slices in degrees where 0 is top and 90
 right.
@@ -125,13 +115,26 @@ right.
 * description: The diameter of the pie relative to the plot area. Can be a percentage
 or pixel value. Pixel values are given as integers. The default
 behaviour (as of 3.0) is to scale to the plot area and give room
-for data labels within the plot area. As a consequence, the size
+for data labels within the plot area.
+slicedOffset is also included 
+in the default size calculation. As a consequence, the size
 of the pie may vary when points are updated and data labels more
 around. In that case it is best to set a fixed value, for example
 "75%".
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/ : Smaller pie
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
+/**
+* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+
+The default value changed from false to true with Highcharts
+3.0.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
 
 -(NSDictionary *)getParams;
 

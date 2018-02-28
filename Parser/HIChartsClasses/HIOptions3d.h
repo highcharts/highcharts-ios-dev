@@ -18,11 +18,12 @@ highcharts-3d.js, found in the download package or online at
 @interface HIOptions3d: HIChartsJSONSerializable
 
 /**
-* description: Whether the 3d box should automatically adjust to the chart plot
-area.
-* default: true
+* description: Defines the distance the viewer is standing in front of the chart,
+this setting is important to calculate the perspective effect
+in column and scatter charts. It is not used for 3D pie charts.
+* default: 100
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *fitToPlot;
+@property(nonatomic, readwrite) NSNumber *viewDistance;
 /**
 * description: Provides the option to draw a frame around the charts by defining
 a bottom, front and back panel.
@@ -41,22 +42,21 @@ edge.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
-* description: The total depth of the chart.
-* default: 100
-*/
-@property(nonatomic, readwrite) NSNumber *depth;
-/**
 * description: One of the two rotation angles for the chart.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *beta;
 /**
-* description: Defines the distance the viewer is standing in front of the chart,
-this setting is important to calculate the perspective effect
-in column and scatter charts. It is not used for 3D pie charts.
+* description: The total depth of the chart.
 * default: 100
 */
-@property(nonatomic, readwrite) NSNumber *viewDistance;
+@property(nonatomic, readwrite) NSNumber *depth;
+/**
+* description: Whether the 3d box should automatically adjust to the chart plot
+area.
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *fitToPlot;
 /**
 * description: One of the two rotation angles for the chart.
 * default: 0

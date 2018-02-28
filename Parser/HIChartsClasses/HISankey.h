@@ -16,8 +16,8 @@ specified, it is inherited from chart.type.
 
 For options that apply to multiple series, it is recommended to add
 them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-sankey.
+To apply to all series of this specific type, apply it to [plotOptions.
+sankey](#plotOptions.sankey).
 */
 @interface HISankey: HISeries
 
@@ -60,9 +60,11 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @property(nonatomic, readwrite) NSNumber *minPointLength;
 /**
 * description: A series specific or series type specific color set to apply instead
-of the global colors when colorByPoint is true.
+of the global colors when [colorByPoint](#plotOptions.
+column.colorByPoint) is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;
 /**
 * description: A collection of options for the individual nodes. The nodes in a sankey 
 diagram are auto-generated instances of Highcharts.Point, but options can

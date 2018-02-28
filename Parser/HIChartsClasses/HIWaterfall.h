@@ -64,7 +64,7 @@ The default null means it is computed automatically, but this option
 can be used to override the automatic value.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/ : Set the point range to one day on a data set with one week between the points
 */
-@property(nonatomic, readwrite) id pointRange;
+@property(nonatomic, readwrite) NSNumber *pointRange;
 /**
 * description: The minimal height for a column or width for a bar. By default,
 0 values are not shown. To visualize a 0 (or close to zero) point,
@@ -83,9 +83,11 @@ highcharts-3d.js.
 @property(nonatomic, readwrite) NSNumber *groupZPadding;
 /**
 * description: A series specific or series type specific color set to apply instead
-of the global colors when colorByPoint is true.
+of the global colors when [colorByPoint](#plotOptions.
+column.colorByPoint) is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;
 /**
 * description: 3D columns only. The color of the edges. Similar to borderColor,
  except it defaults to the same color as the column.

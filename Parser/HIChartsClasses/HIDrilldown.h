@@ -18,7 +18,8 @@ resolution data through clicking on chart items like columns or pie slices.
 
 The drilldown feature requires the drilldown.js file to be loaded, 
 found in the modules directory of the download package, or online at 
-(code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/drilldown.js].
+(code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/
+drilldown.js].
 */
 @interface HIDrilldown: HIChartsJSONSerializable
 
@@ -69,7 +70,8 @@ animation-easing/).
 @property(nonatomic, readwrite) HIAnimation *animation;
 /**
 * description: Options for the drill up button that appears when drilling down
-on a series. The text for the button is defined in lang.drillUpText.
+on a series. The text for the button is defined in
+lang.drillUpText.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/ : Drill up button
 */
 @property(nonatomic, readwrite) HIDrillUpButton *drillUpButton;

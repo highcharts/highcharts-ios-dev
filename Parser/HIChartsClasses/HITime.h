@@ -21,7 +21,7 @@ The common use case is that all charts in the same Highcharts object
 share the same time settings, in which case the global settings are set
 using setOptions.
 
-js
+`js
 // Apply time settings globally
 Highcharts.setOptions({
     time: {
@@ -43,9 +43,7 @@ console.log(
 	   'Current time in New York',
 	    chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now())
 );
-
-Since v6.0.5, the time options were moved from the global obect to the
-time object, and time options can be set on each individual chart.
+Since v6.0.5, the time options were moved from theglobalobect to thetime` object, and time options can be set on each individual chart.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/timezone/ : Set the timezone globally
 https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/individual/ : Set the timezone per chart instance
 */
@@ -58,9 +56,9 @@ handle Jalali dates.
 */
 @property(nonatomic, readwrite) id Date;
 /**
-* description: Requires moment.js](http://momentjs.com/). If the timezone option
+* description: Requires [moment.js](http://momentjs.com/). If the timezone option
 is specified, it creates a default
-[getTimezoneOffset function that looks
+getTimezoneOffset function that looks
 up the specified timezone in moment.js. If moment.js is not included,
 this throws a Highcharts error in the console, but does not crash the
 chart.

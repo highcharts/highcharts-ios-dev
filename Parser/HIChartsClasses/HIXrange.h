@@ -61,9 +61,11 @@ highcharts-3d.js.
 @property(nonatomic, readwrite) NSNumber *groupZPadding;
 /**
 * description: A series specific or series type specific color set to apply instead
-of the global colors when colorByPoint is true.
+of the global colors when [colorByPoint](#plotOptions.
+column.colorByPoint) is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;
 /**
 * description: The color of the border surrounding each column or bar.
 

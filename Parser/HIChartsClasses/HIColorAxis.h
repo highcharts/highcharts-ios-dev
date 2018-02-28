@@ -20,10 +20,10 @@ will appear as a gradient or as separate items inside the legend,
 depending on whether the axis is scalar or based on data classes.
 
 For supported color formats, see the 
-docs article about colors](http://www.highcharts.com/docs/chart-design-and-style/colors).
+[docs article about colors](http://www.highcharts.com/docs/chart-design-and-style/colors).
 
 A scalar color axis is represented by a gradient. The colors either range
-between the [minColor and the maxColor,
+between the minColor and the maxColor,
 or for more fine grained control the colors can be
 defined in stops. Often times, the color axis needs
 to be adjusted to get the right color spread for the data. In addition to
@@ -62,11 +62,13 @@ Highcharts API.](/highcharts#xAxis.labels)
 */
 @property(nonatomic, readwrite) HILabels *labels;
 /**
-* description: The color to represent the maximum of the color axis. Unless dataClasses or stops are set, the gradient
+* description: The color to represent the maximum of the color axis. Unless [dataClasses](#colorAxis.
+dataClasses) or stops are set, the gradient
 ends at this value.
 
 If dataClasses are set, the color is based on minColor and maxColor
-unless a color is set for each data class, or the dataClassColor is set.
+unless a color is set for each data class, or the [dataClassColor](#colorAxis.
+dataClassColor) is set.
 * default: #003399
 */
 @property(nonatomic, readwrite) HIColor *maxColor;
@@ -124,6 +126,10 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 */
 @property(nonatomic, readwrite) NSString *type;
 /**
+* description: Event handlers for the axis.
+*/
+@property(nonatomic, readwrite) HIEvents *events;
+/**
 * description: If tickInterval is null this option
 sets the approximate pixel interval of the tick marks.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/ : 50 px on X axis
@@ -169,11 +175,13 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 */
 @property(nonatomic, readwrite) HIColor *gridLineColor;
 /**
-* description: The color to represent the minimum of the color axis. Unless dataClasses or stops are set, the gradient
+* description: The color to represent the minimum of the color axis. Unless [dataClasses](#colorAxis.
+dataClasses) or stops are set, the gradient
 starts at this value.
 
 If dataClasses are set, the color is based on minColor and maxColor
-unless a color is set for each data class, or the dataClassColor is set.
+unless a color is set for each data class, or the [dataClassColor](#colorAxis.
+dataClassColor) is set.
 * default: #e6ebf5
 */
 @property(nonatomic, readwrite) HIColor *minColor;
@@ -286,7 +294,8 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
 * description: A callback function returning array defining where the ticks are
-laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
+laid out on the axis. This overrides the default behaviour of [tickPixelInterval](#xAxis.
+tickPixelInterval) and tickInterval. The automatic
 tick positions are accessible through this.tickPositions and can
 be modified by the callback.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
@@ -298,7 +307,9 @@ see [this demonstration](http://jsfiddle.net/gh/get/library/pure/
 highcharts/highcharts/tree/master/samples/highcharts/plotoptions/
 series-dashstyle-all/).
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinedashstyle/ : Long dashes on minor grid lines
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",             "DashDot", "LongDashDot", "LongDashDotDot"]
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
+             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",
+             "DashDot", "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
 @property(nonatomic, readwrite) NSString *minorGridLineDashStyle;
@@ -348,10 +359,6 @@ data minimum is lower, the axis will flex to show all data.
 */
 @property(nonatomic, readwrite) NSNumber *softMin;
 /**
-* description: Event handlers for the axis.
-*/
-@property(nonatomic, readwrite) HIEvents *events;
-/**
 * description: The highest allowed value for automatically computed axis extremes.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/floor-ceiling/ : Floor and ceiling
 */
@@ -362,7 +369,9 @@ data minimum is lower, the axis will flex to show all data.
 highcharts/highcharts/tree/master/samples/highcharts/plotoptions/
 series-dashstyle-all/).
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinedashstyle/ : Long dashes
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",             "DashDot", "LongDashDot", "LongDashDotDot"]
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
+             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",
+             "DashDot", "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
 @property(nonatomic, readwrite) NSString *gridLineDashStyle;

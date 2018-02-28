@@ -41,7 +41,8 @@ is set using axis.setExtremes(), the minPadding will be ignored.
 * description: If tickInterval is null this option sets the approximate pixel
 interval of the tick marks. Not applicable to categorized axis.
 
-The tick interval is also influenced by the minTickInterval option, that, by default prevents ticks from being
+The tick interval is also influenced by the [minTickInterval](#xAxis.
+minTickInterval) option, that, by default prevents ticks from being
 denser than the data points.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/ : 50 px on X axis
 */
@@ -211,7 +212,8 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
 * description: A callback function returning array defining where the ticks are
-laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
+laid out on the axis. This overrides the default behaviour of [tickPixelInterval](#xAxis.
+tickPixelInterval) and tickInterval. The automatic
 tick positions are accessible through this.tickPositions and can
 be modified by the callback.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/ : Demo of tickPositions and tickPositioner
@@ -230,7 +232,9 @@ see [this demonstration](http://jsfiddle.net/gh/get/library/pure/
 highcharts/highcharts/tree/master/samples/highcharts/plotoptions/
 series-dashstyle-all/).
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinedashstyle/ : Long dashes on minor grid lines
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",             "DashDot", "LongDashDot", "LongDashDotDot"]
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
+             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",
+             "DashDot", "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
 @property(nonatomic, readwrite) NSString *minorGridLineDashStyle;
@@ -339,7 +343,9 @@ In styled mode, the crosshairs are styled in the
 highcharts/highcharts/tree/master/samples/highcharts/plotoptions/
 series-dashstyle-all/).
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinedashstyle/ : Long dashes
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",             "DashDot", "LongDashDot", "LongDashDotDot"]
+* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
+             "ShortDashDotDot", "Dot", "Dash" ,"LongDash",
+             "DashDot", "LongDashDot", "LongDashDotDot"]
 * default: Solid
 */
 @property(nonatomic, readwrite) NSString *gridLineDashStyle;
@@ -376,8 +382,8 @@ be rounded up.
 
 If a tickAmount is set, the axis may be extended
 beyond the set max in order to reach the given number of ticks. The
-same may happen in a chart with multiple axes, determined by chart.
-alignTicks, where a tickAmount is applied internally.
+same may happen in a chart with multiple axes, determined by [chart.
+alignTicks](#chart), where a tickAmount is applied internally.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/ : Y axis max of 200
 https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-logarithmic/ : Y axis max on logarithmic axis
 */
@@ -463,7 +469,8 @@ two points on the axis.
 @property(nonatomic, readwrite) NSNumber *minTickInterval;
 /**
 * description: The interval of the tick marks in axis units. When null, the tick
-interval is computed to approximately follow the tickPixelInterval on linear and datetime axes. On categorized axes,
+interval is computed to approximately follow the [tickPixelInterval](#xAxis.
+tickPixelInterval) on linear and datetime axes. On categorized axes,
 a null tickInterval will default to 1, one category. Note that
 datetime axes are based on milliseconds, so for example an interval
 of one day is expressed as 24 * 3600 * 1000.

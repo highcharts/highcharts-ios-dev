@@ -88,6 +88,7 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 * default: 0
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ innerSize;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *clip;
 /**
 * description: If a point is sliced, moved out from the center, how many pixels
 should it be moved?.
@@ -95,18 +96,6 @@ should it be moved?.
 * default: 10
 */
 @property(nonatomic, readwrite) NSNumber *slicedOffset;
-/**
-* description: Equivalent to chart.ignoreHiddenSeries,
-this option tells whether the series shall be redrawn as if the
-hidden point were null.
-
-The default value changed from false to true with Highcharts
-3.0.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
-@property(nonatomic, readwrite) NSNumber /* Bool */ *clip;
 /**
 * description: The thickness of a 3D pie. Requires highcharts-3d.js
 * default: 0
@@ -138,6 +127,7 @@ In styled mode, the border stroke width is given in the .highcharts-point class.
 * default: 1
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
+@property(nonatomic, readwrite) NSString *legendType;
 /**
 * description: The start angle of the pie slices in degrees where 0 is top and 90
 right.
@@ -145,6 +135,17 @@ right.
 * default: 0
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
+/**
+* description: Equivalent to chart.ignoreHiddenSeries,
+this option tells whether the series shall be redrawn as if the
+hidden point were null.
+
+The default value changed from false to true with Highcharts
+3.0.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/ : True, the hiddden point is ignored
+* default: true
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;
 
 -(NSDictionary *)getParams;
 

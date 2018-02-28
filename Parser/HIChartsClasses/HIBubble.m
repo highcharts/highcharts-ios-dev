@@ -64,7 +64,7 @@
 	[self updateNSObject:@"minSize"];
 }
 
--(void)setMaxSize:(NSString *)maxSize {
+-(void)setMaxSize:(id)maxSize {
 	_maxSize = maxSize;
 	[self updateNSObject:@"maxSize"];
 }

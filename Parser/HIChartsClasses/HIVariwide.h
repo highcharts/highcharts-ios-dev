@@ -16,8 +16,8 @@ not specified, it is inherited from chart.type.
 
 For options that apply to multiple series, it is recommended to add
 them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-variwide.
+To apply to all series of this specific type, apply it to [plotOptions.
+variwide](#plotOptions.variwide).
 */
 @interface HIVariwide: HISeries
 
@@ -53,7 +53,7 @@ The default null means it is computed automatically, but this option
 can be used to override the automatic value.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/ : Set the point range to one day on a data set with one week between the points
 */
-@property(nonatomic, readwrite) id pointRange;
+@property(nonatomic, readwrite) NSNumber *pointRange;
 /**
 * description: The minimal height for a column or width for a bar. By default,
 0 values are not shown. To visualize a 0 (or close to zero) point,
@@ -66,9 +66,11 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 @property(nonatomic, readwrite) NSNumber *minPointLength;
 /**
 * description: A series specific or series type specific color set to apply instead
-of the global colors when colorByPoint is true.
+of the global colors when [colorByPoint](#plotOptions.
+column.colorByPoint) is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;
 /**
 * description: The color of the border surrounding each column or bar.
 

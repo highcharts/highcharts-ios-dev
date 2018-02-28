@@ -15,8 +15,8 @@ not specified, it is inherited from chart.type.
 
 For options that apply to multiple series, it is recommended to add
 them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-bubble.
+To apply to all series of this specific type, apply it to [plotOptions.
+bubble](#plotOptions.bubble).
 */
 @interface HIBubble: HISeries
 
@@ -58,7 +58,7 @@ Can be either pixels (when no unit is given), or a percentage of
 the smallest one of the plot width and height.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-size/ : Bubble size
 */
-@property(nonatomic, readwrite) NSString *maxSize;
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ maxSize;
 /**
 * description: When displayNegative is false,
 bubbles with lower Z values are skipped. When displayNegative

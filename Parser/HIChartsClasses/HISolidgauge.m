@@ -18,14 +18,11 @@
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
-	if (self.rounded) {
-		params[@"rounded"] = self.rounded;
-	}
 	if (self.overshoot) {
 		params[@"overshoot"] = self.overshoot;
 	}
-	if (self.wrap) {
-		params[@"wrap"] = self.wrap;
+	if (self.rounded) {
+		params[@"rounded"] = self.rounded;
 	}
 	return params;
 }
@@ -37,19 +34,14 @@
 	[self updateNSObject:@"colorByPoint"];
 }
 
--(void)setRounded:(NSNumber *)rounded {
-	_rounded = rounded;
-	[self updateNSObject:@"rounded"];
-}
-
 -(void)setOvershoot:(NSNumber *)overshoot {
 	_overshoot = overshoot;
 	[self updateNSObject:@"overshoot"];
 }
 
--(void)setWrap:(NSNumber *)wrap {
-	_wrap = wrap;
-	[self updateNSObject:@"wrap"];
+-(void)setRounded:(NSNumber *)rounded {
+	_rounded = rounded;
+	[self updateNSObject:@"rounded"];
 }
 
 @end

@@ -106,6 +106,8 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 * description: Options for displaying a message like "No data to display". 
 This feature requires the file no-data-to-display.js to be loaded in the
 page. The actual text to display is set in the lang.noData option.
+* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line : Line chart with no-data module
+https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-pie : Pie chart with no-data module
 */
 @property(nonatomic, readwrite) HINoData *noData;
 
@@ -137,7 +139,8 @@ type. The config objects for each series can also be overridden for
 each series item as given in the series array.
 
 Configuration options for the series are given in three levels. Options
-for all series in a chart are given in the plotOptions.series object. Then options for all series of a specific type are
+for all series in a chart are given in the [plotOptions.series](#plotOptions.
+series) object. Then options for all series of a specific type are
 given in the plotOptions of that type, for example plotOptions.line.
 Next, options for one single series are given in the series array.
 */
@@ -154,11 +157,11 @@ to be rendered by WebGL instead of the default SVG. This allows hundreds of
 thousands of data points to be rendered in milliseconds. In addition to the
 WebGL rendering it saves time by skipping processing and inspection of the
 data wherever possible. This introduces some limitations to what features are
-available in Boost mode. See the docs](https://www.highcharts.com/docs/advanced-chart-features/boost-module)
+available in Boost mode. See [the docs](https://www.highcharts.com/docs/advanced-chart-features/boost-module)
 for details.
 
 In addition to the global boost option, each series has a
-[boostThreshold that defines when the
+boostThreshold that defines when the
 boost should kick in.
 
 Requires the modules/boost.js module.
@@ -232,20 +235,21 @@ resolution data through clicking on chart items like columns or pie slices.
 
 The drilldown feature requires the drilldown.js file to be loaded, 
 found in the modules directory of the download package, or online at 
-(code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/drilldown.js].
+(code.highcharts.com/modules/drilldown.js)[code.highcharts.com/modules/
+drilldown.js].
 */
 @property(nonatomic, readwrite) HIDrilldown *drilldown;
 
 /**
 * description: The Data module provides a simplified interface for adding data to
 a chart from sources like CVS, HTML tables or grid views. See also
-the tutorial article on the Data module](http://www.highcharts.com/docs/working-
+the [tutorial article on the Data module](http://www.highcharts.com/docs/working-
 with-data/data-module).
 
 It requires the modules/data.js file to be loaded.
 
 Please note that the default way of adding data in Highcharts, without
-the need of a module, is through the [series.data
+the need of a module, is through the series.data
 option.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/ : HTML table
 https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/ : CSV
@@ -269,10 +273,10 @@ will appear as a gradient or as separate items inside the legend,
 depending on whether the axis is scalar or based on data classes.
 
 For supported color formats, see the 
-docs article about colors](http://www.highcharts.com/docs/chart-design-and-style/colors).
+[docs article about colors](http://www.highcharts.com/docs/chart-design-and-style/colors).
 
 A scalar color axis is represented by a gradient. The colors either range
-between the [minColor and the maxColor,
+between the minColor and the maxColor,
 or for more fine grained control the colors can be
 defined in stops. Often times, the color axis needs
 to be adjusted to get the right color spread for the data. In addition to
@@ -301,7 +305,7 @@ The common use case is that all charts in the same Highcharts object
 share the same time settings, in which case the global settings are set
 using setOptions.
 
-js
+`js
 // Apply time settings globally
 Highcharts.setOptions({
     time: {
@@ -323,9 +327,7 @@ console.log(
 	   'Current time in New York',
 	    chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now())
 );
-
-Since v6.0.5, the time options were moved from the global obect to the
-time object, and time options can be set on each individual chart.
+Since v6.0.5, the time options were moved from theglobalobect to thetime` object, and time options can be set on each individual chart.
 * demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/timezone/ : Set the timezone globally
 https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/individual/ : Set the timezone per chart instance
 */

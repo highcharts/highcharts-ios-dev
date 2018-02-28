@@ -120,8 +120,8 @@ https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/sampl
 * description: In styled mode, this sets how many colors the class names
 should rotate between. With ten colors, series (or points) are
 given class names like highcharts-color-0, highcharts-color-0
-...] highcharts-color-9. The equivalent in non-styled mode
-is to set colors using the [colors setting.
+[...] highcharts-color-9. The equivalent in non-styled mode
+is to set colors using the colors setting.
 * default: 10
 */
 @property(nonatomic, readwrite) NSNumber *colorCount;
@@ -198,7 +198,8 @@ is calculated from the offset width of the containing element.
 disabled throughout the chart by setting it to false here. It can
 be overridden for each individual API method as a function parameter.
 The only animation not affected by this option is the initial series
-animation, see plotOptions.series.animation.
+animation, see [plotOptions.series.animation](#plotOptions.series.
+animation).
 
 The animation can either be set as a boolean or a configuration
 object. If true, it will use the 'swing' jQuery easing and a
