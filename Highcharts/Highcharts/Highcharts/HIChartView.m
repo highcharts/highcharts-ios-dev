@@ -1,5 +1,5 @@
 //
-//  HIGView.m
+//  HIChartView.m
 //  Highcharts
 //
 //  License: www.highcharts.com/license
