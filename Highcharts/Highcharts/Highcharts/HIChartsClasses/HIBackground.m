@@ -17,6 +17,7 @@
 		params[@"outerRadius"] = self.outerRadius;
 	}
 	if (self.from) {
+        params[@"from"] = self.from;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -52,7 +53,7 @@
 	[self updateNSObject:@"outerRadius"];
 }
 
--(void)setFrom:(id)from {
+-(void)setFrom:(NSNumber *)from {
 	_from = from;
 	[self updateNSObject:@"from"];
 }
