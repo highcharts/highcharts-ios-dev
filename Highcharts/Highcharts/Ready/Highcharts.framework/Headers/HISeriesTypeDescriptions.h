@@ -16,15 +16,15 @@ when these series types are used.
 */
 @interface HISeriesTypeDescriptions: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) id funnel;
-@property(nonatomic, readwrite) id pyramid;
-@property(nonatomic, readwrite) id columnrange;
-@property(nonatomic, readwrite) id errorbar;
-@property(nonatomic, readwrite) id areasplinerange;
-@property(nonatomic, readwrite) id waterfall;
-@property(nonatomic, readwrite) id arearange;
-@property(nonatomic, readwrite) id bubble;
-@property(nonatomic, readwrite) id boxplot;
+@property(nonatomic, readwrite) NSString *funnel;
+@property(nonatomic, readwrite) NSString *pyramid;
+@property(nonatomic, readwrite) NSString *columnrange;
+@property(nonatomic, readwrite) NSString *errorbar;
+@property(nonatomic, readwrite) NSString *areasplinerange;
+@property(nonatomic, readwrite) NSString *waterfall;
+@property(nonatomic, readwrite) NSString *arearange;
+@property(nonatomic, readwrite) NSString *bubble;
+@property(nonatomic, readwrite) NSString *boxplot;
 
 -(NSDictionary *)getParams;
 

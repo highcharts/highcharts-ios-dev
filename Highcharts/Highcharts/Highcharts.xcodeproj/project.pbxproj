@@ -149,8 +149,6 @@
 		CD8C14931F9794F600C2CD61 /* HIDateTimeLabelFormats.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C13981F97946400C2CD61 /* HIDateTimeLabelFormats.m */; };
 		CD8C14941F9794F600C2CD61 /* HIDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8C137E1F97945D00C2CD61 /* HIDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8C14951F9794F600C2CD61 /* HIDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C13DC1F97947700C2CD61 /* HIDebug.m */; };
-		CD8C14961F9794F600C2CD61 /* HIDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8C13D61F97947500C2CD61 /* HIDefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD8C14971F9794F600C2CD61 /* HIDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C14481F97949500C2CD61 /* HIDefs.m */; };
 		CD8C14981F9794F600C2CD61 /* HIDial.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8C143B1F97949100C2CD61 /* HIDial.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8C14991F9794F600C2CD61 /* HIDial.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C13A11F97946600C2CD61 /* HIDial.m */; };
 		CD8C149A1F9794F600C2CD61 /* HIDrilldown.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8C136E1F97945900C2CD61 /* HIDrilldown.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -555,7 +553,6 @@
 		CD8C13D31F97947400C2CD61 /* HIHover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIHover.h; sourceTree = "<group>"; };
 		CD8C13D41F97947500C2CD61 /* HISpline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HISpline.h; sourceTree = "<group>"; };
 		CD8C13D51F97947500C2CD61 /* HIVariablepie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIVariablepie.h; sourceTree = "<group>"; };
-		CD8C13D61F97947500C2CD61 /* HIDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIDefs.h; sourceTree = "<group>"; };
 		CD8C13D71F97947500C2CD61 /* HIAreasplinerange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIAreasplinerange.m; sourceTree = "<group>"; };
 		CD8C13D81F97947600C2CD61 /* HIPyramid.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIPyramid.m; sourceTree = "<group>"; };
 		CD8C13D91F97947600C2CD61 /* HIContextButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIContextButton.h; sourceTree = "<group>"; };
@@ -668,7 +665,6 @@
 		CD8C14451F97949400C2CD61 /* HIChart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChart.m; sourceTree = "<group>"; };
 		CD8C14461F97949400C2CD61 /* HISankey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HISankey.m; sourceTree = "<group>"; };
 		CD8C14471F97949500C2CD61 /* HILeft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HILeft.h; sourceTree = "<group>"; };
-		CD8C14481F97949500C2CD61 /* HIDefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIDefs.m; sourceTree = "<group>"; };
 		CD8C14491F97949500C2CD61 /* HIBreaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIBreaks.h; sourceTree = "<group>"; };
 		CD9B22DB1FE3C8B1002CEFD5 /* HIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIFilter.h; path = ../../../../Parser/HIChartsClasses/HIFilter.h; sourceTree = "<group>"; };
 		CD9B22DC1FE3C8B1002CEFD5 /* HIFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIFilter.m; path = ../../../../Parser/HIChartsClasses/HIFilter.m; sourceTree = "<group>"; };
@@ -795,8 +791,6 @@
 				CD8C13981F97946400C2CD61 /* HIDateTimeLabelFormats.m */,
 				CD8C137E1F97945D00C2CD61 /* HIDebug.h */,
 				CD8C13DC1F97947700C2CD61 /* HIDebug.m */,
-				CD8C13D61F97947500C2CD61 /* HIDefs.h */,
-				CD8C14481F97949500C2CD61 /* HIDefs.m */,
 				CD8C143B1F97949100C2CD61 /* HIDial.h */,
 				CD8C13A11F97946600C2CD61 /* HIDial.m */,
 				CD8C136E1F97945900C2CD61 /* HIDrilldown.h */,
@@ -1168,7 +1162,6 @@
 				CD8C15141F9794F600C2CD61 /* HISelect.h in Headers */,
 				CD8C146C1F9794F600C2CD61 /* HIBoxplot.h in Headers */,
 				CD8C15421F9794F600C2CD61 /* HIWaterfall.h in Headers */,
-				CD8C14961F9794F600C2CD61 /* HIDefs.h in Headers */,
 				CD8C15281F9794F600C2CD61 /* HIStyle.h in Headers */,
 				CD8C146E1F9794F600C2CD61 /* HIBreaks.h in Headers */,
 				CD8C145A1F9794F600C2CD61 /* HIAreasplinerange.h in Headers */,
@@ -1465,7 +1458,6 @@
 				CD8C14791F9794F600C2CD61 /* HIChart.m in Sources */,
 				CD8C14E51F9794F600C2CD61 /* HINodes.m in Sources */,
 				CD8C145F1F9794F600C2CD61 /* HIBack.m in Sources */,
-				CD8C14971F9794F600C2CD61 /* HIDefs.m in Sources */,
 				CD8C14991F9794F600C2CD61 /* HIDial.m in Sources */,
 				CD8C14851F9794F600C2CD61 /* HIContextButton.m in Sources */,
 				CD5B35971F90C46C006159D7 /* HIChartView.m in Sources */,

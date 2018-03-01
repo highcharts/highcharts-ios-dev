@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/HIBackground.h</key>
 		<data>
-		jCof07aamzSaNJvpoZsT8F96lpU=
+		7O5+OX4mWyB1Ms+ZfUxzdZQ7fis=
 		</data>
 		<key>Headers/HIBackgroundColor.h</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Headers/HIBridge.h</key>
 		<data>
-		Cu/PHg/6tgjx/rH7+1UnPdDWY84=
+		WfRytu0+IqUTYqrcKvxH9Bxb/wU=
 		</data>
 		<key>Headers/HIBubble.h</key>
 		<data>
@@ -183,10 +183,6 @@
 		<key>Headers/HIDebug.h</key>
 		<data>
 		IbzY0oNeG0arvmLF28SJY9+fBxQ=
-		</data>
-		<key>Headers/HIDefs.h</key>
-		<data>
-		EdAUwBwYVOV+PJor+7S9vkMrmrQ=
 		</data>
 		<key>Headers/HIDial.h</key>
 		<data>
@@ -474,7 +470,7 @@
 		</data>
 		<key>Headers/HISeriesTypeDescriptions.h</key>
 		<data>
-		/8fXLAOW5ymXiINFqR0lQiUKB0A=
+		XGaBojbJdhjTnsfmz/x+ubmBHE0=
 		</data>
 		<key>Headers/HIShapeOptions.h</key>
 		<data>
@@ -1370,11 +1366,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jCof07aamzSaNJvpoZsT8F96lpU=
+			7O5+OX4mWyB1Ms+ZfUxzdZQ7fis=
 			</data>
 			<key>hash2</key>
 			<data>
-			g5IEtyBDZkiIKPWHuRbpTz+l3FflYbvanvPH3V6esjk=
+			Cpr3WXawV9scob+Lq6euGR/gnok+YQlLp02Gq0dnH+s=
 			</data>
 		</dict>
 		<key>Headers/HIBackgroundColor.h</key>
@@ -1458,11 +1454,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Cu/PHg/6tgjx/rH7+1UnPdDWY84=
+			WfRytu0+IqUTYqrcKvxH9Bxb/wU=
 			</data>
 			<key>hash2</key>
 			<data>
-			DlLkus4CUdS08wfIC0QDr0VnmbzWRRvdA0VJfFPhf2o=
+			T+1T/vKgOBNOoxHCA78Ad9QXkMPUa23xq0G0VtxQcVU=
 			</data>
 		</dict>
 		<key>Headers/HIBubble.h</key>
@@ -1716,17 +1712,6 @@
 			<key>hash2</key>
 			<data>
 			RR4OeGQt3MRFFDsdXiLRGToMAQL/7L18r8ldJp/Via8=
-			</data>
-		</dict>
-		<key>Headers/HIDefs.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			EdAUwBwYVOV+PJor+7S9vkMrmrQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			U9UCfcH6xBc9xGIRL/06zS8hrRgR3g00tK5LdYTnHGk=
 			</data>
 		</dict>
 		<key>Headers/HIDial.h</key>
@@ -2514,11 +2499,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/8fXLAOW5ymXiINFqR0lQiUKB0A=
+			XGaBojbJdhjTnsfmz/x+ubmBHE0=
 			</data>
 			<key>hash2</key>
 			<data>
-			e+uW0r8FxxpzbQsW3AgtGJrcaXi/v3h+VkgQOKPBm6M=
+			68Clb1JX6XOlIGv0q36P1zeg5d3ws9Lew2TBAIzjAmY=
 			</data>
 		</dict>
 		<key>Headers/HIShapeOptions.h</key>
