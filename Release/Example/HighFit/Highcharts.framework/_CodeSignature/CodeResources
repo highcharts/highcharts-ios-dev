@@ -112,6 +112,10 @@
 		<data>
 		j0VTXF7cIzGLY99g8dWJTLkLeng=
 		</data>
+		<key>Headers/HIChartContext.h</key>
+		<data>
+		rJREnFC+rX10QZwqaHf7uPqMeRc=
+		</data>
 		<key>Headers/HIChartTypes.h</key>
 		<data>
 		i4wAK+HCCP+Ve1d5vrgwfZJnHCs=
@@ -226,7 +230,7 @@
 		</data>
 		<key>Headers/HIFunction.h</key>
 		<data>
-		BosMhdx1qJ1pS9aiplyA0yp+ypY=
+		GPkLj/LEeJmowNgBm3ga1rvLNLA=
 		</data>
 		<key>Headers/HIFunnel.h</key>
 		<data>
@@ -610,7 +614,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KZsVQsIynE9qr1mZJ0Uv7EZaplM=
+		bIYll2pnl30Z6jmtxtC/ZwWta6k=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -623,6 +627,10 @@
 		<key>PrivateHeaders/HIChartsJSONSerializableSubclass.h</key>
 		<data>
 		5e6nAUM7azQUwenSwUn6nnDSpu0=
+		</data>
+		<key>PrivateHeaders/HIFunctionSubclass.h</key>
+		<data>
+		mfrMbgpbHCA4TCO129/LgMIGyAQ=
 		</data>
 		<key>com.highcharts.charts.bundle/css/Dosis.css</key>
 		<data>
@@ -770,7 +778,7 @@
 		</data>
 		<key>com.highcharts.charts.bundle/highcharts.html</key>
 		<data>
-		CRJd/bP2vDWIFgEi0VyTk4oJep0=
+		3l22RFjT6QdnEpY7fKCG1JgDBTY=
 		</data>
 		<key>com.highcharts.charts.bundle/js/css/highcharts.css</key>
 		<data>
@@ -1516,6 +1524,17 @@
 			/cG0dj4jsAisI+52P/d33XoZv55ci1zbmPNIpOmRtwM=
 			</data>
 		</dict>
+		<key>Headers/HIChartContext.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rJREnFC+rX10QZwqaHf7uPqMeRc=
+			</data>
+			<key>hash2</key>
+			<data>
+			BtbuMiJgYXDPj6B6kEs7u0LeqtBEigDyVOAJWYoR5dk=
+			</data>
+		</dict>
 		<key>Headers/HIChartTypes.h</key>
 		<dict>
 			<key>hash</key>
@@ -1828,11 +1847,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BosMhdx1qJ1pS9aiplyA0yp+ypY=
+			GPkLj/LEeJmowNgBm3ga1rvLNLA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fh5szBVCFxVn68wwZQi7SfRINUFduzckglgMYiRAf44=
+			BhXQAqjP5CKjFiM7q7G5QdhZn2/K4NMa/qygqG5mdyc=
 			</data>
 		</dict>
 		<key>Headers/HIFunnel.h</key>
@@ -2913,6 +2932,17 @@
 			k7tElflrKFCOENTpk8x/+rdONYfCmEh2uawnAzp0au0=
 			</data>
 		</dict>
+		<key>PrivateHeaders/HIFunctionSubclass.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mfrMbgpbHCA4TCO129/LgMIGyAQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			dB3nkFE//iwrBpkV2FsvNsZHwbcv2hBNXnP5DNujQaE=
+			</data>
+		</dict>
 		<key>com.highcharts.charts.bundle/css/Dosis.css</key>
 		<dict>
 			<key>hash</key>
@@ -3313,11 +3343,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CRJd/bP2vDWIFgEi0VyTk4oJep0=
+			3l22RFjT6QdnEpY7fKCG1JgDBTY=
 			</data>
 			<key>hash2</key>
 			<data>
-			npJN4Arax7dtMGSHrIZ9vBUfbzFxPiz+8i09IY3pqKM=
+			goPtypsEmwFEguZIXxm5sfhE0Ym9dF5bdauFOcztpFQ=
 			</data>
 		</dict>
 		<key>com.highcharts.charts.bundle/js/css/highcharts.css</key>
