@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Chart's context class. The class contains the current chart context that can be used in closures.
+ */
 @interface HIChartContext : NSObject
 
 -(instancetype)initWithContext:(NSDictionary *)context;
 
+/**
+ *  A method for getting chart's data depending on the actual context.
+ */
 - (id)getProperty:(NSString*)param;
 
 @end

@@ -12,19 +12,39 @@
 
 @interface HIFunction : HIChartsJSONSerializable
 
+/**
+ *  Definition of Objective-C/Swift closure.
+ */
 typedef void (^ HIClosure)(HIChartContext *);
 
+/**
+ *  A string representation of JS function.
+ */
 @property(nonatomic, readwrite) NSString *jsFunction;
+
+/**
+ *  An Objective-C/Swift closure.
+ */
 @property (nonatomic) HIClosure closure;
+
+/**
+ *  An array of properties that will be available to get from the chart context.
+ */
 @property (nonatomic, strong) NSArray<NSString *> *properties;
 
 /**
- * Init with function's string representation
+ *  Init with the string representation of JS function.
  */
 - (instancetype)initWithJSFunction:(NSString *) jsFunction;
 
+/**
+ *  Init with the Objective-C/Swift closure.
+ */
 - (instancetype)initWithClosure:(HIClosure)closure;
 
+/**
+ *  Init with the Objective-C/Swift closure and array of properties that will be available to get from the chart context.
+ */
 - (instancetype)initWithClosure:(HIClosure)closure properties:(NSArray<NSString *> *)properties;
 
 -(id)getFunction;

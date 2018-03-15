@@ -11,9 +11,6 @@
 #import "HIFunctionSubclass.h"
 #import "HIChartsJSONSerializableSubclass.h"
 
-@interface HIFunction ()
-@end
-
 @implementation HIFunction
 
 -(instancetype)initWithJSFunction:(NSString *)jsFunction {
