@@ -6,18 +6,27 @@
  * In case of questions, please contact sales@highsoft.com
  */
 
-@import UIKit;
+#import <Foundation/Foundation.h>
 #import "HIChartsJSONSerializable.h"
+#import "HIChartContext.h"
 
 @interface HIFunction : HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) NSString *function;
+typedef void (^ HIClosure)(HIChartContext *);
+
+@property(nonatomic, readwrite) NSString *jsFunction;
+@property (nonatomic) HIClosure closure;
+@property (nonatomic, strong) NSArray<NSString *> *properties;
+
 /**
  * Init with function's string representation
  */
-- (instancetype)initWithFunction: (NSString *) function;
+- (instancetype)initWithJSFunction:(NSString *) jsFunction;
+
+- (instancetype)initWithClosure:(HIClosure)closure;
+
+- (instancetype)initWithClosure:(HIClosure)closure properties:(NSArray<NSString *> *)properties;
 
 -(id)getFunction;
 
 @end
-

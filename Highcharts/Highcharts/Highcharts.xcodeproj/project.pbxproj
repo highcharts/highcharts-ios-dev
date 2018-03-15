@@ -44,6 +44,9 @@
 		34EC1CF61CDCC783001DB3A0 /* HIGOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */; };
 		34F873FE1CDA134400674E6C /* HIGExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F873FC1CDA134400674E6C /* HIGExport.h */; };
 		CD0FDCDA1FE7DE800029B4A3 /* HIChartsJSONSerializableSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0FDCD91FE7DE7F0029B4A3 /* HIChartsJSONSerializableSubclass.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3F77092056AE4300527CBE /* HIChartContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD3F770C2056AE5F00527CBE /* HIChartContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3F770B2056AE5F00527CBE /* HIChartContext.m */; };
+		CD3F770F2056CE6E00527CBE /* HIFunctionSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3F770E2056CE6E00527CBE /* HIFunctionSubclass.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CD5B358F1F90C44A006159D7 /* HIGBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA681CD3A6F500BE07CE /* HIGBundle.m */; };
 		CD5B35901F90C44C006159D7 /* HIGHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA6C1CD3AD0600BE07CE /* HIGHTML.m */; };
 		CD5B35911F90C44F006159D7 /* HIGDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDA741CD3B3EE00BE07CE /* HIGDependency.m */; };
@@ -388,6 +391,9 @@
 		34F873FC1CDA134400674E6C /* HIGExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGExport.h; sourceTree = "<group>"; };
 		34F873FD1CDA134400674E6C /* HIGExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGExport.m; sourceTree = "<group>"; };
 		CD0FDCD91FE7DE7F0029B4A3 /* HIChartsJSONSerializableSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartsJSONSerializableSubclass.h; sourceTree = "<group>"; };
+		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
+		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
+		CD3F770E2056CE6E00527CBE /* HIFunctionSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFunctionSubclass.h; sourceTree = "<group>"; };
 		CD87DC4F2046DECE009309A5 /* HIChartTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIChartTypes.h; sourceTree = "<group>"; };
 		CD87DC502046DECF009309A5 /* HILevelSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILevelSize.m; sourceTree = "<group>"; };
 		CD87DC512046DECF009309A5 /* HINormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HINormal.m; sourceTree = "<group>"; };
@@ -1048,6 +1054,8 @@
 				3481FB1D1CD4BB410068A523 /* HIGJavaScript.m */,
 				34F873FC1CDA134400674E6C /* HIGExport.h */,
 				34F873FD1CDA134400674E6C /* HIGExport.m */,
+				CD0FDCD91FE7DE7F0029B4A3 /* HIChartsJSONSerializableSubclass.h */,
+				CD3F770E2056CE6E00527CBE /* HIFunctionSubclass.h */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -1057,7 +1065,6 @@
 			children = (
 				2011ABB31E7013F30027DA10 /* HIChartsClasses */,
 				208C104F1E5C4BD8005C425F /* HIChartsJSONSerializable.h */,
-				CD0FDCD91FE7DE7F0029B4A3 /* HIChartsJSONSerializableSubclass.h */,
 				208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */,
 				EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */,
 				345BA00E1C39AFB9001DAB1B /* HIChartView.h */,
@@ -1073,6 +1080,8 @@
 				208980271E6412EA007280D7 /* HIColor.m */,
 				CDDF95D61F9F5D480021A129 /* HIFunction.h */,
 				CDDF95D41F9F5D260021A129 /* HIFunction.m */,
+				CD3F77092056AE4300527CBE /* HIChartContext.h */,
+				CD3F770B2056AE5F00527CBE /* HIChartContext.m */,
 			);
 			name = Public;
 			sourceTree = "<group>";
@@ -1108,6 +1117,7 @@
 				CD8C14CA1F9794F600C2CD61 /* HILang.h in Headers */,
 				CD8C154A1F9794F600C2CD61 /* HIXrange.h in Headers */,
 				CD8C15241F9794F600C2CD61 /* HIStates.h in Headers */,
+				CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */,
 				CD8C14CC1F9794F600C2CD61 /* HILeft.h in Headers */,
 				CD8C15041F9794F600C2CD61 /* HIResetZoomButton.h in Headers */,
 				3481FB1E1CD4BB410068A523 /* HIGJavaScript.h in Headers */,
@@ -1168,6 +1178,7 @@
 				CD87DC662046DED5009309A5 /* HITime.h in Headers */,
 				CD8C14801F9794F600C2CD61 /* HIColumnrange.h in Headers */,
 				CD8C14761F9794F600C2CD61 /* HIButtons.h in Headers */,
+				CD3F770F2056CE6E00527CBE /* HIFunctionSubclass.h in Headers */,
 				CD8C14741F9794F600C2CD61 /* HIButtonOptions.h in Headers */,
 				CD8C154C1F9794F600C2CD61 /* HIYAxis.h in Headers */,
 				CD8C15301F9794F600C2CD61 /* HITheme.h in Headers */,
@@ -1510,6 +1521,7 @@
 				CD8C14E91F9794F600C2CD61 /* HIOptions3d.m in Sources */,
 				CD8C14F11F9794F600C2CD61 /* HIPartialFill.m in Sources */,
 				CD8C14B11F9794F600C2CD61 /* HIHeatmap.m in Sources */,
+				CD3F770C2056AE5F00527CBE /* HIChartContext.m in Sources */,
 				CD8C149D1F9794F600C2CD61 /* HIDrillUpButton.m in Sources */,
 				CD8C14551F9794F600C2CD61 /* HIArea.m in Sources */,
 				CD8C14A71F9794F600C2CD61 /* HIFront.m in Sources */,
