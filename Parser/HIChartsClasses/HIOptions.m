@@ -33,16 +33,7 @@
 		params[@"yAxis"] = array;
 	}
 	if (self.series) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.series) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"series"] = array;
+		params[@"series"] = [self.series getParams];
 	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
@@ -162,10 +153,13 @@
 	[self updateArrayObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }
 
--(void)setSeries:(NSArray<HISeries *> *)series {
-	NSArray<HISeries *> *oldValue = _series;
+-(void)setSeries:(HISeries *)series {
+	HISeries *oldValue = _series;
+	if(self.series) {
+		[self removeObserver:self forKeyPath:@"series.isUpdated"];
+	}
 	_series = series;
-	[self updateArrayObject:oldValue newValue:series propertyName:@"series"];
+	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
 }
 
 -(void)setAccessibility:(HIAccessibility *)accessibility {

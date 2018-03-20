@@ -10,9 +10,7 @@
 
 
 /**
-* description: Descriptions of lesser known series types. The relevant
-description is added to the screen reader information region
-when these series types are used.
+Descriptions of lesser known series types. The relevant description is added to the screen reader information region when these series types are used.
 */
 @interface HISeriesTypeDescriptions: HIChartsJSONSerializable
 

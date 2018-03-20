@@ -50,14 +50,14 @@ class HIChartsClass:
         self.parent = parent
 
         if self.description:
-            self.comment = "/**\n* description: {0}\n".format(self.description)
-            if self.demo:
-                self.comment += "* demo: {0}".format(self.demo)
-            if self.values:
-                self.comment += "* accepted values: {0}\n".format(self.values)
+            self.comment = "/**\n{0}\n".format(self.description.replace('\n', ' ').replace('  ', ' '))
             self.comment = clean_comment(self.comment)
+            if self.values:
+                self.comment += "\n**Accepted values:** `{0}`.\n".format(self.values)
             if self.defaults:
-                self.comment += "* default: {0}\n".format(self.defaults)
+                self.comment += "\n**Defaults to** `{0}`.\n".format(self.defaults)
+            if self.demo:
+                self.comment += "\n####Try it\n{0}".format(self.demo)
             self.comment += "*/\n"
 
     def update(self, data_type, description, demo, values, defaults, products, extends, exclude):
@@ -86,14 +86,14 @@ class HIChartsClass:
             self.exclude = exclude
 
         if self.description:
-            self.comment = "/**\n* description: {0}\n".format(self.description)
-            if self.demo:
-                self.comment += "* demo: {0}".format(self.demo)
-            if self.values:
-                self.comment += "* accepted values: {0}\n".format(self.values)
+            self.comment = "/**\n{0}\n".format(self.description)
             self.comment = clean_comment(self.comment)
+            if self.values:
+                self.comment += "\n####Accepted values: `{0}`\n".format(self.values)
             if self.defaults:
-                self.comment += "* default: {0}\n".format(self.defaults)
+                self.comment += "\n####Defaults to `{0}`\n".format(self.defaults)
+            if self.demo:
+                self.comment += "\n####Try it\n{0}".format(self.demo)
             self.comment += "*/\n"
 
     def add_property(self, variable):
@@ -107,25 +107,9 @@ class HIChartsClass:
 
 
 def clean_comment(comment):
+    comment = comment.replace('`<', '__x__').replace('>`', '__y__')
     soup = BeautifulSoup(comment, 'html.parser')
-    demos = list()
-    for m in soup.find_all('a'):
-        a = str(m)
-        if a in comment:
-            if 'href' in a:
-                demo_link = m['href']
-                demo_text = m.__dict__['next_element']
-                if not demo_link.startswith("#"):
-                    if demo_text in demos:
-                        comment = comment.replace(a, "")
-                        replaced_text = demos[-1] + "\n"
-                        comment = comment.replace(replaced_text, demos[-1])
-                    else:
-                        demos.append(demo_text)
-                        comment = comment.replace(a, demo_link + " : " + demo_text, 1)
-
-    soup = BeautifulSoup(comment, 'html.parser')
-    comment = soup.get_text()
+    comment = soup.get_text().replace('__x__', '`<').replace('__y__', '>`')
     return comment
 
 
@@ -839,7 +823,7 @@ def create_class(node):
 
             if "description" in doclet:
                 description = doclet["description"]
-                description = re.sub(r'`\s*(.*?)\s*`', r'\1', description)
+                #description = re.sub(r'`\s*(.*?)\s*`', r'\1', description)
                 description = re.sub(r'(\[(.*?)\]\(#.*?\))', r'\2', description)
                 description = description.replace("\r", "\n")
 
@@ -869,7 +853,7 @@ def create_class(node):
                         elif attr_sample == "products":
                             attr_products = sample[attr_sample]
                     if attr_products is None or "highcharts" in attr_products:
-                        demo += "https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/{0} : {1}\n".format(value, name)
+                        demo += "* [{0}](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/{1})\n".format(name, value)
                 if demo == "":
                     demo = None
 

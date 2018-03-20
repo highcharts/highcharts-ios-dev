@@ -10,9 +10,12 @@
 
 
 /**
-* description: CSS styles for the loading label span.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/ : Vertically centered
-* default: { "fontWeight": "bold", "position": "relative", "top": "45%" }
+CSS styles for the loading label `span`.
+
+**Defaults to** `{ "fontWeight": "bold", "position": "relative", "top": "45%" }`.
+
+####Try it
+* [Vertically centered](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/)
 */
 @interface HILabelStyle: HIChartsJSONSerializable
 

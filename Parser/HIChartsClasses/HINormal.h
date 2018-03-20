@@ -10,13 +10,12 @@
 
 
 /**
-* description: The normal state of a single point marker. Currently only used
-for setting animation when returning to normal state from hover.
+The normal state of a single point marker. Currently only used for setting animation when returning to normal state from hover.
 */
 @interface HINormal: HIChartsJSONSerializable
 
 /**
-* description: Animation when returning to normal state after hovering.
+Animation when returning to normal state after hovering.
 */
 @property(nonatomic, readwrite) id /* Bool, id */ animation;
 

@@ -10,22 +10,16 @@
 
 
 /**
-* description: A HTML label that can be positioned anywhere in the chart area.
+A HTML label that can be positioned anywhere in the chart area.
 */
 @interface HIItems: HIChartsJSONSerializable
 
 /**
-* description: CSS styles for each label. To position the label, use left and top
-like this:
-
-style: {
-    left: '100px',
-    top: '100px'
-}
+CSS styles for each label. To position the label, use left and top like this: style: {   left: '100px',   top: '100px' }
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
-* description: Inner HTML or text for the label.
+Inner HTML or text for the label.
 */
 @property(nonatomic, readwrite) NSString *html;
 

@@ -10,178 +10,154 @@
 
 
 /**
-* description: Language object. The language object is global and it can't be set
-on each chart initiation. Instead, use Highcharts.setOptions to
-set it before any chart is initialized.
-
-Highcharts.setOptions({
-    lang: {
-        months: [
-            'Janvier', 'FĂŠvrier', 'Mars', 'Avril',
-            'Mai', 'Juin', 'Juillet', 'AoĂťt',
-            'Septembre', 'Octobre', 'Novembre', 'DĂŠcembre'
-        ],
-        weekdays: [
-            'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
-            'Jeudi', 'Vendredi', 'Samedi'
-        ]
-    }
-});
+Language object. The language object is global and it can't be set on each chart initiation. Instead, use `Highcharts.setOptions` to set it before any chart is initialized. Highcharts.setOptions({   lang: {     months: [       'Janvier', 'FĂŠvrier', 'Mars', 'Avril',       'Mai', 'Juin', 'Juillet', 'AoĂťt',       'Septembre', 'Octobre', 'Novembre', 'DĂŠcembre'     ],     weekdays: [       'Dimanche', 'Lundi', 'Mardi', 'Mercredi',       'Jeudi', 'Vendredi', 'Samedi'     ]   } });
 */
 @interface HILang: HIChartsJSONSerializable
 
 /**
-* description: Export-data module only. The text for the menu item.
+Export-data module only. The text for the menu item.
 */
 @property(nonatomic, readwrite) NSString *downloadCSV;
 /**
-* description: Export-data module only. The text for the menu item.
+Export-data module only. The text for the menu item.
 */
 @property(nonatomic, readwrite) NSString *downloadXLS;
 /**
-* description: Exporting module only. The text for the PNG download menu item.
-* default: Download PNG image
+Exporting module only. The text for the PNG download menu item.
+
+**Defaults to** `Download PNG image`.
 */
 @property(nonatomic, readwrite) NSString *downloadPNG;
 /**
-* description: Configure the accessibility strings in the chart. Requires the 
-[accessibility module](//code.highcharts.com/modules/accessibility.
-js) to be loaded. For a description of the module and information
-on its features, see [Highcharts Accessibility](http://www.highcharts.
-com/docs/chart-concepts/accessibility).
-
-For more dynamic control over the accessibility functionality, see
-[accessibility.pointDescriptionFormatter](accessibility.
-pointDescriptionFormatter),
-[accessibility.seriesDescriptionFormatter](accessibility.
-seriesDescriptionFormatter), and
-[accessibility.screenReaderSectionFormatter](accessibility.
-screenReaderSectionFormatter).
+Configure the accessibility strings in the chart. Requires the [accessibility module](//code.highcharts.com/modules/accessibility. js) to be loaded. For a description of the module and information on its features, see [Highcharts Accessibility](http://www.highcharts. com/docs/chart-concepts/accessibility). For more dynamic control over the accessibility functionality, see [accessibility.pointDescriptionFormatter](accessibility. pointDescriptionFormatter), [accessibility.seriesDescriptionFormatter](accessibility. seriesDescriptionFormatter), and [accessibility.screenReaderSectionFormatter](accessibility. screenReaderSectionFormatter).
 */
 @property(nonatomic, readwrite) HIAccessibility *accessibility;
 /**
-* description: Short week days, starting Sunday. If not specified, Highcharts uses
-the first three letters of the lang.weekdays option.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/ : Finnish two-letter abbreviations
+Short week days, starting Sunday. If not specified, Highcharts uses the first three letters of the `lang.weekdays` option.
+
+####Try it
+* [Finnish two-letter abbreviations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/)
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *shortWeekdays;
 /**
-* description: The text to display when the chart contains no data. Requires the
-no-data module, see noData.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line : No-data text
-* default: No data to display
+The text to display when the chart contains no data. Requires the no-data module, see noData.
+
+**Defaults to** `No data to display`.
+
+####Try it
+* [No-data text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
 */
 @property(nonatomic, readwrite) NSString *noData;
 /**
-* description: The loading text that appears when the chart is set into the loading
-state following a call to chart.showLoading.
-* default: Loading...
+The loading text that appears when the chart is set into the loading state following a call to `chart.showLoading`.
+
+**Defaults to** `Loading...`.
 */
 @property(nonatomic, readwrite) NSString *loading;
 /**
-* description: [Metric prefixes](http://en.wikipedia.org/wiki/Metric_prefix) used
-to shorten high numbers in axis labels. Replacing any of the positions
-with null causes the full number to be written. Setting numericSymbols
-to null disables shortening altogether.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/ : Replacing the symbols with text
-* default: [ "k" , "M" , "G" , "T" , "P" , "E"]
+[Metric prefixes](http://en.wikipedia.org/wiki/Metric_prefix) used to shorten high numbers in axis labels. Replacing any of the positions with `null` causes the full number to be written. Setting `numericSymbols` to `null` disables shortening altogether.
+
+**Defaults to** `[ "k" , "M" , "G" , "T" , "P" , "E"]`.
+
+####Try it
+* [Replacing the symbols with text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/)
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *numericSymbols;
 /**
-* description: Exporting module only. The text for the menu item to print the chart.
-* default: Print chart
+Exporting module only. The text for the menu item to print the chart.
+
+**Defaults to** `Print chart`.
 */
 @property(nonatomic, readwrite) NSString *printChart;
 /**
-* description: The magnitude of numericSymbols replacements.
-Use 10000 for Japanese, Korean and various Chinese locales, which
-use symbols for 10^4, 10^8 and 10^12.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbolmagnitude/ : 10000 magnitude for Japanese
-* default: 1000
+The magnitude of numericSymbols replacements. Use 10000 for Japanese, Korean and various Chinese locales, which use symbols for 10^4, 10^8 and 10^12.
+
+**Defaults to** `1000`.
+
+####Try it
+* [10000 magnitude for Japanese](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbolmagnitude/)
 */
 @property(nonatomic, readwrite) NSNumber *numericSymbolMagnitude;
 /**
-* description: An array containing the weekday names.
-* default: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-         "Friday", "Saturday"]
+An array containing the weekday names.
+
+**Defaults to** `["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+         "Friday", "Saturday"]`.
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *weekdays;
 /**
-* description: Exporting module only. The text for the SVG download menu item.
-* default: Download SVG vector image
+Exporting module only. The text for the SVG download menu item.
+
+**Defaults to** `Download SVG vector image`.
 */
 @property(nonatomic, readwrite) NSString *downloadSVG;
 /**
-* description: The text for the button that appears when drilling down, linking
-back to the parent series. The parent series' name is inserted for
-{series.name}.
-* default: Back to {series.name}
+The text for the button that appears when drilling down, linking back to the parent series. The parent series' name is inserted for `{series.name}`.
+
+**Defaults to** `Back to {series.name}`.
 */
 @property(nonatomic, readwrite) NSString *drillUpText;
 /**
-* description: Export-data module only. The text for the menu item.
+Export-data module only. The text for the menu item.
 */
 @property(nonatomic, readwrite) NSString *viewData;
 /**
-* description: Exporting module menu. The tooltip title for the context menu holding
-print and export menu items.
-* default: Chart context menu
+Exporting module menu. The tooltip title for the context menu holding print and export menu items.
+
+**Defaults to** `Chart context menu`.
 */
 @property(nonatomic, readwrite) NSString *contextButtonTitle;
 /**
-* description: What to show in a date field for invalid dates. Defaults to an empty
-string.
+What to show in a date field for invalid dates. Defaults to an empty string.
 */
 @property(nonatomic, readwrite) NSString *invalidDate;
 /**
-* description: The text for the label appearing when a chart is zoomed.
-* default: Reset zoom
+The text for the label appearing when a chart is zoomed.
+
+**Defaults to** `Reset zoom`.
 */
 @property(nonatomic, readwrite) NSString *resetZoom;
 /**
-* description: Exporting module only. The text for the PDF download menu item.
-* default: Download PDF document
+Exporting module only. The text for the PDF download menu item.
+
+**Defaults to** `Download PDF document`.
 */
 @property(nonatomic, readwrite) NSString *downloadPDF;
 /**
-* description: An array containing the months names. Corresponds to the %B format
-in Highcharts.dateFormat().
-* default: [ "January" , "February" , "March" , "April" , "May" ,
+An array containing the months names. Corresponds to the `%B` format in `Highcharts.dateFormat()`.
+
+**Defaults to** `[ "January" , "February" , "March" , "April" , "May" ,
          "June" , "July" , "August" , "September" , "October" ,
-         "November" , "December"]
+         "November" , "December"]`.
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *months;
 /**
-* description: An array containing the months names in abbreviated form. Corresponds
-to the %b format in Highcharts.dateFormat().
-* default: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" ,
-         "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+An array containing the months names in abbreviated form. Corresponds to the `%b` format in `Highcharts.dateFormat()`.
+
+**Defaults to** `[ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" ,
+         "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]`.
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *shortMonths;
 /**
-* description: Exporting module only. The text for the JPEG download menu item.
-* default: Download JPEG image
+Exporting module only. The text for the JPEG download menu item.
+
+**Defaults to** `Download JPEG image`.
 */
 @property(nonatomic, readwrite) NSString *downloadJPEG;
 /**
-* description: The default decimal point used in the Highcharts.numberFormat
-method unless otherwise specified in the function arguments.
-* default: .
+The default decimal point used in the `Highcharts.numberFormat` method unless otherwise specified in the function arguments.
+
+**Defaults to** `.`.
 */
 @property(nonatomic, readwrite) NSString *decimalPoint;
 /**
-* description: The tooltip title for the label appearing when a chart is zoomed.
-* default: Reset zoom level 1:1
+The tooltip title for the label appearing when a chart is zoomed.
+
+**Defaults to** `Reset zoom level 1:1`.
 */
 @property(nonatomic, readwrite) NSString *resetZoomTitle;
 /**
-* description: The default thousands separator used in the Highcharts.numberFormat
-method unless otherwise specified in the function arguments. Since
-Highcharts 4.1 it defaults to a single space character, which is
-compatible with ISO and works across Anglo-American and continental
-European languages.
-
-The default is a single space.
+The default thousands separator used in the `Highcharts.numberFormat` method unless otherwise specified in the function arguments. Since Highcharts 4.1 it defaults to a single space character, which is compatible with ISO and works across Anglo-American and continental European languages. The default is a single space.
 */
 @property(nonatomic, readwrite) NSString *thousandsSep;
 

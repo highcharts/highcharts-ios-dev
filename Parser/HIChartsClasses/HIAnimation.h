@@ -10,15 +10,14 @@
 
 
 /**
-* description: Animation setting for hovering the graph in line-type series.
-* default: { "duration": 50 }
+Animation setting for hovering the graph in line-type series.
+
+**Defaults to** `{ "duration": 50 }`.
 */
 @interface HIAnimation: HIChartsJSONSerializable
 
 /**
-* description: The duration of the hover animation in milliseconds. By
-default the hover state animates quickly in, and slowly back
-to normal.
+The duration of the hover animation in milliseconds. By default the hover state animates quickly in, and slowly back to normal.
 */
 @property(nonatomic, readwrite) NSNumber *duration;
 
