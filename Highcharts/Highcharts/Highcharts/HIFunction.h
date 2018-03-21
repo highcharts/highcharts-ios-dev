@@ -47,6 +47,16 @@ typedef void (^ HIClosure)(HIChartContext *);
  */
 - (instancetype)initWithClosure:(HIClosure)closure properties:(NSArray<NSString *> *)properties;
 
+/**
+ *  Init with the Objective-C/Swift closure and string representation of JS function.
+ */
+- (instancetype)initWithClosure:(HIClosure)closure jsFunction:(NSString *)jsFunction;
+
+/**
+ *  Init with the Objective-C/Swift closure, string representation of JS function and array of properties that will be available to get from the chart context.
+ */
+- (instancetype)initWithClosure:(HIClosure)closure jsFunction:(NSString *)jsFunction properties:(NSArray<NSString *> *)properties;
+
 -(id)getFunction;
 
 @end
