@@ -18,6 +18,17 @@
 			name = "Build framework";
 			productName = "Build framework";
 		};
+		CD91B2EA20626A5300BCEE37 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CD91B2EE20626A5400BCEE37 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				CD91B2EF20626A5900BCEE37 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -1316,6 +1327,10 @@
 					348F281D1CDB790F005CA399 = {
 						CreatedOnToolsVersion = 7.1;
 					};
+					CD91B2EA20626A5300BCEE37 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 343E13841C38513D006DDD68 /* Build configuration list for PBXProject "Highcharts" */;
@@ -1333,6 +1348,7 @@
 				343E13891C38513D006DDD68 /* Highcharts */,
 				348F281D1CDB790F005CA399 /* HighchartsTests */,
 				20B0FEC21E7068490049A5E5 /* Build framework */,
+				CD91B2EA20626A5300BCEE37 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -1385,6 +1401,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${GCC_PREPROCESSOR_DEFINITIONS}\" = \"TRIAL=1\" ]; then\n    uuidgen >> ${BUILT_PRODUCTS_DIR}/$TARGET_NAME.framework/VERSION.txt\nfi";
+		};
+		CD91B2EF20626A5900BCEE37 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Highsoft AS\";\ncompanyID=\"com.highcharts.highcharts\";\ncompanyURL=\"https://www.highcharts.com\";\ntarget=\"iphoneos\";\noutputPath=\"${PROJECT_DIR}/Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--output \"${outputPath}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--ignore Private \\\n--ignore .m \\\n--ignore HIGChartView.h \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--docset-platform-family \"${target}\" \\\n--no-create-docset \\\n--exit-threshold 2 \\\n--explicit-crossref \\\n--keep-undocumented-members \\\n--keep-undocumented-objects \\\n--search-undocumented-doc \\\n\"${PROJECT_DIR}/${PROJECT_NAME}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1869,6 +1898,30 @@
 			};
 			name = Release;
 		};
+		CD91B2EB20626A5400BCEE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD91B2EC20626A5400BCEE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD91B2ED20626A5400BCEE37 /* Trial */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Trial;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1908,6 +1961,16 @@
 				348F28261CDB790F005CA399 /* Debug */,
 				348F28271CDB790F005CA399 /* Release */,
 				341A67441D256CC800C234A6 /* Trial */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD91B2EE20626A5400BCEE37 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD91B2EB20626A5400BCEE37 /* Debug */,
+				CD91B2EC20626A5400BCEE37 /* Release */,
+				CD91B2ED20626A5400BCEE37 /* Trial */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
