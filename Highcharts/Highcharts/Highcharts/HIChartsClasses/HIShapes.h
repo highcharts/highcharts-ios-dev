@@ -11,75 +11,85 @@
 
 
 /**
-* description: An array of shapes for the annotation. For options that apply to
-multiple shapes, then can be added to the
-[shapeOptions](annotations.shapeOptions.html).
+An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the [shapeOptions](annotations.shapeOptions.html).
 */
 @interface HIShapes: HIChartsJSONSerializable
 
 /**
-* description: An array of points for the shape. This option is available for shapes
-which can use multiple points such as path. A point can be either 
-a point object or a point's id.
+An array of points for the shape. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point's id.
 */
 @property(nonatomic, readwrite) NSArray *points;
 /**
-* description: Id of the marker which will be drawn at the final vertex of the path.
-Custom markers can be defined in defs property.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/ : Define a custom marker for annotations
+Id of the marker which will be drawn at the final vertex of the path. Custom markers can be defined in defs property.
+
+####Try it
+* [Define a custom marker for annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/)
 */
 @property(nonatomic, readwrite) NSString *markerEnd;
 /**
-* description: Id of the marker which will be drawn at the first vertex of the path.
-Custom markers can be defined in defs property.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/ : Define a custom marker for annotations
+Id of the marker which will be drawn at the first vertex of the path. Custom markers can be defined in defs property.
+
+####Try it
+* [Define a custom marker for annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/)
 */
 @property(nonatomic, readwrite) NSString *markerStart;
 /**
-* description: This option defines the point to which the shape will be connected.
-It can be either the point which exists in the series - it is
-referenced by the point's id - or a new point with defined x, y
-properties and optionally axes.
+This option defines the point to which the shape will be connected. It can be either the point which exists in the series - it is referenced by the point's id - or a new point with defined x, y properties and optionally axes.
 */
 @property(nonatomic, readwrite) HIPoint *point;
 /**
-* description: The pixel stroke width of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-*
+The pixel stroke width of the shape.
+
+####Try it
+* [Basic shape annotation
+*](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *strokeWidth;
 /**
-* description: The height of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+The height of the shape.
+
+####Try it
+* [Basic shape annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *height;
 /**
-* description: The width of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+The width of the shape.
+
+####Try it
+* [Basic shape annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
 /**
-* description: The color of the shape's stroke.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-*
+The color of the shape's stroke.
+
+####Try it
+* [Basic shape annotation
+*](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) HIColor *stroke;
 /**
-* description: The radius of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-*
+The radius of the shape.
+
+####Try it
+* [Basic shape annotation
+*](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *r;
 /**
-* description: The type of the shape, e.g. circle or rectangle.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-* default: 'rect'
+The type of the shape, e.g. circle or rectangle.
+
+**Defaults to** `'rect'`.
+
+####Try it
+* [Basic shape annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSString *type;
 /**
-* description: The color of the shape's fill.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-*
+The color of the shape's fill.
+
+####Try it
+* [Basic shape annotation
+*](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) HIColor *fill;
 

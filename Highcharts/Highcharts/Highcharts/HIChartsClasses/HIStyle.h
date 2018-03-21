@@ -10,8 +10,7 @@
 
 
 /**
-* description: Styles for the series label. The color defaults to the series
-color, or a contrast color if onArea.
+Styles for the series label. The color defaults to the series color, or a contrast color if `onArea`.
 */
 @interface HIStyle: HIChartsJSONSerializable
 
@@ -25,13 +24,15 @@ color, or a contrast color if onArea.
 @property(nonatomic, readwrite) NSString *fontFamily;
 @property(nonatomic, readwrite) NSString *textOutline;
 /**
-* description: Border radius of the focus border.
-* default: 3
+Border radius of the focus border.
+
+**Defaults to** `3`.
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
-* description: Line width of the focus border.
-* default: 2
+Line width of the focus border.
+
+**Defaults to** `2`.
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 @property(nonatomic, readwrite) NSString *textOverflow;

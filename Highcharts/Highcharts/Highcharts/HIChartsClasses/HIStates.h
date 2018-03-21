@@ -12,15 +12,14 @@
 
 
 /**
-* description: A wrapper object for all the series options in specific states.
+A wrapper object for all the series options in specific states.
 */
 @interface HIStates: HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) HIHover *hover;
 @property(nonatomic, readwrite) HISelect *select;
 /**
-* description: The normal state of a single point marker. Currently only used
-for setting animation when returning to normal state from hover.
+The normal state of a single point marker. Currently only used for setting animation when returning to normal state from hover.
 */
 @property(nonatomic, readwrite) HINormal *normal;
 

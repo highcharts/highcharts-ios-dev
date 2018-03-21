@@ -10,11 +10,12 @@
 
 
 /**
-* description: Additional styles to apply to the data label of a point that has
-drilldown data. By default it is underlined and blue to invite to
-interaction.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/ : Label styles
-* default: { "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }
+Additional styles to apply to the data label of a point that has drilldown data. By default it is underlined and blue to invite to interaction.
+
+**Defaults to** `{ "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }`.
+
+####Try it
+* [Label styles](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/)
 */
 @interface HIActiveDataLabelStyle: HIChartsJSONSerializable
 

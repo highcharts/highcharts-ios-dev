@@ -11,58 +11,63 @@
 
 
 /**
-* description: Configure a crosshair that follows either the mouse pointer or the
-hovered point.
+Configure a crosshair that follows either the mouse pointer or the hovered point. In styled mode, the crosshairs are styled in the `.highcharts-crosshair`, `.highcharts-crosshair-thin` or `.highcharts-xaxis-category` classes.
 
-In styled mode, the crosshairs are styled in the
-.highcharts-crosshair, .highcharts-crosshair-thin or
-.highcharts-xaxis-category classes.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/ : Crosshair on both axes
-* default: false
+**Defaults to** `false`.
+
+####Try it
+* [Crosshair on both axes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/)
 */
 @interface HICrosshair: HIChartsJSONSerializable
 
 /**
-* description: The Z index of the crosshair. Higher Z indices allow drawing the
-crosshair on top of the series or behind the grid lines.
-* default: 2
+The Z index of the crosshair. Higher Z indices allow drawing the crosshair on top of the series or behind the grid lines.
+
+**Defaults to** `2`.
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
-* description: The dash style for the crosshair. See
-series.dashStyle
-for possible values.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/ : Dotted crosshair
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot",
+The dash style for the crosshair. See series.dashStyle for possible values.
+
+**Accepted values:** `["Solid", "ShortDash", "ShortDot", "ShortDashDot",
              "ShortDashDotDot", "Dot", "Dash" ,"LongDash",
-             "DashDot", "LongDashDot", "LongDashDotDot"]
-* default: Solid
+             "DashDot", "LongDashDot", "LongDashDotDot"]`.
+
+**Defaults to** `Solid`.
+
+####Try it
+* [Dotted crosshair](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/)
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
-* description: The color of the crosshair. Defaults to #cccccc for numeric and
-datetime axes, and rgba(204,214,235,0.25) for category axes, where
-the crosshair by default highlights the whole category.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/ : Customized crosshairs
-* default: #cccccc
+The color of the crosshair. Defaults to `#cccccc` for numeric and datetime axes, and `rgba(204,214,235,0.25)` for category axes, where the crosshair by default highlights the whole category.
+
+**Defaults to** `#cccccc`.
+
+####Try it
+* [Customized crosshairs](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/)
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**
-* description: A class name for the crosshair, especially as a hook for styling.
+A class name for the crosshair, especially as a hook for styling.
 */
 @property(nonatomic, readwrite) NSString *className;
 /**
-* description: The pixel width of the crosshair. Defaults to 1 for numeric or
-datetime axes, and for one category width for category axes.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/ : Customized crosshairs
-* default: 1
+The pixel width of the crosshair. Defaults to 1 for numeric or datetime axes, and for one category width for category axes.
+
+**Defaults to** `1`.
+
+####Try it
+* [Customized crosshairs](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
 /**
-* description: Whether the crosshair should snap to the point or follow the pointer
-independent of points.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/ : True by default
-* default: true
+Whether the crosshair should snap to the point or follow the pointer independent of points.
+
+**Defaults to** `true`.
+
+####Try it
+* [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *snap;
 

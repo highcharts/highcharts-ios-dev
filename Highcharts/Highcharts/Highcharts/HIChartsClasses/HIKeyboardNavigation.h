@@ -10,40 +10,33 @@
 
 
 /**
-* description: Keyboard navigation for the legend. Requires the Accessibility module.
+Keyboard navigation for the legend. Requires the Accessibility module.
 */
 @interface HIKeyboardNavigation: HIChartsJSONSerializable
 
 /**
-* description: Enable/disable keyboard navigation for the legend. Requires the Accessibility
-module.
-* default: true
+Enable/disable keyboard navigation for the legend. Requires the Accessibility module.
+
+**Defaults to** `true`.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
-* description: Options for the focus border drawn around elements while
-navigating through them.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/custom-focus : Custom focus ring
+Options for the focus border drawn around elements while navigating through them.
+
+####Try it
+* [Custom focus ring](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/custom-focus)
 */
 @property(nonatomic, readwrite) HIFocusBorder *focusBorder;
 /**
-* description: Set the keyboard navigation mode for the chart. Can be "normal"
-or "serialize". In normal mode, left/right arrow keys move
-between points in a series, while up/down arrow keys move between
-series. Up/down navigation acts intelligently to figure out which
-series makes sense to move to from any given point.
+Set the keyboard navigation mode for the chart. Can be "normal" or "serialize". In normal mode, left/right arrow keys move between points in a series, while up/down arrow keys move between series. Up/down navigation acts intelligently to figure out which series makes sense to move to from any given point. In "serialize" mode, points are instead navigated as a single list. Left/right behaves as in "normal" mode. Up/down arrow keys will behave like left/right. This is useful for unifying navigation behavior with/without screen readers enabled.
 
-In "serialize" mode, points are instead navigated as a single 
-list. Left/right behaves as in "normal" mode. Up/down arrow keys
-will behave like left/right. This is useful for unifying 
-navigation behavior with/without screen readers enabled.
-* default: normal
+**Defaults to** `normal`.
 */
 @property(nonatomic, readwrite) NSString *mode;
 /**
-* description: Skip null points when navigating through points with the
-keyboard.
-* default: true
+Skip null points when navigating through points with the keyboard.
+
+**Defaults to** `true`.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skipNullPoints;
 

@@ -11,65 +11,56 @@
 
 
 /**
-* description: A sankey series. If the type option is not
-specified, it is inherited from chart.type.
-
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to [plotOptions.
-sankey](#plotOptions.sankey).
+A `sankey` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. sankey](#plotOptions.sankey).
 */
 @interface HISankey: HISeries
 
 /**
-* description: When using automatic point colors pulled from the options.colors
+When using automatic point colors pulled from the `options.colors`
 collection, this option determines whether the chart should receive
 one color per series or one color per point.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/ : False by default
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/ : True
-* default: false
+
+####Defaults to `false`
+
+####Try it
+* [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/)
+* [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
-* description: Higher numbers makes the links in a sankey diagram render more curved.
-A curveFactor of 0 makes the lines straight.
+Higher numbers makes the links in a sankey diagram render more curved. A `curveFactor` of 0 makes the lines straight.
 */
 @property(nonatomic, readwrite) NSNumber *curveFactor;
 /**
-* description: The padding between nodes in a sankey diagram, in pixels.
+The padding between nodes in a sankey diagram, in pixels.
 */
 @property(nonatomic, readwrite) NSNumber *nodePadding;
 /**
-* description: The pixel width of each node in a sankey diagram, or the height in case
-the chart is inverted.
+The pixel width of each node in a sankey diagram, or the height in case the chart is inverted.
 */
 @property(nonatomic, readwrite) NSNumber *nodeWidth;
 /**
-* description: Opacity for the links between nodes in the sankey diagram.
+Opacity for the links between nodes in the sankey diagram.
 */
 @property(nonatomic, readwrite) NSNumber *linkOpacity;
 /**
-* description: The minimal height for a column or width for a bar. By default,
-0 values are not shown. To visualize a 0 (or close to zero) point,
-set the minimal point length to a pixel value like 3\. In stacked
-column charts, minPointLength might not be respected for tightly
-packed values.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/ : Zero base value
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/ : Positive and negative close to zero values
+The minimal height for a column or width for a bar. By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point length to a pixel value like 3\. In stacked column charts, minPointLength might not be respected for tightly packed values.
+
+####Try it
+* [Zero base value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/)
+* [Positive and negative close to zero values](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/)
 */
 @property(nonatomic, readwrite) NSNumber *minPointLength;
 /**
-* description: A series specific or series type specific color set to apply instead
-of the global colors when [colorByPoint](#plotOptions.
-column.colorByPoint) is true.
+A series specific or series type specific color set to apply instead of the global colors when [colorByPoint](#plotOptions. column.colorByPoint) is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;
 /**
-* description: A collection of options for the individual nodes. The nodes in a sankey 
-diagram are auto-generated instances of Highcharts.Point, but options can
-be applied here and linked by the id.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/sankey/ : Sankey diagram with node options
+A collection of options for the individual nodes. The nodes in a sankey diagram are auto-generated instances of `Highcharts.Point`, but options can be applied here and linked by the `id`.
+
+####Try it
+* [Sankey diagram with node options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/sankey/)
 */
 @property(nonatomic, readwrite) NSArray <HINodes *> *nodes;
 
