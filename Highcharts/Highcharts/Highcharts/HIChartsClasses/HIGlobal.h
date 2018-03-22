@@ -9,6 +9,8 @@
 #import "HIChartsJSONSerializable.h"
 
 
+/**
+ */
 @interface HIGlobal: HIChartsJSONSerializable
 
 /**

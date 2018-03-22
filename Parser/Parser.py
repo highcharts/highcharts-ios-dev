@@ -281,6 +281,7 @@ def field_in_parent(field, source):
 
 def format_to_h(name, source):
     imports = ""
+    description = None
     colorAdded = False
     functionAdded = False
     htext = ""
@@ -288,14 +289,16 @@ def format_to_h(name, source):
     class_name = "HI" + upper_first(create_name(name))
 
     if class_name in comments:
-        htext += comments[class_name]
+        description = comments[class_name]
     elif source.comment:
-        htext += source.comment
+        description = source.comment
         x = name.split(".")
         if len(x) == 2 and x[0] == "plotOptions":
             pass
         else:
             comments[class_name] = source.comment
+
+    htext += description if description else "/**\n */\n"
 
     if not added_new_properties(class_name, source):
         return None
@@ -501,6 +504,7 @@ def format_to_m(name, source):
 
 def create_options_files():
     imports = "#import \"HIColor.h\"\n"
+    description = "/**\n */\n"
     htext = "@interface HIOptions: HIChartsJSONSerializable\n\n"
     mtext = "#import \"HIChartsJSONSerializableSubclass.h\"\n"
     mtext += "#import \"HIOptions.h\"\n\n@implementation HIOptions\n\n"
@@ -607,7 +611,7 @@ def create_options_files():
     imports += "\n\n"
     htext += "\n@end\n"
     with open("HIChartsClasses/HIOptions.h", "w") as o:
-        o.write(imports + htext)
+        o.write(imports + description + htext)
     with open("HIChartsClasses/HIOptions.m", "w") as m:
         m.write(mtext)
 

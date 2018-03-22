@@ -9,6 +9,8 @@
 #import "HIAttributes.h"
 
 
+/**
+ */
 @interface HIHalo: HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) NSNumber *opacity;

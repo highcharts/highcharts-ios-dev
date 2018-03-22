@@ -13,6 +13,8 @@
 #import "HIColor.h"
 
 
+/**
+ */
 @interface HIChart: HIChartsJSONSerializable
 
 /**

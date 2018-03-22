@@ -26,6 +26,8 @@
 #import "HINavigation.h"
 
 
+/**
+ */
 @interface HIOptions: HIChartsJSONSerializable
 
 /**
