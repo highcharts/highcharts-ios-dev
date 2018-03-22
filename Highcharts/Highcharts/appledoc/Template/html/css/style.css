@@ -396,7 +396,7 @@ header {
   z-index: 2;
   background: #414141;
   color: #fff;
-  font-size: 1.1em;
+  font-size: 1.35em;
   line-height: 25px;
   letter-spacing: .05em
 }
@@ -1084,7 +1084,7 @@ article #content .title {
   margin: 0;
   font-weight: 300;
   font-size: 20px;
-  padding: 5px 15px 0 15px;
+  padding: 2px 15px 0 15px;
 }
 
 /*
