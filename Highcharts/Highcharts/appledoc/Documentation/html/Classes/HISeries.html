@@ -224,7 +224,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Lang configuration for different series types. For more dynamic control over the series element descriptions, see <code>accessibility.seriesDescriptionFormatter</code>.</p>
+						<p>General options for all series types.</p>
 					</div>
 					
 					
@@ -252,15 +252,52 @@
 			
 			<div class="method-subsection brief-description">
 				<p>An array of data points for the series. The points can be given in three ways:
-An array of numerical values. In this case, the numerical values will
-be interpreted as y values, and x values will be automatically calculated,
-either starting at 0 and incrementing by 1, or from pointStart
-and pointInterval given in the plotOptions. If the axis is
-has categories, these will be used. This option is not available for range series. Example:
-data: [0, 5, 3, 5]  An array of arrays with two values. In this case, the first value is the
-x value and the second is the y value. If the first value is a string, it is
-applied as the name of the point, and the x value is incremented following
-the above rules. For range series, the arrays will be interpreted as [x, low, high]. In this cases, the X value can be skipped altogether to make use of pointStart and pointRange.</p>
+</br></br>1. An array of numerical values. In this case, the numerical values will
+be interpreted as <code>y</code> values, and <code>x</code> values will be automatically calculated,
+either starting at 0 and incrementing by 1, or from <code>pointStart</code>
+and <code>pointInterval</code> given in the plotOptions. If the axis is
+has categories, these will be used. This option is not available for range series. Example:</p>
+
+<pre>
+data: [0, 5, 3, 5]
+</pre>
+
+
+<p></br>2. An array of arrays with two values. In this case, the first value is the
+<code>x</code> value and the second is the <code>y</code> value. If the first value is a string, it is
+applied as the name of the point, and the <code>x</code> value is incremented following
+the above rules. For range series, the arrays will be interpreted as <code>[x, low, high]</code>. In this cases, the <code>X</code> value can be skipped altogether to make use of <code>pointStart</code> and <code>pointRange</code>.
+Example:</p>
+
+<pre>
+data: [
+    [0, 9],
+    [1, 2],
+    [2, 8]
+]
+</pre>
+
+
+<p></br>3. An array of objects with named values. In this case the objects are
+point configuration objects as seen below. Range series values are given by low and high.
+Example:</p>
+
+<pre>
+data: [{
+     x: 1,
+     y: 9,
+     name: "Point2",
+     color: "#00FF00"
+}, {
+     x: 1,
+     y: 0,
+     name: "Point1",
+     color: "#FF00FF"
+}]
+</pre>
+
+
+<p>Note that line series and derived types like spline and area, require data to be sorted by X because it interpolates mouse coordinates for the tooltip. Column and scatter series, where each point has its own mouse event, does not require sorting.</p>
 			</div>
 			
 		    
@@ -277,22 +314,7 @@ the above rules. For range series, the arrays will be interpreted as [x, low, hi
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>Example:
-data: [[5, 2], [6, 3], [8, 2]] An array of objects with named values. In this case the objects are
-point configuration objects as seen below. Range series values are given by low and high.</p>
-
-<p>Example:
-data: [{
-name: &lsquo;Point 1&rsquo;,
-color: &lsquo;#00FF00&rsquo;,
-y: 0
-}, {
-name: &lsquo;Point 2&rsquo;,
-color: &lsquo;#FF00FF&rsquo;,
-y: 5
-}]  Note that line series and derived types like spline and area, require data to be sorted by X because it interpolates mouse coordinates for the tooltip. Column and scatter series, where each point has its own mouse event, does not require sorting.</p>
-
-<h4>Try it</h4>
+				<h4>Try it</h4>
 
 <ul>
 <li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/">Numerical values</a></li>
@@ -330,7 +352,7 @@ y: 5
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An id for the series. This can be used after render time to get a pointer to the series object through chart.get().</p>
+				<p>An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.</p>
 			</div>
 			
 		    
@@ -347,7 +369,9 @@ y: 5
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<h4>Try it</h4>
 
 <ul>
 <li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/">Get series by id</a></li>
@@ -381,7 +405,7 @@ y: 5
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The index of the series in the chart, affecting the internal index in the chart.series array, the visible Z index as well as the order in the legend.</p>
+				<p>The index of the series in the chart, affecting the internal index in the <code>chart.series</code> array, the visible Z index as well as the order in the legend.</p>
 			</div>
 			
 		    
@@ -395,6 +419,11 @@ y: 5
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+			</div>
 			
 
 			
@@ -439,7 +468,9 @@ y: 5
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<h4>Try it</h4>
 
 <ul>
 <li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/">Legend in opposite order</a></li>
@@ -490,7 +521,9 @@ y: 5
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<h4>Try it</h4>
 
 <ul>
 <li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/">Series name</a></li>
@@ -541,7 +574,9 @@ y: 5
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Defaults to</strong> <code>null</code>.</p>
+
+<h4>Try it</h4>
 
 <ul>
 <li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/">Stacked and grouped columns</a></li>
@@ -575,9 +610,7 @@ y: 5
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The type of series. Can be one of area, areaspline,
-bar, column, line, pie,
-scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.</p>
+				<p>The type of series, for example <code>line</code> or <code>column</code>. By default, the series type is inherited from chart.type, so unless the chart is a combination of series types, there is no need to set it on the series level.</p>
 			</div>
 			
 		    
@@ -594,7 +627,9 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>[null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<p><strong>Accepted values:</strong> <code>[null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]</code>.</p>
 
 <h4>Try it</h4>
 
@@ -630,7 +665,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.</p>
+				<p>When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <code>axis id</code> or the index of the axis in the xAxis array, with 0 being the first.</p>
 			</div>
 			
 		    
@@ -676,7 +711,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the yAxis array, with 0 being the first.</p>
+				<p>When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <code>axis id</code> or the index of the axis in the yAxis array, with 0 being the first.</p>
 			</div>
 			
 		    
@@ -729,7 +764,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Define the visual z index of the series.</p>
+				<p>Define the visual <code>z</code> index of the series.</p>
 			</div>
 			
 		    
@@ -746,7 +781,9 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<h4>Try it</h4>
 
 <ul>
 <li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/">With no z index, the series defined last are on top</a></li>

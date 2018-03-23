@@ -21,36 +21,48 @@
 
 
 /**
- Lang configuration for different series types. For more dynamic control over the series element descriptions, see `accessibility.seriesDescriptionFormatter`.
+ General options for all series types.
  */
 @interface HISeries: HIChartsJSONSerializable
 
 /**
  An array of data points for the series. The points can be given in three ways:
- An array of numerical values. In this case, the numerical values will
- be interpreted as y values, and x values will be automatically calculated,
- either starting at 0 and incrementing by 1, or from pointStart
- and pointInterval given in the plotOptions. If the axis is
+ </br></br>1. An array of numerical values. In this case, the numerical values will
+ be interpreted as `y` values, and `x` values will be automatically calculated,
+ either starting at 0 and incrementing by 1, or from `pointStart`
+ and `pointInterval` given in the plotOptions. If the axis is
  has categories, these will be used. This option is not available for range series. Example:
- data: [0, 5, 3, 5]  An array of arrays with two values. In this case, the first value is the
- x value and the second is the y value. If the first value is a string, it is
- applied as the name of the point, and the x value is incremented following
- the above rules. For range series, the arrays will be interpreted as [x, low, high]. In this cases, the X value can be skipped altogether to make use of pointStart and pointRange.
- 
+ <pre>
+ data: [0, 5, 3, 5]
+ </pre>
+ </br>2. An array of arrays with two values. In this case, the first value is the
+ `x` value and the second is the `y` value. If the first value is a string, it is
+ applied as the name of the point, and the `x` value is incremented following
+ the above rules. For range series, the arrays will be interpreted as `[x, low, high]`. In this cases, the `X` value can be skipped altogether to make use of `pointStart` and `pointRange`.
  Example:
- data: [[5, 2], [6, 3], [8, 2]] An array of objects with named values. In this case the objects are
+ <pre>
+ data: [
+    [0, 9],
+    [1, 2],
+    [2, 8]
+]
+ </pre>
+ </br>3. An array of objects with named values. In this case the objects are
  point configuration objects as seen below. Range series values are given by low and high.
- 
  Example:
+ <pre>
  data: [{
- name: 'Point 1',
- color: '#00FF00',
- y: 0
+     x: 1,
+     y: 9,
+     name: "Point2",
+     color: "#00FF00"
  }, {
- name: 'Point 2',
- color: '#FF00FF',
- y: 5
- }]  Note that line series and derived types like spline and area, require data to be sorted by X because it interpolates mouse coordinates for the tooltip. Column and scatter series, where each point has its own mouse event, does not require sorting.
+     x: 1,
+     y: 0,
+     name: "Point1",
+     color: "#FF00FF"
+ }]
+ </pre>Note that line series and derived types like spline and area, require data to be sorted by X because it interpolates mouse coordinates for the tooltip. Column and scatter series, where each point has its own mouse event, does not require sorting.
  
  ####Try it
  * [Numerical values](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/)
@@ -61,18 +73,24 @@
  */
 @property(nonatomic, readwrite) NSArray /* <Data, NSNumber, NSArray> */ *data;
 /**
- An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
+ An id for the series. This can be used after render time to get a pointer to the series object through `chart.get()`.
+ 
+ **Defaults to** `undefined`.
  
  ####Try it
  * [Get series by id](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/)
  */
 @property(nonatomic, readwrite) NSString *id;
 /**
- The index of the series in the chart, affecting the internal index in the chart.series array, the visible Z index as well as the order in the legend.
+ The index of the series in the chart, affecting the internal index in the `chart.series` array, the visible Z index as well as the order in the legend.
+ 
+ **Defaults to** `undefined`.
  */
 @property(nonatomic, readwrite) NSNumber *index;
 /**
  The sequential index of the series in the legend.
+ 
+ **Defaults to** `undefined`.
  
  ####Try it
  * [Legend in opposite order](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/)
@@ -81,6 +99,8 @@
 /**
  The name of the series as shown in the legend, tooltip etc.
  
+ **Defaults to** `undefined`.
+ 
  ####Try it
  * [Series name](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/)
  */
@@ -88,14 +108,16 @@
 /**
  This option allows grouping series in a stacked chart. The stack option can be a string or a number or anything else, as long as the grouped series' stack options match each other.
  
+ **Defaults to** `null`.
+ 
  ####Try it
  * [Stacked and grouped columns](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/)
  */
 @property(nonatomic, readwrite) NSString *stack;
 /**
- The type of series. Can be one of area, areaspline,
- bar, column, line, pie,
- scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
+ The type of series, for example `line` or `column`. By default, the series type is inherited from chart.type, so unless the chart is a combination of series types, there is no need to set it on the series level.
+ 
+ **Defaults to** `undefined`.
  
  **Accepted values:** `[null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]`.
  
@@ -104,13 +126,13 @@
  */
 @property(nonatomic, readwrite) NSString *type;
 /**
- When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.
+ When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the `axis id` or the index of the axis in the xAxis array, with 0 being the first.
  
  **Defaults to** `0`.
  */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
 /**
- When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the yAxis array, with 0 being the first.
+ When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the `axis id` or the index of the axis in the yAxis array, with 0 being the first.
  
  **Defaults to** `0`.
  
@@ -119,7 +141,9 @@
  */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
- Define the visual z index of the series.
+ Define the visual `z` index of the series.
+ 
+ **Defaults to** `undefined`.
  
  ####Try it
  * [With no z index, the series defined last are on top](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/)
