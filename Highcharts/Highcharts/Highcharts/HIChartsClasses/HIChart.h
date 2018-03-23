@@ -228,7 +228,7 @@ Allow panning in a chart. Best used with `panKey` to combine zooming and panning
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *panning;
 /**
-Options to render charts in 3 dimensions. This feature requires `highcharts-3d.js`, found in the download package or online at [code.highcharts.com/highcharts-3d.js](http:https://code.highcharts.com/highcharts- 3d.js).
+Options to render charts in 3 dimensions. This feature requires `highcharts-3d.js`, found in the download package or online at [code.highcharts.com/highcharts-3d.js](https://code.highcharts.com/highcharts-3d.js).
 */
 @property(nonatomic, readwrite) HIOptions3d *options3d;
 /**

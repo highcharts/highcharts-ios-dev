@@ -505,14 +505,14 @@ article #content {
   background: #fff;
   border: 1px solid #e9e9e9;
   /*padding: 15px 25px 30px 25px;*/
-  padding: 0px 25px 30px 25px;
+  padding: 0px 25px 200px 25px;
   font-size: 1.4em;
   line-height: 1.45;
   position: relative
 }
 
 #splashText {
-  padding: 30px;
+  padding: 30px 30px 400px 30px;
 }
 
 #splashText h1 {
@@ -818,7 +818,7 @@ article #content .title {
   display: block
 }
 
-* header styling */
+/* header styling */
 .headerMain .row {
   overflow: hidden;
 }
@@ -982,7 +982,6 @@ article #content .title {
   width: 350px;
   display:none;
   float:left;
-  border-right: 1px solid silver;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
@@ -994,6 +993,14 @@ article #content .title {
 .rhs-col {
   width: 100%;
   float: left;
+}
+
+#page-title h1 {
+  color: #eeeaea;
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 2px 15px 0 15px;
 }
 
 
