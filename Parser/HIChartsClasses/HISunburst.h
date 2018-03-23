@@ -13,7 +13,7 @@
 
 
 /**
-A `sunburst` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. sunburst](#plotOptions.sunburst).
+A `sunburst` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.sunburst`.
 */
 @interface HISunburst: HISeries
 
@@ -32,8 +32,7 @@ Determines the width of the ring per level.
 */
 @property(nonatomic, readwrite) HILevelSize *levelSize;
 /**
-The center of the sunburst chart relative to the plot area. Can be
-percentages or pixel values.
+/** The center of the sunburst chart relative to the plot area. Can be percentages or pixel values. 
 
 ####Defaults to `[null, null]`
 
@@ -42,8 +41,7 @@ percentages or pixel values.
 */
 @property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
 /**
-If a point is sliced, moved out from the center, how many pixels
-should it be moved?.
+/** If a point is sliced, moved out from the center, how many pixels should it be moved?. 
 
 ####Defaults to `10`
 
@@ -81,7 +79,7 @@ The color of the border surrounding each slice. When `null`, the border takes th
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
-A series specific or series type specific color set to use instead of the global colors.
+A series specific or series type specific color set to use instead of the global `colors`.
 
 ####Try it
 * [Set default colors for all pies](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/)
@@ -106,7 +104,7 @@ The start angle of the pie slices in degrees where 0 is top and 90 right.
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
 /**
-The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. slicedOffset is also included in the default size calculation. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example `"75%"`.
+The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. `slicedOffset` is also included in the default size calculation. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example `"75%"`.
 
 ####Try it
 * [Smaller pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/)

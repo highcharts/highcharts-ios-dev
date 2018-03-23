@@ -15,7 +15,7 @@ The pane serves as a container for axes and backgrounds for circular gauges and 
 @interface HIPane: HIChartsJSONSerializable
 
 /**
-The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to startAngle + 360.
+The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to `startAngle` + 360.
 
 ####Try it
 * [VU-meter with custom start and end angle](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/)

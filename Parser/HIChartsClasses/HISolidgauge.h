@@ -10,7 +10,7 @@
 
 
 /**
-A `solidgauge` series. If the type option is not specified, it is inherited from chart.type.  For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. solidgauge](#plotOptions.solidgauge).
+A `solidgauge` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.solidgauge`.
 */
 @interface HISolidgauge: HISeries
 
@@ -19,10 +19,7 @@ Whether to give each point an individual color.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
-Allow the gauge to overshoot the end of the perimeter axis by this
-many degrees. Say if the gauge axis goes from 0 to 60, a value of
-100, or 1000, will show 5 degrees beyond the end of the axis when this
-option is set to 5.
+/** Allow the gauge to overshoot the end of the perimeter axis by this many degrees. Say if the gauge axis goes from 0 to 60, a value of 100, or 1000, will show 5 degrees beyond the end of the axis when this option is set to 5. 
 
 ####Defaults to `0`
 

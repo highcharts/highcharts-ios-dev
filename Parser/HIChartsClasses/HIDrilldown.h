@@ -27,7 +27,7 @@ Additional styles to apply to the data label of a point that has drilldown data.
 */
 @property(nonatomic, readwrite) HIActiveDataLabelStyle *activeDataLabelStyle;
 /**
-An array of series configurations for the drill down. Each series configuration uses the same syntax as the series option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its `id`.
+An array of series configurations for the drill down. Each series configuration uses the same syntax as the `series` option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its `id`.
 */
 @property(nonatomic, readwrite) NSArray *series;
 /**
@@ -44,7 +44,7 @@ Set the animation for all drilldown animations. Animation of a drilldown occurs 
 */
 @property(nonatomic, readwrite) HIAnimation *animation;
 /**
-Options for the drill up button that appears when drilling down on a series. The text for the button is defined in lang.drillUpText.
+Options for the drill up button that appears when drilling down on a series. The text for the button is defined in `lang.drillUpText`.
 
 ####Try it
 * [Drill up button](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/)

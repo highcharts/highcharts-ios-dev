@@ -16,7 +16,7 @@ An array of data classes or ranges for the choropleth map. If none given, the co
 @interface HIDataClasses: HIChartsJSONSerializable
 
 /**
-The color of each data class. If not set, the color is pulled from the global or chart-specific colors array. In styled mode, this option is ignored. Instead, use colors defined in CSS.
+The color of each data class. If not set, the color is pulled from the global or chart-specific `colors` array. In styled mode, this option is ignored. Instead, use colors defined in CSS.
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**
@@ -28,7 +28,7 @@ The start of the value range that the data class represents, relating to the poi
 */
 @property(nonatomic, readwrite) NSNumber *from;
 /**
-The name of the data class as it appears in the legend. If no name is given, it is automatically created based on the `from` and `to` values. For full programmatic control, legend.labelFormatter can be used. In the formatter, `this.from` and `this.to` can be accessed.
+The name of the data class as it appears in the legend. If no name is given, it is automatically created based on the `from` and `to` values. For full programmatic control, `legend.labelFormatter` can be used. In the formatter, `this.from` and `this.to` can be accessed.
 */
 @property(nonatomic, readwrite) NSString *name;
 

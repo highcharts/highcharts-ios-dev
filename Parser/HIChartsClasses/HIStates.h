@@ -12,7 +12,7 @@
 
 
 /**
-A wrapper object for all the series options in specific states.
+/** A wrapper object for all the series options in specific states. 
 */
 @interface HIStates: HIChartsJSONSerializable
 

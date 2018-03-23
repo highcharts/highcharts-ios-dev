@@ -19,7 +19,7 @@
 
 
 /**
-The X axis or category axis. Normally this is the horizontal axis, though if the chart is inverted this is the vertical axis. In case of multiple axes, the xAxis node is an array of configuration objects. See the Axis object for programmatic access to the axis.
+The X axis or category axis. Normally this is the horizontal axis, though if the chart is inverted this is the vertical axis. In case of multiple axes, the xAxis node is an array of configuration objects. See `the Axis object` for programmatic access to the axis.
 */
 @interface HIXAxis: HIChartsJSONSerializable
 
@@ -33,7 +33,7 @@ Padding of the min value relative to the length of the axis. A padding of 0.05 w
 */
 @property(nonatomic, readwrite) NSNumber *minPadding;
 /**
-If tickInterval is `null` this option sets the approximate pixel interval of the tick marks. Not applicable to categorized axis. The tick interval is also influenced by the [minTickInterval](#xAxis. minTickInterval) option, that, by default prevents ticks from being denser than the data points.
+If tickInterval is `null` this option sets the approximate pixel interval of the tick marks. Not applicable to categorized axis. The tick interval is also influenced by the `minTickInterval` option, that, by default prevents ticks from being denser than the data points.
 
 ####Try it
 * [50 px on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/)
@@ -49,7 +49,7 @@ The Z index of the grid lines.
 */
 @property(nonatomic, readwrite) NSNumber *gridZIndex;
 /**
-For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the `day` unit can be used on midnight and `hour` unit be used for intermediate values on the same axis. For an overview of the replacement codes, see dateFormat. Defaults to: {   millisecond: '%H:%M:%S.%L',   second: '%H:%M:%S',   minute: '%H:%M',   hour: '%H:%M',   day: '%e. %b',   week: '%e. %b',   month: '%b \'%y',   year: '%Y' }
+For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the `day` unit can be used on midnight and `hour` unit be used for intermediate values on the same axis. For an overview of the replacement codes, see `dateFormat`. Defaults to: {   millisecond: '%H:%M:%S.%L',   second: '%H:%M:%S',   minute: '%H:%M',   hour: '%H:%M',   day: '%e. %b',   week: '%e. %b',   month: '%b \'%y',   year: '%Y' }
 
 ####Try it
 * [Different day format on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/datetimelabelformats/)
@@ -69,7 +69,7 @@ A soft maximum for the axis. If the series data maximum is less than this, the a
 */
 @property(nonatomic, readwrite) NSNumber *softMax;
 /**
-Refers to the index in the panes array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.
+Refers to the index in the `panes` array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.
 
 ####Try it
 * [Two gauges with different center](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter)
@@ -121,14 +121,14 @@ An id for the axis. This can be used after render time to get a pointer to the a
 */
 @property(nonatomic, readwrite) NSString *id;
 /**
-An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.
+An array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`.
 
 ####Try it
 * [Demo of tickPositions and tickPositioner](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/)
 */
 @property(nonatomic, readwrite) NSArray<NSNumber *> *tickPositions;
 /**
-The minimum value of the axis. If `null` the min value is automatically calculated. If the `startOnTick` option is true (default), the `min` value might be rounded down. The automatically calculated minimum value is also affected by floor, softMin, minPadding, minRange as well as series.threshold and series.softThreshold.
+The minimum value of the axis. If `null` the min value is automatically calculated. If the `startOnTick` option is true (default), the `min` value might be rounded down. The automatically calculated minimum value is also affected by `floor`, `softMin`, `minPadding`, `minRange` as well as `series.threshold` and `series.softThreshold`.
 
 ####Try it
 * [-50 with startOnTick to false](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/)
@@ -181,7 +181,7 @@ Color of the minor, secondary grid lines. In styled mode, the stroke width is gi
 */
 @property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
-A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of [tickPixelInterval](#xAxis. tickPixelInterval) and tickInterval. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
+A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
 
 ####Try it
 * [Demo of tickPositions and tickPositioner](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/)
@@ -235,7 +235,7 @@ A soft minimum for the axis. If the series data minimum is greater than this, th
 */
 @property(nonatomic, readwrite) NSNumber *softMin;
 /**
-The type of axis. Can be one of `linear`, `logarithmic`, `datetime` or `category`. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed on appropriate values like full hours or days. In a category axis, the point names of the chart's series are used for categories, if not a categories array is defined.
+The type of axis. Can be one of `linear`, `logarithmic`, `datetime` or `category`. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed on appropriate values like full hours or days. In a category axis, the `point names` of the chart's series are used for categories, if not a `categories` array is defined.
 
 **Accepted values:** `["linear", "logarithmic", "datetime", "category"]`.
 
@@ -310,7 +310,7 @@ The position of the minor tick marks relative to the axis line. Can be one of `i
 */
 @property(nonatomic, readwrite) NSString *minorTickPosition;
 /**
-The maximum value of the axis. If `null`, the max value is automatically calculated. If the `endOnTick` option is true, the `max` value might be rounded up. If a tickAmount is set, the axis may be extended beyond the set max in order to reach the given number of ticks. The same may happen in a chart with multiple axes, determined by [chart. alignTicks](#chart), where a `tickAmount` is applied internally.
+The maximum value of the axis. If `null`, the max value is automatically calculated. If the `endOnTick` option is true, the `max` value might be rounded up. If a `tickAmount` is set, the axis may be extended beyond the set max in order to reach the given number of ticks. The same may happen in a chart with multiple axes, determined by `chart.alignTicks`, where a `tickAmount` is applied internally.
 
 ####Try it
 * [Y axis max of 200](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/)
@@ -345,7 +345,7 @@ The width of the grid lines extending the ticks across the plot area. In styled 
 */
 @property(nonatomic, readwrite) NSNumber *gridLineWidth;
 /**
-Enable or disable minor ticks. Unless minorTickInterval is set, the tick interval is calculated as a fifth of the `tickInterval`. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting `minorTickInterval` to `"auto"`.
+Enable or disable minor ticks. Unless `minorTickInterval` is set, the tick interval is calculated as a fifth of the `tickInterval`. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting `minorTickInterval` to `"auto"`.
 
 **Defaults to** `false`.
 
@@ -396,7 +396,7 @@ The minimum tick interval allowed in axis values. For example on zooming in on a
 */
 @property(nonatomic, readwrite) NSNumber *minTickInterval;
 /**
-The interval of the tick marks in axis units. When `null`, the tick interval is computed to approximately follow the [tickPixelInterval](#xAxis. tickPixelInterval) on linear and datetime axes. On categorized axes, a `null` tickInterval will default to 1, one category. Note that datetime axes are based on milliseconds, so for example an interval of one day is expressed as `24 * 3600 * 1000`. On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc.  If the tickInterval is too dense for labels to be drawn, Highcharts may remove ticks. If the chart has multiple axes, the alignTicks option may interfere with the `tickInterval` setting.
+The interval of the tick marks in axis units. When `null`, the tick interval is computed to approximately follow the `tickPixelInterval` on linear and datetime axes. On categorized axes, a `null` tickInterval will default to 1, one category. Note that datetime axes are based on milliseconds, so for example an interval of one day is expressed as `24 * 3600 * 1000`. On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc. If the tickInterval is too dense for labels to be drawn, Highcharts may remove ticks. If the chart has multiple axes, the `alignTicks` option may interfere with the `tickInterval` setting.
 
 **Defaults to** `null`.
 
@@ -415,7 +415,7 @@ Specific tick interval in axis units for the minor ticks. On a linear axis, if `
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ minorTickInterval;
 /**
-If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a name and setting axis type to `category`. However, if you have multiple series, best practice remains defining the `categories` array. Example: categories: ['Apples', 'Bananas', 'Oranges']
+If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a `name` and setting axis `type` to `category`. However, if you have multiple series, best practice remains defining the `categories` array. Example: categories: ['Apples', 'Bananas', 'Oranges']
 
 **Defaults to** `null`.
 

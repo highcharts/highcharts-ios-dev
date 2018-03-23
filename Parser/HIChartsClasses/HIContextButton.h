@@ -17,7 +17,7 @@ Options for the export button. In styled mode, export button styles can be appli
 @interface HIContextButton: HIChartsJSONSerializable
 
 /**
-See navigation.buttonOptions.symbolFill.
+/** See `navigation.buttonOptions.symbolFill`. 
 
 ####Defaults to `#666666`
 
@@ -42,7 +42,7 @@ The class name of the context button.
 */
 @property(nonatomic, readwrite) NSString *className;
 /**
-The key to a lang option setting that is used for the button's title tooltip. When the key is `contextButtonTitle`, it refers to lang.contextButtonTitle that defaults to "Chart context menu".
+The key to a `lang` option setting that is used for the button's title tooltip. When the key is `contextButtonTitle`, it refers to `lang.contextButtonTitle` that defaults to "Chart context menu".
 */
 @property(nonatomic, readwrite) NSString *_titleKey;
 /**
@@ -63,7 +63,7 @@ The class name of the menu appearing from the button.
 */
 @property(nonatomic, readwrite) NSString *menuClassName;
 /**
-A collection of strings pointing to config options for the menu items. The config options are defined in the `menuItemDefinitions` option. By default, there is the "Print" menu item plus one menu item for each of the available export types.  Defaults to  [ 	'printChart', 	'separator', 	'downloadPNG', 	'downloadJPEG', 	'downloadPDF', 	'downloadSVG' ] 
+A collection of strings pointing to config options for the menu items. The config options are defined in the `menuItemDefinitions` option. By default, there is the "Print" menu item plus one menu item for each of the available export types. Defaults to  [ 	'printChart', 	'separator', 	'downloadPNG', 	'downloadJPEG', 	'downloadPDF', 	'downloadSVG' ] 
 
 ####Try it
 * [Menu item definitions](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/)

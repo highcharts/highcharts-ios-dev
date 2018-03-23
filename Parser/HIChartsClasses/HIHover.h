@@ -75,7 +75,7 @@ The color of the point marker's outline. When `null`, the series' or point's lin
 */
 @property(nonatomic, readwrite) HIColor *lineColor;
 /**
-The radius of the point marker. In hover state, it defaults to the normal state's radius + 2 as per the radiusPlus option.
+The radius of the point marker. In hover state, it defaults to the normal state's radius + 2 as per the `radiusPlus` option.
 
 ####Try it
 * [10px radius](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-radius/)

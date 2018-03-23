@@ -25,7 +25,7 @@ CSS styles for the title. Use this for font styling, but use `align`, `x` and `y
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
-The vertical alignment of the title. Can be one of `"top"`, `"middle"` and `"bottom"`. When a value is given, the title behaves as if [floating](#title. floating) were `true`.
+The vertical alignment of the title. Can be one of `"top"`, `"middle"` and `"bottom"`. When a value is given, the title behaves as if `floating` were `true`.
 
 **Accepted values:** `["top", "middle", "bottom"]`.
 
@@ -60,7 +60,7 @@ Whether to [use HTML](http://www.highcharts.com/docs/chart-concepts/labels- and-
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
-The y position of the title relative to the alignment within [chart. spacingTop](#chart.spacingTop) and chart.spacingBottom. By default it depends on the font size.
+The y position of the title relative to the alignment within `chart.spacingTop` and `chart.spacingBottom`. By default it depends on the font size.
 
 ####Try it
 * [Title inside the plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/y/)
@@ -105,8 +105,7 @@ When the title is floating, the plot area will not move to make space for it.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *floating;
 /**
-The rotation of the text in degrees. 0 is horizontal, 270 is
-vertical reading from bottom to top.
+/** The rotation of the text in degrees. 0 is horizontal, 270 is vertical reading from bottom to top. 
 
 ####Defaults to `0`
 
@@ -130,7 +129,7 @@ If enabled, the axis title will skewed to follow the perspective. This will fix 
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skew3d;
 /**
-Defines how the title is repositioned according to the 3D chart orientation. - `'offset'`: Maintain a fixed horizontal/vertical distance from the  tick marks, despite the chart orientation. This is the backwards  compatible behavior, and causes skewing of X and Z axes. - `'chart'`: Preserve 3D position relative to the chart.  This looks nice, but hard to read if the text isn't  forward-facing. - `'flap'`: Rotated text along the axis to compensate for the chart  orientation. This tries to maintain text as legible as possible on  all orientations. - `'ortho'`: Rotated text along the axis direction so that the labels  are orthogonal to the axis. This is very similar to `'flap'`, but  prevents skewing the labels (X and Y scaling are still present). - `null`: Will use the config from `labels.position3d`
+Defines how the title is repositioned according to the 3D chart orientation. - `'offset'`: Maintain a fixed horizontal/vertical distance from the  tick marks, despite the chart orientation. This is the backwards  compatible behavior, and causes skewing of X and Z axes. - `'chart'`: Preserve 3D position relative to the chart. This looks nice, but hard to read if the text isn't  forward-facing. - `'flap'`: Rotated text along the axis to compensate for the chart  orientation. This tries to maintain text as legible as possible on  all orientations. - `'ortho'`: Rotated text along the axis direction so that the labels  are orthogonal to the axis. This is very similar to `'flap'`, but  prevents skewing the labels (X and Y scaling are still present). - `null`: Will use the config from `labels.position3d`
 
 **Accepted values:** `['offset', 'chart', 'flap', 'ortho', null]`.
 

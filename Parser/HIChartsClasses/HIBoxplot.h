@@ -11,7 +11,7 @@
 
 
 /**
-A `boxplot` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to plotOptions.boxplot.
+A `boxplot` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.boxplot`.
 */
 @interface HIBoxplot: HISeries
 
@@ -27,7 +27,7 @@ The color of the median line. If `null`, the general series color applies. In st
 */
 @property(nonatomic, readwrite) HIColor *medianColor;
 /**
-The pixel width of the median line. If `null`, the lineWidth is used. In styled mode, the median stroke width can be set with the `.highcharts-boxplot-median` class.
+The pixel width of the median line. If `null`, the `lineWidth` is used. In styled mode, the median stroke width can be set with the `.highcharts-boxplot-median` class.
 
 ####Try it
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
@@ -87,7 +87,7 @@ The fill color of the box. In styled mode, the fill color can be set with the `.
 */
 @property(nonatomic, readwrite) HIColor *fillColor;
 /**
-The width of the stem, the vertical line extending from the box to the whiskers. If `null`, the width is inherited from the lineWidth option. In styled mode, the stem stroke width can be set with the `.highcharts-boxplot-stem` class.
+The width of the stem, the vertical line extending from the box to the whiskers. If `null`, the width is inherited from the `lineWidth` option. In styled mode, the stem stroke width can be set with the `.highcharts-boxplot-stem` class.
 
 **Defaults to** `null`.
 
@@ -98,7 +98,7 @@ The width of the stem, the vertical line extending from the box to the whiskers.
 */
 @property(nonatomic, readwrite) NSNumber *stemWidth;
 /**
-The line width of the whiskers, the horizontal lines marking low and high values. When `null`, the general lineWidth applies. In styled mode, the whisker stroke width can be set with the `.highcharts-boxplot-whisker` class.
+The line width of the whiskers, the horizontal lines marking low and high values. When `null`, the general `lineWidth` applies. In styled mode, the whisker stroke width can be set with the `.highcharts-boxplot-whisker` class.
 
 ####Try it
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
@@ -121,7 +121,7 @@ The minimal height for a column or width for a bar. By default, 0 values are not
 */
 @property(nonatomic, readwrite) NSNumber *minPointLength;
 /**
-A series specific or series type specific color set to apply instead of the global colors when [colorByPoint](#plotOptions. column.colorByPoint) is true.
+A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;
