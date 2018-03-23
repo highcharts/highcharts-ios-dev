@@ -13,7 +13,8 @@
 /**
 An array of background items for the pane.
 
-####Try it
+**Try it**
+
 * [Speedometer gauge with multiple backgrounds](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/)
 */
 @interface HIBackground: HIChartsJSONSerializable
@@ -40,7 +41,8 @@ The inner radius of the pane background. Can be either numeric (pixels) or a per
 /**
 The class name for this background.
 
-####Try it
+**Try it**
+
 * [Panes styled by CSS](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pane/)
 */
 @property(nonatomic, readwrite) NSString *className;

@@ -13,7 +13,8 @@
 /**
 Options for exporting data to CSV or ExCel, or displaying the data in a HTML table or a JavaScript structure. Requires the `export-data.js` module. This module adds data export options to the export menu and provides functions like `Chart.getCSV`, `Chart.getTable`, `Chart.getDataRows` and `Chart.viewData`.
 
-####Try it
+**Try it**
+
 * [Categorized data](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/)
 * [Highstock time axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/)
 */
@@ -22,7 +23,8 @@ Options for exporting data to CSV or ExCel, or displaying the data in a HTML tab
 /**
 Formatter callback for the column headers. Parameters are: - `item` - The series or axis object) - `key` - The point key, for example y or z - `keyLength` - The amount of value keys for this item, for  example a range series has the keys `low` and `high` so the  key length is 2. If `useMultiLevelHeaders` is true, columnHeaderFormatter by default returns an object with columnTitle and topLevelColumnTitle for each key. Columns with the same topLevelColumnTitle have their titles merged into a single cell with colspan for table/Excel export. If `useMultiLevelHeaders` is false, or for CSV export, it returns the series name, followed by the key if there is more than one key. For the axis it returns the axis title or "Category" or "DateTime" by default. Return `false` to use Highcharts' proposed header.
 
-####Try it
+**Try it**
+
 * [Multiple table headers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table)
 */
 @property(nonatomic, readwrite) HIFunction *columnHeaderFormatter;

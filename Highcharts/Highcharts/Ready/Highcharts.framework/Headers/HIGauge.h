@@ -19,7 +19,8 @@ A `gauge` series. If the `type` option is not specified, it is inherited from `c
 /**
 Options for the dial or arrow pointer of the gauge. In styled mode, the dial is styled with the `.highcharts-gauge-series .highcharts-dial` rule.
 
-####Try it
+**Try it**
+
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/)
 */
 @property(nonatomic, readwrite) HIDial *dial;
@@ -28,7 +29,8 @@ Allow the dial to overshoot the end of the perimeter axis by this many degrees. 
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Allow 5 degrees overshoot](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-overshoot/)
 */
 @property(nonatomic, readwrite) NSNumber *overshoot;
@@ -41,7 +43,8 @@ When this option is `true`, the dial will wrap around the axes. For instance, in
 /**
 Options for the pivot or the center point of the gauge. In styled mode, the pivot is styled with the `.highcharts-gauge-series .highcharts-pivot` rule.
 
-####Try it
+**Try it**
+
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/)
 */
 @property(nonatomic, readwrite) HIPivot *pivot;

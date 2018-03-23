@@ -31,34 +31,37 @@ Shared CSS styles for all labels.
 /**
 The y position offset of the label relative to the tick position on the axis.
 
-####Defaults to `3`
+**Defaults to** `3`.
 
-####Try it
+**Try it**
+
 * [Y axis labels placed on grid lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-x/)
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
 The x position offset of the label relative to the tick position on the axis. Defaults to -15 for left axis, 15 for right axis.
 
-####Try it
+**Try it**
+
 * [Y axis labels placed on grid lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-x/)
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
 What part of the string the given position is anchored to. Can be one of `"left"`, `"center"` or `"right"`. The exact position also depends on the `labels.x` setting. Angular gauges and solid gauges defaults to `center`.
 
-####Accepted values: `["left", "center", "right"]`
+**Accepted values:** `["left", "center", "right"]`.
 
-####Defaults to `right`
+**Defaults to** `right`.
 
-####Try it
+**Try it**
+
 * [Left](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/labels-align-left/)
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
 Angular gauges and solid gauges only. The label's pixel distance from the perimeter of the plot area.
 
-####Defaults to `-25`
+**Defaults to** `-25`.
 */
 @property(nonatomic, readwrite) NSNumber *distance;
 /**
@@ -72,7 +75,8 @@ Whether to reserve space for the labels. By default, space is reserved for the l
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [No reserved space, labels inside plot](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-reservespace/)
 * [Left-aligned labels on a vertical category axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-reservespace-true/)
 */
@@ -82,7 +86,8 @@ A [format string](http://www.highcharts.com/docs/chart- concepts/labels-and-stri
 
 **Defaults to** `{value}`.
 
-####Try it
+**Try it**
+
 * [Add units to Y axis label](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/labels-format/)
 */
 @property(nonatomic, readwrite) NSString *format;
@@ -91,7 +96,8 @@ When each category width is more than this many pixels, we don't apply auto rota
 
 **Defaults to** `80`.
 
-####Try it
+**Try it**
+
 * [Lower limit](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotationlimit/)
 */
 @property(nonatomic, readwrite) NSNumber *autoRotationLimit;
@@ -100,7 +106,8 @@ Enable or disable the axis labels.
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [X axis labels disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-enabled/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
@@ -109,7 +116,8 @@ Horizontal axes only. The number of lines to spread the labels over to make room
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Show labels over two lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-staggerlines/)
 */
 @property(nonatomic, readwrite) NSNumber *staggerLines;
@@ -118,7 +126,8 @@ Defines how the labels are be repositioned according to the 3D chart orientation
 
 **Accepted values:** `['offset', 'chart', 'flap', 'ortho']`.
 
-####Try it
+**Try it**
+
 * [Skewed labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/skewed-labels/)
 */
 @property(nonatomic, readwrite) NSString *position3d;
@@ -139,7 +148,8 @@ To show only every _n_'th label on the axis, set the step to _n_. Setting the st
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Showing only every other axis label on a categorized x axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-step/)
 * [Auto steps on a category axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-step-auto/)
 */
@@ -147,14 +157,16 @@ To show only every _n_'th label on the axis, set the step to _n_. Setting the st
 /**
 If enabled, the axis labels will skewed to follow the perspective. This will fix overlapping labels and titles, but texts become less legible due to the distortion. The final appearance depends heavily on `labels.position3d`.
 
-####Try it
+**Try it**
+
 * [Skewed labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/skewed-labels/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skew3d;
 /**
 Callback JavaScript function to format the label. The value is given by `this.value`. Additional properties for `this` are `axis`, `chart`, `isFirst` and `isLast`. The value of the default label formatter can be retrieved by calling `this.axis.defaultLabelFormatter.call(this)` within the function. Defaults to: function() {   return this.value; }
 
-####Try it
+**Try it**
+
 * [Linked category names](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-formatter-linked/)
 * [Modified numeric labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-formatter-extended/)
 */
@@ -164,7 +176,8 @@ Rotation of the labels in degrees.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [X axis labels rotated 90Â°](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-rotation/)
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
@@ -173,7 +186,8 @@ For horizontal axes, the allowed degrees of label rotation to prevent overlappin
 
 **Defaults to** `[-45]`.
 
-####Try it
+**Try it**
+
 * [Default auto rotation of 0 or -45](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-default/)
 * [Custom graded auto rotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotation-0-90/)
 */
@@ -181,21 +195,24 @@ For horizontal axes, the allowed degrees of label rotation to prevent overlappin
 /**
 This option defines the point to which the label will be connected. It can be either the point which exists in the series - it is referenced by the point's id - or a new point with defined x, y properies and optionally axes.
 
-####Try it
+**Try it**
+
 * [Attach annotation to a mock point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-point/)
 */
 @property(nonatomic, readwrite) HIPoint *point;
 /**
 Whether to allow the annotation's labels to overlap. To make the labels less sensitive for overlapping, the can be set to 0.
 
-####Try it
+**Try it**
+
 * [Hide overlapping labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/tooltip-like/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowOverlap;
 /**
 The border color for the annotation's label.
 
-####Try it
+**Try it**
+
 * [Set labels graphic options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/)
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
@@ -204,7 +221,8 @@ The vertical alignment of the annotation's label.
 
 **Accepted values:** `["top", "middle", "bottom"]`.
 
-####Try it
+**Try it**
+
 * [Set labels position
 *](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/)
 */
@@ -212,7 +230,8 @@ The vertical alignment of the annotation's label.
 /**
 The border radius in pixels for the annotaiton's label.
 
-####Try it
+**Try it**
+
 * [Set labels graphic options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/)
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
@@ -221,28 +240,32 @@ Alias for the format option.
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Set labels text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/)
 */
 @property(nonatomic, readwrite) NSString *text;
 /**
 Whether to hide the annotation's label that is outside the plot area.
 
-####Try it
+**Try it**
+
 * [Crop or justify labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *crop;
 /**
 A class name for styling by CSS.
 
-####Try it
+**Try it**
+
 * [Styled mode annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/annotations)
 */
 @property(nonatomic, readwrite) NSString *className;
 /**
 The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
 
-####Try it
+**Try it**
+
 * [Available shapes for labels
 *](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shapes/)
 */
@@ -250,14 +273,16 @@ The name of a symbol to use for the border around the label. Symbols are predefi
 /**
 The border width in pixels for the annotation's label
 
-####Try it
+**Try it**
+
 * [Set labels graphic options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/)
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
 The background color or gradient for the annotation's label.
 
-####Try it
+**Try it**
+
 * [Set labels graphic options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/)
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
@@ -266,7 +291,8 @@ How to handle the annotation's label that flow outside the plot area. The justif
 
 **Accepted values:** `["none", "justify"]`.
 
-####Try it
+**Try it**
+
 * [Crop or justify labels
 *](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/)
 */
@@ -274,7 +300,8 @@ How to handle the annotation's label that flow outside the plot area. The justif
 /**
 The shadow of the box. The shadow can be an object configuration containing `color`, `offsetX`, `offsetY`, `opacity` and `width`.
 
-####Try it
+**Try it**
+
 * [Set labels graphic options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/)
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;

@@ -27,25 +27,28 @@ Which point to use as a root in the visualization.
 /**
 Determines the width of the ring per level.
 
-####Try it
+**Try it**
+
 * [Sunburst with various sizes per level](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-levelsize/)
 */
 @property(nonatomic, readwrite) HILevelSize *levelSize;
 /**
 The center of the sunburst chart relative to the plot area. Can be percentages or pixel values.
 
-####Defaults to `[null, null]`
+**Defaults to** `[null, null]`.
 
-####Try it
+**Try it**
+
 * [Centered at 100, 100](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/)
 */
 @property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
 /**
 If a point is sliced, moved out from the center, how many pixels should it be moved?.
 
-####Defaults to `10`
+**Defaults to** `10`.
 
-####Try it
+**Try it**
+
 * [Sliced sunburst](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-sliced)
 */
 @property(nonatomic, readwrite) NSNumber *slicedOffset;
@@ -56,7 +59,8 @@ Used together with the levels and `allowDrillToNode` options. When set to false 
 /**
 Set options on specific levels. Takes precedence over series options, but not point options.
 
-####Try it
+**Try it**
+
 * [Sunburst chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst)
 */
 @property(nonatomic, readwrite) NSArray <HILevels *> *levels;
@@ -65,7 +69,8 @@ When enabled the user can click on a point which is a parent and zoom in on its 
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Allow drill to node](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowDrillToNode;
@@ -74,14 +79,16 @@ The color of the border surrounding each slice. When `null`, the border takes th
 
 **Defaults to** `#ffffff`.
 
-####Try it
+**Try it**
+
 * [Black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/)
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
 A series specific or series type specific color set to use instead of the global `colors`.
 
-####Try it
+**Try it**
+
 * [Set default colors for all pies](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/)
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
@@ -90,7 +97,8 @@ The width of the border surrounding each slice. When setting the border width to
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [3px border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-borderwidth/)
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
@@ -99,14 +107,16 @@ The start angle of the pie slices in degrees where 0 is top and 90 right.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Start from right](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/)
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
 /**
 The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. `slicedOffset` is also included in the default size calculation. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example `"75%"`.
 
-####Try it
+**Try it**
+
 * [Smaller pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/)
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ size;

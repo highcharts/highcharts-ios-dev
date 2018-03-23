@@ -19,7 +19,8 @@ CSS styles for the title. In styled mode, the subtitle style is given in the `.h
 
 **Defaults to** `{ "color": "#666666" }`.
 
-####Try it
+**Try it**
+
 * [Custom color and weight](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/style/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/)
 */
@@ -29,14 +30,16 @@ The vertical alignment of the title. Can be one of "top", "middle" and "bottom".
 
 **Accepted values:** `["top", "middle", "bottom"]`.
 
-####Try it
+**Try it**
+
 * [Footnote at the bottom right of plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/)
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
 /**
 The subtitle of the chart.
 
-####Try it
+**Try it**
+
 * [Custom subtitle](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/text/)
 * [Formatted and linked text.](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/text-formatted/)
 */
@@ -48,7 +51,8 @@ The horizontal alignment of the subtitle. Can be one of "left", "center" and "ri
 
 **Defaults to** `center`.
 
-####Try it
+**Try it**
+
 * [Footnote at right of plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/align/)
 */
 @property(nonatomic, readwrite) NSString *align;
@@ -63,7 +67,8 @@ The y position of the subtitle relative to the alignment within chart. spacingTo
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Footnote at the bottom right of plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/)
 */
 @property(nonatomic, readwrite) NSNumber *y;
@@ -72,7 +77,8 @@ The x position of the subtitle relative to the alignment within chart. spacingLe
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Footnote at right of plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/align/)
 */
 @property(nonatomic, readwrite) NSNumber *x;
@@ -81,7 +87,8 @@ Adjustment made to the subtitle width, normally to reserve space for the exporti
 
 **Defaults to** `-44`.
 
-####Try it
+**Try it**
+
 * [Wider menu, greater padding](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/)
 */
 @property(nonatomic, readwrite) NSNumber *widthAdjust;
@@ -90,7 +97,8 @@ When the subtitle is floating, the plot area will not move to make space for it.
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Floating title and subtitle](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/floating/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *floating;

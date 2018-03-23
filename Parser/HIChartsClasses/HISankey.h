@@ -18,9 +18,10 @@ A `sankey` series. If the `type` option is not specified, it is inherited from `
 /**
 When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point.
 
-####Defaults to `false`
+**Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/)
 * [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/)
 */
@@ -44,7 +45,8 @@ Opacity for the links between nodes in the sankey diagram.
 /**
 The minimal height for a column or width for a bar. By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point length to a pixel value like 3\. In stacked column charts, minPointLength might not be respected for tightly packed values.
 
-####Try it
+**Try it**
+
 * [Zero base value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/)
 * [Positive and negative close to zero values](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/)
 */
@@ -57,7 +59,8 @@ A series specific or series type specific color set to apply instead of the glob
 /**
 A collection of options for the individual nodes. The nodes in a sankey diagram are auto-generated instances of `Highcharts.Point`, but options can be applied here and linked by the `id`.
 
-####Try it
+**Try it**
+
 * [Sankey diagram with node options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/sankey/)
 */
 @property(nonatomic, readwrite) NSArray <HINodes *> *nodes;

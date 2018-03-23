@@ -28,7 +28,8 @@ Lang configuration for different series types. For more dynamic control over the
 /**
 An array of data points for the series. The points can be given in three ways:  An array of numerical values. In this case, the numerical values will  	be interpreted as y values, and x values will be automatically calculated, 	either starting at 0 and incrementing by 1, or from pointStart  	and pointInterval given in the plotOptions. If the axis is 	has categories, these will be used. This option is not available for range series. Example: data: [0, 5, 3, 5]  An array of arrays with two values. In this case, the first value is the 	x value and the second is the y value. If the first value is a string, it is 	applied as the name of the point, and the x value is incremented following 	the above rules. For range series, the arrays will be interpreted as [x, low, high]. In this cases, the X value can be skipped altogether to make use of pointStart and pointRange.  Example: data: [[5, 2], [6, 3], [8, 2]] An array of objects with named values. In this case the objects are 	point configuration objects as seen below. Range series values are given by low and high.  Example: data: [{ 	name: 'Point 1', 	color: '#00FF00', 	y: 0 }, { 	name: 'Point 2', 	color: '#FF00FF', 	y: 5 }]  Note that line series and derived types like spline and area, require data to be sorted by X because it interpolates mouse coordinates for the tooltip. Column and scatter series, where each point has its own mouse event, does not require sorting.
 
-####Try it
+**Try it**
+
 <ul>
 <li><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/" target="_blank">1) Numerical values</a></li>
 
@@ -46,7 +47,8 @@ An array of data points for the series. The points can be given in three ways: 
 /**
 An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
 
-####Try it
+**Try it**
+
 <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/" target="_blank">Get series by id</a>*/
 @property(nonatomic, readwrite) NSString *id;
 /**
@@ -60,13 +62,15 @@ The sequential index of the series in the legend. Try it: 	Legend in opposite or
 /**
 The name of the series as shown in the legend, tooltip etc.
 
-####Try it
+**Try it**
+
 <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/name/" target="_blank">Series name</a>*/
 @property(nonatomic, readwrite) NSString *name;
 /**
 This option allows grouping series in a stacked chart. The stack option can be a string or a number or anything else, as long as the grouped series' stack options match each other.
 
-####Try it
+**Try it**
+
 <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/stack/" target="_blank">Stacked and grouped columns</a>*/
 @property(nonatomic, readwrite) NSString *stack;
 /**
@@ -74,7 +78,8 @@ The type of series. Can be one of area, areaspline, bar, column, line, pie, sc
 
 **Accepted values:** `[null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]`.
 
-####Try it
+**Try it**
+
 <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/type/" target="_blank">Line and column in the same chart</a>*/
 @property(nonatomic, readwrite) NSString *type;
 /**
@@ -88,13 +93,15 @@ When using dual or multiple y axes, this number defines which yAxis the particul
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/" target="_blank">Apply the column series to the secondary Y axis</a>*/
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 /**
 Define the visual z index of the series.
 
-####Try it
+**Try it**
+
 <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank">with a z index, the series with the highest z index is on top</a>.*/
 @property(nonatomic, readwrite) NSNumber *zIndex;
@@ -119,7 +126,8 @@ Whether to select the series initially. If `showCheckbox` is true, the checkbox 
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [One out of two series selected](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
@@ -134,7 +142,8 @@ Properties for each single point.
 /**
 The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the `options.colors` array. In styled mode, the color can be defined by the `colorIndex` option. Also, the series color can be set with the `.highcharts-series`, `.highcharts-color-{n}`, `.highcharts-{type}-series` or `.highcharts-series-{n}` class, or individual classes given by the `className` option.
 
-####Try it
+**Try it**
+
 * [General plot option](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/)
 * [One specific series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/)
 * [Area color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/)
@@ -145,7 +154,8 @@ If no x values are given for the points in a series, `pointInterval` defines the
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [Datetime X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/)
 */
 @property(nonatomic, readwrite) NSNumber *pointInterval;
@@ -188,7 +198,8 @@ You can set the cursor to "pointer" if you have click events attached to the ser
 
 **Accepted values:** `[null, "default", "none", "help", "pointer", "crosshair"]`.
 
-####Try it
+**Try it**
+
 * [On line graph](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/)
 * [On columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/)
 * [On scatter markers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/)
@@ -203,7 +214,8 @@ A name for the dash style to use for the graph, or for some series types the out
 
 **Defaults to** `Solid`.
 
-####Try it
+**Try it**
+
 * [Possible values demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/)
 * [Chart suitable for printing in black and white](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle/)
 */
@@ -215,7 +227,8 @@ Possible values: `null`, `"on"`, `"between"`. In a column chart, when pointPlace
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Between in a column chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/)
 * [Numeric placement for custom layout](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-numeric/)
 */
@@ -225,7 +238,8 @@ Whether to connect a graph line across null points, or render a gap between the 
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-false/)
 * [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-true/)
 */
@@ -235,7 +249,8 @@ The color for the parts of the graph or points that are below the `threshold`.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Spline, area and column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/)
 * [Arearange](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/)
@@ -246,14 +261,16 @@ Enable or disable the mouse tracking for a specific series. This includes point 
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [No mouse tracking](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enableMouseTracking;
 /**
 Series labels are placed as close to the series as possible in a natural way, seeking to avoid other series. The goal of this feature is to make the chart more easily readable, like if a human designer placed the labels in the optimal position. The series labels currently work with series types having a `graph` or an `area`. Requires the `series-label.js` module.
 
-####Try it
+**Try it**
+
 * [Line chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart)
 * [Stream graph](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph)
 * [Stock chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart)
@@ -266,7 +283,8 @@ Whether to stack the values of each series on top of each other. Possible values
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/)
 * [Column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-column/)
 * [Bar](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-bar/)
@@ -282,7 +300,8 @@ Determines whether the series should look for the nearest point in both dimensio
 
 **Accepted values:** `['x', 'xy']`.
 
-####Try it
+**Try it**
+
 * [Different hover behaviors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/findnearestpointby/)
 */
 @property(nonatomic, readwrite) NSString *findNearestPointBy;
@@ -291,7 +310,8 @@ If true, a checkbox is displayed next to the legend item to allow selecting the 
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Show select box](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
@@ -303,7 +323,8 @@ For some series, there is a limit that shuts down initial animation by default w
 /**
 An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
 
-####Try it
+**Try it**
+
 * [An extended data array with keys](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/)
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *keys;
@@ -322,7 +343,8 @@ Allow this series' points to be selected by clicking on the graphic (columns, po
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/)
 * [Column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/)
 * [Pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/)
@@ -335,7 +357,8 @@ Whether to apply steps to the line. Possible values are `left`, `center` and `ri
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Different step line options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-step/)
 * [Stepped, stacked area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-step/)
 */
@@ -351,7 +374,8 @@ By default, series are exposed to screen readers as regions. By enabling this op
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Accessible data visualization](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/art-grants/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *exposeElementToA11y;
@@ -360,7 +384,8 @@ Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Shadow enabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/)
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
@@ -369,7 +394,8 @@ Enable or disable the initial animation when a series is displayed. The animatio
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Animation disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/)
 * [Slower animation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/)
 * [Custom easing function](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/)
@@ -380,14 +406,16 @@ Defines the Axis on which the zones are applied.
 
 **Defaults to** `y`.
 
-####Try it
+**Try it**
+
 * [Zones on the X-Axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/)
 */
 @property(nonatomic, readwrite) NSString *zoneAxis;
 /**
 An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the `zoneAxis` option. In styled mode, the color zones are styled with the `.highcharts-zone-{n}` class, or custom classed from the `className` option ([view live demo](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/)).
 
-####Try it
+**Try it**
+
 * [Color zones](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/)
 */
 @property(nonatomic, readwrite) NSArray <HIZones *> *zones;
@@ -396,14 +424,16 @@ On datetime series, this allows for setting the `pointInterval` to irregular tim
 
 **Accepted values:** `[null, "day", "month", "year"]`.
 
-####Try it
+**Try it**
+
 * [One point a month](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointintervalunit/)
 */
 @property(nonatomic, readwrite) NSString *pointIntervalUnit;
 /**
 Polar charts only. Whether to connect the ends of a line series plot across the extremes.
 
-####Try it
+**Try it**
+
 * [Do not connect](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-connectends-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectEnds;
@@ -412,14 +442,16 @@ Set the initial visibility of the series.
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Two series, one hidden and one visible](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
 The `id` of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
 
-####Try it
+**Try it**
+
 * [Linked series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/)
 */
 @property(nonatomic, readwrite) NSString *linkedTo;
@@ -442,7 +474,8 @@ If no x values are given for the points in a series, pointStart defines on what 
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Linear](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/)
 * [Datetime](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/)
 */
@@ -460,7 +493,8 @@ Pixel width of the graph line.
 
 **Defaults to** `2`.
 
-####Try it
+**Try it**
+
 * [On all series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/)
 * [On one single series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-specific/)
 */
@@ -470,7 +504,8 @@ Sticky tracking of mouse events. When true, the `mouseOut` event on a series isn
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/)
 * [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/)
 */
@@ -480,7 +515,8 @@ Whether to display this particular series or series type in the legend. The defa
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [One series in the legend, one hidden](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;

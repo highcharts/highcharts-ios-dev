@@ -13,7 +13,8 @@
 /**
 Time options that can apply globally or to individual charts. These settings affect how `datetime` axes are laid out, how tooltips are formatted, how series `pointIntervalUnit` works and how the Highstock range selector handles time. The common use case is that all charts in the same Highcharts object share the same time settings, in which case the global settings are set using `setOptions`. ```js // Apply time settings globally Highcharts.setOptions({   time: {     timezone: 'Europe/London'   } }); // Apply time settings by instance var chart = Highcharts.chart('container', {   time: {     timezone: 'America/New_York'   },   series: [{     data: [1, 4, 3, 5]   }] }); // Use the Time object console.log( 	  'Current time in New York', 	  chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now()) ); ``` Since v6.0.5, the time options were moved from the `global` obect to the `time` object, and time options can be set on each individual chart.
 
-####Try it
+**Try it**
+
 * [Set the timezone globally](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/timezone/)
 * [Set the timezone per chart instance](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/individual/)
 */
@@ -28,14 +29,16 @@ Requires [moment.js](http://momentjs.com/). If the timezone option is specified,
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Europe/Oslo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/timezone/)
 */
 @property(nonatomic, readwrite) NSString *timezone;
 /**
 A callback to return the time zone offset for a given datetime. It takes the timestamp in terms of milliseconds since January 1 1970, and returns the timezone offset in minutes. This provides a hook for drawing time based charts in specific time zones using their local DST crossover dates, with the help of external libraries.
 
-####Try it
+**Try it**
+
 * [Use moment.js to draw Oslo time regardless of browser locale](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/gettimezoneoffset/)
 */
 @property(nonatomic, readwrite) HIFunction *getTimezoneOffset;
@@ -44,14 +47,16 @@ The timezone offset in minutes. Positive values are west, negative values are ea
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Timezone offset](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/timezoneoffset/)
 */
 @property(nonatomic, readwrite) NSNumber *timezoneOffset;
 /**
 Whether to use UTC time for axis scaling, tickmark placement and time display in `Highcharts.dateFormat`. Advantages of using UTC is that the time displays equally regardless of the user agent's time zone settings. Local time can be used when the data is loaded in real time or when correct Daylight Saving Time transitions are required.
 
-####Try it
+**Try it**
+
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/useutc-true/)
 * [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/useutc-false/)
 */

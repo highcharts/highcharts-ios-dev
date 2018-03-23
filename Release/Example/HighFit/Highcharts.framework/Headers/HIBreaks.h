@@ -12,7 +12,8 @@
 /**
 An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other.
 
-####Try it
+**Try it**
+
 * [Simple break](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-simple/)
 * [Advanced with callback](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/)
 */

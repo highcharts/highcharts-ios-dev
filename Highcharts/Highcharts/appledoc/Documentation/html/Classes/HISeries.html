@@ -224,7 +224,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>General options for all series types.</p>
+						<p>Lang configuration for different series types. For more dynamic control over the series element descriptions, see <code>accessibility.seriesDescriptionFormatter</code>.</p>
 					</div>
 					
 					
@@ -252,52 +252,15 @@
 			
 			<div class="method-subsection brief-description">
 				<p>An array of data points for the series. The points can be given in three ways:
-</br></br>1. An array of numerical values. In this case, the numerical values will
-be interpreted as <code>y</code> values, and <code>x</code> values will be automatically calculated,
-either starting at 0 and incrementing by 1, or from <code>pointStart</code>
-and <code>pointInterval</code> given in the plotOptions. If the axis is
-has categories, these will be used. This option is not available for range series. Example:</p>
-
-<pre>
-data: [0, 5, 3, 5]
-</pre>
-
-
-<p></br>2. An array of arrays with two values. In this case, the first value is the
-<code>x</code> value and the second is the <code>y</code> value. If the first value is a string, it is
-applied as the name of the point, and the <code>x</code> value is incremented following
-the above rules. For range series, the arrays will be interpreted as <code>[x, low, high]</code>. In this cases, the <code>X</code> value can be skipped altogether to make use of <code>pointStart</code> and <code>pointRange</code>.
-Example:</p>
-
-<pre>
-data: [
-    [0, 9],
-    [1, 2],
-    [2, 8]
-]
-</pre>
-
-
-<p></br>3. An array of objects with named values. In this case the objects are
-point configuration objects as seen below. Range series values are given by low and high.
-Example:</p>
-
-<pre>
-data: [{
-     x: 1,
-     y: 9,
-     name: "Point2",
-     color: "#00FF00"
-}, {
-     x: 1,
-     y: 0,
-     name: "Point1",
-     color: "#FF00FF"
-}]
-</pre>
-
-
-<p>Note that line series and derived types like spline and area, require data to be sorted by X because it interpolates mouse coordinates for the tooltip. Column and scatter series, where each point has its own mouse event, does not require sorting.</p>
+  An array of numerical values. In this case, the numerical values will
+    be interpreted as y values, and x values will be automatically calculated,
+    either starting at 0 and incrementing by 1, or from pointStart
+    and pointInterval given in the plotOptions. If the axis is
+    has categories, these will be used. This option is not available for range series. Example:
+data: [0, 5, 3, 5]  An array of arrays with two values. In this case, the first value is the
+    x value and the second is the y value. If the first value is a string, it is
+    applied as the name of the point, and the x value is incremented following
+    the above rules. For range series, the arrays will be interpreted as [x, low, high]. In this cases, the X value can be skipped altogether to make use of pointStart and pointRange.</p>
 			</div>
 			
 		    
@@ -314,14 +277,47 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p>Example:
+data: [[5, 2], [6, 3], [8, 2]] An array of objects with named values. In this case the objects are
+    point configuration objects as seen below. Range series values are given by low and high.</p>
+
+<p>Example:
+data: [{
+    name: &lsquo;Point 1&rsquo;,
+    color: &lsquo;#00FF00&rsquo;,
+    y: 0
+}, {
+    name: &lsquo;Point 2&rsquo;,
+    color: &lsquo;#FF00FF&rsquo;,
+    y: 5
+}]  Note that line series and derived types like spline and area, require data to be sorted by X because it interpolates mouse coordinates for the tooltip. Column and scatter series, where each point has its own mouse event, does not require sorting.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/">Numerical values</a></li>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-arrays/">Arrays of numeric x and y</a></li>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-arrays-datetime/">Arrays of datetime x and y</a></li>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/">Arrays of point.name and y</a></li>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/">Config objects</a></li>
+
+<li><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/" target="_blank">1) Numerical values</a></li>
+
+
+
+<li><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-arrays/" target="_blank">2a) arrays of numeric x and y</a></li>
+
+
+
+<li><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-arrays-datetime/" target="_blank">2b) arrays of datetime x and y</a></li>
+
+
+
+<li><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-name-value/" target="_blank">2c) arrays of point.name and y</a></li>
+
+
+
+<li><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank">3) config objects</a></li>
+
+
+
+<li><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-null-values/" target="_blank">4) 3D column with null values</a></li>
+
 </ul>
 
 			</div>
@@ -352,7 +348,7 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.</p>
+				<p>An id for the series. This can be used after render time to get a pointer to the series object through chart.get().</p>
 			</div>
 			
 		    
@@ -369,14 +365,9 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+				<p><strong>Try it</strong></p>
 
-<h4>Try it</h4>
-
-<ul>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/">Get series by id</a></li>
-</ul>
-
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-id/" target="_blank">Get series by id</a></p>
 			</div>
 			
 
@@ -405,7 +396,7 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The index of the series in the chart, affecting the internal index in the <code>chart.series</code> array, the visible Z index as well as the order in the legend.</p>
+				<p>The index of the series in the chart, affecting the internal index in the chart.series array, the visible Z index as well as the order in the legend.</p>
 			</div>
 			
 		    
@@ -419,11 +410,6 @@ data: [{
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
 			
 
 			
@@ -451,7 +437,7 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The sequential index of the series in the legend.</p>
+				<p>The sequential index of the series in the legend. Try it:   Legend in opposite order .</p>
 			</div>
 			
 		    
@@ -465,18 +451,6 @@ data: [{
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-
-<h4>Try it</h4>
-
-<ul>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legendindex/">Legend in opposite order</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -521,14 +495,9 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+				<p><strong>Try it</strong></p>
 
-<h4>Try it</h4>
-
-<ul>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/name/">Series name</a></li>
-</ul>
-
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/name/" target="_blank">Series name</a></p>
 			</div>
 			
 
@@ -574,14 +543,9 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
+				<p><strong>Try it</strong></p>
 
-<h4>Try it</h4>
-
-<ul>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/stack/">Stacked and grouped columns</a></li>
-</ul>
-
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/stack/" target="_blank">Stacked and grouped columns</a></p>
 			</div>
 			
 
@@ -610,7 +574,9 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The type of series, for example <code>line</code> or <code>column</code>. By default, the series type is inherited from chart.type, so unless the chart is a combination of series types, there is no need to set it on the series level.</p>
+				<p>The type of series. Can be one of area, areaspline,
+bar, column, line, pie,
+scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.</p>
 			</div>
 			
 		    
@@ -627,16 +593,11 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+				<p><strong>Accepted values:</strong> <code>[null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]</code>.</p>
 
-<p><strong>Accepted values:</strong> <code>[null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]</code>.</p>
+<p><strong>Try it</strong></p>
 
-<h4>Try it</h4>
-
-<ul>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/type/">Line and column in the same chart</a></li>
-</ul>
-
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/type/" target="_blank">Line and column in the same chart</a></p>
 			</div>
 			
 
@@ -665,7 +626,7 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <code>axis id</code> or the index of the axis in the xAxis array, with 0 being the first.</p>
+				<p>When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the xAxis array, with 0 being the first.</p>
 			</div>
 			
 		    
@@ -711,7 +672,7 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <code>axis id</code> or the index of the axis in the yAxis array, with 0 being the first.</p>
+				<p>When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the axis id or the index of the axis in the yAxis array, with 0 being the first.</p>
 			</div>
 			
 		    
@@ -730,12 +691,9 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>0</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
-<ul>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/">Apply the column series to the secondary Y axis</a></li>
-</ul>
-
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/yaxis/" target="_blank">Apply the column series to the secondary Y axis</a></p>
 			</div>
 			
 
@@ -764,7 +722,7 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Define the visual <code>z</code> index of the series.</p>
+				<p>Define the visual z index of the series.</p>
 			</div>
 			
 		    
@@ -781,15 +739,12 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+				<p><strong>Try it</strong></p>
 
-<h4>Try it</h4>
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,</p>
 
-<ul>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/">With no z index, the series defined last are on top</a></li>
-<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/">With a z index, the series with the highest z index is on top</a></li>
-</ul>
-
+<pre><code>        &lt;a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank"&gt;with a z index, the series with the highest z index is on top&lt;/a&gt;.
+</code></pre>
 			</div>
 			
 
@@ -941,7 +896,7 @@ data: [{
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Lang configuration for the series main summary. Each series type has two modes:     1. This series type is the only series type used in the         chart     2. This is a combination chart with multiple series types If a definition does not exist for the specific series type and mode, the &lsquo;default&rsquo; lang definitions are used.</p>
+				<p>Lang configuration for the series main summary. Each series type has two modes:     1. This series type is the only series type used in the         chart   2. This is a combination chart with multiple series types If a definition does not exist for the specific series type and mode, the &lsquo;default&rsquo; lang definitions are used.</p>
 			</div>
 			
 		    
@@ -1001,7 +956,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>false</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/">One out of two series selected</a></li>
@@ -1134,7 +1089,7 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/">General plot option</a></li>
@@ -1189,7 +1144,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>1</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/">Datetime X axis</a></li>
@@ -1544,7 +1499,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>[null, "default", "none", "help", "pointer", "crosshair"]</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/">On line graph</a></li>
@@ -1598,12 +1553,12 @@ data: [{
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["Solid", "ShortDash", "ShortDot", "ShortDashDot",
-"ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",
-"LongDashDot", "LongDashDotDot"]</code>.</p>
+            "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",
+            "LongDashDot", "LongDashDotDot"]</code>.</p>
 
 <p><strong>Defaults to</strong> <code>Solid</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">Possible values demonstrated</a></li>
@@ -1659,7 +1614,7 @@ data: [{
 
 <p><strong>Defaults to</strong> <code>null</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/">Between in a column chart</a></li>
@@ -1713,7 +1668,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>false</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-false/">False by default</a></li>
@@ -1767,7 +1722,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>null</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/">Spline, area and column</a></li>
@@ -1822,7 +1777,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>true</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/">No mouse tracking</a></li>
@@ -1873,7 +1828,7 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart">Line chart</a></li>
@@ -1930,7 +1885,7 @@ data: [{
 
 <p><strong>Defaults to</strong> <code>null</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/">Line</a></li>
@@ -1990,7 +1945,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>['x', 'xy']</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/findnearestpointby/">Different hover behaviors</a></li>
@@ -2043,7 +1998,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>false</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/">Show select box</a></li>
@@ -2151,7 +2106,7 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/">An extended data array with keys</a></li>
@@ -2291,7 +2246,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>false</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/">Line</a></li>
@@ -2348,7 +2303,7 @@ data: [{
 
 <p><strong>Defaults to</strong> <code>null</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-step/">Different step line options</a></li>
@@ -2448,7 +2403,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/art-grants/">Accessible data visualization</a></li>
@@ -2501,7 +2456,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>false</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/">Shadow enabled</a></li>
@@ -2554,7 +2509,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>true</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/">Animation disabled</a></li>
@@ -2609,7 +2564,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>y</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/">Zones on the X-Axis</a></li>
@@ -2660,7 +2615,7 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/">Color zones</a></li>
@@ -2713,7 +2668,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>[null, "day", "month", "year"]</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointintervalunit/">One point a month</a></li>
@@ -2764,7 +2719,7 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-connectends-false/">Do not connect</a></li>
@@ -2817,7 +2772,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>true</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/">Two series, one hidden and one visible</a></li>
@@ -2868,7 +2823,7 @@ data: [{
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<h4>Try it</h4>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/">Linked series</a></li>
@@ -3049,7 +3004,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>0</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/">Linear</a></li>
@@ -3151,7 +3106,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>2</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/">On all series</a></li>
@@ -3205,7 +3160,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>true</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/">True by default</a></li>
@@ -3259,7 +3214,7 @@ data: [{
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>true</code>.</p>
 
-<h4>Try it</h4>
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/">One series in the legend, one hidden</a></li>

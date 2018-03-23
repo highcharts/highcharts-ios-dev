@@ -53,7 +53,8 @@ An array containing the default colors for the chart's series. When all colors a
 **Defaults to** `["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9",
          "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]`.
 
-####Try it
+**Try it**
+
 * [Assign a global color theme](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/)
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
@@ -66,7 +67,8 @@ The pane serves as a container for axes and backgrounds for circular gauges and 
 /**
 Allows setting a set of rules to apply for different screen or chart sizes. Each rule specifies additional chart options.
 
-####Try it
+**Try it**
+
 * [Axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/)
 * [Legend](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/)
 * [Class name](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/)
@@ -76,7 +78,8 @@ Allows setting a set of rules to apply for different screen or chart sizes. Each
 /**
 Options for displaying a message like "No data to display". This feature requires the file no-data-to-display.js to be loaded in the page. The actual text to display is set in the lang.noData option.
 
-####Try it
+**Try it**
+
 * [Line chart with no-data module](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
 * [Pie chart with no-data module](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-pie)
 */
@@ -110,7 +113,8 @@ Options for the exporting module. For an overview on the matter, see [the docs](
 /**
 Options for the Boost module. The Boost module allows certain series types to be rendered by WebGL instead of the default SVG. This allows hundreds of thousands of data points to be rendered in milliseconds. In addition to the WebGL rendering it saves time by skipping processing and inspection of the data wherever possible. This introduces some limitations to what features are available in Boost mode. See [the docs](https://www.highcharts.com/docs/advanced-chart-features/boost-module) for details. In addition to the global `boost` option, each series has a `boostThreshold` that defines when the boost should kick in. Requires the `modules/boost.js` module.
 
-####Try it
+**Try it**
+
 * [Line chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line)
 * [Line chart with hundreds of series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy)
 * [Scatter chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter)
@@ -127,7 +131,8 @@ Options for the Boost module. The Boost module allows certain series types to be
 /**
 Options for configuring annotations, for example labels, arrows or shapes. Annotations can be tied to points, axis coordinates or chart pixel coordinates.
 
-####Try it
+**Try it**
+
 * [Basic annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/basic/)
 * [Advanced annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/annotations/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/annotations)
@@ -137,7 +142,8 @@ Options for configuring annotations, for example labels, arrows or shapes. Annot
 /**
 Styled mode only. Configuration object for adding SVG definitions for reusable elements. See [gradients, shadows and patterns](http://www.highcharts.com/docs/chart-design-and-style/gradients-shadows-and-patterns) for more information and code examples.
 
-####Try it
+**Try it**
+
 * [Define a custom marker for annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/custom-markers/)
 * [Define markers in a styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/annotations-markers/)
 */
@@ -158,7 +164,8 @@ Highchart by default puts a credits label in the lower right corner of the chart
 /**
 The Z axis or depth axis for 3D plots. See `the Axis object` for programmatic access to the axis.
 
-####Try it
+**Try it**
+
 * [Z-Axis with Categories](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-zaxis-categories/)
 * [Z-Axis with styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-zaxis-grid/)
 */
@@ -170,14 +177,15 @@ The X axis or category axis. Normally this is the horizontal axis, though if the
 @property(nonatomic, readwrite) NSArray<HIXAxis *> *xAxis;
 
 /**
- Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices. The drilldown feature requires the drilldown.js file to be loaded, found in the modules directory of the download package, or online at [code.highcharts.com/modules/drilldown.js](https://code.highcharts.com/modules/drilldown.js).
+Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices. The drilldown feature requires the drilldown.js file to be loaded, found in the modules directory of the download package, or online at (code.highcharts.com/modules/drilldown.js)[https://code.highcharts.com/modules/drilldown.js].
 */
 @property(nonatomic, readwrite) HIDrilldown *drilldown;
 
 /**
 The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the [tutorial article on the Data module](http://www.highcharts.com/docs/working- with-data/data-module). It requires the `modules/data.js` file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the `series.data` option.
 
-####Try it
+**Try it**
+
 * [HTML table](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/)
 * [CSV](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/)
 */
@@ -196,7 +204,8 @@ A color axis for choropleth maps and heat maps. Visually, the color axis will ap
 /**
 Time options that can apply globally or to individual charts. These settings affect how `datetime` axes are laid out, how tooltips are formatted, how series `pointIntervalUnit` works and how the Highstock range selector handles time. The common use case is that all charts in the same Highcharts object share the same time settings, in which case the global settings are set using `setOptions`. ```js // Apply time settings globally Highcharts.setOptions({   time: {     timezone: 'Europe/London'   } }); // Apply time settings by instance var chart = Highcharts.chart('container', {   time: {     timezone: 'America/New_York'   },   series: [{     data: [1, 4, 3, 5]   }] }); // Use the Time object console.log( 	  'Current time in New York', 	  chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now()) ); ``` Since v6.0.5, the time options were moved from the `global` obect to the `time` object, and time options can be set on each individual chart.
 
-####Try it
+**Try it**
+
 * [Set the timezone globally](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/timezone/)
 * [Set the timezone per chart instance](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/individual/)
 */

@@ -20,7 +20,8 @@ CSS styles for the loading screen that covers the plot area.
 
 **Defaults to** `{ "position": "absolute", "backgroundColor": "#ffffff", "opacity": 0.5, "textAlign": "center" }`.
 
-####Try it
+**Try it**
+
 * [Gray plot area, white text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/)
 */
 @property(nonatomic, readwrite) HIStyle *style;
@@ -29,7 +30,8 @@ CSS styles for the loading label `span`.
 
 **Defaults to** `{ "fontWeight": "bold", "position": "relative", "top": "45%" }`.
 
-####Try it
+**Try it**
+
 * [Vertically centered](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/)
 */
 @property(nonatomic, readwrite) HILabelStyle *labelStyle;
@@ -38,7 +40,8 @@ The duration in milliseconds of the fade out effect.
 
 **Defaults to** `100`.
 
-####Try it
+**Try it**
+
 * [Fade in and out over a second](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/)
 */
 @property(nonatomic, readwrite) NSNumber *hideDuration;
@@ -47,7 +50,8 @@ The duration in milliseconds of the fade in effect.
 
 **Defaults to** `100`.
 
-####Try it
+**Try it**
+
 * [Fade in and out over a second](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/)
 */
 @property(nonatomic, readwrite) NSNumber *showDuration;

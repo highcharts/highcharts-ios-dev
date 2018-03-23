@@ -12,7 +12,8 @@
 /**
 Allows setting a set of rules to apply for different screen or chart sizes. Each rule specifies additional chart options.
 
-####Try it
+**Try it**
+
 * [Axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/)
 * [Legend](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/)
 * [Class name](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/)
@@ -22,7 +23,8 @@ Allows setting a set of rules to apply for different screen or chart sizes. Each
 /**
 A set of rules for responsive settings. The rules are executed from the top down.
 
-####Try it
+**Try it**
+
 * [Axis changes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/)
 */
 @property(nonatomic, readwrite) NSArray <HIRules *> *rules;

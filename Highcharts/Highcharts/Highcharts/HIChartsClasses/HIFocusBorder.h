@@ -12,7 +12,8 @@
 /**
 Options for the focus border drawn around elements while navigating through them.
 
-####Try it
+**Try it**
+
 * [Custom focus ring](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/custom-focus)
 */
 @interface HIFocusBorder: HIChartsJSONSerializable

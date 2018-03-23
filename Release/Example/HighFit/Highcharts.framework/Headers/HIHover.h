@@ -22,7 +22,8 @@ Enable separate styles for the hovered series to visualize that the user hovers 
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/)
 * [Column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/)
 * [Pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/)
@@ -39,7 +40,8 @@ Pixel width of the graph line. By default this property is undefined, and the `l
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [5px line on hover](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/)
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
@@ -48,14 +50,16 @@ The additional line width for the graph of a hovered series.
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [5 pixels wider](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/)
 */
 @property(nonatomic, readwrite) NSNumber *lineWidthPlus;
 /**
 Options for the halo appearing around the hovered point in line- type series as well as outside the hovered slice in pie charts. By default the halo is filled by the current point or series color with an opacity of 0.25\. The halo can be disabled by setting the `halo` option to `false`. In styled mode, the halo is styled with the `.highcharts-halo` class, with colors inherited from `.highcharts-color-{n}`.
 
-####Try it
+**Try it**
+
 * [Halo options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/)
 */
 @property(nonatomic, readwrite) HIHalo *halo;
@@ -70,14 +74,16 @@ The color of the point marker's outline. When `null`, the series' or point's lin
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [White fill color, black line color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-linecolor/)
 */
 @property(nonatomic, readwrite) HIColor *lineColor;
 /**
 The radius of the point marker. In hover state, it defaults to the normal state's radius + 2 as per the `radiusPlus` option.
 
-####Try it
+**Try it**
+
 * [10px radius](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-radius/)
 */
 @property(nonatomic, readwrite) NSNumber *radius;

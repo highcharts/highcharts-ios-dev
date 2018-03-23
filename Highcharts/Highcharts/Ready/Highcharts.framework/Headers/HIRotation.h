@@ -12,7 +12,8 @@
 /**
 Rotation options for the words in the wordcloud.
 
-####Try it
+**Try it**
+
 * [Word cloud with rotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/wordcloud-rotation)
 */
 @interface HIRotation: HIChartsJSONSerializable

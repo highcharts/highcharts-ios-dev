@@ -14,7 +14,8 @@ CSS styles for each legend item. Only a subset of CSS is supported, notably thos
 
 **Defaults to** `{ "color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold", "textOverflow": "ellipsis" }`.
 
-####Try it
+**Try it**
+
 * [Bold black text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemstyle/)
 */
 @interface HIItemStyle: HIChartsJSONSerializable

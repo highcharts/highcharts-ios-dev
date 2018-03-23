@@ -18,34 +18,38 @@ A `tilemap` series. If the `type` option is not specified, it is inherited from 
 /**
 The padding between points in the tilemap.
 
-####Defaults to `0`
+**Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Point padding on tiles](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding)
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
 The column size - how many X axis units each column in the tilemap should span. Works as in `Heatmaps`.
 
-####Defaults to `1`
+**Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [One day](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/)
 */
 @property(nonatomic, readwrite) NSNumber *colsize;
 /**
 The row size - how many Y axis units each tilemap row should span. Analogous to `colsize`.
 
-####Defaults to `1`
+**Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/)
 */
 @property(nonatomic, readwrite) NSNumber *rowsize;
 /**
 The shape of the tiles in the tilemap. Possible values are `hexagon`, `circle`, `diamond`, and `square`.
 
-####Try it
+**Try it**
+
 * [Circular tile shapes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa)
 * [Diamond tile shapes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap)
 */

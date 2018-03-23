@@ -18,14 +18,16 @@ The button that appears after a selection zoom, allowing the user to reset zoom.
 /**
 The position of the button.
 
-####Try it
+**Try it**
+
 * [Above the plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/)
 */
 @property(nonatomic, readwrite) HIPosition *position;
 /**
 A collection of attributes for the button. The object takes SVG attributes like `fill`, `stroke`, `stroke-width` or `r`, the border radius. The theme also supports `style`, a collection of CSS properties for the text. Equivalent attributes for the hover state are given in `theme.states.hover`.
 
-####Try it
+**Try it**
+
 * [Theming the button](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-theme/)
 */
 @property(nonatomic, readwrite) HITheme *theme;
@@ -36,7 +38,8 @@ What frame the button should be placed related to. Can be either `plot` or `char
 
 **Defaults to** `plot`.
 
-####Try it
+**Try it**
+
 * [Relative to the chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-relativeto/)
 */
 @property(nonatomic, readwrite) NSString *relativeTo;

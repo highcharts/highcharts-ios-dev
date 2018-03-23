@@ -20,9 +20,10 @@ A `wordcloud` series. If the `type` option is not specified, it is inherited fro
 /**
 When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point.
 
-####Defaults to `false`
+**Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/)
 * [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/)
 */
@@ -40,16 +41,18 @@ Spiral used for placing a word after the inital position experienced a collision
 /**
 The width of the border surrounding each column or bar. In styled mode, the stroke width can be set with the `.highcharts-point` rule.
 
-####Defaults to `1`
+**Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [2px black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/)
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
 Rotation options for the words in the wordcloud.
 
-####Try it
+**Try it**
+
 * [Word cloud with rotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/wordcloud-rotation)
 */
 @property(nonatomic, readwrite) HIRotation *rotation;
@@ -62,7 +65,8 @@ The corner radius of the border surrounding each column or bar.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Rounded columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/)
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
@@ -76,7 +80,8 @@ The color of the border surrounding each column or bar. In styled mode, the bord
 
 **Defaults to** `#ffffff`.
 
-####Try it
+**Try it**
+
 * [Dark gray border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/)
 */
 @property(nonatomic, readwrite) HIColor *borderColor;

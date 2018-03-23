@@ -23,7 +23,8 @@ Enable/disable keyboard navigation for the legend. Requires the Accessibility mo
 /**
 Options for the focus border drawn around elements while navigating through them.
 
-####Try it
+**Try it**
+
 * [Custom focus ring](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/custom-focus)
 */
 @property(nonatomic, readwrite) HIFocusBorder *focusBorder;

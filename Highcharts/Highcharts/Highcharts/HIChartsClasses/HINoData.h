@@ -13,7 +13,8 @@
 /**
 Options for displaying a message like "No data to display". This feature requires the file no-data-to-display.js to be loaded in the page. The actual text to display is set in the lang.noData option.
 
-####Try it
+**Try it**
+
 * [Line chart with no-data module](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
 * [Pie chart with no-data module](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-pie)
 */
@@ -28,7 +29,8 @@ The position of the no-data label, relative to the plot area.
 /**
 CSS styles for the no-data label.
 
-####Try it
+**Try it**
+
 * [Styled no-data text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
 */
 @property(nonatomic, readwrite) HIStyle *style;

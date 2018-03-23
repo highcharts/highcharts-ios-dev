@@ -46,21 +46,24 @@ When enabled the user can click on a point which is a parent and zoom in on its 
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Enabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-allowdrilltonode/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowDrillToNode;
 /**
 The sort index of the point inside the treemap level.
 
-####Try it
+**Try it**
+
 * [Sort by years](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-sortindex/)
 */
 @property(nonatomic, readwrite) NSNumber *sortIndex;
 /**
 This option decides if the user can interact with the parent nodes or just the leaf nodes. When this option is undefined, it will be true by default. However when allowDrillToNode is true, then it will be false by default.
 
-####Try it
+**Try it**
+
 * [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-false/)
 * [InteractByLeaf and allowDrillToNode is true](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-true-and-allowdrilltonode/)
 */
@@ -76,7 +79,8 @@ This option decides which algorithm is used for setting position and dimensions 
 
 **Defaults to** `sliceAndDice`.
 
-####Try it
+**Try it**
+
 * [SliceAndDice by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-sliceanddice/)
 * [Stripes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-stripes/)
 * [Squarified](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-squarified/)
@@ -100,7 +104,8 @@ Defines which direction the layout algorithm will start drawing. Possible values
 /**
 Set options on specific levels. Takes precedence over series options, but not point options.
 
-####Try it
+**Try it**
+
 * [Styling dataLabels and borders](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/)
 * [Different layoutAlgorithm](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/)
 */
@@ -114,7 +119,8 @@ Enabling this option will make the treemap alternate the drawing direction betwe
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Enabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-alternatestartingdirection-true/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *alternateStartingDirection;

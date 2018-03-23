@@ -28,7 +28,8 @@ The corner radius of the outer chart border.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [20px radius](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/borderradius/)
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
@@ -37,7 +38,8 @@ The space between the bottom edge of the chart and the content (plot area, axis 
 
 **Defaults to** `15`.
 
-####Try it
+**Try it**
+
 * [Spacing bottom set to 100](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingbottom/)
 */
 @property(nonatomic, readwrite) NSNumber *spacingBottom;
@@ -46,7 +48,8 @@ An explicit height for the chart. If a _number_, the height is given in pixels. 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [500px height](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/height/)
 * [Highcharts with percentage height](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/height-percent/)
 */
@@ -56,7 +59,8 @@ When using multiple axis, the ticks of two or more opposite axes will automatica
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/alignticks-true/)
 * [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/alignticks-false/)
 */
@@ -64,7 +68,8 @@ When using multiple axis, the ticks of two or more opposite axes will automatica
 /**
 Common options for all yAxes rendered in a parallel coordinates plot. This feature requires `modules/parallel-coordinates.js`. The default options are:  parallelAxes: { 	lineWidth: 1,    // classic mode only 	gridlinesWidth: 0, // classic mode only 	title: { 		text: '', 		reserveSpace: false 	}, 	labels: { 		x: 0, 		y: 0, 		align: 'center', 		reserveSpace: false 	}, 	offset: 0 }
 
-####Try it
+**Try it**
+
 * [Set the same tickAmount for all yAxes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/parallel-coordinates/parallelaxes/)
 */
 @property(nonatomic, readwrite) HIParallelAxes *parallelAxes;
@@ -73,7 +78,8 @@ The margin between the right outer edge of the chart and the plot area. Use this
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [100px right margin](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginright/)
 */
 @property(nonatomic, readwrite) NSNumber *marginRight;
@@ -82,7 +88,8 @@ The color of the inner chart or plot area border.
 
 **Defaults to** `#cccccc`.
 
-####Try it
+**Try it**
+
 * [Blue border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbordercolor/)
 */
 @property(nonatomic, readwrite) HIColor *plotBorderColor;
@@ -91,7 +98,8 @@ The space between the right edge of the chart and the content (plot area, axis t
 
 **Defaults to** `10`.
 
-####Try it
+**Try it**
+
 * [Spacing set to 100](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingright-100/)
 * [Legend in right position with default spacing](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingright-legend/)
 */
@@ -101,7 +109,8 @@ The color of the outer chart border.
 
 **Defaults to** `#335cad`.
 
-####Try it
+**Try it**
+
 * [Brown border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/bordercolor/)
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
@@ -116,7 +125,8 @@ Additional CSS styles to apply inline to the container `div`. Note that since th
 
 **Defaults to** `{"fontFamily":"\"Lucida Grande\", \"Lucida Sans Unicode\", Verdana, Arial, Helvetica, sans-serif","fontSize":"12px"}`.
 
-####Try it
+**Try it**
+
 * [Using a serif type font](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/style-serif-font/)
 * [Styled mode with relative font sizes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/em/)
 */
@@ -124,7 +134,8 @@ Additional CSS styles to apply inline to the container `div`. Note that since th
 /**
 The HTML element where the chart will be rendered. If it is a string, the element by that id is used. The HTML element can also be passed by direct reference, or as the first argument of the chart constructor, in which case the option is not needed.
 
-####Try it
+**Try it**
+
 * [String](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/)
 * [Object reference](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-object/)
 * [Object reference through jQuery](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-jquery/)
@@ -135,7 +146,8 @@ Whether to reflow the chart to fit the width of the container div on resizing th
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/)
 * [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-false/)
 */
@@ -145,7 +157,8 @@ Whether to apply a drop shadow to the plot area. Requires that plotBackgroundCol
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Plot shadow](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotshadow/)
 */
 @property(nonatomic, readwrite) id /* Bool, id */ plotShadow;
@@ -154,7 +167,8 @@ Decides in what dimensions the user can zoom by dragging the mouse. Can be one o
 
 **Accepted values:** `[null, "x", "y", "xy"]`.
 
-####Try it
+**Try it**
+
 * [None by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-none/)
 * [X](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-x/)
 * [Y](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-y/)
@@ -166,7 +180,8 @@ The space between the top edge of the chart and the content (plot area, axis tit
 
 **Defaults to** `10`.
 
-####Try it
+**Try it**
+
 * [A top spacing of 100](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingtop-100/)
 * [Floating chart title makes the plot area align to the default spacingTop of 10.](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingtop-10/)
 */
@@ -174,7 +189,8 @@ The space between the top edge of the chart and the content (plot area, axis tit
 /**
 The margin between the bottom outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also `spacingBottom`.
 
-####Try it
+**Try it**
+
 * [100px bottom margin](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginbottom/)
 */
 @property(nonatomic, readwrite) NSNumber *marginBottom;
@@ -183,7 +199,8 @@ An explicit width for the chart. By default (when `null`) the width is calculate
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [800px wide](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/width/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
@@ -192,7 +209,8 @@ Set the overall animation for all chart updating. Animation can be disabled thro
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Updating with no animation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-none/)
 * [With a longer duration](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-duration/)
 * [With a jQuery UI easing](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-easing/)
@@ -203,7 +221,8 @@ The background color or gradient for the plot area.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/)
 */
@@ -213,7 +232,8 @@ The background color or gradient for the outer chart area.
 
 **Defaults to** `#FFFFFF`.
 
-####Try it
+**Try it**
+
 * [Color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-color/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-gradient/)
 */
@@ -223,7 +243,8 @@ Allow panning in a chart. Best used with `panKey` to combine zooming and panning
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Zooming and panning](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/pankey/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *panning;
@@ -238,7 +259,8 @@ The default series type for the chart. Can be any of the chart types listed unde
 
 **Defaults to** `line`.
 
-####Try it
+**Try it**
+
 * [Bar](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/type-bar/)
 */
 @property(nonatomic, readwrite) NSString *type;
@@ -251,7 +273,8 @@ The space between the left edge of the chart and the content (plot area, axis ti
 
 **Defaults to** `10`.
 
-####Try it
+**Try it**
+
 * [Spacing left set to 100](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/spacingleft/)
 */
 @property(nonatomic, readwrite) NSNumber *spacingLeft;
@@ -278,7 +301,8 @@ The margin between the left outer edge of the chart and the plot area. Use this 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [150px left margin](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginleft/)
 */
 @property(nonatomic, readwrite) NSNumber *marginLeft;
@@ -287,7 +311,8 @@ Whether to apply a drop shadow to the outer chart area. Requires that background
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Shadow](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/shadow/)
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
@@ -296,7 +321,8 @@ Whether to invert the axes so that the x axis is vertical and y axis is horizont
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Inverted line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/inverted/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *inverted;
@@ -305,7 +331,8 @@ The pixel width of the plot area border.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [1px border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotborderwidth/)
 */
 @property(nonatomic, readwrite) NSNumber *plotBorderWidth;
@@ -314,7 +341,8 @@ If true, the axes will scale to the remaining visible series once one series is 
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true/)
 * [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-false/)
 * [True with stack](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true-stacked/)
@@ -331,7 +359,8 @@ The URL for an image to use as the plot background. To set an image as the backg
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Skies](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundimage/)
 */
 @property(nonatomic, readwrite) NSString *plotBackgroundImage;
@@ -350,7 +379,8 @@ A CSS class name to apply to the charts container `div`, allowing unique CSS sty
 /**
 Flag to render charts as a parallel coordinates plot. In a parallel coordinates plot (||-coords) by default all required yAxes are generated and the legend is disabled. This feature requires `modules/parallel-coordinates.js`.
 
-####Try it
+**Try it**
+
 * [Parallel coordinates demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples//highcharts/demo/parallel-coordinates/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *parallelCoordinates;
@@ -361,7 +391,8 @@ The button that appears after a selection zoom, allowing the user to reset zoom.
 /**
 Whether to show the axes initially. This only applies to empty charts where series are added dynamically, as axes are automatically added to cartesian series.
 
-####Try it
+**Try it**
+
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/showaxes-false/)
 * [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/showaxes-true/)
 */
@@ -371,7 +402,8 @@ The pixel width of the outer chart border.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [5px border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/borderwidth/)
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
@@ -386,14 +418,16 @@ The margin between the top outer edge of the chart and the plot area. Use this t
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [100px top margin](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/margintop/)
 */
 @property(nonatomic, readwrite) NSNumber *marginTop;
 /**
 The margin between the outer edge of the chart and the plot area. The numbers in the array designate top, right, bottom and left respectively. Use the options `marginTop`, `marginRight`, `marginBottom` and `marginLeft` for shorthand setting of one option. By default there is no margin. The actual space is dynamically calculated from the offset of axis labels, axis title, title, subtitle and legend in addition to the `spacingTop`, `spacingRight`, `spacingBottom` and `spacingLeft` options.
 
-####Try it
+**Try it**
+
 * [Zero margins](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/margins-zero/)
 */
 @property(nonatomic, readwrite) NSArray *margin;

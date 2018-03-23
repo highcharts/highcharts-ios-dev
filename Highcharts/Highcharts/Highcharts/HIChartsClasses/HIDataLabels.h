@@ -30,7 +30,8 @@ The x position of the data label relative to the data point.
 
 **Defaults to** `5`.
 
-####Try it
+**Try it**
+
 * [Data labels inside the bar](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bar-datalabels-align-inside-bar/)
 */
 @property(nonatomic, readwrite) NSNumber *x;
@@ -39,7 +40,8 @@ Alignment of the data label relative to the data point.
 
 **Defaults to** `left`.
 
-####Try it
+**Try it**
+
 * [Data labels inside the bar](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bar-datalabels-align-inside-bar/)
 */
 @property(nonatomic, readwrite) NSString *align;
@@ -48,21 +50,24 @@ Y offset of the higher data labels relative to the point value.
 
 **Defaults to** `-6`.
 
-####Try it
+**Try it**
+
 * [Data labels on range series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ yHigh;
 /**
 X offset of the higher data labels relative to the point value.
 
-####Try it
+**Try it**
+
 * [Data labels on range series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/)
 */
 @property(nonatomic, readwrite) NSNumber *xHigh;
 /**
 X offset of the lower data labels relative to the point value.
 
-####Try it
+**Try it**
+
 * [Data labels on range series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/)
 */
 @property(nonatomic, readwrite) NSNumber *xLow;
@@ -71,7 +76,8 @@ Y offset of the lower data labels relative to the point value.
 
 **Defaults to** `16`.
 
-####Try it
+**Try it**
+
 * [Data labels on range series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-datalabels/)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ yLow;
@@ -80,7 +86,8 @@ The border radius in pixels for the data label.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Data labels box options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/)
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
@@ -89,7 +96,8 @@ The name of a symbol to use for the border around the label. Symbols are predefi
 
 **Defaults to** `square`.
 
-####Try it
+**Try it**
+
 * [A callout for annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/)
 */
 @property(nonatomic, readwrite) NSString *shape;
@@ -98,14 +106,16 @@ The border color for the data label. Defaults to `undefined`.
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Data labels box options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/)
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
 A declarative filter for which data labels to display. The declarative filter is designed for use when callback functions are not available, like when the chart options require a pure JSON structure or for use with graphical editors. For programmatic control, use the `formatter` instead, and return `false` to disable a single data label.
 
-####Try it
+**Try it**
+
 * [Data labels filtered by percentage](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome)
 */
 @property(nonatomic, readwrite) HIFilter *filter;
@@ -114,7 +124,8 @@ Styles for the label. The default `color` setting is `"contrast"`, which is a ps
 
 **Defaults to** `{"color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "1px contrast" }`.
 
-####Try it
+**Try it**
+
 * [Bold labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/)
 */
 @property(nonatomic, readwrite) HIStyle *style;
@@ -123,7 +134,8 @@ Text rotation in degrees. Note that due to a more complex structure, backgrounds
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Vertical labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/)
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
@@ -136,14 +148,16 @@ Whether to [use HTML](http://www.highcharts.com/docs/chart-concepts/labels-and-s
 /**
 The text color for the data labels. Defaults to `null`. For certain series types, like column or map, the data labels can be drawn inside the points. In this case the data label will be drawn with maximum contrast by default. Additionally, it will be given a `text-outline` style with the opposite color, to further increase the contrast. This can be overridden by setting the `text-outline` style to `none` in the `dataLabels.style` option.
 
-####Try it
+**Try it**
+
 * [Red data labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-color/)
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**
 The background color or gradient for the data label.
 
-####Try it
+**Try it**
+
 * [Data labels box options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/)
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
@@ -152,7 +166,8 @@ Whether to allow data labels to overlap. To make the labels less sensitive for o
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Don't allow overlap](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-allowoverlap-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowOverlap;
@@ -161,7 +176,8 @@ A [format string](http://www.highcharts.com/docs/chart-concepts/labels-and-strin
 
 **Defaults to** `{y}`.
 
-####Try it
+**Try it**
+
 * [Add a unit](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-format/)
 */
 @property(nonatomic, readwrite) NSString *format;
@@ -170,7 +186,8 @@ The shadow of the box. Works best with `borderWidth` or `backgroundColor`. Since
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Data labels box options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/)
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
@@ -183,7 +200,8 @@ The Z index of the data labels. The default Z index puts it above the series. Us
 /**
 A class name for the data label. Particularly in styled mode, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a [contrast text shadow](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/).
 
-####Try it
+**Try it**
+
 * [Styling by CSS](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/)
 */
 @property(nonatomic, readwrite) NSString *className;
@@ -192,7 +210,8 @@ The border width in pixels for the data label.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Data labels box options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/)
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
@@ -207,7 +226,8 @@ The y position offset of the label relative to the point.
 
 **Defaults to** `-6`.
 
-####Try it
+**Try it**
+
 * [Vertical and positioned](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/)
 */
 @property(nonatomic, readwrite) NSNumber *y;
@@ -224,7 +244,8 @@ The color of the line connecting the data label to the pie slice. The default co
 
 **Defaults to** `{point.color}`.
 
-####Try it
+**Try it**
+
 * [Blue connectors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/)
 * [Styled connectors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/)
 */
@@ -234,7 +255,8 @@ The distance of the data label from the pie's edge. Negative numbers put the dat
 
 **Defaults to** `30`.
 
-####Try it
+**Try it**
+
 * [Data labels on top of the pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-distance/)
 */
 @property(nonatomic, readwrite) NSNumber *distance;
@@ -243,7 +265,8 @@ The width of the line connecting the data label to the pie slice. In styled mode
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [Disable the connector](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/)
 * [Styled connectors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/)
 */
@@ -251,7 +274,8 @@ The width of the line connecting the data label to the pie slice. In styled mode
 /**
 Whether to render the connector as a soft arc or a line with sharp break.
 
-####Try it
+**Try it**
+
 * [Soft](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-true/)
 * [Non soft](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/)
 */
@@ -261,7 +285,8 @@ The distance from the data label to the connector.
 
 **Defaults to** `5`.
 
-####Try it
+**Try it**
+
 * [No padding](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorpadding/)
 */
 @property(nonatomic, readwrite) NSNumber *connectorPadding;

@@ -35,7 +35,8 @@ Configure the accessibility strings in the chart. Requires the [accessibility mo
 /**
 Short week days, starting Sunday. If not specified, Highcharts uses the first three letters of the `lang.weekdays` option.
 
-####Try it
+**Try it**
+
 * [Finnish two-letter abbreviations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/shortweekdays/)
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *shortWeekdays;
@@ -44,7 +45,8 @@ The text to display when the chart contains no data. Requires the no-data module
 
 **Defaults to** `No data to display`.
 
-####Try it
+**Try it**
+
 * [No-data text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
 */
 @property(nonatomic, readwrite) NSString *noData;
@@ -59,7 +61,8 @@ The loading text that appears when the chart is set into the loading state follo
 
 **Defaults to** `[ "k" , "M" , "G" , "T" , "P" , "E"]`.
 
-####Try it
+**Try it**
+
 * [Replacing the symbols with text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbols/)
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *numericSymbols;
@@ -74,7 +77,8 @@ The magnitude of `numericSymbols` replacements. Use 10000 for Japanese, Korean a
 
 **Defaults to** `1000`.
 
-####Try it
+**Try it**
+
 * [10000 magnitude for Japanese](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/numericsymbolmagnitude/)
 */
 @property(nonatomic, readwrite) NSNumber *numericSymbolMagnitude;

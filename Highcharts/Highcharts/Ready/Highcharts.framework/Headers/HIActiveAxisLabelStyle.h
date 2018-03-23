@@ -14,7 +14,8 @@ Additional styles to apply to the X axis label for a point that has drilldown da
 
 **Defaults to** `{ "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }`.
 
-####Try it
+**Try it**
+
 * [Label styles](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/)
 */
 @interface HIActiveAxisLabelStyle: HIChartsJSONSerializable

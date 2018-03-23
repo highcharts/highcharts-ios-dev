@@ -26,7 +26,8 @@ The text for the credits label.
 
 **Defaults to** `Highcharts.com`.
 
-####Try it
+**Try it**
+
 * [Custom URL and text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/)
 */
 @property(nonatomic, readwrite) NSString *text;
@@ -35,7 +36,8 @@ Whether to show the credits text.
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Credits disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
@@ -44,14 +46,16 @@ The URL for the credits label.
 
 **Defaults to** `http://www.highcharts.com`.
 
-####Try it
+**Try it**
+
 * [Custom URL and text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/)
 */
 @property(nonatomic, readwrite) NSString *href;
 /**
 Position configuration for the credits label.
 
-####Try it
+**Try it**
+
 * [Left aligned](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/)
 * [Left aligned](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/)
 */

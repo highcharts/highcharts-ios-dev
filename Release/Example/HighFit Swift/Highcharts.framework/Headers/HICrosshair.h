@@ -15,7 +15,8 @@ Configure a crosshair that follows either the mouse pointer or the hovered point
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Crosshair on both axes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/)
 */
 @interface HICrosshair: HIChartsJSONSerializable
@@ -35,7 +36,8 @@ The dash style for the crosshair. See `series.dashStyle` for possible values.
 
 **Defaults to** `Solid`.
 
-####Try it
+**Try it**
+
 * [Dotted crosshair](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/)
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
@@ -44,7 +46,8 @@ The color of the crosshair. Defaults to `#cccccc` for numeric and datetime axes,
 
 **Defaults to** `#cccccc`.
 
-####Try it
+**Try it**
+
 * [Customized crosshairs](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/)
 */
 @property(nonatomic, readwrite) HIColor *color;
@@ -57,7 +60,8 @@ The pixel width of the crosshair. Defaults to 1 for numeric or datetime axes, an
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [Customized crosshairs](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
@@ -66,7 +70,8 @@ Whether the crosshair should snap to the point or follow the pointer independent
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *snap;

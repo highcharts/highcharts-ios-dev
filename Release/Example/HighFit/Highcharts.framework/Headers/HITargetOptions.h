@@ -13,7 +13,8 @@
 /**
 All options related with look and positiong of targets.
 
-####Try it
+**Try it**
+
 * [Target options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bullet-targetoptions/)
 */
 @interface HITargetOptions: HIChartsJSONSerializable

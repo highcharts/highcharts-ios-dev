@@ -17,14 +17,16 @@ The pane serves as a container for axes and backgrounds for circular gauges and 
 /**
 The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to `startAngle` + 360.
 
-####Try it
+**Try it**
+
 * [VU-meter with custom start and end angle](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/)
 */
 @property(nonatomic, readwrite) NSNumber *endAngle;
 /**
 The start angle of the polar X axis or gauge axis, given in degrees where 0 is north. Defaults to 0.
 
-####Try it
+**Try it**
+
 * [VU-meter with custom start and end angle](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/)
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
@@ -33,14 +35,16 @@ The center of a polar chart or angular gauge, given as an array of [x, y] positi
 
 **Defaults to** `["50%", "50%"]`.
 
-####Try it
+**Try it**
+
 * [Two gauges with different center](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/)
 */
 @property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
 /**
 An array of background items for the pane.
 
-####Try it
+**Try it**
+
 * [Speedometer gauge with multiple backgrounds](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/)
 */
 @property(nonatomic, readwrite) NSArray <HIBackground *> *background;
@@ -49,7 +53,8 @@ The size of the pane, either as a number defining pixels, or a percentage defini
 
 **Defaults to** `85%`.
 
-####Try it
+**Try it**
+
 * [Smaller size](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ size;

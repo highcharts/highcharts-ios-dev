@@ -12,7 +12,8 @@
 /**
 Determines the width of the ring per level.
 
-####Try it
+**Try it**
+
 * [Sunburst with various sizes per level](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-levelsize/)
 */
 @interface HILevelSize: HIChartsJSONSerializable
@@ -22,14 +23,16 @@ How to interpret `levelSize.value`. `percentage` gives a width relative to resul
 
 **Accepted values:** `["percentage", "pixels", "weight"]`.
 
-####Try it
+**Try it**
+
 * [Sunburst with various sizes per level](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-levelsize/)
 */
 @property(nonatomic, readwrite) NSString *unit;
 /**
 The value used for calculating the width of the ring. Its' affect is determined by `levelSize.unit`.
 
-####Try it
+**Try it**
+
 * [Sunburst with various sizes per level](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-levelsize/)
 */
 @property(nonatomic, readwrite) NSNumber *value;

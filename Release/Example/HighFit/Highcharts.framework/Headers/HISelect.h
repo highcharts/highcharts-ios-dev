@@ -20,21 +20,24 @@ Enable or disable visible feedback for selection.
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Disabled select state](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-enabled/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
 The width of the point marker's outline.
 
-####Try it
+**Try it**
+
 * [3px line width for selected points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linewidth/)
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
 The radius of the point marker. In hover state, it defaults to the normal state's radius + 2.
 
-####Try it
+**Try it**
+
 * [10px radius for selected points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-radius/)
 */
 @property(nonatomic, readwrite) NSNumber *radius;
@@ -43,7 +46,8 @@ The fill color of the point marker.
 
 **Defaults to** `#cccccc`.
 
-####Try it
+**Try it**
+
 * [Solid red discs for selected points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-fillcolor/)
 */
 @property(nonatomic, readwrite) HIColor *fillColor;
@@ -52,7 +56,8 @@ The color of the point marker's outline. When `null`, the series' or point's col
 
 **Defaults to** `#000000`.
 
-####Try it
+**Try it**
+
 * [Red line color for selected points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linecolor/)
 */
 @property(nonatomic, readwrite) HIColor *lineColor;

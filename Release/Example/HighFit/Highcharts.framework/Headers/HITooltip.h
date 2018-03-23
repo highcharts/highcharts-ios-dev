@@ -28,7 +28,8 @@ The radius of the rounded border corners.
 
 **Defaults to** `3`.
 
-####Try it
+**Try it**
+
 * [5px by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/)
 * [Square borders](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderradius-0/)
 */
@@ -36,21 +37,24 @@ The radius of the rounded border corners.
 /**
 The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are `point.key`, `series.name`, `series.color` and other members from the `point` and `series` objects. The `point.key` variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the `point.key` date format can be set using tooltip.xDateFormat.
 
-####Try it
+**Try it**
+
 * [A HTML table in the tooltip](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/)
 */
 @property(nonatomic, readwrite) NSString *headerFormat;
 /**
 A string to append to each series' y value. Overridable in each series' tooltip options object.
 
-####Try it
+**Try it**
+
 * [Set decimals, prefix and suffix for the value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/)
 */
 @property(nonatomic, readwrite) NSString *valueSuffix;
 /**
 A string to prepend to each series' y value. Overridable in each series' tooltip options object.
 
-####Try it
+**Try it**
+
 * [Set decimals, prefix and suffix for the value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/)
 */
 @property(nonatomic, readwrite) NSString *valuePrefix;
@@ -69,7 +73,8 @@ The name of a symbol to use for the border around the tooltip.
 /**
 A callback function to place the tooltip in a default position. The callback receives three parameters: `labelWidth`, `labelHeight` and `point`, where point contains values for `plotX` and `plotY` telling where the reference point is in the plot area. Add `chart.plotLeft` and `chart.plotTop` to get the full coordinates. The return should be an object containing x and y values, for example `{ x: 100, y: 100 }`.
 
-####Try it
+**Try it**
+
 * [A fixed tooltip position](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/)
 */
 @property(nonatomic, readwrite) HIFunction *positioner;
@@ -78,7 +83,8 @@ Use HTML to render the contents of the tooltip instead of SVG. Using HTML allows
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [A table for value alignment](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/)
 * [Full HTML tooltip](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/fullhtml/)
 */
@@ -88,7 +94,8 @@ The color of the tooltip border. When `null`, the border takes the color of the 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Follow series by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/)
 * [Black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/)
 */
@@ -98,14 +105,16 @@ CSS styles for the tooltip. The tooltip can also be styled through the CSS class
 
 **Defaults to** `{ "color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap" }`.
 
-####Try it
+**Try it**
+
 * [Greater padding, bold text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/)
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
 A string to append to the tooltip format.
 
-####Try it
+**Try it**
+
 * [A table for value alignment](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/)
 */
 @property(nonatomic, readwrite) NSString *footerFormat;
@@ -120,7 +129,8 @@ Split the tooltip into one label per series, with the header close to the axis. 
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Split tooltip](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *split;
@@ -129,7 +139,8 @@ The background color or gradient for the tooltip. In styled mode, the stroke wid
 
 **Defaults to** `rgba(247,247,247,0.85)`.
 
-####Try it
+**Try it**
+
 * [Yellowish background](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-solid/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/)
 * [Tooltip in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/)
@@ -140,7 +151,8 @@ Proximity snap for graphs or single points. It defaults to 10 for mouse-powered 
 
 **Defaults to** `10/25`.
 
-####Try it
+**Try it**
+
 * [10 px by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/)
 * [50 px on graph](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/snap-50/)
 */
@@ -150,7 +162,8 @@ When the tooltip is shared, the entire plot area will capture mouse movement or 
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-false/)
 * [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-true/)
 * [True with x axis crosshair](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shared-x-crosshair/)
@@ -160,7 +173,8 @@ When the tooltip is shared, the entire plot area will capture mouse movement or 
 /**
 Callback function to format the text of the tooltip from scratch. Return `false` to disable tooltip for a specific point on series. A subset of HTML is supported. Unless `useHTML` is true, the HTML of the tooltip is parsed and converted to SVG, therefore this isn't a complete HTML renderer. The following tags are supported: `<b>`, `<strong>`, `<i>`, `<em>`, `<br/>`, `<span>`. Spans can be styled with a `style` attribute, but only text-related CSS that is shared with SVG is handled. Since version 2.1 the tooltip can be shared between multiple series through the `shared` option. The available data in the formatter differ a bit depending on whether the tooltip is shared or not. In a shared tooltip, all properties except `x`, which is common for all points, are kept in an array, `this.points`. Available data are:  this.percentage (not shared) / this.points[i].percentage (shared) Stacked series and pies only. The point's percentage of the total.  this.point (not shared) / this.points[i].point (shared) The point object. The point name, if defined, is available through `this.point.name`. this.points In a shared tooltip, this is an array containing all other properties for each point. this.series (not shared) / this.points[i].series (shared) The series object. The series name is available through `this.series.name`. this.total (not shared) / this.points[i].total (shared) Stacked series only. The total value at this point's x value.  this.x The x value. This property is the same regardless of the tooltip being shared or not. this.y (not shared) / this.points[i].y (shared) The y value. 
 
-####Try it
+**Try it**
+
 * [Simple string formatting](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-simple/)
 * [Formatting with shared tooltip](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/formatter-shared/)
 */
@@ -170,14 +184,16 @@ The HTML of the point's line in the tooltip. Variables are enclosed by curly bra
 
 **Defaults to** `<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>`.
 
-####Try it
+**Try it**
+
 * [A different point format with value suffix](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/)
 */
 @property(nonatomic, readwrite) NSString *pointFormat;
 /**
 The format for the date in the tooltip header if the X axis is a datetime axis. The default is a best guess based on the smallest distance between points in the chart.
 
-####Try it
+**Try it**
+
 * [A different format](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/xdateformat/)
 */
 @property(nonatomic, readwrite) NSString *xDateFormat;
@@ -192,7 +208,8 @@ Whether to apply a drop shadow to the tooltip.
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/)
 * [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/shadow/)
 */
@@ -202,7 +219,8 @@ Enable or disable the tooltip.
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/)
 * [Disable tooltip and show values on chart instead](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/)
 */
@@ -216,7 +234,8 @@ The pixel width of the tooltip border. In styled mode, the stroke width is set i
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [2px by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/)
 * [No border (shadow only)](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderwidth/)
 * [Tooltip in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/)
@@ -237,7 +256,8 @@ The number of milliseconds to wait until the tooltip is hidden when mouse out fr
 /**
 How many decimals to show in each series' y value. This is overridable in each series' tooltip options object. The default is to preserve all decimals.
 
-####Try it
+**Try it**
+
 * [Set decimals, prefix and suffix for the value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/)
 */
 @property(nonatomic, readwrite) NSNumber *valueDecimals;

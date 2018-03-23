@@ -20,7 +20,8 @@ The color of the border surrounding each slice. When `null`, the border takes th
 
 **Defaults to** `#ffffff`.
 
-####Try it
+**Try it**
+
 * [Black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/)
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
@@ -29,7 +30,8 @@ The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Semi-circle donut](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/)
 */
 @property(nonatomic, readwrite) NSNumber *endAngle;
@@ -38,7 +40,8 @@ The size of the inner diameter for the pie. A size greater than 0 renders a donu
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [80px inner size](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-80px/)
 * [50% of the plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/)
 * [3D donut](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/)
@@ -49,7 +52,8 @@ The center of the pie chart relative to the plot area. Can be percentages or pix
 
 **Defaults to** `[null, null]`.
 
-####Try it
+**Try it**
+
 * [Centered at 100, 100](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/)
 */
 @property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
@@ -59,7 +63,8 @@ If a point is sliced, moved out from the center, how many pixels should it be mo
 
 **Defaults to** `10`.
 
-####Try it
+**Try it**
+
 * [20px offset](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/)
 */
 @property(nonatomic, readwrite) NSNumber *slicedOffset;
@@ -72,7 +77,8 @@ The thickness of a 3D pie. Requires `highcharts-3d.js`
 /**
 A series specific or series type specific color set to use instead of the global `colors`.
 
-####Try it
+**Try it**
+
 * [Set default colors for all pies](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/)
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
@@ -87,7 +93,8 @@ The width of the border surrounding each slice. When setting the border width to
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [3px border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-borderwidth/)
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
@@ -97,14 +104,16 @@ The start angle of the pie slices in degrees where 0 is top and 90 right.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Start from right](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-startangle-90/)
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
 /**
 The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. `slicedOffset` is also included in the default size calculation. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example `"75%"`.
 
-####Try it
+**Try it**
+
 * [Smaller pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/)
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
@@ -113,7 +122,8 @@ Equivalent to `chart.ignoreHiddenSeries`, this option tells whether the series s
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [True, the hiddden point is ignored](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *ignoreHiddenPoint;

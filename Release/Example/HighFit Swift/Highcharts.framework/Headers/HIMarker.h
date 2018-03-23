@@ -35,7 +35,8 @@ A predefined shape or symbol for the marker. When null, the symbol is pulled fro
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Predefined, graphic and custom markers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-symbol/)
 */
 @property(nonatomic, readwrite) NSString *symbol;
@@ -48,14 +49,16 @@ The fill color of the point marker. When `null`, the series' or point's color is
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [White fill](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/)
 */
 @property(nonatomic, readwrite) HIColor *fillColor;
 /**
 The color of the point marker's outline. When `null`, the series' or point's color is used.
 
-####Try it
+**Try it**
+
 * [Inherit from series color (null)](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/)
 */
 @property(nonatomic, readwrite) HIColor *lineColor;
@@ -64,7 +67,8 @@ The width of the point marker's outline.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [2px blue marker](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/)
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
@@ -77,7 +81,8 @@ Image markers only. Set the image width explicitly. When using this option, a `w
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Fixed width and height](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/)
 */
 @property(nonatomic, readwrite) NSNumber *height;
@@ -86,21 +91,24 @@ Image markers only. Set the image width explicitly. When using this option, a `h
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Fixed width and height](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
 /**
 The radius of the point marker.
 
-####Try it
+**Try it**
+
 * [Bigger markers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-radius/)
 */
 @property(nonatomic, readwrite) NSNumber *radius;
 /**
 The threshold for how dense the point markers should be before they are hidden, given that `enabled` is not defined. The number indicates the horizontal distance between the two closest points in the series, as multiples of the `marker.radius`. In other words, the default value of 2 means points are hidden if overlapping horizontally.
 
-####Try it
+**Try it**
+
 * [A higher threshold](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabledthreshold)
 */
 @property(nonatomic, readwrite) NSNumber *enabledThreshold;

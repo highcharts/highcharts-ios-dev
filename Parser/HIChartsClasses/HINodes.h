@@ -13,7 +13,8 @@
 /**
 A collection of options for the individual nodes. The nodes in a sankey diagram are auto-generated instances of `Highcharts.Point`, but options can be applied here and linked by the `id`.
 
-####Try it
+**Try it**
+
 * [Sankey diagram with node options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/sankey/)
 */
 @interface HINodes: HIChartsJSONSerializable
@@ -21,7 +22,8 @@ A collection of options for the individual nodes. The nodes in a sankey diagram 
 /**
 The name to display for the node in data labels and tooltips. Use this when the name is different from the `id`. Where the id must be unique for each node, this is not necessary for the name.
 
-####Try it
+**Try it**
+
 * [Sankey diagram with node options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/sankey/)
 */
 @property(nonatomic, readwrite) NSString *name;
@@ -34,7 +36,8 @@ An optional column index of where to place the node. The default behaviour is to
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Specified node column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-node-column/)
 */
 @property(nonatomic, readwrite) NSNumber *column;
@@ -43,7 +46,8 @@ The vertical offset of a node in terms of weight. Positive values shift the node
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Specified node offset](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-node-column/)
 */
 @property(nonatomic, readwrite) NSNumber *offset;

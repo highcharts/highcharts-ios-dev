@@ -28,7 +28,8 @@ Whether to display the frame. Possible values are `true`, `false`, `"auto"` to d
 
 **Defaults to** `default`.
 
-####Try it
+**Try it**
+
 * [Auto frames](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/scatter-frame/)
 */
 @property(nonatomic, readwrite) id /* Bool, NSString */ visible;

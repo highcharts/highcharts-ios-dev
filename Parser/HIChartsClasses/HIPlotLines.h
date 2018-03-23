@@ -20,7 +20,8 @@ The z index of the plot line within the chart.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Behind plot lines by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-behind/)
 * [Above plot lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above/)
 * [Above plot lines and series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above-all/)
@@ -33,7 +34,8 @@ The dashing or dot style for the plot line. For possible values see [this overvi
 
 **Defaults to** `Solid`.
 
-####Try it
+**Try it**
+
 * [Dash and dot pattern](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-dashstyle/)
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
@@ -42,7 +44,8 @@ The color of the line.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [A red line from X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/)
 */
 @property(nonatomic, readwrite) HIColor *color;
@@ -51,7 +54,8 @@ The position of the line in axis units.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Between two categories on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/)
 */
 @property(nonatomic, readwrite) NSNumber *value;
@@ -60,7 +64,8 @@ An id used for identifying the plot line in Axis.removePlotLine.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Remove plot line by id](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-id/)
 */
 @property(nonatomic, readwrite) NSString *id;
@@ -73,7 +78,8 @@ The width or thickness of the plot line.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [2px wide line from X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
@@ -84,7 +90,8 @@ Text labels for the plot bands
 /**
 An object defining mouse events for the plot line. Supported properties are `click`, `mouseover`, `mouseout`, `mousemove`.
 
-####Try it
+**Try it**
+
 * [Mouse events demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-events/)
 */
 @property(nonatomic, readwrite) id events;

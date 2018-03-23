@@ -19,7 +19,8 @@ CSS styles for the title. Use this for font styling, but use `align`, `x` and `y
 
 **Defaults to** `{ "color": "#333333", "fontSize": "18px" }`.
 
-####Try it
+**Try it**
+
 * [Custom color and weight](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/style/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/)
 */
@@ -29,7 +30,8 @@ The vertical alignment of the title. Can be one of `"top"`, `"middle"` and `"bot
 
 **Accepted values:** `["top", "middle", "bottom"]`.
 
-####Try it
+**Try it**
+
 * [Chart title in bottom right corner](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/verticalalign/)
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
@@ -38,7 +40,8 @@ The title of the chart. To disable the title, set the `text` to `null`.
 
 **Defaults to** `Chart title`.
 
-####Try it
+**Try it**
+
 * [Custom title](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/text/)
 */
 @property(nonatomic, readwrite) NSString *text;
@@ -49,7 +52,8 @@ The horizontal alignment of the title. Can be one of "left", "center" and "right
 
 **Defaults to** `center`.
 
-####Try it
+**Try it**
+
 * [Aligned to the plot area (x = 70px = margin left - spacing left)](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/align/)
 */
 @property(nonatomic, readwrite) NSString *align;
@@ -62,7 +66,8 @@ Whether to [use HTML](http://www.highcharts.com/docs/chart-concepts/labels- and-
 /**
 The y position of the title relative to the alignment within `chart.spacingTop` and `chart.spacingBottom`. By default it depends on the font size.
 
-####Try it
+**Try it**
+
 * [Title inside the plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/y/)
 */
 @property(nonatomic, readwrite) NSNumber *y;
@@ -71,7 +76,8 @@ The x position of the title relative to the alignment within chart. spacingLeft 
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Aligned to the plot area (x = 70px = margin left - spacing left)](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/align/)
 */
 @property(nonatomic, readwrite) NSNumber *x;
@@ -80,7 +86,8 @@ Adjustment made to the title width, normally to reserve space for the exporting 
 
 **Defaults to** `-44`.
 
-####Try it
+**Try it**
+
 * [Wider menu, greater padding](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/)
 */
 @property(nonatomic, readwrite) NSNumber *widthAdjust;
@@ -89,7 +96,8 @@ The margin between the title and the plot area, or if a subtitle is present, the
 
 **Defaults to** `15`.
 
-####Try it
+**Try it**
+
 * [A chart title margin of 50](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/margin-50/)
 * [The same margin applied with a subtitle](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/margin-subtitle/)
 */
@@ -99,7 +107,8 @@ When the title is floating, the plot area will not move to make space for it.
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoomtype-none/)
 * [True - title on top of the plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/floating/)
 */
@@ -107,9 +116,10 @@ When the title is floating, the plot area will not move to make space for it.
 /**
 The rotation of the text in degrees. 0 is horizontal, 270 is vertical reading from bottom to top.
 
-####Defaults to `0`
+**Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Horizontal](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/title-offset/)
 */
 @property(nonatomic, readwrite) NSNumber *rotation;
@@ -124,7 +134,8 @@ If enabled, the axis title will skewed to follow the perspective. This will fix 
 
 **Accepted values:** `[false, true, null]`.
 
-####Try it
+**Try it**
+
 * [Skewed labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/skewed-labels/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skew3d;
@@ -133,14 +144,16 @@ Defines how the title is repositioned according to the 3D chart orientation. - `
 
 **Accepted values:** `['offset', 'chart', 'flap', 'ortho', null]`.
 
-####Try it
+**Try it**
+
 * [Skewed labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/skewed-labels/)
 */
 @property(nonatomic, readwrite) NSString *position3d;
 /**
 The distance of the axis title from the axis line. By default, this distance is computed from the offset width of the labels, the labels' distance from the axis and the title's margin. However when the offset option is set, it overrides all this.
 
-####Try it
+**Try it**
+
 * [Place the axis title on top of the axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/title-offset/)
 */
 @property(nonatomic, readwrite) NSNumber *offset;

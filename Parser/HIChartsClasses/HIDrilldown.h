@@ -22,7 +22,8 @@ Additional styles to apply to the data label of a point that has drilldown data.
 
 **Defaults to** `{ "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }`.
 
-####Try it
+**Try it**
+
 * [Label styles](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/)
 */
 @property(nonatomic, readwrite) HIActiveDataLabelStyle *activeDataLabelStyle;
@@ -35,7 +36,8 @@ When this option is false, clicking a single point will drill down all points in
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Don't allow point drilldown](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/allowpointdrilldown-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointDrilldown;
@@ -46,7 +48,8 @@ Set the animation for all drilldown animations. Animation of a drilldown occurs 
 /**
 Options for the drill up button that appears when drilling down on a series. The text for the button is defined in `lang.drillUpText`.
 
-####Try it
+**Try it**
+
 * [Drill up button](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/)
 */
 @property(nonatomic, readwrite) HIDrillUpButton *drillUpButton;
@@ -55,7 +58,8 @@ Additional styles to apply to the X axis label for a point that has drilldown da
 
 **Defaults to** `{ "cursor": "pointer", "color": "#003399", "fontWeight": "bold", "textDecoration": "underline" }`.
 
-####Try it
+**Try it**
+
 * [Label styles](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/labels/)
 */
 @property(nonatomic, readwrite) HIActiveAxisLabelStyle *activeAxisLabelStyle;

@@ -19,7 +19,8 @@ Options for the exporting module. For an overview on the matter, see [the docs](
 /**
 An object consisting of definitions for the menu items in the context menu. Each key value pair has a `key` that is referenced in the `menuItems` setting, and a `value`, which is an object with the following properties:  onclick The click handler for the menu item text The text for the menu item textKey If internationalization is required, the key to a language string 
 
-####Try it
+**Try it**
+
 * [Menu item definitions](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/)
 */
 @property(nonatomic, readwrite) id menuItemDefinitions;
@@ -30,21 +31,24 @@ Analogous to `sourceWidth`.
 /**
 The width of the original chart when exported, unless an explicit `chart.width` is set. The width exported raster image is then multiplied by `scale`.
 
-####Try it
+**Try it**
+
 * [Source size demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/sourcewidth/)
 */
 @property(nonatomic, readwrite) NSNumber *sourceWidth;
 /**
 Defines the scale or zoom factor for the exported image compared to the on-screen display. While for instance a 600px wide chart may look good on a website, it will look bad in print. The default scale of 2 makes this chart export to a 1200px PNG or JPG.
 
-####Try it
+**Try it**
+
 * [Scale demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/scale/)
 */
 @property(nonatomic, readwrite) NSNumber *scale;
 /**
 Export-data module required. Show a HTML table below the chart with the chart's current data.
 
-####Try it
+**Try it**
+
 * [Show the table](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/showtable/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showTable;
@@ -53,7 +57,8 @@ The filename, without extension, to use for the exported chart.
 
 **Defaults to** `chart`.
 
-####Try it
+**Try it**
+
 * [Custom file name](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/filename/)
 */
 @property(nonatomic, readwrite) NSString *filename;
@@ -66,7 +71,8 @@ The pixel width of charts exported to PNG or JPG. As of Highcharts 3.0, the defa
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Export to 200px wide images](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/width/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
@@ -79,7 +85,8 @@ When printing the chart from the menu item in the burger menu, if the on-screen 
 /**
 Options for exporting data to CSV or ExCel, or displaying the data in a HTML table or a JavaScript structure. Requires the `export-data.js` module. This module adds data export options to the export menu and provides functions like `Chart.getCSV`, `Chart.getTable`, `Chart.getDataRows` and `Chart.viewData`.
 
-####Try it
+**Try it**
+
 * [Categorized data](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/)
 * [Highstock time axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/)
 */
@@ -95,7 +102,8 @@ Additional chart options to be merged into an exported chart. For example, a com
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Added data labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/)
 */
 @property(nonatomic, readwrite) id chartOptions;
@@ -112,14 +120,16 @@ Whether or not to fall back to the export server if the offline-exporting module
 /**
 Export-data module required. If using multi level table headers, use rowspans for headers that have only one level.
 
-####Try it
+**Try it**
+
 * [Multiple table headers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useRowspanHeaders;
 /**
 Export-data module required. Use multi level headers in data table. If `csv.columnHeaderFormatter` is defined, it has to return objects in order for multi level headers to work.
 
-####Try it
+**Try it**
+
 * [Multiple table headers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useMultiLevelHeaders;
@@ -132,7 +142,8 @@ Whether to enable the exporting module. Disabling the module will hide the conte
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Exporting module is loaded but disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/enabled-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
@@ -147,7 +158,8 @@ Export-data module required. Caption for the data table. Same as chart title by 
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Multiple table headers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table)
 */
 @property(nonatomic, readwrite) id /* Bool, NSString */ tableCaption;

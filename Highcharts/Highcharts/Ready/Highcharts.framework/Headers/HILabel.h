@@ -17,7 +17,8 @@ Text labels for the plot bands
 /**
 CSS styles for the text label. In styled mode, the labels are styled by the `.highcharts-plot-line-label` class.
 
-####Try it
+**Try it**
+
 * [Blue and bold label](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-style/)
 */
 @property(nonatomic, readwrite) HIStyle *style;
@@ -28,7 +29,8 @@ Vertical alignment of the label relative to the plot line. Can be one of "top", 
 
 **Defaults to** `top`.
 
-####Try it
+**Try it**
+
 * [Vertically centered label](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-verticalalign-middle/)
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
@@ -41,35 +43,40 @@ Horizontal alignment of the label. Can be one of "left", "center" or "right".
 
 **Defaults to** `left`.
 
-####Try it
+**Try it**
+
 * [Aligned to the right](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-align-right/)
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
 The text alignment for the label. While `align` determines where the texts anchor point is placed within the plot band, `textAlign` determines how the text is aligned against its anchor point. Possible values are "left", "center" and "right". Defaults to the same as the `align` option.
 
-####Try it
+**Try it**
+
 * [Text label in bottom position](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-textalign/)
 */
 @property(nonatomic, readwrite) NSString *textAlign;
 /**
 Vertical position of the text baseline relative to the alignment. Default varies by orientation.
 
-####Try it
+**Try it**
+
 * [Label below the plot line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-y/)
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
 Horizontal position relative the alignment. Default varies by orientation.
 
-####Try it
+**Try it**
+
 * [Aligned 10px from the right edge](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-align-right/)
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
 Rotation of the text label in degrees. Defaults to 0 for horizontal plot lines and 90 for vertical lines.
 
-####Try it
+**Try it**
+
 * [Slanted text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-verticalalign-middle/)
 */
 @property(nonatomic, readwrite) NSNumber *rotation;

@@ -15,7 +15,8 @@
 /**
 Options for configuring annotations, for example labels, arrows or shapes. Annotations can be tied to points, axis coordinates or chart pixel coordinates.
 
-####Try it
+**Try it**
+
 * [Basic annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/basic/)
 * [Advanced annotations](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/annotations/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/annotations)
@@ -44,7 +45,8 @@ The Z index of the annotation.
 /**
 Whether the annotation is visible.
 
-####Try it
+**Try it**
+
 * [Set annotation visibility](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/visible/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;

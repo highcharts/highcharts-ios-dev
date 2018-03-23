@@ -20,7 +20,8 @@ In a gauge chart, this option determines the outer radius of the plot band that 
 
 **Defaults to** `100%`.
 
-####Try it
+**Try it**
+
 * [Gauge plot band](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ outerRadius;
@@ -29,7 +30,8 @@ In a gauge chart, this option determines the inner radius of the plot band that 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Gauge plot band](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ innerRadius;
@@ -38,7 +40,8 @@ In a gauge chart, this option sets the width of the plot band stretching along t
 
 **Defaults to** `10`.
 
-####Try it
+**Try it**
+
 * [Gauge plot band](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ thickness;
@@ -53,7 +56,8 @@ The z index of the plot band within the chart, relative to other elements. Using
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Behind plot lines by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/)
 * [Above plot lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-zindex/)
 * [Above plot lines and series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-zindex-above-series/)
@@ -64,7 +68,8 @@ The start position of the plot band in axis units.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Datetime axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/)
 * [Categorized axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-from/)
 */
@@ -74,7 +79,8 @@ The color of the plot band.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Color band](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/)
 */
 @property(nonatomic, readwrite) HIColor *color;
@@ -83,7 +89,8 @@ An id used for identifying the plot band in Axis.removePlotBand.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Remove plot band by id](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-id/)
 */
 @property(nonatomic, readwrite) NSString *id;
@@ -96,7 +103,8 @@ The end position of the plot band in axis units.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Datetime axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/)
 * [Categorized axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-from/)
 */
@@ -114,7 +122,8 @@ Text labels for the plot bands
 /**
 An object defining mouse events for the plot band. Supported properties are `click`, `mouseover`, `mouseout`, `mousemove`.
 
-####Try it
+**Try it**
+
 * [Mouse events demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-events/)
 */
 @property(nonatomic, readwrite) id events;

@@ -26,7 +26,8 @@ The column size - how many X axis units each column in the heatmap should span.
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [One day](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/)
 */
 @property(nonatomic, readwrite) NSNumber *colsize;
@@ -35,7 +36,8 @@ The row size - how many Y axis units each heatmap row should span.
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/)
 */
 @property(nonatomic, readwrite) NSNumber *rowsize;

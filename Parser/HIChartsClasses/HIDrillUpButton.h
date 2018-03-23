@@ -12,7 +12,8 @@
 /**
 Options for the drill up button that appears when drilling down on a series. The text for the button is defined in `lang.drillUpText`.
 
-####Try it
+**Try it**
+
 * [Drill up button](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/)
 */
 @interface HIDrillUpButton: HIChartsJSONSerializable
@@ -24,7 +25,8 @@ Positioning options for the button within the `relativeTo` box. Available proper
 /**
 A collection of attributes for the button. The object takes SVG attributes like `fill`, `stroke`, `stroke-width` or `r`, the border radius. The theme also supports `style`, a collection of CSS properties for the text. Equivalent attributes for the hover state are given in `theme.states.hover`.
 
-####Try it
+**Try it**
+
 * [Button theming](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/)
 */
 @property(nonatomic, readwrite) id theme;

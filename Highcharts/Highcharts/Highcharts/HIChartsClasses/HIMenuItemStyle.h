@@ -14,7 +14,8 @@ CSS styles for the individual items within the popup menu appearing by default w
 
 **Defaults to** `{ "padding": "0.5em 1em", "color": "#333333", "background": "none" }`.
 
-####Try it
+**Try it**
+
 * [Add a grey stripe to the left](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/)
 */
 @interface HIMenuItemStyle: HIChartsJSONSerializable

@@ -18,16 +18,18 @@ A `errorbar` series. If the `type` option is not specified, it is inherited from
 /**
 The line width of the whiskers, the horizontal lines marking low and high values. When `null`, the general `lineWidth` applies.
 
-####Try it
+**Try it**
+
 * [Error bar styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/)
 */
 @property(nonatomic, readwrite) NSNumber *whiskerWidth;
 /**
 Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
 
-####Defaults to `true`
+**Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Grouping disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;
@@ -36,7 +38,8 @@ The color of the median line. If `null`, the general series color applies. In st
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
 * [Box plot in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/)
 * [Error bar styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/)
@@ -45,7 +48,8 @@ The color of the median line. If `null`, the general series color applies. In st
 /**
 The pixel width of the median line. If `null`, the `lineWidth` is used. In styled mode, the median stroke width can be set with the `.highcharts-boxplot-median` class.
 
-####Try it
+**Try it**
+
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
 * [Box plot in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/)
 */
@@ -55,7 +59,8 @@ The color of the whiskers, the horizontal lines marking low and high values. Whe
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
 * [Box plot in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/)
 */
@@ -65,7 +70,8 @@ The color of the stem, the vertical line extending from the box to the whiskers.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
 * [Box plot in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/)
 * [Error bar styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/)
@@ -74,7 +80,8 @@ The color of the stem, the vertical line extending from the box to the whiskers.
 /**
 The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set `0` to disable whiskers.
 
-####Try it
+**Try it**
+
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ whiskerLength;
@@ -87,7 +94,8 @@ The dash style of the stem, the vertical line extending from the box to the whis
 
 **Defaults to** `Solid`.
 
-####Try it
+**Try it**
+
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
 * [Box plot in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/)
 * [Error bar styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/)
@@ -98,7 +106,8 @@ The fill color of the box. In styled mode, the fill color can be set with the `.
 
 **Defaults to** `#ffffff`.
 
-####Try it
+**Try it**
+
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
 */
 @property(nonatomic, readwrite) HIColor *fillColor;
@@ -107,7 +116,8 @@ The width of the stem, the vertical line extending from the box to the whiskers.
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Box plot styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/)
 * [Box plot in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/)
 * [Error bar styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/)
@@ -116,14 +126,16 @@ The width of the stem, the vertical line extending from the box to the whiskers.
 /**
 The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points. The default `null` means it is computed automatically, but this option can be used to override the automatic value.
 
-####Try it
+**Try it**
+
 * [Set the point range to one day on a data set with one week between the points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/)
 */
 @property(nonatomic, readwrite) NSNumber *pointRange;
 /**
 The minimal height for a column or width for a bar. By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point length to a pixel value like 3\. In stacked column charts, minPointLength might not be respected for tightly packed values.
 
-####Try it
+**Try it**
+
 * [Zero base value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/)
 * [Positive and negative close to zero values](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/)
 */
@@ -142,7 +154,8 @@ When using automatic point colors pulled from the `options.colors` collection, t
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/)
 * [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/)
 */
@@ -152,7 +165,8 @@ The maximum allowed pixel width for a column, translated to the height of a bar 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Limited to 50](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/)
 */
 @property(nonatomic, readwrite) NSNumber *maxPointWidth;
@@ -161,14 +175,16 @@ A pixel value specifying a fixed width for each column or bar. When `null`, the 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [20px wide columns regardless of chart width or the amount of data points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/)
 */
 @property(nonatomic, readwrite) NSNumber *pointWidth;
 /**
 Padding between each column or bar, in x axis units.
 
-####Try it
+**Try it**
+
 * [0.1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/)
 * [0.25](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/)
 * [0 for tightly packed columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/)
@@ -177,7 +193,8 @@ Padding between each column or bar, in x axis units.
 /**
 Padding between each value groups, in x axis units.
 
-####Try it
+**Try it**
+
 * [0.2 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/)
 * [No group padding - all columns are evenly spaced](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/)
 */
@@ -191,7 +208,8 @@ Padding between each value groups, in x axis units.
 /**
 When true, each column edge is rounded to its nearest pixel in order to render sharp on screen. In some cases, when there are a lot of densely packed columns, this leads to visible difference in column widths or distance between columns. In these cases, setting `crisp` to `false` may look better, even though each column is rendered blurry.
 
-####Try it
+**Try it**
+
 * [Crisp is false](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *crisp;

@@ -18,7 +18,8 @@ A `areaspline` series. If the `type` option is not specified, it is inherited fr
 /**
 A separate color for the negative part of the area. In styled mode, a negative color is set with the `.highcharts-negative` class name.
 
-####Try it
+**Try it**
+
 * [Negative color in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/)
 */
 @property(nonatomic, readwrite) HIColor *negativeFillColor;
@@ -27,7 +28,8 @@ Whether the whole area or just the line should respond to mouseover tooltips and
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Display the tooltip when the area is hovered](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *trackByArea;
@@ -36,7 +38,8 @@ Fill color or gradient for the area. When `null`, the series' `color` is used wi
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Null by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/)
 */
@@ -46,7 +49,8 @@ A separate color for the graph line. By default the line takes the `color` of th
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Dark gray line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/)
 */
 @property(nonatomic, readwrite) HIColor *lineColor;
@@ -55,7 +59,8 @@ Fill opacity for the area. When you set an explicit `fillColor`, the `fillOpacit
 
 **Defaults to** `0.75`.
 
-####Try it
+**Try it**
+
 * [Automatic fill color and fill opacity of 0.1](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillopacity/)
 */
 @property(nonatomic, readwrite) NSNumber *fillOpacity;

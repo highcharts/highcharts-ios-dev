@@ -13,7 +13,8 @@
 /**
 A partial fill for each point, typically used to visualize how much of a task is performed. The partial fill object can be set either on series or point level.
 
-####Try it
+**Try it**
+
 * [X-range with partial fill](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/x-range)
 */
 @interface HIPartialFill: HIChartsJSONSerializable

@@ -23,7 +23,8 @@ CSS styles for the popup menu appearing by default when the export icon is click
 
 **Defaults to** `{ "border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0" }`.
 
-####Try it
+**Try it**
+
 * [Light gray menu background](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/)
 */
 @property(nonatomic, readwrite) HIMenuStyle *menuStyle;
@@ -32,7 +33,8 @@ CSS styles for the individual items within the popup menu appearing by default w
 
 **Defaults to** `{ "padding": "0.5em 1em", "color": "#333333", "background": "none" }`.
 
-####Try it
+**Try it**
+
 * [Add a grey stripe to the left](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/)
 */
 @property(nonatomic, readwrite) HIMenuItemStyle *menuItemStyle;
@@ -45,14 +47,16 @@ CSS styles for the hover state of the individual items within the popup menu app
 
 **Defaults to** `{ "background": "#335cad", "color": "#ffffff" }`.
 
-####Try it
+**Try it**
+
 * [Bold text on hover](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/)
 */
 @property(nonatomic, readwrite) HIMenuItemHoverStyle *menuItemHoverStyle;
 /**
 Text styles for the legend page navigation.
 
-####Try it
+**Try it**
+
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
 @property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
@@ -61,7 +65,8 @@ The pixel size of the up and down arrows in the legend paging navigation.
 
 **Defaults to** `12`.
 
-####Try it
+**Try it**
+
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
 @property(nonatomic, readwrite) NSNumber *arrowSize;
@@ -76,7 +81,8 @@ The color of the inactive up or down arrow in the legend page navigation. .
 
 **Defaults to** `#cccccc`.
 
-####Try it
+**Try it**
+
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
 @property(nonatomic, readwrite) HIColor *inactiveColor;
@@ -85,7 +91,8 @@ How to animate the pages when navigating up or down. A value of `true` applies t
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
 @property(nonatomic, readwrite) id /* Bool, id */ animation;
@@ -94,7 +101,8 @@ The color for the active up or down arrow in the legend page navigation.
 
 **Defaults to** `#003399`.
 
-####Try it
+**Try it**
+
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
 @property(nonatomic, readwrite) HIColor *activeColor;

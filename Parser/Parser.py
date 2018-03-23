@@ -56,7 +56,7 @@ class HIChartsClass:
             if self.defaults:
                 self.comment += "\n**Defaults to** `{0}`.\n".format(self.defaults)
             if self.demo:
-                self.comment += "\n####Try it\n{0}".format(self.demo)
+                self.comment += "\n**Try it**\n\n{0}".format(self.demo)
             self.comment += "*/\n"
 
     def update(self, data_type, description, demo, values, defaults, products, extends, exclude):
@@ -87,11 +87,11 @@ class HIChartsClass:
         if self.description:
             self.comment = clean_comment(self.description)
             if self.values:
-                self.comment += "\n####Accepted values: `{0}`\n".format(self.values)
+                self.comment += "\n**Accepted values:** `{0}`.\n".format(self.values)
             if self.defaults:
-                self.comment += "\n####Defaults to `{0}`\n".format(self.defaults)
+                self.comment += "\n**Defaults to** `{0}`.\n".format(self.defaults)
             if self.demo:
-                self.comment += "\n####Try it\n{0}".format(self.demo)
+                self.comment += "\n**Try it**\n\n{0}".format(self.demo)
             self.comment += "*/\n"
 
     def add_property(self, variable):

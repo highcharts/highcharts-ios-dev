@@ -16,7 +16,8 @@
 /**
 The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the [tutorial article on the Data module](http://www.highcharts.com/docs/working- with-data/data-module). It requires the `modules/data.js` file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the `series.data` option.
 
-####Try it
+**Try it**
+
 * [HTML table](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/)
 * [CSV](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/)
 */
@@ -31,35 +32,40 @@ Whether to use the first row in the data set as series names.
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Don't get series names from the CSV](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *firstRowAsNames;
 /**
 An array containing object with Point property names along with what column id the property should be taken from.
 
-####Try it
+**Try it**
+
 * [Label from data set](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/seriesmapping-label/)
 */
 @property(nonatomic, readwrite) NSArray *seriesMapping;
 /**
 The same as the columns input option, but defining rows intead of columns.
 
-####Try it
+**Try it**
+
 * [Data in rows](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/rows/)
 */
 @property(nonatomic, readwrite) NSArray<NSArray *> *rows;
 /**
 The callback that is evaluated when the data is finished loading, optionally from an external source, and parsed. The first argument passed is a finished chart options object, containing the series. These options can be extended with additional options and passed directly to the chart constructor.
 
-####Try it
+**Try it**
+
 * [Modify data on complete](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/complete/)
 */
 @property(nonatomic, readwrite) HIFunction *complete;
 /**
 Item or cell delimiter for parsing CSV. Defaults to the tab character `\t` if a tab character is found in the CSV string, if not it defaults to `,`. If this is set to false or undefined, the parser will attempt to deduce the delimiter automatically.
 
-####Try it
+**Try it**
+
 * [Delimiters](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/)
 */
 @property(nonatomic, readwrite) NSString *itemDelimiter;
@@ -69,21 +75,24 @@ Which of the predefined date formats in Date.prototype.dateFormats to use to par
 **Accepted values:** `[undefined, "YYYY/mm/dd", "dd/mm/YYYY", "mm/dd/YYYY",
             "dd/mm/YYYY", "dd/mm/YY", "mm/dd/YY"]`.
 
-####Try it
+**Try it**
+
 * [Best guess date format](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/dateformat-auto/)
 */
 @property(nonatomic, readwrite) NSString *dateFormat;
 /**
 The Google Spreadsheet worksheet to use in combination with `googleSpreadsheetKey`. The available id's from your sheet can be read from `https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic`.
 
-####Try it
+**Try it**
+
 * [Load a Google Spreadsheet](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/)
 */
 @property(nonatomic, readwrite) NSString *googleSpreadsheetWorksheet;
 /**
 The key for a Google Spreadsheet to load. See [general information on GS](https://developers.google.com/gdata/samples/spreadsheet_sample).
 
-####Try it
+**Try it**
+
 * [Load a Google Spreadsheet](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/)
 */
 @property(nonatomic, readwrite) NSString *googleSpreadsheetKey;
@@ -92,7 +101,8 @@ Switch rows and columns of the input data, so that `this.columns` effectively be
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Switch rows and columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/switchrowsandcolumns/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *switchRowsAndColumns;
@@ -101,7 +111,8 @@ In tabular input data, the first row (indexed by 0) to use.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Limited data](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/)
 */
 @property(nonatomic, readwrite) NSNumber *startRow;
@@ -110,21 +121,24 @@ In tabular input data, the first column (indexed by 0) to use.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Limited data](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/)
 */
 @property(nonatomic, readwrite) NSNumber *startColumn;
 /**
 In tabular input data, the last column (indexed by 0) to use. Defaults to the last column containing data.
 
-####Try it
+**Try it**
+
 * [Limited data](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/)
 */
 @property(nonatomic, readwrite) NSNumber *endColumn;
 /**
 A HTML table or the id of such to be parsed as input data. Related options are `startRow`, `endRow`, `startColumn` and `endColumn` to delimit what part of the table is used.
 
-####Try it
+**Try it**
+
 * [Parsed table](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/)
 */
 @property(nonatomic, readwrite) id table;
@@ -133,7 +147,8 @@ The decimal point used for parsing numbers in the CSV. If both this and data.del
 
 **Defaults to** `.`.
 
-####Try it
+**Try it**
+
 * [Comma as decimal point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/)
 */
 @property(nonatomic, readwrite) NSString *decimalPoint;
@@ -142,35 +157,40 @@ Line delimiter for parsing CSV.
 
 **Defaults to** `\n`.
 
-####Try it
+**Try it**
+
 * [Delimiters](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/delimiters/)
 */
 @property(nonatomic, readwrite) NSString *lineDelimiter;
 /**
 A comma delimited string to be parsed. Related options are `startRow`, `endRow`, `startColumn` and `endColumn` to delimit what part of the table is used. The `lineDelimiter` and `itemDelimiter` options define the CSV delimiter formats. The built-in CSV parser doesn't support all flavours of CSV, so in some cases it may be necessary to use an external CSV parser. See [this example](http://jsfiddle.net/highcharts/u59176h4/) of parsing CSV through the MIT licensed [Papa Parse](http://papaparse.com/) library.
 
-####Try it
+**Try it**
+
 * [Data from CSV](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/)
 */
 @property(nonatomic, readwrite) NSString *csv;
 /**
 A callback function to access the parsed columns, the two-dimentional input data array directly, before they are interpreted into series data and categories. Return `false` to stop completion, or call `this.complete()` to continue async.
 
-####Try it
+**Try it**
+
 * [Modify data after parse](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/)
 */
 @property(nonatomic, readwrite) HIFunction *parsed;
 /**
 A two-dimensional array representing the input data on tabular form. This input can be used when the data is already parsed, for example from a grid view component. Each cell can be a string or number. If not switchRowsAndColumns is set, the columns are interpreted as series.
 
-####Try it
+**Try it**
+
 * [Columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/columns/)
 */
 @property(nonatomic, readwrite) NSArray<NSArray *> *columns;
 /**
 In tabular input data, the last row (indexed by 0) to use. Defaults to the last row containing data.
 
-####Try it
+**Try it**
+
 * [Limited data](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/start-end/)
 */
 @property(nonatomic, readwrite) NSNumber *endRow;
@@ -207,7 +227,8 @@ A description of the point to add to the screen reader information about the poi
 /**
 The name of the point as shown in the legend, tooltip, dataLabel etc.
 
-####Try it
+**Try it**
+
 * [Point names](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/)
 */
 @property(nonatomic, readwrite) NSString *name;
@@ -216,7 +237,8 @@ Individual color for the point. By default the color is pulled from the global `
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Mark the highest point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/color/)
 */
 @property(nonatomic, readwrite) HIColor *color;
@@ -229,7 +251,8 @@ Whether the data point is selected initially.
 /**
 Individual data label for each point. The options are the same as the ones for `plotOptions.series.dataLabels`
 
-####Try it
+**Try it**
+
 * [Show a label for the last value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/datalabels/)
 */
 @property(nonatomic, readwrite) id dataLabels;
@@ -254,7 +277,8 @@ The x value of the point. For datetime axes, the X value is the timestamp in mil
 /**
 The `id` of a series in the `drilldown.series` array to use for a drilldown for this point.
 
-####Try it
+**Try it**
+
 * [Basic drilldown](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/basic/)
 */
 @property(nonatomic, readwrite) NSString *drilldown;
@@ -263,7 +287,8 @@ An id for the point. This can be used after render time to get a pointer to the 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Remove an id'd point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/id/)
 */
 @property(nonatomic, readwrite) NSString *id;
@@ -297,7 +322,8 @@ The color of the border surrounding the column or bar. In styled mode, the borde
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Dark gray border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/)
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
@@ -306,7 +332,8 @@ The width of the border surrounding the column or bar. In styled mode, the strok
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [2px black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/)
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
@@ -317,7 +344,8 @@ The value of the point, resulting in a color controled by options as set in the 
 /**
 Point padding for a single point.
 
-####Try it
+**Try it**
+
 * [Point padding on tiles](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding)
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
@@ -326,7 +354,8 @@ When this property is true, the points acts as a summary column for the values a
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Waterfall](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *isIntermediateSum;
@@ -335,28 +364,32 @@ When this property is true, the point display the total sum across the entire se
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Waterfall](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *isSum;
 /**
 Whether to display a slice offset from the center.
 
-####Try it
+**Try it**
+
 * [One sliced point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *sliced;
 /**
 The inner radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string.
 
-####Try it
+**Try it**
+
 * [Individual radius and innerRadius](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ innerRadius;
 /**
 The outer radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string.
 
-####Try it
+**Try it**
+
 * [Individual radius and innerRadius](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/)
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ radius;
@@ -369,7 +402,8 @@ Whether the link goes out of the system.
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [Sankey chart with outgoing links](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *outgoing;
@@ -396,7 +430,8 @@ Only for treemap. Use this option to build a tree structure. The value should be
 
 **Defaults to** `undefined`.
 
-####Try it
+**Try it**
+
 * [Point parent](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/parent/)
 * [Example where parent id is not matching](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/)
 */

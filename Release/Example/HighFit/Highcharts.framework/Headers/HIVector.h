@@ -23,7 +23,8 @@ What part of the vector it should be rotated around. Can be one of `start`, `cen
 
 **Accepted values:** `["start", "center", "end"]`.
 
-####Try it
+**Try it**
+
 * [Rotate from start](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/vector-rotationorigin-start/)
 */
 @property(nonatomic, readwrite) NSString *rotationOrigin;

@@ -34,7 +34,8 @@ The responsive rule applies if the chart height is greater than this.
 /**
 The responsive rule applies if the chart width is less than this.
 
-####Try it
+**Try it**
+
 * [Max width is 500](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/)
 */
 @property(nonatomic, readwrite) NSNumber *maxWidth;

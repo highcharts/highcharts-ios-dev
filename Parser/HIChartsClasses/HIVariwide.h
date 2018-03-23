@@ -18,7 +18,8 @@ A `variwide` series. If the `type` option is not specified, it is inherited from
 /**
 In a variwide chart, the point padding is 0 in order to express the horizontal stacking of items.
 
-####Try it
+**Try it**
+
 * [0.1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/)
 * [0.25](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/)
 * [0 for tightly packed columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/)
@@ -27,7 +28,8 @@ In a variwide chart, the point padding is 0 in order to express the horizontal s
 /**
 In a variwide chart, the group padding is 0 in order to express the horizontal stacking of items.
 
-####Try it
+**Try it**
+
 * [0.2 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/)
 * [No group padding - all columns are evenly spaced](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/)
 */
@@ -37,21 +39,24 @@ The corner radius of the border surrounding each column or bar.
 
 **Defaults to** `0`.
 
-####Try it
+**Try it**
+
 * [Rounded columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/)
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
 The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points. The default `null` means it is computed automatically, but this option can be used to override the automatic value.
 
-####Try it
+**Try it**
+
 * [Set the point range to one day on a data set with one week between the points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/)
 */
 @property(nonatomic, readwrite) NSNumber *pointRange;
 /**
 The minimal height for a column or width for a bar. By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point length to a pixel value like 3\. In stacked column charts, minPointLength might not be respected for tightly packed values.
 
-####Try it
+**Try it**
+
 * [Zero base value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/)
 * [Positive and negative close to zero values](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/)
 */
@@ -66,7 +71,8 @@ The color of the border surrounding each column or bar. In styled mode, the bord
 
 **Defaults to** `#ffffff`.
 
-####Try it
+**Try it**
+
 * [Dark gray border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/)
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
@@ -75,7 +81,8 @@ When using automatic point colors pulled from the `options.colors` collection, t
 
 **Defaults to** `false`.
 
-####Try it
+**Try it**
+
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/)
 * [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/)
 */
@@ -85,7 +92,8 @@ The maximum allowed pixel width for a column, translated to the height of a bar 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [Limited to 50](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/)
 */
 @property(nonatomic, readwrite) NSNumber *maxPointWidth;
@@ -94,7 +102,8 @@ A pixel value specifying a fixed width for each column or bar. When `null`, the 
 
 **Defaults to** `null`.
 
-####Try it
+**Try it**
+
 * [20px wide columns regardless of chart width or the amount of data points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/)
 */
 @property(nonatomic, readwrite) NSNumber *pointWidth;
@@ -103,7 +112,8 @@ The width of the border surrounding each column or bar. In styled mode, the stro
 
 **Defaults to** `1`.
 
-####Try it
+**Try it**
+
 * [2px black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/)
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
@@ -112,7 +122,8 @@ Whether to group non-stacked columns or to let them render independent of each o
 
 **Defaults to** `true`.
 
-####Try it
+**Try it**
+
 * [Grouping disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;

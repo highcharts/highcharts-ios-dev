@@ -13,7 +13,8 @@
 /**
 Set options on specific levels. Takes precedence over series options, but not point options.
 
-####Try it
+**Try it**
+
 * [Sunburst chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst)
 */
 @interface HILevels: HIChartsJSONSerializable
@@ -57,7 +58,8 @@ Can set a `rotation` on all points which lies on the same level.
 /**
 Decides which level takes effect from the options set in the levels object.
 
-####Try it
+**Try it**
+
 * [Styling of both levels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/)
 */
 @property(nonatomic, readwrite) NSNumber *level;
