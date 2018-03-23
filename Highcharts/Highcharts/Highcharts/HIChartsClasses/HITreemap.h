@@ -13,7 +13,7 @@
 
 
 /**
-A `treemap` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. treemap](#plotOptions.treemap).
+A `treemap` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.treemap`.
 */
 @interface HITreemap: HISeries
 
@@ -66,7 +66,7 @@ This option decides if the user can interact with the parent nodes or just the l
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *interactByLeaf;
 /**
-A series specific or series type specific color set to apply instead of the global colors when [colorByPoint](#plotOptions. treemap.colorByPoint) is true.
+A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 /**

@@ -16,7 +16,7 @@ A `funnel` series. If the `type` option is not specified, it is inherited from `
 @interface HIFunnel: HISeries
 
 /**
-/** The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height. 
+The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
 
 ####Defaults to `["50%", "50%"]`
 

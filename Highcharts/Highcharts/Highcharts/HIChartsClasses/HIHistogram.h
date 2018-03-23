@@ -11,7 +11,7 @@
 
 
 /**
-A `histogram` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to plotOptions.histogram.
+A `histogram` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.histogram`.
 */
 @interface HIHistogram: HISeries
 
@@ -31,7 +31,7 @@ Padding between each column or bar, in x axis units.
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
-Width of each bin. By default the bin's width is calculated as `(max - min) / number of bins`. This option takes precedence over binsNumber.
+Width of each bin. By default the bin's width is calculated as `(max - min) / number of bins`. This option takes precedence over `binsNumber`.
 */
 @property(nonatomic, readwrite) NSNumber *binWidth;
 /**
@@ -49,9 +49,7 @@ Padding between each value groups, in x axis units.
 */
 @property(nonatomic, readwrite) NSNumber *groupPadding;
 /**
-Whether to group non-stacked columns or to let them render independent
-of each other. Non-grouped columns will be laid out individually
-and overlap each other.
+Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
 
 ####Defaults to `true`
 
@@ -90,7 +88,7 @@ The spacing between columns on the Z Axis in a 3D chart. Requires `highcharts-3d
 */
 @property(nonatomic, readwrite) NSNumber *groupZPadding;
 /**
-A series specific or series type specific color set to apply instead of the global colors when [colorByPoint](#plotOptions. column.colorByPoint) is true.
+A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;

@@ -16,7 +16,7 @@ A `variwide` series. If the `type` option is not specified, it is inherited from
 @interface HIVariwide: HISeries
 
 /**
-/** In a variwide chart, the point padding is 0 in order to express the horizontal stacking of items. 
+In a variwide chart, the point padding is 0 in order to express the horizontal stacking of items.
 
 ####Try it
 * [0.1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/)
@@ -25,7 +25,7 @@ A `variwide` series. If the `type` option is not specified, it is inherited from
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
-/** In a variwide chart, the group padding is 0 in order to express the horizontal stacking of items. 
+In a variwide chart, the group padding is 0 in order to express the horizontal stacking of items.
 
 ####Try it
 * [0.2 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/)

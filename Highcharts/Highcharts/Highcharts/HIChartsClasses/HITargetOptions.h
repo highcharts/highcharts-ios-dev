@@ -31,7 +31,7 @@ The border width of the rectangle representing the target. In styled mode, use c
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-The color of the rectangle representing the target. When not set, point's color (if set in point's options - `color`) or zone of the target value (if `zones` or `negativeColor` are set) or the same color as the point has is used. In styled mode, use class `highcharts-bullet-target` instead.
+The color of the rectangle representing the target. When not set, point's color (if set in point's options - ``color``) or zone of the target value (if ``zones`` or ``negativeColor`` are set) or the same color as the point has is used. In styled mode, use class `highcharts-bullet-target` instead.
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**

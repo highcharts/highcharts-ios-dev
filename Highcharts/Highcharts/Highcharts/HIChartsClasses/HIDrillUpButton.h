@@ -10,7 +10,7 @@
 
 
 /**
-Options for the drill up button that appears when drilling down on a series. The text for the button is defined in lang.drillUpText.
+Options for the drill up button that appears when drilling down on a series. The text for the button is defined in `lang.drillUpText`.
 
 ####Try it
 * [Drill up button](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/)

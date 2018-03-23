@@ -106,7 +106,7 @@ The color of the outer chart border.
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
-In styled mode, this sets how many colors the class names should rotate between. With ten colors, series (or points) are given class names like `highcharts-color-0`, `highcharts-color-0` [...] `highcharts-color-9`. The equivalent in non-styled mode is to set colors using the colors setting.
+In styled mode, this sets how many colors the class names should rotate between. With ten colors, series (or points) are given class names like `highcharts-color-0`, `highcharts-color-0` `...] `highcharts-color-9`. The equivalent in non-styled mode is to set colors using the [colors` setting.
 
 **Defaults to** `10`.
 */
@@ -188,7 +188,7 @@ An explicit width for the chart. By default (when `null`) the width is calculate
 */
 @property(nonatomic, readwrite) NSNumber *width;
 /**
-Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the initial series animation, see [plotOptions.series.animation](#plotOptions.series. animation). The animation can either be set as a boolean or a configuration object. If `true`, it will use the 'swing' jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:  duration The duration of the animation in milliseconds. easing A string reference to an easing function set on the `Math` object. See [the easing demo](http://jsfiddle.net/gh/get/library/pure/ highcharts/highcharts/tree/master/samples/highcharts/plotoptions/ series-animation-easing/). 
+Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the initial series animation, see `plotOptions.series.animation`. The animation can either be set as a boolean or a configuration object. If `true`, it will use the 'swing' jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:  duration The duration of the animation in milliseconds. easing A string reference to an easing function set on the `Math` object. See [the easing demo](http://jsfiddle.net/gh/get/library/pure/ highcharts/highcharts/tree/master/samples/highcharts/plotoptions/ series-animation-easing/). 
 
 **Defaults to** `true`.
 
@@ -219,7 +219,7 @@ The background color or gradient for the outer chart area.
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
-Allow panning in a chart. Best used with panKey to combine zooming and panning. On touch devices, when the tooltip.followTouchMove option is `true` (default), panning requires two fingers. To allow panning with one finger, set `followTouchMove` to `false`.
+Allow panning in a chart. Best used with `panKey` to combine zooming and panning. On touch devices, when the `tooltip.followTouchMove` option is `true` (default), panning requires two fingers. To allow panning with one finger, set `followTouchMove` to `false`.
 
 **Defaults to** `false`.
 
@@ -228,11 +228,11 @@ Allow panning in a chart. Best used with panKey to combine zooming and panning. 
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *panning;
 /**
-Options to render charts in 3 dimensions. This feature requires `highcharts-3d.js`, found in the download package or online at [code.highcharts.com/highcharts-3d.js](http://code.highcharts.com/highcharts- 3d.js).
+Options to render charts in 3 dimensions. This feature requires `highcharts-3d.js`, found in the download package or online at [code.highcharts.com/highcharts-3d.js](http:https://code.highcharts.com/highcharts- 3d.js).
 */
 @property(nonatomic, readwrite) HIOptions3d *options3d;
 /**
-The default series type for the chart. Can be any of the chart types listed under plotOptions.
+The default series type for the chart. Can be any of the chart types listed under `plotOptions`.
 
 **Accepted values:** `["line", "spline", "column", "bar", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "heatmap", "polygon", "pyramid", "scatter", "solidgauge", "treemap", "waterfall"]`.
 
@@ -292,7 +292,7 @@ Whether to apply a drop shadow to the outer chart area. Requires that background
 */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
-Whether to invert the axes so that the x axis is vertical and y axis is horizontal. When `true`, the x axis is reversed by default.
+Whether to invert the axes so that the x axis is vertical and y axis is horizontal. When `true`, the x axis is `reversed` by default.
 
 **Defaults to** `false`.
 
@@ -336,7 +336,7 @@ The URL for an image to use as the plot background. To set an image as the backg
 */
 @property(nonatomic, readwrite) NSString *plotBackgroundImage;
 /**
-Equivalent to zoomType, but for multitouch gestures only. By default, the `pinchType` is the same as the `zoomType` setting. However, pinching can be enabled separately in some cases, for example in stock charts where a mouse drag pans the chart, while pinching is enabled. When tooltip.followTouchMove is true, pinchType only applies to two-finger touches.
+Equivalent to `zoomType`, but for multitouch gestures only. By default, the `pinchType` is the same as the `zoomType` setting. However, pinching can be enabled separately in some cases, for example in stock charts where a mouse drag pans the chart, while pinching is enabled. When `tooltip.followTouchMove` is true, pinchType only applies to two-finger touches.
 
 **Accepted values:** `["x", "y", "xy"]`.
 
@@ -376,7 +376,7 @@ The pixel width of the outer chart border.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-A text description of the chart type. If the Accessibility module is loaded, this will be included in the description of the chart in the screen reader information region.  Highcharts will by default attempt to guess the chart type, but for more complex charts it is recommended to specify this property for clarity.
+A text description of the chart type. If the Accessibility module is loaded, this will be included in the description of the chart in the screen reader information region. Highcharts will by default attempt to guess the chart type, but for more complex charts it is recommended to specify this property for clarity.
 
 **Defaults to** `undefined`.
 */

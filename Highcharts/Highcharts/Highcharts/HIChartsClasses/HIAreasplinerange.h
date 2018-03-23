@@ -11,13 +11,12 @@
 
 
 /**
-A `areasplinerange` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. areasplinerange](#plotOptions.areasplinerange).
+A `areasplinerange` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.areasplinerange`.
 */
 @interface HIAreasplinerange: HISeries
 
 /**
-Whether the whole area or just the line should respond to mouseover
-tooltips and other mouse or touch events.
+Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
 
 ####Defaults to `false`
 

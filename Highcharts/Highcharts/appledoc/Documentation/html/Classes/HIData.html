@@ -222,7 +222,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the <a href="http://www.highcharts.com/docs/working-%20with-data/data-module">tutorial article on the Data module</a>. It requires the <code>modules/data.js</code> file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the series.data option.</p>
+						<p>The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the <a href="http://www.highcharts.com/docs/working-%20with-data/data-module">tutorial article on the Data module</a>. It requires the <code>modules/data.js</code> file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the <code>series.data</code> option.</p>
 
 <h4>Try it</h4>
 
@@ -609,7 +609,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id&rsquo;s from your sheet can be read from <code>https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic</code>.</p>
+				<p>The Google Spreadsheet worksheet to use in combination with <code>googleSpreadsheetKey</code>. The available id&rsquo;s from your sheet can be read from <code>https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic</code>.</p>
 			</div>
 			
 		    
@@ -1078,7 +1078,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A comma delimited string to be parsed. Related options are <a href="#data.%20startRow">startRow</a>, endRow, startColumn and endColumn to delimit what part of the table is used. The lineDelimiter and <a href="#data.%20itemDelimiter">itemDelimiter</a> options define the CSV delimiter formats. The built-in CSV parser doesn&rsquo;t support all flavours of CSV, so in some cases it may be necessary to use an external CSV parser. See <a href="http://jsfiddle.net/highcharts/u59176h4/">this example</a> of parsing CSV through the MIT licensed <a href="http://papaparse.com/">Papa Parse</a> library.</p>
+				<p>A comma delimited string to be parsed. Related options are <code>startRow</code>, <code>endRow</code>, <code>startColumn</code> and <code>endColumn</code> to delimit what part of the table is used. The <code>lineDelimiter</code> and <code>itemDelimiter</code> options define the CSV delimiter formats. The built-in CSV parser doesn&rsquo;t support all flavours of CSV, so in some cases it may be necessary to use an external CSV parser. See <a href="http://jsfiddle.net/highcharts/u59176h4/">this example</a> of parsing CSV through the MIT licensed <a href="http://papaparse.com/">Papa Parse</a> library.</p>
 			</div>
 			
 		    
@@ -1724,7 +1724,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Individual data label for each point. The options are the same as the ones for <a href="#plotOptions.series.%20dataLabels">plotOptions.series.dataLabels</a></p>
+				<p>Individual data label for each point. The options are the same as the ones for <code>plotOptions.series.dataLabels</code></p>
 			</div>
 			
 		    
@@ -1944,7 +1944,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <code>id</code> of a series in the drilldown.series array to use for a drilldown for this point.</p>
+				<p>The <code>id</code> of a series in the <code>drilldown.series</code> array to use for a drilldown for this point.</p>
 			</div>
 			
 		    
@@ -2416,7 +2416,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The value of the point, resulting in a color controled by options as set in the colorAxis configuration.</p>
+				<p>The value of the point, resulting in a color controled by options as set in the <code>colorAxis</code> configuration.</p>
 			</div>
 			
 		    

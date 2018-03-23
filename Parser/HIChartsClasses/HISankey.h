@@ -16,7 +16,7 @@ A `sankey` series. If the `type` option is not specified, it is inherited from `
 @interface HISankey: HISeries
 
 /**
-/** When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point. 
+When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point.
 
 ####Defaults to `false`
 

@@ -124,7 +124,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>wordcloud</code> series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.wordcloud">plotOptions. wordcloud</a>.</p>
+						<p>A <code>wordcloud</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>. For options that apply to multiple series, it is recommended to add them to the <code>plotOptions.series</code> options structure. To apply to all series of this specific type, apply it to <code>plotOptions.wordcloud</code>.</p>
 					</div>
 					
 					
@@ -151,9 +151,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When using automatic point colors pulled from the <code>options.colors</code>
-collection, this option determines whether the chart should receive
-one color per series or one color per point.</p>
+				<p>When using automatic point colors pulled from the <code>options.colors</code> collection, this option determines whether the chart should receive one color per series or one color per point.</p>
 			</div>
 			
 		    
@@ -294,7 +292,7 @@ one color per series or one color per point.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the border surrounding each column or bar.</p>
+				<p>The width of the border surrounding each column or bar. In styled mode, the stroke width can be set with the <code>.highcharts-point</code> rule.</p>
 			</div>
 			
 		    
@@ -311,10 +309,7 @@ one color per series or one color per point.</p>
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>In styled mode, the stroke width can be set with the <code>.highcharts-point</code>
-rule.</p>
-
-<h4>Defaults to <code>1</code></h4>
+				<h4>Defaults to <code>1</code></h4>
 
 <h4>Try it</h4>
 
@@ -495,7 +490,7 @@ rule.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A series specific or series type specific color set to apply instead of the global colors when <a href="#plotOptions.%20column.colorByPoint">colorByPoint</a> is true.</p>
+				<p>A series specific or series type specific color set to apply instead of the global <code>colors</code> when <code>colorByPoint</code> is true.</p>
 			</div>
 			
 		    

@@ -1,10 +1,10 @@
 /**
-* (c) 2009-2018 Highsoft AS
-*
-* License: www.highcharts.com/license
-* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
-* In case of questions, please contact sales@highsoft.com
-*/
+ * (c) 2009-2018 Highsoft AS
+ *
+ * License: www.highcharts.com/license
+ * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
+ * In case of questions, please contact sales@highsoft.com
+ */
 
 #import "HISummary.h"
 #import "HIPoint.h"
@@ -21,7 +21,7 @@
 
 
 /**
- Lang configuration for different series types. For more dynamic control over the series element descriptions, see [accessibility.seriesDescriptionFormatter](accessibility. seriesDescriptionFormatter).
+ Lang configuration for different series types. For more dynamic control over the series element descriptions, see `accessibility.seriesDescriptionFormatter`.
  */
 @interface HISeries: HIChartsJSONSerializable
 
@@ -160,7 +160,7 @@
  */
 @property(nonatomic, readwrite) HIPoint *point;
 /**
- The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the `options.colors` array. In styled mode, the color can be defined by the colorIndex option. Also, the series color can be set with the `.highcharts-series`, `.highcharts-color-{n}`, `.highcharts-{type}-series` or `.highcharts-series-{n}` class, or individual classes given by the `className` option.
+ The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the `options.colors` array. In styled mode, the color can be defined by the `colorIndex` option. Also, the series color can be set with the `.highcharts-series`, `.highcharts-color-{n}`, `.highcharts-{type}-series` or `.highcharts-series-{n}` class, or individual classes given by the `className` option.
  
  ####Try it
  * [General plot option](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/)
@@ -188,19 +188,19 @@
  */
 @property(nonatomic, readwrite) HIStates *states;
 /**
- The threshold, also called zero level or base level. For line type series this is only used in conjunction with negativeColor.
+ The threshold, also called zero level or base level. For line type series this is only used in conjunction with `negativeColor`.
  
  **Defaults to** `0`.
  */
 @property(nonatomic, readwrite) NSNumber *threshold;
 /**
- When this is true, the series will not cause the Y axis to cross the zero plane (or threshold option) unless the data actually crosses the plane. For example, if `softThreshold` is `false`, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the `minPadding` option. If `softThreshold` is `true`, the Y axis starts at 0.
+ When this is true, the series will not cause the Y axis to cross the zero plane (or `threshold` option) unless the data actually crosses the plane. For example, if `softThreshold` is `false`, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the `minPadding` option. If `softThreshold` is `true`, the Y axis starts at 0.
  
  **Defaults to** `true`.
  */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *softThreshold;
 /**
- A configuration object for the tooltip rendering of each single series. Properties are inherited from tooltip, but only the following properties can be defined on a series level.
+ A configuration object for the tooltip rendering of each single series. Properties are inherited from `tooltip`, but only the following properties can be defined on a series level.
  */
 @property(nonatomic, readwrite) HITooltip *tooltip;
 /**
@@ -208,7 +208,7 @@
  */
 @property(nonatomic, readwrite) HIMarker *marker;
 /**
- Same as [accessibility.pointDescriptionFormatter](#accessibility. pointDescriptionFormatter), but for an individual series. Overrides the chart wide configuration.
+ Same as `accessibility.pointDescriptionFormatter`, but for an individual series. Overrides the chart wide configuration.
  */
 @property(nonatomic, readwrite) HIFunction *pointDescriptionFormatter;
 /**
@@ -237,7 +237,7 @@
  */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
- Possible values: `null`, `"on"`, `"between"`. In a column chart, when pointPlacement is `"on"`, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is `"between"`, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart. Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding. Note that pointPlacement needs a [pointRange](#plotOptions.series. pointRange) to work. For column series this is computed, but for line-type series it needs to be set. Defaults to `null` in cartesian charts, `"between"` in polar charts.
+ Possible values: `null`, `"on"`, `"between"`. In a column chart, when pointPlacement is `"on"`, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is `"between"`, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart. Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding. Note that pointPlacement needs a `pointRange` to work. For column series this is computed, but for line-type series it needs to be set. Defaults to `null` in cartesian charts, `"between"` in polar charts.
  
  **Accepted values:** `[null, "on", "between"]`.
  
@@ -259,7 +259,7 @@
  */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectNulls;
 /**
- The color for the parts of the graph or points that are below the threshold.
+ The color for the parts of the graph or points that are below the `threshold`.
  
  **Defaults to** `null`.
  
@@ -393,7 +393,7 @@
  */
 @property(nonatomic, readwrite) id /* Bool, id */ shadow;
 /**
- Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see [chart.animation](#chart. animation) and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing A string reference to an easing function set on the `Math` object. See the _Custom easing function_ demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.
+ Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see `chart.animation` and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing A string reference to an easing function set on the `Math` object. See the _Custom easing function_ demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.
  
  **Defaults to** `true`.
  
@@ -420,7 +420,7 @@
  */
 @property(nonatomic, readwrite) NSArray <HIZones *> *zones;
 /**
- On datetime series, this allows for setting the pointInterval to irregular time units, `day`, `month` and `year`. A day is usually the same as 24 hours, but `pointIntervalUnit` also takes the DST crossover into consideration when dealing with local time. Combine this option with `pointInterval` to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+ On datetime series, this allows for setting the `pointInterval` to irregular time units, `day`, `month` and `year`. A day is usually the same as 24 hours, but `pointIntervalUnit` also takes the DST crossover into consideration when dealing with local time. Combine this option with `pointInterval` to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
  
  **Accepted values:** `[null, "day", "month", "year"]`.
  
@@ -445,7 +445,7 @@
  */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
- The id of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
+ The `id` of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
  
  ####Try it
  * [Linked series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/)
@@ -516,3 +516,4 @@
 -(NSDictionary *)getParams;
 
 @end
+

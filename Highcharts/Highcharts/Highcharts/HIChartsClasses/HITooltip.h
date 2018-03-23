@@ -18,7 +18,7 @@ Options for the tooltip that appears when the user hovers over a series or point
 @interface HITooltip: HIChartsJSONSerializable
 
 /**
-Whether the tooltip should follow the finger as it moves on a touch device. If this is `true` and chart.panning is set,`followTouchMove` will take over one-finger touches, so the user needs to use two fingers for zooming and panning.
+Whether the tooltip should follow the finger as it moves on a touch device. If this is `true` and `chart.panning` is set,`followTouchMove` will take over one-finger touches, so the user needs to use two fingers for zooming and panning.
 
 **Defaults to** `true`.
 */
@@ -55,7 +55,7 @@ A string to prepend to each series' y value. Overridable in each series' tooltip
 */
 @property(nonatomic, readwrite) NSString *valuePrefix;
 /**
-For series on a datetime axes, the date format in the tooltip's header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see [dateFormat](#Highcharts. dateFormat). Defaults to: {   millisecond:"%A, %b %e, %H:%M:%S.%L",   second:"%A, %b %e, %H:%M:%S",   minute:"%A, %b %e, %H:%M",   hour:"%A, %b %e, %H:%M",   day:"%A, %b %e, %Y",   week:"Week from %A, %b %e, %Y",   month:"%B %Y",   year:"%Y" }
+For series on a datetime axes, the date format in the tooltip's header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see `dateFormat`. Defaults to: {   millisecond:"%A, %b %e, %H:%M:%S.%L",   second:"%A, %b %e, %H:%M:%S",   minute:"%A, %b %e, %H:%M",   hour:"%A, %b %e, %H:%M",   day:"%A, %b %e, %Y",   week:"Week from %A, %b %e, %Y",   month:"%B %Y",   year:"%Y" }
 */
 @property(nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats;
 /**
@@ -116,7 +116,7 @@ Enable or disable animation of the tooltip. In slow legacy IE browsers the anima
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
 /**
-Split the tooltip into one label per series, with the header close to the axis. This is recommended over shared tooltips for charts with multiple line series, generally making them easier to read. This option takes precedence over `tooltip.shared`.
+Split the tooltip into one label per series, with the header close to the axis. This is recommended over `shared` tooltips for charts with multiple line series, generally making them easier to read. This option takes precedence over `tooltip.shared`.
 
 **Defaults to** `false`.
 
@@ -136,7 +136,7 @@ The background color or gradient for the tooltip. In styled mode, the stroke wid
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
-Proximity snap for graphs or single points. It defaults to 10 for mouse-powered devices and 25 for touch devices. Note that in most cases the whole plot area captures the mouse movement, and in these cases `tooltip.snap` doesn't make sense. This applies when stickyTracking is `true` (default) and when the tooltip is shared or split.
+Proximity snap for graphs or single points. It defaults to 10 for mouse-powered devices and 25 for touch devices. Note that in most cases the whole plot area captures the mouse movement, and in these cases `tooltip.snap` doesn't make sense. This applies when `stickyTracking` is `true` (default) and when the tooltip is `shared` or `split`.
 
 **Defaults to** `10/25`.
 
@@ -146,7 +146,7 @@ Proximity snap for graphs or single points. It defaults to 10 for mouse-powered 
 */
 @property(nonatomic, readwrite) NSNumber *snap;
 /**
-When the tooltip is shared, the entire plot area will capture mouse movement or touch events. Tooltip texts for series types with ordered data (not pie, scatter, flags etc) will be shown in a single bubble. This is recommended for single series charts and for tablet/mobile optimized charts. See also tooltip.split, that is better suited for charts with many series, especially line-type series. The `tooltip.split` option takes precedence over `tooltip.shared`.
+When the tooltip is shared, the entire plot area will capture mouse movement or touch events. Tooltip texts for series types with ordered data (not pie, scatter, flags etc) will be shown in a single bubble. This is recommended for single series charts and for tablet/mobile optimized charts. See also `tooltip.split`, that is better suited for charts with many series, especially line-type series. The `tooltip.split` option takes precedence over `tooltip.shared`.
 
 **Defaults to** `false`.
 
@@ -223,7 +223,7 @@ The pixel width of the tooltip border. In styled mode, the stroke width is set i
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the `plotOptions` for those series types. For touch moves to behave the same way, [followTouchMove](#tooltip. followTouchMove) must be `true` also.
+Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the `plotOptions` for those series types. For touch moves to behave the same way, `followTouchMove` must be `true` also.
 
 **Defaults to** `false`.
 */

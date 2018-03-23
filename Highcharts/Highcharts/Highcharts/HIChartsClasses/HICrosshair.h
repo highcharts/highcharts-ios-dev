@@ -27,7 +27,7 @@ The Z index of the crosshair. Higher Z indices allow drawing the crosshair on to
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
-The dash style for the crosshair. See series.dashStyle for possible values.
+The dash style for the crosshair. See `series.dashStyle` for possible values.
 
 **Accepted values:** `["Solid", "ShortDash", "ShortDot", "ShortDashDot",
              "ShortDashDotDot", "Dot", "Dash" ,"LongDash",

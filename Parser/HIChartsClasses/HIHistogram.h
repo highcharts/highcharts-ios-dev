@@ -22,7 +22,7 @@ An integer identifying the index to use for the base series, or a string represe
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ baseSeries;
 /**
-/** Padding between each column or bar, in x axis units. 
+Padding between each column or bar, in x axis units.
 
 ####Try it
 * [0.1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/)
@@ -41,7 +41,7 @@ A preferable number of bins. It is a suggestion, so a histogram may have a diffe
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber, Function */ binsNumber;
 /**
-/** Padding between each value groups, in x axis units. 
+Padding between each value groups, in x axis units.
 
 ####Try it
 * [0.2 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/)
@@ -49,7 +49,7 @@ A preferable number of bins. It is a suggestion, so a histogram may have a diffe
 */
 @property(nonatomic, readwrite) NSNumber *groupPadding;
 /**
-/** Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other. 
+Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
 
 ####Defaults to `true`
 

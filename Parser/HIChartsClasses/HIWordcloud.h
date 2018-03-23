@@ -18,7 +18,7 @@ A `wordcloud` series. If the `type` option is not specified, it is inherited fro
 @interface HIWordcloud: HISeries
 
 /**
-/** When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point. 
+When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point.
 
 ####Defaults to `false`
 
@@ -38,7 +38,7 @@ Spiral used for placing a word after the inital position experienced a collision
 */
 @property(nonatomic, readwrite) NSString *spiral;
 /**
-/** The width of the border surrounding each column or bar. In styled mode, the stroke width can be set with the `.highcharts-point` rule. 
+The width of the border surrounding each column or bar. In styled mode, the stroke width can be set with the `.highcharts-point` rule.
 
 ####Defaults to `1`
 

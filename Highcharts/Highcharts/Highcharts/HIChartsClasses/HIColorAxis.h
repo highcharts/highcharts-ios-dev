@@ -15,7 +15,7 @@
 
 
 /**
-A color axis for choropleth maps and heat maps. Visually, the color axis will appear as a gradient or as separate items inside the legend, depending on whether the axis is scalar or based on data classes. For supported color formats, see the [docs article about colors](http://www.highcharts.com/docs/chart-design-and-style/colors). A scalar color axis is represented by a gradient. The colors either range between the minColor and the maxColor, or for more fine grained control the colors can be defined in stops. Often times, the color axis needs to be adjusted to get the right color spread for the data. In addition to stops, consider using a logarithmic axis type, or setting min and max to avoid the colors being determined by outliers. When dataClasses are used, the ranges are subdivided into separate classes like categories based on their values. This can be used for ranges between two values, but also for a true category. However, when your data is categorized, it may be as convenient to add each category to a separate series. See the Axis object for programmatic access to the axis.
+A color axis for choropleth maps and heat maps. Visually, the color axis will appear as a gradient or as separate items inside the legend, depending on whether the axis is scalar or based on data classes. For supported color formats, see the [docs article about colors](http://www.highcharts.com/docs/chart-design-and-style/colors). A scalar color axis is represented by a gradient. The colors either range between the `minColor` and the `maxColor`, or for more fine grained control the colors can be defined in `stops`. Often times, the color axis needs to be adjusted to get the right color spread for the data. In addition to stops, consider using a logarithmic `axis type`, or setting `min` and `max` to avoid the colors being determined by outliers. When `dataClasses` are used, the ranges are subdivided into separate classes like categories based on their values. This can be used for ranges between two values, but also for a true category. However, when your data is categorized, it may be as convenient to add each category to a separate series. See `the Axis object` for programmatic access to the axis.
 */
 @interface HIColorAxis: HIChartsJSONSerializable
 
@@ -24,8 +24,7 @@ An array of data classes or ranges for the choropleth map. If none given, the co
 */
 @property(nonatomic, readwrite) NSArray <HIDataClasses *> *dataClasses;
 /**
-Padding of the min value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer.
+Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer.
 
 ####Defaults to `0.01`
 
@@ -34,14 +33,11 @@ padding of 0.05 will make a 100px axis 5px longer.
 */
 @property(nonatomic, readwrite) NSNumber *minPadding;
 /**
-The axis labels show the number for each tick.
-
-For more live examples on label options, see [xAxis.labels in the
-Highcharts API.](/highcharts#xAxis.labels)
+The axis labels show the number for each tick. For more live examples on label options, see `xAxis.labels in the Highcharts API.`
 */
 @property(nonatomic, readwrite) HILabels *labels;
 /**
-The color to represent the maximum of the color axis. Unless [dataClasses](#colorAxis. dataClasses) or stops are set, the gradient ends at this value. If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the [dataClassColor](#colorAxis. dataClassColor) is set.
+The color to represent the maximum of the color axis. Unless `dataClasses` or `stops` are set, the gradient ends at this value. If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the `dataClassColor` is set.
 
 **Defaults to** `#003399`.
 */
@@ -51,9 +47,7 @@ The triangular marker on a scalar color axis that points to the value of the hov
 */
 @property(nonatomic, readwrite) HIMarker *marker;
 /**
-The minimum value of the axis in terms of map point values. If `null`,
-the min value is automatically calculated. If the `startOnTick`
-option is true, the min value might be rounded down.
+The minimum value of the axis in terms of map point values. If `null`, the min value is automatically calculated. If the `startOnTick` option is true, the min value might be rounded down.
 
 ####Try it
 * [-50 with startOnTick to false](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/)
@@ -65,7 +59,7 @@ Color stops for the gradient of a scalar color axis. Use this in cases where a l
 */
 @property(nonatomic, readwrite) NSArray<NSArray *> *stops;
 /**
-Determines how to set each data class' color if no individual color is set. The default value, `tween`, computes intermediate colors between `minColor` and `maxColor`. The other possible value, `category`, pulls colors from the global or chart specific colors array.
+Determines how to set each data class' color if no individual color is set. The default value, `tween`, computes intermediate colors between `minColor` and `maxColor`. The other possible value, `category`, pulls colors from the global or chart specific `colors` array.
 
 **Accepted values:** `["tween", "category"]`.
 
@@ -73,9 +67,7 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSString *dataClassColor;
 /**
-Whether to force the axis to end on a tick. Use this option with
-the maxPadding option to control the axis
-end.
+Whether to force the axis to end on a tick. Use this option with the `maxPadding` option to control the axis end.
 
 ####Defaults to `true`
 
@@ -85,8 +77,7 @@ end.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *endOnTick;
 /**
-The type of interpolation to use for the color axis. Can be `linear`
-or `logarithmic`.
+The type of interpolation to use for the color axis. Can be `linear` or `logarithmic`.
 
 ####Accepted values: `["linear", "logarithmic"]`
 
@@ -105,8 +96,7 @@ Event handlers for the axis.
 */
 @property(nonatomic, readwrite) HIEvents *events;
 /**
-If tickInterval is `null` this option
-sets the approximate pixel interval of the tick marks.
+If `tickInterval` is `null` this option sets the approximate pixel interval of the tick marks.
 
 ####Defaults to `72`
 
@@ -115,9 +105,7 @@ sets the approximate pixel interval of the tick marks.
 */
 @property(nonatomic, readwrite) NSNumber *tickPixelInterval;
 /**
-The maximum value of the axis in terms of map point values. If `null`,
-the max value is automatically calculated. If the `endOnTick` option
-is true, the max value might be rounded up.
+The maximum value of the axis in terms of map point values. If `null`, the max value is automatically calculated. If the `endOnTick` option is true, the max value might be rounded up.
 
 ####Try it
 * [Y axis max of 200](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/)
@@ -125,9 +113,7 @@ is true, the max value might be rounded up.
 */
 @property(nonatomic, readwrite) NSNumber *max;
 /**
-Whether to reverse the axis so that the highest number is closest
-to the origin. Defaults to `false` in a horizontal legend and `true`
-in a vertical legend, where the smallest value starts on top.
+Whether to reverse the axis so that the highest number is closest to the origin. Defaults to `false` in a horizontal legend and `true` in a vertical legend, where the smallest value starts on top.
 
 ####Defaults to `false`
 
@@ -136,8 +122,7 @@ in a vertical legend, where the smallest value starts on top.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reversed;
 /**
-The width of the grid lines extending from the axis across the
-gradient of a scalar color axis.
+The width of the grid lines extending from the axis across the gradient of a scalar color axis.
 
 ####Defaults to `1`
 
@@ -147,8 +132,7 @@ gradient of a scalar color axis.
 */
 @property(nonatomic, readwrite) NSNumber *gridLineWidth;
 /**
-The interval of the tick marks in axis units. When `null`, the tick
-interval is computed to approximately follow the `tickPixelInterval`.
+The interval of the tick marks in axis units. When `null`, the tick interval is computed to approximately follow the `tickPixelInterval`.
 
 ####Defaults to `null`
 
@@ -167,14 +151,13 @@ Color of the grid lines extending from the axis across the gradient.
 */
 @property(nonatomic, readwrite) HIColor *gridLineColor;
 /**
-The color to represent the minimum of the color axis. Unless [dataClasses](#colorAxis. dataClasses) or stops are set, the gradient starts at this value. If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the [dataClassColor](#colorAxis. dataClassColor) is set.
+The color to represent the minimum of the color axis. Unless `dataClasses` or `stops` are set, the gradient starts at this value. If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the `dataClassColor` is set.
 
 **Defaults to** `#e6ebf5`.
 */
 @property(nonatomic, readwrite) HIColor *minColor;
 /**
-Whether to force the axis to start on a tick. Use this option with
-the `maxPadding` option to control the axis start.
+Whether to force the axis to start on a tick. Use this option with the `maxPadding` option to control the axis start.
 
 ####Defaults to `true`
 
@@ -184,8 +167,7 @@ the `maxPadding` option to control the axis start.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startOnTick;
 /**
-Padding of the max value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer.
+Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer.
 
 ####Defaults to `0.01`
 
@@ -229,7 +211,7 @@ A soft maximum for the axis. If the series data maximum is less than this, the a
 */
 @property(nonatomic, readwrite) NSNumber *softMax;
 /**
-Refers to the index in the panes array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.
+Refers to the index in the `panes` array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.
 
 ####Try it
 * [Two gauges with different center](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter)
@@ -272,7 +254,7 @@ An id for the axis. This can be used after render time to get a pointer to the a
 */
 @property(nonatomic, readwrite) NSString *id;
 /**
-An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.
+An array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`.
 
 ####Try it
 * [Demo of tickPositions and tickPositioner](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/)
@@ -299,7 +281,7 @@ Color of the minor, secondary grid lines. In styled mode, the stroke width is gi
 */
 @property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
-A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of [tickPixelInterval](#xAxis. tickPixelInterval) and tickInterval. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
+A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
 
 ####Try it
 * [Demo of tickPositions and tickPositioner](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/)
@@ -373,7 +355,7 @@ The position of the minor tick marks relative to the axis line. Can be one of `i
 */
 @property(nonatomic, readwrite) NSString *minorTickPosition;
 /**
-Enable or disable minor ticks. Unless minorTickInterval is set, the tick interval is calculated as a fifth of the `tickInterval`. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting `minorTickInterval` to `"auto"`.
+Enable or disable minor ticks. Unless `minorTickInterval` is set, the tick interval is calculated as a fifth of the `tickInterval`. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting `minorTickInterval` to `"auto"`.
 
 **Defaults to** `false`.
 

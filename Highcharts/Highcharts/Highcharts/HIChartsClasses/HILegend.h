@@ -91,7 +91,7 @@ The pixel width of the legend item symbol. When the `squareSymbol` option is set
 */
 @property(nonatomic, readwrite) NSNumber *symbolWidth;
 /**
-Whether to [use HTML](http://www.highcharts.com/docs/chart-concepts/labels- and-string-formatting#html) to render the legend item texts. Prior to 4.1.7, when using HTML, legend.navigation was disabled.
+Whether to [use HTML](http://www.highcharts.com/docs/chart-concepts/labels- and-string-formatting#html) to render the legend item texts. Prior to 4.1.7, when using HTML, `legend.navigation` was disabled.
 
 **Defaults to** `false`.
 */

@@ -17,7 +17,7 @@ An `xrange` series. If the `type` option is not specified, it is inherited from 
 @interface HIXrange: HISeries
 
 /**
-/** In an X-range series, this option makes all points of the same Y-axis category the same color. 
+In an X-range series, this option makes all points of the same Y-axis category the same color.
 
 ####Defaults to `false`
 
@@ -34,7 +34,7 @@ A partial fill for each point, typically used to visualize how much of a task is
 */
 @property(nonatomic, readwrite) HIPartialFill *partialFill;
 /**
-/** The corner radius of the border surrounding each column or bar. 
+The corner radius of the border surrounding each column or bar.
 
 ####Defaults to `0`
 

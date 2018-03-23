@@ -20,16 +20,12 @@
 
 
 /**
-The Y axis or value axis. Normally this is the vertical axis, though if the chart is inverted this is the horizontal axis. In case of multiple axes, the yAxis node is an array of configuration objects. See the Axis object for programmatic access to the axis.
+The Y axis or value axis. Normally this is the vertical axis, though if the chart is inverted this is the horizontal axis. In case of multiple axes, the yAxis node is an array of configuration objects. See `the Axis object` for programmatic access to the axis.
 */
 @interface HIYAxis: HIChartsJSONSerializable
 
 /**
-Padding of the min value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer. This is useful
-when you don't want the lowest data value to appear on the edge
-of the plot area. When the axis' `min` option is set or a max extreme
-is set using `axis.setExtremes()`, the maxPadding will be ignored.
+Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the lowest data value to appear on the edge of the plot area. When the axis' `min` option is set or a max extreme is set using `axis.setExtremes()`, the maxPadding will be ignored.
 
 ####Defaults to `0.01`
 
@@ -42,7 +38,7 @@ The axis labels show the number or category for each tick.
 */
 @property(nonatomic, readwrite) HILabels *labels;
 /**
-Solid gauge only. Unless stops are set, the color to represent the maximum value of the Y axis.
+Solid gauge only. Unless `stops` are set, the color to represent the maximum value of the Y axis.
 
 **Defaults to** `#003399`.
 
@@ -51,9 +47,7 @@ Solid gauge only. Unless stops are set, the color to represent the maximum value
 */
 @property(nonatomic, readwrite) HIColor *maxColor;
 /**
-A soft maximum for the axis. If the series data maximum is less
-than this, the axis will stay at this maximum, but if the series
-data maximum is higher, the axis will flex to show all data.
+A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data.
 
 ####Try it
 * [Soft min and max](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/)
@@ -69,8 +63,7 @@ In a polar chart, this is the angle of the Y axis in degrees, where 0 is up and 
 */
 @property(nonatomic, readwrite) NSNumber *angle;
 /**
-Whether to force the axis to start on a tick. Use this option with
-the `maxPadding` option to control the axis start.
+Whether to force the axis to start on a tick. Use this option with the `maxPadding` option to control the axis start.
 
 ####Try it
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-false/)
@@ -89,8 +82,7 @@ Solid gauge series only. Color stops for the solid gauge. Use this in cases wher
 */
 @property(nonatomic, readwrite) NSArray<NSArray *> *stops;
 /**
-Whether to force the axis to end on a tick. Use this option with
-the `maxPadding` option to control the axis end.
+Whether to force the axis to end on a tick. Use this option with the `maxPadding` option to control the axis end.
 
 ####Try it
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/)
@@ -98,9 +90,7 @@ the `maxPadding` option to control the axis end.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *endOnTick;
 /**
-A soft minimum for the axis. If the series data minimum is greater
-than this, the axis will stay at this minimum, but if the series
-data minimum is lower, the axis will flex to show all data.
+A soft minimum for the axis. If the series data minimum is greater than this, the axis will stay at this minimum, but if the series data minimum is lower, the axis will flex to show all data.
 
 ####Try it
 * [Soft min and max](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/)
@@ -119,12 +109,7 @@ Polar charts only. Whether the grid lines should draw as a polygon with straight
 */
 @property(nonatomic, readwrite) NSString *gridLineInterpolation;
 /**
-If tickInterval is `null` this option sets the approximate pixel
-interval of the tick marks. Not applicable to categorized axis.
-
-The tick interval is also influenced by the [minTickInterval](#xAxis.
-minTickInterval) option, that, by default prevents ticks from being
-denser than the data points.
+If tickInterval is `null` this option sets the approximate pixel interval of the tick marks. Not applicable to categorized axis. The tick interval is also influenced by the `minTickInterval` option, that, by default prevents ticks from being denser than the data points.
 
 ####Try it
 * [50 px on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/)
@@ -140,10 +125,7 @@ The pixel width of the major tick marks.
 */
 @property(nonatomic, readwrite) NSNumber *tickWidth;
 /**
-Whether to display the axis on the opposite side of the normal. The
-normal is on the left side for vertical axes and bottom for
-horizontal, so the opposite sides will be right and top respectively.
-This is typically used with dual or multiple axes.
+Whether to display the axis on the opposite side of the normal. The normal is on the left side for vertical axes and bottom for horizontal, so the opposite sides will be right and top respectively. This is typically used with dual or multiple axes.
 
 ####Defaults to `false`
 
@@ -152,16 +134,7 @@ This is typically used with dual or multiple axes.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *opposite;
 /**
-The maximum value of the axis. If `null`, the max value is
-automatically calculated.
-
-If the `endOnTick` option is true, the `max` value might
-be rounded up.
-
-If a tickAmount is set, the axis may be extended
-beyond the set max in order to reach the given number of ticks. The
-same may happen in a chart with multiple axes, determined by [chart.
-alignTicks](#chart), where a `tickAmount` is applied internally.
+The maximum value of the axis. If `null`, the max value is automatically calculated. If the `endOnTick` option is true, the `max` value might be rounded up. If a `tickAmount` is set, the axis may be extended beyond the set max in order to reach the given number of ticks. The same may happen in a chart with multiple axes, determined by `chart.alignTicks`, where a `tickAmount` is applied internally.
 
 ####Try it
 * [Y axis max of 200](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/)
@@ -173,10 +146,7 @@ An array of objects representing plot lines on the X axis
 */
 @property(nonatomic, readwrite) NSArray <HIPlotLines *> *plotLines;
 /**
-The width of the grid lines extending the ticks across the plot area.
-
-In styled mode, the stroke width is given in the
-`.highcharts-grid-line` class.
+The width of the grid lines extending the ticks across the plot area. In styled mode, the stroke width is given in the `.highcharts-grid-line` class.
 
 ####Defaults to `0`
 
@@ -186,7 +156,7 @@ In styled mode, the stroke width is given in the
 */
 @property(nonatomic, readwrite) NSNumber *gridLineWidth;
 /**
-Parallel coordinates only. Format that will be used for point.y and available in tooltip.pointFormat as `{point.formattedValue}`. If not set, `{point.formattedValue}` will use other options, in this order: 1. yAxis.labels.format will be used if  set 2. if yAxis is a category, then category name will be displayed 3. if yAxis is a datetime, then value will use the same format as  yAxis labels 4. if yAxis is linear/logarithmic type, then simple value will be  used
+Parallel coordinates only. Format that will be used for point.y and available in `tooltip.pointFormat` as `{point.formattedValue}`. If not set, `{point.formattedValue}` will use other options, in this order: 1. `yAxis.labels.format` will be used if  set 2. if yAxis is a category, then category name will be displayed 3. if yAxis is a datetime, then value will use the same format as  yAxis labels 4. if yAxis is linear/logarithmic type, then simple value will be  used
 
 **Defaults to** `undefined`.
 
@@ -204,7 +174,7 @@ If `true`, the first series in a stack will be drawn on top in a positive, non-r
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reversedStacks;
 /**
-Solid gauge only. Unless stops are set, the color to represent the minimum value of the Y axis.
+Solid gauge only. Unless `stops` are set, the color to represent the minimum value of the Y axis.
 
 **Defaults to** `#e6ebf5`.
 
@@ -213,8 +183,7 @@ Solid gauge only. Unless stops are set, the color to represent the minimum value
 */
 @property(nonatomic, readwrite) HIColor *minColor;
 /**
-Whether to show the last tick label. Defaults to `true` on cartesian
-charts, and `false` on polar charts.
+Whether to show the last tick label. Defaults to `true` on cartesian charts, and `false` on polar charts.
 
 ####Defaults to `true`
 
@@ -223,17 +192,7 @@ charts, and `false` on polar charts.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showLastLabel;
 /**
-The minimum value of the axis. If `null` the min value is 
-automatically calculated.
-
-If the `startOnTick` option is true (default), the `min` value might
-be rounded down.
-
-The automatically calculated minimum value is also affected by
-floor, softMin,
-minPadding, minRange
-as well as series.threshold
-and series.softThreshold.
+The minimum value of the axis. If `null` the min value is automatically calculated. If the `startOnTick` option is true (default), the `min` value might be rounded down. The automatically calculated minimum value is also affected by `floor`, `softMin`, `minPadding`, `minRange` as well as `series.threshold` and `series.softThreshold`.
 
 ####Try it
 * [-50 with startOnTick to false](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/)
@@ -245,11 +204,7 @@ The stack labels show the total value for each bar in a stacked column or bar ch
 */
 @property(nonatomic, readwrite) HIStackLabels *stackLabels;
 /**
-Padding of the max value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer. This is useful
-when you don't want the highest data value to appear on the edge
-of the plot area. When the axis' `max` option is set or a max extreme
-is set using `axis.setExtremes()`, the maxPadding will be ignored.
+Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the highest data value to appear on the edge of the plot area. When the axis' `max` option is set or a max extreme is set using `axis.setExtremes()`, the maxPadding will be ignored.
 
 ####Defaults to `0.01`
 
@@ -258,10 +213,7 @@ is set using `axis.setExtremes()`, the maxPadding will be ignored.
 */
 @property(nonatomic, readwrite) NSNumber *maxPadding;
 /**
-The color of the line marking the axis itself.
-
-In styled mode, the line stroke is given in the
-`.highcharts-axis-line` or `.highcharts-xaxis-line` class.
+The color of the line marking the axis itself. In styled mode, the line stroke is given in the `.highcharts-axis-line` or `.highcharts-xaxis-line` class.
 
 ####Defaults to `#ccd6eb`
 
@@ -275,10 +227,7 @@ The axis title, showing next to the axis line.
 */
 @property(nonatomic, readwrite) HITitle *title;
 /**
-The width of the line marking the axis itself.
-
-In styled mode, the stroke width is given in the
-`.highcharts-axis-line` or `.highcharts-xaxis-line` class.
+The width of the line marking the axis itself. In styled mode, the stroke width is given in the `.highcharts-axis-line` or `.highcharts-xaxis-line` class.
 
 ####Defaults to `1`
 
@@ -297,7 +246,7 @@ The Z index of the grid lines.
 */
 @property(nonatomic, readwrite) NSNumber *gridZIndex;
 /**
-For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the `day` unit can be used on midnight and `hour` unit be used for intermediate values on the same axis. For an overview of the replacement codes, see dateFormat. Defaults to: {   millisecond: '%H:%M:%S.%L',   second: '%H:%M:%S',   minute: '%H:%M',   hour: '%H:%M',   day: '%e. %b',   week: '%e. %b',   month: '%b \'%y',   year: '%Y' }
+For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the `day` unit can be used on midnight and `hour` unit be used for intermediate values on the same axis. For an overview of the replacement codes, see `dateFormat`. Defaults to: {   millisecond: '%H:%M:%S.%L',   second: '%H:%M:%S',   minute: '%H:%M',   hour: '%H:%M',   day: '%e. %b',   week: '%e. %b',   month: '%b \'%y',   year: '%Y' }
 
 ####Try it
 * [Different day format on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/datetimelabelformats/)
@@ -310,7 +259,7 @@ Whether axis, including axis title, line, ticks and labels, should be visible.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *visible;
 /**
-Refers to the index in the panes array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.
+Refers to the index in the `panes` array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.
 
 ####Try it
 * [Two gauges with different center](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter)
@@ -352,7 +301,7 @@ An id for the axis. This can be used after render time to get a pointer to the a
 */
 @property(nonatomic, readwrite) NSString *id;
 /**
-An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.
+An array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`.
 
 ####Try it
 * [Demo of tickPositions and tickPositioner](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/)
@@ -396,7 +345,7 @@ Color of the minor, secondary grid lines. In styled mode, the stroke width is gi
 */
 @property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
-A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of [tickPixelInterval](#xAxis. tickPixelInterval) and tickInterval. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
+A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
 
 ####Try it
 * [Demo of tickPositions and tickPositioner](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpositions-tickpositioner/)
@@ -427,7 +376,7 @@ Datetime axis only. An array determining what time intervals the ticks are allow
 */
 @property(nonatomic, readwrite) NSArray *units;
 /**
-The type of axis. Can be one of `linear`, `logarithmic`, `datetime` or `category`. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed on appropriate values like full hours or days. In a category axis, the point names of the chart's series are used for categories, if not a categories array is defined.
+The type of axis. Can be one of `linear`, `logarithmic`, `datetime` or `category`. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed on appropriate values like full hours or days. In a category axis, the `point names` of the chart's series are used for categories, if not a `categories` array is defined.
 
 **Accepted values:** `["linear", "logarithmic", "datetime", "category"]`.
 
@@ -506,7 +455,7 @@ Whether to show the axis line and title when the axis has no data.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showEmpty;
 /**
-Enable or disable minor ticks. Unless minorTickInterval is set, the tick interval is calculated as a fifth of the `tickInterval`. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting `minorTickInterval` to `"auto"`.
+Enable or disable minor ticks. Unless `minorTickInterval` is set, the tick interval is calculated as a fifth of the `tickInterval`. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting `minorTickInterval` to `"auto"`.
 
 **Defaults to** `false`.
 
@@ -557,7 +506,7 @@ The minimum tick interval allowed in axis values. For example on zooming in on a
 */
 @property(nonatomic, readwrite) NSNumber *minTickInterval;
 /**
-The interval of the tick marks in axis units. When `null`, the tick interval is computed to approximately follow the [tickPixelInterval](#xAxis. tickPixelInterval) on linear and datetime axes. On categorized axes, a `null` tickInterval will default to 1, one category. Note that datetime axes are based on milliseconds, so for example an interval of one day is expressed as `24 * 3600 * 1000`. On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc.  If the tickInterval is too dense for labels to be drawn, Highcharts may remove ticks. If the chart has multiple axes, the alignTicks option may interfere with the `tickInterval` setting.
+The interval of the tick marks in axis units. When `null`, the tick interval is computed to approximately follow the `tickPixelInterval` on linear and datetime axes. On categorized axes, a `null` tickInterval will default to 1, one category. Note that datetime axes are based on milliseconds, so for example an interval of one day is expressed as `24 * 3600 * 1000`. On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc. If the tickInterval is too dense for labels to be drawn, Highcharts may remove ticks. If the chart has multiple axes, the `alignTicks` option may interfere with the `tickInterval` setting.
 
 **Defaults to** `null`.
 
@@ -576,7 +525,7 @@ Specific tick interval in axis units for the minor ticks. On a linear axis, if `
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ minorTickInterval;
 /**
-If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a name and setting axis type to `category`. However, if you have multiple series, best practice remains defining the `categories` array. Example: categories: ['Apples', 'Bananas', 'Oranges']
+If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a `name` and setting axis `type` to `category`. However, if you have multiple series, best practice remains defining the `categories` array. Example: categories: ['Apples', 'Bananas', 'Oranges']
 
 **Defaults to** `null`.
 

@@ -29,8 +29,7 @@ Shared CSS styles for all labels.
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
-The y position offset of the label relative to the tick position
-on the axis.
+The y position offset of the label relative to the tick position on the axis.
 
 ####Defaults to `3`
 
@@ -39,19 +38,14 @@ on the axis.
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
-The x position offset of the label relative to the tick position
-on the axis. Defaults to -15 for left axis, 15 for right axis.
+The x position offset of the label relative to the tick position on the axis. Defaults to -15 for left axis, 15 for right axis.
 
 ####Try it
 * [Y axis labels placed on grid lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-x/)
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
-What part of the string the given position is anchored to. Can
-be one of `"left"`, `"center"` or `"right"`. The exact position
-also depends on the `labels.x` setting.
-
-Angular gauges and solid gauges defaults to `center`.
+What part of the string the given position is anchored to. Can be one of `"left"`, `"center"` or `"right"`. The exact position also depends on the `labels.x` setting. Angular gauges and solid gauges defaults to `center`.
 
 ####Accepted values: `["left", "center", "right"]`
 
@@ -62,8 +56,7 @@ Angular gauges and solid gauges defaults to `center`.
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
-Angular gauges and solid gauges only. The label's pixel distance
-from the perimeter of the plot area.
+Angular gauges and solid gauges only. The label's pixel distance from the perimeter of the plot area.
 
 ####Defaults to `-25`
 */
@@ -121,7 +114,7 @@ Horizontal axes only. The number of lines to spread the labels over to make room
 */
 @property(nonatomic, readwrite) NSNumber *staggerLines;
 /**
-Defines how the labels are be repositioned according to the 3D chart orientation. - `'offset'`: Maintain a fixed horizontal/vertical distance from the 	 tick marks, despite the chart orientation. This is the backwards 	 compatible behavior, and causes skewing of X and Z axes. - `'chart'`: Preserve 3D position relative to the chart.  This looks nice, but hard to read if the text isn't  forward-facing. - `'flap'`: Rotated text along the axis to compensate for the chart 	 orientation. This tries to maintain text as legible as possible on 	 all orientations. - `'ortho'`: Rotated text along the axis direction so that the labels 	 are orthogonal to the axis. This is very similar to `'flap'`, but 	 prevents skewing the labels (X and Y scaling are still present).
+Defines how the labels are be repositioned according to the 3D chart orientation. - `'offset'`: Maintain a fixed horizontal/vertical distance from the 	 tick marks, despite the chart orientation. This is the backwards 	 compatible behavior, and causes skewing of X and Z axes. - `'chart'`: Preserve 3D position relative to the chart. This looks nice, but hard to read if the text isn't  forward-facing. - `'flap'`: Rotated text along the axis to compensate for the chart 	 orientation. This tries to maintain text as legible as possible on 	 all orientations. - `'ortho'`: Rotated text along the axis direction so that the labels 	 are orthogonal to the axis. This is very similar to `'flap'`, but 	 prevents skewing the labels (X and Y scaling are still present).
 
 **Accepted values:** `['offset', 'chart', 'flap', 'ortho']`.
 
@@ -152,7 +145,7 @@ To show only every _n_'th label on the axis, set the step to _n_. Setting the st
 */
 @property(nonatomic, readwrite) NSNumber *step;
 /**
-If enabled, the axis labels will skewed to follow the perspective.  This will fix overlapping labels and titles, but texts become less legible due to the distortion. The final appearance depends heavily on `labels.position3d`.
+If enabled, the axis labels will skewed to follow the perspective. This will fix overlapping labels and titles, but texts become less legible due to the distortion. The final appearance depends heavily on `labels.position3d`.
 
 ####Try it
 * [Skewed labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/skewed-labels/)

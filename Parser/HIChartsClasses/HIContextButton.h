@@ -17,7 +17,7 @@ Options for the export button. In styled mode, export button styles can be appli
 @interface HIContextButton: HIChartsJSONSerializable
 
 /**
-/** See `navigation.buttonOptions.symbolFill`. 
+See `navigation.buttonOptions.symbolFill`.
 
 ####Defaults to `#666666`
 

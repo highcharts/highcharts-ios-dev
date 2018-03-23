@@ -16,7 +16,7 @@
 
 
 /**
-Options for configuring accessibility for the chart. Requires the [accessibility module](//code.highcharts.com/modules/accessibility. js) to be loaded. For a description of the module and information on its features, see [Highcharts Accessibility](http://www.highcharts. com/docs/chart-concepts/accessibility).
+Options for configuring accessibility for the chart. Requires the [accessibility module](https://code.highcharts.com/modules/accessibility.js) to be loaded. For a description of the module and information on its features, see [Highcharts Accessibility](http://www.highcharts.com/docs/chart-concepts/accessibility).
 */
 @interface HIAccessibility: HIChartsJSONSerializable
 
@@ -51,7 +51,7 @@ Formatter function to use instead of the default for point descriptions. Receive
 */
 @property(nonatomic, readwrite) HIFunction *pointDescriptionFormatter;
 /**
-Date format to use for points on datetime axes when describing them to screen reader users. Defaults to the same format as in tooltip. For an overview of the replacement codes, see dateFormat.
+Date format to use for points on datetime axes when describing them to screen reader users. Defaults to the same format as in tooltip. For an overview of the replacement codes, see `dateFormat`.
 */
 @property(nonatomic, readwrite) NSString *pointDateFormat;
 /**
@@ -63,7 +63,7 @@ Function to run upon clicking the "View as Data Table" link in the screen reader
 */
 @property(nonatomic, readwrite) HIFunction *onTableAnchorClick;
 /**
-Formatter function to determine the date/time format used with points on datetime axes when describing them to screen reader users. Receives one argument, `point`, referring to the point to describe. Should return a date format string compatible with dateFormat.
+Formatter function to determine the date/time format used with points on datetime axes when describing them to screen reader users. Receives one argument, `point`, referring to the point to describe. Should return a date format string compatible with `dateFormat`.
 */
 @property(nonatomic, readwrite) HIFunction *pointDateFormatter;
 @property(nonatomic, readwrite) NSString *defaultChartTitle;
@@ -87,7 +87,7 @@ Exporting menu format strings for accessibility module.
 @property(nonatomic, readwrite) NSString *chartHeading;
 @property(nonatomic, readwrite) NSString *rangeSelectorMaxInput;
 /**
-Lang configuration for different series types. For more dynamic control over the series element descriptions, see [accessibility.seriesDescriptionFormatter](accessibility. seriesDescriptionFormatter).
+Lang configuration for different series types. For more dynamic control over the series element descriptions, see `accessibility.seriesDescriptionFormatter`.
 */
 @property(nonatomic, readwrite) HISeries *series;
 /**

@@ -13,14 +13,12 @@
 
 
 /**
-A `wordcloud` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. wordcloud](#plotOptions.wordcloud).
+A `wordcloud` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.wordcloud`.
 */
 @interface HIWordcloud: HISeries
 
 /**
-When using automatic point colors pulled from the `options.colors`
-collection, this option determines whether the chart should receive
-one color per series or one color per point.
+When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point.
 
 ####Defaults to `false`
 
@@ -40,10 +38,7 @@ Spiral used for placing a word after the inital position experienced a collision
 */
 @property(nonatomic, readwrite) NSString *spiral;
 /**
-The width of the border surrounding each column or bar.
-
-In styled mode, the stroke width can be set with the `.highcharts-point`
-rule.
+The width of the border surrounding each column or bar. In styled mode, the stroke width can be set with the `.highcharts-point` rule.
 
 ####Defaults to `1`
 
@@ -72,7 +67,7 @@ The corner radius of the border surrounding each column or bar.
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
-A series specific or series type specific color set to apply instead of the global colors when [colorByPoint](#plotOptions. column.colorByPoint) is true.
+A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;

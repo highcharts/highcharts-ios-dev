@@ -23,11 +23,11 @@ Options for configuring annotations, for example labels, arrows or shapes. Annot
 @interface HIAnnotations: HIChartsJSONSerializable
 
 /**
-An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the [shapeOptions](annotations.shapeOptions.html).
+An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the `shapeOptions`.
 */
 @property(nonatomic, readwrite) NSArray <HIShapes *> *shapes;
 /**
-An array of labels for the annotation. For options that apply to multiple labels, they can be added to the [labelOptions](annotations.labelOptions.html).
+An array of labels for the annotation. For options that apply to multiple labels, they can be added to the `labelOptions`.
 */
 @property(nonatomic, readwrite) NSArray <HILabels *> *labels;
 /**

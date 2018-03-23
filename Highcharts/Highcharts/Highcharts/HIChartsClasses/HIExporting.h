@@ -17,18 +17,18 @@ Options for the exporting module. For an overview on the matter, see [the docs](
 @interface HIExporting: HIChartsJSONSerializable
 
 /**
-An object consisting of definitions for the menu items in the context menu. Each key value pair has a `key` that is referenced in the menuItems setting, and a `value`, which is an object with the following properties:  onclick The click handler for the menu item text The text for the menu item textKey If internationalization is required, the key to a language string 
+An object consisting of definitions for the menu items in the context menu. Each key value pair has a `key` that is referenced in the `menuItems` setting, and a `value`, which is an object with the following properties:  onclick The click handler for the menu item text The text for the menu item textKey If internationalization is required, the key to a language string 
 
 ####Try it
 * [Menu item definitions](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/)
 */
 @property(nonatomic, readwrite) id menuItemDefinitions;
 /**
-Analogous to sourceWidth.
+Analogous to `sourceWidth`.
 */
 @property(nonatomic, readwrite) NSNumber *sourceHeight;
 /**
-The width of the original chart when exported, unless an explicit chart.width is set. The width exported raster image is then multiplied by scale.
+The width of the original chart when exported, unless an explicit `chart.width` is set. The width exported raster image is then multiplied by `scale`.
 
 ####Try it
 * [Source size demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/sourcewidth/)
@@ -58,11 +58,11 @@ The filename, without extension, to use for the exported chart.
 */
 @property(nonatomic, readwrite) NSString *filename;
 /**
-Options for the export related buttons, print and export. In addition to the default buttons listed here, custom buttons can be added. See navigation.buttonOptions for general options.
+Options for the export related buttons, print and export. In addition to the default buttons listed here, custom buttons can be added. See `navigation.buttonOptions` for general options.
 */
 @property(nonatomic, readwrite) HIButtons *buttons;
 /**
-The pixel width of charts exported to PNG or JPG. As of Highcharts 3.0, the default pixel width is a function of the [chart.width](#chart. width) or exporting.sourceWidth and the exporting.scale.
+The pixel width of charts exported to PNG or JPG. As of Highcharts 3.0, the default pixel width is a function of the `chart.width` or `exporting.sourceWidth` and the `exporting.scale`.
 
 **Defaults to** `undefined`.
 
@@ -117,7 +117,7 @@ Export-data module required. If using multi level table headers, use rowspans fo
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useRowspanHeaders;
 /**
-Export-data module required. Use multi level headers in data table. If csv.columnHeaderFormatter is defined, it has to return objects in order for multi level headers to work.
+Export-data module required. Use multi level headers in data table. If `csv.columnHeaderFormatter` is defined, it has to return objects in order for multi level headers to work.
 
 ####Try it
 * [Multiple table headers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table)
@@ -152,13 +152,13 @@ Export-data module required. Caption for the data table. Same as chart title by 
 */
 @property(nonatomic, readwrite) id /* Bool, NSString */ tableCaption;
 /**
-Function to call if the offline-exporting module fails to export a chart on the client side, and [fallbackToExportServer](#exporting. fallbackToExportServer) is disabled. If left undefined, an exception is thrown instead.
+Function to call if the offline-exporting module fails to export a chart on the client side, and `fallbackToExportServer` is disabled. If left undefined, an exception is thrown instead.
 
 **Defaults to** `undefined`.
 */
 @property(nonatomic, readwrite) HIFunction *error;
 /**
-Path where Highcharts will look for export module dependencies to load on demand if they don't already exist on `window`. Should currently point to location of [CanVG](https://github.com/canvg/canvg) library, [RGBColor.js](https://github.com/canvg/canvg), [jsPDF](https://github. com/yWorks/jsPDF) and [svg2pdf.js](https://github.com/yWorks/svg2pdf. js), required for client side export in certain browsers.
+Path where Highcharts will look for export module dependencies to load on demand if they don't already exist on `window`. Should currently point to location of [CanVG](https://github.com/canvg/canvg) library, [RGBColor.js](https://github.com/canvg/canvg), [jsPDF](https://github.com/yWorks/jsPDF) and [svg2pdf.js](https://github.com/yWorks/svg2pdf.js), required for client side export in certain browsers.
 */
 @property(nonatomic, readwrite) NSString *libURL;
 @property(nonatomic, readwrite) NSString *exportRegionLabel;

@@ -11,19 +11,12 @@
 
 
 /**
-A `columnrange` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. columnrange](#plotOptions.columnrange).
+A `columnrange` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.columnrange`.
 */
 @interface HIColumnrange: HISeries
 
 /**
-The X axis range that each point is valid for. This determines the
-width of the column. On a categorized axis, the range will be 1
-by default (one category unit). On linear and datetime axes, the
-range will be computed as the distance between the two closest data
-points.
-
-The default `null` means it is computed automatically, but this option
-can be used to override the automatic value.
+The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points. The default `null` means it is computed automatically, but this option can be used to override the automatic value.
 
 ####Try it
 * [Set the point range to one day on a data set with one week between the points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/)
@@ -53,7 +46,7 @@ The spacing between columns on the Z Axis in a 3D chart. Requires `highcharts-3d
 */
 @property(nonatomic, readwrite) NSNumber *groupZPadding;
 /**
-A series specific or series type specific color set to apply instead of the global colors when [colorByPoint](#plotOptions. column.colorByPoint) is true.
+A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;

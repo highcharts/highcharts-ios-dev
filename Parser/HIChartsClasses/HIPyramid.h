@@ -16,22 +16,22 @@ A `pyramid` series. If the `type` option is not specified, it is inherited from 
 @interface HIPyramid: HISeries
 
 /**
-/** The pyramid is reversed by default, as opposed to the funnel, which shares the layout engine, and is not reversed. 
+The pyramid is reversed by default, as opposed to the funnel, which shares the layout engine, and is not reversed.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reversed;
 /**
-/** The pyramid neck width is zero by default, as opposed to the funnel, which shares the same layout logic. 
+The pyramid neck width is zero by default, as opposed to the funnel, which shares the same layout logic.
 */
 @property(nonatomic, readwrite) NSString *neckHeight;
 /**
-/** The pyramid neck width is zero by default, as opposed to the funnel, which shares the same layout logic. 
+The pyramid neck width is zero by default, as opposed to the funnel, which shares the same layout logic.
 
 ####Try it
 * [Funnel demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/)
 */
 @property(nonatomic, readwrite) NSString *neckWidth;
 /**
-/** The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height. 
+The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
 
 ####Defaults to `["50%", "50%"]`
 

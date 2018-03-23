@@ -16,7 +16,7 @@ A `waterfall` series. If the `type` option is not specified, it is inherited fro
 @interface HIWaterfall: HISeries
 
 /**
-/** The color of the border of each waterfall column. In styled mode, the border stroke can be set with the `.highcharts-point` class. 
+The color of the border of each waterfall column. In styled mode, the border stroke can be set with the `.highcharts-point` class.
 
 ####Defaults to `#333333`
 

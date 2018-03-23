@@ -11,13 +11,12 @@
 
 
 /**
-A `funnel` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to plotOptions.funnel.
+A `funnel` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.funnel`.
 */
 @interface HIFunnel: HISeries
 
 /**
-The center of the series. By default, it is centered in the middle
-of the plot area, so it fills the plot area height.
+The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
 
 ####Defaults to `["50%", "50%"]`
 
@@ -70,7 +69,7 @@ The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to 
 */
 @property(nonatomic, readwrite) NSNumber *endAngle;
 /**
-The size of the inner diameter for the pie. A size greater than 0 renders a donut chart. Can be a percentage or pixel value. Percentages are relative to the pie size. Pixel values are given as integers.  Note: in Highcharts < 4.1.2, the percentage was relative to the plot area, not the pie size.
+The size of the inner diameter for the pie. A size greater than 0 renders a donut chart. Can be a percentage or pixel value. Percentages are relative to the pie size. Pixel values are given as integers. Note: in Highcharts < 4.1.2, the percentage was relative to the plot area, not the pie size.
 
 **Defaults to** `0`.
 
@@ -97,7 +96,7 @@ The thickness of a 3D pie. Requires `highcharts-3d.js`
 */
 @property(nonatomic, readwrite) NSNumber *depth;
 /**
-A series specific or series type specific color set to use instead of the global colors.
+A series specific or series type specific color set to use instead of the global `colors`.
 
 ####Try it
 * [Set default colors for all pies](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/)
@@ -129,7 +128,7 @@ The start angle of the pie slices in degrees where 0 is top and 90 right.
 */
 @property(nonatomic, readwrite) NSNumber *startAngle;
 /**
-Equivalent to chart.ignoreHiddenSeries, this option tells whether the series shall be redrawn as if the hidden point were `null`. The default value changed from `false` to `true` with Highcharts 3.0.
+Equivalent to `chart.ignoreHiddenSeries`, this option tells whether the series shall be redrawn as if the hidden point were `null`. The default value changed from `false` to `true` with Highcharts 3.0.
 
 **Defaults to** `true`.
 

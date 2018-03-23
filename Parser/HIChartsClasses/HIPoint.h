@@ -10,7 +10,7 @@
 
 
 /**
-/** Properties for each single point. 
+Properties for each single point.
 */
 @interface HIPoint: HIChartsJSONSerializable
 

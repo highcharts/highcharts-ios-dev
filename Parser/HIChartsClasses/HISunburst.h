@@ -32,7 +32,7 @@ Determines the width of the ring per level.
 */
 @property(nonatomic, readwrite) HILevelSize *levelSize;
 /**
-/** The center of the sunburst chart relative to the plot area. Can be percentages or pixel values. 
+The center of the sunburst chart relative to the plot area. Can be percentages or pixel values.
 
 ####Defaults to `[null, null]`
 
@@ -41,7 +41,7 @@ Determines the width of the ring per level.
 */
 @property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
 /**
-/** If a point is sliced, moved out from the center, how many pixels should it be moved?. 
+If a point is sliced, moved out from the center, how many pixels should it be moved?.
 
 ####Defaults to `10`
 

@@ -29,7 +29,7 @@ Shared CSS styles for all labels.
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
-/** The y position offset of the label relative to the tick position on the axis. 
+The y position offset of the label relative to the tick position on the axis.
 
 ####Defaults to `3`
 
@@ -38,14 +38,14 @@ Shared CSS styles for all labels.
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
-/** The x position offset of the label relative to the tick position on the axis. Defaults to -15 for left axis, 15 for right axis. 
+The x position offset of the label relative to the tick position on the axis. Defaults to -15 for left axis, 15 for right axis.
 
 ####Try it
 * [Y axis labels placed on grid lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-x/)
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
-/** What part of the string the given position is anchored to. Can be one of `"left"`, `"center"` or `"right"`. The exact position also depends on the `labels.x` setting. Angular gauges and solid gauges defaults to `center`. 
+What part of the string the given position is anchored to. Can be one of `"left"`, `"center"` or `"right"`. The exact position also depends on the `labels.x` setting. Angular gauges and solid gauges defaults to `center`.
 
 ####Accepted values: `["left", "center", "right"]`
 
@@ -56,7 +56,7 @@ Shared CSS styles for all labels.
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
-/** Angular gauges and solid gauges only. The label's pixel distance from the perimeter of the plot area. 
+Angular gauges and solid gauges only. The label's pixel distance from the perimeter of the plot area.
 
 ####Defaults to `-25`
 */

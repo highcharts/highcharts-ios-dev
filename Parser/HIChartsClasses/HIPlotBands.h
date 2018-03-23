@@ -11,7 +11,7 @@
 
 
 /**
-/** An array of objects defining plot bands on the Y axis. 
+An array of objects defining plot bands on the Y axis.
 */
 @interface HIPlotBands: HIChartsJSONSerializable
 

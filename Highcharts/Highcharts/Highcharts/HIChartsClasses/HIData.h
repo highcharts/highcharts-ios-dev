@@ -14,7 +14,7 @@
 
 
 /**
-The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the [tutorial article on the Data module](http://www.highcharts.com/docs/working- with-data/data-module). It requires the `modules/data.js` file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the series.data option.
+The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the [tutorial article on the Data module](http://www.highcharts.com/docs/working- with-data/data-module). It requires the `modules/data.js` file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the `series.data` option.
 
 ####Try it
 * [HTML table](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/column-parsed/)
@@ -74,7 +74,7 @@ Which of the predefined date formats in Date.prototype.dateFormats to use to par
 */
 @property(nonatomic, readwrite) NSString *dateFormat;
 /**
-The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id's from your sheet can be read from `https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic`.
+The Google Spreadsheet worksheet to use in combination with `googleSpreadsheetKey`. The available id's from your sheet can be read from `https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic`.
 
 ####Try it
 * [Load a Google Spreadsheet](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/)
@@ -147,7 +147,7 @@ Line delimiter for parsing CSV.
 */
 @property(nonatomic, readwrite) NSString *lineDelimiter;
 /**
-A comma delimited string to be parsed. Related options are [startRow](#data. startRow), endRow, startColumn and endColumn to delimit what part of the table is used. The lineDelimiter and [itemDelimiter](#data. itemDelimiter) options define the CSV delimiter formats. The built-in CSV parser doesn't support all flavours of CSV, so in some cases it may be necessary to use an external CSV parser. See [this example](http://jsfiddle.net/highcharts/u59176h4/) of parsing CSV through the MIT licensed [Papa Parse](http://papaparse.com/) library.
+A comma delimited string to be parsed. Related options are `startRow`, `endRow`, `startColumn` and `endColumn` to delimit what part of the table is used. The `lineDelimiter` and `itemDelimiter` options define the CSV delimiter formats. The built-in CSV parser doesn't support all flavours of CSV, so in some cases it may be necessary to use an external CSV parser. See [this example](http://jsfiddle.net/highcharts/u59176h4/) of parsing CSV through the MIT licensed [Papa Parse](http://papaparse.com/) library.
 
 ####Try it
 * [Data from CSV](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/csv/)
@@ -227,7 +227,7 @@ Whether the data point is selected initially.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
 /**
-Individual data label for each point. The options are the same as the ones for [plotOptions.series.dataLabels](#plotOptions.series. dataLabels)
+Individual data label for each point. The options are the same as the ones for `plotOptions.series.dataLabels`
 
 ####Try it
 * [Show a label for the last value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/datalabels/)
@@ -252,7 +252,7 @@ The x value of the point. For datetime axes, the X value is the timestamp in mil
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
-The `id` of a series in the drilldown.series array to use for a drilldown for this point.
+The `id` of a series in the `drilldown.series` array to use for a drilldown for this point.
 
 ####Try it
 * [Basic drilldown](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/basic/)
@@ -311,7 +311,7 @@ The width of the border surrounding the column or bar. In styled mode, the strok
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-The value of the point, resulting in a color controled by options as set in the colorAxis configuration.
+The value of the point, resulting in a color controled by options as set in the `colorAxis` configuration.
 */
 @property(nonatomic, readwrite) NSNumber *value;
 /**

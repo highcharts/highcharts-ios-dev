@@ -16,14 +16,14 @@ A `errorbar` series. If the `type` option is not specified, it is inherited from
 @interface HIErrorbar: HISeries
 
 /**
-/** The line width of the whiskers, the horizontal lines marking low and high values. When `null`, the general `lineWidth` applies. 
+The line width of the whiskers, the horizontal lines marking low and high values. When `null`, the general `lineWidth` applies.
 
 ####Try it
 * [Error bar styling](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/)
 */
 @property(nonatomic, readwrite) NSNumber *whiskerWidth;
 /**
-/** Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other. 
+Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
 
 ####Defaults to `true`
 

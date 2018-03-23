@@ -191,7 +191,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether the tooltip should follow the finger as it moves on a touch device. If this is <code>true</code> and chart.panning is set,<code>followTouchMove</code> will take over one-finger touches, so the user needs to use two fingers for zooming and panning.</p>
+				<p>Whether the tooltip should follow the finger as it moves on a touch device. If this is <code>true</code> and <code>chart.panning</code> is set,<code>followTouchMove</code> will take over one-finger touches, so the user needs to use two fingers for zooming and panning.</p>
 			</div>
 			
 		    
@@ -444,7 +444,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For series on a datetime axes, the date format in the tooltip&rsquo;s header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see <a href="#Highcharts.%20dateFormat">dateFormat</a>. Defaults to: {   millisecond:&ldquo;%A, %b %e, %H:%M:%S.%L&rdquo;,   second:&ldquo;%A, %b %e, %H:%M:%S&rdquo;,   minute:&ldquo;%A, %b %e, %H:%M&rdquo;,   hour:&ldquo;%A, %b %e, %H:%M&rdquo;,   day:&ldquo;%A, %b %e, %Y&rdquo;,   week:&ldquo;Week from %A, %b %e, %Y&rdquo;,   month:&ldquo;%B %Y&rdquo;,   year:&ldquo;%Y&rdquo; }</p>
+				<p>For series on a datetime axes, the date format in the tooltip&rsquo;s header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see <code>dateFormat</code>. Defaults to: {   millisecond:&ldquo;%A, %b %e, %H:%M:%S.%L&rdquo;,   second:&ldquo;%A, %b %e, %H:%M:%S&rdquo;,   minute:&ldquo;%A, %b %e, %H:%M&rdquo;,   hour:&ldquo;%A, %b %e, %H:%M&rdquo;,   day:&ldquo;%A, %b %e, %Y&rdquo;,   week:&ldquo;Week from %A, %b %e, %Y&rdquo;,   month:&ldquo;%B %Y&rdquo;,   year:&ldquo;%Y&rdquo; }</p>
 			</div>
 			
 		    
@@ -842,7 +842,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Split the tooltip into one label per series, with the header close to the axis. This is recommended over shared tooltips for charts with multiple line series, generally making them easier to read. This option takes precedence over <code>tooltip.shared</code>.</p>
+				<p>Split the tooltip into one label per series, with the header close to the axis. This is recommended over <code>shared</code> tooltips for charts with multiple line series, generally making them easier to read. This option takes precedence over <code>tooltip.shared</code>.</p>
 			</div>
 			
 		    
@@ -950,7 +950,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Proximity snap for graphs or single points. It defaults to 10 for mouse-powered devices and 25 for touch devices. Note that in most cases the whole plot area captures the mouse movement, and in these cases <code>tooltip.snap</code> doesn&rsquo;t make sense. This applies when stickyTracking is <code>true</code> (default) and when the tooltip is shared or split.</p>
+				<p>Proximity snap for graphs or single points. It defaults to 10 for mouse-powered devices and 25 for touch devices. Note that in most cases the whole plot area captures the mouse movement, and in these cases <code>tooltip.snap</code> doesn&rsquo;t make sense. This applies when <code>stickyTracking</code> is <code>true</code> (default) and when the tooltip is <code>shared</code> or <code>split</code>.</p>
 			</div>
 			
 		    
@@ -1004,7 +1004,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When the tooltip is shared, the entire plot area will capture mouse movement or touch events. Tooltip texts for series types with ordered data (not pie, scatter, flags etc) will be shown in a single bubble. This is recommended for single series charts and for tablet/mobile optimized charts. See also tooltip.split, that is better suited for charts with many series, especially line-type series. The <code>tooltip.split</code> option takes precedence over <code>tooltip.shared</code>.</p>
+				<p>When the tooltip is shared, the entire plot area will capture mouse movement or touch events. Tooltip texts for series types with ordered data (not pie, scatter, flags etc) will be shown in a single bubble. This is recommended for single series charts and for tablet/mobile optimized charts. See also <code>tooltip.split</code>, that is better suited for charts with many series, especially line-type series. The <code>tooltip.split</code> option takes precedence over <code>tooltip.shared</code>.</p>
 			</div>
 			
 		    
@@ -1466,7 +1466,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. For touch moves to behave the same way, <a href="#tooltip.%20followTouchMove">followTouchMove</a> must be <code>true</code> also.</p>
+				<p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. For touch moves to behave the same way, <code>followTouchMove</code> must be <code>true</code> also.</p>
 			</div>
 			
 		    

@@ -13,12 +13,7 @@
 
 
 /**
-Options for the series data labels, appearing next to each data
-point.
-
-In styled mode, the data labels can be styled wtih the
-`.highcharts-data-label-box` and `.highcharts-data-label` class names
-([see example](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels)).
+Options for the series data labels, appearing next to each data point. In styled mode, the data labels can be styled wtih the `.highcharts-data-label-box` and `.highcharts-data-label` class names ([see example](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels)).
 */
 @interface HIDataLabels: HIChartsJSONSerializable
 
@@ -153,7 +148,7 @@ The background color or gradient for the data label.
 */
 @property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
-Whether to allow data labels to overlap. To make the labels less sensitive for overlapping, the [dataLabels.padding](#plotOptions. series.dataLabels.padding) can be set to 0.
+Whether to allow data labels to overlap. To make the labels less sensitive for overlapping, the `dataLabels.padding` can be set to 0.
 
 **Defaults to** `false`.
 
@@ -244,7 +239,7 @@ The distance of the data label from the pie's edge. Negative numbers put the dat
 */
 @property(nonatomic, readwrite) NSNumber *distance;
 /**
-The width of the line connecting the data label to the pie slice.  In styled mode, the connector stroke width is given in the `.highcharts-data-label-connector` class.
+The width of the line connecting the data label to the pie slice. In styled mode, the connector stroke width is given in the `.highcharts-data-label-connector` class.
 
 **Defaults to** `1`.
 

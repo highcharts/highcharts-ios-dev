@@ -24,7 +24,7 @@ An array of data classes or ranges for the choropleth map. If none given, the co
 */
 @property(nonatomic, readwrite) NSArray <HIDataClasses *> *dataClasses;
 /**
-/** Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. 
+Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer.
 
 ####Defaults to `0.01`
 
@@ -33,7 +33,7 @@ An array of data classes or ranges for the choropleth map. If none given, the co
 */
 @property(nonatomic, readwrite) NSNumber *minPadding;
 /**
-/** The axis labels show the number for each tick. For more live examples on label options, see `xAxis.labels in the Highcharts API.` 
+The axis labels show the number for each tick. For more live examples on label options, see `xAxis.labels in the Highcharts API.`
 */
 @property(nonatomic, readwrite) HILabels *labels;
 /**
@@ -47,7 +47,7 @@ The triangular marker on a scalar color axis that points to the value of the hov
 */
 @property(nonatomic, readwrite) HIMarker *marker;
 /**
-/** The minimum value of the axis in terms of map point values. If `null`, the min value is automatically calculated. If the `startOnTick` option is true, the min value might be rounded down. 
+The minimum value of the axis in terms of map point values. If `null`, the min value is automatically calculated. If the `startOnTick` option is true, the min value might be rounded down.
 
 ####Try it
 * [-50 with startOnTick to false](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/)
@@ -67,7 +67,7 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSString *dataClassColor;
 /**
-/** Whether to force the axis to end on a tick. Use this option with the `maxPadding` option to control the axis end. 
+Whether to force the axis to end on a tick. Use this option with the `maxPadding` option to control the axis end.
 
 ####Defaults to `true`
 
@@ -77,7 +77,7 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *endOnTick;
 /**
-/** The type of interpolation to use for the color axis. Can be `linear` or `logarithmic`. 
+The type of interpolation to use for the color axis. Can be `linear` or `logarithmic`.
 
 ####Accepted values: `["linear", "logarithmic"]`
 
@@ -92,11 +92,11 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSString *type;
 /**
-/** Event handlers for the axis. 
+Event handlers for the axis.
 */
 @property(nonatomic, readwrite) HIEvents *events;
 /**
-/** If `tickInterval` is `null` this option sets the approximate pixel interval of the tick marks. 
+If `tickInterval` is `null` this option sets the approximate pixel interval of the tick marks.
 
 ####Defaults to `72`
 
@@ -105,7 +105,7 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSNumber *tickPixelInterval;
 /**
-/** The maximum value of the axis in terms of map point values. If `null`, the max value is automatically calculated. If the `endOnTick` option is true, the max value might be rounded up. 
+The maximum value of the axis in terms of map point values. If `null`, the max value is automatically calculated. If the `endOnTick` option is true, the max value might be rounded up.
 
 ####Try it
 * [Y axis max of 200](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/)
@@ -113,7 +113,7 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSNumber *max;
 /**
-/** Whether to reverse the axis so that the highest number is closest to the origin. Defaults to `false` in a horizontal legend and `true` in a vertical legend, where the smallest value starts on top. 
+Whether to reverse the axis so that the highest number is closest to the origin. Defaults to `false` in a horizontal legend and `true` in a vertical legend, where the smallest value starts on top.
 
 ####Defaults to `false`
 
@@ -122,7 +122,7 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reversed;
 /**
-/** The width of the grid lines extending from the axis across the gradient of a scalar color axis. 
+The width of the grid lines extending from the axis across the gradient of a scalar color axis.
 
 ####Defaults to `1`
 
@@ -132,7 +132,7 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSNumber *gridLineWidth;
 /**
-/** The interval of the tick marks in axis units. When `null`, the tick interval is computed to approximately follow the `tickPixelInterval`. 
+The interval of the tick marks in axis units. When `null`, the tick interval is computed to approximately follow the `tickPixelInterval`.
 
 ####Defaults to `null`
 
@@ -141,7 +141,7 @@ Determines how to set each data class' color if no individual color is set. The 
 */
 @property(nonatomic, readwrite) NSNumber *tickInterval;
 /**
-/** Color of the grid lines extending from the axis across the gradient. 
+Color of the grid lines extending from the axis across the gradient.
 
 ####Defaults to `#e6e6e6`
 
@@ -157,7 +157,7 @@ The color to represent the minimum of the color axis. Unless `dataClasses` or `s
 */
 @property(nonatomic, readwrite) HIColor *minColor;
 /**
-/** Whether to force the axis to start on a tick. Use this option with the `maxPadding` option to control the axis start. 
+Whether to force the axis to start on a tick. Use this option with the `maxPadding` option to control the axis start.
 
 ####Defaults to `true`
 
@@ -167,7 +167,7 @@ The color to represent the minimum of the color axis. Unless `dataClasses` or `s
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startOnTick;
 /**
-/** Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. 
+Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer.
 
 ####Defaults to `0.01`
 
@@ -176,7 +176,7 @@ The color to represent the minimum of the color axis. Unless `dataClasses` or `s
 */
 @property(nonatomic, readwrite) NSNumber *maxPadding;
 /**
-/** The pixel length of the main tick marks on the color axis. 
+The pixel length of the main tick marks on the color axis.
 
 ####Try it
 * [20 px tick length on the X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/ticklength/)

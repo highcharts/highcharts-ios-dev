@@ -25,7 +25,7 @@ In a gauge chart, this option determines the outer radius of the plot band that 
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ outerRadius;
 /**
-In a gauge chart, this option determines the inner radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like `"100%"`, or as a pixel number, like `100`. By default, the inner radius is controlled by the [thickness](#yAxis. plotBands.thickness) option.
+In a gauge chart, this option determines the inner radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like `"100%"`, or as a pixel number, like `100`. By default, the inner radius is controlled by the `thickness` option.
 
 **Defaults to** `null`.
 
@@ -34,7 +34,7 @@ In a gauge chart, this option determines the inner radius of the plot band that 
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ innerRadius;
 /**
-In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like `"10%"`, or as a pixel number, like `10`. The default value 10 is the same as the default tickLength, thus making the plot band act as a background for the tick markers.
+In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like `"10%"`, or as a pixel number, like `10`. The default value 10 is the same as the default `tickLength`, thus making the plot band act as a background for the tick markers.
 
 **Defaults to** `10`.
 

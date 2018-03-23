@@ -16,7 +16,7 @@ A `areasplinerange` series. If the `type` option is not specified, it is inherit
 @interface HIAreasplinerange: HISeries
 
 /**
-/** Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events. 
+Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
 
 ####Defaults to `false`
 

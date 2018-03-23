@@ -16,7 +16,7 @@ A `tilemap` series. If the `type` option is not specified, it is inherited from 
 @interface HITilemap: HISeries
 
 /**
-/** The padding between points in the tilemap. 
+The padding between points in the tilemap.
 
 ####Defaults to `0`
 
@@ -25,7 +25,7 @@ A `tilemap` series. If the `type` option is not specified, it is inherited from 
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
-/** The column size - how many X axis units each column in the tilemap should span. Works as in `Heatmaps`. 
+The column size - how many X axis units each column in the tilemap should span. Works as in `Heatmaps`.
 
 ####Defaults to `1`
 
@@ -34,7 +34,7 @@ A `tilemap` series. If the `type` option is not specified, it is inherited from 
 */
 @property(nonatomic, readwrite) NSNumber *colsize;
 /**
-/** The row size - how many Y axis units each tilemap row should span. Analogous to `colsize`. 
+The row size - how many Y axis units each tilemap row should span. Analogous to `colsize`.
 
 ####Defaults to `1`
 

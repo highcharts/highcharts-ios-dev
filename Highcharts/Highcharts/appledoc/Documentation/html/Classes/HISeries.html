@@ -224,7 +224,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Lang configuration for different series types. For more dynamic control over the series element descriptions, see <a href="accessibility.%20seriesDescriptionFormatter">accessibility.seriesDescriptionFormatter</a>.</p>
+						<p>Lang configuration for different series types. For more dynamic control over the series element descriptions, see <code>accessibility.seriesDescriptionFormatter</code>.</p>
 					</div>
 					
 					
@@ -1080,7 +1080,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the <code>options.colors</code> array. In styled mode, the color can be defined by the colorIndex option. Also, the series color can be set with the <code>.highcharts-series</code>, <code>.highcharts-color-{n}</code>, <code>.highcharts-{type}-series</code> or <code>.highcharts-series-{n}</code> class, or individual classes given by the <code>className</code> option.</p>
+				<p>The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the <code>options.colors</code> array. In styled mode, the color can be defined by the <code>colorIndex</code> option. Also, the series color can be set with the <code>.highcharts-series</code>, <code>.highcharts-color-{n}</code>, <code>.highcharts-{type}-series</code> or <code>.highcharts-series-{n}</code> class, or individual classes given by the <code>className</code> option.</p>
 			</div>
 			
 		    
@@ -1273,7 +1273,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The threshold, also called zero level or base level. For line type series this is only used in conjunction with negativeColor.</p>
+				<p>The threshold, also called zero level or base level. For line type series this is only used in conjunction with <code>negativeColor</code>.</p>
 			</div>
 			
 		    
@@ -1319,7 +1319,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When this is true, the series will not cause the Y axis to cross the zero plane (or threshold option) unless the data actually crosses the plane. For example, if <code>softThreshold</code> is <code>false</code>, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the <code>minPadding</code> option. If <code>softThreshold</code> is <code>true</code>, the Y axis starts at 0.</p>
+				<p>When this is true, the series will not cause the Y axis to cross the zero plane (or <code>threshold</code> option) unless the data actually crosses the plane. For example, if <code>softThreshold</code> is <code>false</code>, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the <code>minPadding</code> option. If <code>softThreshold</code> is <code>true</code>, the Y axis starts at 0.</p>
 			</div>
 			
 		    
@@ -1365,7 +1365,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A configuration object for the tooltip rendering of each single series. Properties are inherited from tooltip, but only the following properties can be defined on a series level.</p>
+				<p>A configuration object for the tooltip rendering of each single series. Properties are inherited from <code>tooltip</code>, but only the following properties can be defined on a series level.</p>
 			</div>
 			
 		    
@@ -1447,7 +1447,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Same as <a href="#accessibility.%20pointDescriptionFormatter">accessibility.pointDescriptionFormatter</a>, but for an individual series. Overrides the chart wide configuration.</p>
+				<p>Same as <code>accessibility.pointDescriptionFormatter</code>, but for an individual series. Overrides the chart wide configuration.</p>
 			</div>
 			
 		    
@@ -1601,7 +1601,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Possible values: <code>null</code>, <code>"on"</code>, <code>"between"</code>. In a column chart, when pointPlacement is <code>"on"</code>, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is <code>"between"</code>, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart. Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won&rsquo;t affect axis padding. Note that pointPlacement needs a <a href="#plotOptions.series.%20pointRange">pointRange</a> to work. For column series this is computed, but for line-type series it needs to be set. Defaults to <code>null</code> in cartesian charts, <code>"between"</code> in polar charts.</p>
+				<p>Possible values: <code>null</code>, <code>"on"</code>, <code>"between"</code>. In a column chart, when pointPlacement is <code>"on"</code>, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is <code>"between"</code>, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart. Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won&rsquo;t affect axis padding. Note that pointPlacement needs a <code>pointRange</code> to work. For column series this is computed, but for line-type series it needs to be set. Defaults to <code>null</code> in cartesian charts, <code>"between"</code> in polar charts.</p>
 			</div>
 			
 		    
@@ -1711,7 +1711,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color for the parts of the graph or points that are below the threshold.</p>
+				<p>The color for the parts of the graph or points that are below the <code>threshold</code>.</p>
 			</div>
 			
 		    
@@ -2498,7 +2498,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href="#chart.%20animation">chart.animation</a> and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing A string reference to an easing function set on the <code>Math</code> object. See the <em>Custom easing function</em> demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.</p>
+				<p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <code>chart.animation</code> and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing A string reference to an easing function set on the <code>Math</code> object. See the <em>Custom easing function</em> demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.</p>
 			</div>
 			
 		    
@@ -2657,7 +2657,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>On datetime series, this allows for setting the pointInterval to irregular time units, <code>day</code>, <code>month</code> and <code>year</code>. A day is usually the same as 24 hours, but <code>pointIntervalUnit</code> also takes the DST crossover into consideration when dealing with local time. Combine this option with <code>pointInterval</code> to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the <em>series data</em>, not the interval of the axis ticks, which is independent.</p>
+				<p>On datetime series, this allows for setting the <code>pointInterval</code> to irregular time units, <code>day</code>, <code>month</code> and <code>year</code>. A day is usually the same as 24 hours, but <code>pointIntervalUnit</code> also takes the DST crossover into consideration when dealing with local time. Combine this option with <code>pointInterval</code> to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the <em>series data</em>, not the interval of the axis ticks, which is independent.</p>
 			</div>
 			
 		    
@@ -2814,7 +2814,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The id of another series to link to. Additionally, the value can be &ldquo;:previous&rdquo; to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.</p>
+				<p>The <code>id</code> of another series to link to. Additionally, the value can be &ldquo;:previous&rdquo; to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.</p>
 			</div>
 			
 		    

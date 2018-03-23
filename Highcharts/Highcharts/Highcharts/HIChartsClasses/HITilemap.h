@@ -11,7 +11,7 @@
 
 
 /**
-A `tilemap` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. tilemap](#plotOptions.tilemap).
+A `tilemap` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.tilemap`.
 */
 @interface HITilemap: HISeries
 
@@ -25,8 +25,7 @@ The padding between points in the tilemap.
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
-The column size - how many X axis units each column in the tilemap
-should span. Works as in Heatmaps.
+The column size - how many X axis units each column in the tilemap should span. Works as in `Heatmaps`.
 
 ####Defaults to `1`
 
@@ -35,8 +34,7 @@ should span. Works as in Heatmaps.
 */
 @property(nonatomic, readwrite) NSNumber *colsize;
 /**
-The row size - how many Y axis units each tilemap row should span.
-Analogous to colsize.
+The row size - how many Y axis units each tilemap row should span. Analogous to `colsize`.
 
 ####Defaults to `1`
 

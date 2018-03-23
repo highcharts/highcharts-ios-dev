@@ -105,7 +105,7 @@ When the title is floating, the plot area will not move to make space for it.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *floating;
 /**
-/** The rotation of the text in degrees. 0 is horizontal, 270 is vertical reading from bottom to top. 
+The rotation of the text in degrees. 0 is horizontal, 270 is vertical reading from bottom to top.
 
 ####Defaults to `0`
 

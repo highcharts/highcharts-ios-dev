@@ -50,8 +50,6 @@ class HIChartsClass:
         self.parent = parent
 
         if self.description:
-            #self.comment = "/**\n{0}\n".format(self.description)
-                                               # .replace('\n', ' ').replace('  ', ' '))
             self.comment = clean_comment(self.description)
             if self.values:
                 self.comment += "\n**Accepted values:** `{0}`.\n".format(self.values)
@@ -87,8 +85,7 @@ class HIChartsClass:
             self.exclude = exclude
 
         if self.description:
-            self.comment = "/**\n{0}\n".format(self.description)
-            self.comment = clean_comment(self.comment)
+            self.comment = clean_comment(self.description)
             if self.values:
                 self.comment += "\n####Accepted values: `{0}`\n".format(self.values)
             if self.defaults:

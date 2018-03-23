@@ -212,7 +212,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A color axis for choropleth maps and heat maps. Visually, the color axis will appear as a gradient or as separate items inside the legend, depending on whether the axis is scalar or based on data classes. For supported color formats, see the <a href="http://www.highcharts.com/docs/chart-design-and-style/colors">docs article about colors</a>. A scalar color axis is represented by a gradient. The colors either range between the minColor and the maxColor, or for more fine grained control the colors can be defined in stops. Often times, the color axis needs to be adjusted to get the right color spread for the data. In addition to stops, consider using a logarithmic axis type, or setting min and max to avoid the colors being determined by outliers. When dataClasses are used, the ranges are subdivided into separate classes like categories based on their values. This can be used for ranges between two values, but also for a true category. However, when your data is categorized, it may be as convenient to add each category to a separate series. See the Axis object for programmatic access to the axis.</p>
+						<p>A color axis for choropleth maps and heat maps. Visually, the color axis will appear as a gradient or as separate items inside the legend, depending on whether the axis is scalar or based on data classes. For supported color formats, see the <a href="http://www.highcharts.com/docs/chart-design-and-style/colors">docs article about colors</a>. A scalar color axis is represented by a gradient. The colors either range between the <code>minColor</code> and the <code>maxColor</code>, or for more fine grained control the colors can be defined in <code>stops</code>. Often times, the color axis needs to be adjusted to get the right color spread for the data. In addition to stops, consider using a logarithmic <code>axis type</code>, or setting <code>min</code> and <code>max</code> to avoid the colors being determined by outliers. When <code>dataClasses</code> are used, the ranges are subdivided into separate classes like categories based on their values. This can be used for ranges between two values, but also for a true category. However, when your data is categorized, it may be as convenient to add each category to a separate series. See <code>the Axis object</code> for programmatic access to the axis.</p>
 					</div>
 					
 					
@@ -280,8 +280,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding of the min value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer.</p>
+				<p>Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer.</p>
 			</div>
 			
 		    
@@ -334,7 +333,7 @@ padding of 0.05 will make a 100px axis 5px longer.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The axis labels show the number for each tick.</p>
+				<p>The axis labels show the number for each tick. For more live examples on label options, see <code>xAxis.labels in the Highcharts API.</code></p>
 			</div>
 			
 		    
@@ -348,12 +347,6 @@ padding of 0.05 will make a 100px axis 5px longer.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>For more live examples on label options, see ~!@<a href="/highcharts#xAxis.labels">xAxis.labels in the
-Highcharts API.</a>@!~</p>
-			</div>
 			
 
 			
@@ -381,7 +374,7 @@ Highcharts API.</a>@!~</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color to represent the maximum of the color axis. Unless <a href="#colorAxis.%20dataClasses">dataClasses</a> or stops are set, the gradient ends at this value. If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the <a href="#colorAxis.%20dataClassColor">dataClassColor</a> is set.</p>
+				<p>The color to represent the maximum of the color axis. Unless <code>dataClasses</code> or <code>stops</code> are set, the gradient ends at this value. If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the <code>dataClassColor</code> is set.</p>
 			</div>
 			
 		    
@@ -468,9 +461,7 @@ Highcharts API.</a>@!~</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The minimum value of the axis in terms of map point values. If <code>null</code>,
-the min value is automatically calculated. If the <code>startOnTick</code>
-option is true, the min value might be rounded down.</p>
+				<p>The minimum value of the axis in terms of map point values. If <code>null</code>, the min value is automatically calculated. If the <code>startOnTick</code> option is true, the min value might be rounded down.</p>
 			</div>
 			
 		    
@@ -563,7 +554,7 @@ option is true, the min value might be rounded down.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Determines how to set each data class' color if no individual color is set. The default value, <code>tween</code>, computes intermediate colors between <code>minColor</code> and <code>maxColor</code>. The other possible value, <code>category</code>, pulls colors from the global or chart specific colors array.</p>
+				<p>Determines how to set each data class' color if no individual color is set. The default value, <code>tween</code>, computes intermediate colors between <code>minColor</code> and <code>maxColor</code>. The other possible value, <code>category</code>, pulls colors from the global or chart specific <code>colors</code> array.</p>
 			</div>
 			
 		    
@@ -611,9 +602,7 @@ option is true, the min value might be rounded down.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to force the axis to end on a tick. Use this option with
-the maxPadding option to control the axis
-end.</p>
+				<p>Whether to force the axis to end on a tick. Use this option with the <code>maxPadding</code> option to control the axis end.</p>
 			</div>
 			
 		    
@@ -667,8 +656,7 @@ end.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The type of interpolation to use for the color axis. Can be <code>linear</code>
-or <code>logarithmic</code>.</p>
+				<p>The type of interpolation to use for the color axis. Can be <code>linear</code> or <code>logarithmic</code>.</p>
 			</div>
 			
 		    
@@ -768,8 +756,7 @@ or <code>logarithmic</code>.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If tickInterval is <code>null</code> this option
-sets the approximate pixel interval of the tick marks.</p>
+				<p>If <code>tickInterval</code> is <code>null</code> this option sets the approximate pixel interval of the tick marks.</p>
 			</div>
 			
 		    
@@ -822,9 +809,7 @@ sets the approximate pixel interval of the tick marks.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The maximum value of the axis in terms of map point values. If <code>null</code>,
-the max value is automatically calculated. If the <code>endOnTick</code> option
-is true, the max value might be rounded up.</p>
+				<p>The maximum value of the axis in terms of map point values. If <code>null</code>, the max value is automatically calculated. If the <code>endOnTick</code> option is true, the max value might be rounded up.</p>
 			</div>
 			
 		    
@@ -876,9 +861,7 @@ is true, the max value might be rounded up.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to reverse the axis so that the highest number is closest
-to the origin. Defaults to <code>false</code> in a horizontal legend and <code>true</code>
-in a vertical legend, where the smallest value starts on top.</p>
+				<p>Whether to reverse the axis so that the highest number is closest to the origin. Defaults to <code>false</code> in a horizontal legend and <code>true</code> in a vertical legend, where the smallest value starts on top.</p>
 			</div>
 			
 		    
@@ -931,8 +914,7 @@ in a vertical legend, where the smallest value starts on top.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the grid lines extending from the axis across the
-gradient of a scalar color axis.</p>
+				<p>The width of the grid lines extending from the axis across the gradient of a scalar color axis.</p>
 			</div>
 			
 		    
@@ -986,8 +968,7 @@ gradient of a scalar color axis.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The interval of the tick marks in axis units. When <code>null</code>, the tick
-interval is computed to approximately follow the <code>tickPixelInterval</code>.</p>
+				<p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval is computed to approximately follow the <code>tickPixelInterval</code>.</p>
 			</div>
 			
 		    
@@ -1094,7 +1075,7 @@ interval is computed to approximately follow the <code>tickPixelInterval</code>.
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color to represent the minimum of the color axis. Unless <a href="#colorAxis.%20dataClasses">dataClasses</a> or stops are set, the gradient starts at this value. If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the <a href="#colorAxis.%20dataClassColor">dataClassColor</a> is set.</p>
+				<p>The color to represent the minimum of the color axis. Unless <code>dataClasses</code> or <code>stops</code> are set, the gradient starts at this value. If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the <code>dataClassColor</code> is set.</p>
 			</div>
 			
 		    
@@ -1140,8 +1121,7 @@ interval is computed to approximately follow the <code>tickPixelInterval</code>.
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to force the axis to start on a tick. Use this option with
-the <code>maxPadding</code> option to control the axis start.</p>
+				<p>Whether to force the axis to start on a tick. Use this option with the <code>maxPadding</code> option to control the axis start.</p>
 			</div>
 			
 		    
@@ -1195,8 +1175,7 @@ the <code>maxPadding</code> option to control the axis start.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding of the max value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer.</p>
+				<p>Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer.</p>
 			</div>
 			
 		    
@@ -1496,7 +1475,7 @@ padding of 0.05 will make a 100px axis 5px longer.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Refers to the index in the panes array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.</p>
+				<p>Refers to the index in the <code>panes</code> array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.</p>
 			</div>
 			
 		    
@@ -1759,7 +1738,7 @@ padding of 0.05 will make a 100px axis 5px longer.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.</p>
+				<p>An array defining where the ticks are laid out on the axis. This overrides the default behaviour of <code>tickPixelInterval</code> and <code>tickInterval</code>.</p>
 			</div>
 			
 		    
@@ -1918,7 +1897,7 @@ padding of 0.05 will make a 100px axis 5px longer.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of <a href="#xAxis.%20tickPixelInterval">tickPixelInterval</a> and tickInterval. The automatic tick positions are accessible through <code>this.tickPositions</code> and can be modified by the callback.</p>
+				<p>A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of <code>tickPixelInterval</code> and <code>tickInterval</code>. The automatic tick positions are accessible through <code>this.tickPositions</code> and can be modified by the callback.</p>
 			</div>
 			
 		    
@@ -2377,7 +2356,7 @@ padding of 0.05 will make a 100px axis 5px longer.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable minor ticks. Unless minorTickInterval is set, the tick interval is calculated as a fifth of the <code>tickInterval</code>. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting <code>minorTickInterval</code> to <code>"auto"</code>.</p>
+				<p>Enable or disable minor ticks. Unless <code>minorTickInterval</code> is set, the tick interval is calculated as a fifth of the <code>tickInterval</code>. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting <code>minorTickInterval</code> to <code>"auto"</code>.</p>
 			</div>
 			
 		    

@@ -47,7 +47,7 @@
 
 
 /**
-The plotOptions is a wrapper object for config objects for each series type. The config objects for each series can also be overridden for each series item as given in the series array. Configuration options for the series are given in three levels. Options for all series in a chart are given in the [plotOptions.series](#plotOptions. series) object. Then options for all series of a specific type are given in the plotOptions of that type, for example plotOptions.line. Next, options for one single series are given in the series array.
+The plotOptions is a wrapper object for config objects for each series type. The config objects for each series can also be overridden for each series item as given in the series array. Configuration options for the series are given in three levels. Options for all series in a chart are given in the `plotOptions.series` object. Then options for all series of a specific type are given in the plotOptions of that type, for example plotOptions.line. Next, options for one single series are given in `the series array`.
 */
 @interface HIPlotOptions: HIChartsJSONSerializable
 
@@ -78,7 +78,7 @@ A pyramid series is a special type of funnel, without neck and reversed by defau
 */
 @property(nonatomic, readwrite) HIPyramid *pyramid;
 /**
-The column range is a cartesian series type with higher and lower Y values along an X axis. Requires `highcharts-more.js`. To display horizontal bars, set chart.inverted to `true`.
+The column range is a cartesian series type with higher and lower Y values along an X axis. Requires `highcharts-more.js`. To display horizontal bars, set `chart.inverted` to `true`.
 
 ####Try it
 * [Inverted column range](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/columnrange/)
@@ -254,7 +254,7 @@ A variwide chart (related to marimekko chart) is a column chart with a variable 
 */
 @property(nonatomic, readwrite) HIVariwide *variwide;
 /**
-A bullet graph is a variation of a bar graph. The bullet graph features a single measure, compares it to a target, and displays it in the context of qualitative ranges of performance that could be set using plotBands on yAxis.
+A bullet graph is a variation of a bar graph. The bullet graph features a single measure, compares it to a target, and displays it in the context of qualitative ranges of performance that could be set using `plotBands` on `yAxis`.
 
 ####Try it
 * [Bullet graph](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/bullet-graph/)

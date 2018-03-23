@@ -29,7 +29,7 @@ Exporting module only. The text for the PNG download menu item.
 */
 @property(nonatomic, readwrite) NSString *downloadPNG;
 /**
-Configure the accessibility strings in the chart. Requires the [accessibility module](//code.highcharts.com/modules/accessibility. js) to be loaded. For a description of the module and information on its features, see [Highcharts Accessibility](http://www.highcharts. com/docs/chart-concepts/accessibility). For more dynamic control over the accessibility functionality, see [accessibility.pointDescriptionFormatter](accessibility. pointDescriptionFormatter), [accessibility.seriesDescriptionFormatter](accessibility. seriesDescriptionFormatter), and [accessibility.screenReaderSectionFormatter](accessibility. screenReaderSectionFormatter).
+Configure the accessibility strings in the chart. Requires the [accessibility module](https://code.highcharts.com/modules/accessibility.js) to be loaded. For a description of the module and information on its features, see [Highcharts Accessibility](http://www.highcharts.com/docs/chart-concepts/accessibility). For more dynamic control over the accessibility functionality, see `accessibility.pointDescriptionFormatter`, `accessibility.seriesDescriptionFormatter`, and `accessibility.screenReaderSectionFormatter`.
 */
 @property(nonatomic, readwrite) HIAccessibility *accessibility;
 /**
@@ -40,7 +40,7 @@ Short week days, starting Sunday. If not specified, Highcharts uses the first th
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *shortWeekdays;
 /**
-The text to display when the chart contains no data. Requires the no-data module, see noData.
+The text to display when the chart contains no data. Requires the no-data module, see `noData`.
 
 **Defaults to** `No data to display`.
 
@@ -70,7 +70,7 @@ Exporting module only. The text for the menu item to print the chart.
 */
 @property(nonatomic, readwrite) NSString *printChart;
 /**
-The magnitude of numericSymbols replacements. Use 10000 for Japanese, Korean and various Chinese locales, which use symbols for 10^4, 10^8 and 10^12.
+The magnitude of `numericSymbols` replacements. Use 10000 for Japanese, Korean and various Chinese locales, which use symbols for 10^4, 10^8 and 10^12.
 
 **Defaults to** `1000`.
 

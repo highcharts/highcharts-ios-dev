@@ -12,13 +12,12 @@
 
 
 /**
-An `xrange` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to plotOptions.xrange.
+An `xrange` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.xrange`.
 */
 @interface HIXrange: HISeries
 
 /**
-In an X-range series, this option makes all points of the same Y-axis
-category the same color.
+In an X-range series, this option makes all points of the same Y-axis category the same color.
 
 ####Defaults to `false`
 
@@ -58,7 +57,7 @@ The spacing between columns on the Z Axis in a 3D chart. Requires `highcharts-3d
 */
 @property(nonatomic, readwrite) NSNumber *groupZPadding;
 /**
-A series specific or series type specific color set to apply instead of the global colors when [colorByPoint](#plotOptions. column.colorByPoint) is true.
+A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startFromThreshold;

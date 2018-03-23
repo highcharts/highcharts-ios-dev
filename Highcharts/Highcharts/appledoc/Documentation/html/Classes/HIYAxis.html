@@ -246,7 +246,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The Y axis or value axis. Normally this is the vertical axis, though if the chart is inverted this is the horizontal axis. In case of multiple axes, the yAxis node is an array of configuration objects. See the Axis object for programmatic access to the axis.</p>
+						<p>The Y axis or value axis. Normally this is the vertical axis, though if the chart is inverted this is the horizontal axis. In case of multiple axes, the yAxis node is an array of configuration objects. See <code>the Axis object</code> for programmatic access to the axis.</p>
 					</div>
 					
 					
@@ -273,11 +273,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding of the min value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer. This is useful
-when you don&rsquo;t want the lowest data value to appear on the edge
-of the plot area. When the axis' <code>min</code> option is set or a max extreme
-is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p>
+				<p>Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don&rsquo;t want the lowest data value to appear on the edge of the plot area. When the axis' <code>min</code> option is set or a max extreme is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p>
 			</div>
 			
 		    
@@ -371,7 +367,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Solid gauge only. Unless stops are set, the color to represent the maximum value of the Y axis.</p>
+				<p>Solid gauge only. Unless <code>stops</code> are set, the color to represent the maximum value of the Y axis.</p>
 			</div>
 			
 		    
@@ -424,9 +420,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A soft maximum for the axis. If the series data maximum is less
-than this, the axis will stay at this maximum, but if the series
-data maximum is higher, the axis will flex to show all data.</p>
+				<p>A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data.</p>
 			</div>
 			
 		    
@@ -530,8 +524,7 @@ data maximum is higher, the axis will flex to show all data.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to force the axis to start on a tick. Use this option with
-the <code>maxPadding</code> option to control the axis start.</p>
+				<p>Whether to force the axis to start on a tick. Use this option with the <code>maxPadding</code> option to control the axis start.</p>
 			</div>
 			
 		    
@@ -675,8 +668,7 @@ the <code>maxPadding</code> option to control the axis start.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to force the axis to end on a tick. Use this option with
-the <code>maxPadding</code> option to control the axis end.</p>
+				<p>Whether to force the axis to end on a tick. Use this option with the <code>maxPadding</code> option to control the axis end.</p>
 			</div>
 			
 		    
@@ -728,9 +720,7 @@ the <code>maxPadding</code> option to control the axis end.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A soft minimum for the axis. If the series data minimum is greater
-than this, the axis will stay at this minimum, but if the series
-data minimum is lower, the axis will flex to show all data.</p>
+				<p>A soft minimum for the axis. If the series data minimum is greater than this, the axis will stay at this minimum, but if the series data minimum is lower, the axis will flex to show all data.</p>
 			</div>
 			
 		    
@@ -837,8 +827,7 @@ data minimum is lower, the axis will flex to show all data.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If tickInterval is <code>null</code> this option sets the approximate pixel
-interval of the tick marks. Not applicable to categorized axis.</p>
+				<p>If tickInterval is <code>null</code> this option sets the approximate pixel interval of the tick marks. Not applicable to categorized axis. The tick interval is also influenced by the <code>minTickInterval</code> option, that, by default prevents ticks from being denser than the data points.</p>
 			</div>
 			
 		    
@@ -855,10 +844,7 @@ interval of the tick marks. Not applicable to categorized axis.</p>
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>The tick interval is also influenced by the <a href="#xAxis.%0AminTickInterval">minTickInterval</a> option, that, by default prevents ticks from being
-denser than the data points.</p>
-
-<h4>Try it</h4>
+				<h4>Try it</h4>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/">50 px on X axis</a></li>
@@ -945,10 +931,7 @@ denser than the data points.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to display the axis on the opposite side of the normal. The
-normal is on the left side for vertical axes and bottom for
-horizontal, so the opposite sides will be right and top respectively.
-This is typically used with dual or multiple axes.</p>
+				<p>Whether to display the axis on the opposite side of the normal. The normal is on the left side for vertical axes and bottom for horizontal, so the opposite sides will be right and top respectively. This is typically used with dual or multiple axes.</p>
 			</div>
 			
 		    
@@ -1001,8 +984,7 @@ This is typically used with dual or multiple axes.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The maximum value of the axis. If <code>null</code>, the max value is
-automatically calculated.</p>
+				<p>The maximum value of the axis. If <code>null</code>, the max value is automatically calculated. If the <code>endOnTick</code> option is true, the <code>max</code> value might be rounded up. If a <code>tickAmount</code> is set, the axis may be extended beyond the set max in order to reach the given number of ticks. The same may happen in a chart with multiple axes, determined by <code>chart.alignTicks</code>, where a <code>tickAmount</code> is applied internally.</p>
 			</div>
 			
 		    
@@ -1019,15 +1001,7 @@ automatically calculated.</p>
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>If the <code>endOnTick</code> option is true, the <code>max</code> value might
-be rounded up.</p>
-
-<p>If a tickAmount is set, the axis may be extended
-beyond the set max in order to reach the given number of ticks. The
-same may happen in a chart with multiple axes, determined by ~!@<a href="#chart">chart.
-alignTicks</a>@!~, where a <code>tickAmount</code> is applied internally.</p>
-
-<h4>Try it</h4>
+				<h4>Try it</h4>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/">Y axis max of 200</a></li>
@@ -1103,7 +1077,7 @@ alignTicks</a>@!~, where a <code>tickAmount</code> is applied internally.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the grid lines extending the ticks across the plot area.</p>
+				<p>The width of the grid lines extending the ticks across the plot area. In styled mode, the stroke width is given in the <code>.highcharts-grid-line</code> class.</p>
 			</div>
 			
 		    
@@ -1120,10 +1094,7 @@ alignTicks</a>@!~, where a <code>tickAmount</code> is applied internally.</p>
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>In styled mode, the stroke width is given in the
-<code>.highcharts-grid-line</code> class.</p>
-
-<h4>Defaults to <code>0</code></h4>
+				<h4>Defaults to <code>0</code></h4>
 
 <h4>Try it</h4>
 
@@ -1160,7 +1131,7 @@ alignTicks</a>@!~, where a <code>tickAmount</code> is applied internally.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Parallel coordinates only. Format that will be used for point.y and available in tooltip.pointFormat as <code>{point.formattedValue}</code>. If not set, <code>{point.formattedValue}</code> will use other options, in this order: 1. yAxis.labels.format will be used if  set 2. if yAxis is a category, then category name will be displayed 3. if yAxis is a datetime, then value will use the same format as  yAxis labels 4. if yAxis is linear/logarithmic type, then simple value will be  used</p>
+				<p>Parallel coordinates only. Format that will be used for point.y and available in <code>tooltip.pointFormat</code> as <code>{point.formattedValue}</code>. If not set, <code>{point.formattedValue}</code> will use other options, in this order: 1. <code>yAxis.labels.format</code> will be used if  set 2. if yAxis is a category, then category name will be displayed 3. if yAxis is a datetime, then value will use the same format as  yAxis labels 4. if yAxis is linear/logarithmic type, then simple value will be  used</p>
 			</div>
 			
 		    
@@ -1266,7 +1237,7 @@ alignTicks</a>@!~, where a <code>tickAmount</code> is applied internally.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Solid gauge only. Unless stops are set, the color to represent the minimum value of the Y axis.</p>
+				<p>Solid gauge only. Unless <code>stops</code> are set, the color to represent the minimum value of the Y axis.</p>
 			</div>
 			
 		    
@@ -1319,8 +1290,7 @@ alignTicks</a>@!~, where a <code>tickAmount</code> is applied internally.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to show the last tick label. Defaults to <code>true</code> on cartesian
-charts, and <code>false</code> on polar charts.</p>
+				<p>Whether to show the last tick label. Defaults to <code>true</code> on cartesian charts, and <code>false</code> on polar charts.</p>
 			</div>
 			
 		    
@@ -1373,8 +1343,7 @@ charts, and <code>false</code> on polar charts.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The minimum value of the axis. If <code>null</code> the min value is
-automatically calculated.</p>
+				<p>The minimum value of the axis. If <code>null</code> the min value is automatically calculated. If the <code>startOnTick</code> option is true (default), the <code>min</code> value might be rounded down. The automatically calculated minimum value is also affected by <code>floor</code>, <code>softMin</code>, <code>minPadding</code>, <code>minRange</code> as well as <code>series.threshold</code> and <code>series.softThreshold</code>.</p>
 			</div>
 			
 		    
@@ -1391,16 +1360,7 @@ automatically calculated.</p>
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>If the <code>startOnTick</code> option is true (default), the <code>min</code> value might
-be rounded down.</p>
-
-<p>The automatically calculated minimum value is also affected by
-floor, softMin,
-minPadding, minRange
-as well as series.threshold
-and series.softThreshold.</p>
-
-<h4>Try it</h4>
+				<h4>Try it</h4>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/">-50 with startOnTick to false</a></li>
@@ -1476,11 +1436,7 @@ and series.softThreshold.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding of the max value relative to the length of the axis. A
-padding of 0.05 will make a 100px axis 5px longer. This is useful
-when you don&rsquo;t want the highest data value to appear on the edge
-of the plot area. When the axis' <code>max</code> option is set or a max extreme
-is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p>
+				<p>Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don&rsquo;t want the highest data value to appear on the edge of the plot area. When the axis' <code>max</code> option is set or a max extreme is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p>
 			</div>
 			
 		    
@@ -1533,7 +1489,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the line marking the axis itself.</p>
+				<p>The color of the line marking the axis itself. In styled mode, the line stroke is given in the <code>.highcharts-axis-line</code> or <code>.highcharts-xaxis-line</code> class.</p>
 			</div>
 			
 		    
@@ -1550,10 +1506,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>In styled mode, the line stroke is given in the
-<code>.highcharts-axis-line</code> or <code>.highcharts-xaxis-line</code> class.</p>
-
-<h4>Defaults to <code>#ccd6eb</code></h4>
+				<h4>Defaults to <code>#ccd6eb</code></h4>
 
 <h4>Try it</h4>
 
@@ -1631,7 +1584,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the line marking the axis itself.</p>
+				<p>The width of the line marking the axis itself. In styled mode, the stroke width is given in the <code>.highcharts-axis-line</code> or <code>.highcharts-xaxis-line</code> class.</p>
 			</div>
 			
 		    
@@ -1648,10 +1601,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p>In styled mode, the stroke width is given in the
-<code>.highcharts-axis-line</code> or <code>.highcharts-xaxis-line</code> class.</p>
-
-<h4>Defaults to <code>1</code></h4>
+				<h4>Defaults to <code>1</code></h4>
 
 <h4>Try it</h4>
 
@@ -1741,7 +1691,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see dateFormat. Defaults to: {   millisecond: &lsquo;%H:%M:%S.%L&rsquo;,   second: &lsquo;%H:%M:%S&rsquo;,   minute: &lsquo;%H:%M&rsquo;,   hour: &lsquo;%H:%M&rsquo;,   day: &lsquo;%e. %b&rsquo;,   week: &lsquo;%e. %b&rsquo;,   month: &lsquo;%b \&rsquo;%y',   year: &lsquo;%Y&rsquo; }</p>
+				<p>For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see <code>dateFormat</code>. Defaults to: {   millisecond: &lsquo;%H:%M:%S.%L&rsquo;,   second: &lsquo;%H:%M:%S&rsquo;,   minute: &lsquo;%H:%M&rsquo;,   hour: &lsquo;%H:%M&rsquo;,   day: &lsquo;%e. %b&rsquo;,   week: &lsquo;%e. %b&rsquo;,   month: &lsquo;%b \&rsquo;%y',   year: &lsquo;%Y&rsquo; }</p>
 			</div>
 			
 		    
@@ -1838,7 +1788,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Refers to the index in the panes array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.</p>
+				<p>Refers to the index in the <code>panes</code> array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.</p>
 			</div>
 			
 		    
@@ -2100,7 +2050,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.</p>
+				<p>An array defining where the ticks are laid out on the axis. This overrides the default behaviour of <code>tickPixelInterval</code> and <code>tickInterval</code>.</p>
 			</div>
 			
 		    
@@ -2364,7 +2314,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of <a href="#xAxis.%20tickPixelInterval">tickPixelInterval</a> and tickInterval. The automatic tick positions are accessible through <code>this.tickPositions</code> and can be modified by the callback.</p>
+				<p>A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of <code>tickPixelInterval</code> and <code>tickInterval</code>. The automatic tick positions are accessible through <code>this.tickPositions</code> and can be modified by the callback.</p>
 			</div>
 			
 		    
@@ -2564,7 +2514,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The type of axis. Can be one of <code>linear</code>, <code>logarithmic</code>, <code>datetime</code> or <code>category</code>. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed on appropriate values like full hours or days. In a category axis, the point names of the chart&rsquo;s series are used for categories, if not a categories array is defined.</p>
+				<p>The type of axis. Can be one of <code>linear</code>, <code>logarithmic</code>, <code>datetime</code> or <code>category</code>. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed on appropriate values like full hours or days. In a category axis, the <code>point names</code> of the chart&rsquo;s series are used for categories, if not a <code>categories</code> array is defined.</p>
 			</div>
 			
 		    
@@ -3028,7 +2978,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable minor ticks. Unless minorTickInterval is set, the tick interval is calculated as a fifth of the <code>tickInterval</code>. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting <code>minorTickInterval</code> to <code>"auto"</code>.</p>
+				<p>Enable or disable minor ticks. Unless <code>minorTickInterval</code> is set, the tick interval is calculated as a fifth of the <code>tickInterval</code>. On a logarithmic axis, minor ticks are laid out based on a best guess, attempting to enter approximately 5 minor ticks between each major tick. Prior to v6.0.0, ticks were unabled in auto layout by setting <code>minorTickInterval</code> to <code>"auto"</code>.</p>
 			</div>
 			
 		    
@@ -3336,7 +3286,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval is computed to approximately follow the <a href="#xAxis.%20tickPixelInterval">tickPixelInterval</a> on linear and datetime axes. On categorized axes, a <code>null</code> tickInterval will default to 1, one category. Note that datetime axes are based on milliseconds, so for example an interval of one day is expressed as <code>24 * 3600 * 1000</code>. On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc.  If the tickInterval is too dense for labels to be drawn, Highcharts may remove ticks. If the chart has multiple axes, the alignTicks option may interfere with the <code>tickInterval</code> setting.</p>
+				<p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval is computed to approximately follow the <code>tickPixelInterval</code> on linear and datetime axes. On categorized axes, a <code>null</code> tickInterval will default to 1, one category. Note that datetime axes are based on milliseconds, so for example an interval of one day is expressed as <code>24 * 3600 * 1000</code>. On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc. If the tickInterval is too dense for labels to be drawn, Highcharts may remove ticks. If the chart has multiple axes, the <code>alignTicks</code> option may interfere with the <code>tickInterval</code> setting.</p>
 			</div>
 			
 		    
@@ -3443,7 +3393,7 @@ is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a name and setting axis type to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array. Example: categories: [&lsquo;Apples&rsquo;, &lsquo;Bananas&rsquo;, &lsquo;Oranges&rsquo;]</p>
+				<p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <code>name</code> and setting axis <code>type</code> to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array. Example: categories: [&lsquo;Apples&rsquo;, &lsquo;Bananas&rsquo;, &lsquo;Oranges&rsquo;]</p>
 			</div>
 			
 		    

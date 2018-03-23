@@ -10,7 +10,7 @@
 
 
 /**
-A `bubble` series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to [plotOptions. bubble](#plotOptions.bubble).
+A `bubble` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.bubble`.
 */
 @interface HIBubble: HISeries
 
@@ -58,7 +58,7 @@ Maximum bubble size. Bubbles will automatically size between the `minSize` and `
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ maxSize;
 /**
-When displayNegative is `false`, bubbles with lower Z values are skipped. When `displayNegative` is `true` and a negativeColor is given, points with lower Z is colored.
+When `displayNegative` is `false`, bubbles with lower Z values are skipped. When `displayNegative` is `true` and a `negativeColor` is given, points with lower Z is colored.
 
 **Defaults to** `0`.
 
@@ -76,7 +76,7 @@ When this is true, the absolute value of z determines the size of the bubble. Th
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *sizeByAbsoluteValue;
 /**
-Whether to display negative sized bubbles. The threshold is given by the zThreshold option, and negative bubbles can be visualized by setting negativeColor.
+Whether to display negative sized bubbles. The threshold is given by the `zThreshold` option, and negative bubbles can be visualized by setting `negativeColor`.
 
 **Defaults to** `true`.
 

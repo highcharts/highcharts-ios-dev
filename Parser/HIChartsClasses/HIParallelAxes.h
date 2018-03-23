@@ -23,11 +23,11 @@ Common options for all yAxes rendered in a parallel coordinates plot. This featu
 @interface HIParallelAxes: HIChartsJSONSerializable
 
 /**
-/** The axis labels show the number or category for each tick. 
+The axis labels show the number or category for each tick.
 */
 @property(nonatomic, readwrite) HILabels *labels;
 /**
-/** The width of the line marking the axis itself. In styled mode, the stroke width is given in the `.highcharts-axis-line` or `.highcharts-xaxis-line` class. 
+The width of the line marking the axis itself. In styled mode, the stroke width is given in the `.highcharts-axis-line` or `.highcharts-xaxis-line` class.
 
 ####Defaults to `1`
 
@@ -37,7 +37,7 @@ Common options for all yAxes rendered in a parallel coordinates plot. This featu
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
-/** The distance in pixels from the plot area to the axis line. A positive offset moves the axis with it's line, labels and ticks away from the plot area. This is typically used when two or more axes are displayed on the same side of the plot. With multiple axes the offset is dynamically adjusted to avoid collision, this can be overridden by setting offset explicitly. 
+The distance in pixels from the plot area to the axis line. A positive offset moves the axis with it's line, labels and ticks away from the plot area. This is typically used when two or more axes are displayed on the same side of the plot. With multiple axes the offset is dynamically adjusted to avoid collision, this can be overridden by setting offset explicitly.
 
 ####Defaults to `0`
 
@@ -47,11 +47,11 @@ Common options for all yAxes rendered in a parallel coordinates plot. This featu
 */
 @property(nonatomic, readwrite) NSNumber *offset;
 /**
-/** Titles for yAxes are taken from `xAxis.categories`. All options for `xAxis.labels` applies to parallel coordinates titles. For example, to style categories, use `xAxis.labels.style`. 
+Titles for yAxes are taken from `xAxis.categories`. All options for `xAxis.labels` applies to parallel coordinates titles. For example, to style categories, use `xAxis.labels.style`.
 */
 @property(nonatomic, readwrite) id title;
 /**
-/** Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the lowest data value to appear on the edge of the plot area. When the axis' `min` option is set or a max extreme is set using `axis.setExtremes()`, the maxPadding will be ignored. 
+Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the lowest data value to appear on the edge of the plot area. When the axis' `min` option is set or a max extreme is set using `axis.setExtremes()`, the maxPadding will be ignored.
 
 ####Defaults to `0.01`
 
@@ -60,14 +60,14 @@ Common options for all yAxes rendered in a parallel coordinates plot. This featu
 */
 @property(nonatomic, readwrite) NSNumber *minPadding;
 /**
-/** A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data. 
+A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data.
 
 ####Try it
 * [Soft min and max](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/)
 */
 @property(nonatomic, readwrite) NSNumber *softMax;
 /**
-/** Whether to force the axis to start on a tick. Use this option with the `maxPadding` option to control the axis start. 
+Whether to force the axis to start on a tick. Use this option with the `maxPadding` option to control the axis start.
 
 ####Try it
 * [False by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-false/)
@@ -75,7 +75,7 @@ Common options for all yAxes rendered in a parallel coordinates plot. This featu
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *startOnTick;
 /**
-/** Whether to force the axis to end on a tick. Use this option with the `maxPadding` option to control the axis end. 
+Whether to force the axis to end on a tick. Use this option with the `maxPadding` option to control the axis end.
 
 ####Try it
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/)
@@ -83,21 +83,21 @@ Common options for all yAxes rendered in a parallel coordinates plot. This featu
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *endOnTick;
 /**
-/** A soft minimum for the axis. If the series data minimum is greater than this, the axis will stay at this minimum, but if the series data minimum is lower, the axis will flex to show all data. 
+A soft minimum for the axis. If the series data minimum is greater than this, the axis will stay at this minimum, but if the series data minimum is lower, the axis will flex to show all data.
 
 ####Try it
 * [Soft min and max](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/)
 */
 @property(nonatomic, readwrite) NSNumber *softMin;
 /**
-/** If tickInterval is `null` this option sets the approximate pixel interval of the tick marks. Not applicable to categorized axis. The tick interval is also influenced by the `minTickInterval` option, that, by default prevents ticks from being denser than the data points. 
+If tickInterval is `null` this option sets the approximate pixel interval of the tick marks. Not applicable to categorized axis. The tick interval is also influenced by the `minTickInterval` option, that, by default prevents ticks from being denser than the data points.
 
 ####Try it
 * [50 px on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/)
 */
 @property(nonatomic, readwrite) NSNumber *tickPixelInterval;
 /**
-/** The pixel width of the major tick marks. 
+The pixel width of the major tick marks.
 
 ####Defaults to `0`
 
@@ -106,7 +106,7 @@ Common options for all yAxes rendered in a parallel coordinates plot. This featu
 */
 @property(nonatomic, readwrite) NSNumber *tickWidth;
 /**
-/** Whether to display the axis on the opposite side of the normal. The normal is on the left side for vertical axes and bottom for horizontal, so the opposite sides will be right and top respectively. This is typically used with dual or multiple axes. 
+Whether to display the axis on the opposite side of the normal. The normal is on the left side for vertical axes and bottom for horizontal, so the opposite sides will be right and top respectively. This is typically used with dual or multiple axes.
 
 ####Defaults to `false`
 
@@ -115,7 +115,7 @@ Common options for all yAxes rendered in a parallel coordinates plot. This featu
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *opposite;
 /**
-/** The maximum value of the axis. If `null`, the max value is automatically calculated. If the `endOnTick` option is true, the `max` value might be rounded up. If a `tickAmount` is set, the axis may be extended beyond the set max in order to reach the given number of ticks. The same may happen in a chart with multiple axes, determined by `chart.alignTicks`, where a `tickAmount` is applied internally. 
+The maximum value of the axis. If `null`, the max value is automatically calculated. If the `endOnTick` option is true, the `max` value might be rounded up. If a `tickAmount` is set, the axis may be extended beyond the set max in order to reach the given number of ticks. The same may happen in a chart with multiple axes, determined by `chart.alignTicks`, where a `tickAmount` is applied internally.
 
 ####Try it
 * [Y axis max of 200](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/)
@@ -141,7 +141,7 @@ If `true`, the first series in a stack will be drawn on top in a positive, non-r
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reversedStacks;
 /**
-/** Whether to show the last tick label. Defaults to `true` on cartesian charts, and `false` on polar charts. 
+Whether to show the last tick label. Defaults to `true` on cartesian charts, and `false` on polar charts.
 
 ####Defaults to `true`
 
@@ -150,7 +150,7 @@ If `true`, the first series in a stack will be drawn on top in a positive, non-r
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showLastLabel;
 /**
-/** The minimum value of the axis. If `null` the min value is automatically calculated. If the `startOnTick` option is true (default), the `min` value might be rounded down. The automatically calculated minimum value is also affected by `floor`, `softMin`, `minPadding`, `minRange` as well as `series.threshold` and `series.softThreshold`. 
+The minimum value of the axis. If `null` the min value is automatically calculated. If the `startOnTick` option is true (default), the `min` value might be rounded down. The automatically calculated minimum value is also affected by `floor`, `softMin`, `minPadding`, `minRange` as well as `series.threshold` and `series.softThreshold`.
 
 ####Try it
 * [-50 with startOnTick to false](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/)
@@ -158,7 +158,7 @@ If `true`, the first series in a stack will be drawn on top in a positive, non-r
 */
 @property(nonatomic, readwrite) NSNumber *min;
 /**
-/** Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the highest data value to appear on the edge of the plot area. When the axis' `max` option is set or a max extreme is set using `axis.setExtremes()`, the maxPadding will be ignored. 
+Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the highest data value to appear on the edge of the plot area. When the axis' `max` option is set or a max extreme is set using `axis.setExtremes()`, the maxPadding will be ignored.
 
 ####Defaults to `0.01`
 
@@ -167,7 +167,7 @@ If `true`, the first series in a stack will be drawn on top in a positive, non-r
 */
 @property(nonatomic, readwrite) NSNumber *maxPadding;
 /**
-/** The color of the line marking the axis itself. In styled mode, the line stroke is given in the `.highcharts-axis-line` or `.highcharts-xaxis-line` class. 
+The color of the line marking the axis itself. In styled mode, the line stroke is given in the `.highcharts-axis-line` or `.highcharts-xaxis-line` class.
 
 ####Defaults to `#ccd6eb`
 
