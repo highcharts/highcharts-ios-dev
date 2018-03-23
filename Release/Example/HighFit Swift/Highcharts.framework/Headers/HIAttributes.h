@@ -9,6 +9,8 @@
 #import "HIChartsJSONSerializable.h"
 
 
+/**
+ */
 @interface HIAttributes: HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) NSNumber *zIndex;

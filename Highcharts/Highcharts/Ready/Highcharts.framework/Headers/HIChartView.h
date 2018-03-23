@@ -13,7 +13,8 @@
 #import "HIGlobal.h"
 
 /**
- *  Highcharts Chart View Class. The view requires options to render.
+ *  Highcharts Chart View Class.
+ *  @warning The view requires #options# to render.
  */
 @interface HIChartView : UIView
 

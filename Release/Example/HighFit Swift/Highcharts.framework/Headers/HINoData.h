@@ -11,32 +11,35 @@
 
 
 /**
-* description: Options for displaying a message like "No data to display". 
-This feature requires the file no-data-to-display.js to be loaded in the
-page. The actual text to display is set in the lang.noData option.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line : Line chart with no-data module
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-pie : Pie chart with no-data module
+Options for displaying a message like "No data to display". This feature requires the file no-data-to-display.js to be loaded in the page. The actual text to display is set in the lang.noData option.
+
+####Try it
+* [Line chart with no-data module](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
+* [Pie chart with no-data module](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-pie)
 */
 @interface HINoData: HIChartsJSONSerializable
 
 /**
-* description: The position of the no-data label, relative to the plot area.
-* default: { "x": 0, "y": 0, "align": "center", "verticalAlign": "middle" }
+The position of the no-data label, relative to the plot area.
+
+**Defaults to** `{ "x": 0, "y": 0, "align": "center", "verticalAlign": "middle" }`.
 */
 @property(nonatomic, readwrite) HIPosition *position;
 /**
-* description: CSS styles for the no-data label.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line : Styled no-data text
+CSS styles for the no-data label.
+
+####Try it
+* [Styled no-data text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
-* description: An object of additional SVG attributes for the no-data label.
+An object of additional SVG attributes for the no-data label.
 */
 @property(nonatomic, readwrite) id attr;
 /**
-* description: Whether to insert the label as HTML, or as pseudo-HTML rendered with
-SVG.
-* default: false
+Whether to insert the label as HTML, or as pseudo-HTML rendered with SVG.
+
+**Defaults to** `false`.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 

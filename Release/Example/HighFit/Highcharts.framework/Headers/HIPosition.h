@@ -10,28 +10,32 @@
 
 
 /**
-* description: The position of the button.
+The position of the button.
 */
 @interface HIPosition: HIChartsJSONSerializable
 
 /**
-* description: Vertical offset of the button.
+Vertical offset of the button.
 */
 @property(nonatomic, readwrite) NSNumber *y;
 /**
-* description: Horizontal offset of the button.
-* default: -10
+Horizontal offset of the button.
+
+**Defaults to** `-10`.
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
-* description: Horizontal alignment of the button.
-* accepted values: ["left", "center", "right"]
+Horizontal alignment of the button.
+
+**Accepted values:** `["left", "center", "right"]`.
 */
 @property(nonatomic, readwrite) NSString *align;
 /**
-* description: Vertical alignment of the button.
-* accepted values: ["top", "middle", "bottom"]
-* default: top
+Vertical alignment of the button.
+
+**Accepted values:** `["top", "middle", "bottom"]`.
+
+**Defaults to** `top`.
 */
 @property(nonatomic, readwrite) NSString *verticalAlign;
 

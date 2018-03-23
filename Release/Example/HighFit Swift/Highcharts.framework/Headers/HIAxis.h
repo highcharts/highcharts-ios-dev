@@ -10,7 +10,7 @@
 
 
 /**
-* description: Axis description format strings.
+Axis description format strings.
 */
 @interface HIAxis: HIChartsJSONSerializable
 

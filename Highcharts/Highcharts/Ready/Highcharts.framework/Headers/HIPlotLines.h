@@ -11,64 +11,81 @@
 
 
 /**
-* description: An array of objects representing plot lines on the X axis
+An array of objects representing plot lines on the X axis
 */
 @interface HIPlotLines: HIChartsJSONSerializable
 
 /**
-* description: The z index of the plot line within the chart.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-behind/ : Behind plot lines by default
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above/ : Above plot lines
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above-all/ : Above plot lines and series
-* default: null
+The z index of the plot line within the chart.
+
+**Defaults to** `null`.
+
+####Try it
+* [Behind plot lines by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-behind/)
+* [Above plot lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above/)
+* [Above plot lines and series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-zindex-above-all/)
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
-* description: The dashing or dot style for the plot line. For possible values see
-[this overview](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-
-dashstyle-all/).
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-dashstyle/ : Dash and dot pattern
-* accepted values: ["Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot", "LongDashDot", "LongDashDotDot"]
-* default: Solid
+The dashing or dot style for the plot line. For possible values see [this overview](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series- dashstyle-all/).
+
+**Accepted values:** `["Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot", "LongDashDot", "LongDashDotDot"]`.
+
+**Defaults to** `Solid`.
+
+####Try it
+* [Dash and dot pattern](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-dashstyle/)
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
-* description: The color of the line.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/ : A red line from X axis
-* default: null
+The color of the line.
+
+**Defaults to** `null`.
+
+####Try it
+* [A red line from X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/)
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**
-* description: The position of the line in axis units.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/ : Between two categories on X axis
-* default: null
+The position of the line in axis units.
+
+**Defaults to** `null`.
+
+####Try it
+* [Between two categories on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/)
 */
 @property(nonatomic, readwrite) NSNumber *value;
 /**
-* description: An id used for identifying the plot line in Axis.removePlotLine.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-id/ : Remove plot line by id
-* default: null
+An id used for identifying the plot line in Axis.removePlotLine.
+
+**Defaults to** `null`.
+
+####Try it
+* [Remove plot line by id](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-id/)
 */
 @property(nonatomic, readwrite) NSString *id;
 /**
-* description: A custom class name, in addition to the default highcharts-plot-line, to
-apply to each individual line.
+A custom class name, in addition to the default `highcharts-plot-line`, to apply to each individual line.
 */
 @property(nonatomic, readwrite) NSString *className;
 /**
-* description: The width or thickness of the plot line.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/ : 2px wide line from X axis
-* default: null
+The width or thickness of the plot line.
+
+**Defaults to** `null`.
+
+####Try it
+* [2px wide line from X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-color/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
 /**
-* description: Text labels for the plot bands
+Text labels for the plot bands
 */
 @property(nonatomic, readwrite) HILabel *label;
 /**
-* description: An object defining mouse events for the plot line. Supported properties
-are click, mouseover, mouseout, mousemove.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-events/ : Mouse events demonstrated
+An object defining mouse events for the plot line. Supported properties are `click`, `mouseover`, `mouseout`, `mousemove`.
+
+####Try it
+* [Mouse events demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-events/)
 */
 @property(nonatomic, readwrite) id events;
 

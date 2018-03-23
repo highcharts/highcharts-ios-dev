@@ -10,11 +10,12 @@
 
 
 /**
-* description: CSS styles for the hover state of the individual items within the
-popup menu appearing by default when the export icon is clicked.
- The menu items are rendered in HTML.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/ : Bold text on hover
-* default: { "background": "#335cad", "color": "#ffffff" }
+CSS styles for the hover state of the individual items within the popup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML.
+
+**Defaults to** `{ "background": "#335cad", "color": "#ffffff" }`.
+
+####Try it
+* [Bold text on hover](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/)
 */
 @interface HIMenuItemHoverStyle: HIChartsJSONSerializable
 

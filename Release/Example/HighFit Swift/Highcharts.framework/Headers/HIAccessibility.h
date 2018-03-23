@@ -16,126 +16,82 @@
 
 
 /**
-* description: Options for configuring accessibility for the chart. Requires the
-[accessibility module](//code.highcharts.com/modules/accessibility.
-js) to be loaded. For a description of the module and information
-on its features, see [Highcharts Accessibility](http://www.highcharts.
-com/docs/chart-concepts/accessibility).
+Options for configuring accessibility for the chart. Requires the [accessibility module](https://code.highcharts.com/modules/accessibility.js) to be loaded. For a description of the module and information on its features, see [Highcharts Accessibility](http://www.highcharts.com/docs/chart-concepts/accessibility).
 */
 @interface HIAccessibility: HIChartsJSONSerializable
 
 /**
-* description: A formatter function to create the HTML contents of the hidden screen
-reader information region. Receives one argument, chart, referring
-to the chart object. Should return a String with the HTML content
-of the region.
+A formatter function to create the HTML contents of the hidden screen reader information region. Receives one argument, `chart`, referring to the chart object. Should return a String with the HTML content of the region. The link to view the chart as a data table will be added automatically after the custom HTML content.
 
-The link to view the chart as a data table will be added
-automatically after the custom HTML content.
-* default: undefined
+**Defaults to** `undefined`.
 */
 @property(nonatomic, readwrite) HIFunction *screenReaderSectionFormatter;
 /**
-* description: Whether or not to add series descriptions to charts with a single
-series.
-* default: false
+Whether or not to add series descriptions to charts with a single series.
+
+**Defaults to** `false`.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *describeSingleSeries;
 /**
-* description: Options for keyboard navigation.
+Options for keyboard navigation.
 */
 @property(nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation;
 /**
-* description: Enable accessibility features for the chart.
-* default: true
+Enable accessibility features for the chart.
+
+**Defaults to** `true`.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
-* description: When a series contains more points than this, we no longer expose
-information about individual points to screen readers.
-
-Set to false to disable.
+When a series contains more points than this, we no longer expose information about individual points to screen readers. Set to `false` to disable.
 */
 @property(nonatomic, readwrite) NSNumber *pointDescriptionThreshold;
 /**
-* description: Formatter function to use instead of the default for point
-descriptions.
-Receives one argument, point, referring to the point to describe.
-Should return a String with the description of the point for a screen
-reader user.
+Formatter function to use instead of the default for point descriptions. Receives one argument, `point`, referring to the point to describe. Should return a String with the description of the point for a screen reader user.
 */
 @property(nonatomic, readwrite) HIFunction *pointDescriptionFormatter;
 /**
-* description: Date format to use for points on datetime axes when describing them
-to screen reader users.
-
-Defaults to the same format as in tooltip.
-
-For an overview of the replacement codes, see
-dateFormat.
+Date format to use for points on datetime axes when describing them to screen reader users. Defaults to the same format as in tooltip. For an overview of the replacement codes, see `dateFormat`.
 */
 @property(nonatomic, readwrite) NSString *pointDateFormat;
 /**
-* description: Formatter function to use instead of the default for series
-descriptions. Receives one argument, series, referring to the
-series to describe. Should return a String with the description of
-the series for a screen reader user.
+Formatter function to use instead of the default for series descriptions. Receives one argument, `series`, referring to the series to describe. Should return a String with the description of the series for a screen reader user.
 */
 @property(nonatomic, readwrite) HIFunction *seriesDescriptionFormatter;
 /**
-* description: Function to run upon clicking the "View as Data Table" link in the
-screen reader region.
-
-By default Highcharts will insert and set focus to a data table
-representation of the chart.
+Function to run upon clicking the "View as Data Table" link in the screen reader region. By default Highcharts will insert and set focus to a data table representation of the chart.
 */
 @property(nonatomic, readwrite) HIFunction *onTableAnchorClick;
 /**
-* description: Formatter function to determine the date/time format used with
-points on datetime axes when describing them to screen reader users.
-Receives one argument, point, referring to the point to describe.
-Should return a date format string compatible with
-dateFormat.
+Formatter function to determine the date/time format used with points on datetime axes when describing them to screen reader users. Receives one argument, `point`, referring to the point to describe. Should return a date format string compatible with `dateFormat`.
 */
 @property(nonatomic, readwrite) HIFunction *pointDateFormatter;
 @property(nonatomic, readwrite) NSString *defaultChartTitle;
 @property(nonatomic, readwrite) NSString *screenReaderRegionLabel;
 @property(nonatomic, readwrite) NSString *mapZoomIn;
 /**
-* description: Axis description format strings.
+Axis description format strings.
 */
 @property(nonatomic, readwrite) HIAxis *axis;
 @property(nonatomic, readwrite) NSString *rangeSelectorMinInput;
 /**
-* description: Chart type description strings. This is added to the chart 
-information region.
-
-If there is only a single series type used in the chart, we use
-the format string for the series type, or default if missing.
-There is one format string for cases where there is only a single
-series in the chart, and one for multiple series of the same
-type.
+Chart type description strings. This is added to the chart information region. If there is only a single series type used in the chart, we use the format string for the series type, or default if missing. There is one format string for cases where there is only a single series in the chart, and one for multiple series of the same type.
 */
 @property(nonatomic, readwrite) HIChartTypes *chartTypes;
 @property(nonatomic, readwrite) NSString *rangeSelectorButton;
 @property(nonatomic, readwrite) NSString *longDescriptionHeading;
 /**
-* description: Exporting menu format strings for accessibility module.
+Exporting menu format strings for accessibility module.
 */
 @property(nonatomic, readwrite) HIExporting *exporting;
 @property(nonatomic, readwrite) NSString *chartHeading;
 @property(nonatomic, readwrite) NSString *rangeSelectorMaxInput;
 /**
-* description: Lang configuration for different series types. For more dynamic
-control over the series element descriptions, see
-[accessibility.seriesDescriptionFormatter](accessibility.
-seriesDescriptionFormatter).
+Lang configuration for different series types. For more dynamic control over the series element descriptions, see `accessibility.seriesDescriptionFormatter`.
 */
 @property(nonatomic, readwrite) HISeries *series;
 /**
-* description: Descriptions of lesser known series types. The relevant
-description is added to the screen reader information region
-when these series types are used.
+Descriptions of lesser known series types. The relevant description is added to the screen reader information region when these series types are used.
 */
 @property(nonatomic, readwrite) HISeriesTypeDescriptions *seriesTypeDescriptions;
 @property(nonatomic, readwrite) NSString *legendItem;

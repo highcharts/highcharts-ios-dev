@@ -11,46 +11,47 @@
 
 
 /**
-* description: A tilemap series. If the type option is
-not specified, it is inherited from chart.type.
-
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to [plotOptions.
-tilemap](#plotOptions.tilemap).
+A `tilemap` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.tilemap`.
 */
 @interface HITilemap: HISeries
 
 /**
-* description: The padding between points in the tilemap.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding : Point padding on tiles
-* default: 0
+The padding between points in the tilemap.
+
+####Defaults to `0`
+
+####Try it
+* [Point padding on tiles](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/tilemap-pointpadding)
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
-* description: The column size - how many X axis units each column in the tilemap
-should span. Works as in Heatmaps.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/ : One day
-* default: 1
+The column size - how many X axis units each column in the tilemap should span. Works as in `Heatmaps`.
+
+####Defaults to `1`
+
+####Try it
+* [One day](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/)
 */
 @property(nonatomic, readwrite) NSNumber *colsize;
 /**
-* description: The row size - how many Y axis units each tilemap row should span.
-Analogous to colsize.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/ : 1 by default
-* default: 1
+The row size - how many Y axis units each tilemap row should span. Analogous to `colsize`.
+
+####Defaults to `1`
+
+####Try it
+* [1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/)
 */
 @property(nonatomic, readwrite) NSNumber *rowsize;
 /**
-* description: The shape of the tiles in the tilemap. Possible values are hexagon,
-circle, diamond, and square.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa : Circular tile shapes
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap : Diamond tile shapes
+The shape of the tiles in the tilemap. Possible values are `hexagon`, `circle`, `diamond`, and `square`.
+
+####Try it
+* [Circular tile shapes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa)
+* [Diamond tile shapes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap)
 */
 @property(nonatomic, readwrite) NSString *tileShape;
 /**
-* description: The color applied to null points. In styled mode, a general CSS class is
-applied instead.
+The color applied to null points. In styled mode, a general CSS class is applied instead.
 */
 @property(nonatomic, readwrite) HIColor *nullColor;
 

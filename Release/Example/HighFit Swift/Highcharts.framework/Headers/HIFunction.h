@@ -10,15 +10,17 @@
 #import "HIChartsJSONSerializable.h"
 #import "HIChartContext.h"
 
+/**
+ */
 @interface HIFunction : HIChartsJSONSerializable
 
 /**
- *  Definition of Objective-C/Swift closure.
+ *  Definition of an Objective-C/Swift closure.
  */
 typedef void (^ HIClosure)(HIChartContext *);
 
 /**
- *  A string representation of JS function.
+ *  A string representation of the JS function.
  */
 @property(nonatomic, readwrite) NSString *jsFunction;
 
@@ -33,19 +35,38 @@ typedef void (^ HIClosure)(HIChartContext *);
 @property (nonatomic, strong) NSArray<NSString *> *properties;
 
 /**
- *  Init with the string representation of JS function.
+ *  Initializes with a javascript function.
+ *  @param jsFunction A string representation of the JS function.
  */
 - (instancetype)initWithJSFunction:(NSString *) jsFunction;
 
 /**
- *  Init with the Objective-C/Swift closure.
+ *  Initializes with a closure.
+ *  @param closure The Objective-C/Swift closure.
  */
 - (instancetype)initWithClosure:(HIClosure)closure;
 
 /**
- *  Init with the Objective-C/Swift closure and array of properties that will be available to get from the chart context.
+ *  Initializes with a closure and properties.
+ *  @param closure The Objective-C/Swift closure.
+ *  @param properties An array of the properties that will be available to get from the chart context.
  */
 - (instancetype)initWithClosure:(HIClosure)closure properties:(NSArray<NSString *> *)properties;
+
+/**
+ *  Initializes with a closure and javascript function.
+ *  @param closure The Objective-C/Swift closure.
+ *  @param jsFunction A string representation of the JS function.
+ */
+- (instancetype)initWithClosure:(HIClosure)closure jsFunction:(NSString *)jsFunction;
+
+/**
+ *  Initializes with a closure, javascript function and properties.
+ *  @param closure The Objective-C/Swift closure.
+ *  @param jsFunction A string representation of the JS function.
+ *  @param properties An array of the properties that will be available to get from the chart context.
+ */
+- (instancetype)initWithClosure:(HIClosure)closure jsFunction:(NSString *)jsFunction properties:(NSArray<NSString *> *)properties;
 
 -(id)getFunction;
 

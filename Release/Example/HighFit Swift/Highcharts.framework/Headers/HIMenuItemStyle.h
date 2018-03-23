@@ -10,11 +10,12 @@
 
 
 /**
-* description: CSS styles for the individual items within the popup menu appearing
-by default when the export icon is clicked. The menu items are rendered
-in HTML.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/ : Add a grey stripe to the left
-* default: { "padding": "0.5em 1em", "color": "#333333", "background": "none" }
+CSS styles for the individual items within the popup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML.
+
+**Defaults to** `{ "padding": "0.5em 1em", "color": "#333333", "background": "none" }`.
+
+####Try it
+* [Add a grey stripe to the left](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/)
 */
 @interface HIMenuItemStyle: HIChartsJSONSerializable
 
@@ -22,7 +23,7 @@ in HTML.
 @property(nonatomic, readwrite) NSString *color;
 @property(nonatomic, readwrite) NSString *transition;
 /**
-* description: Defaults to 14px on touch devices and 11px on desktop.
+Defaults to `14px` on touch devices and `11px` on desktop.
 */
 @property(nonatomic, readwrite) NSString *fontSize;
 @property(nonatomic, readwrite) NSString *background;

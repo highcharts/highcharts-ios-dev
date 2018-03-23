@@ -10,14 +10,7 @@
 
 
 /**
-* description: Chart type description strings. This is added to the chart 
-information region.
-
-If there is only a single series type used in the chart, we use
-the format string for the series type, or default if missing.
-There is one format string for cases where there is only a single
-series in the chart, and one for multiple series of the same
-type.
+Chart type description strings. This is added to the chart information region. If there is only a single series type used in the chart, we use the format string for the series type, or default if missing. There is one format string for cases where there is only a single series in the chart, and one for multiple series of the same type.
 */
 @interface HIChartTypes: HIChartsJSONSerializable
 

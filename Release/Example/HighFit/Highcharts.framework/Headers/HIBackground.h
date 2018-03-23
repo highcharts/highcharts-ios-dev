@@ -11,49 +11,55 @@
 
 
 /**
-* description: An array of background items for the pane.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/ : Speedometer gauge with multiple backgrounds
+An array of background items for the pane.
+
+####Try it
+* [Speedometer gauge with multiple backgrounds](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-speedometer/)
 */
 @interface HIBackground: HIChartsJSONSerializable
 
 /**
-* description: The pane background border color.
-* default: #cccccc
+The pane background border color.
+
+**Defaults to** `#cccccc`.
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
-* description: The outer radius of the circular pane background. Can be either
-numeric (pixels) or a percentage string.
-* default: 105%
+The outer radius of the circular pane background. Can be either numeric (pixels) or a percentage string.
+
+**Defaults to** `105%`.
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ outerRadius;
 @property(nonatomic, readwrite) NSNumber *from;
 /**
-* description: The inner radius of the pane background. Can be either numeric
-(pixels) or a percentage string.
-* default: 0
+The inner radius of the pane background. Can be either numeric (pixels) or a percentage string.
+
+**Defaults to** `0`.
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ innerRadius;
 /**
-* description: The class name for this background.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pane/ : Panes styled by CSS
+The class name for this background.
+
+####Try it
+* [Panes styled by CSS](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pane/)
 */
 @property(nonatomic, readwrite) NSString *className;
 /**
-* description: Tha shape of the pane background. When solid, the background
-is circular. When arc, the background extends only from the min
-to the max of the value axis.
-* accepted values: ["solid", "arc"]
-* default: solid
+Tha shape of the pane background. When `solid`, the background is circular. When `arc`, the background extends only from the min to the max of the value axis.
+
+**Accepted values:** `["solid", "arc"]`.
+
+**Defaults to** `solid`.
 */
 @property(nonatomic, readwrite) NSString *shape;
 /**
-* description: The pixel border width of the pane background.
-* default: 1
+The pixel border width of the pane background.
+
+**Defaults to** `1`.
 */
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
-* description: The background color or gradient for the pane.
+The background color or gradient for the pane.
 */
 @property(nonatomic, readwrite) HIBackgroundColor *backgroundColor;
 

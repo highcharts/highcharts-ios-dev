@@ -11,50 +11,63 @@
 
 
 /**
-* description: Options for annotation's shapes. Each shape inherits options
-from the shapeOptions object. An option from the shapeOptions can be
-overwritten by config for a specific shape.
+Options for annotation's shapes. Each shape inherits options from the shapeOptions object. An option from the shapeOptions can be overwritten by config for a specific shape.
 */
 @interface HIShapeOptions: HIChartsJSONSerializable
 
 /**
-* description: The pixel stroke width of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-*
+The pixel stroke width of the shape.
+
+####Try it
+* [Basic shape annotation
+*](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *strokeWidth;
 /**
-* description: The height of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+The height of the shape.
+
+####Try it
+* [Basic shape annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *height;
 /**
-* description: The width of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
+The width of the shape.
+
+####Try it
+* [Basic shape annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *width;
 /**
-* description: The color of the shape's stroke.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-*
+The color of the shape's stroke.
+
+####Try it
+* [Basic shape annotation
+*](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) HIColor *stroke;
 /**
-* description: The radius of the shape.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-*
+The radius of the shape.
+
+####Try it
+* [Basic shape annotation
+*](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *r;
 /**
-* description: The type of the shape, e.g. circle or rectangle.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-* default: 'rect'
+The type of the shape, e.g. circle or rectangle.
+
+**Defaults to** `'rect'`.
+
+####Try it
+* [Basic shape annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSString *type;
 /**
-* description: The color of the shape's fill.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/ : Basic shape annotation
-*
+The color of the shape's fill.
+
+####Try it
+* [Basic shape annotation
+*](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) HIColor *fill;
 

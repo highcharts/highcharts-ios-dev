@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  Chart's context class. The class contains the current chart context that can be used in closures.
+ *  The chart's context class. The class contains the current chart context that can be used in closures.
  */
 @interface HIChartContext : NSObject
 
@@ -17,6 +17,8 @@
 
 /**
  *  A method for getting chart's data depending on the actual context.
+ *  @param param The property's name.
+ *  @return The property value.
  */
 - (id)getProperty:(NSString*)param;
 

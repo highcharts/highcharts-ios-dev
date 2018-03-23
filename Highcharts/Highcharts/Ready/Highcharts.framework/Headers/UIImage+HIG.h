@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Image class category. This saves image in file system and returns image string representation.
+ */
 @interface UIImage (HIG)
 
 /**
- *  Image class category. This saves image in file system and returns image
- *  string representation.
- *
- *  @return image path.
+ *  A string representation of the image.
+ *  @return Image path
  */
 - (NSString*)image;
 

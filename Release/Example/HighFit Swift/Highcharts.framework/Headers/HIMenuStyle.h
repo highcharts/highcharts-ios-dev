@@ -10,10 +10,12 @@
 
 
 /**
-* description: CSS styles for the popup menu appearing by default when the export
-icon is clicked. This menu is rendered in HTML.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/ : Light gray menu background
-* default: { "border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0" }
+CSS styles for the popup menu appearing by default when the export icon is clicked. This menu is rendered in HTML.
+
+**Defaults to** `{ "border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0" }`.
+
+####Try it
+* [Light gray menu background](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/)
 */
 @interface HIMenuStyle: HIChartsJSONSerializable
 

@@ -10,20 +10,14 @@
 
 
 /**
-* description: A pareto series. If the type option is not
-specified, it is inherited from chart.type.
-
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to [plotOptions.
-pareto](#plotOptions.pareto).
+A `pareto` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.pareto`.
 */
 @interface HIPareto: HISeries
 
 /**
-* description: An integer identifying the index to use for the base series, or a string
-representing the id of the series.
-* default: undefined
+An integer identifying the index to use for the base series, or a string representing the id of the series.
+
+**Defaults to** `undefined`.
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ baseSeries;
 

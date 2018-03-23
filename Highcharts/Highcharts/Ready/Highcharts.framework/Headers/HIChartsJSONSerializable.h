@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+* The parent class for all Highcharts objects.
+*/
 @interface HIChartsJSONSerializable : NSObject
 @end

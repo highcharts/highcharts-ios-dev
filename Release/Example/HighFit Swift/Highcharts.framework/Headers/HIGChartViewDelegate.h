@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @class HIChartView;
+
+/**
+ * The delegate of the HIChartView.
+ */
 @protocol HIChartViewDelegate <NSObject>
 
 /**
