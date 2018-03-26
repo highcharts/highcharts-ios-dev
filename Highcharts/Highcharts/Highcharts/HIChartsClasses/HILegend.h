@@ -18,7 +18,7 @@
 
 
 /**
-The legend is a box containing a symbol and name for each series item or point item in the chart. Each series (or points in case of pie charts) is represented by a symbol and its name in the legend. It is possible to override the symbol creator function and create [custom legend symbols](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend- custom-symbol/).
+The legend is a box containing a symbol and name for each series item or point item in the chart. Each series (or points in case of pie charts) is represented by a symbol and its name in the legend. It is possible to override the symbol creator function and create [custom legend symbols](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-custom-symbol/).
 */
 @interface HILegend: HIChartsJSONSerializable
 
@@ -187,7 +187,7 @@ Default styling for the checkbox next to a legend item when `showCheckbox` is tr
 */
 @property(nonatomic, readwrite) HIItemCheckboxStyle *itemCheckboxStyle;
 /**
-A [format string](http://www.highcharts.com/docs/chart-concepts/labels- and-string-formatting) for each legend label. Available variables relates to properties on the series, or the point in case of pies.
+A [format string](http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) for each legend label. Available variables relates to properties on the series, or the point in case of pies.
 
 **Defaults to** `{name}`.
 */
@@ -356,7 +356,7 @@ The x offset of the legend relative to its horizontal alignment `align` within c
 */
 @property(nonatomic, readwrite) NSNumber *x;
 /**
-Options for the paging or navigation appearing when the legend is overflown. Navigation works well on screen, but not in static exported images. One way of working around that is to [increase the chart height in export](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation- enabled-false/).
+Options for the paging or navigation appearing when the legend is overflown. Navigation works well on screen, but not in static exported images. One way of working around that is to [increase the chart height in export](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation-enabled-false/).
 */
 @property(nonatomic, readwrite) HINavigation *navigation;
 

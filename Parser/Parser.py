@@ -105,9 +105,10 @@ class HIChartsClass:
 
 
 def clean_comment(comment):
-    comment = comment.replace('\n', ' ').replace('  ', ' ').replace('.  ', '. ').replace('//code.highcharts.com/', 'https://code.highcharts.com/')
-    comment = re.sub('(\(|\[)[\w\.*/ *: *\-*]+\.\s+[\w\.*/ *: *\- *]+(\)|\])', lambda s: s.group(0).replace(' ', ''), comment)
+    comment = comment.replace('\n', ' ').replace('  ', ' ').replace('.  ', '. ').replace('(//code.highcharts.com/', '(https://code.highcharts.com/').replace('[code.highcharts.com/', '[https://code.highcharts.com/')
+    comment = re.sub('(\(|\[)[\w\.*/ *: *\-*]+[\.\-/_]\s+[\w\.*/ *: *\- *]+(\)|\])', lambda s: s.group(0).replace(' ', ''), comment)
     comment = re.sub('\[(.+?)\]\((.+?)\)', lambda s: s.group(0) if s.group(2).startswith("http") else s.group(0).replace(s.group(0), '`{}`'.format(s.group(1))), comment)
+    comment = re.sub('\((.+?)\)\[(.+?)\]', r'[\1](\2)', comment)
     comment = comment.replace('`<', '__x__').replace('>`', '__y__')
     soup = BeautifulSoup(comment, 'html.parser')
     comment = soup.get_text().replace('__x__', '`<').replace('__y__', '>`')

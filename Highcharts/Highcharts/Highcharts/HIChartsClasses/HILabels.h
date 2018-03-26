@@ -82,7 +82,7 @@ Whether to reserve space for the labels. By default, space is reserved for the l
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *reserveSpace;
 /**
-A [format string](http://www.highcharts.com/docs/chart- concepts/labels-and-string-formatting) for the axis label.
+A [format string](http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) for the axis label.
 
 **Defaults to** `{value}`.
 

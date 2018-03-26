@@ -211,7 +211,7 @@ An array of colored bands stretching across the plot area marking an interval on
 */
 @property(nonatomic, readwrite) NSArray <HIPlotBands *> *plotBands;
 /**
-The dash or dot style of the minor grid lines. For possible values, see [this demonstration](http://jsfiddle.net/gh/get/library/pure/ highcharts/highcharts/tree/master/samples/highcharts/plotoptions/ series-dashstyle-all/).
+The dash or dot style of the minor grid lines. For possible values, see [this demonstration](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/).
 
 **Accepted values:** `["Solid", "ShortDash", "ShortDot", "ShortDashDot",
              "ShortDashDotDot", "Dot", "Dash" ,"LongDash",
@@ -298,7 +298,7 @@ The axis labels show the number or category for each tick.
 */
 @property(nonatomic, readwrite) HILabels *labels;
 /**
-The dash or dot style of the grid lines. For possible values, see [this demonstration](http://jsfiddle.net/gh/get/library/pure/ highcharts/highcharts/tree/master/samples/highcharts/plotoptions/ series-dashstyle-all/).
+The dash or dot style of the grid lines. For possible values, see [this demonstration](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/).
 
 **Accepted values:** `["Solid", "ShortDash", "ShortDot", "ShortDashDot",
              "ShortDashDotDot", "Dot", "Dash" ,"LongDash",

@@ -32,7 +32,7 @@ Padding between each column or bar, in x axis units.
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
-Width of each bin. By default the bin's width is calculated as `(max - min) / number of bins`. This option takes precedence over `binsNumber`.
+Width of each bin. By default the bin's width is calculated as `(max-min) / number of bins`. This option takes precedence over `binsNumber`.
 */
 @property(nonatomic, readwrite) NSNumber *binWidth;
 /**
