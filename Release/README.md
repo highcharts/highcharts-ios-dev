@@ -1,218 +1,189 @@
 <p align="center" >
-	<img src="http://www.highcharts.com/media/templates/highsoft_bootstrap/images/logo.svg" alt="Highcharts" title="Highcharts">
+<img src="https://github.com/highcharts/highcharts-ios/blob/master/Images/logo.png" alt="Highcharts" title="Highcharts">
 </p>
 
-Highcharts iOS is a wrapper of HighchartsJS for iOS. And best is that you don't need to know JavaScript!
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-## System Requirementss
+[Highcharts iOS](http://www.highcharts.com/blog/mobile/) is a delightful wrapper of HighchartsJS for iOS.
 
-- iOS 8.0+
-- Xcode 7.0+
+The most popular, robust and battle-tested JavaScript Charting library is now available for iOS with our new Objective-C wrapper. Get gorgeous, multi-touch charts with minimal effort.
 
 ## Documentation
-There are some limitations that apply for wrapper if you want more power ower the charts you need to know JS and Higcharst API because Highcharts iOS is based on Highcharts JS therefore standard documentation apply.
 
-- Read the ["General Docummentation"](http://www.highcharts.com/docs) if you want to know more.
-- Read the ["API Docummentation"](http://api.highcharts.com/highcharts) if you need more customized charts.
+Access the full [API documentation](http://api.highcharts.com/highcharts-ios/) here.
 
-## Installation
-You can integrate `Highcharts.framework` into your project manually as a **Embedded Framework**.
+# HOWTO
 
-- Select your project in the Project Navigator to show the target configuration window and select the target in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- Click `Add Other...`, and select `Highcharts.framework`.
-- Select 'Create Groups' and click `finish`.
-
-## Demo
-There is `DemoCharts.xcodeproj` that contains few example charts.
+Here we present how to create basic chart and place it in your project.
 
 
-## Your First Chart
+## What we need to do
+
+  - Prepare your project for Highcharts
+  - Create chart view and place it in your view
+  - Create chart options and add them to your chart view
+  - Run your app and enjoy!
+
+
+## Preparing your project
+
+- First of all download Highcharts framework from here: [Highcharts](https://github.com/highcharts/highcharts-ios) 
+or by using Cocoapods by adding 
+    ```
+    pod 'Highcharts', '~> 6.0.7'
+    ```
+    to your Podfile
+    
+    or Carthage by adding
+    ```
+    github "https://github.com/highcharts/highcharts-ios" >= 6.0.7
+    ```
+    to your Cartfile
+    
+    
+- Now add Highcharts to your project by simply copying it to your project to folder **Frameworks** (create it if necessary) and remeber to check "**Copy items if needed**" option
+
+![alt text](https://github.com/highcharts/highcharts-ios/blob/master/Images/3.png "Files")
+
+- Click on **finish**
+
+![alt text](https://github.com/highcharts/highcharts-ios/blob/master/Images/2.png "Copy")
+
+- Then go to your project settings and add Highcharts to **Embedded Binaries**
+
+![alt text](https://github.com/highcharts/highcharts-ios/blob/master/Images/1.png "Embedded")
+
+You are now set to use Highcharts!
+
+Please note when linking manually that binary framework in the 'release' directory is designed to allow uploads to the AppStore. Therefore it does not allow running on iOS Simulator.
+In order to use simulator, download the repository and use framework that can be found in the 'development' directory.
+Cocoapods solve this problem automatically - they introduce a stripping script for AppStore uploads.
+
+## Using Highcharts (demo app)
+
+##### Set AppDelegate
+
+In your **AppDelegate.m** import Highcharts at the top
+
+```objc
+#import <Highcharts/Highcharts.h>
 ```
-// Import Higcharts framework header
+Add this line to your **application:didFinishLaunchingWithOptions**
+
+```objc
+[HIChartView preload];
+```
+#### Add HIChartView to your View Controller
+In your View Controller .m file add
+```objc
+#import <Highcharts/Highcharts.h>
+```
+Then change
+```objc
+@interface ViewController ()
+@end
+```
+To
+```objc
+@interface ViewController ()
+@property (strong, nonatomic) HIChartView *chartView;
+@end
+```
+#### Creating chart
+Let's start with creating simple chart!
+
+For the purpose of this tutorial, we will create a simple column chart using random data.
+
+In **viewDidLoad** add following lines
+```objc
+self.chartView = [[HIChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 20, self.view.bounds.size.width, 300.0f)];
+```
+This will create our chartView with defined origin and size.
+
+Done!
+Now let's create a chart.
+
+The heart of a chart is **HIOptions** class which contains all the information needed to present it. Some of the options there are optional, some are not (see demo app [HighFit](https://github.com/highcharts/highcharts-ios/tree/master/Example/HighFit) provided by Highcharts). 
+
+Create instance of **HIOptions** class
+```objc
+HIOptions *options = [[HIOptions alloc]init];
+```
+Now we need to add the options that our chart requires to be presented. Let's start with **chart type**. To do so, create HIChart class object and set its type to "column"
+```objc
+HIChart *chart = [[HIChart alloc]init];
+chart.type = @"column";
+```
+Add this object to your **options**
+```objc
+options.chart = chart;
+```
+Then let's give our chart a name (title) and also add it to **options**
+```objc
+HITitle *title = [[HITitle alloc]init];
+title.text = @"Demo chart";
+
+options.title = title;
+```
+Now we need to add some data (in this tutorial it will be some random set of numbers). Since we are creating a **column** chart, we need to use **HIColumn** data series
+```objc
+HIColumn *series = [[HIColumn alloc]init];
+```
+To add data, just create array of our data objects
+```objc
+series.data = @[@49.9, @71.5, @106.4, @129.2, @144, @176, @135.6, @148.5, @216.4, @194.1, @95.6, @54.4];
+```
+Since options can store multiple series, we need to add our series as one-element-array
+```objc
+options.series = @[series];
+```
+And at last add our **options** to the chartView
+```objc
+self.chartView.options = options;
+```
+
+Don't forget to add chartView as subview to your View Controller's view! At the end add
+```objc
+[self.view addSubview:self.chartView];
+```
+That's it! We are now set to run our application!
+Your View Controller .m file should look like this
+```objc
+#import "ViewController.h"
 #import <Highcharts/Highcharts.h>
 
-// This is needed before any chart view is initialized. Yo need do it only once. Egz. When starting your app.
-[HighchartsView preload];
+@interface ViewController ()
+@property (strong, nonatomic) HIChartView *chartView;
+@end
 
-// Init HighchartView with desired frame.
-HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
+@implementation ViewController
 
-// Load your chart.
-highchartsView.options = @{
-
-    @"chart": @{
-        @"type": @"bar"
-    },
-    @"title": @{
-        @"text": @"Fruit Consumption"
-    },
-    @"xAxis": @{
-        @"categories": @[ @"Apples", @"Bananas", @"Oranges" ]
-    },
-    @"yAxis": @{
-        @"title": @{
-            @"text": @"Fruit eaten"
-        }
-    },
-    @"series": @[
-        @{
-            @"name": @"Jane",
-            @"data": @[ @1, @0, @4 ]
-        },
-        @{
-            @"name": @"John",
-            @"data": @[ @5, @7, @3 ]
-        }
-    ]
-};
-
-// Add Chart to view.
-[self.view addSubview:self.highchartsView];
-
-```
-
-## Themes
-You can change look of you chart by loading theme.
-
-```
-HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
-
-highchartsView.theme = @"dark-unica";
-
-highchartsView.options = ...;
-
-[self.view addSubview:self.highchartsView];
-
-```
-
-#### List avaiable themes in distribution:
-
-
-Name         |
------------- |
-dark-unica   |
-sand-signika |
-grid-light   |
-
-## Plugins
-Some time's or dependig from your needs you will need to use/load plugins that view reqires for proper display or extend functionality.
-
-```
-HighchartsView *highchartsView = [[HighchartsView alloc] initWithFrame:self.view.bounds];
-
-highchartsView.plugins = @[ @"exporting", ...];
-
-highchartsView.options = ...;
-
-[self.view addSubview:self.highchartsView];
-
-```
-
-#### Official Plugins that extends functionality. 
-These plugins are included in this distribution.
-
-Name              |
-------------------|
-boost             |
-broken-axis       |
-canvas-toolsv     |
-data              |
-drilldown         |
-funnel            |
-heatmap           |
-no-data-to-display|
-solid-gauge       |
-treemap           |
-
-## Errors
-
-#### Plugins, Themes
-
-When loading of plugin or theme fails there is Log on console
-
-`[Highcharts]: /js/plugins/dummy.js dont exist!`
-
-If this happens check that you are initializing Highcharts properly and plugin / theme you are loading exist.
-
-## Release App to AppStore
-Highcharts is build with [Carthage](https://github.com/Carthage/) when making a realease version of your app to AppStore you need to make certain steps that are described [here](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
-
-## FAQ
-
-#### How to ues non static data in chart, from array or later from network?
-If data you want to display is not static egz. from network or user input, of course you can do that.
-
-```
-
-// Make sure data you want to display is in proper format. See exaples or API documentation.
-NSArray *data = ...
-
-// Load your chart.
-highchartsView.options = @{
-
-    @"chart": @{
-        @"type": @"line"
-    },
-    @"title": @{
-        @"text": @"Non static chart"
-    },
-    @"series": data
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
     
-};
-
-```
-
-#### How to ues UIColor objent not HTML
-You can but dont need to use HTML colors. Simply initialize UIColor like you always do.
-
-```
-// First create color object in any way you want, here standard UIColor init.
-UIColor *myColor = [UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:0.502];
-
-...
-
-// Second use method 'color' on your object color in your chart color options.
-@"yAxis" : @{
-    @"title" : @{
-        @"text" : @"Temperature (°C)"
-    },
-    @"plotLines" : @[@{
-        @"value" : @0,
-        @"width" : @1,
-        @"color" : [myColor color]
-    }]
+    self.chartView = [[HIChartView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 20, self.view.bounds.size.width, 300.0f)];
+    
+    HIOptions *options = [[HIOptions alloc]init];
+    
+    HIChart *chart = [[HIChart alloc]init];
+    chart.type = @"column";
+    options.chart = chart;
+    
+    HITitle *title = [[HITitle alloc]init];
+    title.text = @"Demo chart";
+    options.title = title;
+    
+    HIColumn *series = [[HIColumn alloc]init];
+    series.data = @[@49.9, @71.5, @106.4, @129.2, @144, @176, @135.6, @148.5, @216.4, @194.1, @95.6, @54.4];
+    options.series = @[series];
+    self.chartView.options = options;
+    
+    [self.view addSubview:self.chartView];
 }
 
-...
-
+@end
 ```
 
-### How to use custom UIImage loaded from my app bundle?
-Some times you will ned to load image asset from your app bundle or from other source that you need to display on chart.
-
-```
-// First load image from any source you have.
-UIImage *myImage = [UIImage imageNamed:@"myImage.png"];
-
-...
-
-// Second use method 'image' on your image object egz. [instance image].
-@"series" : @[@{
-    @"name" : @"Tokyo",
-    @"marker" : @{
-        @"symbol" : @"square"
-    },
-    @"data" : @[@7.0, @6.9, @9.5, @14.5, @18.2, @21.5, @25.2, @{
-        @"y" : @26.5,
-        @"marker" : @{
-            @"symbol" : [myImage image]
-        }
-    }, @23.3, @18.3, @13.9, @9.6]
-}
-
-...
-
-```
-
+## ***Press "Run" in XCode.***
+#### For more complex solutions see demo app [HighFit](https://github.com/highcharts/highcharts-ios/tree/master/Example/HighFit) provided by Highcharts or read the following [documentation](http://api.highcharts.com/highcharts-ios/)!
