@@ -35,6 +35,10 @@
             function updateOptions(options) {
                 chart.update(options);
             }
+        
+            function iOSEventHandler(event) {
+                window.webkit.messageHandlers.observe.postMessage(event);
+            }
             
             function modifySize(width, height) {
                 document.getElementById('viewport').setAttribute('content', 'width=' + width + ', height=' + height + ', initial-scale=1.0, maximum-scale=1.0, user-scalable=no')

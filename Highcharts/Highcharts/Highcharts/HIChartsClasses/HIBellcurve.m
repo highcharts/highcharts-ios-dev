@@ -15,26 +15,26 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.fillOpacity) {
-		params[@"fillOpacity"] = self.fillOpacity;
+	if (self.intervals) {
+		params[@"intervals"] = self.intervals;
 	}
 	if (self.pointsInInterval) {
 		params[@"pointsInInterval"] = self.pointsInInterval;
 	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
-	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
 	}
-	if (self.intervals) {
-		params[@"intervals"] = self.intervals;
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.fillOpacity) {
+		params[@"fillOpacity"] = self.fillOpacity;
 	}
 	if (self.baseSeries) {
 		params[@"baseSeries"] = self.baseSeries;
@@ -44,23 +44,14 @@
 
 # pragma mark - Setters
 
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	_fillOpacity = fillOpacity;
-	[self updateNSObject:@"fillOpacity"];
+-(void)setIntervals:(NSNumber *)intervals {
+	_intervals = intervals;
+	[self updateNSObject:@"intervals"];
 }
 
 -(void)setPointsInInterval:(NSNumber *)pointsInInterval {
 	_pointsInInterval = pointsInInterval;
 	[self updateNSObject:@"pointsInInterval"];
-}
-
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setNegativeFillColor:(HIColor *)negativeFillColor {
@@ -72,6 +63,11 @@
 	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
 }
 
+-(void)setTrackByArea:(NSNumber *)trackByArea {
+	_trackByArea = trackByArea;
+	[self updateNSObject:@"trackByArea"];
+}
+
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;
 	if(self.fillColor) {
@@ -81,14 +77,18 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setTrackByArea:(NSNumber *)trackByArea {
-	_trackByArea = trackByArea;
-	[self updateNSObject:@"trackByArea"];
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
--(void)setIntervals:(NSNumber *)intervals {
-	_intervals = intervals;
-	[self updateNSObject:@"intervals"];
+-(void)setFillOpacity:(NSNumber *)fillOpacity {
+	_fillOpacity = fillOpacity;
+	[self updateNSObject:@"fillOpacity"];
 }
 
 -(void)setBaseSeries:(id)baseSeries {

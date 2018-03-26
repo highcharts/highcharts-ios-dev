@@ -10,38 +10,44 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.fontSize) {
-		params[@"fontSize"] = self.fontSize;
+	if (self.fontWeight) {
+		params[@"fontWeight"] = self.fontWeight;
 	}
 	if (self.color) {
 		params[@"color"] = self.color;
 	}
-	if (self.textOutline) {
-		params[@"textOutline"] = self.textOutline;
-	}
-	if (self.fontWeight) {
-		params[@"fontWeight"] = self.fontWeight;
-	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
-	}
-	if (self.backgroundColor) {
-		params[@"backgroundColor"] = self.backgroundColor;
+	if (self.fontSize) {
+		params[@"fontSize"] = self.fontSize;
 	}
 	if (self.opacity) {
 		params[@"opacity"] = self.opacity;
 	}
+	if (self.position) {
+		params[@"position"] = self.position;
+	}
 	if (self.textAlign) {
 		params[@"textAlign"] = self.textAlign;
 	}
-	if (self.position) {
-		params[@"position"] = self.position;
+	if (self.backgroundColor) {
+		params[@"backgroundColor"] = self.backgroundColor;
 	}
 	if (self.fontFamily) {
 		params[@"fontFamily"] = self.fontFamily;
 	}
+	if (self.textOutline) {
+		params[@"textOutline"] = self.textOutline;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
+	}
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
+	}
 	if (self.textOverflow) {
 		params[@"textOverflow"] = self.textOverflow;
+	}
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
 	}
 	if (self.pointerEvents) {
 		params[@"pointerEvents"] = self.pointerEvents;
@@ -54,9 +60,9 @@
 
 # pragma mark - Setters
 
--(void)setFontSize:(NSString *)fontSize {
-	_fontSize = fontSize;
-	[self updateNSObject:@"fontSize"];
+-(void)setFontWeight:(NSString *)fontWeight {
+	_fontWeight = fontWeight;
+	[self updateNSObject:@"fontWeight"];
 }
 
 -(void)setColor:(NSString *)color {
@@ -64,24 +70,9 @@
 	[self updateNSObject:@"color"];
 }
 
--(void)setTextOutline:(NSString *)textOutline {
-	_textOutline = textOutline;
-	[self updateNSObject:@"textOutline"];
-}
-
--(void)setFontWeight:(NSString *)fontWeight {
-	_fontWeight = fontWeight;
-	[self updateNSObject:@"fontWeight"];
-}
-
--(void)setCursor:(NSString *)cursor {
-	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
-}
-
--(void)setBackgroundColor:(NSString *)backgroundColor {
-	_backgroundColor = backgroundColor;
-	[self updateNSObject:@"backgroundColor"];
+-(void)setFontSize:(NSString *)fontSize {
+	_fontSize = fontSize;
+	[self updateNSObject:@"fontSize"];
 }
 
 -(void)setOpacity:(NSNumber *)opacity {
@@ -89,14 +80,19 @@
 	[self updateNSObject:@"opacity"];
 }
 
+-(void)setPosition:(NSString *)position {
+	_position = position;
+	[self updateNSObject:@"position"];
+}
+
 -(void)setTextAlign:(NSString *)textAlign {
 	_textAlign = textAlign;
 	[self updateNSObject:@"textAlign"];
 }
 
--(void)setPosition:(NSString *)position {
-	_position = position;
-	[self updateNSObject:@"position"];
+-(void)setBackgroundColor:(NSString *)backgroundColor {
+	_backgroundColor = backgroundColor;
+	[self updateNSObject:@"backgroundColor"];
 }
 
 -(void)setFontFamily:(NSString *)fontFamily {
@@ -104,9 +100,29 @@
 	[self updateNSObject:@"fontFamily"];
 }
 
+-(void)setTextOutline:(NSString *)textOutline {
+	_textOutline = textOutline;
+	[self updateNSObject:@"textOutline"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	_borderRadius = borderRadius;
+	[self updateNSObject:@"borderRadius"];
+}
+
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	_lineWidth = lineWidth;
+	[self updateNSObject:@"lineWidth"];
+}
+
 -(void)setTextOverflow:(NSString *)textOverflow {
 	_textOverflow = textOverflow;
 	[self updateNSObject:@"textOverflow"];
+}
+
+-(void)setCursor:(NSString *)cursor {
+	_cursor = cursor;
+	[self updateNSObject:@"cursor"];
 }
 
 -(void)setPointerEvents:(NSString *)pointerEvents {

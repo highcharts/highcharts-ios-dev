@@ -10,11 +10,13 @@
 
 
 /**
-* description: CSS styles for each legend item in hover mode. Only a subset of
-CSS is supported, notably those options related to text. Properties
-are inherited from style unless overridden here.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/ : Red on hover
-* default: { "color": "#000000" }
+CSS styles for each legend item in hover mode. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from `style` unless overridden here.
+
+**Defaults to** `{ "color": "#000000" }`.
+
+**Try it**
+
+* [Red on hover](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/)
 */
 @interface HIItemHoverStyle: HIChartsJSONSerializable
 

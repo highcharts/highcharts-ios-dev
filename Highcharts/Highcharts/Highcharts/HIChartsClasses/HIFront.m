@@ -13,11 +13,11 @@
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
-	if (self.size) {
-		params[@"size"] = self.size;
-	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
+	}
+	if (self.size) {
+		params[@"size"] = self.size;
 	}
 	return params;
 }
@@ -33,14 +33,14 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setSize:(NSNumber *)size {
-	_size = size;
-	[self updateNSObject:@"size"];
-}
-
 -(void)setVisible:(id)visible {
 	_visible = visible;
 	[self updateNSObject:@"visible"];
+}
+
+-(void)setSize:(NSNumber *)size {
+	_size = size;
+	[self updateNSObject:@"size"];
 }
 
 @end

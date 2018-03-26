@@ -1,6 +1,5 @@
 #import "HIChartsJSONSerializableSubclass.h"
 #import "HIHover.h"
-#import "HIMarker.h"
 
 @implementation HIHover
 
@@ -11,26 +10,44 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.lineWidth) {
-		params[@"lineWidth"] = self.lineWidth;
+	if (self.radiusPlus) {
+		params[@"radiusPlus"] = self.radiusPlus;
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.marker) {
-		params[@"marker"] = [self.marker getParams];
-	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.lineWidthPlus) {
 		params[@"lineWidthPlus"] = self.lineWidthPlus;
 	}
+	if (self.halo) {
+		params[@"halo"] = [self.halo getParams];
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.radius) {
+		params[@"radius"] = self.radius;
+	}
 	if (self.brightness) {
 		params[@"brightness"] = self.brightness;
 	}
-	if (self.halo) {
-		params[@"halo"] = [self.halo getParams];
+	if (self.linkOpacity) {
+		params[@"linkOpacity"] = self.linkOpacity;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = self.borderColor;
+	}
+	if (self.opacity) {
+		params[@"opacity"] = self.opacity;
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
@@ -38,49 +55,19 @@
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
-	}
-	if (self.radiusPlus) {
-		params[@"radiusPlus"] = self.radiusPlus;
-	}
-	if (self.radius) {
-		params[@"radius"] = self.radius;
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.linkOpacity) {
-		params[@"linkOpacity"] = self.linkOpacity;
-	}
-	if (self.opacity) {
-		params[@"opacity"] = self.opacity;
-	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setLineWidth:(NSNumber *)lineWidth {
-	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+-(void)setRadiusPlus:(NSNumber *)radiusPlus {
+	_radiusPlus = radiusPlus;
+	[self updateNSObject:@"radiusPlus"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
 	_enabled = enabled;
 	[self updateNSObject:@"enabled"];
-}
-
--(void)setMarker:(HIMarker *)marker {
-	HIMarker *oldValue = _marker;
-	if(self.marker) {
-		[self removeObserver:self forKeyPath:@"marker.isUpdated"];
-	}
-	_marker = marker;
-	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
 }
 
 -(void)setAnimation:(HIAnimation *)animation {
@@ -92,14 +79,14 @@
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	_lineWidth = lineWidth;
+	[self updateNSObject:@"lineWidth"];
+}
+
 -(void)setLineWidthPlus:(NSNumber *)lineWidthPlus {
 	_lineWidthPlus = lineWidthPlus;
 	[self updateNSObject:@"lineWidthPlus"];
-}
-
--(void)setBrightness:(NSNumber *)brightness {
-	_brightness = brightness;
-	[self updateNSObject:@"brightness"];
 }
 
 -(void)setHalo:(HIHalo *)halo {
@@ -109,6 +96,49 @@
 	}
 	_halo = halo;
 	[self updateHIObject:oldValue newValue:halo propertyName:@"halo"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	if(self.fillColor) {
+		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
+	}
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setRadius:(NSNumber *)radius {
+	_radius = radius;
+	[self updateNSObject:@"radius"];
+}
+
+-(void)setBrightness:(NSNumber *)brightness {
+	_brightness = brightness;
+	[self updateNSObject:@"brightness"];
+}
+
+-(void)setLinkOpacity:(NSNumber *)linkOpacity {
+	_linkOpacity = linkOpacity;
+	[self updateNSObject:@"linkOpacity"];
+}
+
+-(void)setBorderColor:(NSString *)borderColor {
+	_borderColor = borderColor;
+	[self updateNSObject:@"borderColor"];
+}
+
+-(void)setOpacity:(NSNumber *)opacity {
+	_opacity = opacity;
+	[self updateNSObject:@"opacity"];
 }
 
 -(void)setShadow:(NSNumber *)shadow {
@@ -123,53 +153,6 @@
 	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
-}
-
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
--(void)setRadiusPlus:(NSNumber *)radiusPlus {
-	_radiusPlus = radiusPlus;
-	[self updateNSObject:@"radiusPlus"];
-}
-
--(void)setRadius:(NSNumber *)radius {
-	_radius = radius;
-	[self updateNSObject:@"radius"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setLinkOpacity:(NSNumber *)linkOpacity {
-	_linkOpacity = linkOpacity;
-	[self updateNSObject:@"linkOpacity"];
-}
-
--(void)setOpacity:(NSNumber *)opacity {
-	_opacity = opacity;
-	[self updateNSObject:@"opacity"];
 }
 
 @end

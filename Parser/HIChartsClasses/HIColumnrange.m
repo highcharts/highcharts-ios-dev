@@ -34,6 +34,9 @@
 		}
 		params[@"colors"] = array;
 	}
+	if (self.startFromThreshold) {
+		params[@"startFromThreshold"] = self.startFromThreshold;
+	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
@@ -99,6 +102,11 @@
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setStartFromThreshold:(NSNumber *)startFromThreshold {
+	_startFromThreshold = startFromThreshold;
+	[self updateNSObject:@"startFromThreshold"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {

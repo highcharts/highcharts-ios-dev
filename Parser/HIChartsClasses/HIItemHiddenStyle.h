@@ -10,12 +10,13 @@
 
 
 /**
-* description: CSS styles for each legend item when the corresponding series or
-point is hidden. Only a subset of CSS is supported, notably those
-options related to text. Properties are inherited from style
-unless overridden here.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhiddenstyle/ : Darker gray color
-* default: { "color": "#cccccc" }
+CSS styles for each legend item when the corresponding series or point is hidden. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from `style` unless overridden here.
+
+**Defaults to** `{ "color": "#cccccc" }`.
+
+**Try it**
+
+* [Darker gray color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhiddenstyle/)
 */
 @interface HIItemHiddenStyle: HIChartsJSONSerializable
 

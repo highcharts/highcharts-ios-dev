@@ -13,11 +13,11 @@
 	if (self.to) {
 		params[@"to"] = self.to;
 	}
-	if (self.orientations) {
-		params[@"orientations"] = self.orientations;
-	}
 	if (self.from) {
 		params[@"from"] = self.from;
+	}
+	if (self.orientations) {
+		params[@"orientations"] = self.orientations;
 	}
 	return params;
 }
@@ -29,14 +29,14 @@
 	[self updateNSObject:@"to"];
 }
 
--(void)setOrientations:(NSNumber *)orientations {
-	_orientations = orientations;
-	[self updateNSObject:@"orientations"];
-}
-
 -(void)setFrom:(NSNumber *)from {
 	_from = from;
 	[self updateNSObject:@"from"];
+}
+
+-(void)setOrientations:(NSNumber *)orientations {
+	_orientations = orientations;
+	[self updateNSObject:@"orientations"];
 }
 
 @end

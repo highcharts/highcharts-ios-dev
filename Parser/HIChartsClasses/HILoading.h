@@ -11,38 +11,48 @@
 
 
 /**
-* description: The loading options control the appearance of the loading screen
-that covers the plot area on chart operations. This screen only
-appears after an explicit call to chart.showLoading(). It is a
-utility for developers to communicate to the end user that something
-is going on, for example while retrieving new data via an XHR connection.
-The "Loading..." text itself is not part of this configuration
-object, but part of the lang object.
+The loading options control the appearance of the loading screen that covers the plot area on chart operations. This screen only appears after an explicit call to `chart.showLoading()`. It is a utility for developers to communicate to the end user that something is going on, for example while retrieving new data via an XHR connection. The "Loading..." text itself is not part of this configuration object, but part of the `lang` object.
 */
 @interface HILoading: HIChartsJSONSerializable
 
 /**
-* description: CSS styles for the loading screen that covers the plot area.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/ : Gray plot area, white text
-* default: { "position": "absolute", "backgroundColor": "#ffffff", "opacity": 0.5, "textAlign": "center" }
+CSS styles for the loading screen that covers the plot area.
+
+**Defaults to** `{ "position": "absolute", "backgroundColor": "#ffffff", "opacity": 0.5, "textAlign": "center" }`.
+
+**Try it**
+
+* [Gray plot area, white text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/)
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
-* description: CSS styles for the loading label span.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/ : Vertically centered
-* default: { "fontWeight": "bold", "position": "relative", "top": "45%" }
+CSS styles for the loading label `span`.
+
+**Defaults to** `{ "fontWeight": "bold", "position": "relative", "top": "45%" }`.
+
+**Try it**
+
+* [Vertically centered](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/)
 */
 @property(nonatomic, readwrite) HILabelStyle *labelStyle;
 /**
-* description: The duration in milliseconds of the fade out effect.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
-* default: 100
+The duration in milliseconds of the fade out effect.
+
+**Defaults to** `100`.
+
+**Try it**
+
+* [Fade in and out over a second](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/)
 */
 @property(nonatomic, readwrite) NSNumber *hideDuration;
 /**
-* description: The duration in milliseconds of the fade in effect.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/ : Fade in and out over a second
-* default: 100
+The duration in milliseconds of the fade in effect.
+
+**Defaults to** `100`.
+
+**Try it**
+
+* [Fade in and out over a second](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/)
 */
 @property(nonatomic, readwrite) NSNumber *showDuration;
 

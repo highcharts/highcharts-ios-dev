@@ -10,18 +10,22 @@
 
 
 /**
-* description: Allows setting a set of rules to apply for different screen or chart
-sizes. Each rule specifies additional chart options.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/ : Legend
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/ : Class name
+Allows setting a set of rules to apply for different screen or chart sizes. Each rule specifies additional chart options.
+
+**Try it**
+
+* [Axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/)
+* [Legend](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/)
+* [Class name](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/)
 */
 @interface HIResponsive: HIChartsJSONSerializable
 
 /**
-* description: A set of rules for responsive settings. The rules are executed from
-the top down.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/ : Axis changes
+A set of rules for responsive settings. The rules are executed from the top down.
+
+**Try it**
+
+* [Axis changes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/)
 */
 @property(nonatomic, readwrite) NSArray <HIRules *> *rules;
 

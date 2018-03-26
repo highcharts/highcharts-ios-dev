@@ -10,56 +10,56 @@
 
 
 /**
-* description: Options to render charts in 3 dimensions. This feature requires
-highcharts-3d.js, found in the download package or online at
-[code.highcharts.com/highcharts-3d.js](http://code.highcharts.com/highcharts-
-3d.js).
+Options to render charts in 3 dimensions. This feature requires `highcharts-3d.js`, found in the download package or online at [code.highcharts.com/highcharts-3d.js](http:https://code.highcharts.com/highcharts- 3d.js).
 */
 @interface HIOptions3d: HIChartsJSONSerializable
 
 /**
-* description: Whether the 3d box should automatically adjust to the chart plot
-area.
-* default: true
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *fitToPlot;
-/**
-* description: Provides the option to draw a frame around the charts by defining
-a bottom, front and back panel.
-*/
-@property(nonatomic, readwrite) HIFrame *frame;
-/**
-* description: Set it to "auto" to automatically move the labels to the best
-edge.
-* accepted values: [null, "auto"]
-* default: null
-*/
-@property(nonatomic, readwrite) NSString *axisLabelPosition;
-/**
-* description: Wether to render the chart using the 3D functionality.
-* default: false
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
-/**
-* description: The total depth of the chart.
-* default: 100
-*/
-@property(nonatomic, readwrite) NSNumber *depth;
-/**
-* description: One of the two rotation angles for the chart.
-* default: 0
-*/
-@property(nonatomic, readwrite) NSNumber *beta;
-/**
-* description: Defines the distance the viewer is standing in front of the chart,
-this setting is important to calculate the perspective effect
-in column and scatter charts. It is not used for 3D pie charts.
-* default: 100
+Defines the distance the viewer is standing in front of the chart, this setting is important to calculate the perspective effect in column and scatter charts. It is not used for 3D pie charts.
+
+**Defaults to** `100`.
 */
 @property(nonatomic, readwrite) NSNumber *viewDistance;
 /**
-* description: One of the two rotation angles for the chart.
-* default: 0
+Provides the option to draw a frame around the charts by defining a bottom, front and back panel.
+*/
+@property(nonatomic, readwrite) HIFrame *frame;
+/**
+Set it to `"auto"` to automatically move the labels to the best edge.
+
+**Accepted values:** `[null, "auto"]`.
+
+**Defaults to** `null`.
+*/
+@property(nonatomic, readwrite) NSString *axisLabelPosition;
+/**
+Wether to render the chart using the 3D functionality.
+
+**Defaults to** `false`.
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+/**
+One of the two rotation angles for the chart.
+
+**Defaults to** `0`.
+*/
+@property(nonatomic, readwrite) NSNumber *beta;
+/**
+The total depth of the chart.
+
+**Defaults to** `100`.
+*/
+@property(nonatomic, readwrite) NSNumber *depth;
+/**
+Whether the 3d box should automatically adjust to the chart plot area.
+
+**Defaults to** `true`.
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *fitToPlot;
+/**
+One of the two rotation angles for the chart.
+
+**Defaults to** `0`.
 */
 @property(nonatomic, readwrite) NSNumber *alpha;
 

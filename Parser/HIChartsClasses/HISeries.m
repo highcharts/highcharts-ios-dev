@@ -49,6 +49,18 @@
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
+	if (self.yAxisDescription) {
+		params[@"yAxisDescription"] = self.yAxisDescription;
+	}
+	if (self.xAxisDescription) {
+		params[@"xAxisDescription"] = self.xAxisDescription;
+	}
+	if (self.definition) {
+		params[@"definition"] = self.definition;
+	}
+	if (self.summary) {
+		params[@"summary"] = [self.summary getParams];
+	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
@@ -120,9 +132,6 @@
 	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
-	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
 	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -265,6 +274,30 @@
 -(void)setZIndex:(NSNumber *)zIndex {
 	_zIndex = zIndex;
 	[self updateNSObject:@"zIndex"];
+}
+
+-(void)setYAxisDescription:(NSString *)yAxisDescription {
+	_yAxisDescription = yAxisDescription;
+	[self updateNSObject:@"yAxisDescription"];
+}
+
+-(void)setXAxisDescription:(NSString *)xAxisDescription {
+	_xAxisDescription = xAxisDescription;
+	[self updateNSObject:@"xAxisDescription"];
+}
+
+-(void)setDefinition:(NSString *)definition {
+	_definition = definition;
+	[self updateNSObject:@"definition"];
+}
+
+-(void)setSummary:(HISummary *)summary {
+	HISummary *oldValue = _summary;
+	if(self.summary) {
+		[self removeObserver:self forKeyPath:@"summary.isUpdated"];
+	}
+	_summary = summary;
+	[self updateHIObject:oldValue newValue:summary propertyName:@"summary"];
 }
 
 -(void)setSelected:(NSNumber *)selected {
@@ -421,11 +454,6 @@
 -(void)setAnimationLimit:(NSNumber *)animationLimit {
 	_animationLimit = animationLimit;
 	[self updateNSObject:@"animationLimit"];
-}
-
--(void)setDefinition:(NSString *)definition {
-	_definition = definition;
-	[self updateNSObject:@"definition"];
 }
 
 -(void)setKeys:(NSArray<NSString *> *)keys {

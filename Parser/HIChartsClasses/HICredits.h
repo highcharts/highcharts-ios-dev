@@ -11,38 +11,53 @@
 
 
 /**
-* description: Highchart by default puts a credits label in the lower right corner
-of the chart. This can be changed using these options.
+Highchart by default puts a credits label in the lower right corner of the chart. This can be changed using these options.
 */
 @interface HICredits: HIChartsJSONSerializable
 
 /**
-* description: CSS styles for the credits label.
-* default: { "cursor": "pointer", "color": "#999999", "fontSize": "10px" }
+CSS styles for the credits label.
+
+**Defaults to** `{ "cursor": "pointer", "color": "#999999", "fontSize": "10px" }`.
 */
 @property(nonatomic, readwrite) HIStyle *style;
 /**
-* description: The text for the credits label.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
-* default: Highcharts.com
+The text for the credits label.
+
+**Defaults to** `Highcharts.com`.
+
+**Try it**
+
+* [Custom URL and text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/)
 */
 @property(nonatomic, readwrite) NSString *text;
 /**
-* description: Whether to show the credits text.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/ : Credits disabled
-* default: true
+Whether to show the credits text.
+
+**Defaults to** `true`.
+
+**Try it**
+
+* [Credits disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
-* description: The URL for the credits label.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/ : Custom URL and text
-* default: http://www.highcharts.com
+The URL for the credits label.
+
+**Defaults to** `http://www.highcharts.com`.
+
+**Try it**
+
+* [Custom URL and text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/)
 */
 @property(nonatomic, readwrite) NSString *href;
 /**
-* description: Position configuration for the credits label.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
-https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/ : Left aligned
+Position configuration for the credits label.
+
+**Try it**
+
+* [Left aligned](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/)
+* [Left aligned](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/)
 */
 @property(nonatomic, readwrite) HIPosition *position;
 

@@ -11,16 +11,16 @@
 
 
 /**
-* description: A partial fill for each point, typically used to visualize how much of
-a task is performed. The partial fill object can be set either on series
-or point level.
-* demo: https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/x-range : X-range with partial fill
+A partial fill for each point, typically used to visualize how much of a task is performed. The partial fill object can be set either on series or point level.
+
+**Try it**
+
+* [X-range with partial fill](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/x-range)
 */
 @interface HIPartialFill: HIChartsJSONSerializable
 
 /**
-* description: The fill color to be used for partial fills. Defaults to a darker shade
-of the point color.
+The fill color to be used for partial fills. Defaults to a darker shade of the point color.
 */
 @property(nonatomic, readwrite) HIColor *fill;
 

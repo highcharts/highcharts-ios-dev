@@ -50,14 +50,13 @@ class HIChartsClass:
         self.parent = parent
 
         if self.description:
-            self.comment = "/**\n* description: {0}\n".format(self.description)
-            if self.demo:
-                self.comment += "* demo: {0}".format(self.demo)
+            self.comment = clean_comment(self.description)
             if self.values:
-                self.comment += "* accepted values: {0}\n".format(self.values)
-            self.comment = clean_comment(self.comment)
+                self.comment += "\n**Accepted values:** `{0}`.\n".format(self.values)
             if self.defaults:
-                self.comment += "* default: {0}\n".format(self.defaults)
+                self.comment += "\n**Defaults to** `{0}`.\n".format(self.defaults)
+            if self.demo:
+                self.comment += "\n**Try it**\n\n{0}".format(self.demo)
             self.comment += "*/\n"
 
     def update(self, data_type, description, demo, values, defaults, products, extends, exclude):
@@ -86,14 +85,13 @@ class HIChartsClass:
             self.exclude = exclude
 
         if self.description:
-            self.comment = "/**\n* description: {0}\n".format(self.description)
-            if self.demo:
-                self.comment += "* demo: {0}".format(self.demo)
+            self.comment = clean_comment(self.description)
             if self.values:
-                self.comment += "* accepted values: {0}\n".format(self.values)
-            self.comment = clean_comment(self.comment)
+                self.comment += "\n**Accepted values:** `{0}`.\n".format(self.values)
             if self.defaults:
-                self.comment += "* default: {0}\n".format(self.defaults)
+                self.comment += "\n**Defaults to** `{0}`.\n".format(self.defaults)
+            if self.demo:
+                self.comment += "\n**Try it**\n\n{0}".format(self.demo)
             self.comment += "*/\n"
 
     def add_property(self, variable):
@@ -107,25 +105,13 @@ class HIChartsClass:
 
 
 def clean_comment(comment):
+    comment = comment.replace('\n', ' ').replace('  ', ' ').replace('.  ', '. ').replace('//code.highcharts.com/', 'https://code.highcharts.com/')
+    comment = re.sub('(\(|\[)[\w\.*/ *: *\-*]+\.\s+[\w\.*/ *: *\- *]+(\)|\])', lambda s: s.group(0).replace(' ', ''), comment)
+    comment = re.sub('\[(.+?)\]\((.+?)\)', lambda s: s.group(0) if s.group(2).startswith("http") else s.group(0).replace(s.group(0), '`{}`'.format(s.group(1))), comment)
+    comment = comment.replace('`<', '__x__').replace('>`', '__y__')
     soup = BeautifulSoup(comment, 'html.parser')
-    demos = list()
-    for m in soup.find_all('a'):
-        a = str(m)
-        if a in comment:
-            if 'href' in a:
-                demo_link = m['href']
-                demo_text = m.__dict__['next_element']
-                if not demo_link.startswith("#"):
-                    if demo_text in demos:
-                        comment = comment.replace(a, "")
-                        replaced_text = demos[-1] + "\n"
-                        comment = comment.replace(replaced_text, demos[-1])
-                    else:
-                        demos.append(demo_text)
-                        comment = comment.replace(a, demo_link + " : " + demo_text, 1)
-
-    soup = BeautifulSoup(comment, 'html.parser')
-    comment = soup.get_text()
+    comment = soup.get_text().replace('__x__', '`<').replace('__y__', '>`')
+    comment = "/**\n{0}\n".format(comment)
     return comment
 
 
@@ -297,6 +283,7 @@ def field_in_parent(field, source):
 
 def format_to_h(name, source):
     imports = ""
+    description = None
     colorAdded = False
     functionAdded = False
     htext = ""
@@ -304,14 +291,16 @@ def format_to_h(name, source):
     class_name = "HI" + upper_first(create_name(name))
 
     if class_name in comments:
-        htext += comments[class_name]
+        description = comments[class_name]
     elif source.comment:
-        htext += source.comment
+        description = source.comment
         x = name.split(".")
         if len(x) == 2 and x[0] == "plotOptions":
             pass
         else:
             comments[class_name] = source.comment
+
+    htext += description if description else "/**\n */\n"
 
     if not added_new_properties(class_name, source):
         return None
@@ -517,6 +506,7 @@ def format_to_m(name, source):
 
 def create_options_files():
     imports = "#import \"HIColor.h\"\n"
+    description = "/**\n */\n"
     htext = "@interface HIOptions: HIChartsJSONSerializable\n\n"
     mtext = "#import \"HIChartsJSONSerializableSubclass.h\"\n"
     mtext += "#import \"HIOptions.h\"\n\n@implementation HIOptions\n\n"
@@ -623,7 +613,7 @@ def create_options_files():
     imports += "\n\n"
     htext += "\n@end\n"
     with open("HIChartsClasses/HIOptions.h", "w") as o:
-        o.write(imports + htext)
+        o.write(imports + description + htext)
     with open("HIChartsClasses/HIOptions.m", "w") as m:
         m.write(mtext)
 
@@ -839,9 +829,9 @@ def create_class(node):
 
             if "description" in doclet:
                 description = doclet["description"]
-                description = re.sub(r'`\s*(.*?)\s*`', r'\1', description)
-                description = re.sub(r'(\[(.*?)\]\(#.*?\))', r'\2', description)
-                description = description.replace("\r", "\n")
+                #description = re.sub(r'`\s*(.*?)\s*`', r'\1', description)
+                # description = re.sub(r'(\[(.*?)\]\(#.*?\))', r'\2', description)
+                # description = description.replace("\r", "\n")
 
             if "values" in doclet and len(doclet["values"]) > 0:
                 values = doclet["values"]
@@ -869,7 +859,7 @@ def create_class(node):
                         elif attr_sample == "products":
                             attr_products = sample[attr_sample]
                     if attr_products is None or "highcharts" in attr_products:
-                        demo += "https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/{0} : {1}\n".format(value, name)
+                        demo += "* [{0}](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/{1})\n".format(name, value)
                 if demo == "":
                     demo = None
 

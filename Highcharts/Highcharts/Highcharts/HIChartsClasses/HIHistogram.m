@@ -15,26 +15,26 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.groupZPadding) {
-		params[@"groupZPadding"] = self.groupZPadding;
+	if (self.baseSeries) {
+		params[@"baseSeries"] = self.baseSeries;
 	}
-	if (self.pointWidth) {
-		params[@"pointWidth"] = self.pointWidth;
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
 	}
-	if (self.edgeWidth) {
-		params[@"edgeWidth"] = self.edgeWidth;
+	if (self.binWidth) {
+		params[@"binWidth"] = self.binWidth;
 	}
-	if (self.depth) {
-		params[@"depth"] = self.depth;
+	if (self.binsNumber) {
+		params[@"binsNumber"] = self.binsNumber;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
 	}
-	if (self.maxPointWidth) {
-		params[@"maxPointWidth"] = self.maxPointWidth;
+	if (self.grouping) {
+		params[@"grouping"] = self.grouping;
 	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -42,23 +42,8 @@
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
 	}
-	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getData];
-	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
-	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
-	}
-	if (self.binWidth) {
-		params[@"binWidth"] = self.binWidth;
-	}
-	if (self.grouping) {
-		params[@"grouping"] = self.grouping;
-	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
+	if (self.groupZPadding) {
+		params[@"groupZPadding"] = self.groupZPadding;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -67,38 +52,59 @@
 		}
 		params[@"colors"] = array;
 	}
+	if (self.startFromThreshold) {
+		params[@"startFromThreshold"] = self.startFromThreshold;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.edgeColor) {
+		params[@"edgeColor"] = [self.edgeColor getData];
+	}
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
+	}
+	if (self.maxPointWidth) {
+		params[@"maxPointWidth"] = self.maxPointWidth;
+	}
+	if (self.pointWidth) {
+		params[@"pointWidth"] = self.pointWidth;
+	}
+	if (self.edgeWidth) {
+		params[@"edgeWidth"] = self.edgeWidth;
+	}
 	if (self.crisp) {
 		params[@"crisp"] = self.crisp;
 	}
-	if (self.binsNumber) {
-		params[@"binsNumber"] = self.binsNumber;
+	if (self.depth) {
+		params[@"depth"] = self.depth;
 	}
-	if (self.baseSeries) {
-		params[@"baseSeries"] = self.baseSeries;
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setGroupZPadding:(NSNumber *)groupZPadding {
-	_groupZPadding = groupZPadding;
-	[self updateNSObject:@"groupZPadding"];
+-(void)setBaseSeries:(id)baseSeries {
+	_baseSeries = baseSeries;
+	[self updateNSObject:@"baseSeries"];
 }
 
--(void)setPointWidth:(NSNumber *)pointWidth {
-	_pointWidth = pointWidth;
-	[self updateNSObject:@"pointWidth"];
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
 }
 
--(void)setEdgeWidth:(NSNumber *)edgeWidth {
-	_edgeWidth = edgeWidth;
-	[self updateNSObject:@"edgeWidth"];
+-(void)setBinWidth:(NSNumber *)binWidth {
+	_binWidth = binWidth;
+	[self updateNSObject:@"binWidth"];
 }
 
--(void)setDepth:(NSNumber *)depth {
-	_depth = depth;
-	[self updateNSObject:@"depth"];
+-(void)setBinsNumber:(id)binsNumber {
+	_binsNumber = binsNumber;
+	[self updateNSObject:@"binsNumber"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {
@@ -106,18 +112,14 @@
 	[self updateNSObject:@"groupPadding"];
 }
 
--(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
-	_maxPointWidth = maxPointWidth;
-	[self updateNSObject:@"maxPointWidth"];
+-(void)setGrouping:(NSNumber *)grouping {
+	_grouping = grouping;
+	[self updateNSObject:@"grouping"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	_borderRadius = borderRadius;
+	[self updateNSObject:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {
@@ -128,6 +130,31 @@
 -(void)setMinPointLength:(NSNumber *)minPointLength {
 	_minPointLength = minPointLength;
 	[self updateNSObject:@"minPointLength"];
+}
+
+-(void)setGroupZPadding:(NSNumber *)groupZPadding {
+	_groupZPadding = groupZPadding;
+	[self updateNSObject:@"groupZPadding"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setStartFromThreshold:(NSNumber *)startFromThreshold {
+	_startFromThreshold = startFromThreshold;
+	[self updateNSObject:@"startFromThreshold"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setEdgeColor:(HIColor *)edgeColor {
@@ -144,30 +171,19 @@
 	[self updateNSObject:@"colorByPoint"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+-(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
+	_maxPointWidth = maxPointWidth;
+	[self updateNSObject:@"maxPointWidth"];
 }
 
--(void)setBinWidth:(NSNumber *)binWidth {
-	_binWidth = binWidth;
-	[self updateNSObject:@"binWidth"];
+-(void)setPointWidth:(NSNumber *)pointWidth {
+	_pointWidth = pointWidth;
+	[self updateNSObject:@"pointWidth"];
 }
 
--(void)setGrouping:(NSNumber *)grouping {
-	_grouping = grouping;
-	[self updateNSObject:@"grouping"];
-}
-
--(void)setPointPadding:(NSNumber *)pointPadding {
-	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
-}
-
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
-	_colors = colors;
-	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+-(void)setEdgeWidth:(NSNumber *)edgeWidth {
+	_edgeWidth = edgeWidth;
+	[self updateNSObject:@"edgeWidth"];
 }
 
 -(void)setCrisp:(NSNumber *)crisp {
@@ -175,14 +191,14 @@
 	[self updateNSObject:@"crisp"];
 }
 
--(void)setBinsNumber:(id)binsNumber {
-	_binsNumber = binsNumber;
-	[self updateNSObject:@"binsNumber"];
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
 }
 
--(void)setBaseSeries:(id)baseSeries {
-	_baseSeries = baseSeries;
-	[self updateNSObject:@"baseSeries"];
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
 }
 
 @end

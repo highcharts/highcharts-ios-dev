@@ -9,11 +9,12 @@
 #import "HIChartsJSONSerializable.h"
 
 
+/**
+ */
 @interface HIGlobal: HIChartsJSONSerializable
 
 /**
-* description: Path to the pattern image required by VML browsers in order to
-draw radial gradients.
+Path to the pattern image required by VML browsers in order to draw radial gradients.
 */
 @property(nonatomic, readwrite) NSString *VMLRadialGradientURL;
 

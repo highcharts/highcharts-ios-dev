@@ -15,44 +15,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.neckWidth) {
-		params[@"neckWidth"] = self.neckWidth;
-	}
-	if (self.minSize) {
-		params[@"minSize"] = self.minSize;
-	}
-	if (self.ignoreHiddenPoint) {
-		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
-	}
-	if (self.width) {
-		params[@"width"] = self.width;
-	}
-	if (self.innerSize) {
-		params[@"innerSize"] = self.innerSize;
+	if (self.reversed) {
+		params[@"reversed"] = self.reversed;
 	}
 	if (self.neckHeight) {
 		params[@"neckHeight"] = self.neckHeight;
 	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.depth) {
-		params[@"depth"] = self.depth;
-	}
-	if (self.clip) {
-		params[@"clip"] = self.clip;
-	}
-	if (self.reversed) {
-		params[@"reversed"] = self.reversed;
-	}
-	if (self.endAngle) {
-		params[@"endAngle"] = self.endAngle;
-	}
-	if (self.startAngle) {
-		params[@"startAngle"] = self.startAngle;
-	}
-	if (self.height) {
-		params[@"height"] = self.height;
+	if (self.neckWidth) {
+		params[@"neckWidth"] = self.neckWidth;
 	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -66,8 +36,29 @@
 		}
 		params[@"center"] = array;
 	}
+	if (self.height) {
+		params[@"height"] = self.height;
+	}
+	if (self.width) {
+		params[@"width"] = self.width;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.endAngle) {
+		params[@"endAngle"] = self.endAngle;
+	}
+	if (self.innerSize) {
+		params[@"innerSize"] = self.innerSize;
+	}
+	if (self.clip) {
+		params[@"clip"] = self.clip;
+	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
+	}
+	if (self.depth) {
+		params[@"depth"] = self.depth;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -76,39 +67,55 @@
 		}
 		params[@"colors"] = array;
 	}
+	if (self.minSize) {
+		params[@"minSize"] = self.minSize;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.legendType) {
+		params[@"legendType"] = self.legendType;
+	}
+	if (self.startAngle) {
+		params[@"startAngle"] = self.startAngle;
+	}
+	if (self.ignoreHiddenPoint) {
+		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setReversed:(NSNumber *)reversed {
+	_reversed = reversed;
+	[self updateNSObject:@"reversed"];
+}
+
+-(void)setNeckHeight:(NSString *)neckHeight {
+	_neckHeight = neckHeight;
+	[self updateNSObject:@"neckHeight"];
+}
 
 -(void)setNeckWidth:(NSString *)neckWidth {
 	_neckWidth = neckWidth;
 	[self updateNSObject:@"neckWidth"];
 }
 
--(void)setMinSize:(NSNumber *)minSize {
-	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+-(void)setCenter:(NSArray *)center {
+	NSArray *oldValue = _center;
+	_center = center;
+	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
 }
 
--(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
-	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:@"ignoreHiddenPoint"];
+-(void)setHeight:(id)height {
+	_height = height;
+	[self updateNSObject:@"height"];
 }
 
 -(void)setWidth:(id)width {
 	_width = width;
 	[self updateNSObject:@"width"];
-}
-
--(void)setInnerSize:(id)innerSize {
-	_innerSize = innerSize;
-	[self updateNSObject:@"innerSize"];
-}
-
--(void)setNeckHeight:(NSString *)neckHeight {
-	_neckHeight = neckHeight;
-	[self updateNSObject:@"neckHeight"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
@@ -120,9 +127,14 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setDepth:(NSNumber *)depth {
-	_depth = depth;
-	[self updateNSObject:@"depth"];
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
+}
+
+-(void)setInnerSize:(id)innerSize {
+	_innerSize = innerSize;
+	[self updateNSObject:@"innerSize"];
 }
 
 -(void)setClip:(NSNumber *)clip {
@@ -130,14 +142,35 @@
 	[self updateNSObject:@"clip"];
 }
 
--(void)setReversed:(NSNumber *)reversed {
-	_reversed = reversed;
-	[self updateNSObject:@"reversed"];
+-(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	_slicedOffset = slicedOffset;
+	[self updateNSObject:@"slicedOffset"];
 }
 
--(void)setEndAngle:(NSNumber *)endAngle {
-	_endAngle = endAngle;
-	[self updateNSObject:@"endAngle"];
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setMinSize:(NSNumber *)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
+}
+
+-(void)setLegendType:(NSString *)legendType {
+	_legendType = legendType;
+	[self updateNSObject:@"legendType"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {
@@ -145,26 +178,9 @@
 	[self updateNSObject:@"startAngle"];
 }
 
--(void)setHeight:(id)height {
-	_height = height;
-	[self updateNSObject:@"height"];
-}
-
--(void)setCenter:(NSArray *)center {
-	NSArray *oldValue = _center;
-	_center = center;
-	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
-}
-
--(void)setSlicedOffset:(NSNumber *)slicedOffset {
-	_slicedOffset = slicedOffset;
-	[self updateNSObject:@"slicedOffset"];
-}
-
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
-	_colors = colors;
-	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:@"ignoreHiddenPoint"];
 }
 
 @end

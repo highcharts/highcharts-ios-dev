@@ -16,45 +16,44 @@
 
 
 /**
-* description: Provides the option to draw a frame around the charts by defining
-a bottom, front and back panel.
+Provides the option to draw a frame around the charts by defining a bottom, front and back panel.
 */
 @interface HIFrame: HIChartsJSONSerializable
 
 /**
-* description: The right of the frame around a 3D chart.
+The right of the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HIRight *right;
+/**
+The bottom of the frame around a 3D chart.
+*/
 @property(nonatomic, readwrite) HIBottom *bottom;
 /**
-* description: The top of the frame around a 3D chart.
+The top of the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HITop *top;
 /**
-* description: The back side of the frame around a 3D chart.
+The back side of the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HIBack *back;
 /**
-* description: Whether the frames are visible.
+Whether the frames are visible.
 */
 @property(nonatomic, readwrite) NSString *visible;
 /**
-* description: The front of the frame around a 3D chart.
+The front of the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HIFront *front;
 /**
-* description: General pixel thickness for the frame faces.
+General pixel thickness for the frame faces.
 */
 @property(nonatomic, readwrite) NSNumber *size;
 /**
-* description: Note: As of v5.0.12, frame.left or frame.right should be used
-instead.
-
-The side for the frame around a 3D chart.
+Note: As of v5.0.12, `frame.left` or `frame.right` should be used instead. The side for the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HISide *side;
 /**
-* description: The left side of the frame around a 3D chart.
+The left side of the frame around a 3D chart.
 */
 @property(nonatomic, readwrite) HILeft *left;
 

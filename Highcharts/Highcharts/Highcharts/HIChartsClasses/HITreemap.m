@@ -15,14 +15,26 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.levelIsConstant) {
-		params[@"levelIsConstant"] = self.levelIsConstant;
-	}
-	if (self.drillUpButton) {
-		params[@"drillUpButton"] = [self.drillUpButton getParams];
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.opacity) {
+		params[@"opacity"] = self.opacity;
+	}
+	if (self.ignoreHiddenPoint) {
+		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.allowDrillToNode) {
+		params[@"allowDrillToNode"] = self.allowDrillToNode;
+	}
+	if (self.sortIndex) {
+		params[@"sortIndex"] = self.sortIndex;
+	}
+	if (self.interactByLeaf) {
+		params[@"interactByLeaf"] = self.interactByLeaf;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -30,6 +42,12 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
+	}
+	if (self.layoutAlgorithm) {
+		params[@"layoutAlgorithm"] = self.layoutAlgorithm;
+	}
+	if (self.levelIsConstant) {
+		params[@"levelIsConstant"] = self.levelIsConstant;
 	}
 	if (self.layoutStartingDirection) {
 		params[@"layoutStartingDirection"] = self.layoutStartingDirection;
@@ -46,47 +64,20 @@
 		}
 		params[@"levels"] = array;
 	}
-	if (self.ignoreHiddenPoint) {
-		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
-	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
-	}
-	if (self.interactByLeaf) {
-		params[@"interactByLeaf"] = self.interactByLeaf;
-	}
-	if (self.opacity) {
-		params[@"opacity"] = self.opacity;
-	}
-	if (self.allowDrillToNode) {
-		params[@"allowDrillToNode"] = self.allowDrillToNode;
+	if (self.drillUpButton) {
+		params[@"drillUpButton"] = [self.drillUpButton getParams];
 	}
 	if (self.alternateStartingDirection) {
 		params[@"alternateStartingDirection"] = self.alternateStartingDirection;
-	}
-	if (self.layoutAlgorithm) {
-		params[@"layoutAlgorithm"] = self.layoutAlgorithm;
-	}
-	if (self.sortIndex) {
-		params[@"sortIndex"] = self.sortIndex;
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
-	_levelIsConstant = levelIsConstant;
-	[self updateNSObject:@"levelIsConstant"];
-}
-
--(void)setDrillUpButton:(HIDrillUpButton *)drillUpButton {
-	HIDrillUpButton *oldValue = _drillUpButton;
-	if(self.drillUpButton) {
-		[self removeObserver:self forKeyPath:@"drillUpButton.isUpdated"];
-	}
-	_drillUpButton = drillUpButton;
-	[self updateHIObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
@@ -98,10 +89,45 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
+-(void)setOpacity:(NSNumber *)opacity {
+	_opacity = opacity;
+	[self updateNSObject:@"opacity"];
+}
+
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:@"ignoreHiddenPoint"];
+}
+
+-(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
+	_allowDrillToNode = allowDrillToNode;
+	[self updateNSObject:@"allowDrillToNode"];
+}
+
+-(void)setSortIndex:(NSNumber *)sortIndex {
+	_sortIndex = sortIndex;
+	[self updateNSObject:@"sortIndex"];
+}
+
+-(void)setInteractByLeaf:(NSNumber *)interactByLeaf {
+	_interactByLeaf = interactByLeaf;
+	[self updateNSObject:@"interactByLeaf"];
+}
+
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {
+	_layoutAlgorithm = layoutAlgorithm;
+	[self updateNSObject:@"layoutAlgorithm"];
+}
+
+-(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
+	_levelIsConstant = levelIsConstant;
+	[self updateNSObject:@"levelIsConstant"];
 }
 
 -(void)setLayoutStartingDirection:(NSString *)layoutStartingDirection {
@@ -115,44 +141,18 @@
 	[self updateArrayObject:oldValue newValue:levels propertyName:@"levels"];
 }
 
--(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
-	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:@"ignoreHiddenPoint"];
-}
-
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
-}
-
--(void)setInteractByLeaf:(NSNumber *)interactByLeaf {
-	_interactByLeaf = interactByLeaf;
-	[self updateNSObject:@"interactByLeaf"];
-}
-
--(void)setOpacity:(NSNumber *)opacity {
-	_opacity = opacity;
-	[self updateNSObject:@"opacity"];
-}
-
--(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
-	_allowDrillToNode = allowDrillToNode;
-	[self updateNSObject:@"allowDrillToNode"];
+-(void)setDrillUpButton:(HIDrillUpButton *)drillUpButton {
+	HIDrillUpButton *oldValue = _drillUpButton;
+	if(self.drillUpButton) {
+		[self removeObserver:self forKeyPath:@"drillUpButton.isUpdated"];
+	}
+	_drillUpButton = drillUpButton;
+	[self updateHIObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
 }
 
 -(void)setAlternateStartingDirection:(NSNumber *)alternateStartingDirection {
 	_alternateStartingDirection = alternateStartingDirection;
 	[self updateNSObject:@"alternateStartingDirection"];
-}
-
--(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {
-	_layoutAlgorithm = layoutAlgorithm;
-	[self updateNSObject:@"layoutAlgorithm"];
-}
-
--(void)setSortIndex:(NSNumber *)sortIndex {
-	_sortIndex = sortIndex;
-	[self updateNSObject:@"sortIndex"];
 }
 
 @end

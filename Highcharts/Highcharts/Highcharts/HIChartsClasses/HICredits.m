@@ -10,6 +10,12 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.style) {
+		params[@"style"] = [self.style getParams];
+	}
+	if (self.text) {
+		params[@"text"] = self.text;
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -19,16 +25,24 @@
 	if (self.position) {
 		params[@"position"] = [self.position getParams];
 	}
-	if (self.style) {
-		params[@"style"] = [self.style getParams];
-	}
-	if (self.text) {
-		params[@"text"] = self.text;
-	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setText:(NSString *)text {
+	_text = text;
+	[self updateNSObject:@"text"];
+}
 
 -(void)setEnabled:(NSNumber *)enabled {
 	_enabled = enabled;
@@ -47,20 +61,6 @@
 	}
 	_position = position;
 	[self updateHIObject:oldValue newValue:position propertyName:@"position"];
-}
-
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
-	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
-}
-
--(void)setText:(NSString *)text {
-	_text = text;
-	[self updateNSObject:@"text"];
 }
 
 @end

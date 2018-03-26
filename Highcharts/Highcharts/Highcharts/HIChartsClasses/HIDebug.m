@@ -13,20 +13,20 @@
 	if (self.timeKDTree) {
 		params[@"timeKDTree"] = self.timeKDTree;
 	}
+	if (self.timeSeriesProcessing) {
+		params[@"timeSeriesProcessing"] = self.timeSeriesProcessing;
+	}
 	if (self.timeBufferCopy) {
 		params[@"timeBufferCopy"] = self.timeBufferCopy;
+	}
+	if (self.timeSetup) {
+		params[@"timeSetup"] = self.timeSetup;
 	}
 	if (self.timeRendering) {
 		params[@"timeRendering"] = self.timeRendering;
 	}
 	if (self.showSkipSummary) {
 		params[@"showSkipSummary"] = self.showSkipSummary;
-	}
-	if (self.timeSeriesProcessing) {
-		params[@"timeSeriesProcessing"] = self.timeSeriesProcessing;
-	}
-	if (self.timeSetup) {
-		params[@"timeSetup"] = self.timeSetup;
 	}
 	return params;
 }
@@ -38,9 +38,19 @@
 	[self updateNSObject:@"timeKDTree"];
 }
 
+-(void)setTimeSeriesProcessing:(NSNumber *)timeSeriesProcessing {
+	_timeSeriesProcessing = timeSeriesProcessing;
+	[self updateNSObject:@"timeSeriesProcessing"];
+}
+
 -(void)setTimeBufferCopy:(NSNumber *)timeBufferCopy {
 	_timeBufferCopy = timeBufferCopy;
 	[self updateNSObject:@"timeBufferCopy"];
+}
+
+-(void)setTimeSetup:(NSNumber *)timeSetup {
+	_timeSetup = timeSetup;
+	[self updateNSObject:@"timeSetup"];
 }
 
 -(void)setTimeRendering:(NSNumber *)timeRendering {
@@ -51,16 +61,6 @@
 -(void)setShowSkipSummary:(NSNumber *)showSkipSummary {
 	_showSkipSummary = showSkipSummary;
 	[self updateNSObject:@"showSkipSummary"];
-}
-
--(void)setTimeSeriesProcessing:(NSNumber *)timeSeriesProcessing {
-	_timeSeriesProcessing = timeSeriesProcessing;
-	[self updateNSObject:@"timeSeriesProcessing"];
-}
-
--(void)setTimeSetup:(NSNumber *)timeSetup {
-	_timeSetup = timeSetup;
-	[self updateNSObject:@"timeSetup"];
 }
 
 @end

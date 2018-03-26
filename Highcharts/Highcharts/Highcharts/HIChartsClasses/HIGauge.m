@@ -15,14 +15,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.wrap) {
-		params[@"wrap"] = self.wrap;
+	if (self.dial) {
+		params[@"dial"] = [self.dial getParams];
 	}
 	if (self.overshoot) {
 		params[@"overshoot"] = self.overshoot;
 	}
-	if (self.dial) {
-		params[@"dial"] = [self.dial getParams];
+	if (self.wrap) {
+		params[@"wrap"] = self.wrap;
 	}
 	if (self.pivot) {
 		params[@"pivot"] = [self.pivot getParams];
@@ -32,16 +32,6 @@
 
 # pragma mark - Setters
 
--(void)setWrap:(NSNumber *)wrap {
-	_wrap = wrap;
-	[self updateNSObject:@"wrap"];
-}
-
--(void)setOvershoot:(NSNumber *)overshoot {
-	_overshoot = overshoot;
-	[self updateNSObject:@"overshoot"];
-}
-
 -(void)setDial:(HIDial *)dial {
 	HIDial *oldValue = _dial;
 	if(self.dial) {
@@ -49,6 +39,16 @@
 	}
 	_dial = dial;
 	[self updateHIObject:oldValue newValue:dial propertyName:@"dial"];
+}
+
+-(void)setOvershoot:(NSNumber *)overshoot {
+	_overshoot = overshoot;
+	[self updateNSObject:@"overshoot"];
+}
+
+-(void)setWrap:(NSNumber *)wrap {
+	_wrap = wrap;
+	[self updateNSObject:@"wrap"];
 }
 
 -(void)setPivot:(HIPivot *)pivot {

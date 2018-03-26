@@ -19,26 +19,23 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
+	if (self.symbol) {
+		params[@"symbol"] = self.symbol;
+	}
 	if (self.states) {
 		params[@"states"] = [self.states getParams];
 	}
-	if (self.symbol) {
-		params[@"symbol"] = self.symbol;
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
-	}
-	if (self.lineColor) {
-		params[@"lineColor"] = self.lineColor;
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.enabledThreshold) {
-		params[@"enabledThreshold"] = self.enabledThreshold;
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
@@ -48,6 +45,9 @@
 	}
 	if (self.radius) {
 		params[@"radius"] = self.radius;
+	}
+	if (self.enabledThreshold) {
+		params[@"enabledThreshold"] = self.enabledThreshold;
 	}
 	return params;
 }
@@ -77,6 +77,11 @@
 	[self updateNSObject:@"enabled"];
 }
 
+-(void)setSymbol:(NSString *)symbol {
+	_symbol = symbol;
+	[self updateNSObject:@"symbol"];
+}
+
 -(void)setStates:(HIStates *)states {
 	HIStates *oldValue = _states;
 	if(self.states) {
@@ -84,26 +89,6 @@
 	}
 	_states = states;
 	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
-}
-
--(void)setSymbol:(NSString *)symbol {
-	_symbol = symbol;
-	[self updateNSObject:@"symbol"];
-}
-
--(void)setLineWidth:(NSNumber *)lineWidth {
-	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
-}
-
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	_fillOpacity = fillOpacity;
-	[self updateNSObject:@"fillOpacity"];
-}
-
--(void)setLineColor:(id)lineColor {
-	_lineColor = lineColor;
-	[self updateNSObject:@"lineColor"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
@@ -115,9 +100,23 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setEnabledThreshold:(NSNumber *)enabledThreshold {
-	_enabledThreshold = enabledThreshold;
-	[self updateNSObject:@"enabledThreshold"];
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	_lineWidth = lineWidth;
+	[self updateNSObject:@"lineWidth"];
+}
+
+-(void)setFillOpacity:(NSNumber *)fillOpacity {
+	_fillOpacity = fillOpacity;
+	[self updateNSObject:@"fillOpacity"];
 }
 
 -(void)setHeight:(NSNumber *)height {
@@ -133,6 +132,11 @@
 -(void)setRadius:(NSNumber *)radius {
 	_radius = radius;
 	[self updateNSObject:@"radius"];
+}
+
+-(void)setEnabledThreshold:(NSNumber *)enabledThreshold {
+	_enabledThreshold = enabledThreshold;
+	[self updateNSObject:@"enabledThreshold"];
 }
 
 @end

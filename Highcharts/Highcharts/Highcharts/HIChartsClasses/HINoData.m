@@ -10,32 +10,22 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.attr) {
-		params[@"attr"] = self.attr;
-	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
-	}
 	if (self.position) {
 		params[@"position"] = [self.position getParams];
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
+	if (self.attr) {
+		params[@"attr"] = self.attr;
+	}
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
+	}
 	return params;
 }
 
 # pragma mark - Setters
-
--(void)setAttr:(id)attr {
-	_attr = attr;
-	[self updateNSObject:@"attr"];
-}
-
--(void)setUseHTML:(NSNumber *)useHTML {
-	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
-}
 
 -(void)setPosition:(HIPosition *)position {
 	HIPosition *oldValue = _position;
@@ -53,6 +43,16 @@
 	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setAttr:(id)attr {
+	_attr = attr;
+	[self updateNSObject:@"attr"];
+}
+
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
 }
 
 @end

@@ -10,9 +10,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
 	if (self.debug) {
 		params[@"debug"] = [self.debug getParams];
 	}
@@ -22,6 +19,9 @@
 	if (self.useGPUTranslations) {
 		params[@"useGPUTranslations"] = self.useGPUTranslations;
 	}
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
+	}
 	if (self.seriesThreshold) {
 		params[@"seriesThreshold"] = self.seriesThreshold;
 	}
@@ -29,11 +29,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setEnabled:(NSNumber *)enabled {
-	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
-}
 
 -(void)setDebug:(HIDebug *)debug {
 	HIDebug *oldValue = _debug;
@@ -52,6 +47,11 @@
 -(void)setUseGPUTranslations:(NSNumber *)useGPUTranslations {
 	_useGPUTranslations = useGPUTranslations;
 	[self updateNSObject:@"useGPUTranslations"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
 }
 
 -(void)setSeriesThreshold:(NSNumber *)seriesThreshold {

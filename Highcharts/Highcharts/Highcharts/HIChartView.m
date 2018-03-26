@@ -1,5 +1,5 @@
 //
-//  HIGView.m
+//  HIChartView.m
 //  Highcharts
 //
 //  License: www.highcharts.com/license
@@ -12,14 +12,17 @@
 #import "HIGHTML.h"
 #import "HIGDependency.h"
 #import "HIGExport.h"
+#import "HIFunctionSubclass.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
-@interface HIChartView () <WKNavigationDelegate>
+@interface HIChartView () <WKNavigationDelegate, WKScriptMessageHandler>
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) HIGHTML *HTML;
 @property (nonatomic, weak) NSTimer *reloadTimer;
+@property (nonatomic, strong) NSMutableDictionary *optionsParams;
+@property (nonatomic, strong) NSMutableDictionary *closures;
 @end
 
 static BOOL preloaded = NO;
@@ -75,7 +78,15 @@ static BOOL preloaded = NO;
     
     NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
     
-    self.webView = [[WKWebView alloc] initWithFrame:frame];
+    WKUserContentController *controller = [[WKUserContentController alloc] init];
+    [controller addScriptMessageHandler:self name:@"observe"];
+    
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    configuration.userContentController = controller;
+    
+    self.closures = [[NSMutableDictionary alloc] init];
+    
+    self.webView = [[WKWebView alloc] initWithFrame:frame configuration:configuration];
     self.webView.scrollView.scrollEnabled = NO;
     self.webView.multipleTouchEnabled = NO;
     self.webView.navigationDelegate = self;
@@ -106,8 +117,45 @@ static BOOL preloaded = NO;
 
 #pragma mark - Helpers
 
+- (void)prepareOptionsParams {
+    self.optionsParams = [[self.options getParams] mutableCopy];
+    [self prepareFunctions:self.optionsParams];
+}
+
+- (void)prepareFunctions:(NSMutableDictionary *)params {
+    NSMutableDictionary *functions = [[NSMutableDictionary alloc] init];
+    for (id key in params){
+        id value = [params objectForKey:key];
+        if([value isKindOfClass:[NSDictionary class]]){
+            [self prepareFunctions:value];
+        }
+        else if ([value isKindOfClass:[NSArray class]]) {
+            for (id item in value) {
+                if([item isKindOfClass:[NSMutableDictionary class]]){
+                    [self prepareFunctions:item];
+                }
+                else break;
+            }
+        }
+        else if ([value isKindOfClass:[HIFunction class]]) {
+            HIFunction *function = (HIFunction *)value;
+            [functions setObject:function.function forKey:key];
+            if (function.closure) {
+                self.closures[function.uuid] = function.closure;
+            }
+        }
+    }
+    
+    for(id key in functions) {
+        id value = [functions objectForKey:key];
+        [params removeObjectForKey:key];
+        [params setObject:value forKey:key];
+    }
+}
+
 - (void)updateOptions {
-    [self.HTML prepareOptions:[self.options getParams]];
+    [self prepareOptionsParams];
+    [self.HTML prepareOptions:self.optionsParams];
     NSString *modificationString = [NSString stringWithFormat:@"updateOptions(%@);", self.HTML.options];
     [self.webView evaluateJavaScript:modificationString completionHandler:nil];
 }
@@ -116,7 +164,6 @@ static BOOL preloaded = NO;
     NSString *modificationString = [NSString stringWithFormat:@"modifySize(%f, %f);", CGRectGetWidth(self.webView.bounds), CGRectGetHeight(self.webView.bounds)];
     [self.webView evaluateJavaScript:modificationString completionHandler:nil];
 }
-
 
 - (void) loadChartInternal {
     if(self.reloadTimer) return;
@@ -161,10 +208,13 @@ static BOOL preloaded = NO;
         [self.HTML prepareJavaScript:plugin prefix:@"js/modules/" suffix:@".js"];
     }
     
+    // Prepare options parameters and fix functions objects.
+    [self prepareOptionsParams];
+    
     // Load theme js, only one.
     [self.HTML prepareJavaScript:self.theme?:nil prefix:@"js/themes/" suffix:@".js"];
     [self.HTML prepareLang:[self.lang getParams] Global:[self.global getParams]];
-    [self.HTML prepareOptions:[self.options getParams]];
+    [self.HTML prepareOptions:self.optionsParams];
     [self.HTML injectJavaScriptToHTML];
     
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
@@ -256,6 +306,23 @@ static BOOL preloaded = NO;
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     [self resize];
     if ([self.delegate respondsToSelector:@selector(chartViewDidLoad:)]) [self.delegate chartViewDidLoad:self];
+}
+
+#pragma mark - WKScriptMessageHandler
+
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    if ([message.name isEqualToString:@"observe"]) {
+        NSString *closureID = message.body[@"uuid"];
+        
+        if (closureID) {
+            NSDictionary *dictionary = (NSDictionary *)message.body;
+    
+            HIChartContext *context = [[HIChartContext alloc] initWithContext:dictionary];
+            
+            HIClosure closure = (HIClosure)self.closures[closureID];
+            closure(context);
+        }
+    }
 }
 
 #pragma mark - Deprecated
