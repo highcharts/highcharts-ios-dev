@@ -177,12 +177,12 @@ The X axis or category axis. Normally this is the horizontal axis, though if the
 @property(nonatomic, readwrite) NSArray<HIXAxis *> *xAxis;
 
 /**
-Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices. The drilldown feature requires the drilldown.js file to be loaded, found in the modules directory of the download package, or online at (code.highcharts.com/modules/drilldown.js)[https://code.highcharts.com/modules/drilldown.js].
+Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices. The drilldown feature requires the drilldown.js file to be loaded, found in the modules directory of the download package, or online at [code.highcharts.com/modules/drilldown.js](https://code.highcharts.com/modules/drilldown.js).
 */
 @property(nonatomic, readwrite) HIDrilldown *drilldown;
 
 /**
-The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the [tutorial article on the Data module](http://www.highcharts.com/docs/working- with-data/data-module). It requires the `modules/data.js` file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the `series.data` option.
+The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the [tutorial article on the Data module](http://www.highcharts.com/docs/working-with-data/data-module). It requires the `modules/data.js` file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the `series.data` option.
 
 **Try it**
 
@@ -192,7 +192,7 @@ The Data module provides a simplified interface for adding data to a chart from 
 @property(nonatomic, readwrite) HIData *data;
 
 /**
-The legend is a box containing a symbol and name for each series item or point item in the chart. Each series (or points in case of pie charts) is represented by a symbol and its name in the legend. It is possible to override the symbol creator function and create [custom legend symbols](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend- custom-symbol/).
+The legend is a box containing a symbol and name for each series item or point item in the chart. Each series (or points in case of pie charts) is represented by a symbol and its name in the legend. It is possible to override the symbol creator function and create [custom legend symbols](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-custom-symbol/).
 */
 @property(nonatomic, readwrite) HILegend *legend;
 
