@@ -106,6 +106,9 @@
 	if (self.itemHiddenStyle) {
 		params[@"itemHiddenStyle"] = [self.itemHiddenStyle getParams];
 	}
+	if (self.alignColumns) {
+		params[@"alignColumns"] = self.alignColumns;
+	}
 	if (self.symbolHeight) {
 		params[@"symbolHeight"] = self.symbolHeight;
 	}
@@ -319,6 +322,11 @@
 	}
 	_itemHiddenStyle = itemHiddenStyle;
 	[self updateHIObject:oldValue newValue:itemHiddenStyle propertyName:@"itemHiddenStyle"];
+}
+
+-(void)setAlignColumns:(NSNumber *)alignColumns {
+	_alignColumns = alignColumns;
+	[self updateNSObject:@"alignColumns"];
 }
 
 -(void)setSymbolHeight:(NSNumber *)symbolHeight {

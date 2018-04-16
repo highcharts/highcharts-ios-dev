@@ -21,6 +21,12 @@
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
+	if (self.minFontSize) {
+		params[@"minFontSize"] = self.minFontSize;
+	}
+	if (self.maxFontSize) {
+		params[@"maxFontSize"] = self.maxFontSize;
+	}
 	if (self.spiral) {
 		params[@"spiral"] = self.spiral;
 	}
@@ -42,9 +48,6 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
-	}
-	if (self.startFromThreshold) {
-		params[@"startFromThreshold"] = self.startFromThreshold;
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
@@ -69,6 +72,16 @@
 	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setMinFontSize:(NSNumber *)minFontSize {
+	_minFontSize = minFontSize;
+	[self updateNSObject:@"minFontSize"];
+}
+
+-(void)setMaxFontSize:(NSNumber *)maxFontSize {
+	_maxFontSize = maxFontSize;
+	[self updateNSObject:@"maxFontSize"];
 }
 
 -(void)setSpiral:(NSString *)spiral {
@@ -104,11 +117,6 @@
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
-}
-
--(void)setStartFromThreshold:(NSNumber *)startFromThreshold {
-	_startFromThreshold = startFromThreshold;
-	[self updateNSObject:@"startFromThreshold"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {

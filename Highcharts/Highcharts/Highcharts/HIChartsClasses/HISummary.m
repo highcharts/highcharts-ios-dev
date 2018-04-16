@@ -177,7 +177,7 @@
 	[self updateNSObject:@"mapCombination"];
 }
 
--(void)setDefault:(NSString *)defaults {
+-(void)setDefaults:(NSString *)defaults {
 	_defaults = defaults;
 	[self updateNSObject:@"defaults"];
 }

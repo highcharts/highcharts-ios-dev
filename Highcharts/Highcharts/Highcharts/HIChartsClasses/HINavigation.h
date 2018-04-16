@@ -39,7 +39,7 @@ CSS styles for the individual items within the popup menu appearing by default w
 */
 @property(nonatomic, readwrite) HIMenuItemStyle *menuItemStyle;
 /**
-A collection of options for buttons appearing in the exporting module. In styled mode, the buttons are styled with the `.highcharts-contextbutton` and `.highcharts-button-symbol` class.
+A collection of options for buttons appearing in the exporting module. In styled mode, the buttons are styled with the `.highcharts-contextbutton` and `.highcharts-button-symbol` classes.
 */
 @property(nonatomic, readwrite) HIButtonOptions *buttonOptions;
 /**

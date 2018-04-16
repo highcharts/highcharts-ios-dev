@@ -73,9 +73,6 @@
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
-	if (self.legendType) {
-		params[@"legendType"] = self.legendType;
-	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
 	}
@@ -169,11 +166,6 @@
 -(void)setBorderWidth:(NSNumber *)borderWidth {
 	_borderWidth = borderWidth;
 	[self updateNSObject:@"borderWidth"];
-}
-
--(void)setLegendType:(NSString *)legendType {
-	_legendType = legendType;
-	[self updateNSObject:@"legendType"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {
