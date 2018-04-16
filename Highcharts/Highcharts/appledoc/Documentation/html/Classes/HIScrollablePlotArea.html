@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPolygon Class Reference</title>
+	<title>HIScrollablePlotArea Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,7 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/trackByArea">trackByArea</option>
+		<option value="//api/name/minWidth">minWidth</option>
+		
+		<option value="//api/name/scrollPositionX">scrollPositionX</option>
 		
 	</optgroup>
 	
@@ -85,16 +87,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPolygon Class Reference</h1>
+					<h1 class="title">HIScrollablePlotArea Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPolygon.h</td>
+	<td>HIScrollablePlotArea.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,33 +106,14 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>polygon</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+						<p>Options for a scrollable plot area. This feature provides a minimum width for the plot area of the chart. If the width gets smaller than this, typically on mobile devices, a native browser scrollbar is presented below the chart. This scrollbar provides smooth scrolling for the contents of the plot area, whereas the title, legend and axes are fixed.</p>
 
-<p>Configuration options for the series are given in three levels:</p>
+<p><strong>Try it</strong></p>
 
-<ol>
-<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
-<li><p>Options for all <code>polygon</code> series are defined in <code>plotOptions.polygon</code>.</p></li>
-<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
-</ol>
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/scrollable-plotarea">Scrollable plot area</a></li>
+</ul>
 
-
-<p><pre>
-Highcharts.chart(&lsquo;container&rsquo;, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        polygon: {
-            // shared options for all polygon series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: &lsquo;polygon&rsquo;
-    }]
-});
-<pre></p>
 					</div>
 					
 					
@@ -146,8 +129,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/trackByArea" title="trackByArea"></a>
-	<h3 class="method-title"><code><a href="#//api/name/trackByArea">&nbsp;&nbsp;trackByArea</a></code>
+	<a name="//api/name/minWidth" title="minWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minWidth">&nbsp;&nbsp;minWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -155,10 +138,76 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>The minimum width for the plot area. If it gets smaller than this, the plot area will become scrollable.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *trackByArea</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minWidth</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIScrollablePlotArea.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/scrollPositionX" title="scrollPositionX"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scrollPositionX">&nbsp;&nbsp;scrollPositionX</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The initial scrolling position of the scrollable plot area. Ranges from 0 to 1, where 0 aligns the plot area to the left and 1 aligns it to the right. Typically we would use 1 if the chart has right aligned Y axes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *scrollPositionX</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIScrollablePlotArea.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

@@ -118,7 +118,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>bubble</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>. For options that apply to multiple series, it is recommended to add them to the <code>plotOptions.series</code> options structure. To apply to all series of this specific type, apply it to <code>plotOptions.bubble</code>.</p>
+						<p>A <code>bubble</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+
+<p>Configuration options for the series are given in three levels:</p>
+
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>bubble</code> series are defined in <code>plotOptions.bubble</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
+
+
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        bubble: {
+            // shared options for all bubble series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;bubble&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -450,59 +476,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sizeByAbsoluteValue" title="sizeByAbsoluteValue"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sizeByAbsoluteValue">&nbsp;&nbsp;sizeByAbsoluteValue</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>When this is true, the absolute value of z determines the size of the bubble. This means that with the default <code>zThreshold</code> of 0, a bubble of value -1 will have the same size as a bubble of value 1, while a bubble of value 0 will have a smaller size according to <code>minSize</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sizeByAbsoluteValue</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-sizebyabsolutevalue/">Size by absolute value, various thresholds</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBubble.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/displayNegative" title="displayNegative"></a>
 	<h3 class="method-title"><code><a href="#//api/name/displayNegative">&nbsp;&nbsp;displayNegative</a></code>
 </h3>
@@ -537,6 +510,59 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-negative/">Negative bubbles</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBubble.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sizeByAbsoluteValue" title="sizeByAbsoluteValue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sizeByAbsoluteValue">&nbsp;&nbsp;sizeByAbsoluteValue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When this is true, the absolute value of z determines the size of the bubble. This means that with the default <code>zThreshold</code> of 0, a bubble of value -1 will have the same size as a bubble of value 1, while a bubble of value 0 will have a smaller size according to <code>minSize</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sizeByAbsoluteValue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-sizebyabsolutevalue/">Size by absolute value, various thresholds</a></li>
 </ul>
 
 			</div>

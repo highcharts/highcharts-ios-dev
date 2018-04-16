@@ -112,7 +112,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>arearange</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>. For options that apply to multiple series, it is recommended to add them to the <code>plotOptions.series</code> options structure. To apply to all series of this specific type, apply it to <code>plotOptions.arearange</code>.</p>
+						<p>A <code>arearange</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+
+<p>Configuration options for the series are given in three levels:</p>
+
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>arearange</code> series are defined in <code>plotOptions.arearange</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
+
+
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        arearange: {
+            // shared options for all arearange series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;arearange&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
