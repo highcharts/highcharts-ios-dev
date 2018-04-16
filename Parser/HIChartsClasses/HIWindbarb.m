@@ -24,6 +24,9 @@
 	if (self.yOffset) {
 		params[@"yOffset"] = self.yOffset;
 	}
+	if (self.xOffset) {
+		params[@"xOffset"] = self.xOffset;
+	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
@@ -42,9 +45,6 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
-	}
-	if (self.startFromThreshold) {
-		params[@"startFromThreshold"] = self.startFromThreshold;
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
@@ -102,6 +102,11 @@
 	[self updateNSObject:@"yOffset"];
 }
 
+-(void)setXOffset:(NSNumber *)xOffset {
+	_xOffset = xOffset;
+	[self updateNSObject:@"xOffset"];
+}
+
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	_borderRadius = borderRadius;
 	[self updateNSObject:@"borderRadius"];
@@ -126,11 +131,6 @@
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
-}
-
--(void)setStartFromThreshold:(NSNumber *)startFromThreshold {
-	_startFromThreshold = startFromThreshold;
-	[self updateNSObject:@"startFromThreshold"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {

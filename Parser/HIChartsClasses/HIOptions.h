@@ -101,7 +101,7 @@ Options for the tooltip that appears when the user hovers over a series or point
 @property(nonatomic, readwrite) HITooltip *tooltip;
 
 /**
-The plotOptions is a wrapper object for config objects for each series type. The config objects for each series can also be overridden for each series item as given in the series array. Configuration options for the series are given in three levels. Options for all series in a chart are given in the `plotOptions.series` object. Then options for all series of a specific type are given in the plotOptions of that type, for example plotOptions.line. Next, options for one single series are given in `the series array`.
+The plotOptions is a wrapper object for config objects for each series type. The config objects for each series can also be overridden for each series item as given in the series array. Configuration options for the series are given in three levels. Options for all series in a chart are given in the `plotOptions.series` object. Then options for all series of a specific type are given in the plotOptions of that type, for example `plotOptions.line`. Next, options for one single series are given in `the series array`.
 */
 @property(nonatomic, readwrite) HIPlotOptions *plotOptions;
 
@@ -202,7 +202,7 @@ A color axis for choropleth maps and heat maps. Visually, the color axis will ap
 @property(nonatomic, readwrite) HIColorAxis *colorAxis;
 
 /**
-Time options that can apply globally or to individual charts. These settings affect how `datetime` axes are laid out, how tooltips are formatted, how series `pointIntervalUnit` works and how the Highstock range selector handles time. The common use case is that all charts in the same Highcharts object share the same time settings, in which case the global settings are set using `setOptions`. ```js // Apply time settings globally Highcharts.setOptions({   time: {     timezone: 'Europe/London'   } }); // Apply time settings by instance var chart = Highcharts.chart('container', {   time: {     timezone: 'America/New_York'   },   series: [{     data: [1, 4, 3, 5]   }] }); // Use the Time object console.log( 	  'Current time in New York', 	  chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now()) ); ``` Since v6.0.5, the time options were moved from the `global` obect to the `time` object, and time options can be set on each individual chart.
+Time options that can apply globally or to individual charts. These settings affect how `datetime` axes are laid out, how tooltips are formatted, how series `pointIntervalUnit` works and how the Highstock range selector handles time. The common use case is that all charts in the same Highcharts object share the same time settings, in which case the global settings are set using `setOptions`. ```js // Apply time settings globally Highcharts.setOptions({   time: {     timezone: 'Europe/London'   } }); // Apply time settings by instance var chart = Highcharts.chart('container', {   time: {     timezone: 'America/New_York'   },   series: [{     data: [1, 4, 3, 5]   }] }); // Use the Time object console.log(    'Current time in New York',    chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now()) ); ``` Since v6.0.5, the time options were moved from the `global` obect to the `time` object, and time options can be set on each individual chart.
 
 **Try it**
 

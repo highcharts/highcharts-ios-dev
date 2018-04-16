@@ -76,6 +76,9 @@
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
+	if (self.alignTicks) {
+		params[@"alignTicks"] = self.alignTicks;
+	}
 	if (self.pane) {
 		params[@"pane"] = self.pane;
 	}
@@ -327,6 +330,11 @@
 -(void)setVisible:(NSNumber *)visible {
 	_visible = visible;
 	[self updateNSObject:@"visible"];
+}
+
+-(void)setAlignTicks:(NSNumber *)alignTicks {
+	_alignTicks = alignTicks;
+	[self updateNSObject:@"alignTicks"];
 }
 
 -(void)setPane:(NSNumber *)pane {
