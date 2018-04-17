@@ -22,7 +22,7 @@
     chart.marginRight = @10;
     
     HIEvents *events = [[HIEvents alloc] init];
-    events.load = [[HIFunction alloc] initWithFunction:@"function () { var series = this.series[0]; setInterval(function () { var x = (new Date()).getTime(), y = Math.random(); series.addPoint([x, y], true, true); }, 1000); }"];
+    events.load = [[HIFunction alloc] initWithJSFunction:@"function () { var series = this.series[0]; setInterval(function () { var x = (new Date()).getTime(), y = Math.random(); series.addPoint([x, y], true, true); }, 1000); }"];
     chart.events = events;
     
     HITitle *title = [[HITitle alloc]init];
@@ -43,8 +43,8 @@
     yaxis.plotLines = [NSMutableArray arrayWithObjects:plotLines, nil];
     
     HITooltip *tooltip = [[HITooltip alloc] init];
-    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.series.name + '</b><br/>' + Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' + Highcharts.numberFormat(this.y, 2); }"];
-
+    tooltip.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return '<b>' + this.series.name + '</b><br/>' + Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' + Highcharts.numberFormat(this.y, 2); }"];
+    
     HILegend *legend = [[HILegend alloc] init];
     legend.enabled = [[NSNumber alloc] initWithBool:false];
     

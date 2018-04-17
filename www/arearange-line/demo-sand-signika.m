@@ -30,7 +30,7 @@
     yaxis.title.text = @"";
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
+    // tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
     tooltip.shared = [[NSNumber alloc] initWithBool:true];
     tooltip.valueSuffix = @"°C";
     

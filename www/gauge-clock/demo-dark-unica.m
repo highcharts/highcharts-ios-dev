@@ -37,7 +37,7 @@
     HIPane *pane = [[HIPane alloc] init];
     
     HIBackground *paneBackground = [[HIBackground alloc] init];
-    paneBackground.backgroundColor = [[HIColor alloc] init];
+    paneBackground.backgroundColor = [[HIBackgroundColor alloc] init];
     
     pane.background = [NSMutableArray arrayWithObjects:paneBackground, nil];
     
@@ -69,7 +69,7 @@
     yaxis.title.y = @10;
     
     HITooltip *tooltip = [[HITooltip alloc] init];
-    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.series.chart.tooltipText; }"];
+    tooltip.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return this.series.chart.tooltipText; }"];
     
     HIGauge *gauge = [[HIGauge alloc] init];
     

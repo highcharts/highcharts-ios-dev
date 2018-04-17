@@ -25,10 +25,10 @@
     
     HIXAxis *xaxis = [[HIXAxis alloc] init];
     xaxis.categories = [NSMutableArray arrayWithObjects:@"Apples",
-                           @"Pears",
-                           @"Plums",
-                           @"Bananas",
-                           @"Oranges", nil];
+                        @"Pears",
+                        @"Plums",
+                        @"Bananas",
+                        @"Oranges", nil];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.allowDecimals = [[NSNumber alloc] initWithBool:false];
@@ -36,27 +36,27 @@
     yaxis.title.text = @"Units";
     
     HITooltip *tooltip = [[HITooltip alloc] init];
-    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.series.name + '</b><br/>' + this.point.y + ' ' + this.point.name.toLowerCase(); }"];
+    tooltip.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return '<b>' + this.series.name + '</b><br/>' + this.point.y + ' ' + this.point.name.toLowerCase(); }"];
     
     HIColumn *column1 = [[HIColumn alloc] init];
     column1.name = @"Jane";
     column1.data = [NSMutableArray arrayWithObjects:
-                                                      @[@"Apples",  @3],
-                                                      @[@"Pears", @2],
-                                                      @[@"Plums", @5],
-                                                      @[@"Bananas", @1],
-                                                      @[@"Oranges", @2]
-                                                      , nil];
+                    @[@"Apples",  @3],
+                    @[@"Pears", @2],
+                    @[@"Plums", @5],
+                    @[@"Bananas", @1],
+                    @[@"Oranges", @2]
+                    , nil];
     
     HIColumn *column2 = [[HIColumn alloc] init];
     column2.name = @"John";
     column2.data = [NSMutableArray arrayWithObjects:
-                                                      @[@"Apples" , @4],
-                                                      @[@"Pears" , @0],
-                                                      @[@"Plums" , @11],
-                                                      @[@"Bananas" , @1],
-                                                      @[@"Oranges" , @4]
-                                                      , nil];
+                    @[@"Apples" , @4],
+                    @[@"Pears" , @0],
+                    @[@"Plums" , @11],
+                    @[@"Bananas" , @1],
+                    @[@"Oranges" , @4]
+                    , nil];
     
     //options.data = data;
     options.chart = chart;

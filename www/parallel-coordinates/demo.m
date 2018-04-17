@@ -40,7 +40,7 @@
     plotOptions.series.states.hover.halo = [[HIHalo alloc] init];
     plotOptions.series.states.hover.halo.size = @0;
     plotOptions.series.events = [[HIEvents alloc] init];
-    plotOptions.series.events.mouseOver = [[HIFunction alloc] initWithFunction:@"function () { this.group.toFront();}"];
+    plotOptions.series.events.mouseOver = [[HIFunction alloc] initWithJSFunction:@"function () { this.group.toFront();}"];
     
     HITooltip *tooltip = [[HITooltip alloc] init];
     tooltip.pointFormat = @"<span style=\"color:{point.color}\">\u25CF</span> {series.name}: <b>{point.formattedValue}</b><br/>";

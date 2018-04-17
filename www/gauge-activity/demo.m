@@ -22,7 +22,7 @@
     title.text = @"Activity";
     title.style = [[HIStyle alloc] init];
     title.style.fontSize = @"24px";
-  
+    
     HITooltip *tooltip = [[HITooltip alloc] init];
     tooltip.borderWidth = @0;
     tooltip.backgroundColor = [[HIColor alloc] initWithName:@"none"];
@@ -30,7 +30,7 @@
     tooltip.style = [[HIStyle alloc] init];
     tooltip.style.fontSize = @"16px";
     tooltip.pointFormat = @"'{series.name}<br><span style=\"font-size:2em; color: {point.color}; font-weight: bold\">{point.y}%</span>'";
-    tooltip.positioner = [[HIFunction alloc] initWithFunction:@"function (labelWidth) { return { x: 200 - labelWidth / 2, y: 180 }; }"];
+    tooltip.positioner = [[HIFunction alloc] initWithJSFunction:@"function (labelWidth) { return { x: 200 - labelWidth / 2, y: 180 }; }"];
     
     HIPane *pane = [[HIPane alloc] init];
     pane.startAngle = @0;

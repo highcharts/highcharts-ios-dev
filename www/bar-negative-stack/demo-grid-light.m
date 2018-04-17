@@ -53,10 +53,10 @@
     yaxis.title = [[HITitle alloc] init];
     yaxis.title.text = @"";
     yaxis.labels = [[HILabels alloc] init];
-    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return Math.abs(this.value) + '%'; }"];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return Math.abs(this.value) + '%'; }"];
     
     HITooltip *tooltip = [[HITooltip alloc] init];
-    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' + 'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0); }"];
+    tooltip.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' + 'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0); }"];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc] init];
     plotoptions.bar = [[HIBar alloc] init];

@@ -27,7 +27,7 @@
     xaxis.min = @0;
     xaxis.max = @360;
     xaxis.labels = [[HILabels alloc]init];
-    xaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value + '°'; }"];
+    xaxis.labels.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return this.value + '°'; }"];
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.min = @0;

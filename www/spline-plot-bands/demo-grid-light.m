@@ -20,12 +20,15 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"spline";
+    chart.scrollablePlotArea = [[HIScrollablePlotArea alloc] init];
+    chart.scrollablePlotArea.minWidth = @600;
+    chart.scrollablePlotArea.scrollPositionX = @1;
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Wind speed during two days";
     
     HISubtitle *subtitle = [[HISubtitle alloc]init];
-    subtitle.text = @"May 31 and and June 1, 2015 at two locations in Vik i Sogn, Norway";
+    subtitle.text = @"13th & 14th of February, 2018 at two locations in Vik i Sogn, Norway";
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.type = @"datetime";
@@ -223,7 +226,7 @@
     HINavigation *navigation = [[HINavigation alloc]init];
     navigation.menuItemStyle = [[HIMenuItemStyle alloc] init];
     navigation.menuItemStyle.fontSize = @"10px";
-  
+    
     options.chart = chart;
     options.title = title;
     options.subtitle = subtitle;

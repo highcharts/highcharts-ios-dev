@@ -17,6 +17,9 @@
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"arearange";
     chart.zoomType = @"x";
+    chart.scrollablePlotArea = [[HIScrollablePlotArea alloc] init];
+    chart.scrollablePlotArea.minWidth = @600;
+    chart.scrollablePlotArea.scrollPositionX = @1;
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Temperature variation by day";
@@ -28,7 +31,7 @@
     yaxis.title = [[HITitle alloc]init];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
+//    tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
     tooltip.shared = [[NSNumber alloc] initWithBool:true];
     tooltip.valueSuffix = @"°C";
     
