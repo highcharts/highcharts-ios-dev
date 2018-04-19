@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/alignTicks">alignTicks</option>
+		
 		<option value="//api/name/ceiling">ceiling</option>
 		
 		<option value="//api/name/className">className</option>
@@ -1413,8 +1415,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/softMax" title="softMax"></a>
-	<h3 class="method-title"><code><a href="#//api/name/softMax">&nbsp;&nbsp;softMax</a></code>
+	<a name="//api/name/alignTicks" title="alignTicks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alignTicks">&nbsp;&nbsp;alignTicks</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1424,12 +1426,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data.</p>
+				<p>When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if <code>tickAmount</code> were specified. This can be prevented by setting <code>alignTicks</code> to false. If the grid lines look messy, it&rsquo;s a good idea to hide them for the secondary axis by setting <code>gridLineWidth</code> to 0. If <code>startOnTick</code> or <code>endOnTick</code> in an Axis options are set to false, then the <code>alignTicks</code> will be disabled for the Axis. Disabled for logarithmic axes.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *softMax</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alignTicks</code></div>
 
 		    
 			
@@ -1441,12 +1443,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/">Soft min and max</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
 			</div>
 			
 
@@ -3015,6 +3012,57 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-outside/">&ldquo;outside&rdquo; by default</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-inside/">&ldquo;inside&rdquo;</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIColorAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/softMax" title="softMax"></a>
+	<h3 class="method-title"><code><a href="#//api/name/softMax">&nbsp;&nbsp;softMax</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *softMax</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/">Soft min and max</a></li>
 </ul>
 
 			</div>

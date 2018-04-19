@@ -33,11 +33,11 @@
 	if (self.zThreshold) {
 		params[@"zThreshold"] = self.zThreshold;
 	}
-	if (self.sizeByAbsoluteValue) {
-		params[@"sizeByAbsoluteValue"] = self.sizeByAbsoluteValue;
-	}
 	if (self.displayNegative) {
 		params[@"displayNegative"] = self.displayNegative;
+	}
+	if (self.sizeByAbsoluteValue) {
+		params[@"sizeByAbsoluteValue"] = self.sizeByAbsoluteValue;
 	}
 	return params;
 }
@@ -74,14 +74,14 @@
 	[self updateNSObject:@"zThreshold"];
 }
 
--(void)setSizeByAbsoluteValue:(NSNumber *)sizeByAbsoluteValue {
-	_sizeByAbsoluteValue = sizeByAbsoluteValue;
-	[self updateNSObject:@"sizeByAbsoluteValue"];
-}
-
 -(void)setDisplayNegative:(NSNumber *)displayNegative {
 	_displayNegative = displayNegative;
 	[self updateNSObject:@"displayNegative"];
+}
+
+-(void)setSizeByAbsoluteValue:(NSNumber *)sizeByAbsoluteValue {
+	_sizeByAbsoluteValue = sizeByAbsoluteValue;
+	[self updateNSObject:@"sizeByAbsoluteValue"];
 }
 
 @end

@@ -82,8 +82,6 @@
 		
 		<option value="//api/name/pointWidth">pointWidth</option>
 		
-		<option value="//api/name/startFromThreshold">startFromThreshold</option>
-		
 	</optgroup>
 	
 
@@ -128,7 +126,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>variwide</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>. For options that apply to multiple series, it is recommended to add them to the <code>plotOptions.series</code> options structure. To apply to all series of this specific type, apply it to <code>plotOptions.variwide</code>.</p>
+						<p>A <code>variwide</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+
+<p>Configuration options for the series are given in three levels:</p>
+
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>variwide</code> series are defined in <code>plotOptions.variwide</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
+
+
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        variwide: {
+            // shared options for all variwide series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;variwide&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -443,22 +467,6 @@
 			</div>
 			
 			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/startFromThreshold" title="startFromThreshold"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startFromThreshold">&nbsp;&nbsp;startFromThreshold</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startFromThreshold</code></div>
-
-		    
 		</div>
 	</div>
 </div><div class="section-method">

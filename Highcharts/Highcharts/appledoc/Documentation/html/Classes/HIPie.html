@@ -76,8 +76,6 @@
 		
 		<option value="//api/name/innerSize">innerSize</option>
 		
-		<option value="//api/name/legendType">legendType</option>
-		
 		<option value="//api/name/minSize">minSize</option>
 		
 		<option value="//api/name/size">size</option>
@@ -130,7 +128,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>pie</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>. For options that apply to multiple series, it is recommended to add them to the <code>plotOptions.series</code> options structure. To apply to all series of this specific type, apply it to <code>plotOptions.pie</code>.</p>
+						<p>A <code>pie</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+
+<p>Configuration options for the series are given in three levels:</p>
+
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>pie</code> series are defined in <code>plotOptions.pie</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
+
+
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        pie: {
+            // shared options for all pie series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;pie&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -622,22 +646,6 @@
 			</div>
 			
 			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/legendType" title="legendType"></a>
-	<h3 class="method-title"><code><a href="#//api/name/legendType">&nbsp;&nbsp;legendType</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *legendType</code></div>
-
-		    
 		</div>
 	</div>
 </div><div class="section-method">

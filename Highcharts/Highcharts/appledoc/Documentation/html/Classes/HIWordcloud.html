@@ -70,13 +70,15 @@
 		
 		<option value="//api/name/edgeWidth">edgeWidth</option>
 		
+		<option value="//api/name/maxFontSize">maxFontSize</option>
+		
+		<option value="//api/name/minFontSize">minFontSize</option>
+		
 		<option value="//api/name/placementStrategy">placementStrategy</option>
 		
 		<option value="//api/name/rotation">rotation</option>
 		
 		<option value="//api/name/spiral">spiral</option>
-		
-		<option value="//api/name/startFromThreshold">startFromThreshold</option>
 		
 		<option value="//api/name/style">style</option>
 		
@@ -124,7 +126,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>wordcloud</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>. For options that apply to multiple series, it is recommended to add them to the <code>plotOptions.series</code> options structure. To apply to all series of this specific type, apply it to <code>plotOptions.wordcloud</code>.</p>
+						<p>A <code>wordcloud</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+
+<p>Configuration options for the series are given in three levels:</p>
+
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>wordcloud</code> series are defined in <code>plotOptions.wordcloud</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
+
+
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        wordcloud: {
+            // shared options for all wordcloud series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;wordcloud&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -224,6 +252,88 @@
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>{"fontFamily":"sans-serif", "fontWeight": "900"}</code>.</p>
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIWordcloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minFontSize" title="minFontSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minFontSize">&nbsp;&nbsp;minFontSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A threshold determining the minimum font size that can be applied to a word.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minFontSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIWordcloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/maxFontSize" title="maxFontSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxFontSize">&nbsp;&nbsp;maxFontSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The word with the largest weight will have a font size equal to this value. The font size of a word is the ratio between its weight and the largest occuring weight, multiplied with the value of maxFontSize.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *maxFontSize</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -517,22 +627,6 @@
 			</div>
 			
 			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/startFromThreshold" title="startFromThreshold"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startFromThreshold">&nbsp;&nbsp;startFromThreshold</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startFromThreshold</code></div>
-
-		    
 		</div>
 	</div>
 </div><div class="section-method">

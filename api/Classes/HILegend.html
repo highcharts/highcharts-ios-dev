@@ -60,6 +60,8 @@
 		
 		<option value="//api/name/align">align</option>
 		
+		<option value="//api/name/alignColumns">alignColumns</option>
+		
 		<option value="//api/name/backgroundColor">backgroundColor</option>
 		
 		<option value="//api/name/borderColor">borderColor</option>
@@ -409,7 +411,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width for each legend item. This is useful in a horizontal layout with many items when you want the items to align vertically. .</p>
+				<p>The width for each legend item. By default the items are laid out successively. In a <code>horizontal layout</code>, if the items are laid out across two rows or more, they will be vertically aligned depending on the <code>legend.alignColumns</code> option.</p>
 			</div>
 			
 		    
@@ -1821,6 +1823,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/alignColumns" title="alignColumns"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alignColumns">&nbsp;&nbsp;alignColumns</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If the <code>layout</code> is <code>horizontal</code> and the legend items span over two lines or more, whether to align the items into vertical columns. Setting this to <code>false</code> makes room for more items, but will look more messy.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alignColumns</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			

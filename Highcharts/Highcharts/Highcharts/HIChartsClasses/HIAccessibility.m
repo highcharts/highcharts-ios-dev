@@ -40,6 +40,51 @@
 	if (self.pointDateFormatter) {
 		params[@"pointDateFormatter"] = [self.pointDateFormatter getFunction];
 	}
+	if (self.chartTypes) {
+		params[@"chartTypes"] = [self.chartTypes getParams];
+	}
+	if (self.longDescriptionHeading) {
+		params[@"longDescriptionHeading"] = self.longDescriptionHeading;
+	}
+	if (self.rangeSelectorMaxInput) {
+		params[@"rangeSelectorMaxInput"] = self.rangeSelectorMaxInput;
+	}
+	if (self.structureHeading) {
+		params[@"structureHeading"] = self.structureHeading;
+	}
+	if (self.chartContainerLabel) {
+		params[@"chartContainerLabel"] = self.chartContainerLabel;
+	}
+	if (self.axis) {
+		params[@"axis"] = [self.axis getParams];
+	}
+	if (self.series) {
+		params[@"series"] = [self.series getParams];
+	}
+	if (self.exporting) {
+		params[@"exporting"] = [self.exporting getParams];
+	}
+	if (self.mapZoomOut) {
+		params[@"mapZoomOut"] = self.mapZoomOut;
+	}
+	if (self.rangeSelectorMinInput) {
+		params[@"rangeSelectorMinInput"] = self.rangeSelectorMinInput;
+	}
+	if (self.rangeSelectorButton) {
+		params[@"rangeSelectorButton"] = self.rangeSelectorButton;
+	}
+	if (self.legendItem) {
+		params[@"legendItem"] = self.legendItem;
+	}
+	if (self.tableSummary) {
+		params[@"tableSummary"] = self.tableSummary;
+	}
+	if (self.noDescription) {
+		params[@"noDescription"] = self.noDescription;
+	}
+	if (self.viewAsDataTable) {
+		params[@"viewAsDataTable"] = self.viewAsDataTable;
+	}
 	if (self.defaultChartTitle) {
 		params[@"defaultChartTitle"] = self.defaultChartTitle;
 	}
@@ -49,59 +94,17 @@
 	if (self.mapZoomIn) {
 		params[@"mapZoomIn"] = self.mapZoomIn;
 	}
-	if (self.axis) {
-		params[@"axis"] = [self.axis getParams];
-	}
-	if (self.rangeSelectorMinInput) {
-		params[@"rangeSelectorMinInput"] = self.rangeSelectorMinInput;
-	}
-	if (self.chartTypes) {
-		params[@"chartTypes"] = [self.chartTypes getParams];
-	}
-	if (self.rangeSelectorButton) {
-		params[@"rangeSelectorButton"] = self.rangeSelectorButton;
-	}
-	if (self.longDescriptionHeading) {
-		params[@"longDescriptionHeading"] = self.longDescriptionHeading;
-	}
-	if (self.exporting) {
-		params[@"exporting"] = [self.exporting getParams];
-	}
 	if (self.chartHeading) {
 		params[@"chartHeading"] = self.chartHeading;
 	}
-	if (self.rangeSelectorMaxInput) {
-		params[@"rangeSelectorMaxInput"] = self.rangeSelectorMaxInput;
-	}
-	if (self.series) {
-		params[@"series"] = [self.series getParams];
-	}
-	if (self.seriesTypeDescriptions) {
-		params[@"seriesTypeDescriptions"] = [self.seriesTypeDescriptions getParams];
-	}
-	if (self.legendItem) {
-		params[@"legendItem"] = self.legendItem;
-	}
-	if (self.chartContainerLabel) {
-		params[@"chartContainerLabel"] = self.chartContainerLabel;
-	}
-	if (self.structureHeading) {
-		params[@"structureHeading"] = self.structureHeading;
-	}
-	if (self.tableSummary) {
-		params[@"tableSummary"] = self.tableSummary;
+	if (self.svgContainerTitle) {
+		params[@"svgContainerTitle"] = self.svgContainerTitle;
 	}
 	if (self.navigationHint) {
 		params[@"navigationHint"] = self.navigationHint;
 	}
-	if (self.noDescription) {
-		params[@"noDescription"] = self.noDescription;
-	}
-	if (self.viewAsDataTable) {
-		params[@"viewAsDataTable"] = self.viewAsDataTable;
-	}
-	if (self.mapZoomOut) {
-		params[@"mapZoomOut"] = self.mapZoomOut;
+	if (self.seriesTypeDescriptions) {
+		params[@"seriesTypeDescriptions"] = [self.seriesTypeDescriptions getParams];
 	}
 	return params;
 }
@@ -182,6 +185,97 @@
 	[self updateHIObject:oldValue newValue:pointDateFormatter propertyName:@"pointDateFormatter"];
 }
 
+-(void)setChartTypes:(HIChartTypes *)chartTypes {
+	HIChartTypes *oldValue = _chartTypes;
+	if(self.chartTypes) {
+		[self removeObserver:self forKeyPath:@"chartTypes.isUpdated"];
+	}
+	_chartTypes = chartTypes;
+	[self updateHIObject:oldValue newValue:chartTypes propertyName:@"chartTypes"];
+}
+
+-(void)setLongDescriptionHeading:(NSString *)longDescriptionHeading {
+	_longDescriptionHeading = longDescriptionHeading;
+	[self updateNSObject:@"longDescriptionHeading"];
+}
+
+-(void)setRangeSelectorMaxInput:(NSString *)rangeSelectorMaxInput {
+	_rangeSelectorMaxInput = rangeSelectorMaxInput;
+	[self updateNSObject:@"rangeSelectorMaxInput"];
+}
+
+-(void)setStructureHeading:(NSString *)structureHeading {
+	_structureHeading = structureHeading;
+	[self updateNSObject:@"structureHeading"];
+}
+
+-(void)setChartContainerLabel:(NSString *)chartContainerLabel {
+	_chartContainerLabel = chartContainerLabel;
+	[self updateNSObject:@"chartContainerLabel"];
+}
+
+-(void)setAxis:(HIAxis *)axis {
+	HIAxis *oldValue = _axis;
+	if(self.axis) {
+		[self removeObserver:self forKeyPath:@"axis.isUpdated"];
+	}
+	_axis = axis;
+	[self updateHIObject:oldValue newValue:axis propertyName:@"axis"];
+}
+
+-(void)setSeries:(HISeries *)series {
+	HISeries *oldValue = _series;
+	if(self.series) {
+		[self removeObserver:self forKeyPath:@"series.isUpdated"];
+	}
+	_series = series;
+	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
+}
+
+-(void)setExporting:(HIExporting *)exporting {
+	HIExporting *oldValue = _exporting;
+	if(self.exporting) {
+		[self removeObserver:self forKeyPath:@"exporting.isUpdated"];
+	}
+	_exporting = exporting;
+	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
+}
+
+-(void)setMapZoomOut:(NSString *)mapZoomOut {
+	_mapZoomOut = mapZoomOut;
+	[self updateNSObject:@"mapZoomOut"];
+}
+
+-(void)setRangeSelectorMinInput:(NSString *)rangeSelectorMinInput {
+	_rangeSelectorMinInput = rangeSelectorMinInput;
+	[self updateNSObject:@"rangeSelectorMinInput"];
+}
+
+-(void)setRangeSelectorButton:(NSString *)rangeSelectorButton {
+	_rangeSelectorButton = rangeSelectorButton;
+	[self updateNSObject:@"rangeSelectorButton"];
+}
+
+-(void)setLegendItem:(NSString *)legendItem {
+	_legendItem = legendItem;
+	[self updateNSObject:@"legendItem"];
+}
+
+-(void)setTableSummary:(NSString *)tableSummary {
+	_tableSummary = tableSummary;
+	[self updateNSObject:@"tableSummary"];
+}
+
+-(void)setNoDescription:(NSString *)noDescription {
+	_noDescription = noDescription;
+	[self updateNSObject:@"noDescription"];
+}
+
+-(void)setViewAsDataTable:(NSString *)viewAsDataTable {
+	_viewAsDataTable = viewAsDataTable;
+	[self updateNSObject:@"viewAsDataTable"];
+}
+
 -(void)setDefaultChartTitle:(NSString *)defaultChartTitle {
 	_defaultChartTitle = defaultChartTitle;
 	[self updateNSObject:@"defaultChartTitle"];
@@ -197,65 +291,19 @@
 	[self updateNSObject:@"mapZoomIn"];
 }
 
--(void)setAxis:(HIAxis *)axis {
-	HIAxis *oldValue = _axis;
-	if(self.axis) {
-		[self removeObserver:self forKeyPath:@"axis.isUpdated"];
-	}
-	_axis = axis;
-	[self updateHIObject:oldValue newValue:axis propertyName:@"axis"];
-}
-
--(void)setRangeSelectorMinInput:(NSString *)rangeSelectorMinInput {
-	_rangeSelectorMinInput = rangeSelectorMinInput;
-	[self updateNSObject:@"rangeSelectorMinInput"];
-}
-
--(void)setChartTypes:(HIChartTypes *)chartTypes {
-	HIChartTypes *oldValue = _chartTypes;
-	if(self.chartTypes) {
-		[self removeObserver:self forKeyPath:@"chartTypes.isUpdated"];
-	}
-	_chartTypes = chartTypes;
-	[self updateHIObject:oldValue newValue:chartTypes propertyName:@"chartTypes"];
-}
-
--(void)setRangeSelectorButton:(NSString *)rangeSelectorButton {
-	_rangeSelectorButton = rangeSelectorButton;
-	[self updateNSObject:@"rangeSelectorButton"];
-}
-
--(void)setLongDescriptionHeading:(NSString *)longDescriptionHeading {
-	_longDescriptionHeading = longDescriptionHeading;
-	[self updateNSObject:@"longDescriptionHeading"];
-}
-
--(void)setExporting:(HIExporting *)exporting {
-	HIExporting *oldValue = _exporting;
-	if(self.exporting) {
-		[self removeObserver:self forKeyPath:@"exporting.isUpdated"];
-	}
-	_exporting = exporting;
-	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
-}
-
 -(void)setChartHeading:(NSString *)chartHeading {
 	_chartHeading = chartHeading;
 	[self updateNSObject:@"chartHeading"];
 }
 
--(void)setRangeSelectorMaxInput:(NSString *)rangeSelectorMaxInput {
-	_rangeSelectorMaxInput = rangeSelectorMaxInput;
-	[self updateNSObject:@"rangeSelectorMaxInput"];
+-(void)setSvgContainerTitle:(NSString *)svgContainerTitle {
+	_svgContainerTitle = svgContainerTitle;
+	[self updateNSObject:@"svgContainerTitle"];
 }
 
--(void)setSeries:(HISeries *)series {
-	HISeries *oldValue = _series;
-	if(self.series) {
-		[self removeObserver:self forKeyPath:@"series.isUpdated"];
-	}
-	_series = series;
-	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
+-(void)setNavigationHint:(NSString *)navigationHint {
+	_navigationHint = navigationHint;
+	[self updateNSObject:@"navigationHint"];
 }
 
 -(void)setSeriesTypeDescriptions:(HISeriesTypeDescriptions *)seriesTypeDescriptions {
@@ -265,46 +313,6 @@
 	}
 	_seriesTypeDescriptions = seriesTypeDescriptions;
 	[self updateHIObject:oldValue newValue:seriesTypeDescriptions propertyName:@"seriesTypeDescriptions"];
-}
-
--(void)setLegendItem:(NSString *)legendItem {
-	_legendItem = legendItem;
-	[self updateNSObject:@"legendItem"];
-}
-
--(void)setChartContainerLabel:(NSString *)chartContainerLabel {
-	_chartContainerLabel = chartContainerLabel;
-	[self updateNSObject:@"chartContainerLabel"];
-}
-
--(void)setStructureHeading:(NSString *)structureHeading {
-	_structureHeading = structureHeading;
-	[self updateNSObject:@"structureHeading"];
-}
-
--(void)setTableSummary:(NSString *)tableSummary {
-	_tableSummary = tableSummary;
-	[self updateNSObject:@"tableSummary"];
-}
-
--(void)setNavigationHint:(NSString *)navigationHint {
-	_navigationHint = navigationHint;
-	[self updateNSObject:@"navigationHint"];
-}
-
--(void)setNoDescription:(NSString *)noDescription {
-	_noDescription = noDescription;
-	[self updateNSObject:@"noDescription"];
-}
-
--(void)setViewAsDataTable:(NSString *)viewAsDataTable {
-	_viewAsDataTable = viewAsDataTable;
-	[self updateNSObject:@"viewAsDataTable"];
-}
-
--(void)setMapZoomOut:(NSString *)mapZoomOut {
-	_mapZoomOut = mapZoomOut;
-	[self updateNSObject:@"mapZoomOut"];
 }
 
 @end

@@ -25,8 +25,8 @@
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
-	if (self.softMax) {
-		params[@"softMax"] = self.softMax;
+	if (self.alignTicks) {
+		params[@"alignTicks"] = self.alignTicks;
 	}
 	if (self.pane) {
 		params[@"pane"] = self.pane;
@@ -256,6 +256,9 @@
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
+	if (self.softMax) {
+		params[@"softMax"] = self.softMax;
+	}
 	return params;
 }
 
@@ -290,9 +293,9 @@
 	[self updateNSObject:@"visible"];
 }
 
--(void)setSoftMax:(NSNumber *)softMax {
-	_softMax = softMax;
-	[self updateNSObject:@"softMax"];
+-(void)setAlignTicks:(NSNumber *)alignTicks {
+	_alignTicks = alignTicks;
+	[self updateNSObject:@"alignTicks"];
 }
 
 -(void)setPane:(NSNumber *)pane {
@@ -633,6 +636,11 @@
 -(void)setLineWidth:(NSNumber *)lineWidth {
 	_lineWidth = lineWidth;
 	[self updateNSObject:@"lineWidth"];
+}
+
+-(void)setSoftMax:(NSNumber *)softMax {
+	_softMax = softMax;
+	[self updateNSObject:@"softMax"];
 }
 
 @end

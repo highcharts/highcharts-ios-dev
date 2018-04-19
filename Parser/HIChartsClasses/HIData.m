@@ -10,11 +10,23 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.enablePolling) {
+		params[@"enablePolling"] = self.enablePolling;
+	}
+	if (self.startColumn) {
+		params[@"startColumn"] = self.startColumn;
+	}
+	if (self.lineDelimiter) {
+		params[@"lineDelimiter"] = self.lineDelimiter;
+	}
+	if (self.table) {
+		params[@"table"] = self.table;
+	}
+	if (self.parsed) {
+		params[@"parsed"] = [self.parsed getFunction];
+	}
 	if (self.parseDate) {
 		params[@"parseDate"] = [self.parseDate getFunction];
-	}
-	if (self.firstRowAsNames) {
-		params[@"firstRowAsNames"] = self.firstRowAsNames;
 	}
 	if (self.seriesMapping) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -40,11 +52,8 @@
 		}
 		params[@"rows"] = array;
 	}
-	if (self.complete) {
-		params[@"complete"] = [self.complete getFunction];
-	}
-	if (self.itemDelimiter) {
-		params[@"itemDelimiter"] = self.itemDelimiter;
+	if (self.csvURL) {
+		params[@"csvURL"] = self.csvURL;
 	}
 	if (self.dateFormat) {
 		params[@"dateFormat"] = self.dateFormat;
@@ -52,35 +61,17 @@
 	if (self.googleSpreadsheetWorksheet) {
 		params[@"googleSpreadsheetWorksheet"] = self.googleSpreadsheetWorksheet;
 	}
-	if (self.googleSpreadsheetKey) {
-		params[@"googleSpreadsheetKey"] = self.googleSpreadsheetKey;
+	if (self.dataRefreshRate) {
+		params[@"dataRefreshRate"] = self.dataRefreshRate;
 	}
-	if (self.switchRowsAndColumns) {
-		params[@"switchRowsAndColumns"] = self.switchRowsAndColumns;
+	if (self.rowsURL) {
+		params[@"rowsURL"] = self.rowsURL;
 	}
 	if (self.startRow) {
 		params[@"startRow"] = self.startRow;
 	}
-	if (self.startColumn) {
-		params[@"startColumn"] = self.startColumn;
-	}
-	if (self.endColumn) {
-		params[@"endColumn"] = self.endColumn;
-	}
-	if (self.table) {
-		params[@"table"] = self.table;
-	}
-	if (self.decimalPoint) {
-		params[@"decimalPoint"] = self.decimalPoint;
-	}
-	if (self.lineDelimiter) {
-		params[@"lineDelimiter"] = self.lineDelimiter;
-	}
 	if (self.csv) {
 		params[@"csv"] = self.csv;
-	}
-	if (self.parsed) {
-		params[@"parsed"] = [self.parsed getFunction];
 	}
 	if (self.columns) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -96,6 +87,33 @@
 	}
 	if (self.endRow) {
 		params[@"endRow"] = self.endRow;
+	}
+	if (self.itemDelimiter) {
+		params[@"itemDelimiter"] = self.itemDelimiter;
+	}
+	if (self.complete) {
+		params[@"complete"] = [self.complete getFunction];
+	}
+	if (self.beforeParse) {
+		params[@"beforeParse"] = [self.beforeParse getFunction];
+	}
+	if (self.endColumn) {
+		params[@"endColumn"] = self.endColumn;
+	}
+	if (self.firstRowAsNames) {
+		params[@"firstRowAsNames"] = self.firstRowAsNames;
+	}
+	if (self.googleSpreadsheetKey) {
+		params[@"googleSpreadsheetKey"] = self.googleSpreadsheetKey;
+	}
+	if (self.switchRowsAndColumns) {
+		params[@"switchRowsAndColumns"] = self.switchRowsAndColumns;
+	}
+	if (self.decimalPoint) {
+		params[@"decimalPoint"] = self.decimalPoint;
+	}
+	if (self.columnsURL) {
+		params[@"columnsURL"] = self.columnsURL;
 	}
 	if (self.high) {
 		params[@"high"] = self.high;
@@ -222,6 +240,35 @@
 
 # pragma mark - Setters
 
+-(void)setEnablePolling:(NSNumber *)enablePolling {
+	_enablePolling = enablePolling;
+	[self updateNSObject:@"enablePolling"];
+}
+
+-(void)setStartColumn:(NSNumber *)startColumn {
+	_startColumn = startColumn;
+	[self updateNSObject:@"startColumn"];
+}
+
+-(void)setLineDelimiter:(NSString *)lineDelimiter {
+	_lineDelimiter = lineDelimiter;
+	[self updateNSObject:@"lineDelimiter"];
+}
+
+-(void)setTable:(id)table {
+	_table = table;
+	[self updateNSObject:@"table"];
+}
+
+-(void)setParsed:(HIFunction *)parsed {
+	HIFunction *oldValue = _parsed;
+	if(self.parsed) {
+		[self removeObserver:self forKeyPath:@"parsed.isUpdated"];
+	}
+	_parsed = parsed;
+	[self updateHIObject:oldValue newValue:parsed propertyName:@"parsed"];
+}
+
 -(void)setParseDate:(HIFunction *)parseDate {
 	HIFunction *oldValue = _parseDate;
 	if(self.parseDate) {
@@ -229,11 +276,6 @@
 	}
 	_parseDate = parseDate;
 	[self updateHIObject:oldValue newValue:parseDate propertyName:@"parseDate"];
-}
-
--(void)setFirstRowAsNames:(NSNumber *)firstRowAsNames {
-	_firstRowAsNames = firstRowAsNames;
-	[self updateNSObject:@"firstRowAsNames"];
 }
 
 -(void)setSeriesMapping:(NSArray *)seriesMapping {
@@ -248,18 +290,9 @@
 	[self updateArrayObject:oldValue newValue:rows propertyName:@"rows"];
 }
 
--(void)setComplete:(HIFunction *)complete {
-	HIFunction *oldValue = _complete;
-	if(self.complete) {
-		[self removeObserver:self forKeyPath:@"complete.isUpdated"];
-	}
-	_complete = complete;
-	[self updateHIObject:oldValue newValue:complete propertyName:@"complete"];
-}
-
--(void)setItemDelimiter:(NSString *)itemDelimiter {
-	_itemDelimiter = itemDelimiter;
-	[self updateNSObject:@"itemDelimiter"];
+-(void)setCsvURL:(NSString *)csvURL {
+	_csvURL = csvURL;
+	[self updateNSObject:@"csvURL"];
 }
 
 -(void)setDateFormat:(NSString *)dateFormat {
@@ -272,14 +305,14 @@
 	[self updateNSObject:@"googleSpreadsheetWorksheet"];
 }
 
--(void)setGoogleSpreadsheetKey:(NSString *)googleSpreadsheetKey {
-	_googleSpreadsheetKey = googleSpreadsheetKey;
-	[self updateNSObject:@"googleSpreadsheetKey"];
+-(void)setDataRefreshRate:(NSNumber *)dataRefreshRate {
+	_dataRefreshRate = dataRefreshRate;
+	[self updateNSObject:@"dataRefreshRate"];
 }
 
--(void)setSwitchRowsAndColumns:(NSNumber *)switchRowsAndColumns {
-	_switchRowsAndColumns = switchRowsAndColumns;
-	[self updateNSObject:@"switchRowsAndColumns"];
+-(void)setRowsURL:(NSString *)rowsURL {
+	_rowsURL = rowsURL;
+	[self updateNSObject:@"rowsURL"];
 }
 
 -(void)setStartRow:(NSNumber *)startRow {
@@ -287,43 +320,9 @@
 	[self updateNSObject:@"startRow"];
 }
 
--(void)setStartColumn:(NSNumber *)startColumn {
-	_startColumn = startColumn;
-	[self updateNSObject:@"startColumn"];
-}
-
--(void)setEndColumn:(NSNumber *)endColumn {
-	_endColumn = endColumn;
-	[self updateNSObject:@"endColumn"];
-}
-
--(void)setTable:(id)table {
-	_table = table;
-	[self updateNSObject:@"table"];
-}
-
--(void)setDecimalPoint:(NSString *)decimalPoint {
-	_decimalPoint = decimalPoint;
-	[self updateNSObject:@"decimalPoint"];
-}
-
--(void)setLineDelimiter:(NSString *)lineDelimiter {
-	_lineDelimiter = lineDelimiter;
-	[self updateNSObject:@"lineDelimiter"];
-}
-
 -(void)setCsv:(NSString *)csv {
 	_csv = csv;
 	[self updateNSObject:@"csv"];
-}
-
--(void)setParsed:(HIFunction *)parsed {
-	HIFunction *oldValue = _parsed;
-	if(self.parsed) {
-		[self removeObserver:self forKeyPath:@"parsed.isUpdated"];
-	}
-	_parsed = parsed;
-	[self updateHIObject:oldValue newValue:parsed propertyName:@"parsed"];
 }
 
 -(void)setColumns:(NSArray<NSArray *> *)columns {
@@ -335,6 +334,59 @@
 -(void)setEndRow:(NSNumber *)endRow {
 	_endRow = endRow;
 	[self updateNSObject:@"endRow"];
+}
+
+-(void)setItemDelimiter:(NSString *)itemDelimiter {
+	_itemDelimiter = itemDelimiter;
+	[self updateNSObject:@"itemDelimiter"];
+}
+
+-(void)setComplete:(HIFunction *)complete {
+	HIFunction *oldValue = _complete;
+	if(self.complete) {
+		[self removeObserver:self forKeyPath:@"complete.isUpdated"];
+	}
+	_complete = complete;
+	[self updateHIObject:oldValue newValue:complete propertyName:@"complete"];
+}
+
+-(void)setBeforeParse:(HIFunction *)beforeParse {
+	HIFunction *oldValue = _beforeParse;
+	if(self.beforeParse) {
+		[self removeObserver:self forKeyPath:@"beforeParse.isUpdated"];
+	}
+	_beforeParse = beforeParse;
+	[self updateHIObject:oldValue newValue:beforeParse propertyName:@"beforeParse"];
+}
+
+-(void)setEndColumn:(NSNumber *)endColumn {
+	_endColumn = endColumn;
+	[self updateNSObject:@"endColumn"];
+}
+
+-(void)setFirstRowAsNames:(NSNumber *)firstRowAsNames {
+	_firstRowAsNames = firstRowAsNames;
+	[self updateNSObject:@"firstRowAsNames"];
+}
+
+-(void)setGoogleSpreadsheetKey:(NSString *)googleSpreadsheetKey {
+	_googleSpreadsheetKey = googleSpreadsheetKey;
+	[self updateNSObject:@"googleSpreadsheetKey"];
+}
+
+-(void)setSwitchRowsAndColumns:(NSNumber *)switchRowsAndColumns {
+	_switchRowsAndColumns = switchRowsAndColumns;
+	[self updateNSObject:@"switchRowsAndColumns"];
+}
+
+-(void)setDecimalPoint:(NSString *)decimalPoint {
+	_decimalPoint = decimalPoint;
+	[self updateNSObject:@"decimalPoint"];
+}
+
+-(void)setColumnsURL:(NSString *)columnsURL {
+	_columnsURL = columnsURL;
+	[self updateNSObject:@"columnsURL"];
 }
 
 -(void)setHigh:(NSNumber *)high {

@@ -351,6 +351,8 @@
 		CD9B22DE1FE3C8B2002CEFD5 /* HIFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B22DC1FE3C8B1002CEFD5 /* HIFilter.m */; };
 		CDDF95D51F9F5D260021A129 /* HIFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDF95D41F9F5D260021A129 /* HIFunction.m */; };
 		CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDF95D61F9F5D480021A129 /* HIFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDF3A37E2084D31300C251C6 /* HIScrollablePlotArea.h in Headers */ = {isa = PBXBuildFile; fileRef = CDF3A37C2084D31300C251C6 /* HIScrollablePlotArea.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDF3A37F2084D31300C251C6 /* HIScrollablePlotArea.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF3A37D2084D31300C251C6 /* HIScrollablePlotArea.m */; };
 		EC1449381F4A854900612B1C /* HIGChartViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC14493B1F4A926E00612B1C /* HIGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449391F4A926E00612B1C /* HIGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -687,6 +689,8 @@
 		CD9B22DC1FE3C8B1002CEFD5 /* HIFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIFilter.m; path = ../../../../Parser/HIChartsClasses/HIFilter.m; sourceTree = "<group>"; };
 		CDDF95D41F9F5D260021A129 /* HIFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIFunction.m; sourceTree = "<group>"; };
 		CDDF95D61F9F5D480021A129 /* HIFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFunction.h; sourceTree = "<group>"; };
+		CDF3A37C2084D31300C251C6 /* HIScrollablePlotArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIScrollablePlotArea.h; sourceTree = "<group>"; };
+		CDF3A37D2084D31300C251C6 /* HIScrollablePlotArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIScrollablePlotArea.m; sourceTree = "<group>"; };
 		EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartViewDelegate.h; sourceTree = "<group>"; };
 		EC1449391F4A926E00612B1C /* HIGChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartView.h; sourceTree = "<group>"; };
 		EC14493A1F4A926E00612B1C /* HIGChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChartView.m; sourceTree = "<group>"; };
@@ -714,6 +718,8 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				CDF3A37C2084D31300C251C6 /* HIScrollablePlotArea.h */,
+				CDF3A37D2084D31300C251C6 /* HIScrollablePlotArea.m */,
 				CD87DC592046DED2009309A5 /* HIAxis.h */,
 				CD87DC5C2046DED3009309A5 /* HIAxis.m */,
 				CD87DC5E2046DED3009309A5 /* HIBackgroundColor.h */,
@@ -1151,6 +1157,7 @@
 				CD8C14EC1F9794F600C2CD61 /* HIParallelAxes.h in Headers */,
 				CD8C14941F9794F600C2CD61 /* HIDebug.h in Headers */,
 				CD8C153A1F9794F600C2CD61 /* HITreemap.h in Headers */,
+				CDF3A37E2084D31300C251C6 /* HIScrollablePlotArea.h in Headers */,
 				CD87DC762046DED5009309A5 /* HILevelSize.h in Headers */,
 				CD8C14EA1F9794F600C2CD61 /* HIPane.h in Headers */,
 				CD87DC692046DED5009309A5 /* HISeriesTypeDescriptions.h in Headers */,
@@ -1575,6 +1582,7 @@
 				CD8C15111F9794F600C2CD61 /* HIScatter.m in Sources */,
 				CD8C145D1F9794F600C2CD61 /* HIAttributes.m in Sources */,
 				CD8C14FB1F9794F600C2CD61 /* HIPlotOptions.m in Sources */,
+				CDF3A37F2084D31300C251C6 /* HIScrollablePlotArea.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1682,7 +1690,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 6.0.7;
+				DYLIB_CURRENT_VERSION = 6.1.0;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1824,7 +1832,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 6.0.7;
+				DYLIB_CURRENT_VERSION = 6.1.0;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1853,7 +1861,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 6.0.7;
+				DYLIB_CURRENT_VERSION = 6.1.0;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (

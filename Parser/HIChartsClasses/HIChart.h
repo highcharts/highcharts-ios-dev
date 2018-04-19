@@ -9,6 +9,7 @@
 #import "HIParallelAxes.h"
 #import "HIOptions3d.h"
 #import "HIEvents.h"
+#import "HIScrollablePlotArea.h"
 #import "HIResetZoomButton.h"
 #import "HIColor.h"
 
@@ -55,7 +56,7 @@ An explicit height for the chart. If a _number_, the height is given in pixels. 
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ height;
 /**
-When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if `tickAmount` were specified. This can be prevented by setting `alignTicks` to false. If the grid lines look messy, it's a good idea to hide them for the secondary axis by setting `gridLineWidth` to 0.
+When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if `tickAmount` were specified. This can be prevented by setting `alignTicks` to false. If the grid lines look messy, it's a good idea to hide them for the secondary axis by setting `gridLineWidth` to 0. If `startOnTick` or `endOnTick` in an Axis options are set to false, then the `alignTicks ` will be disabled for the Axis. Disabled for logarithmic axes.
 
 **Defaults to** `true`.
 
@@ -66,7 +67,7 @@ When using multiple axis, the ticks of two or more opposite axes will automatica
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *alignTicks;
 /**
-Common options for all yAxes rendered in a parallel coordinates plot. This feature requires `modules/parallel-coordinates.js`. The default options are:  parallelAxes: { 	lineWidth: 1,    // classic mode only 	gridlinesWidth: 0, // classic mode only 	title: { 		text: '', 		reserveSpace: false 	}, 	labels: { 		x: 0, 		y: 0, 		align: 'center', 		reserveSpace: false 	}, 	offset: 0 }
+Common options for all yAxes rendered in a parallel coordinates plot. This feature requires `modules/parallel-coordinates.js`. The default options are:  parallelAxes: {  lineWidth: 1,    // classic mode only  gridlinesWidth: 0, // classic mode only  title: {    text: '',    reserveSpace: false  },  labels: {    x: 0,    y: 0,    align: 'center',    reserveSpace: false  },  offset: 0 }
 
 **Try it**
 
@@ -306,6 +307,14 @@ The margin between the left outer edge of the chart and the plot area. Use this 
 * [150px left margin](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/marginleft/)
 */
 @property(nonatomic, readwrite) NSNumber *marginLeft;
+/**
+Options for a scrollable plot area. This feature provides a minimum width for the plot area of the chart. If the width gets smaller than this, typically on mobile devices, a native browser scrollbar is presented below the chart. This scrollbar provides smooth scrolling for the contents of the plot area, whereas the title, legend and axes are fixed.
+
+**Try it**
+
+* [Scrollable plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/scrollable-plotarea)
+*/
+@property(nonatomic, readwrite) HIScrollablePlotArea *scrollablePlotArea;
 /**
 Whether to apply a drop shadow to the outer chart area. Requires that backgroundColor be set. The shadow can be an object configuration containing `color`, `offsetX`, `offsetY`, `opacity` and `width`.
 

@@ -11,31 +11,31 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.funnel) {
-        params[@"funnel"] = self.funnel;
+		params[@"funnel"] = self.funnel;
 	}
 	if (self.pyramid) {
-        params[@"pyramid"] = self.pyramid;
+		params[@"pyramid"] = self.pyramid;
 	}
 	if (self.columnrange) {
-        params[@"columnrange"] = self.columnrange;
+		params[@"columnrange"] = self.columnrange;
 	}
 	if (self.errorbar) {
-        params[@"errorbar"] = self.errorbar;
+		params[@"errorbar"] = self.errorbar;
 	}
 	if (self.areasplinerange) {
-        params[@"areasplinerange"] = self.areasplinerange;
+		params[@"areasplinerange"] = self.areasplinerange;
 	}
 	if (self.waterfall) {
-        params[@"waterfall"] = self.waterfall;
+		params[@"waterfall"] = self.waterfall;
 	}
 	if (self.arearange) {
-        params[@"arearange"] = self.arearange;
+		params[@"arearange"] = self.arearange;
 	}
 	if (self.bubble) {
-        params[@"bubble"] = self.bubble;
+		params[@"bubble"] = self.bubble;
 	}
 	if (self.boxplot) {
-        params[@"boxplot"] = self.boxplot;
+		params[@"boxplot"] = self.boxplot;
 	}
 	return params;
 }

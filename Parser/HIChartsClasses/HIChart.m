@@ -112,6 +112,9 @@
 	if (self.marginLeft) {
 		params[@"marginLeft"] = self.marginLeft;
 	}
+	if (self.scrollablePlotArea) {
+		params[@"scrollablePlotArea"] = [self.scrollablePlotArea getParams];
+	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
 	}
@@ -353,6 +356,15 @@
 -(void)setMarginLeft:(NSNumber *)marginLeft {
 	_marginLeft = marginLeft;
 	[self updateNSObject:@"marginLeft"];
+}
+
+-(void)setScrollablePlotArea:(HIScrollablePlotArea *)scrollablePlotArea {
+	HIScrollablePlotArea *oldValue = _scrollablePlotArea;
+	if(self.scrollablePlotArea) {
+		[self removeObserver:self forKeyPath:@"scrollablePlotArea.isUpdated"];
+	}
+	_scrollablePlotArea = scrollablePlotArea;
+	[self updateHIObject:oldValue newValue:scrollablePlotArea propertyName:@"scrollablePlotArea"];
 }
 
 -(void)setShadow:(id)shadow {

@@ -16,8 +16,6 @@
 	if (self.outerRadius) {
 		params[@"outerRadius"] = self.outerRadius;
 	}
-	if (self.from) {
-	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
 	}
@@ -50,11 +48,6 @@
 -(void)setOuterRadius:(id)outerRadius {
 	_outerRadius = outerRadius;
 	[self updateNSObject:@"outerRadius"];
-}
-
--(void)setFrom:(id)from {
-	_from = from;
-	[self updateNSObject:@"from"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {

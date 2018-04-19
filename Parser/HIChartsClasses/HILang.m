@@ -52,8 +52,8 @@
 		}
 		params[@"numericSymbols"] = array;
 	}
-	if (self.printChart) {
-		params[@"printChart"] = self.printChart;
+	if (self.downloadSVG) {
+		params[@"downloadSVG"] = self.downloadSVG;
 	}
 	if (self.numericSymbolMagnitude) {
 		params[@"numericSymbolMagnitude"] = self.numericSymbolMagnitude;
@@ -70,8 +70,8 @@
 		}
 		params[@"weekdays"] = array;
 	}
-	if (self.downloadSVG) {
-		params[@"downloadSVG"] = self.downloadSVG;
+	if (self.printChart) {
+		params[@"printChart"] = self.printChart;
 	}
 	if (self.drillUpText) {
 		params[@"drillUpText"] = self.drillUpText;
@@ -90,6 +90,9 @@
 	}
 	if (self.downloadPDF) {
 		params[@"downloadPDF"] = self.downloadPDF;
+	}
+	if (self.openInCloud) {
+		params[@"openInCloud"] = self.openInCloud;
 	}
 	if (self.months) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -178,9 +181,9 @@
 	[self updateArrayObject:oldValue newValue:numericSymbols propertyName:@"numericSymbols"];
 }
 
--(void)setPrintChart:(NSString *)printChart {
-	_printChart = printChart;
-	[self updateNSObject:@"printChart"];
+-(void)setDownloadSVG:(NSString *)downloadSVG {
+	_downloadSVG = downloadSVG;
+	[self updateNSObject:@"downloadSVG"];
 }
 
 -(void)setNumericSymbolMagnitude:(NSNumber *)numericSymbolMagnitude {
@@ -194,9 +197,9 @@
 	[self updateArrayObject:oldValue newValue:weekdays propertyName:@"weekdays"];
 }
 
--(void)setDownloadSVG:(NSString *)downloadSVG {
-	_downloadSVG = downloadSVG;
-	[self updateNSObject:@"downloadSVG"];
+-(void)setPrintChart:(NSString *)printChart {
+	_printChart = printChart;
+	[self updateNSObject:@"printChart"];
 }
 
 -(void)setDrillUpText:(NSString *)drillUpText {
@@ -227,6 +230,11 @@
 -(void)setDownloadPDF:(NSString *)downloadPDF {
 	_downloadPDF = downloadPDF;
 	[self updateNSObject:@"downloadPDF"];
+}
+
+-(void)setOpenInCloud:(NSString *)openInCloud {
+	_openInCloud = openInCloud;
+	[self updateNSObject:@"openInCloud"];
 }
 
 -(void)setMonths:(NSArray<NSString *> *)months {

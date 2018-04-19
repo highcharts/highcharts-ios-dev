@@ -11,69 +11,78 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.funnel) {
+		params[@"funnel"] = self.funnel;
 	}
 	if (self.pyramid) {
+		params[@"pyramid"] = self.pyramid;
 	}
 	if (self.columnrange) {
+		params[@"columnrange"] = self.columnrange;
 	}
 	if (self.errorbar) {
+		params[@"errorbar"] = self.errorbar;
 	}
 	if (self.areasplinerange) {
+		params[@"areasplinerange"] = self.areasplinerange;
 	}
 	if (self.waterfall) {
+		params[@"waterfall"] = self.waterfall;
 	}
 	if (self.arearange) {
+		params[@"arearange"] = self.arearange;
 	}
 	if (self.bubble) {
+		params[@"bubble"] = self.bubble;
 	}
 	if (self.boxplot) {
+		params[@"boxplot"] = self.boxplot;
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setFunnel:(id)funnel {
+-(void)setFunnel:(NSString *)funnel {
 	_funnel = funnel;
 	[self updateNSObject:@"funnel"];
 }
 
--(void)setPyramid:(id)pyramid {
+-(void)setPyramid:(NSString *)pyramid {
 	_pyramid = pyramid;
 	[self updateNSObject:@"pyramid"];
 }
 
--(void)setColumnrange:(id)columnrange {
+-(void)setColumnrange:(NSString *)columnrange {
 	_columnrange = columnrange;
 	[self updateNSObject:@"columnrange"];
 }
 
--(void)setErrorbar:(id)errorbar {
+-(void)setErrorbar:(NSString *)errorbar {
 	_errorbar = errorbar;
 	[self updateNSObject:@"errorbar"];
 }
 
--(void)setAreasplinerange:(id)areasplinerange {
+-(void)setAreasplinerange:(NSString *)areasplinerange {
 	_areasplinerange = areasplinerange;
 	[self updateNSObject:@"areasplinerange"];
 }
 
--(void)setWaterfall:(id)waterfall {
+-(void)setWaterfall:(NSString *)waterfall {
 	_waterfall = waterfall;
 	[self updateNSObject:@"waterfall"];
 }
 
--(void)setArearange:(id)arearange {
+-(void)setArearange:(NSString *)arearange {
 	_arearange = arearange;
 	[self updateNSObject:@"arearange"];
 }
 
--(void)setBubble:(id)bubble {
+-(void)setBubble:(NSString *)bubble {
 	_bubble = bubble;
 	[self updateNSObject:@"bubble"];
 }
 
--(void)setBoxplot:(id)boxplot {
+-(void)setBoxplot:(NSString *)boxplot {
 	_boxplot = boxplot;
 	[self updateNSObject:@"boxplot"];
 }

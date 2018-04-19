@@ -40,9 +40,6 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.startFromThreshold) {
-		params[@"startFromThreshold"] = self.startFromThreshold;
-	}
 	if (self.nodes) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.nodes) {
@@ -94,11 +91,6 @@
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
-}
-
--(void)setStartFromThreshold:(NSNumber *)startFromThreshold {
-	_startFromThreshold = startFromThreshold;
-	[self updateNSObject:@"startFromThreshold"];
 }
 
 -(void)setNodes:(NSArray <HINodes *> *)nodes {

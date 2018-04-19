@@ -118,7 +118,7 @@ User supplied description text. This is added after the main summary if present.
 */
 @property(nonatomic, readwrite) NSString *definition;
 /**
-Lang configuration for the series main summary. Each series type has two modes: 	1. This series type is the only series type used in the 		chart 	2. This is a combination chart with multiple series types If a definition does not exist for the specific series type and mode, the 'default' lang definitions are used.
+Lang configuration for the series main summary. Each series type has two modes:   1. This series type is the only series type used in the    chart  2. This is a combination chart with multiple series types If a definition does not exist for the specific series type and mode, the 'default' lang definitions are used.
 */
 @property(nonatomic, readwrite) HISummary *summary;
 /**
@@ -326,6 +326,7 @@ An array specifying which option maps to which key in the data point array. This
 **Try it**
 
 * [An extended data array with keys](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/)
+* [Nested keys used to access object properties](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-nested-keys/)
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *keys;
 /**

@@ -190,7 +190,9 @@ def get_type(x):
         "umber": 'NSNumber',
         "function|null": 'HIFunction',
         #6.0.6
-        "Undefined|Number": 'NSNumber'
+        "Undefined|Number": 'NSNumber',
+        #6.1.0
+        "Bool": 'NSNumber /* Bool */'
     }[str(x)]
 
 
