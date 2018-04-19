@@ -75,7 +75,7 @@
     
     series.dataLabels = [[HIDataLabels alloc]init];
     series.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
-    series.dataLabels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return Highcharts.numberFormat(this.y / 1000, 0, ',') + 'k'; }"];
+    series.dataLabels.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return Highcharts.numberFormat(this.y / 1000, 0, ',') + 'k'; }"];
     series.dataLabels.style = [[HIStyle alloc] init];
     series.dataLabels.style.fontWeight = @"bold";
     series.pointPadding = @0;

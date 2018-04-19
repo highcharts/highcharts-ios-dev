@@ -45,10 +45,10 @@
     yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Temperature";
     yaxis.labels = [[HILabels alloc]init];
-    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value + '°'; }"];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return this.value + '°'; }"];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
+//    tooltip.crosshairs = [[NSNumber alloc] initWithBool:true];
     tooltip.shared = [[NSNumber alloc] initWithBool:true];
     
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc]init];

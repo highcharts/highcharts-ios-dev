@@ -62,11 +62,11 @@
     options.legend = legend;
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.formatter = [[HIFunction alloc] initWithFunction:@"function () { return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> sold <br><b>' + this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>'; }"];
+    tooltip.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> sold <br><b>' + this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>'; }"];
     
     HIHeatmap *heatmap = [[HIHeatmap alloc]init];
     heatmap.name = @"Sales per employee";
-    heatmap.borderWidth = @1;
+//    heatmap.borderWidth = @1;
     heatmap.dataLabels = [[HIDataLabels alloc]init];
     heatmap.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     heatmap.dataLabels.color = [[HIColor alloc]initWithHexValue:@"000000"];

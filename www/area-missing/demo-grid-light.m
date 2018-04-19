@@ -44,10 +44,10 @@
     yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Y-Axis";
     yaxis.labels = [[HILabels alloc]init];
-    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value; }"];
+    yaxis.labels.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return this.value; }"];
     
     HITooltip *tooltip = [[HITooltip alloc]init];
-    tooltip.formatter = [[HIFunction alloc] initWithFunction:@" function () { return '<b>' + this.series.name + '</b><br/>' + this.x + ': ' + this.y; }"];
+    tooltip.formatter = [[HIFunction alloc] initWithJSFunction:@" function () { return '<b>' + this.series.name + '</b><br/>' + this.x + ': ' + this.y; }"];
     
     HILegend *legend = [[HILegend alloc]init];
     legend.layout = @"vertical";

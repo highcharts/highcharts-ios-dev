@@ -25,6 +25,11 @@
     
     HISubtitle *subtitle = [[HISubtitle alloc]init];
     subtitle.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"absolute", @"position", @"0px", @"right", @"10px", @"bottom", nil];
+    subtitle.style = @{
+                        @"position": @"absolute",
+                        @"right": @"0px",
+                        @"bottom": @"10px"
+                    };
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.categories = [NSMutableArray arrayWithObjects:@"Monday",
@@ -38,8 +43,8 @@
     HIYAxis *yaxis = [[HIYAxis alloc]init];
     yaxis.title = [[HITitle alloc]init];
     yaxis.title.text = @"Number of units";
-    yaxis.labels = [[HILabels alloc]init];
-    yaxis.labels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.value; }"];
+    yaxis.allowDecimals = [[NSNumber alloc] initWithBool:false];
+    yaxis.min = @0;
     
     HILegend *legend = [[HILegend alloc]init];
     legend.layout = @"vertical";
