@@ -12,6 +12,19 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBellcurve *copyBellcurve = [[HIBellcurve allocWithZone: zone] init];
+	copyBellcurve.intervals = [self.intervals copyWithZone: zone];
+	copyBellcurve.pointsInInterval = [self.pointsInInterval copyWithZone: zone];
+	copyBellcurve.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
+	copyBellcurve.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyBellcurve.fillColor = [self.fillColor copyWithZone: zone];
+	copyBellcurve.lineColor = [self.lineColor copyWithZone: zone];
+	copyBellcurve.fillOpacity = [self.fillOpacity copyWithZone: zone];
+	copyBellcurve.baseSeries = [self.baseSeries copyWithZone: zone];
+	return copyBellcurve;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

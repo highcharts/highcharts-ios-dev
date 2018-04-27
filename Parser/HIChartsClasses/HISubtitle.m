@@ -7,6 +7,20 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HISubtitle *copySubtitle = [[HISubtitle allocWithZone: zone] init];
+	copySubtitle.style = [self.style copyWithZone: zone];
+	copySubtitle.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copySubtitle.text = [self.text copyWithZone: zone];
+	copySubtitle.align = [self.align copyWithZone: zone];
+	copySubtitle.useHTML = [self.useHTML copyWithZone: zone];
+	copySubtitle.y = [self.y copyWithZone: zone];
+	copySubtitle.x = [self.x copyWithZone: zone];
+	copySubtitle.widthAdjust = [self.widthAdjust copyWithZone: zone];
+	copySubtitle.floating = [self.floating copyWithZone: zone];
+	return copySubtitle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

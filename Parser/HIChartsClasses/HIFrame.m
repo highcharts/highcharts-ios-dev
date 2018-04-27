@@ -7,6 +7,20 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIFrame *copyFrame = [[HIFrame allocWithZone: zone] init];
+	copyFrame.right = [self.right copyWithZone: zone];
+	copyFrame.bottom = [self.bottom copyWithZone: zone];
+	copyFrame.top = [self.top copyWithZone: zone];
+	copyFrame.back = [self.back copyWithZone: zone];
+	copyFrame.visible = [self.visible copyWithZone: zone];
+	copyFrame.front = [self.front copyWithZone: zone];
+	copyFrame.size = [self.size copyWithZone: zone];
+	copyFrame.side = [self.side copyWithZone: zone];
+	copyFrame.left = [self.left copyWithZone: zone];
+	return copyFrame;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

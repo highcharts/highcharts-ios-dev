@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIDataClasses *copyDataClasses = [[HIDataClasses allocWithZone: zone] init];
+	copyDataClasses.color = [self.color copyWithZone: zone];
+	copyDataClasses.to = [self.to copyWithZone: zone];
+	copyDataClasses.from = [self.from copyWithZone: zone];
+	copyDataClasses.name = [self.name copyWithZone: zone];
+	return copyDataClasses;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

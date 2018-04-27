@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HINoData *copyNoData = [[HINoData allocWithZone: zone] init];
+	copyNoData.position = [self.position copyWithZone: zone];
+	copyNoData.style = [self.style copyWithZone: zone];
+	copyNoData.attr = [self.attr copyWithZone: zone];
+	copyNoData.useHTML = [self.useHTML copyWithZone: zone];
+	return copyNoData;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

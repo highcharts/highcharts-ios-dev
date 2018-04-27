@@ -12,6 +12,23 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIVariwide *copyVariwide = [[HIVariwide allocWithZone: zone] init];
+	copyVariwide.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyVariwide.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyVariwide.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyVariwide.pointRange = [self.pointRange copyWithZone: zone];
+	copyVariwide.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyVariwide.colors = [self.colors copyWithZone: zone];
+	copyVariwide.borderColor = [self.borderColor copyWithZone: zone];
+	copyVariwide.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyVariwide.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyVariwide.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyVariwide.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyVariwide.grouping = [self.grouping copyWithZone: zone];
+	return copyVariwide;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

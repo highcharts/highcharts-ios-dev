@@ -12,6 +12,30 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIWaterfall *copyWaterfall = [[HIWaterfall allocWithZone: zone] init];
+	copyWaterfall.borderColor = [self.borderColor copyWithZone: zone];
+	copyWaterfall.upColor = [self.upColor copyWithZone: zone];
+	copyWaterfall.lineColor = [self.lineColor copyWithZone: zone];
+	copyWaterfall.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyWaterfall.pointRange = [self.pointRange copyWithZone: zone];
+	copyWaterfall.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyWaterfall.groupZPadding = [self.groupZPadding copyWithZone: zone];
+	copyWaterfall.colors = [self.colors copyWithZone: zone];
+	copyWaterfall.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyWaterfall.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyWaterfall.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyWaterfall.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyWaterfall.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyWaterfall.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyWaterfall.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyWaterfall.crisp = [self.crisp copyWithZone: zone];
+	copyWaterfall.depth = [self.depth copyWithZone: zone];
+	copyWaterfall.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyWaterfall.grouping = [self.grouping copyWithZone: zone];
+	return copyWaterfall;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

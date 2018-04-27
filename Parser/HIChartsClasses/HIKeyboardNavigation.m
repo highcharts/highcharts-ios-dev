@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIKeyboardNavigation *copyKeyboardNavigation = [[HIKeyboardNavigation allocWithZone: zone] init];
+	copyKeyboardNavigation.enabled = [self.enabled copyWithZone: zone];
+	copyKeyboardNavigation.focusBorder = [self.focusBorder copyWithZone: zone];
+	copyKeyboardNavigation.mode = [self.mode copyWithZone: zone];
+	copyKeyboardNavigation.skipNullPoints = [self.skipNullPoints copyWithZone: zone];
+	return copyKeyboardNavigation;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

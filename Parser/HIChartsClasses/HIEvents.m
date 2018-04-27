@@ -7,6 +7,38 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIEvents *copyEvents = [[HIEvents allocWithZone: zone] init];
+	copyEvents.legendItemClick = [self.legendItemClick copyWithZone: zone];
+	copyEvents.checkboxClick = [self.checkboxClick copyWithZone: zone];
+	copyEvents.pointInBreak = [self.pointInBreak copyWithZone: zone];
+	copyEvents.afterBreaks = [self.afterBreaks copyWithZone: zone];
+	copyEvents.pointBreak = [self.pointBreak copyWithZone: zone];
+	copyEvents.setExtremes = [self.setExtremes copyWithZone: zone];
+	copyEvents.afterSetExtremes = [self.afterSetExtremes copyWithZone: zone];
+	copyEvents.unselect = [self.unselect copyWithZone: zone];
+	copyEvents.update = [self.update copyWithZone: zone];
+	copyEvents.remove = [self.remove copyWithZone: zone];
+	copyEvents.mouseOut = [self.mouseOut copyWithZone: zone];
+	copyEvents.mouseOver = [self.mouseOver copyWithZone: zone];
+	copyEvents.click = [self.click copyWithZone: zone];
+	copyEvents.select = [self.select copyWithZone: zone];
+	copyEvents.hide = [self.hide copyWithZone: zone];
+	copyEvents.show = [self.show copyWithZone: zone];
+	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
+	copyEvents.load = [self.load copyWithZone: zone];
+	copyEvents.selection = [self.selection copyWithZone: zone];
+	copyEvents.render = [self.render copyWithZone: zone];
+	copyEvents.addSeries = [self.addSeries copyWithZone: zone];
+	copyEvents.drillup = [self.drillup copyWithZone: zone];
+	copyEvents.beforePrint = [self.beforePrint copyWithZone: zone];
+	copyEvents.drillupall = [self.drillupall copyWithZone: zone];
+	copyEvents.drilldown = [self.drilldown copyWithZone: zone];
+	copyEvents.redraw = [self.redraw copyWithZone: zone];
+	copyEvents.afterPrint = [self.afterPrint copyWithZone: zone];
+	return copyEvents;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

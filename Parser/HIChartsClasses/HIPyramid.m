@@ -12,6 +12,28 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPyramid *copyPyramid = [[HIPyramid allocWithZone: zone] init];
+	copyPyramid.reversed = [self.reversed copyWithZone: zone];
+	copyPyramid.neckHeight = [self.neckHeight copyWithZone: zone];
+	copyPyramid.neckWidth = [self.neckWidth copyWithZone: zone];
+	copyPyramid.center = [self.center copyWithZone: zone];
+	copyPyramid.height = [self.height copyWithZone: zone];
+	copyPyramid.width = [self.width copyWithZone: zone];
+	copyPyramid.borderColor = [self.borderColor copyWithZone: zone];
+	copyPyramid.endAngle = [self.endAngle copyWithZone: zone];
+	copyPyramid.innerSize = [self.innerSize copyWithZone: zone];
+	copyPyramid.clip = [self.clip copyWithZone: zone];
+	copyPyramid.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copyPyramid.depth = [self.depth copyWithZone: zone];
+	copyPyramid.colors = [self.colors copyWithZone: zone];
+	copyPyramid.minSize = [self.minSize copyWithZone: zone];
+	copyPyramid.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyPyramid.startAngle = [self.startAngle copyWithZone: zone];
+	copyPyramid.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	return copyPyramid;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

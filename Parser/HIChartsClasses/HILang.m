@@ -7,6 +7,36 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HILang *copyLang = [[HILang allocWithZone: zone] init];
+	copyLang.downloadCSV = [self.downloadCSV copyWithZone: zone];
+	copyLang.downloadXLS = [self.downloadXLS copyWithZone: zone];
+	copyLang.downloadPNG = [self.downloadPNG copyWithZone: zone];
+	copyLang.accessibility = [self.accessibility copyWithZone: zone];
+	copyLang.shortWeekdays = [self.shortWeekdays copyWithZone: zone];
+	copyLang.noData = [self.noData copyWithZone: zone];
+	copyLang.loading = [self.loading copyWithZone: zone];
+	copyLang.numericSymbols = [self.numericSymbols copyWithZone: zone];
+	copyLang.downloadSVG = [self.downloadSVG copyWithZone: zone];
+	copyLang.numericSymbolMagnitude = [self.numericSymbolMagnitude copyWithZone: zone];
+	copyLang.weekdays = [self.weekdays copyWithZone: zone];
+	copyLang.printChart = [self.printChart copyWithZone: zone];
+	copyLang.drillUpText = [self.drillUpText copyWithZone: zone];
+	copyLang.viewData = [self.viewData copyWithZone: zone];
+	copyLang.contextButtonTitle = [self.contextButtonTitle copyWithZone: zone];
+	copyLang.invalidDate = [self.invalidDate copyWithZone: zone];
+	copyLang.resetZoom = [self.resetZoom copyWithZone: zone];
+	copyLang.downloadPDF = [self.downloadPDF copyWithZone: zone];
+	copyLang.openInCloud = [self.openInCloud copyWithZone: zone];
+	copyLang.months = [self.months copyWithZone: zone];
+	copyLang.shortMonths = [self.shortMonths copyWithZone: zone];
+	copyLang.downloadJPEG = [self.downloadJPEG copyWithZone: zone];
+	copyLang.decimalPoint = [self.decimalPoint copyWithZone: zone];
+	copyLang.resetZoomTitle = [self.resetZoomTitle copyWithZone: zone];
+	copyLang.thousandsSep = [self.thousandsSep copyWithZone: zone];
+	return copyLang;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

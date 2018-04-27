@@ -7,6 +7,12 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPartialFill *copyPartialFill = [[HIPartialFill allocWithZone: zone] init];
+	copyPartialFill.fill = [self.fill copyWithZone: zone];
+	return copyPartialFill;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

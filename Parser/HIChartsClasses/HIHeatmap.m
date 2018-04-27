@@ -12,6 +12,15 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIHeatmap *copyHeatmap = [[HIHeatmap allocWithZone: zone] init];
+	copyHeatmap.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyHeatmap.colsize = [self.colsize copyWithZone: zone];
+	copyHeatmap.rowsize = [self.rowsize copyWithZone: zone];
+	copyHeatmap.nullColor = [self.nullColor copyWithZone: zone];
+	return copyHeatmap;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

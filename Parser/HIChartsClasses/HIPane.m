@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPane *copyPane = [[HIPane allocWithZone: zone] init];
+	copyPane.endAngle = [self.endAngle copyWithZone: zone];
+	copyPane.startAngle = [self.startAngle copyWithZone: zone];
+	copyPane.center = [self.center copyWithZone: zone];
+	copyPane.background = [self.background copyWithZone: zone];
+	copyPane.size = [self.size copyWithZone: zone];
+	return copyPane;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

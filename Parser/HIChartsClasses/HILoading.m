@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HILoading *copyLoading = [[HILoading allocWithZone: zone] init];
+	copyLoading.style = [self.style copyWithZone: zone];
+	copyLoading.labelStyle = [self.labelStyle copyWithZone: zone];
+	copyLoading.hideDuration = [self.hideDuration copyWithZone: zone];
+	copyLoading.showDuration = [self.showDuration copyWithZone: zone];
+	return copyLoading;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

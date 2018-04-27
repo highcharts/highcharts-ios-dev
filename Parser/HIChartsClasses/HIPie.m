@@ -12,6 +12,24 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPie *copyPie = [[HIPie allocWithZone: zone] init];
+	copyPie.borderColor = [self.borderColor copyWithZone: zone];
+	copyPie.endAngle = [self.endAngle copyWithZone: zone];
+	copyPie.innerSize = [self.innerSize copyWithZone: zone];
+	copyPie.center = [self.center copyWithZone: zone];
+	copyPie.clip = [self.clip copyWithZone: zone];
+	copyPie.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copyPie.depth = [self.depth copyWithZone: zone];
+	copyPie.colors = [self.colors copyWithZone: zone];
+	copyPie.minSize = [self.minSize copyWithZone: zone];
+	copyPie.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyPie.startAngle = [self.startAngle copyWithZone: zone];
+	copyPie.size = [self.size copyWithZone: zone];
+	copyPie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	return copyPie;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

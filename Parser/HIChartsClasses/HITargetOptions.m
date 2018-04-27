@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HITargetOptions *copyTargetOptions = [[HITargetOptions allocWithZone: zone] init];
+	copyTargetOptions.borderColor = [self.borderColor copyWithZone: zone];
+	copyTargetOptions.width = [self.width copyWithZone: zone];
+	copyTargetOptions.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyTargetOptions.color = [self.color copyWithZone: zone];
+	copyTargetOptions.height = [self.height copyWithZone: zone];
+	return copyTargetOptions;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

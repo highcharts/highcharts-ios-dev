@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIHalo *copyHalo = [[HIHalo allocWithZone: zone] init];
+	copyHalo.opacity = [self.opacity copyWithZone: zone];
+	copyHalo.attributes = [self.attributes copyWithZone: zone];
+	copyHalo.enabled = [self.enabled copyWithZone: zone];
+	copyHalo.size = [self.size copyWithZone: zone];
+	return copyHalo;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

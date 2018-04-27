@@ -12,6 +12,29 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBullet *copyBullet = [[HIBullet allocWithZone: zone] init];
+	copyBullet.targetOptions = [self.targetOptions copyWithZone: zone];
+	copyBullet.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyBullet.pointRange = [self.pointRange copyWithZone: zone];
+	copyBullet.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyBullet.groupZPadding = [self.groupZPadding copyWithZone: zone];
+	copyBullet.colors = [self.colors copyWithZone: zone];
+	copyBullet.borderColor = [self.borderColor copyWithZone: zone];
+	copyBullet.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyBullet.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyBullet.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyBullet.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyBullet.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyBullet.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyBullet.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyBullet.crisp = [self.crisp copyWithZone: zone];
+	copyBullet.depth = [self.depth copyWithZone: zone];
+	copyBullet.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyBullet.grouping = [self.grouping copyWithZone: zone];
+	return copyBullet;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

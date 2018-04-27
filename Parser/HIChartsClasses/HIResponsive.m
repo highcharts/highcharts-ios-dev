@@ -7,6 +7,12 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIResponsive *copyResponsive = [[HIResponsive allocWithZone: zone] init];
+	copyResponsive.rules = [self.rules copyWithZone: zone];
+	return copyResponsive;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -12,6 +12,23 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIWordcloud *copyWordcloud = [[HIWordcloud allocWithZone: zone] init];
+	copyWordcloud.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyWordcloud.style = [self.style copyWithZone: zone];
+	copyWordcloud.minFontSize = [self.minFontSize copyWithZone: zone];
+	copyWordcloud.maxFontSize = [self.maxFontSize copyWithZone: zone];
+	copyWordcloud.spiral = [self.spiral copyWithZone: zone];
+	copyWordcloud.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyWordcloud.rotation = [self.rotation copyWithZone: zone];
+	copyWordcloud.placementStrategy = [self.placementStrategy copyWithZone: zone];
+	copyWordcloud.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyWordcloud.colors = [self.colors copyWithZone: zone];
+	copyWordcloud.borderColor = [self.borderColor copyWithZone: zone];
+	copyWordcloud.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	return copyWordcloud;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

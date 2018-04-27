@@ -7,6 +7,23 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HILevels *copyLevels = [[HILevels allocWithZone: zone] init];
+	copyLevels.borderColor = [self.borderColor copyWithZone: zone];
+	copyLevels.colorVariation = [self.colorVariation copyWithZone: zone];
+	copyLevels.levelSize = [self.levelSize copyWithZone: zone];
+	copyLevels.borderDashStyle = [self.borderDashStyle copyWithZone: zone];
+	copyLevels.color = [self.color copyWithZone: zone];
+	copyLevels.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyLevels.rotationMode = [self.rotationMode copyWithZone: zone];
+	copyLevels.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyLevels.rotation = [self.rotation copyWithZone: zone];
+	copyLevels.level = [self.level copyWithZone: zone];
+	copyLevels.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
+	copyLevels.layoutStartingDirection = [self.layoutStartingDirection copyWithZone: zone];
+	return copyLevels;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

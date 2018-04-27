@@ -12,6 +12,29 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIVariablepie *copyVariablepie = [[HIVariablepie allocWithZone: zone] init];
+	copyVariablepie.zMax = [self.zMax copyWithZone: zone];
+	copyVariablepie.minPointSize = [self.minPointSize copyWithZone: zone];
+	copyVariablepie.sizeBy = [self.sizeBy copyWithZone: zone];
+	copyVariablepie.zMin = [self.zMin copyWithZone: zone];
+	copyVariablepie.maxPointSize = [self.maxPointSize copyWithZone: zone];
+	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
+	copyVariablepie.endAngle = [self.endAngle copyWithZone: zone];
+	copyVariablepie.innerSize = [self.innerSize copyWithZone: zone];
+	copyVariablepie.center = [self.center copyWithZone: zone];
+	copyVariablepie.clip = [self.clip copyWithZone: zone];
+	copyVariablepie.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copyVariablepie.depth = [self.depth copyWithZone: zone];
+	copyVariablepie.colors = [self.colors copyWithZone: zone];
+	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
+	copyVariablepie.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyVariablepie.startAngle = [self.startAngle copyWithZone: zone];
+	copyVariablepie.size = [self.size copyWithZone: zone];
+	copyVariablepie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	return copyVariablepie;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

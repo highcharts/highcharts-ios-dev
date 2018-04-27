@@ -12,6 +12,16 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIArea *copyArea = [[HIArea allocWithZone: zone] init];
+	copyArea.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
+	copyArea.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyArea.fillColor = [self.fillColor copyWithZone: zone];
+	copyArea.lineColor = [self.lineColor copyWithZone: zone];
+	copyArea.fillOpacity = [self.fillOpacity copyWithZone: zone];
+	return copyArea;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

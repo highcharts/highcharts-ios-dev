@@ -7,6 +7,20 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPlotLines *copyPlotLines = [[HIPlotLines allocWithZone: zone] init];
+	copyPlotLines.zIndex = [self.zIndex copyWithZone: zone];
+	copyPlotLines.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyPlotLines.color = [self.color copyWithZone: zone];
+	copyPlotLines.value = [self.value copyWithZone: zone];
+	copyPlotLines.id = [self.id copyWithZone: zone];
+	copyPlotLines.className = [self.className copyWithZone: zone];
+	copyPlotLines.width = [self.width copyWithZone: zone];
+	copyPlotLines.label = [self.label copyWithZone: zone];
+	copyPlotLines.events = [self.events copyWithZone: zone];
+	return copyPlotLines;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

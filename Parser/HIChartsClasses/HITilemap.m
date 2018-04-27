@@ -12,6 +12,16 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HITilemap *copyTilemap = [[HITilemap allocWithZone: zone] init];
+	copyTilemap.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyTilemap.colsize = [self.colsize copyWithZone: zone];
+	copyTilemap.rowsize = [self.rowsize copyWithZone: zone];
+	copyTilemap.tileShape = [self.tileShape copyWithZone: zone];
+	copyTilemap.nullColor = [self.nullColor copyWithZone: zone];
+	return copyTilemap;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

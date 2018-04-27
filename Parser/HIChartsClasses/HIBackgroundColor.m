@@ -7,6 +7,13 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBackgroundColor *copyBackgroundColor = [[HIBackgroundColor allocWithZone: zone] init];
+	copyBackgroundColor.linearGradient = [self.linearGradient copyWithZone: zone];
+	copyBackgroundColor.stops = [self.stops copyWithZone: zone];
+	return copyBackgroundColor;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

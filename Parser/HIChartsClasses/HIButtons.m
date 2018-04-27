@@ -7,6 +7,12 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIButtons *copyButtons = [[HIButtons allocWithZone: zone] init];
+	copyButtons.contextButton = [self.contextButton copyWithZone: zone];
+	return copyButtons;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

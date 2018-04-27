@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HITime *copyTime = [[HITime allocWithZone: zone] init];
+	copyTime.Date = [self.Date copyWithZone: zone];
+	copyTime.timezone = [self.timezone copyWithZone: zone];
+	copyTime.getTimezoneOffset = [self.getTimezoneOffset copyWithZone: zone];
+	copyTime.timezoneOffset = [self.timezoneOffset copyWithZone: zone];
+	copyTime.useUTC = [self.useUTC copyWithZone: zone];
+	return copyTime;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

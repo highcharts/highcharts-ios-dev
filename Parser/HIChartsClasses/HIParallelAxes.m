@@ -7,6 +7,67 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIParallelAxes *copyParallelAxes = [[HIParallelAxes allocWithZone: zone] init];
+	copyParallelAxes.labels = [self.labels copyWithZone: zone];
+	copyParallelAxes.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyParallelAxes.offset = [self.offset copyWithZone: zone];
+	copyParallelAxes.title = [self.title copyWithZone: zone];
+	copyParallelAxes.minPadding = [self.minPadding copyWithZone: zone];
+	copyParallelAxes.softMax = [self.softMax copyWithZone: zone];
+	copyParallelAxes.startOnTick = [self.startOnTick copyWithZone: zone];
+	copyParallelAxes.endOnTick = [self.endOnTick copyWithZone: zone];
+	copyParallelAxes.softMin = [self.softMin copyWithZone: zone];
+	copyParallelAxes.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
+	copyParallelAxes.tickWidth = [self.tickWidth copyWithZone: zone];
+	copyParallelAxes.opposite = [self.opposite copyWithZone: zone];
+	copyParallelAxes.max = [self.max copyWithZone: zone];
+	copyParallelAxes.tooltipValueFormat = [self.tooltipValueFormat copyWithZone: zone];
+	copyParallelAxes.reversedStacks = [self.reversedStacks copyWithZone: zone];
+	copyParallelAxes.showLastLabel = [self.showLastLabel copyWithZone: zone];
+	copyParallelAxes.min = [self.min copyWithZone: zone];
+	copyParallelAxes.maxPadding = [self.maxPadding copyWithZone: zone];
+	copyParallelAxes.lineColor = [self.lineColor copyWithZone: zone];
+	copyParallelAxes.gridZIndex = [self.gridZIndex copyWithZone: zone];
+	copyParallelAxes.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyParallelAxes.visible = [self.visible copyWithZone: zone];
+	copyParallelAxes.alignTicks = [self.alignTicks copyWithZone: zone];
+	copyParallelAxes.pane = [self.pane copyWithZone: zone];
+	copyParallelAxes.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
+	copyParallelAxes.reversed = [self.reversed copyWithZone: zone];
+	copyParallelAxes.startOfWeek = [self.startOfWeek copyWithZone: zone];
+	copyParallelAxes.tickPositions = [self.tickPositions copyWithZone: zone];
+	copyParallelAxes.minRange = [self.minRange copyWithZone: zone];
+	copyParallelAxes.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
+	copyParallelAxes.allowDecimals = [self.allowDecimals copyWithZone: zone];
+	copyParallelAxes.tickPositioner = [self.tickPositioner copyWithZone: zone];
+	copyParallelAxes.minorTickLength = [self.minorTickLength copyWithZone: zone];
+	copyParallelAxes.units = [self.units copyWithZone: zone];
+	copyParallelAxes.type = [self.type copyWithZone: zone];
+	copyParallelAxes.events = [self.events copyWithZone: zone];
+	copyParallelAxes.crosshair = [self.crosshair copyWithZone: zone];
+	copyParallelAxes.ceiling = [self.ceiling copyWithZone: zone];
+	copyParallelAxes.definition = [self.definition copyWithZone: zone];
+	copyParallelAxes.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
+	copyParallelAxes.showEmpty = [self.showEmpty copyWithZone: zone];
+	copyParallelAxes.minorTicks = [self.minorTicks copyWithZone: zone];
+	copyParallelAxes.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
+	copyParallelAxes.floor = [self.floor copyWithZone: zone];
+	copyParallelAxes.tickColor = [self.tickColor copyWithZone: zone];
+	copyParallelAxes.minTickInterval = [self.minTickInterval copyWithZone: zone];
+	copyParallelAxes.tickInterval = [self.tickInterval copyWithZone: zone];
+	copyParallelAxes.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyParallelAxes.categories = [self.categories copyWithZone: zone];
+	copyParallelAxes.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyParallelAxes.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyParallelAxes.uniqueNames = [self.uniqueNames copyWithZone: zone];
+	copyParallelAxes.className = [self.className copyWithZone: zone];
+	copyParallelAxes.tickAmount = [self.tickAmount copyWithZone: zone];
+	copyParallelAxes.tickLength = [self.tickLength copyWithZone: zone];
+	copyParallelAxes.tickPosition = [self.tickPosition copyWithZone: zone];
+	return copyParallelAxes;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

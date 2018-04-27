@@ -7,6 +7,17 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIDrilldown *copyDrilldown = [[HIDrilldown allocWithZone: zone] init];
+	copyDrilldown.activeDataLabelStyle = [self.activeDataLabelStyle copyWithZone: zone];
+	copyDrilldown.series = [self.series copyWithZone: zone];
+	copyDrilldown.allowPointDrilldown = [self.allowPointDrilldown copyWithZone: zone];
+	copyDrilldown.animation = [self.animation copyWithZone: zone];
+	copyDrilldown.drillUpButton = [self.drillUpButton copyWithZone: zone];
+	copyDrilldown.activeAxisLabelStyle = [self.activeAxisLabelStyle copyWithZone: zone];
+	return copyDrilldown;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIMenuItemStyle *copyMenuItemStyle = [[HIMenuItemStyle allocWithZone: zone] init];
+	copyMenuItemStyle.padding = [self.padding copyWithZone: zone];
+	copyMenuItemStyle.color = [self.color copyWithZone: zone];
+	copyMenuItemStyle.transition = [self.transition copyWithZone: zone];
+	copyMenuItemStyle.fontSize = [self.fontSize copyWithZone: zone];
+	copyMenuItemStyle.background = [self.background copyWithZone: zone];
+	return copyMenuItemStyle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

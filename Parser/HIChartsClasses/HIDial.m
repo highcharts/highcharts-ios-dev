@@ -7,6 +7,19 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIDial *copyDial = [[HIDial allocWithZone: zone] init];
+	copyDial.borderColor = [self.borderColor copyWithZone: zone];
+	copyDial.rearLength = [self.rearLength copyWithZone: zone];
+	copyDial.baseLength = [self.baseLength copyWithZone: zone];
+	copyDial.radius = [self.radius copyWithZone: zone];
+	copyDial.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyDial.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyDial.topWidth = [self.topWidth copyWithZone: zone];
+	copyDial.baseWidth = [self.baseWidth copyWithZone: zone];
+	return copyDial;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

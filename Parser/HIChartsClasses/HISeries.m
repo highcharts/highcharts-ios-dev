@@ -7,6 +7,72 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HISeries *copySeries = [[HISeries allocWithZone: zone] init];
+	copySeries.data = [self.data copyWithZone: zone];
+	copySeries.id = [self.id copyWithZone: zone];
+	copySeries.index = [self.index copyWithZone: zone];
+	copySeries.legendIndex = [self.legendIndex copyWithZone: zone];
+	copySeries.name = [self.name copyWithZone: zone];
+	copySeries.stack = [self.stack copyWithZone: zone];
+	copySeries.type = [self.type copyWithZone: zone];
+	copySeries.xAxis = [self.xAxis copyWithZone: zone];
+	copySeries.yAxis = [self.yAxis copyWithZone: zone];
+	copySeries.zIndex = [self.zIndex copyWithZone: zone];
+	copySeries.yAxisDescription = [self.yAxisDescription copyWithZone: zone];
+	copySeries.xAxisDescription = [self.xAxisDescription copyWithZone: zone];
+	copySeries.definition = [self.definition copyWithZone: zone];
+	copySeries.summary = [self.summary copyWithZone: zone];
+	copySeries.selected = [self.selected copyWithZone: zone];
+	copySeries.colorIndex = [self.colorIndex copyWithZone: zone];
+	copySeries.point = [self.point copyWithZone: zone];
+	copySeries.color = [self.color copyWithZone: zone];
+	copySeries.pointInterval = [self.pointInterval copyWithZone: zone];
+	copySeries.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copySeries.states = [self.states copyWithZone: zone];
+	copySeries.threshold = [self.threshold copyWithZone: zone];
+	copySeries.softThreshold = [self.softThreshold copyWithZone: zone];
+	copySeries.tooltip = [self.tooltip copyWithZone: zone];
+	copySeries.marker = [self.marker copyWithZone: zone];
+	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copySeries.cursor = [self.cursor copyWithZone: zone];
+	copySeries.dashStyle = [self.dashStyle copyWithZone: zone];
+	copySeries.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copySeries.connectNulls = [self.connectNulls copyWithZone: zone];
+	copySeries.negativeColor = [self.negativeColor copyWithZone: zone];
+	copySeries.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copySeries.label = [self.label copyWithZone: zone];
+	copySeries.stacking = [self.stacking copyWithZone: zone];
+	copySeries.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copySeries.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySeries.events = [self.events copyWithZone: zone];
+	copySeries.animationLimit = [self.animationLimit copyWithZone: zone];
+	copySeries.keys = [self.keys copyWithZone: zone];
+	copySeries.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copySeries.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copySeries.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySeries.step = [self.step copyWithZone: zone];
+	copySeries.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copySeries.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copySeries.shadow = [self.shadow copyWithZone: zone];
+	copySeries.animation = [self.animation copyWithZone: zone];
+	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copySeries.zones = [self.zones copyWithZone: zone];
+	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copySeries.connectEnds = [self.connectEnds copyWithZone: zone];
+	copySeries.visible = [self.visible copyWithZone: zone];
+	copySeries.linkedTo = [self.linkedTo copyWithZone: zone];
+	copySeries.boostThreshold = [self.boostThreshold copyWithZone: zone];
+	copySeries.dataLabels = [self.dataLabels copyWithZone: zone];
+	copySeries.className = [self.className copyWithZone: zone];
+	copySeries.pointStart = [self.pointStart copyWithZone: zone];
+	copySeries.linecap = [self.linecap copyWithZone: zone];
+	copySeries.lineWidth = [self.lineWidth copyWithZone: zone];
+	copySeries.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copySeries.showInLegend = [self.showInLegend copyWithZone: zone];
+	return copySeries;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

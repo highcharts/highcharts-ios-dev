@@ -12,6 +12,11 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIScatter3d *copyScatter3d = [[HIScatter3d allocWithZone: zone] init];
+	return copyScatter3d;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

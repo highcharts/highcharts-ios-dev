@@ -7,6 +7,49 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPlotOptions *copyPlotOptions = [[HIPlotOptions allocWithZone: zone] init];
+	copyPlotOptions.tilemap = [self.tilemap copyWithZone: zone];
+	copyPlotOptions.bellcurve = [self.bellcurve copyWithZone: zone];
+	copyPlotOptions.pyramid = [self.pyramid copyWithZone: zone];
+	copyPlotOptions.columnrange = [self.columnrange copyWithZone: zone];
+	copyPlotOptions.bubble = [self.bubble copyWithZone: zone];
+	copyPlotOptions.errorbar = [self.errorbar copyWithZone: zone];
+	copyPlotOptions.pie = [self.pie copyWithZone: zone];
+	copyPlotOptions.gauge = [self.gauge copyWithZone: zone];
+	copyPlotOptions.pareto = [self.pareto copyWithZone: zone];
+	copyPlotOptions.spline = [self.spline copyWithZone: zone];
+	copyPlotOptions.areaspline = [self.areaspline copyWithZone: zone];
+	copyPlotOptions.polygon = [self.polygon copyWithZone: zone];
+	copyPlotOptions.streamgraph = [self.streamgraph copyWithZone: zone];
+	copyPlotOptions.xrange = [self.xrange copyWithZone: zone];
+	copyPlotOptions.vector = [self.vector copyWithZone: zone];
+	copyPlotOptions.series = [self.series copyWithZone: zone];
+	copyPlotOptions.sunburst = [self.sunburst copyWithZone: zone];
+	copyPlotOptions.boxplot = [self.boxplot copyWithZone: zone];
+	copyPlotOptions.scatter3d = [self.scatter3d copyWithZone: zone];
+	copyPlotOptions.heatmap = [self.heatmap copyWithZone: zone];
+	copyPlotOptions.solidgauge = [self.solidgauge copyWithZone: zone];
+	copyPlotOptions.funnel = [self.funnel copyWithZone: zone];
+	copyPlotOptions.histogram = [self.histogram copyWithZone: zone];
+	copyPlotOptions.waterfall = [self.waterfall copyWithZone: zone];
+	copyPlotOptions.bar = [self.bar copyWithZone: zone];
+	copyPlotOptions.line = [self.line copyWithZone: zone];
+	copyPlotOptions.windbarb = [self.windbarb copyWithZone: zone];
+	copyPlotOptions.variwide = [self.variwide copyWithZone: zone];
+	copyPlotOptions.bullet = [self.bullet copyWithZone: zone];
+	copyPlotOptions.column = [self.column copyWithZone: zone];
+	copyPlotOptions.area = [self.area copyWithZone: zone];
+	copyPlotOptions.treemap = [self.treemap copyWithZone: zone];
+	copyPlotOptions.areasplinerange = [self.areasplinerange copyWithZone: zone];
+	copyPlotOptions.wordcloud = [self.wordcloud copyWithZone: zone];
+	copyPlotOptions.arearange = [self.arearange copyWithZone: zone];
+	copyPlotOptions.variablepie = [self.variablepie copyWithZone: zone];
+	copyPlotOptions.scatter = [self.scatter copyWithZone: zone];
+	copyPlotOptions.sankey = [self.sankey copyWithZone: zone];
+	return copyPlotOptions;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

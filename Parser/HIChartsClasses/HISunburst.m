@@ -12,6 +12,24 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HISunburst *copySunburst = [[HISunburst allocWithZone: zone] init];
+	copySunburst.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copySunburst.rootId = [self.rootId copyWithZone: zone];
+	copySunburst.levelSize = [self.levelSize copyWithZone: zone];
+	copySunburst.center = [self.center copyWithZone: zone];
+	copySunburst.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copySunburst.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
+	copySunburst.levels = [self.levels copyWithZone: zone];
+	copySunburst.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
+	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
+	copySunburst.colors = [self.colors copyWithZone: zone];
+	copySunburst.borderWidth = [self.borderWidth copyWithZone: zone];
+	copySunburst.startAngle = [self.startAngle copyWithZone: zone];
+	copySunburst.size = [self.size copyWithZone: zone];
+	return copySunburst;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

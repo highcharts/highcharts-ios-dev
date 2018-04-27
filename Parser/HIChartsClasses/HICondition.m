@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HICondition *copyCondition = [[HICondition allocWithZone: zone] init];
+	copyCondition.minWidth = [self.minWidth copyWithZone: zone];
+	copyCondition.callback = [self.callback copyWithZone: zone];
+	copyCondition.minHeight = [self.minHeight copyWithZone: zone];
+	copyCondition.maxWidth = [self.maxWidth copyWithZone: zone];
+	copyCondition.maxHeight = [self.maxHeight copyWithZone: zone];
+	return copyCondition;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -7,6 +7,58 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIChart *copyChart = [[HIChart allocWithZone: zone] init];
+	copyChart.polar = [self.polar copyWithZone: zone];
+	copyChart.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyChart.spacingBottom = [self.spacingBottom copyWithZone: zone];
+	copyChart.height = [self.height copyWithZone: zone];
+	copyChart.alignTicks = [self.alignTicks copyWithZone: zone];
+	copyChart.parallelAxes = [self.parallelAxes copyWithZone: zone];
+	copyChart.marginRight = [self.marginRight copyWithZone: zone];
+	copyChart.plotBorderColor = [self.plotBorderColor copyWithZone: zone];
+	copyChart.spacingRight = [self.spacingRight copyWithZone: zone];
+	copyChart.borderColor = [self.borderColor copyWithZone: zone];
+	copyChart.colorCount = [self.colorCount copyWithZone: zone];
+	copyChart.style = [self.style copyWithZone: zone];
+	copyChart.renderTo = [self.renderTo copyWithZone: zone];
+	copyChart.reflow = [self.reflow copyWithZone: zone];
+	copyChart.plotShadow = [self.plotShadow copyWithZone: zone];
+	copyChart.zoomType = [self.zoomType copyWithZone: zone];
+	copyChart.spacingTop = [self.spacingTop copyWithZone: zone];
+	copyChart.marginBottom = [self.marginBottom copyWithZone: zone];
+	copyChart.width = [self.width copyWithZone: zone];
+	copyChart.animation = [self.animation copyWithZone: zone];
+	copyChart.plotBackgroundColor = [self.plotBackgroundColor copyWithZone: zone];
+	copyChart.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyChart.panning = [self.panning copyWithZone: zone];
+	copyChart.options3d = [self.options3d copyWithZone: zone];
+	copyChart.type = [self.type copyWithZone: zone];
+	copyChart.events = [self.events copyWithZone: zone];
+	copyChart.spacingLeft = [self.spacingLeft copyWithZone: zone];
+	copyChart.definition = [self.definition copyWithZone: zone];
+	copyChart.panKey = [self.panKey copyWithZone: zone];
+	copyChart.spacing = [self.spacing copyWithZone: zone];
+	copyChart.marginLeft = [self.marginLeft copyWithZone: zone];
+	copyChart.scrollablePlotArea = [self.scrollablePlotArea copyWithZone: zone];
+	copyChart.shadow = [self.shadow copyWithZone: zone];
+	copyChart.inverted = [self.inverted copyWithZone: zone];
+	copyChart.plotBorderWidth = [self.plotBorderWidth copyWithZone: zone];
+	copyChart.ignoreHiddenSeries = [self.ignoreHiddenSeries copyWithZone: zone];
+	copyChart.selectionMarkerFill = [self.selectionMarkerFill copyWithZone: zone];
+	copyChart.plotBackgroundImage = [self.plotBackgroundImage copyWithZone: zone];
+	copyChart.pinchType = [self.pinchType copyWithZone: zone];
+	copyChart.className = [self.className copyWithZone: zone];
+	copyChart.parallelCoordinates = [self.parallelCoordinates copyWithZone: zone];
+	copyChart.resetZoomButton = [self.resetZoomButton copyWithZone: zone];
+	copyChart.showAxes = [self.showAxes copyWithZone: zone];
+	copyChart.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyChart.typeDescription = [self.typeDescription copyWithZone: zone];
+	copyChart.marginTop = [self.marginTop copyWithZone: zone];
+	copyChart.margin = [self.margin copyWithZone: zone];
+	return copyChart;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

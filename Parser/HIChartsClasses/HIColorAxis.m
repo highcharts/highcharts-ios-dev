@@ -7,6 +7,67 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIColorAxis *copyColorAxis = [[HIColorAxis allocWithZone: zone] init];
+	copyColorAxis.dataClasses = [self.dataClasses copyWithZone: zone];
+	copyColorAxis.minPadding = [self.minPadding copyWithZone: zone];
+	copyColorAxis.labels = [self.labels copyWithZone: zone];
+	copyColorAxis.maxColor = [self.maxColor copyWithZone: zone];
+	copyColorAxis.marker = [self.marker copyWithZone: zone];
+	copyColorAxis.min = [self.min copyWithZone: zone];
+	copyColorAxis.stops = [self.stops copyWithZone: zone];
+	copyColorAxis.dataClassColor = [self.dataClassColor copyWithZone: zone];
+	copyColorAxis.endOnTick = [self.endOnTick copyWithZone: zone];
+	copyColorAxis.type = [self.type copyWithZone: zone];
+	copyColorAxis.events = [self.events copyWithZone: zone];
+	copyColorAxis.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
+	copyColorAxis.max = [self.max copyWithZone: zone];
+	copyColorAxis.reversed = [self.reversed copyWithZone: zone];
+	copyColorAxis.gridLineWidth = [self.gridLineWidth copyWithZone: zone];
+	copyColorAxis.tickInterval = [self.tickInterval copyWithZone: zone];
+	copyColorAxis.gridLineColor = [self.gridLineColor copyWithZone: zone];
+	copyColorAxis.minColor = [self.minColor copyWithZone: zone];
+	copyColorAxis.startOnTick = [self.startOnTick copyWithZone: zone];
+	copyColorAxis.maxPadding = [self.maxPadding copyWithZone: zone];
+	copyColorAxis.tickLength = [self.tickLength copyWithZone: zone];
+	copyColorAxis.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyColorAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
+	copyColorAxis.visible = [self.visible copyWithZone: zone];
+	copyColorAxis.alignTicks = [self.alignTicks copyWithZone: zone];
+	copyColorAxis.pane = [self.pane copyWithZone: zone];
+	copyColorAxis.tickWidth = [self.tickWidth copyWithZone: zone];
+	copyColorAxis.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
+	copyColorAxis.startOfWeek = [self.startOfWeek copyWithZone: zone];
+	copyColorAxis.id = [self.id copyWithZone: zone];
+	copyColorAxis.tickPositions = [self.tickPositions copyWithZone: zone];
+	copyColorAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
+	copyColorAxis.minorGridLineColor = [self.minorGridLineColor copyWithZone: zone];
+	copyColorAxis.tickPositioner = [self.tickPositioner copyWithZone: zone];
+	copyColorAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
+	copyColorAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
+	copyColorAxis.units = [self.units copyWithZone: zone];
+	copyColorAxis.softMin = [self.softMin copyWithZone: zone];
+	copyColorAxis.ceiling = [self.ceiling copyWithZone: zone];
+	copyColorAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
+	copyColorAxis.definition = [self.definition copyWithZone: zone];
+	copyColorAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
+	copyColorAxis.minorTicks = [self.minorTicks copyWithZone: zone];
+	copyColorAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
+	copyColorAxis.floor = [self.floor copyWithZone: zone];
+	copyColorAxis.tickColor = [self.tickColor copyWithZone: zone];
+	copyColorAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyColorAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
+	copyColorAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
+	copyColorAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyColorAxis.uniqueNames = [self.uniqueNames copyWithZone: zone];
+	copyColorAxis.className = [self.className copyWithZone: zone];
+	copyColorAxis.tickAmount = [self.tickAmount copyWithZone: zone];
+	copyColorAxis.lineColor = [self.lineColor copyWithZone: zone];
+	copyColorAxis.tickPosition = [self.tickPosition copyWithZone: zone];
+	copyColorAxis.softMax = [self.softMax copyWithZone: zone];
+	return copyColorAxis;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

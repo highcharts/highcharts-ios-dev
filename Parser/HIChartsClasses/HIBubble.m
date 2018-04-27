@@ -12,6 +12,19 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBubble *copyBubble = [[HIBubble allocWithZone: zone] init];
+	copyBubble.zMax = [self.zMax copyWithZone: zone];
+	copyBubble.sizeBy = [self.sizeBy copyWithZone: zone];
+	copyBubble.zMin = [self.zMin copyWithZone: zone];
+	copyBubble.minSize = [self.minSize copyWithZone: zone];
+	copyBubble.maxSize = [self.maxSize copyWithZone: zone];
+	copyBubble.zThreshold = [self.zThreshold copyWithZone: zone];
+	copyBubble.displayNegative = [self.displayNegative copyWithZone: zone];
+	copyBubble.sizeByAbsoluteValue = [self.sizeByAbsoluteValue copyWithZone: zone];
+	return copyBubble;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

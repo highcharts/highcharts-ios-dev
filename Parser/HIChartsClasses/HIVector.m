@@ -12,6 +12,13 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIVector *copyVector = [[HIVector allocWithZone: zone] init];
+	copyVector.vectorLength = [self.vectorLength copyWithZone: zone];
+	copyVector.rotationOrigin = [self.rotationOrigin copyWithZone: zone];
+	return copyVector;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

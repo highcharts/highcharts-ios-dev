@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HICsv *copyCsv = [[HICsv allocWithZone: zone] init];
+	copyCsv.columnHeaderFormatter = [self.columnHeaderFormatter copyWithZone: zone];
+	copyCsv.decimalPoint = [self.decimalPoint copyWithZone: zone];
+	copyCsv.lineDelimiter = [self.lineDelimiter copyWithZone: zone];
+	copyCsv.itemDelimiter = [self.itemDelimiter copyWithZone: zone];
+	copyCsv.dateFormat = [self.dateFormat copyWithZone: zone];
+	return copyCsv;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

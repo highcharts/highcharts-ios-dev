@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HILabelStyle *copyLabelStyle = [[HILabelStyle allocWithZone: zone] init];
+	copyLabelStyle.fontWeight = [self.fontWeight copyWithZone: zone];
+	copyLabelStyle.top = [self.top copyWithZone: zone];
+	copyLabelStyle.position = [self.position copyWithZone: zone];
+	return copyLabelStyle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

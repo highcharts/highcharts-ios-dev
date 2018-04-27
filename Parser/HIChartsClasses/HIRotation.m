@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIRotation *copyRotation = [[HIRotation allocWithZone: zone] init];
+	copyRotation.to = [self.to copyWithZone: zone];
+	copyRotation.from = [self.from copyWithZone: zone];
+	copyRotation.orientations = [self.orientations copyWithZone: zone];
+	return copyRotation;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

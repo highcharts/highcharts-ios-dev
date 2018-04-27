@@ -7,6 +7,18 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBackground *copyBackground = [[HIBackground allocWithZone: zone] init];
+	copyBackground.borderColor = [self.borderColor copyWithZone: zone];
+	copyBackground.outerRadius = [self.outerRadius copyWithZone: zone];
+	copyBackground.innerRadius = [self.innerRadius copyWithZone: zone];
+	copyBackground.className = [self.className copyWithZone: zone];
+	copyBackground.shape = [self.shape copyWithZone: zone];
+	copyBackground.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyBackground.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	return copyBackground;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

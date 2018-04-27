@@ -7,6 +7,13 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIColorVariation *copyColorVariation = [[HIColorVariation allocWithZone: zone] init];
+	copyColorVariation.to = [self.to copyWithZone: zone];
+	copyColorVariation.key = [self.key copyWithZone: zone];
+	return copyColorVariation;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

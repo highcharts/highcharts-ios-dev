@@ -12,6 +12,12 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPareto *copyPareto = [[HIPareto allocWithZone: zone] init];
+	copyPareto.baseSeries = [self.baseSeries copyWithZone: zone];
+	return copyPareto;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

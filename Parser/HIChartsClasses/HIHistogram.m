@@ -12,6 +12,31 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIHistogram *copyHistogram = [[HIHistogram allocWithZone: zone] init];
+	copyHistogram.baseSeries = [self.baseSeries copyWithZone: zone];
+	copyHistogram.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyHistogram.binWidth = [self.binWidth copyWithZone: zone];
+	copyHistogram.binsNumber = [self.binsNumber copyWithZone: zone];
+	copyHistogram.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyHistogram.grouping = [self.grouping copyWithZone: zone];
+	copyHistogram.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyHistogram.pointRange = [self.pointRange copyWithZone: zone];
+	copyHistogram.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyHistogram.groupZPadding = [self.groupZPadding copyWithZone: zone];
+	copyHistogram.colors = [self.colors copyWithZone: zone];
+	copyHistogram.borderColor = [self.borderColor copyWithZone: zone];
+	copyHistogram.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyHistogram.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyHistogram.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyHistogram.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyHistogram.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyHistogram.crisp = [self.crisp copyWithZone: zone];
+	copyHistogram.depth = [self.depth copyWithZone: zone];
+	copyHistogram.borderWidth = [self.borderWidth copyWithZone: zone];
+	return copyHistogram;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

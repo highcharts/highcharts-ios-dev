@@ -7,6 +7,23 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIStackLabels *copyStackLabels = [[HIStackLabels allocWithZone: zone] init];
+	copyStackLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
+	copyStackLabels.style = [self.style copyWithZone: zone];
+	copyStackLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyStackLabels.format = [self.format copyWithZone: zone];
+	copyStackLabels.align = [self.align copyWithZone: zone];
+	copyStackLabels.enabled = [self.enabled copyWithZone: zone];
+	copyStackLabels.useHTML = [self.useHTML copyWithZone: zone];
+	copyStackLabels.y = [self.y copyWithZone: zone];
+	copyStackLabels.x = [self.x copyWithZone: zone];
+	copyStackLabels.rotation = [self.rotation copyWithZone: zone];
+	copyStackLabels.formatter = [self.formatter copyWithZone: zone];
+	copyStackLabels.textAlign = [self.textAlign copyWithZone: zone];
+	return copyStackLabels;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

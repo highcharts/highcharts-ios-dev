@@ -12,6 +12,19 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HISankey *copySankey = [[HISankey allocWithZone: zone] init];
+	copySankey.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copySankey.curveFactor = [self.curveFactor copyWithZone: zone];
+	copySankey.nodePadding = [self.nodePadding copyWithZone: zone];
+	copySankey.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copySankey.linkOpacity = [self.linkOpacity copyWithZone: zone];
+	copySankey.minPointLength = [self.minPointLength copyWithZone: zone];
+	copySankey.colors = [self.colors copyWithZone: zone];
+	copySankey.nodes = [self.nodes copyWithZone: zone];
+	return copySankey;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

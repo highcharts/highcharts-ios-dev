@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIFront *copyFront = [[HIFront allocWithZone: zone] init];
+	copyFront.color = [self.color copyWithZone: zone];
+	copyFront.visible = [self.visible copyWithZone: zone];
+	copyFront.size = [self.size copyWithZone: zone];
+	return copyFront;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

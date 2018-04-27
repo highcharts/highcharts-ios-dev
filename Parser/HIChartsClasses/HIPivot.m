@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPivot *copyPivot = [[HIPivot allocWithZone: zone] init];
+	copyPivot.borderColor = [self.borderColor copyWithZone: zone];
+	copyPivot.radius = [self.radius copyWithZone: zone];
+	copyPivot.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyPivot.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	return copyPivot;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

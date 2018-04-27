@@ -12,6 +12,25 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HITreemap *copyTreemap = [[HITreemap allocWithZone: zone] init];
+	copyTreemap.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyTreemap.borderColor = [self.borderColor copyWithZone: zone];
+	copyTreemap.opacity = [self.opacity copyWithZone: zone];
+	copyTreemap.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	copyTreemap.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
+	copyTreemap.sortIndex = [self.sortIndex copyWithZone: zone];
+	copyTreemap.interactByLeaf = [self.interactByLeaf copyWithZone: zone];
+	copyTreemap.colors = [self.colors copyWithZone: zone];
+	copyTreemap.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
+	copyTreemap.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
+	copyTreemap.layoutStartingDirection = [self.layoutStartingDirection copyWithZone: zone];
+	copyTreemap.levels = [self.levels copyWithZone: zone];
+	copyTreemap.drillUpButton = [self.drillUpButton copyWithZone: zone];
+	copyTreemap.alternateStartingDirection = [self.alternateStartingDirection copyWithZone: zone];
+	return copyTreemap;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

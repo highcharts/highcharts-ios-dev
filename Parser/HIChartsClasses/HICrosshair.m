@@ -7,6 +7,17 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HICrosshair *copyCrosshair = [[HICrosshair allocWithZone: zone] init];
+	copyCrosshair.zIndex = [self.zIndex copyWithZone: zone];
+	copyCrosshair.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyCrosshair.color = [self.color copyWithZone: zone];
+	copyCrosshair.className = [self.className copyWithZone: zone];
+	copyCrosshair.width = [self.width copyWithZone: zone];
+	copyCrosshair.snap = [self.snap copyWithZone: zone];
+	return copyCrosshair;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

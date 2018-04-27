@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPoint *copyPoint = [[HIPoint allocWithZone: zone] init];
+	copyPoint.events = [self.events copyWithZone: zone];
+	copyPoint.y = [self.y copyWithZone: zone];
+	copyPoint.x = [self.x copyWithZone: zone];
+	copyPoint.xAxis = [self.xAxis copyWithZone: zone];
+	copyPoint.yAxis = [self.yAxis copyWithZone: zone];
+	return copyPoint;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

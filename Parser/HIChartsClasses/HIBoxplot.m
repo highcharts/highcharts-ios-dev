@@ -12,6 +12,33 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBoxplot *copyBoxplot = [[HIBoxplot allocWithZone: zone] init];
+	copyBoxplot.medianColor = [self.medianColor copyWithZone: zone];
+	copyBoxplot.medianWidth = [self.medianWidth copyWithZone: zone];
+	copyBoxplot.whiskerColor = [self.whiskerColor copyWithZone: zone];
+	copyBoxplot.stemColor = [self.stemColor copyWithZone: zone];
+	copyBoxplot.whiskerLength = [self.whiskerLength copyWithZone: zone];
+	copyBoxplot.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
+	copyBoxplot.fillColor = [self.fillColor copyWithZone: zone];
+	copyBoxplot.stemWidth = [self.stemWidth copyWithZone: zone];
+	copyBoxplot.whiskerWidth = [self.whiskerWidth copyWithZone: zone];
+	copyBoxplot.pointRange = [self.pointRange copyWithZone: zone];
+	copyBoxplot.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyBoxplot.colors = [self.colors copyWithZone: zone];
+	copyBoxplot.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyBoxplot.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyBoxplot.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyBoxplot.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyBoxplot.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyBoxplot.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyBoxplot.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyBoxplot.crisp = [self.crisp copyWithZone: zone];
+	copyBoxplot.depth = [self.depth copyWithZone: zone];
+	copyBoxplot.grouping = [self.grouping copyWithZone: zone];
+	return copyBoxplot;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

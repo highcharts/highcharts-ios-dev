@@ -12,6 +12,14 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HISolidgauge *copySolidgauge = [[HISolidgauge allocWithZone: zone] init];
+	copySolidgauge.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copySolidgauge.overshoot = [self.overshoot copyWithZone: zone];
+	copySolidgauge.rounded = [self.rounded copyWithZone: zone];
+	return copySolidgauge;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

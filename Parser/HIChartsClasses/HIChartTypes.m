@@ -7,6 +7,33 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIChartTypes *copyChartTypes = [[HIChartTypes allocWithZone: zone] init];
+	copyChartTypes.scatterMultiple = [self.scatterMultiple copyWithZone: zone];
+	copyChartTypes.defaultMultiple = [self.defaultMultiple copyWithZone: zone];
+	copyChartTypes.mapTypeDescription = [self.mapTypeDescription copyWithZone: zone];
+	copyChartTypes.lineMultiple = [self.lineMultiple copyWithZone: zone];
+	copyChartTypes.defaultSingle = [self.defaultSingle copyWithZone: zone];
+	copyChartTypes.emptyChart = [self.emptyChart copyWithZone: zone];
+	copyChartTypes.pieMultiple = [self.pieMultiple copyWithZone: zone];
+	copyChartTypes.columnSingle = [self.columnSingle copyWithZone: zone];
+	copyChartTypes.pieSingle = [self.pieSingle copyWithZone: zone];
+	copyChartTypes.splineMultiple = [self.splineMultiple copyWithZone: zone];
+	copyChartTypes.unknownMap = [self.unknownMap copyWithZone: zone];
+	copyChartTypes.combinationChart = [self.combinationChart copyWithZone: zone];
+	copyChartTypes.columnMultiple = [self.columnMultiple copyWithZone: zone];
+	copyChartTypes.scatterSingle = [self.scatterSingle copyWithZone: zone];
+	copyChartTypes.bubbleMultiple = [self.bubbleMultiple copyWithZone: zone];
+	copyChartTypes.boxplotMultiple = [self.boxplotMultiple copyWithZone: zone];
+	copyChartTypes.barSingle = [self.barSingle copyWithZone: zone];
+	copyChartTypes.barMultiple = [self.barMultiple copyWithZone: zone];
+	copyChartTypes.lineSingle = [self.lineSingle copyWithZone: zone];
+	copyChartTypes.splineSingle = [self.splineSingle copyWithZone: zone];
+	copyChartTypes.bubbleSingle = [self.bubbleSingle copyWithZone: zone];
+	copyChartTypes.boxplotSingle = [self.boxplotSingle copyWithZone: zone];
+	return copyChartTypes;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

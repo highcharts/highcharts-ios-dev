@@ -7,6 +7,12 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIAnimation *copyAnimation = [[HIAnimation allocWithZone: zone] init];
+	copyAnimation.duration = [self.duration copyWithZone: zone];
+	return copyAnimation;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

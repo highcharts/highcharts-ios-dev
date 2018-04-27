@@ -12,6 +12,32 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIWindbarb *copyWindbarb = [[HIWindbarb allocWithZone: zone] init];
+	copyWindbarb.onSeries = [self.onSeries copyWithZone: zone];
+	copyWindbarb.vectorLength = [self.vectorLength copyWithZone: zone];
+	copyWindbarb.yOffset = [self.yOffset copyWithZone: zone];
+	copyWindbarb.xOffset = [self.xOffset copyWithZone: zone];
+	copyWindbarb.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyWindbarb.pointRange = [self.pointRange copyWithZone: zone];
+	copyWindbarb.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyWindbarb.groupZPadding = [self.groupZPadding copyWithZone: zone];
+	copyWindbarb.colors = [self.colors copyWithZone: zone];
+	copyWindbarb.borderColor = [self.borderColor copyWithZone: zone];
+	copyWindbarb.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyWindbarb.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyWindbarb.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyWindbarb.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyWindbarb.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyWindbarb.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyWindbarb.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyWindbarb.crisp = [self.crisp copyWithZone: zone];
+	copyWindbarb.depth = [self.depth copyWithZone: zone];
+	copyWindbarb.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyWindbarb.grouping = [self.grouping copyWithZone: zone];
+	return copyWindbarb;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

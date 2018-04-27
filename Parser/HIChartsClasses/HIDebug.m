@@ -7,6 +7,17 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIDebug *copyDebug = [[HIDebug allocWithZone: zone] init];
+	copyDebug.timeKDTree = [self.timeKDTree copyWithZone: zone];
+	copyDebug.timeSeriesProcessing = [self.timeSeriesProcessing copyWithZone: zone];
+	copyDebug.timeBufferCopy = [self.timeBufferCopy copyWithZone: zone];
+	copyDebug.timeSetup = [self.timeSetup copyWithZone: zone];
+	copyDebug.timeRendering = [self.timeRendering copyWithZone: zone];
+	copyDebug.showSkipSummary = [self.showSkipSummary copyWithZone: zone];
+	return copyDebug;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

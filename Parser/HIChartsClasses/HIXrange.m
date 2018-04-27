@@ -12,6 +12,22 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIXrange *copyXrange = [[HIXrange allocWithZone: zone] init];
+	copyXrange.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyXrange.partialFill = [self.partialFill copyWithZone: zone];
+	copyXrange.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyXrange.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyXrange.groupZPadding = [self.groupZPadding copyWithZone: zone];
+	copyXrange.colors = [self.colors copyWithZone: zone];
+	copyXrange.borderColor = [self.borderColor copyWithZone: zone];
+	copyXrange.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyXrange.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyXrange.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyXrange.borderWidth = [self.borderWidth copyWithZone: zone];
+	return copyXrange;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

@@ -12,6 +12,28 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIFunnel *copyFunnel = [[HIFunnel allocWithZone: zone] init];
+	copyFunnel.center = [self.center copyWithZone: zone];
+	copyFunnel.reversed = [self.reversed copyWithZone: zone];
+	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
+	copyFunnel.height = [self.height copyWithZone: zone];
+	copyFunnel.width = [self.width copyWithZone: zone];
+	copyFunnel.neckWidth = [self.neckWidth copyWithZone: zone];
+	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
+	copyFunnel.endAngle = [self.endAngle copyWithZone: zone];
+	copyFunnel.innerSize = [self.innerSize copyWithZone: zone];
+	copyFunnel.clip = [self.clip copyWithZone: zone];
+	copyFunnel.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copyFunnel.depth = [self.depth copyWithZone: zone];
+	copyFunnel.colors = [self.colors copyWithZone: zone];
+	copyFunnel.minSize = [self.minSize copyWithZone: zone];
+	copyFunnel.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyFunnel.startAngle = [self.startAngle copyWithZone: zone];
+	copyFunnel.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	return copyFunnel;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

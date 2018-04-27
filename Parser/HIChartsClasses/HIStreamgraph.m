@@ -12,6 +12,16 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIStreamgraph *copyStreamgraph = [[HIStreamgraph allocWithZone: zone] init];
+	copyStreamgraph.fillOpacity = [self.fillOpacity copyWithZone: zone];
+	copyStreamgraph.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
+	copyStreamgraph.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyStreamgraph.fillColor = [self.fillColor copyWithZone: zone];
+	copyStreamgraph.lineColor = [self.lineColor copyWithZone: zone];
+	return copyStreamgraph;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

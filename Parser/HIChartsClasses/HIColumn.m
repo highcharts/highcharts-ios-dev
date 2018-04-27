@@ -12,6 +12,28 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIColumn *copyColumn = [[HIColumn allocWithZone: zone] init];
+	copyColumn.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyColumn.pointRange = [self.pointRange copyWithZone: zone];
+	copyColumn.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyColumn.groupZPadding = [self.groupZPadding copyWithZone: zone];
+	copyColumn.colors = [self.colors copyWithZone: zone];
+	copyColumn.borderColor = [self.borderColor copyWithZone: zone];
+	copyColumn.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyColumn.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyColumn.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyColumn.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyColumn.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyColumn.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyColumn.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyColumn.crisp = [self.crisp copyWithZone: zone];
+	copyColumn.depth = [self.depth copyWithZone: zone];
+	copyColumn.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyColumn.grouping = [self.grouping copyWithZone: zone];
+	return copyColumn;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

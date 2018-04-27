@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIFilter *copyFilter = [[HIFilter allocWithZone: zone] init];
+	copyFilter.operator = [self.operator copyWithZone: zone];
+	copyFilter.property = [self.property copyWithZone: zone];
+	copyFilter.value = [self.value copyWithZone: zone];
+	return copyFilter;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

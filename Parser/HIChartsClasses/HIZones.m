@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIZones *copyZones = [[HIZones allocWithZone: zone] init];
+	copyZones.className = [self.className copyWithZone: zone];
+	copyZones.color = [self.color copyWithZone: zone];
+	copyZones.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyZones.fillColor = [self.fillColor copyWithZone: zone];
+	copyZones.value = [self.value copyWithZone: zone];
+	return copyZones;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

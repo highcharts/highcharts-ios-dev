@@ -7,6 +7,84 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIYAxis *copyYAxis = [[HIYAxis allocWithZone: zone] init];
+	copyYAxis.minPadding = [self.minPadding copyWithZone: zone];
+	copyYAxis.labels = [self.labels copyWithZone: zone];
+	copyYAxis.maxColor = [self.maxColor copyWithZone: zone];
+	copyYAxis.softMax = [self.softMax copyWithZone: zone];
+	copyYAxis.angle = [self.angle copyWithZone: zone];
+	copyYAxis.startOnTick = [self.startOnTick copyWithZone: zone];
+	copyYAxis.plotBands = [self.plotBands copyWithZone: zone];
+	copyYAxis.stops = [self.stops copyWithZone: zone];
+	copyYAxis.endOnTick = [self.endOnTick copyWithZone: zone];
+	copyYAxis.softMin = [self.softMin copyWithZone: zone];
+	copyYAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
+	copyYAxis.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
+	copyYAxis.tickWidth = [self.tickWidth copyWithZone: zone];
+	copyYAxis.opposite = [self.opposite copyWithZone: zone];
+	copyYAxis.max = [self.max copyWithZone: zone];
+	copyYAxis.plotLines = [self.plotLines copyWithZone: zone];
+	copyYAxis.gridLineWidth = [self.gridLineWidth copyWithZone: zone];
+	copyYAxis.tooltipValueFormat = [self.tooltipValueFormat copyWithZone: zone];
+	copyYAxis.reversedStacks = [self.reversedStacks copyWithZone: zone];
+	copyYAxis.minColor = [self.minColor copyWithZone: zone];
+	copyYAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
+	copyYAxis.min = [self.min copyWithZone: zone];
+	copyYAxis.stackLabels = [self.stackLabels copyWithZone: zone];
+	copyYAxis.maxPadding = [self.maxPadding copyWithZone: zone];
+	copyYAxis.lineColor = [self.lineColor copyWithZone: zone];
+	copyYAxis.title = [self.title copyWithZone: zone];
+	copyYAxis.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyYAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
+	copyYAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyYAxis.visible = [self.visible copyWithZone: zone];
+	copyYAxis.alignTicks = [self.alignTicks copyWithZone: zone];
+	copyYAxis.pane = [self.pane copyWithZone: zone];
+	copyYAxis.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
+	copyYAxis.reversed = [self.reversed copyWithZone: zone];
+	copyYAxis.startOfWeek = [self.startOfWeek copyWithZone: zone];
+	copyYAxis.id = [self.id copyWithZone: zone];
+	copyYAxis.tickPositions = [self.tickPositions copyWithZone: zone];
+	copyYAxis.minRange = [self.minRange copyWithZone: zone];
+	copyYAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
+	copyYAxis.allowDecimals = [self.allowDecimals copyWithZone: zone];
+	copyYAxis.minorGridLineColor = [self.minorGridLineColor copyWithZone: zone];
+	copyYAxis.tickPositioner = [self.tickPositioner copyWithZone: zone];
+	copyYAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
+	copyYAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
+	copyYAxis.units = [self.units copyWithZone: zone];
+	copyYAxis.type = [self.type copyWithZone: zone];
+	copyYAxis.events = [self.events copyWithZone: zone];
+	copyYAxis.crosshair = [self.crosshair copyWithZone: zone];
+	copyYAxis.ceiling = [self.ceiling copyWithZone: zone];
+	copyYAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
+	copyYAxis.definition = [self.definition copyWithZone: zone];
+	copyYAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
+	copyYAxis.breaks = [self.breaks copyWithZone: zone];
+	copyYAxis.showEmpty = [self.showEmpty copyWithZone: zone];
+	copyYAxis.minorTicks = [self.minorTicks copyWithZone: zone];
+	copyYAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
+	copyYAxis.floor = [self.floor copyWithZone: zone];
+	copyYAxis.offset = [self.offset copyWithZone: zone];
+	copyYAxis.tickColor = [self.tickColor copyWithZone: zone];
+	copyYAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
+	copyYAxis.tickInterval = [self.tickInterval copyWithZone: zone];
+	copyYAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyYAxis.categories = [self.categories copyWithZone: zone];
+	copyYAxis.gridLineColor = [self.gridLineColor copyWithZone: zone];
+	copyYAxis.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyYAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
+	copyYAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyYAxis.uniqueNames = [self.uniqueNames copyWithZone: zone];
+	copyYAxis.className = [self.className copyWithZone: zone];
+	copyYAxis.tickAmount = [self.tickAmount copyWithZone: zone];
+	copyYAxis.tickLength = [self.tickLength copyWithZone: zone];
+	copyYAxis.alternateGridColor = [self.alternateGridColor copyWithZone: zone];
+	copyYAxis.tickPosition = [self.tickPosition copyWithZone: zone];
+	return copyYAxis;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

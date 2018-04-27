@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBoost *copyBoost = [[HIBoost allocWithZone: zone] init];
+	copyBoost.debug = [self.debug copyWithZone: zone];
+	copyBoost.allowForce = [self.allowForce copyWithZone: zone];
+	copyBoost.useGPUTranslations = [self.useGPUTranslations copyWithZone: zone];
+	copyBoost.enabled = [self.enabled copyWithZone: zone];
+	copyBoost.seriesThreshold = [self.seriesThreshold copyWithZone: zone];
+	return copyBoost;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

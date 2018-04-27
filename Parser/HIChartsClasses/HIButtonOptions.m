@@ -7,6 +7,26 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIButtonOptions *copyButtonOptions = [[HIButtonOptions allocWithZone: zone] init];
+	copyButtonOptions.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyButtonOptions.symbolFill = [self.symbolFill copyWithZone: zone];
+	copyButtonOptions.text = [self.text copyWithZone: zone];
+	copyButtonOptions.align = [self.align copyWithZone: zone];
+	copyButtonOptions.enabled = [self.enabled copyWithZone: zone];
+	copyButtonOptions.theme = [self.theme copyWithZone: zone];
+	copyButtonOptions.height = [self.height copyWithZone: zone];
+	copyButtonOptions.width = [self.width copyWithZone: zone];
+	copyButtonOptions.buttonSpacing = [self.buttonSpacing copyWithZone: zone];
+	copyButtonOptions.symbolSize = [self.symbolSize copyWithZone: zone];
+	copyButtonOptions.y = [self.y copyWithZone: zone];
+	copyButtonOptions.symbolStroke = [self.symbolStroke copyWithZone: zone];
+	copyButtonOptions.symbolY = [self.symbolY copyWithZone: zone];
+	copyButtonOptions.symbolX = [self.symbolX copyWithZone: zone];
+	copyButtonOptions.symbolStrokeWidth = [self.symbolStrokeWidth copyWithZone: zone];
+	return copyButtonOptions;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -12,6 +12,15 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIGauge *copyGauge = [[HIGauge allocWithZone: zone] init];
+	copyGauge.dial = [self.dial copyWithZone: zone];
+	copyGauge.overshoot = [self.overshoot copyWithZone: zone];
+	copyGauge.wrap = [self.wrap copyWithZone: zone];
+	copyGauge.pivot = [self.pivot copyWithZone: zone];
+	return copyGauge;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

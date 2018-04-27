@@ -7,6 +7,22 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIShapes *copyShapes = [[HIShapes allocWithZone: zone] init];
+	copyShapes.points = [self.points copyWithZone: zone];
+	copyShapes.markerEnd = [self.markerEnd copyWithZone: zone];
+	copyShapes.markerStart = [self.markerStart copyWithZone: zone];
+	copyShapes.point = [self.point copyWithZone: zone];
+	copyShapes.strokeWidth = [self.strokeWidth copyWithZone: zone];
+	copyShapes.height = [self.height copyWithZone: zone];
+	copyShapes.width = [self.width copyWithZone: zone];
+	copyShapes.stroke = [self.stroke copyWithZone: zone];
+	copyShapes.r = [self.r copyWithZone: zone];
+	copyShapes.type = [self.type copyWithZone: zone];
+	copyShapes.fill = [self.fill copyWithZone: zone];
+	return copyShapes;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

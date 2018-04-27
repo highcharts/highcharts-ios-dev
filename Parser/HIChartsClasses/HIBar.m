@@ -12,6 +12,28 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBar *copyBar = [[HIBar allocWithZone: zone] init];
+	copyBar.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyBar.pointRange = [self.pointRange copyWithZone: zone];
+	copyBar.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyBar.groupZPadding = [self.groupZPadding copyWithZone: zone];
+	copyBar.colors = [self.colors copyWithZone: zone];
+	copyBar.borderColor = [self.borderColor copyWithZone: zone];
+	copyBar.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyBar.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyBar.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyBar.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyBar.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyBar.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyBar.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyBar.crisp = [self.crisp copyWithZone: zone];
+	copyBar.depth = [self.depth copyWithZone: zone];
+	copyBar.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyBar.grouping = [self.grouping copyWithZone: zone];
+	return copyBar;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

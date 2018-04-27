@@ -7,6 +7,12 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIGlobal *copyGlobal = [[HIGlobal allocWithZone: zone] init];
+	copyGlobal.VMLRadialGradientURL = [self.VMLRadialGradientURL copyWithZone: zone];
+	return copyGlobal;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -12,6 +12,11 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HISpline *copySpline = [[HISpline allocWithZone: zone] init];
+	return copySpline;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

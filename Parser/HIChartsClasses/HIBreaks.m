@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIBreaks *copyBreaks = [[HIBreaks allocWithZone: zone] init];
+	copyBreaks.to = [self.to copyWithZone: zone];
+	copyBreaks.breakSize = [self.breakSize copyWithZone: zone];
+	copyBreaks.from = [self.from copyWithZone: zone];
+	copyBreaks.repeat = [self.repeat copyWithZone: zone];
+	return copyBreaks;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

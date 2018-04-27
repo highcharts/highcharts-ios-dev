@@ -7,6 +7,27 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HILabel *copyLabel = [[HILabel allocWithZone: zone] init];
+	copyLabel.style = [self.style copyWithZone: zone];
+	copyLabel.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyLabel.text = [self.text copyWithZone: zone];
+	copyLabel.align = [self.align copyWithZone: zone];
+	copyLabel.textAlign = [self.textAlign copyWithZone: zone];
+	copyLabel.y = [self.y copyWithZone: zone];
+	copyLabel.x = [self.x copyWithZone: zone];
+	copyLabel.rotation = [self.rotation copyWithZone: zone];
+	copyLabel.useHTML = [self.useHTML copyWithZone: zone];
+	copyLabel.minFontSize = [self.minFontSize copyWithZone: zone];
+	copyLabel.maxFontSize = [self.maxFontSize copyWithZone: zone];
+	copyLabel.enabled = [self.enabled copyWithZone: zone];
+	copyLabel.connectorNeighbourDistance = [self.connectorNeighbourDistance copyWithZone: zone];
+	copyLabel.onArea = [self.onArea copyWithZone: zone];
+	copyLabel.boxesToAvoid = [self.boxesToAvoid copyWithZone: zone];
+	copyLabel.connectorAllowed = [self.connectorAllowed copyWithZone: zone];
+	return copyLabel;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

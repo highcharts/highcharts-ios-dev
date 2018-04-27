@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HICredits *copyCredits = [[HICredits allocWithZone: zone] init];
+	copyCredits.style = [self.style copyWithZone: zone];
+	copyCredits.text = [self.text copyWithZone: zone];
+	copyCredits.enabled = [self.enabled copyWithZone: zone];
+	copyCredits.href = [self.href copyWithZone: zone];
+	copyCredits.position = [self.position copyWithZone: zone];
+	return copyCredits;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

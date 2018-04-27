@@ -12,6 +12,11 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HILine *copyLine = [[HILine allocWithZone: zone] init];
+	return copyLine;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

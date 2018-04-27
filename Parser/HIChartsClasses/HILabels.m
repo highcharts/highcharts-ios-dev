@@ -7,6 +7,44 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HILabels *copyLabels = [[HILabels allocWithZone: zone] init];
+	copyLabels.items = [self.items copyWithZone: zone];
+	copyLabels.style = [self.style copyWithZone: zone];
+	copyLabels.y = [self.y copyWithZone: zone];
+	copyLabels.x = [self.x copyWithZone: zone];
+	copyLabels.align = [self.align copyWithZone: zone];
+	copyLabels.distance = [self.distance copyWithZone: zone];
+	copyLabels.zIndex = [self.zIndex copyWithZone: zone];
+	copyLabels.reserveSpace = [self.reserveSpace copyWithZone: zone];
+	copyLabels.format = [self.format copyWithZone: zone];
+	copyLabels.autoRotationLimit = [self.autoRotationLimit copyWithZone: zone];
+	copyLabels.enabled = [self.enabled copyWithZone: zone];
+	copyLabels.staggerLines = [self.staggerLines copyWithZone: zone];
+	copyLabels.position3d = [self.position3d copyWithZone: zone];
+	copyLabels.useHTML = [self.useHTML copyWithZone: zone];
+	copyLabels.padding = [self.padding copyWithZone: zone];
+	copyLabels.step = [self.step copyWithZone: zone];
+	copyLabels.skew3d = [self.skew3d copyWithZone: zone];
+	copyLabels.formatter = [self.formatter copyWithZone: zone];
+	copyLabels.rotation = [self.rotation copyWithZone: zone];
+	copyLabels.autoRotation = [self.autoRotation copyWithZone: zone];
+	copyLabels.point = [self.point copyWithZone: zone];
+	copyLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
+	copyLabels.borderColor = [self.borderColor copyWithZone: zone];
+	copyLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyLabels.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyLabels.text = [self.text copyWithZone: zone];
+	copyLabels.crop = [self.crop copyWithZone: zone];
+	copyLabels.className = [self.className copyWithZone: zone];
+	copyLabels.shape = [self.shape copyWithZone: zone];
+	copyLabels.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyLabels.overflow = [self.overflow copyWithZone: zone];
+	copyLabels.shadow = [self.shadow copyWithZone: zone];
+	return copyLabels;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

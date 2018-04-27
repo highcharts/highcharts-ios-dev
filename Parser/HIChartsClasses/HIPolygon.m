@@ -12,6 +12,12 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIPolygon *copyPolygon = [[HIPolygon allocWithZone: zone] init];
+	copyPolygon.trackByArea = [self.trackByArea copyWithZone: zone];
+	return copyPolygon;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

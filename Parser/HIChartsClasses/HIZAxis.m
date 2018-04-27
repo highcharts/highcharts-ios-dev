@@ -7,6 +7,71 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIZAxis *copyZAxis = [[HIZAxis allocWithZone: zone] init];
+	copyZAxis.minPadding = [self.minPadding copyWithZone: zone];
+	copyZAxis.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
+	copyZAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
+	copyZAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyZAxis.visible = [self.visible copyWithZone: zone];
+	copyZAxis.alignTicks = [self.alignTicks copyWithZone: zone];
+	copyZAxis.pane = [self.pane copyWithZone: zone];
+	copyZAxis.tickWidth = [self.tickWidth copyWithZone: zone];
+	copyZAxis.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
+	copyZAxis.reversed = [self.reversed copyWithZone: zone];
+	copyZAxis.startOfWeek = [self.startOfWeek copyWithZone: zone];
+	copyZAxis.id = [self.id copyWithZone: zone];
+	copyZAxis.tickPositions = [self.tickPositions copyWithZone: zone];
+	copyZAxis.min = [self.min copyWithZone: zone];
+	copyZAxis.minRange = [self.minRange copyWithZone: zone];
+	copyZAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
+	copyZAxis.allowDecimals = [self.allowDecimals copyWithZone: zone];
+	copyZAxis.startOnTick = [self.startOnTick copyWithZone: zone];
+	copyZAxis.minorGridLineColor = [self.minorGridLineColor copyWithZone: zone];
+	copyZAxis.tickPositioner = [self.tickPositioner copyWithZone: zone];
+	copyZAxis.plotBands = [self.plotBands copyWithZone: zone];
+	copyZAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
+	copyZAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
+	copyZAxis.endOnTick = [self.endOnTick copyWithZone: zone];
+	copyZAxis.plotLines = [self.plotLines copyWithZone: zone];
+	copyZAxis.units = [self.units copyWithZone: zone];
+	copyZAxis.softMin = [self.softMin copyWithZone: zone];
+	copyZAxis.type = [self.type copyWithZone: zone];
+	copyZAxis.events = [self.events copyWithZone: zone];
+	copyZAxis.ceiling = [self.ceiling copyWithZone: zone];
+	copyZAxis.labels = [self.labels copyWithZone: zone];
+	copyZAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
+	copyZAxis.definition = [self.definition copyWithZone: zone];
+	copyZAxis.opposite = [self.opposite copyWithZone: zone];
+	copyZAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
+	copyZAxis.max = [self.max copyWithZone: zone];
+	copyZAxis.gridLineWidth = [self.gridLineWidth copyWithZone: zone];
+	copyZAxis.minorTicks = [self.minorTicks copyWithZone: zone];
+	copyZAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
+	copyZAxis.floor = [self.floor copyWithZone: zone];
+	copyZAxis.offset = [self.offset copyWithZone: zone];
+	copyZAxis.tickColor = [self.tickColor copyWithZone: zone];
+	copyZAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
+	copyZAxis.tickInterval = [self.tickInterval copyWithZone: zone];
+	copyZAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyZAxis.categories = [self.categories copyWithZone: zone];
+	copyZAxis.gridLineColor = [self.gridLineColor copyWithZone: zone];
+	copyZAxis.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyZAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
+	copyZAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
+	copyZAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyZAxis.uniqueNames = [self.uniqueNames copyWithZone: zone];
+	copyZAxis.maxPadding = [self.maxPadding copyWithZone: zone];
+	copyZAxis.className = [self.className copyWithZone: zone];
+	copyZAxis.tickAmount = [self.tickAmount copyWithZone: zone];
+	copyZAxis.tickLength = [self.tickLength copyWithZone: zone];
+	copyZAxis.alternateGridColor = [self.alternateGridColor copyWithZone: zone];
+	copyZAxis.title = [self.title copyWithZone: zone];
+	copyZAxis.tickPosition = [self.tickPosition copyWithZone: zone];
+	copyZAxis.softMax = [self.softMax copyWithZone: zone];
+	return copyZAxis;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

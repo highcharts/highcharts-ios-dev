@@ -12,6 +12,33 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIErrorbar *copyErrorbar = [[HIErrorbar allocWithZone: zone] init];
+	copyErrorbar.whiskerWidth = [self.whiskerWidth copyWithZone: zone];
+	copyErrorbar.grouping = [self.grouping copyWithZone: zone];
+	copyErrorbar.medianColor = [self.medianColor copyWithZone: zone];
+	copyErrorbar.medianWidth = [self.medianWidth copyWithZone: zone];
+	copyErrorbar.whiskerColor = [self.whiskerColor copyWithZone: zone];
+	copyErrorbar.stemColor = [self.stemColor copyWithZone: zone];
+	copyErrorbar.whiskerLength = [self.whiskerLength copyWithZone: zone];
+	copyErrorbar.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
+	copyErrorbar.fillColor = [self.fillColor copyWithZone: zone];
+	copyErrorbar.stemWidth = [self.stemWidth copyWithZone: zone];
+	copyErrorbar.pointRange = [self.pointRange copyWithZone: zone];
+	copyErrorbar.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyErrorbar.colors = [self.colors copyWithZone: zone];
+	copyErrorbar.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyErrorbar.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyErrorbar.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyErrorbar.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyErrorbar.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyErrorbar.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyErrorbar.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyErrorbar.crisp = [self.crisp copyWithZone: zone];
+	copyErrorbar.depth = [self.depth copyWithZone: zone];
+	return copyErrorbar;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

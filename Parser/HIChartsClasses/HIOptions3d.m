@@ -7,6 +7,19 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	HIOptions3d *copyOptions3d = [[HIOptions3d allocWithZone: zone] init];
+	copyOptions3d.viewDistance = [self.viewDistance copyWithZone: zone];
+	copyOptions3d.frame = [self.frame copyWithZone: zone];
+	copyOptions3d.axisLabelPosition = [self.axisLabelPosition copyWithZone: zone];
+	copyOptions3d.enabled = [self.enabled copyWithZone: zone];
+	copyOptions3d.beta = [self.beta copyWithZone: zone];
+	copyOptions3d.depth = [self.depth copyWithZone: zone];
+	copyOptions3d.fitToPlot = [self.fitToPlot copyWithZone: zone];
+	copyOptions3d.alpha = [self.alpha copyWithZone: zone];
+	return copyOptions3d;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
