@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HISide *copySide = [[HISide allocWithZone: zone] init];
+	copySide.color = [self.color copyWithZone: zone];
+	copySide.size = [self.size copyWithZone: zone];
+	return copySide;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

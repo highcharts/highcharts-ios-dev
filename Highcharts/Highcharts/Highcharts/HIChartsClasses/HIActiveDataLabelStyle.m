@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIActiveDataLabelStyle *copyActiveDataLabelStyle = [[HIActiveDataLabelStyle allocWithZone: zone] init];
+	copyActiveDataLabelStyle.cursor = [self.cursor copyWithZone: zone];
+	copyActiveDataLabelStyle.color = [self.color copyWithZone: zone];
+	copyActiveDataLabelStyle.textDecoration = [self.textDecoration copyWithZone: zone];
+	copyActiveDataLabelStyle.fontWeight = [self.fontWeight copyWithZone: zone];
+	return copyActiveDataLabelStyle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

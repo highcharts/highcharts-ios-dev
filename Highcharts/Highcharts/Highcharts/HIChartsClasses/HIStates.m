@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIStates *copyStates = [[HIStates allocWithZone: zone] init];
+	copyStates.hover = [self.hover copyWithZone: zone];
+	copyStates.select = [self.select copyWithZone: zone];
+	copyStates.normal = [self.normal copyWithZone: zone];
+	return copyStates;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

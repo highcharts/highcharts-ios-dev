@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIItemCheckboxStyle *copyItemCheckboxStyle = [[HIItemCheckboxStyle allocWithZone: zone] init];
+	copyItemCheckboxStyle.position = [self.position copyWithZone: zone];
+	copyItemCheckboxStyle.height = [self.height copyWithZone: zone];
+	copyItemCheckboxStyle.width = [self.width copyWithZone: zone];
+	return copyItemCheckboxStyle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

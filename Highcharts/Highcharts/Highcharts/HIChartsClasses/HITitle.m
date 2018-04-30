@@ -7,6 +7,27 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HITitle *copyTitle = [[HITitle allocWithZone: zone] init];
+	copyTitle.style = [self.style copyWithZone: zone];
+	copyTitle.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyTitle.text = [self.text copyWithZone: zone];
+	copyTitle.align = [self.align copyWithZone: zone];
+	copyTitle.useHTML = [self.useHTML copyWithZone: zone];
+	copyTitle.y = [self.y copyWithZone: zone];
+	copyTitle.x = [self.x copyWithZone: zone];
+	copyTitle.widthAdjust = [self.widthAdjust copyWithZone: zone];
+	copyTitle.margin = [self.margin copyWithZone: zone];
+	copyTitle.floating = [self.floating copyWithZone: zone];
+	copyTitle.rotation = [self.rotation copyWithZone: zone];
+	copyTitle.reserveSpace = [self.reserveSpace copyWithZone: zone];
+	copyTitle.skew3d = [self.skew3d copyWithZone: zone];
+	copyTitle.position3d = [self.position3d copyWithZone: zone];
+	copyTitle.offset = [self.offset copyWithZone: zone];
+	return copyTitle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

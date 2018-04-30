@@ -7,6 +7,22 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HINavigation *copyNavigation = [[HINavigation allocWithZone: zone] init];
+	copyNavigation.menuStyle = [self.menuStyle copyWithZone: zone];
+	copyNavigation.menuItemStyle = [self.menuItemStyle copyWithZone: zone];
+	copyNavigation.buttonOptions = [self.buttonOptions copyWithZone: zone];
+	copyNavigation.menuItemHoverStyle = [self.menuItemHoverStyle copyWithZone: zone];
+	copyNavigation.style = [self.style copyWithZone: zone];
+	copyNavigation.arrowSize = [self.arrowSize copyWithZone: zone];
+	copyNavigation.enabled = [self.enabled copyWithZone: zone];
+	copyNavigation.inactiveColor = [self.inactiveColor copyWithZone: zone];
+	copyNavigation.animation = [self.animation copyWithZone: zone];
+	copyNavigation.activeColor = [self.activeColor copyWithZone: zone];
+	return copyNavigation;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

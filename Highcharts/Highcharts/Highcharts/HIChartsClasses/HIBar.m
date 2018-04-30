@@ -12,6 +12,80 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIBar *copyBar = [[HIBar allocWithZone: zone] init];
+	copyBar.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyBar.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyBar.pointRange = [self.pointRange copyWithZone: zone];
+	copyBar.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyBar.groupZPadding = [self.groupZPadding copyWithZone: zone];
+	copyBar.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyBar.states = [self.states copyWithZone: zone];
+	copyBar.colors = [self.colors copyWithZone: zone];
+	copyBar.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyBar.threshold = [self.threshold copyWithZone: zone];
+	copyBar.borderColor = [self.borderColor copyWithZone: zone];
+	copyBar.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyBar.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyBar.tooltip = [self.tooltip copyWithZone: zone];
+	copyBar.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
+	copyBar.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyBar.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyBar.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyBar.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyBar.crisp = [self.crisp copyWithZone: zone];
+	copyBar.depth = [self.depth copyWithZone: zone];
+	copyBar.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyBar.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyBar.grouping = [self.grouping copyWithZone: zone];
+	copyBar.selected = [self.selected copyWithZone: zone];
+	copyBar.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyBar.point = [self.point copyWithZone: zone];
+	copyBar.color = [self.color copyWithZone: zone];
+	copyBar.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyBar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyBar.cursor = [self.cursor copyWithZone: zone];
+	copyBar.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBar.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyBar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyBar.label = [self.label copyWithZone: zone];
+	copyBar.stacking = [self.stacking copyWithZone: zone];
+	copyBar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyBar.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyBar.events = [self.events copyWithZone: zone];
+	copyBar.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyBar.definition = [self.definition copyWithZone: zone];
+	copyBar.keys = [self.keys copyWithZone: zone];
+	copyBar.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyBar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copyBar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyBar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyBar.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyBar.shadow = [self.shadow copyWithZone: zone];
+	copyBar.animation = [self.animation copyWithZone: zone];
+	copyBar.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyBar.zones = [self.zones copyWithZone: zone];
+	copyBar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyBar.visible = [self.visible copyWithZone: zone];
+	copyBar.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyBar.boostThreshold = [self.boostThreshold copyWithZone: zone];
+	copyBar.className = [self.className copyWithZone: zone];
+	copyBar.pointStart = [self.pointStart copyWithZone: zone];
+	copyBar.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyBar.data = [self.data copyWithZone: zone];
+	copyBar.id = [self.id copyWithZone: zone];
+	copyBar.index = [self.index copyWithZone: zone];
+	copyBar.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyBar.name = [self.name copyWithZone: zone];
+	copyBar.stack = [self.stack copyWithZone: zone];
+	copyBar.type = [self.type copyWithZone: zone];
+	copyBar.xAxis = [self.xAxis copyWithZone: zone];
+	copyBar.yAxis = [self.yAxis copyWithZone: zone];
+	copyBar.zIndex = [self.zIndex copyWithZone: zone];
+	return copyBar;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

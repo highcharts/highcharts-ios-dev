@@ -7,6 +7,20 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIDateTimeLabelFormats *copyDateTimeLabelFormats = [[HIDateTimeLabelFormats allocWithZone: zone] init];
+	copyDateTimeLabelFormats.millisecond = [self.millisecond copyWithZone: zone];
+	copyDateTimeLabelFormats.week = [self.week copyWithZone: zone];
+	copyDateTimeLabelFormats.hour = [self.hour copyWithZone: zone];
+	copyDateTimeLabelFormats.month = [self.month copyWithZone: zone];
+	copyDateTimeLabelFormats.second = [self.second copyWithZone: zone];
+	copyDateTimeLabelFormats.year = [self.year copyWithZone: zone];
+	copyDateTimeLabelFormats.day = [self.day copyWithZone: zone];
+	copyDateTimeLabelFormats.minute = [self.minute copyWithZone: zone];
+	return copyDateTimeLabelFormats;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

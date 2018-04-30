@@ -7,6 +7,18 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HINodes *copyNodes = [[HINodes allocWithZone: zone] init];
+	copyNodes.name = [self.name copyWithZone: zone];
+	copyNodes.color = [self.color copyWithZone: zone];
+	copyNodes.column = [self.column copyWithZone: zone];
+	copyNodes.offset = [self.offset copyWithZone: zone];
+	copyNodes.id = [self.id copyWithZone: zone];
+	copyNodes.colorIndex = [self.colorIndex copyWithZone: zone];
+	return copyNodes;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

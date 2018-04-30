@@ -7,6 +7,36 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HISummary *copySummary = [[HISummary allocWithZone: zone] init];
+	copySummary.pieCombination = [self.pieCombination copyWithZone: zone];
+	copySummary.pie = [self.pie copyWithZone: zone];
+	copySummary.lineCombination = [self.lineCombination copyWithZone: zone];
+	copySummary.mapbubble = [self.mapbubble copyWithZone: zone];
+	copySummary.spline = [self.spline copyWithZone: zone];
+	copySummary.barCombination = [self.barCombination copyWithZone: zone];
+	copySummary.boxplotCombination = [self.boxplotCombination copyWithZone: zone];
+	copySummary.splineCombination = [self.splineCombination copyWithZone: zone];
+	copySummary.scatterCombination = [self.scatterCombination copyWithZone: zone];
+	copySummary.maplineCombination = [self.maplineCombination copyWithZone: zone];
+	copySummary.bubble = [self.bubble copyWithZone: zone];
+	copySummary.boxplot = [self.boxplot copyWithZone: zone];
+	copySummary.columnCombination = [self.columnCombination copyWithZone: zone];
+	copySummary.map = [self.map copyWithZone: zone];
+	copySummary.line = [self.line copyWithZone: zone];
+	copySummary.mapline = [self.mapline copyWithZone: zone];
+	copySummary.bar = [self.bar copyWithZone: zone];
+	copySummary.mapCombination = [self.mapCombination copyWithZone: zone];
+	copySummary.defaults = [self.defaults copyWithZone: zone];
+	copySummary.mapbubbleCombination = [self.mapbubbleCombination copyWithZone: zone];
+	copySummary.defaultCombination = [self.defaultCombination copyWithZone: zone];
+	copySummary.column = [self.column copyWithZone: zone];
+	copySummary.bubbleCombination = [self.bubbleCombination copyWithZone: zone];
+	copySummary.scatter = [self.scatter copyWithZone: zone];
+	return copySummary;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

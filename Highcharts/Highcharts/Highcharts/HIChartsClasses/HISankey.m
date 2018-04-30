@@ -12,6 +12,56 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HISankey *copySankey = [[HISankey allocWithZone: zone] init];
+	copySankey.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copySankey.curveFactor = [self.curveFactor copyWithZone: zone];
+	copySankey.nodePadding = [self.nodePadding copyWithZone: zone];
+	copySankey.tooltip = [self.tooltip copyWithZone: zone];
+	copySankey.dataLabels = [self.dataLabels copyWithZone: zone];
+	copySankey.states = [self.states copyWithZone: zone];
+	copySankey.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copySankey.linkOpacity = [self.linkOpacity copyWithZone: zone];
+	copySankey.showInLegend = [self.showInLegend copyWithZone: zone];
+	copySankey.minPointLength = [self.minPointLength copyWithZone: zone];
+	copySankey.colors = [self.colors copyWithZone: zone];
+	copySankey.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copySankey.selected = [self.selected copyWithZone: zone];
+	copySankey.colorIndex = [self.colorIndex copyWithZone: zone];
+	copySankey.point = [self.point copyWithZone: zone];
+	copySankey.color = [self.color copyWithZone: zone];
+	copySankey.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copySankey.cursor = [self.cursor copyWithZone: zone];
+	copySankey.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copySankey.label = [self.label copyWithZone: zone];
+	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySankey.events = [self.events copyWithZone: zone];
+	copySankey.definition = [self.definition copyWithZone: zone];
+	copySankey.keys = [self.keys copyWithZone: zone];
+	copySankey.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copySankey.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copySankey.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySankey.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copySankey.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copySankey.animation = [self.animation copyWithZone: zone];
+	copySankey.visible = [self.visible copyWithZone: zone];
+	copySankey.linkedTo = [self.linkedTo copyWithZone: zone];
+	copySankey.className = [self.className copyWithZone: zone];
+	copySankey.nodes = [self.nodes copyWithZone: zone];
+	copySankey.data = [self.data copyWithZone: zone];
+	copySankey.id = [self.id copyWithZone: zone];
+	copySankey.index = [self.index copyWithZone: zone];
+	copySankey.legendIndex = [self.legendIndex copyWithZone: zone];
+	copySankey.name = [self.name copyWithZone: zone];
+	copySankey.stack = [self.stack copyWithZone: zone];
+	copySankey.type = [self.type copyWithZone: zone];
+	copySankey.xAxis = [self.xAxis copyWithZone: zone];
+	copySankey.yAxis = [self.yAxis copyWithZone: zone];
+	copySankey.zIndex = [self.zIndex copyWithZone: zone];
+	return copySankey;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

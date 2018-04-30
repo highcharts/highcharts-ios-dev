@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIRules *copyRules = [[HIRules allocWithZone: zone] init];
+	copyRules.condition = [self.condition copyWithZone: zone];
+	copyRules.chartOptions = [self.chartOptions copyWithZone: zone];
+	return copyRules;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

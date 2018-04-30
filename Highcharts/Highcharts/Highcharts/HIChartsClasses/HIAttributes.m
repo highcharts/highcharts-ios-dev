@@ -7,6 +7,13 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIAttributes *copyAttributes = [[HIAttributes allocWithZone: zone] init];
+	copyAttributes.zIndex = [self.zIndex copyWithZone: zone];
+	return copyAttributes;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
