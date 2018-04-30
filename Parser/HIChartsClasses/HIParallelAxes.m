@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIParallelAxes *copyParallelAxes = [[HIParallelAxes allocWithZone: zone] init];
 	copyParallelAxes.labels = [self.labels copyWithZone: zone];
 	copyParallelAxes.lineWidth = [self.lineWidth copyWithZone: zone];

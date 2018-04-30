@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILang *copyLang = [[HILang allocWithZone: zone] init];
 	copyLang.downloadCSV = [self.downloadCSV copyWithZone: zone];
 	copyLang.downloadXLS = [self.downloadXLS copyWithZone: zone];

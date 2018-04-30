@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILoading *copyLoading = [[HILoading allocWithZone: zone] init];
 	copyLoading.style = [self.style copyWithZone: zone];
 	copyLoading.labelStyle = [self.labelStyle copyWithZone: zone];

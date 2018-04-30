@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HITop *copyTop = [[HITop allocWithZone: zone] init];
 	copyTop.color = [self.color copyWithZone: zone];
 	copyTop.visible = [self.visible copyWithZone: zone];

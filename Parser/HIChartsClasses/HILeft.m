@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILeft *copyLeft = [[HILeft allocWithZone: zone] init];
 	copyLeft.color = [self.color copyWithZone: zone];
 	copyLeft.visible = [self.visible copyWithZone: zone];

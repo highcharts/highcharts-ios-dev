@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HICondition *copyCondition = [[HICondition allocWithZone: zone] init];
 	copyCondition.minWidth = [self.minWidth copyWithZone: zone];
 	copyCondition.callback = [self.callback copyWithZone: zone];

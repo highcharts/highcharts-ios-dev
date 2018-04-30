@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIItemHoverStyle *copyItemHoverStyle = [[HIItemHoverStyle allocWithZone: zone] init];
 	copyItemHoverStyle.color = [self.color copyWithZone: zone];
 	return copyItemHoverStyle;

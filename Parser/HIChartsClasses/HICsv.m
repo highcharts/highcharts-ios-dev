@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HICsv *copyCsv = [[HICsv allocWithZone: zone] init];
 	copyCsv.columnHeaderFormatter = [self.columnHeaderFormatter copyWithZone: zone];
 	copyCsv.decimalPoint = [self.decimalPoint copyWithZone: zone];

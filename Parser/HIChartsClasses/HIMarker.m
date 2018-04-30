@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIMarker *copyMarker = [[HIMarker allocWithZone: zone] init];
 	copyMarker.color = [self.color copyWithZone: zone];
 	copyMarker.animation = [self.animation copyWithZone: zone];

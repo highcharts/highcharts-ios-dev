@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIButtonOptions *copyButtonOptions = [[HIButtonOptions allocWithZone: zone] init];
 	copyButtonOptions.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyButtonOptions.symbolFill = [self.symbolFill copyWithZone: zone];

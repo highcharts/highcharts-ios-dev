@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIDateTimeLabelFormats *copyDateTimeLabelFormats = [[HIDateTimeLabelFormats allocWithZone: zone] init];
 	copyDateTimeLabelFormats.millisecond = [self.millisecond copyWithZone: zone];
 	copyDateTimeLabelFormats.week = [self.week copyWithZone: zone];

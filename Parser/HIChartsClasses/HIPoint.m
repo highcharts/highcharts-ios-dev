@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIPoint *copyPoint = [[HIPoint allocWithZone: zone] init];
 	copyPoint.events = [self.events copyWithZone: zone];
 	copyPoint.y = [self.y copyWithZone: zone];

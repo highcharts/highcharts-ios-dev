@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIStyle *copyStyle = [[HIStyle allocWithZone: zone] init];
 	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyStyle.color = [self.color copyWithZone: zone];

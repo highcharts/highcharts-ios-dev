@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HISeriesTypeDescriptions *copySeriesTypeDescriptions = [[HISeriesTypeDescriptions allocWithZone: zone] init];
 	copySeriesTypeDescriptions.funnel = [self.funnel copyWithZone: zone];
 	copySeriesTypeDescriptions.pyramid = [self.pyramid copyWithZone: zone];

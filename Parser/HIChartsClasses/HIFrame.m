@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIFrame *copyFrame = [[HIFrame allocWithZone: zone] init];
 	copyFrame.right = [self.right copyWithZone: zone];
 	copyFrame.bottom = [self.bottom copyWithZone: zone];

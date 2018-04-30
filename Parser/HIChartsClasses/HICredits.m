@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HICredits *copyCredits = [[HICredits allocWithZone: zone] init];
 	copyCredits.style = [self.style copyWithZone: zone];
 	copyCredits.text = [self.text copyWithZone: zone];

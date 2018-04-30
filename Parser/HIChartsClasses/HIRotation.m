@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIRotation *copyRotation = [[HIRotation allocWithZone: zone] init];
 	copyRotation.to = [self.to copyWithZone: zone];
 	copyRotation.from = [self.from copyWithZone: zone];

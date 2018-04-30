@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIBoost *copyBoost = [[HIBoost allocWithZone: zone] init];
 	copyBoost.debug = [self.debug copyWithZone: zone];
 	copyBoost.allowForce = [self.allowForce copyWithZone: zone];

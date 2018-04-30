@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HITargetOptions *copyTargetOptions = [[HITargetOptions allocWithZone: zone] init];
 	copyTargetOptions.borderColor = [self.borderColor copyWithZone: zone];
 	copyTargetOptions.width = [self.width copyWithZone: zone];

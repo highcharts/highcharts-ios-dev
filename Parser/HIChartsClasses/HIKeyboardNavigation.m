@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIKeyboardNavigation *copyKeyboardNavigation = [[HIKeyboardNavigation allocWithZone: zone] init];
 	copyKeyboardNavigation.enabled = [self.enabled copyWithZone: zone];
 	copyKeyboardNavigation.focusBorder = [self.focusBorder copyWithZone: zone];

@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIItemStyle *copyItemStyle = [[HIItemStyle allocWithZone: zone] init];
 	copyItemStyle.color = [self.color copyWithZone: zone];
 	copyItemStyle.fontWeight = [self.fontWeight copyWithZone: zone];

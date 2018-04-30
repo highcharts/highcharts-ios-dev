@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILabelOptions *copyLabelOptions = [[HILabelOptions allocWithZone: zone] init];
 	copyLabelOptions.allowOverlap = [self.allowOverlap copyWithZone: zone];
 	copyLabelOptions.borderColor = [self.borderColor copyWithZone: zone];

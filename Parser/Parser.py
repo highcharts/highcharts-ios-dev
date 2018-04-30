@@ -447,7 +447,7 @@ def format_to_m(name, source):
                  "\n\t\treturn self;\n\t} else {\n\t\treturn nil;\n\t}\n}\n"
     else:
         mtext += "-(instancetype)init {\n\treturn [super init];\n}\n"
-    copyWithZones = "\n-(id)copyWithZone:(NSZone *)zone {" + "\n\t{0} *{1} = [[{0} allocWithZone: zone] init];\n".format(class_name, copyParamName)
+    copyWithZones = "\n-(id)copyWithZone:(NSZone *)zone {\n\t[super copyWithZone:zone];" + "\n\t{0} *{1} = [[{0} allocWithZone: zone] init];\n".format(class_name, copyParamName)
     getParams = "\n-(NSDictionary *)getParams\n{\n\tNSMutableDictionary *params =" \
                 " [NSMutableDictionary dictionaryWithDictionary: "
     setters_text = "\n# pragma mark - Setters\n"
@@ -457,12 +457,12 @@ def format_to_m(name, source):
         getParams += "@{}];\n"
 
     for field in classes[class_name]:
+        variableName = get_last(field.name)
+        copyWithZones += "\t{0}.{1} = [self.{1} copyWithZone: zone];\n".format(copyParamName, variableName)
 
         if field_in_parent(field, source):
             pass
         else:
-            variableName = get_last(field.name)
-            copyWithZones += "\t{0}.{1} = [self.{1} copyWithZone: zone];\n".format(copyParamName, variableName)
             getParams += "\tif (self.{0})".format(variableName) + " {\n"
             if structure[field.name].data_type:
                 data_type = structure[field.name].data_type
@@ -568,7 +568,7 @@ def create_options_files():
     htext += "/**\n* Additional options that are not listed above but are accepted by API\n*/\n"
     htext += "@property(nonatomic, readwrite) NSDictionary *additionalOptions;\n"
     htext += "\n-(NSDictionary *)getParams;\n"
-    copyWithZones = "\n-(id)copyWithZone:(NSZone *)zone {" + "\n\tHIOptions *copyOptions = [[HIOptions allocWithZone: zone] init];\n"
+    copyWithZones = "\n-(id)copyWithZone:(NSZone *)zone {\n\t[super copyWithZone:zone];" + "\n\tHIOptions *copyOptions = [[HIOptions allocWithZone: zone] init];\n"
     for field in options:
         if field.name != 'global' and field.name != "lang":
             mtext += "\tif (self.{0})".format(get_last(field.name)) + " {\n"

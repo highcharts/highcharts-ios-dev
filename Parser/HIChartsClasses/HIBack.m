@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIBack *copyBack = [[HIBack allocWithZone: zone] init];
 	copyBack.color = [self.color copyWithZone: zone];
 	copyBack.visible = [self.visible copyWithZone: zone];

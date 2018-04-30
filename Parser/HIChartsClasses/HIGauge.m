@@ -13,11 +13,49 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIGauge *copyGauge = [[HIGauge allocWithZone: zone] init];
 	copyGauge.dial = [self.dial copyWithZone: zone];
 	copyGauge.overshoot = [self.overshoot copyWithZone: zone];
+	copyGauge.tooltip = [self.tooltip copyWithZone: zone];
+	copyGauge.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyGauge.wrap = [self.wrap copyWithZone: zone];
 	copyGauge.pivot = [self.pivot copyWithZone: zone];
+	copyGauge.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyGauge.linecap = [self.linecap copyWithZone: zone];
+	copyGauge.selected = [self.selected copyWithZone: zone];
+	copyGauge.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyGauge.point = [self.point copyWithZone: zone];
+	copyGauge.color = [self.color copyWithZone: zone];
+	copyGauge.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyGauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyGauge.cursor = [self.cursor copyWithZone: zone];
+	copyGauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyGauge.label = [self.label copyWithZone: zone];
+	copyGauge.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyGauge.events = [self.events copyWithZone: zone];
+	copyGauge.definition = [self.definition copyWithZone: zone];
+	copyGauge.keys = [self.keys copyWithZone: zone];
+	copyGauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copyGauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyGauge.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyGauge.animation = [self.animation copyWithZone: zone];
+	copyGauge.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyGauge.visible = [self.visible copyWithZone: zone];
+	copyGauge.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyGauge.className = [self.className copyWithZone: zone];
+	copyGauge.pointStart = [self.pointStart copyWithZone: zone];
+	copyGauge.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyGauge.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyGauge.data = [self.data copyWithZone: zone];
+	copyGauge.id = [self.id copyWithZone: zone];
+	copyGauge.index = [self.index copyWithZone: zone];
+	copyGauge.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyGauge.name = [self.name copyWithZone: zone];
+	copyGauge.type = [self.type copyWithZone: zone];
+	copyGauge.xAxis = [self.xAxis copyWithZone: zone];
+	copyGauge.yAxis = [self.yAxis copyWithZone: zone];
+	copyGauge.zIndex = [self.zIndex copyWithZone: zone];
 	return copyGauge;
 }
 

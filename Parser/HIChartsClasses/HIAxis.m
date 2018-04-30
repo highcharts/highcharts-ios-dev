@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIAxis *copyAxis = [[HIAxis allocWithZone: zone] init];
 	copyAxis.xAxisDescriptionSingular = [self.xAxisDescriptionSingular copyWithZone: zone];
 	copyAxis.xAxisDescriptionPlural = [self.xAxisDescriptionPlural copyWithZone: zone];

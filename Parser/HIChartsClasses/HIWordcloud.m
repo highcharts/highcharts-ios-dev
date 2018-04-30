@@ -13,19 +13,55 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIWordcloud *copyWordcloud = [[HIWordcloud allocWithZone: zone] init];
 	copyWordcloud.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyWordcloud.style = [self.style copyWithZone: zone];
 	copyWordcloud.minFontSize = [self.minFontSize copyWithZone: zone];
 	copyWordcloud.maxFontSize = [self.maxFontSize copyWithZone: zone];
 	copyWordcloud.spiral = [self.spiral copyWithZone: zone];
+	copyWordcloud.tooltip = [self.tooltip copyWithZone: zone];
+	copyWordcloud.animation = [self.animation copyWithZone: zone];
 	copyWordcloud.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyWordcloud.rotation = [self.rotation copyWithZone: zone];
+	copyWordcloud.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyWordcloud.placementStrategy = [self.placementStrategy copyWithZone: zone];
 	copyWordcloud.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyWordcloud.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyWordcloud.states = [self.states copyWithZone: zone];
 	copyWordcloud.colors = [self.colors copyWithZone: zone];
 	copyWordcloud.borderColor = [self.borderColor copyWithZone: zone];
 	copyWordcloud.edgeWidth = [self.edgeWidth copyWithZone: zone];
+	copyWordcloud.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyWordcloud.selected = [self.selected copyWithZone: zone];
+	copyWordcloud.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyWordcloud.point = [self.point copyWithZone: zone];
+	copyWordcloud.color = [self.color copyWithZone: zone];
+	copyWordcloud.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
+	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyWordcloud.label = [self.label copyWithZone: zone];
+	copyWordcloud.events = [self.events copyWithZone: zone];
+	copyWordcloud.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyWordcloud.definition = [self.definition copyWithZone: zone];
+	copyWordcloud.keys = [self.keys copyWithZone: zone];
+	copyWordcloud.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyWordcloud.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copyWordcloud.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyWordcloud.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyWordcloud.visible = [self.visible copyWithZone: zone];
+	copyWordcloud.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyWordcloud.className = [self.className copyWithZone: zone];
+	copyWordcloud.data = [self.data copyWithZone: zone];
+	copyWordcloud.id = [self.id copyWithZone: zone];
+	copyWordcloud.index = [self.index copyWithZone: zone];
+	copyWordcloud.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyWordcloud.name = [self.name copyWithZone: zone];
+	copyWordcloud.stack = [self.stack copyWithZone: zone];
+	copyWordcloud.type = [self.type copyWithZone: zone];
+	copyWordcloud.xAxis = [self.xAxis copyWithZone: zone];
+	copyWordcloud.yAxis = [self.yAxis copyWithZone: zone];
+	copyWordcloud.zIndex = [self.zIndex copyWithZone: zone];
 	return copyWordcloud;
 }
 

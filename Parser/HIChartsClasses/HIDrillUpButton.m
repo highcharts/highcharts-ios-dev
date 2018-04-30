@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIDrillUpButton *copyDrillUpButton = [[HIDrillUpButton allocWithZone: zone] init];
 	copyDrillUpButton.position = [self.position copyWithZone: zone];
 	copyDrillUpButton.theme = [self.theme copyWithZone: zone];

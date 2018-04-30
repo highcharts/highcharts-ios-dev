@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIColorVariation *copyColorVariation = [[HIColorVariation allocWithZone: zone] init];
 	copyColorVariation.to = [self.to copyWithZone: zone];
 	copyColorVariation.key = [self.key copyWithZone: zone];

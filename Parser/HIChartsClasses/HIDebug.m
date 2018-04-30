@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIDebug *copyDebug = [[HIDebug allocWithZone: zone] init];
 	copyDebug.timeKDTree = [self.timeKDTree copyWithZone: zone];
 	copyDebug.timeSeriesProcessing = [self.timeSeriesProcessing copyWithZone: zone];

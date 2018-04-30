@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIMenuStyle *copyMenuStyle = [[HIMenuStyle allocWithZone: zone] init];
 	copyMenuStyle.padding = [self.padding copyWithZone: zone];
 	copyMenuStyle.border = [self.border copyWithZone: zone];

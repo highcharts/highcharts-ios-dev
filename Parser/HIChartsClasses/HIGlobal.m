@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIGlobal *copyGlobal = [[HIGlobal allocWithZone: zone] init];
 	copyGlobal.VMLRadialGradientURL = [self.VMLRadialGradientURL copyWithZone: zone];
 	return copyGlobal;

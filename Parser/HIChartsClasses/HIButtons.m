@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIButtons *copyButtons = [[HIButtons allocWithZone: zone] init];
 	copyButtons.contextButton = [self.contextButton copyWithZone: zone];
 	return copyButtons;

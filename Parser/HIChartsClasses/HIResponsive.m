@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIResponsive *copyResponsive = [[HIResponsive allocWithZone: zone] init];
 	copyResponsive.rules = [self.rules copyWithZone: zone];
 	return copyResponsive;

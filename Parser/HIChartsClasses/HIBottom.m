@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIBottom *copyBottom = [[HIBottom allocWithZone: zone] init];
 	copyBottom.color = [self.color copyWithZone: zone];
 	copyBottom.visible = [self.visible copyWithZone: zone];

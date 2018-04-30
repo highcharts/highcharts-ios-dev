@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HINoData *copyNoData = [[HINoData allocWithZone: zone] init];
 	copyNoData.position = [self.position copyWithZone: zone];
 	copyNoData.style = [self.style copyWithZone: zone];

@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HISummary *copySummary = [[HISummary allocWithZone: zone] init];
 	copySummary.pieCombination = [self.pieCombination copyWithZone: zone];
 	copySummary.pie = [self.pie copyWithZone: zone];

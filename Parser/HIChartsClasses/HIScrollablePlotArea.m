@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIScrollablePlotArea *copyScrollablePlotArea = [[HIScrollablePlotArea allocWithZone: zone] init];
 	copyScrollablePlotArea.minWidth = [self.minWidth copyWithZone: zone];
 	copyScrollablePlotArea.scrollPositionX = [self.scrollPositionX copyWithZone: zone];

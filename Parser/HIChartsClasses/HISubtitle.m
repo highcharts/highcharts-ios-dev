@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HISubtitle *copySubtitle = [[HISubtitle allocWithZone: zone] init];
 	copySubtitle.style = [self.style copyWithZone: zone];
 	copySubtitle.verticalAlign = [self.verticalAlign copyWithZone: zone];

@@ -13,16 +13,22 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIWindbarb *copyWindbarb = [[HIWindbarb allocWithZone: zone] init];
 	copyWindbarb.onSeries = [self.onSeries copyWithZone: zone];
 	copyWindbarb.vectorLength = [self.vectorLength copyWithZone: zone];
+	copyWindbarb.tooltip = [self.tooltip copyWithZone: zone];
 	copyWindbarb.yOffset = [self.yOffset copyWithZone: zone];
+	copyWindbarb.states = [self.states copyWithZone: zone];
+	copyWindbarb.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyWindbarb.xOffset = [self.xOffset copyWithZone: zone];
 	copyWindbarb.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyWindbarb.pointRange = [self.pointRange copyWithZone: zone];
 	copyWindbarb.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyWindbarb.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyWindbarb.colors = [self.colors copyWithZone: zone];
+	copyWindbarb.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyWindbarb.threshold = [self.threshold copyWithZone: zone];
 	copyWindbarb.borderColor = [self.borderColor copyWithZone: zone];
 	copyWindbarb.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyWindbarb.colorByPoint = [self.colorByPoint copyWithZone: zone];
@@ -32,9 +38,52 @@
 	copyWindbarb.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyWindbarb.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyWindbarb.crisp = [self.crisp copyWithZone: zone];
+	copyWindbarb.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyWindbarb.depth = [self.depth copyWithZone: zone];
 	copyWindbarb.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyWindbarb.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWindbarb.grouping = [self.grouping copyWithZone: zone];
+	copyWindbarb.selected = [self.selected copyWithZone: zone];
+	copyWindbarb.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyWindbarb.point = [self.point copyWithZone: zone];
+	copyWindbarb.color = [self.color copyWithZone: zone];
+	copyWindbarb.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyWindbarb.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
+	copyWindbarb.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyWindbarb.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyWindbarb.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyWindbarb.label = [self.label copyWithZone: zone];
+	copyWindbarb.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyWindbarb.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyWindbarb.events = [self.events copyWithZone: zone];
+	copyWindbarb.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyWindbarb.definition = [self.definition copyWithZone: zone];
+	copyWindbarb.keys = [self.keys copyWithZone: zone];
+	copyWindbarb.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyWindbarb.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copyWindbarb.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyWindbarb.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyWindbarb.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyWindbarb.animation = [self.animation copyWithZone: zone];
+	copyWindbarb.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyWindbarb.zones = [self.zones copyWithZone: zone];
+	copyWindbarb.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyWindbarb.visible = [self.visible copyWithZone: zone];
+	copyWindbarb.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyWindbarb.className = [self.className copyWithZone: zone];
+	copyWindbarb.pointStart = [self.pointStart copyWithZone: zone];
+	copyWindbarb.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyWindbarb.data = [self.data copyWithZone: zone];
+	copyWindbarb.id = [self.id copyWithZone: zone];
+	copyWindbarb.index = [self.index copyWithZone: zone];
+	copyWindbarb.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyWindbarb.name = [self.name copyWithZone: zone];
+	copyWindbarb.stack = [self.stack copyWithZone: zone];
+	copyWindbarb.type = [self.type copyWithZone: zone];
+	copyWindbarb.xAxis = [self.xAxis copyWithZone: zone];
+	copyWindbarb.yAxis = [self.yAxis copyWithZone: zone];
+	copyWindbarb.zIndex = [self.zIndex copyWithZone: zone];
 	return copyWindbarb;
 }
 

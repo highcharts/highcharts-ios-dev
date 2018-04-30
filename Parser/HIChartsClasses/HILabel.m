@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILabel *copyLabel = [[HILabel allocWithZone: zone] init];
 	copyLabel.style = [self.style copyWithZone: zone];
 	copyLabel.verticalAlign = [self.verticalAlign copyWithZone: zone];

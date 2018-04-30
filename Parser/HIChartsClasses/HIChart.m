@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIChart *copyChart = [[HIChart allocWithZone: zone] init];
 	copyChart.polar = [self.polar copyWithZone: zone];
 	copyChart.borderRadius = [self.borderRadius copyWithZone: zone];

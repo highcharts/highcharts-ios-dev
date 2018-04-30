@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIShapes *copyShapes = [[HIShapes allocWithZone: zone] init];
 	copyShapes.points = [self.points copyWithZone: zone];
 	copyShapes.markerEnd = [self.markerEnd copyWithZone: zone];

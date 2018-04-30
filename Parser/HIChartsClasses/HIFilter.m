@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIFilter *copyFilter = [[HIFilter allocWithZone: zone] init];
 	copyFilter.operator = [self.operator copyWithZone: zone];
 	copyFilter.property = [self.property copyWithZone: zone];

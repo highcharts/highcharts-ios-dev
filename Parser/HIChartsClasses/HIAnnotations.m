@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIAnnotations *copyAnnotations = [[HIAnnotations allocWithZone: zone] init];
 	copyAnnotations.shapes = [self.shapes copyWithZone: zone];
 	copyAnnotations.labels = [self.labels copyWithZone: zone];

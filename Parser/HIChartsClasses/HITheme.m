@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HITheme *copyTheme = [[HITheme allocWithZone: zone] init];
 	copyTheme.zIndex = [self.zIndex copyWithZone: zone];
 	copyTheme.padding = [self.padding copyWithZone: zone];

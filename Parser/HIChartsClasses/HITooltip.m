@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HITooltip *copyTooltip = [[HITooltip allocWithZone: zone] init];
 	copyTooltip.followTouchMove = [self.followTouchMove copyWithZone: zone];
 	copyTooltip.borderRadius = [self.borderRadius copyWithZone: zone];

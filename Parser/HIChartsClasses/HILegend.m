@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILegend *copyLegend = [[HILegend allocWithZone: zone] init];
 	copyLegend.symbolRadius = [self.symbolRadius copyWithZone: zone];
 	copyLegend.borderRadius = [self.borderRadius copyWithZone: zone];

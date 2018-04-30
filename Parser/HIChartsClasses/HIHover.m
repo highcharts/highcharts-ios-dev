@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIHover *copyHover = [[HIHover allocWithZone: zone] init];
 	copyHover.radiusPlus = [self.radiusPlus copyWithZone: zone];
 	copyHover.enabled = [self.enabled copyWithZone: zone];

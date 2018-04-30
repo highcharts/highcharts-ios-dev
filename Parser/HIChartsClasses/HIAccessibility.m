@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIAccessibility *copyAccessibility = [[HIAccessibility allocWithZone: zone] init];
 	copyAccessibility.screenReaderSectionFormatter = [self.screenReaderSectionFormatter copyWithZone: zone];
 	copyAccessibility.describeSingleSeries = [self.describeSingleSeries copyWithZone: zone];

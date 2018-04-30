@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIPivot *copyPivot = [[HIPivot allocWithZone: zone] init];
 	copyPivot.borderColor = [self.borderColor copyWithZone: zone];
 	copyPivot.radius = [self.radius copyWithZone: zone];

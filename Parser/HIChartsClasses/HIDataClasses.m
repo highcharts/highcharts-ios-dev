@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIDataClasses *copyDataClasses = [[HIDataClasses allocWithZone: zone] init];
 	copyDataClasses.color = [self.color copyWithZone: zone];
 	copyDataClasses.to = [self.to copyWithZone: zone];

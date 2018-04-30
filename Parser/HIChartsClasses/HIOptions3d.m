@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIOptions3d *copyOptions3d = [[HIOptions3d allocWithZone: zone] init];
 	copyOptions3d.viewDistance = [self.viewDistance copyWithZone: zone];
 	copyOptions3d.frame = [self.frame copyWithZone: zone];

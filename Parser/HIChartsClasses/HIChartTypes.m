@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIChartTypes *copyChartTypes = [[HIChartTypes allocWithZone: zone] init];
 	copyChartTypes.scatterMultiple = [self.scatterMultiple copyWithZone: zone];
 	copyChartTypes.defaultMultiple = [self.defaultMultiple copyWithZone: zone];

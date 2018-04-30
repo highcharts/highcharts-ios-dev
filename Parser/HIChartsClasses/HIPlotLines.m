@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIPlotLines *copyPlotLines = [[HIPlotLines allocWithZone: zone] init];
 	copyPlotLines.zIndex = [self.zIndex copyWithZone: zone];
 	copyPlotLines.dashStyle = [self.dashStyle copyWithZone: zone];

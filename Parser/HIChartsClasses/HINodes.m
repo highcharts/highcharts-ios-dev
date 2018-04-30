@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HINodes *copyNodes = [[HINodes allocWithZone: zone] init];
 	copyNodes.name = [self.name copyWithZone: zone];
 	copyNodes.color = [self.color copyWithZone: zone];

@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIStates *copyStates = [[HIStates allocWithZone: zone] init];
 	copyStates.hover = [self.hover copyWithZone: zone];
 	copyStates.select = [self.select copyWithZone: zone];

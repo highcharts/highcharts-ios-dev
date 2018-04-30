@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIPartialFill *copyPartialFill = [[HIPartialFill allocWithZone: zone] init];
 	copyPartialFill.fill = [self.fill copyWithZone: zone];
 	return copyPartialFill;

@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HINavigation *copyNavigation = [[HINavigation allocWithZone: zone] init];
 	copyNavigation.menuStyle = [self.menuStyle copyWithZone: zone];
 	copyNavigation.menuItemStyle = [self.menuItemStyle copyWithZone: zone];

@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIEvents *copyEvents = [[HIEvents allocWithZone: zone] init];
 	copyEvents.legendItemClick = [self.legendItemClick copyWithZone: zone];
 	copyEvents.checkboxClick = [self.checkboxClick copyWithZone: zone];

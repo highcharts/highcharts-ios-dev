@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIStackLabels *copyStackLabels = [[HIStackLabels allocWithZone: zone] init];
 	copyStackLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
 	copyStackLabels.style = [self.style copyWithZone: zone];

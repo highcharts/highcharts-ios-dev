@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIAttributes *copyAttributes = [[HIAttributes allocWithZone: zone] init];
 	copyAttributes.zIndex = [self.zIndex copyWithZone: zone];
 	return copyAttributes;

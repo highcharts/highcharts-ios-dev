@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HISelect *copySelect = [[HISelect allocWithZone: zone] init];
 	copySelect.enabled = [self.enabled copyWithZone: zone];
 	copySelect.lineWidth = [self.lineWidth copyWithZone: zone];

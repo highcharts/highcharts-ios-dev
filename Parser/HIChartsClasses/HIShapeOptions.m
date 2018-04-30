@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIShapeOptions *copyShapeOptions = [[HIShapeOptions allocWithZone: zone] init];
 	copyShapeOptions.strokeWidth = [self.strokeWidth copyWithZone: zone];
 	copyShapeOptions.height = [self.height copyWithZone: zone];

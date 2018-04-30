@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIPlotOptions *copyPlotOptions = [[HIPlotOptions allocWithZone: zone] init];
 	copyPlotOptions.tilemap = [self.tilemap copyWithZone: zone];
 	copyPlotOptions.bellcurve = [self.bellcurve copyWithZone: zone];

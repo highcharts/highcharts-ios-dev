@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIRight *copyRight = [[HIRight allocWithZone: zone] init];
 	copyRight.color = [self.color copyWithZone: zone];
 	copyRight.visible = [self.visible copyWithZone: zone];

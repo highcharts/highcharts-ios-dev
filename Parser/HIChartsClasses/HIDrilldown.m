@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIDrilldown *copyDrilldown = [[HIDrilldown allocWithZone: zone] init];
 	copyDrilldown.activeDataLabelStyle = [self.activeDataLabelStyle copyWithZone: zone];
 	copyDrilldown.series = [self.series copyWithZone: zone];

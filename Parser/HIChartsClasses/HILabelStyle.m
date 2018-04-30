@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILabelStyle *copyLabelStyle = [[HILabelStyle allocWithZone: zone] init];
 	copyLabelStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyLabelStyle.top = [self.top copyWithZone: zone];

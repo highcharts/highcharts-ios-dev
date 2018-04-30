@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIActiveAxisLabelStyle *copyActiveAxisLabelStyle = [[HIActiveAxisLabelStyle allocWithZone: zone] init];
 	copyActiveAxisLabelStyle.cursor = [self.cursor copyWithZone: zone];
 	copyActiveAxisLabelStyle.color = [self.color copyWithZone: zone];

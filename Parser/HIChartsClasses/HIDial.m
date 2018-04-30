@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIDial *copyDial = [[HIDial allocWithZone: zone] init];
 	copyDial.borderColor = [self.borderColor copyWithZone: zone];
 	copyDial.rearLength = [self.rearLength copyWithZone: zone];

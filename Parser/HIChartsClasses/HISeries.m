@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HISeries *copySeries = [[HISeries allocWithZone: zone] init];
 	copySeries.data = [self.data copyWithZone: zone];
 	copySeries.id = [self.id copyWithZone: zone];

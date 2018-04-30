@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIPane *copyPane = [[HIPane allocWithZone: zone] init];
 	copyPane.endAngle = [self.endAngle copyWithZone: zone];
 	copyPane.startAngle = [self.startAngle copyWithZone: zone];

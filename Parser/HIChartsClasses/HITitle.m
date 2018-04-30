@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HITitle *copyTitle = [[HITitle allocWithZone: zone] init];
 	copyTitle.style = [self.style copyWithZone: zone];
 	copyTitle.verticalAlign = [self.verticalAlign copyWithZone: zone];

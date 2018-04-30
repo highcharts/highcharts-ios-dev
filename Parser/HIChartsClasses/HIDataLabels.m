@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIDataLabels *copyDataLabels = [[HIDataLabels allocWithZone: zone] init];
 	copyDataLabels.defer = [self.defer copyWithZone: zone];
 	copyDataLabels.inside = [self.inside copyWithZone: zone];

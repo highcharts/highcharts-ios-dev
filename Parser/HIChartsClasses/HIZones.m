@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIZones *copyZones = [[HIZones allocWithZone: zone] init];
 	copyZones.className = [self.className copyWithZone: zone];
 	copyZones.color = [self.color copyWithZone: zone];

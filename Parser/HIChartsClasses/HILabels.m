@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILabels *copyLabels = [[HILabels allocWithZone: zone] init];
 	copyLabels.items = [self.items copyWithZone: zone];
 	copyLabels.style = [self.style copyWithZone: zone];

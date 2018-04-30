@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HITime *copyTime = [[HITime allocWithZone: zone] init];
 	copyTime.Date = [self.Date copyWithZone: zone];
 	copyTime.timezone = [self.timezone copyWithZone: zone];

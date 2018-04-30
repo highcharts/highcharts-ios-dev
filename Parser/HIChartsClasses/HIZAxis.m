@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIZAxis *copyZAxis = [[HIZAxis allocWithZone: zone] init];
 	copyZAxis.minPadding = [self.minPadding copyWithZone: zone];
 	copyZAxis.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];

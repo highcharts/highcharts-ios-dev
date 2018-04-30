@@ -119,6 +119,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIOptions *copyOptions = [[HIOptions allocWithZone: zone] init];
 	copyOptions.subtitle = [self.subtitle copyWithZone: zone];
 	copyOptions.yAxis = [self.yAxis copyWithZone: zone];

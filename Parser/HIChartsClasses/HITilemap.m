@@ -13,12 +13,52 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HITilemap *copyTilemap = [[HITilemap allocWithZone: zone] init];
 	copyTilemap.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyTilemap.colsize = [self.colsize copyWithZone: zone];
 	copyTilemap.rowsize = [self.rowsize copyWithZone: zone];
+	copyTilemap.states = [self.states copyWithZone: zone];
 	copyTilemap.tileShape = [self.tileShape copyWithZone: zone];
+	copyTilemap.color = [self.color copyWithZone: zone];
+	copyTilemap.tooltip = [self.tooltip copyWithZone: zone];
+	copyTilemap.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyTilemap.animation = [self.animation copyWithZone: zone];
 	copyTilemap.nullColor = [self.nullColor copyWithZone: zone];
+	copyTilemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyTilemap.selected = [self.selected copyWithZone: zone];
+	copyTilemap.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyTilemap.point = [self.point copyWithZone: zone];
+	copyTilemap.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyTilemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyTilemap.cursor = [self.cursor copyWithZone: zone];
+	copyTilemap.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyTilemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyTilemap.label = [self.label copyWithZone: zone];
+	copyTilemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyTilemap.events = [self.events copyWithZone: zone];
+	copyTilemap.definition = [self.definition copyWithZone: zone];
+	copyTilemap.keys = [self.keys copyWithZone: zone];
+	copyTilemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyTilemap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copyTilemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyTilemap.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyTilemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyTilemap.zones = [self.zones copyWithZone: zone];
+	copyTilemap.visible = [self.visible copyWithZone: zone];
+	copyTilemap.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyTilemap.boostThreshold = [self.boostThreshold copyWithZone: zone];
+	copyTilemap.className = [self.className copyWithZone: zone];
+	copyTilemap.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyTilemap.data = [self.data copyWithZone: zone];
+	copyTilemap.id = [self.id copyWithZone: zone];
+	copyTilemap.index = [self.index copyWithZone: zone];
+	copyTilemap.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyTilemap.name = [self.name copyWithZone: zone];
+	copyTilemap.type = [self.type copyWithZone: zone];
+	copyTilemap.xAxis = [self.xAxis copyWithZone: zone];
+	copyTilemap.yAxis = [self.yAxis copyWithZone: zone];
+	copyTilemap.zIndex = [self.zIndex copyWithZone: zone];
 	return copyTilemap;
 }
 

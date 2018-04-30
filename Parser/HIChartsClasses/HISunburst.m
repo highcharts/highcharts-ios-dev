@@ -13,20 +13,55 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HISunburst *copySunburst = [[HISunburst allocWithZone: zone] init];
 	copySunburst.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copySunburst.rootId = [self.rootId copyWithZone: zone];
 	copySunburst.levelSize = [self.levelSize copyWithZone: zone];
 	copySunburst.center = [self.center copyWithZone: zone];
 	copySunburst.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copySunburst.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySunburst.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
 	copySunburst.levels = [self.levels copyWithZone: zone];
 	copySunburst.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
 	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
+	copySunburst.point = [self.point copyWithZone: zone];
+	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
+	copySunburst.states = [self.states copyWithZone: zone];
 	copySunburst.colors = [self.colors copyWithZone: zone];
+	copySunburst.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySunburst.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySunburst.startAngle = [self.startAngle copyWithZone: zone];
 	copySunburst.size = [self.size copyWithZone: zone];
+	copySunburst.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copySunburst.events = [self.events copyWithZone: zone];
+	copySunburst.selected = [self.selected copyWithZone: zone];
+	copySunburst.colorIndex = [self.colorIndex copyWithZone: zone];
+	copySunburst.color = [self.color copyWithZone: zone];
+	copySunburst.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copySunburst.cursor = [self.cursor copyWithZone: zone];
+	copySunburst.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copySunburst.label = [self.label copyWithZone: zone];
+	copySunburst.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySunburst.definition = [self.definition copyWithZone: zone];
+	copySunburst.keys = [self.keys copyWithZone: zone];
+	copySunburst.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copySunburst.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySunburst.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copySunburst.shadow = [self.shadow copyWithZone: zone];
+	copySunburst.animation = [self.animation copyWithZone: zone];
+	copySunburst.visible = [self.visible copyWithZone: zone];
+	copySunburst.linkedTo = [self.linkedTo copyWithZone: zone];
+	copySunburst.className = [self.className copyWithZone: zone];
+	copySunburst.data = [self.data copyWithZone: zone];
+	copySunburst.id = [self.id copyWithZone: zone];
+	copySunburst.index = [self.index copyWithZone: zone];
+	copySunburst.legendIndex = [self.legendIndex copyWithZone: zone];
+	copySunburst.name = [self.name copyWithZone: zone];
+	copySunburst.type = [self.type copyWithZone: zone];
+	copySunburst.xAxis = [self.xAxis copyWithZone: zone];
+	copySunburst.yAxis = [self.yAxis copyWithZone: zone];
+	copySunburst.zIndex = [self.zIndex copyWithZone: zone];
 	return copySunburst;
 }
 

@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIBackground *copyBackground = [[HIBackground allocWithZone: zone] init];
 	copyBackground.borderColor = [self.borderColor copyWithZone: zone];
 	copyBackground.outerRadius = [self.outerRadius copyWithZone: zone];

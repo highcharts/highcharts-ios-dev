@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIExporting *copyExporting = [[HIExporting allocWithZone: zone] init];
 	copyExporting.menuItemDefinitions = [self.menuItemDefinitions copyWithZone: zone];
 	copyExporting.sourceHeight = [self.sourceHeight copyWithZone: zone];

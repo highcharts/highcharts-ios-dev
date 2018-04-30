@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILevels *copyLevels = [[HILevels allocWithZone: zone] init];
 	copyLevels.borderColor = [self.borderColor copyWithZone: zone];
 	copyLevels.colorVariation = [self.colorVariation copyWithZone: zone];

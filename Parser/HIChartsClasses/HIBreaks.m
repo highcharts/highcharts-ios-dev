@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIBreaks *copyBreaks = [[HIBreaks allocWithZone: zone] init];
 	copyBreaks.to = [self.to copyWithZone: zone];
 	copyBreaks.breakSize = [self.breakSize copyWithZone: zone];

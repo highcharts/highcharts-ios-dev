@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIHalo *copyHalo = [[HIHalo allocWithZone: zone] init];
 	copyHalo.opacity = [self.opacity copyWithZone: zone];
 	copyHalo.attributes = [self.attributes copyWithZone: zone];

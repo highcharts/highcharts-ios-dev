@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIYAxis *copyYAxis = [[HIYAxis allocWithZone: zone] init];
 	copyYAxis.minPadding = [self.minPadding copyWithZone: zone];
 	copyYAxis.labels = [self.labels copyWithZone: zone];

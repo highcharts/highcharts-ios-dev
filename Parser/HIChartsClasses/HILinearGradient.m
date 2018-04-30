@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HILinearGradient *copyLinearGradient = [[HILinearGradient allocWithZone: zone] init];
 	copyLinearGradient.y1 = [self.y1 copyWithZone: zone];
 	copyLinearGradient.x2 = [self.x2 copyWithZone: zone];

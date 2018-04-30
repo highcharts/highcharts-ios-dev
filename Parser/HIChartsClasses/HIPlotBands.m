@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIPlotBands *copyPlotBands = [[HIPlotBands allocWithZone: zone] init];
 	copyPlotBands.outerRadius = [self.outerRadius copyWithZone: zone];
 	copyPlotBands.innerRadius = [self.innerRadius copyWithZone: zone];

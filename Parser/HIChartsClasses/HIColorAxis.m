@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIColorAxis *copyColorAxis = [[HIColorAxis allocWithZone: zone] init];
 	copyColorAxis.dataClasses = [self.dataClasses copyWithZone: zone];
 	copyColorAxis.minPadding = [self.minPadding copyWithZone: zone];

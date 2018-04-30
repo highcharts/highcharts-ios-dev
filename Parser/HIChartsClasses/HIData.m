@@ -8,6 +8,7 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
 	HIData *copyData = [[HIData allocWithZone: zone] init];
 	copyData.enablePolling = [self.enablePolling copyWithZone: zone];
 	copyData.startColumn = [self.startColumn copyWithZone: zone];
