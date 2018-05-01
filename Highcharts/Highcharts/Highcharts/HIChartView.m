@@ -21,7 +21,6 @@
 @property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) HIGHTML *HTML;
 @property (nonatomic, weak) NSTimer *reloadTimer;
-@property (nonatomic, strong) NSMutableDictionary *optionsParams;
 @property (nonatomic, strong) NSMutableDictionary *closures;
 @end
 
@@ -117,64 +116,42 @@ static BOOL preloaded = NO;
 
 #pragma mark - Helpers
 
-- (void)prepareOptionsParams {
-    self.optionsParams = [[self.options getParams] mutableCopy];
-    [self prepareFunctions:self.optionsParams];
-}
-
-- (void)prepareFunctions:(NSMutableDictionary *)params {
-    NSMutableDictionary *functions = [[NSMutableDictionary alloc] init];
+- (void)prepareHIObjects:(NSMutableDictionary *)params {
+    NSMutableDictionary *objects = [[NSMutableDictionary alloc] init];
     for (id key in params){
         id value = [params objectForKey:key];
         if([value isKindOfClass:[NSDictionary class]]){
-            [self prepareFunctions:value];
+            [self prepareHIObjects:value];
         }
         else if ([value isKindOfClass:[NSArray class]]) {
             for (id item in value) {
                 if([item isKindOfClass:[NSMutableDictionary class]]){
-                    [self prepareFunctions:item];
+                    [self prepareHIObjects:item];
                 }
                 else break;
             }
         }
         else if ([value isKindOfClass:[HIFunction class]]) {
             HIFunction *function = (HIFunction *)value;
-            [functions setObject:function.function forKey:key];
+            [objects setObject:function.function forKey:key];
             if (function.closure) {
                 self.closures[function.uuid] = function.closure;
             }
         }
+        else if ([value isKindOfClass:[HIColor class]]) {
+            HIColor *color = (HIColor *)value;
+            [objects setObject:[color getData] forKey:key];
+        }
     }
     
-    for(id key in functions) {
-        id value = [functions objectForKey:key];
+    for(id key in objects) {
+        id value = [objects objectForKey:key];
         [params removeObjectForKey:key];
         [params setObject:value forKey:key];
     }
 }
 
-- (void)updateOptions {
-    [self prepareOptionsParams];
-    [self.HTML prepareOptions:self.optionsParams];
-    NSString *modificationString = [NSString stringWithFormat:@"updateOptions(%@);", self.HTML.options];
-    [self.webView evaluateJavaScript:modificationString completionHandler:nil];
-}
-
-- (void) resize {
-    NSString *modificationString = [NSString stringWithFormat:@"modifySize(%f, %f);", CGRectGetWidth(self.webView.bounds), CGRectGetHeight(self.webView.bounds)];
-    [self.webView evaluateJavaScript:modificationString completionHandler:nil];
-}
-
-- (void) loadChartInternal {
-    if(self.reloadTimer) return;
-    self.reloadTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadChartWorker) userInfo:nil repeats:NO];
-}
-
-- (void) loadChartWorker {
-    if (!self.options) {
-        return;
-    }
-    
+- (void)prepareHTML:(NSDictionary *)options {
     [self.HTML prepareViewWidth:CGRectGetWidth(self.webView.bounds) height: CGRectGetHeight(self.webView.bounds)];
     
     if (!self.plugins) {
@@ -208,15 +185,62 @@ static BOOL preloaded = NO;
         [self.HTML prepareJavaScript:plugin prefix:@"js/modules/" suffix:@".js"];
     }
     
-    // Prepare options parameters and fix functions objects.
-    [self prepareOptionsParams];
-    
     // Load theme js, only one.
     [self.HTML prepareJavaScript:self.theme?:nil prefix:@"js/themes/" suffix:@".js"];
     [self.HTML prepareLang:[self.lang getParams] Global:[self.global getParams]];
-    [self.HTML prepareOptions:self.optionsParams];
+    [self.HTML prepareOptions:options];
     [self.HTML injectJavaScriptToHTML];
+}
+
+- (void)updateOptions {
+    NSMutableDictionary *options = [[self.options getParams] mutableCopy];
+    [self prepareHIObjects:options];
+    [self.HTML prepareOptions:options];
+    NSString *modificationString = [NSString stringWithFormat:@"updateOptions(%@);", self.HTML.options];
+    [self.webView evaluateJavaScript:modificationString completionHandler:nil];
+}
+
+- (void) resize {
+    NSString *modificationString = [NSString stringWithFormat:@"modifySize(%f, %f);", CGRectGetWidth(self.webView.bounds), CGRectGetHeight(self.webView.bounds)];
+    [self.webView evaluateJavaScript:modificationString completionHandler:nil];
+}
+
+- (void) loadChartInternal {
+    if(self.reloadTimer) return;
+    self.reloadTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadChartWorker) userInfo:nil repeats:NO];
+}
+
+- (void) loadChartWorker {
+    if (!self.options) {
+        return;
+    }
     
+    NSMutableDictionary *options = [[self.options getParams] mutableCopy];
+    
+    // Prepare HI objects from options.
+    [self prepareHIObjects:options];
+    
+    // Prepare HTML with options.
+    [self prepareHTML:options];
+    
+    // Load HTML
+    [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
+}
+
+- (void) loadJSONOptions:(NSDictionary *)jsonOptions {
+    if (!jsonOptions) {
+        return;
+    }
+    
+    NSMutableDictionary *options = [self recursiveMutableCopy:jsonOptions];
+    
+    // Prepare HI objects from options.
+    [self prepareHIObjects:options];
+    
+    // Prepare HTML with options.
+    [self prepareHTML:options];
+    
+    // Load HTML
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
 }
 
@@ -323,6 +347,28 @@ static BOOL preloaded = NO;
             closure(context);
         }
     }
+}
+
+#pragma mark - NSMutableCopying recursively
+
+- (id) recursiveMutableCopy:(id)object {
+    if ([object isKindOfClass:[NSDictionary class]]) {
+        NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithDictionary:object];
+        for (NSString* key in [dict allKeys]) {
+            [dict setObject:[self recursiveMutableCopy:[dict objectForKey:key]] forKey:key];
+        }
+        return dict;
+    }
+    else if ([object isKindOfClass:[NSArray class]]) {
+        NSMutableArray* array = [NSMutableArray arrayWithArray:object];
+        for (int i = 0; i < [array count]; i++) {
+            [array replaceObjectAtIndex:i withObject:[self recursiveMutableCopy:[array objectAtIndex:i]]];
+        }
+        return array;
+    }
+    else if ([object isKindOfClass:[NSString class]])
+        return [NSMutableString stringWithString:object];
+    return object;
 }
 
 #pragma mark - Deprecated
