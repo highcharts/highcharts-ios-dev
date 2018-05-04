@@ -7,6 +7,78 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIData *copyData = [[HIData allocWithZone: zone] init];
+	copyData.enablePolling = [self.enablePolling copyWithZone: zone];
+	copyData.startColumn = [self.startColumn copyWithZone: zone];
+	copyData.lineDelimiter = [self.lineDelimiter copyWithZone: zone];
+	copyData.table = [self.table copyWithZone: zone];
+	copyData.parsed = [self.parsed copyWithZone: zone];
+	copyData.parseDate = [self.parseDate copyWithZone: zone];
+	copyData.seriesMapping = [self.seriesMapping copyWithZone: zone];
+	copyData.rows = [self.rows copyWithZone: zone];
+	copyData.csvURL = [self.csvURL copyWithZone: zone];
+	copyData.dateFormat = [self.dateFormat copyWithZone: zone];
+	copyData.googleSpreadsheetWorksheet = [self.googleSpreadsheetWorksheet copyWithZone: zone];
+	copyData.dataRefreshRate = [self.dataRefreshRate copyWithZone: zone];
+	copyData.rowsURL = [self.rowsURL copyWithZone: zone];
+	copyData.startRow = [self.startRow copyWithZone: zone];
+	copyData.csv = [self.csv copyWithZone: zone];
+	copyData.columns = [self.columns copyWithZone: zone];
+	copyData.endRow = [self.endRow copyWithZone: zone];
+	copyData.itemDelimiter = [self.itemDelimiter copyWithZone: zone];
+	copyData.complete = [self.complete copyWithZone: zone];
+	copyData.beforeParse = [self.beforeParse copyWithZone: zone];
+	copyData.endColumn = [self.endColumn copyWithZone: zone];
+	copyData.firstRowAsNames = [self.firstRowAsNames copyWithZone: zone];
+	copyData.googleSpreadsheetKey = [self.googleSpreadsheetKey copyWithZone: zone];
+	copyData.switchRowsAndColumns = [self.switchRowsAndColumns copyWithZone: zone];
+	copyData.decimalPoint = [self.decimalPoint copyWithZone: zone];
+	copyData.columnsURL = [self.columnsURL copyWithZone: zone];
+	copyData.high = [self.high copyWithZone: zone];
+	copyData.q1 = [self.q1 copyWithZone: zone];
+	copyData.q3 = [self.q3 copyWithZone: zone];
+	copyData.median = [self.median copyWithZone: zone];
+	copyData.low = [self.low copyWithZone: zone];
+	copyData.labelrank = [self.labelrank copyWithZone: zone];
+	copyData.definition = [self.definition copyWithZone: zone];
+	copyData.name = [self.name copyWithZone: zone];
+	copyData.color = [self.color copyWithZone: zone];
+	copyData.selected = [self.selected copyWithZone: zone];
+	copyData.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyData.className = [self.className copyWithZone: zone];
+	copyData.events = [self.events copyWithZone: zone];
+	copyData.y = [self.y copyWithZone: zone];
+	copyData.x = [self.x copyWithZone: zone];
+	copyData.drilldown = [self.drilldown copyWithZone: zone];
+	copyData.id = [self.id copyWithZone: zone];
+	copyData.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyData.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyData.marker = [self.marker copyWithZone: zone];
+	copyData.length = [self.length copyWithZone: zone];
+	copyData.direction = [self.direction copyWithZone: zone];
+	copyData.target = [self.target copyWithZone: zone];
+	copyData.targetOptions = [self.targetOptions copyWithZone: zone];
+	copyData.borderColor = [self.borderColor copyWithZone: zone];
+	copyData.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyData.value = [self.value copyWithZone: zone];
+	copyData.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyData.isIntermediateSum = [self.isIntermediateSum copyWithZone: zone];
+	copyData.isSum = [self.isSum copyWithZone: zone];
+	copyData.sliced = [self.sliced copyWithZone: zone];
+	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
+	copyData.radius = [self.radius copyWithZone: zone];
+	copyData.to = [self.to copyWithZone: zone];
+	copyData.outgoing = [self.outgoing copyWithZone: zone];
+	copyData.from = [self.from copyWithZone: zone];
+	copyData.weight = [self.weight copyWithZone: zone];
+	copyData.z = [self.z copyWithZone: zone];
+	copyData.colorValue = [self.colorValue copyWithZone: zone];
+	copyData.parent = [self.parent copyWithZone: zone];
+	return copyData;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

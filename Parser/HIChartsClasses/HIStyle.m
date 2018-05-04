@@ -7,6 +7,27 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIStyle *copyStyle = [[HIStyle allocWithZone: zone] init];
+	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
+	copyStyle.color = [self.color copyWithZone: zone];
+	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
+	copyStyle.opacity = [self.opacity copyWithZone: zone];
+	copyStyle.position = [self.position copyWithZone: zone];
+	copyStyle.textAlign = [self.textAlign copyWithZone: zone];
+	copyStyle.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyStyle.fontFamily = [self.fontFamily copyWithZone: zone];
+	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
+	copyStyle.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyStyle.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyStyle.textOverflow = [self.textOverflow copyWithZone: zone];
+	copyStyle.cursor = [self.cursor copyWithZone: zone];
+	copyStyle.pointerEvents = [self.pointerEvents copyWithZone: zone];
+	copyStyle.whiteSpace = [self.whiteSpace copyWithZone: zone];
+	return copyStyle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIFocusBorder *copyFocusBorder = [[HIFocusBorder allocWithZone: zone] init];
+	copyFocusBorder.margin = [self.margin copyWithZone: zone];
+	copyFocusBorder.style = [self.style copyWithZone: zone];
+	copyFocusBorder.enabled = [self.enabled copyWithZone: zone];
+	copyFocusBorder.hideBrowserFocusOutline = [self.hideBrowserFocusOutline copyWithZone: zone];
+	return copyFocusBorder;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -7,6 +7,25 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIMarker *copyMarker = [[HIMarker allocWithZone: zone] init];
+	copyMarker.color = [self.color copyWithZone: zone];
+	copyMarker.animation = [self.animation copyWithZone: zone];
+	copyMarker.enabled = [self.enabled copyWithZone: zone];
+	copyMarker.symbol = [self.symbol copyWithZone: zone];
+	copyMarker.states = [self.states copyWithZone: zone];
+	copyMarker.fillColor = [self.fillColor copyWithZone: zone];
+	copyMarker.lineColor = [self.lineColor copyWithZone: zone];
+	copyMarker.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyMarker.fillOpacity = [self.fillOpacity copyWithZone: zone];
+	copyMarker.height = [self.height copyWithZone: zone];
+	copyMarker.width = [self.width copyWithZone: zone];
+	copyMarker.radius = [self.radius copyWithZone: zone];
+	copyMarker.enabledThreshold = [self.enabledThreshold copyWithZone: zone];
+	return copyMarker;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

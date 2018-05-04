@@ -110,4 +110,9 @@
     [self update:value];
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    HIChartsJSONSerializable *copy = [[HIChartsJSONSerializable alloc] init];
+    return copy;
+}
+
 @end

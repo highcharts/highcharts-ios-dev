@@ -21,16 +21,7 @@
 		params[@"subtitle"] = [self.subtitle getParams];
 	}
 	if (self.yAxis) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.yAxis) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"yAxis"] = array;
+		params[@"yAxis"] = [self.yAxis getParams];
 	}
 	if (self.series) {
 		params[@"series"] = [self.series getParams];
@@ -100,16 +91,7 @@
 		params[@"zAxis"] = [self.zAxis getParams];
 	}
 	if (self.xAxis) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.xAxis) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"xAxis"] = array;
+		params[@"xAxis"] = [self.xAxis getParams];
 	}
 	if (self.drilldown) {
 		params[@"drilldown"] = [self.drilldown getParams];
@@ -136,6 +118,39 @@
 	return params;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIOptions *copyOptions = [[HIOptions allocWithZone: zone] init];
+	copyOptions.subtitle = [self.subtitle copyWithZone: zone];
+	copyOptions.yAxis = [self.yAxis copyWithZone: zone];
+	copyOptions.series = [self.series copyWithZone: zone];
+	copyOptions.accessibility = [self.accessibility copyWithZone: zone];
+	copyOptions.colors = [self.colors copyWithZone: zone];
+	copyOptions.pane = [self.pane copyWithZone: zone];
+	copyOptions.responsive = [self.responsive copyWithZone: zone];
+	copyOptions.noData = [self.noData copyWithZone: zone];
+	copyOptions.loading = [self.loading copyWithZone: zone];
+	copyOptions.title = [self.title copyWithZone: zone];
+	copyOptions.tooltip = [self.tooltip copyWithZone: zone];
+	copyOptions.plotOptions = [self.plotOptions copyWithZone: zone];
+	copyOptions.exporting = [self.exporting copyWithZone: zone];
+	copyOptions.boost = [self.boost copyWithZone: zone];
+	copyOptions.annotations = [self.annotations copyWithZone: zone];
+	copyOptions.defs = [self.defs copyWithZone: zone];
+	copyOptions.labels = [self.labels copyWithZone: zone];
+	copyOptions.chart = [self.chart copyWithZone: zone];
+	copyOptions.credits = [self.credits copyWithZone: zone];
+	copyOptions.zAxis = [self.zAxis copyWithZone: zone];
+	copyOptions.xAxis = [self.xAxis copyWithZone: zone];
+	copyOptions.drilldown = [self.drilldown copyWithZone: zone];
+	copyOptions.data = [self.data copyWithZone: zone];
+	copyOptions.legend = [self.legend copyWithZone: zone];
+	copyOptions.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyOptions.time = [self.time copyWithZone: zone];
+	copyOptions.navigation = [self.navigation copyWithZone: zone];
+	return copyOptions;
+}
+
 # pragma mark - Setters
 
 -(void)setSubtitle:(HISubtitle *)subtitle {
@@ -147,10 +162,13 @@
 	[self updateHIObject:oldValue newValue:subtitle propertyName:@"subtitle"];
 }
 
--(void)setYAxis:(NSArray<HIYAxis *> *)yAxis {
-	NSArray<HIYAxis *> *oldValue = _yAxis;
+-(void)setYAxis:(HIYAxis *)yAxis {
+	HIYAxis *oldValue = _yAxis;
+	if(self.yAxis) {
+		[self removeObserver:self forKeyPath:@"yAxis.isUpdated"];
+	}
 	_yAxis = yAxis;
-	[self updateArrayObject:oldValue newValue:yAxis propertyName:@"yAxis"];
+	[self updateHIObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }
 
 -(void)setSeries:(HISeries *)series {
@@ -305,10 +323,13 @@
 	[self updateHIObject:oldValue newValue:zAxis propertyName:@"zAxis"];
 }
 
--(void)setXAxis:(NSArray<HIXAxis *> *)xAxis {
-	NSArray<HIXAxis *> *oldValue = _xAxis;
+-(void)setXAxis:(HIXAxis *)xAxis {
+	HIXAxis *oldValue = _xAxis;
+	if(self.xAxis) {
+		[self removeObserver:self forKeyPath:@"xAxis.isUpdated"];
+	}
 	_xAxis = xAxis;
-	[self updateArrayObject:oldValue newValue:xAxis propertyName:@"xAxis"];
+	[self updateHIObject:oldValue newValue:xAxis propertyName:@"xAxis"];
 }
 
 -(void)setDrilldown:(HIDrilldown *)drilldown {

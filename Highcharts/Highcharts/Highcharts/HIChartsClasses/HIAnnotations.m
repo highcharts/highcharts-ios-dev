@@ -7,6 +7,18 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIAnnotations *copyAnnotations = [[HIAnnotations allocWithZone: zone] init];
+	copyAnnotations.shapes = [self.shapes copyWithZone: zone];
+	copyAnnotations.labels = [self.labels copyWithZone: zone];
+	copyAnnotations.labelOptions = [self.labelOptions copyWithZone: zone];
+	copyAnnotations.zIndex = [self.zIndex copyWithZone: zone];
+	copyAnnotations.visible = [self.visible copyWithZone: zone];
+	copyAnnotations.shapeOptions = [self.shapeOptions copyWithZone: zone];
+	return copyAnnotations;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

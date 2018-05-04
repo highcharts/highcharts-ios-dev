@@ -7,6 +7,77 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIXAxis *copyXAxis = [[HIXAxis allocWithZone: zone] init];
+	copyXAxis.minPadding = [self.minPadding copyWithZone: zone];
+	copyXAxis.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
+	copyXAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
+	copyXAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyXAxis.visible = [self.visible copyWithZone: zone];
+	copyXAxis.alignTicks = [self.alignTicks copyWithZone: zone];
+	copyXAxis.pane = [self.pane copyWithZone: zone];
+	copyXAxis.tickWidth = [self.tickWidth copyWithZone: zone];
+	copyXAxis.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
+	copyXAxis.reversed = [self.reversed copyWithZone: zone];
+	copyXAxis.startOfWeek = [self.startOfWeek copyWithZone: zone];
+	copyXAxis.id = [self.id copyWithZone: zone];
+	copyXAxis.tickPositions = [self.tickPositions copyWithZone: zone];
+	copyXAxis.min = [self.min copyWithZone: zone];
+	copyXAxis.minRange = [self.minRange copyWithZone: zone];
+	copyXAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
+	copyXAxis.allowDecimals = [self.allowDecimals copyWithZone: zone];
+	copyXAxis.startOnTick = [self.startOnTick copyWithZone: zone];
+	copyXAxis.minorGridLineColor = [self.minorGridLineColor copyWithZone: zone];
+	copyXAxis.tickPositioner = [self.tickPositioner copyWithZone: zone];
+	copyXAxis.plotBands = [self.plotBands copyWithZone: zone];
+	copyXAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
+	copyXAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
+	copyXAxis.endOnTick = [self.endOnTick copyWithZone: zone];
+	copyXAxis.plotLines = [self.plotLines copyWithZone: zone];
+	copyXAxis.units = [self.units copyWithZone: zone];
+	copyXAxis.softMin = [self.softMin copyWithZone: zone];
+	copyXAxis.type = [self.type copyWithZone: zone];
+	copyXAxis.events = [self.events copyWithZone: zone];
+	copyXAxis.crosshair = [self.crosshair copyWithZone: zone];
+	copyXAxis.ceiling = [self.ceiling copyWithZone: zone];
+	copyXAxis.labels = [self.labels copyWithZone: zone];
+	copyXAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
+	copyXAxis.definition = [self.definition copyWithZone: zone];
+	copyXAxis.opposite = [self.opposite copyWithZone: zone];
+	copyXAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
+	copyXAxis.max = [self.max copyWithZone: zone];
+	copyXAxis.breaks = [self.breaks copyWithZone: zone];
+	copyXAxis.showEmpty = [self.showEmpty copyWithZone: zone];
+	copyXAxis.gridLineWidth = [self.gridLineWidth copyWithZone: zone];
+	copyXAxis.minorTicks = [self.minorTicks copyWithZone: zone];
+	copyXAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
+	copyXAxis.floor = [self.floor copyWithZone: zone];
+	copyXAxis.offset = [self.offset copyWithZone: zone];
+	copyXAxis.tickColor = [self.tickColor copyWithZone: zone];
+	copyXAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
+	copyXAxis.tickInterval = [self.tickInterval copyWithZone: zone];
+	copyXAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyXAxis.categories = [self.categories copyWithZone: zone];
+	copyXAxis.gridLineColor = [self.gridLineColor copyWithZone: zone];
+	copyXAxis.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyXAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
+	copyXAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
+	copyXAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyXAxis.uniqueNames = [self.uniqueNames copyWithZone: zone];
+	copyXAxis.maxPadding = [self.maxPadding copyWithZone: zone];
+	copyXAxis.className = [self.className copyWithZone: zone];
+	copyXAxis.tickAmount = [self.tickAmount copyWithZone: zone];
+	copyXAxis.tickLength = [self.tickLength copyWithZone: zone];
+	copyXAxis.lineColor = [self.lineColor copyWithZone: zone];
+	copyXAxis.alternateGridColor = [self.alternateGridColor copyWithZone: zone];
+	copyXAxis.title = [self.title copyWithZone: zone];
+	copyXAxis.tickPosition = [self.tickPosition copyWithZone: zone];
+	copyXAxis.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyXAxis.softMax = [self.softMax copyWithZone: zone];
+	return copyXAxis;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

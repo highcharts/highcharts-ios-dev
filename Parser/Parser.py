@@ -396,8 +396,8 @@ def format_to_h(name, source):
                 htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
                 imports += "#import \"{0}.h\"\n".format("HI" + upper_first(name))
 
-    htext += "\n-(NSDictionary *)getParams;\n\n"
-    htext += "@end\n"
+    htext += "\n-(NSDictionary *)getParams;\n"
+    htext += "\n@end\n"
     if imports == "":
         imports += "#import \"HIChartsJSONSerializable.h\"\n"
     if colorAdded:
@@ -435,6 +435,7 @@ def create_setter(field):
 
 def format_to_m(name, source):
     class_name = "HI" + upper_first(create_name(name))
+    copyParamName = "copy" + upper_first(create_name(name))
 
     mtext = "#import \"HIChartsJSONSerializableSubclass.h\"\n"
     mtext += "#import \"{0}.h\"\n\n".format(class_name)
@@ -446,6 +447,7 @@ def format_to_m(name, source):
                  "\n\t\treturn self;\n\t} else {\n\t\treturn nil;\n\t}\n}\n"
     else:
         mtext += "-(instancetype)init {\n\treturn [super init];\n}\n"
+    copyWithZones = "\n-(id)copyWithZone:(NSZone *)zone {\n\t[super copyWithZone:zone];" + "\n\t{0} *{1} = [[{0} allocWithZone: zone] init];\n".format(class_name, copyParamName)
     getParams = "\n-(NSDictionary *)getParams\n{\n\tNSMutableDictionary *params =" \
                 " [NSMutableDictionary dictionaryWithDictionary: "
     setters_text = "\n# pragma mark - Setters\n"
@@ -455,51 +457,56 @@ def format_to_m(name, source):
         getParams += "@{}];\n"
 
     for field in classes[class_name]:
+        variableName = get_last(field.name)
+        copyWithZones += "\t{0}.{1} = [self.{1} copyWithZone: zone];\n".format(copyParamName, variableName)
 
         if field_in_parent(field, source):
             pass
         else:
-            getParams += "\tif (self.{0})".format(get_last(field.name)) + " {\n"
+            getParams += "\tif (self.{0})".format(variableName) + " {\n"
             if structure[field.name].data_type:
                 data_type = structure[field.name].data_type
                 if get_type(data_type) == 'HIFunction':
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getFunction];\n".format(get_last(field.name),
-                                                                                       get_last(field.name))
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getFunction];\n".format(variableName,
+                                                                                           variableName)
                 elif get_type(data_type) == 'HIColor':
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(get_last(field.name),
-                                                                                       get_last(field.name))
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(variableName,
+                                                                                       variableName)
                 elif get_type(data_type) == 'NSArray<HIColor *>':
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
-                    getParams += "\t\tfor (HIColor *obj in self.{0})".format(get_last(field.name)) + " {\n"
-                    getParams += "\t\t\t[array addObject:[obj getData]];\n".format(get_last(field.name))
+                    getParams += "\t\tfor (HIColor *obj in self.{0})".format(variableName) + " {\n"
+                    getParams += "\t\t\t[array addObject:[obj getData]];\n".format(variableName)
                     getParams += "\t\t}\n"
-                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(get_last(field.name))
+                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(variableName)
                 elif 'NSArray' in str(get_type(data_type)):
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
-                    getParams += "\t\tfor (id obj in self.{0})".format(get_last(field.name)) + " {\n"
+                    getParams += "\t\tfor (id obj in self.{0})".format(variableName) + " {\n"
                     getParams += "\t\t\tif ([obj isKindOfClass: [HIChartsJSONSerializable class]])".format(
-                        get_last(field.name)) + " {\n"
+                        variableName) + " {\n"
                     getParams += "\t\t\t\t[array addObject:[(HIChartsJSONSerializable *)obj getParams]];\n".format(
-                        get_last(field.name))
+                        variableName)
                     getParams += "\t\t\t}\n"
                     getParams += "\t\t\telse {\n\t\t\t\t[array addObject: obj];\n"
                     getParams += "\t\t\t}\n"
                     getParams += "\t\t}\n"
-                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(get_last(field.name))
+                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(variableName)
                 elif structure[field.name].properties:
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(get_last(field.name),
-                                                                                         get_last(field.name))
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(variableName,
+                                                                                         variableName)
                 else:
-                    getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(get_last(field.name), get_last(field.name))
+                    getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(variableName, variableName)
             elif structure[field.name].properties:
-                getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(get_last(field.name),
-                                                                                     get_last(field.name))
+                getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(variableName,
+                                                                                     variableName)
             getParams += "\t}\n"
 
             setters_text += "\n" + create_setter(field) + "\n"
 
+    copyWithZones += "\treturn {};\n".format(copyParamName)
+    copyWithZones += "}\n"
     getParams += "\treturn params;\n"
     getParams += "}\n"
+    mtext += copyWithZones
     mtext += getParams
     if setters_text != "\n# pragma mark - Setters\n":
         mtext += setters_text
@@ -560,10 +567,12 @@ def create_options_files():
                 htext += "@property(nonatomic, readwrite) {0}{1};\n\n".format(type, get_last(field.name))
     htext += "/**\n* Additional options that are not listed above but are accepted by API\n*/\n"
     htext += "@property(nonatomic, readwrite) NSDictionary *additionalOptions;\n"
-    htext += "\n\n-(NSDictionary *)getParams;\n\n"
+    htext += "\n-(NSDictionary *)getParams;\n"
+    copyWithZones = "\n-(id)copyWithZone:(NSZone *)zone {\n\t[super copyWithZone:zone];" + "\n\tHIOptions *copyOptions = [[HIOptions allocWithZone: zone] init];\n"
     for field in options:
         if field.name != 'global' and field.name != "lang":
             mtext += "\tif (self.{0})".format(get_last(field.name)) + " {\n"
+            copyWithZones += "\tcopyOptions.{0} = [self.{0} copyWithZone: zone];\n".format(get_last(field.name))
 
             if field.data_type:
                 if get_type(field.data_type) == 'HIColor':
@@ -609,8 +618,11 @@ def create_options_files():
                   "\t[self updateNSObject:@\"{0}\"];\n".format("additionalOptions") + \
                   "}\n"
 
+    copyWithZones += "\treturn copyOptions;\n}\n"
+
     mtext += "\treturn params;\n"
     mtext += "}\n"
+    mtext += copyWithZones
     mtext += setters_text
     mtext += "\n@end"
     imports += "\n\n"

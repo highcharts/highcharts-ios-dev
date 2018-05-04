@@ -10,6 +10,11 @@
 #import "HIColor.h"
 #import "HIChartsJSONSerializableSubclass.h"
 
+@interface HIColor()
+@property(nonatomic, readwrite) NSString *string;
+@property(nonatomic, readwrite) NSDictionary *dictionary;
+@end
+
 @implementation HIColor
 
 -(instancetype)initWithString:(NSString *)string {
@@ -91,6 +96,14 @@
     else {
         return nil;
     }
+}
+
+-(id)copyWithZone:(NSZone *)zone {
+    [super copyWithZone:zone];
+    HIColor *copyColor = [[HIColor allocWithZone: zone] init];
+    copyColor.string = [self.string copyWithZone:zone];
+    copyColor.dictionary = [self.dictionary copyWithZone:zone];
+    return copyColor;
 }
 
 @end

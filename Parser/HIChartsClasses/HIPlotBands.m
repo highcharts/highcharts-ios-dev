@@ -7,6 +7,25 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIPlotBands *copyPlotBands = [[HIPlotBands allocWithZone: zone] init];
+	copyPlotBands.outerRadius = [self.outerRadius copyWithZone: zone];
+	copyPlotBands.innerRadius = [self.innerRadius copyWithZone: zone];
+	copyPlotBands.thickness = [self.thickness copyWithZone: zone];
+	copyPlotBands.borderColor = [self.borderColor copyWithZone: zone];
+	copyPlotBands.zIndex = [self.zIndex copyWithZone: zone];
+	copyPlotBands.from = [self.from copyWithZone: zone];
+	copyPlotBands.color = [self.color copyWithZone: zone];
+	copyPlotBands.id = [self.id copyWithZone: zone];
+	copyPlotBands.className = [self.className copyWithZone: zone];
+	copyPlotBands.to = [self.to copyWithZone: zone];
+	copyPlotBands.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyPlotBands.label = [self.label copyWithZone: zone];
+	copyPlotBands.events = [self.events copyWithZone: zone];
+	return copyPlotBands;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

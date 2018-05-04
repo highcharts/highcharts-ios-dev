@@ -7,6 +7,27 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIHover *copyHover = [[HIHover allocWithZone: zone] init];
+	copyHover.radiusPlus = [self.radiusPlus copyWithZone: zone];
+	copyHover.enabled = [self.enabled copyWithZone: zone];
+	copyHover.animation = [self.animation copyWithZone: zone];
+	copyHover.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyHover.lineWidthPlus = [self.lineWidthPlus copyWithZone: zone];
+	copyHover.halo = [self.halo copyWithZone: zone];
+	copyHover.fillColor = [self.fillColor copyWithZone: zone];
+	copyHover.lineColor = [self.lineColor copyWithZone: zone];
+	copyHover.radius = [self.radius copyWithZone: zone];
+	copyHover.brightness = [self.brightness copyWithZone: zone];
+	copyHover.linkOpacity = [self.linkOpacity copyWithZone: zone];
+	copyHover.borderColor = [self.borderColor copyWithZone: zone];
+	copyHover.opacity = [self.opacity copyWithZone: zone];
+	copyHover.shadow = [self.shadow copyWithZone: zone];
+	copyHover.color = [self.color copyWithZone: zone];
+	return copyHover;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

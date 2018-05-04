@@ -12,6 +12,63 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIVariablepie *copyVariablepie = [[HIVariablepie allocWithZone: zone] init];
+	copyVariablepie.data = [self.data copyWithZone: zone];
+	copyVariablepie.id = [self.id copyWithZone: zone];
+	copyVariablepie.index = [self.index copyWithZone: zone];
+	copyVariablepie.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyVariablepie.name = [self.name copyWithZone: zone];
+	copyVariablepie.type = [self.type copyWithZone: zone];
+	copyVariablepie.zIndex = [self.zIndex copyWithZone: zone];
+	copyVariablepie.zMax = [self.zMax copyWithZone: zone];
+	copyVariablepie.minPointSize = [self.minPointSize copyWithZone: zone];
+	copyVariablepie.sizeBy = [self.sizeBy copyWithZone: zone];
+	copyVariablepie.zMin = [self.zMin copyWithZone: zone];
+	copyVariablepie.tooltip = [self.tooltip copyWithZone: zone];
+	copyVariablepie.maxPointSize = [self.maxPointSize copyWithZone: zone];
+	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
+	copyVariablepie.endAngle = [self.endAngle copyWithZone: zone];
+	copyVariablepie.innerSize = [self.innerSize copyWithZone: zone];
+	copyVariablepie.center = [self.center copyWithZone: zone];
+	copyVariablepie.clip = [self.clip copyWithZone: zone];
+	copyVariablepie.point = [self.point copyWithZone: zone];
+	copyVariablepie.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copyVariablepie.depth = [self.depth copyWithZone: zone];
+	copyVariablepie.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyVariablepie.states = [self.states copyWithZone: zone];
+	copyVariablepie.colors = [self.colors copyWithZone: zone];
+	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
+	copyVariablepie.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyVariablepie.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyVariablepie.startAngle = [self.startAngle copyWithZone: zone];
+	copyVariablepie.size = [self.size copyWithZone: zone];
+	copyVariablepie.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyVariablepie.events = [self.events copyWithZone: zone];
+	copyVariablepie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	copyVariablepie.linecap = [self.linecap copyWithZone: zone];
+	copyVariablepie.selected = [self.selected copyWithZone: zone];
+	copyVariablepie.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyVariablepie.color = [self.color copyWithZone: zone];
+	copyVariablepie.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyVariablepie.cursor = [self.cursor copyWithZone: zone];
+	copyVariablepie.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyVariablepie.label = [self.label copyWithZone: zone];
+	copyVariablepie.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyVariablepie.definition = [self.definition copyWithZone: zone];
+	copyVariablepie.keys = [self.keys copyWithZone: zone];
+	copyVariablepie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copyVariablepie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyVariablepie.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyVariablepie.shadow = [self.shadow copyWithZone: zone];
+	copyVariablepie.animation = [self.animation copyWithZone: zone];
+	copyVariablepie.visible = [self.visible copyWithZone: zone];
+	copyVariablepie.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyVariablepie.className = [self.className copyWithZone: zone];
+	return copyVariablepie;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

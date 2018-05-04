@@ -12,6 +12,74 @@
 	}
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIAreaspline *copyAreaspline = [[HIAreaspline allocWithZone: zone] init];
+	copyAreaspline.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
+	copyAreaspline.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyAreaspline.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyAreaspline.fillColor = [self.fillColor copyWithZone: zone];
+	copyAreaspline.lineColor = [self.lineColor copyWithZone: zone];
+	copyAreaspline.threshold = [self.threshold copyWithZone: zone];
+	copyAreaspline.fillOpacity = [self.fillOpacity copyWithZone: zone];
+	copyAreaspline.linecap = [self.linecap copyWithZone: zone];
+	copyAreaspline.selected = [self.selected copyWithZone: zone];
+	copyAreaspline.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyAreaspline.point = [self.point copyWithZone: zone];
+	copyAreaspline.color = [self.color copyWithZone: zone];
+	copyAreaspline.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyAreaspline.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyAreaspline.states = [self.states copyWithZone: zone];
+	copyAreaspline.tooltip = [self.tooltip copyWithZone: zone];
+	copyAreaspline.marker = [self.marker copyWithZone: zone];
+	copyAreaspline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyAreaspline.cursor = [self.cursor copyWithZone: zone];
+	copyAreaspline.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyAreaspline.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyAreaspline.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyAreaspline.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyAreaspline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyAreaspline.label = [self.label copyWithZone: zone];
+	copyAreaspline.stacking = [self.stacking copyWithZone: zone];
+	copyAreaspline.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyAreaspline.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyAreaspline.events = [self.events copyWithZone: zone];
+	copyAreaspline.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyAreaspline.definition = [self.definition copyWithZone: zone];
+	copyAreaspline.keys = [self.keys copyWithZone: zone];
+	copyAreaspline.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyAreaspline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
+	copyAreaspline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyAreaspline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyAreaspline.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyAreaspline.shadow = [self.shadow copyWithZone: zone];
+	copyAreaspline.animation = [self.animation copyWithZone: zone];
+	copyAreaspline.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyAreaspline.zones = [self.zones copyWithZone: zone];
+	copyAreaspline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyAreaspline.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyAreaspline.visible = [self.visible copyWithZone: zone];
+	copyAreaspline.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyAreaspline.boostThreshold = [self.boostThreshold copyWithZone: zone];
+	copyAreaspline.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyAreaspline.className = [self.className copyWithZone: zone];
+	copyAreaspline.pointStart = [self.pointStart copyWithZone: zone];
+	copyAreaspline.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyAreaspline.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyAreaspline.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyAreaspline.data = [self.data copyWithZone: zone];
+	copyAreaspline.id = [self.id copyWithZone: zone];
+	copyAreaspline.index = [self.index copyWithZone: zone];
+	copyAreaspline.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyAreaspline.name = [self.name copyWithZone: zone];
+	copyAreaspline.stack = [self.stack copyWithZone: zone];
+	copyAreaspline.type = [self.type copyWithZone: zone];
+	copyAreaspline.xAxis = [self.xAxis copyWithZone: zone];
+	copyAreaspline.yAxis = [self.yAxis copyWithZone: zone];
+	copyAreaspline.zIndex = [self.zIndex copyWithZone: zone];
+	return copyAreaspline;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];

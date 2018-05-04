@@ -7,6 +7,51 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HILegend *copyLegend = [[HILegend allocWithZone: zone] init];
+	copyLegend.symbolRadius = [self.symbolRadius copyWithZone: zone];
+	copyLegend.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyLegend.rtl = [self.rtl copyWithZone: zone];
+	copyLegend.squareSymbol = [self.squareSymbol copyWithZone: zone];
+	copyLegend.itemWidth = [self.itemWidth copyWithZone: zone];
+	copyLegend.symbolPadding = [self.symbolPadding copyWithZone: zone];
+	copyLegend.floating = [self.floating copyWithZone: zone];
+	copyLegend.symbolWidth = [self.symbolWidth copyWithZone: zone];
+	copyLegend.useHTML = [self.useHTML copyWithZone: zone];
+	copyLegend.borderColor = [self.borderColor copyWithZone: zone];
+	copyLegend.layout = [self.layout copyWithZone: zone];
+	copyLegend.title = [self.title copyWithZone: zone];
+	copyLegend.width = [self.width copyWithZone: zone];
+	copyLegend.itemMarginBottom = [self.itemMarginBottom copyWithZone: zone];
+	copyLegend.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyLegend.lineHeight = [self.lineHeight copyWithZone: zone];
+	copyLegend.itemMarginTop = [self.itemMarginTop copyWithZone: zone];
+	copyLegend.itemCheckboxStyle = [self.itemCheckboxStyle copyWithZone: zone];
+	copyLegend.labelFormat = [self.labelFormat copyWithZone: zone];
+	copyLegend.itemStyle = [self.itemStyle copyWithZone: zone];
+	copyLegend.reversed = [self.reversed copyWithZone: zone];
+	copyLegend.padding = [self.padding copyWithZone: zone];
+	copyLegend.itemDistance = [self.itemDistance copyWithZone: zone];
+	copyLegend.shadow = [self.shadow copyWithZone: zone];
+	copyLegend.itemHoverStyle = [self.itemHoverStyle copyWithZone: zone];
+	copyLegend.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyLegend.margin = [self.margin copyWithZone: zone];
+	copyLegend.align = [self.align copyWithZone: zone];
+	copyLegend.keyboardNavigation = [self.keyboardNavigation copyWithZone: zone];
+	copyLegend.enabled = [self.enabled copyWithZone: zone];
+	copyLegend.maxHeight = [self.maxHeight copyWithZone: zone];
+	copyLegend.itemHiddenStyle = [self.itemHiddenStyle copyWithZone: zone];
+	copyLegend.alignColumns = [self.alignColumns copyWithZone: zone];
+	copyLegend.symbolHeight = [self.symbolHeight copyWithZone: zone];
+	copyLegend.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyLegend.labelFormatter = [self.labelFormatter copyWithZone: zone];
+	copyLegend.y = [self.y copyWithZone: zone];
+	copyLegend.x = [self.x copyWithZone: zone];
+	copyLegend.navigation = [self.navigation copyWithZone: zone];
+	return copyLegend;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -7,6 +7,43 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HITooltip *copyTooltip = [[HITooltip allocWithZone: zone] init];
+	copyTooltip.followTouchMove = [self.followTouchMove copyWithZone: zone];
+	copyTooltip.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyTooltip.headerFormat = [self.headerFormat copyWithZone: zone];
+	copyTooltip.valueSuffix = [self.valueSuffix copyWithZone: zone];
+	copyTooltip.valuePrefix = [self.valuePrefix copyWithZone: zone];
+	copyTooltip.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyTooltip.shape = [self.shape copyWithZone: zone];
+	copyTooltip.positioner = [self.positioner copyWithZone: zone];
+	copyTooltip.useHTML = [self.useHTML copyWithZone: zone];
+	copyTooltip.borderColor = [self.borderColor copyWithZone: zone];
+	copyTooltip.style = [self.style copyWithZone: zone];
+	copyTooltip.footerFormat = [self.footerFormat copyWithZone: zone];
+	copyTooltip.animation = [self.animation copyWithZone: zone];
+	copyTooltip.split = [self.split copyWithZone: zone];
+	copyTooltip.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyTooltip.snap = [self.snap copyWithZone: zone];
+	copyTooltip.shared = [self.shared copyWithZone: zone];
+	copyTooltip.formatter = [self.formatter copyWithZone: zone];
+	copyTooltip.pointFormat = [self.pointFormat copyWithZone: zone];
+	copyTooltip.xDateFormat = [self.xDateFormat copyWithZone: zone];
+	copyTooltip.padding = [self.padding copyWithZone: zone];
+	copyTooltip.shadow = [self.shadow copyWithZone: zone];
+	copyTooltip.enabled = [self.enabled copyWithZone: zone];
+	copyTooltip.pointFormatter = [self.pointFormatter copyWithZone: zone];
+	copyTooltip.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyTooltip.followPointer = [self.followPointer copyWithZone: zone];
+	copyTooltip.hideDelay = [self.hideDelay copyWithZone: zone];
+	copyTooltip.valueDecimals = [self.valueDecimals copyWithZone: zone];
+	copyTooltip.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
+	copyTooltip.nodeFormat = [self.nodeFormat copyWithZone: zone];
+	copyTooltip.distance = [self.distance copyWithZone: zone];
+	return copyTooltip;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

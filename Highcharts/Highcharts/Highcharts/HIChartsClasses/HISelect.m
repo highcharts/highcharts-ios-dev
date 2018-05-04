@@ -7,6 +7,19 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HISelect *copySelect = [[HISelect allocWithZone: zone] init];
+	copySelect.enabled = [self.enabled copyWithZone: zone];
+	copySelect.lineWidth = [self.lineWidth copyWithZone: zone];
+	copySelect.radius = [self.radius copyWithZone: zone];
+	copySelect.fillColor = [self.fillColor copyWithZone: zone];
+	copySelect.lineColor = [self.lineColor copyWithZone: zone];
+	copySelect.color = [self.color copyWithZone: zone];
+	copySelect.borderColor = [self.borderColor copyWithZone: zone];
+	return copySelect;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

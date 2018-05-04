@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIScrollablePlotArea *copyScrollablePlotArea = [[HIScrollablePlotArea allocWithZone: zone] init];
+	copyScrollablePlotArea.minWidth = [self.minWidth copyWithZone: zone];
+	copyScrollablePlotArea.scrollPositionX = [self.scrollPositionX copyWithZone: zone];
+	return copyScrollablePlotArea;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HILevelSize *copyLevelSize = [[HILevelSize allocWithZone: zone] init];
+	copyLevelSize.unit = [self.unit copyWithZone: zone];
+	copyLevelSize.value = [self.value copyWithZone: zone];
+	return copyLevelSize;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIAxis *copyAxis = [[HIAxis allocWithZone: zone] init];
+	copyAxis.xAxisDescriptionSingular = [self.xAxisDescriptionSingular copyWithZone: zone];
+	copyAxis.xAxisDescriptionPlural = [self.xAxisDescriptionPlural copyWithZone: zone];
+	copyAxis.yAxisDescriptionPlural = [self.yAxisDescriptionPlural copyWithZone: zone];
+	copyAxis.yAxisDescriptionSingular = [self.yAxisDescriptionSingular copyWithZone: zone];
+	return copyAxis;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

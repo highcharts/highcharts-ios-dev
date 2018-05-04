@@ -7,6 +7,14 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIItems *copyItems = [[HIItems allocWithZone: zone] init];
+	copyItems.style = [self.style copyWithZone: zone];
+	copyItems.html = [self.html copyWithZone: zone];
+	return copyItems;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

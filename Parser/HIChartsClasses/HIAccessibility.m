@@ -7,6 +7,44 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIAccessibility *copyAccessibility = [[HIAccessibility allocWithZone: zone] init];
+	copyAccessibility.screenReaderSectionFormatter = [self.screenReaderSectionFormatter copyWithZone: zone];
+	copyAccessibility.describeSingleSeries = [self.describeSingleSeries copyWithZone: zone];
+	copyAccessibility.keyboardNavigation = [self.keyboardNavigation copyWithZone: zone];
+	copyAccessibility.enabled = [self.enabled copyWithZone: zone];
+	copyAccessibility.pointDescriptionThreshold = [self.pointDescriptionThreshold copyWithZone: zone];
+	copyAccessibility.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyAccessibility.pointDateFormat = [self.pointDateFormat copyWithZone: zone];
+	copyAccessibility.seriesDescriptionFormatter = [self.seriesDescriptionFormatter copyWithZone: zone];
+	copyAccessibility.onTableAnchorClick = [self.onTableAnchorClick copyWithZone: zone];
+	copyAccessibility.pointDateFormatter = [self.pointDateFormatter copyWithZone: zone];
+	copyAccessibility.chartTypes = [self.chartTypes copyWithZone: zone];
+	copyAccessibility.longDescriptionHeading = [self.longDescriptionHeading copyWithZone: zone];
+	copyAccessibility.rangeSelectorMaxInput = [self.rangeSelectorMaxInput copyWithZone: zone];
+	copyAccessibility.structureHeading = [self.structureHeading copyWithZone: zone];
+	copyAccessibility.chartContainerLabel = [self.chartContainerLabel copyWithZone: zone];
+	copyAccessibility.axis = [self.axis copyWithZone: zone];
+	copyAccessibility.series = [self.series copyWithZone: zone];
+	copyAccessibility.exporting = [self.exporting copyWithZone: zone];
+	copyAccessibility.mapZoomOut = [self.mapZoomOut copyWithZone: zone];
+	copyAccessibility.rangeSelectorMinInput = [self.rangeSelectorMinInput copyWithZone: zone];
+	copyAccessibility.rangeSelectorButton = [self.rangeSelectorButton copyWithZone: zone];
+	copyAccessibility.legendItem = [self.legendItem copyWithZone: zone];
+	copyAccessibility.tableSummary = [self.tableSummary copyWithZone: zone];
+	copyAccessibility.noDescription = [self.noDescription copyWithZone: zone];
+	copyAccessibility.viewAsDataTable = [self.viewAsDataTable copyWithZone: zone];
+	copyAccessibility.defaultChartTitle = [self.defaultChartTitle copyWithZone: zone];
+	copyAccessibility.screenReaderRegionLabel = [self.screenReaderRegionLabel copyWithZone: zone];
+	copyAccessibility.mapZoomIn = [self.mapZoomIn copyWithZone: zone];
+	copyAccessibility.chartHeading = [self.chartHeading copyWithZone: zone];
+	copyAccessibility.svgContainerTitle = [self.svgContainerTitle copyWithZone: zone];
+	copyAccessibility.navigationHint = [self.navigationHint copyWithZone: zone];
+	copyAccessibility.seriesTypeDescriptions = [self.seriesTypeDescriptions copyWithZone: zone];
+	return copyAccessibility;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

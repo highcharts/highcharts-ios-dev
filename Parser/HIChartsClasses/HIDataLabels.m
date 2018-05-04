@@ -7,6 +7,50 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIDataLabels *copyDataLabels = [[HIDataLabels allocWithZone: zone] init];
+	copyDataLabels.defer = [self.defer copyWithZone: zone];
+	copyDataLabels.inside = [self.inside copyWithZone: zone];
+	copyDataLabels.formatter = [self.formatter copyWithZone: zone];
+	copyDataLabels.enabled = [self.enabled copyWithZone: zone];
+	copyDataLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyDataLabels.crop = [self.crop copyWithZone: zone];
+	copyDataLabels.padding = [self.padding copyWithZone: zone];
+	copyDataLabels.overflow = [self.overflow copyWithZone: zone];
+	copyDataLabels.x = [self.x copyWithZone: zone];
+	copyDataLabels.align = [self.align copyWithZone: zone];
+	copyDataLabels.yHigh = [self.yHigh copyWithZone: zone];
+	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
+	copyDataLabels.xLow = [self.xLow copyWithZone: zone];
+	copyDataLabels.yLow = [self.yLow copyWithZone: zone];
+	copyDataLabels.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyDataLabels.shape = [self.shape copyWithZone: zone];
+	copyDataLabels.borderColor = [self.borderColor copyWithZone: zone];
+	copyDataLabels.filter = [self.filter copyWithZone: zone];
+	copyDataLabels.style = [self.style copyWithZone: zone];
+	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
+	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
+	copyDataLabels.color = [self.color copyWithZone: zone];
+	copyDataLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyDataLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
+	copyDataLabels.format = [self.format copyWithZone: zone];
+	copyDataLabels.shadow = [self.shadow copyWithZone: zone];
+	copyDataLabels.zIndex = [self.zIndex copyWithZone: zone];
+	copyDataLabels.className = [self.className copyWithZone: zone];
+	copyDataLabels.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyDataLabels.rotationMode = [self.rotationMode copyWithZone: zone];
+	copyDataLabels.y = [self.y copyWithZone: zone];
+	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
+	copyDataLabels.nodeFormat = [self.nodeFormat copyWithZone: zone];
+	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
+	copyDataLabels.distance = [self.distance copyWithZone: zone];
+	copyDataLabels.connectorWidth = [self.connectorWidth copyWithZone: zone];
+	copyDataLabels.softConnector = [self.softConnector copyWithZone: zone];
+	copyDataLabels.connectorPadding = [self.connectorPadding copyWithZone: zone];
+	return copyDataLabels;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

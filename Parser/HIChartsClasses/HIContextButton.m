@@ -7,6 +7,34 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIContextButton *copyContextButton = [[HIContextButton allocWithZone: zone] init];
+	copyContextButton.symbolFill = [self.symbolFill copyWithZone: zone];
+	copyContextButton.symbol = [self.symbol copyWithZone: zone];
+	copyContextButton.className = [self.className copyWithZone: zone];
+	copyContextButton._titleKey = [self._titleKey copyWithZone: zone];
+	copyContextButton.onclick = [self.onclick copyWithZone: zone];
+	copyContextButton.x = [self.x copyWithZone: zone];
+	copyContextButton.menuClassName = [self.menuClassName copyWithZone: zone];
+	copyContextButton.menuItems = [self.menuItems copyWithZone: zone];
+	copyContextButton.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyContextButton.text = [self.text copyWithZone: zone];
+	copyContextButton.align = [self.align copyWithZone: zone];
+	copyContextButton.enabled = [self.enabled copyWithZone: zone];
+	copyContextButton.theme = [self.theme copyWithZone: zone];
+	copyContextButton.height = [self.height copyWithZone: zone];
+	copyContextButton.width = [self.width copyWithZone: zone];
+	copyContextButton.buttonSpacing = [self.buttonSpacing copyWithZone: zone];
+	copyContextButton.symbolSize = [self.symbolSize copyWithZone: zone];
+	copyContextButton.y = [self.y copyWithZone: zone];
+	copyContextButton.symbolStroke = [self.symbolStroke copyWithZone: zone];
+	copyContextButton.symbolY = [self.symbolY copyWithZone: zone];
+	copyContextButton.symbolX = [self.symbolX copyWithZone: zone];
+	copyContextButton.symbolStrokeWidth = [self.symbolStrokeWidth copyWithZone: zone];
+	return copyContextButton;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

@@ -7,6 +7,37 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIExporting *copyExporting = [[HIExporting allocWithZone: zone] init];
+	copyExporting.menuItemDefinitions = [self.menuItemDefinitions copyWithZone: zone];
+	copyExporting.sourceHeight = [self.sourceHeight copyWithZone: zone];
+	copyExporting.sourceWidth = [self.sourceWidth copyWithZone: zone];
+	copyExporting.scale = [self.scale copyWithZone: zone];
+	copyExporting.showTable = [self.showTable copyWithZone: zone];
+	copyExporting.filename = [self.filename copyWithZone: zone];
+	copyExporting.buttons = [self.buttons copyWithZone: zone];
+	copyExporting.width = [self.width copyWithZone: zone];
+	copyExporting.printMaxWidth = [self.printMaxWidth copyWithZone: zone];
+	copyExporting.csv = [self.csv copyWithZone: zone];
+	copyExporting.type = [self.type copyWithZone: zone];
+	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
+	copyExporting.formAttributes = [self.formAttributes copyWithZone: zone];
+	copyExporting.fallbackToExportServer = [self.fallbackToExportServer copyWithZone: zone];
+	copyExporting.useRowspanHeaders = [self.useRowspanHeaders copyWithZone: zone];
+	copyExporting.useMultiLevelHeaders = [self.useMultiLevelHeaders copyWithZone: zone];
+	copyExporting.url = [self.url copyWithZone: zone];
+	copyExporting.enabled = [self.enabled copyWithZone: zone];
+	copyExporting.allowHTML = [self.allowHTML copyWithZone: zone];
+	copyExporting.tableCaption = [self.tableCaption copyWithZone: zone];
+	copyExporting.error = [self.error copyWithZone: zone];
+	copyExporting.libURL = [self.libURL copyWithZone: zone];
+	copyExporting.exportRegionLabel = [self.exportRegionLabel copyWithZone: zone];
+	copyExporting.menuButtonLabel = [self.menuButtonLabel copyWithZone: zone];
+	copyExporting.chartMenuLabel = [self.chartMenuLabel copyWithZone: zone];
+	return copyExporting;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

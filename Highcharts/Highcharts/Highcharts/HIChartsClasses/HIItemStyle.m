@@ -7,6 +7,16 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIItemStyle *copyItemStyle = [[HIItemStyle allocWithZone: zone] init];
+	copyItemStyle.color = [self.color copyWithZone: zone];
+	copyItemStyle.fontWeight = [self.fontWeight copyWithZone: zone];
+	copyItemStyle.textOverflow = [self.textOverflow copyWithZone: zone];
+	copyItemStyle.fontSize = [self.fontSize copyWithZone: zone];
+	return copyItemStyle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

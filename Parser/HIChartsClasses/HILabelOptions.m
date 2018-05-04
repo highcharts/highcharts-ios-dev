@@ -7,6 +7,33 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HILabelOptions *copyLabelOptions = [[HILabelOptions allocWithZone: zone] init];
+	copyLabelOptions.allowOverlap = [self.allowOverlap copyWithZone: zone];
+	copyLabelOptions.borderColor = [self.borderColor copyWithZone: zone];
+	copyLabelOptions.style = [self.style copyWithZone: zone];
+	copyLabelOptions.padding = [self.padding copyWithZone: zone];
+	copyLabelOptions.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyLabelOptions.distance = [self.distance copyWithZone: zone];
+	copyLabelOptions.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyLabelOptions.text = [self.text copyWithZone: zone];
+	copyLabelOptions.align = [self.align copyWithZone: zone];
+	copyLabelOptions.format = [self.format copyWithZone: zone];
+	copyLabelOptions.crop = [self.crop copyWithZone: zone];
+	copyLabelOptions.useHTML = [self.useHTML copyWithZone: zone];
+	copyLabelOptions.className = [self.className copyWithZone: zone];
+	copyLabelOptions.shape = [self.shape copyWithZone: zone];
+	copyLabelOptions.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyLabelOptions.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyLabelOptions.y = [self.y copyWithZone: zone];
+	copyLabelOptions.x = [self.x copyWithZone: zone];
+	copyLabelOptions.overflow = [self.overflow copyWithZone: zone];
+	copyLabelOptions.formatter = [self.formatter copyWithZone: zone];
+	copyLabelOptions.shadow = [self.shadow copyWithZone: zone];
+	return copyLabelOptions;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

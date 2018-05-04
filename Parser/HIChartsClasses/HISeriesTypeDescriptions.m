@@ -7,6 +7,21 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HISeriesTypeDescriptions *copySeriesTypeDescriptions = [[HISeriesTypeDescriptions allocWithZone: zone] init];
+	copySeriesTypeDescriptions.funnel = [self.funnel copyWithZone: zone];
+	copySeriesTypeDescriptions.pyramid = [self.pyramid copyWithZone: zone];
+	copySeriesTypeDescriptions.columnrange = [self.columnrange copyWithZone: zone];
+	copySeriesTypeDescriptions.errorbar = [self.errorbar copyWithZone: zone];
+	copySeriesTypeDescriptions.areasplinerange = [self.areasplinerange copyWithZone: zone];
+	copySeriesTypeDescriptions.waterfall = [self.waterfall copyWithZone: zone];
+	copySeriesTypeDescriptions.arearange = [self.arearange copyWithZone: zone];
+	copySeriesTypeDescriptions.bubble = [self.bubble copyWithZone: zone];
+	copySeriesTypeDescriptions.boxplot = [self.boxplot copyWithZone: zone];
+	return copySeriesTypeDescriptions;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

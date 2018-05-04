@@ -7,6 +7,13 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIItemHoverStyle *copyItemHoverStyle = [[HIItemHoverStyle allocWithZone: zone] init];
+	copyItemHoverStyle.color = [self.color copyWithZone: zone];
+	return copyItemHoverStyle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

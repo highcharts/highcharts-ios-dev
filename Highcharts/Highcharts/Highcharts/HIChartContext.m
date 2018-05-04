@@ -31,4 +31,10 @@
     else return NULL;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    HIChartContext *copyChartContext = [[HIChartContext allocWithZone: zone] init];
+    copyChartContext.context = [self.context copyWithZone:zone];
+    return copyChartContext;
+}
+
 @end

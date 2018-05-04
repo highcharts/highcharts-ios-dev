@@ -7,6 +7,15 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIResetZoomButton *copyResetZoomButton = [[HIResetZoomButton allocWithZone: zone] init];
+	copyResetZoomButton.position = [self.position copyWithZone: zone];
+	copyResetZoomButton.theme = [self.theme copyWithZone: zone];
+	copyResetZoomButton.relativeTo = [self.relativeTo copyWithZone: zone];
+	return copyResetZoomButton;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];

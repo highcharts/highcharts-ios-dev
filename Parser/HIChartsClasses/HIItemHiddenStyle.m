@@ -7,6 +7,13 @@
 	return [super init];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+	[super copyWithZone:zone];
+	HIItemHiddenStyle *copyItemHiddenStyle = [[HIItemHiddenStyle allocWithZone: zone] init];
+	copyItemHiddenStyle.color = [self.color copyWithZone: zone];
+	return copyItemHiddenStyle;
+}
+
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
