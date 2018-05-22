@@ -37,6 +37,10 @@
     self.scripts = @"";
 }
 
+- (void)prepareScripts {
+    self.scripts = @"";
+}
+
 - (void)prepareJavaScript:(NSString*)js prefix:(NSString*)prefix suffix:(NSString*)suffix;
 {
     if (!js) {

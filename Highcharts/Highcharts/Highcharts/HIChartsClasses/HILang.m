@@ -248,6 +248,11 @@
 	[self updateNSObject:@"contextButtonTitle"];
 }
 
+-(void)setCancelButtonTitle:(NSString *)cancelButtonTitle {
+    _cancelButtonTitle = cancelButtonTitle;
+    [self updateNSObject:@"cancelButtonTitle"];
+}
+
 -(void)setInvalidDate:(NSString *)invalidDate {
 	_invalidDate = invalidDate;
 	[self updateNSObject:@"invalidDate"];

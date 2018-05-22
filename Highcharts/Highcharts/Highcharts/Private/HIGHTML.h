@@ -45,6 +45,11 @@
 @property (strong, nonatomic) NSString *global;
 
 /**
+ *  Prepare scripts before injecting to HTML.
+ */
+- (void)prepareScripts;
+
+/**
  *  Loads html from location.
  *
  *  @param path to HTML file to load.

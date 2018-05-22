@@ -22,6 +22,7 @@
 @property (nonatomic, strong) HIGHTML *HTML;
 @property (nonatomic, weak) NSTimer *reloadTimer;
 @property (nonatomic, strong) NSMutableDictionary *closures;
+@property (nonatomic, strong) NSArray *additionalPlugins;
 @end
 
 static BOOL preloaded = NO;
@@ -69,6 +70,8 @@ static BOOL preloaded = NO;
     self.preservesSuperviewLayoutMargins = NO;
     self.highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
     
+    self.additionalPlugins = @[ @"exporting", @"offline-exporting", @"accessibility", @"boost", @"data", @"drilldown" ];
+    
     self.HTML = [[HIGHTML alloc] init];
     
     self.HTML.baseURL = [self.highchartsBundle bundlePath];
@@ -79,6 +82,7 @@ static BOOL preloaded = NO;
     
     WKUserContentController *controller = [[WKUserContentController alloc] init];
     [controller addScriptMessageHandler:self name:@"observe"];
+    [controller addScriptMessageHandler:self name:@"exporting"];
     
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.userContentController = controller;
@@ -167,6 +171,7 @@ static BOOL preloaded = NO;
     }
     
     // Load Highchart main scripts.
+    [self.HTML prepareScripts];
     [self.HTML prepareJavaScript:@"highcharts" prefix:@"js/" suffix:@".js"];
     [self.HTML prepareJavaScript:@"highcharts-more" prefix:@"js/" suffix:@".js"];
     [self.HTML prepareJavaScript:@"highcharts-3d" prefix:@"js/" suffix:@".js"];
@@ -176,7 +181,7 @@ static BOOL preloaded = NO;
     
     self.plugins = [self.plugins arrayByAddingObjectsFromArray:plugins];
     
-    self.plugins = [self.plugins arrayByAddingObjectsFromArray: @[ @"exporting", @"offline-exporting", @"offline-exporting-wrap", @"accessibility", @"boost", @"data", @"drilldown"] ];
+    self.plugins = [self.additionalPlugins arrayByAddingObjectsFromArray:self.plugins];
     
     self.plugins = [[NSOrderedSet orderedSetWithArray:self.plugins] array];
     
@@ -340,13 +345,71 @@ static BOOL preloaded = NO;
         
         if (closureID) {
             NSDictionary *dictionary = (NSDictionary *)message.body;
-    
+
             HIChartContext *context = [[HIChartContext alloc] initWithContext:dictionary];
             
             HIClosure closure = (HIClosure)self.closures[closureID];
             closure(context);
         }
     }
+    else if ([message.name isEqualToString:@"exporting"]) {
+        NSString *messageBody = message.body;
+        
+        if ([messageBody isEqualToString:@"exportButtonPressed"]) {
+            if ([self.plugins containsObject:@"export-data"]) {
+                [self showExportingActionSheet];
+            }
+            else {
+                [self.webView evaluateJavaScript:@"shareChart(\"image\");" completionHandler:nil];
+            }
+        }
+        else if ([messageBody hasPrefix:@"data:text/csv"]) {
+            HIGExport *export = [[HIGExport alloc] init];
+            export.viewController = self.viewController;
+            
+            [export response:messageBody];
+        }
+    }
+}
+
+#pragma mark - Exporting Action Sheet
+
+- (void)showExportingActionSheet {
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    if ([actionSheet respondsToSelector:@selector(popoverPresentationController)]) {
+        actionSheet.popoverPresentationController.sourceView = self.viewController.view;
+        actionSheet.popoverPresentationController.sourceRect = CGRectMake(self.viewController.view.center.x, self.viewController.view.center.x , 0, 0);
+    }
+    
+    NSString *shareImageTitle = @"Share image";
+    if (self.lang.downloadPNG) {
+        shareImageTitle = self.lang.downloadPNG;
+    }
+    else if (self.lang.downloadJPEG) {
+        shareImageTitle = self.lang.downloadJPEG;
+    }
+    
+    UIAlertAction *shareImageActtion = [UIAlertAction actionWithTitle:shareImageTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.webView evaluateJavaScript:@"shareChart(\"image\");" completionHandler:nil];
+    }];
+    
+    UIAlertAction *sharePDFAction = [UIAlertAction actionWithTitle:self.lang.downloadPDF ? self.lang.downloadPDF : @"Share PDF" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.webView evaluateJavaScript:@"shareChart(\"pdf\");" completionHandler:nil];
+    }];
+    
+    UIAlertAction *shareCSVAction = [UIAlertAction actionWithTitle:self.lang.downloadCSV ? self.lang.downloadCSV : @"Share CSV" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.webView evaluateJavaScript:@"shareChart(\"csv\");" completionHandler:nil];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:self.lang.cancelButtonTitle ? self.lang.cancelButtonTitle : @"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [actionSheet addAction:shareImageActtion];
+    [actionSheet addAction:sharePDFAction];
+    [actionSheet addAction:shareCSVAction];
+    [actionSheet addAction:cancelAction];
+    
+    [self.viewController presentViewController:actionSheet animated:YES completion:nil];
 }
 
 #pragma mark - NSMutableCopying recursively
