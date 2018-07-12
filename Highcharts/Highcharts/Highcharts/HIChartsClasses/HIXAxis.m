@@ -60,6 +60,7 @@
 	copyXAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyXAxis.categories = [self.categories copyWithZone: zone];
 	copyXAxis.gridLineColor = [self.gridLineColor copyWithZone: zone];
+	copyXAxis.reversedStacks = [self.reversedStacks copyWithZone: zone];
 	copyXAxis.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyXAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
 	copyXAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
@@ -284,6 +285,9 @@
 	}
 	if (self.gridLineColor) {
 		params[@"gridLineColor"] = [self.gridLineColor getData];
+	}
+	if (self.reversedStacks) {
+		params[@"reversedStacks"] = self.reversedStacks;
 	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
@@ -621,6 +625,11 @@
 	}
 	_gridLineColor = gridLineColor;
 	[self updateHIObject:oldValue newValue:gridLineColor propertyName:@"gridLineColor"];
+}
+
+-(void)setReversedStacks:(NSNumber *)reversedStacks {
+	_reversedStacks = reversedStacks;
+	[self updateNSObject:@"reversedStacks"];
 }
 
 -(void)setLinkedTo:(NSNumber *)linkedTo {

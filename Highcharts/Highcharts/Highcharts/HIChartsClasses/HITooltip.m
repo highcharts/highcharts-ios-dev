@@ -22,6 +22,7 @@
 	copyTooltip.borderColor = [self.borderColor copyWithZone: zone];
 	copyTooltip.style = [self.style copyWithZone: zone];
 	copyTooltip.footerFormat = [self.footerFormat copyWithZone: zone];
+	copyTooltip.outside = [self.outside copyWithZone: zone];
 	copyTooltip.animation = [self.animation copyWithZone: zone];
 	copyTooltip.split = [self.split copyWithZone: zone];
 	copyTooltip.backgroundColor = [self.backgroundColor copyWithZone: zone];
@@ -82,6 +83,9 @@
 	}
 	if (self.footerFormat) {
 		params[@"footerFormat"] = self.footerFormat;
+	}
+	if (self.outside) {
+		params[@"outside"] = self.outside;
 	}
 	if (self.animation) {
 		params[@"animation"] = self.animation;
@@ -219,6 +223,11 @@
 -(void)setFooterFormat:(NSString *)footerFormat {
 	_footerFormat = footerFormat;
 	[self updateNSObject:@"footerFormat"];
+}
+
+-(void)setOutside:(NSNumber *)outside {
+	_outside = outside;
+	[self updateNSObject:@"outside"];
 }
 
 -(void)setAnimation:(NSNumber *)animation {
