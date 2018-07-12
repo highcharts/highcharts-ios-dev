@@ -136,6 +136,8 @@
 		
 		<option value="//api/name/reversed">reversed</option>
 		
+		<option value="//api/name/reversedStacks">reversedStacks</option>
+		
 		<option value="//api/name/showFirstLabel">showFirstLabel</option>
 		
 		<option value="//api/name/showLastLabel">showLastLabel</option>
@@ -2493,7 +2495,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Specific tick interval in axis units for the minor ticks. On a linear axis, if <code>"auto"</code>, the minor tick interval is calculated as a fifth of the tickInterval. If <code>null</code>, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don&rsquo;t make sense, and will be ignored to prevent performance problems.</p>
+				<p>Specific tick interval in axis units for the minor ticks. On a linear axis, if <code>"auto"</code>, the minor tick interval is calculated as a fifth of the tickInterval. If <code>null</code> or <code>undefined</code>, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don&rsquo;t make sense, and will be ignored to prevent performance problems.</p>
 			</div>
 			
 		    
@@ -2625,6 +2627,59 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinecolor/">Green lines</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/">Styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reversedStacks" title="reversedStacks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reversedStacks">&nbsp;&nbsp;reversedStacks</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This option determines how stacks should be ordered within a group. For example reversed xAxis also reverses stacks, so first series comes last in a group. To keep order like for non-reversed xAxis enable this option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversedStacks</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/reversedstacks/">Reversed stacks comparison</a></li>
 </ul>
 
 			</div>

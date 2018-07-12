@@ -90,6 +90,8 @@
 		
 		<option value="//api/name/nodeFormatter">nodeFormatter</option>
 		
+		<option value="//api/name/outside">outside</option>
+		
 		<option value="//api/name/padding">padding</option>
 		
 		<option value="//api/name/pointFormat">pointFormat</option>
@@ -291,7 +293,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are <code>point.key</code>, <code>series.name</code>, <code>series.color</code> and other members from the <code>point</code> and <code>series</code> objects. The <code>point.key</code> variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the <code>point.key</code> date format can be set using tooltip.xDateFormat.</p>
+				<p>The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are <code>point.key</code>, <code>series.name</code>, <code>series.color</code> and other members from the <code>point</code> and <code>series</code> objects. The <code>point.key</code> variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the <code>point.key</code> date format can be set using <code>tooltip.xDateFormat</code>.</p>
 			</div>
 			
 		    
@@ -785,6 +787,59 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/outside" title="outside"></a>
+	<h3 class="method-title"><code><a href="#//api/name/outside">&nbsp;&nbsp;outside</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to allow the tooltip to render outside the chart&rsquo;s SVG element box. By default (<code>false</code>), the tooltip is rendered within the chart&rsquo;s SVG element, which results in the tooltip being aligned inside the chart area. For small charts, this may result in clipping or overlapping. When <code>true</code>, a separate SVG element is created and overlaid on the page, allowing the tooltip to be aligned inside the page itself.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *outside</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/outside">Small charts with tooltips outside</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/animation" title="animation"></a>
 	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
 </h3>
@@ -796,7 +851,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable animation of the tooltip. In slow legacy IE browsers the animation is disabled by default.</p>
+				<p>Enable or disable animation of the tooltip.</p>
 			</div>
 			
 		    
@@ -1060,7 +1115,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback function to format the text of the tooltip from scratch. Return <code>false</code> to disable tooltip for a specific point on series. A subset of HTML is supported. Unless <code>useHTML</code> is true, the HTML of the tooltip is parsed and converted to SVG, therefore this isn&rsquo;t a complete HTML renderer. The following tags are supported: <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;br/&gt;</code>, <code>&lt;span&gt;</code>. Spans can be styled with a <code>style</code> attribute, but only text-related CSS that is shared with SVG is handled. Since version 2.1 the tooltip can be shared between multiple series through the <code>shared</code> option. The available data in the formatter differ a bit depending on whether the tooltip is shared or not. In a shared tooltip, all properties except <code>x</code>, which is common for all points, are kept in an array, <code>this.points</code>. Available data are:  this.percentage (not shared) / this.points[i].percentage (shared) Stacked series and pies only. The point&rsquo;s percentage of the total.  this.point (not shared) / this.points[i].point (shared) The point object. The point name, if defined, is available through <code>this.point.name</code>. this.points In a shared tooltip, this is an array containing all other properties for each point. this.series (not shared) / this.points[i].series (shared) The series object. The series name is available through <code>this.series.name</code>. this.total (not shared) / this.points[i].total (shared) Stacked series only. The total value at this point&rsquo;s x value.  this.x The x value. This property is the same regardless of the tooltip being shared or not. this.y (not shared) / this.points[i].y (shared) The y value.</p>
+				<p>Callback function to format the text of the tooltip from scratch. Return <code>false</code> to disable tooltip for a specific point on series. A subset of HTML is supported. Unless <code>useHTML</code> is true, the HTML of the tooltip is parsed and converted to SVG, therefore this isn&rsquo;t a complete HTML renderer. The following tags are supported: <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;br/&gt;</code>, <code>&lt;span&gt;</code>. Spans can be styled with a <code>style</code> attribute, but only text-related CSS that is shared with SVG is handled. Since version 2.1 the tooltip can be shared between multiple series through the <code>shared</code> option. The available data in the formatter differ a bit depending on whether the tooltip is shared or not. In a shared tooltip, all properties except <code>x</code>, which is common for all points, are kept in an array, <code>this.points</code>. Available data are:  this.percentage (not shared) / this.points[i].percentage (shared)  Stacked series and pies only. The point&rsquo;s percentage of the total.  this.point (not shared) / this.points[i].point (shared) The point object. The point name, if defined, is available through <code>this.point.name</code>. this.points In a shared tooltip, this is an array containing all other properties for each point. this.series (not shared) / this.points[i].series (shared) The series object. The series name is available through <code>this.series.name</code>. this.total (not shared) / this.points[i].total (shared) Stacked series only. The total value at this point&rsquo;s x value.  this.x The x value. This property is the same regardless of the tooltip being shared or not. this.y (not shared) / this.points[i].y (shared) The y value.</p>
 			</div>
 			
 		    
@@ -1112,7 +1167,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The HTML of the point&rsquo;s line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series. name and series.color and other properties on the same form. Furthermore, point.y can be extended by the <code>tooltip.valuePrefix</code> and <code>tooltip.valueSuffix</code> variables. This can also be overridden for each series, which makes it a good hook for displaying units. In styled mode, the dot is colored by a class name rather than the point color.</p>
+				<p>The HTML of the point&rsquo;s line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series. name and series.color and other properties on the same form. Furthermore, <code>point.y</code> can be extended by the <code>tooltip.valuePrefix</code> and <code>tooltip.valueSuffix</code> variables. This can also be overridden for each series, which makes it a good hook for displaying units. In styled mode, the dot is colored by a class name rather than the point color.</p>
 			</div>
 			
 		    
