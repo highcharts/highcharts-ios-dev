@@ -806,7 +806,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A declarative filter for which data labels to display. The declarative filter is designed for use when callback functions are not available, like when the chart options require a pure JSON structure or for use with graphical editors. For programmatic control, use the <code>formatter</code> instead, and return <code>false</code> to disable a single data label.</p>
+				<p>A declarative filter for which data labels to display. The declarative filter is designed for use when callback functions are not available, like when the chart options require a pure JSON structure or for use with graphical editors. For programmatic control, use the <code>formatter</code> instead, and return <code>undefined</code> to disable a single data label.</p>
 			</div>
 			
 		    
@@ -1420,7 +1420,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Decides how the data label will be rotated according to the perimeter of the sunburst. It can either be parallel or perpendicular to the perimeter. <code>series.rotation</code> takes precedence over <code>rotationMode</code>.</p>
+				<p>Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are <code>auto</code>, <code>parallel</code> and <code>perpendicular</code>. When <code>auto</code>, the best fit will be computed for the point. The <code>series.rotation</code> option takes precedence over <code>rotationMode</code>.</p>
 			</div>
 			
 		    
@@ -1437,7 +1437,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["perpendicular", "parallel"]</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["auto", "perpendicular", "parallel"]</code>.</p>
 			</div>
 			
 
@@ -1466,7 +1466,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The y position offset of the label relative to the point.</p>
+				<p>The y position offset of the label relative to the point in pixels.</p>
 			</div>
 			
 		    
@@ -1574,60 +1574,6 @@
 
 			
 
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/connectorColor" title="connectorColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/connectorColor">&nbsp;&nbsp;connectorColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The color of the line connecting the data label to the pie slice. The default color is the same as the point&rsquo;s color. In styled mode, the connector stroke is given in the <code>.highcharts-data-label-connector</code> class.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *connectorColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{point.color}</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/">Blue connectors</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/">Styled connectors</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -1837,6 +1783,60 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorpadding/">No padding</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectorColor" title="connectorColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorColor">&nbsp;&nbsp;connectorColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the line connecting the data label to the pie slice. The default color is the same as the point&rsquo;s color. In styled mode, the connector stroke is given in the <code>.highcharts-data-label-connector</code> class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *connectorColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{point.color}</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/">Blue connectors</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/">Styled connectors</a></li>
 </ul>
 
 			</div>
