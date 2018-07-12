@@ -498,8 +498,8 @@
 	[self updateNSObject:@"marginTop"];
 }
 
--(void)setMargin:(NSArray *)margin {
-	NSArray *oldValue = _margin;
+-(void)setMargin:(NSArray<NSNumber *> *)margin {
+	NSArray<NSNumber *> *oldValue = _margin;
 	_margin = margin;
 	[self updateArrayObject:oldValue newValue:margin propertyName:@"margin"];
 }
