@@ -192,7 +192,12 @@ def get_type(x):
         #6.0.6
         "Undefined|Number": 'NSNumber',
         #6.1.0
-        "Bool": 'NSNumber /* Bool */'
+        "Bool": 'NSNumber /* Bool */',
+        #6.1.1
+        "AnimationOptions|Boolean": 'id /* id, Bool */',
+        "Boolean|AnimationOptions": 'id /* Bool, id */',
+        "Boolean|AnimationObject": 'id /* Bool, id */',
+        "Array.<number>": 'NSArray<NSNumber *>'
     }[str(x)]
 
 

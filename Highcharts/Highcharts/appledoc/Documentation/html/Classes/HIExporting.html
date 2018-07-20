@@ -809,7 +809,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether or not to fall back to the export server if the offline-exporting module is unable to export the chart on the client side.</p>
+				<p>Whether or not to fall back to the export server if the offline-exporting module is unable to export the chart on the client side. This happens for certain browsers, and certain features (e.g. <code>allowHTML</code>), depending on the image type exporting to. For very complex charts, it is possible that export can fail in browsers that don&rsquo;t support Blob objects, due to data URL length limits. It is recommended to define the <code>exporting.error</code> handler if disabling fallback, in order to notify users in case export fails.</p>
 			</div>
 			
 		    
@@ -1150,7 +1150,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Function to call if the offline-exporting module fails to export a chart on the client side, and <code>fallbackToExportServer</code> is disabled. If left undefined, an exception is thrown instead.</p>
+				<p>Function to call if the offline-exporting module fails to export a chart on the client side, and <code>fallbackToExportServer</code> is disabled. If left undefined, an exception is thrown instead. Receives two parameters, the exporting options, and the error from the module.</p>
 			</div>
 			
 		    

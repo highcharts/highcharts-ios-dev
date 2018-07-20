@@ -57,6 +57,7 @@
 	copyColorAxis.floor = [self.floor copyWithZone: zone];
 	copyColorAxis.tickColor = [self.tickColor copyWithZone: zone];
 	copyColorAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyColorAxis.reversedStacks = [self.reversedStacks copyWithZone: zone];
 	copyColorAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
 	copyColorAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
 	copyColorAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
@@ -248,6 +249,9 @@
 	}
 	if (self.minorTickInterval) {
 		params[@"minorTickInterval"] = self.minorTickInterval;
+	}
+	if (self.reversedStacks) {
+		params[@"reversedStacks"] = self.reversedStacks;
 	}
 	if (self.minorGridLineWidth) {
 		params[@"minorGridLineWidth"] = self.minorGridLineWidth;
@@ -554,6 +558,11 @@
 -(void)setMinorTickInterval:(id)minorTickInterval {
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:@"minorTickInterval"];
+}
+
+-(void)setReversedStacks:(NSNumber *)reversedStacks {
+	_reversedStacks = reversedStacks;
+	[self updateNSObject:@"reversedStacks"];
 }
 
 -(void)setMinorGridLineWidth:(NSNumber *)minorGridLineWidth {

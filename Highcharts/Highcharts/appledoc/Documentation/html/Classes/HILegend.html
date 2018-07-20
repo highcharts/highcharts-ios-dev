@@ -722,7 +722,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The layout of the legend items. Can be one of &ldquo;horizontal&rdquo; or &ldquo;vertical&rdquo;.</p>
+				<p>The layout of the legend items. Can be one of <code>horizontal</code> or <code>vertical</code> or <code>proximate</code>. When <code>proximate</code>, the legend items will be placed as close as possible to the graphs they&rsquo;re representing, except in inverted charts or when the legend position doesn&rsquo;t allow it.</p>
 			</div>
 			
 		    
@@ -739,7 +739,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["horizontal", "vertical"]</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["horizontal", "vertical", "proximate"]</code>.</p>
 
 <p><strong>Defaults to</strong> <code>horizontal</code>.</p>
 
@@ -748,6 +748,7 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/">Horizontal by default</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-vertical/">Vertical</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-proximate">Labels proximate to the data</a></li>
 </ul>
 
 			</div>
@@ -986,7 +987,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Line height for the legend items. Deprecated as of 2.1. Instead, the line height for each item can be set using itemStyle.lineHeight, and the padding between items using itemMarginTop and itemMarginBottom.</p>
+				<p>Line height for the legend items. Deprecated as of 2.1. Instead, the line height for each item can be set using itemStyle.lineHeight, and the padding between items using <code>itemMarginTop</code> and <code>itemMarginBottom</code>.</p>
 			</div>
 			
 		    
@@ -1497,7 +1498,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The vertical alignment of the legend box. Can be one of <code>top</code>, <code>middle</code> or <code>bottom</code>. Vertical position can be further determined by the <code>y</code> option. In the case that the legend is aligned in a corner position, the <code>layout</code> option will determine whether to place it above/below or on the side of the plot area.</p>
+				<p>The vertical alignment of the legend box. Can be one of <code>top</code>, <code>middle</code> or <code>bottom</code>. Vertical position can be further determined by the <code>y</code> option. In the case that the legend is aligned in a corner position, the <code>layout</code> option will determine whether to place it above/below or on the side of the plot area. When the <code>layout</code> option is <code>proximate</code>, the <code>verticalAlign</code> option doesn&rsquo;t apply.</p>
 			</div>
 			
 		    

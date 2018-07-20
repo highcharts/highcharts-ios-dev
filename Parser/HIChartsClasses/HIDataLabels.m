@@ -43,11 +43,11 @@
 	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyDataLabels.nodeFormat = [self.nodeFormat copyWithZone: zone];
-	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyDataLabels.distance = [self.distance copyWithZone: zone];
 	copyDataLabels.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyDataLabels.softConnector = [self.softConnector copyWithZone: zone];
 	copyDataLabels.connectorPadding = [self.connectorPadding copyWithZone: zone];
+	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -153,9 +153,6 @@
 	if (self.nodeFormat) {
 		params[@"nodeFormat"] = self.nodeFormat;
 	}
-	if (self.connectorColor) {
-		params[@"connectorColor"] = self.connectorColor;
-	}
 	if (self.distance) {
 		params[@"distance"] = self.distance;
 	}
@@ -167,6 +164,9 @@
 	}
 	if (self.connectorPadding) {
 		params[@"connectorPadding"] = self.connectorPadding;
+	}
+	if (self.connectorColor) {
+		params[@"connectorColor"] = self.connectorColor;
 	}
 	return params;
 }
@@ -366,11 +366,6 @@
 	[self updateNSObject:@"nodeFormat"];
 }
 
--(void)setConnectorColor:(NSString *)connectorColor {
-	_connectorColor = connectorColor;
-	[self updateNSObject:@"connectorColor"];
-}
-
 -(void)setDistance:(NSNumber *)distance {
 	_distance = distance;
 	[self updateNSObject:@"distance"];
@@ -389,6 +384,11 @@
 -(void)setConnectorPadding:(NSNumber *)connectorPadding {
 	_connectorPadding = connectorPadding;
 	[self updateNSObject:@"connectorPadding"];
+}
+
+-(void)setConnectorColor:(NSString *)connectorColor {
+	_connectorColor = connectorColor;
+	[self updateNSObject:@"connectorColor"];
 }
 
 @end

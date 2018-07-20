@@ -57,6 +57,7 @@
 	copyZAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyZAxis.categories = [self.categories copyWithZone: zone];
 	copyZAxis.gridLineColor = [self.gridLineColor copyWithZone: zone];
+	copyZAxis.reversedStacks = [self.reversedStacks copyWithZone: zone];
 	copyZAxis.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyZAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
 	copyZAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
@@ -261,6 +262,9 @@
 	}
 	if (self.gridLineColor) {
 		params[@"gridLineColor"] = [self.gridLineColor getData];
+	}
+	if (self.reversedStacks) {
+		params[@"reversedStacks"] = self.reversedStacks;
 	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
@@ -572,6 +576,11 @@
 	}
 	_gridLineColor = gridLineColor;
 	[self updateHIObject:oldValue newValue:gridLineColor propertyName:@"gridLineColor"];
+}
+
+-(void)setReversedStacks:(NSNumber *)reversedStacks {
+	_reversedStacks = reversedStacks;
+	[self updateNSObject:@"reversedStacks"];
 }
 
 -(void)setLinkedTo:(NSNumber *)linkedTo {
