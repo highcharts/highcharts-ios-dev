@@ -96,7 +96,7 @@
 
 -(void)setFunction:(NSString *)function {
     if(self.both && self.closureJSBody) {
-        _function = [NSString stringWithFormat: @"__xx__function() { %@ return ((%@).bind(this))(); }__xx__", self.closureJSBody, function];
+        _function = [NSString stringWithFormat: @"__xx__function(event) { %@ return ((%@).bind(this))(event); }__xx__", self.closureJSBody, function];
     }
     else {
         _function = [NSString stringWithFormat: @"__xx__%@__xx__", function];
@@ -120,7 +120,7 @@
         _uuid = [[[NSUUID UUID] UUIDString] componentsSeparatedByString:@"-"][0];
         NSString *neededProperties = [NSString stringWithFormat:@"dictionary['uuid'] = '%@'; ", self.uuid];
         for (NSString* property in self.properties) {
-            NSString *param = [NSString stringWithFormat:@"dictionary['%1$@'] = this.%1$@; ", property];
+            NSString *param = [NSString stringWithFormat:@"dictionary['%1$@'] = %1$@; ", property];
             neededProperties = [neededProperties stringByAppendingString:param];
         }
         self.closureJSBody = [NSString stringWithFormat:@"var dictionary = {}; %@ iOSEventHandler(dictionary);", neededProperties];
