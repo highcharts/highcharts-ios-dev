@@ -1,0 +1,149 @@
+# Version 6.1.1
+
+## iOS:
+
+1. CSV/PDF export in `export-data` module.
+2. Asign a dictionary with options to the chart options.
+3. Fixed #90 (chart auto update on options change).
+4. HIFunction with event param as a context for events.
+
+## Framework:
+
+1. Added new feature, proximate legend layout, to allow placing legend items close to the data series.
+2. Added new option, tooltip.outside, to allow the tooltip to render outside the confinement of the chart area. Closes #5784.
+3. Added clearer error reporting to offline exporting. Closes #8226.
+4. Added default for data.weight in Word Cloud.
+5. Added feature, event ordering for controlling what handler runs first when multiple modules are used.
+6. Added new default behaviour for sunburst data labels, rotationMode: 'auto'. Now the best fit will be calculated. See #8502.
+7. Added support for polar parallel coordinate charts (star plots).
+8. Added symbol for month number without leading zero. Closes #8150.
+
+## Framework bug fixes:
+
+1. Fixed #4377, exporting context menu did not hide on button click.
+2. Fixed #8021, missing points after zoom in scatter 3d.
+3. Fixed #8031, columns overlapped xAxis.
+4. Fixed #8042, axis labels had the same slot width on 3d charts
+5. Fixed #8140, series legend items didn't show up when colorAxis.showInlegend was false.
+6. Fixed #8159, useHTML caused that treemap data label was misplaced
+7. Fixed #8163, added xAxis.reversedStacks option to control stacks order within a columns group.
+8. Fixed #8173, crosshair did not work properly with variwide.
+9. Fixed #8173, missing unit test.
+10. Fixed #8181, wordcloud missed large words.
+11. Fixed #8187, stackLabels in bar chart were misaligned.
+12. Fixed #8210, a regression causing axis labels to not expand after having ellipsis.
+13. Fixed #8214, missing space character before tracker class definition.
+14. Fixed #8234, a regression causing overlapping X axis labels on drilldown.
+15. Fixed #8241, use secure URLs in themes.
+16. Fixed #8243, the way of calculating axis slotWidth changed.
+17. Fixed #8245, regression causing data.parsed callback not being called on loading Google Spreadsheets.
+18. Fixed #8273, offline export bug due to nested function wrap.
+19. Fixed #8276, wrong z-index for halo in styled mode.
+20. Fixed #8277, missing top neck of reversed funnel.
+21. Fixed #8330, overlapping pie data labels due to a bug in the label distribution algorithm.
+22. Fixed #8358, export icon was not disabled using responsive rule.
+23. Fixed #8365, indicator calculated wrong values for long and short sma.
+24. Fixed #8377, chart disappeared after resizing a hidden chart inside a padded div.
+25. Fixed #8392, plotbands update zIndex issue.
+26. Fixed #8393, annotations are not exported when added dynamically.
+27. Fixed #8402, boost not rendering well with bubble chart and missing z values.
+28. Fixed #8406, colorAxis did not get new series extremes after chart update.
+29. Fixed #8407, scatter series added to a 3D chart via chart.addSeries was not converted to a scatter3d series.
+30. Fixed #8415, className option did not work on plot lines.
+31. Fixed #8428, pie chart slice did not show after visibility changes.
+32. Fixed #8438, combination charts from CSV didn't lay out properly without seriesMapping.
+33. Fixed #8444, axis title rendered a title tag when wrapped across two or more lines.
+34. Fixed #8456, improved 3d projection matrix property.
+35. Fixed #8467, regression causing long axis labels being clipped when using HTML in combination with whiteSpace: nowrap.
+36. Fixed #8477, plot line labels didn't work in browsers that support Array.prototype.flat.
+37. Fixed #8478, a regression causing duplicated legend items when using color axis and dynamically adding series.
+38. Fixed #8481, chart update with type: bar didn't work.
+39. Fixed #8494, incorrect assignment in data export for multiple pie charts.
+40. Fixed #8515, padding was not applied to data labels in sunburst series.
+41. Fixed #8531, random data labels in sunburst chart were hidden.
+42. Fixed #8181, regression with drilling up by clicking root node in Sunburst.
+43. Fixed build scripts which returned to early, instead of waiting for promise to resolve.
+44. Fixed disabling animation in pattern fills.
+45. Fixed export menu rendering below axis when scrollablePlotArea was used. See #8316.
+46. Fixed issue where image patterns could not have translucent opacity with default animation.
+47. Fixed issue with scrollablePlotArea being applied on exported charts. See #8316.
+48. Fixed issue with image patterns in IE not always being shown if images were cached.
+49. Fixed issue with initialValue was always supplied to reduce.
+50. Fixed scrollablePlotArea, the scroll jumped back to original scrollPositionX after toggling series. See #8316.
+51. Fixed stuck series labels.
+
+# Version 6.1.0
+
+## Framework:
+
+1. Added feature for loading data directly from a CSV URL or JSON resource, and keeping it dynamically updated through the data.enablePolling option.
+2. Added examples of themes with styled mode: dark-unica, sand-signika, grid-light.
+3. Added feature to animate the series when updating data through Series.setData, Series.update or Chart.update. The new logic looks for matching X values and can be disabled through setData's updatePoints option.
+4. Added Open in Cloud functionality in the export-data module.
+5. Added pattern fill module.
+6. Added new feature, chart.scrollablePlotArea, to provide smooth scrolling of data on small devices.
+7. Added animation parameter to Chart.update.
+8. Added default max-width for pie data labels to avoid long labels squeezing the pie itself.
+9. Added new option, data.beforeParse, to allow modifying the CSV when using the data.csvURL option.
+10. Added new option, legend.alignColumns, providing better default layout for multiline horizontal legends.
+11. Added support for Infinity and -Infinity values for plotOptions.area.threshold, to make the area extend towards either Y axis extreme. Closes #8139.
+12. Added support for nested series.keys.
+13. Added options minFontSize and maxFontSize to Wordcloud.
+
+## Framework bug fixes:
+
+1. Fixed #7792 #7791, inverted charts not clipping correctly in Boost.
+2. Added max distance to the label distribution function, so pie data labels and flags are not drawn too far away from the anchor point.
+3. Fixed #4881, data labels with useHTML caused recursion error in Firefox on Windows.
+4. Fixed #7026, export-data did not work when the boost module was active.
+5. Fixed #7103, dataLabels not cropped outside extremes.
+6. Fixed #7186, added new build script to dist task. Build and includes es-modules in distribution.
+7. Fixed #7362, dataLabels were overlapping when rotation was set.
+8. Fixed #7383, SVG title tag not configurable.
+9. Fixed #7491, missing words in Wordcloud because of too small playing field.
+10. Fixed #7604, axes ticks were wrongly aligned when startOnTick or endOnTick were set to alse.
+11. Fixed #7639, wrong extremes after repeated zoom in scatter charts.
+12. Fixed #7798, stack labels weren't correctly positioned with multiple yAxis
+13. Fixed #7850, legacy IE wasn't getting classes of DOM elements correctly.
+14. Fixed #7857, panning was not working when xAxis was reversed.
+15. Fixed #7862, connector lines were not visible in waterfall series when negativeColor was used.
+16. Fixed #7874, wrong legend item positions when using HTML after setting chart size.
+17. Fixed #7894, legend.verticalAlign top failed with no chart title.
+18. Fixed #7896, streamgraph rendering and tooltip issues with single series.
+19. Fixed #7898, drillup button with long text was not correctly aligned after multi-level drilldown.
+20. Fixed #7906, error in gauge chart if no yAxis.labels config was provided in styled mode.
+21. Fixed #7931, error in series-label module when animating while chart was destroyed.
+22. Fixed #7933, setting startPoint dynamically failed when data set was empty initially.
+23. Fixed #7942, yAxis ticks and title had wrong positions after toggling series visibility.
+24. Fixed #7957, custom buttons in exporting didn't rescale image symbols.
+25. Fixed #7965, could not toggle the chart.reflow option dynamically with chart.update().
+26. Fixed #7968, a regression causing ellipsis setting xAxis.labels.style not to work.
+27. Fixed #7975, long pie chart data labels were not correctly truncated, and could not be disabled.
+28. Fixed #7986, invalid exported CSS when using comma item delimiter and best-guess decimal point in European locales.
+29. Fixed #7991, treemap had wrong root on export.
+30. Fixed #7996, polar chart with particular values was rendered wrong.
+31. Fixed #8008, drilldown data points set as arrays with keys failed.
+32. Fixed #8014, Chart.setTitle didn't result in legend position updating.
+33. Fixed #8060, markers flickering after setData() when redraw was deferred.
+34. Fixed #8073, animation of graph with center step was distorted.
+35. Fixed #8075, adding and removing axes dynamically caused redraw error.
+36. Fixed #8083, wrong crosshair width and position for variwide chart.
+37. Fixed #8092, plotOptions.bubble.sizeByAbsoluteValue did not render bubbles when z-values were very close.
+38. Fixed #8100, arearange markers did not correctly support negativeColor and zones.
+39. Fixed #8101, wrong decimal separator in tooltip with multiple values.
+40. Fixed #8104, selected state attributes for a point were not applied in xrange series.
+41. Fixed #8106, context was not preserved inside lin2log and log2lin axis functions.
+42. Fixed #8119, point class name was not applied to the halo and connector.
+43. Fixed #8129, yAxis with tickPixelInterval=1 rendered tick close to zero instead of zero.
+44. Fixed Series.update to support soft series name without recreating series.
+45. Fixed data module failing to initialize chart when the data config was empty.
+46. Fixed errors in plugins when destroying a chart from its own callback.
+47. Fixed issue with legend navigation sometimes not focusing for single legend item charts.
+48. Fixed issues with resizing points with autocalculated pattern dimensions.
+
+# Version 6.0.7
+
+1. Chart update feature: changing any object from the chart's options causes the chart to be updated automatically. 
+   Also added a method `updateOptions` for updating the chart options manually.
+2. Functions feature: added support for Objective-C/Swift blocks in HIFunction. 
+3. New api reference(documentation).
