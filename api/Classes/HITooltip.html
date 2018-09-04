@@ -166,7 +166,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for the tooltip that appears when the user hovers over a series or point.</p>
+						<p>A configuration object for the tooltip rendering of each single series. Properties are inherited from <code>tooltip</code>, but only the following properties can be defined on a series level.</p>
 					</div>
 					
 					
@@ -313,7 +313,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/">A HTML table in the tooltip</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/footerformat/">An HTML table in the tooltip</a></li>
 </ul>
 
 			</div>
@@ -418,95 +418,6 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/">Set decimals, prefix and suffix for the value</a></li>
 </ul>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/dateTimeLabelFormats" title="dateTimeLabelFormats"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dateTimeLabelFormats">&nbsp;&nbsp;dateTimeLabelFormats</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>For series on a datetime axes, the date format in the tooltip&rsquo;s header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see <code>dateFormat</code>. Defaults to: {   millisecond:&ldquo;%A, %b %e, %H:%M:%S.%L&rdquo;,   second:&ldquo;%A, %b %e, %H:%M:%S&rdquo;,   minute:&ldquo;%A, %b %e, %H:%M&rdquo;,   hour:&ldquo;%A, %b %e, %H:%M&rdquo;,   day:&ldquo;%A, %b %e, %Y&rdquo;,   week:&ldquo;Week from %A, %b %e, %Y&rdquo;,   month:&ldquo;%B %Y&rdquo;,   year:&ldquo;%Y&rdquo; }</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/shape" title="shape"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shape">&nbsp;&nbsp;shape</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The name of a symbol to use for the border around the tooltip.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *shape</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["callout", "square"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>callout</code>.</p>
 			</div>
 			
 
@@ -640,7 +551,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the tooltip border. When <code>null</code>, the border takes the color of the corresponding series or point.</p>
+				<p>The color of the tooltip border. When <code>undefined</code>, the border takes the color of the corresponding series or point.</p>
 			</div>
 			
 		    
@@ -657,9 +568,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">Follow series by default</a></li>
@@ -711,7 +620,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{ "color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap" }</code>.</p>
+				<p><strong>Defaults to</strong> <code>{"color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap"}</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1260,6 +1169,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/dateTimeLabelFormats" title="dateTimeLabelFormats"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateTimeLabelFormats">&nbsp;&nbsp;dateTimeLabelFormats</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For series on a datetime axes, the date format in the tooltip&rsquo;s header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see <code>dateFormat</code>. Defaults to: {   millisecond:&ldquo;%A, %b %e, %H:%M:%S.%L&rdquo;,   second:&ldquo;%A, %b %e, %H:%M:%S&rdquo;,   minute:&ldquo;%A, %b %e, %H:%M&rdquo;,   hour:&ldquo;%A, %b %e, %H:%M&rdquo;,   day:&ldquo;%A, %b %e, %Y&rdquo;,   week:&ldquo;Week from %A, %b %e, %Y&rdquo;,   month:&ldquo;%B %Y&rdquo;,   year:&ldquo;%Y&rdquo; }</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/padding" title="padding"></a>
 	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
 </h3>
@@ -1397,6 +1347,54 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/">Disable tooltip and show values on chart instead</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shape" title="shape"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shape">&nbsp;&nbsp;shape</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The name of a symbol to use for the border around the tooltip. Can be one of: <code>"callout"</code>, <code>"circle"</code> or <code>"square"</code>. Custom callbacks for symbol path generation can also be added to <code>Highcharts.SVGRenderer.prototype.symbols</code> the same way as for <code>series.marker.symbol</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *shape</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["callout", "square"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>callout</code>.</p>
 			</div>
 			
 
@@ -1705,7 +1703,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>nodes</em> in tooltip of a sankey diagram series, as opposed to links.</p>
+				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>nodes</em> in tooltip of a sankey diagram series, as opposed to links.</p>
 			</div>
 			
 		    

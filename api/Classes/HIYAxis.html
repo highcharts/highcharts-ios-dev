@@ -275,7 +275,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don&rsquo;t want the lowest data value to appear on the edge of the plot area. When the axis' <code>min</code> option is set or a max extreme is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p>
+				<p>Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don&rsquo;t want the lowest data value to appear on the edge of the plot area. When the axis' <code>min</code> option is set or a min extreme is set using <code>axis.setExtremes()</code>, the minPadding will be ignored.</p>
 			</div>
 			
 		    
@@ -422,7 +422,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data.</p>
+				<p>A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data. <strong>Note</strong>: The <code>series.softThreshold</code> option takes precedence over this option.</p>
 			</div>
 			
 		    
@@ -515,8 +515,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/startOnTick" title="startOnTick"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startOnTick">&nbsp;&nbsp;startOnTick</a></code>
+	<a name="//api/name/min" title="min"></a>
+	<h3 class="method-title"><code><a href="#//api/name/min">&nbsp;&nbsp;min</a></code>
 </h3>
 
 	<div class="method-info">
@@ -526,12 +526,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to force the axis to start on a tick. Use this option with the <code>maxPadding</code> option to control the axis start.</p>
+				<p>The minimum value of the axis. If <code>null</code> the min value is automatically calculated. If the <code>startOnTick</code> option is true (default), the <code>min</code> value might be rounded down. The automatically calculated minimum value is also affected by <code>floor</code>, <code>softMin</code>, <code>minPadding</code>, <code>minRange</code> as well as <code>series.threshold</code> and <code>series.softThreshold</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startOnTick</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *min</code></div>
 
 		    
 			
@@ -546,8 +546,8 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-false/">False by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-true/">True</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/">-50 with startOnTick to false</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-true/">-50 with startOnTick true by default</a></li>
 </ul>
 
 			</div>
@@ -687,11 +687,65 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/">True by default</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/endontick/">False</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/max" title="max"></a>
+	<h3 class="method-title"><code><a href="#//api/name/max">&nbsp;&nbsp;max</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The maximum value of the axis. If <code>null</code>, the max value is automatically calculated. If the <code>endOnTick</code> option is true, the <code>max</code> value might be rounded up. If a <code>tickAmount</code> is set, the axis may be extended beyond the set max in order to reach the given number of ticks. The same may happen in a chart with multiple axes, determined by <code>chart.alignTicks</code>, where a <code>tickAmount</code> is applied internally.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *max</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/">Y axis max of 200</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-logarithmic/">Y axis max on logarithmic axis</a></li>
 </ul>
 
 			</div>
@@ -722,7 +776,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A soft minimum for the axis. If the series data minimum is greater than this, the axis will stay at this minimum, but if the series data minimum is lower, the axis will flex to show all data.</p>
+				<p>A soft minimum for the axis. If the series data minimum is greater than this, the axis will stay at this minimum, but if the series data minimum is lower, the axis will flex to show all data. <strong>Note</strong>: The <code>series.softThreshold</code> option takes precedence over this option.</p>
 			</div>
 			
 		    
@@ -792,8 +846,6 @@
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["circle", "polygon"]</code>.</p>
 
-<p><strong>Defaults to</strong> <code>null</code>.</p>
-
 <p><strong>Try it</strong></p>
 
 <ul>
@@ -846,7 +898,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>72</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/">50 px on X axis</a></li>
@@ -975,8 +1029,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/max" title="max"></a>
-	<h3 class="method-title"><code><a href="#//api/name/max">&nbsp;&nbsp;max</a></code>
+	<a name="//api/name/reversed" title="reversed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reversed">&nbsp;&nbsp;reversed</a></code>
 </h3>
 
 	<div class="method-info">
@@ -986,12 +1040,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The maximum value of the axis. If <code>null</code>, the max value is automatically calculated. If the <code>endOnTick</code> option is true, the <code>max</code> value might be rounded up. If a <code>tickAmount</code> is set, the axis may be extended beyond the set max in order to reach the given number of ticks. The same may happen in a chart with multiple axes, determined by <code>chart.alignTicks</code>, where a <code>tickAmount</code> is applied internally.</p>
+				<p>Whether to reverse the axis so that the highest number is closest to the origin.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *max</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversed</code></div>
 
 		    
 			
@@ -1003,11 +1057,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/">Y axis max of 200</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-logarithmic/">Y axis max on logarithmic axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/reversed/">Reversed Y axis</a></li>
 </ul>
 
 			</div>
@@ -1334,8 +1389,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/min" title="min"></a>
-	<h3 class="method-title"><code><a href="#//api/name/min">&nbsp;&nbsp;min</a></code>
+	<a name="//api/name/startOnTick" title="startOnTick"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startOnTick">&nbsp;&nbsp;startOnTick</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1345,12 +1400,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The minimum value of the axis. If <code>null</code> the min value is automatically calculated. If the <code>startOnTick</code> option is true (default), the <code>min</code> value might be rounded down. The automatically calculated minimum value is also affected by <code>floor</code>, <code>softMin</code>, <code>minPadding</code>, <code>minRange</code> as well as <code>series.threshold</code> and <code>series.softThreshold</code>.</p>
+				<p>Whether to force the axis to start on a tick. Use this option with the <code>maxPadding</code> option to control the axis start.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *min</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startOnTick</code></div>
 
 		    
 			
@@ -1362,11 +1417,13 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-false/">-50 with startOnTick to false</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/min-startontick-true/">-50 with startOnTick true by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-false/">False by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startontick-true/">True</a></li>
 </ul>
 
 			</div>
@@ -1455,7 +1512,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0.01</code>.</p>
+				<p><strong>Defaults to</strong> <code>0.05</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1610,6 +1667,59 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/">A 1px line on Y axis</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/">Axes in styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minorTickColor" title="minorTickColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minorTickColor">&nbsp;&nbsp;minorTickColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Color for the minor tick marks.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *minorTickColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>#999999</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/">Black tick marks on Y axis</a></li>
 </ul>
 
 			</div>
@@ -1929,59 +2039,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/reversed" title="reversed"></a>
-	<h3 class="method-title"><code><a href="#//api/name/reversed">&nbsp;&nbsp;reversed</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversed</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/reversed/">Reversed Y axis</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIYAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/startOfWeek" title="startOfWeek"></a>
 	<h3 class="method-title"><code><a href="#//api/name/startOfWeek">&nbsp;&nbsp;startOfWeek</a></code>
 </h3>
@@ -2010,7 +2067,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startofweek-monday/">Monday by default</a></li>
@@ -2062,9 +2121,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/id/">Get the object</a></li>
@@ -2297,6 +2354,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/floor" title="floor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/floor">&nbsp;&nbsp;floor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The lowest allowed value for automatically computed axis extremes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *floor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/floor-ceiling/">Floor and ceiling</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/minorGridLineColor" title="minorGridLineColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/minorGridLineColor">&nbsp;&nbsp;minorGridLineColor</a></code>
 </h3>
@@ -2413,7 +2521,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The dash or dot style of the minor grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.</p>
+				<p>The dash or dot style of the minor grid lines. For possible values, see <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.</p>
 			</div>
 			
 		    
@@ -2468,45 +2576,10 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>The pixel length of the minor tick marks.</p>
-			</div>
-			
-		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minorTickLength</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorticklength/">10px on Y axis</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIYAxis.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -2581,6 +2654,8 @@
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["linear", "logarithmic", "datetime", "category"]</code>.</p>
 
+<p><strong>Defaults to</strong> <code>linear</code>.</p>
+
 <p><strong>Try it</strong></p>
 
 <ul>
@@ -2649,8 +2724,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/crosshair" title="crosshair"></a>
-	<h3 class="method-title"><code><a href="#//api/name/crosshair">&nbsp;&nbsp;crosshair</a></code>
+	<a name="//api/name/tickLength" title="tickLength"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tickLength">&nbsp;&nbsp;tickLength</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2660,12 +2735,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Configure a crosshair that follows either the mouse pointer or the hovered point. In styled mode, the crosshairs are styled in the <code>.highcharts-crosshair</code>, <code>.highcharts-crosshair-thin</code> or <code>.highcharts-xaxis-category</code> classes.</p>
+				<p>The pixel length of the main tick marks.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICrosshair *crosshair</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *tickLength</code></div>
 
 		    
 			
@@ -2677,12 +2752,10 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/">Crosshair on both axes</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/ticklength/">20 px tick length on the X axis</a></li>
 </ul>
 
 			</div>
@@ -2753,6 +2826,59 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/showEmpty" title="showEmpty"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showEmpty">&nbsp;&nbsp;showEmpty</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to show the axis line and title when the axis has no data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showEmpty</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/showempty/">When clicking the legend to hide series, one axis preserves line and title, the other doesn&rsquo;t</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/gridLineDashStyle" title="gridLineDashStyle"></a>
 	<h3 class="method-title"><code><a href="#//api/name/gridLineDashStyle">&nbsp;&nbsp;gridLineDashStyle</a></code>
 </h3>
@@ -2764,7 +2890,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The dash or dot style of the grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.</p>
+				<p>The dash or dot style of the grid lines. For possible values, see <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.</p>
 			</div>
 			
 		    
@@ -2835,11 +2961,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
 			
 
 			
@@ -2962,59 +3083,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/showEmpty" title="showEmpty"></a>
-	<h3 class="method-title"><code><a href="#//api/name/showEmpty">&nbsp;&nbsp;showEmpty</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to show the axis line and title when the axis has no data.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showEmpty</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/showempty/">When clicking the legend to hide series, one axis preserves line and title, the other doesn&rsquo;t</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIYAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/minorTicks" title="minorTicks"></a>
 	<h3 class="method-title"><code><a href="#//api/name/minorTicks">&nbsp;&nbsp;minorTicks</a></code>
 </h3>
@@ -3102,59 +3170,6 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickwidth/">3px width</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIYAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/floor" title="floor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/floor">&nbsp;&nbsp;floor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The lowest allowed value for automatically computed axis extremes.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *floor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/floor-ceiling/">Floor and ceiling</a></li>
 </ul>
 
 			</div>
@@ -3334,7 +3349,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval is computed to approximately follow the <code>tickPixelInterval</code> on linear and datetime axes. On categorized axes, a <code>null</code> tickInterval will default to 1, one category. Note that datetime axes are based on milliseconds, so for example an interval of one day is expressed as <code>24 * 3600 * 1000</code>. On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc. If the tickInterval is too dense for labels to be drawn, Highcharts may remove ticks. If the chart has multiple axes, the <code>alignTicks</code> option may interfere with the <code>tickInterval</code> setting.</p>
+				<p>The interval of the tick marks in axis units. When <code>undefined</code>, the tick interval is computed to approximately follow the <code>tickPixelInterval</code> on linear and datetime axes. On categorized axes, a <code>undefined</code> tickInterval will default to 1, one category. Note that datetime axes are based on milliseconds, so for example an interval of one day is expressed as <code>24 * 3600 * 1000</code>. On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc. If the tickInterval is too dense for labels to be drawn, Highcharts may remove ticks. If the chart has multiple axes, the <code>alignTicks</code> option may interfere with the <code>tickInterval</code> setting.</p>
 			</div>
 			
 		    
@@ -3351,9 +3366,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickinterval-5/">Tick interval of 5 on a linear axis</a></li>
@@ -3376,8 +3389,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/minorTickInterval" title="minorTickInterval"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minorTickInterval">&nbsp;&nbsp;minorTickInterval</a></code>
+	<a name="//api/name/tickPosition" title="tickPosition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tickPosition">&nbsp;&nbsp;tickPosition</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3387,12 +3400,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Specific tick interval in axis units for the minor ticks. On a linear axis, if <code>"auto"</code>, the minor tick interval is calculated as a fifth of the tickInterval. If <code>null</code> or <code>undefined</code>, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don&rsquo;t make sense, and will be ignored to prevent performance problems.</p>
+				<p>The position of the major tick marks relative to the axis line. Can be one of <code>inside</code> and <code>outside</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id minorTickInterval</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tickPosition</code></div>
 
 		    
 			
@@ -3404,13 +3417,13 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Accepted values:</strong> <code>["inside", "outside"]</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-null/">Null by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-5/">5 units</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/">&ldquo;auto&rdquo;</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/">0.1</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-outside/">&ldquo;outside&rdquo; by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-inside/">&ldquo;inside&rdquo;</a></li>
 </ul>
 
 			</div>
@@ -3458,12 +3471,10 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/">With</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/line-labels/">With</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/categories/">Without</a></li>
 </ul>
 
@@ -3566,9 +3577,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/linkedto/">Different string formats of the same date</a></li>
@@ -3592,8 +3601,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/minorGridLineWidth" title="minorGridLineWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minorGridLineWidth">&nbsp;&nbsp;minorGridLineWidth</a></code>
+	<a name="//api/name/alternateGridColor" title="alternateGridColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alternateGridColor">&nbsp;&nbsp;alternateGridColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3603,12 +3612,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Width of the minor, secondary grid lines. In styled mode, the stroke width is given in the <code>.highcharts-grid-line</code> class.</p>
+				<p>When using an alternate grid color, a band is painted across the plot area between every other grid line.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minorGridLineWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *alternateGridColor</code></div>
 
 		    
 			
@@ -3623,61 +3632,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinewidth/">2px lines from Y axis</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/">Styled mode</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIYAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/minorTickColor" title="minorTickColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minorTickColor">&nbsp;&nbsp;minorTickColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Color for the minor tick marks.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *minorTickColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#999999</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/">Black tick marks on Y axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/alternategridcolor/">Alternate grid color on the Y axis</a></li>
 </ul>
 
 			</div>
@@ -3853,8 +3808,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tickLength" title="tickLength"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tickLength">&nbsp;&nbsp;tickLength</a></code>
+	<a name="//api/name/crosshair" title="crosshair"></a>
+	<h3 class="method-title"><code><a href="#//api/name/crosshair">&nbsp;&nbsp;crosshair</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3864,12 +3819,65 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The pixel length of the main tick marks.</p>
+				<p>Configure a crosshair that follows either the mouse pointer or the hovered point. In styled mode, the crosshairs are styled in the <code>.highcharts-crosshair</code>, <code>.highcharts-crosshair-thin</code> or <code>.highcharts-xaxis-category</code> classes.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *tickLength</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICrosshair *crosshair</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/">Crosshair on both axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minorGridLineWidth" title="minorGridLineWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minorGridLineWidth">&nbsp;&nbsp;minorGridLineWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Width of the minor, secondary grid lines. In styled mode, the stroke width is given in the <code>.highcharts-grid-line</code> class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minorGridLineWidth</code></div>
 
 		    
 			
@@ -3884,7 +3892,8 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/ticklength/">20 px tick length on the X axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinewidth/">2px lines from Y axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/">Styled mode</a></li>
 </ul>
 
 			</div>
@@ -3904,8 +3913,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/alternateGridColor" title="alternateGridColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/alternateGridColor">&nbsp;&nbsp;alternateGridColor</a></code>
+	<a name="//api/name/minorTickInterval" title="minorTickInterval"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minorTickInterval">&nbsp;&nbsp;minorTickInterval</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3915,12 +3924,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When using an alternate grid color, a band is painted across the plot area between every other grid line.</p>
+				<p>Specific tick interval in axis units for the minor ticks. On a linear axis, if <code>"auto"</code>, the minor tick interval is calculated as a fifth of the tickInterval. If <code>null</code> or <code>undefined</code>, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don&rsquo;t make sense, and will be ignored to prevent performance problems.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *alternateGridColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id minorTickInterval</code></div>
 
 		    
 			
@@ -3932,66 +3941,13 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/alternategridcolor/">Alternate grid color on the Y axis</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIYAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/tickPosition" title="tickPosition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tickPosition">&nbsp;&nbsp;tickPosition</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The position of the major tick marks relative to the axis line. Can be one of <code>inside</code> and <code>outside</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tickPosition</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["inside", "outside"]</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-outside/">&ldquo;outside&rdquo; by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickposition-inside/">&ldquo;inside&rdquo;</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-null/">Null by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-5/">5 units</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/">&ldquo;auto&rdquo;</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/">0.1</a></li>
 </ul>
 
 			</div>

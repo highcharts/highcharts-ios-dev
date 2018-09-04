@@ -258,7 +258,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A predefined shape or symbol for the marker. When null, the symbol is pulled from options.symbols. Other possible values are &ldquo;circle&rdquo;, &ldquo;square&rdquo;, &ldquo;diamond&rdquo;, &ldquo;triangle&rdquo; and &ldquo;triangle-down&rdquo;. Additionally, the URL to a graphic can be given on this form: &ldquo;url(graphic.png)&rdquo;. Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server. Custom callbacks for symbol path generation can also be added to <code>Highcharts.SVGRenderer.prototype.symbols</code>. The callback is then used by its method name, as shown in the demo.</p>
+				<p>A predefined shape or symbol for the marker. When undefined, the symbol is pulled from options.symbols. Other possible values are &ldquo;circle&rdquo;, &ldquo;square&rdquo;, &ldquo;diamond&rdquo;, &ldquo;triangle&rdquo; and &ldquo;triangle-down&rdquo;. Additionally, the URL to a graphic can be given on this form: &ldquo;url(graphic.png)&rdquo;. Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server. Custom callbacks for symbol path generation can also be added to <code>Highcharts.SVGRenderer.prototype.symbols</code>. The callback is then used by its method name, as shown in the demo.</p>
 			</div>
 			
 		    
@@ -275,12 +275,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>[null, "circle", "square", "diamond", "triangle",
-        "triangle-down"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-symbol/">Predefined, graphic and custom markers</a></li>
@@ -355,7 +350,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The fill color of the point marker. When <code>null</code>, the series' or point&rsquo;s color is used.</p>
+				<p>The fill color of the point marker. When <code>undefined</code>, the series' or point&rsquo;s color is used.</p>
 			</div>
 			
 		    
@@ -372,9 +367,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/">White fill</a></li>
@@ -408,7 +401,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the point marker&rsquo;s outline. When <code>null</code>, the series' or point&rsquo;s color is used.</p>
+				<p>The color of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s color is used.</p>
 			</div>
 			
 		    
@@ -428,7 +421,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/">Inherit from series color (null)</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/">Inherit from series color (undefined)</a></li>
 </ul>
 
 			</div>
@@ -570,9 +563,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/">Fixed width and height</a></li>
@@ -623,9 +614,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/">Fixed width and height</a></li>
@@ -676,7 +665,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>4</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-radius/">Bigger markers</a></li>
@@ -727,7 +718,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>2</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabledthreshold">A higher threshold</a></li>

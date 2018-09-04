@@ -156,7 +156,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Event handlers for the axis.</p>
+						<p>General event handlers for the series items. These event hooks can also be attached to the series at run time using the <code>Highcharts.addEvent</code> function.</p>
 					</div>
 					
 					
@@ -1063,7 +1063,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Fires when an area of the chart has been selected. Selection is enabled by setting the chart&rsquo;s zoomType. One parameter, <code>event</code>, is passed to the function, containing common event information. The default action for the selection event is to zoom the chart to the selected area. It can be prevented by calling <code>event.preventDefault()</code>. Information on the selected area can be found through <code>event.xAxis</code> and <code>event.yAxis</code>, which are arrays containing the axes of each dimension and each axis' min and max values. The primary axes are <code>event.xAxis[0]</code> and <code>event.yAxis[0]</code>. Remember the unit of a datetime axis is milliseconds since 1970-01-01 00:00:00. selection: function(event) {   // log the min and max of the primary, datetime x-axis   console.log(     Highcharts.dateFormat(&lsquo;%Y-%m-%d %H:%M:%S&rsquo;, event.xAxis[0].min),     Highcharts.dateFormat(&lsquo;%Y-%m-%d %H:%M:%S&rsquo;, event.xAxis[0].max)   );   // log the min and max of the y axis   console.log(event.yAxis[0].min, event.yAxis[0].max); }</p>
+				<p>Fires when an area of the chart has been selected. Selection is enabled by setting the chart&rsquo;s zoomType. One parameter, <code>event</code>, is passed to the function, containing common event information. The default action for the selection event is to zoom the chart to the selected area. It can be prevented by calling <code>event.preventDefault()</code>. Information on the selected area can be found through <code>event.xAxis</code> and <code>event.yAxis</code>, which are arrays containing the axes of each dimension and each axis' min and max values. The primary axes are <code>event.xAxis[0]</code> and <code>event.yAxis[0]</code>. Remember the unit of a datetime axis is milliseconds since 1970-01-01 00:00:00. selection: function(event) {   // log the min and max of the primary, datetime x-axis   console.log(     Highcharts.dateFormat(       &lsquo;%Y-%m-%d %H:%M:%S&rsquo;,       event.xAxis[0].min     ),     Highcharts.dateFormat(       &lsquo;%Y-%m-%d %H:%M:%S&rsquo;,       event.xAxis[0].max     )   );   // log the min and max of the y axis   console.log(event.yAxis[0].min, event.yAxis[0].max); }</p>
 			</div>
 			
 		    

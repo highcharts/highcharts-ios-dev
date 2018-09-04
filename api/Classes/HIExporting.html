@@ -152,7 +152,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for the exporting module. For an overview on the matter, see <a href="http://www.highcharts.com/docs/export-module/export-module-overview">the docs</a>.</p>
+						<p>Options for the exporting module. For an overview on the matter, see <a href="https://www.highcharts.com/docs/export-module/export-module-overview">the docs</a>.</p>
 					</div>
 					
 					
@@ -617,7 +617,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for exporting data to CSV or ExCel, or displaying the data in a HTML table or a JavaScript structure. Requires the <code>export-data.js</code> module. This module adds data export options to the export menu and provides functions like <code>Chart.getCSV</code>, <code>Chart.getTable</code>, <code>Chart.getDataRows</code> and <code>Chart.viewData</code>.</p>
+				<p>Options for exporting data to CSV or ExCel, or displaying the data in a HTML table or a JavaScript structure. Requires the <code>export-data.js</code> module. This module adds data export options to the export menu and provides functions like <code>Chart.getCSV</code>, <code>Chart.getTable</code>, <code>Chart.getDataRows</code> and <code>Chart.viewData</code>. The XLS converter is limited and only creates a HTML string that is passed for download, which works but creates a warning before opening. The workaround for this is to use a third party XLSX converter, as demonstrated in the sample below.</p>
 			</div>
 			
 		    
@@ -639,6 +639,7 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/">Categorized data</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/">Highstock time axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/xlsx/">Using a third party XLSX converter</a></li>
 </ul>
 
 			</div>
@@ -704,8 +705,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/chartOptions" title="chartOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
+	<a name="//api/name/tableCaption" title="tableCaption"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tableCaption">&nbsp;&nbsp;tableCaption</a></code>
 </h3>
 
 	<div class="method-info">
@@ -715,12 +716,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Additional chart options to be merged into an exported chart. For example, a common use case is to add data labels to improve readability of the exported chart, or to add a printer-friendly color scheme.</p>
+				<p>Export-data module required. Caption for the data table. Same as chart title by default. Set to <code>false</code> to disable.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id chartOptions</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id tableCaption</code></div>
 
 		    
 			
@@ -732,12 +733,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/">Added data labels</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table">Multiple table headers</a></li>
 </ul>
 
 			</div>
@@ -798,8 +799,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fallbackToExportServer" title="fallbackToExportServer"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fallbackToExportServer">&nbsp;&nbsp;fallbackToExportServer</a></code>
+	<a name="//api/name/useMultiLevelHeaders" title="useMultiLevelHeaders"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useMultiLevelHeaders">&nbsp;&nbsp;useMultiLevelHeaders</a></code>
 </h3>
 
 	<div class="method-info">
@@ -809,12 +810,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether or not to fall back to the export server if the offline-exporting module is unable to export the chart on the client side. This happens for certain browsers, and certain features (e.g. <code>allowHTML</code>), depending on the image type exporting to. For very complex charts, it is possible that export can fail in browsers that don&rsquo;t support Blob objects, due to data URL length limits. It is recommended to define the <code>exporting.error</code> handler if disabling fallback, in order to notify users in case export fails.</p>
+				<p>Export-data module required. Use multi level headers in data table. If <code>csv.columnHeaderFormatter</code> is defined, it has to return objects in order for multi level headers to work.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *fallbackToExportServer</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useMultiLevelHeaders</code></div>
 
 		    
 			
@@ -826,7 +827,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table">Multiple table headers</a></li>
+</ul>
+
 			</div>
 			
 
@@ -895,8 +901,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/useMultiLevelHeaders" title="useMultiLevelHeaders"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useMultiLevelHeaders">&nbsp;&nbsp;useMultiLevelHeaders</a></code>
+	<a name="//api/name/fallbackToExportServer" title="fallbackToExportServer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fallbackToExportServer">&nbsp;&nbsp;fallbackToExportServer</a></code>
 </h3>
 
 	<div class="method-info">
@@ -906,12 +912,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Export-data module required. Use multi level headers in data table. If <code>csv.columnHeaderFormatter</code> is defined, it has to return objects in order for multi level headers to work.</p>
+				<p>Whether or not to fall back to the export server if the offline-exporting module is unable to export the chart on the client side. This happens for certain browsers, and certain features (e.g. <code>allowHTML</code>), depending on the image type exporting to. For very complex charts, it is possible that export can fail in browsers that don&rsquo;t support Blob objects, due to data URL length limits. It is recommended to define the <code>exporting.error</code> handler if disabling fallback, in order to notify users in case export fails.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useMultiLevelHeaders</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *fallbackToExportServer</code></div>
 
 		    
 			
@@ -923,12 +929,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table">Multiple table headers</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
 			</div>
 			
 
@@ -1086,8 +1087,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tableCaption" title="tableCaption"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tableCaption">&nbsp;&nbsp;tableCaption</a></code>
+	<a name="//api/name/chartOptions" title="chartOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1097,12 +1098,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Export-data module required. Caption for the data table. Same as chart title by default. Set to <code>false</code> to disable.</p>
+				<p>Additional chart options to be merged into an exported chart. For example, a common use case is to add data labels to improve readability of the exported chart, or to add a printer-friendly color scheme.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id tableCaption</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id chartOptions</code></div>
 
 		    
 			
@@ -1114,12 +1115,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+				<p><strong>Defaults to</strong> <code>null</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table">Multiple table headers</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/">Added data labels</a></li>
 </ul>
 
 			</div>
