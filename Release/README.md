@@ -30,13 +30,13 @@ Here we present how to create basic chart and place it in your project.
 - First of all download Highcharts framework from here: [Highcharts](https://github.com/highcharts/highcharts-ios) 
 or by using Cocoapods by adding 
     ```
-    pod 'Highcharts', '~> 6.1.1'
+    pod 'Highcharts', '~> 6.1.2'
     ```
     to your Podfile
     
     or Carthage by adding
     ```
-    github "https://github.com/highcharts/highcharts-ios" >= 6.1.1
+    github "https://github.com/highcharts/highcharts-ios" >= 6.1.2
     ```
     to your Cartfile. Please be advised that this is a development framework which contains intel architectures. 
     In order to submit a build to the app store you either need to remove those architectures using lipo,
@@ -54,6 +54,8 @@ or by using Cocoapods by adding
 - Then go to your project settings and add Highcharts to **Embedded Binaries**
 
 ![alt text](https://github.com/highcharts/highcharts-ios/blob/master/Images/1.png "Embedded")
+
+- If your project is leveraging Xcode UI testing, make sure you add the Highcharts framework to Embedded Binaries for the UITests target as well as the main project target
 
 You are now set to use Highcharts!
 
