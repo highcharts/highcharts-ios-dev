@@ -29,18 +29,18 @@
 	copyVariablepie.tooltip = [self.tooltip copyWithZone: zone];
 	copyVariablepie.maxPointSize = [self.maxPointSize copyWithZone: zone];
 	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
-	copyVariablepie.endAngle = [self.endAngle copyWithZone: zone];
+	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
 	copyVariablepie.innerSize = [self.innerSize copyWithZone: zone];
 	copyVariablepie.center = [self.center copyWithZone: zone];
 	copyVariablepie.clip = [self.clip copyWithZone: zone];
 	copyVariablepie.point = [self.point copyWithZone: zone];
+	copyVariablepie.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVariablepie.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyVariablepie.depth = [self.depth copyWithZone: zone];
 	copyVariablepie.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyVariablepie.states = [self.states copyWithZone: zone];
+	copyVariablepie.endAngle = [self.endAngle copyWithZone: zone];
 	copyVariablepie.colors = [self.colors copyWithZone: zone];
-	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
-	copyVariablepie.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyVariablepie.states = [self.states copyWithZone: zone];
 	copyVariablepie.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyVariablepie.startAngle = [self.startAngle copyWithZone: zone];
 	copyVariablepie.size = [self.size copyWithZone: zone];
@@ -52,9 +52,10 @@
 	copyVariablepie.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVariablepie.color = [self.color copyWithZone: zone];
 	copyVariablepie.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyVariablepie.cursor = [self.cursor copyWithZone: zone];
+	copyVariablepie.className = [self.className copyWithZone: zone];
 	copyVariablepie.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariablepie.label = [self.label copyWithZone: zone];
+	copyVariablepie.animation = [self.animation copyWithZone: zone];
 	copyVariablepie.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVariablepie.definition = [self.definition copyWithZone: zone];
 	copyVariablepie.keys = [self.keys copyWithZone: zone];
@@ -62,10 +63,9 @@
 	copyVariablepie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVariablepie.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyVariablepie.shadow = [self.shadow copyWithZone: zone];
-	copyVariablepie.animation = [self.animation copyWithZone: zone];
 	copyVariablepie.visible = [self.visible copyWithZone: zone];
 	copyVariablepie.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyVariablepie.className = [self.className copyWithZone: zone];
+	copyVariablepie.cursor = [self.cursor copyWithZone: zone];
 	return copyVariablepie;
 }
 
@@ -87,11 +87,8 @@
 	if (self.maxPointSize) {
 		params[@"maxPointSize"] = self.maxPointSize;
 	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.endAngle) {
-		params[@"endAngle"] = self.endAngle;
+	if (self.minSize) {
+		params[@"minSize"] = self.minSize;
 	}
 	if (self.innerSize) {
 		params[@"innerSize"] = self.innerSize;
@@ -108,14 +105,14 @@
 		}
 		params[@"center"] = array;
 	}
-	if (self.clip) {
-		params[@"clip"] = self.clip;
-	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
+	}
+	if (self.endAngle) {
+		params[@"endAngle"] = self.endAngle;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -123,12 +120,6 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
-	}
-	if (self.minSize) {
-		params[@"minSize"] = self.minSize;
-	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
@@ -169,18 +160,9 @@
 	[self updateNSObject:@"maxPointSize"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
--(void)setEndAngle:(NSNumber *)endAngle {
-	_endAngle = endAngle;
-	[self updateNSObject:@"endAngle"];
+-(void)setMinSize:(NSNumber *)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
 }
 
 -(void)setInnerSize:(id)innerSize {
@@ -194,11 +176,6 @@
 	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
 }
 
--(void)setClip:(NSNumber *)clip {
-	_clip = clip;
-	[self updateNSObject:@"clip"];
-}
-
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {
 	_slicedOffset = slicedOffset;
 	[self updateNSObject:@"slicedOffset"];
@@ -209,20 +186,15 @@
 	[self updateNSObject:@"depth"];
 }
 
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
+}
+
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
-}
-
--(void)setMinSize:(NSNumber *)minSize {
-	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
-}
-
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {

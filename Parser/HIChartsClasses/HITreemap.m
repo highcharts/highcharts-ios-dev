@@ -24,44 +24,47 @@
 	copyTreemap.xAxis = [self.xAxis copyWithZone: zone];
 	copyTreemap.yAxis = [self.yAxis copyWithZone: zone];
 	copyTreemap.zIndex = [self.zIndex copyWithZone: zone];
-	copyTreemap.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyTreemap.borderColor = [self.borderColor copyWithZone: zone];
+	copyTreemap.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyTreemap.opacity = [self.opacity copyWithZone: zone];
 	copyTreemap.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
-	copyTreemap.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
 	copyTreemap.sortIndex = [self.sortIndex copyWithZone: zone];
-	copyTreemap.interactByLeaf = [self.interactByLeaf copyWithZone: zone];
-	copyTreemap.colors = [self.colors copyWithZone: zone];
+	copyTreemap.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyTreemap.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
+	copyTreemap.tooltip = [self.tooltip copyWithZone: zone];
+	copyTreemap.layoutStartingDirection = [self.layoutStartingDirection copyWithZone: zone];
+	copyTreemap.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyTreemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTreemap.states = [self.states copyWithZone: zone];
 	copyTreemap.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
-	copyTreemap.layoutStartingDirection = [self.layoutStartingDirection copyWithZone: zone];
+	copyTreemap.colors = [self.colors copyWithZone: zone];
 	copyTreemap.levels = [self.levels copyWithZone: zone];
 	copyTreemap.drillUpButton = [self.drillUpButton copyWithZone: zone];
-	copyTreemap.tooltip = [self.tooltip copyWithZone: zone];
-	copyTreemap.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyTreemap.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyTreemap.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyTreemap.interactByLeaf = [self.interactByLeaf copyWithZone: zone];
+	copyTreemap.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
 	copyTreemap.alternateStartingDirection = [self.alternateStartingDirection copyWithZone: zone];
 	copyTreemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTreemap.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyTreemap.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyTreemap.linecap = [self.linecap copyWithZone: zone];
+	copyTreemap.point = [self.point copyWithZone: zone];
 	copyTreemap.selected = [self.selected copyWithZone: zone];
 	copyTreemap.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyTreemap.point = [self.point copyWithZone: zone];
+	copyTreemap.clip = [self.clip copyWithZone: zone];
+	copyTreemap.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyTreemap.color = [self.color copyWithZone: zone];
 	copyTreemap.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyTreemap.threshold = [self.threshold copyWithZone: zone];
 	copyTreemap.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyTreemap.cursor = [self.cursor copyWithZone: zone];
+	copyTreemap.className = [self.className copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyTreemap.connectNulls = [self.connectNulls copyWithZone: zone];
-	copyTreemap.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyTreemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTreemap.label = [self.label copyWithZone: zone];
 	copyTreemap.stacking = [self.stacking copyWithZone: zone];
+	copyTreemap.animation = [self.animation copyWithZone: zone];
 	copyTreemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTreemap.events = [self.events copyWithZone: zone];
 	copyTreemap.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -73,16 +76,15 @@
 	copyTreemap.step = [self.step copyWithZone: zone];
 	copyTreemap.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyTreemap.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
-	copyTreemap.animation = [self.animation copyWithZone: zone];
 	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTreemap.zones = [self.zones copyWithZone: zone];
 	copyTreemap.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyTreemap.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyTreemap.visible = [self.visible copyWithZone: zone];
 	copyTreemap.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyTreemap.boostThreshold = [self.boostThreshold copyWithZone: zone];
-	copyTreemap.className = [self.className copyWithZone: zone];
+	copyTreemap.cursor = [self.cursor copyWithZone: zone];
 	copyTreemap.pointStart = [self.pointStart copyWithZone: zone];
+	copyTreemap.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyTreemap.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyTreemap;
 }
 
@@ -92,23 +94,23 @@
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
 	if (self.opacity) {
 		params[@"opacity"] = self.opacity;
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
 	}
-	if (self.allowDrillToNode) {
-		params[@"allowDrillToNode"] = self.allowDrillToNode;
-	}
 	if (self.sortIndex) {
 		params[@"sortIndex"] = self.sortIndex;
 	}
-	if (self.interactByLeaf) {
-		params[@"interactByLeaf"] = self.interactByLeaf;
+	if (self.layoutAlgorithm) {
+		params[@"layoutAlgorithm"] = self.layoutAlgorithm;
+	}
+	if (self.layoutStartingDirection) {
+		params[@"layoutStartingDirection"] = self.layoutStartingDirection;
+	}
+	if (self.levelIsConstant) {
+		params[@"levelIsConstant"] = self.levelIsConstant;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -116,15 +118,6 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
-	}
-	if (self.layoutAlgorithm) {
-		params[@"layoutAlgorithm"] = self.layoutAlgorithm;
-	}
-	if (self.levelIsConstant) {
-		params[@"levelIsConstant"] = self.levelIsConstant;
-	}
-	if (self.layoutStartingDirection) {
-		params[@"layoutStartingDirection"] = self.layoutStartingDirection;
 	}
 	if (self.levels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -141,6 +134,12 @@
 	if (self.drillUpButton) {
 		params[@"drillUpButton"] = [self.drillUpButton getParams];
 	}
+	if (self.interactByLeaf) {
+		params[@"interactByLeaf"] = self.interactByLeaf;
+	}
+	if (self.allowDrillToNode) {
+		params[@"allowDrillToNode"] = self.allowDrillToNode;
+	}
 	if (self.alternateStartingDirection) {
 		params[@"alternateStartingDirection"] = self.alternateStartingDirection;
 	}
@@ -154,15 +153,6 @@
 	[self updateNSObject:@"colorByPoint"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
 -(void)setOpacity:(NSNumber *)opacity {
 	_opacity = opacity;
 	[self updateNSObject:@"opacity"];
@@ -173,25 +163,9 @@
 	[self updateNSObject:@"ignoreHiddenPoint"];
 }
 
--(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
-	_allowDrillToNode = allowDrillToNode;
-	[self updateNSObject:@"allowDrillToNode"];
-}
-
 -(void)setSortIndex:(NSNumber *)sortIndex {
 	_sortIndex = sortIndex;
 	[self updateNSObject:@"sortIndex"];
-}
-
--(void)setInteractByLeaf:(NSNumber *)interactByLeaf {
-	_interactByLeaf = interactByLeaf;
-	[self updateNSObject:@"interactByLeaf"];
-}
-
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
-	_colors = colors;
-	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
 -(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {
@@ -199,14 +173,20 @@
 	[self updateNSObject:@"layoutAlgorithm"];
 }
 
+-(void)setLayoutStartingDirection:(NSString *)layoutStartingDirection {
+	_layoutStartingDirection = layoutStartingDirection;
+	[self updateNSObject:@"layoutStartingDirection"];
+}
+
 -(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
 	_levelIsConstant = levelIsConstant;
 	[self updateNSObject:@"levelIsConstant"];
 }
 
--(void)setLayoutStartingDirection:(NSString *)layoutStartingDirection {
-	_layoutStartingDirection = layoutStartingDirection;
-	[self updateNSObject:@"layoutStartingDirection"];
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
 -(void)setLevels:(NSArray <HILevels *> *)levels {
@@ -222,6 +202,16 @@
 	}
 	_drillUpButton = drillUpButton;
 	[self updateHIObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
+}
+
+-(void)setInteractByLeaf:(NSNumber *)interactByLeaf {
+	_interactByLeaf = interactByLeaf;
+	[self updateNSObject:@"interactByLeaf"];
+}
+
+-(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
+	_allowDrillToNode = allowDrillToNode;
+	[self updateNSObject:@"allowDrillToNode"];
 }
 
 -(void)setAlternateStartingDirection:(NSNumber *)alternateStartingDirection {

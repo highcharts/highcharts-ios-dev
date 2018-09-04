@@ -11,7 +11,7 @@
 
 
 /**
-A `bellcurve` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.bellcurve`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the `plotOptions.series` object. 2. Options for all `bellcurve` series are defined in `plotOptions.bellcurve`. 3. Options for one single series are given in `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     bellcurve: {       // shared options for all bellcurve series     }   },   series: [{     // specific options for this series instance     type: 'bellcurve'   }] });  
+A `bellcurve` series. If the `type` option is not specified, it is inherited from `chart.type`. For options that apply to multiple series, it is recommended to add them to the `plotOptions.series` options structure. To apply to all series of this specific type, apply it to `plotOptions.bellcurve`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `bellcurve` series are defined in  `plotOptions.bellcurve`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     bellcurve: {       // shared options for all bellcurve series     }   },   series: [{     // specific options for this series instance     type: 'bellcurve'   }] });  
 */
 @interface HIBellcurve: HISeries
 
@@ -52,8 +52,6 @@ Whether the whole area or just the line should respond to mouseover tooltips and
 /**
 Fill color or gradient for the area. When `null`, the series' `color` is used with the series' `fillOpacity`. In styled mode, the fill color can be set with the `.highcharts-area` class name.
 
-**Defaults to** `null`.
-
 **Try it**
 
 * [Null by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/)
@@ -62,8 +60,6 @@ Fill color or gradient for the area. When `null`, the series' `color` is used wi
 @property(nonatomic, readwrite) HIColor *fillColor;
 /**
 A separate color for the graph line. By default the line takes the `color` of the series, but the lineColor setting allows setting a separate color for the line without altering the `fillColor`. In styled mode, the line stroke can be set with the `.highcharts-graph` class name.
-
-**Defaults to** `null`.
 
 **Try it**
 

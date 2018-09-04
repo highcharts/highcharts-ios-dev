@@ -11,14 +11,14 @@
 	[super copyWithZone:zone];
 	HIContextButton *copyContextButton = [[HIContextButton allocWithZone: zone] init];
 	copyContextButton.symbolFill = [self.symbolFill copyWithZone: zone];
-	copyContextButton.symbol = [self.symbol copyWithZone: zone];
+	copyContextButton.menuItems = [self.menuItems copyWithZone: zone];
 	copyContextButton.className = [self.className copyWithZone: zone];
 	copyContextButton._titleKey = [self._titleKey copyWithZone: zone];
 	copyContextButton.onclick = [self.onclick copyWithZone: zone];
 	copyContextButton.x = [self.x copyWithZone: zone];
 	copyContextButton.menuClassName = [self.menuClassName copyWithZone: zone];
-	copyContextButton.menuItems = [self.menuItems copyWithZone: zone];
-	copyContextButton.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyContextButton.symbol = [self.symbol copyWithZone: zone];
+	copyContextButton.symbolStroke = [self.symbolStroke copyWithZone: zone];
 	copyContextButton.text = [self.text copyWithZone: zone];
 	copyContextButton.align = [self.align copyWithZone: zone];
 	copyContextButton.enabled = [self.enabled copyWithZone: zone];
@@ -28,7 +28,7 @@
 	copyContextButton.buttonSpacing = [self.buttonSpacing copyWithZone: zone];
 	copyContextButton.symbolSize = [self.symbolSize copyWithZone: zone];
 	copyContextButton.y = [self.y copyWithZone: zone];
-	copyContextButton.symbolStroke = [self.symbolStroke copyWithZone: zone];
+	copyContextButton.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyContextButton.symbolY = [self.symbolY copyWithZone: zone];
 	copyContextButton.symbolX = [self.symbolX copyWithZone: zone];
 	copyContextButton.symbolStrokeWidth = [self.symbolStrokeWidth copyWithZone: zone];
@@ -41,8 +41,17 @@
 	if (self.symbolFill) {
 		params[@"symbolFill"] = [self.symbolFill getData];
 	}
-	if (self.symbol) {
-		params[@"symbol"] = self.symbol;
+	if (self.menuItems) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.menuItems) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"menuItems"] = array;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -59,20 +68,11 @@
 	if (self.menuClassName) {
 		params[@"menuClassName"] = self.menuClassName;
 	}
-	if (self.menuItems) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.menuItems) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"menuItems"] = array;
+	if (self.symbol) {
+		params[@"symbol"] = self.symbol;
 	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
+	if (self.symbolStroke) {
+		params[@"symbolStroke"] = [self.symbolStroke getData];
 	}
 	if (self.text) {
 		params[@"text"] = self.text;
@@ -101,8 +101,8 @@
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
-	if (self.symbolStroke) {
-		params[@"symbolStroke"] = [self.symbolStroke getData];
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.symbolY) {
 		params[@"symbolY"] = self.symbolY;
@@ -127,9 +127,10 @@
 	[self updateHIObject:oldValue newValue:symbolFill propertyName:@"symbolFill"];
 }
 
--(void)setSymbol:(NSString *)symbol {
-	_symbol = symbol;
-	[self updateNSObject:@"symbol"];
+-(void)setMenuItems:(NSArray *)menuItems {
+	NSArray *oldValue = _menuItems;
+	_menuItems = menuItems;
+	[self updateArrayObject:oldValue newValue:menuItems propertyName:@"menuItems"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -161,15 +162,18 @@
 	[self updateNSObject:@"menuClassName"];
 }
 
--(void)setMenuItems:(NSArray *)menuItems {
-	NSArray *oldValue = _menuItems;
-	_menuItems = menuItems;
-	[self updateArrayObject:oldValue newValue:menuItems propertyName:@"menuItems"];
+-(void)setSymbol:(NSString *)symbol {
+	_symbol = symbol;
+	[self updateNSObject:@"symbol"];
 }
 
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+-(void)setSymbolStroke:(HIColor *)symbolStroke {
+	HIColor *oldValue = _symbolStroke;
+	if(self.symbolStroke) {
+		[self removeObserver:self forKeyPath:@"symbolStroke.isUpdated"];
+	}
+	_symbolStroke = symbolStroke;
+	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
 }
 
 -(void)setText:(NSString *)text {
@@ -221,13 +225,9 @@
 	[self updateNSObject:@"y"];
 }
 
--(void)setSymbolStroke:(HIColor *)symbolStroke {
-	HIColor *oldValue = _symbolStroke;
-	if(self.symbolStroke) {
-		[self removeObserver:self forKeyPath:@"symbolStroke.isUpdated"];
-	}
-	_symbolStroke = symbolStroke;
-	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
 }
 
 -(void)setSymbolY:(NSNumber *)symbolY {

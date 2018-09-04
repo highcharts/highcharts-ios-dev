@@ -15,9 +15,9 @@
 	copyNavigation.buttonOptions = [self.buttonOptions copyWithZone: zone];
 	copyNavigation.menuItemHoverStyle = [self.menuItemHoverStyle copyWithZone: zone];
 	copyNavigation.style = [self.style copyWithZone: zone];
-	copyNavigation.arrowSize = [self.arrowSize copyWithZone: zone];
-	copyNavigation.enabled = [self.enabled copyWithZone: zone];
 	copyNavigation.inactiveColor = [self.inactiveColor copyWithZone: zone];
+	copyNavigation.enabled = [self.enabled copyWithZone: zone];
+	copyNavigation.arrowSize = [self.arrowSize copyWithZone: zone];
 	copyNavigation.animation = [self.animation copyWithZone: zone];
 	copyNavigation.activeColor = [self.activeColor copyWithZone: zone];
 	return copyNavigation;
@@ -41,14 +41,14 @@
 	if (self.style) {
 		params[@"style"] = self.style;
 	}
-	if (self.arrowSize) {
-		params[@"arrowSize"] = self.arrowSize;
+	if (self.inactiveColor) {
+		params[@"inactiveColor"] = [self.inactiveColor getData];
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.inactiveColor) {
-		params[@"inactiveColor"] = [self.inactiveColor getData];
+	if (self.arrowSize) {
+		params[@"arrowSize"] = self.arrowSize;
 	}
 	if (self.animation) {
 		params[@"animation"] = self.animation;
@@ -102,16 +102,6 @@
 	[self updateNSObject:@"style"];
 }
 
--(void)setArrowSize:(NSNumber *)arrowSize {
-	_arrowSize = arrowSize;
-	[self updateNSObject:@"arrowSize"];
-}
-
--(void)setEnabled:(NSNumber *)enabled {
-	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
-}
-
 -(void)setInactiveColor:(HIColor *)inactiveColor {
 	HIColor *oldValue = _inactiveColor;
 	if(self.inactiveColor) {
@@ -119,6 +109,16 @@
 	}
 	_inactiveColor = inactiveColor;
 	[self updateHIObject:oldValue newValue:inactiveColor propertyName:@"inactiveColor"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
+-(void)setArrowSize:(NSNumber *)arrowSize {
+	_arrowSize = arrowSize;
+	[self updateNSObject:@"arrowSize"];
 }
 
 -(void)setAnimation:(id)animation {

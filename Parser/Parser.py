@@ -197,7 +197,41 @@ def get_type(x):
         "AnimationOptions|Boolean": 'id /* id, Bool */',
         "Boolean|AnimationOptions": 'id /* Bool, id */',
         "Boolean|AnimationObject": 'id /* Bool, id */',
-        "Array.<number>": 'NSArray<NSNumber *>'
+        "Array.<number>": 'NSArray<NSNumber *>',
+        # 6.1.2
+        "HTMLElement|String": 'id',
+        "number": 'NSNumber',
+        "string": 'NSString',
+        "Highcharts.ColorString": 'HIColor',
+        "boolean": 'NSNumber /* Bool */',
+        "Highcharts.PlotSeriesDataLabelsOptions": 'id',
+        "Highcharts.CSSObject": 'NSDictionary /* <NSString, NSString> */',
+        "Highcharts.Dictionary.<string>": 'id',
+        "*" : 'id', #xAxis.labels
+        "Array.<*>": 'NSArray', #xAxis.plotBands
+        "Array.<Array.<(string|Array.<number>)>>":'NSArray',
+        "Array.<string>": 'NSArray<NSString *>',
+        "*|boolean": 'id',
+        "null|number|string": 'id',
+        "Number|Undefined": 'NSNumber',
+        "Highcharts.AnimationOptionsObject|boolean": 'id',
+        "Highcharts.PlotSeriesStatesHoverHaloOptions": 'id',
+        "Highcharts.CSSObject|boolean": 'id',
+        "Object|String" : 'id /* NSString, id */',
+        "object": 'id',
+        "Number|String|function": 'id /* NSNumber, NSString, Function */',
+        "Array.<Array.<(number|Highcharts.ColorString)>>": 'NSArray<NSArray *>',
+        "Array.<Object>|Array.<String>": 'NSArray',
+        "Highcharts.SVGDOMElement|string": 'id',
+        "null|number": 'NSNumber',
+        "Array.<number>|number": 'NSArray',
+        "Highcharts.AnimationObject|boolean": 'id',
+        "Boolean|Number": 'NSNumber',
+        "number|string": 'id /* NSNumber, NSString */',
+        "Highcharts.PlotSeriesStatesOptions": 'id',
+        "Highcharts.SeriesShadowOptions|boolean": 'id',
+        "Array.<Highcharts.ColorString>": 'NSArray<HIColor *>',
+        "Highcharts.SVGAttributes": 'id'
     }[str(x)]
 
 

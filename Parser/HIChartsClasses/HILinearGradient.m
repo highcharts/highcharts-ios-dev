@@ -10,8 +10,8 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HILinearGradient *copyLinearGradient = [[HILinearGradient allocWithZone: zone] init];
-	copyLinearGradient.y1 = [self.y1 copyWithZone: zone];
 	copyLinearGradient.x2 = [self.x2 copyWithZone: zone];
+	copyLinearGradient.y1 = [self.y1 copyWithZone: zone];
 	copyLinearGradient.x1 = [self.x1 copyWithZone: zone];
 	copyLinearGradient.y2 = [self.y2 copyWithZone: zone];
 	return copyLinearGradient;
@@ -20,11 +20,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.y1) {
-		params[@"y1"] = self.y1;
-	}
 	if (self.x2) {
 		params[@"x2"] = self.x2;
+	}
+	if (self.y1) {
+		params[@"y1"] = self.y1;
 	}
 	if (self.x1) {
 		params[@"x1"] = self.x1;
@@ -37,14 +37,14 @@
 
 # pragma mark - Setters
 
--(void)setY1:(NSNumber *)y1 {
-	_y1 = y1;
-	[self updateNSObject:@"y1"];
-}
-
 -(void)setX2:(NSNumber *)x2 {
 	_x2 = x2;
 	[self updateNSObject:@"x2"];
+}
+
+-(void)setY1:(NSNumber *)y1 {
+	_y1 = y1;
+	[self updateNSObject:@"y1"];
 }
 
 -(void)setX1:(NSNumber *)x1 {

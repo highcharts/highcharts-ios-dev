@@ -25,7 +25,7 @@
 
 # pragma mark - Setters
 
--(void)setAnimation:(id)animation {
+-(void)setAnimation:(NSNumber *)animation {
 	_animation = animation;
 	[self updateNSObject:@"animation"];
 }

@@ -10,7 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIButtonOptions *copyButtonOptions = [[HIButtonOptions allocWithZone: zone] init];
-	copyButtonOptions.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyButtonOptions.symbolStroke = [self.symbolStroke copyWithZone: zone];
 	copyButtonOptions.symbolFill = [self.symbolFill copyWithZone: zone];
 	copyButtonOptions.text = [self.text copyWithZone: zone];
 	copyButtonOptions.align = [self.align copyWithZone: zone];
@@ -21,7 +21,7 @@
 	copyButtonOptions.buttonSpacing = [self.buttonSpacing copyWithZone: zone];
 	copyButtonOptions.symbolSize = [self.symbolSize copyWithZone: zone];
 	copyButtonOptions.y = [self.y copyWithZone: zone];
-	copyButtonOptions.symbolStroke = [self.symbolStroke copyWithZone: zone];
+	copyButtonOptions.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyButtonOptions.symbolY = [self.symbolY copyWithZone: zone];
 	copyButtonOptions.symbolX = [self.symbolX copyWithZone: zone];
 	copyButtonOptions.symbolStrokeWidth = [self.symbolStrokeWidth copyWithZone: zone];
@@ -31,8 +31,8 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
+	if (self.symbolStroke) {
+		params[@"symbolStroke"] = [self.symbolStroke getData];
 	}
 	if (self.symbolFill) {
 		params[@"symbolFill"] = [self.symbolFill getData];
@@ -64,8 +64,8 @@
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
-	if (self.symbolStroke) {
-		params[@"symbolStroke"] = [self.symbolStroke getData];
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.symbolY) {
 		params[@"symbolY"] = self.symbolY;
@@ -81,9 +81,13 @@
 
 # pragma mark - Setters
 
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+-(void)setSymbolStroke:(HIColor *)symbolStroke {
+	HIColor *oldValue = _symbolStroke;
+	if(self.symbolStroke) {
+		[self removeObserver:self forKeyPath:@"symbolStroke.isUpdated"];
+	}
+	_symbolStroke = symbolStroke;
+	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
 }
 
 -(void)setSymbolFill:(HIColor *)symbolFill {
@@ -144,13 +148,9 @@
 	[self updateNSObject:@"y"];
 }
 
--(void)setSymbolStroke:(HIColor *)symbolStroke {
-	HIColor *oldValue = _symbolStroke;
-	if(self.symbolStroke) {
-		[self removeObserver:self forKeyPath:@"symbolStroke.isUpdated"];
-	}
-	_symbolStroke = symbolStroke;
-	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
 }
 
 -(void)setSymbolY:(NSNumber *)symbolY {
