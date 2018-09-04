@@ -21,15 +21,15 @@
 	copyExporting.printMaxWidth = [self.printMaxWidth copyWithZone: zone];
 	copyExporting.csv = [self.csv copyWithZone: zone];
 	copyExporting.type = [self.type copyWithZone: zone];
-	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
+	copyExporting.tableCaption = [self.tableCaption copyWithZone: zone];
 	copyExporting.formAttributes = [self.formAttributes copyWithZone: zone];
-	copyExporting.fallbackToExportServer = [self.fallbackToExportServer copyWithZone: zone];
-	copyExporting.useRowspanHeaders = [self.useRowspanHeaders copyWithZone: zone];
 	copyExporting.useMultiLevelHeaders = [self.useMultiLevelHeaders copyWithZone: zone];
+	copyExporting.useRowspanHeaders = [self.useRowspanHeaders copyWithZone: zone];
+	copyExporting.fallbackToExportServer = [self.fallbackToExportServer copyWithZone: zone];
 	copyExporting.url = [self.url copyWithZone: zone];
 	copyExporting.enabled = [self.enabled copyWithZone: zone];
 	copyExporting.allowHTML = [self.allowHTML copyWithZone: zone];
-	copyExporting.tableCaption = [self.tableCaption copyWithZone: zone];
+	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
 	copyExporting.error = [self.error copyWithZone: zone];
 	copyExporting.libURL = [self.libURL copyWithZone: zone];
 	copyExporting.exportRegionLabel = [self.exportRegionLabel copyWithZone: zone];
@@ -74,20 +74,20 @@
 	if (self.type) {
 		params[@"type"] = self.type;
 	}
-	if (self.chartOptions) {
-		params[@"chartOptions"] = self.chartOptions;
+	if (self.tableCaption) {
+		params[@"tableCaption"] = self.tableCaption;
 	}
 	if (self.formAttributes) {
 		params[@"formAttributes"] = self.formAttributes;
 	}
-	if (self.fallbackToExportServer) {
-		params[@"fallbackToExportServer"] = self.fallbackToExportServer;
+	if (self.useMultiLevelHeaders) {
+		params[@"useMultiLevelHeaders"] = self.useMultiLevelHeaders;
 	}
 	if (self.useRowspanHeaders) {
 		params[@"useRowspanHeaders"] = self.useRowspanHeaders;
 	}
-	if (self.useMultiLevelHeaders) {
-		params[@"useMultiLevelHeaders"] = self.useMultiLevelHeaders;
+	if (self.fallbackToExportServer) {
+		params[@"fallbackToExportServer"] = self.fallbackToExportServer;
 	}
 	if (self.url) {
 		params[@"url"] = self.url;
@@ -98,8 +98,8 @@
 	if (self.allowHTML) {
 		params[@"allowHTML"] = self.allowHTML;
 	}
-	if (self.tableCaption) {
-		params[@"tableCaption"] = self.tableCaption;
+	if (self.chartOptions) {
+		params[@"chartOptions"] = self.chartOptions;
 	}
 	if (self.error) {
 		params[@"error"] = [self.error getFunction];
@@ -184,9 +184,9 @@
 	[self updateNSObject:@"type"];
 }
 
--(void)setChartOptions:(id)chartOptions {
-	_chartOptions = chartOptions;
-	[self updateNSObject:@"chartOptions"];
+-(void)setTableCaption:(id)tableCaption {
+	_tableCaption = tableCaption;
+	[self updateNSObject:@"tableCaption"];
 }
 
 -(void)setFormAttributes:(id)formAttributes {
@@ -194,9 +194,9 @@
 	[self updateNSObject:@"formAttributes"];
 }
 
--(void)setFallbackToExportServer:(NSNumber *)fallbackToExportServer {
-	_fallbackToExportServer = fallbackToExportServer;
-	[self updateNSObject:@"fallbackToExportServer"];
+-(void)setUseMultiLevelHeaders:(NSNumber *)useMultiLevelHeaders {
+	_useMultiLevelHeaders = useMultiLevelHeaders;
+	[self updateNSObject:@"useMultiLevelHeaders"];
 }
 
 -(void)setUseRowspanHeaders:(NSNumber *)useRowspanHeaders {
@@ -204,9 +204,9 @@
 	[self updateNSObject:@"useRowspanHeaders"];
 }
 
--(void)setUseMultiLevelHeaders:(NSNumber *)useMultiLevelHeaders {
-	_useMultiLevelHeaders = useMultiLevelHeaders;
-	[self updateNSObject:@"useMultiLevelHeaders"];
+-(void)setFallbackToExportServer:(NSNumber *)fallbackToExportServer {
+	_fallbackToExportServer = fallbackToExportServer;
+	[self updateNSObject:@"fallbackToExportServer"];
 }
 
 -(void)setUrl:(NSString *)url {
@@ -224,9 +224,9 @@
 	[self updateNSObject:@"allowHTML"];
 }
 
--(void)setTableCaption:(id)tableCaption {
-	_tableCaption = tableCaption;
-	[self updateNSObject:@"tableCaption"];
+-(void)setChartOptions:(id)chartOptions {
+	_chartOptions = chartOptions;
+	[self updateNSObject:@"chartOptions"];
 }
 
 -(void)setError:(HIFunction *)error {

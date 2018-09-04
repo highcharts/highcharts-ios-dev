@@ -26,16 +26,16 @@
 	copyDataLabels.yLow = [self.yLow copyWithZone: zone];
 	copyDataLabels.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyDataLabels.shape = [self.shape copyWithZone: zone];
+	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
 	copyDataLabels.borderColor = [self.borderColor copyWithZone: zone];
 	copyDataLabels.filter = [self.filter copyWithZone: zone];
 	copyDataLabels.style = [self.style copyWithZone: zone];
-	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
-	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
 	copyDataLabels.color = [self.color copyWithZone: zone];
 	copyDataLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyDataLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
-	copyDataLabels.format = [self.format copyWithZone: zone];
 	copyDataLabels.shadow = [self.shadow copyWithZone: zone];
+	copyDataLabels.format = [self.format copyWithZone: zone];
+	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
 	copyDataLabels.zIndex = [self.zIndex copyWithZone: zone];
 	copyDataLabels.className = [self.className copyWithZone: zone];
 	copyDataLabels.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -43,11 +43,11 @@
 	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyDataLabels.nodeFormat = [self.nodeFormat copyWithZone: zone];
+	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyDataLabels.distance = [self.distance copyWithZone: zone];
-	copyDataLabels.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyDataLabels.softConnector = [self.softConnector copyWithZone: zone];
 	copyDataLabels.connectorPadding = [self.connectorPadding copyWithZone: zone];
-	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
+	copyDataLabels.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -102,6 +102,9 @@
 	if (self.shape) {
 		params[@"shape"] = self.shape;
 	}
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
+	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
@@ -110,12 +113,6 @@
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
-	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
-	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
@@ -126,11 +123,14 @@
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
+	if (self.shadow) {
+		params[@"shadow"] = self.shadow;
+	}
 	if (self.format) {
 		params[@"format"] = self.format;
 	}
-	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+	if (self.rotation) {
+		params[@"rotation"] = self.rotation;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -153,11 +153,11 @@
 	if (self.nodeFormat) {
 		params[@"nodeFormat"] = self.nodeFormat;
 	}
+	if (self.connectorColor) {
+		params[@"connectorColor"] = self.connectorColor;
+	}
 	if (self.distance) {
 		params[@"distance"] = self.distance;
-	}
-	if (self.connectorWidth) {
-		params[@"connectorWidth"] = self.connectorWidth;
 	}
 	if (self.softConnector) {
 		params[@"softConnector"] = self.softConnector;
@@ -165,8 +165,8 @@
 	if (self.connectorPadding) {
 		params[@"connectorPadding"] = self.connectorPadding;
 	}
-	if (self.connectorColor) {
-		params[@"connectorColor"] = self.connectorColor;
+	if (self.connectorWidth) {
+		params[@"connectorWidth"] = self.connectorWidth;
 	}
 	return params;
 }
@@ -257,6 +257,11 @@
 	[self updateNSObject:@"shape"];
 }
 
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
+}
+
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
 	if(self.borderColor) {
@@ -284,16 +289,6 @@
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
--(void)setRotation:(NSNumber *)rotation {
-	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
-}
-
--(void)setUseHTML:(NSNumber *)useHTML {
-	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
-}
-
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
 	if(self.color) {
@@ -317,14 +312,19 @@
 	[self updateNSObject:@"allowOverlap"];
 }
 
+-(void)setShadow:(id)shadow {
+	_shadow = shadow;
+	[self updateNSObject:@"shadow"];
+}
+
 -(void)setFormat:(NSString *)format {
 	_format = format;
 	[self updateNSObject:@"format"];
 }
 
--(void)setShadow:(id)shadow {
-	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+-(void)setRotation:(NSNumber *)rotation {
+	_rotation = rotation;
+	[self updateNSObject:@"rotation"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
@@ -366,14 +366,14 @@
 	[self updateNSObject:@"nodeFormat"];
 }
 
+-(void)setConnectorColor:(NSString *)connectorColor {
+	_connectorColor = connectorColor;
+	[self updateNSObject:@"connectorColor"];
+}
+
 -(void)setDistance:(NSNumber *)distance {
 	_distance = distance;
 	[self updateNSObject:@"distance"];
-}
-
--(void)setConnectorWidth:(NSNumber *)connectorWidth {
-	_connectorWidth = connectorWidth;
-	[self updateNSObject:@"connectorWidth"];
 }
 
 -(void)setSoftConnector:(NSNumber *)softConnector {
@@ -386,9 +386,9 @@
 	[self updateNSObject:@"connectorPadding"];
 }
 
--(void)setConnectorColor:(NSString *)connectorColor {
-	_connectorColor = connectorColor;
-	[self updateNSObject:@"connectorColor"];
+-(void)setConnectorWidth:(NSNumber *)connectorWidth {
+	_connectorWidth = connectorWidth;
+	[self updateNSObject:@"connectorWidth"];
 }
 
 @end

@@ -11,9 +11,9 @@
 	[super copyWithZone:zone];
 	HITargetOptions *copyTargetOptions = [[HITargetOptions allocWithZone: zone] init];
 	copyTargetOptions.borderColor = [self.borderColor copyWithZone: zone];
+	copyTargetOptions.color = [self.color copyWithZone: zone];
 	copyTargetOptions.width = [self.width copyWithZone: zone];
 	copyTargetOptions.borderWidth = [self.borderWidth copyWithZone: zone];
-	copyTargetOptions.color = [self.color copyWithZone: zone];
 	copyTargetOptions.height = [self.height copyWithZone: zone];
 	return copyTargetOptions;
 }
@@ -24,14 +24,14 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
@@ -50,6 +50,15 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
+	_color = color;
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
 -(void)setWidth:(id)width {
 	_width = width;
 	[self updateNSObject:@"width"];
@@ -58,15 +67,6 @@
 -(void)setBorderWidth:(NSNumber *)borderWidth {
 	_borderWidth = borderWidth;
 	[self updateNSObject:@"borderWidth"];
-}
-
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
-	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setHeight:(NSNumber *)height {
