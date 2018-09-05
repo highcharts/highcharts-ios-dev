@@ -19,6 +19,7 @@
 	copyWordcloud.style = [self.style copyWithZone: zone];
 	copyWordcloud.minFontSize = [self.minFontSize copyWithZone: zone];
 	copyWordcloud.maxFontSize = [self.maxFontSize copyWithZone: zone];
+	copyWordcloud.allowExtendPlayingField = [self.allowExtendPlayingField copyWithZone: zone];
 	copyWordcloud.spiral = [self.spiral copyWithZone: zone];
 	copyWordcloud.tooltip = [self.tooltip copyWithZone: zone];
 	copyWordcloud.animation = [self.animation copyWithZone: zone];
@@ -33,12 +34,12 @@
 	copyWordcloud.borderColor = [self.borderColor copyWithZone: zone];
 	copyWordcloud.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyWordcloud.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyWordcloud.point = [self.point copyWithZone: zone];
 	copyWordcloud.selected = [self.selected copyWithZone: zone];
 	copyWordcloud.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyWordcloud.point = [self.point copyWithZone: zone];
 	copyWordcloud.color = [self.color copyWithZone: zone];
 	copyWordcloud.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
+	copyWordcloud.className = [self.className copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWordcloud.label = [self.label copyWithZone: zone];
 	copyWordcloud.events = [self.events copyWithZone: zone];
@@ -51,7 +52,7 @@
 	copyWordcloud.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyWordcloud.visible = [self.visible copyWithZone: zone];
 	copyWordcloud.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWordcloud.className = [self.className copyWithZone: zone];
+	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
 	copyWordcloud.data = [self.data copyWithZone: zone];
 	copyWordcloud.id = [self.id copyWithZone: zone];
 	copyWordcloud.index = [self.index copyWithZone: zone];
@@ -80,11 +81,11 @@
 	if (self.maxFontSize) {
 		params[@"maxFontSize"] = self.maxFontSize;
 	}
+	if (self.allowExtendPlayingField) {
+		params[@"allowExtendPlayingField"] = self.allowExtendPlayingField;
+	}
 	if (self.spiral) {
 		params[@"spiral"] = self.spiral;
-	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.rotation) {
 		params[@"rotation"] = [self.rotation getParams];
@@ -101,9 +102,6 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
@@ -137,14 +135,14 @@
 	[self updateNSObject:@"maxFontSize"];
 }
 
+-(void)setAllowExtendPlayingField:(NSNumber *)allowExtendPlayingField {
+	_allowExtendPlayingField = allowExtendPlayingField;
+	[self updateNSObject:@"allowExtendPlayingField"];
+}
+
 -(void)setSpiral:(NSString *)spiral {
 	_spiral = spiral;
 	[self updateNSObject:@"spiral"];
-}
-
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setRotation:(HIRotation *)rotation {
@@ -170,15 +168,6 @@
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
-}
-
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setEdgeWidth:(NSNumber *)edgeWidth {

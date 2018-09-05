@@ -112,13 +112,14 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for exporting data to CSV or ExCel, or displaying the data in a HTML table or a JavaScript structure. Requires the <code>export-data.js</code> module. This module adds data export options to the export menu and provides functions like <code>Chart.getCSV</code>, <code>Chart.getTable</code>, <code>Chart.getDataRows</code> and <code>Chart.viewData</code>.</p>
+						<p>Options for exporting data to CSV or ExCel, or displaying the data in a HTML table or a JavaScript structure. Requires the <code>export-data.js</code> module. This module adds data export options to the export menu and provides functions like <code>Chart.getCSV</code>, <code>Chart.getTable</code>, <code>Chart.getDataRows</code> and <code>Chart.viewData</code>. The XLS converter is limited and only creates a HTML string that is passed for download, which works but creates a warning before opening. The workaround for this is to use a third party XLSX converter, as demonstrated in the sample below.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/categorized/">Categorized data</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/stock-timeaxis/">Highstock time axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/xlsx/">Using a third party XLSX converter</a></li>
 </ul>
 
 					</div>

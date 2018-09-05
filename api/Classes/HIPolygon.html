@@ -104,33 +104,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>polygon</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
-
-<p>Configuration options for the series are given in three levels:</p>
-
-<ol>
-<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
-<li><p>Options for all <code>polygon</code> series are defined in <code>plotOptions.polygon</code>.</p></li>
-<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
-</ol>
-
-
-<p><pre>
-Highcharts.chart(&lsquo;container&rsquo;, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        polygon: {
-            // shared options for all polygon series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: &lsquo;polygon&rsquo;
-    }]
-});
-<pre></p>
+						<p>A <code>polygon</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>polygon</code> series are defined in  <code>plotOptions.polygon</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     polygon: {       // shared options for all polygon series     }   },   series: [{     // specific options for this series instance     type: &lsquo;polygon&rsquo;   }] });</p>
 					</div>
 					
 					

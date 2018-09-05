@@ -32,11 +32,11 @@
 	copyLegend.itemStyle = [self.itemStyle copyWithZone: zone];
 	copyLegend.reversed = [self.reversed copyWithZone: zone];
 	copyLegend.padding = [self.padding copyWithZone: zone];
-	copyLegend.itemDistance = [self.itemDistance copyWithZone: zone];
+	copyLegend.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyLegend.shadow = [self.shadow copyWithZone: zone];
 	copyLegend.itemHoverStyle = [self.itemHoverStyle copyWithZone: zone];
-	copyLegend.verticalAlign = [self.verticalAlign copyWithZone: zone];
-	copyLegend.margin = [self.margin copyWithZone: zone];
+	copyLegend.itemDistance = [self.itemDistance copyWithZone: zone];
+	copyLegend.navigation = [self.navigation copyWithZone: zone];
 	copyLegend.align = [self.align copyWithZone: zone];
 	copyLegend.keyboardNavigation = [self.keyboardNavigation copyWithZone: zone];
 	copyLegend.enabled = [self.enabled copyWithZone: zone];
@@ -48,7 +48,7 @@
 	copyLegend.labelFormatter = [self.labelFormatter copyWithZone: zone];
 	copyLegend.y = [self.y copyWithZone: zone];
 	copyLegend.x = [self.x copyWithZone: zone];
-	copyLegend.navigation = [self.navigation copyWithZone: zone];
+	copyLegend.margin = [self.margin copyWithZone: zone];
 	return copyLegend;
 }
 
@@ -121,8 +121,8 @@
 	if (self.padding) {
 		params[@"padding"] = self.padding;
 	}
-	if (self.itemDistance) {
-		params[@"itemDistance"] = self.itemDistance;
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
@@ -130,11 +130,11 @@
 	if (self.itemHoverStyle) {
 		params[@"itemHoverStyle"] = [self.itemHoverStyle getParams];
 	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
+	if (self.itemDistance) {
+		params[@"itemDistance"] = self.itemDistance;
 	}
-	if (self.margin) {
-		params[@"margin"] = self.margin;
+	if (self.navigation) {
+		params[@"navigation"] = [self.navigation getParams];
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
@@ -169,8 +169,8 @@
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
-	if (self.navigation) {
-		params[@"navigation"] = [self.navigation getParams];
+	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	return params;
 }
@@ -207,7 +207,7 @@
 	[self updateNSObject:@"symbolPadding"];
 }
 
--(void)setFloating:(NSNumber *)floating {
+-(void)setFloating:(NSString *)floating {
 	_floating = floating;
 	[self updateNSObject:@"floating"];
 }
@@ -307,9 +307,9 @@
 	[self updateNSObject:@"padding"];
 }
 
--(void)setItemDistance:(NSNumber *)itemDistance {
-	_itemDistance = itemDistance;
-	[self updateNSObject:@"itemDistance"];
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
 }
 
 -(void)setShadow:(id)shadow {
@@ -326,14 +326,18 @@
 	[self updateHIObject:oldValue newValue:itemHoverStyle propertyName:@"itemHoverStyle"];
 }
 
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+-(void)setItemDistance:(NSNumber *)itemDistance {
+	_itemDistance = itemDistance;
+	[self updateNSObject:@"itemDistance"];
 }
 
--(void)setMargin:(NSNumber *)margin {
-	_margin = margin;
-	[self updateNSObject:@"margin"];
+-(void)setNavigation:(HINavigation *)navigation {
+	HINavigation *oldValue = _navigation;
+	if(self.navigation) {
+		[self removeObserver:self forKeyPath:@"navigation.isUpdated"];
+	}
+	_navigation = navigation;
+	[self updateHIObject:oldValue newValue:navigation propertyName:@"navigation"];
 }
 
 -(void)setAlign:(NSString *)align {
@@ -403,13 +407,9 @@
 	[self updateNSObject:@"x"];
 }
 
--(void)setNavigation:(HINavigation *)navigation {
-	HINavigation *oldValue = _navigation;
-	if(self.navigation) {
-		[self removeObserver:self forKeyPath:@"navigation.isUpdated"];
-	}
-	_navigation = navigation;
-	[self updateHIObject:oldValue newValue:navigation propertyName:@"navigation"];
+-(void)setMargin:(NSNumber *)margin {
+	_margin = margin;
+	[self updateNSObject:@"margin"];
 }
 
 @end

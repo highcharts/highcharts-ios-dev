@@ -78,6 +78,8 @@
 		
 		<option value="//api/name/text">text</option>
 		
+		<option value="//api/name/textAlign">textAlign</option>
+		
 		<option value="//api/name/useHTML">useHTML</option>
 		
 		<option value="//api/name/verticalAlign">verticalAlign</option>
@@ -148,6 +150,22 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/widthAdjust" title="widthAdjust"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widthAdjust">&nbsp;&nbsp;widthAdjust</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *widthAdjust</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/style" title="style"></a>
 	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
 </h3>
@@ -266,7 +284,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The title of the chart. To disable the title, set the <code>text</code> to <code>null</code>.</p>
+				<p>The title of the chart. To disable the title, set the <code>text</code> to <code>undefined</code>.</p>
 			</div>
 			
 		    
@@ -346,52 +364,6 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/align/">Aligned to the plot area (x = 70px = margin left - spacing left)</a></li>
 </ul>
 
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITitle.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/useHTML" title="useHTML"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-%20and-string-formatting#html">use HTML</a> to render the text.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
 			</div>
 			
 
@@ -513,113 +485,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/widthAdjust" title="widthAdjust"></a>
-	<h3 class="method-title"><code><a href="#//api/name/widthAdjust">&nbsp;&nbsp;widthAdjust</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Adjustment made to the title width, normally to reserve space for the exporting burger menu.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *widthAdjust</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>-44</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/">Wider menu, greater padding</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITitle.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/margin" title="margin"></a>
-	<h3 class="method-title"><code><a href="#//api/name/margin">&nbsp;&nbsp;margin</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The margin between the title and the plot area, or if a subtitle is present, the margin between the subtitle and the plot area.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *margin</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>15</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/margin-50/">A chart title margin of 50</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/margin-subtitle/">The same margin applied with a subtitle</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITitle.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/floating" title="floating"></a>
 	<h3 class="method-title"><code><a href="#//api/name/floating">&nbsp;&nbsp;floating</a></code>
 </h3>
@@ -674,6 +539,105 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/margin" title="margin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/margin">&nbsp;&nbsp;margin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adjustment made to the title width, normally to reserve space for the exporting burger menu.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *margin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>-44</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/">Wider menu, greater padding</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITitle.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/useHTML" title="useHTML"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the text.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITitle.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/rotation" title="rotation"></a>
 	<h3 class="method-title"><code><a href="#//api/name/rotation">&nbsp;&nbsp;rotation</a></code>
 </h3>
@@ -702,7 +666,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0</code>.</p>
+				<p><strong>Defaults to</strong> <code>270</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -914,6 +878,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITitle.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/textAlign" title="textAlign"></a>
+	<h3 class="method-title"><code><a href="#//api/name/textAlign">&nbsp;&nbsp;textAlign</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Alignment of the text, can be <code>"left"</code>, <code>"right"</code> or <code>"center"</code>. Default alignment depends on the <code>title.align</code>: Horizontal axes: - for <code>align</code> = <code>"low"</code>, <code>textAlign</code> is set to <code>left</code> - for <code>align</code> = <code>"middle"</code>, <code>textAlign</code> is set to <code>center</code> - for <code>align</code> = <code>"high"</code>, <code>textAlign</code> is set to <code>right</code> Vertical axes: - for <code>align</code> = <code>"low"</code> and <code>opposite</code> = <code>true</code>, <code>textAlign</code> is  set to <code>right</code> - for <code>align</code> = <code>"low"</code> and <code>opposite</code> = <code>false</code>, <code>textAlign</code> is  set to <code>left</code> - for <code>align</code> = <code>"middle"</code>, <code>textAlign</code> is set to <code>center</code> - for <code>align</code> = <code>"high"</code> and <code>opposite</code> = <code>true</code> <code>textAlign</code> is  set to <code>left</code> - for <code>align</code> = <code>"high"</code> and <code>opposite</code> = <code>false</code> <code>textAlign</code> is  set to <code>right</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *textAlign</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			

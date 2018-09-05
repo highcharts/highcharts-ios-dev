@@ -28,6 +28,7 @@
 	copyBullet.zIndex = [self.zIndex copyWithZone: zone];
 	copyBullet.tooltip = [self.tooltip copyWithZone: zone];
 	copyBullet.targetOptions = [self.targetOptions copyWithZone: zone];
+	copyBullet.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyBullet.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyBullet.pointRange = [self.pointRange copyWithZone: zone];
 	copyBullet.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -38,10 +39,9 @@
 	copyBullet.threshold = [self.threshold copyWithZone: zone];
 	copyBullet.borderColor = [self.borderColor copyWithZone: zone];
 	copyBullet.edgeColor = [self.edgeColor copyWithZone: zone];
-	copyBullet.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyBullet.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyBullet.pointWidth = [self.pointWidth copyWithZone: zone];
-	copyBullet.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyBullet.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyBullet.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBullet.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyBullet.crisp = [self.crisp copyWithZone: zone];
@@ -50,18 +50,20 @@
 	copyBullet.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBullet.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBullet.grouping = [self.grouping copyWithZone: zone];
+	copyBullet.point = [self.point copyWithZone: zone];
 	copyBullet.selected = [self.selected copyWithZone: zone];
 	copyBullet.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyBullet.point = [self.point copyWithZone: zone];
+	copyBullet.clip = [self.clip copyWithZone: zone];
+	copyBullet.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyBullet.color = [self.color copyWithZone: zone];
 	copyBullet.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBullet.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyBullet.cursor = [self.cursor copyWithZone: zone];
+	copyBullet.className = [self.className copyWithZone: zone];
 	copyBullet.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyBullet.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyBullet.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBullet.label = [self.label copyWithZone: zone];
 	copyBullet.stacking = [self.stacking copyWithZone: zone];
+	copyBullet.animation = [self.animation copyWithZone: zone];
 	copyBullet.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBullet.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBullet.events = [self.events copyWithZone: zone];
@@ -74,13 +76,12 @@
 	copyBullet.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBullet.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBullet.shadow = [self.shadow copyWithZone: zone];
-	copyBullet.animation = [self.animation copyWithZone: zone];
 	copyBullet.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBullet.zones = [self.zones copyWithZone: zone];
 	copyBullet.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBullet.visible = [self.visible copyWithZone: zone];
 	copyBullet.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBullet.className = [self.className copyWithZone: zone];
+	copyBullet.cursor = [self.cursor copyWithZone: zone];
 	copyBullet.pointStart = [self.pointStart copyWithZone: zone];
 	copyBullet.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyBullet;
@@ -91,6 +92,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
 	if (self.targetOptions) {
 		params[@"targetOptions"] = [self.targetOptions getParams];
+	}
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -111,14 +115,8 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
-	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
@@ -126,8 +124,8 @@
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
 	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -140,9 +138,6 @@
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
-	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
@@ -159,6 +154,11 @@
 	}
 	_targetOptions = targetOptions;
 	[self updateHIObject:oldValue newValue:targetOptions propertyName:@"targetOptions"];
+}
+
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
@@ -187,15 +187,6 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
 -(void)setEdgeColor:(HIColor *)edgeColor {
 	HIColor *oldValue = _edgeColor;
 	if(self.edgeColor) {
@@ -203,11 +194,6 @@
 	}
 	_edgeColor = edgeColor;
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
-}
-
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
@@ -220,9 +206,9 @@
 	[self updateNSObject:@"pointWidth"];
 }
 
--(void)setPointPadding:(NSNumber *)pointPadding {
-	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {
@@ -243,11 +229,6 @@
 -(void)setDepth:(NSNumber *)depth {
 	_depth = depth;
 	[self updateNSObject:@"depth"];
-}
-
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {

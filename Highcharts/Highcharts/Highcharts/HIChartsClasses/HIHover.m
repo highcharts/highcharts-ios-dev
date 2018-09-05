@@ -16,9 +16,9 @@
 	copyHover.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyHover.lineWidthPlus = [self.lineWidthPlus copyWithZone: zone];
 	copyHover.halo = [self.halo copyWithZone: zone];
+	copyHover.radius = [self.radius copyWithZone: zone];
 	copyHover.fillColor = [self.fillColor copyWithZone: zone];
 	copyHover.lineColor = [self.lineColor copyWithZone: zone];
-	copyHover.radius = [self.radius copyWithZone: zone];
 	copyHover.brightness = [self.brightness copyWithZone: zone];
 	copyHover.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyHover.borderColor = [self.borderColor copyWithZone: zone];
@@ -49,14 +49,14 @@
 	if (self.halo) {
 		params[@"halo"] = [self.halo getParams];
 	}
+	if (self.radius) {
+		params[@"radius"] = self.radius;
+	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
-	}
-	if (self.radius) {
-		params[@"radius"] = self.radius;
 	}
 	if (self.brightness) {
 		params[@"brightness"] = self.brightness;
@@ -119,6 +119,11 @@
 	[self updateHIObject:oldValue newValue:halo propertyName:@"halo"];
 }
 
+-(void)setRadius:(NSNumber *)radius {
+	_radius = radius;
+	[self updateNSObject:@"radius"];
+}
+
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;
 	if(self.fillColor) {
@@ -135,11 +140,6 @@
 	}
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
--(void)setRadius:(NSNumber *)radius {
-	_radius = radius;
-	[self updateNSObject:@"radius"];
 }
 
 -(void)setBrightness:(NSNumber *)brightness {

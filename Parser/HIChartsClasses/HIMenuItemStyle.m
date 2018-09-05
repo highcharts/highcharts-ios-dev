@@ -10,8 +10,8 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIMenuItemStyle *copyMenuItemStyle = [[HIMenuItemStyle allocWithZone: zone] init];
-	copyMenuItemStyle.padding = [self.padding copyWithZone: zone];
 	copyMenuItemStyle.color = [self.color copyWithZone: zone];
+	copyMenuItemStyle.padding = [self.padding copyWithZone: zone];
 	copyMenuItemStyle.transition = [self.transition copyWithZone: zone];
 	copyMenuItemStyle.fontSize = [self.fontSize copyWithZone: zone];
 	copyMenuItemStyle.background = [self.background copyWithZone: zone];
@@ -21,11 +21,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.padding) {
-		params[@"padding"] = self.padding;
-	}
 	if (self.color) {
 		params[@"color"] = self.color;
+	}
+	if (self.padding) {
+		params[@"padding"] = self.padding;
 	}
 	if (self.transition) {
 		params[@"transition"] = self.transition;
@@ -41,14 +41,14 @@
 
 # pragma mark - Setters
 
--(void)setPadding:(NSString *)padding {
-	_padding = padding;
-	[self updateNSObject:@"padding"];
-}
-
 -(void)setColor:(NSString *)color {
 	_color = color;
 	[self updateNSObject:@"color"];
+}
+
+-(void)setPadding:(NSString *)padding {
+	_padding = padding;
+	[self updateNSObject:@"padding"];
 }
 
 -(void)setTransition:(NSString *)transition {

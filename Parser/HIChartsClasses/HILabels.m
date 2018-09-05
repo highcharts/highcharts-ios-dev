@@ -13,22 +13,22 @@
 	copyLabels.items = [self.items copyWithZone: zone];
 	copyLabels.style = [self.style copyWithZone: zone];
 	copyLabels.y = [self.y copyWithZone: zone];
-	copyLabels.x = [self.x copyWithZone: zone];
-	copyLabels.align = [self.align copyWithZone: zone];
 	copyLabels.distance = [self.distance copyWithZone: zone];
+	copyLabels.align = [self.align copyWithZone: zone];
+	copyLabels.x = [self.x copyWithZone: zone];
+	copyLabels.staggerLines = [self.staggerLines copyWithZone: zone];
 	copyLabels.zIndex = [self.zIndex copyWithZone: zone];
 	copyLabels.reserveSpace = [self.reserveSpace copyWithZone: zone];
 	copyLabels.format = [self.format copyWithZone: zone];
 	copyLabels.autoRotationLimit = [self.autoRotationLimit copyWithZone: zone];
 	copyLabels.enabled = [self.enabled copyWithZone: zone];
-	copyLabels.staggerLines = [self.staggerLines copyWithZone: zone];
 	copyLabels.position3d = [self.position3d copyWithZone: zone];
-	copyLabels.useHTML = [self.useHTML copyWithZone: zone];
 	copyLabels.padding = [self.padding copyWithZone: zone];
 	copyLabels.step = [self.step copyWithZone: zone];
 	copyLabels.skew3d = [self.skew3d copyWithZone: zone];
 	copyLabels.formatter = [self.formatter copyWithZone: zone];
 	copyLabels.rotation = [self.rotation copyWithZone: zone];
+	copyLabels.useHTML = [self.useHTML copyWithZone: zone];
 	copyLabels.autoRotation = [self.autoRotation copyWithZone: zone];
 	copyLabels.point = [self.point copyWithZone: zone];
 	copyLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
@@ -67,14 +67,17 @@
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
-	if (self.x) {
-		params[@"x"] = self.x;
+	if (self.distance) {
+		params[@"distance"] = self.distance;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
-	if (self.distance) {
-		params[@"distance"] = self.distance;
+	if (self.x) {
+		params[@"x"] = self.x;
+	}
+	if (self.staggerLines) {
+		params[@"staggerLines"] = self.staggerLines;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -91,14 +94,8 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.staggerLines) {
-		params[@"staggerLines"] = self.staggerLines;
-	}
 	if (self.position3d) {
 		params[@"position3d"] = self.position3d;
-	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
@@ -114,6 +111,9 @@
 	}
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
+	}
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.autoRotation) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -191,9 +191,9 @@
 	[self updateNSObject:@"y"];
 }
 
--(void)setX:(NSNumber *)x {
-	_x = x;
-	[self updateNSObject:@"x"];
+-(void)setDistance:(NSNumber *)distance {
+	_distance = distance;
+	[self updateNSObject:@"distance"];
 }
 
 -(void)setAlign:(NSString *)align {
@@ -201,9 +201,14 @@
 	[self updateNSObject:@"align"];
 }
 
--(void)setDistance:(NSNumber *)distance {
-	_distance = distance;
-	[self updateNSObject:@"distance"];
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
+}
+
+-(void)setStaggerLines:(NSNumber *)staggerLines {
+	_staggerLines = staggerLines;
+	[self updateNSObject:@"staggerLines"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
@@ -231,19 +236,9 @@
 	[self updateNSObject:@"enabled"];
 }
 
--(void)setStaggerLines:(NSNumber *)staggerLines {
-	_staggerLines = staggerLines;
-	[self updateNSObject:@"staggerLines"];
-}
-
 -(void)setPosition3d:(NSString *)position3d {
 	_position3d = position3d;
 	[self updateNSObject:@"position3d"];
-}
-
--(void)setUseHTML:(NSNumber *)useHTML {
-	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
 }
 
 -(void)setPadding:(NSNumber *)padding {
@@ -273,6 +268,11 @@
 -(void)setRotation:(NSNumber *)rotation {
 	_rotation = rotation;
 	[self updateNSObject:@"rotation"];
+}
+
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
 }
 
 -(void)setAutoRotation:(NSArray<NSNumber *> *)autoRotation {

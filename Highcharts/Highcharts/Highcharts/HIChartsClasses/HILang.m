@@ -18,10 +18,10 @@
 	copyLang.noData = [self.noData copyWithZone: zone];
 	copyLang.loading = [self.loading copyWithZone: zone];
 	copyLang.numericSymbols = [self.numericSymbols copyWithZone: zone];
-	copyLang.downloadSVG = [self.downloadSVG copyWithZone: zone];
+	copyLang.printChart = [self.printChart copyWithZone: zone];
 	copyLang.numericSymbolMagnitude = [self.numericSymbolMagnitude copyWithZone: zone];
 	copyLang.weekdays = [self.weekdays copyWithZone: zone];
-	copyLang.printChart = [self.printChart copyWithZone: zone];
+	copyLang.downloadSVG = [self.downloadSVG copyWithZone: zone];
 	copyLang.drillUpText = [self.drillUpText copyWithZone: zone];
 	copyLang.viewData = [self.viewData copyWithZone: zone];
 	copyLang.contextButtonTitle = [self.contextButtonTitle copyWithZone: zone];
@@ -83,8 +83,8 @@
 		}
 		params[@"numericSymbols"] = array;
 	}
-	if (self.downloadSVG) {
-		params[@"downloadSVG"] = self.downloadSVG;
+	if (self.printChart) {
+		params[@"printChart"] = self.printChart;
 	}
 	if (self.numericSymbolMagnitude) {
 		params[@"numericSymbolMagnitude"] = self.numericSymbolMagnitude;
@@ -101,8 +101,8 @@
 		}
 		params[@"weekdays"] = array;
 	}
-	if (self.printChart) {
-		params[@"printChart"] = self.printChart;
+	if (self.downloadSVG) {
+		params[@"downloadSVG"] = self.downloadSVG;
 	}
 	if (self.drillUpText) {
 		params[@"drillUpText"] = self.drillUpText;
@@ -212,9 +212,9 @@
 	[self updateArrayObject:oldValue newValue:numericSymbols propertyName:@"numericSymbols"];
 }
 
--(void)setDownloadSVG:(NSString *)downloadSVG {
-	_downloadSVG = downloadSVG;
-	[self updateNSObject:@"downloadSVG"];
+-(void)setPrintChart:(NSString *)printChart {
+	_printChart = printChart;
+	[self updateNSObject:@"printChart"];
 }
 
 -(void)setNumericSymbolMagnitude:(NSNumber *)numericSymbolMagnitude {
@@ -228,9 +228,9 @@
 	[self updateArrayObject:oldValue newValue:weekdays propertyName:@"weekdays"];
 }
 
--(void)setPrintChart:(NSString *)printChart {
-	_printChart = printChart;
-	[self updateNSObject:@"printChart"];
+-(void)setDownloadSVG:(NSString *)downloadSVG {
+	_downloadSVG = downloadSVG;
+	[self updateNSObject:@"downloadSVG"];
 }
 
 -(void)setDrillUpText:(NSString *)drillUpText {
@@ -246,11 +246,6 @@
 -(void)setContextButtonTitle:(NSString *)contextButtonTitle {
 	_contextButtonTitle = contextButtonTitle;
 	[self updateNSObject:@"contextButtonTitle"];
-}
-
--(void)setCancelButtonTitle:(NSString *)cancelButtonTitle {
-    _cancelButtonTitle = cancelButtonTitle;
-    [self updateNSObject:@"cancelButtonTitle"];
 }
 
 -(void)setInvalidDate:(NSString *)invalidDate {

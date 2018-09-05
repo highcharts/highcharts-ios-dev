@@ -11,7 +11,7 @@
 
 
 /**
-Event handlers for the axis.
+General event handlers for the series items. These event hooks can also be attached to the series at run time using the `Highcharts.addEvent` function.
 */
 @interface HIEvents: HIChartsJSONSerializable
 

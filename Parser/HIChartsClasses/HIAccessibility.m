@@ -20,17 +20,17 @@
 	copyAccessibility.seriesDescriptionFormatter = [self.seriesDescriptionFormatter copyWithZone: zone];
 	copyAccessibility.onTableAnchorClick = [self.onTableAnchorClick copyWithZone: zone];
 	copyAccessibility.pointDateFormatter = [self.pointDateFormatter copyWithZone: zone];
-	copyAccessibility.chartTypes = [self.chartTypes copyWithZone: zone];
+	copyAccessibility.series = [self.series copyWithZone: zone];
 	copyAccessibility.longDescriptionHeading = [self.longDescriptionHeading copyWithZone: zone];
 	copyAccessibility.rangeSelectorMaxInput = [self.rangeSelectorMaxInput copyWithZone: zone];
 	copyAccessibility.structureHeading = [self.structureHeading copyWithZone: zone];
 	copyAccessibility.chartContainerLabel = [self.chartContainerLabel copyWithZone: zone];
-	copyAccessibility.axis = [self.axis copyWithZone: zone];
-	copyAccessibility.series = [self.series copyWithZone: zone];
-	copyAccessibility.exporting = [self.exporting copyWithZone: zone];
 	copyAccessibility.mapZoomOut = [self.mapZoomOut copyWithZone: zone];
+	copyAccessibility.chartTypes = [self.chartTypes copyWithZone: zone];
+	copyAccessibility.axis = [self.axis copyWithZone: zone];
 	copyAccessibility.rangeSelectorMinInput = [self.rangeSelectorMinInput copyWithZone: zone];
 	copyAccessibility.rangeSelectorButton = [self.rangeSelectorButton copyWithZone: zone];
+	copyAccessibility.exporting = [self.exporting copyWithZone: zone];
 	copyAccessibility.legendItem = [self.legendItem copyWithZone: zone];
 	copyAccessibility.tableSummary = [self.tableSummary copyWithZone: zone];
 	copyAccessibility.noDescription = [self.noDescription copyWithZone: zone];
@@ -78,8 +78,8 @@
 	if (self.pointDateFormatter) {
 		params[@"pointDateFormatter"] = [self.pointDateFormatter getFunction];
 	}
-	if (self.chartTypes) {
-		params[@"chartTypes"] = [self.chartTypes getParams];
+	if (self.series) {
+		params[@"series"] = [self.series getParams];
 	}
 	if (self.longDescriptionHeading) {
 		params[@"longDescriptionHeading"] = self.longDescriptionHeading;
@@ -93,23 +93,23 @@
 	if (self.chartContainerLabel) {
 		params[@"chartContainerLabel"] = self.chartContainerLabel;
 	}
-	if (self.axis) {
-		params[@"axis"] = [self.axis getParams];
-	}
-	if (self.series) {
-		params[@"series"] = [self.series getParams];
-	}
-	if (self.exporting) {
-		params[@"exporting"] = [self.exporting getParams];
-	}
 	if (self.mapZoomOut) {
 		params[@"mapZoomOut"] = self.mapZoomOut;
+	}
+	if (self.chartTypes) {
+		params[@"chartTypes"] = [self.chartTypes getParams];
+	}
+	if (self.axis) {
+		params[@"axis"] = [self.axis getParams];
 	}
 	if (self.rangeSelectorMinInput) {
 		params[@"rangeSelectorMinInput"] = self.rangeSelectorMinInput;
 	}
 	if (self.rangeSelectorButton) {
 		params[@"rangeSelectorButton"] = self.rangeSelectorButton;
+	}
+	if (self.exporting) {
+		params[@"exporting"] = [self.exporting getParams];
 	}
 	if (self.legendItem) {
 		params[@"legendItem"] = self.legendItem;
@@ -223,13 +223,13 @@
 	[self updateHIObject:oldValue newValue:pointDateFormatter propertyName:@"pointDateFormatter"];
 }
 
--(void)setChartTypes:(HIChartTypes *)chartTypes {
-	HIChartTypes *oldValue = _chartTypes;
-	if(self.chartTypes) {
-		[self removeObserver:self forKeyPath:@"chartTypes.isUpdated"];
+-(void)setSeries:(HISeries *)series {
+	HISeries *oldValue = _series;
+	if(self.series) {
+		[self removeObserver:self forKeyPath:@"series.isUpdated"];
 	}
-	_chartTypes = chartTypes;
-	[self updateHIObject:oldValue newValue:chartTypes propertyName:@"chartTypes"];
+	_series = series;
+	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
 }
 
 -(void)setLongDescriptionHeading:(NSString *)longDescriptionHeading {
@@ -252,6 +252,20 @@
 	[self updateNSObject:@"chartContainerLabel"];
 }
 
+-(void)setMapZoomOut:(NSString *)mapZoomOut {
+	_mapZoomOut = mapZoomOut;
+	[self updateNSObject:@"mapZoomOut"];
+}
+
+-(void)setChartTypes:(HIChartTypes *)chartTypes {
+	HIChartTypes *oldValue = _chartTypes;
+	if(self.chartTypes) {
+		[self removeObserver:self forKeyPath:@"chartTypes.isUpdated"];
+	}
+	_chartTypes = chartTypes;
+	[self updateHIObject:oldValue newValue:chartTypes propertyName:@"chartTypes"];
+}
+
 -(void)setAxis:(HIAxis *)axis {
 	HIAxis *oldValue = _axis;
 	if(self.axis) {
@@ -259,29 +273,6 @@
 	}
 	_axis = axis;
 	[self updateHIObject:oldValue newValue:axis propertyName:@"axis"];
-}
-
--(void)setSeries:(HISeries *)series {
-	HISeries *oldValue = _series;
-	if(self.series) {
-		[self removeObserver:self forKeyPath:@"series.isUpdated"];
-	}
-	_series = series;
-	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
-}
-
--(void)setExporting:(HIExporting *)exporting {
-	HIExporting *oldValue = _exporting;
-	if(self.exporting) {
-		[self removeObserver:self forKeyPath:@"exporting.isUpdated"];
-	}
-	_exporting = exporting;
-	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
-}
-
--(void)setMapZoomOut:(NSString *)mapZoomOut {
-	_mapZoomOut = mapZoomOut;
-	[self updateNSObject:@"mapZoomOut"];
 }
 
 -(void)setRangeSelectorMinInput:(NSString *)rangeSelectorMinInput {
@@ -292,6 +283,15 @@
 -(void)setRangeSelectorButton:(NSString *)rangeSelectorButton {
 	_rangeSelectorButton = rangeSelectorButton;
 	[self updateNSObject:@"rangeSelectorButton"];
+}
+
+-(void)setExporting:(HIExporting *)exporting {
+	HIExporting *oldValue = _exporting;
+	if(self.exporting) {
+		[self removeObserver:self forKeyPath:@"exporting.isUpdated"];
+	}
+	_exporting = exporting;
+	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
 }
 
 -(void)setLegendItem:(NSString *)legendItem {

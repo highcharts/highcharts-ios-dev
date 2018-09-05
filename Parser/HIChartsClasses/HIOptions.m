@@ -26,6 +26,9 @@
 	if (self.series) {
 		params[@"series"] = [self.series getParams];
 	}
+	if (self.labels) {
+		params[@"labels"] = [self.labels getParams];
+	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
 	}
@@ -78,9 +81,6 @@
 	if (self.defs) {
 		params[@"defs"] = self.defs;
 	}
-	if (self.labels) {
-		params[@"labels"] = [self.labels getParams];
-	}
 	if (self.chart) {
 		params[@"chart"] = [self.chart getParams];
 	}
@@ -124,6 +124,7 @@
 	copyOptions.subtitle = [self.subtitle copyWithZone: zone];
 	copyOptions.yAxis = [self.yAxis copyWithZone: zone];
 	copyOptions.series = [self.series copyWithZone: zone];
+	copyOptions.labels = [self.labels copyWithZone: zone];
 	copyOptions.accessibility = [self.accessibility copyWithZone: zone];
 	copyOptions.colors = [self.colors copyWithZone: zone];
 	copyOptions.pane = [self.pane copyWithZone: zone];
@@ -137,7 +138,6 @@
 	copyOptions.boost = [self.boost copyWithZone: zone];
 	copyOptions.annotations = [self.annotations copyWithZone: zone];
 	copyOptions.defs = [self.defs copyWithZone: zone];
-	copyOptions.labels = [self.labels copyWithZone: zone];
 	copyOptions.chart = [self.chart copyWithZone: zone];
 	copyOptions.credits = [self.credits copyWithZone: zone];
 	copyOptions.zAxis = [self.zAxis copyWithZone: zone];
@@ -178,6 +178,15 @@
 	}
 	_series = series;
 	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
+}
+
+-(void)setLabels:(HILabels *)labels {
+	HILabels *oldValue = _labels;
+	if(self.labels) {
+		[self removeObserver:self forKeyPath:@"labels.isUpdated"];
+	}
+	_labels = labels;
+	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
 -(void)setAccessibility:(HIAccessibility *)accessibility {
@@ -285,15 +294,6 @@
 -(void)setDefs:(id )defs {
 	_defs = defs;
 	[self updateNSObject:@"defs"];
-}
-
--(void)setLabels:(HILabels *)labels {
-	HILabels *oldValue = _labels;
-	if(self.labels) {
-		[self removeObserver:self forKeyPath:@"labels.isUpdated"];
-	}
-	_labels = labels;
-	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
 -(void)setChart:(HIChart *)chart {

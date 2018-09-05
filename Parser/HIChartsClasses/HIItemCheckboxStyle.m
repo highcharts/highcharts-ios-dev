@@ -11,8 +11,8 @@
 	[super copyWithZone:zone];
 	HIItemCheckboxStyle *copyItemCheckboxStyle = [[HIItemCheckboxStyle allocWithZone: zone] init];
 	copyItemCheckboxStyle.position = [self.position copyWithZone: zone];
-	copyItemCheckboxStyle.height = [self.height copyWithZone: zone];
 	copyItemCheckboxStyle.width = [self.width copyWithZone: zone];
+	copyItemCheckboxStyle.height = [self.height copyWithZone: zone];
 	return copyItemCheckboxStyle;
 }
 
@@ -22,11 +22,11 @@
 	if (self.position) {
 		params[@"position"] = self.position;
 	}
-	if (self.height) {
-		params[@"height"] = self.height;
-	}
 	if (self.width) {
 		params[@"width"] = self.width;
+	}
+	if (self.height) {
+		params[@"height"] = self.height;
 	}
 	return params;
 }
@@ -38,14 +38,14 @@
 	[self updateNSObject:@"position"];
 }
 
--(void)setHeight:(NSString *)height {
-	_height = height;
-	[self updateNSObject:@"height"];
-}
-
 -(void)setWidth:(NSString *)width {
 	_width = width;
 	[self updateNSObject:@"width"];
+}
+
+-(void)setHeight:(NSString *)height {
+	_height = height;
+	[self updateNSObject:@"height"];
 }
 
 @end

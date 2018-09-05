@@ -8,11 +8,10 @@
 
 #import "HISeries.h"
 #import "HIPartialFill.h"
-#import "HIColor.h"
 
 
 /**
-An `xrange` series. If the `type` option is not specified, it is inherited from `chart.type`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the `plotOptions.series` object. 2. Options for all `xrange` series are defined in `plotOptions.xrange`. 3. Options for one single series are given in `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     xrange: {       // shared options for all xrange series     }   },   series: [{     // specific options for this series instance     type: 'xrange'   }] });  
+An `xrange` series. If the `type` option is not specified, it is inherited from `chart.type`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `xrange` series are defined in  `plotOptions.xrange`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     xrange: {       // shared options for all xrange series     }   },   series: [{     // specific options for this series instance     type: 'xrange'   }] });  
 */
 @interface HIXrange: HISeries
 
@@ -46,6 +45,16 @@ The corner radius of the border surrounding each column or bar.
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
+Padding between each column or bar, in x axis units.
+
+**Try it**
+
+* [0.1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/)
+* [0.25](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/)
+* [0 for tightly packed columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/)
+*/
+@property(nonatomic, readwrite) NSNumber *pointPadding;
+/**
 The minimal height for a column or width for a bar. By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point length to a pixel value like 3\. In stacked column charts, minPointLength might not be respected for tightly packed values.
 
 **Try it**
@@ -64,16 +73,6 @@ The spacing between columns on the Z Axis in a 3D chart. Requires `highcharts-3d
 A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
 @property(nonatomic, readwrite) NSArray<HIColor *> *colors;
-/**
-The color of the border surrounding each column or bar. In styled mode, the border stroke can be set with the `.highcharts-point` rule.
-
-**Defaults to** `#ffffff`.
-
-**Try it**
-
-* [Dark gray border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/)
-*/
-@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.
 
@@ -94,26 +93,6 @@ A pixel value specifying a fixed width for each column or bar. When `null`, the 
 * [20px wide columns regardless of chart width or the amount of data points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/)
 */
 @property(nonatomic, readwrite) NSNumber *pointWidth;
-/**
-Padding between each column or bar, in x axis units.
-
-**Try it**
-
-* [0.1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/)
-* [0.25](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/)
-* [0 for tightly packed columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/)
-*/
-@property(nonatomic, readwrite) NSNumber *pointPadding;
-/**
-The width of the border surrounding each column or bar. In styled mode, the stroke width can be set with the `.highcharts-point` rule.
-
-**Defaults to** `1`.
-
-**Try it**
-
-* [2px black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/)
-*/
-@property(nonatomic, readwrite) NSNumber *borderWidth;
 
 -(NSDictionary *)getParams;
 
