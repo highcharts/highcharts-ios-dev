@@ -11,14 +11,14 @@
 	[super copyWithZone:zone];
 	HIContextButton *copyContextButton = [[HIContextButton allocWithZone: zone] init];
 	copyContextButton.symbolFill = [self.symbolFill copyWithZone: zone];
-	copyContextButton.menuItems = [self.menuItems copyWithZone: zone];
+	copyContextButton.symbol = [self.symbol copyWithZone: zone];
 	copyContextButton.className = [self.className copyWithZone: zone];
-	copyContextButton._titleKey = [self._titleKey copyWithZone: zone];
 	copyContextButton.onclick = [self.onclick copyWithZone: zone];
+	copyContextButton.titleKey = [self.titleKey copyWithZone: zone];
 	copyContextButton.x = [self.x copyWithZone: zone];
 	copyContextButton.menuClassName = [self.menuClassName copyWithZone: zone];
-	copyContextButton.symbol = [self.symbol copyWithZone: zone];
-	copyContextButton.symbolStroke = [self.symbolStroke copyWithZone: zone];
+	copyContextButton.menuItems = [self.menuItems copyWithZone: zone];
+	copyContextButton.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyContextButton.text = [self.text copyWithZone: zone];
 	copyContextButton.align = [self.align copyWithZone: zone];
 	copyContextButton.enabled = [self.enabled copyWithZone: zone];
@@ -28,7 +28,7 @@
 	copyContextButton.buttonSpacing = [self.buttonSpacing copyWithZone: zone];
 	copyContextButton.symbolSize = [self.symbolSize copyWithZone: zone];
 	copyContextButton.y = [self.y copyWithZone: zone];
-	copyContextButton.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyContextButton.symbolStroke = [self.symbolStroke copyWithZone: zone];
 	copyContextButton.symbolY = [self.symbolY copyWithZone: zone];
 	copyContextButton.symbolX = [self.symbolX copyWithZone: zone];
 	copyContextButton.symbolStrokeWidth = [self.symbolStrokeWidth copyWithZone: zone];
@@ -40,6 +40,24 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.symbolFill) {
 		params[@"symbolFill"] = [self.symbolFill getData];
+	}
+	if (self.symbol) {
+		params[@"symbol"] = self.symbol;
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
+	}
+	if (self.onclick) {
+		params[@"onclick"] = [self.onclick getFunction];
+	}
+	if (self.titleKey) {
+		params[@"titleKey"] = self.titleKey;
+	}
+	if (self.x) {
+		params[@"x"] = self.x;
+	}
+	if (self.menuClassName) {
+		params[@"menuClassName"] = self.menuClassName;
 	}
 	if (self.menuItems) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -53,26 +71,8 @@
 		}
 		params[@"menuItems"] = array;
 	}
-	if (self.className) {
-		params[@"className"] = self.className;
-	}
-	if (self._titleKey) {
-		params[@"_titleKey"] = self._titleKey;
-	}
-	if (self.onclick) {
-		params[@"onclick"] = [self.onclick getFunction];
-	}
-	if (self.x) {
-		params[@"x"] = self.x;
-	}
-	if (self.menuClassName) {
-		params[@"menuClassName"] = self.menuClassName;
-	}
-	if (self.symbol) {
-		params[@"symbol"] = self.symbol;
-	}
-	if (self.symbolStroke) {
-		params[@"symbolStroke"] = [self.symbolStroke getData];
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.text) {
 		params[@"text"] = self.text;
@@ -101,8 +101,8 @@
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
+	if (self.symbolStroke) {
+		params[@"symbolStroke"] = [self.symbolStroke getData];
 	}
 	if (self.symbolY) {
 		params[@"symbolY"] = self.symbolY;
@@ -127,20 +127,14 @@
 	[self updateHIObject:oldValue newValue:symbolFill propertyName:@"symbolFill"];
 }
 
--(void)setMenuItems:(NSArray *)menuItems {
-	NSArray *oldValue = _menuItems;
-	_menuItems = menuItems;
-	[self updateArrayObject:oldValue newValue:menuItems propertyName:@"menuItems"];
+-(void)setSymbol:(NSString *)symbol {
+	_symbol = symbol;
+	[self updateNSObject:@"symbol"];
 }
 
 -(void)setClassName:(NSString *)className {
 	_className = className;
 	[self updateNSObject:@"className"];
-}
-
--(void)set_titleKey:(NSString *)_titleKey {
-	__titleKey = _titleKey;
-	[self updateNSObject:@"_titleKey"];
 }
 
 -(void)setOnclick:(HIFunction *)onclick {
@@ -150,6 +144,11 @@
 	}
 	_onclick = onclick;
 	[self updateHIObject:oldValue newValue:onclick propertyName:@"onclick"];
+}
+
+-(void)setTitleKey:(NSString *)titleKey {
+	_titleKey = titleKey;
+	[self updateNSObject:@"titleKey"];
 }
 
 -(void)setX:(NSNumber *)x {
@@ -162,18 +161,15 @@
 	[self updateNSObject:@"menuClassName"];
 }
 
--(void)setSymbol:(NSString *)symbol {
-	_symbol = symbol;
-	[self updateNSObject:@"symbol"];
+-(void)setMenuItems:(NSArray *)menuItems {
+	NSArray *oldValue = _menuItems;
+	_menuItems = menuItems;
+	[self updateArrayObject:oldValue newValue:menuItems propertyName:@"menuItems"];
 }
 
--(void)setSymbolStroke:(HIColor *)symbolStroke {
-	HIColor *oldValue = _symbolStroke;
-	if(self.symbolStroke) {
-		[self removeObserver:self forKeyPath:@"symbolStroke.isUpdated"];
-	}
-	_symbolStroke = symbolStroke;
-	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
 }
 
 -(void)setText:(NSString *)text {
@@ -225,9 +221,13 @@
 	[self updateNSObject:@"y"];
 }
 
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+-(void)setSymbolStroke:(HIColor *)symbolStroke {
+	HIColor *oldValue = _symbolStroke;
+	if(self.symbolStroke) {
+		[self removeObserver:self forKeyPath:@"symbolStroke.isUpdated"];
+	}
+	_symbolStroke = symbolStroke;
+	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
 }
 
 -(void)setSymbolY:(NSNumber *)symbolY {
