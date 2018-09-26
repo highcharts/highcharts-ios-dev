@@ -13,19 +13,20 @@
 	copyLabels.items = [self.items copyWithZone: zone];
 	copyLabels.style = [self.style copyWithZone: zone];
 	copyLabels.y = [self.y copyWithZone: zone];
-	copyLabels.distance = [self.distance copyWithZone: zone];
-	copyLabels.align = [self.align copyWithZone: zone];
 	copyLabels.x = [self.x copyWithZone: zone];
-	copyLabels.staggerLines = [self.staggerLines copyWithZone: zone];
+	copyLabels.align = [self.align copyWithZone: zone];
+	copyLabels.distance = [self.distance copyWithZone: zone];
 	copyLabels.zIndex = [self.zIndex copyWithZone: zone];
 	copyLabels.reserveSpace = [self.reserveSpace copyWithZone: zone];
 	copyLabels.format = [self.format copyWithZone: zone];
 	copyLabels.autoRotationLimit = [self.autoRotationLimit copyWithZone: zone];
 	copyLabels.enabled = [self.enabled copyWithZone: zone];
+	copyLabels.staggerLines = [self.staggerLines copyWithZone: zone];
 	copyLabels.position3d = [self.position3d copyWithZone: zone];
 	copyLabels.padding = [self.padding copyWithZone: zone];
 	copyLabels.step = [self.step copyWithZone: zone];
 	copyLabels.skew3d = [self.skew3d copyWithZone: zone];
+	copyLabels.overflow = [self.overflow copyWithZone: zone];
 	copyLabels.formatter = [self.formatter copyWithZone: zone];
 	copyLabels.rotation = [self.rotation copyWithZone: zone];
 	copyLabels.useHTML = [self.useHTML copyWithZone: zone];
@@ -41,7 +42,6 @@
 	copyLabels.shape = [self.shape copyWithZone: zone];
 	copyLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
-	copyLabels.overflow = [self.overflow copyWithZone: zone];
 	copyLabels.shadow = [self.shadow copyWithZone: zone];
 	return copyLabels;
 }
@@ -67,17 +67,14 @@
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
-	if (self.distance) {
-		params[@"distance"] = self.distance;
+	if (self.x) {
+		params[@"x"] = self.x;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
-	if (self.x) {
-		params[@"x"] = self.x;
-	}
-	if (self.staggerLines) {
-		params[@"staggerLines"] = self.staggerLines;
+	if (self.distance) {
+		params[@"distance"] = self.distance;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -94,6 +91,9 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
+	if (self.staggerLines) {
+		params[@"staggerLines"] = self.staggerLines;
+	}
 	if (self.position3d) {
 		params[@"position3d"] = self.position3d;
 	}
@@ -105,6 +105,9 @@
 	}
 	if (self.skew3d) {
 		params[@"skew3d"] = self.skew3d;
+	}
+	if (self.overflow) {
+		params[@"overflow"] = self.overflow;
 	}
 	if (self.formatter) {
 		params[@"formatter"] = [self.formatter getFunction];
@@ -160,9 +163,6 @@
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
-	if (self.overflow) {
-		params[@"overflow"] = self.overflow;
-	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
 	}
@@ -191,9 +191,9 @@
 	[self updateNSObject:@"y"];
 }
 
--(void)setDistance:(NSNumber *)distance {
-	_distance = distance;
-	[self updateNSObject:@"distance"];
+-(void)setX:(NSNumber *)x {
+	_x = x;
+	[self updateNSObject:@"x"];
 }
 
 -(void)setAlign:(NSString *)align {
@@ -201,14 +201,9 @@
 	[self updateNSObject:@"align"];
 }
 
--(void)setX:(NSNumber *)x {
-	_x = x;
-	[self updateNSObject:@"x"];
-}
-
--(void)setStaggerLines:(NSNumber *)staggerLines {
-	_staggerLines = staggerLines;
-	[self updateNSObject:@"staggerLines"];
+-(void)setDistance:(NSNumber *)distance {
+	_distance = distance;
+	[self updateNSObject:@"distance"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
@@ -236,6 +231,11 @@
 	[self updateNSObject:@"enabled"];
 }
 
+-(void)setStaggerLines:(NSNumber *)staggerLines {
+	_staggerLines = staggerLines;
+	[self updateNSObject:@"staggerLines"];
+}
+
 -(void)setPosition3d:(NSString *)position3d {
 	_position3d = position3d;
 	[self updateNSObject:@"position3d"];
@@ -254,6 +254,11 @@
 -(void)setSkew3d:(NSNumber *)skew3d {
 	_skew3d = skew3d;
 	[self updateNSObject:@"skew3d"];
+}
+
+-(void)setOverflow:(id)overflow {
+	_overflow = overflow;
+	[self updateNSObject:@"overflow"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {
@@ -346,11 +351,6 @@
 	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
-}
-
--(void)setOverflow:(NSString *)overflow {
-	_overflow = overflow;
-	[self updateNSObject:@"overflow"];
 }
 
 -(void)setShadow:(id)shadow {

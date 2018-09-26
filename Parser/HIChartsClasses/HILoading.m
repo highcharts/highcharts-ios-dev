@@ -21,10 +21,10 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.style) {
-		params[@"style"] = [self.style getParams];
+		params[@"style"] = self.style;
 	}
 	if (self.labelStyle) {
-		params[@"labelStyle"] = [self.labelStyle getParams];
+		params[@"labelStyle"] = self.labelStyle;
 	}
 	if (self.hideDuration) {
 		params[@"hideDuration"] = self.hideDuration;
@@ -37,22 +37,14 @@
 
 # pragma mark - Setters
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
+-(void)setStyle:(NSDictionary *)style {
 	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+	[self updateNSObject:@"style"];
 }
 
--(void)setLabelStyle:(HILabelStyle *)labelStyle {
-	HILabelStyle *oldValue = _labelStyle;
-	if(self.labelStyle) {
-		[self removeObserver:self forKeyPath:@"labelStyle.isUpdated"];
-	}
+-(void)setLabelStyle:(NSDictionary *)labelStyle {
 	_labelStyle = labelStyle;
-	[self updateHIObject:oldValue newValue:labelStyle propertyName:@"labelStyle"];
+	[self updateNSObject:@"labelStyle"];
 }
 
 -(void)setHideDuration:(NSNumber *)hideDuration {

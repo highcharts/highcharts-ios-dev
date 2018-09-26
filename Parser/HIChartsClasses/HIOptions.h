@@ -2,7 +2,6 @@
 #import "HISubtitle.h"
 #import "HIYAxis.h"
 #import "HISeries.h"
-#import "HILabels.h"
 #import "HIAccessibility.h"
 #import "HIPane.h"
 #import "HIResponsive.h"
@@ -14,6 +13,7 @@
 #import "HIExporting.h"
 #import "HIBoost.h"
 #import "HIAnnotations.h"
+#import "HILabels.h"
 #import "HIChart.h"
 #import "HICredits.h"
 #import "HIZAxis.h"
@@ -40,12 +40,10 @@ The Y axis or value axis. Normally this is the vertical axis, though if the char
 */
 @property(nonatomic, readwrite) HIYAxis *yAxis;
 
-@property(nonatomic, readwrite) HISeries *series;
-
 /**
-HTML labels that can be positioned anywhere in the chart area.
+Series options for specific data and the data itself. In TypeScript you have to cast the series options to specific series types, to get all possible options for a series.
 */
-@property(nonatomic, readwrite) HILabels *labels;
+@property(nonatomic, readwrite) NSArray<HISeries *> *series;
 
 /**
 Options for configuring accessibility for the chart. Requires the [accessibility module](https://code.highcharts.com/modules/accessibility.js) to be loaded. For a description of the module and information on its features, see [Highcharts Accessibility](http://www.highcharts.com/docs/chart-concepts/accessibility).
@@ -56,7 +54,7 @@ Options for configuring accessibility for the chart. Requires the [accessibility
 An array containing the default colors for the chart's series. When all colors are used, new colors are pulled from the start again. Default colors can also be set on a series or series.type basis, see `column.colors`, `pie.colors`. In styled mode, the colors option doesn't exist. Instead, colors are defined in CSS and applied either through series or point class names, or through the `chart.colorCount` option. ### Legacy In Highcharts 3.x, the default colors were: colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce',   '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'] In Highcharts 2.x, the default colors were: colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE',  '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']
 
 **Defaults to** `["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9",
-            "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]`.
+         "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]`.
 
 **Try it**
 
@@ -100,6 +98,9 @@ The chart's main title.
 */
 @property(nonatomic, readwrite) HITitle *title;
 
+/**
+Options for the tooltip that appears when the user hovers over a series or point.
+*/
 @property(nonatomic, readwrite) HITooltip *tooltip;
 
 /**
@@ -117,11 +118,11 @@ Options for the Boost module. The Boost module allows certain series types to be
 
 **Try it**
 
-* [Area range chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange)
 * [Line chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line)
 * [Line chart with hundreds of series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy)
 * [Scatter chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter)
 * [Area chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/area)
+* [Area range chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange)
 * [Column chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/column)
 * [Column range chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/columnrange)
 * [Bubble chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/bubble)
@@ -150,6 +151,11 @@ Styled mode only. Configuration object for adding SVG definitions for reusable e
 * [Define markers in a styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/annotations-markers/)
 */
 @property(nonatomic, readwrite) id defs;
+
+/**
+HTML labels that can be positioned anywhere in the chart area.
+*/
+@property(nonatomic, readwrite) HILabels *labels;
 
 /**
 General options for the chart.
@@ -192,7 +198,7 @@ The Data module provides a simplified interface for adding data to a chart from 
 @property(nonatomic, readwrite) HIData *data;
 
 /**
-Options for the tooltip that appears when the user hovers over a series or point.
+The legend is a box containing a symbol and name for each series item or point item in the chart. Each series (or points in case of pie charts) is represented by a symbol and its name in the legend. It is possible to override the symbol creator function and create [custom legend symbols](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-custom-symbol/).
 */
 @property(nonatomic, readwrite) HILegend *legend;
 

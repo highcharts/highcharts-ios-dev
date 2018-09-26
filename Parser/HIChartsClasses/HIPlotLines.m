@@ -14,10 +14,10 @@
 	copyPlotLines.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPlotLines.color = [self.color copyWithZone: zone];
 	copyPlotLines.value = [self.value copyWithZone: zone];
-	copyPlotLines.label = [self.label copyWithZone: zone];
+	copyPlotLines.id = [self.id copyWithZone: zone];
 	copyPlotLines.className = [self.className copyWithZone: zone];
 	copyPlotLines.width = [self.width copyWithZone: zone];
-	copyPlotLines.id = [self.id copyWithZone: zone];
+	copyPlotLines.label = [self.label copyWithZone: zone];
 	copyPlotLines.events = [self.events copyWithZone: zone];
 	return copyPlotLines;
 }
@@ -37,8 +37,8 @@
 	if (self.value) {
 		params[@"value"] = self.value;
 	}
-	if (self.label) {
-		params[@"label"] = [self.label getParams];
+	if (self.id) {
+		params[@"id"] = self.id;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -46,8 +46,8 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
+	if (self.label) {
+		params[@"label"] = [self.label getParams];
 	}
 	if (self.events) {
 		params[@"events"] = self.events;
@@ -81,13 +81,9 @@
 	[self updateNSObject:@"value"];
 }
 
--(void)setLabel:(HILabel *)label {
-	HILabel *oldValue = _label;
-	if(self.label) {
-		[self removeObserver:self forKeyPath:@"label.isUpdated"];
-	}
-	_label = label;
-	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
+-(void)setId:(NSString *)id {
+	_id = id;
+	[self updateNSObject:@"id"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -100,9 +96,13 @@
 	[self updateNSObject:@"width"];
 }
 
--(void)setId:(NSString *)id {
-	_id = id;
-	[self updateNSObject:@"id"];
+-(void)setLabel:(HILabel *)label {
+	HILabel *oldValue = _label;
+	if(self.label) {
+		[self removeObserver:self forKeyPath:@"label.isUpdated"];
+	}
+	_label = label;
+	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
 }
 
 -(void)setEvents:(id)events {

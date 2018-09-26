@@ -35,15 +35,15 @@
 	copyHeatmap.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyHeatmap.nullColor = [self.nullColor copyWithZone: zone];
 	copyHeatmap.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyHeatmap.point = [self.point copyWithZone: zone];
 	copyHeatmap.selected = [self.selected copyWithZone: zone];
 	copyHeatmap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyHeatmap.clip = [self.clip copyWithZone: zone];
-	copyHeatmap.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyHeatmap.point = [self.point copyWithZone: zone];
 	copyHeatmap.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyHeatmap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHeatmap.borderColor = [self.borderColor copyWithZone: zone];
-	copyHeatmap.className = [self.className copyWithZone: zone];
+	copyHeatmap.cursor = [self.cursor copyWithZone: zone];
+	copyHeatmap.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyHeatmap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyHeatmap.label = [self.label copyWithZone: zone];
 	copyHeatmap.showCheckbox = [self.showCheckbox copyWithZone: zone];
@@ -58,8 +58,8 @@
 	copyHeatmap.zones = [self.zones copyWithZone: zone];
 	copyHeatmap.visible = [self.visible copyWithZone: zone];
 	copyHeatmap.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyHeatmap.cursor = [self.cursor copyWithZone: zone];
 	copyHeatmap.boostThreshold = [self.boostThreshold copyWithZone: zone];
+	copyHeatmap.className = [self.className copyWithZone: zone];
 	copyHeatmap.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyHeatmap;
 }

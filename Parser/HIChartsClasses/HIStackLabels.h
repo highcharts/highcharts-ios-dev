@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIStyle.h"
+#import "HIChartsJSONSerializable.h"
 #import "HIFunction.h"
 
 
@@ -26,11 +26,13 @@ Allow the stack labels to overlap.
 /**
 CSS styles for the label. In styled mode, the styles are set in the `.highcharts-stack-label` class.
 
+**Defaults to** `{"color": "#666666", "fontSize": "11px", "fontWeight": "bold", "textOutline": "1px contrast"}`.
+
 **Try it**
 
 * [Red stack total labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/stacklabels-style/)
 */
-@property(nonatomic, readwrite) HIStyle *style;
+@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
 /**
 Defines the vertical alignment of the stack total label. Can be one of `"top"`, `"middle"` or `"bottom"`. The default value is calculated at runtime and depends on orientation and whether the stack is positive or negative.
 
@@ -103,8 +105,6 @@ Rotation of the labels in degrees.
 @property(nonatomic, readwrite) NSNumber *rotation;
 /**
 Callback JavaScript function to format the label. The value is given by `this.total`.
-
-**Defaults to** `function() { return H.numberFormat(this.total, -1); }`.
 
 **Try it**
 

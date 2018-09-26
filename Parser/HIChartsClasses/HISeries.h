@@ -12,8 +12,8 @@
 #import "HITooltip.h"
 #import "HIMarker.h"
 #import "HILabel.h"
-#import "HIAnimation.h"
 #import "HIEvents.h"
+#import "HIAnimation.h"
 #import "HIZones.h"
 #import "HIDataLabels.h"
 #import "HIColor.h"
@@ -21,7 +21,7 @@
 
 
 /**
-Lang configuration for different series types. For more dynamic control over the series element descriptions, see `accessibility.seriesDescriptionFormatter`.
+Series options for specific data and the data itself. In TypeScript you have to cast the series options to specific series types, to get all possible options for a series.
 */
 @interface HISeries: HIChartsJSONSerializable
 
@@ -122,10 +122,6 @@ Lang configuration for the series main summary. Each series type has two modes: 
 */
 @property(nonatomic, readwrite) HISummary *summary;
 /**
-Properties for each single point.
-*/
-@property(nonatomic, readwrite) HIPoint *point;
-/**
 Whether to select the series initially. If `showCheckbox` is true, the checkbox next to the series name in the legend will be checked for a selected series.
 
 **Defaults to** `false`.
@@ -150,15 +146,9 @@ Disable this option to allow series rendering in the whole plotting area. **Note
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *clip;
 /**
-The color for the parts of the graph or points that are below the `threshold`.
-
-**Try it**
-
-* [Spline, area and column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/)
-* [Arearange](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/)
-* [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/)
+Properties for each single point.
 */
-@property(nonatomic, readwrite) HIColor *negativeColor;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the `options.colors` array. In styled mode, the color can be defined by the `colorIndex` option. Also, the series color can be set with the `.highcharts-series`, `.highcharts-color-{n}`, `.highcharts-{type}-series` or `.highcharts-series-{n}` class, or individual classes given by the `className` option.
 
@@ -167,6 +157,7 @@ The main color of the series. In line type series it applies to the line and the
 * [General plot option](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/)
 * [One specific series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/)
 * [Area color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/)
+* [Pattern fill](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/infographic/)
 */
 @property(nonatomic, readwrite) HIColor *color;
 /**
@@ -181,8 +172,6 @@ If no x values are given for the points in a series, `pointInterval` defines the
 @property(nonatomic, readwrite) NSNumber *pointInterval;
 /**
 When the series contains less points than the crop threshold, all points are drawn, even if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
-
-**Defaults to** `300`.
 */
 @property(nonatomic, readwrite) NSNumber *cropThreshold;
 /**
@@ -197,8 +186,6 @@ The threshold, also called zero level or base level. For line type series this i
 @property(nonatomic, readwrite) NSNumber *threshold;
 /**
 When this is true, the series will not cause the Y axis to cross the zero plane (or `threshold` option) unless the data actually crosses the plane. For example, if `softThreshold` is `false`, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the `minPadding` option. If `softThreshold` is `true`, the Y axis starts at 0.
-
-**Defaults to** `true`.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *softThreshold;
 /**
@@ -220,11 +207,23 @@ The border color of the map areas. In styled mode, the border stroke is given in
 */
 @property(nonatomic, readwrite) HIColor *borderColor;
 /**
-An additional class name to apply to the series' graphical elements. This option does not replace default class names of the graphical element.
+You can set the cursor to "pointer" if you have click events attached to the series, to signal to the user that the points and lines can be clicked. In styled mode, the series cursor can be set with the same classes as listed under `series.color`.
+
+**Accepted values:** `["crosshair","default","help","none","pointer"]`.
+
+**Try it**
+
+* [On line graph](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/)
+* [On columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/)
+* [On scatter markers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/)
 */
-@property(nonatomic, readwrite) NSString *className;
+@property(nonatomic, readwrite) NSString *cursor;
 /**
-A name for the dash style to use for the graph, or for some series types the outline of each shape. The value for the `dashStyle` include: `"Dash"`, `"DashDot"`, `"Dot"`, `"LongDash"`, `"LongDashDot"`, `"LongDashDotDot"`, `"ShortDash"`, `"ShortDashDot"`, `"ShortDashDotDot"`, `"ShortDot"`, and `"Solid"`. In styled mode, the [stroke dash-array](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-dashstyle/) can be set with the same classes as listed under `series.color`.
+A name for the dash style to use for the graph, or for some series types the outline of each shape. In styled mode, the [stroke dash-array](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-dashstyle/) can be set with the same classes as listed under `series.color`.
+
+**Accepted values:** `["Dash","DashDot","Dot","LongDash","LongDashDot",
+            "LongDashDotDot","ShortDash","ShortDashDot",
+            "ShortDashDotDot","ShortDot","Solid"]`.
 
 **Defaults to** `Solid`.
 
@@ -242,7 +241,7 @@ Possible values: `"on"`, `"between"`, `number`. In a column chart, when pointPla
 * [Between in a column chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/)
 * [Numeric placement for custom layout](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-numeric/)
 */
-@property(nonatomic, readwrite) id /* NSNumber, NSString */ pointPlacement;
+@property(nonatomic, readwrite) id /* NSString, NSNumber */ pointPlacement;
 /**
 Whether to connect a graph line across null points, or render a gap between the two points on either side of the null.
 
@@ -254,6 +253,16 @@ Whether to connect a graph line across null points, or render a gap between the 
 * [True](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-true/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *connectNulls;
+/**
+The color for the parts of the graph or points that are below the `threshold`.
+
+**Try it**
+
+* [Spline, area and column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/)
+* [Arearange](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/)
+* [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/)
+*/
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 
@@ -292,18 +301,6 @@ Whether to stack the values of each series on top of each other. Possible values
 */
 @property(nonatomic, readwrite) NSString *stacking;
 /**
-Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see `chart.animation` and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing Can be a string reference to an easing function set on the `Math` object or a function. See the _Custom easing function_ demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.
-
-**Defaults to** `true`.
-
-**Try it**
-
-* [Animation disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/)
-* [Slower animation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/)
-* [Custom easing function](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/)
-*/
-@property(nonatomic, readwrite) HIAnimation *animation;
-/**
 Determines whether the series should look for the nearest point in both dimensions or just the x-dimension when hovering the series. Defaults to `'xy'` for scatter series and `'x'` for most other series. If the data has duplicate x-values, it is recommended to set this to `'xy'` to allow hovering over all points. Applies only to series types using nearest neighbor search (not direct hover) for tooltip.
 
 **Accepted values:** `["x", "xy"]`.
@@ -313,6 +310,13 @@ Determines whether the series should look for the nearest point in both dimensio
 * [Different hover behaviors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/findnearestpointby/)
 */
 @property(nonatomic, readwrite) NSString *findNearestPointBy;
+/**
+If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the `selected` option.
+
+**Try it**
+
+* [Show select box](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/)
+*/
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showCheckbox;
 /**
 General event handlers for the series items. These event hooks can also be attached to the series at run time using the `Highcharts.addEvent` function.
@@ -333,22 +337,20 @@ An array specifying which option maps to which key in the data point array. This
 @property(nonatomic, readwrite) NSArray<NSString *> *keys;
 /**
 When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to `0` disable.
-
-**Defaults to** `1000`.
 */
 @property(nonatomic, readwrite) NSNumber *turboThreshold;
 /**
-If set to `True`, the accessibility module will skip past the points in this series for keyboard navigation.
+If set to `true`, the accessibility module will skip past the points in this series for keyboard navigation.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *skipKeyboardNavigation;
 /**
-If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the `selected` option.
-
-**Defaults to** `false`.
+Allow this series' points to be selected by clicking on the graphic (columns, point markers, pie slices, map areas etc).
 
 **Try it**
 
-* [Show select box](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/)
+* [Line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/)
+* [Column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/)
+* [Pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
 /**
@@ -387,6 +389,18 @@ Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an
 */
 @property(nonatomic, readwrite) id shadow;
 /**
+Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see `chart.animation` and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing Can be a string reference to an easing function set on the `Math` object or a function. See the _Custom easing function_ demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.
+
+**Defaults to** `true`.
+
+**Try it**
+
+* [Animation disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/)
+* [Slower animation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/)
+* [Custom easing function](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/)
+*/
+@property(nonatomic, readwrite) HIAnimation *animation;
+/**
 Defines the Axis on which the zones are applied.
 
 **Defaults to** `y`.
@@ -415,16 +429,13 @@ On datetime series, this allows for setting the `pointInterval` to irregular tim
 */
 @property(nonatomic, readwrite) NSString *pointIntervalUnit;
 /**
-Pixel width of the graph line.
-
-**Defaults to** `2`.
+Polar charts only. Whether to connect the ends of a line series plot across the extremes.
 
 **Try it**
 
-* [On all series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/)
-* [On one single series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-specific/)
+* [Do not connect](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-connectends-false/)
 */
-@property(nonatomic, readwrite) NSNumber *lineWidth;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *connectEnds;
 /**
 Set the initial visibility of the series.
 
@@ -444,30 +455,19 @@ The `id` of another series to link to. Additionally, the value can be ":previous
 */
 @property(nonatomic, readwrite) NSString *linkedTo;
 /**
-Sticky tracking of mouse events. When true, the `mouseOut` event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the `mouseOut` event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip when not shared. When `stickyTracking` is false and `tooltip.shared` is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
+Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the `boostThreshold` to 0. Setting it to 1 will force boosting. Requires `modules/boost.js`.
 
-**Defaults to** `true`.
-
-**Try it**
-
-* [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/)
-* [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/)
+**Defaults to** `5000`.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
+@property(nonatomic, readwrite) NSNumber *boostThreshold;
 /**
 Options for the series data labels, appearing next to each data point. In styled mode, the data labels can be styled with the `.highcharts-data-label-box` and `.highcharts-data-label` class names ([see example](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels)).
 */
 @property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
-You can set the cursor to "pointer" if you have click events attached to the series, to signal to the user that the points and lines can be clicked. Possible values are: `"default"`, `"help"`, `"none"`, `"pointer"`, and `"crosshair"`. In styled mode, the series cursor can be set with the same classes as listed under `series.color`.
-
-**Try it**
-
-* [On line graph](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/)
-* [On columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/)
-* [On scatter markers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/)
+An additional class name to apply to the series' graphical elements. This option does not replace default class names of the graphical element.
 */
-@property(nonatomic, readwrite) NSString *cursor;
+@property(nonatomic, readwrite) NSString *className;
 /**
 If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
 
@@ -490,19 +490,25 @@ The line cap used for line ends and line joins on the graph.
 */
 @property(nonatomic, readwrite) NSString *linecap;
 /**
-Polar charts only. Whether to connect the ends of a line series plot across the extremes.
+Pixel width of the graph line.
 
 **Try it**
 
-* [Do not connect](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-connectends-false/)
+* [On all series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/)
+* [On one single series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-specific/)
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *connectEnds;
+@property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
-Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the `boostThreshold` to 0. Setting it to 1 will force boosting. Requires `modules/boost.js`.
+Sticky tracking of mouse events. When true, the `mouseOut` event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the `mouseOut` event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip when not shared. When `stickyTracking` is false and `tooltip.shared` is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
 
-**Defaults to** `5000`.
+**Defaults to** `true`.
+
+**Try it**
+
+* [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/)
+* [False](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/)
 */
-@property(nonatomic, readwrite) NSNumber *boostThreshold;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *stickyTracking;
 /**
 Whether to display this particular series or series type in the legend. The default value is `true` for standalone series, `false` for linked series.
 

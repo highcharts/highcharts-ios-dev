@@ -52,8 +52,6 @@ The text to display when the chart contains no data. Requires the no-data module
 @property(nonatomic, readwrite) NSString *noData;
 /**
 The loading text that appears when the chart is set into the loading state following a call to `chart.showLoading`.
-
-**Defaults to** `Loading...`.
 */
 @property(nonatomic, readwrite) NSString *loading;
 /**
@@ -67,11 +65,11 @@ The loading text that appears when the chart is set into the loading state follo
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *numericSymbols;
 /**
-Exporting module only. The text for the menu item to print the chart.
+Exporting module only. The text for the SVG download menu item.
 
-**Defaults to** `Print chart`.
+**Defaults to** `Download SVG vector image`.
 */
-@property(nonatomic, readwrite) NSString *printChart;
+@property(nonatomic, readwrite) NSString *downloadSVG;
 /**
 The magnitude of `numericSymbols` replacements. Use 10000 for Japanese, Korean and various Chinese locales, which use symbols for 10^4, 10^8 and 10^12.
 
@@ -86,15 +84,15 @@ The magnitude of `numericSymbols` replacements. Use 10000 for Japanese, Korean a
 An array containing the weekday names.
 
 **Defaults to** `["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-            "Friday", "Saturday"]`.
+         "Friday", "Saturday"]`.
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *weekdays;
 /**
-Exporting module only. The text for the SVG download menu item.
+Exporting module only. The text for the menu item to print the chart.
 
-**Defaults to** `Download SVG vector image`.
+**Defaults to** `Print chart`.
 */
-@property(nonatomic, readwrite) NSString *downloadSVG;
+@property(nonatomic, readwrite) NSString *printChart;
 /**
 The text for the button that appears when drilling down, linking back to the parent series. The parent series' name is inserted for `{series.name}`.
 
@@ -117,8 +115,6 @@ What to show in a date field for invalid dates. Defaults to an empty string.
 @property(nonatomic, readwrite) NSString *invalidDate;
 /**
 The text for the label appearing when a chart is zoomed.
-
-**Defaults to** `Reset zoom`.
 */
 @property(nonatomic, readwrite) NSString *resetZoom;
 /**
@@ -135,15 +131,15 @@ Export-data module only. The text for the menu item.
 An array containing the months names. Corresponds to the `%B` format in `Highcharts.dateFormat()`.
 
 **Defaults to** `["January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November",
-            "December"]`.
+         "July", "August", "September", "October", "November",
+         "December"]`.
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *months;
 /**
 An array containing the months names in abbreviated form. Corresponds to the `%b` format in `Highcharts.dateFormat()`.
 
 **Defaults to** `["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]`.
+         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]`.
 */
 @property(nonatomic, readwrite) NSArray<NSString *> *shortMonths;
 /**
@@ -154,14 +150,10 @@ Exporting module only. The text for the JPEG download menu item.
 @property(nonatomic, readwrite) NSString *downloadJPEG;
 /**
 The default decimal point used in the `Highcharts.numberFormat` method unless otherwise specified in the function arguments.
-
-**Defaults to** `.`.
 */
 @property(nonatomic, readwrite) NSString *decimalPoint;
 /**
 The tooltip title for the label appearing when a chart is zoomed.
-
-**Defaults to** `Reset zoom level 1:1`.
 */
 @property(nonatomic, readwrite) NSString *resetZoomTitle;
 /**

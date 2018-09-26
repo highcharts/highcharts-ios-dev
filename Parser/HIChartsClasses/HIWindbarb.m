@@ -22,7 +22,6 @@
 	copyWindbarb.states = [self.states copyWithZone: zone];
 	copyWindbarb.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyWindbarb.xOffset = [self.xOffset copyWithZone: zone];
-	copyWindbarb.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyWindbarb.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyWindbarb.pointRange = [self.pointRange copyWithZone: zone];
 	copyWindbarb.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -32,9 +31,10 @@
 	copyWindbarb.threshold = [self.threshold copyWithZone: zone];
 	copyWindbarb.borderColor = [self.borderColor copyWithZone: zone];
 	copyWindbarb.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyWindbarb.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyWindbarb.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyWindbarb.pointWidth = [self.pointWidth copyWithZone: zone];
-	copyWindbarb.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyWindbarb.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyWindbarb.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyWindbarb.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyWindbarb.crisp = [self.crisp copyWithZone: zone];
@@ -43,19 +43,18 @@
 	copyWindbarb.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyWindbarb.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWindbarb.grouping = [self.grouping copyWithZone: zone];
-	copyWindbarb.point = [self.point copyWithZone: zone];
 	copyWindbarb.selected = [self.selected copyWithZone: zone];
 	copyWindbarb.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyWindbarb.clip = [self.clip copyWithZone: zone];
-	copyWindbarb.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyWindbarb.point = [self.point copyWithZone: zone];
 	copyWindbarb.color = [self.color copyWithZone: zone];
 	copyWindbarb.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyWindbarb.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyWindbarb.className = [self.className copyWithZone: zone];
+	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
 	copyWindbarb.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyWindbarb.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyWindbarb.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWindbarb.label = [self.label copyWithZone: zone];
-	copyWindbarb.animation = [self.animation copyWithZone: zone];
 	copyWindbarb.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWindbarb.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyWindbarb.events = [self.events copyWithZone: zone];
@@ -67,12 +66,13 @@
 	copyWindbarb.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWindbarb.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyWindbarb.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyWindbarb.animation = [self.animation copyWithZone: zone];
 	copyWindbarb.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWindbarb.zones = [self.zones copyWithZone: zone];
 	copyWindbarb.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyWindbarb.visible = [self.visible copyWithZone: zone];
 	copyWindbarb.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
+	copyWindbarb.className = [self.className copyWithZone: zone];
 	copyWindbarb.pointStart = [self.pointStart copyWithZone: zone];
 	copyWindbarb.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyWindbarb.data = [self.data copyWithZone: zone];
@@ -103,9 +103,6 @@
 	if (self.xOffset) {
 		params[@"xOffset"] = self.xOffset;
 	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
-	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
@@ -128,14 +125,17 @@
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
 	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -177,11 +177,6 @@
 	[self updateNSObject:@"xOffset"];
 }
 
--(void)setPointPadding:(NSNumber *)pointPadding {
-	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
-}
-
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	_borderRadius = borderRadius;
 	[self updateNSObject:@"borderRadius"];
@@ -217,6 +212,11 @@
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
 }
 
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
+}
+
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
 	_maxPointWidth = maxPointWidth;
 	[self updateNSObject:@"maxPointWidth"];
@@ -227,9 +227,9 @@
 	[self updateNSObject:@"pointWidth"];
 }
 
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {

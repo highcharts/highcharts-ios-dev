@@ -24,24 +24,24 @@
 	copyFunnel.zIndex = [self.zIndex copyWithZone: zone];
 	copyFunnel.center = [self.center copyWithZone: zone];
 	copyFunnel.reversed = [self.reversed copyWithZone: zone];
-	copyFunnel.neckWidth = [self.neckWidth copyWithZone: zone];
+	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
 	copyFunnel.height = [self.height copyWithZone: zone];
 	copyFunnel.states = [self.states copyWithZone: zone];
 	copyFunnel.width = [self.width copyWithZone: zone];
 	copyFunnel.animation = [self.animation copyWithZone: zone];
-	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
+	copyFunnel.neckWidth = [self.neckWidth copyWithZone: zone];
 	copyFunnel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
-	copyFunnel.minSize = [self.minSize copyWithZone: zone];
+	copyFunnel.endAngle = [self.endAngle copyWithZone: zone];
 	copyFunnel.innerSize = [self.innerSize copyWithZone: zone];
 	copyFunnel.clip = [self.clip copyWithZone: zone];
 	copyFunnel.point = [self.point copyWithZone: zone];
-	copyFunnel.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyFunnel.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyFunnel.depth = [self.depth copyWithZone: zone];
 	copyFunnel.tooltip = [self.tooltip copyWithZone: zone];
-	copyFunnel.endAngle = [self.endAngle copyWithZone: zone];
 	copyFunnel.colors = [self.colors copyWithZone: zone];
+	copyFunnel.minSize = [self.minSize copyWithZone: zone];
+	copyFunnel.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyFunnel.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyFunnel.startAngle = [self.startAngle copyWithZone: zone];
 	copyFunnel.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -52,7 +52,7 @@
 	copyFunnel.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyFunnel.color = [self.color copyWithZone: zone];
 	copyFunnel.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyFunnel.className = [self.className copyWithZone: zone];
+	copyFunnel.cursor = [self.cursor copyWithZone: zone];
 	copyFunnel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyFunnel.label = [self.label copyWithZone: zone];
 	copyFunnel.showCheckbox = [self.showCheckbox copyWithZone: zone];
@@ -64,7 +64,7 @@
 	copyFunnel.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel.visible = [self.visible copyWithZone: zone];
 	copyFunnel.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyFunnel.cursor = [self.cursor copyWithZone: zone];
+	copyFunnel.className = [self.className copyWithZone: zone];
 	return copyFunnel;
 }
 
@@ -86,8 +86,8 @@
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
 	}
-	if (self.neckWidth) {
-		params[@"neckWidth"] = self.neckWidth;
+	if (self.neckHeight) {
+		params[@"neckHeight"] = self.neckHeight;
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
@@ -95,11 +95,11 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.neckHeight) {
-		params[@"neckHeight"] = self.neckHeight;
+	if (self.neckWidth) {
+		params[@"neckWidth"] = self.neckWidth;
 	}
-	if (self.minSize) {
-		params[@"minSize"] = self.minSize;
+	if (self.endAngle) {
+		params[@"endAngle"] = self.endAngle;
 	}
 	if (self.innerSize) {
 		params[@"innerSize"] = self.innerSize;
@@ -110,15 +110,15 @@
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
-	if (self.endAngle) {
-		params[@"endAngle"] = self.endAngle;
-	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
+	}
+	if (self.minSize) {
+		params[@"minSize"] = self.minSize;
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
@@ -142,9 +142,9 @@
 	[self updateNSObject:@"reversed"];
 }
 
--(void)setNeckWidth:(id)neckWidth {
-	_neckWidth = neckWidth;
-	[self updateNSObject:@"neckWidth"];
+-(void)setNeckHeight:(id)neckHeight {
+	_neckHeight = neckHeight;
+	[self updateNSObject:@"neckHeight"];
 }
 
 -(void)setHeight:(id)height {
@@ -157,14 +157,14 @@
 	[self updateNSObject:@"width"];
 }
 
--(void)setNeckHeight:(id)neckHeight {
-	_neckHeight = neckHeight;
-	[self updateNSObject:@"neckHeight"];
+-(void)setNeckWidth:(id)neckWidth {
+	_neckWidth = neckWidth;
+	[self updateNSObject:@"neckWidth"];
 }
 
--(void)setMinSize:(NSNumber *)minSize {
-	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
 }
 
 -(void)setInnerSize:(id)innerSize {
@@ -182,15 +182,15 @@
 	[self updateNSObject:@"depth"];
 }
 
--(void)setEndAngle:(NSNumber *)endAngle {
-	_endAngle = endAngle;
-	[self updateNSObject:@"endAngle"];
-}
-
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setMinSize:(NSNumber *)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {

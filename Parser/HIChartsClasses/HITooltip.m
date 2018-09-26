@@ -15,6 +15,8 @@
 	copyTooltip.headerFormat = [self.headerFormat copyWithZone: zone];
 	copyTooltip.valueSuffix = [self.valueSuffix copyWithZone: zone];
 	copyTooltip.valuePrefix = [self.valuePrefix copyWithZone: zone];
+	copyTooltip.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyTooltip.shape = [self.shape copyWithZone: zone];
 	copyTooltip.positioner = [self.positioner copyWithZone: zone];
 	copyTooltip.useHTML = [self.useHTML copyWithZone: zone];
 	copyTooltip.borderColor = [self.borderColor copyWithZone: zone];
@@ -29,11 +31,9 @@
 	copyTooltip.formatter = [self.formatter copyWithZone: zone];
 	copyTooltip.pointFormat = [self.pointFormat copyWithZone: zone];
 	copyTooltip.xDateFormat = [self.xDateFormat copyWithZone: zone];
-	copyTooltip.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyTooltip.padding = [self.padding copyWithZone: zone];
 	copyTooltip.shadow = [self.shadow copyWithZone: zone];
 	copyTooltip.enabled = [self.enabled copyWithZone: zone];
-	copyTooltip.shape = [self.shape copyWithZone: zone];
 	copyTooltip.pointFormatter = [self.pointFormatter copyWithZone: zone];
 	copyTooltip.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyTooltip.followPointer = [self.followPointer copyWithZone: zone];
@@ -62,6 +62,12 @@
 	}
 	if (self.valuePrefix) {
 		params[@"valuePrefix"] = self.valuePrefix;
+	}
+	if (self.dateTimeLabelFormats) {
+		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+	}
+	if (self.shape) {
+		params[@"shape"] = self.shape;
 	}
 	if (self.positioner) {
 		params[@"positioner"] = [self.positioner getFunction];
@@ -105,9 +111,6 @@
 	if (self.xDateFormat) {
 		params[@"xDateFormat"] = self.xDateFormat;
 	}
-	if (self.dateTimeLabelFormats) {
-		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
-	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
 	}
@@ -116,9 +119,6 @@
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
-	}
-	if (self.shape) {
-		params[@"shape"] = self.shape;
 	}
 	if (self.pointFormatter) {
 		params[@"pointFormatter"] = [self.pointFormatter getFunction];
@@ -172,6 +172,20 @@
 -(void)setValuePrefix:(NSString *)valuePrefix {
 	_valuePrefix = valuePrefix;
 	[self updateNSObject:@"valuePrefix"];
+}
+
+-(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
+	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
+	if(self.dateTimeLabelFormats) {
+		[self removeObserver:self forKeyPath:@"dateTimeLabelFormats.isUpdated"];
+	}
+	_dateTimeLabelFormats = dateTimeLabelFormats;
+	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
+}
+
+-(void)setShape:(NSString *)shape {
+	_shape = shape;
+	[self updateNSObject:@"shape"];
 }
 
 -(void)setPositioner:(HIFunction *)positioner {
@@ -264,15 +278,6 @@
 	[self updateNSObject:@"xDateFormat"];
 }
 
--(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
-	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
-	if(self.dateTimeLabelFormats) {
-		[self removeObserver:self forKeyPath:@"dateTimeLabelFormats.isUpdated"];
-	}
-	_dateTimeLabelFormats = dateTimeLabelFormats;
-	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
-}
-
 -(void)setPadding:(NSNumber *)padding {
 	_padding = padding;
 	[self updateNSObject:@"padding"];
@@ -286,11 +291,6 @@
 -(void)setEnabled:(NSNumber *)enabled {
 	_enabled = enabled;
 	[self updateNSObject:@"enabled"];
-}
-
--(void)setShape:(NSString *)shape {
-	_shape = shape;
-	[self updateNSObject:@"shape"];
 }
 
 -(void)setPointFormatter:(HIFunction *)pointFormatter {
