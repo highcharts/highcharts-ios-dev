@@ -4,7 +4,7 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-[Highcharts iOS](http://www.highcharts.com/blog/mobile/) is a delightful wrapper of HighchartsJS for iOS.
+[Highcharts iOS](https://www.highcharts.com/products/ios/) is a delightful wrapper of HighchartsJS for iOS.
 
 The most popular, robust and battle-tested JavaScript Charting library is now available for iOS with our new Objective-C wrapper. Get gorgeous, multi-touch charts with minimal effort.
 
@@ -30,13 +30,13 @@ Here we present how to create basic chart and place it in your project.
 - First of all download Highcharts framework from here: [Highcharts](https://github.com/highcharts/highcharts-ios) 
 or by using Cocoapods by adding 
     ```
-    pod 'Highcharts', '~> 6.1.3'
+    pod 'Highcharts', '~> 6.1.4'
     ```
     to your Podfile
     
     or Carthage by adding
     ```
-    github "https://github.com/highcharts/highcharts-ios" >= 6.1.3
+    github "https://github.com/highcharts/highcharts-ios" >= 6.1.4
     ```
     to your Cartfile. Please be advised that this is a development framework which contains intel architectures. 
     In order to submit a build to the app store you either need to remove those architectures using lipo,
