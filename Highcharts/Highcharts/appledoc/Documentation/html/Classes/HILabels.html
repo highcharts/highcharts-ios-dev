@@ -253,7 +253,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{"color": "#333333"}</code>.</p>
+				<p><strong>Defaults to</strong> <code>{"color": "#333333", "position": "absolute"}</code>.</p>
 			</div>
 			
 
@@ -324,8 +324,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/distance" title="distance"></a>
-	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
 </h3>
 
 	<div class="method-info">
@@ -335,12 +335,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Angular gauges and solid gauges only. The label&rsquo;s pixel distance from the perimeter of the plot area.</p>
+				<p>The x position offset of the label relative to the tick position on the axis. Defaults to -15 for left axis, 15 for right axis.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
 
 		    
 			
@@ -352,7 +352,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>-25</code>.</p>
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-x/">Y axis labels placed on grid lines</a></li>
+</ul>
+
 			</div>
 			
 
@@ -425,8 +430,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/x" title="x"></a>
-	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
+	<a name="//api/name/distance" title="distance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
 </h3>
 
 	<div class="method-info">
@@ -436,12 +441,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The x position offset of the label relative to the tick position on the axis. Defaults to -15 for left axis, 15 for right axis.</p>
+				<p>Angular gauges and solid gauges only. The label&rsquo;s pixel distance from the perimeter of the plot area.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
 
 		    
 			
@@ -453,65 +458,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>-8</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-x/">Y axis labels placed on grid lines</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/staggerLines" title="staggerLines"></a>
-	<h3 class="method-title"><code><a href="#//api/name/staggerLines">&nbsp;&nbsp;staggerLines</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Horizontal axes only. The number of lines to spread the labels over to make room or tighter labels.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *staggerLines</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-staggerlines/">Show labels over two lines</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>-25</code>.</p>
 			</div>
 			
 
@@ -786,6 +733,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/staggerLines" title="staggerLines"></a>
+	<h3 class="method-title"><code><a href="#//api/name/staggerLines">&nbsp;&nbsp;staggerLines</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Horizontal axes only. The number of lines to spread the labels over to make room or tighter labels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *staggerLines</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-staggerlines/">Show labels over two lines</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/position3d" title="position3d"></a>
 	<h3 class="method-title"><code><a href="#//api/name/position3d">&nbsp;&nbsp;position3d</a></code>
 </h3>
@@ -971,6 +969,54 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/skewed-labels/">Skewed labels</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/overflow" title="overflow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/overflow">&nbsp;&nbsp;overflow</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>How to handle overflowing labels on horizontal axis. If set to <code>"allow"</code>, it will not be aligned at all. By default it <code>"justify"</code> labels inside the chart area. If there is room to move it, it will be aligned to the edge, else it will be removed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id overflow</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["allow", "justify"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>justify</code>.</p>
 			</div>
 			
 
@@ -1739,60 +1785,6 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/">Set labels graphic options</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/overflow" title="overflow"></a>
-	<h3 class="method-title"><code><a href="#//api/name/overflow">&nbsp;&nbsp;overflow</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>How to handle the annotation&rsquo;s label that flow outside the plot area. The justify option aligns the label inside the plot area.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *overflow</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["none", "justify"]</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li>~!@<a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/">Crop or justify labels
-*</a>@!~</li>
 </ul>
 
 			</div>
