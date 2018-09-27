@@ -266,8 +266,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/neckWidth" title="neckWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/neckWidth">&nbsp;&nbsp;neckWidth</a></code>
+	<a name="//api/name/neckHeight" title="neckHeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/neckHeight">&nbsp;&nbsp;neckHeight</a></code>
 </h3>
 
 	<div class="method-info">
@@ -277,12 +277,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area width.</p>
+				<p>The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id neckWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id neckHeight</code></div>
 
 		    
 			
@@ -291,16 +291,6 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/">Funnel demo</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -409,8 +399,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/neckHeight" title="neckHeight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/neckHeight">&nbsp;&nbsp;neckHeight</a></code>
+	<a name="//api/name/neckWidth" title="neckWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/neckWidth">&nbsp;&nbsp;neckWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -420,12 +410,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height.</p>
+				<p>The width of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area width.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id neckHeight</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id neckWidth</code></div>
 
 		    
 			
@@ -434,6 +424,16 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/">Funnel demo</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -450,8 +450,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/minSize" title="minSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minSize">&nbsp;&nbsp;minSize</a></code>
+	<a name="//api/name/endAngle" title="endAngle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/endAngle">&nbsp;&nbsp;endAngle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -461,12 +461,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.</p>
+				<p>The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to <code>startAngle</code> plus 360.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minSize</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *endAngle</code></div>
 
 		    
 			
@@ -478,7 +478,14 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>80</code>.</p>
+				<p><strong>Defaults to</strong> <code>null</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/">Semi-circle donut</a></li>
+</ul>
+
 			</div>
 			
 
@@ -650,59 +657,6 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/endAngle" title="endAngle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/endAngle">&nbsp;&nbsp;endAngle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to <code>startAngle</code> plus 360.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *endAngle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>null</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/">Semi-circle donut</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIFunnel.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/colors" title="colors"></a>
 	<h3 class="method-title"><code><a href="#//api/name/colors">&nbsp;&nbsp;colors</a></code>
 </h3>
@@ -737,6 +691,52 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/">Set default colors for all pies</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIFunnel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minSize" title="minSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minSize">&nbsp;&nbsp;minSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>80</code>.</p>
 			</div>
 			
 

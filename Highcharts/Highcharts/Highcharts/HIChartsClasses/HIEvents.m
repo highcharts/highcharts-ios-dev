@@ -17,16 +17,6 @@
 	copyEvents.pointBreak = [self.pointBreak copyWithZone: zone];
 	copyEvents.setExtremes = [self.setExtremes copyWithZone: zone];
 	copyEvents.afterSetExtremes = [self.afterSetExtremes copyWithZone: zone];
-	copyEvents.unselect = [self.unselect copyWithZone: zone];
-	copyEvents.update = [self.update copyWithZone: zone];
-	copyEvents.remove = [self.remove copyWithZone: zone];
-	copyEvents.mouseOut = [self.mouseOut copyWithZone: zone];
-	copyEvents.mouseOver = [self.mouseOver copyWithZone: zone];
-	copyEvents.click = [self.click copyWithZone: zone];
-	copyEvents.select = [self.select copyWithZone: zone];
-	copyEvents.hide = [self.hide copyWithZone: zone];
-	copyEvents.show = [self.show copyWithZone: zone];
-	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
 	copyEvents.load = [self.load copyWithZone: zone];
 	copyEvents.selection = [self.selection copyWithZone: zone];
 	copyEvents.render = [self.render copyWithZone: zone];
@@ -36,7 +26,17 @@
 	copyEvents.drillupall = [self.drillupall copyWithZone: zone];
 	copyEvents.drilldown = [self.drilldown copyWithZone: zone];
 	copyEvents.redraw = [self.redraw copyWithZone: zone];
+	copyEvents.click = [self.click copyWithZone: zone];
 	copyEvents.afterPrint = [self.afterPrint copyWithZone: zone];
+	copyEvents.unselect = [self.unselect copyWithZone: zone];
+	copyEvents.update = [self.update copyWithZone: zone];
+	copyEvents.remove = [self.remove copyWithZone: zone];
+	copyEvents.mouseOut = [self.mouseOut copyWithZone: zone];
+	copyEvents.mouseOver = [self.mouseOver copyWithZone: zone];
+	copyEvents.select = [self.select copyWithZone: zone];
+	copyEvents.hide = [self.hide copyWithZone: zone];
+	copyEvents.show = [self.show copyWithZone: zone];
+	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
 	return copyEvents;
 }
 
@@ -63,36 +63,6 @@
 	}
 	if (self.afterSetExtremes) {
 		params[@"afterSetExtremes"] = [self.afterSetExtremes getFunction];
-	}
-	if (self.unselect) {
-		params[@"unselect"] = [self.unselect getFunction];
-	}
-	if (self.update) {
-		params[@"update"] = [self.update getFunction];
-	}
-	if (self.remove) {
-		params[@"remove"] = [self.remove getFunction];
-	}
-	if (self.mouseOut) {
-		params[@"mouseOut"] = [self.mouseOut getFunction];
-	}
-	if (self.mouseOver) {
-		params[@"mouseOver"] = [self.mouseOver getFunction];
-	}
-	if (self.click) {
-		params[@"click"] = [self.click getFunction];
-	}
-	if (self.select) {
-		params[@"select"] = [self.select getFunction];
-	}
-	if (self.hide) {
-		params[@"hide"] = [self.hide getFunction];
-	}
-	if (self.show) {
-		params[@"show"] = [self.show getFunction];
-	}
-	if (self.afterAnimate) {
-		params[@"afterAnimate"] = [self.afterAnimate getFunction];
 	}
 	if (self.load) {
 		params[@"load"] = [self.load getFunction];
@@ -121,8 +91,38 @@
 	if (self.redraw) {
 		params[@"redraw"] = [self.redraw getFunction];
 	}
+	if (self.click) {
+		params[@"click"] = [self.click getFunction];
+	}
 	if (self.afterPrint) {
 		params[@"afterPrint"] = [self.afterPrint getFunction];
+	}
+	if (self.unselect) {
+		params[@"unselect"] = [self.unselect getFunction];
+	}
+	if (self.update) {
+		params[@"update"] = [self.update getFunction];
+	}
+	if (self.remove) {
+		params[@"remove"] = [self.remove getFunction];
+	}
+	if (self.mouseOut) {
+		params[@"mouseOut"] = [self.mouseOut getFunction];
+	}
+	if (self.mouseOver) {
+		params[@"mouseOver"] = [self.mouseOver getFunction];
+	}
+	if (self.select) {
+		params[@"select"] = [self.select getFunction];
+	}
+	if (self.hide) {
+		params[@"hide"] = [self.hide getFunction];
+	}
+	if (self.show) {
+		params[@"show"] = [self.show getFunction];
+	}
+	if (self.afterAnimate) {
+		params[@"afterAnimate"] = [self.afterAnimate getFunction];
 	}
 	return params;
 }
@@ -190,96 +190,6 @@
 	}
 	_afterSetExtremes = afterSetExtremes;
 	[self updateHIObject:oldValue newValue:afterSetExtremes propertyName:@"afterSetExtremes"];
-}
-
--(void)setUnselect:(HIFunction *)unselect {
-	HIFunction *oldValue = _unselect;
-	if(self.unselect) {
-		[self removeObserver:self forKeyPath:@"unselect.isUpdated"];
-	}
-	_unselect = unselect;
-	[self updateHIObject:oldValue newValue:unselect propertyName:@"unselect"];
-}
-
--(void)setUpdate:(HIFunction *)update {
-	HIFunction *oldValue = _update;
-	if(self.update) {
-		[self removeObserver:self forKeyPath:@"update.isUpdated"];
-	}
-	_update = update;
-	[self updateHIObject:oldValue newValue:update propertyName:@"update"];
-}
-
--(void)setRemove:(HIFunction *)remove {
-	HIFunction *oldValue = _remove;
-	if(self.remove) {
-		[self removeObserver:self forKeyPath:@"remove.isUpdated"];
-	}
-	_remove = remove;
-	[self updateHIObject:oldValue newValue:remove propertyName:@"remove"];
-}
-
--(void)setMouseOut:(HIFunction *)mouseOut {
-	HIFunction *oldValue = _mouseOut;
-	if(self.mouseOut) {
-		[self removeObserver:self forKeyPath:@"mouseOut.isUpdated"];
-	}
-	_mouseOut = mouseOut;
-	[self updateHIObject:oldValue newValue:mouseOut propertyName:@"mouseOut"];
-}
-
--(void)setMouseOver:(HIFunction *)mouseOver {
-	HIFunction *oldValue = _mouseOver;
-	if(self.mouseOver) {
-		[self removeObserver:self forKeyPath:@"mouseOver.isUpdated"];
-	}
-	_mouseOver = mouseOver;
-	[self updateHIObject:oldValue newValue:mouseOver propertyName:@"mouseOver"];
-}
-
--(void)setClick:(HIFunction *)click {
-	HIFunction *oldValue = _click;
-	if(self.click) {
-		[self removeObserver:self forKeyPath:@"click.isUpdated"];
-	}
-	_click = click;
-	[self updateHIObject:oldValue newValue:click propertyName:@"click"];
-}
-
--(void)setSelect:(HIFunction *)select {
-	HIFunction *oldValue = _select;
-	if(self.select) {
-		[self removeObserver:self forKeyPath:@"select.isUpdated"];
-	}
-	_select = select;
-	[self updateHIObject:oldValue newValue:select propertyName:@"select"];
-}
-
--(void)setHide:(HIFunction *)hide {
-	HIFunction *oldValue = _hide;
-	if(self.hide) {
-		[self removeObserver:self forKeyPath:@"hide.isUpdated"];
-	}
-	_hide = hide;
-	[self updateHIObject:oldValue newValue:hide propertyName:@"hide"];
-}
-
--(void)setShow:(HIFunction *)show {
-	HIFunction *oldValue = _show;
-	if(self.show) {
-		[self removeObserver:self forKeyPath:@"show.isUpdated"];
-	}
-	_show = show;
-	[self updateHIObject:oldValue newValue:show propertyName:@"show"];
-}
-
--(void)setAfterAnimate:(HIFunction *)afterAnimate {
-	HIFunction *oldValue = _afterAnimate;
-	if(self.afterAnimate) {
-		[self removeObserver:self forKeyPath:@"afterAnimate.isUpdated"];
-	}
-	_afterAnimate = afterAnimate;
-	[self updateHIObject:oldValue newValue:afterAnimate propertyName:@"afterAnimate"];
 }
 
 -(void)setLoad:(HIFunction *)load {
@@ -363,6 +273,15 @@
 	[self updateHIObject:oldValue newValue:redraw propertyName:@"redraw"];
 }
 
+-(void)setClick:(HIFunction *)click {
+	HIFunction *oldValue = _click;
+	if(self.click) {
+		[self removeObserver:self forKeyPath:@"click.isUpdated"];
+	}
+	_click = click;
+	[self updateHIObject:oldValue newValue:click propertyName:@"click"];
+}
+
 -(void)setAfterPrint:(HIFunction *)afterPrint {
 	HIFunction *oldValue = _afterPrint;
 	if(self.afterPrint) {
@@ -370,6 +289,87 @@
 	}
 	_afterPrint = afterPrint;
 	[self updateHIObject:oldValue newValue:afterPrint propertyName:@"afterPrint"];
+}
+
+-(void)setUnselect:(HIFunction *)unselect {
+	HIFunction *oldValue = _unselect;
+	if(self.unselect) {
+		[self removeObserver:self forKeyPath:@"unselect.isUpdated"];
+	}
+	_unselect = unselect;
+	[self updateHIObject:oldValue newValue:unselect propertyName:@"unselect"];
+}
+
+-(void)setUpdate:(HIFunction *)update {
+	HIFunction *oldValue = _update;
+	if(self.update) {
+		[self removeObserver:self forKeyPath:@"update.isUpdated"];
+	}
+	_update = update;
+	[self updateHIObject:oldValue newValue:update propertyName:@"update"];
+}
+
+-(void)setRemove:(HIFunction *)remove {
+	HIFunction *oldValue = _remove;
+	if(self.remove) {
+		[self removeObserver:self forKeyPath:@"remove.isUpdated"];
+	}
+	_remove = remove;
+	[self updateHIObject:oldValue newValue:remove propertyName:@"remove"];
+}
+
+-(void)setMouseOut:(HIFunction *)mouseOut {
+	HIFunction *oldValue = _mouseOut;
+	if(self.mouseOut) {
+		[self removeObserver:self forKeyPath:@"mouseOut.isUpdated"];
+	}
+	_mouseOut = mouseOut;
+	[self updateHIObject:oldValue newValue:mouseOut propertyName:@"mouseOut"];
+}
+
+-(void)setMouseOver:(HIFunction *)mouseOver {
+	HIFunction *oldValue = _mouseOver;
+	if(self.mouseOver) {
+		[self removeObserver:self forKeyPath:@"mouseOver.isUpdated"];
+	}
+	_mouseOver = mouseOver;
+	[self updateHIObject:oldValue newValue:mouseOver propertyName:@"mouseOver"];
+}
+
+-(void)setSelect:(HIFunction *)select {
+	HIFunction *oldValue = _select;
+	if(self.select) {
+		[self removeObserver:self forKeyPath:@"select.isUpdated"];
+	}
+	_select = select;
+	[self updateHIObject:oldValue newValue:select propertyName:@"select"];
+}
+
+-(void)setHide:(HIFunction *)hide {
+	HIFunction *oldValue = _hide;
+	if(self.hide) {
+		[self removeObserver:self forKeyPath:@"hide.isUpdated"];
+	}
+	_hide = hide;
+	[self updateHIObject:oldValue newValue:hide propertyName:@"hide"];
+}
+
+-(void)setShow:(HIFunction *)show {
+	HIFunction *oldValue = _show;
+	if(self.show) {
+		[self removeObserver:self forKeyPath:@"show.isUpdated"];
+	}
+	_show = show;
+	[self updateHIObject:oldValue newValue:show propertyName:@"show"];
+}
+
+-(void)setAfterAnimate:(HIFunction *)afterAnimate {
+	HIFunction *oldValue = _afterAnimate;
+	if(self.afterAnimate) {
+		[self removeObserver:self forKeyPath:@"afterAnimate.isUpdated"];
+	}
+	_afterAnimate = afterAnimate;
+	[self updateHIObject:oldValue newValue:afterAnimate propertyName:@"afterAnimate"];
 }
 
 @end

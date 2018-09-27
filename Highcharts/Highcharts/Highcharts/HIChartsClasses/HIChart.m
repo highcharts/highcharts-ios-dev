@@ -10,17 +10,18 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIChart *copyChart = [[HIChart allocWithZone: zone] init];
+	copyChart.plotBackgroundImage = [self.plotBackgroundImage copyWithZone: zone];
 	copyChart.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyChart.spacingBottom = [self.spacingBottom copyWithZone: zone];
-	copyChart.plotShadow = [self.plotShadow copyWithZone: zone];
 	copyChart.height = [self.height copyWithZone: zone];
+	copyChart.style = [self.style copyWithZone: zone];
 	copyChart.alignTicks = [self.alignTicks copyWithZone: zone];
 	copyChart.parallelAxes = [self.parallelAxes copyWithZone: zone];
 	copyChart.marginRight = [self.marginRight copyWithZone: zone];
 	copyChart.plotBorderColor = [self.plotBorderColor copyWithZone: zone];
 	copyChart.spacingRight = [self.spacingRight copyWithZone: zone];
 	copyChart.borderColor = [self.borderColor copyWithZone: zone];
-	copyChart.className = [self.className copyWithZone: zone];
+	copyChart.colorCount = [self.colorCount copyWithZone: zone];
 	copyChart.polar = [self.polar copyWithZone: zone];
 	copyChart.renderTo = [self.renderTo copyWithZone: zone];
 	copyChart.reflow = [self.reflow copyWithZone: zone];
@@ -28,7 +29,7 @@
 	copyChart.spacingTop = [self.spacingTop copyWithZone: zone];
 	copyChart.marginBottom = [self.marginBottom copyWithZone: zone];
 	copyChart.width = [self.width copyWithZone: zone];
-	copyChart.marginLeft = [self.marginLeft copyWithZone: zone];
+	copyChart.animation = [self.animation copyWithZone: zone];
 	copyChart.plotBackgroundColor = [self.plotBackgroundColor copyWithZone: zone];
 	copyChart.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyChart.panning = [self.panning copyWithZone: zone];
@@ -37,19 +38,18 @@
 	copyChart.events = [self.events copyWithZone: zone];
 	copyChart.spacingLeft = [self.spacingLeft copyWithZone: zone];
 	copyChart.definition = [self.definition copyWithZone: zone];
-	copyChart.spacing = [self.spacing copyWithZone: zone];
 	copyChart.panKey = [self.panKey copyWithZone: zone];
-	copyChart.style = [self.style copyWithZone: zone];
+	copyChart.spacing = [self.spacing copyWithZone: zone];
+	copyChart.marginLeft = [self.marginLeft copyWithZone: zone];
 	copyChart.scrollablePlotArea = [self.scrollablePlotArea copyWithZone: zone];
 	copyChart.shadow = [self.shadow copyWithZone: zone];
 	copyChart.inverted = [self.inverted copyWithZone: zone];
-	copyChart.animation = [self.animation copyWithZone: zone];
 	copyChart.plotBorderWidth = [self.plotBorderWidth copyWithZone: zone];
 	copyChart.ignoreHiddenSeries = [self.ignoreHiddenSeries copyWithZone: zone];
 	copyChart.selectionMarkerFill = [self.selectionMarkerFill copyWithZone: zone];
-	copyChart.plotBackgroundImage = [self.plotBackgroundImage copyWithZone: zone];
+	copyChart.plotShadow = [self.plotShadow copyWithZone: zone];
 	copyChart.pinchType = [self.pinchType copyWithZone: zone];
-	copyChart.colorCount = [self.colorCount copyWithZone: zone];
+	copyChart.className = [self.className copyWithZone: zone];
 	copyChart.parallelCoordinates = [self.parallelCoordinates copyWithZone: zone];
 	copyChart.resetZoomButton = [self.resetZoomButton copyWithZone: zone];
 	copyChart.showAxes = [self.showAxes copyWithZone: zone];
@@ -63,17 +63,20 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.plotBackgroundImage) {
+		params[@"plotBackgroundImage"] = self.plotBackgroundImage;
+	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.spacingBottom) {
 		params[@"spacingBottom"] = self.spacingBottom;
 	}
-	if (self.plotShadow) {
-		params[@"plotShadow"] = self.plotShadow;
-	}
 	if (self.height) {
 		params[@"height"] = self.height;
+	}
+	if (self.style) {
+		params[@"style"] = self.style;
 	}
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
@@ -93,8 +96,8 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
-	if (self.className) {
-		params[@"className"] = self.className;
+	if (self.colorCount) {
+		params[@"colorCount"] = self.colorCount;
 	}
 	if (self.polar) {
 		params[@"polar"] = self.polar;
@@ -117,8 +120,8 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.marginLeft) {
-		params[@"marginLeft"] = self.marginLeft;
+	if (self.animation) {
+		params[@"animation"] = self.animation;
 	}
 	if (self.plotBackgroundColor) {
 		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getData];
@@ -144,6 +147,9 @@
 	if (self.definition) {
 		params[@"definition"] = self.definition;
 	}
+	if (self.panKey) {
+		params[@"panKey"] = self.panKey;
+	}
 	if (self.spacing) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.spacing) {
@@ -156,11 +162,8 @@
 		}
 		params[@"spacing"] = array;
 	}
-	if (self.panKey) {
-		params[@"panKey"] = self.panKey;
-	}
-	if (self.style) {
-		params[@"style"] = self.style;
+	if (self.marginLeft) {
+		params[@"marginLeft"] = self.marginLeft;
 	}
 	if (self.scrollablePlotArea) {
 		params[@"scrollablePlotArea"] = [self.scrollablePlotArea getParams];
@@ -171,9 +174,6 @@
 	if (self.inverted) {
 		params[@"inverted"] = self.inverted;
 	}
-	if (self.animation) {
-		params[@"animation"] = self.animation;
-	}
 	if (self.plotBorderWidth) {
 		params[@"plotBorderWidth"] = self.plotBorderWidth;
 	}
@@ -183,14 +183,14 @@
 	if (self.selectionMarkerFill) {
 		params[@"selectionMarkerFill"] = [self.selectionMarkerFill getData];
 	}
-	if (self.plotBackgroundImage) {
-		params[@"plotBackgroundImage"] = self.plotBackgroundImage;
+	if (self.plotShadow) {
+		params[@"plotShadow"] = self.plotShadow;
 	}
 	if (self.pinchType) {
 		params[@"pinchType"] = self.pinchType;
 	}
-	if (self.colorCount) {
-		params[@"colorCount"] = self.colorCount;
+	if (self.className) {
+		params[@"className"] = self.className;
 	}
 	if (self.parallelCoordinates) {
 		params[@"parallelCoordinates"] = self.parallelCoordinates;
@@ -227,6 +227,11 @@
 
 # pragma mark - Setters
 
+-(void)setPlotBackgroundImage:(NSString *)plotBackgroundImage {
+	_plotBackgroundImage = plotBackgroundImage;
+	[self updateNSObject:@"plotBackgroundImage"];
+}
+
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	_borderRadius = borderRadius;
 	[self updateNSObject:@"borderRadius"];
@@ -237,14 +242,14 @@
 	[self updateNSObject:@"spacingBottom"];
 }
 
--(void)setPlotShadow:(id)plotShadow {
-	_plotShadow = plotShadow;
-	[self updateNSObject:@"plotShadow"];
-}
-
 -(void)setHeight:(id)height {
 	_height = height;
 	[self updateNSObject:@"height"];
+}
+
+-(void)setStyle:(NSDictionary *)style {
+	_style = style;
+	[self updateNSObject:@"style"];
 }
 
 -(void)setAlignTicks:(NSNumber *)alignTicks {
@@ -289,9 +294,9 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setClassName:(NSString *)className {
-	_className = className;
-	[self updateNSObject:@"className"];
+-(void)setColorCount:(NSNumber *)colorCount {
+	_colorCount = colorCount;
+	[self updateNSObject:@"colorCount"];
 }
 
 -(void)setPolar:(NSNumber *)polar {
@@ -329,9 +334,9 @@
 	[self updateNSObject:@"width"];
 }
 
--(void)setMarginLeft:(NSNumber *)marginLeft {
-	_marginLeft = marginLeft;
-	[self updateNSObject:@"marginLeft"];
+-(void)setAnimation:(id)animation {
+	_animation = animation;
+	[self updateNSObject:@"animation"];
 }
 
 -(void)setPlotBackgroundColor:(HIColor *)plotBackgroundColor {
@@ -390,20 +395,20 @@
 	[self updateNSObject:@"definition"];
 }
 
+-(void)setPanKey:(NSString *)panKey {
+	_panKey = panKey;
+	[self updateNSObject:@"panKey"];
+}
+
 -(void)setSpacing:(NSArray<NSNumber *> *)spacing {
 	NSArray<NSNumber *> *oldValue = _spacing;
 	_spacing = spacing;
 	[self updateArrayObject:oldValue newValue:spacing propertyName:@"spacing"];
 }
 
--(void)setPanKey:(NSString *)panKey {
-	_panKey = panKey;
-	[self updateNSObject:@"panKey"];
-}
-
--(void)setStyle:(NSDictionary *)style {
-	_style = style;
-	[self updateNSObject:@"style"];
+-(void)setMarginLeft:(NSNumber *)marginLeft {
+	_marginLeft = marginLeft;
+	[self updateNSObject:@"marginLeft"];
 }
 
 -(void)setScrollablePlotArea:(HIScrollablePlotArea *)scrollablePlotArea {
@@ -425,11 +430,6 @@
 	[self updateNSObject:@"inverted"];
 }
 
--(void)setAnimation:(id)animation {
-	_animation = animation;
-	[self updateNSObject:@"animation"];
-}
-
 -(void)setPlotBorderWidth:(NSNumber *)plotBorderWidth {
 	_plotBorderWidth = plotBorderWidth;
 	[self updateNSObject:@"plotBorderWidth"];
@@ -449,9 +449,9 @@
 	[self updateHIObject:oldValue newValue:selectionMarkerFill propertyName:@"selectionMarkerFill"];
 }
 
--(void)setPlotBackgroundImage:(NSString *)plotBackgroundImage {
-	_plotBackgroundImage = plotBackgroundImage;
-	[self updateNSObject:@"plotBackgroundImage"];
+-(void)setPlotShadow:(id)plotShadow {
+	_plotShadow = plotShadow;
+	[self updateNSObject:@"plotShadow"];
 }
 
 -(void)setPinchType:(NSString *)pinchType {
@@ -459,9 +459,9 @@
 	[self updateNSObject:@"pinchType"];
 }
 
--(void)setColorCount:(NSNumber *)colorCount {
-	_colorCount = colorCount;
-	[self updateNSObject:@"colorCount"];
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
 }
 
 -(void)setParallelCoordinates:(NSNumber *)parallelCoordinates {
@@ -498,8 +498,8 @@
 	[self updateNSObject:@"marginTop"];
 }
 
--(void)setMargin:(NSArray *)margin {
-	NSArray *oldValue = _margin;
+-(void)setMargin:(NSArray<NSNumber *> *)margin {
+	NSArray<NSNumber *> *oldValue = _margin;
 	_margin = margin;
 	[self updateArrayObject:oldValue newValue:margin propertyName:@"margin"];
 }

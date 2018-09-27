@@ -25,18 +25,17 @@
 	copyLegend.width = [self.width copyWithZone: zone];
 	copyLegend.itemMarginBottom = [self.itemMarginBottom copyWithZone: zone];
 	copyLegend.backgroundColor = [self.backgroundColor copyWithZone: zone];
-	copyLegend.lineHeight = [self.lineHeight copyWithZone: zone];
 	copyLegend.itemMarginTop = [self.itemMarginTop copyWithZone: zone];
 	copyLegend.itemCheckboxStyle = [self.itemCheckboxStyle copyWithZone: zone];
 	copyLegend.labelFormat = [self.labelFormat copyWithZone: zone];
 	copyLegend.itemStyle = [self.itemStyle copyWithZone: zone];
 	copyLegend.reversed = [self.reversed copyWithZone: zone];
 	copyLegend.padding = [self.padding copyWithZone: zone];
-	copyLegend.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyLegend.itemDistance = [self.itemDistance copyWithZone: zone];
 	copyLegend.shadow = [self.shadow copyWithZone: zone];
 	copyLegend.itemHoverStyle = [self.itemHoverStyle copyWithZone: zone];
-	copyLegend.itemDistance = [self.itemDistance copyWithZone: zone];
-	copyLegend.navigation = [self.navigation copyWithZone: zone];
+	copyLegend.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyLegend.margin = [self.margin copyWithZone: zone];
 	copyLegend.align = [self.align copyWithZone: zone];
 	copyLegend.keyboardNavigation = [self.keyboardNavigation copyWithZone: zone];
 	copyLegend.enabled = [self.enabled copyWithZone: zone];
@@ -48,7 +47,7 @@
 	copyLegend.labelFormatter = [self.labelFormatter copyWithZone: zone];
 	copyLegend.y = [self.y copyWithZone: zone];
 	copyLegend.x = [self.x copyWithZone: zone];
-	copyLegend.margin = [self.margin copyWithZone: zone];
+	copyLegend.navigation = [self.navigation copyWithZone: zone];
 	return copyLegend;
 }
 
@@ -100,9 +99,6 @@
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
-	if (self.lineHeight) {
-		params[@"lineHeight"] = self.lineHeight;
-	}
 	if (self.itemMarginTop) {
 		params[@"itemMarginTop"] = self.itemMarginTop;
 	}
@@ -113,7 +109,7 @@
 		params[@"labelFormat"] = self.labelFormat;
 	}
 	if (self.itemStyle) {
-		params[@"itemStyle"] = [self.itemStyle getParams];
+		params[@"itemStyle"] = self.itemStyle;
 	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
@@ -121,20 +117,20 @@
 	if (self.padding) {
 		params[@"padding"] = self.padding;
 	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
+	if (self.itemDistance) {
+		params[@"itemDistance"] = self.itemDistance;
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.itemHoverStyle) {
-		params[@"itemHoverStyle"] = [self.itemHoverStyle getParams];
+		params[@"itemHoverStyle"] = self.itemHoverStyle;
 	}
-	if (self.itemDistance) {
-		params[@"itemDistance"] = self.itemDistance;
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
 	}
-	if (self.navigation) {
-		params[@"navigation"] = [self.navigation getParams];
+	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
@@ -149,7 +145,7 @@
 		params[@"maxHeight"] = self.maxHeight;
 	}
 	if (self.itemHiddenStyle) {
-		params[@"itemHiddenStyle"] = [self.itemHiddenStyle getParams];
+		params[@"itemHiddenStyle"] = self.itemHiddenStyle;
 	}
 	if (self.alignColumns) {
 		params[@"alignColumns"] = self.alignColumns;
@@ -161,7 +157,6 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.labelFormatter) {
-		params[@"labelFormatter"] = [self.labelFormatter getFunction];
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
@@ -169,8 +164,8 @@
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
-	if (self.margin) {
-		params[@"margin"] = self.margin;
+	if (self.navigation) {
+		params[@"navigation"] = [self.navigation getParams];
 	}
 	return params;
 }
@@ -207,7 +202,7 @@
 	[self updateNSObject:@"symbolPadding"];
 }
 
--(void)setFloating:(NSString *)floating {
+-(void)setFloating:(NSNumber *)floating {
 	_floating = floating;
 	[self updateNSObject:@"floating"];
 }
@@ -264,11 +259,6 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
--(void)setLineHeight:(NSNumber *)lineHeight {
-	_lineHeight = lineHeight;
-	[self updateNSObject:@"lineHeight"];
-}
-
 -(void)setItemMarginTop:(NSNumber *)itemMarginTop {
 	_itemMarginTop = itemMarginTop;
 	[self updateNSObject:@"itemMarginTop"];
@@ -288,13 +278,9 @@
 	[self updateNSObject:@"labelFormat"];
 }
 
--(void)setItemStyle:(HIItemStyle *)itemStyle {
-	HIItemStyle *oldValue = _itemStyle;
-	if(self.itemStyle) {
-		[self removeObserver:self forKeyPath:@"itemStyle.isUpdated"];
-	}
+-(void)setItemStyle:(NSDictionary *)itemStyle {
 	_itemStyle = itemStyle;
-	[self updateHIObject:oldValue newValue:itemStyle propertyName:@"itemStyle"];
+	[self updateNSObject:@"itemStyle"];
 }
 
 -(void)setReversed:(NSNumber *)reversed {
@@ -307,9 +293,9 @@
 	[self updateNSObject:@"padding"];
 }
 
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+-(void)setItemDistance:(NSNumber *)itemDistance {
+	_itemDistance = itemDistance;
+	[self updateNSObject:@"itemDistance"];
 }
 
 -(void)setShadow:(id)shadow {
@@ -317,27 +303,19 @@
 	[self updateNSObject:@"shadow"];
 }
 
--(void)setItemHoverStyle:(HIItemHoverStyle *)itemHoverStyle {
-	HIItemHoverStyle *oldValue = _itemHoverStyle;
-	if(self.itemHoverStyle) {
-		[self removeObserver:self forKeyPath:@"itemHoverStyle.isUpdated"];
-	}
+-(void)setItemHoverStyle:(NSDictionary *)itemHoverStyle {
 	_itemHoverStyle = itemHoverStyle;
-	[self updateHIObject:oldValue newValue:itemHoverStyle propertyName:@"itemHoverStyle"];
+	[self updateNSObject:@"itemHoverStyle"];
 }
 
--(void)setItemDistance:(NSNumber *)itemDistance {
-	_itemDistance = itemDistance;
-	[self updateNSObject:@"itemDistance"];
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:@"verticalAlign"];
 }
 
--(void)setNavigation:(HINavigation *)navigation {
-	HINavigation *oldValue = _navigation;
-	if(self.navigation) {
-		[self removeObserver:self forKeyPath:@"navigation.isUpdated"];
-	}
-	_navigation = navigation;
-	[self updateHIObject:oldValue newValue:navigation propertyName:@"navigation"];
+-(void)setMargin:(NSNumber *)margin {
+	_margin = margin;
+	[self updateNSObject:@"margin"];
 }
 
 -(void)setAlign:(NSString *)align {
@@ -364,13 +342,9 @@
 	[self updateNSObject:@"maxHeight"];
 }
 
--(void)setItemHiddenStyle:(HIItemHiddenStyle *)itemHiddenStyle {
-	HIItemHiddenStyle *oldValue = _itemHiddenStyle;
-	if(self.itemHiddenStyle) {
-		[self removeObserver:self forKeyPath:@"itemHiddenStyle.isUpdated"];
-	}
+-(void)setItemHiddenStyle:(NSDictionary *)itemHiddenStyle {
 	_itemHiddenStyle = itemHiddenStyle;
-	[self updateHIObject:oldValue newValue:itemHiddenStyle propertyName:@"itemHiddenStyle"];
+	[self updateNSObject:@"itemHiddenStyle"];
 }
 
 -(void)setAlignColumns:(NSNumber *)alignColumns {
@@ -388,13 +362,9 @@
 	[self updateNSObject:@"borderWidth"];
 }
 
--(void)setLabelFormatter:(HIFunction *)labelFormatter {
-	HIFunction *oldValue = _labelFormatter;
-	if(self.labelFormatter) {
-		[self removeObserver:self forKeyPath:@"labelFormatter.isUpdated"];
-	}
+-(void)setLabelFormatter:(id)labelFormatter {
 	_labelFormatter = labelFormatter;
-	[self updateHIObject:oldValue newValue:labelFormatter propertyName:@"labelFormatter"];
+	[self updateNSObject:@"labelFormatter"];
 }
 
 -(void)setY:(NSNumber *)y {
@@ -407,9 +377,13 @@
 	[self updateNSObject:@"x"];
 }
 
--(void)setMargin:(NSNumber *)margin {
-	_margin = margin;
-	[self updateNSObject:@"margin"];
+-(void)setNavigation:(HINavigation *)navigation {
+	HINavigation *oldValue = _navigation;
+	if(self.navigation) {
+		[self removeObserver:self forKeyPath:@"navigation.isUpdated"];
+	}
+	_navigation = navigation;
+	[self updateHIObject:oldValue newValue:navigation propertyName:@"navigation"];
 }
 
 @end

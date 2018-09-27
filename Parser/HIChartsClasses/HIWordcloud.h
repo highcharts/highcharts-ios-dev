@@ -17,7 +17,7 @@ A `wordcloud` series. If the `type` option is not specified, it is inherited fro
 @interface HIWordcloud: HISeries
 
 /**
-When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point.
+When using automatic point colors pulled from the global `colors` or series-specific `plotOptions.column.colors` collections, this option determines whether the chart should receive one color per series or one color per point. In styled mode, the `colors` or `series.colors` arrays are not supported, and instead this option gives the points individual color class names on the form `highcharts-color-{n}`.
 
 **Defaults to** `false`.
 

@@ -211,8 +211,8 @@ def get_type(x):
         "Array.<*>": 'NSArray', #xAxis.plotBands
         "Array.<Array.<(string|Array.<number>)>>":'NSArray',
         "Array.<string>": 'NSArray<NSString *>',
-        "*|boolean": 'id',
-        "null|number|string": 'id',
+        "*|boolean": 'NSNumber /* Bool */',
+        "null|number|string": 'id /* NSNumber, NSString */',
         "Number|Undefined": 'NSNumber',
         "Highcharts.AnimationOptionsObject|boolean": 'id',
         "Highcharts.PlotSeriesStatesHoverHaloOptions": 'id',
@@ -231,7 +231,21 @@ def get_type(x):
         "Highcharts.PlotSeriesStatesOptions": 'id',
         "Highcharts.SeriesShadowOptions|boolean": 'id',
         "Array.<Highcharts.ColorString>": 'NSArray<HIColor *>',
-        "Highcharts.SVGAttributes": 'id'
+        "Highcharts.SVGAttributes": 'id',
+        #6.1.4
+        "boolean|*": 'NSNumber /* Bool */',
+        "number|string|null": 'id /* NSNumber, NSString */',
+        "boolean|Highcharts.AnimationOptionsObject": 'id',
+        "boolean|Highcharts.CSSObject": 'id',
+        "boolean|string": 'id /* Bool, NSString */',
+        "Highcharts.FormatterCallbackFunction": 'HIFunction',
+        "Array.<Array.<number, Highcharts.ColorString>>": 'NSArray<NSArray *>',
+        "string|Highcharts.SVGDOMElement": 'id',
+        "number|null": 'NSNumber',
+        "number|Array.<number>": 'NSArray<NSNumber *>',
+        "boolean|Highcharts.AnimationObject": 'id',
+        "string|number" : 'id /* NSString, NSNumber */',
+        "boolean|Highcharts.ShadowOptionsObject": 'id'
     }[str(x)]
 
 

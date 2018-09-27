@@ -15,8 +15,7 @@
 	copyYAxis.maxColor = [self.maxColor copyWithZone: zone];
 	copyYAxis.softMax = [self.softMax copyWithZone: zone];
 	copyYAxis.angle = [self.angle copyWithZone: zone];
-	copyYAxis.min = [self.min copyWithZone: zone];
-	copyYAxis.plotBands = [self.plotBands copyWithZone: zone];
+	copyYAxis.startOnTick = [self.startOnTick copyWithZone: zone];
 	copyYAxis.stops = [self.stops copyWithZone: zone];
 	copyYAxis.endOnTick = [self.endOnTick copyWithZone: zone];
 	copyYAxis.max = [self.max copyWithZone: zone];
@@ -32,13 +31,13 @@
 	copyYAxis.reversedStacks = [self.reversedStacks copyWithZone: zone];
 	copyYAxis.minColor = [self.minColor copyWithZone: zone];
 	copyYAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
-	copyYAxis.startOnTick = [self.startOnTick copyWithZone: zone];
+	copyYAxis.title = [self.title copyWithZone: zone];
 	copyYAxis.stackLabels = [self.stackLabels copyWithZone: zone];
 	copyYAxis.maxPadding = [self.maxPadding copyWithZone: zone];
+	copyYAxis.min = [self.min copyWithZone: zone];
 	copyYAxis.lineColor = [self.lineColor copyWithZone: zone];
-	copyYAxis.title = [self.title copyWithZone: zone];
 	copyYAxis.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyYAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyYAxis.plotBands = [self.plotBands copyWithZone: zone];
 	copyYAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
 	copyYAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyYAxis.visible = [self.visible copyWithZone: zone];
@@ -51,7 +50,6 @@
 	copyYAxis.minRange = [self.minRange copyWithZone: zone];
 	copyYAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
 	copyYAxis.allowDecimals = [self.allowDecimals copyWithZone: zone];
-	copyYAxis.floor = [self.floor copyWithZone: zone];
 	copyYAxis.minorGridLineColor = [self.minorGridLineColor copyWithZone: zone];
 	copyYAxis.tickPositioner = [self.tickPositioner copyWithZone: zone];
 	copyYAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
@@ -59,30 +57,32 @@
 	copyYAxis.units = [self.units copyWithZone: zone];
 	copyYAxis.type = [self.type copyWithZone: zone];
 	copyYAxis.events = [self.events copyWithZone: zone];
-	copyYAxis.tickLength = [self.tickLength copyWithZone: zone];
+	copyYAxis.crosshair = [self.crosshair copyWithZone: zone];
 	copyYAxis.ceiling = [self.ceiling copyWithZone: zone];
-	copyYAxis.showEmpty = [self.showEmpty copyWithZone: zone];
 	copyYAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
 	copyYAxis.definition = [self.definition copyWithZone: zone];
 	copyYAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
 	copyYAxis.breaks = [self.breaks copyWithZone: zone];
+	copyYAxis.showEmpty = [self.showEmpty copyWithZone: zone];
 	copyYAxis.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyYAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
+	copyYAxis.floor = [self.floor copyWithZone: zone];
 	copyYAxis.offset = [self.offset copyWithZone: zone];
 	copyYAxis.tickColor = [self.tickColor copyWithZone: zone];
 	copyYAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
 	copyYAxis.tickInterval = [self.tickInterval copyWithZone: zone];
-	copyYAxis.tickPosition = [self.tickPosition copyWithZone: zone];
+	copyYAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyYAxis.categories = [self.categories copyWithZone: zone];
 	copyYAxis.gridLineColor = [self.gridLineColor copyWithZone: zone];
 	copyYAxis.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyYAxis.alternateGridColor = [self.alternateGridColor copyWithZone: zone];
+	copyYAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
+	copyYAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyYAxis.uniqueNames = [self.uniqueNames copyWithZone: zone];
 	copyYAxis.className = [self.className copyWithZone: zone];
 	copyYAxis.tickAmount = [self.tickAmount copyWithZone: zone];
-	copyYAxis.crosshair = [self.crosshair copyWithZone: zone];
-	copyYAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
-	copyYAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyYAxis.tickLength = [self.tickLength copyWithZone: zone];
+	copyYAxis.alternateGridColor = [self.alternateGridColor copyWithZone: zone];
+	copyYAxis.tickPosition = [self.tickPosition copyWithZone: zone];
 	return copyYAxis;
 }
 
@@ -104,20 +104,8 @@
 	if (self.angle) {
 		params[@"angle"] = self.angle;
 	}
-	if (self.min) {
-		params[@"min"] = self.min;
-	}
-	if (self.plotBands) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.plotBands) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"plotBands"] = array;
+	if (self.startOnTick) {
+		params[@"startOnTick"] = self.startOnTick;
 	}
 	if (self.stops) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -182,8 +170,8 @@
 	if (self.showLastLabel) {
 		params[@"showLastLabel"] = self.showLastLabel;
 	}
-	if (self.startOnTick) {
-		params[@"startOnTick"] = self.startOnTick;
+	if (self.title) {
+		params[@"title"] = [self.title getParams];
 	}
 	if (self.stackLabels) {
 		params[@"stackLabels"] = [self.stackLabels getParams];
@@ -191,17 +179,26 @@
 	if (self.maxPadding) {
 		params[@"maxPadding"] = self.maxPadding;
 	}
+	if (self.min) {
+		params[@"min"] = self.min;
+	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
-	}
-	if (self.title) {
-		params[@"title"] = [self.title getParams];
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
-	if (self.minorTickColor) {
-		params[@"minorTickColor"] = [self.minorTickColor getData];
+	if (self.plotBands) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.plotBands) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"plotBands"] = array;
 	}
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
@@ -248,9 +245,6 @@
 	if (self.allowDecimals) {
 		params[@"allowDecimals"] = self.allowDecimals;
 	}
-	if (self.floor) {
-		params[@"floor"] = self.floor;
-	}
 	if (self.minorGridLineColor) {
 		params[@"minorGridLineColor"] = [self.minorGridLineColor getData];
 	}
@@ -281,14 +275,11 @@
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
-	if (self.tickLength) {
-		params[@"tickLength"] = self.tickLength;
+	if (self.crosshair) {
+		params[@"crosshair"] = [self.crosshair getParams];
 	}
 	if (self.ceiling) {
 		params[@"ceiling"] = self.ceiling;
-	}
-	if (self.showEmpty) {
-		params[@"showEmpty"] = self.showEmpty;
 	}
 	if (self.gridLineDashStyle) {
 		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
@@ -311,11 +302,17 @@
 		}
 		params[@"breaks"] = array;
 	}
+	if (self.showEmpty) {
+		params[@"showEmpty"] = self.showEmpty;
+	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
 	}
 	if (self.minorTickWidth) {
 		params[@"minorTickWidth"] = self.minorTickWidth;
+	}
+	if (self.floor) {
+		params[@"floor"] = self.floor;
 	}
 	if (self.offset) {
 		params[@"offset"] = self.offset;
@@ -329,8 +326,8 @@
 	if (self.tickInterval) {
 		params[@"tickInterval"] = self.tickInterval;
 	}
-	if (self.tickPosition) {
-		params[@"tickPosition"] = self.tickPosition;
+	if (self.minorTickInterval) {
+		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.categories) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -350,8 +347,11 @@
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
 	}
-	if (self.alternateGridColor) {
-		params[@"alternateGridColor"] = [self.alternateGridColor getData];
+	if (self.minorGridLineWidth) {
+		params[@"minorGridLineWidth"] = self.minorGridLineWidth;
+	}
+	if (self.minorTickColor) {
+		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
@@ -362,14 +362,14 @@
 	if (self.tickAmount) {
 		params[@"tickAmount"] = self.tickAmount;
 	}
-	if (self.crosshair) {
-		params[@"crosshair"] = [self.crosshair getParams];
+	if (self.tickLength) {
+		params[@"tickLength"] = self.tickLength;
 	}
-	if (self.minorGridLineWidth) {
-		params[@"minorGridLineWidth"] = self.minorGridLineWidth;
+	if (self.alternateGridColor) {
+		params[@"alternateGridColor"] = [self.alternateGridColor getData];
 	}
-	if (self.minorTickInterval) {
-		params[@"minorTickInterval"] = self.minorTickInterval;
+	if (self.tickPosition) {
+		params[@"tickPosition"] = self.tickPosition;
 	}
 	return params;
 }
@@ -409,15 +409,9 @@
 	[self updateNSObject:@"angle"];
 }
 
--(void)setMin:(NSNumber *)min {
-	_min = min;
-	[self updateNSObject:@"min"];
-}
-
--(void)setPlotBands:(NSArray <HIPlotBands *> *)plotBands {
-	NSArray <HIPlotBands *> *oldValue = _plotBands;
-	_plotBands = plotBands;
-	[self updateArrayObject:oldValue newValue:plotBands propertyName:@"plotBands"];
+-(void)setStartOnTick:(NSNumber *)startOnTick {
+	_startOnTick = startOnTick;
+	[self updateNSObject:@"startOnTick"];
 }
 
 -(void)setStops:(NSArray<NSArray *> *)stops {
@@ -501,9 +495,13 @@
 	[self updateNSObject:@"showLastLabel"];
 }
 
--(void)setStartOnTick:(NSNumber *)startOnTick {
-	_startOnTick = startOnTick;
-	[self updateNSObject:@"startOnTick"];
+-(void)setTitle:(HITitle *)title {
+	HITitle *oldValue = _title;
+	if(self.title) {
+		[self removeObserver:self forKeyPath:@"title.isUpdated"];
+	}
+	_title = title;
+	[self updateHIObject:oldValue newValue:title propertyName:@"title"];
 }
 
 -(void)setStackLabels:(HIStackLabels *)stackLabels {
@@ -520,6 +518,11 @@
 	[self updateNSObject:@"maxPadding"];
 }
 
+-(void)setMin:(NSNumber *)min {
+	_min = min;
+	[self updateNSObject:@"min"];
+}
+
 -(void)setLineColor:(HIColor *)lineColor {
 	HIColor *oldValue = _lineColor;
 	if(self.lineColor) {
@@ -529,27 +532,15 @@
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
--(void)setTitle:(HITitle *)title {
-	HITitle *oldValue = _title;
-	if(self.title) {
-		[self removeObserver:self forKeyPath:@"title.isUpdated"];
-	}
-	_title = title;
-	[self updateHIObject:oldValue newValue:title propertyName:@"title"];
-}
-
 -(void)setLineWidth:(NSNumber *)lineWidth {
 	_lineWidth = lineWidth;
 	[self updateNSObject:@"lineWidth"];
 }
 
--(void)setMinorTickColor:(HIColor *)minorTickColor {
-	HIColor *oldValue = _minorTickColor;
-	if(self.minorTickColor) {
-		[self removeObserver:self forKeyPath:@"minorTickColor.isUpdated"];
-	}
-	_minorTickColor = minorTickColor;
-	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
+-(void)setPlotBands:(NSArray <HIPlotBands *> *)plotBands {
+	NSArray <HIPlotBands *> *oldValue = _plotBands;
+	_plotBands = plotBands;
+	[self updateArrayObject:oldValue newValue:plotBands propertyName:@"plotBands"];
 }
 
 -(void)setGridZIndex:(NSNumber *)gridZIndex {
@@ -617,11 +608,6 @@
 	[self updateNSObject:@"allowDecimals"];
 }
 
--(void)setFloor:(NSNumber *)floor {
-	_floor = floor;
-	[self updateNSObject:@"floor"];
-}
-
 -(void)setMinorGridLineColor:(HIColor *)minorGridLineColor {
 	HIColor *oldValue = _minorGridLineColor;
 	if(self.minorGridLineColor) {
@@ -670,19 +656,18 @@
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
--(void)setTickLength:(NSNumber *)tickLength {
-	_tickLength = tickLength;
-	[self updateNSObject:@"tickLength"];
+-(void)setCrosshair:(HICrosshair *)crosshair {
+	HICrosshair *oldValue = _crosshair;
+	if(self.crosshair) {
+		[self removeObserver:self forKeyPath:@"crosshair.isUpdated"];
+	}
+	_crosshair = crosshair;
+	[self updateHIObject:oldValue newValue:crosshair propertyName:@"crosshair"];
 }
 
 -(void)setCeiling:(NSNumber *)ceiling {
 	_ceiling = ceiling;
 	[self updateNSObject:@"ceiling"];
-}
-
--(void)setShowEmpty:(NSNumber *)showEmpty {
-	_showEmpty = showEmpty;
-	[self updateNSObject:@"showEmpty"];
 }
 
 -(void)setGridLineDashStyle:(NSString *)gridLineDashStyle {
@@ -706,6 +691,11 @@
 	[self updateArrayObject:oldValue newValue:breaks propertyName:@"breaks"];
 }
 
+-(void)setShowEmpty:(NSNumber *)showEmpty {
+	_showEmpty = showEmpty;
+	[self updateNSObject:@"showEmpty"];
+}
+
 -(void)setMinorTicks:(NSNumber *)minorTicks {
 	_minorTicks = minorTicks;
 	[self updateNSObject:@"minorTicks"];
@@ -714,6 +704,11 @@
 -(void)setMinorTickWidth:(NSNumber *)minorTickWidth {
 	_minorTickWidth = minorTickWidth;
 	[self updateNSObject:@"minorTickWidth"];
+}
+
+-(void)setFloor:(NSNumber *)floor {
+	_floor = floor;
+	[self updateNSObject:@"floor"];
 }
 
 -(void)setOffset:(NSNumber *)offset {
@@ -740,9 +735,9 @@
 	[self updateNSObject:@"tickInterval"];
 }
 
--(void)setTickPosition:(NSString *)tickPosition {
-	_tickPosition = tickPosition;
-	[self updateNSObject:@"tickPosition"];
+-(void)setMinorTickInterval:(id)minorTickInterval {
+	_minorTickInterval = minorTickInterval;
+	[self updateNSObject:@"minorTickInterval"];
 }
 
 -(void)setCategories:(NSArray<NSString *> *)categories {
@@ -765,13 +760,18 @@
 	[self updateNSObject:@"linkedTo"];
 }
 
--(void)setAlternateGridColor:(HIColor *)alternateGridColor {
-	HIColor *oldValue = _alternateGridColor;
-	if(self.alternateGridColor) {
-		[self removeObserver:self forKeyPath:@"alternateGridColor.isUpdated"];
+-(void)setMinorGridLineWidth:(NSNumber *)minorGridLineWidth {
+	_minorGridLineWidth = minorGridLineWidth;
+	[self updateNSObject:@"minorGridLineWidth"];
+}
+
+-(void)setMinorTickColor:(HIColor *)minorTickColor {
+	HIColor *oldValue = _minorTickColor;
+	if(self.minorTickColor) {
+		[self removeObserver:self forKeyPath:@"minorTickColor.isUpdated"];
 	}
-	_alternateGridColor = alternateGridColor;
-	[self updateHIObject:oldValue newValue:alternateGridColor propertyName:@"alternateGridColor"];
+	_minorTickColor = minorTickColor;
+	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
 }
 
 -(void)setUniqueNames:(NSNumber *)uniqueNames {
@@ -789,23 +789,23 @@
 	[self updateNSObject:@"tickAmount"];
 }
 
--(void)setCrosshair:(HICrosshair *)crosshair {
-	HICrosshair *oldValue = _crosshair;
-	if(self.crosshair) {
-		[self removeObserver:self forKeyPath:@"crosshair.isUpdated"];
+-(void)setTickLength:(NSNumber *)tickLength {
+	_tickLength = tickLength;
+	[self updateNSObject:@"tickLength"];
+}
+
+-(void)setAlternateGridColor:(HIColor *)alternateGridColor {
+	HIColor *oldValue = _alternateGridColor;
+	if(self.alternateGridColor) {
+		[self removeObserver:self forKeyPath:@"alternateGridColor.isUpdated"];
 	}
-	_crosshair = crosshair;
-	[self updateHIObject:oldValue newValue:crosshair propertyName:@"crosshair"];
+	_alternateGridColor = alternateGridColor;
+	[self updateHIObject:oldValue newValue:alternateGridColor propertyName:@"alternateGridColor"];
 }
 
--(void)setMinorGridLineWidth:(NSNumber *)minorGridLineWidth {
-	_minorGridLineWidth = minorGridLineWidth;
-	[self updateNSObject:@"minorGridLineWidth"];
-}
-
--(void)setMinorTickInterval:(id)minorTickInterval {
-	_minorTickInterval = minorTickInterval;
-	[self updateNSObject:@"minorTickInterval"];
+-(void)setTickPosition:(NSString *)tickPosition {
+	_tickPosition = tickPosition;
+	[self updateNSObject:@"tickPosition"];
 }
 
 @end

@@ -22,7 +22,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.style) {
-		params[@"style"] = [self.style getParams];
+		params[@"style"] = self.style;
 	}
 	if (self.text) {
 		params[@"text"] = self.text;
@@ -41,13 +41,9 @@
 
 # pragma mark - Setters
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
+-(void)setStyle:(NSDictionary *)style {
 	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+	[self updateNSObject:@"style"];
 }
 
 -(void)setText:(NSString *)text {

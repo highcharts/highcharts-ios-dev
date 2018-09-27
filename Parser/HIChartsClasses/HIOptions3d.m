@@ -14,8 +14,8 @@
 	copyOptions3d.frame = [self.frame copyWithZone: zone];
 	copyOptions3d.axisLabelPosition = [self.axisLabelPosition copyWithZone: zone];
 	copyOptions3d.enabled = [self.enabled copyWithZone: zone];
-	copyOptions3d.depth = [self.depth copyWithZone: zone];
 	copyOptions3d.beta = [self.beta copyWithZone: zone];
+	copyOptions3d.depth = [self.depth copyWithZone: zone];
 	copyOptions3d.fitToPlot = [self.fitToPlot copyWithZone: zone];
 	copyOptions3d.alpha = [self.alpha copyWithZone: zone];
 	return copyOptions3d;
@@ -36,11 +36,11 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.depth) {
-		params[@"depth"] = self.depth;
-	}
 	if (self.beta) {
 		params[@"beta"] = self.beta;
+	}
+	if (self.depth) {
+		params[@"depth"] = self.depth;
 	}
 	if (self.fitToPlot) {
 		params[@"fitToPlot"] = self.fitToPlot;
@@ -77,14 +77,14 @@
 	[self updateNSObject:@"enabled"];
 }
 
--(void)setDepth:(NSNumber *)depth {
-	_depth = depth;
-	[self updateNSObject:@"depth"];
-}
-
 -(void)setBeta:(NSNumber *)beta {
 	_beta = beta;
 	[self updateNSObject:@"beta"];
+}
+
+-(void)setDepth:(NSNumber *)depth {
+	_depth = depth;
+	[self updateNSObject:@"depth"];
 }
 
 -(void)setFitToPlot:(NSNumber *)fitToPlot {

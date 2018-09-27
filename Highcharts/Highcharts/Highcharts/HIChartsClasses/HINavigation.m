@@ -15,9 +15,9 @@
 	copyNavigation.buttonOptions = [self.buttonOptions copyWithZone: zone];
 	copyNavigation.menuItemHoverStyle = [self.menuItemHoverStyle copyWithZone: zone];
 	copyNavigation.style = [self.style copyWithZone: zone];
-	copyNavigation.inactiveColor = [self.inactiveColor copyWithZone: zone];
-	copyNavigation.enabled = [self.enabled copyWithZone: zone];
 	copyNavigation.arrowSize = [self.arrowSize copyWithZone: zone];
+	copyNavigation.enabled = [self.enabled copyWithZone: zone];
+	copyNavigation.inactiveColor = [self.inactiveColor copyWithZone: zone];
 	copyNavigation.animation = [self.animation copyWithZone: zone];
 	copyNavigation.activeColor = [self.activeColor copyWithZone: zone];
 	return copyNavigation;
@@ -41,14 +41,14 @@
 	if (self.style) {
 		params[@"style"] = self.style;
 	}
-	if (self.inactiveColor) {
-		params[@"inactiveColor"] = [self.inactiveColor getData];
+	if (self.arrowSize) {
+		params[@"arrowSize"] = self.arrowSize;
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.arrowSize) {
-		params[@"arrowSize"] = self.arrowSize;
+	if (self.inactiveColor) {
+		params[@"inactiveColor"] = [self.inactiveColor getData];
 	}
 	if (self.animation) {
 		params[@"animation"] = self.animation;
@@ -102,13 +102,9 @@
 	[self updateNSObject:@"style"];
 }
 
--(void)setInactiveColor:(HIColor *)inactiveColor {
-	HIColor *oldValue = _inactiveColor;
-	if(self.inactiveColor) {
-		[self removeObserver:self forKeyPath:@"inactiveColor.isUpdated"];
-	}
-	_inactiveColor = inactiveColor;
-	[self updateHIObject:oldValue newValue:inactiveColor propertyName:@"inactiveColor"];
+-(void)setArrowSize:(NSNumber *)arrowSize {
+	_arrowSize = arrowSize;
+	[self updateNSObject:@"arrowSize"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
@@ -116,9 +112,13 @@
 	[self updateNSObject:@"enabled"];
 }
 
--(void)setArrowSize:(NSNumber *)arrowSize {
-	_arrowSize = arrowSize;
-	[self updateNSObject:@"arrowSize"];
+-(void)setInactiveColor:(HIColor *)inactiveColor {
+	HIColor *oldValue = _inactiveColor;
+	if(self.inactiveColor) {
+		[self removeObserver:self forKeyPath:@"inactiveColor.isUpdated"];
+	}
+	_inactiveColor = inactiveColor;
+	[self updateHIObject:oldValue newValue:inactiveColor propertyName:@"inactiveColor"];
 }
 
 -(void)setAnimation:(id)animation {

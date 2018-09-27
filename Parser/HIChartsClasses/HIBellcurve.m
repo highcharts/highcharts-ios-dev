@@ -19,30 +19,29 @@
 	copyBellcurve.intervals = [self.intervals copyWithZone: zone];
 	copyBellcurve.pointsInInterval = [self.pointsInInterval copyWithZone: zone];
 	copyBellcurve.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyBellcurve.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyBellcurve.lineColor = [self.lineColor copyWithZone: zone];
 	copyBellcurve.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyBellcurve.fillColor = [self.fillColor copyWithZone: zone];
-	copyBellcurve.lineColor = [self.lineColor copyWithZone: zone];
+	copyBellcurve.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyBellcurve.threshold = [self.threshold copyWithZone: zone];
 	copyBellcurve.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyBellcurve.linecap = [self.linecap copyWithZone: zone];
-	copyBellcurve.point = [self.point copyWithZone: zone];
 	copyBellcurve.selected = [self.selected copyWithZone: zone];
 	copyBellcurve.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBellcurve.clip = [self.clip copyWithZone: zone];
-	copyBellcurve.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyBellcurve.point = [self.point copyWithZone: zone];
 	copyBellcurve.color = [self.color copyWithZone: zone];
 	copyBellcurve.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBellcurve.states = [self.states copyWithZone: zone];
 	copyBellcurve.tooltip = [self.tooltip copyWithZone: zone];
 	copyBellcurve.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBellcurve.borderColor = [self.borderColor copyWithZone: zone];
-	copyBellcurve.className = [self.className copyWithZone: zone];
+	copyBellcurve.cursor = [self.cursor copyWithZone: zone];
 	copyBellcurve.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBellcurve.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBellcurve.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyBellcurve.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBellcurve.label = [self.label copyWithZone: zone];
-	copyBellcurve.animation = [self.animation copyWithZone: zone];
 	copyBellcurve.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBellcurve.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBellcurve.events = [self.events copyWithZone: zone];
@@ -55,17 +54,18 @@
 	copyBellcurve.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBellcurve.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBellcurve.shadow = [self.shadow copyWithZone: zone];
+	copyBellcurve.animation = [self.animation copyWithZone: zone];
 	copyBellcurve.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBellcurve.zones = [self.zones copyWithZone: zone];
-	copyBellcurve.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyBellcurve.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyBellcurve.visible = [self.visible copyWithZone: zone];
 	copyBellcurve.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBellcurve.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBellcurve.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyBellcurve.cursor = [self.cursor copyWithZone: zone];
+	copyBellcurve.className = [self.className copyWithZone: zone];
 	copyBellcurve.pointStart = [self.pointStart copyWithZone: zone];
 	copyBellcurve.borderWidth = [self.borderWidth copyWithZone: zone];
-	copyBellcurve.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyBellcurve.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyBellcurve.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBellcurve.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyBellcurve.baseSeries = [self.baseSeries copyWithZone: zone];
 	copyBellcurve.id = [self.id copyWithZone: zone];
@@ -92,14 +92,14 @@
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
-	if (self.trackByArea) {
-		params[@"trackByArea"] = self.trackByArea;
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
+	if (self.trackByArea) {
+		params[@"trackByArea"] = self.trackByArea;
 	}
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
@@ -131,9 +131,13 @@
 	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
 }
 
--(void)setTrackByArea:(NSNumber *)trackByArea {
-	_trackByArea = trackByArea;
-	[self updateNSObject:@"trackByArea"];
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
@@ -145,13 +149,9 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+-(void)setTrackByArea:(NSNumber *)trackByArea {
+	_trackByArea = trackByArea;
+	[self updateNSObject:@"trackByArea"];
 }
 
 -(void)setFillOpacity:(NSNumber *)fillOpacity {

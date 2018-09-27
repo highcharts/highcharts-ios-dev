@@ -16,7 +16,6 @@
 	[super copyWithZone:zone];
 	HIBar *copyBar = [[HIBar allocWithZone: zone] init];
 	copyBar.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyBar.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyBar.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyBar.pointRange = [self.pointRange copyWithZone: zone];
 	copyBar.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -28,10 +27,11 @@
 	copyBar.threshold = [self.threshold copyWithZone: zone];
 	copyBar.borderColor = [self.borderColor copyWithZone: zone];
 	copyBar.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyBar.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyBar.tooltip = [self.tooltip copyWithZone: zone];
 	copyBar.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyBar.pointWidth = [self.pointWidth copyWithZone: zone];
-	copyBar.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyBar.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyBar.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBar.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyBar.crisp = [self.crisp copyWithZone: zone];
@@ -39,20 +39,19 @@
 	copyBar.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBar.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBar.grouping = [self.grouping copyWithZone: zone];
-	copyBar.point = [self.point copyWithZone: zone];
 	copyBar.selected = [self.selected copyWithZone: zone];
 	copyBar.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBar.clip = [self.clip copyWithZone: zone];
-	copyBar.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyBar.point = [self.point copyWithZone: zone];
 	copyBar.color = [self.color copyWithZone: zone];
 	copyBar.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyBar.className = [self.className copyWithZone: zone];
+	copyBar.cursor = [self.cursor copyWithZone: zone];
 	copyBar.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBar.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyBar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBar.label = [self.label copyWithZone: zone];
 	copyBar.stacking = [self.stacking copyWithZone: zone];
-	copyBar.animation = [self.animation copyWithZone: zone];
 	copyBar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBar.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBar.events = [self.events copyWithZone: zone];
@@ -65,14 +64,15 @@
 	copyBar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBar.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBar.shadow = [self.shadow copyWithZone: zone];
+	copyBar.animation = [self.animation copyWithZone: zone];
 	copyBar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBar.zones = [self.zones copyWithZone: zone];
 	copyBar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBar.visible = [self.visible copyWithZone: zone];
 	copyBar.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBar.cursor = [self.cursor copyWithZone: zone];
-	copyBar.pointStart = [self.pointStart copyWithZone: zone];
 	copyBar.boostThreshold = [self.boostThreshold copyWithZone: zone];
+	copyBar.className = [self.className copyWithZone: zone];
+	copyBar.pointStart = [self.pointStart copyWithZone: zone];
 	copyBar.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyBar.data = [self.data copyWithZone: zone];
 	copyBar.id = [self.id copyWithZone: zone];
@@ -90,9 +90,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
-	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
@@ -115,14 +112,17 @@
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
 	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -143,11 +143,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setPointPadding:(NSNumber *)pointPadding {
-	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
-}
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	_borderRadius = borderRadius;
@@ -184,6 +179,11 @@
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
 }
 
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
+}
+
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
 	_maxPointWidth = maxPointWidth;
 	[self updateNSObject:@"maxPointWidth"];
@@ -194,9 +194,9 @@
 	[self updateNSObject:@"pointWidth"];
 }
 
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {
