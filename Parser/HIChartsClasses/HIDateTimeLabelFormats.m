@@ -25,72 +25,104 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.millisecond) {
-		params[@"millisecond"] = self.millisecond;
+		params[@"millisecond"] = [self.millisecond getParams];
 	}
 	if (self.week) {
-		params[@"week"] = self.week;
+		params[@"week"] = [self.week getParams];
 	}
 	if (self.hour) {
-		params[@"hour"] = self.hour;
+		params[@"hour"] = [self.hour getParams];
 	}
 	if (self.month) {
-		params[@"month"] = self.month;
+		params[@"month"] = [self.month getParams];
 	}
 	if (self.second) {
-		params[@"second"] = self.second;
+		params[@"second"] = [self.second getParams];
 	}
 	if (self.year) {
-		params[@"year"] = self.year;
+		params[@"year"] = [self.year getParams];
 	}
 	if (self.day) {
-		params[@"day"] = self.day;
+		params[@"day"] = [self.day getParams];
 	}
 	if (self.minute) {
-		params[@"minute"] = self.minute;
+		params[@"minute"] = [self.minute getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setMillisecond:(NSString *)millisecond {
+-(void)setMillisecond:(HIMillisecond *)millisecond {
+	HIMillisecond *oldValue = _millisecond;
+	if(self.millisecond) {
+		[self removeObserver:self forKeyPath:@"millisecond.isUpdated"];
+	}
 	_millisecond = millisecond;
-	[self updateNSObject:@"millisecond"];
+	[self updateHIObject:oldValue newValue:millisecond propertyName:@"millisecond"];
 }
 
--(void)setWeek:(NSString *)week {
+-(void)setWeek:(HIWeek *)week {
+	HIWeek *oldValue = _week;
+	if(self.week) {
+		[self removeObserver:self forKeyPath:@"week.isUpdated"];
+	}
 	_week = week;
-	[self updateNSObject:@"week"];
+	[self updateHIObject:oldValue newValue:week propertyName:@"week"];
 }
 
--(void)setHour:(NSString *)hour {
+-(void)setHour:(HIHour *)hour {
+	HIHour *oldValue = _hour;
+	if(self.hour) {
+		[self removeObserver:self forKeyPath:@"hour.isUpdated"];
+	}
 	_hour = hour;
-	[self updateNSObject:@"hour"];
+	[self updateHIObject:oldValue newValue:hour propertyName:@"hour"];
 }
 
--(void)setMonth:(NSString *)month {
+-(void)setMonth:(HIMonth *)month {
+	HIMonth *oldValue = _month;
+	if(self.month) {
+		[self removeObserver:self forKeyPath:@"month.isUpdated"];
+	}
 	_month = month;
-	[self updateNSObject:@"month"];
+	[self updateHIObject:oldValue newValue:month propertyName:@"month"];
 }
 
--(void)setSecond:(NSString *)second {
+-(void)setSecond:(HISecond *)second {
+	HISecond *oldValue = _second;
+	if(self.second) {
+		[self removeObserver:self forKeyPath:@"second.isUpdated"];
+	}
 	_second = second;
-	[self updateNSObject:@"second"];
+	[self updateHIObject:oldValue newValue:second propertyName:@"second"];
 }
 
--(void)setYear:(NSString *)year {
+-(void)setYear:(HIYear *)year {
+	HIYear *oldValue = _year;
+	if(self.year) {
+		[self removeObserver:self forKeyPath:@"year.isUpdated"];
+	}
 	_year = year;
-	[self updateNSObject:@"year"];
+	[self updateHIObject:oldValue newValue:year propertyName:@"year"];
 }
 
--(void)setDay:(NSString *)day {
+-(void)setDay:(HIDay *)day {
+	HIDay *oldValue = _day;
+	if(self.day) {
+		[self removeObserver:self forKeyPath:@"day.isUpdated"];
+	}
 	_day = day;
-	[self updateNSObject:@"day"];
+	[self updateHIObject:oldValue newValue:day propertyName:@"day"];
 }
 
--(void)setMinute:(NSString *)minute {
+-(void)setMinute:(HIMinute *)minute {
+	HIMinute *oldValue = _minute;
+	if(self.minute) {
+		[self removeObserver:self forKeyPath:@"minute.isUpdated"];
+	}
 	_minute = minute;
-	[self updateNSObject:@"minute"];
+	[self updateHIObject:oldValue newValue:minute propertyName:@"minute"];
 }
 
 @end

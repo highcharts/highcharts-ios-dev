@@ -19,7 +19,7 @@ CSS styles for the credits label.
 
 **Defaults to** `{"cursor": "pointer", "color": "#999999", "fontSize": "10px"}`.
 */
-@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 The text for the credits label.
 

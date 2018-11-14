@@ -9,11 +9,12 @@
 #import "HISummary.h"
 #import "HIPoint.h"
 #import "HIStates.h"
-#import "HITooltip.h"
+#import "HIDragDrop.h"
 #import "HIMarker.h"
 #import "HILabel.h"
 #import "HIEvents.h"
 #import "HIAnimation.h"
+#import "HITooltip.h"
 #import "HIZones.h"
 #import "HIDataLabels.h"
 #import "HIColor.h"
@@ -43,7 +44,7 @@ An array of data points for the series. The points can be given in three ways: 
 
 <li><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-column-null-values/" target="_blank">4) 3D column with null values</a></li>
 </ul>*/
-@property(nonatomic, readwrite) NSArray /* <Data, NSNumber, NSArray> */ *data;
+@property(nonatomic, readwrite) NSArray /* <id, NSNumber, NSArray> */ *data;
 /**
 An id for the series. This can be used after render time to get a pointer to the series object through chart.get().
 
@@ -159,7 +160,7 @@ The main color of the series. In line type series it applies to the line and the
 * [Area color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/)
 * [Pattern fill](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/infographic/)
 */
-@property(nonatomic, readwrite) HIColor *color;
+@property(nonatomic, readwrite) NSString *color;
 /**
 If no x values are given for the points in a series, `pointInterval` defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set `pointInterval` to `10`. In true `datetime` axes, the `pointInterval` is set in milliseconds. It can be also be combined with `pointIntervalUnit` to draw irregular time intervals. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
 
@@ -189,9 +190,15 @@ When this is true, the series will not cause the Y axis to cross the zero plane 
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *softThreshold;
 /**
-A configuration object for the tooltip rendering of each single series. Properties are inherited from `tooltip`, but only the following properties can be defined on a series level.
+The draggable-points module allows points to be moved around or modified in the chart. In addition to the options mentioned under the `dragDrop` API structure, the module fires three events, `point.dragStart`, `point.drag` and `point.drop`. It requires the `modules/draggable-points.js` file to be loaded.
+
+**Try it**
+
+* [Draggable column and line series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/resize-column)
+* [Draggable bubbles](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-bubble)
+* [Draggable X range series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-xrange)
 */
-@property(nonatomic, readwrite) HITooltip *tooltip;
+@property(nonatomic, readwrite) HIDragDrop *dragDrop;
 /**
 Options for the point markers of line-like series. Properties like `fillColor`, `lineColor` and `lineWidth` define the visual appearance of the markers. Other series types, like column series, don't have markers, but have visual options on the series level instead. In styled mode, the markers can be styled with the `.highcharts-point`, `.highcharts-point-hover` and `.highcharts-point-select` class names.
 */
@@ -234,7 +241,7 @@ A name for the dash style to use for the graph, or for some series types the out
 */
 @property(nonatomic, readwrite) NSString *dashStyle;
 /**
-Possible values: `"on"`, `"between"`, `number`. In a column chart, when pointPlacement is `"on"`, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is `"between"`, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart. Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding. Note that pointPlacement needs a `pointRange` to work. For column series this is computed, but for line-type series it needs to be set. Defaults to `undefined` in cartesian charts, `"between"` in polar charts.
+Possible values: `"on"`, `"between"`, `number`. In a column chart, when pointPlacement is `"on"`, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is `"between"`, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart. Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding. Note that pointPlacement needs a `pointRange` to work. For column series this is computed, but for line-type series it needs to be set. For the `xrange` series type and gantt charts, if the Y axis is a category axis, the `pointPlacement` applies to the Y axis rather than the (typically datetime) X axis. Defaults to `undefined` in cartesian charts, `"between"` in polar charts.
 
 **Try it**
 
@@ -262,7 +269,7 @@ The color for the parts of the graph or points that are below the `threshold`.
 * [Arearange](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/)
 */
-@property(nonatomic, readwrite) HIColor *negativeColor;
+@property(nonatomic, readwrite) NSString *negativeColor;
 /**
 Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 
@@ -387,7 +394,7 @@ Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an
 
 * [Shadow enabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/)
 */
-@property(nonatomic, readwrite) id shadow;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
 /**
 Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see `chart.animation` and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing Can be a string reference to an easing function set on the `Math` object or a function. See the _Custom easing function_ demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.
 
@@ -400,6 +407,10 @@ Enable or disable the initial animation when a series is displayed. The animatio
 * [Custom easing function](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/)
 */
 @property(nonatomic, readwrite) HIAnimation *animation;
+/**
+A configuration object for the tooltip rendering of each single series. Properties are inherited from `tooltip`, but only the following properties can be defined on a series level.
+*/
+@property(nonatomic, readwrite) HITooltip *tooltip;
 /**
 Defines the Axis on which the zones are applied.
 
@@ -461,7 +472,12 @@ Set the point threshold for when a series should enter boost mode. Setting it to
 */
 @property(nonatomic, readwrite) NSNumber *boostThreshold;
 /**
-Options for the series data labels, appearing next to each data point. In styled mode, the data labels can be styled with the `.highcharts-data-label-box` and `.highcharts-data-label` class names ([see example](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels)).
+Options for the series data labels, appearing next to each data point. Since v6.2.0, multiple data labels can be applied to each single point by defining them as an array of configs. In styled mode, the data labels can be styled with the `.highcharts-data-label-box` and `.highcharts-data-label` class names ([see example](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels)).
+
+**Try it**
+
+* [Data labels enabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-enabled)
+* [Multiple data labels on a bar series](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-multiple)
 */
 @property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
@@ -487,6 +503,8 @@ The border width of each map area. In styled mode, the border stroke width is gi
 The line cap used for line ends and line joins on the graph.
 
 **Accepted values:** `["round", "square"]`.
+
+**Defaults to** `round`.
 */
 @property(nonatomic, readwrite) NSString *linecap;
 /**

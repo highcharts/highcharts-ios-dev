@@ -7,7 +7,6 @@
 */
 
 #import "HIChartsJSONSerializable.h"
-#import "HIColor.h"
 
 
 /**
@@ -48,7 +47,7 @@ The fill color of the point marker.
 
 * [Solid red discs for selected points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-fillcolor/)
 */
-@property(nonatomic, readwrite) HIColor *fillColor;
+@property(nonatomic, readwrite) NSString *fillColor;
 /**
 The color of the point marker's outline. When `undefined`, the series' or point's color is used.
 
@@ -56,19 +55,19 @@ The color of the point marker's outline. When `undefined`, the series' or point'
 
 * [Red line color for selected points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linecolor/)
 */
-@property(nonatomic, readwrite) HIColor *lineColor;
+@property(nonatomic, readwrite) NSString *lineColor;
 /**
 A specific color for the selected point.
 
 **Defaults to** `#cccccc`.
 */
-@property(nonatomic, readwrite) HIColor *color;
+@property(nonatomic, readwrite) NSString *color;
 /**
 A specific border color for the selected point.
 
 **Defaults to** `#000000`.
 */
-@property(nonatomic, readwrite) HIColor *borderColor;
+@property(nonatomic, readwrite) NSString *borderColor;
 
 -(NSDictionary *)getParams;
 

@@ -20,6 +20,7 @@
 	copyParallelAxes.endOnTick = [self.endOnTick copyWithZone: zone];
 	copyParallelAxes.max = [self.max copyWithZone: zone];
 	copyParallelAxes.softMin = [self.softMin copyWithZone: zone];
+	copyParallelAxes.type = [self.type copyWithZone: zone];
 	copyParallelAxes.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
 	copyParallelAxes.tickWidth = [self.tickWidth copyWithZone: zone];
 	copyParallelAxes.opposite = [self.opposite copyWithZone: zone];
@@ -44,7 +45,6 @@
 	copyParallelAxes.tickPositioner = [self.tickPositioner copyWithZone: zone];
 	copyParallelAxes.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyParallelAxes.units = [self.units copyWithZone: zone];
-	copyParallelAxes.type = [self.type copyWithZone: zone];
 	copyParallelAxes.events = [self.events copyWithZone: zone];
 	copyParallelAxes.crosshair = [self.crosshair copyWithZone: zone];
 	copyParallelAxes.ceiling = [self.ceiling copyWithZone: zone];
@@ -102,6 +102,9 @@
 	if (self.softMin) {
 		params[@"softMin"] = self.softMin;
 	}
+	if (self.type) {
+		params[@"type"] = self.type;
+	}
 	if (self.tickPixelInterval) {
 		params[@"tickPixelInterval"] = self.tickPixelInterval;
 	}
@@ -130,7 +133,7 @@
 		params[@"min"] = self.min;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
+		params[@"lineColor"] = self.lineColor;
 	}
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
@@ -192,9 +195,6 @@
 		}
 		params[@"units"] = array;
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
@@ -223,7 +223,7 @@
 		params[@"floor"] = self.floor;
 	}
 	if (self.tickColor) {
-		params[@"tickColor"] = [self.tickColor getData];
+		params[@"tickColor"] = self.tickColor;
 	}
 	if (self.minTickInterval) {
 		params[@"minTickInterval"] = self.minTickInterval;
@@ -250,7 +250,7 @@
 		params[@"linkedTo"] = self.linkedTo;
 	}
 	if (self.minorTickColor) {
-		params[@"minorTickColor"] = [self.minorTickColor getData];
+		params[@"minorTickColor"] = self.minorTickColor;
 	}
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
@@ -326,6 +326,11 @@
 	[self updateNSObject:@"softMin"];
 }
 
+-(void)setType:(NSString *)type {
+	_type = type;
+	[self updateNSObject:@"type"];
+}
+
 -(void)setTickPixelInterval:(NSNumber *)tickPixelInterval {
 	_tickPixelInterval = tickPixelInterval;
 	[self updateNSObject:@"tickPixelInterval"];
@@ -371,13 +376,9 @@
 	[self updateNSObject:@"min"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
+-(void)setLineColor:(NSString *)lineColor {
 	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+	[self updateNSObject:@"lineColor"];
 }
 
 -(void)setGridZIndex:(NSNumber *)gridZIndex {
@@ -454,15 +455,10 @@
 	[self updateNSObject:@"minorTickLength"];
 }
 
--(void)setUnits:(NSArray *)units {
-	NSArray *oldValue = _units;
+-(void)setUnits:(NSArray<NSArray *> *)units {
+	NSArray<NSArray *> *oldValue = _units;
 	_units = units;
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
-}
-
--(void)setType:(NSString *)type {
-	_type = type;
-	[self updateNSObject:@"type"];
 }
 
 -(void)setEvents:(HIEvents *)events {
@@ -518,13 +514,9 @@
 	[self updateNSObject:@"floor"];
 }
 
--(void)setTickColor:(HIColor *)tickColor {
-	HIColor *oldValue = _tickColor;
-	if(self.tickColor) {
-		[self removeObserver:self forKeyPath:@"tickColor.isUpdated"];
-	}
+-(void)setTickColor:(NSString *)tickColor {
 	_tickColor = tickColor;
-	[self updateHIObject:oldValue newValue:tickColor propertyName:@"tickColor"];
+	[self updateNSObject:@"tickColor"];
 }
 
 -(void)setMinTickInterval:(NSNumber *)minTickInterval {
@@ -553,13 +545,9 @@
 	[self updateNSObject:@"linkedTo"];
 }
 
--(void)setMinorTickColor:(HIColor *)minorTickColor {
-	HIColor *oldValue = _minorTickColor;
-	if(self.minorTickColor) {
-		[self removeObserver:self forKeyPath:@"minorTickColor.isUpdated"];
-	}
+-(void)setMinorTickColor:(NSString *)minorTickColor {
 	_minorTickColor = minorTickColor;
-	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
+	[self updateNSObject:@"minorTickColor"];
 }
 
 -(void)setUniqueNames:(NSNumber *)uniqueNames {

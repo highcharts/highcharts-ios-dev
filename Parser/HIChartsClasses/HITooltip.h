@@ -8,7 +8,6 @@
 
 #import "HIDateTimeLabelFormats.h"
 #import "HIStyle.h"
-#import "HIColor.h"
 #import "HIFunction.h"
 
 
@@ -33,7 +32,7 @@ The radius of the rounded border corners.
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
-The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are `point.key`, `series.name`, `series.color` and other members from the `point` and `series` objects. The `point.key` variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the `point.key` date format can be set using `tooltip.xDateFormat`.
+The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are `point.key`, `series.name`, `series.color` and other members from the `point` and `series` objects. The `point.key` variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the `point.key` date format can be set using `tooltip.xDateFormat`. To access the original point use `point.point`.
 
 **Try it**
 
@@ -95,7 +94,7 @@ The color of the tooltip border. When `undefined`, the border takes the color of
 * [Follow series by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/)
 * [Black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/)
 */
-@property(nonatomic, readwrite) HIColor *borderColor;
+@property(nonatomic, readwrite) NSString *borderColor;
 /**
 CSS styles for the tooltip. The tooltip can also be styled through the CSS class `.highcharts-tooltip`.
 
@@ -149,7 +148,7 @@ The background color or gradient for the tooltip. In styled mode, the stroke wid
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/)
 * [Tooltip in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/)
 */
-@property(nonatomic, readwrite) HIColor *backgroundColor;
+@property(nonatomic, readwrite) NSString *backgroundColor;
 /**
 Proximity snap for graphs or single points. It defaults to 10 for mouse-powered devices and 25 for touch devices. Note that in most cases the whole plot area captures the mouse movement, and in these cases `tooltip.snap` doesn't make sense. This applies when `stickyTracking` is `true` (default) and when the tooltip is `shared` or `split`.
 

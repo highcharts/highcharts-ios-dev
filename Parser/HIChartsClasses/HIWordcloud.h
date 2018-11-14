@@ -64,8 +64,6 @@ This option decides which algorithm is used for placement, and rotation of a wor
 /**
 The corner radius of the border surrounding each column or bar.
 
-**Defaults to** `0`.
-
 **Try it**
 
 * [Rounded columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/)
@@ -74,7 +72,7 @@ The corner radius of the border surrounding each column or bar.
 /**
 A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<NSString *> *colors;
 /**
 3D columns only. The width of the colored edges.
 

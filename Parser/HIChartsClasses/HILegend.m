@@ -82,7 +82,7 @@
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
+		params[@"borderColor"] = self.borderColor;
 	}
 	if (self.layout) {
 		params[@"layout"] = self.layout;
@@ -97,7 +97,7 @@
 		params[@"itemMarginBottom"] = self.itemMarginBottom;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getData];
+		params[@"backgroundColor"] = self.backgroundColor;
 	}
 	if (self.itemMarginTop) {
 		params[@"itemMarginTop"] = self.itemMarginTop;
@@ -109,7 +109,7 @@
 		params[@"labelFormat"] = self.labelFormat;
 	}
 	if (self.itemStyle) {
-		params[@"itemStyle"] = self.itemStyle;
+		params[@"itemStyle"] = [self.itemStyle getParams];
 	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
@@ -217,13 +217,9 @@
 	[self updateNSObject:@"useHTML"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
+-(void)setBorderColor:(NSString *)borderColor {
 	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+	[self updateNSObject:@"borderColor"];
 }
 
 -(void)setLayout:(NSString *)layout {
@@ -250,13 +246,9 @@
 	[self updateNSObject:@"itemMarginBottom"];
 }
 
--(void)setBackgroundColor:(HIColor *)backgroundColor {
-	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
+-(void)setBackgroundColor:(NSString *)backgroundColor {
 	_backgroundColor = backgroundColor;
-	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+	[self updateNSObject:@"backgroundColor"];
 }
 
 -(void)setItemMarginTop:(NSNumber *)itemMarginTop {
@@ -278,9 +270,13 @@
 	[self updateNSObject:@"labelFormat"];
 }
 
--(void)setItemStyle:(NSDictionary *)itemStyle {
+-(void)setItemStyle:(HIItemStyle *)itemStyle {
+	HIItemStyle *oldValue = _itemStyle;
+	if(self.itemStyle) {
+		[self removeObserver:self forKeyPath:@"itemStyle.isUpdated"];
+	}
 	_itemStyle = itemStyle;
-	[self updateNSObject:@"itemStyle"];
+	[self updateHIObject:oldValue newValue:itemStyle propertyName:@"itemStyle"];
 }
 
 -(void)setReversed:(NSNumber *)reversed {
@@ -298,14 +294,18 @@
 	[self updateNSObject:@"itemDistance"];
 }
 
--(void)setShadow:(id)shadow {
+-(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }
 
--(void)setItemHoverStyle:(NSDictionary *)itemHoverStyle {
+-(void)setItemHoverStyle:(HICSSObject *)itemHoverStyle {
+	HICSSObject *oldValue = _itemHoverStyle;
+	if(self.itemHoverStyle) {
+		[self removeObserver:self forKeyPath:@"itemHoverStyle.isUpdated"];
+	}
 	_itemHoverStyle = itemHoverStyle;
-	[self updateNSObject:@"itemHoverStyle"];
+	[self updateHIObject:oldValue newValue:itemHoverStyle propertyName:@"itemHoverStyle"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
@@ -342,9 +342,13 @@
 	[self updateNSObject:@"maxHeight"];
 }
 
--(void)setItemHiddenStyle:(NSDictionary *)itemHiddenStyle {
+-(void)setItemHiddenStyle:(HICSSObject *)itemHiddenStyle {
+	HICSSObject *oldValue = _itemHiddenStyle;
+	if(self.itemHiddenStyle) {
+		[self removeObserver:self forKeyPath:@"itemHiddenStyle.isUpdated"];
+	}
 	_itemHiddenStyle = itemHiddenStyle;
-	[self updateNSObject:@"itemHiddenStyle"];
+	[self updateHIObject:oldValue newValue:itemHiddenStyle propertyName:@"itemHiddenStyle"];
 }
 
 -(void)setAlignColumns:(NSNumber *)alignColumns {

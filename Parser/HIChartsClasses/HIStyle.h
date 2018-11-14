@@ -10,12 +10,16 @@
 
 
 /**
-Styles for the series label. The color defaults to the series color, or a contrast color if `onArea`.
+CSS styles for the no-data label.
+
+**Try it**
+
+* [Styled no-data text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
 */
 @interface HIStyle: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) NSString *fontWeight;
 @property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) NSString *fontWeight;
 @property(nonatomic, readwrite) NSString *fontSize;
 @property(nonatomic, readwrite) NSString *fontFamily;
 /**

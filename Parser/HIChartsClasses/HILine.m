@@ -26,7 +26,7 @@
 	copyLine.states = [self.states copyWithZone: zone];
 	copyLine.threshold = [self.threshold copyWithZone: zone];
 	copyLine.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyLine.tooltip = [self.tooltip copyWithZone: zone];
+	copyLine.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyLine.marker = [self.marker copyWithZone: zone];
 	copyLine.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyLine.borderColor = [self.borderColor copyWithZone: zone];
@@ -52,6 +52,7 @@
 	copyLine.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyLine.shadow = [self.shadow copyWithZone: zone];
 	copyLine.animation = [self.animation copyWithZone: zone];
+	copyLine.tooltip = [self.tooltip copyWithZone: zone];
 	copyLine.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLine.zones = [self.zones copyWithZone: zone];
 	copyLine.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

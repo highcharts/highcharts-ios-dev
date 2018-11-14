@@ -29,6 +29,7 @@
 	copyGauge.point = [self.point copyWithZone: zone];
 	copyGauge.color = [self.color copyWithZone: zone];
 	copyGauge.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyGauge.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyGauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyGauge.borderColor = [self.borderColor copyWithZone: zone];
 	copyGauge.cursor = [self.cursor copyWithZone: zone];

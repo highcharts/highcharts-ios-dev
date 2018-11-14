@@ -32,7 +32,7 @@
 		params[@"dashStyle"] = self.dashStyle;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getData];
+		params[@"color"] = self.color;
 	}
 	if (self.value) {
 		params[@"value"] = self.value;
@@ -67,13 +67,9 @@
 	[self updateNSObject:@"dashStyle"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
+-(void)setColor:(NSString *)color {
 	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+	[self updateNSObject:@"color"];
 }
 
 -(void)setValue:(NSNumber *)value {

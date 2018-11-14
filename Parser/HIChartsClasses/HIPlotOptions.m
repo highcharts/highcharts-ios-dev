@@ -10,7 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIPlotOptions *copyPlotOptions = [[HIPlotOptions allocWithZone: zone] init];
-	copyPlotOptions.tilemap = [self.tilemap copyWithZone: zone];
+	copyPlotOptions.xrange = [self.xrange copyWithZone: zone];
 	copyPlotOptions.bellcurve = [self.bellcurve copyWithZone: zone];
 	copyPlotOptions.pyramid = [self.pyramid copyWithZone: zone];
 	copyPlotOptions.columnrange = [self.columnrange copyWithZone: zone];
@@ -23,7 +23,7 @@
 	copyPlotOptions.areaspline = [self.areaspline copyWithZone: zone];
 	copyPlotOptions.polygon = [self.polygon copyWithZone: zone];
 	copyPlotOptions.streamgraph = [self.streamgraph copyWithZone: zone];
-	copyPlotOptions.xrange = [self.xrange copyWithZone: zone];
+	copyPlotOptions.tilemap = [self.tilemap copyWithZone: zone];
 	copyPlotOptions.vector = [self.vector copyWithZone: zone];
 	copyPlotOptions.series = [self.series copyWithZone: zone];
 	copyPlotOptions.sunburst = [self.sunburst copyWithZone: zone];
@@ -54,8 +54,8 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.tilemap) {
-		params[@"tilemap"] = [self.tilemap getParams];
+	if (self.xrange) {
+		params[@"xrange"] = [self.xrange getParams];
 	}
 	if (self.bellcurve) {
 		params[@"bellcurve"] = [self.bellcurve getParams];
@@ -93,8 +93,8 @@
 	if (self.streamgraph) {
 		params[@"streamgraph"] = [self.streamgraph getParams];
 	}
-	if (self.xrange) {
-		params[@"xrange"] = [self.xrange getParams];
+	if (self.tilemap) {
+		params[@"tilemap"] = [self.tilemap getParams];
 	}
 	if (self.vector) {
 		params[@"vector"] = [self.vector getParams];
@@ -173,13 +173,13 @@
 
 # pragma mark - Setters
 
--(void)setTilemap:(HITilemap *)tilemap {
-	HITilemap *oldValue = _tilemap;
-	if(self.tilemap) {
-		[self removeObserver:self forKeyPath:@"tilemap.isUpdated"];
+-(void)setXrange:(HIXrange *)xrange {
+	HIXrange *oldValue = _xrange;
+	if(self.xrange) {
+		[self removeObserver:self forKeyPath:@"xrange.isUpdated"];
 	}
-	_tilemap = tilemap;
-	[self updateHIObject:oldValue newValue:tilemap propertyName:@"tilemap"];
+	_xrange = xrange;
+	[self updateHIObject:oldValue newValue:xrange propertyName:@"xrange"];
 }
 
 -(void)setBellcurve:(HIBellcurve *)bellcurve {
@@ -290,13 +290,13 @@
 	[self updateHIObject:oldValue newValue:streamgraph propertyName:@"streamgraph"];
 }
 
--(void)setXrange:(HIXrange *)xrange {
-	HIXrange *oldValue = _xrange;
-	if(self.xrange) {
-		[self removeObserver:self forKeyPath:@"xrange.isUpdated"];
+-(void)setTilemap:(HITilemap *)tilemap {
+	HITilemap *oldValue = _tilemap;
+	if(self.tilemap) {
+		[self removeObserver:self forKeyPath:@"tilemap.isUpdated"];
 	}
-	_xrange = xrange;
-	[self updateHIObject:oldValue newValue:xrange propertyName:@"xrange"];
+	_tilemap = tilemap;
+	[self updateHIObject:oldValue newValue:tilemap propertyName:@"tilemap"];
 }
 
 -(void)setVector:(HIVector *)vector {

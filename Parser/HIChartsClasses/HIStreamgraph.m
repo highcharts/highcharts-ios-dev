@@ -30,10 +30,10 @@
 	copyStreamgraph.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyStreamgraph.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyStreamgraph.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyStreamgraph.lineColor = [self.lineColor copyWithZone: zone];
+	copyStreamgraph.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyStreamgraph.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyStreamgraph.fillColor = [self.fillColor copyWithZone: zone];
-	copyStreamgraph.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyStreamgraph.lineColor = [self.lineColor copyWithZone: zone];
 	copyStreamgraph.threshold = [self.threshold copyWithZone: zone];
 	copyStreamgraph.linecap = [self.linecap copyWithZone: zone];
 	copyStreamgraph.selected = [self.selected copyWithZone: zone];
@@ -44,7 +44,7 @@
 	copyStreamgraph.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyStreamgraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyStreamgraph.states = [self.states copyWithZone: zone];
-	copyStreamgraph.tooltip = [self.tooltip copyWithZone: zone];
+	copyStreamgraph.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyStreamgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyStreamgraph.borderColor = [self.borderColor copyWithZone: zone];
 	copyStreamgraph.cursor = [self.cursor copyWithZone: zone];
@@ -67,6 +67,7 @@
 	copyStreamgraph.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyStreamgraph.shadow = [self.shadow copyWithZone: zone];
 	copyStreamgraph.animation = [self.animation copyWithZone: zone];
+	copyStreamgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyStreamgraph.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyStreamgraph.zones = [self.zones copyWithZone: zone];
 	copyStreamgraph.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -90,16 +91,16 @@
 		params[@"fillOpacity"] = self.fillOpacity;
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getData];
-	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
+		params[@"negativeFillColor"] = self.negativeFillColor;
 	}
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = self.fillColor;
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = self.lineColor;
 	}
 	return params;
 }
@@ -111,36 +112,24 @@
 	[self updateNSObject:@"fillOpacity"];
 }
 
--(void)setNegativeFillColor:(HIColor *)negativeFillColor {
-	HIColor *oldValue = _negativeFillColor;
-	if(self.negativeFillColor) {
-		[self removeObserver:self forKeyPath:@"negativeFillColor.isUpdated"];
-	}
+-(void)setNegativeFillColor:(NSString *)negativeFillColor {
 	_negativeFillColor = negativeFillColor;
-	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
-}
-
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+	[self updateNSObject:@"negativeFillColor"];
 }
 
 -(void)setTrackByArea:(NSNumber *)trackByArea {
 	_trackByArea = trackByArea;
 	[self updateNSObject:@"trackByArea"];
+}
+
+-(void)setFillColor:(NSString *)fillColor {
+	_fillColor = fillColor;
+	[self updateNSObject:@"fillColor"];
+}
+
+-(void)setLineColor:(NSString *)lineColor {
+	_lineColor = lineColor;
+	[self updateNSObject:@"lineColor"];
 }
 
 @end

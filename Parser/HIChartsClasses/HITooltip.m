@@ -76,7 +76,7 @@
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
+		params[@"borderColor"] = self.borderColor;
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
@@ -94,7 +94,7 @@
 		params[@"split"] = self.split;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getData];
+		params[@"backgroundColor"] = self.backgroundColor;
 	}
 	if (self.snap) {
 		params[@"snap"] = self.snap;
@@ -202,13 +202,9 @@
 	[self updateNSObject:@"useHTML"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
+-(void)setBorderColor:(NSString *)borderColor {
 	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+	[self updateNSObject:@"borderColor"];
 }
 
 -(void)setStyle:(HIStyle *)style {
@@ -240,13 +236,9 @@
 	[self updateNSObject:@"split"];
 }
 
--(void)setBackgroundColor:(HIColor *)backgroundColor {
-	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
+-(void)setBackgroundColor:(NSString *)backgroundColor {
 	_backgroundColor = backgroundColor;
-	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+	[self updateNSObject:@"backgroundColor"];
 }
 
 -(void)setSnap:(NSNumber *)snap {

@@ -44,8 +44,6 @@ The center of the sunburst chart relative to the plot area. Can be percentages o
 /**
 If a point is sliced, moved out from the center, how many pixels should it be moved?.
 
-**Defaults to** `10`.
-
 **Try it**
 
 * [Sliced sunburst](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-sliced)
@@ -80,7 +78,7 @@ A series specific or series type specific color set to use instead of the global
 
 * [Set default colors for all pies](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/)
 */
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<NSString *> *colors;
 /**
 The start angle of the pie slices in degrees where 0 is top and 90 right.
 
@@ -98,7 +96,7 @@ The diameter of the pie relative to the plot area. Can be a percentage or pixel 
 
 * [Smaller pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/)
 */
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ size;
 
 -(NSDictionary *)getParams;
 

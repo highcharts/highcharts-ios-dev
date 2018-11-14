@@ -55,8 +55,6 @@ The width of the funnel compared to the width of the plot area, or the pixel wid
 /**
 The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to `startAngle` plus 360.
 
-**Defaults to** `null`.
-
 **Try it**
 
 * [Semi-circle donut](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-semi-circle/)
@@ -73,11 +71,9 @@ The size of the inner diameter for the pie. A size greater than 0 renders a donu
 * [50% of the plot area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-innersize-50percent/)
 * [3D donut](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie-donut/)
 */
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ innerSize;
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ innerSize;
 /**
 If a point is sliced, moved out from the center, how many pixels should it be moved?.
-
-**Defaults to** `10`.
 
 **Try it**
 
@@ -97,13 +93,14 @@ A series specific or series type specific color set to use instead of the global
 
 * [Set default colors for all pies](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/)
 */
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<NSString *> *colors;
 /**
 The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
 
 **Defaults to** `80`.
 */
 @property(nonatomic, readwrite) NSNumber *minSize;
+@property(nonatomic, readwrite) NSString *legendType;
 /**
 The start angle of the pie slices in degrees where 0 is top and 90 right.
 
@@ -116,8 +113,6 @@ The start angle of the pie slices in degrees where 0 is top and 90 right.
 @property(nonatomic, readwrite) NSNumber *startAngle;
 /**
 Equivalent to `chart.ignoreHiddenSeries`, this option tells whether the series shall be redrawn as if the hidden point were `null`. The default value changed from `false` to `true` with Highcharts 3.0.
-
-**Defaults to** `true`.
 
 **Try it**
 

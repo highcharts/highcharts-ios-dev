@@ -15,7 +15,6 @@
 #import "HIEvents.h"
 #import "HICrosshair.h"
 #import "HIBreaks.h"
-#import "HIColor.h"
 #import "HIFunction.h"
 
 
@@ -47,7 +46,7 @@ Solid gauge only. Unless `stops` are set, the color to represent the maximum val
 
 * [Min and max colors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/mincolor-maxcolor/)
 */
-@property(nonatomic, readwrite) HIColor *maxColor;
+@property(nonatomic, readwrite) NSString *maxColor;
 /**
 A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data. **Note**: The `series.softThreshold` option takes precedence over this option.
 
@@ -82,7 +81,7 @@ Solid gauge series only. Color stops for the solid gauge. Use this in cases wher
 
 * [True by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-solid/)
 */
-@property(nonatomic, readwrite) NSArray<NSArray *> *stops;
+@property(nonatomic, readwrite) NSArray<NSArray *> /* <NSNumber, NSString> */ *stops;
 /**
 Whether to force the axis to end on a tick. Use this option with the `maxPadding` option to control the axis end.
 
@@ -109,6 +108,19 @@ A soft minimum for the axis. If the series data minimum is greater than this, th
 * [Soft min and max](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/)
 */
 @property(nonatomic, readwrite) NSNumber *softMin;
+/**
+The type of axis. Can be one of `linear`, `logarithmic`, `datetime`, `category` or `treegrid`. Defaults to `treegrid` for Gantt charts, `linear` for other chart types. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed on appropriate values, like full hours or days. In a category or treegrid axis, the `point names` of the chart's series are used for categories, if a `categories` array is not defined.
+
+**Accepted values:** `["linear", "logarithmic", "datetime", "category", "treegrid"]`.
+
+**Defaults to** `linear`.
+
+**Try it**
+
+* [Logarithmic with minor grid lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-minorgrid/)
+* [Logarithmic with extension to emulate negative values](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-negative/)
+*/
+@property(nonatomic, readwrite) NSString *type;
 /**
 Polar charts only. Whether the grid lines should draw as a polygon with straight lines between categories, or as circles. Can be either `circle` or `polygon`.
 
@@ -202,7 +214,7 @@ Solid gauge only. Unless `stops` are set, the color to represent the minimum val
 
 * [Min and max color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/mincolor-maxcolor/)
 */
-@property(nonatomic, readwrite) HIColor *minColor;
+@property(nonatomic, readwrite) NSString *minColor;
 /**
 Whether to show the last tick label. Defaults to `true` on cartesian charts, and `false` on polar charts.
 
@@ -250,7 +262,7 @@ The color of the line marking the axis itself. In styled mode, the line stroke i
 * [A red line on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/)
 * [Axes in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/)
 */
-@property(nonatomic, readwrite) HIColor *lineColor;
+@property(nonatomic, readwrite) NSString *lineColor;
 /**
 The width of the line marking the axis itself. In styled mode, the stroke width is given in the `.highcharts-axis-line` or `.highcharts-xaxis-line` class.
 
@@ -379,7 +391,7 @@ Color of the minor, secondary grid lines. In styled mode, the stroke width is gi
 * [Bright grey lines from Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) HIColor *minorGridLineColor;
+@property(nonatomic, readwrite) NSString *minorGridLineColor;
 /**
 A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
 
@@ -413,21 +425,7 @@ The pixel length of the minor tick marks.
 /**
 Datetime axis only. An array determining what time intervals the ticks are allowed to fall on. Each array item is an array where the first value is the time unit and the second value another array of allowed multiples. Defaults to: units: [[   'millisecond', // unit name   [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples ], [   'second',   [1, 2, 5, 10, 15, 30] ], [   'minute',   [1, 2, 5, 10, 15, 30] ], [   'hour',   [1, 2, 3, 4, 6, 8, 12] ], [   'day',   [1] ], [   'week',   [1] ], [   'month',   [1, 3, 6] ], [   'year',   null ]]
 */
-@property(nonatomic, readwrite) NSArray *units;
-/**
-The type of axis. Can be one of `linear`, `logarithmic`, `datetime` or `category`. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed on appropriate values like full hours or days. In a category axis, the `point names` of the chart's series are used for categories, if not a `categories` array is defined.
-
-**Accepted values:** `["linear", "logarithmic", "datetime", "category"]`.
-
-**Try it**
-
-* [Linear](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/type-linear/)
-* [Logarithmic](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log/)
-* [Logarithmic with minor grid lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-minorgrid/)
-* [Logarithmic on two axes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/type-log-both/)
-* [Logarithmic with extension to emulate negative values](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-negative/)
-*/
-@property(nonatomic, readwrite) NSString *type;
+@property(nonatomic, readwrite) NSArray<NSArray *> *units;
 /**
 Event handlers for the axis.
 */
@@ -547,7 +545,7 @@ Color for the main tick marks. In styled mode, the stroke is given in the `.high
 * [Red ticks on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickcolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) HIColor *tickColor;
+@property(nonatomic, readwrite) NSString *tickColor;
 /**
 The minimum tick interval allowed in axis values. For example on zooming in on an axis with daily data, this can be used to prevent the axis from showing hours. Defaults to the closest distance between two points on the axis.
 */
@@ -590,7 +588,7 @@ Color of the grid lines extending the ticks across the plot area. In styled mode
 * [Green lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) HIColor *gridLineColor;
+@property(nonatomic, readwrite) NSString *gridLineColor;
 /**
 Index of another axis that this axis is linked to. When an axis is linked to a master axis, it will take the same extremes as the master, but as assigned by min or max or by setExtremes. It can be used to show additional info, or to ease reading the chart by duplicating the scales.
 
@@ -618,7 +616,7 @@ Color for the minor tick marks.
 
 * [Black tick marks on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/)
 */
-@property(nonatomic, readwrite) HIColor *minorTickColor;
+@property(nonatomic, readwrite) NSString *minorTickColor;
 /**
 Applies only when the axis `type` is `category`. When `uniqueNames` is true, points are placed on the X axis according to their names. If the same point name is repeated in the same or another series, the point is placed on the same X position as other points of the same name. When `uniqueNames` is false, the points are laid out in increasing X positions regardless of their names, and the X axis category will take the name of the last point in each position.
 
@@ -661,7 +659,7 @@ When using an alternate grid color, a band is painted across the plot area betwe
 
 * [Alternate grid color on the Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/alternategridcolor/)
 */
-@property(nonatomic, readwrite) HIColor *alternateGridColor;
+@property(nonatomic, readwrite) NSString *alternateGridColor;
 /**
 The position of the major tick marks relative to the axis line. Can be one of `inside` and `outside`.
 

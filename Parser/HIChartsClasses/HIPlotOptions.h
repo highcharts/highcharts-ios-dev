@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HITilemap.h"
+#import "HIXrange.h"
 #import "HIBellcurve.h"
 #import "HIPyramid.h"
 #import "HIColumnrange.h"
@@ -19,7 +19,7 @@
 #import "HIAreaspline.h"
 #import "HIPolygon.h"
 #import "HIStreamgraph.h"
-#import "HIXrange.h"
+#import "HITilemap.h"
 #import "HIVector.h"
 #import "HISeries.h"
 #import "HISunburst.h"
@@ -52,18 +52,15 @@ The plotOptions is a wrapper object for config objects for each series type. The
 @interface HIPlotOptions: HIChartsJSONSerializable
 
 /**
-A tilemap series is a type of heatmap where the tile shapes are configurable. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `tilemap` series are defined in  `plotOptions.tilemap`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     tilemap: {       // shared options for all tilemap series     }   },   series: [{     // specific options for this series instance     type: 'tilemap'   }] });  
+The X-range series displays ranges on the X axis, typically time intervals with a start and end date. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `xrange` series are defined in  `plotOptions.xrange`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     xrange: {       // shared options for all xrange series     }   },   series: [{     // specific options for this series instance     type: 'xrange'   }] });  
 
 **Try it**
 
-* [Honeycomb tilemap, USA](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/honeycomb-usa/)
-* [Honeycomb tilemap, Brazil](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-brazil/)
-* [Honeycomb tilemap, China](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-china/)
-* [Honeycomb tilemap, Europe](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-europe/)
-* [Circlemap tilemap, Africa](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa/)
-* [Diamondmap tilemap](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap)
+* [X-range](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/x-range/)
+* [Styled mode X-range](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/x-range/)
+* [Inverted X-range](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/inverted-xrange/)
 */
-@property(nonatomic, readwrite) HITilemap *tilemap;
+@property(nonatomic, readwrite) HIXrange *xrange;
 /**
 A bell curve is an areaspline series which represents the probability density function of the normal distribution. It calculates mean and standard deviation of the base series data and plots the curve according to the calculated parameters. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `bellcurve` series are defined in  `plotOptions.bellcurve`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     bellcurve: {       // shared options for all bellcurve series     }   },   series: [{     // specific options for this series instance     type: 'bellcurve'   }] });  
 
@@ -162,15 +159,18 @@ A streamgraph is a type of stacked area graph which is displaced around a centra
 */
 @property(nonatomic, readwrite) HIStreamgraph *streamgraph;
 /**
-The X-range series displays ranges on the X axis, typically time intervals with a start and end date. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `xrange` series are defined in  `plotOptions.xrange`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     xrange: {       // shared options for all xrange series     }   },   series: [{     // specific options for this series instance     type: 'xrange'   }] });  
+A tilemap series is a type of heatmap where the tile shapes are configurable. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `tilemap` series are defined in  `plotOptions.tilemap`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     tilemap: {       // shared options for all tilemap series     }   },   series: [{     // specific options for this series instance     type: 'tilemap'   }] });  
 
 **Try it**
 
-* [X-range](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/x-range/)
-* [Styled mode X-range](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/x-range/)
-* [Inverted X-range](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/inverted-xrange/)
+* [Honeycomb tilemap, USA](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/honeycomb-usa/)
+* [Honeycomb tilemap, Brazil](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-brazil/)
+* [Honeycomb tilemap, China](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-china/)
+* [Honeycomb tilemap, Europe](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-europe/)
+* [Circlemap tilemap, Africa](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa/)
+* [Diamondmap tilemap](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap)
 */
-@property(nonatomic, readwrite) HIXrange *xrange;
+@property(nonatomic, readwrite) HITilemap *tilemap;
 /**
 A vector plot is a type of cartesian chart where each point has an X and Y position, a length and a direction. Vectors are drawn as arrows. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `vector` series are defined in  `plotOptions.vector`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     vector: {       // shared options for all vector series     }   },   series: [{     // specific options for this series instance     type: 'vector'   }] });  
 

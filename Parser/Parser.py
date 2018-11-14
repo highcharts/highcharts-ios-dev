@@ -14,6 +14,7 @@ import json
 import sys
 import os
 import re
+import copy
 from bs4 import BeautifulSoup, SoupStrainer
 
 reload(sys)
@@ -26,6 +27,7 @@ options = list()
 classes = dict()
 comments = dict()
 types = dict()
+unknown_types_tree = set()
 filelicense = "/**\n* (c) 2009-2018 Highsoft AS\n*\n* License: www.highcharts.com/license\n" \
               "* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/\n" \
               "* In case of questions, please contact sales@highsoft.com\n*/\n\n"
@@ -48,6 +50,7 @@ class HIChartsClass:
         self.checkedExtends = False
         self.info = info
         self.parent = parent
+        self.kind = ""
 
         if self.description:
             self.comment = clean_comment(self.description)
@@ -130,8 +133,7 @@ class Node:
         self.parent = parent
         self.info = info
 
-def get_type(x):
-    return {
+hc_types = {
         "Number": 'NSNumber',
         "Boolean": 'NSNumber /* Bool */',
         "Color": 'HIColor',
@@ -147,47 +149,41 @@ def get_type(x):
         "Array<Array>": 'NSArray<NSArray *>',
         "CSSObject": 'NSDictionary /* <NSString, NSString> */',
         "Array<Color>": 'NSArray<HIColor *>',
-        "Array<Object|Array|Number>": 'NSArray /* <Data, NSNumber, NSArray> */',
+        "Array<Object|Array|Number>": 'NSArray /* <id, NSNumber, NSArray> */',
         "Array<String|Number>": 'NSArray /* <NSString, NSNumber> */',
         "Array<Object|Number>": 'NSArray /* <id, NSNumber> */',
         "Array<Object|Array>": 'NSArray',
         "Number|String": 'id /* NSNumber, NSString */',
-        "String|HTMLElement": 'id',
+        "String|HTMLElement": 'NSString',
         "Array<Array<Mixed>>": 'NSArray<NSArray *>',
         "String|Object": 'id /* NSString, id */',
         "Mixed": 'id',
         "Number|Boolean": 'NSNumber',
         "": 'id',
-        "plotOptions.series.states": 'id',
         "Boolean|String": 'id /* Bool, NSString */',
         # nowe typy
         "Object|Boolean": 'id /* id, Bool */',
-        "String|Array.<String>": 'id',
+        "String|Array.<String>": 'NSArray<NSString *>',
         "Array.<String>": 'NSArray<NSString *>',
         "function": 'HIFunction',
-        "String|function": 'NSString',
         "Array.<Object>": 'NSArray',
         "Array.<Number>": 'NSArray<NSNumber *>',
         "Array.<Array>": 'NSArray<NSArray *>',
         "Array.<Color>": 'NSArray<HIColor *>',
-        "Array.<Object|Array|Number>": 'NSArray /* <Data, NSNumber, NSArray> */',
+        "Array.<Object|Array|Number>": 'NSArray /* <id, NSNumber, NSArray> */',
         "Array.<String|Number>": 'NSArray /* <NSString, NSNumber> */',
-        "Array.<Object|Number>": 'NSArray',
-        "Array.<Object|Array>": 'NSArray',
+        "Array.<Object|Number>": 'NSArray /* <id, NSNumber> */',
+        "Array.<Object|Array>": 'NSArray /* <id, NSArray> */',
         "Array.<Array<Mixed>>": 'NSArray<NSArray *>',
-        "Array.<(Object|Number)>": 'NSArray',
+        "Array.<(Object|Number)>": 'NSArray /* <id, NSNumber> */',
         "Array.<(String|Number)>": 'NSArray /* <NSString, NSNumber> */',
-        "Array.<(Object|Array)>": 'NSArray',
-        "String|Array.<Object>": 'NSString',
+        "Array.<(Object|Array)>": 'NSArray /* <id, NSArray> */',
         "String|undefined": 'NSString',
-        "Array.<String>|Array.<Object>": 'NSArray',
+        "Array.<String>|Array.<Object>": 'NSArray /* <NSString, id> */',
         "String|Number|function": 'id /* NSString, NSNumber, Function */',
-        "Array.<(Object|Array|Number)>": 'NSArray /* <Data, NSNumber, NSArray> */',
+        "Array.<(Object|Array|Number)>": 'NSArray /* <id, NSNumber, NSArray> */',
         "String|null": 'NSString',
-        "Array.<Array<Mixed>>": 'NSArray<NSArray *>',
         "Array.<Array.<Mixed>>": 'NSArray<NSArray *>',
-        "Object|Number": 'id /* id, NSNumber */',
-        "umber": 'NSNumber',
         "function|null": 'HIFunction',
         #6.0.6
         "Undefined|Number": 'NSNumber',
@@ -196,58 +192,62 @@ def get_type(x):
         #6.1.1
         "AnimationOptions|Boolean": 'id /* id, Bool */',
         "Boolean|AnimationOptions": 'id /* Bool, id */',
-        "Boolean|AnimationObject": 'id /* Bool, id */',
         "Array.<number>": 'NSArray<NSNumber *>',
         # 6.1.2
-        "HTMLElement|String": 'id',
         "number": 'NSNumber',
         "string": 'NSString',
-        "Highcharts.ColorString": 'HIColor',
         "boolean": 'NSNumber /* Bool */',
-        "Highcharts.PlotSeriesDataLabelsOptions": 'id',
-        "Highcharts.CSSObject": 'NSDictionary /* <NSString, NSString> */',
-        "Highcharts.Dictionary.<string>": 'id',
-        "*" : 'id', #xAxis.labels
-        "Array.<*>": 'NSArray', #xAxis.plotBands
-        "Array.<Array.<(string|Array.<number>)>>":'NSArray',
+        "*" : 'id',
+        "Array.<*>": 'NSArray',
+        "Array.<Array.<(string|Array.<number>)>>":'NSArray<NSArray *>',
         "Array.<string>": 'NSArray<NSString *>',
-        "*|boolean": 'NSNumber /* Bool */',
         "null|number|string": 'id /* NSNumber, NSString */',
-        "Number|Undefined": 'NSNumber',
-        "Highcharts.AnimationOptionsObject|boolean": 'id',
-        "Highcharts.PlotSeriesStatesHoverHaloOptions": 'id',
-        "Highcharts.CSSObject|boolean": 'id',
-        "Object|String" : 'id /* NSString, id */',
         "object": 'id',
         "Number|String|function": 'id /* NSNumber, NSString, Function */',
-        "Array.<Array.<(number|Highcharts.ColorString)>>": 'NSArray<NSArray *>',
-        "Array.<Object>|Array.<String>": 'NSArray',
-        "Highcharts.SVGDOMElement|string": 'id',
+        "Array.<Object>|Array.<String>": 'NSArray /* <id, NSString> */',
         "null|number": 'NSNumber',
-        "Array.<number>|number": 'NSArray',
-        "Highcharts.AnimationObject|boolean": 'id',
+        "Array.<number>|number": 'NSArray<NSNumber *>',
         "Boolean|Number": 'NSNumber',
         "number|string": 'id /* NSNumber, NSString */',
-        "Highcharts.PlotSeriesStatesOptions": 'id',
-        "Highcharts.SeriesShadowOptions|boolean": 'id',
-        "Array.<Highcharts.ColorString>": 'NSArray<HIColor *>',
-        "Highcharts.SVGAttributes": 'id',
         #6.1.4
-        "boolean|*": 'NSNumber /* Bool */',
+        "boolean|*": 'id /* Bool, id */',
         "number|string|null": 'id /* NSNumber, NSString */',
-        "boolean|Highcharts.AnimationOptionsObject": 'id',
-        "boolean|Highcharts.CSSObject": 'id',
         "boolean|string": 'id /* Bool, NSString */',
-        "Highcharts.FormatterCallbackFunction": 'HIFunction',
-        "Array.<Array.<number, Highcharts.ColorString>>": 'NSArray<NSArray *>',
-        "string|Highcharts.SVGDOMElement": 'id',
         "number|null": 'NSNumber',
         "number|Array.<number>": 'NSArray<NSNumber *>',
-        "boolean|Highcharts.AnimationObject": 'id',
         "string|number" : 'id /* NSString, NSNumber */',
-        "boolean|Highcharts.ShadowOptionsObject": 'id'
-    }[str(x)]
+        #6.2.0
+        "Array.<(number|string|null)>": 'NSArray /* <NSNumber, NSString> */',
+        "string|null": 'NSString',
+        "Array.<Array.<number, string>>": 'NSArray<NSArray *> /* <NSNumber, NSString> */',
+        # tree_namespace
+        "number|undefined": 'NSNumber',
+        "Array.<(number|string)>": 'NSArray /* <NSNumber, NSString> */',
+        "false": 'NSNumber /* Bool */',
+        "undefined" : 'id',
+        "null" : 'id',
+        "Object|undefined": 'id',
+        "false|Highcharts.XAxisCrosshairOptions|Highcharts.YAxisCrosshairOptions": 'id',
+        "\"contrast\"": 'NSString',
+        "\"contrast\"|string": 'NSString',
+        "Array.<Point>": 'NSArray',
+        "string|Array.<(number|string)>": 'NSArray /* <NSNumber, NSString> */',
+        "Highcharts.Dictionary.<function()>": 'NSDictionary',
+        "Highcharts.Dictionary.<(boolean|number|string)>": 'NSDictionary',
+        "Highcharts.Dictionary.<string>": 'NSDictionary /* <NSString, NSString> */',
+        # tree
+        "Highcharts.PlotSeriesDataLabelsOptions": 'id',
+        "Highcharts.Options": 'HIOptions',
+        "boolean|Highcharts.ShadowOptionsObject": 'NSNumber /* Bool */',
+        "string|Highcharts.SVGDOMElement": 'NSString',
+        "boolean|Highcharts.CSSObject": 'NSNumber /* Bool */'
 
+        #"boolean|Highcharts.AnimationObject": 'id /* id, Bool */', # Highcharts.AnimationOptionsObject
+        #"boolean|Highcharts.AnimationOptionsObject": 'id'
+    }
+
+def get_type(x):
+    return hc_types[str(x)]
 
 def upper_first(x):
     r = x[0].upper() + x[1:]
@@ -718,7 +718,8 @@ def create_files():
 
 def print_structure():
     for c in structure:
-        text = "name: {0}, type: {1}, group: {3}, extends: {2}, props: ".format(c, structure[c].data_type, structure[c].extends, structure[c].group)
+        # text = "name: {0}, type: {1}, group: {3}, extends: {2}, props: ".format(c, structure[c].data_type, structure[c].extends, structure[c].group)
+        text = "name: {0}, type: {1}, props: ".format(c, structure[c].data_type)
         for p in structure[c].properties:
             text += "{0} | ".format(p.name)
         print text
@@ -879,6 +880,7 @@ def merge_extended_properties(field):
         if x[0] == "series" or x[0] == "plotOptions" and x[1] != "series":
             structure[field].extends = "series"
 
+new_types_from_namespace = set()
 
 def create_class(node):
     source = node.info
@@ -933,12 +935,17 @@ def create_class(node):
 
             if "type" in doclet:
                 type = doclet["type"]
+
                 if len(type["names"]) == 1:
                     data_type = type["names"][0]
                 elif len(type["names"]) == 2:
                     data_type = type["names"][0] + "|" + type["names"][1]
                 elif len(type["names"]) == 3:
                     data_type = type["names"][0] + "|" + type["names"][1] + "|" + type["names"][2]
+
+                if 'Highcharts.' in data_type and data_type not in hc_types:
+                    new_types_from_namespace.add(data_type)
+                    data_type = type_from_namespace(data_type)
 
             if "products" in doclet:
                 products = doclet["products"]
@@ -964,6 +971,8 @@ def create_class(node):
             name = "HIPoint"
         elif name == "description":
             name = "definition"
+        elif name == "default": # sprawdzic!
+            name = "defaults"
 
         c = HIChartsClass(name, data_type, description, demo, values, defaults, products, extends, exclude, source, parent)
         return c
@@ -1061,11 +1070,342 @@ def create_structure():
         merge_extended_properties(field)
 
 
-def main():
-    create_structure()
-    create_files()
-    generate_documentation()
+#-----------------------------------------------------------------------------------------------------
+# --------------NAMESPACE PARSER----------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------
 
+
+namespace_structure = dict()
+namespace_types = dict()
+default_type = "*"
+unknown_type_namespace = set()
+
+
+def print_namespace_structure():
+    for c in namespace_structure:
+        text = "name: {0}, type: {1}, kind: {2}, props: ".format(c, namespace_structure[c].data_type, namespace_structure[c].kind)
+        for p in namespace_structure[c].properties:
+            text += "{0} | ".format(p.name)
+        print text
+
+
+def create_namespace_class(node):
+    source = node.info
+    parent = node.parent
+    data_type = None
+    description = None
+    demo = None
+    values = None
+    defaults = None
+    products = None
+    extends = None
+    exclude = None
+    kind = ""
+
+    if ".[key:string]" in node.name:
+        return None
+
+    if source:
+        if "doclet" in source:
+            doclet = source["doclet"]
+
+            if "description" in doclet:
+                description = doclet["description"]
+
+            if "kind" in doclet:
+                kind = doclet["kind"]
+
+            if "values" in doclet and len(doclet["values"]) > 0:
+                values = doclet["values"]
+
+            if "defaultvalue" in doclet:
+                defaults = doclet["defaultvalue"].replace("\r", "\n")
+
+            if "types" in doclet:
+                types = doclet["types"]
+                if len(types) == 1:
+                    data_type = types[0]
+                elif len(types) == 2:
+                    data_type = types[0] + "|" + types[1]
+                elif len(types) == 3:
+                    data_type = types[0] + "|" + types[1] + "|" + types[2]
+                elif len(types) == 4:
+                    data_type = types[0] + "|" + types[1] + "|" + types[2] + "|" + types[3]
+
+                namespace_types[node.name] = data_type
+
+            if "products" in doclet:
+                products = doclet["products"]
+
+            if "isDeprecated" in doclet:
+                if doclet["isDeprecated"]:
+                    return None
+
+        c = HIChartsClass(node.name, data_type, description, demo, values, defaults, products, extends, exclude, source, parent)
+        c.kind = kind
+        return c
+
+
+def create_namespace_structure():
+    with open('tree-namespace.json') as data_file:
+        data = json.load(data_file)
+
+    for field in data:
+        if field == "children":
+            for child in data[field]:
+                if child["doclet"]["name"] == "Highcharts":
+                    add_to_namespace_structure("Highcharts", child, None)
+
+    for field in namespace_structure:
+        change_namespace_types(field)
+
+
+def add_to_namespace_structure(name, source, parent):
+    if parent:
+        fullname = "{0}.{1}".format(parent, name)
+    else:
+        fullname = name
+
+    node = Node(fullname, parent, source)
+
+    hi_class = create_namespace_class(node)
+
+    if hi_class:
+        namespace_structure[node.name] = hi_class
+
+        if parent:
+            namespace_structure[parent].add_property(hi_class)
+
+        if "children" in source:
+            childrens = source["children"]
+            for children in childrens:
+                if children["doclet"]["name"]:
+                    add_to_namespace_structure(get_last(children["doclet"]["name"]), children, fullname)
+
+
+def change_namespace_types(name):
+    field = namespace_structure[name]
+    new_type = get_namespace_type(name)
+    if new_type:
+        field.data_type = new_type
+
+    for child in field.properties:
+        change_namespace_types(child.name)
+
+
+def rec_copy_from_namespace(name):
+    if name not in structure and name in namespace_structure:
+        field = namespace_structure[name]
+        structure[field.name] = field
+        for prop in field.properties:
+            rec_copy_from_namespace(prop.name)
+            if prop.data_type:
+                types = prop.data_type.split("|")
+                for type in types:
+                    rec_copy_from_namespace(type)
+
+
+def get_namespace_array_type(type):
+    hc_match = re.search(r'Array.*(Highcharts\.[a-zA-Z]+)', type)
+    while hc_match:
+        temp = hc_match.group(1)
+        while temp in namespace_types:
+            temp = namespace_types[temp]
+
+        if temp.startswith('Array'):
+            temp = get_namespace_array_type(temp)
+        elif temp in namespace_structure:
+            field = namespace_structure[temp]
+            if field.kind == 'class':
+                temp = 'Object'
+            else:
+                unknown_type_namespace.add('A: ' + temp)
+                temp = default_type
+        elif temp not in hc_types:
+            unknown_type_namespace.add('A: ' + temp)
+            temp = default_type
+        type = type.replace(hc_match.group(1), temp)
+        hc_match = re.search(r'Array.*(Highcharts\.[a-zA-Z]+)', type)
+
+    same_match = re.search(r'Array.*\((.*?)\|(.*?)(\)|\|)', type)
+    while same_match:
+        if same_match.group(1) == same_match.group(2):
+            type = type.replace(same_match.group(1) + '|' + same_match.group(2), same_match.group(1))
+            same_match = re.search(r'Array.*\((.*?)\|(.*?)(\)|\|)', type)
+        else:
+            break
+
+    type = re.sub(r'Array\.<(\(((\w+|\*)\.*\w*)\))>', lambda s: s.group(0).replace('(', '').replace(')', ''), type)
+    return type
+
+
+def get_namespace_type(name):
+    if name in namespace_types:
+        if '<(' in namespace_types[name] and ')>' in namespace_types[name]:
+            types = [namespace_types[name]]
+        else:
+            types = namespace_types[name].split('|')
+
+        for index, type in enumerate(types):
+            type = get_namespace_array_type(type)
+
+            while type in namespace_types:
+                type = namespace_types[type]
+
+            if type.startswith('Array'):
+                type = get_namespace_array_type(type)
+            elif '<(' not in type and ')>' not in type and len(type.split('|')) > 1:
+                splitted = type.split('|')
+                for ind, sp in enumerate(splitted):
+                    new = get_namespace_type(sp)
+                    if new:
+                        sp = new
+                    splitted[ind] = sp
+                type = '|'.join(splitted)
+            elif type in namespace_structure:
+                if namespace_structure[type].kind == "class":
+                    type = 'Object'
+                else:
+                    unknown_type_namespace.add(type)
+                    type = default_type
+            elif not type in hc_types:
+                unknown_type_namespace.add(type)
+                type = default_type
+
+            types[index] = type
+
+        new_type = '|'.join(types)
+
+        if len(types) > 1 and len(set(types)) == 1:
+            new_type = types[0]
+
+        if not new_type in hc_types:
+            unknown_type_namespace.add(new_type)
+            new_type = default_type
+
+        return new_type
+    else:
+        return None
+
+
+def find_namespace_array_type(type):
+    hc_match = re.search(r'Array.*(Highcharts\.[a-zA-Z]+)', type)
+    while hc_match:
+        temp = hc_match.group(1)
+
+        if temp in namespace_structure:
+            rec_copy_from_namespace(temp)
+            if namespace_structure[temp].data_type != "*":
+                temp = namespace_structure[temp].data_type
+            else:
+                temp = 'HI.' + get_last(temp)
+
+        if temp.startswith('Array'):
+            temp = find_namespace_array_type(temp)
+
+        type = type.replace(hc_match.group(1), temp)
+        hc_match = re.search(r'Array.*(Highcharts\.[a-zA-Z]+)', type)
+
+    same_match = re.search(r'Array.*\((.*?)\|(.*?)(\)|\|)', type)
+    while same_match:
+        if same_match.group(1) == same_match.group(2):
+            type = type.replace(same_match.group(1) + "|" + same_match.group(2), same_match.group(1))
+            same_match = re.search(r'Array.*\((.*?)\|(.*?)(\)|\|)', type)
+        else:
+            break
+
+    type = re.sub(r'Array\.<(\(((\w+|\*)\.*\w*)\))>', lambda s: s.group(0).replace('(', '').replace(')', ''), type)
+    return type
+
+
+def find_namespace_type(name):
+    if '<(' in name and ')>' in name:
+        types = [name]
+    else:
+        types = name.split('|')
+
+    for index, type in enumerate(types):
+        type = find_namespace_array_type(type)
+
+        if type in namespace_structure:
+            rec_copy_from_namespace(type)
+            if namespace_structure[type].data_type != "*":
+                type = namespace_structure[type].data_type
+            else:
+                type = 'HI.' + get_last(type)
+
+        if type.startswith('Array'):
+            type = find_namespace_array_type(type)
+        elif '<(' not in type and ')>' not in type and len(type.split('|')) > 1:
+            splitted = type.split('|')
+            for ind, sp in enumerate(splitted):
+                splitted[ind] = find_namespace_type(sp)
+            type = '|'.join(splitted)
+
+        types[index] = type
+
+    new_type = '|'.join(types)
+
+    if len(types) > 1 and len(set(types)) == 1:
+        new_type = types[0]
+
+    return new_type
+
+
+def type_from_namespace(type):
+    new_type = find_namespace_type(type).replace('HI.', 'Highcharts.')
+
+    if new_type not in hc_types:
+        if new_type.startswith('Array.'):
+            hc_match = re.search(r'Array\.<(Highcharts\.[a-zA-Z]+)>', new_type)
+            if hc_match:
+                temp = hc_match.group(1)
+                if temp in namespace_structure:
+                    print "Added type from namespace : " + new_type + ", value: " + 'NSArray<{} *>'.format('HI' + get_last(temp))
+                    hc_types[new_type] = 'NSArray<{} *>'.format('HI' + get_last(temp))
+
+        elif new_type in namespace_structure:
+            print "Added type from namespace : " + new_type + ", value: " + "HI" + get_last(new_type)
+            hc_types[new_type] = 'HI' + get_last(new_type)
+        elif 'Highcharts.AnimationOptionsObject' in new_type or 'Highcharts.AnimationObject' in new_type:
+            hc_types[new_type] = 'HIAnimationOptionsObject'
+
+    if new_type not in hc_types:
+        unknown_type = type
+        if unknown_type != new_type:
+            unknown_type = new_type + ' (original type: ' + type + ')'
+        unknown_types_tree.add(unknown_type)
+
+    return new_type
+
+
+def print_unknown_namespace_types():
+    print "Unknown namespace types:"
+    for type in unknown_type_namespace:
+        print type
+    print "- - - - - - - - - - - - - - - - - - - - - - - - - - -  \n\n"
+
+
+def print_unknown_tree_types():
+    print "Unknown tree types:"
+    for type in unknown_types_tree:
+        print type
+    print "- - - - - - - - - - - - - - - - - - - - - - - - - - -  \n\n"
+
+
+def main():
+    create_namespace_structure()
+    print_namespace_structure()
+
+    print_unknown_namespace_types()
+
+    create_structure()
+
+    print_unknown_tree_types()
+
+    create_files()
+    # generate_documentation()
 
 if __name__ == "__main__":
     main()
+

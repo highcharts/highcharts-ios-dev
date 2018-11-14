@@ -40,6 +40,7 @@
 	copyHeatmap.clip = [self.clip copyWithZone: zone];
 	copyHeatmap.point = [self.point copyWithZone: zone];
 	copyHeatmap.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyHeatmap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyHeatmap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHeatmap.borderColor = [self.borderColor copyWithZone: zone];
 	copyHeatmap.cursor = [self.cursor copyWithZone: zone];
@@ -77,7 +78,7 @@
 		params[@"rowsize"] = self.rowsize;
 	}
 	if (self.nullColor) {
-		params[@"nullColor"] = [self.nullColor getData];
+		params[@"nullColor"] = self.nullColor;
 	}
 	return params;
 }
@@ -99,13 +100,9 @@
 	[self updateNSObject:@"rowsize"];
 }
 
--(void)setNullColor:(HIColor *)nullColor {
-	HIColor *oldValue = _nullColor;
-	if(self.nullColor) {
-		[self removeObserver:self forKeyPath:@"nullColor.isUpdated"];
-	}
+-(void)setNullColor:(NSString *)nullColor {
 	_nullColor = nullColor;
-	[self updateHIObject:oldValue newValue:nullColor propertyName:@"nullColor"];
+	[self updateNSObject:@"nullColor"];
 }
 
 @end

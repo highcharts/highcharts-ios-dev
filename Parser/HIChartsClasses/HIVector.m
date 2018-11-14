@@ -30,6 +30,7 @@
 	copyVector.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyVector.threshold = [self.threshold copyWithZone: zone];
 	copyVector.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyVector.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVector.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVector.borderColor = [self.borderColor copyWithZone: zone];
 	copyVector.cursor = [self.cursor copyWithZone: zone];

@@ -23,7 +23,7 @@
 	copyPareto.color = [self.color copyWithZone: zone];
 	copyPareto.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPareto.states = [self.states copyWithZone: zone];
-	copyPareto.tooltip = [self.tooltip copyWithZone: zone];
+	copyPareto.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPareto.marker = [self.marker copyWithZone: zone];
 	copyPareto.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPareto.cursor = [self.cursor copyWithZone: zone];
@@ -41,6 +41,7 @@
 	copyPareto.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPareto.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPareto.animation = [self.animation copyWithZone: zone];
+	copyPareto.tooltip = [self.tooltip copyWithZone: zone];
 	copyPareto.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyPareto.visible = [self.visible copyWithZone: zone];
 	copyPareto.linkedTo = [self.linkedTo copyWithZone: zone];

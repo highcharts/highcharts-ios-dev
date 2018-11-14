@@ -60,7 +60,7 @@ An array containing the default colors for the chart's series. When all colors a
 
 * [Assign a global color theme](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/)
 */
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<NSString *> *colors;
 
 /**
 The pane serves as a container for axes and backgrounds for circular gauges and polar charts.

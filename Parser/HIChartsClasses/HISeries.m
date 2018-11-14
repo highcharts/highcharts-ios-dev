@@ -34,7 +34,7 @@
 	copySeries.states = [self.states copyWithZone: zone];
 	copySeries.threshold = [self.threshold copyWithZone: zone];
 	copySeries.softThreshold = [self.softThreshold copyWithZone: zone];
-	copySeries.tooltip = [self.tooltip copyWithZone: zone];
+	copySeries.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySeries.marker = [self.marker copyWithZone: zone];
 	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySeries.borderColor = [self.borderColor copyWithZone: zone];
@@ -59,6 +59,7 @@
 	copySeries.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySeries.shadow = [self.shadow copyWithZone: zone];
 	copySeries.animation = [self.animation copyWithZone: zone];
+	copySeries.tooltip = [self.tooltip copyWithZone: zone];
 	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySeries.zones = [self.zones copyWithZone: zone];
 	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -144,7 +145,7 @@
 		params[@"point"] = [self.point getParams];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getData];
+		params[@"color"] = self.color;
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
@@ -161,8 +162,8 @@
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
-	if (self.tooltip) {
-		params[@"tooltip"] = [self.tooltip getParams];
+	if (self.dragDrop) {
+		params[@"dragDrop"] = [self.dragDrop getParams];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
@@ -186,7 +187,7 @@
 		params[@"connectNulls"] = self.connectNulls;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getData];
+		params[@"negativeColor"] = self.negativeColor;
 	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
@@ -244,6 +245,9 @@
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.tooltip) {
+		params[@"tooltip"] = [self.tooltip getParams];
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
@@ -402,13 +406,9 @@
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
+-(void)setColor:(NSString *)color {
 	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+	[self updateNSObject:@"color"];
 }
 
 -(void)setPointInterval:(NSNumber *)pointInterval {
@@ -440,13 +440,13 @@
 	[self updateNSObject:@"softThreshold"];
 }
 
--(void)setTooltip:(HITooltip *)tooltip {
-	HITooltip *oldValue = _tooltip;
-	if(self.tooltip) {
-		[self removeObserver:self forKeyPath:@"tooltip.isUpdated"];
+-(void)setDragDrop:(HIDragDrop *)dragDrop {
+	HIDragDrop *oldValue = _dragDrop;
+	if(self.dragDrop) {
+		[self removeObserver:self forKeyPath:@"dragDrop.isUpdated"];
 	}
-	_tooltip = tooltip;
-	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
+	_dragDrop = dragDrop;
+	[self updateHIObject:oldValue newValue:dragDrop propertyName:@"dragDrop"];
 }
 
 -(void)setMarker:(HIMarker *)marker {
@@ -496,13 +496,9 @@
 	[self updateNSObject:@"connectNulls"];
 }
 
--(void)setNegativeColor:(HIColor *)negativeColor {
-	HIColor *oldValue = _negativeColor;
-	if(self.negativeColor) {
-		[self removeObserver:self forKeyPath:@"negativeColor.isUpdated"];
-	}
+-(void)setNegativeColor:(NSString *)negativeColor {
 	_negativeColor = negativeColor;
-	[self updateHIObject:oldValue newValue:negativeColor propertyName:@"negativeColor"];
+	[self updateNSObject:@"negativeColor"];
 }
 
 -(void)setEnableMouseTracking:(NSNumber *)enableMouseTracking {
@@ -584,7 +580,7 @@
 	[self updateNSObject:@"exposeElementToA11y"];
 }
 
--(void)setShadow:(id)shadow {
+-(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }
@@ -596,6 +592,15 @@
 	}
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
+-(void)setTooltip:(HITooltip *)tooltip {
+	HITooltip *oldValue = _tooltip;
+	if(self.tooltip) {
+		[self removeObserver:self forKeyPath:@"tooltip.isUpdated"];
+	}
+	_tooltip = tooltip;
+	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
 }
 
 -(void)setZoneAxis:(NSString *)zoneAxis {

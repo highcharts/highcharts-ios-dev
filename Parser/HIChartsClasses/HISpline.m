@@ -35,7 +35,7 @@
 	copySpline.states = [self.states copyWithZone: zone];
 	copySpline.threshold = [self.threshold copyWithZone: zone];
 	copySpline.softThreshold = [self.softThreshold copyWithZone: zone];
-	copySpline.tooltip = [self.tooltip copyWithZone: zone];
+	copySpline.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySpline.marker = [self.marker copyWithZone: zone];
 	copySpline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySpline.borderColor = [self.borderColor copyWithZone: zone];
@@ -60,6 +60,7 @@
 	copySpline.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySpline.shadow = [self.shadow copyWithZone: zone];
 	copySpline.animation = [self.animation copyWithZone: zone];
+	copySpline.tooltip = [self.tooltip copyWithZone: zone];
 	copySpline.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySpline.zones = [self.zones copyWithZone: zone];
 	copySpline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

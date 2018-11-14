@@ -7,7 +7,6 @@
 */
 
 #import "HISeries.h"
-#import "HIColor.h"
 
 
 /**
@@ -32,15 +31,7 @@ A separate color for the negative part of the area. In styled mode, a negative c
 
 * [Negative color in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/)
 */
-@property(nonatomic, readwrite) HIColor *negativeFillColor;
-/**
-A separate color for the graph line. By default the line takes the `color` of the series, but the lineColor setting allows setting a separate color for the line without altering the `fillColor`. In styled mode, the line stroke can be set with the `.highcharts-graph` class name.
-
-**Try it**
-
-* [Dark gray line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/)
-*/
-@property(nonatomic, readwrite) HIColor *lineColor;
+@property(nonatomic, readwrite) NSString *negativeFillColor;
 /**
 Fill color or gradient for the area. When `null`, the series' `color` is used with the series' `fillOpacity`. In styled mode, the fill color can be set with the `.highcharts-area` class name.
 
@@ -49,7 +40,15 @@ Fill color or gradient for the area. When `null`, the series' `color` is used wi
 * [Null by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/)
 */
-@property(nonatomic, readwrite) HIColor *fillColor;
+@property(nonatomic, readwrite) NSString *fillColor;
+/**
+A separate color for the graph line. By default the line takes the `color` of the series, but the lineColor setting allows setting a separate color for the line without altering the `fillColor`. In styled mode, the line stroke can be set with the `.highcharts-graph` class name.
+
+**Try it**
+
+* [Dark gray line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/)
+*/
+@property(nonatomic, readwrite) NSString *lineColor;
 /**
 Fill opacity for the area. When you set an explicit `fillColor`, the `fillOpacity` is not applied. Instead, you should define the opacity in the `fillColor` with an rgba color definition. The `fillOpacity` setting, also the default setting, overrides the alpha component of the `color` setting. In styled mode, the fill opacity can be set with the `.highcharts-area` class name.
 

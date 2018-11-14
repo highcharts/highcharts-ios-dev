@@ -48,13 +48,13 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.inactiveColor) {
-		params[@"inactiveColor"] = [self.inactiveColor getData];
+		params[@"inactiveColor"] = self.inactiveColor;
 	}
 	if (self.animation) {
 		params[@"animation"] = self.animation;
 	}
 	if (self.activeColor) {
-		params[@"activeColor"] = [self.activeColor getData];
+		params[@"activeColor"] = self.activeColor;
 	}
 	return params;
 }
@@ -97,9 +97,13 @@
 	[self updateHIObject:oldValue newValue:menuItemHoverStyle propertyName:@"menuItemHoverStyle"];
 }
 
--(void)setStyle:(NSDictionary *)style {
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
 	_style = style;
-	[self updateNSObject:@"style"];
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setArrowSize:(NSNumber *)arrowSize {
@@ -112,27 +116,23 @@
 	[self updateNSObject:@"enabled"];
 }
 
--(void)setInactiveColor:(HIColor *)inactiveColor {
-	HIColor *oldValue = _inactiveColor;
-	if(self.inactiveColor) {
-		[self removeObserver:self forKeyPath:@"inactiveColor.isUpdated"];
-	}
+-(void)setInactiveColor:(NSString *)inactiveColor {
 	_inactiveColor = inactiveColor;
-	[self updateHIObject:oldValue newValue:inactiveColor propertyName:@"inactiveColor"];
+	[self updateNSObject:@"inactiveColor"];
 }
 
--(void)setAnimation:(id)animation {
-	_animation = animation;
-	[self updateNSObject:@"animation"];
-}
-
--(void)setActiveColor:(HIColor *)activeColor {
-	HIColor *oldValue = _activeColor;
-	if(self.activeColor) {
-		[self removeObserver:self forKeyPath:@"activeColor.isUpdated"];
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	if(self.animation) {
+		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
 	}
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
+-(void)setActiveColor:(NSString *)activeColor {
 	_activeColor = activeColor;
-	[self updateHIObject:oldValue newValue:activeColor propertyName:@"activeColor"];
+	[self updateNSObject:@"activeColor"];
 }
 
 @end

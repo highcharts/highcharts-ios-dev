@@ -33,16 +33,16 @@
 		params[@"radius"] = self.radius;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
+		params[@"fillColor"] = self.fillColor;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
+		params[@"lineColor"] = self.lineColor;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getData];
+		params[@"color"] = self.color;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
+		params[@"borderColor"] = self.borderColor;
 	}
 	return params;
 }
@@ -64,40 +64,24 @@
 	[self updateNSObject:@"radius"];
 }
 
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
+-(void)setFillColor:(NSString *)fillColor {
 	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+	[self updateNSObject:@"fillColor"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
+-(void)setLineColor:(NSString *)lineColor {
 	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+	[self updateNSObject:@"lineColor"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
+-(void)setColor:(NSString *)color {
 	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+	[self updateNSObject:@"color"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
+-(void)setBorderColor:(NSString *)borderColor {
 	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+	[self updateNSObject:@"borderColor"];
 }
 
 @end

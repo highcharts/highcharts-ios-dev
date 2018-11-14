@@ -10,8 +10,8 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIStyle *copyStyle = [[HIStyle allocWithZone: zone] init];
-	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyStyle.color = [self.color copyWithZone: zone];
+	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
 	copyStyle.fontFamily = [self.fontFamily copyWithZone: zone];
 	copyStyle.borderRadius = [self.borderRadius copyWithZone: zone];
@@ -24,11 +24,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.fontWeight) {
-		params[@"fontWeight"] = self.fontWeight;
-	}
 	if (self.color) {
 		params[@"color"] = self.color;
+	}
+	if (self.fontWeight) {
+		params[@"fontWeight"] = self.fontWeight;
 	}
 	if (self.fontSize) {
 		params[@"fontSize"] = self.fontSize;
@@ -53,14 +53,14 @@
 
 # pragma mark - Setters
 
--(void)setFontWeight:(NSString *)fontWeight {
-	_fontWeight = fontWeight;
-	[self updateNSObject:@"fontWeight"];
-}
-
 -(void)setColor:(NSString *)color {
 	_color = color;
 	[self updateNSObject:@"color"];
+}
+
+-(void)setFontWeight:(NSString *)fontWeight {
+	_fontWeight = fontWeight;
+	[self updateNSObject:@"fontWeight"];
 }
 
 -(void)setFontSize:(NSString *)fontSize {

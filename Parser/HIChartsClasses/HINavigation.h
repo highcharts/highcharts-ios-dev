@@ -10,7 +10,6 @@
 #import "HIMenuItemStyle.h"
 #import "HIButtonOptions.h"
 #import "HIMenuItemHoverStyle.h"
-#import "HIColor.h"
 
 
 /**
@@ -59,7 +58,7 @@ Text styles for the legend page navigation.
 
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
-@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 The pixel size of the up and down arrows in the legend paging navigation.
 
@@ -83,7 +82,7 @@ The color of the inactive up or down arrow in the legend page navigation. .
 
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
-@property(nonatomic, readwrite) HIColor *inactiveColor;
+@property(nonatomic, readwrite) NSString *inactiveColor;
 /**
 How to animate the pages when navigating up or down. A value of `true` applies the default navigation given in the `chart.animation` option. Additional options can be given as an object containing values for easing and duration.
 
@@ -93,7 +92,7 @@ How to animate the pages when navigating up or down. A value of `true` applies t
 
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
-@property(nonatomic, readwrite) id animation;
+@property(nonatomic, readwrite) HIAnimationOptionsObject *animation;
 /**
 The color for the active up or down arrow in the legend page navigation.
 
@@ -101,7 +100,7 @@ The color for the active up or down arrow in the legend page navigation.
 
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
-@property(nonatomic, readwrite) HIColor *activeColor;
+@property(nonatomic, readwrite) NSString *activeColor;
 
 -(NSDictionary *)getParams;
 

@@ -43,6 +43,7 @@
 	copyPyramid.minSize = [self.minSize copyWithZone: zone];
 	copyPyramid.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPyramid.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyPyramid.legendType = [self.legendType copyWithZone: zone];
 	copyPyramid.startAngle = [self.startAngle copyWithZone: zone];
 	copyPyramid.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPyramid.events = [self.events copyWithZone: zone];
@@ -51,6 +52,7 @@
 	copyPyramid.selected = [self.selected copyWithZone: zone];
 	copyPyramid.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPyramid.color = [self.color copyWithZone: zone];
+	copyPyramid.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid.cursor = [self.cursor copyWithZone: zone];
 	copyPyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
@@ -112,13 +114,21 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
+	}
+	if (self.legendType) {
+		params[@"legendType"] = self.legendType;
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
@@ -182,8 +192,8 @@
 	[self updateNSObject:@"depth"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
@@ -191,6 +201,11 @@
 -(void)setMinSize:(NSNumber *)minSize {
 	_minSize = minSize;
 	[self updateNSObject:@"minSize"];
+}
+
+-(void)setLegendType:(NSString *)legendType {
+	_legendType = legendType;
+	[self updateNSObject:@"legendType"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {

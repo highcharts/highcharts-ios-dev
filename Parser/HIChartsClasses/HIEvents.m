@@ -29,11 +29,14 @@
 	copyEvents.click = [self.click copyWithZone: zone];
 	copyEvents.afterPrint = [self.afterPrint copyWithZone: zone];
 	copyEvents.unselect = [self.unselect copyWithZone: zone];
+	copyEvents.drop = [self.drop copyWithZone: zone];
 	copyEvents.update = [self.update copyWithZone: zone];
 	copyEvents.remove = [self.remove copyWithZone: zone];
+	copyEvents.drag = [self.drag copyWithZone: zone];
 	copyEvents.mouseOut = [self.mouseOut copyWithZone: zone];
 	copyEvents.mouseOver = [self.mouseOver copyWithZone: zone];
 	copyEvents.select = [self.select copyWithZone: zone];
+	copyEvents.dragStart = [self.dragStart copyWithZone: zone];
 	copyEvents.hide = [self.hide copyWithZone: zone];
 	copyEvents.show = [self.show copyWithZone: zone];
 	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
@@ -100,11 +103,17 @@
 	if (self.unselect) {
 		params[@"unselect"] = [self.unselect getFunction];
 	}
+	if (self.drop) {
+		params[@"drop"] = [self.drop getFunction];
+	}
 	if (self.update) {
 		params[@"update"] = [self.update getFunction];
 	}
 	if (self.remove) {
 		params[@"remove"] = [self.remove getFunction];
+	}
+	if (self.drag) {
+		params[@"drag"] = [self.drag getFunction];
 	}
 	if (self.mouseOut) {
 		params[@"mouseOut"] = [self.mouseOut getFunction];
@@ -114,6 +123,9 @@
 	}
 	if (self.select) {
 		params[@"select"] = [self.select getFunction];
+	}
+	if (self.dragStart) {
+		params[@"dragStart"] = [self.dragStart getFunction];
 	}
 	if (self.hide) {
 		params[@"hide"] = [self.hide getFunction];
@@ -300,6 +312,15 @@
 	[self updateHIObject:oldValue newValue:unselect propertyName:@"unselect"];
 }
 
+-(void)setDrop:(HIFunction *)drop {
+	HIFunction *oldValue = _drop;
+	if(self.drop) {
+		[self removeObserver:self forKeyPath:@"drop.isUpdated"];
+	}
+	_drop = drop;
+	[self updateHIObject:oldValue newValue:drop propertyName:@"drop"];
+}
+
 -(void)setUpdate:(HIFunction *)update {
 	HIFunction *oldValue = _update;
 	if(self.update) {
@@ -316,6 +337,15 @@
 	}
 	_remove = remove;
 	[self updateHIObject:oldValue newValue:remove propertyName:@"remove"];
+}
+
+-(void)setDrag:(HIFunction *)drag {
+	HIFunction *oldValue = _drag;
+	if(self.drag) {
+		[self removeObserver:self forKeyPath:@"drag.isUpdated"];
+	}
+	_drag = drag;
+	[self updateHIObject:oldValue newValue:drag propertyName:@"drag"];
 }
 
 -(void)setMouseOut:(HIFunction *)mouseOut {
@@ -343,6 +373,15 @@
 	}
 	_select = select;
 	[self updateHIObject:oldValue newValue:select propertyName:@"select"];
+}
+
+-(void)setDragStart:(HIFunction *)dragStart {
+	HIFunction *oldValue = _dragStart;
+	if(self.dragStart) {
+		[self removeObserver:self forKeyPath:@"dragStart.isUpdated"];
+	}
+	_dragStart = dragStart;
+	[self updateHIObject:oldValue newValue:dragStart propertyName:@"dragStart"];
 }
 
 -(void)setHide:(HIFunction *)hide {

@@ -45,6 +45,7 @@
 	copyChart.shadow = [self.shadow copyWithZone: zone];
 	copyChart.inverted = [self.inverted copyWithZone: zone];
 	copyChart.plotBorderWidth = [self.plotBorderWidth copyWithZone: zone];
+	copyChart.zoomKey = [self.zoomKey copyWithZone: zone];
 	copyChart.ignoreHiddenSeries = [self.ignoreHiddenSeries copyWithZone: zone];
 	copyChart.selectionMarkerFill = [self.selectionMarkerFill copyWithZone: zone];
 	copyChart.plotShadow = [self.plotShadow copyWithZone: zone];
@@ -88,13 +89,13 @@
 		params[@"marginRight"] = self.marginRight;
 	}
 	if (self.plotBorderColor) {
-		params[@"plotBorderColor"] = [self.plotBorderColor getData];
+		params[@"plotBorderColor"] = self.plotBorderColor;
 	}
 	if (self.spacingRight) {
 		params[@"spacingRight"] = self.spacingRight;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
+		params[@"borderColor"] = self.borderColor;
 	}
 	if (self.colorCount) {
 		params[@"colorCount"] = self.colorCount;
@@ -124,10 +125,10 @@
 		params[@"animation"] = self.animation;
 	}
 	if (self.plotBackgroundColor) {
-		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getData];
+		params[@"plotBackgroundColor"] = self.plotBackgroundColor;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getData];
+		params[@"backgroundColor"] = self.backgroundColor;
 	}
 	if (self.panning) {
 		params[@"panning"] = self.panning;
@@ -177,11 +178,14 @@
 	if (self.plotBorderWidth) {
 		params[@"plotBorderWidth"] = self.plotBorderWidth;
 	}
+	if (self.zoomKey) {
+		params[@"zoomKey"] = self.zoomKey;
+	}
 	if (self.ignoreHiddenSeries) {
 		params[@"ignoreHiddenSeries"] = self.ignoreHiddenSeries;
 	}
 	if (self.selectionMarkerFill) {
-		params[@"selectionMarkerFill"] = [self.selectionMarkerFill getData];
+		params[@"selectionMarkerFill"] = self.selectionMarkerFill;
 	}
 	if (self.plotShadow) {
 		params[@"plotShadow"] = self.plotShadow;
@@ -247,9 +251,13 @@
 	[self updateNSObject:@"height"];
 }
 
--(void)setStyle:(NSDictionary *)style {
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
 	_style = style;
-	[self updateNSObject:@"style"];
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setAlignTicks:(NSNumber *)alignTicks {
@@ -271,13 +279,9 @@
 	[self updateNSObject:@"marginRight"];
 }
 
--(void)setPlotBorderColor:(HIColor *)plotBorderColor {
-	HIColor *oldValue = _plotBorderColor;
-	if(self.plotBorderColor) {
-		[self removeObserver:self forKeyPath:@"plotBorderColor.isUpdated"];
-	}
+-(void)setPlotBorderColor:(NSString *)plotBorderColor {
 	_plotBorderColor = plotBorderColor;
-	[self updateHIObject:oldValue newValue:plotBorderColor propertyName:@"plotBorderColor"];
+	[self updateNSObject:@"plotBorderColor"];
 }
 
 -(void)setSpacingRight:(NSNumber *)spacingRight {
@@ -285,13 +289,9 @@
 	[self updateNSObject:@"spacingRight"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
+-(void)setBorderColor:(NSString *)borderColor {
 	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+	[self updateNSObject:@"borderColor"];
 }
 
 -(void)setColorCount:(NSNumber *)colorCount {
@@ -304,7 +304,7 @@
 	[self updateNSObject:@"polar"];
 }
 
--(void)setRenderTo:(id)renderTo {
+-(void)setRenderTo:(NSString *)renderTo {
 	_renderTo = renderTo;
 	[self updateNSObject:@"renderTo"];
 }
@@ -334,27 +334,23 @@
 	[self updateNSObject:@"width"];
 }
 
--(void)setAnimation:(id)animation {
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	if(self.animation) {
+		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
+	}
 	_animation = animation;
-	[self updateNSObject:@"animation"];
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
--(void)setPlotBackgroundColor:(HIColor *)plotBackgroundColor {
-	HIColor *oldValue = _plotBackgroundColor;
-	if(self.plotBackgroundColor) {
-		[self removeObserver:self forKeyPath:@"plotBackgroundColor.isUpdated"];
-	}
+-(void)setPlotBackgroundColor:(NSString *)plotBackgroundColor {
 	_plotBackgroundColor = plotBackgroundColor;
-	[self updateHIObject:oldValue newValue:plotBackgroundColor propertyName:@"plotBackgroundColor"];
+	[self updateNSObject:@"plotBackgroundColor"];
 }
 
--(void)setBackgroundColor:(HIColor *)backgroundColor {
-	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
+-(void)setBackgroundColor:(NSString *)backgroundColor {
 	_backgroundColor = backgroundColor;
-	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+	[self updateNSObject:@"backgroundColor"];
 }
 
 -(void)setPanning:(NSNumber *)panning {
@@ -420,7 +416,7 @@
 	[self updateHIObject:oldValue newValue:scrollablePlotArea propertyName:@"scrollablePlotArea"];
 }
 
--(void)setShadow:(id)shadow {
+-(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }
@@ -435,21 +431,22 @@
 	[self updateNSObject:@"plotBorderWidth"];
 }
 
+-(void)setZoomKey:(NSString *)zoomKey {
+	_zoomKey = zoomKey;
+	[self updateNSObject:@"zoomKey"];
+}
+
 -(void)setIgnoreHiddenSeries:(NSNumber *)ignoreHiddenSeries {
 	_ignoreHiddenSeries = ignoreHiddenSeries;
 	[self updateNSObject:@"ignoreHiddenSeries"];
 }
 
--(void)setSelectionMarkerFill:(HIColor *)selectionMarkerFill {
-	HIColor *oldValue = _selectionMarkerFill;
-	if(self.selectionMarkerFill) {
-		[self removeObserver:self forKeyPath:@"selectionMarkerFill.isUpdated"];
-	}
+-(void)setSelectionMarkerFill:(NSString *)selectionMarkerFill {
 	_selectionMarkerFill = selectionMarkerFill;
-	[self updateHIObject:oldValue newValue:selectionMarkerFill propertyName:@"selectionMarkerFill"];
+	[self updateNSObject:@"selectionMarkerFill"];
 }
 
--(void)setPlotShadow:(id)plotShadow {
+-(void)setPlotShadow:(NSNumber *)plotShadow {
 	_plotShadow = plotShadow;
 	[self updateNSObject:@"plotShadow"];
 }

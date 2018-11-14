@@ -35,10 +35,11 @@
 	copyErrorbar.stemColor = [self.stemColor copyWithZone: zone];
 	copyErrorbar.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyErrorbar.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
-	copyErrorbar.fillColor = [self.fillColor copyWithZone: zone];
+	copyErrorbar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyErrorbar.threshold = [self.threshold copyWithZone: zone];
 	copyErrorbar.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyErrorbar.stemWidth = [self.stemWidth copyWithZone: zone];
+	copyErrorbar.fillColor = [self.fillColor copyWithZone: zone];
 	copyErrorbar.pointRange = [self.pointRange copyWithZone: zone];
 	copyErrorbar.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyErrorbar.cropThreshold = [self.cropThreshold copyWithZone: zone];
@@ -118,11 +119,11 @@
 	if (self.stemDashStyle) {
 		params[@"stemDashStyle"] = self.stemDashStyle;
 	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
 	if (self.stemWidth) {
 		params[@"stemWidth"] = self.stemWidth;
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -132,8 +133,13 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
@@ -221,6 +227,11 @@
 	[self updateNSObject:@"stemDashStyle"];
 }
 
+-(void)setStemWidth:(NSNumber *)stemWidth {
+	_stemWidth = stemWidth;
+	[self updateNSObject:@"stemWidth"];
+}
+
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;
 	if(self.fillColor) {
@@ -228,11 +239,6 @@
 	}
 	_fillColor = fillColor;
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setStemWidth:(NSNumber *)stemWidth {
-	_stemWidth = stemWidth;
-	[self updateNSObject:@"stemWidth"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {
@@ -245,8 +251,8 @@
 	[self updateNSObject:@"minPointLength"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

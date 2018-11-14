@@ -11,7 +11,6 @@
 #import "HIEvents.h"
 #import "HIScrollablePlotArea.h"
 #import "HIResetZoomButton.h"
-#import "HIColor.h"
 
 
 /**
@@ -64,7 +63,7 @@ Additional CSS styles to apply inline to the container `div`. Note that since th
 * [Using a serif type font](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/style-serif-font/)
 * [Styled mode with relative font sizes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/em/)
 */
-@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if `tickAmount` were specified. This can be prevented by setting `alignTicks` to false. If the grid lines look messy, it's a good idea to hide them for the secondary axis by setting `gridLineWidth` to 0. If `startOnTick` or `endOnTick` in an Axis options are set to false, then the `alignTicks ` will be disabled for the Axis. Disabled for logarithmic axes.
 
@@ -99,7 +98,7 @@ The color of the inner chart or plot area border.
 
 * [Blue border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbordercolor/)
 */
-@property(nonatomic, readwrite) HIColor *plotBorderColor;
+@property(nonatomic, readwrite) NSString *plotBorderColor;
 /**
 The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or legend in top position).
 
@@ -118,7 +117,7 @@ The color of the outer chart border.
 
 * [Brown border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/bordercolor/)
 */
-@property(nonatomic, readwrite) HIColor *borderColor;
+@property(nonatomic, readwrite) NSString *borderColor;
 /**
 In styled mode, this sets how many colors the class names should rotate between. With ten colors, series (or points) are given class names like `highcharts-color-0`, `highcharts-color-0` `...] `highcharts-color-9`. The equivalent in non-styled mode is to set colors using the [colors` setting.
 */
@@ -145,7 +144,7 @@ The HTML element where the chart will be rendered. If it is a string, the elemen
 * [Object reference](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-object/)
 * [Object reference through jQuery](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-jquery/)
 */
-@property(nonatomic, readwrite) id renderTo;
+@property(nonatomic, readwrite) NSString *renderTo;
 /**
 Whether to reflow the chart to fit the width of the container div on resizing the window.
 
@@ -208,7 +207,7 @@ Set the overall animation for all chart updating. Animation can be disabled thro
 * [With a longer duration](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-duration/)
 * [With a jQuery UI easing](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/animation-easing/)
 */
-@property(nonatomic, readwrite) id animation;
+@property(nonatomic, readwrite) HIAnimationOptionsObject *animation;
 /**
 The background color or gradient for the plot area.
 
@@ -217,7 +216,7 @@ The background color or gradient for the plot area.
 * [Color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/)
 */
-@property(nonatomic, readwrite) HIColor *plotBackgroundColor;
+@property(nonatomic, readwrite) NSString *plotBackgroundColor;
 /**
 The background color or gradient for the outer chart area.
 
@@ -226,7 +225,7 @@ The background color or gradient for the outer chart area.
 * [Color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-color/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-gradient/)
 */
-@property(nonatomic, readwrite) HIColor *backgroundColor;
+@property(nonatomic, readwrite) NSString *backgroundColor;
 /**
 Allow panning in a chart. Best used with `panKey` to combine zooming and panning. On touch devices, when the `tooltip.followTouchMove` option is `true` (default), panning requires two fingers. To allow panning with one finger, set `followTouchMove` to `false`.
 
@@ -314,7 +313,7 @@ Whether to apply a drop shadow to the outer chart area. Requires that background
 
 * [Shadow](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/shadow/)
 */
-@property(nonatomic, readwrite) id shadow;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
 /**
 Whether to invert the axes so that the x axis is vertical and y axis is horizontal. When `true`, the x axis is `reversed` by default.
 
@@ -336,6 +335,12 @@ The pixel width of the plot area border.
 */
 @property(nonatomic, readwrite) NSNumber *plotBorderWidth;
 /**
+Set a key to hold when dragging to zoom the chart. Requires the draggable-points module. This is useful to avoid zooming while moving points. Should be set different than `chart.panKey`.
+
+**Accepted values:** `["alt", "ctrl", "meta", "shift"]`.
+*/
+@property(nonatomic, readwrite) NSString *zoomKey;
+/**
 If true, the axes will scale to the remaining visible series once one series is hidden. If false, hiding and showing a series will not affect the axes or the other series. For stacks, once one series within the stack is hidden, the rest of the stack will close in around it even if the axis is not affected.
 
 **Try it**
@@ -350,7 +355,7 @@ The background color of the marker square when selecting (zooming in on) an area
 
 **Defaults to** `rgba(51,92,173,0.25)`.
 */
-@property(nonatomic, readwrite) HIColor *selectionMarkerFill;
+@property(nonatomic, readwrite) NSString *selectionMarkerFill;
 /**
 Whether to apply a drop shadow to the plot area. Requires that plotBackgroundColor be set. The shadow can be an object configuration containing `color`, `offsetX`, `offsetY`, `opacity` and `width`.
 
@@ -360,7 +365,7 @@ Whether to apply a drop shadow to the plot area. Requires that plotBackgroundCol
 
 * [Plot shadow](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotshadow/)
 */
-@property(nonatomic, readwrite) id plotShadow;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *plotShadow;
 /**
 Equivalent to `zoomType`, but for multitouch gestures only. By default, the `pinchType` is the same as the `zoomType` setting. However, pinching can be enabled separately in some cases, for example in stock charts where a mouse drag pans the chart, while pinching is enabled. When `tooltip.followTouchMove` is true, pinchType only applies to two-finger touches.
 

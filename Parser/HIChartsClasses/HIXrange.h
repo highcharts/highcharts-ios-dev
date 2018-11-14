@@ -37,8 +37,6 @@ A partial fill for each point, typically used to visualize how much of a task is
 /**
 The corner radius of the border surrounding each column or bar.
 
-**Defaults to** `0`.
-
 **Try it**
 
 * [Rounded columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/)
@@ -62,11 +60,9 @@ The spacing between columns on the Z Axis in a 3D chart. Requires `highcharts-3d
 /**
 A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<NSString *> *colors;
 /**
 The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.
-
-**Defaults to** `null`.
 
 **Try it**
 
@@ -75,8 +71,6 @@ The maximum allowed pixel width for a column, translated to the height of a bar 
 @property(nonatomic, readwrite) NSNumber *maxPointWidth;
 /**
 A pixel value specifying a fixed width for each column or bar. When `null`, the width is calculated from the `pointPadding` and `groupPadding`.
-
-**Defaults to** `null`.
 
 **Try it**
 
@@ -93,6 +87,25 @@ Padding between each column or bar, in x axis units.
 * [0 for tightly packed columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/)
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
+/**
+Padding between each value groups, in x axis units.
+
+**Try it**
+
+* [0.2 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/)
+* [No group padding - all columns are evenly spaced](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/)
+*/
+@property(nonatomic, readwrite) NSNumber *groupPadding;
+/**
+Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
+
+**Defaults to** `true`.
+
+**Try it**
+
+* [Grouping disabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/)
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;
 
 -(NSDictionary *)getParams;
 

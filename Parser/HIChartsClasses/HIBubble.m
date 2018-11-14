@@ -53,6 +53,7 @@
 	copyBubble.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBubble.threshold = [self.threshold copyWithZone: zone];
+	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBubble.borderColor = [self.borderColor copyWithZone: zone];
 	copyBubble.cursor = [self.cursor copyWithZone: zone];

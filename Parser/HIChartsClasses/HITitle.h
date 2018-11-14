@@ -24,7 +24,7 @@ CSS styles for the title. Use this for font styling, but use `align`, `x` and `y
 * [Custom color and weight](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/style/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/)
 */
-@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 The vertical alignment of the title. Can be one of `"top"`, `"middle"` and `"bottom"`. When a value is given, the title behaves as if `floating` were `true`.
 

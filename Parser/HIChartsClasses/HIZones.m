@@ -25,13 +25,13 @@
 		params[@"className"] = self.className;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getData];
+		params[@"color"] = self.color;
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
+		params[@"fillColor"] = self.fillColor;
 	}
 	if (self.value) {
 		params[@"value"] = self.value;
@@ -46,13 +46,9 @@
 	[self updateNSObject:@"className"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
+-(void)setColor:(NSString *)color {
 	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+	[self updateNSObject:@"color"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {
@@ -60,13 +56,9 @@
 	[self updateNSObject:@"dashStyle"];
 }
 
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
+-(void)setFillColor:(NSString *)fillColor {
 	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+	[self updateNSObject:@"fillColor"];
 }
 
 -(void)setValue:(NSNumber *)value {

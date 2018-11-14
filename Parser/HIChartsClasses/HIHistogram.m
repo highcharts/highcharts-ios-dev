@@ -57,6 +57,7 @@
 	copyHistogram.clip = [self.clip copyWithZone: zone];
 	copyHistogram.point = [self.point copyWithZone: zone];
 	copyHistogram.color = [self.color copyWithZone: zone];
+	copyHistogram.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyHistogram.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHistogram.cursor = [self.cursor copyWithZone: zone];
 	copyHistogram.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -120,8 +121,13 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
@@ -201,8 +207,8 @@
 	[self updateNSObject:@"groupZPadding"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

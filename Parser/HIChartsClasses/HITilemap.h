@@ -7,7 +7,6 @@
 */
 
 #import "HISeries.h"
-#import "HIColor.h"
 
 
 /**
@@ -26,15 +25,16 @@ The padding between points in the tilemap.
 */
 @property(nonatomic, readwrite) NSNumber *pointPadding;
 /**
-The column size - how many X axis units each column in the tilemap should span. Works as in `Heatmaps`.
+The shape of the tiles in the tilemap. Possible values are `hexagon`, `circle`, `diamond`, and `square`.
 
-**Defaults to** `1`.
+**Accepted values:** `["circle", "diamond", "hexagon", "square"]`.
 
 **Try it**
 
-* [One day](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/)
+* [Circular tile shapes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa)
+* [Diamond tile shapes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap)
 */
-@property(nonatomic, readwrite) NSNumber *colsize;
+@property(nonatomic, readwrite) NSString *tileShape;
 /**
 The row size - how many Y axis units each tilemap row should span. Analogous to `colsize`.
 
@@ -46,18 +46,19 @@ The row size - how many Y axis units each tilemap row should span. Analogous to 
 */
 @property(nonatomic, readwrite) NSNumber *rowsize;
 /**
-The shape of the tiles in the tilemap. Possible values are `hexagon`, `circle`, `diamond`, and `square`.
+The column size - how many X axis units each column in the tilemap should span. Works as in `Heatmaps`.
+
+**Defaults to** `1`.
 
 **Try it**
 
-* [Circular tile shapes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa)
-* [Diamond tile shapes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap)
+* [One day](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/)
 */
-@property(nonatomic, readwrite) NSString *tileShape;
+@property(nonatomic, readwrite) NSNumber *colsize;
 /**
 The color applied to null points. In styled mode, a general CSS class is applied instead.
 */
-@property(nonatomic, readwrite) HIColor *nullColor;
+@property(nonatomic, readwrite) NSString *nullColor;
 
 -(NSDictionary *)getParams;
 

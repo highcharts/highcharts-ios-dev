@@ -40,8 +40,13 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
@@ -195,8 +200,8 @@
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
