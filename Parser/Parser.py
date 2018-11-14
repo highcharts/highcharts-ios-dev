@@ -339,9 +339,9 @@ def field_in_parent(field, source):
 
 def format_to_h(name, source):
     imports = ""
+    import_hi_set = set()
+    import_hi_string = ""
     description = None
-    colorAdded = False
-    functionAdded = False
     htext = ""
 
     class_name = "HI" + upper_first(create_name(name))
@@ -391,7 +391,7 @@ def format_to_h(name, source):
 
                 htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
 
-            elif "NSArray" in str(get_type(field.data_type)) and structure[field.name].properties:
+            elif "NSArray" in str(get_type(field.data_type)) and structure[field.name].properties and 'HI' not in get_type(field.data_type):
                 type = "{0} <{1} *> *".format(get_type(field.data_type), "HI" + upper_first(
                                                                                           create_name(
                                                                                               field.name)))
@@ -404,8 +404,12 @@ def format_to_h(name, source):
                 type = "{0} *".format(get_type(field.data_type))
                 types[field.name] = type
 
+                hi_match = re.search(r'<(HI[A-Z]{1}[a-z]+) \*>', type)
+                if hi_match:
+                    import_hi_set.add(hi_match.group(1))
+
                 htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
-            elif field.data_type == "Object":
+            elif field.data_type == "Object" or field.data_type == "object":
                 if structure[field.name].properties:
                     type = "{0} *".format("HI" + upper_first(create_name(field.name)))
                     types[field.name] = type
@@ -419,11 +423,7 @@ def format_to_h(name, source):
                     htext += "@property(nonatomic, readwrite) {0} {1};\n".format(type, get_last(field.name))
 
             else:
-                if get_type(field.data_type) == "HIColor" and not colorAdded:
-                    colorAdded = True
-                if get_type(field.data_type) == "HIFunction" and not functionAdded:
-                    functionAdded = True
-                if structure[field.name].properties:
+                if structure[field.name].properties and 'HI' not in get_type(field.data_type):
                     type = "{0} *".format("HI" + upper_first(create_name(field.name)))
                     types[field.name] = type
 
@@ -432,6 +432,9 @@ def format_to_h(name, source):
                 else:
                     type = "{0} *".format(get_type(field.data_type))
                     types[field.name] = type
+
+                    if 'HI' in type:
+                        import_hi_set.add(get_type(field.data_type))
 
                     htext += "@property(nonatomic, readwrite) {0}{1};\n".format(type, get_last(field.name))
         else:
@@ -451,12 +454,19 @@ def format_to_h(name, source):
 
     htext += "\n-(NSDictionary *)getParams;\n"
     htext += "\n@end\n"
-    if imports == "":
+
+    for mathch in import_hi_set:
+        import_hi_string += "#import \"" + mathch + ".h\"\n"
+
+    if 'HIColor' in import_hi_set:
+        import_hi_set.remove('HIColor')
+    if 'HIFunction' in import_hi_set:
+        import_hi_set.remove('HIFunction')
+
+    if imports == "" and len(import_hi_set) == 0:
         imports += "#import \"HIChartsJSONSerializable.h\"\n"
-    if colorAdded:
-        imports += "#import \"HIColor.h\"\n"
-    if functionAdded:
-        imports += "#import \"HIFunction.h\"\n"
+    imports += import_hi_string
+
     imports += "\n\n"
     return filelicense + imports + htext
 
@@ -1395,11 +1405,13 @@ def print_unknown_tree_types():
 
 def main():
     create_namespace_structure()
-    print_namespace_structure()
+    #print_namespace_structure()
 
     print_unknown_namespace_types()
 
     create_structure()
+
+    #print_structure()
 
     print_unknown_tree_types()
 
