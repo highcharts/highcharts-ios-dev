@@ -454,6 +454,7 @@ def format_to_h(name, source):
 
     htext += "\n-(NSDictionary *)getParams;\n"
     htext += "\n@end\n"
+    htext = htext.replace('*default;', '*defaults;')
 
     for mathch in import_hi_set:
         import_hi_string += "#import \"" + mathch + ".h\"\n"
@@ -472,7 +473,7 @@ def format_to_h(name, source):
 
 
 def create_setter(field):
-    setter_attribute = get_last(field.name)
+    setter_attribute = re.sub(r'\bdefault\b', 'defaults', get_last(field.name))
     setter_type = re.sub('\s/(.?)+/', '', types[field.name])
 
     setter_text = "-(void)set{0}:({1}){2}".format(upper_first(setter_attribute), setter_type, setter_attribute) + " {\n"
@@ -520,7 +521,7 @@ def format_to_m(name, source):
         getParams += "@{}];\n"
 
     for field in classes[class_name]:
-        variableName = get_last(field.name)
+        variableName = re.sub(r'\bdefault\b', 'defaults', get_last(field.name))
         copyWithZones += "\t{0}.{1} = [self.{1} copyWithZone: zone];\n".format(copyParamName, variableName)
 
         if field_in_parent(field, source):
@@ -530,17 +531,17 @@ def format_to_m(name, source):
             if structure[field.name].data_type:
                 data_type = structure[field.name].data_type
                 if get_type(data_type) == 'HIFunction':
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getFunction];\n".format(variableName,
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getFunction];\n".format(re.sub(r'\bdefaults\b', 'default', variableName),
                                                                                            variableName)
                 elif get_type(data_type) == 'HIColor':
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(variableName,
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getData];\n".format(re.sub(r'\bdefaults\b', 'default', variableName),
                                                                                        variableName)
                 elif get_type(data_type) == 'NSArray<HIColor *>':
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     getParams += "\t\tfor (HIColor *obj in self.{0})".format(variableName) + " {\n"
                     getParams += "\t\t\t[array addObject:[obj getData]];\n".format(variableName)
                     getParams += "\t\t}\n"
-                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(variableName)
+                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(re.sub(r'\bdefaults\b', 'default', variableName))
                 elif 'NSArray' in str(get_type(data_type)):
                     getParams += "\t\tNSMutableArray *array = [[NSMutableArray alloc] init];\n"
                     getParams += "\t\tfor (id obj in self.{0})".format(variableName) + " {\n"
@@ -552,14 +553,14 @@ def format_to_m(name, source):
                     getParams += "\t\t\telse {\n\t\t\t\t[array addObject: obj];\n"
                     getParams += "\t\t\t}\n"
                     getParams += "\t\t}\n"
-                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(variableName)
+                    getParams += "\t\tparams[@\"{0}\"] = array;\n".format(re.sub(r'\bdefaults\b', 'default', variableName))
                 elif structure[field.name].properties:
-                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(variableName,
+                    getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(re.sub(r'\bdefaults\b', 'default', variableName),
                                                                                          variableName)
                 else:
-                    getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(variableName, variableName)
+                    getParams += "\t\tparams[@\"{0}\"] = self.{1};\n".format(re.sub(r'\bdefaults\b', 'default', variableName), variableName)
             elif structure[field.name].properties:
-                getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(variableName,
+                getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(re.sub(r'\bdefaults\b', 'default', variableName),
                                                                                      variableName)
             getParams += "\t}\n"
 
@@ -981,8 +982,6 @@ def create_class(node):
             name = "HIPoint"
         elif name == "description":
             name = "definition"
-        elif name == "default": # sprawdzic!
-            name = "defaults"
 
         c = HIChartsClass(name, data_type, description, demo, values, defaults, products, extends, exclude, source, parent)
         return c
