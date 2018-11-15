@@ -12,25 +12,25 @@
 	HILabels *copyLabels = [[HILabels allocWithZone: zone] init];
 	copyLabels.items = [self.items copyWithZone: zone];
 	copyLabels.style = [self.style copyWithZone: zone];
+	copyLabels.distance = [self.distance copyWithZone: zone];
+	copyLabels.align = [self.align copyWithZone: zone];
 	copyLabels.y = [self.y copyWithZone: zone];
 	copyLabels.x = [self.x copyWithZone: zone];
-	copyLabels.align = [self.align copyWithZone: zone];
-	copyLabels.distance = [self.distance copyWithZone: zone];
-	copyLabels.zIndex = [self.zIndex copyWithZone: zone];
-	copyLabels.reserveSpace = [self.reserveSpace copyWithZone: zone];
-	copyLabels.format = [self.format copyWithZone: zone];
-	copyLabels.autoRotationLimit = [self.autoRotationLimit copyWithZone: zone];
-	copyLabels.enabled = [self.enabled copyWithZone: zone];
 	copyLabels.staggerLines = [self.staggerLines copyWithZone: zone];
+	copyLabels.autoRotationLimit = [self.autoRotationLimit copyWithZone: zone];
 	copyLabels.position3d = [self.position3d copyWithZone: zone];
-	copyLabels.padding = [self.padding copyWithZone: zone];
-	copyLabels.step = [self.step copyWithZone: zone];
-	copyLabels.skew3d = [self.skew3d copyWithZone: zone];
-	copyLabels.overflow = [self.overflow copyWithZone: zone];
-	copyLabels.formatter = [self.formatter copyWithZone: zone];
 	copyLabels.rotation = [self.rotation copyWithZone: zone];
+	copyLabels.reserveSpace = [self.reserveSpace copyWithZone: zone];
 	copyLabels.useHTML = [self.useHTML copyWithZone: zone];
+	copyLabels.skew3d = [self.skew3d copyWithZone: zone];
+	copyLabels.formatter = [self.formatter copyWithZone: zone];
 	copyLabels.autoRotation = [self.autoRotation copyWithZone: zone];
+	copyLabels.padding = [self.padding copyWithZone: zone];
+	copyLabels.format = [self.format copyWithZone: zone];
+	copyLabels.zIndex = [self.zIndex copyWithZone: zone];
+	copyLabels.step = [self.step copyWithZone: zone];
+	copyLabels.overflow = [self.overflow copyWithZone: zone];
+	copyLabels.enabled = [self.enabled copyWithZone: zone];
 	copyLabels.point = [self.point copyWithZone: zone];
 	copyLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
 	copyLabels.borderColor = [self.borderColor copyWithZone: zone];
@@ -64,59 +64,41 @@
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
+	if (self.distance) {
+		params[@"distance"] = self.distance;
+	}
+	if (self.align) {
+		params[@"align"] = self.align;
+	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
-	if (self.align) {
-		params[@"align"] = self.align;
-	}
-	if (self.distance) {
-		params[@"distance"] = self.distance;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.reserveSpace) {
-		params[@"reserveSpace"] = self.reserveSpace;
-	}
-	if (self.format) {
-		params[@"format"] = self.format;
+	if (self.staggerLines) {
+		params[@"staggerLines"] = self.staggerLines;
 	}
 	if (self.autoRotationLimit) {
 		params[@"autoRotationLimit"] = self.autoRotationLimit;
 	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
-	if (self.staggerLines) {
-		params[@"staggerLines"] = self.staggerLines;
-	}
 	if (self.position3d) {
 		params[@"position3d"] = self.position3d;
-	}
-	if (self.padding) {
-		params[@"padding"] = self.padding;
-	}
-	if (self.step) {
-		params[@"step"] = self.step;
-	}
-	if (self.skew3d) {
-		params[@"skew3d"] = self.skew3d;
-	}
-	if (self.overflow) {
-		params[@"overflow"] = self.overflow;
-	}
-	if (self.formatter) {
-		params[@"formatter"] = [self.formatter getFunction];
 	}
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
 	}
+	if (self.reserveSpace) {
+		params[@"reserveSpace"] = self.reserveSpace;
+	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
+	}
+	if (self.skew3d) {
+		params[@"skew3d"] = self.skew3d;
+	}
+	if (self.formatter) {
+		params[@"formatter"] = [self.formatter getFunction];
 	}
 	if (self.autoRotation) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -129,6 +111,24 @@
 			}
 		}
 		params[@"autoRotation"] = array;
+	}
+	if (self.padding) {
+		params[@"padding"] = self.padding;
+	}
+	if (self.format) {
+		params[@"format"] = self.format;
+	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
+	}
+	if (self.step) {
+		params[@"step"] = self.step;
+	}
+	if (self.overflow) {
+		params[@"overflow"] = self.overflow;
+	}
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
@@ -177,13 +177,23 @@
 	[self updateArrayObject:oldValue newValue:items propertyName:@"items"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	if(self.style) {
 		[self removeObserver:self forKeyPath:@"style.isUpdated"];
 	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setDistance:(NSNumber *)distance {
+	_distance = distance;
+	[self updateNSObject:@"distance"];
+}
+
+-(void)setAlign:(NSString *)align {
+	_align = align;
+	[self updateNSObject:@"align"];
 }
 
 -(void)setY:(NSNumber *)y {
@@ -196,29 +206,9 @@
 	[self updateNSObject:@"x"];
 }
 
--(void)setAlign:(NSString *)align {
-	_align = align;
-	[self updateNSObject:@"align"];
-}
-
--(void)setDistance:(NSNumber *)distance {
-	_distance = distance;
-	[self updateNSObject:@"distance"];
-}
-
--(void)setZIndex:(NSNumber *)zIndex {
-	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
-}
-
--(void)setReserveSpace:(NSNumber *)reserveSpace {
-	_reserveSpace = reserveSpace;
-	[self updateNSObject:@"reserveSpace"];
-}
-
--(void)setFormat:(NSString *)format {
-	_format = format;
-	[self updateNSObject:@"format"];
+-(void)setStaggerLines:(NSNumber *)staggerLines {
+	_staggerLines = staggerLines;
+	[self updateNSObject:@"staggerLines"];
 }
 
 -(void)setAutoRotationLimit:(NSNumber *)autoRotationLimit {
@@ -226,39 +216,29 @@
 	[self updateNSObject:@"autoRotationLimit"];
 }
 
--(void)setEnabled:(NSNumber *)enabled {
-	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
-}
-
--(void)setStaggerLines:(NSNumber *)staggerLines {
-	_staggerLines = staggerLines;
-	[self updateNSObject:@"staggerLines"];
-}
-
 -(void)setPosition3d:(NSString *)position3d {
 	_position3d = position3d;
 	[self updateNSObject:@"position3d"];
 }
 
--(void)setPadding:(NSNumber *)padding {
-	_padding = padding;
-	[self updateNSObject:@"padding"];
+-(void)setRotation:(NSNumber *)rotation {
+	_rotation = rotation;
+	[self updateNSObject:@"rotation"];
 }
 
--(void)setStep:(NSNumber *)step {
-	_step = step;
-	[self updateNSObject:@"step"];
+-(void)setReserveSpace:(NSNumber *)reserveSpace {
+	_reserveSpace = reserveSpace;
+	[self updateNSObject:@"reserveSpace"];
+}
+
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
 }
 
 -(void)setSkew3d:(NSNumber *)skew3d {
 	_skew3d = skew3d;
 	[self updateNSObject:@"skew3d"];
-}
-
--(void)setOverflow:(id)overflow {
-	_overflow = overflow;
-	[self updateNSObject:@"overflow"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {
@@ -270,20 +250,40 @@
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
--(void)setRotation:(NSNumber *)rotation {
-	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
-}
-
--(void)setUseHTML:(NSNumber *)useHTML {
-	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
-}
-
 -(void)setAutoRotation:(NSArray<NSNumber *> *)autoRotation {
 	NSArray<NSNumber *> *oldValue = _autoRotation;
 	_autoRotation = autoRotation;
 	[self updateArrayObject:oldValue newValue:autoRotation propertyName:@"autoRotation"];
+}
+
+-(void)setPadding:(NSNumber *)padding {
+	_padding = padding;
+	[self updateNSObject:@"padding"];
+}
+
+-(void)setFormat:(NSString *)format {
+	_format = format;
+	[self updateNSObject:@"format"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	_zIndex = zIndex;
+	[self updateNSObject:@"zIndex"];
+}
+
+-(void)setStep:(NSNumber *)step {
+	_step = step;
+	[self updateNSObject:@"step"];
+}
+
+-(void)setOverflow:(id)overflow {
+	_overflow = overflow;
+	[self updateNSObject:@"overflow"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
 }
 
 -(void)setPoint:(HIPoint *)point {

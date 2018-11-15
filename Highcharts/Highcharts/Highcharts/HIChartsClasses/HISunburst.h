@@ -9,36 +9,10 @@
 #import "HISeries.h"
 #import "HILevelSize.h"
 #import "HILevels.h"
-#import "HIColor.h"
 
 
 /**
-A `sunburst` series. If the `type` option is not specified, it is inherited from `chart.type`.
-
-Configuration options for the series are given in three levels:
- 
-1. Options for all series in a chart are defined in the `plotOptions.series` object.
-
-2. Options for all `sunburst` series are defined in `plotOptions.sunburst`.
-
-3. Options for one single series are given in `the series instance array`.
- 
-<pre>
- Highcharts.chart('container', {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        sunburst: {
-            // shared options for all sunburst series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: 'sunburst'
-    }]
- });
-<pre>
+A `sunburst` series. If the `type` option is not specified, it is inherited from `chart.type`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `sunburst` series are defined in  `plotOptions.sunburst`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     sunburst: {       // shared options for all sunburst series     }   },   series: [{     // specific options for this series instance     type: 'sunburst'   }] });  
 */
 @interface HISunburst: HISeries
 
@@ -69,8 +43,6 @@ The center of the sunburst chart relative to the plot area. Can be percentages o
 @property(nonatomic, readwrite) NSArray /* <NSString, NSNumber> */ *center;
 /**
 If a point is sliced, moved out from the center, how many pixels should it be moved?.
-
-**Defaults to** `10`.
 
 **Try it**
 
@@ -106,7 +78,7 @@ A series specific or series type specific color set to use instead of the global
 
 * [Set default colors for all pies](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome/)
 */
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<NSString *> *colors;
 /**
 The start angle of the pie slices in degrees where 0 is top and 90 right.
 
@@ -124,7 +96,7 @@ The diameter of the pie relative to the plot area. Can be a percentage or pixel 
 
 * [Smaller pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-size/)
 */
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ size;
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ size;
 
 -(NSDictionary *)getParams;
 

@@ -7,10 +7,9 @@
 */
 
 #import "HITitle.h"
-#import "HIItemCheckboxStyle.h"
-#import "HIItemStyle.h"
 #import "HIKeyboardNavigation.h"
 #import "HINavigation.h"
+#import "HICSSObject.h"
 
 
 /**
@@ -160,7 +159,7 @@ Default styling for the checkbox next to a legend item when `showCheckbox` is tr
 
 **Defaults to** `{"width": "13px", "height": "13px", "position":"absolute"}`.
 */
-@property(nonatomic, readwrite) HIItemCheckboxStyle *itemCheckboxStyle;
+@property(nonatomic, readwrite) HICSSObject *itemCheckboxStyle;
 /**
 A [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) for each legend label. Available variables relates to properties on the series, or the point in case of pies.
 
@@ -176,7 +175,7 @@ CSS styles for each legend item. Only a subset of CSS is supported, notably thos
 
 * [Bold black text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemstyle/)
 */
-@property(nonatomic, readwrite) HIItemStyle *itemStyle;
+@property(nonatomic, readwrite) HICSSObject *itemStyle;
 /**
 Whether to reverse the order of the legend items compared to the order of the series or points as defined in the configuration object.
 

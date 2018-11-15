@@ -18,7 +18,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.animation) {
-		params[@"animation"] = self.animation;
+		params[@"animation"] = [self.animation getParams];
 	}
 	return params;
 }

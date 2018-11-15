@@ -10,32 +10,7 @@
 
 
 /**
-A `bubble` series. If the `type` option is not specified, it is inherited from `chart.type`.
-
-Configuration options for the series are given in three levels:
- 
-1. Options for all series in a chart are defined in the `plotOptions.series` object.
-
-2. Options for all `bubble` series are defined in `plotOptions.bubble`.
-
-3. Options for one single series are given in `the series instance array`.
- 
-<pre>
- Highcharts.chart('container', {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        bubble: {
-            // shared options for all bubble series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: 'bubble'
-    }]
- });
-<pre>
+A `bubble` series. If the `type` option is not specified, it is inherited from `chart.type`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `bubble` series are defined in  `plotOptions.bubble`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     bubble: {       // shared options for all bubble series     }   },   series: [{     // specific options for this series instance     type: 'bubble'   }] });  
 */
 @interface HIBubble: HISeries
 

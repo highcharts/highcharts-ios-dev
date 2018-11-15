@@ -197,7 +197,7 @@
 		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
 	}
 	if (self.minorGridLineColor) {
-		params[@"minorGridLineColor"] = [self.minorGridLineColor getData];
+		params[@"minorGridLineColor"] = self.minorGridLineColor;
 	}
 	if (self.tickPositioner) {
 		params[@"tickPositioner"] = [self.tickPositioner getFunction];
@@ -245,7 +245,7 @@
 		params[@"floor"] = self.floor;
 	}
 	if (self.tickColor) {
-		params[@"tickColor"] = [self.tickColor getData];
+		params[@"tickColor"] = self.tickColor;
 	}
 	if (self.minorTickInterval) {
 		params[@"minorTickInterval"] = self.minorTickInterval;
@@ -260,7 +260,7 @@
 		params[@"showLastLabel"] = self.showLastLabel;
 	}
 	if (self.minorTickColor) {
-		params[@"minorTickColor"] = [self.minorTickColor getData];
+		params[@"minorTickColor"] = self.minorTickColor;
 	}
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
@@ -272,7 +272,7 @@
 		params[@"tickAmount"] = self.tickAmount;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
+		params[@"lineColor"] = self.lineColor;
 	}
 	if (self.tickPosition) {
 		params[@"tickPosition"] = self.tickPosition;
@@ -472,13 +472,9 @@
 	[self updateNSObject:@"tickmarkPlacement"];
 }
 
--(void)setMinorGridLineColor:(HIColor *)minorGridLineColor {
-	HIColor *oldValue = _minorGridLineColor;
-	if(self.minorGridLineColor) {
-		[self removeObserver:self forKeyPath:@"minorGridLineColor.isUpdated"];
-	}
+-(void)setMinorGridLineColor:(NSString *)minorGridLineColor {
 	_minorGridLineColor = minorGridLineColor;
-	[self updateHIObject:oldValue newValue:minorGridLineColor propertyName:@"minorGridLineColor"];
+	[self updateNSObject:@"minorGridLineColor"];
 }
 
 -(void)setTickPositioner:(HIFunction *)tickPositioner {
@@ -500,8 +496,8 @@
 	[self updateNSObject:@"minorTickLength"];
 }
 
--(void)setUnits:(NSArray *)units {
-	NSArray *oldValue = _units;
+-(void)setUnits:(NSArray<NSArray *> *)units {
+	NSArray<NSArray *> *oldValue = _units;
 	_units = units;
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
 }
@@ -546,13 +542,9 @@
 	[self updateNSObject:@"floor"];
 }
 
--(void)setTickColor:(HIColor *)tickColor {
-	HIColor *oldValue = _tickColor;
-	if(self.tickColor) {
-		[self removeObserver:self forKeyPath:@"tickColor.isUpdated"];
-	}
+-(void)setTickColor:(NSString *)tickColor {
 	_tickColor = tickColor;
-	[self updateHIObject:oldValue newValue:tickColor propertyName:@"tickColor"];
+	[self updateNSObject:@"tickColor"];
 }
 
 -(void)setMinorTickInterval:(id)minorTickInterval {
@@ -575,13 +567,9 @@
 	[self updateNSObject:@"showLastLabel"];
 }
 
--(void)setMinorTickColor:(HIColor *)minorTickColor {
-	HIColor *oldValue = _minorTickColor;
-	if(self.minorTickColor) {
-		[self removeObserver:self forKeyPath:@"minorTickColor.isUpdated"];
-	}
+-(void)setMinorTickColor:(NSString *)minorTickColor {
 	_minorTickColor = minorTickColor;
-	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
+	[self updateNSObject:@"minorTickColor"];
 }
 
 -(void)setUniqueNames:(NSNumber *)uniqueNames {
@@ -599,13 +587,9 @@
 	[self updateNSObject:@"tickAmount"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
+-(void)setLineColor:(NSString *)lineColor {
 	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+	[self updateNSObject:@"lineColor"];
 }
 
 -(void)setTickPosition:(NSString *)tickPosition {

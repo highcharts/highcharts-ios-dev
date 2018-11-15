@@ -37,8 +37,8 @@
 
 # pragma mark - Setters
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	if(self.style) {
 		[self removeObserver:self forKeyPath:@"style.isUpdated"];
 	}
@@ -46,8 +46,8 @@
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
--(void)setLabelStyle:(HILabelStyle *)labelStyle {
-	HILabelStyle *oldValue = _labelStyle;
+-(void)setLabelStyle:(HICSSObject *)labelStyle {
+	HICSSObject *oldValue = _labelStyle;
 	if(self.labelStyle) {
 		[self removeObserver:self forKeyPath:@"labelStyle.isUpdated"];
 	}

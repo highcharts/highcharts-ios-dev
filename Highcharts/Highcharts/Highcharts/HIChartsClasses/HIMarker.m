@@ -45,10 +45,10 @@
 		params[@"states"] = [self.states getParams];
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
+		params[@"fillColor"] = self.fillColor;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
+		params[@"lineColor"] = self.lineColor;
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
@@ -110,22 +110,14 @@
 	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
 }
 
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
+-(void)setFillColor:(NSString *)fillColor {
 	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+	[self updateNSObject:@"fillColor"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
+-(void)setLineColor:(NSString *)lineColor {
 	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+	[self updateNSObject:@"lineColor"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {

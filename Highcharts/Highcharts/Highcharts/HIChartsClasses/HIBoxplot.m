@@ -31,11 +31,12 @@
 	copyBoxplot.tooltip = [self.tooltip copyWithZone: zone];
 	copyBoxplot.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyBoxplot.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
-	copyBoxplot.fillColor = [self.fillColor copyWithZone: zone];
+	copyBoxplot.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyBoxplot.whiskerWidth = [self.whiskerWidth copyWithZone: zone];
 	copyBoxplot.threshold = [self.threshold copyWithZone: zone];
 	copyBoxplot.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyBoxplot.stemWidth = [self.stemWidth copyWithZone: zone];
-	copyBoxplot.whiskerWidth = [self.whiskerWidth copyWithZone: zone];
+	copyBoxplot.fillColor = [self.fillColor copyWithZone: zone];
 	copyBoxplot.pointRange = [self.pointRange copyWithZone: zone];
 	copyBoxplot.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyBoxplot.cropThreshold = [self.cropThreshold copyWithZone: zone];
@@ -112,14 +113,14 @@
 	if (self.stemDashStyle) {
 		params[@"stemDashStyle"] = self.stemDashStyle;
 	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
+	if (self.whiskerWidth) {
+		params[@"whiskerWidth"] = self.whiskerWidth;
 	}
 	if (self.stemWidth) {
 		params[@"stemWidth"] = self.stemWidth;
 	}
-	if (self.whiskerWidth) {
-		params[@"whiskerWidth"] = self.whiskerWidth;
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -129,8 +130,13 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
@@ -211,13 +217,9 @@
 	[self updateNSObject:@"stemDashStyle"];
 }
 
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+-(void)setWhiskerWidth:(NSNumber *)whiskerWidth {
+	_whiskerWidth = whiskerWidth;
+	[self updateNSObject:@"whiskerWidth"];
 }
 
 -(void)setStemWidth:(NSNumber *)stemWidth {
@@ -225,9 +227,13 @@
 	[self updateNSObject:@"stemWidth"];
 }
 
--(void)setWhiskerWidth:(NSNumber *)whiskerWidth {
-	_whiskerWidth = whiskerWidth;
-	[self updateNSObject:@"whiskerWidth"];
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	if(self.fillColor) {
+		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
+	}
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {
@@ -240,8 +246,8 @@
 	[self updateNSObject:@"minPointLength"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

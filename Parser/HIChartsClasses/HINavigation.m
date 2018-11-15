@@ -39,7 +39,7 @@
 		params[@"menuItemHoverStyle"] = [self.menuItemHoverStyle getParams];
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.arrowSize) {
 		params[@"arrowSize"] = self.arrowSize;
@@ -51,7 +51,7 @@
 		params[@"inactiveColor"] = self.inactiveColor;
 	}
 	if (self.animation) {
-		params[@"animation"] = self.animation;
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.activeColor) {
 		params[@"activeColor"] = self.activeColor;

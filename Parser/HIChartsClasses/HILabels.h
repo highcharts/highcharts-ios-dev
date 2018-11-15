@@ -7,10 +7,10 @@
 */
 
 #import "HIItems.h"
-#import "HIStyle.h"
 #import "HIPoint.h"
 #import "HIColor.h"
 #import "HIFunction.h"
+#import "HICSSObject.h"
 
 
 /**
@@ -27,7 +27,7 @@ Shared CSS styles for all labels.
 
 **Defaults to** `{"color": "#333333", "position": "absolute"}`.
 */
-@property(nonatomic, readwrite) HIStyle *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 Angular gauges and solid gauges only. The label's pixel distance from the perimeter of the plot area.
 

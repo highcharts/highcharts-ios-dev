@@ -21,10 +21,10 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.labelStyle) {
-		params[@"labelStyle"] = self.labelStyle;
+		params[@"labelStyle"] = [self.labelStyle getParams];
 	}
 	if (self.hideDuration) {
 		params[@"hideDuration"] = self.hideDuration;

@@ -17,14 +17,15 @@
 	HIArearange *copyArearange = [[HIArearange allocWithZone: zone] init];
 	copyArearange.tooltip = [self.tooltip copyWithZone: zone];
 	copyArearange.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyArearange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyArearange.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyArearange.threshold = [self.threshold copyWithZone: zone];
 	copyArearange.shadow = [self.shadow copyWithZone: zone];
 	copyArearange.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyArearange.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyArearange.lineColor = [self.lineColor copyWithZone: zone];
 	copyArearange.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyArearange.fillColor = [self.fillColor copyWithZone: zone];
+	copyArearange.lineColor = [self.lineColor copyWithZone: zone];
 	copyArearange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyArearange.linecap = [self.linecap copyWithZone: zone];
 	copyArearange.selected = [self.selected copyWithZone: zone];
@@ -89,13 +90,13 @@
 		params[@"trackByArea"] = self.trackByArea;
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = [self.negativeFillColor getData];
-	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
+		params[@"negativeFillColor"] = self.negativeFillColor;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
+		params[@"fillColor"] = self.fillColor;
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = self.lineColor;
 	}
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
@@ -110,31 +111,19 @@
 	[self updateNSObject:@"trackByArea"];
 }
 
--(void)setNegativeFillColor:(HIColor *)negativeFillColor {
-	HIColor *oldValue = _negativeFillColor;
-	if(self.negativeFillColor) {
-		[self removeObserver:self forKeyPath:@"negativeFillColor.isUpdated"];
-	}
+-(void)setNegativeFillColor:(NSString *)negativeFillColor {
 	_negativeFillColor = negativeFillColor;
-	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
+	[self updateNSObject:@"negativeFillColor"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
+-(void)setFillColor:(NSString *)fillColor {
 	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+	[self updateNSObject:@"fillColor"];
+}
+
+-(void)setLineColor:(NSString *)lineColor {
+	_lineColor = lineColor;
+	[self updateNSObject:@"lineColor"];
 }
 
 -(void)setFillOpacity:(NSNumber *)fillOpacity {

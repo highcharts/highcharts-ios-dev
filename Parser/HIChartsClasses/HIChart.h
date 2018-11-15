@@ -11,6 +11,8 @@
 #import "HIEvents.h"
 #import "HIScrollablePlotArea.h"
 #import "HIResetZoomButton.h"
+#import "HIAnimationOptionsObject.h"
+#import "HICSSObject.h"
 
 
 /**

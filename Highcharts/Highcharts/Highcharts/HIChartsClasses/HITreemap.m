@@ -56,6 +56,7 @@
 	copyTreemap.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyTreemap.threshold = [self.threshold copyWithZone: zone];
 	copyTreemap.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyTreemap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTreemap.cursor = [self.cursor copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];

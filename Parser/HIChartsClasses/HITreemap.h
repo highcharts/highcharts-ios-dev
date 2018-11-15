@@ -9,6 +9,7 @@
 #import "HISeries.h"
 #import "HILevels.h"
 #import "HIDrillUpButton.h"
+#import "HIColor.h"
 
 
 /**

@@ -38,13 +38,9 @@
 	[self updateHIObject:oldValue newValue:condition propertyName:@"condition"];
 }
 
--(void)setChartOptions:(HIOptions *)chartOptions {
-	HIOptions *oldValue = _chartOptions;
-	if(self.chartOptions) {
-		[self removeObserver:self forKeyPath:@"chartOptions.isUpdated"];
-	}
+-(void)setChartOptions:(NSDictionary *)chartOptions {
 	_chartOptions = chartOptions;
-	[self updateHIObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
+	[self updateNSObject:@"chartOptions"];
 }
 
 @end

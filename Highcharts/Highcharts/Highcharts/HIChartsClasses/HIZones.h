@@ -7,7 +7,6 @@
 */
 
 #import "HIChartsJSONSerializable.h"
-#import "HIColor.h"
 
 
 /**
@@ -30,7 +29,7 @@ Styled mode only. A custom class name for the zone.
 /**
 Defines the color of the series.
 */
-@property(nonatomic, readwrite) HIColor *color;
+@property(nonatomic, readwrite) NSString *color;
 /**
 A name for the dash style to use for the graph.
 
@@ -42,7 +41,7 @@ A name for the dash style to use for the graph.
 /**
 Defines the fill color for the series (in area type series)
 */
-@property(nonatomic, readwrite) HIColor *fillColor;
+@property(nonatomic, readwrite) NSString *fillColor;
 /**
 The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
 */

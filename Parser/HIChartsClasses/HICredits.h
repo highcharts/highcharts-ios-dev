@@ -7,6 +7,7 @@
 */
 
 #import "HIPosition.h"
+#import "HICSSObject.h"
 
 
 /**

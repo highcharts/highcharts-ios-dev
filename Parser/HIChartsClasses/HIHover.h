@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIAnimation.h"
 #import "HIHalo.h"
+#import "HIAnimationOptionsObject.h"
 
 
 /**
@@ -31,7 +31,7 @@ Enable separate styles for the hovered series to visualize that the user hovers 
 /**
 Animation setting for hovering the graph in line-type series.
 */
-@property(nonatomic, readwrite) HIAnimation *animation;
+@property(nonatomic, readwrite) HIAnimationOptionsObject *animation;
 /**
 Pixel width of the graph line. By default this property is undefined, and the `lineWidthPlus` property dictates how much to increase the linewidth from normal state.
 

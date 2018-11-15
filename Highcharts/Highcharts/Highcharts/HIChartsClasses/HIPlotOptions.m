@@ -10,40 +10,40 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIPlotOptions *copyPlotOptions = [[HIPlotOptions allocWithZone: zone] init];
-	copyPlotOptions.tilemap = [self.tilemap copyWithZone: zone];
+	copyPlotOptions.xrange = [self.xrange copyWithZone: zone];
 	copyPlotOptions.bellcurve = [self.bellcurve copyWithZone: zone];
 	copyPlotOptions.pyramid = [self.pyramid copyWithZone: zone];
 	copyPlotOptions.columnrange = [self.columnrange copyWithZone: zone];
+	copyPlotOptions.bubble = [self.bubble copyWithZone: zone];
+	copyPlotOptions.errorbar = [self.errorbar copyWithZone: zone];
 	copyPlotOptions.pie = [self.pie copyWithZone: zone];
 	copyPlotOptions.gauge = [self.gauge copyWithZone: zone];
 	copyPlotOptions.pareto = [self.pareto copyWithZone: zone];
 	copyPlotOptions.spline = [self.spline copyWithZone: zone];
 	copyPlotOptions.areaspline = [self.areaspline copyWithZone: zone];
 	copyPlotOptions.polygon = [self.polygon copyWithZone: zone];
-	copyPlotOptions.area = [self.area copyWithZone: zone];
-	copyPlotOptions.xrange = [self.xrange copyWithZone: zone];
-	copyPlotOptions.heatmap = [self.heatmap copyWithZone: zone];
+	copyPlotOptions.streamgraph = [self.streamgraph copyWithZone: zone];
+	copyPlotOptions.tilemap = [self.tilemap copyWithZone: zone];
+	copyPlotOptions.vector = [self.vector copyWithZone: zone];
 	copyPlotOptions.series = [self.series copyWithZone: zone];
-	copyPlotOptions.scatter3d = [self.scatter3d copyWithZone: zone];
-	copyPlotOptions.bubble = [self.bubble copyWithZone: zone];
+	copyPlotOptions.sunburst = [self.sunburst copyWithZone: zone];
 	copyPlotOptions.boxplot = [self.boxplot copyWithZone: zone];
+	copyPlotOptions.scatter3d = [self.scatter3d copyWithZone: zone];
+	copyPlotOptions.heatmap = [self.heatmap copyWithZone: zone];
 	copyPlotOptions.solidgauge = [self.solidgauge copyWithZone: zone];
 	copyPlotOptions.funnel = [self.funnel copyWithZone: zone];
-	copyPlotOptions.errorbar = [self.errorbar copyWithZone: zone];
 	copyPlotOptions.histogram = [self.histogram copyWithZone: zone];
-	copyPlotOptions.vector = [self.vector copyWithZone: zone];
 	copyPlotOptions.waterfall = [self.waterfall copyWithZone: zone];
+	copyPlotOptions.bar = [self.bar copyWithZone: zone];
 	copyPlotOptions.line = [self.line copyWithZone: zone];
 	copyPlotOptions.windbarb = [self.windbarb copyWithZone: zone];
-	copyPlotOptions.bar = [self.bar copyWithZone: zone];
 	copyPlotOptions.variwide = [self.variwide copyWithZone: zone];
 	copyPlotOptions.bullet = [self.bullet copyWithZone: zone];
 	copyPlotOptions.column = [self.column copyWithZone: zone];
-	copyPlotOptions.streamgraph = [self.streamgraph copyWithZone: zone];
+	copyPlotOptions.area = [self.area copyWithZone: zone];
 	copyPlotOptions.treemap = [self.treemap copyWithZone: zone];
 	copyPlotOptions.areasplinerange = [self.areasplinerange copyWithZone: zone];
 	copyPlotOptions.wordcloud = [self.wordcloud copyWithZone: zone];
-	copyPlotOptions.sunburst = [self.sunburst copyWithZone: zone];
 	copyPlotOptions.arearange = [self.arearange copyWithZone: zone];
 	copyPlotOptions.variablepie = [self.variablepie copyWithZone: zone];
 	copyPlotOptions.scatter = [self.scatter copyWithZone: zone];
@@ -54,8 +54,8 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.tilemap) {
-		params[@"tilemap"] = [self.tilemap getParams];
+	if (self.xrange) {
+		params[@"xrange"] = [self.xrange getParams];
 	}
 	if (self.bellcurve) {
 		params[@"bellcurve"] = [self.bellcurve getParams];
@@ -65,6 +65,12 @@
 	}
 	if (self.columnrange) {
 		params[@"columnrange"] = [self.columnrange getParams];
+	}
+	if (self.bubble) {
+		params[@"bubble"] = [self.bubble getParams];
+	}
+	if (self.errorbar) {
+		params[@"errorbar"] = [self.errorbar getParams];
 	}
 	if (self.pie) {
 		params[@"pie"] = [self.pie getParams];
@@ -84,26 +90,29 @@
 	if (self.polygon) {
 		params[@"polygon"] = [self.polygon getParams];
 	}
-	if (self.area) {
-		params[@"area"] = [self.area getParams];
+	if (self.streamgraph) {
+		params[@"streamgraph"] = [self.streamgraph getParams];
 	}
-	if (self.xrange) {
-		params[@"xrange"] = [self.xrange getParams];
+	if (self.tilemap) {
+		params[@"tilemap"] = [self.tilemap getParams];
 	}
-	if (self.heatmap) {
-		params[@"heatmap"] = [self.heatmap getParams];
+	if (self.vector) {
+		params[@"vector"] = [self.vector getParams];
 	}
 	if (self.series) {
 		params[@"series"] = [self.series getParams];
 	}
-	if (self.scatter3d) {
-		params[@"scatter3d"] = [self.scatter3d getParams];
-	}
-	if (self.bubble) {
-		params[@"bubble"] = [self.bubble getParams];
+	if (self.sunburst) {
+		params[@"sunburst"] = [self.sunburst getParams];
 	}
 	if (self.boxplot) {
 		params[@"boxplot"] = [self.boxplot getParams];
+	}
+	if (self.scatter3d) {
+		params[@"scatter3d"] = [self.scatter3d getParams];
+	}
+	if (self.heatmap) {
+		params[@"heatmap"] = [self.heatmap getParams];
 	}
 	if (self.solidgauge) {
 		params[@"solidgauge"] = [self.solidgauge getParams];
@@ -111,26 +120,20 @@
 	if (self.funnel) {
 		params[@"funnel"] = [self.funnel getParams];
 	}
-	if (self.errorbar) {
-		params[@"errorbar"] = [self.errorbar getParams];
-	}
 	if (self.histogram) {
 		params[@"histogram"] = [self.histogram getParams];
 	}
-	if (self.vector) {
-		params[@"vector"] = [self.vector getParams];
-	}
 	if (self.waterfall) {
 		params[@"waterfall"] = [self.waterfall getParams];
+	}
+	if (self.bar) {
+		params[@"bar"] = [self.bar getParams];
 	}
 	if (self.line) {
 		params[@"line"] = [self.line getParams];
 	}
 	if (self.windbarb) {
 		params[@"windbarb"] = [self.windbarb getParams];
-	}
-	if (self.bar) {
-		params[@"bar"] = [self.bar getParams];
 	}
 	if (self.variwide) {
 		params[@"variwide"] = [self.variwide getParams];
@@ -141,8 +144,8 @@
 	if (self.column) {
 		params[@"column"] = [self.column getParams];
 	}
-	if (self.streamgraph) {
-		params[@"streamgraph"] = [self.streamgraph getParams];
+	if (self.area) {
+		params[@"area"] = [self.area getParams];
 	}
 	if (self.treemap) {
 		params[@"treemap"] = [self.treemap getParams];
@@ -152,9 +155,6 @@
 	}
 	if (self.wordcloud) {
 		params[@"wordcloud"] = [self.wordcloud getParams];
-	}
-	if (self.sunburst) {
-		params[@"sunburst"] = [self.sunburst getParams];
 	}
 	if (self.arearange) {
 		params[@"arearange"] = [self.arearange getParams];
@@ -173,13 +173,13 @@
 
 # pragma mark - Setters
 
--(void)setTilemap:(HITilemap *)tilemap {
-	HITilemap *oldValue = _tilemap;
-	if(self.tilemap) {
-		[self removeObserver:self forKeyPath:@"tilemap.isUpdated"];
+-(void)setXrange:(HIXrange *)xrange {
+	HIXrange *oldValue = _xrange;
+	if(self.xrange) {
+		[self removeObserver:self forKeyPath:@"xrange.isUpdated"];
 	}
-	_tilemap = tilemap;
-	[self updateHIObject:oldValue newValue:tilemap propertyName:@"tilemap"];
+	_xrange = xrange;
+	[self updateHIObject:oldValue newValue:xrange propertyName:@"xrange"];
 }
 
 -(void)setBellcurve:(HIBellcurve *)bellcurve {
@@ -207,6 +207,24 @@
 	}
 	_columnrange = columnrange;
 	[self updateHIObject:oldValue newValue:columnrange propertyName:@"columnrange"];
+}
+
+-(void)setBubble:(HIBubble *)bubble {
+	HIBubble *oldValue = _bubble;
+	if(self.bubble) {
+		[self removeObserver:self forKeyPath:@"bubble.isUpdated"];
+	}
+	_bubble = bubble;
+	[self updateHIObject:oldValue newValue:bubble propertyName:@"bubble"];
+}
+
+-(void)setErrorbar:(HIErrorbar *)errorbar {
+	HIErrorbar *oldValue = _errorbar;
+	if(self.errorbar) {
+		[self removeObserver:self forKeyPath:@"errorbar.isUpdated"];
+	}
+	_errorbar = errorbar;
+	[self updateHIObject:oldValue newValue:errorbar propertyName:@"errorbar"];
 }
 
 -(void)setPie:(HIPie *)pie {
@@ -263,31 +281,31 @@
 	[self updateHIObject:oldValue newValue:polygon propertyName:@"polygon"];
 }
 
--(void)setArea:(HIArea *)area {
-	HIArea *oldValue = _area;
-	if(self.area) {
-		[self removeObserver:self forKeyPath:@"area.isUpdated"];
+-(void)setStreamgraph:(HIStreamgraph *)streamgraph {
+	HIStreamgraph *oldValue = _streamgraph;
+	if(self.streamgraph) {
+		[self removeObserver:self forKeyPath:@"streamgraph.isUpdated"];
 	}
-	_area = area;
-	[self updateHIObject:oldValue newValue:area propertyName:@"area"];
+	_streamgraph = streamgraph;
+	[self updateHIObject:oldValue newValue:streamgraph propertyName:@"streamgraph"];
 }
 
--(void)setXrange:(HIXrange *)xrange {
-	HIXrange *oldValue = _xrange;
-	if(self.xrange) {
-		[self removeObserver:self forKeyPath:@"xrange.isUpdated"];
+-(void)setTilemap:(HITilemap *)tilemap {
+	HITilemap *oldValue = _tilemap;
+	if(self.tilemap) {
+		[self removeObserver:self forKeyPath:@"tilemap.isUpdated"];
 	}
-	_xrange = xrange;
-	[self updateHIObject:oldValue newValue:xrange propertyName:@"xrange"];
+	_tilemap = tilemap;
+	[self updateHIObject:oldValue newValue:tilemap propertyName:@"tilemap"];
 }
 
--(void)setHeatmap:(HIHeatmap *)heatmap {
-	HIHeatmap *oldValue = _heatmap;
-	if(self.heatmap) {
-		[self removeObserver:self forKeyPath:@"heatmap.isUpdated"];
+-(void)setVector:(HIVector *)vector {
+	HIVector *oldValue = _vector;
+	if(self.vector) {
+		[self removeObserver:self forKeyPath:@"vector.isUpdated"];
 	}
-	_heatmap = heatmap;
-	[self updateHIObject:oldValue newValue:heatmap propertyName:@"heatmap"];
+	_vector = vector;
+	[self updateHIObject:oldValue newValue:vector propertyName:@"vector"];
 }
 
 -(void)setSeries:(HISeries *)series {
@@ -299,22 +317,13 @@
 	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
 }
 
--(void)setScatter3d:(HIScatter3d *)scatter3d {
-	HIScatter3d *oldValue = _scatter3d;
-	if(self.scatter3d) {
-		[self removeObserver:self forKeyPath:@"scatter3d.isUpdated"];
+-(void)setSunburst:(HISunburst *)sunburst {
+	HISunburst *oldValue = _sunburst;
+	if(self.sunburst) {
+		[self removeObserver:self forKeyPath:@"sunburst.isUpdated"];
 	}
-	_scatter3d = scatter3d;
-	[self updateHIObject:oldValue newValue:scatter3d propertyName:@"scatter3d"];
-}
-
--(void)setBubble:(HIBubble *)bubble {
-	HIBubble *oldValue = _bubble;
-	if(self.bubble) {
-		[self removeObserver:self forKeyPath:@"bubble.isUpdated"];
-	}
-	_bubble = bubble;
-	[self updateHIObject:oldValue newValue:bubble propertyName:@"bubble"];
+	_sunburst = sunburst;
+	[self updateHIObject:oldValue newValue:sunburst propertyName:@"sunburst"];
 }
 
 -(void)setBoxplot:(HIBoxplot *)boxplot {
@@ -324,6 +333,24 @@
 	}
 	_boxplot = boxplot;
 	[self updateHIObject:oldValue newValue:boxplot propertyName:@"boxplot"];
+}
+
+-(void)setScatter3d:(HIScatter3d *)scatter3d {
+	HIScatter3d *oldValue = _scatter3d;
+	if(self.scatter3d) {
+		[self removeObserver:self forKeyPath:@"scatter3d.isUpdated"];
+	}
+	_scatter3d = scatter3d;
+	[self updateHIObject:oldValue newValue:scatter3d propertyName:@"scatter3d"];
+}
+
+-(void)setHeatmap:(HIHeatmap *)heatmap {
+	HIHeatmap *oldValue = _heatmap;
+	if(self.heatmap) {
+		[self removeObserver:self forKeyPath:@"heatmap.isUpdated"];
+	}
+	_heatmap = heatmap;
+	[self updateHIObject:oldValue newValue:heatmap propertyName:@"heatmap"];
 }
 
 -(void)setSolidgauge:(HISolidgauge *)solidgauge {
@@ -344,15 +371,6 @@
 	[self updateHIObject:oldValue newValue:funnel propertyName:@"funnel"];
 }
 
--(void)setErrorbar:(HIErrorbar *)errorbar {
-	HIErrorbar *oldValue = _errorbar;
-	if(self.errorbar) {
-		[self removeObserver:self forKeyPath:@"errorbar.isUpdated"];
-	}
-	_errorbar = errorbar;
-	[self updateHIObject:oldValue newValue:errorbar propertyName:@"errorbar"];
-}
-
 -(void)setHistogram:(HIHistogram *)histogram {
 	HIHistogram *oldValue = _histogram;
 	if(self.histogram) {
@@ -362,15 +380,6 @@
 	[self updateHIObject:oldValue newValue:histogram propertyName:@"histogram"];
 }
 
--(void)setVector:(HIVector *)vector {
-	HIVector *oldValue = _vector;
-	if(self.vector) {
-		[self removeObserver:self forKeyPath:@"vector.isUpdated"];
-	}
-	_vector = vector;
-	[self updateHIObject:oldValue newValue:vector propertyName:@"vector"];
-}
-
 -(void)setWaterfall:(HIWaterfall *)waterfall {
 	HIWaterfall *oldValue = _waterfall;
 	if(self.waterfall) {
@@ -378,6 +387,15 @@
 	}
 	_waterfall = waterfall;
 	[self updateHIObject:oldValue newValue:waterfall propertyName:@"waterfall"];
+}
+
+-(void)setBar:(HIBar *)bar {
+	HIBar *oldValue = _bar;
+	if(self.bar) {
+		[self removeObserver:self forKeyPath:@"bar.isUpdated"];
+	}
+	_bar = bar;
+	[self updateHIObject:oldValue newValue:bar propertyName:@"bar"];
 }
 
 -(void)setLine:(HILine *)line {
@@ -396,15 +414,6 @@
 	}
 	_windbarb = windbarb;
 	[self updateHIObject:oldValue newValue:windbarb propertyName:@"windbarb"];
-}
-
--(void)setBar:(HIBar *)bar {
-	HIBar *oldValue = _bar;
-	if(self.bar) {
-		[self removeObserver:self forKeyPath:@"bar.isUpdated"];
-	}
-	_bar = bar;
-	[self updateHIObject:oldValue newValue:bar propertyName:@"bar"];
 }
 
 -(void)setVariwide:(HIVariwide *)variwide {
@@ -434,13 +443,13 @@
 	[self updateHIObject:oldValue newValue:column propertyName:@"column"];
 }
 
--(void)setStreamgraph:(HIStreamgraph *)streamgraph {
-	HIStreamgraph *oldValue = _streamgraph;
-	if(self.streamgraph) {
-		[self removeObserver:self forKeyPath:@"streamgraph.isUpdated"];
+-(void)setArea:(HIArea *)area {
+	HIArea *oldValue = _area;
+	if(self.area) {
+		[self removeObserver:self forKeyPath:@"area.isUpdated"];
 	}
-	_streamgraph = streamgraph;
-	[self updateHIObject:oldValue newValue:streamgraph propertyName:@"streamgraph"];
+	_area = area;
+	[self updateHIObject:oldValue newValue:area propertyName:@"area"];
 }
 
 -(void)setTreemap:(HITreemap *)treemap {
@@ -468,15 +477,6 @@
 	}
 	_wordcloud = wordcloud;
 	[self updateHIObject:oldValue newValue:wordcloud propertyName:@"wordcloud"];
-}
-
--(void)setSunburst:(HISunburst *)sunburst {
-	HISunburst *oldValue = _sunburst;
-	if(self.sunburst) {
-		[self removeObserver:self forKeyPath:@"sunburst.isUpdated"];
-	}
-	_sunburst = sunburst;
-	[self updateHIObject:oldValue newValue:sunburst propertyName:@"sunburst"];
 }
 
 -(void)setArearange:(HIArearange *)arearange {

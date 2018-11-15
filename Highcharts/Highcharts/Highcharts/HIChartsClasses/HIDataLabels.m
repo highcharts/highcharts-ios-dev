@@ -20,6 +20,7 @@
 	copyDataLabels.overflow = [self.overflow copyWithZone: zone];
 	copyDataLabels.x = [self.x copyWithZone: zone];
 	copyDataLabels.align = [self.align copyWithZone: zone];
+	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.yHigh = [self.yHigh copyWithZone: zone];
 	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
 	copyDataLabels.xLow = [self.xLow copyWithZone: zone];
@@ -40,7 +41,6 @@
 	copyDataLabels.className = [self.className copyWithZone: zone];
 	copyDataLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDataLabels.rotationMode = [self.rotationMode copyWithZone: zone];
-	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyDataLabels.nodeFormat = [self.nodeFormat copyWithZone: zone];
 	copyDataLabels.distance = [self.distance copyWithZone: zone];
@@ -84,6 +84,9 @@
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
+	if (self.y) {
+		params[@"y"] = self.y;
+	}
 	if (self.yHigh) {
 		params[@"yHigh"] = self.yHigh;
 	}
@@ -103,7 +106,7 @@
 		params[@"shape"] = self.shape;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
+		params[@"borderColor"] = self.borderColor;
 	}
 	if (self.filter) {
 		params[@"filter"] = [self.filter getParams];
@@ -118,10 +121,10 @@
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getData];
+		params[@"color"] = self.color;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getData];
+		params[@"backgroundColor"] = self.backgroundColor;
 	}
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
@@ -143,9 +146,6 @@
 	}
 	if (self.rotationMode) {
 		params[@"rotationMode"] = self.rotationMode;
-	}
-	if (self.y) {
-		params[@"y"] = self.y;
 	}
 	if (self.nodeFormatter) {
 		params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
@@ -227,6 +227,11 @@
 	[self updateNSObject:@"align"];
 }
 
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
+}
+
 -(void)setYHigh:(id)yHigh {
 	_yHigh = yHigh;
 	[self updateNSObject:@"yHigh"];
@@ -257,13 +262,9 @@
 	[self updateNSObject:@"shape"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
+-(void)setBorderColor:(NSString *)borderColor {
 	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+	[self updateNSObject:@"borderColor"];
 }
 
 -(void)setFilter:(HIFilter *)filter {
@@ -275,8 +276,8 @@
 	[self updateHIObject:oldValue newValue:filter propertyName:@"filter"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	if(self.style) {
 		[self removeObserver:self forKeyPath:@"style.isUpdated"];
 	}
@@ -294,22 +295,14 @@
 	[self updateNSObject:@"useHTML"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
+-(void)setColor:(NSString *)color {
 	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+	[self updateNSObject:@"color"];
 }
 
--(void)setBackgroundColor:(HIColor *)backgroundColor {
-	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
+-(void)setBackgroundColor:(NSString *)backgroundColor {
 	_backgroundColor = backgroundColor;
-	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+	[self updateNSObject:@"backgroundColor"];
 }
 
 -(void)setAllowOverlap:(NSNumber *)allowOverlap {
@@ -322,7 +315,7 @@
 	[self updateNSObject:@"format"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
+-(void)setShadow:(id)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }
@@ -345,11 +338,6 @@
 -(void)setRotationMode:(NSString *)rotationMode {
 	_rotationMode = rotationMode;
 	[self updateNSObject:@"rotationMode"];
-}
-
--(void)setY:(NSNumber *)y {
-	_y = y;
-	[self updateNSObject:@"y"];
 }
 
 -(void)setNodeFormatter:(HIFunction *)nodeFormatter {

@@ -26,10 +26,10 @@
 	copySunburst.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
 	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
 	copySunburst.point = [self.point copyWithZone: zone];
-	copySunburst.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
-	copySunburst.colors = [self.colors copyWithZone: zone];
 	copySunburst.states = [self.states copyWithZone: zone];
+	copySunburst.colors = [self.colors copyWithZone: zone];
+	copySunburst.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySunburst.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySunburst.startAngle = [self.startAngle copyWithZone: zone];
 	copySunburst.size = [self.size copyWithZone: zone];
@@ -38,11 +38,11 @@
 	copySunburst.selected = [self.selected copyWithZone: zone];
 	copySunburst.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySunburst.color = [self.color copyWithZone: zone];
+	copySunburst.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySunburst.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySunburst.className = [self.className copyWithZone: zone];
+	copySunburst.cursor = [self.cursor copyWithZone: zone];
 	copySunburst.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySunburst.label = [self.label copyWithZone: zone];
-	copySunburst.animation = [self.animation copyWithZone: zone];
 	copySunburst.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySunburst.definition = [self.definition copyWithZone: zone];
 	copySunburst.keys = [self.keys copyWithZone: zone];
@@ -50,9 +50,10 @@
 	copySunburst.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySunburst.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySunburst.shadow = [self.shadow copyWithZone: zone];
+	copySunburst.animation = [self.animation copyWithZone: zone];
 	copySunburst.visible = [self.visible copyWithZone: zone];
 	copySunburst.linkedTo = [self.linkedTo copyWithZone: zone];
-	copySunburst.cursor = [self.cursor copyWithZone: zone];
+	copySunburst.className = [self.className copyWithZone: zone];
 	copySunburst.data = [self.data copyWithZone: zone];
 	copySunburst.id = [self.id copyWithZone: zone];
 	copySunburst.index = [self.index copyWithZone: zone];
@@ -112,8 +113,13 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
@@ -174,8 +180,8 @@
 	[self updateNSObject:@"allowDrillToNode"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

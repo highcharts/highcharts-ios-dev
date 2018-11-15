@@ -7,36 +7,10 @@
 */
 
 #import "HISeries.h"
-#import "HIColor.h"
 
 
 /**
-A `streamgraph` series. If the `type` option is not specified, it is inherited from `chart.type`.
-
-Configuration options for the series are given in three levels:
- 
-1. Options for all series in a chart are defined in the `plotOptions.series` object.
-
-2. Options for all `streamgraph` series are defined in `plotOptions.streamgraph`.
-
-3. Options for one single series are given in `the series instance array`.
- 
-<pre>
- Highcharts.chart('container', {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        streamgraph: {
-            // shared options for all streamgraph series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: 'streamgraph'
-    }]
- });
-<pre>
+A `streamgraph` series. If the `type` option is not specified, it is inherited from `chart.type`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `streamgraph` series are defined in  `plotOptions.streamgraph`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     streamgraph: {       // shared options for all streamgraph series     }   },   series: [{     // specific options for this series instance     type: 'streamgraph'   }] });  
 */
 @interface HIStreamgraph: HISeries
 
@@ -57,24 +31,7 @@ A separate color for the negative part of the area. In styled mode, a negative c
 
 * [Negative color in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/)
 */
-@property(nonatomic, readwrite) HIColor *negativeFillColor;
-/**
-A separate color for the graph line. By default the line takes the `color` of the series, but the lineColor setting allows setting a separate color for the line without altering the `fillColor`. In styled mode, the line stroke can be set with the `.highcharts-graph` class name.
-
-**Try it**
-
-* [Dark gray line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/)
-*/
-@property(nonatomic, readwrite) HIColor *lineColor;
-/**
-Fill color or gradient for the area. When `null`, the series' `color` is used with the series' `fillOpacity`. In styled mode, the fill color can be set with the `.highcharts-area` class name.
-
-**Try it**
-
-* [Null by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/)
-* [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/)
-*/
-@property(nonatomic, readwrite) HIColor *fillColor;
+@property(nonatomic, readwrite) NSString *negativeFillColor;
 /**
 Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
 
@@ -85,6 +42,23 @@ Whether the whole area or just the line should respond to mouseover tooltips and
 * [Display the tooltip when the area is hovered](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *trackByArea;
+/**
+Fill color or gradient for the area. When `null`, the series' `color` is used with the series' `fillOpacity`. In styled mode, the fill color can be set with the `.highcharts-area` class name.
+
+**Try it**
+
+* [Null by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-default/)
+* [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/)
+*/
+@property(nonatomic, readwrite) NSString *fillColor;
+/**
+A separate color for the graph line. By default the line takes the `color` of the series, but the lineColor setting allows setting a separate color for the line without altering the `fillColor`. In styled mode, the line stroke can be set with the `.highcharts-graph` class name.
+
+**Try it**
+
+* [Dark gray line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/)
+*/
+@property(nonatomic, readwrite) NSString *lineColor;
 
 -(NSDictionary *)getParams;
 

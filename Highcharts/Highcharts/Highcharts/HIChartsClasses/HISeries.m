@@ -24,29 +24,28 @@
 	copySeries.xAxisDescription = [self.xAxisDescription copyWithZone: zone];
 	copySeries.definition = [self.definition copyWithZone: zone];
 	copySeries.summary = [self.summary copyWithZone: zone];
-	copySeries.point = [self.point copyWithZone: zone];
 	copySeries.selected = [self.selected copyWithZone: zone];
 	copySeries.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySeries.clip = [self.clip copyWithZone: zone];
-	copySeries.negativeColor = [self.negativeColor copyWithZone: zone];
+	copySeries.point = [self.point copyWithZone: zone];
 	copySeries.color = [self.color copyWithZone: zone];
 	copySeries.pointInterval = [self.pointInterval copyWithZone: zone];
 	copySeries.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copySeries.states = [self.states copyWithZone: zone];
 	copySeries.threshold = [self.threshold copyWithZone: zone];
 	copySeries.softThreshold = [self.softThreshold copyWithZone: zone];
-	copySeries.tooltip = [self.tooltip copyWithZone: zone];
+	copySeries.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySeries.marker = [self.marker copyWithZone: zone];
 	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySeries.borderColor = [self.borderColor copyWithZone: zone];
-	copySeries.className = [self.className copyWithZone: zone];
+	copySeries.cursor = [self.cursor copyWithZone: zone];
 	copySeries.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySeries.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copySeries.connectNulls = [self.connectNulls copyWithZone: zone];
+	copySeries.negativeColor = [self.negativeColor copyWithZone: zone];
 	copySeries.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySeries.label = [self.label copyWithZone: zone];
 	copySeries.stacking = [self.stacking copyWithZone: zone];
-	copySeries.animation = [self.animation copyWithZone: zone];
 	copySeries.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copySeries.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySeries.events = [self.events copyWithZone: zone];
@@ -59,20 +58,22 @@
 	copySeries.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copySeries.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySeries.shadow = [self.shadow copyWithZone: zone];
+	copySeries.animation = [self.animation copyWithZone: zone];
+	copySeries.tooltip = [self.tooltip copyWithZone: zone];
 	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySeries.zones = [self.zones copyWithZone: zone];
 	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copySeries.lineWidth = [self.lineWidth copyWithZone: zone];
+	copySeries.connectEnds = [self.connectEnds copyWithZone: zone];
 	copySeries.visible = [self.visible copyWithZone: zone];
 	copySeries.linkedTo = [self.linkedTo copyWithZone: zone];
-	copySeries.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copySeries.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copySeries.dataLabels = [self.dataLabels copyWithZone: zone];
-	copySeries.cursor = [self.cursor copyWithZone: zone];
+	copySeries.className = [self.className copyWithZone: zone];
 	copySeries.pointStart = [self.pointStart copyWithZone: zone];
 	copySeries.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySeries.linecap = [self.linecap copyWithZone: zone];
-	copySeries.connectEnds = [self.connectEnds copyWithZone: zone];
-	copySeries.boostThreshold = [self.boostThreshold copyWithZone: zone];
+	copySeries.lineWidth = [self.lineWidth copyWithZone: zone];
+	copySeries.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySeries.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copySeries;
 }
@@ -131,9 +132,6 @@
 	if (self.summary) {
 		params[@"summary"] = [self.summary getParams];
 	}
-	if (self.point) {
-		params[@"point"] = [self.point getParams];
-	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
@@ -143,11 +141,11 @@
 	if (self.clip) {
 		params[@"clip"] = self.clip;
 	}
-	if (self.negativeColor) {
-		params[@"negativeColor"] = [self.negativeColor getData];
+	if (self.point) {
+		params[@"point"] = [self.point getParams];
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getData];
+		params[@"color"] = self.color;
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
@@ -164,8 +162,8 @@
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
-	if (self.tooltip) {
-		params[@"tooltip"] = [self.tooltip getParams];
+	if (self.dragDrop) {
+		params[@"dragDrop"] = [self.dragDrop getParams];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
@@ -176,8 +174,8 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
-	if (self.className) {
-		params[@"className"] = self.className;
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
@@ -188,6 +186,9 @@
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
 	}
+	if (self.negativeColor) {
+		params[@"negativeColor"] = self.negativeColor;
+	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
 	}
@@ -196,9 +197,6 @@
 	}
 	if (self.stacking) {
 		params[@"stacking"] = self.stacking;
-	}
-	if (self.animation) {
-		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;
@@ -245,6 +243,12 @@
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
 	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.tooltip) {
+		params[@"tooltip"] = [self.tooltip getParams];
+	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
@@ -263,8 +267,8 @@
 	if (self.pointIntervalUnit) {
 		params[@"pointIntervalUnit"] = self.pointIntervalUnit;
 	}
-	if (self.lineWidth) {
-		params[@"lineWidth"] = self.lineWidth;
+	if (self.connectEnds) {
+		params[@"connectEnds"] = self.connectEnds;
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
@@ -272,14 +276,14 @@
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
 	}
-	if (self.stickyTracking) {
-		params[@"stickyTracking"] = self.stickyTracking;
+	if (self.boostThreshold) {
+		params[@"boostThreshold"] = self.boostThreshold;
 	}
 	if (self.dataLabels) {
 		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
+	if (self.className) {
+		params[@"className"] = self.className;
 	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
@@ -289,11 +293,11 @@
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
 	}
-	if (self.connectEnds) {
-		params[@"connectEnds"] = self.connectEnds;
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
 	}
-	if (self.boostThreshold) {
-		params[@"boostThreshold"] = self.boostThreshold;
+	if (self.stickyTracking) {
+		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
@@ -378,15 +382,6 @@
 	[self updateHIObject:oldValue newValue:summary propertyName:@"summary"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
-	if(self.point) {
-		[self removeObserver:self forKeyPath:@"point.isUpdated"];
-	}
-	_point = point;
-	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
-}
-
 -(void)setSelected:(NSNumber *)selected {
 	_selected = selected;
 	[self updateNSObject:@"selected"];
@@ -402,22 +397,18 @@
 	[self updateNSObject:@"clip"];
 }
 
--(void)setNegativeColor:(HIColor *)negativeColor {
-	HIColor *oldValue = _negativeColor;
-	if(self.negativeColor) {
-		[self removeObserver:self forKeyPath:@"negativeColor.isUpdated"];
+-(void)setPoint:(HIPoint *)point {
+	HIPoint *oldValue = _point;
+	if(self.point) {
+		[self removeObserver:self forKeyPath:@"point.isUpdated"];
 	}
-	_negativeColor = negativeColor;
-	[self updateHIObject:oldValue newValue:negativeColor propertyName:@"negativeColor"];
+	_point = point;
+	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
+-(void)setColor:(NSString *)color {
 	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+	[self updateNSObject:@"color"];
 }
 
 -(void)setPointInterval:(NSNumber *)pointInterval {
@@ -449,13 +440,13 @@
 	[self updateNSObject:@"softThreshold"];
 }
 
--(void)setTooltip:(HITooltip *)tooltip {
-	HITooltip *oldValue = _tooltip;
-	if(self.tooltip) {
-		[self removeObserver:self forKeyPath:@"tooltip.isUpdated"];
+-(void)setDragDrop:(HIDragDrop *)dragDrop {
+	HIDragDrop *oldValue = _dragDrop;
+	if(self.dragDrop) {
+		[self removeObserver:self forKeyPath:@"dragDrop.isUpdated"];
 	}
-	_tooltip = tooltip;
-	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
+	_dragDrop = dragDrop;
+	[self updateHIObject:oldValue newValue:dragDrop propertyName:@"dragDrop"];
 }
 
 -(void)setMarker:(HIMarker *)marker {
@@ -485,9 +476,9 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setClassName:(NSString *)className {
-	_className = className;
-	[self updateNSObject:@"className"];
+-(void)setCursor:(NSString *)cursor {
+	_cursor = cursor;
+	[self updateNSObject:@"cursor"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {
@@ -503,6 +494,11 @@
 -(void)setConnectNulls:(NSNumber *)connectNulls {
 	_connectNulls = connectNulls;
 	[self updateNSObject:@"connectNulls"];
+}
+
+-(void)setNegativeColor:(NSString *)negativeColor {
+	_negativeColor = negativeColor;
+	[self updateNSObject:@"negativeColor"];
 }
 
 -(void)setEnableMouseTracking:(NSNumber *)enableMouseTracking {
@@ -522,15 +518,6 @@
 -(void)setStacking:(NSString *)stacking {
 	_stacking = stacking;
 	[self updateNSObject:@"stacking"];
-}
-
--(void)setAnimation:(HIAnimation *)animation {
-	HIAnimation *oldValue = _animation;
-	if(self.animation) {
-		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
-	}
-	_animation = animation;
-	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setFindNearestPointBy:(NSString *)findNearestPointBy {
@@ -593,9 +580,27 @@
 	[self updateNSObject:@"exposeElementToA11y"];
 }
 
--(void)setShadow:(id)shadow {
+-(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
+}
+
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	if(self.animation) {
+		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
+	}
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
+-(void)setTooltip:(HITooltip *)tooltip {
+	HITooltip *oldValue = _tooltip;
+	if(self.tooltip) {
+		[self removeObserver:self forKeyPath:@"tooltip.isUpdated"];
+	}
+	_tooltip = tooltip;
+	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
 }
 
 -(void)setZoneAxis:(NSString *)zoneAxis {
@@ -614,9 +619,9 @@
 	[self updateNSObject:@"pointIntervalUnit"];
 }
 
--(void)setLineWidth:(NSNumber *)lineWidth {
-	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+-(void)setConnectEnds:(NSNumber *)connectEnds {
+	_connectEnds = connectEnds;
+	[self updateNSObject:@"connectEnds"];
 }
 
 -(void)setVisible:(NSNumber *)visible {
@@ -629,9 +634,9 @@
 	[self updateNSObject:@"linkedTo"];
 }
 
--(void)setStickyTracking:(NSNumber *)stickyTracking {
-	_stickyTracking = stickyTracking;
-	[self updateNSObject:@"stickyTracking"];
+-(void)setBoostThreshold:(NSNumber *)boostThreshold {
+	_boostThreshold = boostThreshold;
+	[self updateNSObject:@"boostThreshold"];
 }
 
 -(void)setDataLabels:(HIDataLabels *)dataLabels {
@@ -643,9 +648,9 @@
 	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
--(void)setCursor:(NSString *)cursor {
-	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
 }
 
 -(void)setPointStart:(NSNumber *)pointStart {
@@ -663,14 +668,14 @@
 	[self updateNSObject:@"linecap"];
 }
 
--(void)setConnectEnds:(NSNumber *)connectEnds {
-	_connectEnds = connectEnds;
-	[self updateNSObject:@"connectEnds"];
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	_lineWidth = lineWidth;
+	[self updateNSObject:@"lineWidth"];
 }
 
--(void)setBoostThreshold:(NSNumber *)boostThreshold {
-	_boostThreshold = boostThreshold;
-	[self updateNSObject:@"boostThreshold"];
+-(void)setStickyTracking:(NSNumber *)stickyTracking {
+	_stickyTracking = stickyTracking;
+	[self updateNSObject:@"stickyTracking"];
 }
 
 -(void)setShowInLegend:(NSNumber *)showInLegend {

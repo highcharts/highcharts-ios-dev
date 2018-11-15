@@ -77,7 +77,7 @@
 		params[@"height"] = self.height;
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
@@ -122,7 +122,7 @@
 		params[@"width"] = self.width;
 	}
 	if (self.animation) {
-		params[@"animation"] = self.animation;
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.plotBackgroundColor) {
 		params[@"plotBackgroundColor"] = self.plotBackgroundColor;

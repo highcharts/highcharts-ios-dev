@@ -42,31 +42,31 @@
 	copyData.median = [self.median copyWithZone: zone];
 	copyData.low = [self.low copyWithZone: zone];
 	copyData.labelrank = [self.labelrank copyWithZone: zone];
-	copyData.definition = [self.definition copyWithZone: zone];
+	copyData.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyData.name = [self.name copyWithZone: zone];
 	copyData.color = [self.color copyWithZone: zone];
 	copyData.selected = [self.selected copyWithZone: zone];
 	copyData.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyData.className = [self.className copyWithZone: zone];
 	copyData.events = [self.events copyWithZone: zone];
+	copyData.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyData.y = [self.y copyWithZone: zone];
 	copyData.x = [self.x copyWithZone: zone];
 	copyData.drilldown = [self.drilldown copyWithZone: zone];
 	copyData.id = [self.id copyWithZone: zone];
-	copyData.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyData.definition = [self.definition copyWithZone: zone];
 	copyData.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyData.marker = [self.marker copyWithZone: zone];
 	copyData.length = [self.length copyWithZone: zone];
 	copyData.direction = [self.direction copyWithZone: zone];
-	copyData.target = [self.target copyWithZone: zone];
-	copyData.targetOptions = [self.targetOptions copyWithZone: zone];
-	copyData.borderColor = [self.borderColor copyWithZone: zone];
-	copyData.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyData.value = [self.value copyWithZone: zone];
 	copyData.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyData.isIntermediateSum = [self.isIntermediateSum copyWithZone: zone];
 	copyData.isSum = [self.isSum copyWithZone: zone];
 	copyData.sliced = [self.sliced copyWithZone: zone];
+	copyData.borderColor = [self.borderColor copyWithZone: zone];
+	copyData.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyData.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyData.radius = [self.radius copyWithZone: zone];
 	copyData.to = [self.to copyWithZone: zone];
@@ -74,8 +74,12 @@
 	copyData.from = [self.from copyWithZone: zone];
 	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.z = [self.z copyWithZone: zone];
+	copyData.x2 = [self.x2 copyWithZone: zone];
+	copyData.partialFill = [self.partialFill copyWithZone: zone];
 	copyData.colorValue = [self.colorValue copyWithZone: zone];
 	copyData.parent = [self.parent copyWithZone: zone];
+	copyData.target = [self.target copyWithZone: zone];
+	copyData.targetOptions = [self.targetOptions copyWithZone: zone];
 	return copyData;
 }
 
@@ -205,14 +209,14 @@
 	if (self.labelrank) {
 		params[@"labelrank"] = self.labelrank;
 	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
+	if (self.colorIndex) {
+		params[@"colorIndex"] = self.colorIndex;
 	}
 	if (self.name) {
 		params[@"name"] = self.name;
 	}
 	if (self.color) {
-		params[@"color"] = [self.color getData];
+		params[@"color"] = self.color;
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
@@ -226,6 +230,9 @@
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
+	if (self.dragDrop) {
+		params[@"dragDrop"] = [self.dragDrop getParams];
+	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
@@ -238,8 +245,8 @@
 	if (self.id) {
 		params[@"id"] = self.id;
 	}
-	if (self.colorIndex) {
-		params[@"colorIndex"] = self.colorIndex;
+	if (self.definition) {
+		params[@"definition"] = self.definition;
 	}
 	if (self.legendIndex) {
 		params[@"legendIndex"] = self.legendIndex;
@@ -252,18 +259,6 @@
 	}
 	if (self.direction) {
 		params[@"direction"] = self.direction;
-	}
-	if (self.target) {
-		params[@"target"] = self.target;
-	}
-	if (self.targetOptions) {
-		params[@"targetOptions"] = [self.targetOptions getParams];
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.value) {
 		params[@"value"] = self.value;
@@ -279,6 +274,15 @@
 	}
 	if (self.sliced) {
 		params[@"sliced"] = self.sliced;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = self.borderColor;
+	}
+	if (self.pointWidth) {
+		params[@"pointWidth"] = self.pointWidth;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -301,11 +305,23 @@
 	if (self.z) {
 		params[@"z"] = self.z;
 	}
+	if (self.x2) {
+		params[@"x2"] = self.x2;
+	}
+	if (self.partialFill) {
+		params[@"partialFill"] = [self.partialFill getParams];
+	}
 	if (self.colorValue) {
 		params[@"colorValue"] = self.colorValue;
 	}
 	if (self.parent) {
 		params[@"parent"] = self.parent;
+	}
+	if (self.target) {
+		params[@"target"] = self.target;
+	}
+	if (self.targetOptions) {
+		params[@"targetOptions"] = [self.targetOptions getParams];
 	}
 	return params;
 }
@@ -327,7 +343,7 @@
 	[self updateNSObject:@"lineDelimiter"];
 }
 
--(void)setTable:(id)table {
+-(void)setTable:(NSString *)table {
 	_table = table;
 	[self updateNSObject:@"table"];
 }
@@ -491,9 +507,9 @@
 	[self updateNSObject:@"labelrank"];
 }
 
--(void)setDefinition:(NSString *)definition {
-	_definition = definition;
-	[self updateNSObject:@"definition"];
+-(void)setColorIndex:(NSNumber *)colorIndex {
+	_colorIndex = colorIndex;
+	[self updateNSObject:@"colorIndex"];
 }
 
 -(void)setName:(NSString *)name {
@@ -501,13 +517,9 @@
 	[self updateNSObject:@"name"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
+-(void)setColor:(NSString *)color {
 	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+	[self updateNSObject:@"color"];
 }
 
 -(void)setSelected:(NSNumber *)selected {
@@ -534,6 +546,15 @@
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
+-(void)setDragDrop:(HIDragDrop *)dragDrop {
+	HIDragDrop *oldValue = _dragDrop;
+	if(self.dragDrop) {
+		[self removeObserver:self forKeyPath:@"dragDrop.isUpdated"];
+	}
+	_dragDrop = dragDrop;
+	[self updateHIObject:oldValue newValue:dragDrop propertyName:@"dragDrop"];
+}
+
 -(void)setY:(NSNumber *)y {
 	_y = y;
 	[self updateNSObject:@"y"];
@@ -554,9 +575,9 @@
 	[self updateNSObject:@"id"];
 }
 
--(void)setColorIndex:(NSNumber *)colorIndex {
-	_colorIndex = colorIndex;
-	[self updateNSObject:@"colorIndex"];
+-(void)setDefinition:(NSString *)definition {
+	_definition = definition;
+	[self updateNSObject:@"definition"];
 }
 
 -(void)setLegendIndex:(NSNumber *)legendIndex {
@@ -583,34 +604,6 @@
 	[self updateNSObject:@"direction"];
 }
 
--(void)setTarget:(NSNumber *)target {
-	_target = target;
-	[self updateNSObject:@"target"];
-}
-
--(void)setTargetOptions:(HITargetOptions *)targetOptions {
-	HITargetOptions *oldValue = _targetOptions;
-	if(self.targetOptions) {
-		[self removeObserver:self forKeyPath:@"targetOptions.isUpdated"];
-	}
-	_targetOptions = targetOptions;
-	[self updateHIObject:oldValue newValue:targetOptions propertyName:@"targetOptions"];
-}
-
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
-}
-
 -(void)setValue:(NSNumber *)value {
 	_value = value;
 	[self updateNSObject:@"value"];
@@ -634,6 +627,21 @@
 -(void)setSliced:(NSNumber *)sliced {
 	_sliced = sliced;
 	[self updateNSObject:@"sliced"];
+}
+
+-(void)setBorderColor:(NSString *)borderColor {
+	_borderColor = borderColor;
+	[self updateNSObject:@"borderColor"];
+}
+
+-(void)setPointWidth:(NSNumber *)pointWidth {
+	_pointWidth = pointWidth;
+	[self updateNSObject:@"pointWidth"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {
@@ -671,6 +679,20 @@
 	[self updateNSObject:@"z"];
 }
 
+-(void)setX2:(NSNumber *)x2 {
+	_x2 = x2;
+	[self updateNSObject:@"x2"];
+}
+
+-(void)setPartialFill:(HIPartialFill *)partialFill {
+	HIPartialFill *oldValue = _partialFill;
+	if(self.partialFill) {
+		[self removeObserver:self forKeyPath:@"partialFill.isUpdated"];
+	}
+	_partialFill = partialFill;
+	[self updateHIObject:oldValue newValue:partialFill propertyName:@"partialFill"];
+}
+
 -(void)setColorValue:(NSNumber *)colorValue {
 	_colorValue = colorValue;
 	[self updateNSObject:@"colorValue"];
@@ -679,6 +701,20 @@
 -(void)setParent:(NSString *)parent {
 	_parent = parent;
 	[self updateNSObject:@"parent"];
+}
+
+-(void)setTarget:(NSNumber *)target {
+	_target = target;
+	[self updateNSObject:@"target"];
+}
+
+-(void)setTargetOptions:(HITargetOptions *)targetOptions {
+	HITargetOptions *oldValue = _targetOptions;
+	if(self.targetOptions) {
+		[self removeObserver:self forKeyPath:@"targetOptions.isUpdated"];
+	}
+	_targetOptions = targetOptions;
+	[self updateHIObject:oldValue newValue:targetOptions propertyName:@"targetOptions"];
 }
 
 @end

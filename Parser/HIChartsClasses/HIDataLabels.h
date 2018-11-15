@@ -7,8 +7,8 @@
 */
 
 #import "HIFilter.h"
-#import "HIStyle.h"
 #import "HIFunction.h"
+#import "HICSSObject.h"
 
 
 /**
@@ -131,7 +131,7 @@ Styles for the label. The default `color` setting is `"contrast"`, which is a ps
 
 * [Bold labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/)
 */
-@property(nonatomic, readwrite) HIStyle *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.
 

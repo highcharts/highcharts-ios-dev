@@ -28,7 +28,7 @@
 	copySummary.mapline = [self.mapline copyWithZone: zone];
 	copySummary.bar = [self.bar copyWithZone: zone];
 	copySummary.mapCombination = [self.mapCombination copyWithZone: zone];
-	copySummary.default = [self.default copyWithZone: zone];
+	copySummary.defaults = [self.defaults copyWithZone: zone];
 	copySummary.mapbubbleCombination = [self.mapbubbleCombination copyWithZone: zone];
 	copySummary.defaultCombination = [self.defaultCombination copyWithZone: zone];
 	copySummary.column = [self.column copyWithZone: zone];
@@ -94,8 +94,8 @@
 	if (self.mapCombination) {
 		params[@"mapCombination"] = self.mapCombination;
 	}
-	if (self.default) {
-		params[@"default"] = self.default;
+	if (self.defaults) {
+		params[@"default"] = self.defaults;
 	}
 	if (self.mapbubbleCombination) {
 		params[@"mapbubbleCombination"] = self.mapbubbleCombination;
@@ -207,9 +207,9 @@
 	[self updateNSObject:@"mapCombination"];
 }
 
--(void)setDefault:(NSString *)default {
-	_default = default;
-	[self updateNSObject:@"default"];
+-(void)setDefaults:(NSString *)defaults {
+	_defaults = defaults;
+	[self updateNSObject:@"defaults"];
 }
 
 -(void)setMapbubbleCombination:(NSString *)mapbubbleCombination {

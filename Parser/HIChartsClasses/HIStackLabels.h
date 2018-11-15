@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIChartsJSONSerializable.h"
 #import "HIFunction.h"
+#import "HICSSObject.h"
 
 
 /**

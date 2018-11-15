@@ -13,12 +13,12 @@
 #import "HIMarker.h"
 #import "HILabel.h"
 #import "HIEvents.h"
-#import "HIAnimation.h"
 #import "HITooltip.h"
 #import "HIZones.h"
 #import "HIDataLabels.h"
 #import "HIColor.h"
 #import "HIFunction.h"
+#import "HIAnimationOptionsObject.h"
 
 
 /**
@@ -406,7 +406,7 @@ Enable or disable the initial animation when a series is displayed. The animatio
 * [Slower animation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/)
 * [Custom easing function](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/)
 */
-@property(nonatomic, readwrite) HIAnimation *animation;
+@property(nonatomic, readwrite) HIAnimationOptionsObject *animation;
 /**
 A configuration object for the tooltip rendering of each single series. Properties are inherited from `tooltip`, but only the following properties can be defined on a series level.
 */

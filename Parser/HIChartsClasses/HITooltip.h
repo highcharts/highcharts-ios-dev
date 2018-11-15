@@ -7,8 +7,8 @@
 */
 
 #import "HIDateTimeLabelFormats.h"
-#import "HIStyle.h"
 #import "HIFunction.h"
+#import "HICSSObject.h"
 
 
 /**
@@ -104,7 +104,7 @@ CSS styles for the tooltip. The tooltip can also be styled through the CSS class
 
 * [Greater padding, bold text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/)
 */
-@property(nonatomic, readwrite) HIStyle *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 A string to append to the tooltip format.
 

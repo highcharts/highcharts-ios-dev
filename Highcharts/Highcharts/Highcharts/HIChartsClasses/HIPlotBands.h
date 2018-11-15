@@ -7,7 +7,6 @@
 */
 
 #import "HILabel.h"
-#import "HIColor.h"
 
 
 /**
@@ -46,7 +45,7 @@ In a gauge chart, this option sets the width of the plot band stretching along t
 /**
 Border color for the plot band. Also requires `borderWidth` to be set.
 */
-@property(nonatomic, readwrite) HIColor *borderColor;
+@property(nonatomic, readwrite) NSString *borderColor;
 /**
 The z index of the plot band within the chart, relative to other elements. Using the same z index as another element may give unpredictable results, as the last rendered element will be on top. Values from 0 to 20 make sense.
 
@@ -73,7 +72,7 @@ The color of the plot band.
 
 * [Color band](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/)
 */
-@property(nonatomic, readwrite) HIColor *color;
+@property(nonatomic, readwrite) NSString *color;
 /**
 An id used for identifying the plot band in Axis.removePlotBand.
 

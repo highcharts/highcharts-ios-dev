@@ -124,7 +124,7 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.itemHoverStyle) {
-		params[@"itemHoverStyle"] = self.itemHoverStyle;
+		params[@"itemHoverStyle"] = [self.itemHoverStyle getParams];
 	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
@@ -145,7 +145,7 @@
 		params[@"maxHeight"] = self.maxHeight;
 	}
 	if (self.itemHiddenStyle) {
-		params[@"itemHiddenStyle"] = self.itemHiddenStyle;
+		params[@"itemHiddenStyle"] = [self.itemHiddenStyle getParams];
 	}
 	if (self.alignColumns) {
 		params[@"alignColumns"] = self.alignColumns;
@@ -256,8 +256,8 @@
 	[self updateNSObject:@"itemMarginTop"];
 }
 
--(void)setItemCheckboxStyle:(HIItemCheckboxStyle *)itemCheckboxStyle {
-	HIItemCheckboxStyle *oldValue = _itemCheckboxStyle;
+-(void)setItemCheckboxStyle:(HICSSObject *)itemCheckboxStyle {
+	HICSSObject *oldValue = _itemCheckboxStyle;
 	if(self.itemCheckboxStyle) {
 		[self removeObserver:self forKeyPath:@"itemCheckboxStyle.isUpdated"];
 	}
@@ -270,8 +270,8 @@
 	[self updateNSObject:@"labelFormat"];
 }
 
--(void)setItemStyle:(HIItemStyle *)itemStyle {
-	HIItemStyle *oldValue = _itemStyle;
+-(void)setItemStyle:(HICSSObject *)itemStyle {
+	HICSSObject *oldValue = _itemStyle;
 	if(self.itemStyle) {
 		[self removeObserver:self forKeyPath:@"itemStyle.isUpdated"];
 	}

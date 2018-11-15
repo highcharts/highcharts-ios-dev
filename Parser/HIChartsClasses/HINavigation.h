@@ -10,6 +10,8 @@
 #import "HIMenuItemStyle.h"
 #import "HIButtonOptions.h"
 #import "HIMenuItemHoverStyle.h"
+#import "HIAnimationOptionsObject.h"
+#import "HICSSObject.h"
 
 
 /**
