@@ -237,7 +237,7 @@ hc_types = {
         "Highcharts.Dictionary.<string>": 'NSDictionary /* <NSString, NSString> */',
         # tree
         "Highcharts.PlotSeriesDataLabelsOptions": 'id',
-        "Highcharts.Options": 'HIOptions',
+        "Highcharts.Options": 'NSDictionary',
         "boolean|Highcharts.ShadowOptionsObject": 'NSNumber /* Bool */',
         "string|Highcharts.SVGDOMElement": 'NSString',
         "boolean|Highcharts.CSSObject": 'NSNumber /* Bool */'
@@ -456,6 +456,9 @@ def format_to_h(name, source):
     htext += "\n@end\n"
     htext = htext.replace('*default;', '*defaults;')
 
+    if class_name == 'HILang':
+        htext = prepare_lang_class(htext)
+
     for mathch in import_hi_set:
         import_hi_string += "#import \"" + mathch + ".h\"\n"
 
@@ -470,6 +473,17 @@ def format_to_h(name, source):
 
     imports += "\n\n"
     return filelicense + imports + htext
+
+
+def prepare_lang_class(text):
+    text = text.replace('*/\n@property(nonatomic, readwrite) NSString *downloadCSV;',
+                          '\n**Defaults to** `Share CSV`.\n*/\n@property(nonatomic, readwrite) NSString *downloadCSV;')
+    text = text.replace('`Download PNG image`', '`Share image`')
+    text = text.replace('`Download PDF document`', '`Share PDF`')
+    text = text.replace('`Download JPEG image`', '`Share image`')
+    text = text.replace('NSString *contextButtonTitle;',
+                          'NSString *contextButtonTitle;\n/**\nExporting module only. The text for the disabling menu button.\n\n**Defaults to** `Cancel`.\n*/\n@property(nonatomic, readwrite) NSString *cancelButtonTitle;')
+    return text
 
 
 def create_setter(field):
@@ -554,7 +568,7 @@ def format_to_m(name, source):
                     getParams += "\t\t\t}\n"
                     getParams += "\t\t}\n"
                     getParams += "\t\tparams[@\"{0}\"] = array;\n".format(re.sub(r'\bdefaults\b', 'default', variableName))
-                elif structure[field.name].properties:
+                elif structure[field.name].properties or 'HI' in get_type(field.data_type):
                     getParams += "\t\tparams[@\"{0}\"] = [self.{1} getParams];\n".format(re.sub(r'\bdefaults\b', 'default', variableName),
                                                                                          variableName)
                 else:
