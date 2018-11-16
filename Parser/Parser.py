@@ -28,6 +28,8 @@ classes = dict()
 comments = dict()
 types = dict()
 unknown_types_tree = set()
+series_description = ""
+series_data_description = ""
 filelicense = "/**\n* (c) 2009-2018 Highsoft AS\n*\n* License: www.highcharts.com/license\n" \
               "* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/\n" \
               "* In case of questions, please contact sales@highsoft.com\n*/\n\n"
@@ -346,7 +348,9 @@ def format_to_h(name, source):
 
     class_name = "HI" + upper_first(create_name(name))
 
-    if class_name in comments:
+    if source.extends == 'series':
+        description = series_description.replace('#series_name#', get_last(name))
+    elif class_name in comments:
         description = comments[class_name]
     elif source.comment:
         description = source.comment
@@ -375,7 +379,7 @@ def format_to_h(name, source):
             continue
 
         if field.comment:
-            htext += "{0}".format(field.comment)
+            htext += "{0}".format(field.comment) if field.name != 'series.data' else series_data_description
         if field.data_type:
             if "id" in str(get_type(field.data_type)) and "NSArray" not in str(get_type(field.data_type)) and not \
                     structure[
@@ -613,7 +617,7 @@ def create_options_files():
     for field in options:
         if field.name != 'global' and field.name != 'lang':
             if field.comment:
-                htext += "{0}".format(field.comment)
+                htext += "{0}".format(field.comment) if field.name != 'series' else "/**\nSeries options for specific data and the data itself. In TypeScript you have to cast the series options to specific series types, to get all possible options for a series.\n*/\n"
             if upper_first((create_name(field.name))) in files:
                 imports += "#import \"HI{0}.h\"\n".format(upper_first(create_name(field.name)))
             if structure[field.name].data_type:
@@ -923,8 +927,9 @@ def create_class(node):
             doclet = source["doclet"]
 
             if "description" in doclet:
-                description = doclet["description"]
-                #description = re.sub(r'`\s*(.*?)\s*`', r'\1', description)
+                description = doclet["description"] if node.name != 'series' else "General options for all series types."
+
+                # description = re.sub(r'`\s*(.*?)\s*`', r'\1', description)
                 # description = re.sub(r'(\[(.*?)\]\(#.*?\))', r'\2', description)
                 # description = description.replace("\r", "\n")
 
@@ -1034,6 +1039,13 @@ def add_to_structure(name, source, parent):
 def add_additions_to_series():
     with open('addition_to_series.js') as data_file:
         data = json.load(data_file)
+
+    with open('series_description.txt', 'r') as text:
+        global series_description
+        series_description = text.read() + '\n'
+    with open('series_data_description.txt', 'r') as text:
+        global series_data_description
+        series_data_description = text.read() + '\n'
 
     if "series" not in structure:
         structure["series"] = HIChartsClass("series", "Array.<Object>", "General options for all series types.", None, None, None, ["highcharts"], None, None)
