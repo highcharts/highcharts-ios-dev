@@ -207,8 +207,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/colsize" title="colsize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colsize">&nbsp;&nbsp;colsize</a></code>
+	<a name="//api/name/tileShape" title="tileShape"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tileShape">&nbsp;&nbsp;tileShape</a></code>
 </h3>
 
 	<div class="method-info">
@@ -218,12 +218,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The column size - how many X axis units each column in the tilemap should span. Works as in <code>Heatmaps</code>.</p>
+				<p>The shape of the tiles in the tilemap. Possible values are <code>hexagon</code>, <code>circle</code>, <code>diamond</code>, and <code>square</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colsize</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tileShape</code></div>
 
 		    
 			
@@ -235,12 +235,13 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["circle", "diamond", "hexagon", "square"]</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">One day</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa">Circular tile shapes</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap">Diamond tile shapes</a></li>
 </ul>
 
 			</div>
@@ -313,8 +314,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tileShape" title="tileShape"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tileShape">&nbsp;&nbsp;tileShape</a></code>
+	<a name="//api/name/colsize" title="colsize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colsize">&nbsp;&nbsp;colsize</a></code>
 </h3>
 
 	<div class="method-info">
@@ -324,12 +325,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The shape of the tiles in the tilemap. Possible values are <code>hexagon</code>, <code>circle</code>, <code>diamond</code>, and <code>square</code>.</p>
+				<p>The column size - how many X axis units each column in the tilemap should span. Works as in <code>Heatmaps</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tileShape</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colsize</code></div>
 
 		    
 			
@@ -341,11 +342,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa">Circular tile shapes</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap">Diamond tile shapes</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/heatmap/">One day</a></li>
 </ul>
 
 			</div>
@@ -381,7 +383,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *nullColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nullColor</code></div>
 
 		    
 			

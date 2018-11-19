@@ -94,6 +94,8 @@
 		
 		<option value="//api/name/definition">definition</option>
 		
+		<option value="//api/name/dragDrop">dragDrop</option>
+		
 		<option value="//api/name/enableMouseTracking">enableMouseTracking</option>
 		
 		<option value="//api/name/events">events</option>
@@ -934,47 +936,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/point" title="point"></a>
-	<h3 class="method-title"><code><a href="#//api/name/point">&nbsp;&nbsp;point</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Properties for each single point.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPoint *point</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeries.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/selected" title="selected"></a>
 	<h3 class="method-title"><code><a href="#//api/name/selected">&nbsp;&nbsp;selected</a></code>
 </h3>
@@ -1122,8 +1083,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/negativeColor" title="negativeColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/negativeColor">&nbsp;&nbsp;negativeColor</a></code>
+	<a name="//api/name/point" title="point"></a>
+	<h3 class="method-title"><code><a href="#//api/name/point">&nbsp;&nbsp;point</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1133,12 +1094,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color for the parts of the graph or points that are below the <code>threshold</code>.</p>
+				<p>Properties for each single point.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *negativeColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPoint *point</code></div>
 
 		    
 			
@@ -1147,18 +1108,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/">Spline, area and column</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/">Arearange</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/">Styled mode</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -1191,7 +1140,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *color</code></div>
 
 		    
 			
@@ -1209,6 +1158,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/">General plot option</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/">One specific series</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/">Area color</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/infographic/">Pattern fill</a></li>
 </ul>
 
 			</div>
@@ -1306,11 +1256,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>300</code>.</p>
-			</div>
 			
 
 			
@@ -1440,11 +1385,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
-			</div>
-			
 
 			
 
@@ -1460,8 +1400,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tooltip" title="tooltip"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tooltip">&nbsp;&nbsp;tooltip</a></code>
+	<a name="//api/name/dragDrop" title="dragDrop"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dragDrop">&nbsp;&nbsp;dragDrop</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1471,12 +1411,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A configuration object for the tooltip rendering of each single series. Properties are inherited from <code>tooltip</code>, but only the following properties can be defined on a series level.</p>
+				<p>The draggable-points module allows points to be moved around or modified in the chart. In addition to the options mentioned under the <code>dragDrop</code> API structure, the module fires three events, <code>point.dragStart</code>, <code>point.drag</code> and <code>point.drop</code>. It requires the <code>modules/draggable-points.js</code> file to be loaded.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITooltip *tooltip</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDragDrop *dragDrop</code></div>
 
 		    
 			
@@ -1485,6 +1425,18 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/resize-column">Draggable column and line series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-bubble">Draggable bubbles</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-xrange">Draggable X range series</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -1629,8 +1581,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/className" title="className"></a>
-	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
+	<a name="//api/name/cursor" title="cursor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cursor">&nbsp;&nbsp;cursor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1640,12 +1592,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An additional class name to apply to the series' graphical elements. This option does not replace default class names of the graphical element.</p>
+				<p>You can set the cursor to &ldquo;pointer&rdquo; if you have click events attached to the series, to signal to the user that the points and lines can be clicked. In styled mode, the series cursor can be set with the same classes as listed under <code>series.color</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *cursor</code></div>
 
 		    
 			
@@ -1654,6 +1606,20 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["crosshair","default","help","none","pointer"]</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/">On line graph</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/">On columns</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/">On scatter markers</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -1681,7 +1647,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A name for the dash style to use for the graph, or for some series types the outline of each shape. The value for the <code>dashStyle</code> include: <code>"Dash"</code>, <code>"DashDot"</code>, <code>"Dot"</code>, <code>"LongDash"</code>, <code>"LongDashDot"</code>, <code>"LongDashDotDot"</code>, <code>"ShortDash"</code>, <code>"ShortDashDot"</code>, <code>"ShortDashDotDot"</code>, <code>"ShortDot"</code>, and <code>"Solid"</code>. In styled mode, the <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-dashstyle/">stroke dash-array</a> can be set with the same classes as listed under <code>series.color</code>.</p>
+				<p>A name for the dash style to use for the graph, or for some series types the outline of each shape. In styled mode, the <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-dashstyle/">stroke dash-array</a> can be set with the same classes as listed under <code>series.color</code>.</p>
 			</div>
 			
 		    
@@ -1698,7 +1664,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>Solid</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["Dash","DashDot","Dot","LongDash","LongDashDot",
+            "LongDashDotDot","ShortDash","ShortDashDot",
+            "ShortDashDotDot","ShortDot","Solid"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>Solid</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1735,7 +1705,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Possible values: <code>"on"</code>, <code>"between"</code>, <code>number</code>. In a column chart, when pointPlacement is <code>"on"</code>, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is <code>"between"</code>, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart. Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won&rsquo;t affect axis padding. Note that pointPlacement needs a <code>pointRange</code> to work. For column series this is computed, but for line-type series it needs to be set. Defaults to <code>undefined</code> in cartesian charts, <code>"between"</code> in polar charts.</p>
+				<p>Possible values: <code>"on"</code>, <code>"between"</code>, <code>number</code>. In a column chart, when pointPlacement is <code>"on"</code>, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is <code>"between"</code>, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart. Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won&rsquo;t affect axis padding. Note that pointPlacement needs a <code>pointRange</code> to work. For column series this is computed, but for line-type series it needs to be set. For the <code>xrange</code> series type and gantt charts, if the Y axis is a category axis, the <code>pointPlacement</code> applies to the Y axis rather than the (typically datetime) X axis. Defaults to <code>undefined</code> in cartesian charts, <code>"between"</code> in polar charts.</p>
 			</div>
 			
 		    
@@ -1811,6 +1781,59 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-false/">False by default</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-connectnulls-true/">True</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/negativeColor" title="negativeColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/negativeColor">&nbsp;&nbsp;negativeColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color for the parts of the graph or points that are below the <code>threshold</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *negativeColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/">Spline, area and column</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/">Arearange</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/">Styled mode</a></li>
 </ul>
 
 			</div>
@@ -1996,61 +2019,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/animation" title="animation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <code>chart.animation</code> and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing Can be a string reference to an easing function set on the <code>Math</code> object or a function. See the <em>Custom easing function</em> demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimation *animation</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/">Animation disabled</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/">Slower animation</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">Custom easing function</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeries.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/findNearestPointBy" title="findNearestPointBy"></a>
 	<h3 class="method-title"><code><a href="#//api/name/findNearestPointBy">&nbsp;&nbsp;findNearestPointBy</a></code>
 </h3>
@@ -2113,10 +2081,45 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showCheckbox</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/">Show select box</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -2280,11 +2283,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1000</code>.</p>
-			</div>
-			
 
 			
 
@@ -2311,7 +2309,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If set to <code>True</code>, the accessibility module will skip past the points in this series for keyboard navigation.</p>
+				<p>If set to <code>true</code>, the accessibility module will skip past the points in this series for keyboard navigation.</p>
 			</div>
 			
 		    
@@ -2352,7 +2350,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.</p>
+				<p>Allow this series' points to be selected by clicking on the graphic (columns, point markers, pie slices, map areas etc).</p>
 			</div>
 			
 		    
@@ -2369,12 +2367,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/">Show select box</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/">Line</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/">Column</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/">Pie</a></li>
 </ul>
 
 			</div>
@@ -2561,7 +2559,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id shadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
 
 		    
 			
@@ -2582,6 +2580,102 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/animation" title="animation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <code>chart.animation</code> and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing Can be a string reference to an easing function set on the <code>Math</code> object or a function. See the <em>Custom easing function</em> demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimationOptionsObject *animation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/">Animation disabled</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/">Slower animation</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">Custom easing function</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tooltip" title="tooltip"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tooltip">&nbsp;&nbsp;tooltip</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A configuration object for the tooltip rendering of each single series. Properties are inherited from <code>tooltip</code>, but only the following properties can be defined on a series level.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITooltip *tooltip</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -2755,8 +2849,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/lineWidth" title="lineWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
+	<a name="//api/name/connectEnds" title="connectEnds"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectEnds">&nbsp;&nbsp;connectEnds</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2766,12 +2860,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Pixel width of the graph line.</p>
+				<p>Polar charts only. Whether to connect the ends of a line series plot across the extremes.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectEnds</code></div>
 
 		    
 			
@@ -2783,13 +2877,10 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>2</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/">On all series</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-specific/">On one single series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-connectends-false/">Do not connect</a></li>
 </ul>
 
 			</div>
@@ -2913,8 +3004,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/stickyTracking" title="stickyTracking"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stickyTracking">&nbsp;&nbsp;stickyTracking</a></code>
+	<a name="//api/name/boostThreshold" title="boostThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/boostThreshold">&nbsp;&nbsp;boostThreshold</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2924,12 +3015,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn&rsquo;t triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip when not shared. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.</p>
+				<p>Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the <code>boostThreshold</code> to 0. Setting it to 1 will force boosting. Requires <code>modules/boost.js</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *stickyTracking</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *boostThreshold</code></div>
 
 		    
 			
@@ -2941,15 +3032,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/">True by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/">False</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>5000</code>.</p>
 			</div>
 			
 
@@ -2978,7 +3061,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for the series data labels, appearing next to each data point. In styled mode, the data labels can be styled with the <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names (<a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels">see example</a>).</p>
+				<p>Options for the series data labels, appearing next to each data point. Since v6.2.0, multiple data labels can be applied to each single point by defining them as an array of configs. In styled mode, the data labels can be styled with the <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names (<a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels">see example</a>).</p>
 			</div>
 			
 		    
@@ -2992,6 +3075,17 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-enabled">Data labels enabled</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-multiple">Multiple data labels on a bar series</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -3008,8 +3102,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/cursor" title="cursor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/cursor">&nbsp;&nbsp;cursor</a></code>
+	<a name="//api/name/className" title="className"></a>
+	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3019,12 +3113,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>You can set the cursor to &ldquo;pointer&rdquo; if you have click events attached to the series, to signal to the user that the points and lines can be clicked. Possible values are: <code>"default"</code>, <code>"help"</code>, <code>"none"</code>, <code>"pointer"</code>, and <code>"crosshair"</code>. In styled mode, the series cursor can be set with the same classes as listed under <code>series.color</code>.</p>
+				<p>An additional class name to apply to the series' graphical elements. This option does not replace default class names of the graphical element.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *cursor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
 
 		    
 			
@@ -3033,18 +3127,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/">On line graph</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/">On columns</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/">On scatter markers</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -3185,6 +3267,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["round", "square"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>round</code>.</p>
 			</div>
 			
 
@@ -3202,8 +3286,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/connectEnds" title="connectEnds"></a>
-	<h3 class="method-title"><code><a href="#//api/name/connectEnds">&nbsp;&nbsp;connectEnds</a></code>
+	<a name="//api/name/lineWidth" title="lineWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3213,12 +3297,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Polar charts only. Whether to connect the ends of a line series plot across the extremes.</p>
+				<p>Pixel width of the graph line.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectEnds</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
 
 		    
 			
@@ -3233,7 +3317,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-connectends-false/">Do not connect</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/">On all series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-specific/">On one single series</a></li>
 </ul>
 
 			</div>
@@ -3253,8 +3338,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/boostThreshold" title="boostThreshold"></a>
-	<h3 class="method-title"><code><a href="#//api/name/boostThreshold">&nbsp;&nbsp;boostThreshold</a></code>
+	<a name="//api/name/stickyTracking" title="stickyTracking"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stickyTracking">&nbsp;&nbsp;stickyTracking</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3264,12 +3349,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the <code>boostThreshold</code> to 0. Setting it to 1 will force boosting. Requires <code>modules/boost.js</code>.</p>
+				<p>Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn&rsquo;t triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip when not shared. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *boostThreshold</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *stickyTracking</code></div>
 
 		    
 			
@@ -3281,7 +3366,15 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>5000</code>.</p>
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/">True by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/">False</a></li>
+</ul>
+
 			</div>
 			
 

@@ -74,11 +74,17 @@
 		
 		<option value="//api/name/click">click</option>
 		
+		<option value="//api/name/drag">drag</option>
+		
+		<option value="//api/name/dragStart">dragStart</option>
+		
 		<option value="//api/name/drilldown">drilldown</option>
 		
 		<option value="//api/name/drillup">drillup</option>
 		
 		<option value="//api/name/drillupall">drillupall</option>
+		
+		<option value="//api/name/drop">drop</option>
 		
 		<option value="//api/name/hide">hide</option>
 		
@@ -1073,6 +1079,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/drop" title="drop"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drop">&nbsp;&nbsp;drop</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback that fires when the point is dropped. The parameters passed are the same as for <code>drag</code>. To stop the default drop action, return false. See <code>drag and drop options</code>. Requires the <code>draggable-points</code> module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *drop</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-xrange">Drag events</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/update" title="update"></a>
 	<h3 class="method-title"><code><a href="#//api/name/update">&nbsp;&nbsp;update</a></code>
 </h3>
@@ -1156,6 +1213,57 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-remove/">Remove point and confirm</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drag" title="drag"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drag">&nbsp;&nbsp;drag</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback that fires while dragging a point. The mouse event is passed in as parameter. The original data can be accessed from <code>e.origin</code>, and the new point values can be accessed from <code>e.newPoints</code>. If there is only a single point being updated, it can be accessed from <code>e.newPoint</code> for simplicity, and its ID can be accessed from <code>e.newPointId</code>. The <code>this</code> context is the point being dragged. To stop the default drag action, return false. See <code>drag and drop options</code>. Requires the <code>draggable-points</code> module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *drag</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-xrange">Drag events</a></li>
 </ul>
 
 			</div>
@@ -1309,6 +1417,57 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-select/">Report the last selected point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dragStart" title="dragStart"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dragStart">&nbsp;&nbsp;dragStart</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback that fires when starting to drag a point. The mouse event object is passed in as an argument. If a drag handle is used, <code>e.updateProp</code> is set to the data property being dragged. The <code>this</code> context is the point. See <code>drag and drop options</code>. Requires the <code>draggable-points</code> module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *dragStart</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-xrange">Drag events</a></li>
 </ul>
 
 			</div>

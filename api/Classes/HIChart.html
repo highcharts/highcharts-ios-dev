@@ -150,6 +150,8 @@
 		
 		<option value="//api/name/width">width</option>
 		
+		<option value="//api/name/zoomKey">zoomKey</option>
+		
 		<option value="//api/name/zoomType">zoomType</option>
 		
 	</optgroup>
@@ -435,7 +437,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *style</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *style</code></div>
 
 		    
 			
@@ -645,7 +647,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *plotBorderColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *plotBorderColor</code></div>
 
 		    
 			
@@ -657,9 +659,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#cccccc</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbordercolor/">Blue border</a></li>
@@ -752,7 +752,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *borderColor</code></div>
 
 		    
 			
@@ -900,7 +900,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id renderTo</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *renderTo</code></div>
 
 		    
 			
@@ -1219,7 +1219,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id animation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimationOptionsObject *animation</code></div>
 
 		    
 			
@@ -1274,7 +1274,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *plotBackgroundColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *plotBackgroundColor</code></div>
 
 		    
 			
@@ -1326,7 +1326,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *backgroundColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *backgroundColor</code></div>
 
 		    
 			
@@ -1865,7 +1865,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id shadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
 
 		    
 			
@@ -2008,6 +2008,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/zoomKey" title="zoomKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zoomKey">&nbsp;&nbsp;zoomKey</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set a key to hold when dragging to zoom the chart. Requires the draggable-points module. This is useful to avoid zooming while moving points. Should be set different than <code>chart.panKey</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *zoomKey</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["alt", "ctrl", "meta", "shift"]</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChart.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/ignoreHiddenSeries" title="ignoreHiddenSeries"></a>
 	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenSeries">&nbsp;&nbsp;ignoreHiddenSeries</a></code>
 </h3>
@@ -2036,9 +2082,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/ignorehiddenseries-true/">True by default</a></li>
@@ -2079,7 +2123,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *selectionMarkerFill</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *selectionMarkerFill</code></div>
 
 		    
 			
@@ -2125,7 +2169,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id plotShadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *plotShadow</code></div>
 
 		    
 			
