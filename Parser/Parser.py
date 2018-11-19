@@ -192,8 +192,8 @@ hc_types = {
         #6.1.0
         "Bool": 'NSNumber /* Bool */',
         #6.1.1
-        "AnimationOptions|Boolean": 'id /* id, Bool */',
-        "Boolean|AnimationOptions": 'id /* Bool, id */',
+        "AnimationOptions|Boolean": 'HIAnimationOptionsObject',
+        "Boolean|AnimationOptions": 'HIAnimationOptionsObject',
         "Array.<number>": 'NSArray<NSNumber *>',
         # 6.1.2
         "number": 'NSNumber',

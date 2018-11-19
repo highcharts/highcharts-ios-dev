@@ -17803,7 +17803,9 @@
                     "brightness"
                   ],
                   "products": [
-                    "highmaps"
+                    "highmaps",
+                    "highcharts",
+                    "highstock"
                   ]
                 },
                 "children": {},
@@ -25007,7 +25009,7 @@
                         "doclet": {
                           "type": {
                             "names": [
-                              "*"
+                              "Highcharts.SVGAttributes"
                             ]
                           }
                         },
@@ -29124,6 +29126,7 @@
               "select": {
                 "doclet": {
                   "description": "Options for the selected point. These settings override the normal\nstate options when a point is selected.",
+                  "extends": "plotOptions.series.states.select",
                   "exclude": [
                     "halo",
                     "lineWidth",

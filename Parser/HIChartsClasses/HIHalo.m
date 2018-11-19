@@ -42,8 +42,8 @@
 	[self updateNSObject:@"opacity"];
 }
 
--(void)setAttributes:(HIAttributes *)attributes {
-	HIAttributes *oldValue = _attributes;
+-(void)setAttributes:(HISVGAttributes *)attributes {
+	HISVGAttributes *oldValue = _attributes;
 	if(self.attributes) {
 		[self removeObserver:self forKeyPath:@"attributes.isUpdated"];
 	}

@@ -17,6 +17,9 @@
 	copySelect.lineColor = [self.lineColor copyWithZone: zone];
 	copySelect.color = [self.color copyWithZone: zone];
 	copySelect.borderColor = [self.borderColor copyWithZone: zone];
+	copySelect.animation = [self.animation copyWithZone: zone];
+	copySelect.lineWidthPlus = [self.lineWidthPlus copyWithZone: zone];
+	copySelect.halo = [self.halo copyWithZone: zone];
 	return copySelect;
 }
 
@@ -43,6 +46,15 @@
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = self.borderColor;
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.lineWidthPlus) {
+		params[@"lineWidthPlus"] = self.lineWidthPlus;
+	}
+	if (self.halo) {
+		params[@"halo"] = [self.halo getParams];
 	}
 	return params;
 }
@@ -82,6 +94,29 @@
 -(void)setBorderColor:(NSString *)borderColor {
 	_borderColor = borderColor;
 	[self updateNSObject:@"borderColor"];
+}
+
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	if(self.animation) {
+		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
+	}
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
+-(void)setLineWidthPlus:(NSNumber *)lineWidthPlus {
+	_lineWidthPlus = lineWidthPlus;
+	[self updateNSObject:@"lineWidthPlus"];
+}
+
+-(void)setHalo:(HIHalo *)halo {
+	HIHalo *oldValue = _halo;
+	if(self.halo) {
+		[self removeObserver:self forKeyPath:@"halo.isUpdated"];
+	}
+	_halo = halo;
+	[self updateHIObject:oldValue newValue:halo propertyName:@"halo"];
 }
 
 @end
