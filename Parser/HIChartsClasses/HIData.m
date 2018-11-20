@@ -216,7 +216,7 @@
 		params[@"name"] = self.name;
 	}
 	if (self.color) {
-		params[@"color"] = self.color;
+		params[@"color"] = [self.color getData];
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
@@ -276,7 +276,7 @@
 		params[@"sliced"] = self.sliced;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = self.borderColor;
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
@@ -517,9 +517,13 @@
 	[self updateNSObject:@"name"];
 }
 
--(void)setColor:(NSString *)color {
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setSelected:(NSNumber *)selected {
@@ -629,9 +633,13 @@
 	[self updateNSObject:@"sliced"];
 }
 
--(void)setBorderColor:(NSString *)borderColor {
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
 	_borderColor = borderColor;
-	[self updateNSObject:@"borderColor"];
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setPointWidth:(NSNumber *)pointWidth {

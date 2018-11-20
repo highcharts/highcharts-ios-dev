@@ -46,7 +46,7 @@ The fill color of the point marker. When `undefined`, the series' or point's col
 
 * [White fill](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/)
 */
-@property(nonatomic, readwrite) NSString *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 The color of the point marker's outline. When `undefined`, the series' or point's color is used.
 
@@ -54,7 +54,7 @@ The color of the point marker's outline. When `undefined`, the series' or point'
 
 * [Inherit from series color (undefined)](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/)
 */
-@property(nonatomic, readwrite) NSString *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 The width of the point marker's outline.
 

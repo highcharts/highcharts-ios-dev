@@ -78,7 +78,7 @@
 		params[@"rowsize"] = self.rowsize;
 	}
 	if (self.nullColor) {
-		params[@"nullColor"] = self.nullColor;
+		params[@"nullColor"] = [self.nullColor getData];
 	}
 	return params;
 }
@@ -100,9 +100,13 @@
 	[self updateNSObject:@"rowsize"];
 }
 
--(void)setNullColor:(NSString *)nullColor {
+-(void)setNullColor:(HIColor *)nullColor {
+	HIColor *oldValue = _nullColor;
+	if(self.nullColor) {
+		[self removeObserver:self forKeyPath:@"nullColor.isUpdated"];
+	}
 	_nullColor = nullColor;
-	[self updateNSObject:@"nullColor"];
+	[self updateHIObject:oldValue newValue:nullColor propertyName:@"nullColor"];
 }
 
 @end

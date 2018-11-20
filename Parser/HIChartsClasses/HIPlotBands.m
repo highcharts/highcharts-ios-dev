@@ -39,7 +39,7 @@
 		params[@"thickness"] = self.thickness;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = self.borderColor;
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -48,7 +48,7 @@
 		params[@"from"] = self.from;
 	}
 	if (self.color) {
-		params[@"color"] = self.color;
+		params[@"color"] = [self.color getData];
 	}
 	if (self.id) {
 		params[@"id"] = self.id;
@@ -87,9 +87,13 @@
 	[self updateNSObject:@"thickness"];
 }
 
--(void)setBorderColor:(NSString *)borderColor {
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
 	_borderColor = borderColor;
-	[self updateNSObject:@"borderColor"];
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
@@ -102,9 +106,13 @@
 	[self updateNSObject:@"from"];
 }
 
--(void)setColor:(NSString *)color {
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setId:(NSString *)id {

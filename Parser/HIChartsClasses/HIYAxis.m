@@ -96,7 +96,7 @@
 		params[@"labels"] = [self.labels getParams];
 	}
 	if (self.maxColor) {
-		params[@"maxColor"] = self.maxColor;
+		params[@"maxColor"] = [self.maxColor getData];
 	}
 	if (self.softMax) {
 		params[@"softMax"] = self.softMax;
@@ -168,7 +168,7 @@
 		params[@"reversedStacks"] = self.reversedStacks;
 	}
 	if (self.minColor) {
-		params[@"minColor"] = self.minColor;
+		params[@"minColor"] = [self.minColor getData];
 	}
 	if (self.showLastLabel) {
 		params[@"showLastLabel"] = self.showLastLabel;
@@ -186,7 +186,7 @@
 		params[@"min"] = self.min;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = self.lineColor;
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
@@ -249,7 +249,7 @@
 		params[@"allowDecimals"] = self.allowDecimals;
 	}
 	if (self.minorGridLineColor) {
-		params[@"minorGridLineColor"] = self.minorGridLineColor;
+		params[@"minorGridLineColor"] = [self.minorGridLineColor getData];
 	}
 	if (self.tickPositioner) {
 		params[@"tickPositioner"] = [self.tickPositioner getFunction];
@@ -318,7 +318,7 @@
 		params[@"offset"] = self.offset;
 	}
 	if (self.tickColor) {
-		params[@"tickColor"] = self.tickColor;
+		params[@"tickColor"] = [self.tickColor getData];
 	}
 	if (self.minTickInterval) {
 		params[@"minTickInterval"] = self.minTickInterval;
@@ -342,7 +342,7 @@
 		params[@"categories"] = array;
 	}
 	if (self.gridLineColor) {
-		params[@"gridLineColor"] = self.gridLineColor;
+		params[@"gridLineColor"] = [self.gridLineColor getData];
 	}
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
@@ -351,7 +351,7 @@
 		params[@"minorGridLineWidth"] = self.minorGridLineWidth;
 	}
 	if (self.minorTickColor) {
-		params[@"minorTickColor"] = self.minorTickColor;
+		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
@@ -366,7 +366,7 @@
 		params[@"tickLength"] = self.tickLength;
 	}
 	if (self.alternateGridColor) {
-		params[@"alternateGridColor"] = self.alternateGridColor;
+		params[@"alternateGridColor"] = [self.alternateGridColor getData];
 	}
 	if (self.tickPosition) {
 		params[@"tickPosition"] = self.tickPosition;
@@ -390,9 +390,13 @@
 	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
--(void)setMaxColor:(NSString *)maxColor {
+-(void)setMaxColor:(HIColor *)maxColor {
+	HIColor *oldValue = _maxColor;
+	if(self.maxColor) {
+		[self removeObserver:self forKeyPath:@"maxColor.isUpdated"];
+	}
 	_maxColor = maxColor;
-	[self updateNSObject:@"maxColor"];
+	[self updateHIObject:oldValue newValue:maxColor propertyName:@"maxColor"];
 }
 
 -(void)setSoftMax:(NSNumber *)softMax {
@@ -482,9 +486,13 @@
 	[self updateNSObject:@"reversedStacks"];
 }
 
--(void)setMinColor:(NSString *)minColor {
+-(void)setMinColor:(HIColor *)minColor {
+	HIColor *oldValue = _minColor;
+	if(self.minColor) {
+		[self removeObserver:self forKeyPath:@"minColor.isUpdated"];
+	}
 	_minColor = minColor;
-	[self updateNSObject:@"minColor"];
+	[self updateHIObject:oldValue newValue:minColor propertyName:@"minColor"];
 }
 
 -(void)setShowLastLabel:(NSNumber *)showLastLabel {
@@ -520,9 +528,13 @@
 	[self updateNSObject:@"min"];
 }
 
--(void)setLineColor:(NSString *)lineColor {
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
 	_lineColor = lineColor;
-	[self updateNSObject:@"lineColor"];
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {
@@ -601,9 +613,13 @@
 	[self updateNSObject:@"allowDecimals"];
 }
 
--(void)setMinorGridLineColor:(NSString *)minorGridLineColor {
+-(void)setMinorGridLineColor:(HIColor *)minorGridLineColor {
+	HIColor *oldValue = _minorGridLineColor;
+	if(self.minorGridLineColor) {
+		[self removeObserver:self forKeyPath:@"minorGridLineColor.isUpdated"];
+	}
 	_minorGridLineColor = minorGridLineColor;
-	[self updateNSObject:@"minorGridLineColor"];
+	[self updateHIObject:oldValue newValue:minorGridLineColor propertyName:@"minorGridLineColor"];
 }
 
 -(void)setTickPositioner:(HIFunction *)tickPositioner {
@@ -700,9 +716,13 @@
 	[self updateNSObject:@"offset"];
 }
 
--(void)setTickColor:(NSString *)tickColor {
+-(void)setTickColor:(HIColor *)tickColor {
+	HIColor *oldValue = _tickColor;
+	if(self.tickColor) {
+		[self removeObserver:self forKeyPath:@"tickColor.isUpdated"];
+	}
 	_tickColor = tickColor;
-	[self updateNSObject:@"tickColor"];
+	[self updateHIObject:oldValue newValue:tickColor propertyName:@"tickColor"];
 }
 
 -(void)setMinTickInterval:(NSNumber *)minTickInterval {
@@ -726,9 +746,13 @@
 	[self updateArrayObject:oldValue newValue:categories propertyName:@"categories"];
 }
 
--(void)setGridLineColor:(NSString *)gridLineColor {
+-(void)setGridLineColor:(HIColor *)gridLineColor {
+	HIColor *oldValue = _gridLineColor;
+	if(self.gridLineColor) {
+		[self removeObserver:self forKeyPath:@"gridLineColor.isUpdated"];
+	}
 	_gridLineColor = gridLineColor;
-	[self updateNSObject:@"gridLineColor"];
+	[self updateHIObject:oldValue newValue:gridLineColor propertyName:@"gridLineColor"];
 }
 
 -(void)setLinkedTo:(NSNumber *)linkedTo {
@@ -741,9 +765,13 @@
 	[self updateNSObject:@"minorGridLineWidth"];
 }
 
--(void)setMinorTickColor:(NSString *)minorTickColor {
+-(void)setMinorTickColor:(HIColor *)minorTickColor {
+	HIColor *oldValue = _minorTickColor;
+	if(self.minorTickColor) {
+		[self removeObserver:self forKeyPath:@"minorTickColor.isUpdated"];
+	}
 	_minorTickColor = minorTickColor;
-	[self updateNSObject:@"minorTickColor"];
+	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
 }
 
 -(void)setUniqueNames:(NSNumber *)uniqueNames {
@@ -766,9 +794,13 @@
 	[self updateNSObject:@"tickLength"];
 }
 
--(void)setAlternateGridColor:(NSString *)alternateGridColor {
+-(void)setAlternateGridColor:(HIColor *)alternateGridColor {
+	HIColor *oldValue = _alternateGridColor;
+	if(self.alternateGridColor) {
+		[self removeObserver:self forKeyPath:@"alternateGridColor.isUpdated"];
+	}
 	_alternateGridColor = alternateGridColor;
-	[self updateNSObject:@"alternateGridColor"];
+	[self updateHIObject:oldValue newValue:alternateGridColor propertyName:@"alternateGridColor"];
 }
 
 -(void)setTickPosition:(NSString *)tickPosition {

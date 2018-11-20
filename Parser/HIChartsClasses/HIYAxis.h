@@ -15,6 +15,7 @@
 #import "HIEvents.h"
 #import "HICrosshair.h"
 #import "HIBreaks.h"
+#import "HIColor.h"
 #import "HIFunction.h"
 
 
@@ -46,7 +47,7 @@ Solid gauge only. Unless `stops` are set, the color to represent the maximum val
 
 * [Min and max colors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/mincolor-maxcolor/)
 */
-@property(nonatomic, readwrite) NSString *maxColor;
+@property(nonatomic, readwrite) HIColor *maxColor;
 /**
 A soft maximum for the axis. If the series data maximum is less than this, the axis will stay at this maximum, but if the series data maximum is higher, the axis will flex to show all data. **Note**: The `series.softThreshold` option takes precedence over this option.
 
@@ -214,7 +215,7 @@ Solid gauge only. Unless `stops` are set, the color to represent the minimum val
 
 * [Min and max color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/mincolor-maxcolor/)
 */
-@property(nonatomic, readwrite) NSString *minColor;
+@property(nonatomic, readwrite) HIColor *minColor;
 /**
 Whether to show the last tick label. Defaults to `true` on cartesian charts, and `false` on polar charts.
 
@@ -262,7 +263,7 @@ The color of the line marking the axis itself. In styled mode, the line stroke i
 * [A red line on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/)
 * [Axes in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/)
 */
-@property(nonatomic, readwrite) NSString *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 The width of the line marking the axis itself. In styled mode, the stroke width is given in the `.highcharts-axis-line` or `.highcharts-xaxis-line` class.
 
@@ -391,7 +392,7 @@ Color of the minor, secondary grid lines. In styled mode, the stroke width is gi
 * [Bright grey lines from Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *minorGridLineColor;
+@property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
 A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
 
@@ -545,7 +546,7 @@ Color for the main tick marks. In styled mode, the stroke is given in the `.high
 * [Red ticks on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickcolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *tickColor;
+@property(nonatomic, readwrite) HIColor *tickColor;
 /**
 The minimum tick interval allowed in axis values. For example on zooming in on an axis with daily data, this can be used to prevent the axis from showing hours. Defaults to the closest distance between two points on the axis.
 */
@@ -588,7 +589,7 @@ Color of the grid lines extending the ticks across the plot area. In styled mode
 * [Green lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *gridLineColor;
+@property(nonatomic, readwrite) HIColor *gridLineColor;
 /**
 Index of another axis that this axis is linked to. When an axis is linked to a master axis, it will take the same extremes as the master, but as assigned by min or max or by setExtremes. It can be used to show additional info, or to ease reading the chart by duplicating the scales.
 
@@ -616,7 +617,7 @@ Color for the minor tick marks.
 
 * [Black tick marks on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/)
 */
-@property(nonatomic, readwrite) NSString *minorTickColor;
+@property(nonatomic, readwrite) HIColor *minorTickColor;
 /**
 Applies only when the axis `type` is `category`. When `uniqueNames` is true, points are placed on the X axis according to their names. If the same point name is repeated in the same or another series, the point is placed on the same X position as other points of the same name. When `uniqueNames` is false, the points are laid out in increasing X positions regardless of their names, and the X axis category will take the name of the last point in each position.
 
@@ -659,7 +660,7 @@ When using an alternate grid color, a band is painted across the plot area betwe
 
 * [Alternate grid color on the Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/alternategridcolor/)
 */
-@property(nonatomic, readwrite) NSString *alternateGridColor;
+@property(nonatomic, readwrite) HIColor *alternateGridColor;
 /**
 The position of the major tick marks relative to the axis line. Can be one of `inside` and `outside`.
 

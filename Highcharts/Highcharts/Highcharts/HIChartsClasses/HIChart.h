@@ -11,6 +11,7 @@
 #import "HIEvents.h"
 #import "HIScrollablePlotArea.h"
 #import "HIResetZoomButton.h"
+#import "HIColor.h"
 #import "HIAnimationOptionsObject.h"
 #import "HICSSObject.h"
 
@@ -100,7 +101,7 @@ The color of the inner chart or plot area border.
 
 * [Blue border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbordercolor/)
 */
-@property(nonatomic, readwrite) NSString *plotBorderColor;
+@property(nonatomic, readwrite) HIColor *plotBorderColor;
 /**
 The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or legend in top position).
 
@@ -119,7 +120,7 @@ The color of the outer chart border.
 
 * [Brown border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/bordercolor/)
 */
-@property(nonatomic, readwrite) NSString *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 In styled mode, this sets how many colors the class names should rotate between. With ten colors, series (or points) are given class names like `highcharts-color-0`, `highcharts-color-0` `...] `highcharts-color-9`. The equivalent in non-styled mode is to set colors using the [colors` setting.
 */
@@ -218,7 +219,7 @@ The background color or gradient for the plot area.
 * [Color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-color/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundcolor-gradient/)
 */
-@property(nonatomic, readwrite) NSString *plotBackgroundColor;
+@property(nonatomic, readwrite) HIColor *plotBackgroundColor;
 /**
 The background color or gradient for the outer chart area.
 
@@ -227,7 +228,7 @@ The background color or gradient for the outer chart area.
 * [Color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-color/)
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/backgroundcolor-gradient/)
 */
-@property(nonatomic, readwrite) NSString *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 Allow panning in a chart. Best used with `panKey` to combine zooming and panning. On touch devices, when the `tooltip.followTouchMove` option is `true` (default), panning requires two fingers. To allow panning with one finger, set `followTouchMove` to `false`.
 
@@ -357,7 +358,7 @@ The background color of the marker square when selecting (zooming in on) an area
 
 **Defaults to** `rgba(51,92,173,0.25)`.
 */
-@property(nonatomic, readwrite) NSString *selectionMarkerFill;
+@property(nonatomic, readwrite) HIColor *selectionMarkerFill;
 /**
 Whether to apply a drop shadow to the plot area. Requires that plotBackgroundColor be set. The shadow can be an object configuration containing `color`, `offsetX`, `offsetY`, `opacity` and `width`.
 

@@ -7,6 +7,7 @@
 */
 
 #import "HIDateTimeLabelFormats.h"
+#import "HIColor.h"
 #import "HIFunction.h"
 #import "HICSSObject.h"
 
@@ -94,7 +95,7 @@ The color of the tooltip border. When `undefined`, the border takes the color of
 * [Follow series by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/)
 * [Black border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-black/)
 */
-@property(nonatomic, readwrite) NSString *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 CSS styles for the tooltip. The tooltip can also be styled through the CSS class `.highcharts-tooltip`.
 
@@ -148,7 +149,7 @@ The background color or gradient for the tooltip. In styled mode, the stroke wid
 * [Gradient](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/)
 * [Tooltip in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/)
 */
-@property(nonatomic, readwrite) NSString *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 Proximity snap for graphs or single points. It defaults to 10 for mouse-powered devices and 25 for touch devices. Note that in most cases the whole plot area captures the mouse movement, and in these cases `tooltip.snap` doesn't make sense. This applies when `stickyTracking` is `true` (default) and when the tooltip is `shared` or `split`.
 

@@ -94,16 +94,16 @@
 		params[@"pointsInInterval"] = self.pointsInInterval;
 	}
 	if (self.negativeFillColor) {
-		params[@"negativeFillColor"] = self.negativeFillColor;
+		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = self.fillColor;
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = self.lineColor;
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
@@ -128,9 +128,13 @@
 	[self updateNSObject:@"pointsInInterval"];
 }
 
--(void)setNegativeFillColor:(NSString *)negativeFillColor {
+-(void)setNegativeFillColor:(HIColor *)negativeFillColor {
+	HIColor *oldValue = _negativeFillColor;
+	if(self.negativeFillColor) {
+		[self removeObserver:self forKeyPath:@"negativeFillColor.isUpdated"];
+	}
 	_negativeFillColor = negativeFillColor;
-	[self updateNSObject:@"negativeFillColor"];
+	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
 }
 
 -(void)setTrackByArea:(NSNumber *)trackByArea {
@@ -138,14 +142,22 @@
 	[self updateNSObject:@"trackByArea"];
 }
 
--(void)setFillColor:(NSString *)fillColor {
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	if(self.fillColor) {
+		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
+	}
 	_fillColor = fillColor;
-	[self updateNSObject:@"fillColor"];
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setLineColor:(NSString *)lineColor {
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
 	_lineColor = lineColor;
-	[self updateNSObject:@"lineColor"];
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setFillOpacity:(NSNumber *)fillOpacity {

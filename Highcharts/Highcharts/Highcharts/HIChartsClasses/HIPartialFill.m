@@ -22,7 +22,7 @@
 		params[@"amount"] = self.amount;
 	}
 	if (self.fill) {
-		params[@"fill"] = self.fill;
+		params[@"fill"] = [self.fill getData];
 	}
 	return params;
 }
@@ -34,9 +34,13 @@
 	[self updateNSObject:@"amount"];
 }
 
--(void)setFill:(NSString *)fill {
+-(void)setFill:(HIColor *)fill {
+	HIColor *oldValue = _fill;
+	if(self.fill) {
+		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
+	}
 	_fill = fill;
-	[self updateNSObject:@"fill"];
+	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 @end

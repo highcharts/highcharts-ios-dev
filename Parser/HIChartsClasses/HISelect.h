@@ -7,6 +7,7 @@
 */
 
 #import "HIHalo.h"
+#import "HIColor.h"
 #import "HIAnimationOptionsObject.h"
 
 
@@ -48,7 +49,7 @@ The fill color of the point marker.
 
 * [Solid red discs for selected points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-fillcolor/)
 */
-@property(nonatomic, readwrite) NSString *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 The color of the point marker's outline. When `undefined`, the series' or point's color is used.
 
@@ -56,19 +57,19 @@ The color of the point marker's outline. When `undefined`, the series' or point'
 
 * [Red line color for selected points](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linecolor/)
 */
-@property(nonatomic, readwrite) NSString *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 A specific color for the selected point.
 
 **Defaults to** `#cccccc`.
 */
-@property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 A specific border color for the selected point.
 
 **Defaults to** `#000000`.
 */
-@property(nonatomic, readwrite) NSString *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 Animation setting for hovering the graph in line-type series.
 */

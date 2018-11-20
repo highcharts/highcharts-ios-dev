@@ -36,16 +36,16 @@
 		params[@"radius"] = self.radius;
 	}
 	if (self.fillColor) {
-		params[@"fillColor"] = self.fillColor;
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = self.lineColor;
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.color) {
-		params[@"color"] = self.color;
+		params[@"color"] = [self.color getData];
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = self.borderColor;
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
@@ -76,24 +76,40 @@
 	[self updateNSObject:@"radius"];
 }
 
--(void)setFillColor:(NSString *)fillColor {
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	if(self.fillColor) {
+		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
+	}
 	_fillColor = fillColor;
-	[self updateNSObject:@"fillColor"];
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setLineColor:(NSString *)lineColor {
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
 	_lineColor = lineColor;
-	[self updateNSObject:@"lineColor"];
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
--(void)setColor:(NSString *)color {
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setBorderColor:(NSString *)borderColor {
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
 	_borderColor = borderColor;
-	[self updateNSObject:@"borderColor"];
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setAnimation:(HIAnimationOptionsObject *)animation {

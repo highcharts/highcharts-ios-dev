@@ -7,6 +7,7 @@
 */
 
 #import "HISeries.h"
+#import "HIColor.h"
 
 
 /**
@@ -68,7 +69,7 @@ The row size - how many Y axis units each heatmap row should span.
 /**
 The color applied to null points. In styled mode, a general CSS class is applied instead.
 */
-@property(nonatomic, readwrite) NSString *nullColor;
+@property(nonatomic, readwrite) HIColor *nullColor;
 
 -(NSDictionary *)getParams;
 

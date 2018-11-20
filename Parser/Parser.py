@@ -242,10 +242,27 @@ hc_types = {
         "Highcharts.Options": 'NSDictionary',
         "boolean|Highcharts.ShadowOptionsObject": 'NSNumber /* Bool */',
         "string|Highcharts.SVGDOMElement": 'NSString',
-        "boolean|Highcharts.CSSObject": 'NSNumber /* Bool */'
+        "boolean|Highcharts.CSSObject": 'NSNumber /* Bool */',
+        #color fixes
+        "Highcharts.ColorString": 'HIColor',
+        "Highcharts.ColorString|null": 'HIColor'
 
         #"boolean|Highcharts.AnimationObject": 'id /* id, Bool */', # Highcharts.AnimationOptionsObject
         #"boolean|Highcharts.AnimationOptionsObject": 'id'
+
+        #ts/beta-0.6.0
+        #"Array.<Highcharts.Dictionary.<number>>": 'NSArray',
+        #"string|global.HTMLElement": 'NSString',
+        #"Array.<Array.<*>>": 'NSArray',
+        #"Highcharts.Dictionary.<Highcharts.ExportingMenuObject>": 'NSDictionary',
+        #"string|Highcharts.GradientColorObject": 'HIColor',
+        #"Array.<(string|number)>": 'NSArray /* <NSString, NSNumber> */',
+        #"boolean|null": 'NSNumber /* Bool */',
+        #"false|number": 'NSNumber',
+        #"Highcharts.Dictionary.<Highcharts.PlotSeriesDragDropGuideBoxDefaultOptions>": 'NSDictionary',
+        #"*|Array.<*>": 'NSArray',
+        #"function|undefined": 'HIFunction',
+        #"string|undefined": 'NSString'
     }
 
 def get_type(x):
@@ -1168,6 +1185,8 @@ def create_namespace_class(node):
                     data_type = types[0] + "|" + types[1] + "|" + types[2] + "|" + types[3]
 
                 namespace_types[node.name] = data_type
+            else:
+                namespace_types[node.name] = "*"
 
             if "products" in doclet:
                 products = doclet["products"]

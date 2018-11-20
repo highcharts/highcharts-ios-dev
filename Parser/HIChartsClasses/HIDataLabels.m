@@ -106,7 +106,7 @@
 		params[@"shape"] = self.shape;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = self.borderColor;
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.filter) {
 		params[@"filter"] = [self.filter getParams];
@@ -121,10 +121,10 @@
 		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.color) {
-		params[@"color"] = self.color;
+		params[@"color"] = [self.color getData];
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = self.backgroundColor;
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
@@ -166,7 +166,7 @@
 		params[@"connectorPadding"] = self.connectorPadding;
 	}
 	if (self.connectorColor) {
-		params[@"connectorColor"] = self.connectorColor;
+		params[@"connectorColor"] = [self.connectorColor getData];
 	}
 	return params;
 }
@@ -262,9 +262,13 @@
 	[self updateNSObject:@"shape"];
 }
 
--(void)setBorderColor:(NSString *)borderColor {
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
 	_borderColor = borderColor;
-	[self updateNSObject:@"borderColor"];
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setFilter:(HIFilter *)filter {
@@ -295,14 +299,22 @@
 	[self updateNSObject:@"useHTML"];
 }
 
--(void)setColor:(NSString *)color {
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setBackgroundColor:(NSString *)backgroundColor {
+-(void)setBackgroundColor:(HIColor *)backgroundColor {
+	HIColor *oldValue = _backgroundColor;
+	if(self.backgroundColor) {
+		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
+	}
 	_backgroundColor = backgroundColor;
-	[self updateNSObject:@"backgroundColor"];
+	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setAllowOverlap:(NSNumber *)allowOverlap {
@@ -374,9 +386,13 @@
 	[self updateNSObject:@"connectorPadding"];
 }
 
--(void)setConnectorColor:(NSString *)connectorColor {
+-(void)setConnectorColor:(HIColor *)connectorColor {
+	HIColor *oldValue = _connectorColor;
+	if(self.connectorColor) {
+		[self removeObserver:self forKeyPath:@"connectorColor.isUpdated"];
+	}
 	_connectorColor = connectorColor;
-	[self updateNSObject:@"connectorColor"];
+	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
 @end

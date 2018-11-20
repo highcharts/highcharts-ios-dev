@@ -7,6 +7,7 @@
 */
 
 #import "HIFilter.h"
+#import "HIColor.h"
 #import "HIFunction.h"
 #import "HICSSObject.h"
 
@@ -113,7 +114,7 @@ The border color for the data label. Defaults to `undefined`.
 
 * [Data labels box options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/)
 */
-@property(nonatomic, readwrite) NSString *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 A declarative filter for which data labels to display. The declarative filter is designed for use when callback functions are not available, like when the chart options require a pure JSON structure or for use with graphical editors. For programmatic control, use the `formatter` instead, and return `undefined` to disable a single data label.
 
@@ -155,7 +156,7 @@ The text color for the data labels. Defaults to `undefined`. For certain series 
 
 * [Red data labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-color/)
 */
-@property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 The background color or gradient for the data label.
 
@@ -163,7 +164,7 @@ The background color or gradient for the data label.
 
 * [Data labels box options](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/)
 */
-@property(nonatomic, readwrite) NSString *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 Whether to allow data labels to overlap. To make the labels less sensitive for overlapping, the `dataLabels.padding` can be set to 0.
 
@@ -278,7 +279,7 @@ The color of the line connecting the data label to the pie slice. The default co
 * [Blue connectors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/)
 * [Styled connectors](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/)
 */
-@property(nonatomic, readwrite) NSString *connectorColor;
+@property(nonatomic, readwrite) HIColor *connectorColor;
 
 -(NSDictionary *)getParams;
 

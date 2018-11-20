@@ -11,6 +11,7 @@
 #import "HIMarker.h"
 #import "HIPartialFill.h"
 #import "HITargetOptions.h"
+#import "HIColor.h"
 #import "HIFunction.h"
 
 
@@ -292,7 +293,7 @@ Individual color for the point. By default the color is pulled from the global `
 
 * [Mark the highest point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/color/)
 */
-@property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 Whether the data point is selected initially.
 
@@ -407,7 +408,7 @@ The color of the border surrounding the column or bar. In styled mode, the borde
 
 * [Dark gray border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/)
 */
-@property(nonatomic, readwrite) NSString *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 A pixel value specifying a fixed width for the column or bar. Overrides pointWidth on the series.
 

@@ -133,7 +133,7 @@
 		params[@"min"] = self.min;
 	}
 	if (self.lineColor) {
-		params[@"lineColor"] = self.lineColor;
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
@@ -223,7 +223,7 @@
 		params[@"floor"] = self.floor;
 	}
 	if (self.tickColor) {
-		params[@"tickColor"] = self.tickColor;
+		params[@"tickColor"] = [self.tickColor getData];
 	}
 	if (self.minTickInterval) {
 		params[@"minTickInterval"] = self.minTickInterval;
@@ -250,7 +250,7 @@
 		params[@"linkedTo"] = self.linkedTo;
 	}
 	if (self.minorTickColor) {
-		params[@"minorTickColor"] = self.minorTickColor;
+		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
@@ -376,9 +376,13 @@
 	[self updateNSObject:@"min"];
 }
 
--(void)setLineColor:(NSString *)lineColor {
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	if(self.lineColor) {
+		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
+	}
 	_lineColor = lineColor;
-	[self updateNSObject:@"lineColor"];
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setGridZIndex:(NSNumber *)gridZIndex {
@@ -514,9 +518,13 @@
 	[self updateNSObject:@"floor"];
 }
 
--(void)setTickColor:(NSString *)tickColor {
+-(void)setTickColor:(HIColor *)tickColor {
+	HIColor *oldValue = _tickColor;
+	if(self.tickColor) {
+		[self removeObserver:self forKeyPath:@"tickColor.isUpdated"];
+	}
 	_tickColor = tickColor;
-	[self updateNSObject:@"tickColor"];
+	[self updateHIObject:oldValue newValue:tickColor propertyName:@"tickColor"];
 }
 
 -(void)setMinTickInterval:(NSNumber *)minTickInterval {
@@ -545,9 +553,13 @@
 	[self updateNSObject:@"linkedTo"];
 }
 
--(void)setMinorTickColor:(NSString *)minorTickColor {
+-(void)setMinorTickColor:(HIColor *)minorTickColor {
+	HIColor *oldValue = _minorTickColor;
+	if(self.minorTickColor) {
+		[self removeObserver:self forKeyPath:@"minorTickColor.isUpdated"];
+	}
 	_minorTickColor = minorTickColor;
-	[self updateNSObject:@"minorTickColor"];
+	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
 }
 
 -(void)setUniqueNames:(NSNumber *)uniqueNames {

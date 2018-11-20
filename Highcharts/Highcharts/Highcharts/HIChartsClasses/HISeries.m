@@ -145,7 +145,7 @@
 		params[@"point"] = [self.point getParams];
 	}
 	if (self.color) {
-		params[@"color"] = self.color;
+		params[@"color"] = [self.color getData];
 	}
 	if (self.pointInterval) {
 		params[@"pointInterval"] = self.pointInterval;
@@ -187,7 +187,7 @@
 		params[@"connectNulls"] = self.connectNulls;
 	}
 	if (self.negativeColor) {
-		params[@"negativeColor"] = self.negativeColor;
+		params[@"negativeColor"] = [self.negativeColor getData];
 	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
@@ -406,9 +406,13 @@
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
 
--(void)setColor:(NSString *)color {
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	if(self.color) {
+		[self removeObserver:self forKeyPath:@"color.isUpdated"];
+	}
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setPointInterval:(NSNumber *)pointInterval {
@@ -496,9 +500,13 @@
 	[self updateNSObject:@"connectNulls"];
 }
 
--(void)setNegativeColor:(NSString *)negativeColor {
+-(void)setNegativeColor:(HIColor *)negativeColor {
+	HIColor *oldValue = _negativeColor;
+	if(self.negativeColor) {
+		[self removeObserver:self forKeyPath:@"negativeColor.isUpdated"];
+	}
 	_negativeColor = negativeColor;
-	[self updateNSObject:@"negativeColor"];
+	[self updateHIObject:oldValue newValue:negativeColor propertyName:@"negativeColor"];
 }
 
 -(void)setEnableMouseTracking:(NSNumber *)enableMouseTracking {

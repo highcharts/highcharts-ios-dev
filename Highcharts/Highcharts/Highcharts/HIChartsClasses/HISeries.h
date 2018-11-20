@@ -103,9 +103,7 @@ This option allows grouping series in a stacked chart. The stack option can be a
 <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/stack/" target="_blank">Stacked and grouped columns</a>*/
 @property(nonatomic, readwrite) NSString *stack;
 /**
-The type of series. Can be one of area, areaspline,
- bar, column, line, pie,
- scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
+The type of series. Can be one of area, areaspline, bar, column, line, pie, scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
 
 **Accepted values:** `[null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]`.
 
@@ -190,7 +188,7 @@ The main color of the series. In line type series it applies to the line and the
 * [Area color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/)
 * [Pattern fill](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/infographic/)
 */
-@property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 If no x values are given for the points in a series, `pointInterval` defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set `pointInterval` to `10`. In true `datetime` axes, the `pointInterval` is set in milliseconds. It can be also be combined with `pointIntervalUnit` to draw irregular time intervals. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
 
@@ -299,7 +297,7 @@ The color for the parts of the graph or points that are below the `threshold`.
 * [Arearange](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/)
 */
-@property(nonatomic, readwrite) NSString *negativeColor;
+@property(nonatomic, readwrite) HIColor *negativeColor;
 /**
 Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
 

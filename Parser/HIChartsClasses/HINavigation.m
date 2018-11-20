@@ -48,13 +48,13 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.inactiveColor) {
-		params[@"inactiveColor"] = self.inactiveColor;
+		params[@"inactiveColor"] = [self.inactiveColor getData];
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.activeColor) {
-		params[@"activeColor"] = self.activeColor;
+		params[@"activeColor"] = [self.activeColor getData];
 	}
 	return params;
 }
@@ -116,9 +116,13 @@
 	[self updateNSObject:@"enabled"];
 }
 
--(void)setInactiveColor:(NSString *)inactiveColor {
+-(void)setInactiveColor:(HIColor *)inactiveColor {
+	HIColor *oldValue = _inactiveColor;
+	if(self.inactiveColor) {
+		[self removeObserver:self forKeyPath:@"inactiveColor.isUpdated"];
+	}
 	_inactiveColor = inactiveColor;
-	[self updateNSObject:@"inactiveColor"];
+	[self updateHIObject:oldValue newValue:inactiveColor propertyName:@"inactiveColor"];
 }
 
 -(void)setAnimation:(HIAnimationOptionsObject *)animation {
@@ -130,9 +134,13 @@
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
--(void)setActiveColor:(NSString *)activeColor {
+-(void)setActiveColor:(HIColor *)activeColor {
+	HIColor *oldValue = _activeColor;
+	if(self.activeColor) {
+		[self removeObserver:self forKeyPath:@"activeColor.isUpdated"];
+	}
 	_activeColor = activeColor;
-	[self updateNSObject:@"activeColor"];
+	[self updateHIObject:oldValue newValue:activeColor propertyName:@"activeColor"];
 }
 
 @end

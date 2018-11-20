@@ -7,6 +7,7 @@
 */
 
 #import "HIHalo.h"
+#import "HIColor.h"
 #import "HIAnimationOptionsObject.h"
 
 
@@ -59,7 +60,7 @@ Options for the halo appearing around the hovered point in line- type series as 
 /**
 The fill color of the marker in hover state. When `undefined`, the series' or point's fillColor for normal state is used.
 */
-@property(nonatomic, readwrite) NSString *fillColor;
+@property(nonatomic, readwrite) HIColor *fillColor;
 /**
 The color of the point marker's outline. When `undefined`, the series' or point's lineColor for normal state is used.
 
@@ -67,7 +68,7 @@ The color of the point marker's outline. When `undefined`, the series' or point'
 
 * [White fill color, black line color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-states-hover-linecolor/)
 */
-@property(nonatomic, readwrite) NSString *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 The radius of the point marker. In hover state, it defaults to the normal state's radius + 2 as per the `radiusPlus` option.
 
@@ -101,7 +102,7 @@ The shadow option for hovered state.
 /**
 A specific color for the hovered point.
 */
-@property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) HIColor *color;
 
 -(NSDictionary *)getParams;
 

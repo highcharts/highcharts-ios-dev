@@ -89,13 +89,13 @@
 		params[@"marginRight"] = self.marginRight;
 	}
 	if (self.plotBorderColor) {
-		params[@"plotBorderColor"] = self.plotBorderColor;
+		params[@"plotBorderColor"] = [self.plotBorderColor getData];
 	}
 	if (self.spacingRight) {
 		params[@"spacingRight"] = self.spacingRight;
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = self.borderColor;
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.colorCount) {
 		params[@"colorCount"] = self.colorCount;
@@ -125,10 +125,10 @@
 		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.plotBackgroundColor) {
-		params[@"plotBackgroundColor"] = self.plotBackgroundColor;
+		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getData];
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = self.backgroundColor;
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.panning) {
 		params[@"panning"] = self.panning;
@@ -185,7 +185,7 @@
 		params[@"ignoreHiddenSeries"] = self.ignoreHiddenSeries;
 	}
 	if (self.selectionMarkerFill) {
-		params[@"selectionMarkerFill"] = self.selectionMarkerFill;
+		params[@"selectionMarkerFill"] = [self.selectionMarkerFill getData];
 	}
 	if (self.plotShadow) {
 		params[@"plotShadow"] = self.plotShadow;
@@ -279,9 +279,13 @@
 	[self updateNSObject:@"marginRight"];
 }
 
--(void)setPlotBorderColor:(NSString *)plotBorderColor {
+-(void)setPlotBorderColor:(HIColor *)plotBorderColor {
+	HIColor *oldValue = _plotBorderColor;
+	if(self.plotBorderColor) {
+		[self removeObserver:self forKeyPath:@"plotBorderColor.isUpdated"];
+	}
 	_plotBorderColor = plotBorderColor;
-	[self updateNSObject:@"plotBorderColor"];
+	[self updateHIObject:oldValue newValue:plotBorderColor propertyName:@"plotBorderColor"];
 }
 
 -(void)setSpacingRight:(NSNumber *)spacingRight {
@@ -289,9 +293,13 @@
 	[self updateNSObject:@"spacingRight"];
 }
 
--(void)setBorderColor:(NSString *)borderColor {
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
 	_borderColor = borderColor;
-	[self updateNSObject:@"borderColor"];
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setColorCount:(NSNumber *)colorCount {
@@ -343,14 +351,22 @@
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
--(void)setPlotBackgroundColor:(NSString *)plotBackgroundColor {
+-(void)setPlotBackgroundColor:(HIColor *)plotBackgroundColor {
+	HIColor *oldValue = _plotBackgroundColor;
+	if(self.plotBackgroundColor) {
+		[self removeObserver:self forKeyPath:@"plotBackgroundColor.isUpdated"];
+	}
 	_plotBackgroundColor = plotBackgroundColor;
-	[self updateNSObject:@"plotBackgroundColor"];
+	[self updateHIObject:oldValue newValue:plotBackgroundColor propertyName:@"plotBackgroundColor"];
 }
 
--(void)setBackgroundColor:(NSString *)backgroundColor {
+-(void)setBackgroundColor:(HIColor *)backgroundColor {
+	HIColor *oldValue = _backgroundColor;
+	if(self.backgroundColor) {
+		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
+	}
 	_backgroundColor = backgroundColor;
-	[self updateNSObject:@"backgroundColor"];
+	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setPanning:(NSNumber *)panning {
@@ -441,9 +457,13 @@
 	[self updateNSObject:@"ignoreHiddenSeries"];
 }
 
--(void)setSelectionMarkerFill:(NSString *)selectionMarkerFill {
+-(void)setSelectionMarkerFill:(HIColor *)selectionMarkerFill {
+	HIColor *oldValue = _selectionMarkerFill;
+	if(self.selectionMarkerFill) {
+		[self removeObserver:self forKeyPath:@"selectionMarkerFill.isUpdated"];
+	}
 	_selectionMarkerFill = selectionMarkerFill;
-	[self updateNSObject:@"selectionMarkerFill"];
+	[self updateHIObject:oldValue newValue:selectionMarkerFill propertyName:@"selectionMarkerFill"];
 }
 
 -(void)setPlotShadow:(NSNumber *)plotShadow {

@@ -296,7 +296,7 @@ Color of the minor, secondary grid lines. In styled mode, the stroke width is gi
 * [Bright grey lines from Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *minorGridLineColor;
+@property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
 A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
 
@@ -414,7 +414,7 @@ Color for the main tick marks. In styled mode, the stroke is given in the `.high
 * [Red ticks on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickcolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *tickColor;
+@property(nonatomic, readwrite) HIColor *tickColor;
 /**
 Specific tick interval in axis units for the minor ticks. On a linear axis, if `"auto"`, the minor tick interval is calculated as a fifth of the tickInterval. If `null` or `undefined`, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don't make sense, and will be ignored to prevent performance problems.
 
@@ -464,7 +464,7 @@ Color for the minor tick marks.
 
 * [Black tick marks on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/)
 */
-@property(nonatomic, readwrite) NSString *minorTickColor;
+@property(nonatomic, readwrite) HIColor *minorTickColor;
 /**
 Applies only when the axis `type` is `category`. When `uniqueNames` is true, points are placed on the X axis according to their names. If the same point name is repeated in the same or another series, the point is placed on the same X position as other points of the same name. When `uniqueNames` is false, the points are laid out in increasing X positions regardless of their names, and the X axis category will take the name of the last point in each position.
 
@@ -502,7 +502,7 @@ The color of the line marking the axis itself. In styled mode, the line stroke i
 * [A red line on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/)
 * [Axes in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/)
 */
-@property(nonatomic, readwrite) NSString *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 The position of the major tick marks relative to the axis line. Can be one of `inside` and `outside`.
 

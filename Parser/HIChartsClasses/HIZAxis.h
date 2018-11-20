@@ -12,6 +12,7 @@
 #import "HIEvents.h"
 #import "HILabels.h"
 #import "HITitle.h"
+#import "HIColor.h"
 #import "HIFunction.h"
 
 
@@ -195,7 +196,7 @@ Color of the minor, secondary grid lines. In styled mode, the stroke width is gi
 * [Bright grey lines from Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *minorGridLineColor;
+@property(nonatomic, readwrite) HIColor *minorGridLineColor;
 /**
 A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of `tickPixelInterval` and `tickInterval`. The automatic tick positions are accessible through `this.tickPositions` and can be modified by the callback.
 
@@ -393,7 +394,7 @@ Color for the main tick marks. In styled mode, the stroke is given in the `.high
 * [Red ticks on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickcolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *tickColor;
+@property(nonatomic, readwrite) HIColor *tickColor;
 /**
 The minimum tick interval allowed in axis values. For example on zooming in on an axis with daily data, this can be used to prevent the axis from showing hours. Defaults to the closest distance between two points on the axis.
 */
@@ -436,7 +437,7 @@ Color of the grid lines extending the ticks across the plot area. In styled mode
 * [Green lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinecolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *gridLineColor;
+@property(nonatomic, readwrite) HIColor *gridLineColor;
 /**
 This option determines how stacks should be ordered within a group. For example reversed xAxis also reverses stacks, so first series comes last in a group. To keep order like for non-reversed xAxis enable this option.
 
@@ -484,7 +485,7 @@ Color for the minor tick marks.
 
 * [Black tick marks on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/)
 */
-@property(nonatomic, readwrite) NSString *minorTickColor;
+@property(nonatomic, readwrite) HIColor *minorTickColor;
 /**
 Applies only when the axis `type` is `category`. When `uniqueNames` is true, points are placed on the X axis according to their names. If the same point name is repeated in the same or another series, the point is placed on the same X position as other points of the same name. When `uniqueNames` is false, the points are laid out in increasing X positions regardless of their names, and the X axis category will take the name of the last point in each position.
 
@@ -537,7 +538,7 @@ When using an alternate grid color, a band is painted across the plot area betwe
 
 * [Alternate grid color on the Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/alternategridcolor/)
 */
-@property(nonatomic, readwrite) NSString *alternateGridColor;
+@property(nonatomic, readwrite) HIColor *alternateGridColor;
 /**
 The axis title, showing next to the axis line.
 */

@@ -10,6 +10,7 @@
 #import "HIDateTimeLabelFormats.h"
 #import "HIEvents.h"
 #import "HICrosshair.h"
+#import "HIColor.h"
 #import "HIFunction.h"
 
 
@@ -215,7 +216,7 @@ The color of the line marking the axis itself. In styled mode, the line stroke i
 * [A red line on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/)
 * [Axes in styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/)
 */
-@property(nonatomic, readwrite) NSString *lineColor;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 The Z index of the grid lines.
 
@@ -416,7 +417,7 @@ Color for the main tick marks. In styled mode, the stroke is given in the `.high
 * [Red ticks on X axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickcolor/)
 * [Styled mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis-grid/)
 */
-@property(nonatomic, readwrite) NSString *tickColor;
+@property(nonatomic, readwrite) HIColor *tickColor;
 /**
 The minimum tick interval allowed in axis values. For example on zooming in on an axis with daily data, this can be used to prevent the axis from showing hours. Defaults to the closest distance between two points on the axis.
 */
@@ -467,7 +468,7 @@ Color for the minor tick marks.
 
 * [Black tick marks on Y axis](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickcolor/)
 */
-@property(nonatomic, readwrite) NSString *minorTickColor;
+@property(nonatomic, readwrite) HIColor *minorTickColor;
 /**
 Applies only when the axis `type` is `category`. When `uniqueNames` is true, points are placed on the X axis according to their names. If the same point name is repeated in the same or another series, the point is placed on the same X position as other points of the same name. When `uniqueNames` is false, the points are laid out in increasing X positions regardless of their names, and the X axis category will take the name of the last point in each position.
 

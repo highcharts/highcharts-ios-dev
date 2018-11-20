@@ -10,6 +10,7 @@
 #import "HIMenuItemStyle.h"
 #import "HIButtonOptions.h"
 #import "HIMenuItemHoverStyle.h"
+#import "HIColor.h"
 #import "HIAnimationOptionsObject.h"
 #import "HICSSObject.h"
 
@@ -84,7 +85,7 @@ The color of the inactive up or down arrow in the legend page navigation. .
 
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
-@property(nonatomic, readwrite) NSString *inactiveColor;
+@property(nonatomic, readwrite) HIColor *inactiveColor;
 /**
 How to animate the pages when navigating up or down. A value of `true` applies the default navigation given in the `chart.animation` option. Additional options can be given as an object containing values for easing and duration.
 
@@ -102,7 +103,7 @@ The color for the active up or down arrow in the legend page navigation.
 
 * [Legend page navigation demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/)
 */
-@property(nonatomic, readwrite) NSString *activeColor;
+@property(nonatomic, readwrite) HIColor *activeColor;
 
 -(NSDictionary *)getParams;
 

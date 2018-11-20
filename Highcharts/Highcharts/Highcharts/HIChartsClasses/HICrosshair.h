@@ -7,6 +7,7 @@
 */
 
 #import "HIChartsJSONSerializable.h"
+#import "HIColor.h"
 
 
 /**
@@ -49,7 +50,7 @@ The color of the crosshair. Defaults to `#cccccc` for numeric and datetime axes,
 
 * [Customized crosshairs](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/)
 */
-@property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 A class name for the crosshair, especially as a hook for styling.
 */

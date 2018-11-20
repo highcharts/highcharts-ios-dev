@@ -7,6 +7,7 @@
 */
 
 #import "HISeries.h"
+#import "HIColor.h"
 
 
 /**
@@ -83,7 +84,7 @@ The column size - how many X axis units each column in the tilemap should span. 
 /**
 The color applied to null points. In styled mode, a general CSS class is applied instead.
 */
-@property(nonatomic, readwrite) NSString *nullColor;
+@property(nonatomic, readwrite) HIColor *nullColor;
 
 -(NSDictionary *)getParams;
 

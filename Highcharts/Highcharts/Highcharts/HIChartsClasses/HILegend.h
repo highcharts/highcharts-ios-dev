@@ -9,6 +9,7 @@
 #import "HITitle.h"
 #import "HIKeyboardNavigation.h"
 #import "HINavigation.h"
+#import "HIColor.h"
 #import "HICSSObject.h"
 
 
@@ -97,7 +98,7 @@ The color of the drawn border around the legend.
 
 * [Brown border](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/bordercolor/)
 */
-@property(nonatomic, readwrite) NSString *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 The layout of the legend items. Can be one of `horizontal` or `vertical` or `proximate`. When `proximate`, the legend items will be placed as close as possible to the graphs they're representing, except in inverted charts or when the legend position doesn't allow it.
 
@@ -143,7 +144,7 @@ The background color of the legend.
 
 * [Yellowish background](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/backgroundcolor/)
 */
-@property(nonatomic, readwrite) NSString *backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 The pixel top margin for each legend item.
 
