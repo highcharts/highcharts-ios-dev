@@ -366,7 +366,7 @@ def format_to_h(name, source):
     class_name = "HI" + upper_first(create_name(name))
 
     if source.extends == 'series':
-        description = series_description.replace('#series_name#', get_last(name))
+        description = series_description.replace('#series_name#', get_last(name)) # markdown description dla poszczególnych serii dla dokumentacji iOS
     elif class_name in comments:
         description = comments[class_name]
     elif source.comment:
@@ -478,7 +478,7 @@ def format_to_h(name, source):
     htext = htext.replace('*default;', '*defaults;')
 
     if class_name == 'HILang':
-        htext = prepare_lang_class(htext)
+        htext = prepare_lang_class(htext) # iOS Lang class
 
     for mathch in import_hi_set:
         import_hi_string += "#import \"" + mathch + ".h\"\n"
@@ -496,7 +496,7 @@ def format_to_h(name, source):
     return filelicense + imports + htext
 
 
-def prepare_lang_class(text):
+def prepare_lang_class(text): # iOS Lang class
     text = text.replace('*/\n@property(nonatomic, readwrite) NSString *downloadCSV;',
                           '\n**Defaults to** `Share CSV`.\n*/\n@property(nonatomic, readwrite) NSString *downloadCSV;')
     text = text.replace('`Download PNG image`', '`Share image`')
@@ -1057,10 +1057,10 @@ def add_additions_to_series():
     with open('addition_to_series.js') as data_file:
         data = json.load(data_file)
 
-    with open('series_description.txt', 'r') as text:
+    with open('series_description.txt', 'r') as text: # markdown description for iOS docs
         global series_description
         series_description = text.read() + '\n'
-    with open('series_data_description.txt', 'r') as text:
+    with open('series_data_description.txt', 'r') as text: # markdown description for iOS docs
         global series_data_description
         series_data_description = text.read() + '\n'
 
