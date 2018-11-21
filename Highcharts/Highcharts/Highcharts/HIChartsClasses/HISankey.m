@@ -27,16 +27,16 @@
 	copySankey.minPointLength = [self.minPointLength copyWithZone: zone];
 	copySankey.colors = [self.colors copyWithZone: zone];
 	copySankey.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copySankey.point = [self.point copyWithZone: zone];
 	copySankey.selected = [self.selected copyWithZone: zone];
 	copySankey.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySankey.clip = [self.clip copyWithZone: zone];
+	copySankey.point = [self.point copyWithZone: zone];
 	copySankey.color = [self.color copyWithZone: zone];
+	copySankey.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySankey.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySankey.className = [self.className copyWithZone: zone];
+	copySankey.cursor = [self.cursor copyWithZone: zone];
 	copySankey.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySankey.label = [self.label copyWithZone: zone];
-	copySankey.animation = [self.animation copyWithZone: zone];
 	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySankey.events = [self.events copyWithZone: zone];
 	copySankey.definition = [self.definition copyWithZone: zone];
@@ -46,9 +46,10 @@
 	copySankey.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySankey.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copySankey.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copySankey.animation = [self.animation copyWithZone: zone];
 	copySankey.visible = [self.visible copyWithZone: zone];
 	copySankey.linkedTo = [self.linkedTo copyWithZone: zone];
-	copySankey.cursor = [self.cursor copyWithZone: zone];
+	copySankey.className = [self.className copyWithZone: zone];
 	copySankey.nodes = [self.nodes copyWithZone: zone];
 	copySankey.data = [self.data copyWithZone: zone];
 	copySankey.id = [self.id copyWithZone: zone];
@@ -86,8 +87,13 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
@@ -138,8 +144,8 @@
 	[self updateNSObject:@"minPointLength"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

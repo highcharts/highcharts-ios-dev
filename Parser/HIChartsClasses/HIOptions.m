@@ -21,7 +21,16 @@
 		params[@"subtitle"] = [self.subtitle getParams];
 	}
 	if (self.yAxis) {
-		params[@"yAxis"] = [self.yAxis getParams];
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.yAxis) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"yAxis"] = array;
 	}
 	if (self.series) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -40,8 +49,13 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
@@ -100,7 +114,16 @@
 		params[@"zAxis"] = [self.zAxis getParams];
 	}
 	if (self.xAxis) {
-		params[@"xAxis"] = [self.xAxis getParams];
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.xAxis) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"xAxis"] = array;
 	}
 	if (self.drilldown) {
 		params[@"drilldown"] = [self.drilldown getParams];
@@ -171,13 +194,10 @@
 	[self updateHIObject:oldValue newValue:subtitle propertyName:@"subtitle"];
 }
 
--(void)setYAxis:(HIYAxis *)yAxis {
-	HIYAxis *oldValue = _yAxis;
-	if(self.yAxis) {
-		[self removeObserver:self forKeyPath:@"yAxis.isUpdated"];
-	}
+-(void)setYAxis:(NSArray<HIYAxis *> *)yAxis {
+	NSArray<HIYAxis *> *oldValue = _yAxis;
 	_yAxis = yAxis;
-	[self updateHIObject:oldValue newValue:yAxis propertyName:@"yAxis"];
+	[self updateArrayObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }
 
 -(void)setSeries:(NSArray<HISeries *> *)series {
@@ -195,8 +215,8 @@
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
@@ -329,13 +349,10 @@
 	[self updateHIObject:oldValue newValue:zAxis propertyName:@"zAxis"];
 }
 
--(void)setXAxis:(HIXAxis *)xAxis {
-	HIXAxis *oldValue = _xAxis;
-	if(self.xAxis) {
-		[self removeObserver:self forKeyPath:@"xAxis.isUpdated"];
-	}
+-(void)setXAxis:(NSArray<HIXAxis *> *)xAxis {
+	NSArray<HIXAxis *> *oldValue = _xAxis;
 	_xAxis = xAxis;
-	[self updateHIObject:oldValue newValue:xAxis propertyName:@"xAxis"];
+	[self updateArrayObject:oldValue newValue:xAxis propertyName:@"xAxis"];
 }
 
 -(void)setDrilldown:(HIDrilldown *)drilldown {

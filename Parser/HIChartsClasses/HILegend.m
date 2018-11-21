@@ -109,7 +109,7 @@
 		params[@"labelFormat"] = self.labelFormat;
 	}
 	if (self.itemStyle) {
-		params[@"itemStyle"] = self.itemStyle;
+		params[@"itemStyle"] = [self.itemStyle getParams];
 	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
@@ -124,7 +124,7 @@
 		params[@"shadow"] = self.shadow;
 	}
 	if (self.itemHoverStyle) {
-		params[@"itemHoverStyle"] = self.itemHoverStyle;
+		params[@"itemHoverStyle"] = [self.itemHoverStyle getParams];
 	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
@@ -145,7 +145,7 @@
 		params[@"maxHeight"] = self.maxHeight;
 	}
 	if (self.itemHiddenStyle) {
-		params[@"itemHiddenStyle"] = self.itemHiddenStyle;
+		params[@"itemHiddenStyle"] = [self.itemHiddenStyle getParams];
 	}
 	if (self.alignColumns) {
 		params[@"alignColumns"] = self.alignColumns;
@@ -264,8 +264,8 @@
 	[self updateNSObject:@"itemMarginTop"];
 }
 
--(void)setItemCheckboxStyle:(HIItemCheckboxStyle *)itemCheckboxStyle {
-	HIItemCheckboxStyle *oldValue = _itemCheckboxStyle;
+-(void)setItemCheckboxStyle:(HICSSObject *)itemCheckboxStyle {
+	HICSSObject *oldValue = _itemCheckboxStyle;
 	if(self.itemCheckboxStyle) {
 		[self removeObserver:self forKeyPath:@"itemCheckboxStyle.isUpdated"];
 	}
@@ -278,9 +278,13 @@
 	[self updateNSObject:@"labelFormat"];
 }
 
--(void)setItemStyle:(NSDictionary *)itemStyle {
+-(void)setItemStyle:(HICSSObject *)itemStyle {
+	HICSSObject *oldValue = _itemStyle;
+	if(self.itemStyle) {
+		[self removeObserver:self forKeyPath:@"itemStyle.isUpdated"];
+	}
 	_itemStyle = itemStyle;
-	[self updateNSObject:@"itemStyle"];
+	[self updateHIObject:oldValue newValue:itemStyle propertyName:@"itemStyle"];
 }
 
 -(void)setReversed:(NSNumber *)reversed {
@@ -298,14 +302,18 @@
 	[self updateNSObject:@"itemDistance"];
 }
 
--(void)setShadow:(id)shadow {
+-(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }
 
--(void)setItemHoverStyle:(NSDictionary *)itemHoverStyle {
+-(void)setItemHoverStyle:(HICSSObject *)itemHoverStyle {
+	HICSSObject *oldValue = _itemHoverStyle;
+	if(self.itemHoverStyle) {
+		[self removeObserver:self forKeyPath:@"itemHoverStyle.isUpdated"];
+	}
 	_itemHoverStyle = itemHoverStyle;
-	[self updateNSObject:@"itemHoverStyle"];
+	[self updateHIObject:oldValue newValue:itemHoverStyle propertyName:@"itemHoverStyle"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
@@ -342,9 +350,13 @@
 	[self updateNSObject:@"maxHeight"];
 }
 
--(void)setItemHiddenStyle:(NSDictionary *)itemHiddenStyle {
+-(void)setItemHiddenStyle:(HICSSObject *)itemHiddenStyle {
+	HICSSObject *oldValue = _itemHiddenStyle;
+	if(self.itemHiddenStyle) {
+		[self removeObserver:self forKeyPath:@"itemHiddenStyle.isUpdated"];
+	}
 	_itemHiddenStyle = itemHiddenStyle;
-	[self updateNSObject:@"itemHiddenStyle"];
+	[self updateHIObject:oldValue newValue:itemHiddenStyle propertyName:@"itemHiddenStyle"];
 }
 
 -(void)setAlignColumns:(NSNumber *)alignColumns {

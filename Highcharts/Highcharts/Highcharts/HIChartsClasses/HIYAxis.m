@@ -20,6 +20,7 @@
 	copyYAxis.endOnTick = [self.endOnTick copyWithZone: zone];
 	copyYAxis.max = [self.max copyWithZone: zone];
 	copyYAxis.softMin = [self.softMin copyWithZone: zone];
+	copyYAxis.type = [self.type copyWithZone: zone];
 	copyYAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
 	copyYAxis.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
 	copyYAxis.tickWidth = [self.tickWidth copyWithZone: zone];
@@ -55,7 +56,6 @@
 	copyYAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
 	copyYAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyYAxis.units = [self.units copyWithZone: zone];
-	copyYAxis.type = [self.type copyWithZone: zone];
 	copyYAxis.events = [self.events copyWithZone: zone];
 	copyYAxis.crosshair = [self.crosshair copyWithZone: zone];
 	copyYAxis.ceiling = [self.ceiling copyWithZone: zone];
@@ -127,6 +127,9 @@
 	}
 	if (self.softMin) {
 		params[@"softMin"] = self.softMin;
+	}
+	if (self.type) {
+		params[@"type"] = self.type;
 	}
 	if (self.gridLineInterpolation) {
 		params[@"gridLineInterpolation"] = self.gridLineInterpolation;
@@ -268,9 +271,6 @@
 			}
 		}
 		params[@"units"] = array;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -433,6 +433,11 @@
 -(void)setSoftMin:(NSNumber *)softMin {
 	_softMin = softMin;
 	[self updateNSObject:@"softMin"];
+}
+
+-(void)setType:(NSString *)type {
+	_type = type;
+	[self updateNSObject:@"type"];
 }
 
 -(void)setGridLineInterpolation:(NSString *)gridLineInterpolation {
@@ -636,15 +641,10 @@
 	[self updateNSObject:@"minorTickLength"];
 }
 
--(void)setUnits:(NSArray *)units {
-	NSArray *oldValue = _units;
+-(void)setUnits:(NSArray<NSArray *> *)units {
+	NSArray<NSArray *> *oldValue = _units;
 	_units = units;
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
-}
-
--(void)setType:(NSString *)type {
-	_type = type;
-	[self updateNSObject:@"type"];
 }
 
 -(void)setEvents:(HIEvents *)events {

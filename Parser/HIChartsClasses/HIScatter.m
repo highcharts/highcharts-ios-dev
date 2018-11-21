@@ -31,6 +31,7 @@
 	copyScatter.states = [self.states copyWithZone: zone];
 	copyScatter.threshold = [self.threshold copyWithZone: zone];
 	copyScatter.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyScatter.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyScatter.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyScatter.borderColor = [self.borderColor copyWithZone: zone];
 	copyScatter.cursor = [self.cursor copyWithZone: zone];

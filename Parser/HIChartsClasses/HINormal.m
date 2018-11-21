@@ -18,16 +18,20 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.animation) {
-		params[@"animation"] = self.animation;
+		params[@"animation"] = [self.animation getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setAnimation:(id)animation {
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	if(self.animation) {
+		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
+	}
 	_animation = animation;
-	[self updateNSObject:@"animation"];
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 @end

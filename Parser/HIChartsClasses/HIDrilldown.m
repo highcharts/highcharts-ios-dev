@@ -74,8 +74,8 @@
 	[self updateNSObject:@"allowPointDrilldown"];
 }
 
--(void)setAnimation:(HIAnimation *)animation {
-	HIAnimation *oldValue = _animation;
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
 	if(self.animation) {
 		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
 	}

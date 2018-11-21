@@ -45,6 +45,7 @@
 	copyChart.shadow = [self.shadow copyWithZone: zone];
 	copyChart.inverted = [self.inverted copyWithZone: zone];
 	copyChart.plotBorderWidth = [self.plotBorderWidth copyWithZone: zone];
+	copyChart.zoomKey = [self.zoomKey copyWithZone: zone];
 	copyChart.ignoreHiddenSeries = [self.ignoreHiddenSeries copyWithZone: zone];
 	copyChart.selectionMarkerFill = [self.selectionMarkerFill copyWithZone: zone];
 	copyChart.plotShadow = [self.plotShadow copyWithZone: zone];
@@ -76,7 +77,7 @@
 		params[@"height"] = self.height;
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
@@ -121,7 +122,7 @@
 		params[@"width"] = self.width;
 	}
 	if (self.animation) {
-		params[@"animation"] = self.animation;
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.plotBackgroundColor) {
 		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getData];
@@ -176,6 +177,9 @@
 	}
 	if (self.plotBorderWidth) {
 		params[@"plotBorderWidth"] = self.plotBorderWidth;
+	}
+	if (self.zoomKey) {
+		params[@"zoomKey"] = self.zoomKey;
 	}
 	if (self.ignoreHiddenSeries) {
 		params[@"ignoreHiddenSeries"] = self.ignoreHiddenSeries;
@@ -247,9 +251,13 @@
 	[self updateNSObject:@"height"];
 }
 
--(void)setStyle:(NSDictionary *)style {
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
 	_style = style;
-	[self updateNSObject:@"style"];
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setAlignTicks:(NSNumber *)alignTicks {
@@ -304,7 +312,7 @@
 	[self updateNSObject:@"polar"];
 }
 
--(void)setRenderTo:(id)renderTo {
+-(void)setRenderTo:(NSString *)renderTo {
 	_renderTo = renderTo;
 	[self updateNSObject:@"renderTo"];
 }
@@ -334,9 +342,13 @@
 	[self updateNSObject:@"width"];
 }
 
--(void)setAnimation:(id)animation {
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	if(self.animation) {
+		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
+	}
 	_animation = animation;
-	[self updateNSObject:@"animation"];
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setPlotBackgroundColor:(HIColor *)plotBackgroundColor {
@@ -420,7 +432,7 @@
 	[self updateHIObject:oldValue newValue:scrollablePlotArea propertyName:@"scrollablePlotArea"];
 }
 
--(void)setShadow:(id)shadow {
+-(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }
@@ -433,6 +445,11 @@
 -(void)setPlotBorderWidth:(NSNumber *)plotBorderWidth {
 	_plotBorderWidth = plotBorderWidth;
 	[self updateNSObject:@"plotBorderWidth"];
+}
+
+-(void)setZoomKey:(NSString *)zoomKey {
+	_zoomKey = zoomKey;
+	[self updateNSObject:@"zoomKey"];
 }
 
 -(void)setIgnoreHiddenSeries:(NSNumber *)ignoreHiddenSeries {
@@ -449,7 +466,7 @@
 	[self updateHIObject:oldValue newValue:selectionMarkerFill propertyName:@"selectionMarkerFill"];
 }
 
--(void)setPlotShadow:(id)plotShadow {
+-(void)setPlotShadow:(NSNumber *)plotShadow {
 	_plotShadow = plotShadow;
 	[self updateNSObject:@"plotShadow"];
 }

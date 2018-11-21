@@ -32,7 +32,7 @@ Lang configuration for the series main summary. Each series type has two modes: 
 @property(nonatomic, readwrite) NSString *mapline;
 @property(nonatomic, readwrite) NSString *bar;
 @property(nonatomic, readwrite) NSString *mapCombination;
-@property(nonatomic, readwrite) NSString *default;
+@property(nonatomic, readwrite) NSString *defaults;
 @property(nonatomic, readwrite) NSString *mapbubbleCombination;
 @property(nonatomic, readwrite) NSString *defaultCombination;
 @property(nonatomic, readwrite) NSString *column;

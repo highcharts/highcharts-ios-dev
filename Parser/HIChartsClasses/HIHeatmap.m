@@ -40,6 +40,7 @@
 	copyHeatmap.clip = [self.clip copyWithZone: zone];
 	copyHeatmap.point = [self.point copyWithZone: zone];
 	copyHeatmap.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyHeatmap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyHeatmap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHeatmap.borderColor = [self.borderColor copyWithZone: zone];
 	copyHeatmap.cursor = [self.cursor copyWithZone: zone];

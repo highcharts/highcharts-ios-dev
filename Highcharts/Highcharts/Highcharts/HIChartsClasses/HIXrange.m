@@ -30,6 +30,7 @@
 	copyXrange.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyXrange.tooltip = [self.tooltip copyWithZone: zone];
 	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyXrange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyXrange.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyXrange.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyXrange.states = [self.states copyWithZone: zone];
@@ -38,8 +39,10 @@
 	copyXrange.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyXrange.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyXrange.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyXrange.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyXrange.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyXrange.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyXrange.grouping = [self.grouping copyWithZone: zone];
 	copyXrange.selected = [self.selected copyWithZone: zone];
 	copyXrange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyXrange.clip = [self.clip copyWithZone: zone];
@@ -89,8 +92,13 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
+		for (id obj in self.colors) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
 		}
 		params[@"colors"] = array;
 	}
@@ -102,6 +110,12 @@
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
+	}
+	if (self.groupPadding) {
+		params[@"groupPadding"] = self.groupPadding;
+	}
+	if (self.grouping) {
+		params[@"grouping"] = self.grouping;
 	}
 	return params;
 }
@@ -137,8 +151,8 @@
 	[self updateNSObject:@"groupZPadding"];
 }
 
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
+-(void)setColors:(NSArray<NSString *> *)colors {
+	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
@@ -156,6 +170,16 @@
 -(void)setPointPadding:(NSNumber *)pointPadding {
 	_pointPadding = pointPadding;
 	[self updateNSObject:@"pointPadding"];
+}
+
+-(void)setGroupPadding:(NSNumber *)groupPadding {
+	_groupPadding = groupPadding;
+	[self updateNSObject:@"groupPadding"];
+}
+
+-(void)setGrouping:(NSNumber *)grouping {
+	_grouping = grouping;
+	[self updateNSObject:@"grouping"];
 }
 
 @end

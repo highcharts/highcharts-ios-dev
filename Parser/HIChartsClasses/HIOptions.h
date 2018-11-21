@@ -38,7 +38,7 @@ The chart's subtitle. This can be used both to display a subtitle below the main
 /**
 The Y axis or value axis. Normally this is the vertical axis, though if the chart is inverted this is the horizontal axis. In case of multiple axes, the yAxis node is an array of configuration objects. See `the Axis object` for programmatic access to the axis.
 */
-@property(nonatomic, readwrite) HIYAxis *yAxis;
+@property(nonatomic, readwrite) NSArray<HIYAxis *> *yAxis;
 
 /**
 Series options for specific data and the data itself. In TypeScript you have to cast the series options to specific series types, to get all possible options for a series.
@@ -60,7 +60,7 @@ An array containing the default colors for the chart's series. When all colors a
 
 * [Assign a global color theme](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/colors/)
 */
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<NSString *> *colors;
 
 /**
 The pane serves as a container for axes and backgrounds for circular gauges and polar charts.
@@ -180,7 +180,7 @@ The Z axis or depth axis for 3D plots. See `the Axis object` for programmatic ac
 /**
 The X axis or category axis. Normally this is the horizontal axis, though if the chart is inverted this is the vertical axis. In case of multiple axes, the xAxis node is an array of configuration objects. See `the Axis object` for programmatic access to the axis.
 */
-@property(nonatomic, readwrite) HIXAxis *xAxis;
+@property(nonatomic, readwrite) NSArray<HIXAxis *> *xAxis;
 
 /**
 Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices. The drilldown feature requires the drilldown.js file to be loaded, found in the modules directory of the download package, or online at `https://code.highcharts.com/modules/drilldown.js `.

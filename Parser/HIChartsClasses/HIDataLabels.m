@@ -20,6 +20,7 @@
 	copyDataLabels.overflow = [self.overflow copyWithZone: zone];
 	copyDataLabels.x = [self.x copyWithZone: zone];
 	copyDataLabels.align = [self.align copyWithZone: zone];
+	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.yHigh = [self.yHigh copyWithZone: zone];
 	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
 	copyDataLabels.xLow = [self.xLow copyWithZone: zone];
@@ -40,7 +41,6 @@
 	copyDataLabels.className = [self.className copyWithZone: zone];
 	copyDataLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDataLabels.rotationMode = [self.rotationMode copyWithZone: zone];
-	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyDataLabels.nodeFormat = [self.nodeFormat copyWithZone: zone];
 	copyDataLabels.distance = [self.distance copyWithZone: zone];
@@ -83,6 +83,9 @@
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
+	}
+	if (self.y) {
+		params[@"y"] = self.y;
 	}
 	if (self.yHigh) {
 		params[@"yHigh"] = self.yHigh;
@@ -144,9 +147,6 @@
 	if (self.rotationMode) {
 		params[@"rotationMode"] = self.rotationMode;
 	}
-	if (self.y) {
-		params[@"y"] = self.y;
-	}
 	if (self.nodeFormatter) {
 		params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
 	}
@@ -166,7 +166,7 @@
 		params[@"connectorPadding"] = self.connectorPadding;
 	}
 	if (self.connectorColor) {
-		params[@"connectorColor"] = self.connectorColor;
+		params[@"connectorColor"] = [self.connectorColor getData];
 	}
 	return params;
 }
@@ -227,6 +227,11 @@
 	[self updateNSObject:@"align"];
 }
 
+-(void)setY:(NSNumber *)y {
+	_y = y;
+	[self updateNSObject:@"y"];
+}
+
 -(void)setYHigh:(id)yHigh {
 	_yHigh = yHigh;
 	[self updateNSObject:@"yHigh"];
@@ -275,8 +280,8 @@
 	[self updateHIObject:oldValue newValue:filter propertyName:@"filter"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	if(self.style) {
 		[self removeObserver:self forKeyPath:@"style.isUpdated"];
 	}
@@ -322,7 +327,7 @@
 	[self updateNSObject:@"format"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
+-(void)setShadow:(id)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }
@@ -345,11 +350,6 @@
 -(void)setRotationMode:(NSString *)rotationMode {
 	_rotationMode = rotationMode;
 	[self updateNSObject:@"rotationMode"];
-}
-
--(void)setY:(NSNumber *)y {
-	_y = y;
-	[self updateNSObject:@"y"];
 }
 
 -(void)setNodeFormatter:(HIFunction *)nodeFormatter {
@@ -386,9 +386,13 @@
 	[self updateNSObject:@"connectorPadding"];
 }
 
--(void)setConnectorColor:(NSString *)connectorColor {
+-(void)setConnectorColor:(HIColor *)connectorColor {
+	HIColor *oldValue = _connectorColor;
+	if(self.connectorColor) {
+		[self removeObserver:self forKeyPath:@"connectorColor.isUpdated"];
+	}
 	_connectorColor = connectorColor;
-	[self updateNSObject:@"connectorColor"];
+	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
 @end

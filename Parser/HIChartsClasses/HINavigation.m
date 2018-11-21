@@ -39,7 +39,7 @@
 		params[@"menuItemHoverStyle"] = [self.menuItemHoverStyle getParams];
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.arrowSize) {
 		params[@"arrowSize"] = self.arrowSize;
@@ -51,7 +51,7 @@
 		params[@"inactiveColor"] = [self.inactiveColor getData];
 	}
 	if (self.animation) {
-		params[@"animation"] = self.animation;
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.activeColor) {
 		params[@"activeColor"] = [self.activeColor getData];
@@ -97,9 +97,13 @@
 	[self updateHIObject:oldValue newValue:menuItemHoverStyle propertyName:@"menuItemHoverStyle"];
 }
 
--(void)setStyle:(NSDictionary *)style {
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
 	_style = style;
-	[self updateNSObject:@"style"];
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setArrowSize:(NSNumber *)arrowSize {
@@ -121,9 +125,13 @@
 	[self updateHIObject:oldValue newValue:inactiveColor propertyName:@"inactiveColor"];
 }
 
--(void)setAnimation:(id)animation {
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	if(self.animation) {
+		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
+	}
 	_animation = animation;
-	[self updateNSObject:@"animation"];
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setActiveColor:(HIColor *)activeColor {

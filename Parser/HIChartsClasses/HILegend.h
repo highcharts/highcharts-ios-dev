@@ -7,10 +7,10 @@
 */
 
 #import "HITitle.h"
-#import "HIItemCheckboxStyle.h"
 #import "HIKeyboardNavigation.h"
 #import "HINavigation.h"
 #import "HIColor.h"
+#import "HICSSObject.h"
 
 
 /**
@@ -160,7 +160,7 @@ Default styling for the checkbox next to a legend item when `showCheckbox` is tr
 
 **Defaults to** `{"width": "13px", "height": "13px", "position":"absolute"}`.
 */
-@property(nonatomic, readwrite) HIItemCheckboxStyle *itemCheckboxStyle;
+@property(nonatomic, readwrite) HICSSObject *itemCheckboxStyle;
 /**
 A [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) for each legend label. Available variables relates to properties on the series, or the point in case of pies.
 
@@ -176,7 +176,7 @@ CSS styles for each legend item. Only a subset of CSS is supported, notably thos
 
 * [Bold black text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemstyle/)
 */
-@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *itemStyle;
+@property(nonatomic, readwrite) HICSSObject *itemStyle;
 /**
 Whether to reverse the order of the legend items compared to the order of the series or points as defined in the configuration object.
 
@@ -214,7 +214,7 @@ Whether to apply a drop shadow to the legend. A `backgroundColor` also needs to 
 
 * [White background and drop shadow](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/shadow/)
 */
-@property(nonatomic, readwrite) id shadow;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
 /**
 CSS styles for each legend item in hover mode. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from `style` unless overridden here.
 
@@ -224,7 +224,7 @@ CSS styles for each legend item in hover mode. Only a subset of CSS is supported
 
 * [Red on hover](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhoverstyle/)
 */
-@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *itemHoverStyle;
+@property(nonatomic, readwrite) HICSSObject *itemHoverStyle;
 /**
 The vertical alignment of the legend box. Can be one of `top`, `middle` or `bottom`. Vertical position can be further determined by the `y` option. In the case that the legend is aligned in a corner position, the `layout` option will determine whether to place it above/below or on the side of the plot area. When the `layout` option is `proximate`, the `verticalAlign` option doesn't apply.
 
@@ -281,7 +281,7 @@ CSS styles for each legend item when the corresponding series or point is hidden
 
 * [Darker gray color](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhiddenstyle/)
 */
-@property(nonatomic, readwrite) NSDictionary /* <NSString, NSString> */ *itemHiddenStyle;
+@property(nonatomic, readwrite) HICSSObject *itemHiddenStyle;
 /**
 If the `layout` is `horizontal` and the legend items span over two lines or more, whether to align the items into vertical columns. Setting this to `false` makes room for more items, but will look more messy.
 */

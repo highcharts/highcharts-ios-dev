@@ -32,7 +32,7 @@
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
@@ -74,9 +74,13 @@
 	[self updateNSObject:@"allowOverlap"];
 }
 
--(void)setStyle:(NSDictionary *)style {
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	if(self.style) {
+		[self removeObserver:self forKeyPath:@"style.isUpdated"];
+	}
 	_style = style;
-	[self updateNSObject:@"style"];
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {

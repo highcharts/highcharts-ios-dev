@@ -30,6 +30,7 @@
 	copyPolygon.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyPolygon.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPolygon.states = [self.states copyWithZone: zone];
+	copyPolygon.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPolygon.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPolygon.borderColor = [self.borderColor copyWithZone: zone];
 	copyPolygon.cursor = [self.cursor copyWithZone: zone];

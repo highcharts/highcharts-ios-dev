@@ -20,6 +20,7 @@
 	copyParallelAxes.endOnTick = [self.endOnTick copyWithZone: zone];
 	copyParallelAxes.max = [self.max copyWithZone: zone];
 	copyParallelAxes.softMin = [self.softMin copyWithZone: zone];
+	copyParallelAxes.type = [self.type copyWithZone: zone];
 	copyParallelAxes.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
 	copyParallelAxes.tickWidth = [self.tickWidth copyWithZone: zone];
 	copyParallelAxes.opposite = [self.opposite copyWithZone: zone];
@@ -44,7 +45,6 @@
 	copyParallelAxes.tickPositioner = [self.tickPositioner copyWithZone: zone];
 	copyParallelAxes.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyParallelAxes.units = [self.units copyWithZone: zone];
-	copyParallelAxes.type = [self.type copyWithZone: zone];
 	copyParallelAxes.events = [self.events copyWithZone: zone];
 	copyParallelAxes.crosshair = [self.crosshair copyWithZone: zone];
 	copyParallelAxes.ceiling = [self.ceiling copyWithZone: zone];
@@ -101,6 +101,9 @@
 	}
 	if (self.softMin) {
 		params[@"softMin"] = self.softMin;
+	}
+	if (self.type) {
+		params[@"type"] = self.type;
 	}
 	if (self.tickPixelInterval) {
 		params[@"tickPixelInterval"] = self.tickPixelInterval;
@@ -191,9 +194,6 @@
 			}
 		}
 		params[@"units"] = array;
-	}
-	if (self.type) {
-		params[@"type"] = self.type;
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -326,6 +326,11 @@
 	[self updateNSObject:@"softMin"];
 }
 
+-(void)setType:(NSString *)type {
+	_type = type;
+	[self updateNSObject:@"type"];
+}
+
 -(void)setTickPixelInterval:(NSNumber *)tickPixelInterval {
 	_tickPixelInterval = tickPixelInterval;
 	[self updateNSObject:@"tickPixelInterval"];
@@ -454,15 +459,10 @@
 	[self updateNSObject:@"minorTickLength"];
 }
 
--(void)setUnits:(NSArray *)units {
-	NSArray *oldValue = _units;
+-(void)setUnits:(NSArray<NSArray *> *)units {
+	NSArray<NSArray *> *oldValue = _units;
 	_units = units;
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
-}
-
--(void)setType:(NSString *)type {
-	_type = type;
-	[self updateNSObject:@"type"];
 }
 
 -(void)setEvents:(HIEvents *)events {

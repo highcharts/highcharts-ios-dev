@@ -38,7 +38,7 @@
 	[self updateHIObject:oldValue newValue:condition propertyName:@"condition"];
 }
 
--(void)setChartOptions:(id)chartOptions {
+-(void)setChartOptions:(NSDictionary *)chartOptions {
 	_chartOptions = chartOptions;
 	[self updateNSObject:@"chartOptions"];
 }

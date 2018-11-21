@@ -194,8 +194,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/tilemap" title="tilemap"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tilemap">&nbsp;&nbsp;tilemap</a></code>
+	<a name="//api/name/xrange" title="xrange"></a>
+	<h3 class="method-title"><code><a href="#//api/name/xrange">&nbsp;&nbsp;xrange</a></code>
 </h3>
 
 	<div class="method-info">
@@ -205,12 +205,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A tilemap series is a type of heatmap where the tile shapes are configurable. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>tilemap</code> series are defined in  <code>plotOptions.tilemap</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     tilemap: {       // shared options for all tilemap series     }   },   series: [{     // specific options for this series instance     type: &lsquo;tilemap&rsquo;   }] });</p>
+				<p>The X-range series displays ranges on the X axis, typically time intervals with a start and end date. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>xrange</code> series are defined in  <code>plotOptions.xrange</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     xrange: {       // shared options for all xrange series     }   },   series: [{     // specific options for this series instance     type: &lsquo;xrange&rsquo;   }] });</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITilemap *tilemap</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIXrange *xrange</code></div>
 
 		    
 			
@@ -225,12 +225,9 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/honeycomb-usa/">Honeycomb tilemap, USA</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-brazil/">Honeycomb tilemap, Brazil</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-china/">Honeycomb tilemap, China</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-europe/">Honeycomb tilemap, Europe</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa/">Circlemap tilemap, Africa</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap">Diamondmap tilemap</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/x-range/">X-range</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/x-range/">Styled mode X-range</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/inverted-xrange/">Inverted X-range</a></li>
 </ul>
 
 			</div>
@@ -384,6 +381,109 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/columnrange/">Inverted column range</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bubble" title="bubble"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bubble">&nbsp;&nbsp;bubble</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A bubble series is a three dimensional series type where each point renders an X, Y and Z value. Each points is drawn as a bubble where the position along the X and Y axes mark the X and Y values, and the size of the bubble relates to the Z value. Requires <code>highcharts-more.js</code>. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>bubble</code> series are defined in  <code>plotOptions.bubble</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     bubble: {       // shared options for all bubble series     }   },   series: [{     // specific options for this series instance     type: &lsquo;bubble&rsquo;   }] });</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBubble *bubble</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/bubble/">Bubble chart</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/errorbar" title="errorbar"></a>
+	<h3 class="method-title"><code><a href="#//api/name/errorbar">&nbsp;&nbsp;errorbar</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Error bars are a graphical representation of the variability of data and are used on graphs to indicate the error, or uncertainty in a reported measurement. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>errorbar</code> series are defined in  <code>plotOptions.errorbar</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     errorbar: {       // shared options for all errorbar series     }   },   series: [{     // specific options for this series instance     type: &lsquo;errorbar&rsquo;   }] });</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIErrorbar *errorbar</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/error-bar/">Error bars on a column series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-errorbar/on-scatter/">Error bars on a scatter series</a></li>
 </ul>
 
 			</div>
@@ -709,8 +809,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/area" title="area"></a>
-	<h3 class="method-title"><code><a href="#//api/name/area">&nbsp;&nbsp;area</a></code>
+	<a name="//api/name/streamgraph" title="streamgraph"></a>
+	<h3 class="method-title"><code><a href="#//api/name/streamgraph">&nbsp;&nbsp;streamgraph</a></code>
 </h3>
 
 	<div class="method-info">
@@ -720,12 +820,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The area series type. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>area</code> series are defined in  <code>plotOptions.area</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     area: {       // shared options for all area series     }   },   series: [{     // specific options for this series instance     type: &lsquo;area&rsquo;   }] });</p>
+				<p>A streamgraph is a type of stacked area graph which is displaced around a central axis, resulting in a flowing, organic shape. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>streamgraph</code> series are defined in  <code>plotOptions.streamgraph</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     streamgraph: {       // shared options for all streamgraph series     }   },   series: [{     // specific options for this series instance     type: &lsquo;streamgraph&rsquo;   }] });</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIArea *area</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStreamgraph *streamgraph</code></div>
 
 		    
 			
@@ -740,7 +840,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/area-basic/">Area chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph/">Streamgraph</a></li>
 </ul>
 
 			</div>
@@ -760,8 +860,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/xrange" title="xrange"></a>
-	<h3 class="method-title"><code><a href="#//api/name/xrange">&nbsp;&nbsp;xrange</a></code>
+	<a name="//api/name/tilemap" title="tilemap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tilemap">&nbsp;&nbsp;tilemap</a></code>
 </h3>
 
 	<div class="method-info">
@@ -771,12 +871,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The X-range series displays ranges on the X axis, typically time intervals with a start and end date. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>xrange</code> series are defined in  <code>plotOptions.xrange</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     xrange: {       // shared options for all xrange series     }   },   series: [{     // specific options for this series instance     type: &lsquo;xrange&rsquo;   }] });</p>
+				<p>A tilemap series is a type of heatmap where the tile shapes are configurable. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>tilemap</code> series are defined in  <code>plotOptions.tilemap</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     tilemap: {       // shared options for all tilemap series     }   },   series: [{     // specific options for this series instance     type: &lsquo;tilemap&rsquo;   }] });</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIXrange *xrange</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITilemap *tilemap</code></div>
 
 		    
 			
@@ -791,9 +891,12 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/x-range/">X-range</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/x-range/">Styled mode X-range</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/inverted-xrange/">Inverted X-range</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/honeycomb-usa/">Honeycomb tilemap, USA</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-brazil/">Honeycomb tilemap, Brazil</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-china/">Honeycomb tilemap, China</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/honeycomb-europe/">Honeycomb tilemap, Europe</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/circlemap-africa/">Circlemap tilemap, Africa</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/diamondmap">Diamondmap tilemap</a></li>
 </ul>
 
 			</div>
@@ -813,8 +916,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/heatmap" title="heatmap"></a>
-	<h3 class="method-title"><code><a href="#//api/name/heatmap">&nbsp;&nbsp;heatmap</a></code>
+	<a name="//api/name/vector" title="vector"></a>
+	<h3 class="method-title"><code><a href="#//api/name/vector">&nbsp;&nbsp;vector</a></code>
 </h3>
 
 	<div class="method-info">
@@ -824,12 +927,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A heatmap is a graphical representation of data where the individual values contained in a matrix are represented as colors. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>heatmap</code> series are defined in  <code>plotOptions.heatmap</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     heatmap: {       // shared options for all heatmap series     }   },   series: [{     // specific options for this series instance     type: &lsquo;heatmap&rsquo;   }] });</p>
+				<p>A vector plot is a type of cartesian chart where each point has an X and Y position, a length and a direction. Vectors are drawn as arrows. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>vector</code> series are defined in  <code>plotOptions.vector</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     vector: {       // shared options for all vector series     }   },   series: [{     // specific options for this series instance     type: &lsquo;vector&rsquo;   }] });</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIHeatmap *heatmap</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIVector *vector</code></div>
 
 		    
 			
@@ -844,8 +947,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/heatmap/">Simple heatmap</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/heatmap-canvas/">Heavy heatmap</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/vector-plot/">Vector pot</a></li>
 </ul>
 
 			</div>
@@ -890,6 +992,108 @@
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sunburst" title="sunburst"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sunburst">&nbsp;&nbsp;sunburst</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Sunburst displays hierarchical data, where a level in the hierarchy is represented by a circle. The center represents the root node of the tree. The visualization bears a resemblance to both treemap and pie charts. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>sunburst</code> series are defined in  <code>plotOptions.sunburst</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     sunburst: {       // shared options for all sunburst series     }   },   series: [{     // specific options for this series instance     type: &lsquo;sunburst&rsquo;   }] });</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISunburst *sunburst</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">Sunburst chart</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/boxplot" title="boxplot"></a>
+	<h3 class="method-title"><code><a href="#//api/name/boxplot">&nbsp;&nbsp;boxplot</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A box plot is a convenient way of depicting groups of data through their five-number summaries: the smallest observation (sample minimum), lower quartile (Q1), median (Q2), upper quartile (Q3), and largest observation (sample maximum). Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>boxplot</code> series are defined in  <code>plotOptions.boxplot</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     boxplot: {       // shared options for all boxplot series     }   },   series: [{     // specific options for this series instance     type: &lsquo;boxplot&rsquo;   }] });</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBoxplot *boxplot</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/box-plot/">Box plot</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -958,8 +1162,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/bubble" title="bubble"></a>
-	<h3 class="method-title"><code><a href="#//api/name/bubble">&nbsp;&nbsp;bubble</a></code>
+	<a name="//api/name/heatmap" title="heatmap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/heatmap">&nbsp;&nbsp;heatmap</a></code>
 </h3>
 
 	<div class="method-info">
@@ -969,12 +1173,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A bubble series is a three dimensional series type where each point renders an X, Y and Z value. Each points is drawn as a bubble where the position along the X and Y axes mark the X and Y values, and the size of the bubble relates to the Z value. Requires <code>highcharts-more.js</code>. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>bubble</code> series are defined in  <code>plotOptions.bubble</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     bubble: {       // shared options for all bubble series     }   },   series: [{     // specific options for this series instance     type: &lsquo;bubble&rsquo;   }] });</p>
+				<p>A heatmap is a graphical representation of data where the individual values contained in a matrix are represented as colors. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>heatmap</code> series are defined in  <code>plotOptions.heatmap</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     heatmap: {       // shared options for all heatmap series     }   },   series: [{     // specific options for this series instance     type: &lsquo;heatmap&rsquo;   }] });</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBubble *bubble</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIHeatmap *heatmap</code></div>
 
 		    
 			
@@ -989,58 +1193,8 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/bubble/">Bubble chart</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/boxplot" title="boxplot"></a>
-	<h3 class="method-title"><code><a href="#//api/name/boxplot">&nbsp;&nbsp;boxplot</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A box plot is a convenient way of depicting groups of data through their five-number summaries: the smallest observation (sample minimum), lower quartile (Q1), median (Q2), upper quartile (Q3), and largest observation (sample maximum). Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>boxplot</code> series are defined in  <code>plotOptions.boxplot</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     boxplot: {       // shared options for all boxplot series     }   },   series: [{     // specific options for this series instance     type: &lsquo;boxplot&rsquo;   }] });</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBoxplot *boxplot</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/box-plot/">Box plot</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/heatmap/">Simple heatmap</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/heatmap-canvas/">Heavy heatmap</a></li>
 </ul>
 
 			</div>
@@ -1162,58 +1316,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/errorbar" title="errorbar"></a>
-	<h3 class="method-title"><code><a href="#//api/name/errorbar">&nbsp;&nbsp;errorbar</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Error bars are a graphical representation of the variability of data and are used on graphs to indicate the error, or uncertainty in a reported measurement. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>errorbar</code> series are defined in  <code>plotOptions.errorbar</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     errorbar: {       // shared options for all errorbar series     }   },   series: [{     // specific options for this series instance     type: &lsquo;errorbar&rsquo;   }] });</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIErrorbar *errorbar</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/error-bar/">Error bars on a column series</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-errorbar/on-scatter/">Error bars on a scatter series</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/histogram" title="histogram"></a>
 	<h3 class="method-title"><code><a href="#//api/name/histogram">&nbsp;&nbsp;histogram</a></code>
 </h3>
@@ -1246,57 +1348,6 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/histogram/">Histogram</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/vector" title="vector"></a>
-	<h3 class="method-title"><code><a href="#//api/name/vector">&nbsp;&nbsp;vector</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A vector plot is a type of cartesian chart where each point has an X and Y position, a length and a direction. Vectors are drawn as arrows. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>vector</code> series are defined in  <code>plotOptions.vector</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     vector: {       // shared options for all vector series     }   },   series: [{     // specific options for this series instance     type: &lsquo;vector&rsquo;   }] });</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIVector *vector</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/vector-plot/">Vector pot</a></li>
 </ul>
 
 			</div>
@@ -1350,6 +1401,57 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/">Waterfall chart</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/waterfall-inverted/">Horizontal (inverted) waterfall</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/waterfall-stacked/">Stacked waterfall chart</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bar" title="bar"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bar">&nbsp;&nbsp;bar</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A bar series is a special type of column series where the columns are horizontal. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>bar</code> series are defined in  <code>plotOptions.bar</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     bar: {       // shared options for all bar series     }   },   series: [{     // specific options for this series instance     type: &lsquo;bar&rsquo;   }] });</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBar *bar</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/bar-basic/">Bar chart</a></li>
 </ul>
 
 			</div>
@@ -1471,57 +1573,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/bar" title="bar"></a>
-	<h3 class="method-title"><code><a href="#//api/name/bar">&nbsp;&nbsp;bar</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A bar series is a special type of column series where the columns are horizontal. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>bar</code> series are defined in  <code>plotOptions.bar</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     bar: {       // shared options for all bar series     }   },   series: [{     // specific options for this series instance     type: &lsquo;bar&rsquo;   }] });</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBar *bar</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/bar-basic/">Bar chart</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/variwide" title="variwide"></a>
 	<h3 class="method-title"><code><a href="#//api/name/variwide">&nbsp;&nbsp;variwide</a></code>
 </h3>
@@ -1555,6 +1606,7 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/variwide/">Variwide chart</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-variwide/inverted/">Inverted variwide chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-variwide/datetime/">Variwide columns on a datetime axis</a></li>
 </ul>
 
 			</div>
@@ -1676,8 +1728,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/streamgraph" title="streamgraph"></a>
-	<h3 class="method-title"><code><a href="#//api/name/streamgraph">&nbsp;&nbsp;streamgraph</a></code>
+	<a name="//api/name/area" title="area"></a>
+	<h3 class="method-title"><code><a href="#//api/name/area">&nbsp;&nbsp;area</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1687,12 +1739,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A streamgraph is a type of stacked area graph which is displaced around a central axis, resulting in a flowing, organic shape. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>streamgraph</code> series are defined in  <code>plotOptions.streamgraph</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     streamgraph: {       // shared options for all streamgraph series     }   },   series: [{     // specific options for this series instance     type: &lsquo;streamgraph&rsquo;   }] });</p>
+				<p>The area series type. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>area</code> series are defined in  <code>plotOptions.area</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     area: {       // shared options for all area series     }   },   series: [{     // specific options for this series instance     type: &lsquo;area&rsquo;   }] });</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStreamgraph *streamgraph</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIArea *area</code></div>
 
 		    
 			
@@ -1707,7 +1759,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph/">Streamgraph</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/area-basic/">Area chart</a></li>
 </ul>
 
 			</div>
@@ -1851,57 +1903,6 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/wordcloud">Word Cloud chart</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sunburst" title="sunburst"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sunburst">&nbsp;&nbsp;sunburst</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A Sunburst displays hierarchical data, where a level in the hierarchy is represented by a circle. The center represents the root node of the tree. The visualization bears a resemblance to both treemap and pie charts. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>sunburst</code> series are defined in  <code>plotOptions.sunburst</code>. 3. Options for one single series are given in  <code>the series instance array</code>.  Highcharts.chart(&lsquo;container&rsquo;, {   plotOptions: {     series: {       // general options for all series     },     sunburst: {       // shared options for all sunburst series     }   },   series: [{     // specific options for this series instance     type: &lsquo;sunburst&rsquo;   }] });</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISunburst *sunburst</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">Sunburst chart</a></li>
 </ul>
 
 			</div>

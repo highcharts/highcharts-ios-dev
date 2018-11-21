@@ -34,7 +34,7 @@
 	copySeries.states = [self.states copyWithZone: zone];
 	copySeries.threshold = [self.threshold copyWithZone: zone];
 	copySeries.softThreshold = [self.softThreshold copyWithZone: zone];
-	copySeries.tooltip = [self.tooltip copyWithZone: zone];
+	copySeries.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySeries.marker = [self.marker copyWithZone: zone];
 	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySeries.borderColor = [self.borderColor copyWithZone: zone];
@@ -59,6 +59,7 @@
 	copySeries.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySeries.shadow = [self.shadow copyWithZone: zone];
 	copySeries.animation = [self.animation copyWithZone: zone];
+	copySeries.tooltip = [self.tooltip copyWithZone: zone];
 	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySeries.zones = [self.zones copyWithZone: zone];
 	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -161,8 +162,8 @@
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
-	if (self.tooltip) {
-		params[@"tooltip"] = [self.tooltip getParams];
+	if (self.dragDrop) {
+		params[@"dragDrop"] = [self.dragDrop getParams];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
@@ -244,6 +245,9 @@
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.tooltip) {
+		params[@"tooltip"] = [self.tooltip getParams];
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
@@ -440,13 +444,13 @@
 	[self updateNSObject:@"softThreshold"];
 }
 
--(void)setTooltip:(HITooltip *)tooltip {
-	HITooltip *oldValue = _tooltip;
-	if(self.tooltip) {
-		[self removeObserver:self forKeyPath:@"tooltip.isUpdated"];
+-(void)setDragDrop:(HIDragDrop *)dragDrop {
+	HIDragDrop *oldValue = _dragDrop;
+	if(self.dragDrop) {
+		[self removeObserver:self forKeyPath:@"dragDrop.isUpdated"];
 	}
-	_tooltip = tooltip;
-	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
+	_dragDrop = dragDrop;
+	[self updateHIObject:oldValue newValue:dragDrop propertyName:@"dragDrop"];
 }
 
 -(void)setMarker:(HIMarker *)marker {
@@ -584,18 +588,27 @@
 	[self updateNSObject:@"exposeElementToA11y"];
 }
 
--(void)setShadow:(id)shadow {
+-(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }
 
--(void)setAnimation:(HIAnimation *)animation {
-	HIAnimation *oldValue = _animation;
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
 	if(self.animation) {
 		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
 	}
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
+-(void)setTooltip:(HITooltip *)tooltip {
+	HITooltip *oldValue = _tooltip;
+	if(self.tooltip) {
+		[self removeObserver:self forKeyPath:@"tooltip.isUpdated"];
+	}
+	_tooltip = tooltip;
+	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
 }
 
 -(void)setZoneAxis:(NSString *)zoneAxis {

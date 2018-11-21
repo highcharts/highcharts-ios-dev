@@ -83,8 +83,8 @@
 	[self updateNSObject:@"borderWidth"];
 }
 
--(void)setBackgroundColor:(HIBackgroundColor *)backgroundColor {
-	HIBackgroundColor *oldValue = _backgroundColor;
+-(void)setBackgroundColor:(HIColor *)backgroundColor {
+	HIColor *oldValue = _backgroundColor;
 	if(self.backgroundColor) {
 		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
 	}

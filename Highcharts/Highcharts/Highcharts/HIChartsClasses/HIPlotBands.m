@@ -66,7 +66,6 @@
 		params[@"label"] = [self.label getParams];
 	}
 	if (self.events) {
-		params[@"events"] = self.events;
 	}
 	return params;
 }

@@ -11,8 +11,33 @@
 
 
 /**
-A `areaspline` series. If the `type` option is not specified, it is inherited from `chart.type`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `areaspline` series are defined in  `plotOptions.areaspline`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     areaspline: {       // shared options for all areaspline series     }   },   series: [{     // specific options for this series instance     type: 'areaspline'   }] });  
-*/
+ A `areaspline` series. If the `type` option is not specified, it is inherited from `chart.type`.
+ 
+ Configuration options for the series are given in three levels:
+ 
+ 1. Options for all series in a chart are defined in the `plotOptions.series` object.
+ 
+ 2. Options for all `areaspline` series are defined in `plotOptions.areaspline`.
+ 
+ 3. Options for one single series are given in `the series instance array`.
+ 
+ <pre>
+ Highcharts.chart('container', {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        areaspline: {
+            // shared options for all areaspline series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: 'areaspline'
+    }]
+ });
+ <pre>
+ */
 @interface HIAreaspline: HISeries
 
 /**
@@ -24,13 +49,15 @@ A separate color for the negative part of the area. In styled mode, a negative c
 */
 @property(nonatomic, readwrite) HIColor *negativeFillColor;
 /**
-A separate color for the graph line. By default the line takes the `color` of the series, but the lineColor setting allows setting a separate color for the line without altering the `fillColor`. In styled mode, the line stroke can be set with the `.highcharts-graph` class name.
+Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
+
+**Defaults to** `false`.
 
 **Try it**
 
-* [Dark gray line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/)
+* [Display the tooltip when the area is hovered](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/)
 */
-@property(nonatomic, readwrite) HIColor *lineColor;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *trackByArea;
 /**
 Fill color or gradient for the area. When `null`, the series' `color` is used with the series' `fillOpacity`. In styled mode, the fill color can be set with the `.highcharts-area` class name.
 
@@ -41,15 +68,13 @@ Fill color or gradient for the area. When `null`, the series' `color` is used wi
 */
 @property(nonatomic, readwrite) HIColor *fillColor;
 /**
-Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
-
-**Defaults to** `false`.
+A separate color for the graph line. By default the line takes the `color` of the series, but the lineColor setting allows setting a separate color for the line without altering the `fillColor`. In styled mode, the line stroke can be set with the `.highcharts-graph` class name.
 
 **Try it**
 
-* [Display the tooltip when the area is hovered](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-trackbyarea/)
+* [Dark gray line](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/)
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *trackByArea;
+@property(nonatomic, readwrite) HIColor *lineColor;
 /**
 Fill opacity for the area. When you set an explicit `fillColor`, the `fillOpacity` is not applied. Instead, you should define the opacity in the `fillColor` with an rgba color definition. The `fillOpacity` setting, also the default setting, overrides the alpha component of the `color` setting. In styled mode, the fill opacity can be set with the `.highcharts-area` class name.
 

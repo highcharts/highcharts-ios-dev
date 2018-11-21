@@ -479,8 +479,8 @@
 	[self updateArrayObject:oldValue newValue:plotLines propertyName:@"plotLines"];
 }
 
--(void)setUnits:(NSArray *)units {
-	NSArray *oldValue = _units;
+-(void)setUnits:(NSArray<NSArray *> *)units {
+	NSArray<NSArray *> *oldValue = _units;
 	_units = units;
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
 }

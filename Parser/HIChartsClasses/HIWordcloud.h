@@ -12,8 +12,33 @@
 
 
 /**
-A `wordcloud` series. If the `type` option is not specified, it is inherited from `chart.type`. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  `plotOptions.series` object. 2. Options for all `wordcloud` series are defined in  `plotOptions.wordcloud`. 3. Options for one single series are given in  `the series instance array`.  Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     wordcloud: {       // shared options for all wordcloud series     }   },   series: [{     // specific options for this series instance     type: 'wordcloud'   }] });  
-*/
+ A `wordcloud` series. If the `type` option is not specified, it is inherited from `chart.type`.
+ 
+ Configuration options for the series are given in three levels:
+ 
+ 1. Options for all series in a chart are defined in the `plotOptions.series` object.
+ 
+ 2. Options for all `wordcloud` series are defined in `plotOptions.wordcloud`.
+ 
+ 3. Options for one single series are given in `the series instance array`.
+ 
+ <pre>
+ Highcharts.chart('container', {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        wordcloud: {
+            // shared options for all wordcloud series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: 'wordcloud'
+    }]
+ });
+ <pre>
+ */
 @interface HIWordcloud: HISeries
 
 /**
@@ -64,8 +89,6 @@ This option decides which algorithm is used for placement, and rotation of a wor
 /**
 The corner radius of the border surrounding each column or bar.
 
-**Defaults to** `0`.
-
 **Try it**
 
 * [Rounded columns](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/)
@@ -74,7 +97,7 @@ The corner radius of the border surrounding each column or bar.
 /**
 A series specific or series type specific color set to apply instead of the global `colors` when `colorByPoint` is true.
 */
-@property(nonatomic, readwrite) NSArray<HIColor *> *colors;
+@property(nonatomic, readwrite) NSArray<NSString *> *colors;
 /**
 3D columns only. The width of the colored edges.
 

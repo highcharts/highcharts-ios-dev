@@ -7,9 +7,9 @@
 */
 
 #import "HIDateTimeLabelFormats.h"
-#import "HIStyle.h"
 #import "HIColor.h"
 #import "HIFunction.h"
+#import "HICSSObject.h"
 
 
 /**
@@ -33,7 +33,7 @@ The radius of the rounded border corners.
 */
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 /**
-The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are `point.key`, `series.name`, `series.color` and other members from the `point` and `series` objects. The `point.key` variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the `point.key` date format can be set using `tooltip.xDateFormat`.
+The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are `point.key`, `series.name`, `series.color` and other members from the `point` and `series` objects. The `point.key` variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the `point.key` date format can be set using `tooltip.xDateFormat`. To access the original point use `point.point`.
 
 **Try it**
 
@@ -105,7 +105,7 @@ CSS styles for the tooltip. The tooltip can also be styled through the CSS class
 
 * [Greater padding, bold text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/)
 */
-@property(nonatomic, readwrite) HIStyle *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 A string to append to the tooltip format.
 
