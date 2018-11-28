@@ -148,48 +148,57 @@
 }
 
 -(void)setReversed:(NSNumber *)reversed {
+	NSNumber *oldValue = _reversed;
 	_reversed = reversed;
-	[self updateNSObject:@"reversed"];
+	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
 }
 
 -(void)setNeckHeight:(id)neckHeight {
+	id oldValue = _neckHeight;
 	_neckHeight = neckHeight;
-	[self updateNSObject:@"neckHeight"];
+	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
 }
 
 -(void)setHeight:(id)height {
+	id oldValue = _height;
 	_height = height;
-	[self updateNSObject:@"height"];
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setWidth:(id)width {
+	id oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setNeckWidth:(id)neckWidth {
+	id oldValue = _neckWidth;
 	_neckWidth = neckWidth;
-	[self updateNSObject:@"neckWidth"];
+	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
 }
 
 -(void)setEndAngle:(NSNumber *)endAngle {
+	NSNumber *oldValue = _endAngle;
 	_endAngle = endAngle;
-	[self updateNSObject:@"endAngle"];
+	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
 }
 
 -(void)setInnerSize:(id)innerSize {
+	id oldValue = _innerSize;
 	_innerSize = innerSize;
-	[self updateNSObject:@"innerSize"];
+	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
 }
 
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	NSNumber *oldValue = _slicedOffset;
 	_slicedOffset = slicedOffset;
-	[self updateNSObject:@"slicedOffset"];
+	[self updateNSObject:oldValue newValue:slicedOffset propertyName:@"slicedOffset"];
 }
 
 -(void)setDepth:(NSNumber *)depth {
+	NSNumber *oldValue = _depth;
 	_depth = depth;
-	[self updateNSObject:@"depth"];
+	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
 -(void)setColors:(NSArray<NSString *> *)colors {
@@ -199,23 +208,27 @@
 }
 
 -(void)setMinSize:(NSNumber *)minSize {
+	NSNumber *oldValue = _minSize;
 	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }
 
 -(void)setLegendType:(NSString *)legendType {
+	NSString *oldValue = _legendType;
 	_legendType = legendType;
-	[self updateNSObject:@"legendType"];
+	[self updateNSObject:oldValue newValue:legendType propertyName:@"legendType"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {
+	NSNumber *oldValue = _startAngle;
 	_startAngle = startAngle;
-	[self updateNSObject:@"startAngle"];
+	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
 }
 
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:@"ignoreHiddenPoint"];
+	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
 }
 
 @end

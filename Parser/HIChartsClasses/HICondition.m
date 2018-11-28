@@ -42,32 +42,33 @@
 # pragma mark - Setters
 
 -(void)setMinWidth:(NSNumber *)minWidth {
+	NSNumber *oldValue = _minWidth;
 	_minWidth = minWidth;
-	[self updateNSObject:@"minWidth"];
+	[self updateNSObject:oldValue newValue:minWidth propertyName:@"minWidth"];
 }
 
 -(void)setCallback:(HIFunction *)callback {
 	HIFunction *oldValue = _callback;
-	if(self.callback) {
-		[self removeObserver:self forKeyPath:@"callback.isUpdated"];
-	}
 	_callback = callback;
 	[self updateHIObject:oldValue newValue:callback propertyName:@"callback"];
 }
 
 -(void)setMinHeight:(NSNumber *)minHeight {
+	NSNumber *oldValue = _minHeight;
 	_minHeight = minHeight;
-	[self updateNSObject:@"minHeight"];
+	[self updateNSObject:oldValue newValue:minHeight propertyName:@"minHeight"];
 }
 
 -(void)setMaxWidth:(NSNumber *)maxWidth {
+	NSNumber *oldValue = _maxWidth;
 	_maxWidth = maxWidth;
-	[self updateNSObject:@"maxWidth"];
+	[self updateNSObject:oldValue newValue:maxWidth propertyName:@"maxWidth"];
 }
 
 -(void)setMaxHeight:(NSNumber *)maxHeight {
+	NSNumber *oldValue = _maxHeight;
 	_maxHeight = maxHeight;
-	[self updateNSObject:@"maxHeight"];
+	[self updateNSObject:oldValue newValue:maxHeight propertyName:@"maxHeight"];
 }
 
 @end

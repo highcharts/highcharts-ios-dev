@@ -94,8 +94,9 @@
 }
 
 -(void)setInverted:(NSNumber *)inverted {
+	NSNumber *oldValue = _inverted;
 	_inverted = inverted;
-	[self updateNSObject:@"inverted"];
+	[self updateNSObject:oldValue newValue:inverted propertyName:@"inverted"];
 }
 
 -(void)setMatrix:(NSArray<NSNumber *> *)matrix {
@@ -105,48 +106,57 @@
 }
 
 -(void)setStroke:(NSString *)stroke {
+	NSString *oldValue = _stroke;
 	_stroke = stroke;
-	[self updateNSObject:@"stroke"];
+	[self updateNSObject:oldValue newValue:stroke propertyName:@"stroke"];
 }
 
 -(void)setRotation:(NSString *)rotation {
+	NSString *oldValue = _rotation;
 	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setRotationOriginX:(NSNumber *)rotationOriginX {
+	NSNumber *oldValue = _rotationOriginX;
 	_rotationOriginX = rotationOriginX;
-	[self updateNSObject:@"rotationOriginX"];
+	[self updateNSObject:oldValue newValue:rotationOriginX propertyName:@"rotationOriginX"];
 }
 
 -(void)setRotationOriginY:(NSNumber *)rotationOriginY {
+	NSNumber *oldValue = _rotationOriginY;
 	_rotationOriginY = rotationOriginY;
-	[self updateNSObject:@"rotationOriginY"];
+	[self updateNSObject:oldValue newValue:rotationOriginY propertyName:@"rotationOriginY"];
 }
 
 -(void)setScaleX:(NSNumber *)scaleX {
+	NSNumber *oldValue = _scaleX;
 	_scaleX = scaleX;
-	[self updateNSObject:@"scaleX"];
+	[self updateNSObject:oldValue newValue:scaleX propertyName:@"scaleX"];
 }
 
 -(void)setScaleY:(NSNumber *)scaleY {
+	NSNumber *oldValue = _scaleY;
 	_scaleY = scaleY;
-	[self updateNSObject:@"scaleY"];
+	[self updateNSObject:oldValue newValue:scaleY propertyName:@"scaleY"];
 }
 
 -(void)setTranslateX:(NSNumber *)translateX {
+	NSNumber *oldValue = _translateX;
 	_translateX = translateX;
-	[self updateNSObject:@"translateX"];
+	[self updateNSObject:oldValue newValue:translateX propertyName:@"translateX"];
 }
 
 -(void)setTranslateY:(NSNumber *)translateY {
+	NSNumber *oldValue = _translateY;
 	_translateY = translateY;
-	[self updateNSObject:@"translateY"];
+	[self updateNSObject:oldValue newValue:translateY propertyName:@"translateY"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 @end

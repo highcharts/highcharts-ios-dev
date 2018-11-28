@@ -38,29 +38,25 @@
 # pragma mark - Setters
 
 -(void)setDuration:(NSNumber *)duration {
+	NSNumber *oldValue = _duration;
 	_duration = duration;
-	[self updateNSObject:@"duration"];
+	[self updateNSObject:oldValue newValue:duration propertyName:@"duration"];
 }
 
 -(void)setEasing:(NSString *)easing {
+	NSString *oldValue = _easing;
 	_easing = easing;
-	[self updateNSObject:@"easing"];
+	[self updateNSObject:oldValue newValue:easing propertyName:@"easing"];
 }
 
 -(void)setComplete:(HIFunction *)complete {
 	HIFunction *oldValue = _complete;
-	if(self.complete) {
-		[self removeObserver:self forKeyPath:@"complete.isUpdated"];
-	}
 	_complete = complete;
 	[self updateHIObject:oldValue newValue:complete propertyName:@"complete"];
 }
 
 -(void)setStep:(HIFunction *)step {
 	HIFunction *oldValue = _step;
-	if(self.step) {
-		[self removeObserver:self forKeyPath:@"step.isUpdated"];
-	}
 	_step = step;
 	[self updateHIObject:oldValue newValue:step propertyName:@"step"];
 }

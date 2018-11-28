@@ -174,223 +174,229 @@
 # pragma mark - Setters
 
 -(void)setDefer:(NSNumber *)defer {
+	NSNumber *oldValue = _defer;
 	_defer = defer;
-	[self updateNSObject:@"defer"];
+	[self updateNSObject:oldValue newValue:defer propertyName:@"defer"];
 }
 
 -(void)setInside:(NSNumber *)inside {
+	NSNumber *oldValue = _inside;
 	_inside = inside;
-	[self updateNSObject:@"inside"];
+	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {
 	HIFunction *oldValue = _formatter;
-	if(self.formatter) {
-		[self removeObserver:self forKeyPath:@"formatter.isUpdated"];
-	}
 	_formatter = formatter;
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 -(void)setCrop:(NSNumber *)crop {
+	NSNumber *oldValue = _crop;
 	_crop = crop;
-	[self updateNSObject:@"crop"];
+	[self updateNSObject:oldValue newValue:crop propertyName:@"crop"];
 }
 
 -(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setOverflow:(NSNumber *)overflow {
+	NSNumber *oldValue = _overflow;
 	_overflow = overflow;
-	[self updateNSObject:@"overflow"];
+	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setYHigh:(id)yHigh {
+	id oldValue = _yHigh;
 	_yHigh = yHigh;
-	[self updateNSObject:@"yHigh"];
+	[self updateNSObject:oldValue newValue:yHigh propertyName:@"yHigh"];
 }
 
 -(void)setXHigh:(NSNumber *)xHigh {
+	NSNumber *oldValue = _xHigh;
 	_xHigh = xHigh;
-	[self updateNSObject:@"xHigh"];
+	[self updateNSObject:oldValue newValue:xHigh propertyName:@"xHigh"];
 }
 
 -(void)setXLow:(NSNumber *)xLow {
+	NSNumber *oldValue = _xLow;
 	_xLow = xLow;
-	[self updateNSObject:@"xLow"];
+	[self updateNSObject:oldValue newValue:xLow propertyName:@"xLow"];
 }
 
 -(void)setYLow:(id)yLow {
+	id oldValue = _yLow;
 	_yLow = yLow;
-	[self updateNSObject:@"yLow"];
+	[self updateNSObject:oldValue newValue:yLow propertyName:@"yLow"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setShape:(NSString *)shape {
+	NSString *oldValue = _shape;
 	_shape = shape;
-	[self updateNSObject:@"shape"];
+	[self updateNSObject:oldValue newValue:shape propertyName:@"shape"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setFilter:(HIFilter *)filter {
 	HIFilter *oldValue = _filter;
-	if(self.filter) {
-		[self removeObserver:self forKeyPath:@"filter.isUpdated"];
-	}
 	_filter = filter;
 	[self updateHIObject:oldValue newValue:filter propertyName:@"filter"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
 	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
 	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setAllowOverlap:(NSNumber *)allowOverlap {
+	NSNumber *oldValue = _allowOverlap;
 	_allowOverlap = allowOverlap;
-	[self updateNSObject:@"allowOverlap"];
+	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
 }
 
 -(void)setFormat:(NSString *)format {
+	NSString *oldValue = _format;
 	_format = format;
-	[self updateNSObject:@"format"];
+	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
 }
 
 -(void)setShadow:(id)shadow {
+	id oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setRotationMode:(NSString *)rotationMode {
+	NSString *oldValue = _rotationMode;
 	_rotationMode = rotationMode;
-	[self updateNSObject:@"rotationMode"];
+	[self updateNSObject:oldValue newValue:rotationMode propertyName:@"rotationMode"];
 }
 
 -(void)setNodeFormatter:(HIFunction *)nodeFormatter {
 	HIFunction *oldValue = _nodeFormatter;
-	if(self.nodeFormatter) {
-		[self removeObserver:self forKeyPath:@"nodeFormatter.isUpdated"];
-	}
 	_nodeFormatter = nodeFormatter;
 	[self updateHIObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
 }
 
 -(void)setNodeFormat:(NSString *)nodeFormat {
+	NSString *oldValue = _nodeFormat;
 	_nodeFormat = nodeFormat;
-	[self updateNSObject:@"nodeFormat"];
+	[self updateNSObject:oldValue newValue:nodeFormat propertyName:@"nodeFormat"];
 }
 
 -(void)setDistance:(NSNumber *)distance {
+	NSNumber *oldValue = _distance;
 	_distance = distance;
-	[self updateNSObject:@"distance"];
+	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
 }
 
 -(void)setConnectorWidth:(NSNumber *)connectorWidth {
+	NSNumber *oldValue = _connectorWidth;
 	_connectorWidth = connectorWidth;
-	[self updateNSObject:@"connectorWidth"];
+	[self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
 }
 
 -(void)setSoftConnector:(NSNumber *)softConnector {
+	NSNumber *oldValue = _softConnector;
 	_softConnector = softConnector;
-	[self updateNSObject:@"softConnector"];
+	[self updateNSObject:oldValue newValue:softConnector propertyName:@"softConnector"];
 }
 
 -(void)setConnectorPadding:(NSNumber *)connectorPadding {
+	NSNumber *oldValue = _connectorPadding;
 	_connectorPadding = connectorPadding;
-	[self updateNSObject:@"connectorPadding"];
+	[self updateNSObject:oldValue newValue:connectorPadding propertyName:@"connectorPadding"];
 }
 
 -(void)setConnectorColor:(HIColor *)connectorColor {
 	HIColor *oldValue = _connectorColor;
-	if(self.connectorColor) {
-		[self removeObserver:self forKeyPath:@"connectorColor.isUpdated"];
-	}
 	_connectorColor = connectorColor;
 	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }

@@ -38,23 +38,27 @@
 # pragma mark - Setters
 
 -(void)setY1:(NSNumber *)y1 {
+	NSNumber *oldValue = _y1;
 	_y1 = y1;
-	[self updateNSObject:@"y1"];
+	[self updateNSObject:oldValue newValue:y1 propertyName:@"y1"];
 }
 
 -(void)setX2:(NSNumber *)x2 {
+	NSNumber *oldValue = _x2;
 	_x2 = x2;
-	[self updateNSObject:@"x2"];
+	[self updateNSObject:oldValue newValue:x2 propertyName:@"x2"];
 }
 
 -(void)setX1:(NSNumber *)x1 {
+	NSNumber *oldValue = _x1;
 	_x1 = x1;
-	[self updateNSObject:@"x1"];
+	[self updateNSObject:oldValue newValue:x1 propertyName:@"x1"];
 }
 
 -(void)setY2:(NSNumber *)y2 {
+	NSNumber *oldValue = _y2;
 	_y2 = y2;
-	[self updateNSObject:@"y2"];
+	[self updateNSObject:oldValue newValue:y2 propertyName:@"y2"];
 }
 
 @end

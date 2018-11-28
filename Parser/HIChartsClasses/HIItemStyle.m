@@ -26,8 +26,9 @@
 # pragma mark - Setters
 
 -(void)setCursor:(NSString *)cursor {
+	NSString *oldValue = _cursor;
 	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
+	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
 }
 
 @end

@@ -90,30 +90,31 @@
 # pragma mark - Setters
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
+	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
+	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
 -(void)setTileShape:(NSString *)tileShape {
+	NSString *oldValue = _tileShape;
 	_tileShape = tileShape;
-	[self updateNSObject:@"tileShape"];
+	[self updateNSObject:oldValue newValue:tileShape propertyName:@"tileShape"];
 }
 
 -(void)setRowsize:(NSNumber *)rowsize {
+	NSNumber *oldValue = _rowsize;
 	_rowsize = rowsize;
-	[self updateNSObject:@"rowsize"];
+	[self updateNSObject:oldValue newValue:rowsize propertyName:@"rowsize"];
 }
 
 -(void)setColsize:(NSNumber *)colsize {
+	NSNumber *oldValue = _colsize;
 	_colsize = colsize;
-	[self updateNSObject:@"colsize"];
+	[self updateNSObject:oldValue newValue:colsize propertyName:@"colsize"];
 }
 
 -(void)setNullColor:(HIColor *)nullColor {
 	HIColor *oldValue = _nullColor;
-	if(self.nullColor) {
-		[self removeObserver:self forKeyPath:@"nullColor.isUpdated"];
-	}
 	_nullColor = nullColor;
 	[self updateHIObject:oldValue newValue:nullColor propertyName:@"nullColor"];
 }

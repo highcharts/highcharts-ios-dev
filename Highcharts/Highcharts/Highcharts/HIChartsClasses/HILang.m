@@ -167,25 +167,25 @@
 # pragma mark - Setters
 
 -(void)setDownloadCSV:(NSString *)downloadCSV {
+	NSString *oldValue = _downloadCSV;
 	_downloadCSV = downloadCSV;
-	[self updateNSObject:@"downloadCSV"];
+	[self updateNSObject:oldValue newValue:downloadCSV propertyName:@"downloadCSV"];
 }
 
 -(void)setDownloadXLS:(NSString *)downloadXLS {
+	NSString *oldValue = _downloadXLS;
 	_downloadXLS = downloadXLS;
-	[self updateNSObject:@"downloadXLS"];
+	[self updateNSObject:oldValue newValue:downloadXLS propertyName:@"downloadXLS"];
 }
 
 -(void)setDownloadPNG:(NSString *)downloadPNG {
+	NSString *oldValue = _downloadPNG;
 	_downloadPNG = downloadPNG;
-	[self updateNSObject:@"downloadPNG"];
+	[self updateNSObject:oldValue newValue:downloadPNG propertyName:@"downloadPNG"];
 }
 
 -(void)setAccessibility:(HIAccessibility *)accessibility {
 	HIAccessibility *oldValue = _accessibility;
-	if(self.accessibility) {
-		[self removeObserver:self forKeyPath:@"accessibility.isUpdated"];
-	}
 	_accessibility = accessibility;
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
@@ -197,13 +197,15 @@
 }
 
 -(void)setNoData:(NSString *)noData {
+	NSString *oldValue = _noData;
 	_noData = noData;
-	[self updateNSObject:@"noData"];
+	[self updateNSObject:oldValue newValue:noData propertyName:@"noData"];
 }
 
 -(void)setLoading:(NSString *)loading {
+	NSString *oldValue = _loading;
 	_loading = loading;
-	[self updateNSObject:@"loading"];
+	[self updateNSObject:oldValue newValue:loading propertyName:@"loading"];
 }
 
 -(void)setNumericSymbols:(NSArray<NSString *> *)numericSymbols {
@@ -213,13 +215,15 @@
 }
 
 -(void)setDownloadSVG:(NSString *)downloadSVG {
+	NSString *oldValue = _downloadSVG;
 	_downloadSVG = downloadSVG;
-	[self updateNSObject:@"downloadSVG"];
+	[self updateNSObject:oldValue newValue:downloadSVG propertyName:@"downloadSVG"];
 }
 
 -(void)setNumericSymbolMagnitude:(NSNumber *)numericSymbolMagnitude {
+	NSNumber *oldValue = _numericSymbolMagnitude;
 	_numericSymbolMagnitude = numericSymbolMagnitude;
-	[self updateNSObject:@"numericSymbolMagnitude"];
+	[self updateNSObject:oldValue newValue:numericSymbolMagnitude propertyName:@"numericSymbolMagnitude"];
 }
 
 -(void)setWeekdays:(NSArray<NSString *> *)weekdays {
@@ -229,43 +233,51 @@
 }
 
 -(void)setPrintChart:(NSString *)printChart {
+	NSString *oldValue = _printChart;
 	_printChart = printChart;
-	[self updateNSObject:@"printChart"];
+	[self updateNSObject:oldValue newValue:printChart propertyName:@"printChart"];
 }
 
 -(void)setDrillUpText:(NSString *)drillUpText {
+	NSString *oldValue = _drillUpText;
 	_drillUpText = drillUpText;
-	[self updateNSObject:@"drillUpText"];
+	[self updateNSObject:oldValue newValue:drillUpText propertyName:@"drillUpText"];
 }
 
 -(void)setViewData:(NSString *)viewData {
+	NSString *oldValue = _viewData;
 	_viewData = viewData;
-	[self updateNSObject:@"viewData"];
+	[self updateNSObject:oldValue newValue:viewData propertyName:@"viewData"];
 }
 
 -(void)setContextButtonTitle:(NSString *)contextButtonTitle {
+	NSString *oldValue = _contextButtonTitle;
 	_contextButtonTitle = contextButtonTitle;
-	[self updateNSObject:@"contextButtonTitle"];
+	[self updateNSObject:oldValue newValue:contextButtonTitle propertyName:@"contextButtonTitle"];
 }
 
 -(void)setInvalidDate:(NSString *)invalidDate {
+	NSString *oldValue = _invalidDate;
 	_invalidDate = invalidDate;
-	[self updateNSObject:@"invalidDate"];
+	[self updateNSObject:oldValue newValue:invalidDate propertyName:@"invalidDate"];
 }
 
 -(void)setResetZoom:(NSString *)resetZoom {
+	NSString *oldValue = _resetZoom;
 	_resetZoom = resetZoom;
-	[self updateNSObject:@"resetZoom"];
+	[self updateNSObject:oldValue newValue:resetZoom propertyName:@"resetZoom"];
 }
 
 -(void)setDownloadPDF:(NSString *)downloadPDF {
+	NSString *oldValue = _downloadPDF;
 	_downloadPDF = downloadPDF;
-	[self updateNSObject:@"downloadPDF"];
+	[self updateNSObject:oldValue newValue:downloadPDF propertyName:@"downloadPDF"];
 }
 
 -(void)setOpenInCloud:(NSString *)openInCloud {
+	NSString *oldValue = _openInCloud;
 	_openInCloud = openInCloud;
-	[self updateNSObject:@"openInCloud"];
+	[self updateNSObject:oldValue newValue:openInCloud propertyName:@"openInCloud"];
 }
 
 -(void)setMonths:(NSArray<NSString *> *)months {
@@ -281,23 +293,27 @@
 }
 
 -(void)setDownloadJPEG:(NSString *)downloadJPEG {
+	NSString *oldValue = _downloadJPEG;
 	_downloadJPEG = downloadJPEG;
-	[self updateNSObject:@"downloadJPEG"];
+	[self updateNSObject:oldValue newValue:downloadJPEG propertyName:@"downloadJPEG"];
 }
 
 -(void)setDecimalPoint:(NSString *)decimalPoint {
+	NSString *oldValue = _decimalPoint;
 	_decimalPoint = decimalPoint;
-	[self updateNSObject:@"decimalPoint"];
+	[self updateNSObject:oldValue newValue:decimalPoint propertyName:@"decimalPoint"];
 }
 
 -(void)setResetZoomTitle:(NSString *)resetZoomTitle {
+	NSString *oldValue = _resetZoomTitle;
 	_resetZoomTitle = resetZoomTitle;
-	[self updateNSObject:@"resetZoomTitle"];
+	[self updateNSObject:oldValue newValue:resetZoomTitle propertyName:@"resetZoomTitle"];
 }
 
 -(void)setThousandsSep:(NSString *)thousandsSep {
+	NSString *oldValue = _thousandsSep;
 	_thousandsSep = thousandsSep;
-	[self updateNSObject:@"thousandsSep"];
+	[self updateNSObject:oldValue newValue:thousandsSep propertyName:@"thousandsSep"];
 }
 
 @end

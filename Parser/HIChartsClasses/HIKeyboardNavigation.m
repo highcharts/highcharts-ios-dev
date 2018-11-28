@@ -38,27 +38,27 @@
 # pragma mark - Setters
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setFocusBorder:(HIFocusBorder *)focusBorder {
 	HIFocusBorder *oldValue = _focusBorder;
-	if(self.focusBorder) {
-		[self removeObserver:self forKeyPath:@"focusBorder.isUpdated"];
-	}
 	_focusBorder = focusBorder;
 	[self updateHIObject:oldValue newValue:focusBorder propertyName:@"focusBorder"];
 }
 
 -(void)setMode:(NSString *)mode {
+	NSString *oldValue = _mode;
 	_mode = mode;
-	[self updateNSObject:@"mode"];
+	[self updateNSObject:oldValue newValue:mode propertyName:@"mode"];
 }
 
 -(void)setSkipNullPoints:(NSNumber *)skipNullPoints {
+	NSNumber *oldValue = _skipNullPoints;
 	_skipNullPoints = skipNullPoints;
-	[self updateNSObject:@"skipNullPoints"];
+	[self updateNSObject:oldValue newValue:skipNullPoints propertyName:@"skipNullPoints"];
 }
 
 @end

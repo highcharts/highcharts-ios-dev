@@ -54,47 +54,51 @@
 # pragma mark - Setters
 
 -(void)setViewDistance:(NSNumber *)viewDistance {
+	NSNumber *oldValue = _viewDistance;
 	_viewDistance = viewDistance;
-	[self updateNSObject:@"viewDistance"];
+	[self updateNSObject:oldValue newValue:viewDistance propertyName:@"viewDistance"];
 }
 
 -(void)setFrame:(HIFrame *)frame {
 	HIFrame *oldValue = _frame;
-	if(self.frame) {
-		[self removeObserver:self forKeyPath:@"frame.isUpdated"];
-	}
 	_frame = frame;
 	[self updateHIObject:oldValue newValue:frame propertyName:@"frame"];
 }
 
 -(void)setAxisLabelPosition:(NSString *)axisLabelPosition {
+	NSString *oldValue = _axisLabelPosition;
 	_axisLabelPosition = axisLabelPosition;
-	[self updateNSObject:@"axisLabelPosition"];
+	[self updateNSObject:oldValue newValue:axisLabelPosition propertyName:@"axisLabelPosition"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setBeta:(NSNumber *)beta {
+	NSNumber *oldValue = _beta;
 	_beta = beta;
-	[self updateNSObject:@"beta"];
+	[self updateNSObject:oldValue newValue:beta propertyName:@"beta"];
 }
 
 -(void)setDepth:(NSNumber *)depth {
+	NSNumber *oldValue = _depth;
 	_depth = depth;
-	[self updateNSObject:@"depth"];
+	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
 -(void)setFitToPlot:(NSNumber *)fitToPlot {
+	NSNumber *oldValue = _fitToPlot;
 	_fitToPlot = fitToPlot;
-	[self updateNSObject:@"fitToPlot"];
+	[self updateNSObject:oldValue newValue:fitToPlot propertyName:@"fitToPlot"];
 }
 
 -(void)setAlpha:(NSNumber *)alpha {
+	NSNumber *oldValue = _alpha;
 	_alpha = alpha;
-	[self updateNSObject:@"alpha"];
+	[self updateNSObject:oldValue newValue:alpha propertyName:@"alpha"];
 }
 
 @end

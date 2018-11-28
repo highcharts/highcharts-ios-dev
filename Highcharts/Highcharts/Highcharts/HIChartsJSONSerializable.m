@@ -21,6 +21,7 @@
     if (self = [super init]) {
         self.setUppedAttributes = [[NSMutableSet alloc] init];
         self.currentObservers = [[NSMutableArray alloc] init];
+        self.uuid = [[[NSUUID UUID] UUIDString] componentsSeparatedByString:@"-"][0];
         return self;
     }
     return nil;
@@ -31,8 +32,9 @@
 }
 
 -(void)removeObservers {
-    for (NSString *keyPath in self.currentObservers) {
-        [self removeObserver:self forKeyPath:keyPath];
+    for (id object in self.currentObservers) {
+        [object removeObserver:self forKeyPath:@"isUpdated"];
+        [object removeObserver:self forKeyPath:@"jsClassMethod"];
     }
 }
 
@@ -50,15 +52,17 @@
 }
 
 -(void)updateHIObject:(HIChartsJSONSerializable *)oldValue newValue:(HIChartsJSONSerializable *)newValue propertyName:(NSString *)propertyName {
-    NSString *keyPath = [NSString stringWithFormat:@"%@.isUpdated", propertyName];
     if (oldValue) {
+        [oldValue removeObserver:self forKeyPath:@"isUpdated"];
+        [oldValue removeObserver:self forKeyPath:@"jsClassMethod"];
+        [self.currentObservers removeObject:oldValue];
+        
         [self update:YES];
         
         if (newValue) {
-            [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
-        }
-        else {
-            [self.currentObservers removeObject:keyPath];
+            [newValue addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
+            [newValue addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+            [self.currentObservers addObject:newValue];
         }
     }
     else if (newValue) {
@@ -67,16 +71,20 @@
         }
         
         [self.setUppedAttributes addObject:propertyName];
-        [self.currentObservers addObject:keyPath];
-        [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
+        
+        [newValue addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+        [newValue addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
+        [self.currentObservers addObject:newValue];
     }
     
     [self update:NO];
 }
 
--(void)updateNSObject:(NSString *)propertyName {
-    if([self.setUppedAttributes containsObject:propertyName]) {
-        [self update:YES];
+-(void)updateNSObject:(NSObject *)oldValue newValue:(NSObject *)newValue propertyName:(NSString *)propertyName {
+    if ([self.setUppedAttributes containsObject:propertyName]) {
+        if (![oldValue isEqual:newValue]) {
+            [self update:YES];
+        }
     }
     else {
         [self.setUppedAttributes addObject:propertyName];
@@ -86,13 +94,41 @@
 }
 
 -(void)updateArrayObject:(NSArray<NSObject *> *)oldValue newValue:(NSArray<NSObject *> *)newValue propertyName:(NSString *)propertyName {
-    if ([self.setUppedAttributes containsObject:propertyName]) {
-        if (![oldValue isEqualToArray:newValue]) {
-            [self update:YES];
+    if (oldValue) {
+        for (id object in oldValue) {
+            if ([object isKindOfClass:[HIChartsJSONSerializable class]]) {
+                [object removeObserver:self forKeyPath:@"isUpdated"];
+                [object removeObserver:self forKeyPath:@"jsClassMethod"];
+                [self.currentObservers removeObject:object];
+            }
+        }
+        
+        [self update:YES];
+        
+        if (newValue) {
+            for (id object in newValue) {
+                if ([object isKindOfClass:[HIChartsJSONSerializable class]]) {
+                    [object addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+                    [object addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
+                    [self.currentObservers addObject:object];
+                }
+            }
         }
     }
-    else {
+    else if (newValue) {
+        if ([self.setUppedAttributes containsObject:propertyName]) {
+            [self update:YES];
+        }
+        
         [self.setUppedAttributes addObject:propertyName];
+        
+        for (id object in newValue) {
+            if ([object isKindOfClass:[HIChartsJSONSerializable class]]) {
+                [object addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+                [object addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
+                [self.currentObservers addObject:object];
+            }
+        }
     }
     
     [self update:NO];
@@ -105,9 +141,23 @@
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    NSString *kChangeNew = [change valueForKey:@"new"];
-    BOOL value = kChangeNew.boolValue;
-    [self update:value];
+    if ([keyPath isEqualToString:@"jsClassMethod"]) {
+        NSDictionary *kChangeNew = [change valueForKey:@"new"];
+        NSLog(@"IT IS jsClassMethod FROM KVO : %@", kChangeNew);
+        NSLog(@"MY PRIVATE ID IS : %@", self.uuid);
+        [self setJsClassMethod:kChangeNew];
+    }
+    else {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        [self update:value];
+    }
+}
+
+- (void)setJsClassMethod:(NSDictionary *)jsClassMethod {
+    [self willChangeValueForKey:@"jsClassMethod"];
+    _jsClassMethod = jsClassMethod;
+    [self didChangeValueForKey:@"jsClassMethod"];
 }
 
 - (id)copyWithZone:(NSZone *)zone {

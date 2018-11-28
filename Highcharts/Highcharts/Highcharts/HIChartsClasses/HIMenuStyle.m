@@ -34,18 +34,21 @@
 # pragma mark - Setters
 
 -(void)setPadding:(NSString *)padding {
+	NSString *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setBorder:(NSString *)border {
+	NSString *oldValue = _border;
 	_border = border;
-	[self updateNSObject:@"border"];
+	[self updateNSObject:oldValue newValue:border propertyName:@"border"];
 }
 
 -(void)setBackground:(NSString *)background {
+	NSString *oldValue = _background;
 	_background = background;
-	[self updateNSObject:@"background"];
+	[self updateNSObject:oldValue newValue:background propertyName:@"background"];
 }
 
 @end

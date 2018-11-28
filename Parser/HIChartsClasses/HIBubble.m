@@ -118,43 +118,51 @@
 # pragma mark - Setters
 
 -(void)setZMax:(NSNumber *)zMax {
+	NSNumber *oldValue = _zMax;
 	_zMax = zMax;
-	[self updateNSObject:@"zMax"];
+	[self updateNSObject:oldValue newValue:zMax propertyName:@"zMax"];
 }
 
 -(void)setSizeBy:(NSString *)sizeBy {
+	NSString *oldValue = _sizeBy;
 	_sizeBy = sizeBy;
-	[self updateNSObject:@"sizeBy"];
+	[self updateNSObject:oldValue newValue:sizeBy propertyName:@"sizeBy"];
 }
 
 -(void)setZMin:(NSNumber *)zMin {
+	NSNumber *oldValue = _zMin;
 	_zMin = zMin;
-	[self updateNSObject:@"zMin"];
+	[self updateNSObject:oldValue newValue:zMin propertyName:@"zMin"];
 }
 
 -(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
 	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }
 
 -(void)setMaxSize:(id)maxSize {
+	id oldValue = _maxSize;
 	_maxSize = maxSize;
-	[self updateNSObject:@"maxSize"];
+	[self updateNSObject:oldValue newValue:maxSize propertyName:@"maxSize"];
 }
 
 -(void)setZThreshold:(NSNumber *)zThreshold {
+	NSNumber *oldValue = _zThreshold;
 	_zThreshold = zThreshold;
-	[self updateNSObject:@"zThreshold"];
+	[self updateNSObject:oldValue newValue:zThreshold propertyName:@"zThreshold"];
 }
 
 -(void)setDisplayNegative:(NSNumber *)displayNegative {
+	NSNumber *oldValue = _displayNegative;
 	_displayNegative = displayNegative;
-	[self updateNSObject:@"displayNegative"];
+	[self updateNSObject:oldValue newValue:displayNegative propertyName:@"displayNegative"];
 }
 
 -(void)setSizeByAbsoluteValue:(NSNumber *)sizeByAbsoluteValue {
+	NSNumber *oldValue = _sizeByAbsoluteValue;
 	_sizeByAbsoluteValue = sizeByAbsoluteValue;
-	[self updateNSObject:@"sizeByAbsoluteValue"];
+	[self updateNSObject:oldValue newValue:sizeByAbsoluteValue propertyName:@"sizeByAbsoluteValue"];
 }
 
 @end

@@ -70,71 +70,75 @@
 # pragma mark - Setters
 
 -(void)setAllowOverlap:(NSNumber *)allowOverlap {
+	NSNumber *oldValue = _allowOverlap;
 	_allowOverlap = allowOverlap;
-	[self updateNSObject:@"allowOverlap"];
+	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 -(void)setFormat:(NSString *)format {
+	NSString *oldValue = _format;
 	_format = format;
-	[self updateNSObject:@"format"];
+	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
 	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {
 	HIFunction *oldValue = _formatter;
-	if(self.formatter) {
-		[self removeObserver:self forKeyPath:@"formatter.isUpdated"];
-	}
 	_formatter = formatter;
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
 -(void)setTextAlign:(NSString *)textAlign {
+	NSString *oldValue = _textAlign;
 	_textAlign = textAlign;
-	[self updateNSObject:@"textAlign"];
+	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
 }
 
 @end

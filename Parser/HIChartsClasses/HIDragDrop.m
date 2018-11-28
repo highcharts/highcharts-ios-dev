@@ -102,111 +102,123 @@
 # pragma mark - Setters
 
 -(void)setDraggableHigh:(NSNumber *)draggableHigh {
+	NSNumber *oldValue = _draggableHigh;
 	_draggableHigh = draggableHigh;
-	[self updateNSObject:@"draggableHigh"];
+	[self updateNSObject:oldValue newValue:draggableHigh propertyName:@"draggableHigh"];
 }
 
 -(void)setDraggableLow:(NSNumber *)draggableLow {
+	NSNumber *oldValue = _draggableLow;
 	_draggableLow = draggableLow;
-	[self updateNSObject:@"draggableLow"];
+	[self updateNSObject:oldValue newValue:draggableLow propertyName:@"draggableLow"];
 }
 
 -(void)setDraggableX2:(NSNumber *)draggableX2 {
+	NSNumber *oldValue = _draggableX2;
 	_draggableX2 = draggableX2;
-	[self updateNSObject:@"draggableX2"];
+	[self updateNSObject:oldValue newValue:draggableX2 propertyName:@"draggableX2"];
 }
 
 -(void)setDraggableX1:(NSNumber *)draggableX1 {
+	NSNumber *oldValue = _draggableX1;
 	_draggableX1 = draggableX1;
-	[self updateNSObject:@"draggableX1"];
+	[self updateNSObject:oldValue newValue:draggableX1 propertyName:@"draggableX1"];
 }
 
 -(void)setDraggableQ1:(NSNumber *)draggableQ1 {
+	NSNumber *oldValue = _draggableQ1;
 	_draggableQ1 = draggableQ1;
-	[self updateNSObject:@"draggableQ1"];
+	[self updateNSObject:oldValue newValue:draggableQ1 propertyName:@"draggableQ1"];
 }
 
 -(void)setDraggableQ3:(NSNumber *)draggableQ3 {
+	NSNumber *oldValue = _draggableQ3;
 	_draggableQ3 = draggableQ3;
-	[self updateNSObject:@"draggableQ3"];
+	[self updateNSObject:oldValue newValue:draggableQ3 propertyName:@"draggableQ3"];
 }
 
 -(void)setDraggableTarget:(NSNumber *)draggableTarget {
+	NSNumber *oldValue = _draggableTarget;
 	_draggableTarget = draggableTarget;
-	[self updateNSObject:@"draggableTarget"];
+	[self updateNSObject:oldValue newValue:draggableTarget propertyName:@"draggableTarget"];
 }
 
 -(void)setGuideBox:(HIGuideBox *)guideBox {
 	HIGuideBox *oldValue = _guideBox;
-	if(self.guideBox) {
-		[self removeObserver:self forKeyPath:@"guideBox.isUpdated"];
-	}
 	_guideBox = guideBox;
 	[self updateHIObject:oldValue newValue:guideBox propertyName:@"guideBox"];
 }
 
 -(void)setDragMaxX:(NSNumber *)dragMaxX {
+	NSNumber *oldValue = _dragMaxX;
 	_dragMaxX = dragMaxX;
-	[self updateNSObject:@"dragMaxX"];
+	[self updateNSObject:oldValue newValue:dragMaxX propertyName:@"dragMaxX"];
 }
 
 -(void)setDragMaxY:(NSNumber *)dragMaxY {
+	NSNumber *oldValue = _dragMaxY;
 	_dragMaxY = dragMaxY;
-	[self updateNSObject:@"dragMaxY"];
+	[self updateNSObject:oldValue newValue:dragMaxY propertyName:@"dragMaxY"];
 }
 
 -(void)setDragPrecisionX:(NSNumber *)dragPrecisionX {
+	NSNumber *oldValue = _dragPrecisionX;
 	_dragPrecisionX = dragPrecisionX;
-	[self updateNSObject:@"dragPrecisionX"];
+	[self updateNSObject:oldValue newValue:dragPrecisionX propertyName:@"dragPrecisionX"];
 }
 
 -(void)setDragPrecisionY:(NSNumber *)dragPrecisionY {
+	NSNumber *oldValue = _dragPrecisionY;
 	_dragPrecisionY = dragPrecisionY;
-	[self updateNSObject:@"dragPrecisionY"];
+	[self updateNSObject:oldValue newValue:dragPrecisionY propertyName:@"dragPrecisionY"];
 }
 
 -(void)setDragMinX:(NSNumber *)dragMinX {
+	NSNumber *oldValue = _dragMinX;
 	_dragMinX = dragMinX;
-	[self updateNSObject:@"dragMinX"];
+	[self updateNSObject:oldValue newValue:dragMinX propertyName:@"dragMinX"];
 }
 
 -(void)setDragMinY:(NSNumber *)dragMinY {
+	NSNumber *oldValue = _dragMinY;
 	_dragMinY = dragMinY;
-	[self updateNSObject:@"dragMinY"];
+	[self updateNSObject:oldValue newValue:dragMinY propertyName:@"dragMinY"];
 }
 
 -(void)setDraggableY:(NSNumber *)draggableY {
+	NSNumber *oldValue = _draggableY;
 	_draggableY = draggableY;
-	[self updateNSObject:@"draggableY"];
+	[self updateNSObject:oldValue newValue:draggableY propertyName:@"draggableY"];
 }
 
 -(void)setDraggableX:(NSNumber *)draggableX {
+	NSNumber *oldValue = _draggableX;
 	_draggableX = draggableX;
-	[self updateNSObject:@"draggableX"];
+	[self updateNSObject:oldValue newValue:draggableX propertyName:@"draggableX"];
 }
 
 -(void)setDragSensitivity:(NSNumber *)dragSensitivity {
+	NSNumber *oldValue = _dragSensitivity;
 	_dragSensitivity = dragSensitivity;
-	[self updateNSObject:@"dragSensitivity"];
+	[self updateNSObject:oldValue newValue:dragSensitivity propertyName:@"dragSensitivity"];
 }
 
 -(void)setGroupBy:(NSString *)groupBy {
+	NSString *oldValue = _groupBy;
 	_groupBy = groupBy;
-	[self updateNSObject:@"groupBy"];
+	[self updateNSObject:oldValue newValue:groupBy propertyName:@"groupBy"];
 }
 
 -(void)setDragHandle:(HIDragHandle *)dragHandle {
 	HIDragHandle *oldValue = _dragHandle;
-	if(self.dragHandle) {
-		[self removeObserver:self forKeyPath:@"dragHandle.isUpdated"];
-	}
 	_dragHandle = dragHandle;
 	[self updateHIObject:oldValue newValue:dragHandle propertyName:@"dragHandle"];
 }
 
 -(void)setLiveRedraw:(NSNumber *)liveRedraw {
+	NSNumber *oldValue = _liveRedraw;
 	_liveRedraw = liveRedraw;
-	[self updateNSObject:@"liveRedraw"];
+	[self updateNSObject:oldValue newValue:liveRedraw propertyName:@"liveRedraw"];
 }
 
 @end

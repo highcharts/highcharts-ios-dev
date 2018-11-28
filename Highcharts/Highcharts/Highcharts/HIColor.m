@@ -77,13 +77,15 @@
 # pragma mark - Setters/Getters
 
 -(void)setString:(NSString *)string {
+    NSString *oldValue = _string;
     _string = string;
-    [self updateNSObject:@"string"];
+    [self updateNSObject:oldValue newValue:string propertyName:@"string"];
 }
 
 -(void)setDictionary:(NSDictionary *)dictionary {
+    NSDictionary *oldValue = _dictionary;
     _dictionary = dictionary;
-    [self updateNSObject:@"dictionary"];
+    [self updateNSObject:oldValue newValue:dictionary propertyName:@"dictionary"];
 }
 
 -(id)getData {

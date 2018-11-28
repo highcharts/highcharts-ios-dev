@@ -150,33 +150,39 @@
 # pragma mark - Setters
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setOpacity:(NSNumber *)opacity {
+	NSNumber *oldValue = _opacity;
 	_opacity = opacity;
-	[self updateNSObject:@"opacity"];
+	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:@"ignoreHiddenPoint"];
+	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
 }
 
 -(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
+	NSNumber *oldValue = _allowDrillToNode;
 	_allowDrillToNode = allowDrillToNode;
-	[self updateNSObject:@"allowDrillToNode"];
+	[self updateNSObject:oldValue newValue:allowDrillToNode propertyName:@"allowDrillToNode"];
 }
 
 -(void)setSortIndex:(NSNumber *)sortIndex {
+	NSNumber *oldValue = _sortIndex;
 	_sortIndex = sortIndex;
-	[self updateNSObject:@"sortIndex"];
+	[self updateNSObject:oldValue newValue:sortIndex propertyName:@"sortIndex"];
 }
 
 -(void)setInteractByLeaf:(NSNumber *)interactByLeaf {
+	NSNumber *oldValue = _interactByLeaf;
 	_interactByLeaf = interactByLeaf;
-	[self updateNSObject:@"interactByLeaf"];
+	[self updateNSObject:oldValue newValue:interactByLeaf propertyName:@"interactByLeaf"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {
@@ -186,18 +192,21 @@
 }
 
 -(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {
+	NSString *oldValue = _layoutAlgorithm;
 	_layoutAlgorithm = layoutAlgorithm;
-	[self updateNSObject:@"layoutAlgorithm"];
+	[self updateNSObject:oldValue newValue:layoutAlgorithm propertyName:@"layoutAlgorithm"];
 }
 
 -(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
+	NSNumber *oldValue = _levelIsConstant;
 	_levelIsConstant = levelIsConstant;
-	[self updateNSObject:@"levelIsConstant"];
+	[self updateNSObject:oldValue newValue:levelIsConstant propertyName:@"levelIsConstant"];
 }
 
 -(void)setLayoutStartingDirection:(NSString *)layoutStartingDirection {
+	NSString *oldValue = _layoutStartingDirection;
 	_layoutStartingDirection = layoutStartingDirection;
-	[self updateNSObject:@"layoutStartingDirection"];
+	[self updateNSObject:oldValue newValue:layoutStartingDirection propertyName:@"layoutStartingDirection"];
 }
 
 -(void)setLevels:(NSArray <HILevels *> *)levels {
@@ -208,16 +217,14 @@
 
 -(void)setDrillUpButton:(HIDrillUpButton *)drillUpButton {
 	HIDrillUpButton *oldValue = _drillUpButton;
-	if(self.drillUpButton) {
-		[self removeObserver:self forKeyPath:@"drillUpButton.isUpdated"];
-	}
 	_drillUpButton = drillUpButton;
 	[self updateHIObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
 }
 
 -(void)setAlternateStartingDirection:(NSNumber *)alternateStartingDirection {
+	NSNumber *oldValue = _alternateStartingDirection;
 	_alternateStartingDirection = alternateStartingDirection;
-	[self updateNSObject:@"alternateStartingDirection"];
+	[self updateNSObject:oldValue newValue:alternateStartingDirection propertyName:@"alternateStartingDirection"];
 }
 
 @end

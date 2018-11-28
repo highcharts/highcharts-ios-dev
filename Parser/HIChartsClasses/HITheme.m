@@ -38,23 +38,27 @@
 # pragma mark - Setters
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setStroke:(NSString *)stroke {
+	NSString *oldValue = _stroke;
 	_stroke = stroke;
-	[self updateNSObject:@"stroke"];
+	[self updateNSObject:oldValue newValue:stroke propertyName:@"stroke"];
 }
 
 -(void)setFill:(NSString *)fill {
+	NSString *oldValue = _fill;
 	_fill = fill;
-	[self updateNSObject:@"fill"];
+	[self updateNSObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 @end

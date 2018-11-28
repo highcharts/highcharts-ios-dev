@@ -38,27 +38,27 @@
 # pragma mark - Setters
 
 -(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
 	_margin = margin;
-	[self updateNSObject:@"margin"];
+	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }
 
 -(void)setStyle:(HIStyle *)style {
 	HIStyle *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setHideBrowserFocusOutline:(NSNumber *)hideBrowserFocusOutline {
+	NSNumber *oldValue = _hideBrowserFocusOutline;
 	_hideBrowserFocusOutline = hideBrowserFocusOutline;
-	[self updateNSObject:@"hideBrowserFocusOutline"];
+	[self updateNSObject:oldValue newValue:hideBrowserFocusOutline propertyName:@"hideBrowserFocusOutline"];
 }
 
 @end

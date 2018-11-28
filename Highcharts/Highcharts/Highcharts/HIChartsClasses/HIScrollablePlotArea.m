@@ -30,13 +30,15 @@
 # pragma mark - Setters
 
 -(void)setMinWidth:(NSNumber *)minWidth {
+	NSNumber *oldValue = _minWidth;
 	_minWidth = minWidth;
-	[self updateNSObject:@"minWidth"];
+	[self updateNSObject:oldValue newValue:minWidth propertyName:@"minWidth"];
 }
 
 -(void)setScrollPositionX:(NSNumber *)scrollPositionX {
+	NSNumber *oldValue = _scrollPositionX;
 	_scrollPositionX = scrollPositionX;
-	[self updateNSObject:@"scrollPositionX"];
+	[self updateNSObject:oldValue newValue:scrollPositionX propertyName:@"scrollPositionX"];
 }
 
 @end

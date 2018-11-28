@@ -54,43 +54,51 @@
 # pragma mark - Setters
 
 -(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setFontWeight:(NSString *)fontWeight {
+	NSString *oldValue = _fontWeight;
 	_fontWeight = fontWeight;
-	[self updateNSObject:@"fontWeight"];
+	[self updateNSObject:oldValue newValue:fontWeight propertyName:@"fontWeight"];
 }
 
 -(void)setFontSize:(NSString *)fontSize {
+	NSString *oldValue = _fontSize;
 	_fontSize = fontSize;
-	[self updateNSObject:@"fontSize"];
+	[self updateNSObject:oldValue newValue:fontSize propertyName:@"fontSize"];
 }
 
 -(void)setFontFamily:(NSString *)fontFamily {
+	NSString *oldValue = _fontFamily;
 	_fontFamily = fontFamily;
-	[self updateNSObject:@"fontFamily"];
+	[self updateNSObject:oldValue newValue:fontFamily propertyName:@"fontFamily"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
 -(void)setTextOverflow:(NSString *)textOverflow {
+	NSString *oldValue = _textOverflow;
 	_textOverflow = textOverflow;
-	[self updateNSObject:@"textOverflow"];
+	[self updateNSObject:oldValue newValue:textOverflow propertyName:@"textOverflow"];
 }
 
 -(void)setWhiteSpace:(NSString *)whiteSpace {
+	NSString *oldValue = _whiteSpace;
 	_whiteSpace = whiteSpace;
-	[self updateNSObject:@"whiteSpace"];
+	[self updateNSObject:oldValue newValue:whiteSpace propertyName:@"whiteSpace"];
 }
 
 @end

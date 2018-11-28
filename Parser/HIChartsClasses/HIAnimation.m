@@ -26,8 +26,9 @@
 # pragma mark - Setters
 
 -(void)setDuration:(NSNumber *)duration {
+	NSNumber *oldValue = _duration;
 	_duration = duration;
-	[self updateNSObject:@"duration"];
+	[self updateNSObject:oldValue newValue:duration propertyName:@"duration"];
 }
 
 @end

@@ -366,7 +366,7 @@ def format_to_h(name, source):
     class_name = "HI" + upper_first(create_name(name))
 
     if source.extends == 'series':
-        description = series_description.replace('#series_name#', get_last(name)) # markdown description dla poszczególnych serii dla dokumentacji iOS
+        description = series_description.replace('#series_name#', get_last(name))
     elif class_name in comments:
         description = comments[class_name]
     elif source.comment:
@@ -519,13 +519,14 @@ def create_setter(field):
                        "\t[self updateArrayObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
     elif 'HI' in setter_type:
         setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
-                       "\tif(self.{0})".format(setter_attribute) + " {\n" + \
-                       "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
                        "\t_{0} = {0};\n".format(setter_attribute) + \
                        "\t[self updateHIObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
+        # "\tif(self.{0})".format(setter_attribute) + " {\n" + \
+        # "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
     else:
-        setter_text += "\t_{0} = {0};\n".format(setter_attribute) + \
-                       "\t[self updateNSObject:@\"{0}\"];\n".format(setter_attribute)
+        setter_text += "\t{0}oldValue = _{1};\n".format(re.sub(r'\bid\b', 'id ', setter_type), setter_attribute) + \
+                       "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateNSObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
 
     setter_text += "}"
 

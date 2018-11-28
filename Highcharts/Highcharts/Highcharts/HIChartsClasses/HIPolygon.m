@@ -88,8 +88,9 @@
 # pragma mark - Setters
 
 -(void)setTrackByArea:(NSNumber *)trackByArea {
+	NSNumber *oldValue = _trackByArea;
 	_trackByArea = trackByArea;
-	[self updateNSObject:@"trackByArea"];
+	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
 }
 
 @end

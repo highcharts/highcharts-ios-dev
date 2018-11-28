@@ -187,9 +187,6 @@
 
 -(void)setSubtitle:(HISubtitle *)subtitle {
 	HISubtitle *oldValue = _subtitle;
-	if(self.subtitle) {
-		[self removeObserver:self forKeyPath:@"subtitle.isUpdated"];
-	}
 	_subtitle = subtitle;
 	[self updateHIObject:oldValue newValue:subtitle propertyName:@"subtitle"];
 }
@@ -208,9 +205,6 @@
 
 -(void)setAccessibility:(HIAccessibility *)accessibility {
 	HIAccessibility *oldValue = _accessibility;
-	if(self.accessibility) {
-		[self removeObserver:self forKeyPath:@"accessibility.isUpdated"];
-	}
 	_accessibility = accessibility;
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
@@ -223,81 +217,54 @@
 
 -(void)setPane:(HIPane *)pane {
 	HIPane *oldValue = _pane;
-	if(self.pane) {
-		[self removeObserver:self forKeyPath:@"pane.isUpdated"];
-	}
 	_pane = pane;
 	[self updateHIObject:oldValue newValue:pane propertyName:@"pane"];
 }
 
 -(void)setResponsive:(HIResponsive *)responsive {
 	HIResponsive *oldValue = _responsive;
-	if(self.responsive) {
-		[self removeObserver:self forKeyPath:@"responsive.isUpdated"];
-	}
 	_responsive = responsive;
 	[self updateHIObject:oldValue newValue:responsive propertyName:@"responsive"];
 }
 
 -(void)setNoData:(HINoData *)noData {
 	HINoData *oldValue = _noData;
-	if(self.noData) {
-		[self removeObserver:self forKeyPath:@"noData.isUpdated"];
-	}
 	_noData = noData;
 	[self updateHIObject:oldValue newValue:noData propertyName:@"noData"];
 }
 
 -(void)setLoading:(HILoading *)loading {
 	HILoading *oldValue = _loading;
-	if(self.loading) {
-		[self removeObserver:self forKeyPath:@"loading.isUpdated"];
-	}
 	_loading = loading;
 	[self updateHIObject:oldValue newValue:loading propertyName:@"loading"];
 }
 
 -(void)setTitle:(HITitle *)title {
 	HITitle *oldValue = _title;
-	if(self.title) {
-		[self removeObserver:self forKeyPath:@"title.isUpdated"];
-	}
 	_title = title;
 	[self updateHIObject:oldValue newValue:title propertyName:@"title"];
 }
 
 -(void)setTooltip:(HITooltip *)tooltip {
 	HITooltip *oldValue = _tooltip;
-	if(self.tooltip) {
-		[self removeObserver:self forKeyPath:@"tooltip.isUpdated"];
-	}
 	_tooltip = tooltip;
 	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
 }
 
 -(void)setPlotOptions:(HIPlotOptions *)plotOptions {
 	HIPlotOptions *oldValue = _plotOptions;
-	if(self.plotOptions) {
-		[self removeObserver:self forKeyPath:@"plotOptions.isUpdated"];
-	}
 	_plotOptions = plotOptions;
 	[self updateHIObject:oldValue newValue:plotOptions propertyName:@"plotOptions"];
 }
 
 -(void)setExporting:(HIExporting *)exporting {
 	HIExporting *oldValue = _exporting;
-	if(self.exporting) {
-		[self removeObserver:self forKeyPath:@"exporting.isUpdated"];
-	}
 	_exporting = exporting;
 	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
 }
 
 -(void)setBoost:(HIBoost *)boost {
 	HIBoost *oldValue = _boost;
-	if(self.boost) {
-		[self removeObserver:self forKeyPath:@"boost.isUpdated"];
-	}
 	_boost = boost;
 	[self updateHIObject:oldValue newValue:boost propertyName:@"boost"];
 }
@@ -309,42 +276,31 @@
 }
 
 -(void)setDefs:(id )defs {
+	id  oldValue = _defs;
 	_defs = defs;
-	[self updateNSObject:@"defs"];
+	[self updateNSObject:oldValue newValue:defs propertyName:@"defs"];
 }
 
 -(void)setLabels:(HILabels *)labels {
 	HILabels *oldValue = _labels;
-	if(self.labels) {
-		[self removeObserver:self forKeyPath:@"labels.isUpdated"];
-	}
 	_labels = labels;
 	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
 -(void)setChart:(HIChart *)chart {
 	HIChart *oldValue = _chart;
-	if(self.chart) {
-		[self removeObserver:self forKeyPath:@"chart.isUpdated"];
-	}
 	_chart = chart;
 	[self updateHIObject:oldValue newValue:chart propertyName:@"chart"];
 }
 
 -(void)setCredits:(HICredits *)credits {
 	HICredits *oldValue = _credits;
-	if(self.credits) {
-		[self removeObserver:self forKeyPath:@"credits.isUpdated"];
-	}
 	_credits = credits;
 	[self updateHIObject:oldValue newValue:credits propertyName:@"credits"];
 }
 
 -(void)setZAxis:(HIZAxis *)zAxis {
 	HIZAxis *oldValue = _zAxis;
-	if(self.zAxis) {
-		[self removeObserver:self forKeyPath:@"zAxis.isUpdated"];
-	}
 	_zAxis = zAxis;
 	[self updateHIObject:oldValue newValue:zAxis propertyName:@"zAxis"];
 }
@@ -357,54 +313,36 @@
 
 -(void)setDrilldown:(HIDrilldown *)drilldown {
 	HIDrilldown *oldValue = _drilldown;
-	if(self.drilldown) {
-		[self removeObserver:self forKeyPath:@"drilldown.isUpdated"];
-	}
 	_drilldown = drilldown;
 	[self updateHIObject:oldValue newValue:drilldown propertyName:@"drilldown"];
 }
 
 -(void)setData:(HIData *)data {
 	HIData *oldValue = _data;
-	if(self.data) {
-		[self removeObserver:self forKeyPath:@"data.isUpdated"];
-	}
 	_data = data;
 	[self updateHIObject:oldValue newValue:data propertyName:@"data"];
 }
 
 -(void)setLegend:(HILegend *)legend {
 	HILegend *oldValue = _legend;
-	if(self.legend) {
-		[self removeObserver:self forKeyPath:@"legend.isUpdated"];
-	}
 	_legend = legend;
 	[self updateHIObject:oldValue newValue:legend propertyName:@"legend"];
 }
 
 -(void)setColorAxis:(HIColorAxis *)colorAxis {
 	HIColorAxis *oldValue = _colorAxis;
-	if(self.colorAxis) {
-		[self removeObserver:self forKeyPath:@"colorAxis.isUpdated"];
-	}
 	_colorAxis = colorAxis;
 	[self updateHIObject:oldValue newValue:colorAxis propertyName:@"colorAxis"];
 }
 
 -(void)setTime:(HITime *)time {
 	HITime *oldValue = _time;
-	if(self.time) {
-		[self removeObserver:self forKeyPath:@"time.isUpdated"];
-	}
 	_time = time;
 	[self updateHIObject:oldValue newValue:time propertyName:@"time"];
 }
 
 -(void)setNavigation:(HINavigation *)navigation {
 	HINavigation *oldValue = _navigation;
-	if(self.navigation) {
-		[self removeObserver:self forKeyPath:@"navigation.isUpdated"];
-	}
 	_navigation = navigation;
 	[self updateHIObject:oldValue newValue:navigation propertyName:@"navigation"];
 }

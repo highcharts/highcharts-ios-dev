@@ -122,140 +122,153 @@
 # pragma mark - Setters
 
 -(void)setMenuItemDefinitions:(id)menuItemDefinitions {
+	id oldValue = _menuItemDefinitions;
 	_menuItemDefinitions = menuItemDefinitions;
-	[self updateNSObject:@"menuItemDefinitions"];
+	[self updateNSObject:oldValue newValue:menuItemDefinitions propertyName:@"menuItemDefinitions"];
 }
 
 -(void)setSourceHeight:(NSNumber *)sourceHeight {
+	NSNumber *oldValue = _sourceHeight;
 	_sourceHeight = sourceHeight;
-	[self updateNSObject:@"sourceHeight"];
+	[self updateNSObject:oldValue newValue:sourceHeight propertyName:@"sourceHeight"];
 }
 
 -(void)setSourceWidth:(NSNumber *)sourceWidth {
+	NSNumber *oldValue = _sourceWidth;
 	_sourceWidth = sourceWidth;
-	[self updateNSObject:@"sourceWidth"];
+	[self updateNSObject:oldValue newValue:sourceWidth propertyName:@"sourceWidth"];
 }
 
 -(void)setScale:(NSNumber *)scale {
+	NSNumber *oldValue = _scale;
 	_scale = scale;
-	[self updateNSObject:@"scale"];
+	[self updateNSObject:oldValue newValue:scale propertyName:@"scale"];
 }
 
 -(void)setShowTable:(NSNumber *)showTable {
+	NSNumber *oldValue = _showTable;
 	_showTable = showTable;
-	[self updateNSObject:@"showTable"];
+	[self updateNSObject:oldValue newValue:showTable propertyName:@"showTable"];
 }
 
 -(void)setFilename:(NSString *)filename {
+	NSString *oldValue = _filename;
 	_filename = filename;
-	[self updateNSObject:@"filename"];
+	[self updateNSObject:oldValue newValue:filename propertyName:@"filename"];
 }
 
 -(void)setButtons:(HIButtons *)buttons {
 	HIButtons *oldValue = _buttons;
-	if(self.buttons) {
-		[self removeObserver:self forKeyPath:@"buttons.isUpdated"];
-	}
 	_buttons = buttons;
 	[self updateHIObject:oldValue newValue:buttons propertyName:@"buttons"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setPrintMaxWidth:(NSNumber *)printMaxWidth {
+	NSNumber *oldValue = _printMaxWidth;
 	_printMaxWidth = printMaxWidth;
-	[self updateNSObject:@"printMaxWidth"];
+	[self updateNSObject:oldValue newValue:printMaxWidth propertyName:@"printMaxWidth"];
 }
 
 -(void)setCsv:(HICsv *)csv {
 	HICsv *oldValue = _csv;
-	if(self.csv) {
-		[self removeObserver:self forKeyPath:@"csv.isUpdated"];
-	}
 	_csv = csv;
 	[self updateHIObject:oldValue newValue:csv propertyName:@"csv"];
 }
 
 -(void)setType:(NSString *)type {
+	NSString *oldValue = _type;
 	_type = type;
-	[self updateNSObject:@"type"];
+	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
 -(void)setChartOptions:(id)chartOptions {
+	id oldValue = _chartOptions;
 	_chartOptions = chartOptions;
-	[self updateNSObject:@"chartOptions"];
+	[self updateNSObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
 }
 
 -(void)setFormAttributes:(id)formAttributes {
+	id oldValue = _formAttributes;
 	_formAttributes = formAttributes;
-	[self updateNSObject:@"formAttributes"];
+	[self updateNSObject:oldValue newValue:formAttributes propertyName:@"formAttributes"];
 }
 
 -(void)setFallbackToExportServer:(NSNumber *)fallbackToExportServer {
+	NSNumber *oldValue = _fallbackToExportServer;
 	_fallbackToExportServer = fallbackToExportServer;
-	[self updateNSObject:@"fallbackToExportServer"];
+	[self updateNSObject:oldValue newValue:fallbackToExportServer propertyName:@"fallbackToExportServer"];
 }
 
 -(void)setUseRowspanHeaders:(NSNumber *)useRowspanHeaders {
+	NSNumber *oldValue = _useRowspanHeaders;
 	_useRowspanHeaders = useRowspanHeaders;
-	[self updateNSObject:@"useRowspanHeaders"];
+	[self updateNSObject:oldValue newValue:useRowspanHeaders propertyName:@"useRowspanHeaders"];
 }
 
 -(void)setUseMultiLevelHeaders:(NSNumber *)useMultiLevelHeaders {
+	NSNumber *oldValue = _useMultiLevelHeaders;
 	_useMultiLevelHeaders = useMultiLevelHeaders;
-	[self updateNSObject:@"useMultiLevelHeaders"];
+	[self updateNSObject:oldValue newValue:useMultiLevelHeaders propertyName:@"useMultiLevelHeaders"];
 }
 
 -(void)setUrl:(NSString *)url {
+	NSString *oldValue = _url;
 	_url = url;
-	[self updateNSObject:@"url"];
+	[self updateNSObject:oldValue newValue:url propertyName:@"url"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setAllowHTML:(NSNumber *)allowHTML {
+	NSNumber *oldValue = _allowHTML;
 	_allowHTML = allowHTML;
-	[self updateNSObject:@"allowHTML"];
+	[self updateNSObject:oldValue newValue:allowHTML propertyName:@"allowHTML"];
 }
 
 -(void)setTableCaption:(id)tableCaption {
+	id oldValue = _tableCaption;
 	_tableCaption = tableCaption;
-	[self updateNSObject:@"tableCaption"];
+	[self updateNSObject:oldValue newValue:tableCaption propertyName:@"tableCaption"];
 }
 
 -(void)setError:(HIFunction *)error {
 	HIFunction *oldValue = _error;
-	if(self.error) {
-		[self removeObserver:self forKeyPath:@"error.isUpdated"];
-	}
 	_error = error;
 	[self updateHIObject:oldValue newValue:error propertyName:@"error"];
 }
 
 -(void)setLibURL:(NSString *)libURL {
+	NSString *oldValue = _libURL;
 	_libURL = libURL;
-	[self updateNSObject:@"libURL"];
+	[self updateNSObject:oldValue newValue:libURL propertyName:@"libURL"];
 }
 
 -(void)setExportRegionLabel:(NSString *)exportRegionLabel {
+	NSString *oldValue = _exportRegionLabel;
 	_exportRegionLabel = exportRegionLabel;
-	[self updateNSObject:@"exportRegionLabel"];
+	[self updateNSObject:oldValue newValue:exportRegionLabel propertyName:@"exportRegionLabel"];
 }
 
 -(void)setMenuButtonLabel:(NSString *)menuButtonLabel {
+	NSString *oldValue = _menuButtonLabel;
 	_menuButtonLabel = menuButtonLabel;
-	[self updateNSObject:@"menuButtonLabel"];
+	[self updateNSObject:oldValue newValue:menuButtonLabel propertyName:@"menuButtonLabel"];
 }
 
 -(void)setChartMenuLabel:(NSString *)chartMenuLabel {
+	NSString *oldValue = _chartMenuLabel;
 	_chartMenuLabel = chartMenuLabel;
-	[self updateNSObject:@"chartMenuLabel"];
+	[self updateNSObject:oldValue newValue:chartMenuLabel propertyName:@"chartMenuLabel"];
 }
 
 @end

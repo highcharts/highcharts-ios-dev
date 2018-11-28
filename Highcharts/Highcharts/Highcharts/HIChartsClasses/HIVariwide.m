@@ -130,28 +130,33 @@
 # pragma mark - Setters
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
+	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
+	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {
+	NSNumber *oldValue = _groupPadding;
 	_groupPadding = groupPadding;
-	[self updateNSObject:@"groupPadding"];
+	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {
+	NSNumber *oldValue = _pointRange;
 	_pointRange = pointRange;
-	[self updateNSObject:@"pointRange"];
+	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
 }
 
 -(void)setMinPointLength:(NSNumber *)minPointLength {
+	NSNumber *oldValue = _minPointLength;
 	_minPointLength = minPointLength;
-	[self updateNSObject:@"minPointLength"];
+	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
 -(void)setColors:(NSArray<NSString *> *)colors {
@@ -161,23 +166,27 @@
 }
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
+	NSNumber *oldValue = _maxPointWidth;
 	_maxPointWidth = maxPointWidth;
-	[self updateNSObject:@"maxPointWidth"];
+	[self updateNSObject:oldValue newValue:maxPointWidth propertyName:@"maxPointWidth"];
 }
 
 -(void)setPointWidth:(NSNumber *)pointWidth {
+	NSNumber *oldValue = _pointWidth;
 	_pointWidth = pointWidth;
-	[self updateNSObject:@"pointWidth"];
+	[self updateNSObject:oldValue newValue:pointWidth propertyName:@"pointWidth"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {
+	NSNumber *oldValue = _grouping;
 	_grouping = grouping;
-	[self updateNSObject:@"grouping"];
+	[self updateNSObject:oldValue newValue:grouping propertyName:@"grouping"];
 }
 
 @end

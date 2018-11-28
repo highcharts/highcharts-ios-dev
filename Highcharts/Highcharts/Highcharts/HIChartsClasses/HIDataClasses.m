@@ -39,26 +39,26 @@
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setTo:(NSNumber *)to {
+	NSNumber *oldValue = _to;
 	_to = to;
-	[self updateNSObject:@"to"];
+	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
 }
 
 -(void)setFrom:(NSNumber *)from {
+	NSNumber *oldValue = _from;
 	_from = from;
-	[self updateNSObject:@"from"];
+	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
 }
 
 -(void)setName:(NSString *)name {
+	NSString *oldValue = _name;
 	_name = name;
-	[self updateNSObject:@"name"];
+	[self updateNSObject:oldValue newValue:name propertyName:@"name"];
 }
 
 @end

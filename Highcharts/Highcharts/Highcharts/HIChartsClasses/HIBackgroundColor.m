@@ -40,9 +40,6 @@
 
 -(void)setLinearGradient:(HILinearGradient *)linearGradient {
 	HILinearGradient *oldValue = _linearGradient;
-	if(self.linearGradient) {
-		[self removeObserver:self forKeyPath:@"linearGradient.isUpdated"];
-	}
 	_linearGradient = linearGradient;
 	[self updateHIObject:oldValue newValue:linearGradient propertyName:@"linearGradient"];
 }

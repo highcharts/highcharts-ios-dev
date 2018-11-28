@@ -50,44 +50,43 @@
 # pragma mark - Setters
 
 -(void)setStrokeWidth:(NSNumber *)strokeWidth {
+	NSNumber *oldValue = _strokeWidth;
 	_strokeWidth = strokeWidth;
-	[self updateNSObject:@"strokeWidth"];
+	[self updateNSObject:oldValue newValue:strokeWidth propertyName:@"strokeWidth"];
 }
 
 -(void)setHeight:(NSNumber *)height {
+	NSNumber *oldValue = _height;
 	_height = height;
-	[self updateNSObject:@"height"];
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setStroke:(HIColor *)stroke {
 	HIColor *oldValue = _stroke;
-	if(self.stroke) {
-		[self removeObserver:self forKeyPath:@"stroke.isUpdated"];
-	}
 	_stroke = stroke;
 	[self updateHIObject:oldValue newValue:stroke propertyName:@"stroke"];
 }
 
 -(void)setR:(NSNumber *)r {
+	NSNumber *oldValue = _r;
 	_r = r;
-	[self updateNSObject:@"r"];
+	[self updateNSObject:oldValue newValue:r propertyName:@"r"];
 }
 
 -(void)setType:(NSString *)type {
+	NSString *oldValue = _type;
 	_type = type;
-	[self updateNSObject:@"type"];
+	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
 -(void)setFill:(HIColor *)fill {
 	HIColor *oldValue = _fill;
-	if(self.fill) {
-		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
-	}
 	_fill = fill;
 	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
 }

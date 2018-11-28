@@ -86,13 +86,15 @@
 # pragma mark - Setters
 
 -(void)setVectorLength:(NSNumber *)vectorLength {
+	NSNumber *oldValue = _vectorLength;
 	_vectorLength = vectorLength;
-	[self updateNSObject:@"vectorLength"];
+	[self updateNSObject:oldValue newValue:vectorLength propertyName:@"vectorLength"];
 }
 
 -(void)setRotationOrigin:(NSString *)rotationOrigin {
+	NSString *oldValue = _rotationOrigin;
 	_rotationOrigin = rotationOrigin;
-	[self updateNSObject:@"rotationOrigin"];
+	[self updateNSObject:oldValue newValue:rotationOrigin propertyName:@"rotationOrigin"];
 }
 
 @end

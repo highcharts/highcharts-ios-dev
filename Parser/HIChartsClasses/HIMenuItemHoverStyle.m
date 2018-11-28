@@ -30,13 +30,15 @@
 # pragma mark - Setters
 
 -(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setBackground:(NSString *)background {
+	NSString *oldValue = _background;
 	_background = background;
-	[self updateNSObject:@"background"];
+	[self updateNSObject:oldValue newValue:background propertyName:@"background"];
 }
 
 @end

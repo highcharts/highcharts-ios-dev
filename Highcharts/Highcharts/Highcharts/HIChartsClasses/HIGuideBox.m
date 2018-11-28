@@ -27,9 +27,6 @@
 
 -(void)setDefaults:(HIDefault *)defaults {
 	HIDefault *oldValue = _defaults;
-	if(self.defaults) {
-		[self removeObserver:self forKeyPath:@"defaults.isUpdated"];
-	}
 	_defaults = defaults;
 	[self updateHIObject:oldValue newValue:defaults propertyName:@"defaults"];
 }

@@ -43,31 +43,32 @@
 
 -(void)setColumnHeaderFormatter:(HIFunction *)columnHeaderFormatter {
 	HIFunction *oldValue = _columnHeaderFormatter;
-	if(self.columnHeaderFormatter) {
-		[self removeObserver:self forKeyPath:@"columnHeaderFormatter.isUpdated"];
-	}
 	_columnHeaderFormatter = columnHeaderFormatter;
 	[self updateHIObject:oldValue newValue:columnHeaderFormatter propertyName:@"columnHeaderFormatter"];
 }
 
 -(void)setDecimalPoint:(NSString *)decimalPoint {
+	NSString *oldValue = _decimalPoint;
 	_decimalPoint = decimalPoint;
-	[self updateNSObject:@"decimalPoint"];
+	[self updateNSObject:oldValue newValue:decimalPoint propertyName:@"decimalPoint"];
 }
 
 -(void)setLineDelimiter:(NSString *)lineDelimiter {
+	NSString *oldValue = _lineDelimiter;
 	_lineDelimiter = lineDelimiter;
-	[self updateNSObject:@"lineDelimiter"];
+	[self updateNSObject:oldValue newValue:lineDelimiter propertyName:@"lineDelimiter"];
 }
 
 -(void)setItemDelimiter:(NSString *)itemDelimiter {
+	NSString *oldValue = _itemDelimiter;
 	_itemDelimiter = itemDelimiter;
-	[self updateNSObject:@"itemDelimiter"];
+	[self updateNSObject:oldValue newValue:itemDelimiter propertyName:@"itemDelimiter"];
 }
 
 -(void)setDateFormat:(NSString *)dateFormat {
+	NSString *oldValue = _dateFormat;
 	_dateFormat = dateFormat;
-	[self updateNSObject:@"dateFormat"];
+	[self updateNSObject:oldValue newValue:dateFormat propertyName:@"dateFormat"];
 }
 
 @end

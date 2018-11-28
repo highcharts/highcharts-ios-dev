@@ -60,13 +60,15 @@
 # pragma mark - Setters
 
 -(void)setEndAngle:(NSNumber *)endAngle {
+	NSNumber *oldValue = _endAngle;
 	_endAngle = endAngle;
-	[self updateNSObject:@"endAngle"];
+	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {
+	NSNumber *oldValue = _startAngle;
 	_startAngle = startAngle;
-	[self updateNSObject:@"startAngle"];
+	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
 }
 
 -(void)setCenter:(NSArray *)center {
@@ -82,8 +84,9 @@
 }
 
 -(void)setSize:(id)size {
+	id oldValue = _size;
 	_size = size;
-	[self updateNSObject:@"size"];
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
 }
 
 @end

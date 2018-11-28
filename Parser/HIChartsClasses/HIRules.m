@@ -31,16 +31,14 @@
 
 -(void)setCondition:(HICondition *)condition {
 	HICondition *oldValue = _condition;
-	if(self.condition) {
-		[self removeObserver:self forKeyPath:@"condition.isUpdated"];
-	}
 	_condition = condition;
 	[self updateHIObject:oldValue newValue:condition propertyName:@"condition"];
 }
 
 -(void)setChartOptions:(NSDictionary *)chartOptions {
+	NSDictionary *oldValue = _chartOptions;
 	_chartOptions = chartOptions;
-	[self updateNSObject:@"chartOptions"];
+	[self updateNSObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
 }
 
 @end

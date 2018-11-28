@@ -34,18 +34,21 @@
 # pragma mark - Setters
 
 -(void)setTo:(NSNumber *)to {
+	NSNumber *oldValue = _to;
 	_to = to;
-	[self updateNSObject:@"to"];
+	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
 }
 
 -(void)setFrom:(NSNumber *)from {
+	NSNumber *oldValue = _from;
 	_from = from;
-	[self updateNSObject:@"from"];
+	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
 }
 
 -(void)setOrientations:(NSNumber *)orientations {
+	NSNumber *oldValue = _orientations;
 	_orientations = orientations;
-	[self updateNSObject:@"orientations"];
+	[self updateNSObject:oldValue newValue:orientations propertyName:@"orientations"];
 }
 
 @end

@@ -39,30 +39,26 @@
 
 -(void)setPosition:(HIPosition *)position {
 	HIPosition *oldValue = _position;
-	if(self.position) {
-		[self removeObserver:self forKeyPath:@"position.isUpdated"];
-	}
 	_position = position;
 	[self updateHIObject:oldValue newValue:position propertyName:@"position"];
 }
 
 -(void)setStyle:(HIStyle *)style {
 	HIStyle *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setAttr:(id)attr {
+	id oldValue = _attr;
 	_attr = attr;
-	[self updateNSObject:@"attr"];
+	[self updateNSObject:oldValue newValue:attr propertyName:@"attr"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 @end

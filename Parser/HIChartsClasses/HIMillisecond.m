@@ -30,13 +30,15 @@
 # pragma mark - Setters
 
 -(void)setRange:(NSNumber *)range {
+	NSNumber *oldValue = _range;
 	_range = range;
-	[self updateNSObject:@"range"];
+	[self updateNSObject:oldValue newValue:range propertyName:@"range"];
 }
 
 -(void)setMain:(NSString *)main {
+	NSString *oldValue = _main;
 	_main = main;
-	[self updateNSObject:@"main"];
+	[self updateNSObject:oldValue newValue:main propertyName:@"main"];
 }
 
 @end

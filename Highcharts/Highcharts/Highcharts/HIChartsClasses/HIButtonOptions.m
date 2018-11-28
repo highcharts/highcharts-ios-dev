@@ -82,90 +82,93 @@
 # pragma mark - Setters
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 -(void)setSymbolFill:(HIColor *)symbolFill {
 	HIColor *oldValue = _symbolFill;
-	if(self.symbolFill) {
-		[self removeObserver:self forKeyPath:@"symbolFill.isUpdated"];
-	}
 	_symbolFill = symbolFill;
 	[self updateHIObject:oldValue newValue:symbolFill propertyName:@"symbolFill"];
 }
 
 -(void)setText:(NSString *)text {
+	NSString *oldValue = _text;
 	_text = text;
-	[self updateNSObject:@"text"];
+	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setTheme:(HITheme *)theme {
 	HITheme *oldValue = _theme;
-	if(self.theme) {
-		[self removeObserver:self forKeyPath:@"theme.isUpdated"];
-	}
 	_theme = theme;
 	[self updateHIObject:oldValue newValue:theme propertyName:@"theme"];
 }
 
 -(void)setHeight:(NSNumber *)height {
+	NSNumber *oldValue = _height;
 	_height = height;
-	[self updateNSObject:@"height"];
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setButtonSpacing:(NSNumber *)buttonSpacing {
+	NSNumber *oldValue = _buttonSpacing;
 	_buttonSpacing = buttonSpacing;
-	[self updateNSObject:@"buttonSpacing"];
+	[self updateNSObject:oldValue newValue:buttonSpacing propertyName:@"buttonSpacing"];
 }
 
 -(void)setSymbolSize:(NSNumber *)symbolSize {
+	NSNumber *oldValue = _symbolSize;
 	_symbolSize = symbolSize;
-	[self updateNSObject:@"symbolSize"];
+	[self updateNSObject:oldValue newValue:symbolSize propertyName:@"symbolSize"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setSymbolStroke:(HIColor *)symbolStroke {
 	HIColor *oldValue = _symbolStroke;
-	if(self.symbolStroke) {
-		[self removeObserver:self forKeyPath:@"symbolStroke.isUpdated"];
-	}
 	_symbolStroke = symbolStroke;
 	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
 }
 
 -(void)setSymbolY:(NSNumber *)symbolY {
+	NSNumber *oldValue = _symbolY;
 	_symbolY = symbolY;
-	[self updateNSObject:@"symbolY"];
+	[self updateNSObject:oldValue newValue:symbolY propertyName:@"symbolY"];
 }
 
 -(void)setSymbolX:(NSNumber *)symbolX {
+	NSNumber *oldValue = _symbolX;
 	_symbolX = symbolX;
-	[self updateNSObject:@"symbolX"];
+	[self updateNSObject:oldValue newValue:symbolX propertyName:@"symbolX"];
 }
 
 -(void)setSymbolStrokeWidth:(NSNumber *)symbolStrokeWidth {
+	NSNumber *oldValue = _symbolStrokeWidth;
 	_symbolStrokeWidth = symbolStrokeWidth;
-	[self updateNSObject:@"symbolStrokeWidth"];
+	[self updateNSObject:oldValue newValue:symbolStrokeWidth propertyName:@"symbolStrokeWidth"];
 }
 
 @end
