@@ -57,6 +57,8 @@
 		CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
 		CD5B359A1F90C478006159D7 /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		CD5B359B1F90C47A006159D7 /* HIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 208980271E6412EA007280D7 /* HIColor.m */; };
+		CD8FACB321B1945600335AD2 /* HIClassJSMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8FACB221B1945600335AD2 /* HIClassJSMethods.m */; };
+		CD8FACB521B1946C00335AD2 /* HIClassJSMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8FACB421B1946C00335AD2 /* HIClassJSMethods.h */; };
 		CD91B2FC2062741200BCEE37 /* HIGDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = CD91B2F02062741000BCEE37 /* HIGDependency.m */; };
 		CD91B2FD2062741200BCEE37 /* HIGBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = CD91B2F12062741000BCEE37 /* HIGBundle.h */; };
 		CD91B2FE2062741200BCEE37 /* HIGExport.m in Sources */ = {isa = PBXBuildFile; fileRef = CD91B2F22062741000BCEE37 /* HIGExport.m */; };
@@ -419,6 +421,8 @@
 		34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptionsTest.m; sourceTree = "<group>"; };
 		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
 		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
+		CD8FACB221B1945600335AD2 /* HIClassJSMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIClassJSMethods.m; sourceTree = "<group>"; };
+		CD8FACB421B1946C00335AD2 /* HIClassJSMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIClassJSMethods.h; sourceTree = "<group>"; };
 		CD91B2F02062741000BCEE37 /* HIGDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGDependency.m; path = Private/HIGDependency.m; sourceTree = "<group>"; };
 		CD91B2F12062741000BCEE37 /* HIGBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIGBundle.h; path = Private/HIGBundle.h; sourceTree = "<group>"; };
 		CD91B2F22062741000BCEE37 /* HIGExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGExport.m; path = Private/HIGExport.m; sourceTree = "<group>"; };
@@ -1145,6 +1149,8 @@
 				CD91B2F92062741100BCEE37 /* HIGHTML.m */,
 				CD91B2F82062741100BCEE37 /* HIGJavaScript.h */,
 				CD91B2FA2062741200BCEE37 /* HIGJavaScript.m */,
+				CD8FACB421B1946C00335AD2 /* HIClassJSMethods.h */,
+				CD8FACB221B1945600335AD2 /* HIClassJSMethods.m */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -1306,6 +1312,7 @@
 				CDC98DC3219D84C8002A65DC /* HIZones.h in Headers */,
 				CDC98DF5219D84C8002A65DC /* HIDay.h in Headers */,
 				CDC98E54219D84C8002A65DC /* HILine.h in Headers */,
+				CD8FACB521B1946C00335AD2 /* HIClassJSMethods.h in Headers */,
 				CDC98DB2219D84C8002A65DC /* HIPlotOptions.h in Headers */,
 				CDC98D42219D84C7002A65DC /* HIGauge.h in Headers */,
 				CDC98DB3219D84C8002A65DC /* HISummary.h in Headers */,
@@ -1634,6 +1641,7 @@
 				CDC98DB8219D84C8002A65DC /* HIErrorbar.m in Sources */,
 				CDC98E1D219D84C8002A65DC /* HIPareto.m in Sources */,
 				CDC98DB4219D84C8002A65DC /* HICrosshair.m in Sources */,
+				CD8FACB321B1945600335AD2 /* HIClassJSMethods.m in Sources */,
 				CDC98D90219D84C7002A65DC /* HIPie.m in Sources */,
 				CDC98D59219D84C7002A65DC /* HIBoost.m in Sources */,
 				CDC98DE3219D84C8002A65DC /* HISubtitle.m in Sources */,

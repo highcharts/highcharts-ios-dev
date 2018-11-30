@@ -699,11 +699,11 @@
 }
 
 - (void)hide {
-    self.jsClassMethod = @{ @"class" : @"series", @"method" : @"hide", @"id" : self.uuid };
+    self.jsClassMethod = @{ @"class" : @"Series", @"method" : @"hide", @"id" : self.uuid };
 }
 
 - (void)show {
-    self.jsClassMethod = @{ @"class" : @"series", @"method" : @"show", @"id" : self.uuid };
+    self.jsClassMethod = @{ @"class" : @"Series", @"method" : @"show", @"id" : self.uuid };
 }
 
 @end

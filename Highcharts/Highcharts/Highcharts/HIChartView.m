@@ -12,6 +12,7 @@
 #import "HIGHTML.h"
 #import "HIGDependency.h"
 #import "HIGExport.h"
+#import "HIClassJSMethods.h"
 #import "HIFunctionSubclass.h"
 #import "HIChartsJSONSerializableSubclass.h"
 
@@ -253,6 +254,21 @@ static BOOL preloaded = NO;
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
 }
 
+- (void) callJSMethod:(NSDictionary *)dict {
+    NSLog(@"HELLO FROM CHART VIEW!!");
+    NSLog(@"%@", dict);
+    
+    NSString *jsMethod = [HIClassJSMethods getJCClassMethodString:dict];
+    NSLog(@"%@", jsMethod);
+    
+    if (jsMethod.length) {
+        [self.webView evaluateJavaScript:jsMethod completionHandler:nil];
+    }
+    else {
+        NSLog(@"IT IS NIL!");
+    }
+}
+
 #pragma mark - NSKeyValueObserving
 
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
@@ -269,20 +285,7 @@ static BOOL preloaded = NO;
     }
     else if ([keyPath isEqualToString:@"options.jsClassMethod"]) {
         NSDictionary *kChangeNew = [change valueForKey:@"new"];
-        
-        NSLog(@"HELLO FROM CHART VIEW!!");
-        NSLog(@"%@", kChangeNew);
-        
-        NSString *jsMethod;
-        
-        if ([kChangeNew[@"method"] isEqual:@"show"]) {
-            jsMethod = [NSString stringWithFormat:@"(function hideSeries(wrapperID) { chart.series.forEach(function(serie) { if (serie.options._wrapperID === wrapperID) { serie.show(); return; } }); })(\"%@\")", kChangeNew[@"id"]];
-        }
-        else if ([kChangeNew[@"method"] isEqual:@"hide"]) {
-            jsMethod = [NSString stringWithFormat:@"(function hideSeries(wrapperID) { chart.series.forEach(function(serie) { if (serie.options._wrapperID === wrapperID) { serie.hide(); return; } }); })(\"%@\")", kChangeNew[@"id"]];
-        }
-        
-        [self.webView evaluateJavaScript:jsMethod completionHandler:nil];
+        [self callJSMethod:kChangeNew];
     }
 }
 
