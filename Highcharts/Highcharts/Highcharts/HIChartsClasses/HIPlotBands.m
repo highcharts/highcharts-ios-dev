@@ -29,6 +29,7 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+    params[@"_wrapperID"] = self.uuid;
 	if (self.outerRadius) {
 		params[@"outerRadius"] = self.outerRadius;
 	}
@@ -148,6 +149,10 @@
 	id oldValue = _events;
 	_events = events;
 	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
+}
+
+- (void)destroy {
+    self.jsClassMethod = @{ @"class" : @"PlotLineOrBand", @"method" : @"destroy", @"id" : self.uuid };
 }
 
 @end

@@ -56,4 +56,10 @@ Options for annotation's shapes. Each shape inherits options from the shapeOptio
 
 -(NSDictionary *)getParams;
 
+-(void)destroy;
+-(void)redraw;
+-(void)render;
+-(void)setVisibility;
+-(void)setVisibility:(NSNumber /* Bool */ *)visibility;
+
 @end

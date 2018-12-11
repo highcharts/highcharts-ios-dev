@@ -25,6 +25,7 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+    params[@"_wrapperID"] = self.uuid;
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
@@ -109,6 +110,10 @@
 	id oldValue = _events;
 	_events = events;
 	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
+}
+
+- (void)destroy {
+    self.jsClassMethod = @{ @"class" : @"PlotLineOrBand", @"method" : @"destroy", @"id" : self.uuid };
 }
 
 @end

@@ -14,6 +14,12 @@
 #import "HIColor.h"
 #import "HIAnimationOptionsObject.h"
 #import "HICSSObject.h"
+#import "HIAnnotations.h"
+#import "HIXAxis.h"
+#import "HIYAxis.h"
+#import "HICredits.h"
+#import "HISeries.h"
+#import "HISubtitle.h"
 
 
 /**
@@ -437,5 +443,28 @@ The margin between the outer edge of the chart and the plot area. The numbers in
 @property(nonatomic, readwrite) NSArray<NSNumber *> *margin;
 
 -(NSDictionary *)getParams;
+
+-(void)drillUp;
+-(void)addAnnotation:(HIAnnotations *)options;
+-(void)addXAxis:(HIXAxis *)options;
+-(void)addXAxis:(HIXAxis *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addXAxis:(HIXAxis *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addYAxis:(HIYAxis *)options;
+-(void)addYAxis:(HIYAxis *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addYAxis:(HIYAxis *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addCredits:(HICredits *)options;
+-(void)addSeries:(HISeries *)options;
+-(void)addSeries:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addSeries:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addSeriesAsDrilldown:(HIPoint *)point options:(HISeries *)options;
+-(void)destroy;
+-(void)hideLoading;
+-(void)redraw;
+-(void)redraw:(HIAnimationOptionsObject *)animation;
+-(void)removeAnnotation:(NSString *)id;
+-(void)setSubtitle:(HISubtitle *)options;
+-(void)setTitle:(HITitle *)titleOptions subtitleOptions:(HISubtitle *)subtitleOptions redraw:(NSNumber /* Bool */ *)redraw;
+-(void)showLoading:(NSString *)str;
+-(void)zoomOut;
 
 @end

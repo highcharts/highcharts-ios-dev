@@ -7,6 +7,7 @@
 */
 
 #import "HIEvents.h"
+#import "HIAnimationOptionsObject.h"
 
 
 /**
@@ -33,5 +34,20 @@ This number defines which yAxis the point is connected to. It refers to either t
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ yAxis;
 
 -(NSDictionary *)getParams;
+
+-(void)onMouseOut;
+-(void)remove:(NSNumber /* Bool */ *)redraw;
+-(void)remove:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)select;
+-(void)select:(NSNumber /* Bool */ *)selected;
+-(void)select:(NSNumber /* Bool */ *)selected accumulate:(NSNumber /* Bool */ *)accumulate;
+-(void)setNestedProperty:(id)object value:(id)value key:(NSString *)key;
+-(void)setState;
+-(void)setState:(NSString *)state;
+-(void)setState:(NSString *)state move:(NSNumber /* Bool */ *)move;
+-(void)tooltipFormatter:(NSString *)pointFormat;
+-(void)update:(HIPoint *)options;
+-(void)update:(HIPoint *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)update:(HIPoint *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
 
 @end

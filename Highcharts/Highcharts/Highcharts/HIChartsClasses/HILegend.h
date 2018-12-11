@@ -11,6 +11,8 @@
 #import "HINavigation.h"
 #import "HIColor.h"
 #import "HICSSObject.h"
+#import "HIPoint.h"
+#import "HISeries.h"
 
 
 /**
@@ -330,5 +332,10 @@ Options for the paging or navigation appearing when the legend is overflown. Nav
 @property(nonatomic, readwrite) HINavigation *navigation;
 
 -(NSDictionary *)getParams;
+
+-(void)setPointText:(HIPoint *)item;
+-(void)setSeriesText:(HISeries *)item;
+-(void)update:(HILegend *)options;
+-(void)update:(HILegend *)options redraw:(NSNumber /* Bool */ *)redraw;
 
 @end

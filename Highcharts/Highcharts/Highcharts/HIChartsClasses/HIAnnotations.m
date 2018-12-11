@@ -22,6 +22,7 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+    params[@"_wrapperID"] = self.uuid;
 	if (self.shapes) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.shapes) {
@@ -97,6 +98,26 @@
 	HIShapeOptions *oldValue = _shapeOptions;
 	_shapeOptions = shapeOptions;
 	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
+}
+
+-(void)destroy {
+    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"destroy", @"id" : self.uuid };
+}
+
+-(void)redraw {
+    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"redraw", @"id" : self.uuid };
+}
+
+-(void)render {
+    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"render", @"id" : self.uuid };
+}
+
+- (void)setVisibility {
+    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"setVisible0", @"id" : self.uuid };
+}
+
+-(void)setVisibility:(NSNumber *)visibility {
+    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"setVisible1", @"id" : self.uuid, @"params" : @[visibility] };
 }
 
 @end

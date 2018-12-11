@@ -38,14 +38,13 @@
     }
 }
 
--(NSDictionary *)getParams
-{
+-(NSDictionary *)getParams {
     return [[NSDictionary alloc] init];
 }
 
 #pragma mark - Update functions
 
--(void)update:(BOOL)update {
+-(void)setUpdated:(BOOL)update {
     [self willChangeValueForKey:@"isUpdated"];
     self.isUpdated = update;
     [self didChangeValueForKey:@"isUpdated"];
@@ -57,7 +56,7 @@
         [oldValue removeObserver:self forKeyPath:@"jsClassMethod"];
         [self.currentObservers removeObject:oldValue];
         
-        [self update:YES];
+        [self setUpdated:YES];
         
         if (newValue) {
             [newValue addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
@@ -67,7 +66,7 @@
     }
     else if (newValue) {
         if ([self.setUppedAttributes containsObject:propertyName]) {
-            [self update:YES];
+            [self setUpdated:YES];
         }
         
         [self.setUppedAttributes addObject:propertyName];
@@ -77,20 +76,20 @@
         [self.currentObservers addObject:newValue];
     }
     
-    [self update:NO];
+    [self setUpdated:NO];
 }
 
 -(void)updateNSObject:(NSObject *)oldValue newValue:(NSObject *)newValue propertyName:(NSString *)propertyName {
     if ([self.setUppedAttributes containsObject:propertyName]) {
         if (![oldValue isEqual:newValue]) {
-            [self update:YES];
+            [self setUpdated:YES];
         }
     }
     else {
         [self.setUppedAttributes addObject:propertyName];
     }
     
-    [self update:NO];
+    [self setUpdated:NO];
 }
 
 -(void)updateArrayObject:(NSArray<NSObject *> *)oldValue newValue:(NSArray<NSObject *> *)newValue propertyName:(NSString *)propertyName {
@@ -103,7 +102,7 @@
             }
         }
         
-        [self update:YES];
+        [self setUpdated:YES];
         
         if (newValue) {
             for (id object in newValue) {
@@ -117,7 +116,7 @@
     }
     else if (newValue) {
         if ([self.setUppedAttributes containsObject:propertyName]) {
-            [self update:YES];
+            [self setUpdated:YES];
         }
         
         [self.setUppedAttributes addObject:propertyName];
@@ -131,7 +130,7 @@
         }
     }
     
-    [self update:NO];
+    [self setUpdated:NO];
 }
 
 #pragma mark - NSKeyValueObserving
@@ -150,7 +149,7 @@
     else {
         NSString *kChangeNew = [change valueForKey:@"new"];
         BOOL value = kChangeNew.boolValue;
-        [self update:value];
+        [self setUpdated:value];
     }
 }
 

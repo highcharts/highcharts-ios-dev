@@ -19,6 +19,7 @@
 #import "HIColor.h"
 #import "HIFunction.h"
 #import "HIAnimationOptionsObject.h"
+#import "HIData.h"
 
 
 /**
@@ -569,7 +570,40 @@ Whether to display this particular series or series type in the legend. The defa
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
 
 -(NSDictionary *)getParams;
+
+-(void)addPoint:(HIData *)options;
+-(void)addPoint:(HIData *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addPoint:(HIData *)options redraw:(NSNumber /* Bool */ *)redraw shift:(NSNumber /* Bool */ *)shift;
+-(void)addPoint:(HIData *)options redraw:(NSNumber /* Bool */ *)redraw shift:(NSNumber /* Bool */ *)shift animation:(HIAnimationOptionsObject *)animation;
+-(void)animate:(NSNumber /* Bool */ *)init;
+-(void)drawGraph;
+-(void)drawPoints;
 -(void)hide;
+-(void)onMouseOut;
+-(void)onMouseOver;
+-(void)remove;
+-(void)remove:(NSNumber /* Bool */ *)redraw;
+-(void)remove:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)remove:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation withEvent:(NSNumber /* Bool */ *)withEvent;
+-(void)removePoint:(NSNumber *)i;
+-(void)removePoint:(NSNumber *)i redraw:(NSNumber /* Bool */ *)redraw;
+-(void)removePoint:(NSNumber *)i redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)render;
+-(void)select;
+-(void)select:(NSNumber /* Bool */ *)selected;
+-(void)setSeriesData:(NSArray /* <id, NSNumber, NSArray> */ *)data;
+-(void)setSeriesData:(NSArray /* <id, NSNumber, NSArray> */ *)data redraw:(NSNumber /* Bool */ *)redraw;
+-(void)setSeriesData:(NSArray /* <id, NSNumber, NSArray> */ *)data redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)setSeriesData:(NSArray /* <id, NSNumber, NSArray> */ *)data redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation updatePoints:(NSNumber /* Bool */ *)updatePoints;
+-(void)setOptions:(HISeries *)options;
+-(void)setState;
+-(void)setState:(NSString *)state;
+-(void)setSeriesVisible;
+-(void)setSeriesVisible:(NSNumber /* Bool */ *)visible;
+-(void)setSeriesVisible:(NSNumber /* Bool */ *)visible redraw:(NSNumber /* Bool */ *)redraw;
 -(void)show;
+-(void)translate;
+-(void)update:(HISeries *)options;
+-(void)update:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw;
 
 @end
