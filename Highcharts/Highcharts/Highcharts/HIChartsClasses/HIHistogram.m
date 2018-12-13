@@ -43,26 +43,27 @@
 	copyHistogram.threshold = [self.threshold copyWithZone: zone];
 	copyHistogram.borderColor = [self.borderColor copyWithZone: zone];
 	copyHistogram.edgeColor = [self.edgeColor copyWithZone: zone];
-	copyHistogram.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyHistogram.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyHistogram.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyHistogram.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyHistogram.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyHistogram.crisp = [self.crisp copyWithZone: zone];
 	copyHistogram.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyHistogram.depth = [self.depth copyWithZone: zone];
 	copyHistogram.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyHistogram.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyHistogram.point = [self.point copyWithZone: zone];
 	copyHistogram.selected = [self.selected copyWithZone: zone];
 	copyHistogram.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyHistogram.clip = [self.clip copyWithZone: zone];
-	copyHistogram.point = [self.point copyWithZone: zone];
+	copyHistogram.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyHistogram.color = [self.color copyWithZone: zone];
 	copyHistogram.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyHistogram.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyHistogram.cursor = [self.cursor copyWithZone: zone];
-	copyHistogram.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyHistogram.className = [self.className copyWithZone: zone];
 	copyHistogram.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyHistogram.label = [self.label copyWithZone: zone];
+	copyHistogram.animation = [self.animation copyWithZone: zone];
 	copyHistogram.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyHistogram.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyHistogram.events = [self.events copyWithZone: zone];
@@ -75,12 +76,11 @@
 	copyHistogram.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyHistogram.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyHistogram.shadow = [self.shadow copyWithZone: zone];
-	copyHistogram.animation = [self.animation copyWithZone: zone];
 	copyHistogram.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyHistogram.zones = [self.zones copyWithZone: zone];
 	copyHistogram.visible = [self.visible copyWithZone: zone];
 	copyHistogram.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyHistogram.className = [self.className copyWithZone: zone];
+	copyHistogram.cursor = [self.cursor copyWithZone: zone];
 	copyHistogram.pointStart = [self.pointStart copyWithZone: zone];
 	copyHistogram.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyHistogram;
@@ -134,14 +134,14 @@
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
-	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
+	}
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
@@ -222,11 +222,6 @@
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
 }
 
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
-}
-
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
 	_maxPointWidth = maxPointWidth;
 	[self updateNSObject:@"maxPointWidth"];
@@ -235,6 +230,11 @@
 -(void)setPointWidth:(NSNumber *)pointWidth {
 	_pointWidth = pointWidth;
 	[self updateNSObject:@"pointWidth"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setEdgeWidth:(NSNumber *)edgeWidth {

@@ -27,7 +27,7 @@
 		params[@"style"] = [self.style getParams];
 	}
 	if (self.attr) {
-		params[@"attr"] = self.attr;
+		params[@"attr"] = [self.attr getParams];
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
@@ -46,8 +46,8 @@
 	[self updateHIObject:oldValue newValue:position propertyName:@"position"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	if(self.style) {
 		[self removeObserver:self forKeyPath:@"style.isUpdated"];
 	}
@@ -55,9 +55,13 @@
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
--(void)setAttr:(id)attr {
+-(void)setAttr:(HISVGAttributes *)attr {
+	HISVGAttributes *oldValue = _attr;
+	if(self.attr) {
+		[self removeObserver:self forKeyPath:@"attr.isUpdated"];
+	}
 	_attr = attr;
-	[self updateNSObject:@"attr"];
+	[self updateHIObject:oldValue newValue:attr propertyName:@"attr"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {

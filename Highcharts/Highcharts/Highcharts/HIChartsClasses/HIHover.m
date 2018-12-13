@@ -11,18 +11,18 @@
 	[super copyWithZone:zone];
 	HIHover *copyHover = [[HIHover allocWithZone: zone] init];
 	copyHover.radiusPlus = [self.radiusPlus copyWithZone: zone];
+	copyHover.borderColor = [self.borderColor copyWithZone: zone];
+	copyHover.opacity = [self.opacity copyWithZone: zone];
+	copyHover.halo = [self.halo copyWithZone: zone];
 	copyHover.enabled = [self.enabled copyWithZone: zone];
 	copyHover.animation = [self.animation copyWithZone: zone];
 	copyHover.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyHover.lineWidthPlus = [self.lineWidthPlus copyWithZone: zone];
-	copyHover.halo = [self.halo copyWithZone: zone];
+	copyHover.radius = [self.radius copyWithZone: zone];
 	copyHover.fillColor = [self.fillColor copyWithZone: zone];
 	copyHover.lineColor = [self.lineColor copyWithZone: zone];
-	copyHover.radius = [self.radius copyWithZone: zone];
 	copyHover.brightness = [self.brightness copyWithZone: zone];
 	copyHover.linkOpacity = [self.linkOpacity copyWithZone: zone];
-	copyHover.borderColor = [self.borderColor copyWithZone: zone];
-	copyHover.opacity = [self.opacity copyWithZone: zone];
 	copyHover.shadow = [self.shadow copyWithZone: zone];
 	copyHover.color = [self.color copyWithZone: zone];
 	return copyHover;
@@ -33,6 +33,15 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.radiusPlus) {
 		params[@"radiusPlus"] = self.radiusPlus;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = self.borderColor;
+	}
+	if (self.opacity) {
+		params[@"opacity"] = self.opacity;
+	}
+	if (self.halo) {
+		params[@"halo"] = [self.halo getParams];
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
@@ -46,8 +55,8 @@
 	if (self.lineWidthPlus) {
 		params[@"lineWidthPlus"] = self.lineWidthPlus;
 	}
-	if (self.halo) {
-		params[@"halo"] = [self.halo getParams];
+	if (self.radius) {
+		params[@"radius"] = self.radius;
 	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
@@ -55,20 +64,11 @@
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
 	}
-	if (self.radius) {
-		params[@"radius"] = self.radius;
-	}
 	if (self.brightness) {
 		params[@"brightness"] = self.brightness;
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = self.borderColor;
-	}
-	if (self.opacity) {
-		params[@"opacity"] = self.opacity;
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
@@ -84,6 +84,25 @@
 -(void)setRadiusPlus:(NSNumber *)radiusPlus {
 	_radiusPlus = radiusPlus;
 	[self updateNSObject:@"radiusPlus"];
+}
+
+-(void)setBorderColor:(NSString *)borderColor {
+	_borderColor = borderColor;
+	[self updateNSObject:@"borderColor"];
+}
+
+-(void)setOpacity:(NSNumber *)opacity {
+	_opacity = opacity;
+	[self updateNSObject:@"opacity"];
+}
+
+-(void)setHalo:(HIHalo *)halo {
+	HIHalo *oldValue = _halo;
+	if(self.halo) {
+		[self removeObserver:self forKeyPath:@"halo.isUpdated"];
+	}
+	_halo = halo;
+	[self updateHIObject:oldValue newValue:halo propertyName:@"halo"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
@@ -110,13 +129,9 @@
 	[self updateNSObject:@"lineWidthPlus"];
 }
 
--(void)setHalo:(HIHalo *)halo {
-	HIHalo *oldValue = _halo;
-	if(self.halo) {
-		[self removeObserver:self forKeyPath:@"halo.isUpdated"];
-	}
-	_halo = halo;
-	[self updateHIObject:oldValue newValue:halo propertyName:@"halo"];
+-(void)setRadius:(NSNumber *)radius {
+	_radius = radius;
+	[self updateNSObject:@"radius"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
@@ -137,11 +152,6 @@
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
--(void)setRadius:(NSNumber *)radius {
-	_radius = radius;
-	[self updateNSObject:@"radius"];
-}
-
 -(void)setBrightness:(NSNumber *)brightness {
 	_brightness = brightness;
 	[self updateNSObject:@"brightness"];
@@ -150,16 +160,6 @@
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
 	_linkOpacity = linkOpacity;
 	[self updateNSObject:@"linkOpacity"];
-}
-
--(void)setBorderColor:(NSString *)borderColor {
-	_borderColor = borderColor;
-	[self updateNSObject:@"borderColor"];
-}
-
--(void)setOpacity:(NSNumber *)opacity {
-	_opacity = opacity;
-	[self updateNSObject:@"opacity"];
 }
 
 -(void)setShadow:(NSNumber *)shadow {

@@ -21,6 +21,7 @@
 	copyShapes.r = [self.r copyWithZone: zone];
 	copyShapes.type = [self.type copyWithZone: zone];
 	copyShapes.fill = [self.fill copyWithZone: zone];
+	copyShapes.snap = [self.snap copyWithZone: zone];
 	return copyShapes;
 }
 
@@ -69,13 +70,16 @@
 	if (self.fill) {
 		params[@"fill"] = [self.fill getData];
 	}
+	if (self.snap) {
+		params[@"snap"] = self.snap;
+	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setPoints:(NSArray *)points {
-	NSArray *oldValue = _points;
+-(void)setPoints:(NSArray <HIPoints *> *)points {
+	NSArray <HIPoints *> *oldValue = _points;
 	_points = points;
 	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
 }
@@ -140,6 +144,11 @@
 	}
 	_fill = fill;
 	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
+}
+
+-(void)setSnap:(NSNumber *)snap {
+	_snap = snap;
+	[self updateNSObject:@"snap"];
 }
 
 @end

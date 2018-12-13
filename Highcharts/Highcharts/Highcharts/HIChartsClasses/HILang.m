@@ -18,10 +18,10 @@
 	copyLang.noData = [self.noData copyWithZone: zone];
 	copyLang.loading = [self.loading copyWithZone: zone];
 	copyLang.numericSymbols = [self.numericSymbols copyWithZone: zone];
-	copyLang.downloadSVG = [self.downloadSVG copyWithZone: zone];
+	copyLang.printChart = [self.printChart copyWithZone: zone];
 	copyLang.numericSymbolMagnitude = [self.numericSymbolMagnitude copyWithZone: zone];
 	copyLang.weekdays = [self.weekdays copyWithZone: zone];
-	copyLang.printChart = [self.printChart copyWithZone: zone];
+	copyLang.downloadSVG = [self.downloadSVG copyWithZone: zone];
 	copyLang.drillUpText = [self.drillUpText copyWithZone: zone];
 	copyLang.viewData = [self.viewData copyWithZone: zone];
 	copyLang.contextButtonTitle = [self.contextButtonTitle copyWithZone: zone];
@@ -29,11 +29,12 @@
 	copyLang.resetZoom = [self.resetZoom copyWithZone: zone];
 	copyLang.downloadPDF = [self.downloadPDF copyWithZone: zone];
 	copyLang.openInCloud = [self.openInCloud copyWithZone: zone];
+	copyLang.resetZoomTitle = [self.resetZoomTitle copyWithZone: zone];
 	copyLang.months = [self.months copyWithZone: zone];
 	copyLang.shortMonths = [self.shortMonths copyWithZone: zone];
 	copyLang.downloadJPEG = [self.downloadJPEG copyWithZone: zone];
 	copyLang.decimalPoint = [self.decimalPoint copyWithZone: zone];
-	copyLang.resetZoomTitle = [self.resetZoomTitle copyWithZone: zone];
+	copyLang.navigation = [self.navigation copyWithZone: zone];
 	copyLang.thousandsSep = [self.thousandsSep copyWithZone: zone];
 	return copyLang;
 }
@@ -83,8 +84,8 @@
 		}
 		params[@"numericSymbols"] = array;
 	}
-	if (self.downloadSVG) {
-		params[@"downloadSVG"] = self.downloadSVG;
+	if (self.printChart) {
+		params[@"printChart"] = self.printChart;
 	}
 	if (self.numericSymbolMagnitude) {
 		params[@"numericSymbolMagnitude"] = self.numericSymbolMagnitude;
@@ -101,8 +102,8 @@
 		}
 		params[@"weekdays"] = array;
 	}
-	if (self.printChart) {
-		params[@"printChart"] = self.printChart;
+	if (self.downloadSVG) {
+		params[@"downloadSVG"] = self.downloadSVG;
 	}
 	if (self.drillUpText) {
 		params[@"drillUpText"] = self.drillUpText;
@@ -124,6 +125,9 @@
 	}
 	if (self.openInCloud) {
 		params[@"openInCloud"] = self.openInCloud;
+	}
+	if (self.resetZoomTitle) {
+		params[@"resetZoomTitle"] = self.resetZoomTitle;
 	}
 	if (self.months) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -155,8 +159,8 @@
 	if (self.decimalPoint) {
 		params[@"decimalPoint"] = self.decimalPoint;
 	}
-	if (self.resetZoomTitle) {
-		params[@"resetZoomTitle"] = self.resetZoomTitle;
+	if (self.navigation) {
+		params[@"navigation"] = [self.navigation getParams];
 	}
 	if (self.thousandsSep) {
 		params[@"thousandsSep"] = self.thousandsSep;
@@ -212,9 +216,9 @@
 	[self updateArrayObject:oldValue newValue:numericSymbols propertyName:@"numericSymbols"];
 }
 
--(void)setDownloadSVG:(NSString *)downloadSVG {
-	_downloadSVG = downloadSVG;
-	[self updateNSObject:@"downloadSVG"];
+-(void)setPrintChart:(NSString *)printChart {
+	_printChart = printChart;
+	[self updateNSObject:@"printChart"];
 }
 
 -(void)setNumericSymbolMagnitude:(NSNumber *)numericSymbolMagnitude {
@@ -228,9 +232,9 @@
 	[self updateArrayObject:oldValue newValue:weekdays propertyName:@"weekdays"];
 }
 
--(void)setPrintChart:(NSString *)printChart {
-	_printChart = printChart;
-	[self updateNSObject:@"printChart"];
+-(void)setDownloadSVG:(NSString *)downloadSVG {
+	_downloadSVG = downloadSVG;
+	[self updateNSObject:@"downloadSVG"];
 }
 
 -(void)setDrillUpText:(NSString *)drillUpText {
@@ -268,6 +272,11 @@
 	[self updateNSObject:@"openInCloud"];
 }
 
+-(void)setResetZoomTitle:(NSString *)resetZoomTitle {
+	_resetZoomTitle = resetZoomTitle;
+	[self updateNSObject:@"resetZoomTitle"];
+}
+
 -(void)setMonths:(NSArray<NSString *> *)months {
 	NSArray<NSString *> *oldValue = _months;
 	_months = months;
@@ -290,9 +299,13 @@
 	[self updateNSObject:@"decimalPoint"];
 }
 
--(void)setResetZoomTitle:(NSString *)resetZoomTitle {
-	_resetZoomTitle = resetZoomTitle;
-	[self updateNSObject:@"resetZoomTitle"];
+-(void)setNavigation:(HINavigation *)navigation {
+	HINavigation *oldValue = _navigation;
+	if(self.navigation) {
+		[self removeObserver:self forKeyPath:@"navigation.isUpdated"];
+	}
+	_navigation = navigation;
+	[self updateHIObject:oldValue newValue:navigation propertyName:@"navigation"];
 }
 
 -(void)setThousandsSep:(NSString *)thousandsSep {

@@ -451,7 +451,7 @@ def format_to_h(name, source):
                 type = "{0} *".format(get_type(field.data_type))
                 types[field.name] = type
 
-                hi_match = re.search(r'<(HI[A-Z]{1}[a-z]+) \*>', type)
+                hi_match = re.search(r'<(HI[A-Z]{1}[a-zA-Z]+) \*>', type)
                 if hi_match:
                     import_hi_set.add(hi_match.group(1))
 

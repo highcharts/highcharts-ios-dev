@@ -10,10 +10,10 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIDragHandle *copyDragHandle = [[HIDragHandle allocWithZone: zone] init];
-	copyDragHandle.className = [self.className copyWithZone: zone];
+	copyDragHandle.cursor = [self.cursor copyWithZone: zone];
 	copyDragHandle.zIndex = [self.zIndex copyWithZone: zone];
 	copyDragHandle.color = [self.color copyWithZone: zone];
-	copyDragHandle.cursor = [self.cursor copyWithZone: zone];
+	copyDragHandle.className = [self.className copyWithZone: zone];
 	copyDragHandle.pathFormatter = [self.pathFormatter copyWithZone: zone];
 	copyDragHandle.lineColor = [self.lineColor copyWithZone: zone];
 	copyDragHandle.lineWidth = [self.lineWidth copyWithZone: zone];
@@ -23,8 +23,8 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.className) {
-		params[@"className"] = self.className;
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -32,8 +32,8 @@
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
+	if (self.className) {
+		params[@"className"] = self.className;
 	}
 	if (self.pathFormatter) {
 		params[@"pathFormatter"] = [self.pathFormatter getFunction];
@@ -49,9 +49,9 @@
 
 # pragma mark - Setters
 
--(void)setClassName:(NSString *)className {
-	_className = className;
-	[self updateNSObject:@"className"];
+-(void)setCursor:(NSString *)cursor {
+	_cursor = cursor;
+	[self updateNSObject:@"cursor"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
@@ -68,9 +68,9 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setCursor:(NSString *)cursor {
-	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
+-(void)setClassName:(NSString *)className {
+	_className = className;
+	[self updateNSObject:@"className"];
 }
 
 -(void)setPathFormatter:(HIFunction *)pathFormatter {

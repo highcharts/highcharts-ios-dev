@@ -6,6 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
+#import "HILabelIntersectBoxObject.h"
 #import "HICSSObject.h"
 
 
