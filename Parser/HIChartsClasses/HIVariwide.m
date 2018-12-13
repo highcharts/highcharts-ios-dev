@@ -26,28 +26,29 @@
 	copyVariwide.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVariwide.threshold = [self.threshold copyWithZone: zone];
 	copyVariwide.borderColor = [self.borderColor copyWithZone: zone];
-	copyVariwide.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyVariwide.tooltip = [self.tooltip copyWithZone: zone];
 	copyVariwide.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyVariwide.pointWidth = [self.pointWidth copyWithZone: zone];
+	copyVariwide.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyVariwide.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVariwide.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyVariwide.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVariwide.grouping = [self.grouping copyWithZone: zone];
+	copyVariwide.point = [self.point copyWithZone: zone];
 	copyVariwide.selected = [self.selected copyWithZone: zone];
 	copyVariwide.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVariwide.clip = [self.clip copyWithZone: zone];
-	copyVariwide.point = [self.point copyWithZone: zone];
+	copyVariwide.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyVariwide.color = [self.color copyWithZone: zone];
 	copyVariwide.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyVariwide.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVariwide.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyVariwide.cursor = [self.cursor copyWithZone: zone];
+	copyVariwide.className = [self.className copyWithZone: zone];
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyVariwide.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyVariwide.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariwide.label = [self.label copyWithZone: zone];
 	copyVariwide.stacking = [self.stacking copyWithZone: zone];
+	copyVariwide.animation = [self.animation copyWithZone: zone];
 	copyVariwide.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyVariwide.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVariwide.events = [self.events copyWithZone: zone];
@@ -60,13 +61,12 @@
 	copyVariwide.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyVariwide.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyVariwide.shadow = [self.shadow copyWithZone: zone];
-	copyVariwide.animation = [self.animation copyWithZone: zone];
 	copyVariwide.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVariwide.zones = [self.zones copyWithZone: zone];
 	copyVariwide.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyVariwide.visible = [self.visible copyWithZone: zone];
 	copyVariwide.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyVariwide.className = [self.className copyWithZone: zone];
+	copyVariwide.cursor = [self.cursor copyWithZone: zone];
 	copyVariwide.pointStart = [self.pointStart copyWithZone: zone];
 	copyVariwide.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVariwide.data = [self.data copyWithZone: zone];
@@ -112,14 +112,14 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
-	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
+	}
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
@@ -160,11 +160,6 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
-}
-
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
 	_maxPointWidth = maxPointWidth;
 	[self updateNSObject:@"maxPointWidth"];
@@ -173,6 +168,11 @@
 -(void)setPointWidth:(NSNumber *)pointWidth {
 	_pointWidth = pointWidth;
 	[self updateNSObject:@"pointWidth"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {

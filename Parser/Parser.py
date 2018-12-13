@@ -230,8 +230,6 @@ hc_types = {
         "null" : 'id',
         "Object|undefined": 'id',
         "false|Highcharts.XAxisCrosshairOptions|Highcharts.YAxisCrosshairOptions": 'id',
-        "\"contrast\"": 'NSString',
-        "\"contrast\"|string": 'NSString',
         "Array.<Point>": 'NSArray',
         "string|Array.<(number|string)>": 'NSArray /* <NSNumber, NSString> */',
         "Highcharts.Dictionary.<function()>": 'NSDictionary',
@@ -245,24 +243,43 @@ hc_types = {
         "boolean|Highcharts.CSSObject": 'NSNumber /* Bool */',
         #color fixes
         "Highcharts.ColorString": 'HIColor',
-        "Highcharts.ColorString|null": 'HIColor'
-
-        #"boolean|Highcharts.AnimationObject": 'id /* id, Bool */', # Highcharts.AnimationOptionsObject
-        #"boolean|Highcharts.AnimationOptionsObject": 'id'
-
-        #ts/beta-0.6.0
-        #"Array.<Highcharts.Dictionary.<number>>": 'NSArray',
-        #"string|global.HTMLElement": 'NSString',
-        #"Array.<Array.<*>>": 'NSArray',
-        #"Highcharts.Dictionary.<Highcharts.ExportingMenuObject>": 'NSDictionary',
-        #"string|Highcharts.GradientColorObject": 'HIColor',
-        #"Array.<(string|number)>": 'NSArray /* <NSString, NSNumber> */',
-        #"boolean|null": 'NSNumber /* Bool */',
-        #"false|number": 'NSNumber',
-        #"Highcharts.Dictionary.<Highcharts.PlotSeriesDragDropGuideBoxDefaultOptions>": 'NSDictionary',
-        #"*|Array.<*>": 'NSArray',
-        #"function|undefined": 'HIFunction',
-        #"string|undefined": 'NSString'
+        "Highcharts.ColorString|null": 'HIColor',
+        #7.0.0
+        "string|global.HTMLElement": 'NSString',
+        "Array.<Highcharts.Dictionary.<number>>": 'NSArray',
+        "Array.<Array.<*>>": 'NSArray<NSArray *>',
+        "string|Highcharts.GradientColorObject|Highcharts.PatternObject": 'HIColor',
+        "Highcharts.FormatterCallbackFunction.<Highcharts.TooltipFormatterContextObject>": 'HIFunction',
+        "Highcharts.Dictionary.<*>": 'NSDictionary',
+        "Array.<Array.<string, (Array.<number>|null)>>": 'NSArray<NSArray *>',
+        "string|Highcharts.GradientColorObject": 'HIColor',
+        "string|MockPointOptions": 'NSString',
+        "Array.<(string|number)>": 'NSArray /* <NSString, NSNumber> */',
+        "Highcharts.FormatterCallbackFunction.<Highcharts.SeriesDataLabelsFormatterContextObject>": 'HIFunction',
+        "Annotation.ControlPoint.Options": 'id',
+        "Highcharts.FormatterCallbackFunction.<object>": 'HIFunction',
+        "boolean|null": 'NSNumber /* Bool */',
+        "false|number": 'NSNumber',
+        "String|function": 'NSString',
+        "*|Array.<*>": 'NSArray',
+        "function|undefined": 'HIFunction',
+        "string|undefined": 'NSString',
+        "Highcharts.GradientColorObject": 'HIColor',
+        # tree-namespace
+        "Array.<Array.<number, string>>|undefined": 'NSArray<NSArray *>',
+        "string|*": 'NSString',
+        "Array.<*>|undefined": 'NSArray',
+        "boolean|undefined": 'NSNumber /* Bool */',
+        "Array.<number>|undefined": 'NSArray<NSNumber *>',
+        "object|undefined": 'id',
+        "boolean|*|undefined": 'NSNumber /* Bool */',
+        "string|Array.<(number|string)>|undefined": 'NSArray /* <NSNumber, NSString> */',
+        "Array<number>": 'NSArray<NSNumber *>',
+        "boolean|Array.<*>|undefined": 'id',
+        "Array.<function()>|undefined": 'NSArray<HIFunction *>',
+        "*|undefined": 'id',
+        "Highcharts.Dictionary.<number>": 'NSDictionary',
+        "Object|*": 'id',
     }
 
 def get_type(x):
@@ -281,6 +298,15 @@ def get_last(x):
         last = 'definition'
     return last
 
+
+def removeDuplicates(listofElements):
+    uniqueList = []
+
+    for elem in listofElements:
+        if elem not in uniqueList:
+            uniqueList.append(elem)
+
+    return uniqueList
 
 def create_name(source):
     name = source.split(".")[-1]
@@ -366,7 +392,7 @@ def format_to_h(name, source):
     class_name = "HI" + upper_first(create_name(name))
 
     if source.extends == 'series':
-        description = series_description.replace('#series_name#', get_last(name)) # markdown description dla poszczególnych serii dla dokumentacji iOS
+        description = series_description.replace('#series_name#', get_last(name)) # markdown description dla poszczegolnych serii dla dokumentacji iOS
     elif class_name in comments:
         description = comments[class_name]
     elif source.comment:
@@ -983,16 +1009,22 @@ def create_class(node):
             if "type" in doclet:
                 type = doclet["type"]
 
-                if len(type["names"]) == 1:
-                    data_type = type["names"][0]
-                elif len(type["names"]) == 2:
-                    data_type = type["names"][0] + "|" + type["names"][1]
-                elif len(type["names"]) == 3:
-                    data_type = type["names"][0] + "|" + type["names"][1] + "|" + type["names"][2]
+                if "names" in type:
+                    types = type["names"]
 
-                if 'Highcharts.' in data_type and data_type not in hc_types:
-                    new_types_from_namespace.add(data_type)
-                    data_type = type_from_namespace(data_type)
+                    for ind, curr_type in enumerate(types):
+                        if '\"' in curr_type:
+                            types[ind] = 'string'
+                        elif 'Highcharts.Dictionary.<Highcharts.' in curr_type:
+                            types[ind] = "Object"
+
+                    types = removeDuplicates(types)
+
+                    data_type = '|'.join(types)
+
+                    if 'Highcharts.' in data_type and data_type not in hc_types:
+                        new_types_from_namespace.add(data_type)
+                        data_type = type_from_namespace(data_type)
 
             if "products" in doclet:
                 products = doclet["products"]
@@ -1175,14 +1207,16 @@ def create_namespace_class(node):
 
             if "types" in doclet:
                 types = doclet["types"]
-                if len(types) == 1:
-                    data_type = types[0]
-                elif len(types) == 2:
-                    data_type = types[0] + "|" + types[1]
-                elif len(types) == 3:
-                    data_type = types[0] + "|" + types[1] + "|" + types[2]
-                elif len(types) == 4:
-                    data_type = types[0] + "|" + types[1] + "|" + types[2] + "|" + types[3]
+
+                for ind, type in enumerate(types):
+                    if '\"' in type:
+                        types[ind] = 'string'
+                    elif 'Highcharts.Dictionary.<Highcharts.' in type:
+                        types[ind] = "Object"
+
+                types = removeDuplicates(types)
+
+                data_type = '|'.join(types)
 
                 namespace_types[node.name] = data_type
             else:
@@ -1328,10 +1362,9 @@ def get_namespace_type(name):
 
             types[index] = type
 
-        new_type = '|'.join(types)
+        types = removeDuplicates(types)
 
-        if len(types) > 1 and len(set(types)) == 1:
-            new_type = types[0]
+        new_type = '|'.join(types)
 
         if not new_type in hc_types:
             unknown_type_namespace.add(new_type)
@@ -1353,6 +1386,9 @@ def find_namespace_array_type(type):
                 temp = namespace_structure[temp].data_type
             else:
                 temp = 'HI.' + get_last(temp)
+        else:
+            print temp + " not in namespace structure!"
+            temp = "*"
 
         if temp.startswith('Array'):
             temp = find_namespace_array_type(temp)
@@ -1398,10 +1434,9 @@ def find_namespace_type(name):
 
         types[index] = type
 
-    new_type = '|'.join(types)
+    types = removeDuplicates(types)
 
-    if len(types) > 1 and len(set(types)) == 1:
-        new_type = types[0]
+    new_type = '|'.join(types)
 
     return new_type
 

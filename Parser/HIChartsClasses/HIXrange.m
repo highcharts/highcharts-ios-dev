@@ -31,6 +31,7 @@
 	copyXrange.tooltip = [self.tooltip copyWithZone: zone];
 	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyXrange.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyXrange.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyXrange.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyXrange.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyXrange.states = [self.states copyWithZone: zone];
@@ -38,20 +39,20 @@
 	copyXrange.borderColor = [self.borderColor copyWithZone: zone];
 	copyXrange.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyXrange.pointWidth = [self.pointWidth copyWithZone: zone];
-	copyXrange.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyXrange.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyXrange.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyXrange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyXrange.grouping = [self.grouping copyWithZone: zone];
+	copyXrange.point = [self.point copyWithZone: zone];
 	copyXrange.selected = [self.selected copyWithZone: zone];
 	copyXrange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyXrange.clip = [self.clip copyWithZone: zone];
-	copyXrange.point = [self.point copyWithZone: zone];
 	copyXrange.color = [self.color copyWithZone: zone];
 	copyXrange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyXrange.cursor = [self.cursor copyWithZone: zone];
+	copyXrange.className = [self.className copyWithZone: zone];
 	copyXrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyXrange.label = [self.label copyWithZone: zone];
+	copyXrange.animation = [self.animation copyWithZone: zone];
 	copyXrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyXrange.events = [self.events copyWithZone: zone];
 	copyXrange.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -62,12 +63,11 @@
 	copyXrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyXrange.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyXrange.shadow = [self.shadow copyWithZone: zone];
-	copyXrange.animation = [self.animation copyWithZone: zone];
 	copyXrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyXrange.zones = [self.zones copyWithZone: zone];
 	copyXrange.visible = [self.visible copyWithZone: zone];
 	copyXrange.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyXrange.className = [self.className copyWithZone: zone];
+	copyXrange.cursor = [self.cursor copyWithZone: zone];
 	copyXrange.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyXrange;
 }
@@ -83,6 +83,9 @@
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
+	}
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
@@ -107,9 +110,6 @@
 	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
-	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -141,6 +141,11 @@
 	[self updateNSObject:@"borderRadius"];
 }
 
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
+}
+
 -(void)setMinPointLength:(NSNumber *)minPointLength {
 	_minPointLength = minPointLength;
 	[self updateNSObject:@"minPointLength"];
@@ -165,11 +170,6 @@
 -(void)setPointWidth:(NSNumber *)pointWidth {
 	_pointWidth = pointWidth;
 	[self updateNSObject:@"pointWidth"];
-}
-
--(void)setPointPadding:(NSNumber *)pointPadding {
-	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {

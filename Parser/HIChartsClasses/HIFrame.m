@@ -17,7 +17,6 @@
 	copyFrame.visible = [self.visible copyWithZone: zone];
 	copyFrame.front = [self.front copyWithZone: zone];
 	copyFrame.size = [self.size copyWithZone: zone];
-	copyFrame.side = [self.side copyWithZone: zone];
 	copyFrame.left = [self.left copyWithZone: zone];
 	return copyFrame;
 }
@@ -45,9 +44,6 @@
 	}
 	if (self.size) {
 		params[@"size"] = self.size;
-	}
-	if (self.side) {
-		params[@"side"] = [self.side getParams];
 	}
 	if (self.left) {
 		params[@"left"] = [self.left getParams];
@@ -110,15 +106,6 @@
 -(void)setSize:(NSNumber *)size {
 	_size = size;
 	[self updateNSObject:@"size"];
-}
-
--(void)setSide:(HISide *)side {
-	HISide *oldValue = _side;
-	if(self.side) {
-		[self removeObserver:self forKeyPath:@"side.isUpdated"];
-	}
-	_side = side;
-	[self updateHIObject:oldValue newValue:side propertyName:@"side"];
 }
 
 -(void)setLeft:(HILeft *)left {

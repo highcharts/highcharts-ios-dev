@@ -17,6 +17,7 @@
 	copyShapeOptions.r = [self.r copyWithZone: zone];
 	copyShapeOptions.type = [self.type copyWithZone: zone];
 	copyShapeOptions.fill = [self.fill copyWithZone: zone];
+	copyShapeOptions.snap = [self.snap copyWithZone: zone];
 	return copyShapeOptions;
 }
 
@@ -43,6 +44,9 @@
 	}
 	if (self.fill) {
 		params[@"fill"] = [self.fill getData];
+	}
+	if (self.snap) {
+		params[@"snap"] = self.snap;
 	}
 	return params;
 }
@@ -90,6 +94,11 @@
 	}
 	_fill = fill;
 	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
+}
+
+-(void)setSnap:(NSNumber *)snap {
+	_snap = snap;
+	[self updateNSObject:@"snap"];
 }
 
 @end

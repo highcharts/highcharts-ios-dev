@@ -168,8 +168,8 @@
 	[self updateNSObject:@"onArea"];
 }
 
--(void)setBoxesToAvoid:(NSArray *)boxesToAvoid {
-	NSArray *oldValue = _boxesToAvoid;
+-(void)setBoxesToAvoid:(NSArray<HILabelIntersectBoxObject *> *)boxesToAvoid {
+	NSArray<HILabelIntersectBoxObject *> *oldValue = _boxesToAvoid;
 	_boxesToAvoid = boxesToAvoid;
 	[self updateArrayObject:oldValue newValue:boxesToAvoid propertyName:@"boxesToAvoid"];
 }

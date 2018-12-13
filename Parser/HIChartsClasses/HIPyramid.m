@@ -23,8 +23,8 @@
 	copyPyramid.type = [self.type copyWithZone: zone];
 	copyPyramid.zIndex = [self.zIndex copyWithZone: zone];
 	copyPyramid.reversed = [self.reversed copyWithZone: zone];
-	copyPyramid.neckHeight = [self.neckHeight copyWithZone: zone];
 	copyPyramid.neckWidth = [self.neckWidth copyWithZone: zone];
+	copyPyramid.neckHeight = [self.neckHeight copyWithZone: zone];
 	copyPyramid.center = [self.center copyWithZone: zone];
 	copyPyramid.height = [self.height copyWithZone: zone];
 	copyPyramid.states = [self.states copyWithZone: zone];
@@ -32,19 +32,19 @@
 	copyPyramid.animation = [self.animation copyWithZone: zone];
 	copyPyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPyramid.borderColor = [self.borderColor copyWithZone: zone];
-	copyPyramid.endAngle = [self.endAngle copyWithZone: zone];
+	copyPyramid.minSize = [self.minSize copyWithZone: zone];
 	copyPyramid.innerSize = [self.innerSize copyWithZone: zone];
 	copyPyramid.clip = [self.clip copyWithZone: zone];
 	copyPyramid.point = [self.point copyWithZone: zone];
+	copyPyramid.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPyramid.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyPyramid.depth = [self.depth copyWithZone: zone];
 	copyPyramid.tooltip = [self.tooltip copyWithZone: zone];
+	copyPyramid.endAngle = [self.endAngle copyWithZone: zone];
 	copyPyramid.colors = [self.colors copyWithZone: zone];
-	copyPyramid.minSize = [self.minSize copyWithZone: zone];
-	copyPyramid.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPyramid.borderWidth = [self.borderWidth copyWithZone: zone];
-	copyPyramid.legendType = [self.legendType copyWithZone: zone];
 	copyPyramid.startAngle = [self.startAngle copyWithZone: zone];
+	copyPyramid.legendType = [self.legendType copyWithZone: zone];
 	copyPyramid.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPyramid.events = [self.events copyWithZone: zone];
 	copyPyramid.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
@@ -54,7 +54,7 @@
 	copyPyramid.color = [self.color copyWithZone: zone];
 	copyPyramid.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyPyramid.cursor = [self.cursor copyWithZone: zone];
+	copyPyramid.className = [self.className copyWithZone: zone];
 	copyPyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid.label = [self.label copyWithZone: zone];
 	copyPyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
@@ -66,7 +66,7 @@
 	copyPyramid.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid.visible = [self.visible copyWithZone: zone];
 	copyPyramid.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyPyramid.className = [self.className copyWithZone: zone];
+	copyPyramid.cursor = [self.cursor copyWithZone: zone];
 	return copyPyramid;
 }
 
@@ -76,11 +76,11 @@
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
 	}
-	if (self.neckHeight) {
-		params[@"neckHeight"] = self.neckHeight;
-	}
 	if (self.neckWidth) {
 		params[@"neckWidth"] = self.neckWidth;
+	}
+	if (self.neckHeight) {
+		params[@"neckHeight"] = self.neckHeight;
 	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -100,8 +100,8 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.endAngle) {
-		params[@"endAngle"] = self.endAngle;
+	if (self.minSize) {
+		params[@"minSize"] = self.minSize;
 	}
 	if (self.innerSize) {
 		params[@"innerSize"] = self.innerSize;
@@ -111,6 +111,9 @@
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
+	}
+	if (self.endAngle) {
+		params[@"endAngle"] = self.endAngle;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -124,14 +127,11 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.minSize) {
-		params[@"minSize"] = self.minSize;
+	if (self.startAngle) {
+		params[@"startAngle"] = self.startAngle;
 	}
 	if (self.legendType) {
 		params[@"legendType"] = self.legendType;
-	}
-	if (self.startAngle) {
-		params[@"startAngle"] = self.startAngle;
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
@@ -146,14 +146,14 @@
 	[self updateNSObject:@"reversed"];
 }
 
--(void)setNeckHeight:(NSString *)neckHeight {
-	_neckHeight = neckHeight;
-	[self updateNSObject:@"neckHeight"];
-}
-
 -(void)setNeckWidth:(NSString *)neckWidth {
 	_neckWidth = neckWidth;
 	[self updateNSObject:@"neckWidth"];
+}
+
+-(void)setNeckHeight:(NSString *)neckHeight {
+	_neckHeight = neckHeight;
+	[self updateNSObject:@"neckHeight"];
 }
 
 -(void)setCenter:(NSArray *)center {
@@ -172,9 +172,9 @@
 	[self updateNSObject:@"width"];
 }
 
--(void)setEndAngle:(NSNumber *)endAngle {
-	_endAngle = endAngle;
-	[self updateNSObject:@"endAngle"];
+-(void)setMinSize:(NSNumber *)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
 }
 
 -(void)setInnerSize:(id)innerSize {
@@ -192,25 +192,25 @@
 	[self updateNSObject:@"depth"];
 }
 
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
+}
+
 -(void)setColors:(NSArray<NSString *> *)colors {
 	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setMinSize:(NSNumber *)minSize {
-	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+-(void)setStartAngle:(NSNumber *)startAngle {
+	_startAngle = startAngle;
+	[self updateNSObject:@"startAngle"];
 }
 
 -(void)setLegendType:(NSString *)legendType {
 	_legendType = legendType;
 	[self updateNSObject:@"legendType"];
-}
-
--(void)setStartAngle:(NSNumber *)startAngle {
-	_startAngle = startAngle;
-	[self updateNSObject:@"startAngle"];
 }
 
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {

@@ -1,7 +1,7 @@
 #import "HIChartsJSONSerializableSubclass.h"
-#import "HIBackgroundColor.h"
+#import "HIGradientColorObject.h"
 
-@implementation HIBackgroundColor
+@implementation HIGradientColorObject
 
 -(instancetype)init {
 	return [super init];
@@ -9,17 +9,21 @@
 
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
-	HIBackgroundColor *copyBackgroundColor = [[HIBackgroundColor allocWithZone: zone] init];
-	copyBackgroundColor.linearGradient = [self.linearGradient copyWithZone: zone];
-	copyBackgroundColor.stops = [self.stops copyWithZone: zone];
-	return copyBackgroundColor;
+	HIGradientColorObject *copyGradientColorObject = [[HIGradientColorObject allocWithZone: zone] init];
+	copyGradientColorObject.linearGradient = [self.linearGradient copyWithZone: zone];
+	copyGradientColorObject.radialGradient = [self.radialGradient copyWithZone: zone];
+	copyGradientColorObject.stops = [self.stops copyWithZone: zone];
+	return copyGradientColorObject;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.linearGradient) {
-		params[@"linearGradient"] = [self.linearGradient getParams];
+		params[@"linearGradient"] = self.linearGradient;
+	}
+	if (self.radialGradient) {
+		params[@"radialGradient"] = self.radialGradient;
 	}
 	if (self.stops) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -38,13 +42,14 @@
 
 # pragma mark - Setters
 
--(void)setLinearGradient:(HILinearGradient *)linearGradient {
-	HILinearGradient *oldValue = _linearGradient;
-	if(self.linearGradient) {
-		[self removeObserver:self forKeyPath:@"linearGradient.isUpdated"];
-	}
+-(void)setLinearGradient:(id)linearGradient {
 	_linearGradient = linearGradient;
-	[self updateHIObject:oldValue newValue:linearGradient propertyName:@"linearGradient"];
+	[self updateNSObject:@"linearGradient"];
+}
+
+-(void)setRadialGradient:(id)radialGradient {
+	_radialGradient = radialGradient;
+	[self updateNSObject:@"radialGradient"];
 }
 
 -(void)setStops:(NSArray<NSArray *> *)stops {

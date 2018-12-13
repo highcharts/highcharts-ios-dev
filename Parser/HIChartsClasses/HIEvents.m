@@ -37,6 +37,10 @@
 	copyEvents.mouseOver = [self.mouseOver copyWithZone: zone];
 	copyEvents.select = [self.select copyWithZone: zone];
 	copyEvents.dragStart = [self.dragStart copyWithZone: zone];
+	copyEvents.selectButton = [self.selectButton copyWithZone: zone];
+	copyEvents.showPopup = [self.showPopup copyWithZone: zone];
+	copyEvents.hidePopup = [self.hidePopup copyWithZone: zone];
+	copyEvents.deselectButton = [self.deselectButton copyWithZone: zone];
 	copyEvents.hide = [self.hide copyWithZone: zone];
 	copyEvents.show = [self.show copyWithZone: zone];
 	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
@@ -126,6 +130,18 @@
 	}
 	if (self.dragStart) {
 		params[@"dragStart"] = [self.dragStart getFunction];
+	}
+	if (self.selectButton) {
+		params[@"selectButton"] = [self.selectButton getFunction];
+	}
+	if (self.showPopup) {
+		params[@"showPopup"] = [self.showPopup getFunction];
+	}
+	if (self.hidePopup) {
+		params[@"hidePopup"] = [self.hidePopup getFunction];
+	}
+	if (self.deselectButton) {
+		params[@"deselectButton"] = [self.deselectButton getFunction];
 	}
 	if (self.hide) {
 		params[@"hide"] = [self.hide getFunction];
@@ -382,6 +398,42 @@
 	}
 	_dragStart = dragStart;
 	[self updateHIObject:oldValue newValue:dragStart propertyName:@"dragStart"];
+}
+
+-(void)setSelectButton:(HIFunction *)selectButton {
+	HIFunction *oldValue = _selectButton;
+	if(self.selectButton) {
+		[self removeObserver:self forKeyPath:@"selectButton.isUpdated"];
+	}
+	_selectButton = selectButton;
+	[self updateHIObject:oldValue newValue:selectButton propertyName:@"selectButton"];
+}
+
+-(void)setShowPopup:(HIFunction *)showPopup {
+	HIFunction *oldValue = _showPopup;
+	if(self.showPopup) {
+		[self removeObserver:self forKeyPath:@"showPopup.isUpdated"];
+	}
+	_showPopup = showPopup;
+	[self updateHIObject:oldValue newValue:showPopup propertyName:@"showPopup"];
+}
+
+-(void)setHidePopup:(HIFunction *)hidePopup {
+	HIFunction *oldValue = _hidePopup;
+	if(self.hidePopup) {
+		[self removeObserver:self forKeyPath:@"hidePopup.isUpdated"];
+	}
+	_hidePopup = hidePopup;
+	[self updateHIObject:oldValue newValue:hidePopup propertyName:@"hidePopup"];
+}
+
+-(void)setDeselectButton:(HIFunction *)deselectButton {
+	HIFunction *oldValue = _deselectButton;
+	if(self.deselectButton) {
+		[self removeObserver:self forKeyPath:@"deselectButton.isUpdated"];
+	}
+	_deselectButton = deselectButton;
+	[self updateHIObject:oldValue newValue:deselectButton propertyName:@"deselectButton"];
 }
 
 -(void)setHide:(HIFunction *)hide {
