@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIItemHiddenStyle Class Reference</title>
+	<title>HINetworkgraph Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,7 +58,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/color">color</option>
+		<option value="//api/name/draggable">draggable</option>
+		
+		<option value="//api/name/layoutAlgorithm">layoutAlgorithm</option>
+		
+		<option value="//api/name/link">link</option>
 		
 	</optgroup>
 	
@@ -85,16 +89,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIItemHiddenStyle Class Reference</h1>
+					<h1 class="title">HINetworkgraph Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIItemHiddenStyle.h</td>
+	<td>HINetworkgraph.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,16 +108,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>CSS styles for each legend item when the corresponding series or point is hidden. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from <code>style</code> unless overridden here.</p>
+						<p>A <code>networkgraph</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
 
-<p><strong>Defaults to</strong> <code>{"color": "#cccccc"}</code>.</p>
+<p>Configuration options for the series are given in three levels:</p>
 
-<p><strong>Try it</strong></p>
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>networkgraph</code> series are defined in <code>plotOptions.networkgraph</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
 
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemhiddenstyle/">Darker gray color</a></li>
-</ul>
 
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        networkgraph: {
+            // shared options for all networkgraph series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;networkgraph&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -129,8 +150,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+	<a name="//api/name/layoutAlgorithm" title="layoutAlgorithm"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layoutAlgorithm">&nbsp;&nbsp;layoutAlgorithm</a></code>
 </h3>
 
 	<div class="method-info">
@@ -139,9 +160,91 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *color</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILayoutAlgorithm *layoutAlgorithm</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/draggable" title="draggable"></a>
+	<h3 class="method-title"><code><a href="#//api/name/draggable">&nbsp;&nbsp;draggable</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Flag to determine if nodes are draggable or not.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *draggable</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINetworkgraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/link" title="link"></a>
+	<h3 class="method-title"><code><a href="#//api/name/link">&nbsp;&nbsp;link</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Link style options</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILink *link</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINetworkgraph.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

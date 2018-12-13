@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HILinearGradient Class Reference</title>
+	<title>HIVenn Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,13 +58,13 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/x1">x1</option>
+		<option value="//api/name/borderDashStyle">borderDashStyle</option>
 		
-		<option value="//api/name/x2">x2</option>
+		<option value="//api/name/brighten">brighten</option>
 		
-		<option value="//api/name/y1">y1</option>
+		<option value="//api/name/colorByPoint">colorByPoint</option>
 		
-		<option value="//api/name/y2">y2</option>
+		<option value="//api/name/opacity">opacity</option>
 		
 	</optgroup>
 	
@@ -91,16 +91,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HILinearGradient Class Reference</h1>
+					<h1 class="title">HIVenn Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HILinearGradient.h</td>
+	<td>HIVenn.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,7 +110,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Definition of the gradient, similar to SVG: object literal holds start position (x1, y1) and the end position (x2, y2) relative to the shape, where 0 means top/left and 1 is bottom/right. All positions are floats between 0 and 1.</p>
+						<p>A <code>venn</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+
+<p>Configuration options for the series are given in three levels:</p>
+
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>venn</code> series are defined in <code>plotOptions.venn</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
+
+
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        venn: {
+            // shared options for all venn series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;venn&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -126,8 +152,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/y1" title="y1"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y1">&nbsp;&nbsp;y1</a></code>
+	<a name="//api/name/colorByPoint" title="colorByPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorByPoint">&nbsp;&nbsp;colorByPoint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -136,14 +162,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y1</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorByPoint</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/x2" title="x2"></a>
-	<h3 class="method-title"><code><a href="#//api/name/x2">&nbsp;&nbsp;x2</a></code>
+	<a name="//api/name/opacity" title="opacity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/opacity">&nbsp;&nbsp;opacity</a></code>
 </h3>
 
 	<div class="method-info">
@@ -152,14 +178,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x2</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *opacity</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/x1" title="x1"></a>
-	<h3 class="method-title"><code><a href="#//api/name/x1">&nbsp;&nbsp;x1</a></code>
+	<a name="//api/name/borderDashStyle" title="borderDashStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderDashStyle">&nbsp;&nbsp;borderDashStyle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -168,14 +194,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x1</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *borderDashStyle</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/y2" title="y2"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y2">&nbsp;&nbsp;y2</a></code>
+	<a name="//api/name/brighten" title="brighten"></a>
+	<h3 class="method-title"><code><a href="#//api/name/brighten">&nbsp;&nbsp;brighten</a></code>
 </h3>
 
 	<div class="method-info">
@@ -184,7 +210,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y2</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *brighten</code></div>
 
 		    
 		</div>

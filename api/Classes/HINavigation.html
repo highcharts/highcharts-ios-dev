@@ -64,9 +64,15 @@
 		
 		<option value="//api/name/arrowSize">arrowSize</option>
 		
+		<option value="//api/name/bindings">bindings</option>
+		
+		<option value="//api/name/bindingsClassName">bindingsClassName</option>
+		
 		<option value="//api/name/buttonOptions">buttonOptions</option>
 		
 		<option value="//api/name/enabled">enabled</option>
+		
+		<option value="//api/name/events">events</option>
 		
 		<option value="//api/name/inactiveColor">inactiveColor</option>
 		
@@ -75,6 +81,8 @@
 		<option value="//api/name/menuItemStyle">menuItemStyle</option>
 		
 		<option value="//api/name/menuStyle">menuStyle</option>
+		
+		<option value="//api/name/popup">popup</option>
 		
 		<option value="//api/name/style">style</option>
 		
@@ -154,7 +162,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMenuStyle *menuStyle</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *menuStyle</code></div>
 
 		    
 			
@@ -166,65 +174,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{ "border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0" }</code>.</p>
+				<p><strong>Defaults to</strong> <code>{"border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0"}</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/">Light gray menu background</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/menuItemStyle" title="menuItemStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/menuItemStyle">&nbsp;&nbsp;menuItemStyle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>CSS styles for the individual items within the popup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMenuItemStyle *menuItemStyle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{ "padding": "0.5em 1em", "color": "#333333", "background": "none" }</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/">Add a grey stripe to the left</a></li>
 </ul>
 
 			</div>
@@ -285,6 +240,141 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/bindingsClassName" title="bindingsClassName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bindingsClassName">&nbsp;&nbsp;bindingsClassName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A CSS class name where all bindings will be attached to. Multiple charts on the same page should have separate class names to prevent duplicating events.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *bindingsClassName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/events" title="events"></a>
+	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Events to communicate between Stock Tools and custom GUI.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/menuItemStyle" title="menuItemStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/menuItemStyle">&nbsp;&nbsp;menuItemStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>CSS styles for the individual items within the popup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML. Font size defaults to <code>11px</code> on desktop and <code>14px</code> on touch devices.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *menuItemStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{"padding": "0.5em 1em", "color": "#333333", "background": "none", "fontSize": "11px/14px", "transition": "background 250ms, color 250ms"}</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/">Add a grey stripe to the left</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/menuItemHoverStyle" title="menuItemHoverStyle"></a>
 	<h3 class="method-title"><code><a href="#//api/name/menuItemHoverStyle">&nbsp;&nbsp;menuItemHoverStyle</a></code>
 </h3>
@@ -301,7 +391,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMenuItemHoverStyle *menuItemHoverStyle</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *menuItemHoverStyle</code></div>
 
 		    
 			
@@ -313,12 +403,63 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{ "background": "#335cad", "color": "#ffffff" }</code>.</p>
+				<p><strong>Defaults to</strong> <code>{"background": "#335cad", "color": "#ffffff"}</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/">Bold text on hover</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bindings" title="bindings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bindings">&nbsp;&nbsp;bindings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Bindings definitions for custom HTML buttons. Each binding implements simple event-driven interface: - <code>className</code>: classname used to bind event to - <code>init</code>: initial event, fired on button click - <code>start</code>: fired on first click on a chart - <code>steps</code>: array of sequential events fired one after another on each  of users clicks - <code>end</code>: last event to be called after last step event</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBindings *bindings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/stocktools/stocktools-thresholds">Custom bindings in Highstock</a></li>
 </ul>
 
 			</div>
@@ -389,8 +530,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/arrowSize" title="arrowSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/arrowSize">&nbsp;&nbsp;arrowSize</a></code>
+	<a name="//api/name/inactiveColor" title="inactiveColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/inactiveColor">&nbsp;&nbsp;inactiveColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -400,12 +541,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The pixel size of the up and down arrows in the legend paging navigation.</p>
+				<p>The color of the inactive up or down arrow in the legend page navigation. .</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *arrowSize</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *inactiveColor</code></div>
 
 		    
 			
@@ -417,9 +558,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>12</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">Legend page navigation demonstrated</a></li>
@@ -453,7 +592,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to enable the legend navigation. In most cases, disabling the navigation results in an unwanted overflow. See also the <code>adapt chart to legend</code> plugin for a solution to extend the chart height to make room for the legend, optionally in exported charts only.</p>
+				<p>Whether to enable the legend navigation. In most cases, disabling the navigation results in an unwanted overflow. See also the <a href="https://www.highcharts.com/products/plugin-registry/single/8/Adapt-Chart-To-Legend">adapt chart to legend</a> plugin for a solution to extend the chart height to make room for the legend, optionally in exported charts only.</p>
 			</div>
 			
 		    
@@ -488,8 +627,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/inactiveColor" title="inactiveColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/inactiveColor">&nbsp;&nbsp;inactiveColor</a></code>
+	<a name="//api/name/arrowSize" title="arrowSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/arrowSize">&nbsp;&nbsp;arrowSize</a></code>
 </h3>
 
 	<div class="method-info">
@@ -499,12 +638,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the inactive up or down arrow in the legend page navigation. .</p>
+				<p>The pixel size of the up and down arrows in the legend paging navigation.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *inactiveColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *arrowSize</code></div>
 
 		    
 			
@@ -516,7 +655,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>12</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/">Legend page navigation demonstrated</a></li>
@@ -627,6 +768,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/popup" title="popup"></a>
+	<h3 class="method-title"><code><a href="#//api/name/popup">&nbsp;&nbsp;popup</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Translations for all field names used in popup.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPopup *popup</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			

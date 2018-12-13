@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIMenuItemHoverStyle Class Reference</title>
+	<title>HIStockToolsBindingsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,15 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/background">background</option>
+		<option value="//api/name/className">className</option>
 		
-		<option value="//api/name/color">color</option>
+		<option value="//api/name/end">end</option>
+		
+		<option value="//api/name/initial">initial</option>
+		
+		<option value="//api/name/start">start</option>
+		
+		<option value="//api/name/steps">steps</option>
 		
 	</optgroup>
 	
@@ -87,7 +93,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIMenuItemHoverStyle Class Reference</h1>
+					<h1 class="title">HIStockToolsBindingsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +102,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIMenuItemHoverStyle.h</td>
+	<td>HIStockToolsBindingsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,16 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>CSS styles for the hover state of the individual items within the popup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML.</p>
-
-<p><strong>Defaults to</strong> <code>{ "background": "#335cad", "color": "#ffffff" }</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/">Bold text on hover</a></li>
-</ul>
-
+						<p>A config object for bindings in Stock Tools module.</p>
 					</div>
 					
 					
@@ -131,8 +128,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+	<a name="//api/name/className" title="className"></a>
+	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
 </h3>
 
 	<div class="method-info">
@@ -140,15 +137,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>ClassName of the element for a binding.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *color</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/background" title="background"></a>
-	<h3 class="method-title"><code><a href="#//api/name/background">&nbsp;&nbsp;background</a></code>
+	<a name="//api/name/end" title="end"></a>
+	<h3 class="method-title"><code><a href="#//api/name/end">&nbsp;&nbsp;end</a></code>
 </h3>
 
 	<div class="method-info">
@@ -156,10 +178,158 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Last event to be fired after last step event.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *background</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *end</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initial" title="initial"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initial">&nbsp;&nbsp;initial</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initial event, fired on a button click.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *initial</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/start" title="start"></a>
+	<h3 class="method-title"><code><a href="#//api/name/start">&nbsp;&nbsp;start</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Event fired on first click on a chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *start</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/steps" title="steps"></a>
+	<h3 class="method-title"><code><a href="#//api/name/steps">&nbsp;&nbsp;steps</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Last event to be fired after last step event. Array of step events to be called sequentially after each user click.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIFunction*&gt; *steps</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

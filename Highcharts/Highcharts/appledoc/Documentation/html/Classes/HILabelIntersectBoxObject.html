@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIItemStyle Class Reference</title>
+	<title>HILabelIntersectBoxObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,7 +58,13 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/cursor">cursor</option>
+		<option value="//api/name/bottom">bottom</option>
+		
+		<option value="//api/name/left">left</option>
+		
+		<option value="//api/name/right">right</option>
+		
+		<option value="//api/name/top">top</option>
 		
 	</optgroup>
 	
@@ -85,7 +91,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIItemStyle Class Reference</h1>
+					<h1 class="title">HILabelIntersectBoxObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -94,7 +100,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIItemStyle.h</td>
+	<td>HILabelIntersectBoxObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,16 +110,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text. The default <code>textOverflow</code> property makes long texts truncate. Set it to <code>undefined</code> to wrap text instead. A <code>width</code> property can be added to control the text width.</p>
-
-<p><strong>Defaults to</strong> <code>{"color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold", "textOverflow": "ellipsis"}</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/itemstyle/">Bold black text</a></li>
-</ul>
-
+						<p>Containing the position of a box that should be avoided by labels.</p>
 					</div>
 					
 					
@@ -129,8 +126,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/cursor" title="cursor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/cursor">&nbsp;&nbsp;cursor</a></code>
+	<a name="//api/name/bottom" title="bottom"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bottom">&nbsp;&nbsp;bottom</a></code>
 </h3>
 
 	<div class="method-info">
@@ -139,7 +136,55 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *cursor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *bottom</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/left" title="left"></a>
+	<h3 class="method-title"><code><a href="#//api/name/left">&nbsp;&nbsp;left</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *left</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/right" title="right"></a>
+	<h3 class="method-title"><code><a href="#//api/name/right">&nbsp;&nbsp;right</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *right</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/top" title="top"></a>
+	<h3 class="method-title"><code><a href="#//api/name/top">&nbsp;&nbsp;top</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *top</code></div>
 
 		    
 		</div>

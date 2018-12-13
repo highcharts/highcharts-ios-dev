@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIMenuItemStyle Class Reference</title>
+	<title>HIMapDataObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,15 +58,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/background">background</option>
+		<option value="//api/name/name">name</option>
 		
-		<option value="//api/name/color">color</option>
+		<option value="//api/name/path">path</option>
 		
-		<option value="//api/name/fontSize">fontSize</option>
-		
-		<option value="//api/name/padding">padding</option>
-		
-		<option value="//api/name/transition">transition</option>
+		<option value="//api/name/properties">properties</option>
 		
 	</optgroup>
 	
@@ -93,7 +89,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIMenuItemStyle Class Reference</h1>
+					<h1 class="title">HIMapDataObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -102,7 +98,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIMenuItemStyle.h</td>
+	<td>HIMapDataObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,16 +108,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>CSS styles for the individual items within the popup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML.</p>
-
-<p><strong>Defaults to</strong> <code>{ "padding": "0.5em 1em", "color": "#333333", "background": "none" }</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/">Add a grey stripe to the left</a></li>
-</ul>
-
+						<p>Map data object.</p>
 					</div>
 					
 					
@@ -137,56 +124,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/padding" title="padding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *padding</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *color</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/transition" title="transition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/transition">&nbsp;&nbsp;transition</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *transition</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fontSize" title="fontSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fontSize">&nbsp;&nbsp;fontSize</a></code>
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
 </h3>
 
 	<div class="method-info">
@@ -196,12 +135,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Defaults to <code>14px</code> on touch devices and <code>11px</code> on desktop.</p>
+				<p>The name of the data.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *fontSize</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *name</code></div>
 
 		    
 			
@@ -219,15 +158,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIMenuItemStyle.h</code></p>
+				<p><code class="declared-in-ref">HIMapDataObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/background" title="background"></a>
-	<h3 class="method-title"><code><a href="#//api/name/background">&nbsp;&nbsp;background</a></code>
+	<a name="//api/name/path" title="path"></a>
+	<h3 class="method-title"><code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
 </h3>
 
 	<div class="method-info">
@@ -235,10 +174,76 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>The SVG path.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *background</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *path</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIMapDataObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/properties" title="properties"></a>
+	<h3 class="method-title"><code><a href="#//api/name/properties">&nbsp;&nbsp;properties</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The GeoJSON meta data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id properties</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIMapDataObject.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIBackgroundColor Class Reference</title>
+	<title>HIMapDataObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/linearGradient">linearGradient</option>
+		<option value="//api/name/name">name</option>
 		
-		<option value="//api/name/stops">stops</option>
+		<option value="//api/name/path">path</option>
+		
+		<option value="//api/name/properties">properties</option>
 		
 	</optgroup>
 	
@@ -87,7 +89,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIBackgroundColor Class Reference</h1>
+					<h1 class="title">HIMapDataObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +98,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIBackgroundColor.h</td>
+	<td>HIMapDataObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +108,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The background color or gradient for the pane.</p>
+						<p>Map data object.</p>
 					</div>
 					
 					
@@ -122,8 +124,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/linearGradient" title="linearGradient"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linearGradient">&nbsp;&nbsp;linearGradient</a></code>
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +135,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Definition of the gradient, similar to SVG: object literal holds start position (x1, y1) and the end position (x2, y2) relative to the shape, where 0 means top/left and 1 is bottom/right. All positions are floats between 0 and 1.</p>
+				<p>The name of the data.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILinearGradient *linearGradient</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *name</code></div>
 
 		    
 			
@@ -156,15 +158,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBackgroundColor.h</code></p>
+				<p><code class="declared-in-ref">HIMapDataObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/stops" title="stops"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stops">&nbsp;&nbsp;stops</a></code>
+	<a name="//api/name/path" title="path"></a>
+	<h3 class="method-title"><code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
 </h3>
 
 	<div class="method-info">
@@ -174,12 +176,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The stops is an array of tuples, where the first item is a float between 0 and 1 assigning the relative position in the gradient, and the second item is the color.</p>
+				<p>The SVG path.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSArray*&gt; *stops</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *path</code></div>
 
 		    
 			
@@ -188,11 +190,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>[[0, #ffffff], [1, #e6e6e6]]</code>.</p>
-			</div>
 			
 
 			
@@ -202,7 +199,48 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBackgroundColor.h</code></p>
+				<p><code class="declared-in-ref">HIMapDataObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/properties" title="properties"></a>
+	<h3 class="method-title"><code><a href="#//api/name/properties">&nbsp;&nbsp;properties</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The GeoJSON meta data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id properties</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIMapDataObject.h</code></p>
 			</div>
 			
 			

@@ -58,6 +58,10 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/base">base</option>
+		
+		<option value="//api/name/id">id</option>
+		
 		<option value="//api/name/labelOptions">labelOptions</option>
 		
 		<option value="//api/name/labels">labels</option>
@@ -139,129 +143,6 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/shapes" title="shapes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shapes">&nbsp;&nbsp;shapes</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the <code>shapeOptions</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIShapes*&gt; *shapes</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/labels" title="labels"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An array of labels for the annotation. For options that apply to multiple labels, they can be added to the <code>labelOptions</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILabels*&gt; *labels</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/labelOptions" title="labelOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labelOptions">&nbsp;&nbsp;labelOptions</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Options for annotation&rsquo;s labels. Each label inherits options from the labelOptions object. An option from the labelOptions can be overwritten by config for a specific label.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabelOptions *labelOptions</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/zIndex" title="zIndex"></a>
 	<h3 class="method-title"><code><a href="#//api/name/zIndex">&nbsp;&nbsp;zIndex</a></code>
 </h3>
@@ -287,11 +168,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>6</code>.</p>
-			</div>
 			
 
 			
@@ -359,6 +235,183 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/labelOptions" title="labelOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labelOptions">&nbsp;&nbsp;labelOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for annotation&rsquo;s labels. Each label inherits options from the labelOptions object. An option from the labelOptions can be overwritten by config for a specific label.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabelOptions *labelOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/labels" title="labels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An array of labels for the annotation. For options that apply to multiple labels, they can be added to the <code>labelOptions</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILabels*&gt; *labels</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shapes" title="shapes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shapes">&nbsp;&nbsp;shapes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the <code>shapeOptions</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIShapes*&gt; *shapes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/base" title="base"></a>
+	<h3 class="method-title"><code><a href="#//api/name/base">&nbsp;&nbsp;base</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A basic type of an annotation. It allows to add custom labels or shapes. The items can be tied to points, axis coordinates or chart pixel coordinates.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBase *base</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/basic/">Basic annotations</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/annotations/">Advanced annotations</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/annotations">Styled mode</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations-advanced/controllable">Controllable items</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/shapeOptions" title="shapeOptions"></a>
 	<h3 class="method-title"><code><a href="#//api/name/shapeOptions">&nbsp;&nbsp;shapeOptions</a></code>
 </h3>
@@ -376,6 +429,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIShapeOptions *shapeOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets an ID for an annotation. Can be user later when removing an annotation in <code>Chart#removeAnnotation(id)</code> method.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
 
 		    
 			

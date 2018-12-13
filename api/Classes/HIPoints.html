@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIMenuStyle Class Reference</title>
+	<title>HIPoints Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,11 +58,13 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/background">background</option>
+		<option value="//api/name/x">x</option>
 		
-		<option value="//api/name/border">border</option>
+		<option value="//api/name/xAxis">xAxis</option>
 		
-		<option value="//api/name/padding">padding</option>
+		<option value="//api/name/y">y</option>
+		
+		<option value="//api/name/yAxis">yAxis</option>
 		
 	</optgroup>
 	
@@ -89,7 +91,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIMenuStyle Class Reference</h1>
+					<h1 class="title">HIPoints Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -98,7 +100,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIMenuStyle.h</td>
+	<td>HIPoints.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -108,16 +110,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>CSS styles for the popup menu appearing by default when the export icon is clicked. This menu is rendered in HTML.</p>
-
-<p><strong>Defaults to</strong> <code>{ "border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0" }</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/">Light gray menu background</a></li>
-</ul>
-
+						<p>An array of points for the shape. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point&rsquo;s id.</p>
 					</div>
 					
 					
@@ -133,8 +126,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/padding" title="padding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
 
 	<div class="method-info">
@@ -142,15 +135,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>The y position of the point. Units can be either in axis or chart pixel coordinates.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *padding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoints.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/border" title="border"></a>
-	<h3 class="method-title"><code><a href="#//api/name/border">&nbsp;&nbsp;border</a></code>
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
 </h3>
 
 	<div class="method-info">
@@ -158,15 +176,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>The x position of the point. Units can be either in axis or chart pixel coordinates.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *border</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoints.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/background" title="background"></a>
-	<h3 class="method-title"><code><a href="#//api/name/background">&nbsp;&nbsp;background</a></code>
+	<a name="//api/name/xAxis" title="xAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/xAxis">&nbsp;&nbsp;xAxis</a></code>
 </h3>
 
 	<div class="method-info">
@@ -174,10 +217,76 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array. If the option is not configured or the axis is not found the point&rsquo;s x coordinate refers to the chart pixels.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *background</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id xAxis</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoints.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/yAxis" title="yAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/yAxis">&nbsp;&nbsp;yAxis</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the yAxis array. If the option is not configured or the axis is not found the point&rsquo;s y coordinate refers to the chart pixels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id yAxis</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoints.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

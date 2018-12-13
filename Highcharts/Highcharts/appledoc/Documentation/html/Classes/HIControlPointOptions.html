@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIBackgroundColor Class Reference</title>
+	<title>HIControlPointOptions Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,19 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/linearGradient">linearGradient</option>
+		<option value="//api/name/events">events</option>
 		
-		<option value="//api/name/stops">stops</option>
+		<option value="//api/name/height">height</option>
+		
+		<option value="//api/name/positioner">positioner</option>
+		
+		<option value="//api/name/style">style</option>
+		
+		<option value="//api/name/symbol">symbol</option>
+		
+		<option value="//api/name/visible">visible</option>
+		
+		<option value="//api/name/width">width</option>
 		
 	</optgroup>
 	
@@ -87,7 +97,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIBackgroundColor Class Reference</h1>
+					<h1 class="title">HIControlPointOptions Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +106,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIBackgroundColor.h</td>
+	<td>HIControlPointOptions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +116,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The background color or gradient for the pane.</p>
+						<p>Options for annotation&rsquo;s control points. Each control point inherits options from controlPointOptions object. Options from the controlPointOptions can be overwritten by options in a specific control point.</p>
 					</div>
 					
 					
@@ -122,8 +132,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/linearGradient" title="linearGradient"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linearGradient">&nbsp;&nbsp;linearGradient</a></code>
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
 </h3>
 
 	<div class="method-info">
@@ -131,40 +141,15 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Definition of the gradient, similar to SVG: object literal holds start position (x1, y1) and the end position (x2, y2) relative to the shape, where 0 means top/left and 1 is bottom/right. All positions are floats between 0 and 1.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILinearGradient *linearGradient</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBackgroundColor.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/stops" title="stops"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stops">&nbsp;&nbsp;stops</a></code>
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
 </h3>
 
 	<div class="method-info">
@@ -172,40 +157,90 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>The stops is an array of tuples, where the first item is a float between 0 and 1 assigning the relative position in the gradient, and the second item is the color.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSArray*&gt; *stops</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/symbol" title="symbol"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbol">&nbsp;&nbsp;symbol</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *symbol</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *height</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/visible" title="visible"></a>
+	<h3 class="method-title"><code><a href="#//api/name/visible">&nbsp;&nbsp;visible</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>[[0, #ffffff], [1, #e6e6e6]]</code>.</p>
-			</div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *visible</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/positioner" title="positioner"></a>
+	<h3 class="method-title"><code><a href="#//api/name/positioner">&nbsp;&nbsp;positioner</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id positioner</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/events" title="events"></a>
+	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
-			
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id events</code></div>
 
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBackgroundColor.h</code></p>
-			</div>
-			
-			
+		    
 		</div>
 	</div>
 </div><div class="section-method">

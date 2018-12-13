@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIMenuStyle Class Reference</title>
+	<title>HIPackedbubble Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,11 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/background">background</option>
+		<option value="//api/name/displayNegative">displayNegative</option>
 		
-		<option value="//api/name/border">border</option>
-		
-		<option value="//api/name/padding">padding</option>
+		<option value="//api/name/zThreshold">zThreshold</option>
 		
 	</optgroup>
 	
@@ -89,16 +87,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIMenuStyle Class Reference</h1>
+					<h1 class="title">HIPackedbubble Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIMenuStyle.h</td>
+	<td>HIPackedbubble.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -108,16 +106,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>CSS styles for the popup menu appearing by default when the export icon is clicked. This menu is rendered in HTML.</p>
+						<p>A <code>packedbubble</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
 
-<p><strong>Defaults to</strong> <code>{ "border": "1px solid #999999", "background": "#ffffff", "padding": "5px 0" }</code>.</p>
+<p>Configuration options for the series are given in three levels:</p>
 
-<p><strong>Try it</strong></p>
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>packedbubble</code> series are defined in <code>plotOptions.packedbubble</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
 
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/">Light gray menu background</a></li>
-</ul>
 
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        packedbubble: {
+            // shared options for all packedbubble series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;packedbubble&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -133,8 +148,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/padding" title="padding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
+	<a name="//api/name/displayNegative" title="displayNegative"></a>
+	<h3 class="method-title"><code><a href="#//api/name/displayNegative">&nbsp;&nbsp;displayNegative</a></code>
 </h3>
 
 	<div class="method-info">
@@ -142,15 +157,52 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to display negative sized bubbles. The threshold is given by the <code>zThreshold</code> option, and negative bubbles can be visualized by setting <code>negativeColor</code>.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *padding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *displayNegative</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-negative/">Negative bubbles</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPackedbubble.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/border" title="border"></a>
-	<h3 class="method-title"><code><a href="#//api/name/border">&nbsp;&nbsp;border</a></code>
+	<a name="//api/name/zThreshold" title="zThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zThreshold">&nbsp;&nbsp;zThreshold</a></code>
 </h3>
 
 	<div class="method-info">
@@ -158,26 +210,45 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>displayNegative</code> is <code>false</code>, bubbles with lower Z values are skipped. When <code>displayNegative</code> is <code>true</code> and a <code>negativeColor</code> is given, points with lower Z is colored.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *border</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zThreshold</code></div>
 
 		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/background" title="background"></a>
-	<h3 class="method-title"><code><a href="#//api/name/background">&nbsp;&nbsp;background</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *background</code></div>
+			
 
-		    
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-negative/">Negative bubbles</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPackedbubble.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

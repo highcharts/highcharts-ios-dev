@@ -170,6 +170,8 @@
 		
 		<option value="//api/name/seriesMapping">seriesMapping</option>
 		
+		<option value="//api/name/sets">sets</option>
+		
 		<option value="//api/name/sliced">sliced</option>
 		
 		<option value="//api/name/startColumn">startColumn</option>
@@ -477,8 +479,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/parsed" title="parsed"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parsed">&nbsp;&nbsp;parsed</a></code>
+	<a name="//api/name/rowsURL" title="rowsURL"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rowsURL">&nbsp;&nbsp;rowsURL</a></code>
 </h3>
 
 	<div class="method-info">
@@ -488,12 +490,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A callback function to access the parsed columns, the two-dimentional input data array directly, before they are interpreted into series data and categories. Return <code>false</code> to stop completion, or call <code>this.complete()</code> to continue async.</p>
+				<p>A URL to a remote JSON dataset, structured as a row array. Will be fetched when the chart is created using Ajax.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *parsed</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rowsURL</code></div>
 
 		    
 			
@@ -508,7 +510,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/">Modify data after parse</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/livedata-rows">Rows with live polling</a></li>
 </ul>
 
 			</div>
@@ -580,7 +582,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array containing object with Point property names along with what column id the property should be taken from.</p>
+				<p>An array containing dictionaries for each series. A dictionary exists of Point property names as the key and the CSV column index as the value.</p>
 			</div>
 			
 		    
@@ -682,7 +684,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A URL to a remote CSV dataset. Will be fetched when the chart is created using Ajax.</p>
+				<p>An URL to a remote CSV dataset. Will be fetched when the chart is created using Ajax.</p>
 			</div>
 			
 		    
@@ -734,7 +736,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Which of the predefined date formats in Date.prototype.dateFormats to use to parse date values. Defaults to a best guess based on what format gives valid and ordered dates. Valid options include: *  <code>YYYY/mm/dd</code> *  <code>dd/mm/YYYY</code> *  <code>mm/dd/YYYY</code> *  <code>dd/mm/YY</code> *  <code>mm/dd/YY</code></p>
+				<p>Which of the predefined date formats in Date.prototype.dateFormats to use to parse date values. Defaults to a best guess based on what format gives valid and ordered dates. Valid options include: <code>YYYY/mm/dd</code>, <code>dd/mm/YYYY</code>, <code>mm/dd/YYYY</code>, <code>dd/mm/YY</code>, <code>mm/dd/YY</code>.</p>
 			</div>
 			
 		    
@@ -751,8 +753,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>[undefined, "YYYY/mm/dd", "dd/mm/YYYY", "mm/dd/YYYY",
-            "dd/mm/YYYY", "dd/mm/YY", "mm/dd/YY"]</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["YYYY/mm/dd", "dd/mm/YYYY", "mm/dd/YYYY", "dd/mm/YYYY",
+            "dd/mm/YY", "mm/dd/YY"]</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -881,8 +883,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/rowsURL" title="rowsURL"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rowsURL">&nbsp;&nbsp;rowsURL</a></code>
+	<a name="//api/name/parsed" title="parsed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parsed">&nbsp;&nbsp;parsed</a></code>
 </h3>
 
 	<div class="method-info">
@@ -892,12 +894,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A URL to a remote JSON dataset, structured as a row array. Will be fetched when the chart is created using Ajax.</p>
+				<p>A callback function to access the parsed columns, the two-dimentional input data array directly, before they are interpreted into series data and categories. Return <code>false</code> to stop completion, or call <code>this.complete()</code> to continue async.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rowsURL</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *parsed</code></div>
 
 		    
 			
@@ -912,7 +914,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/livedata-rows">Rows with live polling</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/">Modify data after parse</a></li>
 </ul>
 
 			</div>
@@ -1510,7 +1512,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The decimal point used for parsing numbers in the CSV. If both this and data.delimiter is set to false, the parser will attempt to deduce the decimal point automatically.</p>
+				<p>The decimal point used for parsing numbers in the CSV. If both this and data.delimiter is set to <code>undefined</code>, the parser will attempt to deduce the decimal point automatically.</p>
 			</div>
 			
 		    
@@ -1849,8 +1851,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/colorIndex" title="colorIndex"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colorIndex">&nbsp;&nbsp;colorIndex</a></code>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1860,12 +1862,53 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A specific color index to use for the point, so its graphic representations are given the class name <code>highcharts-color-{n}</code>. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the <code>fill</code> attribute, so the change in class name won&rsquo;t have a visual effect by default.</p>
+				<p>The y value of the point.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorIndex</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/definition" title="definition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A description of the point to add to the screen reader information about the point. Requires the Accessibility module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
 
 		    
 			
@@ -2130,47 +2173,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/events" title="events"></a>
-	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Individual point events</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/dragDrop" title="dragDrop"></a>
 	<h3 class="method-title"><code><a href="#//api/name/dragDrop">&nbsp;&nbsp;dragDrop</a></code>
 </h3>
@@ -2212,8 +2214,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/y" title="y"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2223,12 +2225,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The y value of the point.</p>
+				<p>An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
 
 		    
 			
@@ -2237,6 +2239,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/id/">Remove an id&rsquo;d point</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -2345,8 +2357,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/id" title="id"></a>
-	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
+	<a name="//api/name/events" title="events"></a>
+	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2356,12 +2368,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.</p>
+				<p>Individual point events</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
 
 		    
 			
@@ -2370,16 +2382,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/id/">Remove an id&rsquo;d point</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -2396,8 +2398,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/definition" title="definition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
+	<a name="//api/name/colorIndex" title="colorIndex"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorIndex">&nbsp;&nbsp;colorIndex</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2407,12 +2409,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A description of the point to add to the screen reader information about the point. Requires the Accessibility module.</p>
+				<p>A specific color index to use for the point, so its graphic representations are given the class name <code>highcharts-color-{n}</code>. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the <code>fill</code> attribute, so the change in class name won&rsquo;t have a visual effect by default.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorIndex</code></div>
 
 		    
 			
@@ -2494,47 +2496,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/length" title="length"></a>
-	<h3 class="method-title"><code><a href="#//api/name/length">&nbsp;&nbsp;length</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The length of the vector. The rendered length will relate to the <code>vectorLength</code> setting.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *length</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/direction" title="direction"></a>
 	<h3 class="method-title"><code><a href="#//api/name/direction">&nbsp;&nbsp;direction</a></code>
 </h3>
@@ -2576,8 +2537,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/value" title="value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+	<a name="//api/name/length" title="length"></a>
+	<h3 class="method-title"><code><a href="#//api/name/length">&nbsp;&nbsp;length</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2587,12 +2548,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The value of the point, resulting in a color controled by options as set in the <code>colorAxis</code> configuration.</p>
+				<p>The length of the vector. The rendered length will relate to the <code>vectorLength</code> setting.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *length</code></div>
 
 		    
 			
@@ -2601,6 +2562,236 @@
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/target" title="target"></a>
+	<h3 class="method-title"><code><a href="#//api/name/target">&nbsp;&nbsp;target</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The target value of a point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *target</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/targetOptions" title="targetOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/targetOptions">&nbsp;&nbsp;targetOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Individual target options for each point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITargetOptions *targetOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the border surrounding the column or bar. In styled mode, the border stroke can be set with the <code>.highcharts-point</code> rule.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/">Dark gray border</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointWidth" title="pointWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointWidth">&nbsp;&nbsp;pointWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A pixel value specifying a fixed width for the column or bar. Overrides pointWidth on the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderWidth" title="borderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width of the border surrounding the column or bar. In styled mode, the stroke width can be set with the <code>.highcharts-point</code> rule.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/">2px black border</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -2652,6 +2843,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/value" title="value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The value of the point, resulting in a color controled by options as set in the <code>colorAxis</code> configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *value</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -2825,8 +3057,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+	<a name="//api/name/to" title="to"></a>
+	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2836,12 +3068,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the border surrounding the column or bar. In styled mode, the border stroke can be set with the <code>.highcharts-point</code> rule.</p>
+				<p>The node that the link runs to.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *to</code></div>
 
 		    
 			
@@ -2850,16 +3082,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/">Dark gray border</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -2876,8 +3098,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pointWidth" title="pointWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointWidth">&nbsp;&nbsp;pointWidth</a></code>
+	<a name="//api/name/from" title="from"></a>
+	<h3 class="method-title"><code><a href="#//api/name/from">&nbsp;&nbsp;from</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2887,12 +3109,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A pixel value specifying a fixed width for the column or bar. Overrides pointWidth on the series.</p>
+				<p>The node that the link runs from.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *from</code></div>
 
 		    
 			
@@ -2901,11 +3123,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
 			
 
 			
@@ -2922,8 +3139,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/borderWidth" title="borderWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+	<a name="//api/name/weight" title="weight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2933,12 +3150,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the border surrounding the column or bar. In styled mode, the stroke width can be set with the <code>.highcharts-point</code> rule.</p>
+				<p>The weight of the link.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *weight</code></div>
 
 		    
 			
@@ -2947,16 +3164,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/">2px black border</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -3075,47 +3282,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/to" title="to"></a>
-	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The node that the link runs to.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *to</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/outgoing" title="outgoing"></a>
 	<h3 class="method-title"><code><a href="#//api/name/outgoing">&nbsp;&nbsp;outgoing</a></code>
 </h3>
@@ -3153,88 +3319,6 @@
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/from" title="from"></a>
-	<h3 class="method-title"><code><a href="#//api/name/from">&nbsp;&nbsp;from</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The node that the link runs from.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *from</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/weight" title="weight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The weight of the link.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *weight</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -3394,52 +3478,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/colorValue" title="colorValue"></a>
-	<h3 class="method-title"><code><a href="#//api/name/colorValue">&nbsp;&nbsp;colorValue</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Serves a purpose only if a <code>colorAxis</code> object is defined in the chart options. This value will decide which color the point gets from the scale of the colorAxis.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorValue</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/parent" title="parent"></a>
 	<h3 class="method-title"><code><a href="#//api/name/parent">&nbsp;&nbsp;parent</a></code>
 </h3>
@@ -3468,9 +3506,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/parent/">Point parent</a></li>
@@ -3494,8 +3530,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/target" title="target"></a>
-	<h3 class="method-title"><code><a href="#//api/name/target">&nbsp;&nbsp;target</a></code>
+	<a name="//api/name/colorValue" title="colorValue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorValue">&nbsp;&nbsp;colorValue</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3505,12 +3541,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The target value of a point.</p>
+				<p>Serves a purpose only if a <code>colorAxis</code> object is defined in the chart options. This value will decide which color the point gets from the scale of the colorAxis.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *target</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *colorValue</code></div>
 
 		    
 			
@@ -3535,8 +3571,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/targetOptions" title="targetOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/targetOptions">&nbsp;&nbsp;targetOptions</a></code>
+	<a name="//api/name/sets" title="sets"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sets">&nbsp;&nbsp;sets</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3546,12 +3582,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Individual target options for each point.</p>
+				<p>The set or sets the options will be applied to. If a single entry is defined, then it will create a new set. If more than one entry is defined, then it will define the overlap between the sets in the array.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITargetOptions *targetOptions</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *sets</code></div>
 
 		    
 			
@@ -3560,6 +3596,17 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/venn-diagram/">Venn diagram</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/euler-diagram/">Euler diagram</a></li>
+</ul>
+
+			</div>
 			
 
 			
