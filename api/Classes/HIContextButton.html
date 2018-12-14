@@ -58,15 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/align">align</option>
-		
-		<option value="//api/name/buttonSpacing">buttonSpacing</option>
-		
 		<option value="//api/name/className">className</option>
 		
 		<option value="//api/name/enabled">enabled</option>
-		
-		<option value="//api/name/height">height</option>
 		
 		<option value="//api/name/menuClassName">menuClassName</option>
 		
@@ -78,25 +72,15 @@
 		
 		<option value="//api/name/symbolFill">symbolFill</option>
 		
-		<option value="//api/name/symbolSize">symbolSize</option>
-		
 		<option value="//api/name/symbolStroke">symbolStroke</option>
 		
 		<option value="//api/name/symbolStrokeWidth">symbolStrokeWidth</option>
-		
-		<option value="//api/name/symbolX">symbolX</option>
-		
-		<option value="//api/name/symbolY">symbolY</option>
 		
 		<option value="//api/name/text">text</option>
 		
 		<option value="//api/name/theme">theme</option>
 		
 		<option value="//api/name/titleKey">titleKey</option>
-		
-		<option value="//api/name/verticalAlign">verticalAlign</option>
-		
-		<option value="//api/name/width">width</option>
 		
 		<option value="//api/name/x">x</option>
 		
@@ -215,8 +199,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/symbol" title="symbol"></a>
-	<h3 class="method-title"><code><a href="#//api/name/symbol">&nbsp;&nbsp;symbol</a></code>
+	<a name="//api/name/menuItems" title="menuItems"></a>
+	<h3 class="method-title"><code><a href="#//api/name/menuItems">&nbsp;&nbsp;menuItems</a></code>
 </h3>
 
 	<div class="method-info">
@@ -226,12 +210,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The symbol for the button. Points to a definition function in the <code>Highcharts.Renderer.symbols</code> collection. The default <code>exportIcon</code> function is part of the exporting module.</p>
+				<p>A collection of strings pointing to config options for the menu items. The config options are defined in the <code>menuItemDefinitions</code> option. By default, there is the &ldquo;Print&rdquo; menu item plus one menu item for each of the available export types.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *symbol</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *menuItems</code></div>
 
 		    
 			
@@ -243,15 +227,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["exportIcon", "circle", "square", "diamond", "triangle", "triangle-down", "menu"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>menu</code>.</p>
+				<p><strong>Defaults to</strong> <code>["printChart", "separator", "downloadPNG", "downloadJPEG", "downloadPDF", "downloadSVG"]</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-symbol/">Use a circle for symbol</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-symbol-custom/">Custom shape as symbol</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/">Menu item definitions</a></li>
 </ul>
 
 			</div>
@@ -491,8 +472,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/menuItems" title="menuItems"></a>
-	<h3 class="method-title"><code><a href="#//api/name/menuItems">&nbsp;&nbsp;menuItems</a></code>
+	<a name="//api/name/symbol" title="symbol"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbol">&nbsp;&nbsp;symbol</a></code>
 </h3>
 
 	<div class="method-info">
@@ -502,12 +483,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A collection of strings pointing to config options for the menu items. The config options are defined in the <code>menuItemDefinitions</code> option. By default, there is the &ldquo;Print&rdquo; menu item plus one menu item for each of the available export types. Defaults to  [  &lsquo;printChart&rsquo;,  &lsquo;separator&rsquo;,  &lsquo;downloadPNG&rsquo;,  &lsquo;downloadJPEG&rsquo;,  &lsquo;downloadPDF&rsquo;,  &lsquo;downloadSVG&rsquo; ]</p>
+				<p>The symbol for the button. Points to a definition function in the <code>Highcharts.Renderer.symbols</code> collection. The default <code>exportIcon</code> function is part of the exporting module. Possible values are &ldquo;circle&rdquo;, &ldquo;square&rdquo;, &ldquo;diamond&rdquo;, &ldquo;triangle&rdquo;, &ldquo;triangle-down&rdquo;, &ldquo;menu&rdquo;, &ldquo;menuball&rdquo; or custom shape.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *menuItems</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *symbol</code></div>
 
 		    
 			
@@ -519,10 +500,13 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Accepted values:</strong> <code>["menu", "menuball", "exportIcon", "circle", "square", "diamond", "triangle", "triangle-down"]</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/">Menu item definitions</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-symbol/">Use a circle for symbol</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-contextbutton-symbol-custom/">Custom shape as symbol</a></li>
 </ul>
 
 			</div>
@@ -542,8 +526,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/verticalAlign" title="verticalAlign"></a>
-	<h3 class="method-title"><code><a href="#//api/name/verticalAlign">&nbsp;&nbsp;verticalAlign</a></code>
+	<a name="//api/name/symbolStroke" title="symbolStroke"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbolStroke">&nbsp;&nbsp;symbolStroke</a></code>
 </h3>
 
 	<div class="method-info">
@@ -553,12 +537,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The vertical alignment of the buttons. Can be one of &ldquo;top&rdquo;, &ldquo;middle&rdquo; or &ldquo;bottom&rdquo;.</p>
+				<p>The color of the symbol&rsquo;s stroke or line.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *verticalAlign</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *symbolStroke</code></div>
 
 		    
 			
@@ -570,14 +554,10 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["top", "middle", "bottom"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>top</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-verticalalign/">Buttons at lower right</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolstroke/">Blue symbol stroke</a></li>
 </ul>
 
 			</div>
@@ -632,61 +612,6 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-text/">Full text button</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/buttons-text-symbol/">Combined symbol and text</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIContextButton.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/align" title="align"></a>
-	<h3 class="method-title"><code><a href="#//api/name/align">&nbsp;&nbsp;align</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Alignment for the buttons.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *align</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["left", "center", "right"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>right</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-align/">Center aligned</a></li>
 </ul>
 
 			</div>
@@ -810,211 +735,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/height" title="height"></a>
-	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Pixel height of the buttons.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *height</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>22</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/">Bigger buttons</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIContextButton.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/width" title="width"></a>
-	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The pixel width of the button.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>24</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/">Bigger buttons</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIContextButton.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/buttonSpacing" title="buttonSpacing"></a>
-	<h3 class="method-title"><code><a href="#//api/name/buttonSpacing">&nbsp;&nbsp;buttonSpacing</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The pixel spacing between buttons.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *buttonSpacing</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>3</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIContextButton.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/symbolSize" title="symbolSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/symbolSize">&nbsp;&nbsp;symbolSize</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The pixel size of the symbol on the button.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *symbolSize</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>14</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/">Bigger buttons</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIContextButton.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/y" title="y"></a>
 	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
@@ -1068,165 +788,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/symbolStroke" title="symbolStroke"></a>
-	<h3 class="method-title"><code><a href="#//api/name/symbolStroke">&nbsp;&nbsp;symbolStroke</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The color of the symbol&rsquo;s stroke or line.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *symbolStroke</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#666666</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-symbolstroke/">Blue symbol stroke</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIContextButton.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/symbolY" title="symbolY"></a>
-	<h3 class="method-title"><code><a href="#//api/name/symbolY">&nbsp;&nbsp;symbolY</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The y position of the center of the symbol inside the button.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *symbolY</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>10.5</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/">Bigger buttons</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIContextButton.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/symbolX" title="symbolX"></a>
-	<h3 class="method-title"><code><a href="#//api/name/symbolX">&nbsp;&nbsp;symbolX</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The x position of the center of the symbol inside the button.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *symbolX</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>12.5</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/">Bigger buttons</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIContextButton.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/symbolStrokeWidth" title="symbolStrokeWidth"></a>
 	<h3 class="method-title"><code><a href="#//api/name/symbolStrokeWidth">&nbsp;&nbsp;symbolStrokeWidth</a></code>
 </h3>
@@ -1255,9 +816,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/buttonoptions-height/">Bigger buttons</a></li>

@@ -36,32 +36,33 @@
 	copyBubble.minSize = [self.minSize copyWithZone: zone];
 	copyBubble.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBubble.maxSize = [self.maxSize copyWithZone: zone];
-	copyBubble.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyBubble.zThreshold = [self.zThreshold copyWithZone: zone];
 	copyBubble.displayNegative = [self.displayNegative copyWithZone: zone];
+	copyBubble.zThreshold = [self.zThreshold copyWithZone: zone];
+	copyBubble.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyBubble.sizeByAbsoluteValue = [self.sizeByAbsoluteValue copyWithZone: zone];
 	copyBubble.states = [self.states copyWithZone: zone];
 	copyBubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBubble.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyBubble.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBubble.linecap = [self.linecap copyWithZone: zone];
+	copyBubble.point = [self.point copyWithZone: zone];
 	copyBubble.selected = [self.selected copyWithZone: zone];
 	copyBubble.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBubble.clip = [self.clip copyWithZone: zone];
-	copyBubble.point = [self.point copyWithZone: zone];
 	copyBubble.color = [self.color copyWithZone: zone];
 	copyBubble.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
-	copyBubble.threshold = [self.threshold copyWithZone: zone];
 	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBubble.borderColor = [self.borderColor copyWithZone: zone];
-	copyBubble.cursor = [self.cursor copyWithZone: zone];
+	copyBubble.className = [self.className copyWithZone: zone];
 	copyBubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBubble.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyBubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBubble.label = [self.label copyWithZone: zone];
 	copyBubble.stacking = [self.stacking copyWithZone: zone];
+	copyBubble.animation = [self.animation copyWithZone: zone];
+	copyBubble.threshold = [self.threshold copyWithZone: zone];
 	copyBubble.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBubble.events = [self.events copyWithZone: zone];
 	copyBubble.definition = [self.definition copyWithZone: zone];
@@ -71,16 +72,15 @@
 	copyBubble.step = [self.step copyWithZone: zone];
 	copyBubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBubble.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
-	copyBubble.animation = [self.animation copyWithZone: zone];
 	copyBubble.zones = [self.zones copyWithZone: zone];
 	copyBubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyBubble.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyBubble.visible = [self.visible copyWithZone: zone];
 	copyBubble.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBubble.boostThreshold = [self.boostThreshold copyWithZone: zone];
-	copyBubble.className = [self.className copyWithZone: zone];
+	copyBubble.cursor = [self.cursor copyWithZone: zone];
 	copyBubble.pointStart = [self.pointStart copyWithZone: zone];
 	copyBubble.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyBubble.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyBubble.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyBubble.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyBubble;
 }
@@ -103,11 +103,11 @@
 	if (self.maxSize) {
 		params[@"maxSize"] = self.maxSize;
 	}
-	if (self.zThreshold) {
-		params[@"zThreshold"] = self.zThreshold;
-	}
 	if (self.displayNegative) {
 		params[@"displayNegative"] = self.displayNegative;
+	}
+	if (self.zThreshold) {
+		params[@"zThreshold"] = self.zThreshold;
 	}
 	if (self.sizeByAbsoluteValue) {
 		params[@"sizeByAbsoluteValue"] = self.sizeByAbsoluteValue;
@@ -142,14 +142,14 @@
 	[self updateNSObject:@"maxSize"];
 }
 
--(void)setZThreshold:(NSNumber *)zThreshold {
-	_zThreshold = zThreshold;
-	[self updateNSObject:@"zThreshold"];
-}
-
 -(void)setDisplayNegative:(NSNumber *)displayNegative {
 	_displayNegative = displayNegative;
 	[self updateNSObject:@"displayNegative"];
+}
+
+-(void)setZThreshold:(NSNumber *)zThreshold {
+	_zThreshold = zThreshold;
+	[self updateNSObject:@"zThreshold"];
 }
 
 -(void)setSizeByAbsoluteValue:(NSNumber *)sizeByAbsoluteValue {

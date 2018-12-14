@@ -23,22 +23,22 @@
 	copyPie.type = [self.type copyWithZone: zone];
 	copyPie.zIndex = [self.zIndex copyWithZone: zone];
 	copyPie.borderColor = [self.borderColor copyWithZone: zone];
-	copyPie.endAngle = [self.endAngle copyWithZone: zone];
+	copyPie.minSize = [self.minSize copyWithZone: zone];
 	copyPie.innerSize = [self.innerSize copyWithZone: zone];
 	copyPie.center = [self.center copyWithZone: zone];
 	copyPie.clip = [self.clip copyWithZone: zone];
 	copyPie.point = [self.point copyWithZone: zone];
+	copyPie.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPie.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyPie.depth = [self.depth copyWithZone: zone];
 	copyPie.tooltip = [self.tooltip copyWithZone: zone];
 	copyPie.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyPie.states = [self.states copyWithZone: zone];
+	copyPie.endAngle = [self.endAngle copyWithZone: zone];
 	copyPie.colors = [self.colors copyWithZone: zone];
-	copyPie.minSize = [self.minSize copyWithZone: zone];
-	copyPie.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyPie.states = [self.states copyWithZone: zone];
 	copyPie.borderWidth = [self.borderWidth copyWithZone: zone];
-	copyPie.legendType = [self.legendType copyWithZone: zone];
 	copyPie.startAngle = [self.startAngle copyWithZone: zone];
+	copyPie.legendType = [self.legendType copyWithZone: zone];
 	copyPie.size = [self.size copyWithZone: zone];
 	copyPie.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPie.events = [self.events copyWithZone: zone];
@@ -49,9 +49,10 @@
 	copyPie.color = [self.color copyWithZone: zone];
 	copyPie.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPie.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyPie.cursor = [self.cursor copyWithZone: zone];
+	copyPie.className = [self.className copyWithZone: zone];
 	copyPie.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPie.label = [self.label copyWithZone: zone];
+	copyPie.animation = [self.animation copyWithZone: zone];
 	copyPie.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPie.definition = [self.definition copyWithZone: zone];
 	copyPie.keys = [self.keys copyWithZone: zone];
@@ -59,18 +60,17 @@
 	copyPie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPie.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPie.shadow = [self.shadow copyWithZone: zone];
-	copyPie.animation = [self.animation copyWithZone: zone];
 	copyPie.visible = [self.visible copyWithZone: zone];
 	copyPie.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyPie.className = [self.className copyWithZone: zone];
+	copyPie.cursor = [self.cursor copyWithZone: zone];
 	return copyPie;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.endAngle) {
-		params[@"endAngle"] = self.endAngle;
+	if (self.minSize) {
+		params[@"minSize"] = self.minSize;
 	}
 	if (self.innerSize) {
 		params[@"innerSize"] = self.innerSize;
@@ -93,6 +93,9 @@
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
+	if (self.endAngle) {
+		params[@"endAngle"] = self.endAngle;
+	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.colors) {
@@ -105,14 +108,11 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.minSize) {
-		params[@"minSize"] = self.minSize;
+	if (self.startAngle) {
+		params[@"startAngle"] = self.startAngle;
 	}
 	if (self.legendType) {
 		params[@"legendType"] = self.legendType;
-	}
-	if (self.startAngle) {
-		params[@"startAngle"] = self.startAngle;
 	}
 	if (self.size) {
 		params[@"size"] = self.size;
@@ -125,9 +125,9 @@
 
 # pragma mark - Setters
 
--(void)setEndAngle:(NSNumber *)endAngle {
-	_endAngle = endAngle;
-	[self updateNSObject:@"endAngle"];
+-(void)setMinSize:(NSNumber *)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
 }
 
 -(void)setInnerSize:(id)innerSize {
@@ -151,25 +151,25 @@
 	[self updateNSObject:@"depth"];
 }
 
+-(void)setEndAngle:(NSNumber *)endAngle {
+	_endAngle = endAngle;
+	[self updateNSObject:@"endAngle"];
+}
+
 -(void)setColors:(NSArray<NSString *> *)colors {
 	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setMinSize:(NSNumber *)minSize {
-	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+-(void)setStartAngle:(NSNumber *)startAngle {
+	_startAngle = startAngle;
+	[self updateNSObject:@"startAngle"];
 }
 
 -(void)setLegendType:(NSString *)legendType {
 	_legendType = legendType;
 	[self updateNSObject:@"legendType"];
-}
-
--(void)setStartAngle:(NSNumber *)startAngle {
-	_startAngle = startAngle;
-	[self updateNSObject:@"startAngle"];
 }
 
 -(void)setSize:(id)size {

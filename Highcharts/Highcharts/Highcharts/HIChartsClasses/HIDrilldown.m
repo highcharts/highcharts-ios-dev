@@ -54,8 +54,8 @@
 
 # pragma mark - Setters
 
--(void)setActiveDataLabelStyle:(HIActiveDataLabelStyle *)activeDataLabelStyle {
-	HIActiveDataLabelStyle *oldValue = _activeDataLabelStyle;
+-(void)setActiveDataLabelStyle:(HICSSObject *)activeDataLabelStyle {
+	HICSSObject *oldValue = _activeDataLabelStyle;
 	if(self.activeDataLabelStyle) {
 		[self removeObserver:self forKeyPath:@"activeDataLabelStyle.isUpdated"];
 	}
@@ -92,8 +92,8 @@
 	[self updateHIObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
 }
 
--(void)setActiveAxisLabelStyle:(HIActiveAxisLabelStyle *)activeAxisLabelStyle {
-	HIActiveAxisLabelStyle *oldValue = _activeAxisLabelStyle;
+-(void)setActiveAxisLabelStyle:(HICSSObject *)activeAxisLabelStyle {
+	HICSSObject *oldValue = _activeAxisLabelStyle;
 	if(self.activeAxisLabelStyle) {
 		[self removeObserver:self forKeyPath:@"activeAxisLabelStyle.isUpdated"];
 	}

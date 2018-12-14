@@ -10,9 +10,9 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIMarker *copyMarker = [[HIMarker allocWithZone: zone] init];
+	copyMarker.enabled = [self.enabled copyWithZone: zone];
 	copyMarker.color = [self.color copyWithZone: zone];
 	copyMarker.animation = [self.animation copyWithZone: zone];
-	copyMarker.enabled = [self.enabled copyWithZone: zone];
 	copyMarker.symbol = [self.symbol copyWithZone: zone];
 	copyMarker.states = [self.states copyWithZone: zone];
 	copyMarker.fillColor = [self.fillColor copyWithZone: zone];
@@ -29,14 +29,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
+	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
-	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
 	}
 	if (self.symbol) {
 		params[@"symbol"] = self.symbol;
@@ -73,6 +73,11 @@
 
 # pragma mark - Setters
 
+-(void)setEnabled:(NSNumber *)enabled {
+	_enabled = enabled;
+	[self updateNSObject:@"enabled"];
+}
+
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
 	if(self.color) {
@@ -89,11 +94,6 @@
 	}
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
-}
-
--(void)setEnabled:(NSNumber *)enabled {
-	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
 }
 
 -(void)setSymbol:(NSString *)symbol {

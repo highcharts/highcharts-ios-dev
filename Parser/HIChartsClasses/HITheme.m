@@ -27,10 +27,10 @@
 		params[@"padding"] = self.padding;
 	}
 	if (self.stroke) {
-		params[@"stroke"] = self.stroke;
+		params[@"stroke"] = [self.stroke getData];
 	}
 	if (self.fill) {
-		params[@"fill"] = self.fill;
+		params[@"fill"] = [self.fill getData];
 	}
 	return params;
 }
@@ -47,14 +47,22 @@
 	[self updateNSObject:@"padding"];
 }
 
--(void)setStroke:(NSString *)stroke {
+-(void)setStroke:(HIColor *)stroke {
+	HIColor *oldValue = _stroke;
+	if(self.stroke) {
+		[self removeObserver:self forKeyPath:@"stroke.isUpdated"];
+	}
 	_stroke = stroke;
-	[self updateNSObject:@"stroke"];
+	[self updateHIObject:oldValue newValue:stroke propertyName:@"stroke"];
 }
 
--(void)setFill:(NSString *)fill {
+-(void)setFill:(HIColor *)fill {
+	HIColor *oldValue = _fill;
+	if(self.fill) {
+		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
+	}
 	_fill = fill;
-	[self updateNSObject:@"fill"];
+	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 @end

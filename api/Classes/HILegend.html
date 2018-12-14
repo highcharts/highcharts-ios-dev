@@ -70,6 +70,8 @@
 		
 		<option value="//api/name/borderWidth">borderWidth</option>
 		
+		<option value="//api/name/bubbleLegend">bubbleLegend</option>
+		
 		<option value="//api/name/enabled">enabled</option>
 		
 		<option value="//api/name/floating">floating</option>
@@ -610,7 +612,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to <a href="https://www.highcharts.com/docs/chart-concepts/%20labels-and-string-formatting#html">use HTML</a> to render the legend item texts. Prior to 4.1.7, when using HTML, <code>legend.navigation</code> was disabled.</p>
+				<p>Whether to <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the legend item texts. Prior to 4.1.7, when using HTML, <code>legend.navigation</code> was disabled.</p>
 			</div>
 			
 		    
@@ -1010,8 +1012,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/itemCheckboxStyle" title="itemCheckboxStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/itemCheckboxStyle">&nbsp;&nbsp;itemCheckboxStyle</a></code>
+	<a name="//api/name/bubbleLegend" title="bubbleLegend"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bubbleLegend">&nbsp;&nbsp;bubbleLegend</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1021,12 +1023,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Default styling for the checkbox next to a legend item when <code>showCheckbox</code> is true.</p>
+				<p>The bubble legend is an additional element in legend which presents the scale of the bubble series. Individual bubble ranges can be defined by user or calculated from series. In the case of automatically calculated ranges, a 1px margin of error is permitted. Requires <code>highcharts-more.js</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *itemCheckboxStyle</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBubbleLegend *bubbleLegend</code></div>
 
 		    
 			
@@ -1035,11 +1037,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{"width": "13px", "height": "13px", "position":"absolute"}</code>.</p>
-			</div>
 			
 
 			
@@ -1208,6 +1205,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/itemCheckboxStyle" title="itemCheckboxStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemCheckboxStyle">&nbsp;&nbsp;itemCheckboxStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Default styling for the checkbox next to a legend item when <code>showCheckbox</code> is true.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *itemCheckboxStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{"width": "13px", "height": "13px", "position":"absolute"}</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/padding" title="padding"></a>
 	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
 </h3>
@@ -1261,8 +1304,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/itemDistance" title="itemDistance"></a>
-	<h3 class="method-title"><code><a href="#//api/name/itemDistance">&nbsp;&nbsp;itemDistance</a></code>
+	<a name="//api/name/verticalAlign" title="verticalAlign"></a>
+	<h3 class="method-title"><code><a href="#//api/name/verticalAlign">&nbsp;&nbsp;verticalAlign</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1272,12 +1315,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>In a legend with horizontal layout, the itemDistance defines the pixel distance between each item.</p>
+				<p>The vertical alignment of the legend box. Can be one of <code>top</code>, <code>middle</code> or <code>bottom</code>. Vertical position can be further determined by the <code>y</code> option. In the case that the legend is aligned in a corner position, the <code>layout</code> option will determine whether to place it above/below or on the side of the plot area. When the <code>layout</code> option is <code>proximate</code>, the <code>verticalAlign</code> option doesn&rsquo;t apply.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *itemDistance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *verticalAlign</code></div>
 
 		    
 			
@@ -1289,12 +1332,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>20</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["top", "middle", "bottom"]</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/">50px item distance</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/verticalalign/">Legend 100px from the top of the chart</a></li>
 </ul>
 
 			</div>
@@ -1418,8 +1461,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/verticalAlign" title="verticalAlign"></a>
-	<h3 class="method-title"><code><a href="#//api/name/verticalAlign">&nbsp;&nbsp;verticalAlign</a></code>
+	<a name="//api/name/itemDistance" title="itemDistance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemDistance">&nbsp;&nbsp;itemDistance</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1429,12 +1472,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The vertical alignment of the legend box. Can be one of <code>top</code>, <code>middle</code> or <code>bottom</code>. Vertical position can be further determined by the <code>y</code> option. In the case that the legend is aligned in a corner position, the <code>layout</code> option will determine whether to place it above/below or on the side of the plot area. When the <code>layout</code> option is <code>proximate</code>, the <code>verticalAlign</code> option doesn&rsquo;t apply.</p>
+				<p>In a legend with horizontal layout, the itemDistance defines the pixel distance between each item.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *verticalAlign</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *itemDistance</code></div>
 
 		    
 			
@@ -1446,12 +1489,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["top", "middle", "bottom"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>20</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/verticalalign/">Legend 100px from the top of the chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/">50px item distance</a></li>
 </ul>
 
 			</div>
@@ -1471,8 +1514,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/margin" title="margin"></a>
-	<h3 class="method-title"><code><a href="#//api/name/margin">&nbsp;&nbsp;margin</a></code>
+	<a name="//api/name/navigation" title="navigation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/navigation">&nbsp;&nbsp;navigation</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1482,12 +1525,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If the plot area sized is calculated automatically and the legend is not floating, the legend margin is the space between the legend and the axis labels or plot area.</p>
+				<p>Options for the paging or navigation appearing when the legend is overflown. Navigation works well on screen, but not in static exported images. One way of working around that is to <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation-enabled-false/">increase the chart height in export</a>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *margin</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINavigation *navigation</code></div>
 
 		    
 			
@@ -1496,19 +1539,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>12</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-default/">12 pixels by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-30/">30 pixels</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -2052,8 +2082,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/navigation" title="navigation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/navigation">&nbsp;&nbsp;navigation</a></code>
+	<a name="//api/name/margin" title="margin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/margin">&nbsp;&nbsp;margin</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2063,12 +2093,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for the paging or navigation appearing when the legend is overflown. Navigation works well on screen, but not in static exported images. One way of working around that is to <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation-enabled-false/">increase the chart height in export</a>.</p>
+				<p>If the plot area sized is calculated automatically and the legend is not floating, the legend margin is the space between the legend and the axis labels or plot area.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINavigation *navigation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *margin</code></div>
 
 		    
 			
@@ -2077,6 +2107,19 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>12</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-default/">12 pixels by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-30/">30 pixels</a></li>
+</ul>
+
+			</div>
 			
 
 			

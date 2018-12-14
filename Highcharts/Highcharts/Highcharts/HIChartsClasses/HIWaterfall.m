@@ -22,6 +22,7 @@
 	copyWaterfall.states = [self.states copyWithZone: zone];
 	copyWaterfall.lineColor = [self.lineColor copyWithZone: zone];
 	copyWaterfall.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyWaterfall.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyWaterfall.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyWaterfall.pointRange = [self.pointRange copyWithZone: zone];
 	copyWaterfall.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -31,11 +32,10 @@
 	copyWaterfall.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyWaterfall.threshold = [self.threshold copyWithZone: zone];
 	copyWaterfall.edgeColor = [self.edgeColor copyWithZone: zone];
-	copyWaterfall.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyWaterfall.tooltip = [self.tooltip copyWithZone: zone];
 	copyWaterfall.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyWaterfall.pointWidth = [self.pointWidth copyWithZone: zone];
-	copyWaterfall.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyWaterfall.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyWaterfall.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyWaterfall.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyWaterfall.crisp = [self.crisp copyWithZone: zone];
@@ -43,20 +43,21 @@
 	copyWaterfall.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyWaterfall.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWaterfall.grouping = [self.grouping copyWithZone: zone];
+	copyWaterfall.point = [self.point copyWithZone: zone];
 	copyWaterfall.selected = [self.selected copyWithZone: zone];
 	copyWaterfall.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyWaterfall.clip = [self.clip copyWithZone: zone];
-	copyWaterfall.point = [self.point copyWithZone: zone];
+	copyWaterfall.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyWaterfall.color = [self.color copyWithZone: zone];
 	copyWaterfall.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyWaterfall.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyWaterfall.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
+	copyWaterfall.className = [self.className copyWithZone: zone];
 	copyWaterfall.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyWaterfall.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyWaterfall.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWaterfall.label = [self.label copyWithZone: zone];
 	copyWaterfall.stacking = [self.stacking copyWithZone: zone];
+	copyWaterfall.animation = [self.animation copyWithZone: zone];
 	copyWaterfall.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWaterfall.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyWaterfall.events = [self.events copyWithZone: zone];
@@ -69,15 +70,14 @@
 	copyWaterfall.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyWaterfall.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyWaterfall.shadow = [self.shadow copyWithZone: zone];
-	copyWaterfall.animation = [self.animation copyWithZone: zone];
 	copyWaterfall.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWaterfall.zones = [self.zones copyWithZone: zone];
 	copyWaterfall.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyWaterfall.visible = [self.visible copyWithZone: zone];
 	copyWaterfall.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWaterfall.boostThreshold = [self.boostThreshold copyWithZone: zone];
-	copyWaterfall.className = [self.className copyWithZone: zone];
+	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
 	copyWaterfall.pointStart = [self.pointStart copyWithZone: zone];
+	copyWaterfall.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyWaterfall.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyWaterfall.data = [self.data copyWithZone: zone];
 	copyWaterfall.id = [self.id copyWithZone: zone];
@@ -100,6 +100,9 @@
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -128,17 +131,14 @@
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
-	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
-	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
 	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -178,6 +178,11 @@
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	_pointPadding = pointPadding;
+	[self updateNSObject:@"pointPadding"];
+}
+
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	_borderRadius = borderRadius;
 	[self updateNSObject:@"borderRadius"];
@@ -213,11 +218,6 @@
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
 }
 
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
-}
-
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
 	_maxPointWidth = maxPointWidth;
 	[self updateNSObject:@"maxPointWidth"];
@@ -228,9 +228,9 @@
 	[self updateNSObject:@"pointWidth"];
 }
 
--(void)setPointPadding:(NSNumber *)pointPadding {
-	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:@"colorByPoint"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {

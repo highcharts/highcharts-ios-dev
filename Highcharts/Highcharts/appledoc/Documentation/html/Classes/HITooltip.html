@@ -84,6 +84,8 @@
 		
 		<option value="//api/name/headerFormat">headerFormat</option>
 		
+		<option value="//api/name/headerShape">headerShape</option>
+		
 		<option value="//api/name/hideDelay">hideDelay</option>
 		
 		<option value="//api/name/nodeFormat">nodeFormat</option>
@@ -291,7 +293,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are <code>point.key</code>, <code>series.name</code>, <code>series.color</code> and other members from the <code>point</code> and <code>series</code> objects. The <code>point.key</code> variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the <code>point.key</code> date format can be set using <code>tooltip.xDateFormat</code>. To access the original point use <code>point.point</code>.</p>
+				<p>The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables are <code>point.key</code>, <code>series.name</code>, <code>series.color</code> and other members from the <code>point</code> and <code>series</code> objects. The <code>point.key</code> variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the <code>point.key</code> date format can be set using <code>tooltip.xDateFormat</code>.</p>
 			</div>
 			
 		    
@@ -433,95 +435,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dateTimeLabelFormats" title="dateTimeLabelFormats"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dateTimeLabelFormats">&nbsp;&nbsp;dateTimeLabelFormats</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>For series on a datetime axes, the date format in the tooltip&rsquo;s header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see <code>dateFormat</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/shape" title="shape"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shape">&nbsp;&nbsp;shape</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The name of a symbol to use for the border around the tooltip. Can be one of: <code>"callout"</code>, <code>"circle"</code> or <code>"square"</code>. Custom callbacks for symbol path generation can also be added to <code>Highcharts.SVGRenderer.prototype.symbols</code> the same way as for <code>series.marker.symbol</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *shape</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["callout", "square"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>callout</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITooltip.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/positioner" title="positioner"></a>
 	<h3 class="method-title"><code><a href="#//api/name/positioner">&nbsp;&nbsp;positioner</a></code>
 </h3>
@@ -533,7 +446,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A callback function to place the tooltip in a default position. The callback receives three parameters: <code>labelWidth</code>, <code>labelHeight</code> and <code>point</code>, where point contains values for <code>plotX</code> and <code>plotY</code> telling where the reference point is in the plot area. Add <code>chart.plotLeft</code> and <code>chart.plotTop</code> to get the full coordinates. The return should be an object containing x and y values, for example <code>{ x: 100, y: 100 }</code>.</p>
+				<p>A callback function to place the tooltip in a default position. The callback receives three parameters: <code>labelWidth</code>, <code>labelHeight</code> and <code>point</code>, where point contains values for <code>plotX</code> and <code>plotY</code> telling where the reference point is in the plot area. Add <code>chart.plotLeft</code> and <code>chart.plotTop</code> to get the full coordinates. Since v7, when <code>tooltip.split</code> option is enabled, positioner is called for each of the boxes separately, including xAxis header. xAxis header is not a point, instead <code>point</code> argument contains info: <code>{ plotX: Number, plotY: Number, isHeader: Boolean }</code>  The return should be an object containing x and y values, for example <code>{ x: 100, y: 100 }</code>.</p>
 			</div>
 			
 		    
@@ -715,6 +628,54 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/">Greater padding, bold text</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/headerShape" title="headerShape"></a>
+	<h3 class="method-title"><code><a href="#//api/name/headerShape">&nbsp;&nbsp;headerShape</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The name of a symbol to use for the border around the tooltip header. Applies only when <code>tooltip.split</code> is enabled. Custom callbacks for symbol path generation can also be added to <code>Highcharts.SVGRenderer.prototype.symbols</code> the same way as for <code>series.marker.symbol</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *headerShape</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["callout", "square"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>callout</code>.</p>
 			</div>
 			
 
@@ -1178,7 +1139,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>&lt;span style="color:{point.color}"&gt;\u25CF&lt;/span&gt; {series.name}: &lt;b&gt;{point.y}&lt;/b&gt;&lt;br/&gt;</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/">A different point format with value suffix</a></li>
@@ -1236,6 +1199,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateTimeLabelFormats" title="dateTimeLabelFormats"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateTimeLabelFormats">&nbsp;&nbsp;dateTimeLabelFormats</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For series on a datetime axes, the date format in the tooltip&rsquo;s header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see <code>dateFormat</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1380,6 +1384,54 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-mouseover/">Disable tooltip and show values on chart instead</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shape" title="shape"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shape">&nbsp;&nbsp;shape</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The name of a symbol to use for the border around the tooltip. Can be one of: <code>"callout"</code>, <code>"circle"</code> or <code>"square"</code>. When <code>tooltip.split</code> option is enabled, shape is applied to all boxes except header, which is controlled by <code>tooltip.headerShape</code>. Custom callbacks for symbol path generation can also be added to <code>Highcharts.SVGRenderer.prototype.symbols</code> the same way as for <code>series.marker.symbol</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *shape</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["callout", "square"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>callout</code>.</p>
 			</div>
 			
 

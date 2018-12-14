@@ -13,9 +13,8 @@
 	copyStyle.color = [self.color copyWithZone: zone];
 	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
-	copyStyle.fontFamily = [self.fontFamily copyWithZone: zone];
-	copyStyle.borderRadius = [self.borderRadius copyWithZone: zone];
-	copyStyle.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyStyle.stroke = [self.stroke copyWithZone: zone];
+	copyStyle.fill = [self.fill copyWithZone: zone];
 	copyStyle.textOverflow = [self.textOverflow copyWithZone: zone];
 	copyStyle.whiteSpace = [self.whiteSpace copyWithZone: zone];
 	return copyStyle;
@@ -33,14 +32,11 @@
 	if (self.fontSize) {
 		params[@"fontSize"] = self.fontSize;
 	}
-	if (self.fontFamily) {
-		params[@"fontFamily"] = self.fontFamily;
+	if (self.stroke) {
+		params[@"stroke"] = self.stroke;
 	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
-	}
-	if (self.lineWidth) {
-		params[@"lineWidth"] = self.lineWidth;
+	if (self.fill) {
+		params[@"fill"] = self.fill;
 	}
 	if (self.textOverflow) {
 		params[@"textOverflow"] = self.textOverflow;
@@ -68,19 +64,14 @@
 	[self updateNSObject:@"fontSize"];
 }
 
--(void)setFontFamily:(NSString *)fontFamily {
-	_fontFamily = fontFamily;
-	[self updateNSObject:@"fontFamily"];
+-(void)setStroke:(NSString *)stroke {
+	_stroke = stroke;
+	[self updateNSObject:@"stroke"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
-}
-
--(void)setLineWidth:(NSNumber *)lineWidth {
-	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+-(void)setFill:(NSString *)fill {
+	_fill = fill;
+	[self updateNSObject:@"fill"];
 }
 
 -(void)setTextOverflow:(NSString *)textOverflow {

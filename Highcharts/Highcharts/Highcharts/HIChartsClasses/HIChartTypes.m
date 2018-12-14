@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HIChartTypes *copyChartTypes = [[HIChartTypes allocWithZone: zone] init];
 	copyChartTypes.scatterMultiple = [self.scatterMultiple copyWithZone: zone];
+	copyChartTypes.boxplotSingle = [self.boxplotSingle copyWithZone: zone];
 	copyChartTypes.defaultMultiple = [self.defaultMultiple copyWithZone: zone];
 	copyChartTypes.mapTypeDescription = [self.mapTypeDescription copyWithZone: zone];
 	copyChartTypes.lineMultiple = [self.lineMultiple copyWithZone: zone];
@@ -18,7 +19,6 @@
 	copyChartTypes.emptyChart = [self.emptyChart copyWithZone: zone];
 	copyChartTypes.pieMultiple = [self.pieMultiple copyWithZone: zone];
 	copyChartTypes.columnSingle = [self.columnSingle copyWithZone: zone];
-	copyChartTypes.pieSingle = [self.pieSingle copyWithZone: zone];
 	copyChartTypes.splineMultiple = [self.splineMultiple copyWithZone: zone];
 	copyChartTypes.unknownMap = [self.unknownMap copyWithZone: zone];
 	copyChartTypes.combinationChart = [self.combinationChart copyWithZone: zone];
@@ -31,7 +31,7 @@
 	copyChartTypes.lineSingle = [self.lineSingle copyWithZone: zone];
 	copyChartTypes.splineSingle = [self.splineSingle copyWithZone: zone];
 	copyChartTypes.bubbleSingle = [self.bubbleSingle copyWithZone: zone];
-	copyChartTypes.boxplotSingle = [self.boxplotSingle copyWithZone: zone];
+	copyChartTypes.pieSingle = [self.pieSingle copyWithZone: zone];
 	return copyChartTypes;
 }
 
@@ -40,6 +40,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.scatterMultiple) {
 		params[@"scatterMultiple"] = self.scatterMultiple;
+	}
+	if (self.boxplotSingle) {
+		params[@"boxplotSingle"] = self.boxplotSingle;
 	}
 	if (self.defaultMultiple) {
 		params[@"defaultMultiple"] = self.defaultMultiple;
@@ -61,9 +64,6 @@
 	}
 	if (self.columnSingle) {
 		params[@"columnSingle"] = self.columnSingle;
-	}
-	if (self.pieSingle) {
-		params[@"pieSingle"] = self.pieSingle;
 	}
 	if (self.splineMultiple) {
 		params[@"splineMultiple"] = self.splineMultiple;
@@ -101,8 +101,8 @@
 	if (self.bubbleSingle) {
 		params[@"bubbleSingle"] = self.bubbleSingle;
 	}
-	if (self.boxplotSingle) {
-		params[@"boxplotSingle"] = self.boxplotSingle;
+	if (self.pieSingle) {
+		params[@"pieSingle"] = self.pieSingle;
 	}
 	return params;
 }
@@ -112,6 +112,11 @@
 -(void)setScatterMultiple:(NSString *)scatterMultiple {
 	_scatterMultiple = scatterMultiple;
 	[self updateNSObject:@"scatterMultiple"];
+}
+
+-(void)setBoxplotSingle:(NSString *)boxplotSingle {
+	_boxplotSingle = boxplotSingle;
+	[self updateNSObject:@"boxplotSingle"];
 }
 
 -(void)setDefaultMultiple:(NSString *)defaultMultiple {
@@ -147,11 +152,6 @@
 -(void)setColumnSingle:(NSString *)columnSingle {
 	_columnSingle = columnSingle;
 	[self updateNSObject:@"columnSingle"];
-}
-
--(void)setPieSingle:(NSString *)pieSingle {
-	_pieSingle = pieSingle;
-	[self updateNSObject:@"pieSingle"];
 }
 
 -(void)setSplineMultiple:(NSString *)splineMultiple {
@@ -214,9 +214,9 @@
 	[self updateNSObject:@"bubbleSingle"];
 }
 
--(void)setBoxplotSingle:(NSString *)boxplotSingle {
-	_boxplotSingle = boxplotSingle;
-	[self updateNSObject:@"boxplotSingle"];
+-(void)setPieSingle:(NSString *)pieSingle {
+	_pieSingle = pieSingle;
+	[self updateNSObject:@"pieSingle"];
 }
 
 @end

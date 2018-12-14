@@ -42,8 +42,8 @@
 	[self updateNSObject:@"margin"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	if(self.style) {
 		[self removeObserver:self forKeyPath:@"style.isUpdated"];
 	}

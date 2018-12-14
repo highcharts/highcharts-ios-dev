@@ -291,6 +291,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/labels" title="labels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>HTML labels that can be positioned anywhere in the chart area.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabels *labels</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/accessibility" title="accessibility"></a>
 	<h3 class="method-title"><code><a href="#//api/name/accessibility">&nbsp;&nbsp;accessibility</a></code>
 </h3>
@@ -748,7 +789,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for the Boost module. The Boost module allows certain series types to be rendered by WebGL instead of the default SVG. This allows hundreds of thousands of data points to be rendered in milliseconds. In addition to the WebGL rendering it saves time by skipping processing and inspection of the data wherever possible. This introduces some limitations to what features are available in Boost mode. See <code>the docs</code> for details. In addition to the global <code>boost</code> option, each series has a <code>boostThreshold</code> that defines when the boost should kick in. Requires the <code>modules/boost.js</code> module.</p>
+				<p>Options for the Boost module. The Boost module allows certain series types to be rendered by WebGL instead of the default SVG. This allows hundreds of thousands of data points to be rendered in milliseconds. In addition to the WebGL rendering it saves time by skipping processing and inspection of the data wherever possible. This introduces some limitations to what features are available in Boost mode. See <a href="https://www.highcharts.com/docs/advanced-chart-features/boost-module">the docs</a> for details. In addition to the global <code>boost</code> option, each series has a <code>boostThreshold</code> that defines when the boost should kick in. Requires the <code>modules/boost.js</code> module.</p>
 			</div>
 			
 		    
@@ -902,47 +943,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/labels" title="labels"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>HTML labels that can be positioned anywhere in the chart area.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabels *labels</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/chart" title="chart"></a>
 	<h3 class="method-title"><code><a href="#//api/name/chart">&nbsp;&nbsp;chart</a></code>
 </h3>
@@ -1036,12 +1036,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The Z axis or depth axis for 3D plots. See <code>the Axis object</code> for programmatic access to the axis.</p>
+				<p>The Z axis or depth axis for 3D plots. See the <code>Axis class</code> for programmatic access to the axis.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIZAxis *zAxis</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIZAxis*&gt; *zAxis</code></div>
 
 		    
 			
@@ -1088,7 +1088,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The X axis or category axis. Normally this is the horizontal axis, though if the chart is inverted this is the vertical axis. In case of multiple axes, the xAxis node is an array of configuration objects. See <code>the Axis object</code> for programmatic access to the axis.</p>
+				<p>The X axis or category axis. Normally this is the horizontal axis, though if the chart is inverted this is the vertical axis. In case of multiple axes, the xAxis node is an array of configuration objects. See the <code>Axis class</code> for programmatic access to the axis.</p>
 			</div>
 			
 		    

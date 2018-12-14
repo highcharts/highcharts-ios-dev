@@ -10,8 +10,8 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIActiveDataLabelStyle *copyActiveDataLabelStyle = [[HIActiveDataLabelStyle allocWithZone: zone] init];
-	copyActiveDataLabelStyle.cursor = [self.cursor copyWithZone: zone];
 	copyActiveDataLabelStyle.color = [self.color copyWithZone: zone];
+	copyActiveDataLabelStyle.cursor = [self.cursor copyWithZone: zone];
 	copyActiveDataLabelStyle.textDecoration = [self.textDecoration copyWithZone: zone];
 	copyActiveDataLabelStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	return copyActiveDataLabelStyle;
@@ -20,11 +20,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
-	}
 	if (self.color) {
 		params[@"color"] = self.color;
+	}
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
 	}
 	if (self.textDecoration) {
 		params[@"textDecoration"] = self.textDecoration;
@@ -37,14 +37,14 @@
 
 # pragma mark - Setters
 
--(void)setCursor:(NSString *)cursor {
-	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
-}
-
 -(void)setColor:(NSString *)color {
 	_color = color;
 	[self updateNSObject:@"color"];
+}
+
+-(void)setCursor:(NSString *)cursor {
+	_cursor = cursor;
+	[self updateNSObject:@"cursor"];
 }
 
 -(void)setTextDecoration:(NSString *)textDecoration {

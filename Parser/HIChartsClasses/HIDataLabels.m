@@ -27,27 +27,30 @@
 	copyDataLabels.yLow = [self.yLow copyWithZone: zone];
 	copyDataLabels.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyDataLabels.shape = [self.shape copyWithZone: zone];
+	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
 	copyDataLabels.borderColor = [self.borderColor copyWithZone: zone];
 	copyDataLabels.filter = [self.filter copyWithZone: zone];
 	copyDataLabels.style = [self.style copyWithZone: zone];
-	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
-	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
 	copyDataLabels.color = [self.color copyWithZone: zone];
 	copyDataLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyDataLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
-	copyDataLabels.format = [self.format copyWithZone: zone];
 	copyDataLabels.shadow = [self.shadow copyWithZone: zone];
+	copyDataLabels.format = [self.format copyWithZone: zone];
+	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
 	copyDataLabels.zIndex = [self.zIndex copyWithZone: zone];
 	copyDataLabels.className = [self.className copyWithZone: zone];
 	copyDataLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDataLabels.rotationMode = [self.rotationMode copyWithZone: zone];
 	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyDataLabels.nodeFormat = [self.nodeFormat copyWithZone: zone];
-	copyDataLabels.distance = [self.distance copyWithZone: zone];
+	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
+	copyDataLabels.alignTo = [self.alignTo copyWithZone: zone];
 	copyDataLabels.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyDataLabels.softConnector = [self.softConnector copyWithZone: zone];
 	copyDataLabels.connectorPadding = [self.connectorPadding copyWithZone: zone];
-	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
+	copyDataLabels.connectorShape = [self.connectorShape copyWithZone: zone];
+	copyDataLabels.crookDistance = [self.crookDistance copyWithZone: zone];
+	copyDataLabels.distance = [self.distance copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -105,6 +108,9 @@
 	if (self.shape) {
 		params[@"shape"] = self.shape;
 	}
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
+	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
@@ -113,12 +119,6 @@
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
-	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
-	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
@@ -129,11 +129,14 @@
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
+	if (self.shadow) {
+		params[@"shadow"] = self.shadow;
+	}
 	if (self.format) {
 		params[@"format"] = self.format;
 	}
-	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+	if (self.rotation) {
+		params[@"rotation"] = self.rotation;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -153,8 +156,11 @@
 	if (self.nodeFormat) {
 		params[@"nodeFormat"] = self.nodeFormat;
 	}
-	if (self.distance) {
-		params[@"distance"] = self.distance;
+	if (self.connectorColor) {
+		params[@"connectorColor"] = [self.connectorColor getData];
+	}
+	if (self.alignTo) {
+		params[@"alignTo"] = self.alignTo;
 	}
 	if (self.connectorWidth) {
 		params[@"connectorWidth"] = self.connectorWidth;
@@ -165,8 +171,14 @@
 	if (self.connectorPadding) {
 		params[@"connectorPadding"] = self.connectorPadding;
 	}
-	if (self.connectorColor) {
-		params[@"connectorColor"] = [self.connectorColor getData];
+	if (self.connectorShape) {
+		params[@"connectorShape"] = self.connectorShape;
+	}
+	if (self.crookDistance) {
+		params[@"crookDistance"] = self.crookDistance;
+	}
+	if (self.distance) {
+		params[@"distance"] = self.distance;
 	}
 	return params;
 }
@@ -232,7 +244,7 @@
 	[self updateNSObject:@"y"];
 }
 
--(void)setYHigh:(id)yHigh {
+-(void)setYHigh:(NSNumber *)yHigh {
 	_yHigh = yHigh;
 	[self updateNSObject:@"yHigh"];
 }
@@ -247,7 +259,7 @@
 	[self updateNSObject:@"xLow"];
 }
 
--(void)setYLow:(id)yLow {
+-(void)setYLow:(NSNumber *)yLow {
 	_yLow = yLow;
 	[self updateNSObject:@"yLow"];
 }
@@ -260,6 +272,11 @@
 -(void)setShape:(NSString *)shape {
 	_shape = shape;
 	[self updateNSObject:@"shape"];
+}
+
+-(void)setUseHTML:(NSNumber *)useHTML {
+	_useHTML = useHTML;
+	[self updateNSObject:@"useHTML"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
@@ -289,16 +306,6 @@
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
--(void)setRotation:(NSNumber *)rotation {
-	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
-}
-
--(void)setUseHTML:(NSNumber *)useHTML {
-	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
-}
-
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
 	if(self.color) {
@@ -322,14 +329,19 @@
 	[self updateNSObject:@"allowOverlap"];
 }
 
+-(void)setShadow:(NSNumber *)shadow {
+	_shadow = shadow;
+	[self updateNSObject:@"shadow"];
+}
+
 -(void)setFormat:(NSString *)format {
 	_format = format;
 	[self updateNSObject:@"format"];
 }
 
--(void)setShadow:(id)shadow {
-	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+-(void)setRotation:(NSNumber *)rotation {
+	_rotation = rotation;
+	[self updateNSObject:@"rotation"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
@@ -366,9 +378,18 @@
 	[self updateNSObject:@"nodeFormat"];
 }
 
--(void)setDistance:(NSNumber *)distance {
-	_distance = distance;
-	[self updateNSObject:@"distance"];
+-(void)setConnectorColor:(HIColor *)connectorColor {
+	HIColor *oldValue = _connectorColor;
+	if(self.connectorColor) {
+		[self removeObserver:self forKeyPath:@"connectorColor.isUpdated"];
+	}
+	_connectorColor = connectorColor;
+	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
+}
+
+-(void)setAlignTo:(NSString *)alignTo {
+	_alignTo = alignTo;
+	[self updateNSObject:@"alignTo"];
 }
 
 -(void)setConnectorWidth:(NSNumber *)connectorWidth {
@@ -386,13 +407,19 @@
 	[self updateNSObject:@"connectorPadding"];
 }
 
--(void)setConnectorColor:(HIColor *)connectorColor {
-	HIColor *oldValue = _connectorColor;
-	if(self.connectorColor) {
-		[self removeObserver:self forKeyPath:@"connectorColor.isUpdated"];
-	}
-	_connectorColor = connectorColor;
-	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
+-(void)setConnectorShape:(NSString *)connectorShape {
+	_connectorShape = connectorShape;
+	[self updateNSObject:@"connectorShape"];
+}
+
+-(void)setCrookDistance:(NSString *)crookDistance {
+	_crookDistance = crookDistance;
+	[self updateNSObject:@"crookDistance"];
+}
+
+-(void)setDistance:(NSNumber *)distance {
+	_distance = distance;
+	[self updateNSObject:@"distance"];
 }
 
 @end

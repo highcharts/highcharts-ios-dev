@@ -26,11 +26,11 @@
 	copyCSSObject.pointerEvents = [self.pointerEvents copyWithZone: zone];
 	copyCSSObject.position = [self.position copyWithZone: zone];
 	copyCSSObject.textAlign = [self.textAlign copyWithZone: zone];
-	copyCSSObject.textOutline = [self.textOutline copyWithZone: zone];
 	copyCSSObject.textDecoration = [self.textDecoration copyWithZone: zone];
+	copyCSSObject.textOutline = [self.textOutline copyWithZone: zone];
 	copyCSSObject.textOverflow = [self.textOverflow copyWithZone: zone];
-	copyCSSObject.transition = [self.transition copyWithZone: zone];
 	copyCSSObject.top = [self.top copyWithZone: zone];
+	copyCSSObject.transition = [self.transition copyWithZone: zone];
 	copyCSSObject.whiteSpace = [self.whiteSpace copyWithZone: zone];
 	copyCSSObject.width = [self.width copyWithZone: zone];
 	return copyCSSObject;
@@ -87,20 +87,20 @@
 	if (self.textAlign) {
 		params[@"textAlign"] = self.textAlign;
 	}
-	if (self.textOutline) {
-		params[@"textOutline"] = self.textOutline;
-	}
 	if (self.textDecoration) {
 		params[@"textDecoration"] = self.textDecoration;
+	}
+	if (self.textOutline) {
+		params[@"textOutline"] = self.textOutline;
 	}
 	if (self.textOverflow) {
 		params[@"textOverflow"] = self.textOverflow;
 	}
-	if (self.transition) {
-		params[@"transition"] = self.transition;
-	}
 	if (self.top) {
 		params[@"top"] = self.top;
+	}
+	if (self.transition) {
+		params[@"transition"] = self.transition;
 	}
 	if (self.whiteSpace) {
 		params[@"whiteSpace"] = self.whiteSpace;
@@ -193,14 +193,14 @@
 	[self updateNSObject:@"textAlign"];
 }
 
--(void)setTextOutline:(NSString *)textOutline {
-	_textOutline = textOutline;
-	[self updateNSObject:@"textOutline"];
-}
-
 -(void)setTextDecoration:(NSString *)textDecoration {
 	_textDecoration = textDecoration;
 	[self updateNSObject:@"textDecoration"];
+}
+
+-(void)setTextOutline:(NSString *)textOutline {
+	_textOutline = textOutline;
+	[self updateNSObject:@"textOutline"];
 }
 
 -(void)setTextOverflow:(NSString *)textOverflow {
@@ -208,14 +208,14 @@
 	[self updateNSObject:@"textOverflow"];
 }
 
--(void)setTransition:(NSString *)transition {
-	_transition = transition;
-	[self updateNSObject:@"transition"];
-}
-
 -(void)setTop:(NSString *)top {
 	_top = top;
 	[self updateNSObject:@"top"];
+}
+
+-(void)setTransition:(NSString *)transition {
+	_transition = transition;
+	[self updateNSObject:@"transition"];
 }
 
 -(void)setWhiteSpace:(NSString *)whiteSpace {
