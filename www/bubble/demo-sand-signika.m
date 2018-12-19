@@ -42,7 +42,7 @@
     plotLines.label = [[HILabel alloc]init];
     plotLines.label.rotation = @0;
     plotLines.label.y = @15;
-    plotLines.label.style = [[HIStyle alloc] init];
+    plotLines.label.style = [[HICSSObject alloc] init];
     plotLines.label.style.fontWeight = @"italic";
     plotLines.label.text = @"Safe fat intake 65g/day";
     plotLines.zIndex = @3;
@@ -64,7 +64,7 @@
     yplotLines.label = [[HILabel alloc]init];
     yplotLines.label.align = @"right";
     yplotLines.label.x = @-10;
-    yplotLines.label.style = [[HIStyle alloc] init];
+    yplotLines.label.style = [[HICSSObject alloc] init];
     yplotLines.label.style.fontWeight = @"italic";
     yplotLines.label.text = @"Safe sugar intake 50g/day";
     yplotLines.zIndex = @3;

@@ -26,7 +26,10 @@
     
     HIItems *item = [[HIItems alloc]init];
     item.html = @"Total fruit consumption";
-    item.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"50px", @"left", @"18px", @"top", @"black", @"color", nil];
+    item.style = [[HICSSObject alloc] init];
+    item.style.color = @"black";
+    item.style.top = @"18px";
+//    item.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"50px", @"left", @"18px", @"top", @"black", @"color", nil];
     
     HILabels *labels = [[HILabels alloc]init];
     labels.items = [NSMutableArray arrayWithObject:item];

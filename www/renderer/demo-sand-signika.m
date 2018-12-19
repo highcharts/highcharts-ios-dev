@@ -23,7 +23,7 @@
     
     HITitle *title = [[HITitle alloc] init];
     title.text = @"Highcharts export server overview";
-    title.style = [[HIStyle alloc] init];
+    title.style = [[HICSSObject alloc] init];
     title.style.color = @"black";
     
     options.chart = chart;

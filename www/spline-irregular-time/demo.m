@@ -28,8 +28,10 @@
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.type = @"datetime";
     xaxis.dateTimeLabelFormats = [[HIDateTimeLabelFormats alloc] init];
-    xaxis.dateTimeLabelFormats.month = @"%e. %b";
-    xaxis.dateTimeLabelFormats.year = @"%b";
+    xaxis.dateTimeLabelFormats.month = [[HIMonth alloc] init];
+    xaxis.dateTimeLabelFormats.month.main = @"%e. %b";
+    xaxis.dateTimeLabelFormats.year = [[HIYear alloc] init];
+    xaxis.dateTimeLabelFormats.year.main = @"%b";
     xaxis.title = [[HITitle alloc]init];
     xaxis.title.text = @"Date";
     

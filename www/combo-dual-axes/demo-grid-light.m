@@ -44,21 +44,21 @@
     HIYAxis *yaxis1 = [[HIYAxis alloc]init];
     yaxis1.labels = [[HILabels alloc]init];
     yaxis1.labels.format = @"{value}°C";
-    yaxis1.labels.style = [[HIStyle alloc] init];
+    yaxis1.labels.style = [[HICSSObject alloc] init];
     yaxis1.labels.style.color = @"#434348";
     yaxis1.title = [[HITitle alloc]init];
     yaxis1.title.text = @"Temperature";
-    yaxis1.title.style = [[HIStyle alloc] init];
+    yaxis1.title.style = [[HICSSObject alloc] init];
     yaxis1.title.style.color = @"#434348";
     
     HIYAxis *yaxis2 = [[HIYAxis alloc]init];
     yaxis2.labels = [[HILabels alloc]init];
     yaxis2.labels.format = @"{value} mm";
-    yaxis2.labels.style = [[HIStyle alloc] init];
+    yaxis2.labels.style = [[HICSSObject alloc] init];
     yaxis2.labels.style.color = @"#7cb5ec";
     yaxis2.title = [[HITitle alloc]init];
     yaxis2.title.text = @"Rainfall";
-    yaxis2.title.style = [[HIStyle alloc] init];
+    yaxis2.title.style = [[HICSSObject alloc] init];
     yaxis2.title.style.color = @"#7cb5ec";
     yaxis2.opposite = [[NSNumber alloc] initWithBool:true];
     

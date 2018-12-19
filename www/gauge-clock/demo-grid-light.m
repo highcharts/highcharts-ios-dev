@@ -37,7 +37,7 @@
     HIPane *pane = [[HIPane alloc] init];
     
     HIBackground *paneBackground = [[HIBackground alloc] init];
-    paneBackground.backgroundColor = [[HIBackgroundColor alloc] init];
+    paneBackground.backgroundColor = [[HIColor alloc] init];
     
     pane.background = [NSMutableArray arrayWithObjects:paneBackground, nil];
     
@@ -62,7 +62,7 @@
     yaxis.tickColor = [[HIColor alloc] initWithHexValue:@"666"];
     yaxis.title = [[HITitle alloc] init];
     yaxis.title.text = @"Powered by<br/>Highcharts";
-    yaxis.title.style = [[HIStyle alloc] init];
+    yaxis.title.style = [[HICSSObject alloc] init];
     yaxis.title.style.color = @"#BBB";
     yaxis.title.style.fontWeight = @"normal";
     yaxis.title.style.fontSize = @"8px";

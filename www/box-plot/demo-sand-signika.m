@@ -44,7 +44,7 @@
     plotlines.label = [[HILabel alloc]init];
     plotlines.label.text = @"Theoretical mean: 932";
     plotlines.label.align = @"center";
-    plotlines.label.style = [[HIStyle alloc] init];
+    plotlines.label.style = [[HICSSObject alloc] init];
     plotlines.label.style.color = @"gray";
     yaxis.plotLines = [NSMutableArray arrayWithObject:plotlines];
     

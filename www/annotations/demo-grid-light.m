@@ -123,7 +123,7 @@
     annotations3.labelOptions.crop = [[NSNumber alloc] initWithBool:true];
     annotations3.labelOptions.style = [[HIStyle alloc] init];
     annotations3.labelOptions.style.fontSize = @"0.8em";
-    annotations3.labelOptions.style.textOutline = @"1px white";
+    // annotations3.labelOptions.style.textOutline = @"1px white";
     
     HILabels *labels10 = [[HILabels alloc] init];
     labels10.point = [[HIPoint alloc] init];

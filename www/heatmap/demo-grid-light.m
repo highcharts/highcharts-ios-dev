@@ -68,7 +68,7 @@
     
     HIHeatmap *heatmap = [[HIHeatmap alloc]init];
     heatmap.name = @"Sales per employee";
-//    heatmap.borderWidth = @1;
+    heatmap.borderWidth = @1;
     heatmap.dataLabels = [[HIDataLabels alloc]init];
     heatmap.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     heatmap.dataLabels.color = [[HIColor alloc]initWithHexValue:@"000000"];

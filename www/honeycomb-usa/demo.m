@@ -70,7 +70,7 @@
     plotOptions.series.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotOptions.series.dataLabels.format = @"{point.hc-a2}";
     plotOptions.series.dataLabels.color = [[HIColor alloc] initWithHexValue:@"000000"];
-    plotOptions.series.dataLabels.style = [[HIStyle alloc] init];
+    plotOptions.series.dataLabels.style = [[HICSSObject alloc] init];
     plotOptions.series.dataLabels.style.textOutline = @"false";
     
     HITilemap *tilemap = [[HITilemap alloc] init];

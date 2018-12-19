@@ -29,7 +29,7 @@
     plotOptions.pie.dataLabels = [[HIDataLabels alloc]init];
     plotOptions.pie.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotOptions.pie.dataLabels.format = @"<b>{point.name}</b>: {point.percentage:.1f} %";
-    plotOptions.pie.dataLabels.style = [[HIStyle alloc] init];
+    plotOptions.pie.dataLabels.style = [[HICSSObject alloc] init];
     plotOptions.pie.dataLabels.style.color = @"black";
     
     HIPie *pie = [[HIPie alloc]init];

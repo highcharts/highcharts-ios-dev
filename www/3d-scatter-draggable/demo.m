@@ -32,9 +32,6 @@
     chart.options3d.frame.back = [[HIBack alloc]init];
     chart.options3d.frame.back.size = @1;
     chart.options3d.frame.back.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.04];
-    chart.options3d.frame.side = [[HISide alloc]init];
-    chart.options3d.frame.side.size = @1;
-    chart.options3d.frame.side.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0.06];
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Draggable box";

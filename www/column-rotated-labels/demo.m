@@ -27,7 +27,7 @@
     xaxis.type = @"category";
     xaxis.labels = [[HILabels alloc]init];
     xaxis.labels.rotation = @-45;
-    xaxis.labels.style = [[HIStyle alloc] init];
+    xaxis.labels.style = [[HICSSObject alloc] init];
     xaxis.labels.style.fontSize = @"13px";
     xaxis.labels.style.fontFamily = @"Verdana, sans-serif";
     
@@ -132,7 +132,7 @@
     column.dataLabels.align = @"right";
     column.dataLabels.format = @"{point.y:.1f}";
     column.dataLabels.y = @10;
-    column.dataLabels.style = [[HIStyle alloc] init];
+    column.dataLabels.style = [[HICSSObject alloc] init];
     column.dataLabels.style.fontSize = @"13px";
     column.dataLabels.style.fontFamily = @"Verdana, sans-serif";
     

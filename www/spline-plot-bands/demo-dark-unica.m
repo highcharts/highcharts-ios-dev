@@ -47,7 +47,7 @@
     band1.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:0.1];
     band1.label = [[HILabel alloc]init];
     band1.label.text = @"Light air";
-    band1.label.style = [[HIStyle alloc] init];
+    band1.label.style = [[HICSSObject alloc] init];
     band1.label.style.color = @"#606060";
     HIPlotBands *band2 = [[HIPlotBands alloc]init];
     band2.from = @1.5;
@@ -55,7 +55,7 @@
     band2.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
     band2.label = [[HILabel alloc]init];
     band2.label.text = @"Light breeze";
-    band2.label.style = [[HIStyle alloc] init];
+    band2.label.style = [[HICSSObject alloc] init];
     band2.label.style.color = @"#606060";
     HIPlotBands *band3 = [[HIPlotBands alloc]init];
     band3.from = @3.3;
@@ -63,7 +63,7 @@
     band3.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:0.1];
     band3.label = [[HILabel alloc]init];
     band3.label.text = @"Gentel breeze";
-    band3.label.style = [[HIStyle alloc] init];
+    band3.label.style = [[HICSSObject alloc] init];
     band3.label.style.color = @"#606060";
     HIPlotBands *band4 = [[HIPlotBands alloc]init];
     band4.from = @5.5;
@@ -71,7 +71,7 @@
     band4.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
     band4.label = [[HILabel alloc]init];
     band4.label.text = @"Moderate breeze";
-    band4.label.style = [[HIStyle alloc] init];
+    band4.label.style = [[HICSSObject alloc] init];
     band4.label.style.color = @"#606060";
     HIPlotBands *band5 = [[HIPlotBands alloc]init];
     band5.from = @8;
@@ -79,7 +79,7 @@
     band5.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:0.1];
     band5.label = [[HILabel alloc]init];
     band5.label.text = @"Fresh breeze";
-    band5.label.style = [[HIStyle alloc] init];
+    band5.label.style = [[HICSSObject alloc] init];
     band5.label.style.color = @"#606060";
     HIPlotBands *band6 = [[HIPlotBands alloc]init];
     band6.from = @11;
@@ -87,7 +87,7 @@
     band6.color = [[HIColor alloc]initWithRGBA:0 green:0 blue:0 alpha:0];
     band6.label = [[HILabel alloc]init];
     band6.label.text = @"Strong breeze";
-    band6.label.style = [[HIStyle alloc] init];
+    band6.label.style = [[HICSSObject alloc] init];
     band6.label.style.color = @"#606060";
     HIPlotBands *band7 = [[HIPlotBands alloc]init];
     band7.from = @14;
@@ -95,7 +95,7 @@
     band7.color = [[HIColor alloc]initWithRGBA:68 green:170 blue:213 alpha:0.1];
     band7.label = [[HILabel alloc]init];
     band7.label.text = @"High wind";
-    band7.label.style = [[HIStyle alloc] init];
+    band7.label.style = [[HICSSObject alloc] init];
     band7.label.style.color = @"#606060";
     yaxis.plotBands = @[band1, band2, band3, band4, band5, band6, band7];
     
@@ -224,7 +224,7 @@
                      ];
     
     HINavigation *navigation = [[HINavigation alloc]init];
-    navigation.menuItemStyle = [[HIMenuItemStyle alloc] init];
+    navigation.menuItemStyle = [[HICSSObject alloc] init];
     navigation.menuItemStyle.fontSize = @"10px";
     
     options.chart = chart;

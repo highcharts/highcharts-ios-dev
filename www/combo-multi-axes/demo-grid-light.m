@@ -44,11 +44,11 @@
     HIYAxis *yaxis1 = [[HIYAxis alloc]init];
     yaxis1.labels = [[HILabels alloc]init];
     yaxis1.labels.format = @"{value}°C";
-    yaxis1.labels.style = [[HIStyle alloc] init];
+    yaxis1.labels.style = [[HICSSObject alloc] init];
     yaxis1.labels.style.color = @"#90ed7d";
     yaxis1.title = [[HITitle alloc]init];
     yaxis1.title.text = @"Temperature";
-    yaxis1.title.style = [[HIStyle alloc] init];
+    yaxis1.title.style = [[HICSSObject alloc] init];
     yaxis1.title.style.color = @"#90ed7d";
     yaxis1.opposite = [[NSNumber alloc] initWithBool:true];
     
@@ -56,21 +56,21 @@
     yaxis2.gridLineWidth = @0;
     yaxis2.labels = [[HILabels alloc]init];
     yaxis2.labels.format = @"{value} mm";
-    yaxis2.labels.style = [[HIStyle alloc] init];
+    yaxis2.labels.style = [[HICSSObject alloc] init];
     yaxis2.labels.style.color = @"#7cb5ec";
     yaxis2.title = [[HITitle alloc]init];
     yaxis2.title.text = @"Rainfall";
-    yaxis2.title.style = [[HIStyle alloc] init];
+    yaxis2.title.style = [[HICSSObject alloc] init];
     yaxis2.title.style.color = @"#7cb5ec";
     HIYAxis *yaxis3 = [[HIYAxis alloc]init];
     yaxis3.gridLineWidth = @0;
     yaxis3.labels = [[HILabels alloc]init];
     yaxis3.labels.format = @"{value} mb";
-    yaxis3.labels.style = [[HIStyle alloc] init];
+    yaxis3.labels.style = [[HICSSObject alloc] init];
     yaxis3.labels.style.color = @"#434348";
     yaxis3.title = [[HITitle alloc]init];
     yaxis3.title.text = @"Sea-Level Pressure";
-    yaxis3.title.style = [[HIStyle alloc] init];
+    yaxis3.title.style = [[HICSSObject alloc] init];
     yaxis3.title.style.color = @"#434348";
     yaxis3.opposite = [[NSNumber alloc] initWithBool:true];
     

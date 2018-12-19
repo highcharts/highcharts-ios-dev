@@ -36,7 +36,7 @@
                         @"Bananas", nil];
     xaxis.labels = [[HILabels alloc] init];
     xaxis.labels.skew3d = [[NSNumber alloc] initWithBool:true];
-    xaxis.labels.style = [[HIStyle alloc] init];
+    xaxis.labels.style = [[HICSSObject alloc] init];
     xaxis.labels.style.fontSize = @"16px";
     
     HIYAxis *yaxis = [[HIYAxis alloc]init];

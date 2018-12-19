@@ -49,7 +49,7 @@
     plotoptions.columnrange = [[HIColumnrange alloc]init];
     plotoptions.columnrange.dataLabels = [[HIDataLabels alloc]init];
     plotoptions.columnrange.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
-    plotoptions.columnrange.dataLabels.formatter = [[HIFunction alloc] initWithFunction:@"function () { return this.y + '°C'; }"];
+    plotoptions.columnrange.dataLabels.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { return this.y + '°C'; }"];
     
     HILegend *legend = [[HILegend alloc]init];
     legend.enabled = [[NSNumber alloc] initWithBool:false];
