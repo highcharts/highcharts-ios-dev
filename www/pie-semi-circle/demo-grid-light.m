@@ -37,7 +37,7 @@
     plotoptions.pie.dataLabels = [[HIDataLabels alloc]init];
     plotoptions.pie.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.pie.dataLabels.distance = @-50;
-    plotoptions.pie.dataLabels.style = [[HIStyle alloc] init];
+    plotoptions.pie.dataLabels.style = [[HICSSObject alloc] init];
     plotoptions.pie.dataLabels.style.color = @"white";
     plotoptions.pie.dataLabels.style.fontWeight = @"bold";
     plotoptions.pie.dataLabels.style.textOutline = @"0px 1px 2px black";

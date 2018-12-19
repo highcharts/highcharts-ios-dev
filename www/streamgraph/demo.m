@@ -127,7 +127,7 @@
     plotoptions.series.label = [[HILabel alloc] init];
     plotoptions.series.label.minFontSize = @5;
     plotoptions.series.label.maxFontSize = @15;
-    plotoptions.series.label.style = [[HIStyle alloc] init];
+    plotoptions.series.label.style = [[HICSSObject alloc] init];
     plotoptions.series.label.style.color = @"rgba(255,255,255,0.75)";
     
     HIExporting *exporting = [[HIExporting alloc] init];

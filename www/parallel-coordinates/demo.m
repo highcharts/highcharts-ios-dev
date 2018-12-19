@@ -28,7 +28,7 @@
     
     HIPlotOptions *plotOptions = [[HIPlotOptions alloc] init];
     plotOptions.series = [[HISeries alloc] init];
-    plotOptions.series.animation = [[HIAnimation alloc] init];
+    plotOptions.series.animation = [[HIAnimationOptionsObject alloc] init];
     plotOptions.series.animation.duration = @0;
     plotOptions.series.marker = [[HIMarker alloc] init];
     plotOptions.series.marker.enabled = [[NSNumber alloc] initWithBool:false];

@@ -32,7 +32,7 @@
     sunburst.cursor = @"pointer";
     
     HIDataLabels *datalabels = [[HIDataLabels alloc] init];
-    datalabels.formatter = [[HIFunction alloc] initWithFunction:@"function () { var shape = this.point.node.shapeArgs; var innerArcFraction = (shape.end - shape.start) / (2 * Math.PI); var perimeter = 2 * Math.PI * shape.innerR; var innerArcPixels = innerArcFraction * perimeter; if (innerArcPixels > 16) { return this.point.name; } }"];
+    datalabels.formatter = [[HIFunction alloc] initWithJSFunction:@"function () { var shape = this.point.node.shapeArgs; var innerArcFraction = (shape.end - shape.start) / (2 * Math.PI); var perimeter = 2 * Math.PI * shape.innerR; var innerArcPixels = innerArcFraction * perimeter; if (innerArcPixels > 16) { return this.point.name; } }"];
     sunburst.dataLabels = datalabels;
     
     HILevels *levels1 = [[HILevels alloc] init];

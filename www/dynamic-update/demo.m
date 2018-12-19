@@ -16,7 +16,6 @@
     
     HIChart *chart = [[HIChart alloc]init];
     chart.type = @"spline";
-    chart.animation = @"Highcharts.svg"; // don't animate in old IE
     chart.marginRight = @10;
     
     HIEvents *events = [[HIEvents alloc] init];

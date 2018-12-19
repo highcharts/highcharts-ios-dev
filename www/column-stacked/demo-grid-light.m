@@ -35,7 +35,7 @@
     yaxis.title.text = @"Total fruit consumption";
     yaxis.stackLabels = [[HIStackLabels alloc]init];
     yaxis.stackLabels.enabled = [[NSNumber alloc] initWithBool:true];
-    yaxis.stackLabels.style = [[HIStyle alloc] init];
+    yaxis.stackLabels.style = [[HICSSObject alloc] init];
     yaxis.stackLabels.style.fontWeight = @"bold";
     yaxis.stackLabels.style.color = @"gray";
     
@@ -60,7 +60,7 @@
     plotoptions.column.dataLabels = [[HIDataLabels alloc]init];
     plotoptions.column.dataLabels.enabled = [[NSNumber alloc] initWithBool:true];
     plotoptions.column.dataLabels.color = [[HIColor alloc]initWithName:@"white"];
-    plotoptions.column.dataLabels.style = [[HIStyle alloc] init];
+    plotoptions.column.dataLabels.style = [[HICSSObject alloc] init];
     plotoptions.column.dataLabels.style.textOutline = @"0 0 3px black";
     
     HIColumn *column1 = [[HIColumn alloc]init];

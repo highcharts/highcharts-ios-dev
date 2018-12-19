@@ -33,8 +33,8 @@
     
     HIXrange *xrange = [[HIXrange alloc] init];
     xrange.name = @"Project 1";
-    //xrange.pointPadding = @0;
-    //xrange.groupZPadding = @0;
+    xrange.pointPadding = @0;
+    xrange.groupZPadding = @0;
     xrange.borderColor = [[HIColor alloc] initWithName:@"gray"];
     xrange.pointWidth = @20;
     xrange.data = @[

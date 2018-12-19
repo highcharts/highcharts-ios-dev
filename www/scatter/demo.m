@@ -55,8 +55,6 @@
     plotOptions.scatter.marker.states.hover.lineColor = [[HIColor alloc]initWithRGB:100 green:100 blue:100];
     HIStates *state = [[HIStates alloc]init];
     state.hover = [[HIHover alloc]init];
-    state.hover.marker = [[HIMarker alloc]init];
-    state.hover.marker.enabled = [[NSNumber alloc] initWithBool:false];
     plotOptions.scatter.states = [[HIStates alloc] init];
     plotOptions.scatter.states = state;
     plotOptions.scatter.tooltip = [[HITooltip alloc]init];

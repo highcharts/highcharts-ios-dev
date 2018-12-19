@@ -24,12 +24,9 @@
     title.text = @"Average fruit consumption during one week";
     
     HISubtitle *subtitle = [[HISubtitle alloc]init];
-    subtitle.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"absolute", @"position", @"0px", @"right", @"10px", @"bottom", nil];
-    subtitle.style = @{
-                        @"position": @"absolute",
-                        @"right": @"0px",
-                        @"bottom": @"10px"
-                    };
+    subtitle.style = [[HICSSObject alloc] init];
+    subtitle.style.position = @"absolute";
+//    subtitle.style = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"absolute", @"position", @"0px", @"right", @"10px", @"bottom", nil];
     
     HIXAxis *xaxis = [[HIXAxis alloc]init];
     xaxis.categories = [NSMutableArray arrayWithObjects:@"Monday",
