@@ -39,7 +39,6 @@
 	copySpline.marker = [self.marker copyWithZone: zone];
 	copySpline.tooltip = [self.tooltip copyWithZone: zone];
 	copySpline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySpline.borderColor = [self.borderColor copyWithZone: zone];
 	copySpline.className = [self.className copyWithZone: zone];
 	copySpline.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySpline.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -71,7 +70,6 @@
 	copySpline.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySpline.cursor = [self.cursor copyWithZone: zone];
 	copySpline.pointStart = [self.pointStart copyWithZone: zone];
-	copySpline.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySpline.linecap = [self.linecap copyWithZone: zone];
 	copySpline.connectEnds = [self.connectEnds copyWithZone: zone];
 	copySpline.boostThreshold = [self.boostThreshold copyWithZone: zone];

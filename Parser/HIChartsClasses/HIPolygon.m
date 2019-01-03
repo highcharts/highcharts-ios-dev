@@ -33,7 +33,6 @@
 	copyPolygon.states = [self.states copyWithZone: zone];
 	copyPolygon.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPolygon.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyPolygon.borderColor = [self.borderColor copyWithZone: zone];
 	copyPolygon.className = [self.className copyWithZone: zone];
 	copyPolygon.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPolygon.connectNulls = [self.connectNulls copyWithZone: zone];
@@ -60,7 +59,6 @@
 	copyPolygon.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPolygon.cursor = [self.cursor copyWithZone: zone];
 	copyPolygon.pointStart = [self.pointStart copyWithZone: zone];
-	copyPolygon.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyPolygon.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyPolygon.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyPolygon.showInLegend = [self.showInLegend copyWithZone: zone];

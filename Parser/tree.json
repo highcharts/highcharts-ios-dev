@@ -51328,6 +51328,7 @@
                     "brightness"
                   ],
                   "products": [
+                    "highcharts",
                     "highmaps"
                   ],
                   "since": "1.0.0"

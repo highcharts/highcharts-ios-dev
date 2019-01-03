@@ -31,7 +31,6 @@
 	copySolidgauge.pointInterval = [self.pointInterval copyWithZone: zone];
 	copySolidgauge.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySolidgauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySolidgauge.borderColor = [self.borderColor copyWithZone: zone];
 	copySolidgauge.className = [self.className copyWithZone: zone];
 	copySolidgauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySolidgauge.label = [self.label copyWithZone: zone];
@@ -50,7 +49,6 @@
 	copySolidgauge.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySolidgauge.cursor = [self.cursor copyWithZone: zone];
 	copySolidgauge.pointStart = [self.pointStart copyWithZone: zone];
-	copySolidgauge.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySolidgauge.data = [self.data copyWithZone: zone];
 	copySolidgauge.id = [self.id copyWithZone: zone];
 	copySolidgauge.index = [self.index copyWithZone: zone];

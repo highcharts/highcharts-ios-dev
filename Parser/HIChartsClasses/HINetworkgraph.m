@@ -37,7 +37,6 @@
 	copyNetworkgraph.states = [self.states copyWithZone: zone];
 	copyNetworkgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyNetworkgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyNetworkgraph.borderColor = [self.borderColor copyWithZone: zone];
 	copyNetworkgraph.className = [self.className copyWithZone: zone];
 	copyNetworkgraph.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyNetworkgraph.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
@@ -57,7 +56,6 @@
 	copyNetworkgraph.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyNetworkgraph.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyNetworkgraph.cursor = [self.cursor copyWithZone: zone];
-	copyNetworkgraph.borderWidth = [self.borderWidth copyWithZone: zone];
 	return copyNetworkgraph;
 }
 

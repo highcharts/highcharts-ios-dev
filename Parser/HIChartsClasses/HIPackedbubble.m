@@ -25,8 +25,11 @@
 	copyPackedbubble.xAxis = [self.xAxis copyWithZone: zone];
 	copyPackedbubble.yAxis = [self.yAxis copyWithZone: zone];
 	copyPackedbubble.zIndex = [self.zIndex copyWithZone: zone];
+	copyPackedbubble.minSize = [self.minSize copyWithZone: zone];
 	copyPackedbubble.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyPackedbubble.maxSize = [self.maxSize copyWithZone: zone];
 	copyPackedbubble.tooltip = [self.tooltip copyWithZone: zone];
+	copyPackedbubble.sizeBy = [self.sizeBy copyWithZone: zone];
 	copyPackedbubble.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPackedbubble.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyPackedbubble.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -48,7 +51,6 @@
 	copyPackedbubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPackedbubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPackedbubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyPackedbubble.borderColor = [self.borderColor copyWithZone: zone];
 	copyPackedbubble.className = [self.className copyWithZone: zone];
 	copyPackedbubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPackedbubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
@@ -69,7 +71,6 @@
 	copyPackedbubble.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPackedbubble.cursor = [self.cursor copyWithZone: zone];
 	copyPackedbubble.pointStart = [self.pointStart copyWithZone: zone];
-	copyPackedbubble.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyPackedbubble.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyPackedbubble.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyPackedbubble;
@@ -78,6 +79,15 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.minSize) {
+		params[@"minSize"] = self.minSize;
+	}
+	if (self.maxSize) {
+		params[@"maxSize"] = self.maxSize;
+	}
+	if (self.sizeBy) {
+		params[@"sizeBy"] = self.sizeBy;
+	}
 	if (self.displayNegative) {
 		params[@"displayNegative"] = self.displayNegative;
 	}
@@ -88,6 +98,21 @@
 }
 
 # pragma mark - Setters
+
+-(void)setMinSize:(id)minSize {
+	_minSize = minSize;
+	[self updateNSObject:@"minSize"];
+}
+
+-(void)setMaxSize:(id)maxSize {
+	_maxSize = maxSize;
+	[self updateNSObject:@"maxSize"];
+}
+
+-(void)setSizeBy:(NSString *)sizeBy {
+	_sizeBy = sizeBy;
+	[self updateNSObject:@"sizeBy"];
+}
 
 -(void)setDisplayNegative:(NSNumber *)displayNegative {
 	_displayNegative = displayNegative;

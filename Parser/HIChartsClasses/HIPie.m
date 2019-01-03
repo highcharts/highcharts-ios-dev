@@ -16,6 +16,7 @@
 	[super copyWithZone:zone];
 	HIPie *copyPie = [[HIPie allocWithZone: zone] init];
 	copyPie.data = [self.data copyWithZone: zone];
+	copyPie.events = [self.events copyWithZone: zone];
 	copyPie.id = [self.id copyWithZone: zone];
 	copyPie.index = [self.index copyWithZone: zone];
 	copyPie.legendIndex = [self.legendIndex copyWithZone: zone];
@@ -41,7 +42,6 @@
 	copyPie.legendType = [self.legendType copyWithZone: zone];
 	copyPie.size = [self.size copyWithZone: zone];
 	copyPie.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyPie.events = [self.events copyWithZone: zone];
 	copyPie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyPie.linecap = [self.linecap copyWithZone: zone];
 	copyPie.selected = [self.selected copyWithZone: zone];
@@ -69,6 +69,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
 	}
@@ -108,6 +111,9 @@
 		}
 		params[@"colors"] = array;
 	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
 	}
@@ -124,6 +130,15 @@
 }
 
 # pragma mark - Setters
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
 
 -(void)setMinSize:(NSNumber *)minSize {
 	_minSize = minSize;
@@ -160,6 +175,11 @@
 	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {

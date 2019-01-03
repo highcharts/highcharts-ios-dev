@@ -121,6 +121,9 @@
 		}
 		params[@"colors"] = array;
 	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
@@ -144,6 +147,9 @@
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
@@ -193,6 +199,15 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
 -(void)setEdgeColor:(HIColor *)edgeColor {
 	HIColor *oldValue = _edgeColor;
 	if(self.edgeColor) {
@@ -235,6 +250,11 @@
 -(void)setDepth:(NSNumber *)depth {
 	_depth = depth;
 	[self updateNSObject:@"depth"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {
