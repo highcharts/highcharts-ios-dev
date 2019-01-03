@@ -58,16 +58,6 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/color">color</option>
-		
-		<option value="//api/name/fill">fill</option>
-		
-		<option value="//api/name/fontSize">fontSize</option>
-		
-		<option value="//api/name/fontWeight">fontWeight</option>
-		
-		<option value="//api/name/stroke">stroke</option>
-		
 		<option value="//api/name/textOverflow">textOverflow</option>
 		
 		<option value="//api/name/whiteSpace">whiteSpace</option>
@@ -116,12 +106,14 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Styles for the annotation&rsquo;s label.</p>
+						<p>Styles for the label. The default <code>color</code> setting is <code>"contrast"</code>, which is a pseudo color that Highcharts picks up and applies the maximum contrast to the underlying point item, for example the bar in a bar chart. The <code>textOutline</code> is a pseudo property that applies an outline of the given width with the given color, which by default is the maximum contrast to the text. So a bright text color will result in a black text outline for maximum readability on a mixed background. In some cases, especially with grayscale text, the text outline doesn&rsquo;t work well, in which cases it can be disabled by setting it to <code>"none"</code>. When <code>useHTML</code> is true, the <code>textOutline</code> will not be picked up. In this, case, the same effect can be acheived through the <code>text-shadow</code> CSS property. For some series types, where each point has an extent, like for example tree maps, the data label may overflow the point. There are two strategies for handling overflow. By default, the text will wrap to multiple lines. The other strategy is to set <code>style.textOverflow</code> to <code>ellipsis</code>, which will keep the text on one line plus it will break inside long words.</p>
+
+<p><strong>Defaults to</strong> <code>{"color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "1px contrast" }</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/">Set labels graphic options</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/">Bold labels</a></li>
 </ul>
 
 					</div>
@@ -139,86 +131,6 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *color</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fontWeight" title="fontWeight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fontWeight">&nbsp;&nbsp;fontWeight</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *fontWeight</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fontSize" title="fontSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fontSize">&nbsp;&nbsp;fontSize</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *fontSize</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/stroke" title="stroke"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stroke">&nbsp;&nbsp;stroke</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *stroke</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fill" title="fill"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fill">&nbsp;&nbsp;fill</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *fill</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/textOverflow" title="textOverflow"></a>
 	<h3 class="method-title"><code><a href="#//api/name/textOverflow">&nbsp;&nbsp;textOverflow</a></code>
 </h3>
@@ -283,7 +195,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2018 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
