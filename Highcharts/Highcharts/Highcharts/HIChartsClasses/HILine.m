@@ -30,7 +30,6 @@
 	copyLine.marker = [self.marker copyWithZone: zone];
 	copyLine.tooltip = [self.tooltip copyWithZone: zone];
 	copyLine.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyLine.borderColor = [self.borderColor copyWithZone: zone];
 	copyLine.className = [self.className copyWithZone: zone];
 	copyLine.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyLine.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -63,7 +62,6 @@
 	copyLine.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyLine.cursor = [self.cursor copyWithZone: zone];
 	copyLine.pointStart = [self.pointStart copyWithZone: zone];
-	copyLine.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyLine.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyLine.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyLine.showInLegend = [self.showInLegend copyWithZone: zone];

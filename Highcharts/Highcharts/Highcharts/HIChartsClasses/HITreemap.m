@@ -24,7 +24,6 @@
 	copyTreemap.xAxis = [self.xAxis copyWithZone: zone];
 	copyTreemap.yAxis = [self.yAxis copyWithZone: zone];
 	copyTreemap.zIndex = [self.zIndex copyWithZone: zone];
-	copyTreemap.borderColor = [self.borderColor copyWithZone: zone];
 	copyTreemap.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyTreemap.opacity = [self.opacity copyWithZone: zone];
 	copyTreemap.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
@@ -40,7 +39,6 @@
 	copyTreemap.colors = [self.colors copyWithZone: zone];
 	copyTreemap.levels = [self.levels copyWithZone: zone];
 	copyTreemap.drillUpButton = [self.drillUpButton copyWithZone: zone];
-	copyTreemap.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyTreemap.interactByLeaf = [self.interactByLeaf copyWithZone: zone];
 	copyTreemap.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
 	copyTreemap.alternateStartingDirection = [self.alternateStartingDirection copyWithZone: zone];

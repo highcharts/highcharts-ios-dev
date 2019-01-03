@@ -38,7 +38,6 @@
 	copySeries.marker = [self.marker copyWithZone: zone];
 	copySeries.tooltip = [self.tooltip copyWithZone: zone];
 	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySeries.borderColor = [self.borderColor copyWithZone: zone];
 	copySeries.className = [self.className copyWithZone: zone];
 	copySeries.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySeries.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -70,7 +69,6 @@
 	copySeries.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySeries.cursor = [self.cursor copyWithZone: zone];
 	copySeries.pointStart = [self.pointStart copyWithZone: zone];
-	copySeries.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySeries.linecap = [self.linecap copyWithZone: zone];
 	copySeries.connectEnds = [self.connectEnds copyWithZone: zone];
 	copySeries.boostThreshold = [self.boostThreshold copyWithZone: zone];
@@ -173,9 +171,6 @@
 	}
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -287,9 +282,6 @@
 	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
-	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.linecap) {
 		params[@"linecap"] = self.linecap;
@@ -485,15 +477,6 @@
 	[self updateHIObject:oldValue newValue:pointDescriptionFormatter propertyName:@"pointDescriptionFormatter"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
 -(void)setClassName:(NSString *)className {
 	_className = className;
 	[self updateNSObject:@"className"];
@@ -665,11 +648,6 @@
 -(void)setPointStart:(NSNumber *)pointStart {
 	_pointStart = pointStart;
 	[self updateNSObject:@"pointStart"];
-}
-
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setLinecap:(NSString *)linecap {
