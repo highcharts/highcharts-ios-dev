@@ -32,7 +32,6 @@
 	copyVector.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVector.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVector.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyVector.borderColor = [self.borderColor copyWithZone: zone];
 	copyVector.className = [self.className copyWithZone: zone];
 	copyVector.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVector.label = [self.label copyWithZone: zone];
@@ -56,7 +55,6 @@
 	copyVector.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVector.cursor = [self.cursor copyWithZone: zone];
 	copyVector.pointStart = [self.pointStart copyWithZone: zone];
-	copyVector.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyVector.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVector.data = [self.data copyWithZone: zone];
 	copyVector.id = [self.id copyWithZone: zone];

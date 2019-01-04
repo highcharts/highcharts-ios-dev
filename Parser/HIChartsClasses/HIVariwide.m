@@ -112,6 +112,9 @@
 		}
 		params[@"colors"] = array;
 	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
@@ -120,6 +123,9 @@
 	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
@@ -160,6 +166,15 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
 	_maxPointWidth = maxPointWidth;
 	[self updateNSObject:@"maxPointWidth"];
@@ -173,6 +188,11 @@
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
 	_colorByPoint = colorByPoint;
 	[self updateNSObject:@"colorByPoint"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {

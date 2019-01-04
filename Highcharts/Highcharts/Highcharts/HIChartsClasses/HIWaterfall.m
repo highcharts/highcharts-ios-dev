@@ -95,6 +95,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	if (self.upColor) {
 		params[@"upColor"] = [self.upColor getData];
 	}
@@ -152,6 +155,9 @@
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
 	}
@@ -159,6 +165,15 @@
 }
 
 # pragma mark - Setters
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
 
 -(void)setUpColor:(HIColor *)upColor {
 	HIColor *oldValue = _upColor;
@@ -251,6 +266,11 @@
 -(void)setDepth:(NSNumber *)depth {
 	_depth = depth;
 	[self updateNSObject:@"depth"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {

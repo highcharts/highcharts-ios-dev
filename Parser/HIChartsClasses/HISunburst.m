@@ -111,6 +111,9 @@
 	if (self.allowDrillToNode) {
 		params[@"allowDrillToNode"] = self.allowDrillToNode;
 	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.colors) {
@@ -122,6 +125,9 @@
 			}
 		}
 		params[@"colors"] = array;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
@@ -180,10 +186,24 @@
 	[self updateNSObject:@"allowDrillToNode"];
 }
 
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	if(self.borderColor) {
+		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
+	}
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
 -(void)setColors:(NSArray<NSString *> *)colors {
 	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	_borderWidth = borderWidth;
+	[self updateNSObject:@"borderWidth"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {

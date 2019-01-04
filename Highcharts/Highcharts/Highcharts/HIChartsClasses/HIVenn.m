@@ -22,7 +22,6 @@
 	copyVenn.name = [self.name copyWithZone: zone];
 	copyVenn.type = [self.type copyWithZone: zone];
 	copyVenn.zIndex = [self.zIndex copyWithZone: zone];
-	copyVenn.borderColor = [self.borderColor copyWithZone: zone];
 	copyVenn.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyVenn.opacity = [self.opacity copyWithZone: zone];
 	copyVenn.borderDashStyle = [self.borderDashStyle copyWithZone: zone];
@@ -31,7 +30,6 @@
 	copyVenn.tooltip = [self.tooltip copyWithZone: zone];
 	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVenn.states = [self.states copyWithZone: zone];
-	copyVenn.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyVenn.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVenn.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVenn.point = [self.point copyWithZone: zone];

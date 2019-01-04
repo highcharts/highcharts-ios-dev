@@ -119,8 +119,8 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	if(self.style) {
 		[self removeObserver:self forKeyPath:@"style.isUpdated"];
 	}
@@ -221,7 +221,7 @@
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
--(void)setShadow:(id)shadow {
+-(void)setShadow:(NSNumber *)shadow {
 	_shadow = shadow;
 	[self updateNSObject:@"shadow"];
 }

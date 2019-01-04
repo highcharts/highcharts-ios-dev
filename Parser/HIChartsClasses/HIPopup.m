@@ -19,6 +19,7 @@
 	copyPopup.verticalCounter = [self.verticalCounter copyWithZone: zone];
 	copyPopup.stroke = [self.stroke copyWithZone: zone];
 	copyPopup.fibonacci = [self.fibonacci copyWithZone: zone];
+	copyPopup.measure = [self.measure copyWithZone: zone];
 	copyPopup.removeButton = [self.removeButton copyWithZone: zone];
 	copyPopup.verticalArrow = [self.verticalArrow copyWithZone: zone];
 	copyPopup.fill = [self.fill copyWithZone: zone];
@@ -104,6 +105,9 @@
 	}
 	if (self.fibonacci) {
 		params[@"fibonacci"] = self.fibonacci;
+	}
+	if (self.measure) {
+		params[@"measure"] = self.measure;
 	}
 	if (self.removeButton) {
 		params[@"removeButton"] = self.removeButton;
@@ -312,6 +316,11 @@
 -(void)setFibonacci:(NSString *)fibonacci {
 	_fibonacci = fibonacci;
 	[self updateNSObject:@"fibonacci"];
+}
+
+-(void)setMeasure:(NSString *)measure {
+	_measure = measure;
+	[self updateNSObject:@"measure"];
 }
 
 -(void)setRemoveButton:(NSString *)removeButton {

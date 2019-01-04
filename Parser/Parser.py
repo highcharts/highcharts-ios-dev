@@ -280,6 +280,10 @@ hc_types = {
         "*|undefined": 'id',
         "Highcharts.Dictionary.<number>": 'NSDictionary',
         "Object|*": 'id',
+        #7.0.1
+        "Highcharts.FormatterCallbackFunction.<Highcharts.AxisLabelsFormatterContextObject>": 'HIFunction',
+        "Highcharts.FormatterCallbackFunction.<Highcharts.Point>": 'HIFunction',
+        "string|Highcharts.HTMLDOMElement": 'NSString'
     }
 
 def get_type(x):

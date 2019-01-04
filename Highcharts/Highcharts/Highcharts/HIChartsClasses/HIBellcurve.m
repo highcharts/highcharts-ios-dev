@@ -47,7 +47,6 @@
 	copyBellcurve.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBellcurve.tooltip = [self.tooltip copyWithZone: zone];
 	copyBellcurve.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyBellcurve.borderColor = [self.borderColor copyWithZone: zone];
 	copyBellcurve.className = [self.className copyWithZone: zone];
 	copyBellcurve.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBellcurve.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -75,7 +74,6 @@
 	copyBellcurve.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBellcurve.cursor = [self.cursor copyWithZone: zone];
 	copyBellcurve.pointStart = [self.pointStart copyWithZone: zone];
-	copyBellcurve.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBellcurve.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyBellcurve.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyBellcurve;

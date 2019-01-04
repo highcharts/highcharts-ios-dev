@@ -48,7 +48,6 @@
 	copyStreamgraph.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyStreamgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyStreamgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyStreamgraph.borderColor = [self.borderColor copyWithZone: zone];
 	copyStreamgraph.className = [self.className copyWithZone: zone];
 	copyStreamgraph.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyStreamgraph.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -77,7 +76,6 @@
 	copyStreamgraph.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyStreamgraph.cursor = [self.cursor copyWithZone: zone];
 	copyStreamgraph.pointStart = [self.pointStart copyWithZone: zone];
-	copyStreamgraph.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyStreamgraph.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyStreamgraph.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyStreamgraph.showInLegend = [self.showInLegend copyWithZone: zone];

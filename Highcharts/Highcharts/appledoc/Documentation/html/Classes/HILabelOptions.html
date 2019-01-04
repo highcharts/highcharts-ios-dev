@@ -278,7 +278,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *style</code></div>
 
 		    
 			
@@ -324,7 +324,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When either the borderWidth or the backgroundColor is set, this is the padding within the box.</p>
+				<p>When either the borderWidth or the backgroundColor is set, this  is the padding within the box.</p>
 			</div>
 			
 		    
@@ -445,9 +445,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-position/">Set labels position</a></li>
@@ -549,9 +547,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/">Set labels text</a></li>
@@ -655,9 +651,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-text/">Set labels text</a></li>
@@ -742,7 +736,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the annotation&rsquo;s label.</p>
+				<p>Whether to <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the annotation&rsquo;s label.</p>
 			</div>
 			
 		    
@@ -756,11 +750,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-			</div>
 			
 
 			
@@ -1111,13 +1100,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["none", "justify"]</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["allow", "justify"]</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li>~!@<a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/">Crop or justify labels
-*</a>@!~</li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-crop-overflow/">Crop or justify labels</a></li>
 </ul>
 
 			</div>
@@ -1148,7 +1136,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback JavaScript function to format the annotation&rsquo;s label. Note that if a <code>format</code> or <code>text</code> are defined, the format or text take precedence and the formatter is ignored. <code>This</code> refers to a * point object.</p>
+				<p>Callback JavaScript function to format the annotation&rsquo;s label. Note that if a <code>format</code> or <code>text</code> are defined, the format or text take precedence and the formatter is ignored. <code>This</code> refers to a point object.</p>
 			</div>
 			
 		    
@@ -1165,9 +1153,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>function () {
-return defined(this.y) ? this.y : 'Annotation label';
-}</code>.</p>
+				<p><strong>Defaults to</strong> <code>function () { return defined(this.y) ? this.y : 'Annotation label'; }</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1208,7 +1194,7 @@ return defined(this.y) ? this.y : 'Annotation label';
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id shadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
 
 		    
 			
@@ -1275,7 +1261,7 @@ return defined(this.y) ? this.y : 'Annotation label';
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2018 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

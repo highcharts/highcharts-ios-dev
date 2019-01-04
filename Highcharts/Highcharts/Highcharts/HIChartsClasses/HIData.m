@@ -57,6 +57,7 @@
 	copyData.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyData.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyData.marker = [self.marker copyWithZone: zone];
+	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.direction = [self.direction copyWithZone: zone];
 	copyData.length = [self.length copyWithZone: zone];
 	copyData.target = [self.target copyWithZone: zone];
@@ -71,7 +72,6 @@
 	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.to = [self.to copyWithZone: zone];
 	copyData.from = [self.from copyWithZone: zone];
-	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyData.radius = [self.radius copyWithZone: zone];
 	copyData.outgoing = [self.outgoing copyWithZone: zone];
@@ -255,6 +255,9 @@
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
 	}
+	if (self.weight) {
+		params[@"weight"] = self.weight;
+	}
 	if (self.direction) {
 		params[@"direction"] = self.direction;
 	}
@@ -296,9 +299,6 @@
 	}
 	if (self.from) {
 		params[@"from"] = self.from;
-	}
-	if (self.weight) {
-		params[@"weight"] = self.weight;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -611,6 +611,11 @@
 	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
 }
 
+-(void)setWeight:(NSNumber *)weight {
+	_weight = weight;
+	[self updateNSObject:@"weight"];
+}
+
 -(void)setDirection:(NSNumber *)direction {
 	_direction = direction;
 	[self updateNSObject:@"direction"];
@@ -687,11 +692,6 @@
 -(void)setFrom:(NSString *)from {
 	_from = from;
 	[self updateNSObject:@"from"];
-}
-
--(void)setWeight:(NSNumber *)weight {
-	_weight = weight;
-	[self updateNSObject:@"weight"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {

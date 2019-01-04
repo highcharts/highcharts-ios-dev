@@ -10,7 +10,6 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIEvents *copyEvents = [[HIEvents allocWithZone: zone] init];
-	copyEvents.legendItemClick = [self.legendItemClick copyWithZone: zone];
 	copyEvents.checkboxClick = [self.checkboxClick copyWithZone: zone];
 	copyEvents.pointInBreak = [self.pointInBreak copyWithZone: zone];
 	copyEvents.afterBreaks = [self.afterBreaks copyWithZone: zone];
@@ -41,6 +40,7 @@
 	copyEvents.showPopup = [self.showPopup copyWithZone: zone];
 	copyEvents.hidePopup = [self.hidePopup copyWithZone: zone];
 	copyEvents.deselectButton = [self.deselectButton copyWithZone: zone];
+	copyEvents.legendItemClick = [self.legendItemClick copyWithZone: zone];
 	copyEvents.hide = [self.hide copyWithZone: zone];
 	copyEvents.show = [self.show copyWithZone: zone];
 	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
@@ -50,9 +50,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.legendItemClick) {
-		params[@"legendItemClick"] = [self.legendItemClick getFunction];
-	}
 	if (self.checkboxClick) {
 		params[@"checkboxClick"] = [self.checkboxClick getFunction];
 	}
@@ -143,6 +140,9 @@
 	if (self.deselectButton) {
 		params[@"deselectButton"] = [self.deselectButton getFunction];
 	}
+	if (self.legendItemClick) {
+		params[@"legendItemClick"] = [self.legendItemClick getFunction];
+	}
 	if (self.hide) {
 		params[@"hide"] = [self.hide getFunction];
 	}
@@ -156,15 +156,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setLegendItemClick:(HIFunction *)legendItemClick {
-	HIFunction *oldValue = _legendItemClick;
-	if(self.legendItemClick) {
-		[self removeObserver:self forKeyPath:@"legendItemClick.isUpdated"];
-	}
-	_legendItemClick = legendItemClick;
-	[self updateHIObject:oldValue newValue:legendItemClick propertyName:@"legendItemClick"];
-}
 
 -(void)setCheckboxClick:(HIFunction *)checkboxClick {
 	HIFunction *oldValue = _checkboxClick;
@@ -434,6 +425,15 @@
 	}
 	_deselectButton = deselectButton;
 	[self updateHIObject:oldValue newValue:deselectButton propertyName:@"deselectButton"];
+}
+
+-(void)setLegendItemClick:(HIFunction *)legendItemClick {
+	HIFunction *oldValue = _legendItemClick;
+	if(self.legendItemClick) {
+		[self removeObserver:self forKeyPath:@"legendItemClick.isUpdated"];
+	}
+	_legendItemClick = legendItemClick;
+	[self updateHIObject:oldValue newValue:legendItemClick propertyName:@"legendItemClick"];
 }
 
 -(void)setHide:(HIFunction *)hide {

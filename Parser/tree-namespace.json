@@ -6,8 +6,8 @@
 	},
 	"meta": {
 		"branch": "master",
-		"commit": "78e5af48c",
-		"date": "Tue Dec 11 2018 13:29:01 GMT+0100 (CET)",
+		"commit": "7c5431802",
+		"date": "Wed Dec 19 2018 11:29:12 GMT+0100 (CET)",
 		"files": [
 			{
 				"path": "code/highcharts.src.js",
@@ -350,7 +350,7 @@
 				"line": 0
 			}
 		],
-		"version": "7.0.0"
+		"version": "7.0.1"
 	},
 	"children": [
 		{
@@ -950,7 +950,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3138
+								"line": 3145
 							}
 						]
 					},
@@ -970,7 +970,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3138
+										"line": 3145
 									}
 								]
 							}
@@ -990,7 +990,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3138
+										"line": 3145
 									}
 								]
 							}
@@ -1010,7 +1010,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3138
+										"line": 3145
 									}
 								]
 							}
@@ -1030,7 +1030,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3138
+										"line": 3145
 									}
 								]
 							}
@@ -1050,7 +1050,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3138
+										"line": 3145
 									}
 								]
 							}
@@ -1159,7 +1159,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 14088
+								"line": 14093
 							}
 						]
 					},
@@ -1189,7 +1189,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21510
+										"line": 21515
 									}
 								]
 							}
@@ -1219,7 +1219,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21529
+										"line": 21534
 									}
 								]
 							}
@@ -1247,7 +1247,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 19407
+										"line": 19412
 									}
 								]
 							}
@@ -1265,7 +1265,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17015
+										"line": 17020
 									}
 								]
 							}
@@ -1283,7 +1283,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17039
+										"line": 17044
 									}
 								]
 							}
@@ -1336,7 +1336,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17173
+										"line": 17178
 									}
 								]
 							}
@@ -1376,7 +1376,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 20137
+										"line": 20142
 									}
 								]
 							}
@@ -1397,7 +1397,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 18972
+										"line": 18977
 									}
 								]
 							}
@@ -1426,7 +1426,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 19675
+										"line": 19680
 									}
 								]
 							}
@@ -1467,7 +1467,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17654
+										"line": 17659
 									}
 								]
 							}
@@ -1489,7 +1489,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17720
+										"line": 17725
 									}
 								]
 							}
@@ -1510,7 +1510,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17740
+										"line": 17745
 									}
 								]
 							}
@@ -1545,7 +1545,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21440
+										"line": 21445
 									}
 								]
 							}
@@ -1603,7 +1603,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17566
+										"line": 17571
 									}
 								]
 							},
@@ -1623,7 +1623,7 @@
 										"files": [
 											{
 												"path": "code/highcharts.src.js",
-												"line": 17612
+												"line": 17617
 											}
 										]
 									}
@@ -1654,7 +1654,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 18999
+										"line": 19004
 									}
 								]
 							}
@@ -1675,7 +1675,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 19385
+										"line": 19390
 									}
 								]
 							}
@@ -1695,7 +1695,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 20267
+										"line": 20272
 									}
 								]
 							}
@@ -1713,7 +1713,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17023
+										"line": 17028
 									}
 								]
 							}
@@ -1752,7 +1752,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 16995
+										"line": 17000
 									}
 								]
 							}
@@ -1771,7 +1771,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17031
+										"line": 17036
 									}
 								]
 							}
@@ -1790,7 +1790,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17153
+										"line": 17158
 									}
 								]
 							}
@@ -1809,7 +1809,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17163
+										"line": 17168
 									}
 								]
 							}
@@ -1838,7 +1838,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36713
+										"line": 36737
 									}
 								]
 							}
@@ -1866,7 +1866,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21612
+										"line": 21617
 									}
 								]
 							}
@@ -1894,7 +1894,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21630
+										"line": 21635
 									}
 								]
 							}
@@ -1914,7 +1914,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 19719
+										"line": 19724
 									}
 								]
 							}
@@ -1942,7 +1942,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 19801
+										"line": 19806
 									}
 								]
 							}
@@ -1976,7 +1976,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 19826
+										"line": 19831
 									}
 								]
 							}
@@ -1994,7 +1994,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17081
+										"line": 17086
 									}
 								]
 							}
@@ -2012,7 +2012,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17198
+										"line": 17203
 									}
 								]
 							}
@@ -2047,7 +2047,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36776
+										"line": 36800
 									}
 								]
 							}
@@ -2085,7 +2085,7 @@
 								"files": [
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 10619
+										"line": 10618
 									}
 								]
 							}
@@ -2186,7 +2186,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 18810
+										"line": 18815
 									}
 								]
 							}
@@ -2243,7 +2243,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 18416
+										"line": 18421
 									}
 								]
 							}
@@ -2280,7 +2280,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36758
+										"line": 36782
 									}
 								]
 							}
@@ -2298,7 +2298,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17053
+										"line": 17058
 									}
 								]
 							}
@@ -2333,7 +2333,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17520
+										"line": 17525
 									}
 								]
 							}
@@ -2368,7 +2368,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 17540
+										"line": 17545
 									}
 								]
 							}
@@ -2386,6 +2386,13 @@
 											"Highcharts.YAxisOptions",
 											"Highcharts.ZAxisOptions"
 										]
+									},
+									"redraw": {
+										"description": "Whether to redraw the chart after the axis is altered. If doing\n       more operations on the chart, it is a good idea to set redraw to\n       false and call {@link Chart#redraw} after.",
+										"isOptional": true,
+										"types": [
+											"boolean"
+										]
 									}
 								},
 								"return": {
@@ -2398,7 +2405,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36667
+										"line": 36686
 									}
 								]
 							}
@@ -2419,7 +2426,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13915
+								"line": 13920
 							}
 						]
 					}
@@ -2449,7 +2456,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13909
+								"line": 13914
 							}
 						]
 					}
@@ -2464,7 +2471,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13921
+								"line": 13926
 							}
 						]
 					},
@@ -2482,7 +2489,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13921
+										"line": 13926
 									}
 								]
 							}
@@ -2500,7 +2507,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13921
+										"line": 13926
 									}
 								]
 							}
@@ -2518,7 +2525,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13921
+										"line": 13926
 									}
 								]
 							}
@@ -2536,7 +2543,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13921
+										"line": 13926
 									}
 								]
 							}
@@ -2554,7 +2561,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13921
+										"line": 13926
 									}
 								]
 							}
@@ -2576,7 +2583,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13940
+								"line": 13945
 							}
 						]
 					}
@@ -2596,7 +2603,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 20598
+								"line": 20603
 							}
 						]
 					}
@@ -2616,7 +2623,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 20592
+								"line": 20597
 							}
 						]
 					}
@@ -2636,7 +2643,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 20610
+								"line": 20615
 							}
 						]
 					}
@@ -2656,7 +2663,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 20604
+								"line": 20609
 							}
 						]
 					}
@@ -2691,7 +2698,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13983
+								"line": 13988
 							}
 						]
 					}
@@ -2706,7 +2713,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13991
+								"line": 13996
 							}
 						]
 					},
@@ -2724,7 +2731,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13991
+										"line": 13996
 									}
 								]
 							}
@@ -2742,7 +2749,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13991
+										"line": 13996
 									}
 								]
 							}
@@ -2760,7 +2767,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13991
+										"line": 13996
 									}
 								]
 							}
@@ -2778,7 +2785,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13991
+										"line": 13996
 									}
 								]
 							}
@@ -2797,7 +2804,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13991
+										"line": 13996
 									}
 								]
 							}
@@ -2834,7 +2841,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 14010
+								"line": 14015
 							}
 						]
 					}
@@ -2849,7 +2856,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 14018
+								"line": 14023
 							}
 						]
 					},
@@ -2867,7 +2874,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -2885,7 +2892,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -2903,7 +2910,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -2921,7 +2928,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -2939,7 +2946,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -2957,7 +2964,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -2975,7 +2982,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -2993,7 +3000,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -3011,7 +3018,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -3029,7 +3036,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 14018
+										"line": 14023
 									}
 								]
 							}
@@ -3061,7 +3068,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 14052
+								"line": 14057
 							}
 						]
 					}
@@ -3076,7 +3083,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3180
+								"line": 3187
 							}
 						]
 					},
@@ -3094,7 +3101,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3180
+										"line": 3187
 									}
 								]
 							}
@@ -3112,7 +3119,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3180
+										"line": 3187
 									}
 								]
 							}
@@ -3130,7 +3137,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3180
+										"line": 3187
 									}
 								]
 							}
@@ -3148,7 +3155,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3180
+										"line": 3187
 									}
 								]
 							}
@@ -3641,7 +3648,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 26258
+								"line": 26276
 							}
 						]
 					},
@@ -3694,7 +3701,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 35632
+										"line": 35651
 									}
 								]
 							}
@@ -3722,7 +3729,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28195
+										"line": 28213
 									}
 								]
 							}
@@ -3740,7 +3747,7 @@
 									"options": {
 										"description": "The config options for the series.",
 										"types": [
-											"Highcharts.SeriesOptions"
+											"Highcharts.SeriesOptionsType"
 										]
 									},
 									"redraw": {
@@ -3770,7 +3777,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 35578
+										"line": 35597
 									}
 								]
 							}
@@ -3826,7 +3833,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26433
+										"line": 26451
 									}
 								]
 							}
@@ -3844,7 +3851,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27140
+										"line": 27158
 									}
 								]
 							}
@@ -3862,7 +3869,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27130
+										"line": 27148
 									}
 								]
 							}
@@ -3877,7 +3884,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 35843
+										"line": 35862
 									}
 								]
 							}
@@ -3938,7 +3945,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27331
+										"line": 27349
 									}
 								]
 							}
@@ -3956,7 +3963,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28212
+										"line": 28230
 									}
 								]
 							}
@@ -4002,7 +4009,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28253
+										"line": 28271
 									}
 								]
 							}
@@ -4119,7 +4126,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6234
+										"line": 6237
 									}
 								]
 							}
@@ -4149,7 +4156,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6188
+										"line": 6191
 									}
 								]
 							}
@@ -4181,7 +4188,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26804
+										"line": 26822
 									}
 								]
 							}
@@ -4254,7 +4261,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27107
+										"line": 27125
 									}
 								]
 							}
@@ -4357,7 +4364,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26883
+										"line": 26901
 									}
 								]
 							}
@@ -4378,7 +4385,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26908
+										"line": 26926
 									}
 								]
 							}
@@ -4448,7 +4455,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 35761
+										"line": 35780
 									}
 								]
 							}
@@ -4487,7 +4494,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26356
+										"line": 26374
 									}
 								]
 							}
@@ -4516,7 +4523,7 @@
 								"files": [
 									{
 										"path": "code/modules/boost.src.js",
-										"line": 591
+										"line": 598
 									}
 								]
 							}
@@ -4557,7 +4564,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26573
+										"line": 26591
 									}
 								]
 							}
@@ -4610,7 +4617,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28109
+										"line": 28127
 									}
 								]
 							}
@@ -4667,7 +4674,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 1615
+										"line": 1621
 									}
 								]
 							}
@@ -4705,7 +4712,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26424
+										"line": 26442
 									}
 								]
 							}
@@ -4723,7 +4730,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27706
+										"line": 27724
 									}
 								]
 							}
@@ -4741,7 +4748,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27679
+										"line": 27697
 									}
 								]
 							}
@@ -4759,7 +4766,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27687
+										"line": 27705
 									}
 								]
 							}
@@ -4777,7 +4784,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27695
+										"line": 27713
 									}
 								]
 							}
@@ -4795,7 +4802,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28385
+										"line": 28405
 									}
 								]
 							}
@@ -4834,7 +4841,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 35801
+										"line": 35820
 									}
 								]
 							}
@@ -4849,7 +4856,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 35828
+										"line": 35847
 									}
 								]
 							}
@@ -4887,7 +4894,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26600
+										"line": 26618
 									}
 								]
 							}
@@ -4900,6 +4907,7 @@
 								"parameters": {
 									"e": {
 										"description": "Event arguments. Used primarily when the function is called\n       internally as a response to window resize.",
+										"isOptional": true,
 										"types": [
 											"global.Event"
 										]
@@ -4915,7 +4923,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27460
+										"line": 27478
 									}
 								]
 							}
@@ -4933,7 +4941,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27355
+										"line": 27373
 									}
 								]
 							}
@@ -4951,7 +4959,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26444
+										"line": 26462
 									}
 								]
 							}
@@ -4978,7 +4986,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27228
+										"line": 27246
 									}
 								]
 							}
@@ -5027,7 +5035,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 27557
+										"line": 27575
 									}
 								]
 							}
@@ -5055,7 +5063,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36111
+										"line": 36130
 									}
 								]
 							}
@@ -5095,7 +5103,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26930
+										"line": 26948
 									}
 								]
 							}
@@ -5123,7 +5131,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 35681
+										"line": 35700
 									}
 								]
 							}
@@ -5141,7 +5149,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26466
+										"line": 26484
 									}
 								]
 							}
@@ -5159,7 +5167,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26994
+										"line": 27012
 									}
 								]
 							}
@@ -5177,7 +5185,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26452
+										"line": 26470
 									}
 								]
 							}
@@ -5195,7 +5203,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26982
+										"line": 27000
 									}
 								]
 							}
@@ -5213,7 +5221,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 23068
+										"line": 23074
 									}
 								]
 							}
@@ -5248,7 +5256,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6076
+										"line": 6079
 									}
 								]
 							}
@@ -5284,7 +5292,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6130
+										"line": 6133
 									}
 								]
 							}
@@ -5338,7 +5346,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 35852
+										"line": 35871
 									}
 								]
 							}
@@ -5376,7 +5384,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26491
+										"line": 26509
 									}
 								]
 							}
@@ -5394,7 +5402,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26499
+										"line": 26517
 									}
 								]
 							}
@@ -5417,7 +5425,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 42701
+										"line": 42713
 									}
 								]
 							}
@@ -5450,7 +5458,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 26185
+								"line": 26193
 							}
 						]
 					}
@@ -5483,7 +5491,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 9617
+								"line": 9624
 							}
 						]
 					}
@@ -5501,7 +5509,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3206
+								"line": 3213
 							}
 						]
 					}
@@ -5519,7 +5527,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2835
+								"line": 2842
 							}
 						]
 					}
@@ -5530,7 +5538,42 @@
 						"description": "All possible cursor styles.",
 						"kind": "typedef",
 						"types": [
-							"string"
+							"\"alias\"",
+							"\"all-scroll\"",
+							"\"auto\"",
+							"\"cell\"",
+							"\"col-resize\"",
+							"\"context-menu\"",
+							"\"copy\"",
+							"\"crosshair\"",
+							"\"default\"",
+							"\"e-resize\"",
+							"\"ew-resize\"",
+							"\"grab\"",
+							"\"grabbing\"",
+							"\"help\"",
+							"\"move\"",
+							"\"n-resize\"",
+							"\"ne-resize\"",
+							"\"nesw-resize\"",
+							"\"no-drop\"",
+							"\"none\"",
+							"\"not-allowed\"",
+							"\"ns-resize\"",
+							"\"nw-resize\"",
+							"\"nwse-resize\"",
+							"\"pointer\"",
+							"\"progress\"",
+							"\"row-resize\"",
+							"\"s-resize\"",
+							"\"se-resize\"",
+							"\"sw-resize\"",
+							"\"text\"",
+							"\"vertical-text\"",
+							"\"w-resize\"",
+							"\"wait\"",
+							"\"zoom-in\"",
+							"\"zoom-out\""
 						]
 					},
 					"meta": {
@@ -6978,6 +7021,41 @@
 				},
 				{
 					"doclet": {
+						"name": "Highcharts.EventOptionsObject",
+						"description": "The event options for adding function callback.",
+						"kind": "interface"
+					},
+					"meta": {
+						"files": [
+							{
+								"path": "code/highcharts.src.js",
+								"line": 281
+							}
+						]
+					},
+					"children": [
+						{
+							"doclet": {
+								"name": "Highcharts.EventOptionsObject.order",
+								"description": "The order the event handler should be called. This opens for having one\nhandler be called before another, independent of in which order they were\nadded.",
+								"kind": "member",
+								"types": [
+									"number"
+								]
+							},
+							"meta": {
+								"files": [
+									{
+										"path": "code/highcharts.src.js",
+										"line": 281
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"doclet": {
 						"name": "Highcharts.ExportingErrorCallbackFunction",
 						"description": "Function to call if the offline-exporting module fails to export a chart on\nthe client side.",
 						"kind": "typedef",
@@ -7116,7 +7194,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13946
+								"line": 13951
 							}
 						]
 					},
@@ -7134,7 +7212,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13946
+										"line": 13951
 									}
 								]
 							}
@@ -7152,7 +7230,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13946
+										"line": 13951
 									}
 								]
 							}
@@ -7170,7 +7248,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13946
+										"line": 13951
 									}
 								]
 							}
@@ -7188,7 +7266,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13946
+										"line": 13951
 									}
 								]
 							}
@@ -7206,7 +7284,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13946
+										"line": 13951
 									}
 								]
 							}
@@ -7224,7 +7302,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 13946
+										"line": 13951
 									}
 								]
 							}
@@ -7241,7 +7319,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3223
+								"line": 3230
 							}
 						]
 					},
@@ -7259,7 +7337,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3223
+										"line": 3230
 									}
 								]
 							}
@@ -7277,7 +7355,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3223
+										"line": 3230
 									}
 								]
 							}
@@ -7295,7 +7373,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3223
+										"line": 3230
 									}
 								]
 							}
@@ -7327,7 +7405,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 281
+								"line": 293
 							}
 						]
 					}
@@ -7342,7 +7420,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3244
+								"line": 3251
 							}
 						]
 					},
@@ -7361,7 +7439,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3244
+										"line": 3251
 									}
 								]
 							}
@@ -7380,7 +7458,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3244
+										"line": 3251
 									}
 								]
 							}
@@ -7399,7 +7477,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3244
+										"line": 3251
 									}
 								]
 							}
@@ -7419,7 +7497,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 292
+								"line": 304
 							}
 						]
 					}
@@ -7440,7 +7518,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 298
+								"line": 310
 							}
 						]
 					}
@@ -7544,7 +7622,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 24823
+								"line": 24829
 							}
 						]
 					},
@@ -7562,7 +7640,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 25665
+										"line": 25673
 									}
 								]
 							}
@@ -7580,7 +7658,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 25695
+										"line": 25703
 									}
 								]
 							}
@@ -7598,7 +7676,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 24857
+										"line": 24863
 									}
 								]
 							}
@@ -7650,7 +7728,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 25632
+										"line": 25640
 									}
 								]
 							}
@@ -7668,7 +7746,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 24903
+										"line": 24909
 									}
 								]
 							}
@@ -7697,7 +7775,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 25217
+										"line": 25225
 									}
 								]
 							}
@@ -7715,7 +7793,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 25183
+										"line": 25191
 									}
 								]
 							}
@@ -7725,6 +7803,9 @@
 								"name": "Highcharts.Legend.update",
 								"description": "Update the legend with new options. Equivalent to running `chart.update`\nwith a legend configuration option.",
 								"kind": "function",
+								"fires": [
+									"Highcharts.Legends#afterUpdate"
+								],
 								"parameters": {
 									"options": {
 										"description": "Legend options.",
@@ -7733,7 +7814,7 @@
 										]
 									},
 									"redraw": {
-										"description": "Whether to redraw the chart.",
+										"description": "Whether to redraw the chart after the axis is altered. If doing\n       more operations on the chart, it is a good idea to set redraw to\n       false and call {@link Chart#redraw} after.\n       Whether to redraw the chart.",
 										"isOptional": true,
 										"types": [
 											"boolean"
@@ -7750,7 +7831,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 24929
+										"line": 24935
 									}
 								]
 							}
@@ -7767,11 +7848,11 @@
 						"files": [
 							{
 								"path": "code/highcharts-more.src.js",
-								"line": 4598
+								"line": 4567
 							},
 							{
 								"path": "code/modules/map.src.js",
-								"line": 3471
+								"line": 3477
 							}
 						]
 					},
@@ -7789,11 +7870,11 @@
 								"files": [
 									{
 										"path": "code/highcharts-more.src.js",
-										"line": 4598
+										"line": 4567
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3471
+										"line": 3477
 									}
 								]
 							}
@@ -7811,11 +7892,11 @@
 								"files": [
 									{
 										"path": "code/highcharts-more.src.js",
-										"line": 4598
+										"line": 4567
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3471
+										"line": 3477
 									}
 								]
 							}
@@ -7833,11 +7914,11 @@
 								"files": [
 									{
 										"path": "code/highcharts-more.src.js",
-										"line": 4598
+										"line": 4567
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3471
+										"line": 3477
 									}
 								]
 							}
@@ -7854,7 +7935,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3281
+								"line": 3288
 							}
 						]
 					},
@@ -7872,7 +7953,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3281
+										"line": 3288
 									}
 								]
 							}
@@ -7890,7 +7971,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3281
+										"line": 3288
 									}
 								]
 							}
@@ -7908,7 +7989,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3281
+										"line": 3288
 									}
 								]
 							}
@@ -7926,7 +8007,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3281
+										"line": 3288
 									}
 								]
 							}
@@ -7943,7 +8024,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 6022
+								"line": 6025
 							}
 						]
 					},
@@ -7961,7 +8042,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6022
+										"line": 6025
 									}
 								]
 							}
@@ -7979,7 +8060,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6022
+										"line": 6025
 									}
 								]
 							}
@@ -7996,7 +8077,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 1863
+								"line": 1869
 							}
 						]
 					},
@@ -8015,7 +8096,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 1863
+										"line": 1869
 									}
 								]
 							}
@@ -8033,7 +8114,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 1863
+										"line": 1869
 									}
 								]
 							}
@@ -8052,7 +8133,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 1863
+										"line": 1869
 									}
 								]
 							}
@@ -8069,7 +8150,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 6008
+								"line": 6011
 							}
 						]
 					},
@@ -8087,7 +8168,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6008
+										"line": 6011
 									}
 								]
 							}
@@ -8105,7 +8186,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6008
+										"line": 6011
 									}
 								]
 							}
@@ -8122,7 +8203,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 8739
+								"line": 8746
 							}
 						]
 					},
@@ -8140,7 +8221,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 8739
+										"line": 8746
 									}
 								]
 							}
@@ -8158,7 +8239,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 8739
+										"line": 8746
 									}
 								]
 							}
@@ -8203,7 +8284,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 307
+								"line": 319
 							}
 						]
 					}
@@ -8218,7 +8299,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 322
+								"line": 334
 							}
 						]
 					},
@@ -8236,7 +8317,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 322
+										"line": 334
 									}
 								]
 							}
@@ -8254,7 +8335,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 322
+										"line": 334
 									}
 								]
 							}
@@ -8526,7 +8607,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 20626
+								"line": 20631
 							}
 						]
 					},
@@ -8579,7 +8660,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 20876
+										"line": 20881
 									}
 								]
 							}
@@ -8597,7 +8678,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 20837
+										"line": 20842
 									}
 								]
 							}
@@ -8615,7 +8696,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 20726
+										"line": 20731
 									}
 								]
 							}
@@ -8632,7 +8713,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 28777
+								"line": 28798
 							}
 						]
 					},
@@ -8652,7 +8733,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28826
+										"line": 28847
 									}
 								]
 							}
@@ -8670,7 +8751,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28856
+										"line": 28877
 									}
 								]
 							}
@@ -8692,7 +8773,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 32958
+										"line": 32979
 									}
 								]
 							}
@@ -8713,7 +8794,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29069
+										"line": 29090
 									}
 								]
 							}
@@ -8734,7 +8815,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29209
+										"line": 29230
 									}
 								]
 							}
@@ -8755,7 +8836,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29090
+										"line": 29111
 									}
 								]
 							}
@@ -8784,7 +8865,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43217
+										"line": 43229
 									}
 								]
 							}
@@ -8832,7 +8913,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28789
+										"line": 28810
 									}
 								]
 							}
@@ -8855,7 +8936,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 42974
+										"line": 42986
 									}
 								]
 							}
@@ -8883,7 +8964,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 42953
+										"line": 42965
 									}
 								]
 							}
@@ -8901,7 +8982,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28897
+										"line": 28918
 									}
 								]
 							}
@@ -8933,7 +9014,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28996
+										"line": 29017
 									}
 								]
 							}
@@ -8951,7 +9032,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 6381
+										"line": 6384
 									}
 								]
 							}
@@ -8987,7 +9068,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36236
+										"line": 36255
 									}
 								]
 							}
@@ -9030,7 +9111,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 42877
+										"line": 42889
 									}
 								]
 							}
@@ -9052,7 +9133,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 42920
+										"line": 42932
 									}
 								]
 							}
@@ -9070,7 +9151,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28818
+										"line": 28839
 									}
 								]
 							}
@@ -9111,7 +9192,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28963
+										"line": 28984
 									}
 								]
 							}
@@ -9150,7 +9231,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43015
+										"line": 43027
 									}
 								]
 							}
@@ -9179,7 +9260,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29232
+										"line": 29253
 									}
 								]
 							}
@@ -9228,7 +9309,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36130
+										"line": 36149
 									}
 								]
 							}
@@ -9246,7 +9327,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29330
+										"line": 29351
 									}
 								]
 							}
@@ -9264,7 +9345,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28936
+										"line": 28957
 									}
 								]
 							}
@@ -9283,7 +9364,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28916
+										"line": 28937
 									}
 								]
 							}
@@ -9303,7 +9384,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 2918
+										"line": 2926
 									}
 								]
 							}
@@ -9320,7 +9401,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 28717
+								"line": 28738
 							}
 						]
 					},
@@ -9340,7 +9421,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9358,7 +9439,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9377,7 +9458,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9395,7 +9476,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9413,7 +9494,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9431,7 +9512,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9449,7 +9530,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9468,7 +9549,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9487,7 +9568,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 28717
+										"line": 28738
 									}
 								]
 							}
@@ -9504,7 +9585,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 23021
+								"line": 23027
 							}
 						]
 					},
@@ -9558,7 +9639,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 24188
+										"line": 24194
 									}
 								]
 							}
@@ -9600,7 +9681,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 23170
+										"line": 23176
 									}
 								]
 							}
@@ -9628,7 +9709,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 23143
+										"line": 23149
 									}
 								]
 							}
@@ -9664,7 +9745,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 24027
+										"line": 24033
 									}
 								]
 							}
@@ -9693,7 +9774,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 23111
+										"line": 23117
 									}
 								]
 							}
@@ -9726,7 +9807,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 23526
+										"line": 23532
 									}
 								]
 							}
@@ -9743,7 +9824,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 22912
+								"line": 22918
 							}
 						]
 					},
@@ -9761,7 +9842,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22912
+										"line": 22918
 									}
 								]
 							}
@@ -9779,7 +9860,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22912
+										"line": 22918
 									}
 								]
 							}
@@ -9796,7 +9877,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 22928
+								"line": 22934
 							}
 						]
 					},
@@ -9814,7 +9895,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22928
+										"line": 22934
 									}
 								]
 							}
@@ -9832,7 +9913,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22928
+										"line": 22934
 									}
 								]
 							}
@@ -9849,7 +9930,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 22942
+								"line": 22948
 							}
 						]
 					},
@@ -9867,7 +9948,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22942
+										"line": 22948
 									}
 								]
 							}
@@ -9885,7 +9966,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22942
+										"line": 22948
 									}
 								]
 							}
@@ -9905,7 +9986,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 22954
+								"line": 22960
 							}
 						]
 					},
@@ -9923,7 +10004,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22954
+										"line": 22960
 									}
 								]
 							}
@@ -9941,7 +10022,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22954
+										"line": 22960
 									}
 								]
 							}
@@ -9958,7 +10039,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 337
+								"line": 349
 							}
 						]
 					},
@@ -9976,7 +10057,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 337
+										"line": 349
 									}
 								]
 							}
@@ -9994,7 +10075,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 337
+										"line": 349
 									}
 								]
 							}
@@ -10011,7 +10092,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3309
+								"line": 3316
 							}
 						]
 					},
@@ -10029,7 +10110,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3309
+										"line": 3316
 									}
 								]
 							}
@@ -10047,7 +10128,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3309
+										"line": 3316
 									}
 								]
 							}
@@ -10065,7 +10146,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3309
+										"line": 3316
 									}
 								]
 							}
@@ -10105,7 +10186,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 7741
+								"line": 7740
 							}
 						]
 					}
@@ -10137,7 +10218,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 7753
+								"line": 7752
 							}
 						]
 					}
@@ -10152,7 +10233,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3330
+								"line": 3337
 							}
 						]
 					},
@@ -10170,7 +10251,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3330
+										"line": 3337
 									}
 								]
 							}
@@ -10188,7 +10269,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3330
+										"line": 3337
 									}
 								]
 							}
@@ -10206,7 +10287,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3330
+										"line": 3337
 									}
 								]
 							}
@@ -10224,7 +10305,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3330
+										"line": 3337
 									}
 								]
 							}
@@ -10245,7 +10326,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 351
+								"line": 363
 							}
 						]
 					}
@@ -10269,7 +10350,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 43573
+								"line": 43585
 							}
 						]
 					}
@@ -10284,7 +10365,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 359
+								"line": 371
 							}
 						]
 					},
@@ -10306,7 +10387,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10326,7 +10407,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10345,7 +10426,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10364,7 +10445,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10383,7 +10464,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10402,7 +10483,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10421,7 +10502,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10440,7 +10521,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10459,7 +10540,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10478,7 +10559,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10497,7 +10578,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10516,7 +10597,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10535,7 +10616,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 359
+										"line": 371
 									}
 								]
 							}
@@ -10558,7 +10639,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 417
+								"line": 429
 							}
 						]
 					}
@@ -10573,7 +10654,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3397
+								"line": 3404
 							}
 						]
 					},
@@ -10594,7 +10675,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3397
+										"line": 3404
 									}
 								]
 							}
@@ -10613,7 +10694,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3397
+										"line": 3404
 									}
 								]
 							}
@@ -10632,7 +10713,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3397
+										"line": 3404
 									}
 								]
 							}
@@ -10651,7 +10732,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3397
+										"line": 3404
 									}
 								]
 							}
@@ -10668,7 +10749,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3511
+								"line": 3518
 							}
 						]
 					},
@@ -10699,7 +10780,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4948
+										"line": 4955
 									}
 								]
 							}
@@ -10735,7 +10816,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4069
+										"line": 4076
 									}
 								]
 							}
@@ -10780,7 +10861,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4614
+										"line": 4621
 									}
 								]
 							}
@@ -10823,7 +10904,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3582
+										"line": 3589
 									}
 								]
 							}
@@ -10877,7 +10958,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3886
+										"line": 3893
 									}
 								]
 							}
@@ -10907,7 +10988,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4170
+										"line": 4177
 									}
 								]
 							}
@@ -10943,7 +11024,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4190
+										"line": 4197
 									}
 								]
 							}
@@ -10972,7 +11053,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4230
+										"line": 4237
 									}
 								]
 							}
@@ -10992,7 +11073,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5019
+										"line": 5026
 									}
 								]
 							}
@@ -11011,7 +11092,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3562
+										"line": 3569
 									}
 								]
 							}
@@ -11068,7 +11149,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4926
+										"line": 4933
 									}
 								]
 							}
@@ -11105,7 +11186,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4705
+										"line": 4712
 									}
 								]
 							}
@@ -11134,7 +11215,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4345
+										"line": 4352
 									}
 								]
 							}
@@ -11163,7 +11244,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4098
+										"line": 4105
 									}
 								]
 							}
@@ -11184,7 +11265,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4913
+										"line": 4920
 									}
 								]
 							}
@@ -11218,7 +11299,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3548
+										"line": 3555
 									}
 								]
 							}
@@ -11247,7 +11328,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4512
+										"line": 4519
 									}
 								]
 							}
@@ -11282,7 +11363,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4416
+										"line": 4423
 									}
 								]
 							}
@@ -11312,7 +11393,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4113
+										"line": 4120
 									}
 								]
 							}
@@ -11330,7 +11411,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3573
+										"line": 3580
 									}
 								]
 							}
@@ -11359,7 +11440,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4461
+										"line": 4468
 									}
 								]
 							}
@@ -11403,7 +11484,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5106
+										"line": 5113
 									}
 								]
 							}
@@ -11433,7 +11514,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4896
+										"line": 4903
 									}
 								]
 							}
@@ -11454,7 +11535,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4364
+										"line": 4371
 									}
 								]
 							}
@@ -11475,7 +11556,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4596
+										"line": 4603
 									}
 								]
 							}
@@ -11509,7 +11590,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 4494
+										"line": 4501
 									}
 								]
 							}
@@ -11529,7 +11610,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 426
+								"line": 438
 							}
 						]
 					}
@@ -11548,7 +11629,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 433
+								"line": 445
 							}
 						]
 					}
@@ -11563,7 +11644,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 5588
+								"line": 5595
 							}
 						]
 					},
@@ -11581,7 +11662,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5630
+										"line": 5637
 									}
 								]
 							}
@@ -11610,7 +11691,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6854
+										"line": 6861
 									}
 								]
 							}
@@ -11675,7 +11756,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6854
+										"line": 6861
 									}
 								]
 							}
@@ -11693,7 +11774,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5710
+										"line": 5717
 									}
 								]
 							}
@@ -11711,7 +11792,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5717
+										"line": 5724
 									}
 								]
 							}
@@ -11793,7 +11874,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6562
+										"line": 6569
 									}
 								]
 							}
@@ -11837,7 +11918,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6808
+										"line": 6815
 									}
 								]
 							}
@@ -11867,7 +11948,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6808
+										"line": 6815
 									}
 								]
 							}
@@ -11915,7 +11996,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 7554
+										"line": 7561
 									}
 								]
 							}
@@ -11998,7 +12079,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5939
+										"line": 5946
 									}
 								]
 							}
@@ -12033,7 +12114,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6736
+										"line": 6743
 									}
 								]
 							}
@@ -12062,7 +12143,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5798
+										"line": 5805
 									}
 								]
 							}
@@ -12080,7 +12161,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5753
+										"line": 5760
 									}
 								]
 							}
@@ -12100,7 +12181,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5908
+										"line": 5915
 									}
 								]
 							}
@@ -12121,7 +12202,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5959
+										"line": 5966
 									}
 								]
 							}
@@ -12139,7 +12220,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6130
+										"line": 6137
 									}
 								]
 							}
@@ -12177,7 +12258,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 7676
+										"line": 7683
 									}
 								]
 							}
@@ -12207,7 +12288,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 7041
+										"line": 7048
 									}
 								]
 							}
@@ -12236,7 +12317,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6539
+										"line": 6546
 									}
 								]
 							}
@@ -12300,7 +12381,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 7060
+										"line": 7067
 									}
 								]
 							}
@@ -12361,7 +12442,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5641
+										"line": 5648
 									}
 								]
 							}
@@ -12382,7 +12463,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5893
+										"line": 5900
 									}
 								]
 							}
@@ -12465,7 +12546,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 7756
+										"line": 7763
 									}
 								]
 							},
@@ -12496,7 +12577,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6764
+										"line": 6771
 									}
 								]
 							}
@@ -12526,7 +12607,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6764
+										"line": 6771
 									}
 								]
 							}
@@ -12556,7 +12637,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6922
+										"line": 6929
 									}
 								]
 							}
@@ -12621,7 +12702,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6922
+										"line": 6929
 									}
 								]
 							}
@@ -12663,7 +12744,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 6997
+										"line": 7004
 									}
 								]
 							}
@@ -12691,7 +12772,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 5881
+										"line": 5888
 									}
 								]
 							}
@@ -12750,7 +12831,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 7150
+										"line": 7157
 									}
 								]
 							},
@@ -12770,7 +12851,7 @@
 										"files": [
 											{
 												"path": "code/highcharts.src.js",
-												"line": 7245
+												"line": 7252
 											}
 										]
 									}
@@ -12790,7 +12871,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 7341
+										"line": 7348
 									}
 								]
 							},
@@ -12811,7 +12892,7 @@
 										"files": [
 											{
 												"path": "code/highcharts.src.js",
-												"line": 7452
+												"line": 7459
 											}
 										]
 									}
@@ -12861,7 +12942,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 7603
+										"line": 7610
 									}
 								]
 							}
@@ -12878,7 +12959,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 22972
+								"line": 22978
 							}
 						]
 					},
@@ -12896,7 +12977,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22972
+										"line": 22978
 									}
 								]
 							}
@@ -12914,7 +12995,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22972
+										"line": 22978
 									}
 								]
 							}
@@ -12932,7 +13013,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22972
+										"line": 22978
 									}
 								]
 							}
@@ -12949,7 +13030,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 22987
+								"line": 22993
 							}
 						]
 					},
@@ -12967,7 +13048,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22987
+										"line": 22993
 									}
 								]
 							}
@@ -12985,7 +13066,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22987
+										"line": 22993
 									}
 								]
 							}
@@ -13003,7 +13084,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22987
+										"line": 22993
 									}
 								]
 							}
@@ -13020,7 +13101,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29547
+								"line": 29568
 							}
 						]
 					},
@@ -13073,7 +13154,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36269
+										"line": 36288
 									}
 								]
 							}
@@ -13101,7 +13182,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33419
+										"line": 33440
 									}
 								]
 							}
@@ -13119,7 +13200,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 31879
+										"line": 31900
 									}
 								]
 							}
@@ -13139,7 +13220,7 @@
 									"options": {
 										"description": "The series options.",
 										"types": [
-											"Highcharts.SeriesOptions",
+											"Highcharts.SeriesOptionsType",
 											"object"
 										]
 									}
@@ -13175,7 +13256,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33010
+										"line": 33031
 									}
 								]
 							}
@@ -13195,7 +13276,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33964
+										"line": 33985
 									}
 								]
 							}
@@ -13215,7 +13296,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33480
+										"line": 33501
 									}
 								]
 							}
@@ -13235,7 +13316,7 @@
 								"files": [
 									{
 										"path": "code/modules/boost.src.js",
-										"line": 3169
+										"line": 3176
 									}
 								]
 							}
@@ -13255,7 +13336,7 @@
 								"files": [
 									{
 										"path": "code/modules/boost.src.js",
-										"line": 3202
+										"line": 3209
 									}
 								]
 							}
@@ -13275,7 +13356,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 32361
+										"line": 32382
 									}
 								]
 							}
@@ -13304,7 +13385,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33042
+										"line": 33063
 									}
 								]
 							}
@@ -13325,7 +13406,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 32297
+										"line": 32318
 									}
 								]
 							}
@@ -13345,7 +13426,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 34330
+										"line": 34351
 									}
 								]
 							}
@@ -13375,7 +13456,7 @@
 								"files": [
 									{
 										"path": "code/modules/boost.src.js",
-										"line": 2957
+										"line": 2964
 									}
 								]
 							}
@@ -13395,7 +13476,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 32384
+										"line": 32405
 									}
 								]
 							}
@@ -13432,7 +13513,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33310
+										"line": 33331
 									}
 								]
 							}
@@ -13455,7 +13536,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43502
+										"line": 43514
 									}
 								]
 							}
@@ -13494,7 +13575,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33600
+										"line": 33621
 									}
 								]
 							}
@@ -13512,7 +13593,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 31910
+										"line": 31931
 									}
 								]
 							}
@@ -13535,7 +13616,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43273
+										"line": 43285
 									}
 								]
 							}
@@ -13558,7 +13639,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43245
+										"line": 43257
 									}
 								]
 							}
@@ -13569,14 +13650,14 @@
 								"description": "Read only. The series' current options. To update, use\n{@link Series#update}.",
 								"kind": "member",
 								"types": [
-									"Highcharts.PlotSeriesOptions"
+									"Highcharts.SeriesOptionsType"
 								]
 							},
 							"meta": {
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 31896
+										"line": 31917
 									}
 								]
 							}
@@ -13594,7 +13675,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33027
+										"line": 33048
 									}
 								]
 							}
@@ -13641,7 +13722,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36458
+										"line": 36477
 									}
 								]
 							}
@@ -13687,7 +13768,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36387
+										"line": 36406
 									}
 								]
 							}
@@ -13710,7 +13791,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 34355
+										"line": 34376
 									}
 								]
 							}
@@ -13743,7 +13824,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43520
+										"line": 43532
 									}
 								]
 							}
@@ -13761,7 +13842,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 31928
+										"line": 31949
 									}
 								]
 							}
@@ -13789,7 +13870,7 @@
 								"files": [
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 10495
+										"line": 10494
 									}
 								]
 							}
@@ -13838,7 +13919,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 32529
+										"line": 32550
 									}
 								]
 							}
@@ -13855,13 +13936,13 @@
 									"itemOptions": {
 										"description": "The series options.",
 										"types": [
-											"Highcharts.PlotSeriesOptions"
+											"Highcharts.SeriesOptionsType"
 										]
 									}
 								},
 								"return": {
 									"types": [
-										"Highcharts.PlotSeriesOptions"
+										"Highcharts.SeriesOptionsType"
 									]
 								}
 							},
@@ -13869,7 +13950,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 32189
+										"line": 32210
 									}
 								]
 							}
@@ -13898,7 +13979,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43315
+										"line": 43327
 									}
 								]
 							}
@@ -13938,7 +14019,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43400
+										"line": 43412
 									}
 								]
 							}
@@ -13961,7 +14042,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 43488
+										"line": 43500
 									}
 								]
 							}
@@ -13984,7 +14065,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 33116
+										"line": 33137
 									}
 								]
 							}
@@ -14002,7 +14083,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 31887
+										"line": 31908
 									}
 								]
 							}
@@ -14019,7 +14100,7 @@
 									"options": {
 										"description": "New options that will be merged with the series' existing options.",
 										"types": [
-											"Highcharts.SeriesOptions"
+											"Highcharts.SeriesOptionsType"
 										]
 									},
 									"redraw": {
@@ -14040,7 +14121,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 36506
+										"line": 36525
 									}
 								]
 							}
@@ -14058,7 +14139,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 31919
+										"line": 31940
 									}
 								]
 							}
@@ -14076,7 +14157,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 32064
+										"line": 32085
 									}
 								]
 							}
@@ -14094,7 +14175,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 32071
+										"line": 32092
 									}
 								]
 							}
@@ -14127,7 +14208,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29396
+								"line": 29417
 							}
 						]
 					}
@@ -14142,7 +14223,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29405
+								"line": 29426
 							}
 						]
 					},
@@ -14160,7 +14241,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29405
+										"line": 29426
 									}
 								]
 							}
@@ -14178,7 +14259,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29405
+										"line": 29426
 									}
 								]
 							}
@@ -14211,7 +14292,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29419
+								"line": 29440
 							}
 						]
 					}
@@ -14226,7 +14307,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29429
+								"line": 29450
 							}
 						]
 					},
@@ -14244,7 +14325,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29429
+										"line": 29450
 									}
 								]
 							}
@@ -14262,7 +14343,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29429
+										"line": 29450
 									}
 								]
 							}
@@ -14280,7 +14361,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29429
+										"line": 29450
 									}
 								]
 							}
@@ -14298,7 +14379,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29429
+										"line": 29450
 									}
 								]
 							}
@@ -14331,7 +14412,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29463
+								"line": 29484
 							}
 						]
 					}
@@ -14346,7 +14427,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29451
+								"line": 29472
 							}
 						]
 					},
@@ -14364,7 +14445,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29451
+										"line": 29472
 									}
 								]
 							}
@@ -14381,7 +14462,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29473
+								"line": 29494
 							}
 						]
 					},
@@ -14399,7 +14480,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29473
+										"line": 29494
 									}
 								]
 							}
@@ -14416,7 +14497,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29480
+								"line": 29501
 							}
 						]
 					},
@@ -14434,7 +14515,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29480
+										"line": 29501
 									}
 								]
 							}
@@ -14452,7 +14533,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29480
+										"line": 29501
 									}
 								]
 							}
@@ -14470,7 +14551,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29480
+										"line": 29501
 									}
 								]
 							}
@@ -14488,7 +14569,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29480
+										"line": 29501
 									}
 								]
 							}
@@ -14521,7 +14602,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29498
+								"line": 29519
 							}
 						]
 					}
@@ -14536,7 +14617,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 29508
+								"line": 29529
 							}
 						]
 					},
@@ -14554,7 +14635,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 29508
+										"line": 29529
 									}
 								]
 							}
@@ -15038,7 +15119,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3356
+								"line": 3363
 							}
 						]
 					},
@@ -15058,7 +15139,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3356
+										"line": 3363
 									}
 								]
 							}
@@ -15078,7 +15159,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3356
+										"line": 3363
 									}
 								]
 							}
@@ -15098,7 +15179,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3356
+										"line": 3363
 									}
 								]
 							}
@@ -15118,7 +15199,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3356
+										"line": 3363
 									}
 								]
 							}
@@ -15138,7 +15219,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3356
+										"line": 3363
 									}
 								]
 							}
@@ -15270,7 +15351,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 26209
+								"line": 26222
 							}
 						]
 					},
@@ -15286,6 +15367,13 @@
 										"types": [
 											"Highcharts.SubtitleOptions"
 										]
+									},
+									"redraw": {
+										"description": "Whether to redraw the chart after the subtitle is altered. If doing\n       more operations on the chart, it is a good idea to set redraw to false\n       and call {@link Chart#redraw} after.",
+										"isOptional": true,
+										"types": [
+											"boolean"
+										]
 									}
 								},
 								"return": {
@@ -15298,7 +15386,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26209
+										"line": 26222
 									}
 								]
 							}
@@ -15318,7 +15406,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3416
+								"line": 3423
 							}
 						]
 					},
@@ -15337,7 +15425,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3416
+										"line": 3423
 									}
 								]
 							}
@@ -15358,7 +15446,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3424
+								"line": 3431
 							}
 						]
 					}
@@ -15373,7 +15461,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 3435
+								"line": 3442
 							},
 							{
 								"path": "code/modules/solid-gauge.src.js",
@@ -15395,7 +15483,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3435
+										"line": 3442
 									}
 								]
 							}
@@ -15413,7 +15501,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3435
+										"line": 3442
 									}
 								]
 							}
@@ -15431,7 +15519,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3435
+										"line": 3442
 									}
 								]
 							}
@@ -15449,7 +15537,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3435
+										"line": 3442
 									}
 								]
 							}
@@ -15467,7 +15555,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3435
+										"line": 3442
 									}
 								]
 							}
@@ -15504,7 +15592,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 3435
+										"line": 3442
 									}
 								]
 							}
@@ -15521,7 +15609,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 8800
+								"line": 8807
 							}
 						]
 					},
@@ -15592,7 +15680,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9218
+										"line": 9225
 									}
 								]
 							}
@@ -15640,7 +15728,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9370
+										"line": 9377
 									}
 								]
 							}
@@ -15669,7 +15757,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9007
+										"line": 9014
 									}
 								]
 							}
@@ -15732,7 +15820,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9102
+										"line": 9109
 									}
 								]
 							}
@@ -15763,7 +15851,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9358
+										"line": 9365
 									}
 								]
 							}
@@ -15797,7 +15885,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 8755
+								"line": 8762
 							}
 						]
 					}
@@ -15815,7 +15903,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 8767
+								"line": 8774
 							}
 						]
 					},
@@ -15833,7 +15921,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 8767
+										"line": 8774
 									}
 								]
 							}
@@ -15851,7 +15939,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 8767
+										"line": 8774
 									}
 								]
 							}
@@ -15871,7 +15959,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 8780
+								"line": 8787
 							}
 						]
 					},
@@ -15889,7 +15977,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 8780
+										"line": 8787
 									}
 								]
 							}
@@ -15909,7 +15997,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 26194
+								"line": 26202
 							}
 						]
 					},
@@ -15925,6 +16013,13 @@
 										"types": [
 											"Highcharts.TitleOptions"
 										]
+									},
+									"redraw": {
+										"description": "Whether to redraw the chart after the title is altered. If doing more\n       operations on the chart, it is a good idea to set redraw to false and\n       call {@link Chart#redraw} after.",
+										"isOptional": true,
+										"types": [
+											"boolean"
+										]
 									}
 								},
 								"return": {
@@ -15937,7 +16032,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 26194
+										"line": 26202
 									}
 								]
 							}
@@ -15954,7 +16049,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 21669
+								"line": 21674
 							}
 						]
 					},
@@ -15972,7 +16067,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21699
+										"line": 21704
 									}
 								]
 							}
@@ -16026,7 +16121,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21961
+										"line": 21967
 									}
 								]
 							}
@@ -16046,7 +16141,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21857
+										"line": 21862
 									}
 								]
 							}
@@ -16075,7 +16170,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22040
+										"line": 22046
 									}
 								]
 							}
@@ -16093,7 +16188,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21737
+										"line": 21742
 									}
 								]
 							}
@@ -16135,7 +16230,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21983
+										"line": 21989
 									}
 								]
 							}
@@ -16153,7 +16248,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21708
+										"line": 21713
 									}
 								]
 							}
@@ -16171,7 +16266,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21766
+										"line": 21771
 									}
 								]
 							}
@@ -16207,7 +16302,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 22324
+										"line": 22330
 									}
 								]
 							}
@@ -16225,7 +16320,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21756
+										"line": 21761
 									}
 								]
 							}
@@ -16243,7 +16338,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21746
+										"line": 21751
 									}
 								]
 							}
@@ -16255,6 +16350,7 @@
 								"kind": "function",
 								"parameters": {
 									"options": {
+										"description": "The tooltip options to update.",
 										"types": [
 											"Highcharts.TooltipOptions"
 										]
@@ -16270,7 +16366,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 21947
+										"line": 21952
 									}
 								]
 							}
@@ -16287,7 +16383,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 9631
+								"line": 9638
 							}
 						]
 					},
@@ -16305,7 +16401,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16324,7 +16420,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16342,7 +16438,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16361,7 +16457,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16379,7 +16475,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16397,7 +16493,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16416,7 +16512,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16434,7 +16530,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16452,7 +16548,7 @@
 								"files": [
 									{
 										"path": "code/highcharts.src.js",
-										"line": 9631
+										"line": 9638
 									}
 								]
 							}
@@ -16485,15 +16581,10 @@
 								]
 							},
 							"options": {
-								"description": "Event options",
+								"description": "Options for adding the event.",
+								"isOptional": true,
 								"types": [
-									"Highcharts.Dictionary.<*>"
-								]
-							},
-							"options.order": {
-								"description": "The order the event handler should be called. This opens for having\n       one handler be called before another, independent of in which order\n       they were added.",
-								"types": [
-									"number"
+									"Highcharts.EventOptionsObject"
 								]
 							}
 						},
@@ -16508,7 +16599,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2375
+								"line": 2387
 							}
 						]
 					}
@@ -16626,7 +16717,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1893
+								"line": 1905
 							}
 						]
 					}
@@ -16670,7 +16761,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2614
+								"line": 2621
 							}
 						]
 					}
@@ -16700,7 +16791,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1775
+								"line": 1787
 							}
 						]
 					}
@@ -16730,7 +16821,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1750
+								"line": 1762
 							}
 						]
 					}
@@ -16777,7 +16868,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1137
+								"line": 1149
 							}
 						]
 					}
@@ -16837,7 +16928,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 26290
+								"line": 26308
 							}
 						]
 					}
@@ -16885,7 +16976,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1225
+								"line": 1237
 							}
 						]
 					}
@@ -16922,7 +17013,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1849
+								"line": 1861
 							}
 						]
 					}
@@ -16980,7 +17071,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1311
+								"line": 1323
 							}
 						]
 					}
@@ -17015,7 +17106,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1291
+								"line": 1303
 							}
 						]
 					}
@@ -17138,7 +17229,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13128
+								"line": 13135
 							}
 						]
 					}
@@ -17157,7 +17248,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 9317
+								"line": 9324
 							}
 						]
 					}
@@ -17186,7 +17277,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1466
+								"line": 1478
 							}
 						]
 					}
@@ -17205,7 +17296,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 9672
+								"line": 9679
 							}
 						]
 					},
@@ -17236,7 +17327,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1122
+								"line": 1134
 							}
 						]
 					}
@@ -17272,7 +17363,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1800
+								"line": 1812
 							}
 						]
 					}
@@ -17301,7 +17392,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1827
+								"line": 1839
 							}
 						]
 					}
@@ -17387,7 +17478,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2268
+								"line": 2280
 							}
 						]
 					}
@@ -17422,7 +17513,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1101
+								"line": 1113
 							}
 						]
 					}
@@ -17459,7 +17550,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 459
+								"line": 471
 							}
 						]
 					}
@@ -17495,7 +17586,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1241
+								"line": 1253
 							}
 						]
 					}
@@ -17531,7 +17622,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1352
+								"line": 1364
 							}
 						]
 					}
@@ -17567,7 +17658,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2140
+								"line": 2152
 							}
 						]
 					}
@@ -17616,7 +17707,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2526
+								"line": 2533
 							}
 						]
 					}
@@ -17687,7 +17778,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1520
+								"line": 1532
 							}
 						]
 					}
@@ -17730,7 +17821,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1476
+								"line": 1488
 							}
 						]
 					}
@@ -17775,7 +17866,7 @@
 						"files": [
 							{
 								"path": "code/modules/gantt.src.js",
-								"line": 6626
+								"line": 6617
 							}
 						]
 					}
@@ -17812,7 +17903,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 6285
+								"line": 6288
 							}
 						]
 					}
@@ -17842,7 +17933,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1600
+								"line": 1612
 							}
 						]
 					}
@@ -17863,7 +17954,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13100
+								"line": 13107
 							}
 						]
 					}
@@ -17906,7 +17997,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2053
+								"line": 2065
 							}
 						]
 					}
@@ -17943,7 +18034,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2287
+								"line": 2299
 							}
 						]
 					}
@@ -18058,7 +18149,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2117
+								"line": 2129
 							}
 						]
 					}
@@ -18109,7 +18200,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1016
+								"line": 1028
 							}
 						]
 					}
@@ -18139,7 +18230,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1065
+								"line": 1077
 							}
 						]
 					}
@@ -18169,7 +18260,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1050
+								"line": 1062
 							}
 						]
 					}
@@ -18199,7 +18290,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1085
+								"line": 1097
 							}
 						]
 					}
@@ -18236,7 +18327,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1032
+								"line": 1044
 							}
 						]
 					}
@@ -18266,7 +18357,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1001
+								"line": 1013
 							}
 						]
 					}
@@ -18297,7 +18388,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2172
+								"line": 2184
 							}
 						]
 					}
@@ -18334,7 +18425,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2304
+								"line": 2316
 							}
 						]
 					}
@@ -18379,7 +18470,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 6813
+								"line": 6816
 							}
 						]
 					}
@@ -18398,64 +18489,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 6742
-							}
-						]
-					}
-				},
-				{
-					"doclet": {
-						"name": "Highcharts.mean",
-						"description": "***************************************************************************\n\nBELL CURVE",
-						"kind": "function",
-						"return": {
-							"types": [
-								"void"
-							]
-						}
-					},
-					"meta": {
-						"files": [
-							{
-								"path": "code/modules/histogram-bellcurve.src.js",
-								"line": 407
-							}
-						]
-					}
-				},
-				{
-					"doclet": {
-						"name": "Highcharts.merge",
-						"description": "Utility function to deep merge two or more objects and return a third object.\nThe merge function can also be used with a single object argument to create a\ndeep copy of an object.",
-						"kind": "function",
-						"isStatic": true,
-						"parameters": {
-							"a": {
-								"description": "The first object to extend. When only this is given, the function\n       returns a deep copy.",
-								"types": [
-									"*"
-								]
-							},
-							"n": {
-								"description": "An object to merge into the previous one.",
-								"isOptional": true,
-								"types": [
-									"*"
-								]
-							}
-						},
-						"return": {
-							"types": [
-								"*"
-							],
-							"description": "The merged object. If the first argument is true, the return is the\n        same as the second argument."
-						}
-					},
-					"meta": {
-						"files": [
-							{
-								"path": "code/highcharts.src.js",
-								"line": 899
+								"line": 6745
 							}
 						]
 					}
@@ -18498,7 +18532,44 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 899
+								"line": 911
+							}
+						]
+					}
+				},
+				{
+					"doclet": {
+						"name": "Highcharts.merge",
+						"description": "Utility function to deep merge two or more objects and return a third object.\nThe merge function can also be used with a single object argument to create a\ndeep copy of an object.",
+						"kind": "function",
+						"isStatic": true,
+						"parameters": {
+							"a": {
+								"description": "The first object to extend. When only this is given, the function\n       returns a deep copy.",
+								"types": [
+									"*"
+								]
+							},
+							"n": {
+								"description": "An object to merge into the previous one.",
+								"isOptional": true,
+								"types": [
+									"*"
+								]
+							}
+						},
+						"return": {
+							"types": [
+								"*"
+							],
+							"description": "The merged object. If the first argument is true, the return is the\n        same as the second argument."
+						}
+					},
+					"meta": {
+						"files": [
+							{
+								"path": "code/highcharts.src.js",
+								"line": 911
 							}
 						]
 					}
@@ -18557,7 +18628,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1615
+								"line": 1627
 							}
 						]
 					}
@@ -18607,7 +18678,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1928
+								"line": 1940
 							}
 						]
 					}
@@ -18649,7 +18720,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2243
+								"line": 2255
 							}
 						]
 					}
@@ -18679,7 +18750,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2186
+								"line": 2198
 							}
 						]
 					}
@@ -18722,7 +18793,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1374
+								"line": 1386
 							}
 						]
 					}
@@ -18752,7 +18823,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1267
+								"line": 1279
 							}
 						]
 					}
@@ -18795,7 +18866,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2320
+								"line": 2332
 							}
 						]
 					}
@@ -18838,7 +18909,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1401
+								"line": 1413
 							}
 						]
 					}
@@ -18881,7 +18952,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2446
+								"line": 2453
 							}
 						]
 					}
@@ -18936,7 +19007,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2688
+								"line": 2695
 							}
 						]
 					}
@@ -18972,7 +19043,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1869
+								"line": 1881
 							}
 						]
 					}
@@ -19002,7 +19073,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13071
+								"line": 13078
 							}
 						]
 					}
@@ -19044,7 +19115,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2341
+								"line": 2353
 							}
 						]
 					}
@@ -19074,7 +19145,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1184
+								"line": 1196
 							}
 						]
 					}
@@ -19102,7 +19173,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 6711
+								"line": 6714
 							}
 						]
 					}
@@ -19137,7 +19208,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1717
+								"line": 1729
 							}
 						]
 					}
@@ -19182,7 +19253,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 9880
+								"line": 9879
 							}
 						]
 					}
@@ -19218,7 +19289,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2212
+								"line": 2224
 							}
 						]
 					}
@@ -19253,7 +19324,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 4380
+								"line": 4379
 							}
 						]
 					}
@@ -19296,7 +19367,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1199
+								"line": 1211
 							}
 						]
 					}
@@ -19315,7 +19386,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 13118
+								"line": 13125
 							}
 						]
 					}
@@ -19337,7 +19408,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2741
+								"line": 2748
 							}
 						]
 					}
@@ -19378,7 +19449,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 1425
+								"line": 1437
 							}
 						]
 					}
@@ -19396,7 +19467,7 @@
 				"files": [
 					{
 						"path": "code/highcharts.src.js",
-						"line": 2771
+						"line": 2778
 					}
 				]
 			},
@@ -19443,7 +19514,7 @@
 						"files": [
 							{
 								"path": "code/highcharts.src.js",
-								"line": 2777
+								"line": 2784
 							}
 						]
 					}

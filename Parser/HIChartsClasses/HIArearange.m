@@ -39,7 +39,6 @@
 	copyArearange.states = [self.states copyWithZone: zone];
 	copyArearange.marker = [self.marker copyWithZone: zone];
 	copyArearange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyArearange.borderColor = [self.borderColor copyWithZone: zone];
 	copyArearange.className = [self.className copyWithZone: zone];
 	copyArearange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyArearange.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -67,7 +66,6 @@
 	copyArearange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyArearange.cursor = [self.cursor copyWithZone: zone];
 	copyArearange.pointStart = [self.pointStart copyWithZone: zone];
-	copyArearange.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyArearange.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyArearange.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyArearange.showInLegend = [self.showInLegend copyWithZone: zone];

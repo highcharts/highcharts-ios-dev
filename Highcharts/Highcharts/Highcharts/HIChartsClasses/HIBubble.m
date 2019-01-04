@@ -54,7 +54,6 @@
 	copyBubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyBubble.borderColor = [self.borderColor copyWithZone: zone];
 	copyBubble.className = [self.className copyWithZone: zone];
 	copyBubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBubble.connectNulls = [self.connectNulls copyWithZone: zone];
@@ -78,7 +77,6 @@
 	copyBubble.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyBubble.cursor = [self.cursor copyWithZone: zone];
 	copyBubble.pointStart = [self.pointStart copyWithZone: zone];
-	copyBubble.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBubble.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyBubble.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyBubble.showInLegend = [self.showInLegend copyWithZone: zone];

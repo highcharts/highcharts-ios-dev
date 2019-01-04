@@ -33,7 +33,6 @@
 	copyScatter.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyScatter.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyScatter.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyScatter.borderColor = [self.borderColor copyWithZone: zone];
 	copyScatter.className = [self.className copyWithZone: zone];
 	copyScatter.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyScatter.connectNulls = [self.connectNulls copyWithZone: zone];
@@ -61,7 +60,6 @@
 	copyScatter.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyScatter.cursor = [self.cursor copyWithZone: zone];
 	copyScatter.pointStart = [self.pointStart copyWithZone: zone];
-	copyScatter.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyScatter.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyScatter.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyScatter.showInLegend = [self.showInLegend copyWithZone: zone];
