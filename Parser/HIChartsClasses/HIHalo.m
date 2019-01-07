@@ -38,27 +38,27 @@
 # pragma mark - Setters
 
 -(void)setOpacity:(NSNumber *)opacity {
+	NSNumber *oldValue = _opacity;
 	_opacity = opacity;
-	[self updateNSObject:@"opacity"];
+	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
 -(void)setAttributes:(HIAttributes *)attributes {
 	HIAttributes *oldValue = _attributes;
-	if(self.attributes) {
-		[self removeObserver:self forKeyPath:@"attributes.isUpdated"];
-	}
 	_attributes = attributes;
 	[self updateHIObject:oldValue newValue:attributes propertyName:@"attributes"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setSize:(NSNumber *)size {
+	NSNumber *oldValue = _size;
 	_size = size;
-	[self updateNSObject:@"size"];
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
 }
 
 @end

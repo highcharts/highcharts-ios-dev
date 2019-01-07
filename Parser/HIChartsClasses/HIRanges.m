@@ -38,34 +38,26 @@
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setConnectorColor:(HIColor *)connectorColor {
 	HIColor *oldValue = _connectorColor;
-	if(self.connectorColor) {
-		[self removeObserver:self forKeyPath:@"connectorColor.isUpdated"];
-	}
 	_connectorColor = connectorColor;
 	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
 -(void)setValue:(id)value {
+	id oldValue = _value;
 	_value = value;
-	[self updateNSObject:@"value"];
+	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }
 
 @end

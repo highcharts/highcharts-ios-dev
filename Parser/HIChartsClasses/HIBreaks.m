@@ -38,23 +38,27 @@
 # pragma mark - Setters
 
 -(void)setTo:(NSNumber *)to {
+	NSNumber *oldValue = _to;
 	_to = to;
-	[self updateNSObject:@"to"];
+	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
 }
 
 -(void)setBreakSize:(NSNumber *)breakSize {
+	NSNumber *oldValue = _breakSize;
 	_breakSize = breakSize;
-	[self updateNSObject:@"breakSize"];
+	[self updateNSObject:oldValue newValue:breakSize propertyName:@"breakSize"];
 }
 
 -(void)setFrom:(NSNumber *)from {
+	NSNumber *oldValue = _from;
 	_from = from;
-	[self updateNSObject:@"from"];
+	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
 }
 
 -(void)setRepeat:(NSNumber *)repeat {
+	NSNumber *oldValue = _repeat;
 	_repeat = repeat;
-	[self updateNSObject:@"repeat"];
+	[self updateNSObject:oldValue newValue:repeat propertyName:@"repeat"];
 }
 
 @end

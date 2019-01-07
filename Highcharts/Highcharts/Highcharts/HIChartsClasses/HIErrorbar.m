@@ -172,75 +172,75 @@
 # pragma mark - Setters
 
 -(void)setWhiskerWidth:(NSNumber *)whiskerWidth {
+	NSNumber *oldValue = _whiskerWidth;
 	_whiskerWidth = whiskerWidth;
-	[self updateNSObject:@"whiskerWidth"];
+	[self updateNSObject:oldValue newValue:whiskerWidth propertyName:@"whiskerWidth"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {
+	NSNumber *oldValue = _grouping;
 	_grouping = grouping;
-	[self updateNSObject:@"grouping"];
+	[self updateNSObject:oldValue newValue:grouping propertyName:@"grouping"];
 }
 
 -(void)setStemWidth:(NSNumber *)stemWidth {
+	NSNumber *oldValue = _stemWidth;
 	_stemWidth = stemWidth;
-	[self updateNSObject:@"stemWidth"];
+	[self updateNSObject:oldValue newValue:stemWidth propertyName:@"stemWidth"];
 }
 
 -(void)setMedianWidth:(NSNumber *)medianWidth {
+	NSNumber *oldValue = _medianWidth;
 	_medianWidth = medianWidth;
-	[self updateNSObject:@"medianWidth"];
+	[self updateNSObject:oldValue newValue:medianWidth propertyName:@"medianWidth"];
 }
 
 -(void)setWhiskerColor:(HIColor *)whiskerColor {
 	HIColor *oldValue = _whiskerColor;
-	if(self.whiskerColor) {
-		[self removeObserver:self forKeyPath:@"whiskerColor.isUpdated"];
-	}
 	_whiskerColor = whiskerColor;
 	[self updateHIObject:oldValue newValue:whiskerColor propertyName:@"whiskerColor"];
 }
 
 -(void)setMedianColor:(HIColor *)medianColor {
 	HIColor *oldValue = _medianColor;
-	if(self.medianColor) {
-		[self removeObserver:self forKeyPath:@"medianColor.isUpdated"];
-	}
 	_medianColor = medianColor;
 	[self updateHIObject:oldValue newValue:medianColor propertyName:@"medianColor"];
 }
 
 -(void)setStemDashStyle:(NSString *)stemDashStyle {
+	NSString *oldValue = _stemDashStyle;
 	_stemDashStyle = stemDashStyle;
-	[self updateNSObject:@"stemDashStyle"];
+	[self updateNSObject:oldValue newValue:stemDashStyle propertyName:@"stemDashStyle"];
 }
 
 -(void)setWhiskerLength:(id)whiskerLength {
+	id oldValue = _whiskerLength;
 	_whiskerLength = whiskerLength;
-	[self updateNSObject:@"whiskerLength"];
+	[self updateNSObject:oldValue newValue:whiskerLength propertyName:@"whiskerLength"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
 	_fillColor = fillColor;
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
+	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
+	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {
+	NSNumber *oldValue = _pointRange;
 	_pointRange = pointRange;
-	[self updateNSObject:@"pointRange"];
+	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
 }
 
 -(void)setMinPointLength:(NSNumber *)minPointLength {
+	NSNumber *oldValue = _minPointLength;
 	_minPointLength = minPointLength;
-	[self updateNSObject:@"minPointLength"];
+	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
 -(void)setColors:(NSArray<NSString *> *)colors {
@@ -251,46 +251,50 @@
 
 -(void)setEdgeColor:(HIColor *)edgeColor {
 	HIColor *oldValue = _edgeColor;
-	if(self.edgeColor) {
-		[self removeObserver:self forKeyPath:@"edgeColor.isUpdated"];
-	}
 	_edgeColor = edgeColor;
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
+	NSNumber *oldValue = _maxPointWidth;
 	_maxPointWidth = maxPointWidth;
-	[self updateNSObject:@"maxPointWidth"];
+	[self updateNSObject:oldValue newValue:maxPointWidth propertyName:@"maxPointWidth"];
 }
 
 -(void)setPointWidth:(NSNumber *)pointWidth {
+	NSNumber *oldValue = _pointWidth;
 	_pointWidth = pointWidth;
-	[self updateNSObject:@"pointWidth"];
+	[self updateNSObject:oldValue newValue:pointWidth propertyName:@"pointWidth"];
 }
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {
+	NSNumber *oldValue = _groupPadding;
 	_groupPadding = groupPadding;
-	[self updateNSObject:@"groupPadding"];
+	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
 }
 
 -(void)setEdgeWidth:(NSNumber *)edgeWidth {
+	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
-	[self updateNSObject:@"edgeWidth"];
+	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
 }
 
 -(void)setCrisp:(NSNumber *)crisp {
+	NSNumber *oldValue = _crisp;
 	_crisp = crisp;
-	[self updateNSObject:@"crisp"];
+	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {
+	NSNumber *oldValue = _depth;
 	_depth = depth;
-	[self updateNSObject:@"depth"];
+	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
 @end

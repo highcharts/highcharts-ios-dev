@@ -26,8 +26,9 @@
 # pragma mark - Setters
 
 -(void)setVMLRadialGradientURL:(NSString *)VMLRadialGradientURL {
+	NSString *oldValue = _VMLRadialGradientURL;
 	_VMLRadialGradientURL = VMLRadialGradientURL;
-	[self updateNSObject:@"VMLRadialGradientURL"];
+	[self updateNSObject:oldValue newValue:VMLRadialGradientURL propertyName:@"VMLRadialGradientURL"];
 }
 
 @end

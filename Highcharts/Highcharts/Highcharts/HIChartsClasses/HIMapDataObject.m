@@ -43,8 +43,9 @@
 # pragma mark - Setters
 
 -(void)setName:(NSString *)name {
+	NSString *oldValue = _name;
 	_name = name;
-	[self updateNSObject:@"name"];
+	[self updateNSObject:oldValue newValue:name propertyName:@"name"];
 }
 
 -(void)setPath:(NSArray *)path {
@@ -54,8 +55,9 @@
 }
 
 -(void)setProperties:(id)properties {
+	id oldValue = _properties;
 	_properties = properties;
-	[self updateNSObject:@"properties"];
+	[self updateNSObject:oldValue newValue:properties propertyName:@"properties"];
 }
 
 @end

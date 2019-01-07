@@ -42,32 +42,33 @@
 # pragma mark - Setters
 
 -(void)setDate:(id)Date {
+	id oldValue = _Date;
 	_Date = Date;
-	[self updateNSObject:@"Date"];
+	[self updateNSObject:oldValue newValue:Date propertyName:@"Date"];
 }
 
 -(void)setTimezone:(NSString *)timezone {
+	NSString *oldValue = _timezone;
 	_timezone = timezone;
-	[self updateNSObject:@"timezone"];
+	[self updateNSObject:oldValue newValue:timezone propertyName:@"timezone"];
 }
 
 -(void)setGetTimezoneOffset:(HIFunction *)getTimezoneOffset {
 	HIFunction *oldValue = _getTimezoneOffset;
-	if(self.getTimezoneOffset) {
-		[self removeObserver:self forKeyPath:@"getTimezoneOffset.isUpdated"];
-	}
 	_getTimezoneOffset = getTimezoneOffset;
 	[self updateHIObject:oldValue newValue:getTimezoneOffset propertyName:@"getTimezoneOffset"];
 }
 
 -(void)setTimezoneOffset:(NSNumber *)timezoneOffset {
+	NSNumber *oldValue = _timezoneOffset;
 	_timezoneOffset = timezoneOffset;
-	[self updateNSObject:@"timezoneOffset"];
+	[self updateNSObject:oldValue newValue:timezoneOffset propertyName:@"timezoneOffset"];
 }
 
 -(void)setUseUTC:(NSNumber *)useUTC {
+	NSNumber *oldValue = _useUTC;
 	_useUTC = useUTC;
-	[self updateNSObject:@"useUTC"];
+	[self updateNSObject:oldValue newValue:useUTC propertyName:@"useUTC"];
 }
 
 @end

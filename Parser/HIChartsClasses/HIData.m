@@ -342,35 +342,37 @@
 # pragma mark - Setters
 
 -(void)setEnablePolling:(NSNumber *)enablePolling {
+	NSNumber *oldValue = _enablePolling;
 	_enablePolling = enablePolling;
-	[self updateNSObject:@"enablePolling"];
+	[self updateNSObject:oldValue newValue:enablePolling propertyName:@"enablePolling"];
 }
 
 -(void)setStartColumn:(NSNumber *)startColumn {
+	NSNumber *oldValue = _startColumn;
 	_startColumn = startColumn;
-	[self updateNSObject:@"startColumn"];
+	[self updateNSObject:oldValue newValue:startColumn propertyName:@"startColumn"];
 }
 
 -(void)setLineDelimiter:(NSString *)lineDelimiter {
+	NSString *oldValue = _lineDelimiter;
 	_lineDelimiter = lineDelimiter;
-	[self updateNSObject:@"lineDelimiter"];
+	[self updateNSObject:oldValue newValue:lineDelimiter propertyName:@"lineDelimiter"];
 }
 
 -(void)setTable:(NSString *)table {
+	NSString *oldValue = _table;
 	_table = table;
-	[self updateNSObject:@"table"];
+	[self updateNSObject:oldValue newValue:table propertyName:@"table"];
 }
 
 -(void)setRowsURL:(NSString *)rowsURL {
+	NSString *oldValue = _rowsURL;
 	_rowsURL = rowsURL;
-	[self updateNSObject:@"rowsURL"];
+	[self updateNSObject:oldValue newValue:rowsURL propertyName:@"rowsURL"];
 }
 
 -(void)setParseDate:(HIFunction *)parseDate {
 	HIFunction *oldValue = _parseDate;
-	if(self.parseDate) {
-		[self removeObserver:self forKeyPath:@"parseDate.isUpdated"];
-	}
 	_parseDate = parseDate;
 	[self updateHIObject:oldValue newValue:parseDate propertyName:@"parseDate"];
 }
@@ -388,42 +390,45 @@
 }
 
 -(void)setCsvURL:(NSString *)csvURL {
+	NSString *oldValue = _csvURL;
 	_csvURL = csvURL;
-	[self updateNSObject:@"csvURL"];
+	[self updateNSObject:oldValue newValue:csvURL propertyName:@"csvURL"];
 }
 
 -(void)setDateFormat:(NSString *)dateFormat {
+	NSString *oldValue = _dateFormat;
 	_dateFormat = dateFormat;
-	[self updateNSObject:@"dateFormat"];
+	[self updateNSObject:oldValue newValue:dateFormat propertyName:@"dateFormat"];
 }
 
 -(void)setGoogleSpreadsheetWorksheet:(NSString *)googleSpreadsheetWorksheet {
+	NSString *oldValue = _googleSpreadsheetWorksheet;
 	_googleSpreadsheetWorksheet = googleSpreadsheetWorksheet;
-	[self updateNSObject:@"googleSpreadsheetWorksheet"];
+	[self updateNSObject:oldValue newValue:googleSpreadsheetWorksheet propertyName:@"googleSpreadsheetWorksheet"];
 }
 
 -(void)setDataRefreshRate:(NSNumber *)dataRefreshRate {
+	NSNumber *oldValue = _dataRefreshRate;
 	_dataRefreshRate = dataRefreshRate;
-	[self updateNSObject:@"dataRefreshRate"];
+	[self updateNSObject:oldValue newValue:dataRefreshRate propertyName:@"dataRefreshRate"];
 }
 
 -(void)setParsed:(HIFunction *)parsed {
 	HIFunction *oldValue = _parsed;
-	if(self.parsed) {
-		[self removeObserver:self forKeyPath:@"parsed.isUpdated"];
-	}
 	_parsed = parsed;
 	[self updateHIObject:oldValue newValue:parsed propertyName:@"parsed"];
 }
 
 -(void)setStartRow:(NSNumber *)startRow {
+	NSNumber *oldValue = _startRow;
 	_startRow = startRow;
-	[self updateNSObject:@"startRow"];
+	[self updateNSObject:oldValue newValue:startRow propertyName:@"startRow"];
 }
 
 -(void)setCsv:(NSString *)csv {
+	NSString *oldValue = _csv;
 	_csv = csv;
-	[self updateNSObject:@"csv"];
+	[self updateNSObject:oldValue newValue:csv propertyName:@"csv"];
 }
 
 -(void)setColumns:(NSArray<NSArray *> *)columns {
@@ -433,309 +438,327 @@
 }
 
 -(void)setEndRow:(NSNumber *)endRow {
+	NSNumber *oldValue = _endRow;
 	_endRow = endRow;
-	[self updateNSObject:@"endRow"];
+	[self updateNSObject:oldValue newValue:endRow propertyName:@"endRow"];
 }
 
 -(void)setItemDelimiter:(NSString *)itemDelimiter {
+	NSString *oldValue = _itemDelimiter;
 	_itemDelimiter = itemDelimiter;
-	[self updateNSObject:@"itemDelimiter"];
+	[self updateNSObject:oldValue newValue:itemDelimiter propertyName:@"itemDelimiter"];
 }
 
 -(void)setComplete:(HIFunction *)complete {
 	HIFunction *oldValue = _complete;
-	if(self.complete) {
-		[self removeObserver:self forKeyPath:@"complete.isUpdated"];
-	}
 	_complete = complete;
 	[self updateHIObject:oldValue newValue:complete propertyName:@"complete"];
 }
 
 -(void)setBeforeParse:(HIFunction *)beforeParse {
 	HIFunction *oldValue = _beforeParse;
-	if(self.beforeParse) {
-		[self removeObserver:self forKeyPath:@"beforeParse.isUpdated"];
-	}
 	_beforeParse = beforeParse;
 	[self updateHIObject:oldValue newValue:beforeParse propertyName:@"beforeParse"];
 }
 
 -(void)setEndColumn:(NSNumber *)endColumn {
+	NSNumber *oldValue = _endColumn;
 	_endColumn = endColumn;
-	[self updateNSObject:@"endColumn"];
+	[self updateNSObject:oldValue newValue:endColumn propertyName:@"endColumn"];
 }
 
 -(void)setFirstRowAsNames:(NSNumber *)firstRowAsNames {
+	NSNumber *oldValue = _firstRowAsNames;
 	_firstRowAsNames = firstRowAsNames;
-	[self updateNSObject:@"firstRowAsNames"];
+	[self updateNSObject:oldValue newValue:firstRowAsNames propertyName:@"firstRowAsNames"];
 }
 
 -(void)setGoogleSpreadsheetKey:(NSString *)googleSpreadsheetKey {
+	NSString *oldValue = _googleSpreadsheetKey;
 	_googleSpreadsheetKey = googleSpreadsheetKey;
-	[self updateNSObject:@"googleSpreadsheetKey"];
+	[self updateNSObject:oldValue newValue:googleSpreadsheetKey propertyName:@"googleSpreadsheetKey"];
 }
 
 -(void)setSwitchRowsAndColumns:(NSNumber *)switchRowsAndColumns {
+	NSNumber *oldValue = _switchRowsAndColumns;
 	_switchRowsAndColumns = switchRowsAndColumns;
-	[self updateNSObject:@"switchRowsAndColumns"];
+	[self updateNSObject:oldValue newValue:switchRowsAndColumns propertyName:@"switchRowsAndColumns"];
 }
 
 -(void)setDecimalPoint:(NSString *)decimalPoint {
+	NSString *oldValue = _decimalPoint;
 	_decimalPoint = decimalPoint;
-	[self updateNSObject:@"decimalPoint"];
+	[self updateNSObject:oldValue newValue:decimalPoint propertyName:@"decimalPoint"];
 }
 
 -(void)setColumnsURL:(NSString *)columnsURL {
+	NSString *oldValue = _columnsURL;
 	_columnsURL = columnsURL;
-	[self updateNSObject:@"columnsURL"];
+	[self updateNSObject:oldValue newValue:columnsURL propertyName:@"columnsURL"];
 }
 
 -(void)setHigh:(NSNumber *)high {
+	NSNumber *oldValue = _high;
 	_high = high;
-	[self updateNSObject:@"high"];
+	[self updateNSObject:oldValue newValue:high propertyName:@"high"];
 }
 
 -(void)setQ1:(NSNumber *)q1 {
+	NSNumber *oldValue = _q1;
 	_q1 = q1;
-	[self updateNSObject:@"q1"];
+	[self updateNSObject:oldValue newValue:q1 propertyName:@"q1"];
 }
 
 -(void)setQ3:(NSNumber *)q3 {
+	NSNumber *oldValue = _q3;
 	_q3 = q3;
-	[self updateNSObject:@"q3"];
+	[self updateNSObject:oldValue newValue:q3 propertyName:@"q3"];
 }
 
 -(void)setMedian:(NSNumber *)median {
+	NSNumber *oldValue = _median;
 	_median = median;
-	[self updateNSObject:@"median"];
+	[self updateNSObject:oldValue newValue:median propertyName:@"median"];
 }
 
 -(void)setLow:(NSNumber *)low {
+	NSNumber *oldValue = _low;
 	_low = low;
-	[self updateNSObject:@"low"];
+	[self updateNSObject:oldValue newValue:low propertyName:@"low"];
 }
 
 -(void)setLabelrank:(NSNumber *)labelrank {
+	NSNumber *oldValue = _labelrank;
 	_labelrank = labelrank;
-	[self updateNSObject:@"labelrank"];
+	[self updateNSObject:oldValue newValue:labelrank propertyName:@"labelrank"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setDefinition:(NSString *)definition {
+	NSString *oldValue = _definition;
 	_definition = definition;
-	[self updateNSObject:@"definition"];
+	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setName:(NSString *)name {
+	NSString *oldValue = _name;
 	_name = name;
-	[self updateNSObject:@"name"];
+	[self updateNSObject:oldValue newValue:name propertyName:@"name"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setSelected:(NSNumber *)selected {
+	NSNumber *oldValue = _selected;
 	_selected = selected;
-	[self updateNSObject:@"selected"];
+	[self updateNSObject:oldValue newValue:selected propertyName:@"selected"];
 }
 
 -(void)setDataLabels:(id)dataLabels {
+	id oldValue = _dataLabels;
 	_dataLabels = dataLabels;
-	[self updateNSObject:@"dataLabels"];
+	[self updateNSObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setDragDrop:(HIDragDrop *)dragDrop {
 	HIDragDrop *oldValue = _dragDrop;
-	if(self.dragDrop) {
-		[self removeObserver:self forKeyPath:@"dragDrop.isUpdated"];
-	}
 	_dragDrop = dragDrop;
 	[self updateHIObject:oldValue newValue:dragDrop propertyName:@"dragDrop"];
 }
 
 -(void)setId:(NSString *)id {
+	NSString *oldValue = _id;
 	_id = id;
-	[self updateNSObject:@"id"];
+	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setDrilldown:(NSString *)drilldown {
+	NSString *oldValue = _drilldown;
 	_drilldown = drilldown;
-	[self updateNSObject:@"drilldown"];
+	[self updateNSObject:oldValue newValue:drilldown propertyName:@"drilldown"];
 }
 
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
-	if(self.events) {
-		[self removeObserver:self forKeyPath:@"events.isUpdated"];
-	}
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setColorIndex:(NSNumber *)colorIndex {
+	NSNumber *oldValue = _colorIndex;
 	_colorIndex = colorIndex;
-	[self updateNSObject:@"colorIndex"];
+	[self updateNSObject:oldValue newValue:colorIndex propertyName:@"colorIndex"];
 }
 
 -(void)setLegendIndex:(NSNumber *)legendIndex {
+	NSNumber *oldValue = _legendIndex;
 	_legendIndex = legendIndex;
-	[self updateNSObject:@"legendIndex"];
+	[self updateNSObject:oldValue newValue:legendIndex propertyName:@"legendIndex"];
 }
 
 -(void)setMarker:(HIMarker *)marker {
 	HIMarker *oldValue = _marker;
-	if(self.marker) {
-		[self removeObserver:self forKeyPath:@"marker.isUpdated"];
-	}
 	_marker = marker;
 	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
 }
 
 -(void)setWeight:(NSNumber *)weight {
+	NSNumber *oldValue = _weight;
 	_weight = weight;
-	[self updateNSObject:@"weight"];
+	[self updateNSObject:oldValue newValue:weight propertyName:@"weight"];
 }
 
 -(void)setDirection:(NSNumber *)direction {
+	NSNumber *oldValue = _direction;
 	_direction = direction;
-	[self updateNSObject:@"direction"];
+	[self updateNSObject:oldValue newValue:direction propertyName:@"direction"];
 }
 
 -(void)setLength:(NSNumber *)length {
+	NSNumber *oldValue = _length;
 	_length = length;
-	[self updateNSObject:@"length"];
+	[self updateNSObject:oldValue newValue:length propertyName:@"length"];
 }
 
 -(void)setTarget:(NSNumber *)target {
+	NSNumber *oldValue = _target;
 	_target = target;
-	[self updateNSObject:@"target"];
+	[self updateNSObject:oldValue newValue:target propertyName:@"target"];
 }
 
 -(void)setTargetOptions:(HITargetOptions *)targetOptions {
 	HITargetOptions *oldValue = _targetOptions;
-	if(self.targetOptions) {
-		[self removeObserver:self forKeyPath:@"targetOptions.isUpdated"];
-	}
 	_targetOptions = targetOptions;
 	[self updateHIObject:oldValue newValue:targetOptions propertyName:@"targetOptions"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setPointWidth:(NSNumber *)pointWidth {
+	NSNumber *oldValue = _pointWidth;
 	_pointWidth = pointWidth;
-	[self updateNSObject:@"pointWidth"];
+	[self updateNSObject:oldValue newValue:pointWidth propertyName:@"pointWidth"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
+	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
+	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
 -(void)setValue:(NSNumber *)value {
+	NSNumber *oldValue = _value;
 	_value = value;
-	[self updateNSObject:@"value"];
+	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }
 
 -(void)setIsIntermediateSum:(NSNumber *)isIntermediateSum {
+	NSNumber *oldValue = _isIntermediateSum;
 	_isIntermediateSum = isIntermediateSum;
-	[self updateNSObject:@"isIntermediateSum"];
+	[self updateNSObject:oldValue newValue:isIntermediateSum propertyName:@"isIntermediateSum"];
 }
 
 -(void)setIsSum:(NSNumber *)isSum {
+	NSNumber *oldValue = _isSum;
 	_isSum = isSum;
-	[self updateNSObject:@"isSum"];
+	[self updateNSObject:oldValue newValue:isSum propertyName:@"isSum"];
 }
 
 -(void)setSliced:(NSNumber *)sliced {
+	NSNumber *oldValue = _sliced;
 	_sliced = sliced;
-	[self updateNSObject:@"sliced"];
+	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
 }
 
 -(void)setTo:(NSString *)to {
+	NSString *oldValue = _to;
 	_to = to;
-	[self updateNSObject:@"to"];
+	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
 }
 
 -(void)setFrom:(NSString *)from {
+	NSString *oldValue = _from;
 	_from = from;
-	[self updateNSObject:@"from"];
+	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {
+	id oldValue = _innerRadius;
 	_innerRadius = innerRadius;
-	[self updateNSObject:@"innerRadius"];
+	[self updateNSObject:oldValue newValue:innerRadius propertyName:@"innerRadius"];
 }
 
 -(void)setRadius:(id)radius {
+	id oldValue = _radius;
 	_radius = radius;
-	[self updateNSObject:@"radius"];
+	[self updateNSObject:oldValue newValue:radius propertyName:@"radius"];
 }
 
 -(void)setOutgoing:(NSNumber *)outgoing {
+	NSNumber *oldValue = _outgoing;
 	_outgoing = outgoing;
-	[self updateNSObject:@"outgoing"];
+	[self updateNSObject:oldValue newValue:outgoing propertyName:@"outgoing"];
 }
 
 -(void)setZ:(NSNumber *)z {
+	NSNumber *oldValue = _z;
 	_z = z;
-	[self updateNSObject:@"z"];
+	[self updateNSObject:oldValue newValue:z propertyName:@"z"];
 }
 
 -(void)setX2:(NSNumber *)x2 {
+	NSNumber *oldValue = _x2;
 	_x2 = x2;
-	[self updateNSObject:@"x2"];
+	[self updateNSObject:oldValue newValue:x2 propertyName:@"x2"];
 }
 
 -(void)setPartialFill:(HIPartialFill *)partialFill {
 	HIPartialFill *oldValue = _partialFill;
-	if(self.partialFill) {
-		[self removeObserver:self forKeyPath:@"partialFill.isUpdated"];
-	}
 	_partialFill = partialFill;
 	[self updateHIObject:oldValue newValue:partialFill propertyName:@"partialFill"];
 }
 
 -(void)setParent:(NSString *)parent {
+	NSString *oldValue = _parent;
 	_parent = parent;
-	[self updateNSObject:@"parent"];
+	[self updateNSObject:oldValue newValue:parent propertyName:@"parent"];
 }
 
 -(void)setColorValue:(NSNumber *)colorValue {
+	NSNumber *oldValue = _colorValue;
 	_colorValue = colorValue;
-	[self updateNSObject:@"colorValue"];
+	[self updateNSObject:oldValue newValue:colorValue propertyName:@"colorValue"];
 }
 
 -(void)setSets:(NSArray<NSString *> *)sets {

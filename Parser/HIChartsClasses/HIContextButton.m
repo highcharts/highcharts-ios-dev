@@ -88,9 +88,6 @@
 
 -(void)setSymbolFill:(HIColor *)symbolFill {
 	HIColor *oldValue = _symbolFill;
-	if(self.symbolFill) {
-		[self removeObserver:self forKeyPath:@"symbolFill.isUpdated"];
-	}
 	_symbolFill = symbolFill;
 	[self updateHIObject:oldValue newValue:symbolFill propertyName:@"symbolFill"];
 }
@@ -102,75 +99,75 @@
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setOnclick:(HIFunction *)onclick {
 	HIFunction *oldValue = _onclick;
-	if(self.onclick) {
-		[self removeObserver:self forKeyPath:@"onclick.isUpdated"];
-	}
 	_onclick = onclick;
 	[self updateHIObject:oldValue newValue:onclick propertyName:@"onclick"];
 }
 
 -(void)setTitleKey:(NSString *)titleKey {
+	NSString *oldValue = _titleKey;
 	_titleKey = titleKey;
-	[self updateNSObject:@"titleKey"];
+	[self updateNSObject:oldValue newValue:titleKey propertyName:@"titleKey"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setMenuClassName:(NSString *)menuClassName {
+	NSString *oldValue = _menuClassName;
 	_menuClassName = menuClassName;
-	[self updateNSObject:@"menuClassName"];
+	[self updateNSObject:oldValue newValue:menuClassName propertyName:@"menuClassName"];
 }
 
 -(void)setSymbol:(NSString *)symbol {
+	NSString *oldValue = _symbol;
 	_symbol = symbol;
-	[self updateNSObject:@"symbol"];
+	[self updateNSObject:oldValue newValue:symbol propertyName:@"symbol"];
 }
 
 -(void)setSymbolStroke:(HIColor *)symbolStroke {
 	HIColor *oldValue = _symbolStroke;
-	if(self.symbolStroke) {
-		[self removeObserver:self forKeyPath:@"symbolStroke.isUpdated"];
-	}
 	_symbolStroke = symbolStroke;
 	[self updateHIObject:oldValue newValue:symbolStroke propertyName:@"symbolStroke"];
 }
 
 -(void)setText:(NSString *)text {
+	NSString *oldValue = _text;
 	_text = text;
-	[self updateNSObject:@"text"];
+	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setTheme:(HITheme *)theme {
 	HITheme *oldValue = _theme;
-	if(self.theme) {
-		[self removeObserver:self forKeyPath:@"theme.isUpdated"];
-	}
 	_theme = theme;
 	[self updateHIObject:oldValue newValue:theme propertyName:@"theme"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setSymbolStrokeWidth:(NSNumber *)symbolStrokeWidth {
+	NSNumber *oldValue = _symbolStrokeWidth;
 	_symbolStrokeWidth = symbolStrokeWidth;
-	[self updateNSObject:@"symbolStrokeWidth"];
+	[self updateNSObject:oldValue newValue:symbolStrokeWidth propertyName:@"symbolStrokeWidth"];
 }
 
 @end

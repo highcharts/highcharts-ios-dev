@@ -19,6 +19,7 @@
 #import "HIColor.h"
 #import "HIFunction.h"
 #import "HIAnimationOptionsObject.h"
+#import "HIData.h"
 
 
 /**
@@ -103,7 +104,9 @@ This option allows grouping series in a stacked chart. The stack option can be a
 <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/stack/" target="_blank">Stacked and grouped columns</a>*/
 @property(nonatomic, readwrite) NSString *stack;
 /**
-The type of series. Can be one of area, areaspline, bar, column, line, pie, scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
+The type of series. Can be one of area, areaspline,
+ bar, column, line, pie,
+ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange are supported with the highcharts-more.js component.
 
 **Accepted values:** `[null, "line", "spline", "column", "area", "areaspline", "pie", "arearange", "areasplinerange", "boxplot", "bubble", "columnrange", "errorbar", "funnel", "gauge", "scatter", "waterfall"]`.
 
@@ -556,5 +559,40 @@ Whether to display this particular series or series type in the legend. The defa
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showInLegend;
 
 -(NSDictionary *)getParams;
+
+-(void)addPoint:(HIData *)options;
+-(void)addPoint:(HIData *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addPoint:(HIData *)options redraw:(NSNumber /* Bool */ *)redraw shift:(NSNumber /* Bool */ *)shift;
+-(void)addPoint:(HIData *)options redraw:(NSNumber /* Bool */ *)redraw shift:(NSNumber /* Bool */ *)shift animation:(HIAnimationOptionsObject *)animation;
+-(void)animate:(NSNumber /* Bool */ *)init;
+-(void)drawGraph;
+-(void)drawPoints;
+-(void)hide;
+-(void)onMouseOut;
+-(void)onMouseOver;
+-(void)remove;
+-(void)remove:(NSNumber /* Bool */ *)redraw;
+-(void)remove:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)remove:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation withEvent:(NSNumber /* Bool */ *)withEvent;
+-(void)removePoint:(NSNumber *)i;
+-(void)removePoint:(NSNumber *)i redraw:(NSNumber /* Bool */ *)redraw;
+-(void)removePoint:(NSNumber *)i redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)render;
+-(void)select;
+-(void)select:(NSNumber /* Bool */ *)selected;
+-(void)setSeriesData:(NSArray /* <id, NSNumber, NSArray> */ *)data;
+-(void)setSeriesData:(NSArray /* <id, NSNumber, NSArray> */ *)data redraw:(NSNumber /* Bool */ *)redraw;
+-(void)setSeriesData:(NSArray /* <id, NSNumber, NSArray> */ *)data redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)setSeriesData:(NSArray /* <id, NSNumber, NSArray> */ *)data redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation updatePoints:(NSNumber /* Bool */ *)updatePoints;
+-(void)setOptions:(HISeries *)options;
+-(void)setState;
+-(void)setState:(NSString *)state;
+-(void)setSeriesVisible;
+-(void)setSeriesVisible:(NSNumber /* Bool */ *)visible;
+-(void)setSeriesVisible:(NSNumber /* Bool */ *)visible redraw:(NSNumber /* Bool */ *)redraw;
+-(void)show;
+-(void)translate;
+-(void)update:(HISeries *)options;
+-(void)update:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw;
 
 @end

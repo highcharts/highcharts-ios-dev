@@ -2,8 +2,8 @@
 //  HIChartsJSONSerializable.m
 //  Highcharts
 //
-//  Created by krzysiek on 20.02.2017.
-//  Copyright © 2017 Highsoft AS. All rights reserved.
+//  License: www.highcharts.com/license
+//  Copyright © 2018 Highsoft AS. All rights reserved.
 //
 
 #import "HIChartsJSONSerializable.h"
@@ -21,6 +21,7 @@
     if (self = [super init]) {
         self.setUppedAttributes = [[NSMutableSet alloc] init];
         self.currentObservers = [[NSMutableArray alloc] init];
+        self.uuid = [[[NSUUID UUID] UUIDString] componentsSeparatedByString:@"-"][0];
         return self;
     }
     return nil;
@@ -31,71 +32,105 @@
 }
 
 -(void)removeObservers {
-    for (NSString *keyPath in self.currentObservers) {
-        [self removeObserver:self forKeyPath:keyPath];
+    for (id object in self.currentObservers) {
+        [object removeObserver:self forKeyPath:@"isUpdated"];
+        [object removeObserver:self forKeyPath:@"jsClassMethod"];
     }
 }
 
--(NSDictionary *)getParams
-{
+-(NSDictionary *)getParams {
     return [[NSDictionary alloc] init];
 }
 
 #pragma mark - Update functions
 
--(void)update:(BOOL)update {
+-(void)setUpdated:(BOOL)update {
     [self willChangeValueForKey:@"isUpdated"];
     self.isUpdated = update;
     [self didChangeValueForKey:@"isUpdated"];
 }
 
 -(void)updateHIObject:(HIChartsJSONSerializable *)oldValue newValue:(HIChartsJSONSerializable *)newValue propertyName:(NSString *)propertyName {
-    NSString *keyPath = [NSString stringWithFormat:@"%@.isUpdated", propertyName];
     if (oldValue) {
-        [self update:YES];
+        [oldValue removeObserver:self forKeyPath:@"isUpdated"];
+        [oldValue removeObserver:self forKeyPath:@"jsClassMethod"];
+        [self.currentObservers removeObject:oldValue];
+        
+        [self setUpdated:YES];
         
         if (newValue) {
-            [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
-        }
-        else {
-            [self.currentObservers removeObject:keyPath];
+            [newValue addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
+            [newValue addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+            [self.currentObservers addObject:newValue];
         }
     }
     else if (newValue) {
         if ([self.setUppedAttributes containsObject:propertyName]) {
-            [self update:YES];
+            [self setUpdated:YES];
         }
         
         [self.setUppedAttributes addObject:propertyName];
-        [self.currentObservers addObject:keyPath];
-        [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
+        
+        [newValue addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+        [newValue addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
+        [self.currentObservers addObject:newValue];
     }
     
-    [self update:NO];
+    [self setUpdated:NO];
 }
 
--(void)updateNSObject:(NSString *)propertyName {
-    if([self.setUppedAttributes containsObject:propertyName]) {
-        [self update:YES];
-    }
-    else {
-        [self.setUppedAttributes addObject:propertyName];
-    }
-    
-    [self update:NO];
-}
-
--(void)updateArrayObject:(NSArray<NSObject *> *)oldValue newValue:(NSArray<NSObject *> *)newValue propertyName:(NSString *)propertyName {
+-(void)updateNSObject:(NSObject *)oldValue newValue:(NSObject *)newValue propertyName:(NSString *)propertyName {
     if ([self.setUppedAttributes containsObject:propertyName]) {
-        if (![oldValue isEqualToArray:newValue]) {
-            [self update:YES];
+        if (![oldValue isEqual:newValue]) {
+            [self setUpdated:YES];
         }
     }
     else {
         [self.setUppedAttributes addObject:propertyName];
     }
     
-    [self update:NO];
+    [self setUpdated:NO];
+}
+
+-(void)updateArrayObject:(NSArray<NSObject *> *)oldValue newValue:(NSArray<NSObject *> *)newValue propertyName:(NSString *)propertyName {
+    if (oldValue) {
+        for (id object in oldValue) {
+            if ([object isKindOfClass:[HIChartsJSONSerializable class]]) {
+                [object removeObserver:self forKeyPath:@"isUpdated"];
+                [object removeObserver:self forKeyPath:@"jsClassMethod"];
+                [self.currentObservers removeObject:object];
+            }
+        }
+        
+        [self setUpdated:YES];
+        
+        if (newValue) {
+            for (id object in newValue) {
+                if ([object isKindOfClass:[HIChartsJSONSerializable class]]) {
+                    [object addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+                    [object addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
+                    [self.currentObservers addObject:object];
+                }
+            }
+        }
+    }
+    else if (newValue) {
+        if ([self.setUppedAttributes containsObject:propertyName]) {
+            [self setUpdated:YES];
+        }
+        
+        [self.setUppedAttributes addObject:propertyName];
+        
+        for (id object in newValue) {
+            if ([object isKindOfClass:[HIChartsJSONSerializable class]]) {
+                [object addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+                [object addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
+                [self.currentObservers addObject:object];
+            }
+        }
+    }
+    
+    [self setUpdated:NO];
 }
 
 #pragma mark - NSKeyValueObserving
@@ -105,9 +140,23 @@
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    NSString *kChangeNew = [change valueForKey:@"new"];
-    BOOL value = kChangeNew.boolValue;
-    [self update:value];
+    if ([keyPath isEqualToString:@"jsClassMethod"]) {
+        NSDictionary *kChangeNew = [change valueForKey:@"new"];
+        NSLog(@"IT IS jsClassMethod FROM KVO : %@", kChangeNew);
+        NSLog(@"MY PRIVATE ID IS : %@", self.uuid);
+        [self setJsClassMethod:kChangeNew];
+    }
+    else {
+        NSString *kChangeNew = [change valueForKey:@"new"];
+        BOOL value = kChangeNew.boolValue;
+        [self setUpdated:value];
+    }
+}
+
+- (void)setJsClassMethod:(NSDictionary *)jsClassMethod {
+    [self willChangeValueForKey:@"jsClassMethod"];
+    _jsClassMethod = jsClassMethod;
+    [self didChangeValueForKey:@"jsClassMethod"];
 }
 
 - (id)copyWithZone:(NSZone *)zone {

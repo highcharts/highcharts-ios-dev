@@ -26,8 +26,9 @@
 # pragma mark - Setters
 
 -(void)setMain:(NSString *)main {
+	NSString *oldValue = _main;
 	_main = main;
-	[self updateNSObject:@"main"];
+	[self updateNSObject:oldValue newValue:main propertyName:@"main"];
 }
 
 @end

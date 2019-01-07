@@ -12,6 +12,8 @@
 #import "HIKeyboardNavigation.h"
 #import "HIColor.h"
 #import "HICSSObject.h"
+#import "HIPoint.h"
+#import "HISeries.h"
 
 
 /**
@@ -335,5 +337,10 @@ If the plot area sized is calculated automatically and the legend is not floatin
 @property(nonatomic, readwrite) NSNumber *margin;
 
 -(NSDictionary *)getParams;
+
+-(void)setPointText:(HIPoint *)item;
+-(void)setSeriesText:(HISeries *)item;
+-(void)update:(HILegend *)options;
+-(void)update:(HILegend *)options redraw:(NSNumber /* Bool */ *)redraw;
 
 @end

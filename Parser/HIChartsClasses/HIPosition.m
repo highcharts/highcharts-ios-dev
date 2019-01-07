@@ -38,23 +38,27 @@
 # pragma mark - Setters
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 @end

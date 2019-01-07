@@ -129,37 +129,39 @@
 # pragma mark - Setters
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setPartialFill:(HIPartialFill *)partialFill {
 	HIPartialFill *oldValue = _partialFill;
-	if(self.partialFill) {
-		[self removeObserver:self forKeyPath:@"partialFill.isUpdated"];
-	}
 	_partialFill = partialFill;
 	[self updateHIObject:oldValue newValue:partialFill propertyName:@"partialFill"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
+	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
-	[self updateNSObject:@"pointPadding"];
+	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
 -(void)setMinPointLength:(NSNumber *)minPointLength {
+	NSNumber *oldValue = _minPointLength;
 	_minPointLength = minPointLength;
-	[self updateNSObject:@"minPointLength"];
+	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
 -(void)setGroupZPadding:(NSNumber *)groupZPadding {
+	NSNumber *oldValue = _groupZPadding;
 	_groupZPadding = groupZPadding;
-	[self updateNSObject:@"groupZPadding"];
+	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
 }
 
 -(void)setColors:(NSArray<NSString *> *)colors {
@@ -170,36 +172,38 @@
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {
+	NSNumber *oldValue = _maxPointWidth;
 	_maxPointWidth = maxPointWidth;
-	[self updateNSObject:@"maxPointWidth"];
+	[self updateNSObject:oldValue newValue:maxPointWidth propertyName:@"maxPointWidth"];
 }
 
 -(void)setPointWidth:(NSNumber *)pointWidth {
+	NSNumber *oldValue = _pointWidth;
 	_pointWidth = pointWidth;
-	[self updateNSObject:@"pointWidth"];
+	[self updateNSObject:oldValue newValue:pointWidth propertyName:@"pointWidth"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {
+	NSNumber *oldValue = _groupPadding;
 	_groupPadding = groupPadding;
-	[self updateNSObject:@"groupPadding"];
+	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {
+	NSNumber *oldValue = _grouping;
 	_grouping = grouping;
-	[self updateNSObject:@"grouping"];
+	[self updateNSObject:oldValue newValue:grouping propertyName:@"grouping"];
 }
 
 @end

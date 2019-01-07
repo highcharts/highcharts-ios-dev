@@ -141,20 +141,19 @@
 # pragma mark - Setters
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setRootId:(NSString *)rootId {
+	NSString *oldValue = _rootId;
 	_rootId = rootId;
-	[self updateNSObject:@"rootId"];
+	[self updateNSObject:oldValue newValue:rootId propertyName:@"rootId"];
 }
 
 -(void)setLevelSize:(HILevelSize *)levelSize {
 	HILevelSize *oldValue = _levelSize;
-	if(self.levelSize) {
-		[self removeObserver:self forKeyPath:@"levelSize.isUpdated"];
-	}
 	_levelSize = levelSize;
 	[self updateHIObject:oldValue newValue:levelSize propertyName:@"levelSize"];
 }
@@ -166,13 +165,15 @@
 }
 
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	NSNumber *oldValue = _slicedOffset;
 	_slicedOffset = slicedOffset;
-	[self updateNSObject:@"slicedOffset"];
+	[self updateNSObject:oldValue newValue:slicedOffset propertyName:@"slicedOffset"];
 }
 
 -(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
+	NSNumber *oldValue = _levelIsConstant;
 	_levelIsConstant = levelIsConstant;
-	[self updateNSObject:@"levelIsConstant"];
+	[self updateNSObject:oldValue newValue:levelIsConstant propertyName:@"levelIsConstant"];
 }
 
 -(void)setLevels:(NSArray <HILevels *> *)levels {
@@ -182,15 +183,13 @@
 }
 
 -(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
+	NSNumber *oldValue = _allowDrillToNode;
 	_allowDrillToNode = allowDrillToNode;
-	[self updateNSObject:@"allowDrillToNode"];
+	[self updateNSObject:oldValue newValue:allowDrillToNode propertyName:@"allowDrillToNode"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
@@ -202,18 +201,21 @@
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {
+	NSNumber *oldValue = _startAngle;
 	_startAngle = startAngle;
-	[self updateNSObject:@"startAngle"];
+	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
 }
 
 -(void)setSize:(id)size {
+	id oldValue = _size;
 	_size = size;
-	[self updateNSObject:@"size"];
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
 }
 
 @end

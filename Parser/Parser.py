@@ -549,13 +549,14 @@ def create_setter(field):
                        "\t[self updateArrayObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
     elif 'HI' in setter_type:
         setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
-                       "\tif(self.{0})".format(setter_attribute) + " {\n" + \
-                       "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
                        "\t_{0} = {0};\n".format(setter_attribute) + \
                        "\t[self updateHIObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
+        # "\tif(self.{0})".format(setter_attribute) + " {\n" + \
+        # "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
     else:
-        setter_text += "\t_{0} = {0};\n".format(setter_attribute) + \
-                       "\t[self updateNSObject:@\"{0}\"];\n".format(setter_attribute)
+        setter_text += "\t{0}oldValue = _{1};\n".format(re.sub(r'\bid\b', 'id ', setter_type), setter_attribute) + \
+                       "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateNSObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
 
     setter_text += "}"
 
@@ -743,9 +744,11 @@ def create_options_files():
     mtext += "\tif (self.additionalOptions) {\n\t\t[params addEntriesFromDictionary: self.additionalOptions];\n\t}\n\n"
 
     setters_text += "\n-(void)set{0}:({1}){2}".format("AdditionalOptions", "NSDictionary *", "additionalOptions") + " {\n" + \
+                  "\tNSDictionary *oldValue = _{0};\n".format("additionalOptions") + \
                   "\t_{0} = {0};\n".format("additionalOptions") + \
-                  "\t[self updateNSObject:@\"{0}\"];\n".format("additionalOptions") + \
+                  "\t[self updateNSObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format("additionalOptions") + \
                   "}\n"
+                  # "\t[self updateNSObject:@\"{0}\"];\n".format("additionalOptions") + \
 
     copyWithZones += "\treturn copyOptions;\n}\n"
 

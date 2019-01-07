@@ -43,33 +43,30 @@
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setText:(NSString *)text {
+	NSString *oldValue = _text;
 	_text = text;
-	[self updateNSObject:@"text"];
+	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setHref:(NSString *)href {
+	NSString *oldValue = _href;
 	_href = href;
-	[self updateNSObject:@"href"];
+	[self updateNSObject:oldValue newValue:href propertyName:@"href"];
 }
 
 -(void)setPosition:(HIPosition *)position {
 	HIPosition *oldValue = _position;
-	if(self.position) {
-		[self removeObserver:self forKeyPath:@"position.isUpdated"];
-	}
 	_position = position;
 	[self updateHIObject:oldValue newValue:position propertyName:@"position"];
 }

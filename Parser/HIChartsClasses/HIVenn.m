@@ -79,23 +79,27 @@
 # pragma mark - Setters
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setOpacity:(NSNumber *)opacity {
+	NSNumber *oldValue = _opacity;
 	_opacity = opacity;
-	[self updateNSObject:@"opacity"];
+	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
 -(void)setBorderDashStyle:(NSString *)borderDashStyle {
+	NSString *oldValue = _borderDashStyle;
 	_borderDashStyle = borderDashStyle;
-	[self updateNSObject:@"borderDashStyle"];
+	[self updateNSObject:oldValue newValue:borderDashStyle propertyName:@"borderDashStyle"];
 }
 
 -(void)setBrighten:(NSNumber *)brighten {
+	NSNumber *oldValue = _brighten;
 	_brighten = brighten;
-	[self updateNSObject:@"brighten"];
+	[self updateNSObject:oldValue newValue:brighten propertyName:@"brighten"];
 }
 
 @end

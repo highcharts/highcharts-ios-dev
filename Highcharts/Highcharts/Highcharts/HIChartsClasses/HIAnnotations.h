@@ -58,4 +58,10 @@ Sets an ID for an annotation. Can be user later when removing an annotation in `
 
 -(NSDictionary *)getParams;
 
+-(void)destroy;
+-(void)redraw;
+-(void)render;
+-(void)setVisibility;
+-(void)setVisibility:(NSNumber /* Bool */ *)visibility;
+
 @end

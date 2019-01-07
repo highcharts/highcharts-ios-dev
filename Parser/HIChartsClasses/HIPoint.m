@@ -43,31 +43,32 @@
 
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
-	if(self.events) {
-		[self removeObserver:self forKeyPath:@"events.isUpdated"];
-	}
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setXAxis:(id)xAxis {
+	id oldValue = _xAxis;
 	_xAxis = xAxis;
-	[self updateNSObject:@"xAxis"];
+	[self updateNSObject:oldValue newValue:xAxis propertyName:@"xAxis"];
 }
 
 -(void)setYAxis:(id)yAxis {
+	id oldValue = _yAxis;
 	_yAxis = yAxis;
-	[self updateNSObject:@"yAxis"];
+	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }
 
 @end

@@ -68,13 +68,15 @@
 # pragma mark - Setters
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setVisible:(NSNumber *)visible {
+	NSNumber *oldValue = _visible;
 	_visible = visible;
-	[self updateNSObject:@"visible"];
+	[self updateNSObject:oldValue newValue:visible propertyName:@"visible"];
 }
 
 -(void)setLabels:(NSArray <HILabels *> *)labels {
@@ -85,9 +87,6 @@
 
 -(void)setLabelOptions:(HILabelOptions *)labelOptions {
 	HILabelOptions *oldValue = _labelOptions;
-	if(self.labelOptions) {
-		[self removeObserver:self forKeyPath:@"labelOptions.isUpdated"];
-	}
 	_labelOptions = labelOptions;
 	[self updateHIObject:oldValue newValue:labelOptions propertyName:@"labelOptions"];
 }
@@ -100,16 +99,14 @@
 
 -(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
 	HIShapeOptions *oldValue = _shapeOptions;
-	if(self.shapeOptions) {
-		[self removeObserver:self forKeyPath:@"shapeOptions.isUpdated"];
-	}
 	_shapeOptions = shapeOptions;
 	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
 }
 
 -(void)setId:(NSString *)id {
+	NSString *oldValue = _id;
 	_id = id;
-	[self updateNSObject:@"id"];
+	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }
 
 @end

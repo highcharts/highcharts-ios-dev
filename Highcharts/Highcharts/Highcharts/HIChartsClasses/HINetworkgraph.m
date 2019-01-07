@@ -78,23 +78,18 @@
 
 -(void)setLayoutAlgorithm:(HILayoutAlgorithm *)layoutAlgorithm {
 	HILayoutAlgorithm *oldValue = _layoutAlgorithm;
-	if(self.layoutAlgorithm) {
-		[self removeObserver:self forKeyPath:@"layoutAlgorithm.isUpdated"];
-	}
 	_layoutAlgorithm = layoutAlgorithm;
 	[self updateHIObject:oldValue newValue:layoutAlgorithm propertyName:@"layoutAlgorithm"];
 }
 
 -(void)setDraggable:(NSNumber *)draggable {
+	NSNumber *oldValue = _draggable;
 	_draggable = draggable;
-	[self updateNSObject:@"draggable"];
+	[self updateNSObject:oldValue newValue:draggable propertyName:@"draggable"];
 }
 
 -(void)setLink:(HILink *)link {
 	HILink *oldValue = _link;
-	if(self.link) {
-		[self removeObserver:self forKeyPath:@"link.isUpdated"];
-	}
 	_link = link;
 	[self updateHIObject:oldValue newValue:link propertyName:@"link"];
 }

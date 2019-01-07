@@ -74,88 +74,81 @@
 # pragma mark - Setters
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setAnimation:(HIAnimationOptionsObject *)animation {
 	HIAnimationOptionsObject *oldValue = _animation;
-	if(self.animation) {
-		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
-	}
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setSymbol:(NSString *)symbol {
+	NSString *oldValue = _symbol;
 	_symbol = symbol;
-	[self updateNSObject:@"symbol"];
+	[self updateNSObject:oldValue newValue:symbol propertyName:@"symbol"];
 }
 
 -(void)setStates:(HIStates *)states {
 	HIStates *oldValue = _states;
-	if(self.states) {
-		[self removeObserver:self forKeyPath:@"states.isUpdated"];
-	}
 	_states = states;
 	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
 	_fillColor = fillColor;
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
 -(void)setLineColor:(HIColor *)lineColor {
 	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
 -(void)setFillOpacity:(NSNumber *)fillOpacity {
+	NSNumber *oldValue = _fillOpacity;
 	_fillOpacity = fillOpacity;
-	[self updateNSObject:@"fillOpacity"];
+	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }
 
 -(void)setHeight:(NSNumber *)height {
+	NSNumber *oldValue = _height;
 	_height = height;
-	[self updateNSObject:@"height"];
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setRadius:(NSNumber *)radius {
+	NSNumber *oldValue = _radius;
 	_radius = radius;
-	[self updateNSObject:@"radius"];
+	[self updateNSObject:oldValue newValue:radius propertyName:@"radius"];
 }
 
 -(void)setEnabledThreshold:(NSNumber *)enabledThreshold {
+	NSNumber *oldValue = _enabledThreshold;
 	_enabledThreshold = enabledThreshold;
-	[self updateNSObject:@"enabledThreshold"];
+	[self updateNSObject:oldValue newValue:enabledThreshold propertyName:@"enabledThreshold"];
 }
 
 @end

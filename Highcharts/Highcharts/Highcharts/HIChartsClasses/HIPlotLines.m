@@ -25,6 +25,7 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+    params[@"_wrapperID"] = self.uuid;
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
@@ -58,56 +59,61 @@
 # pragma mark - Setters
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {
+	NSString *oldValue = _dashStyle;
 	_dashStyle = dashStyle;
-	[self updateNSObject:@"dashStyle"];
+	[self updateNSObject:oldValue newValue:dashStyle propertyName:@"dashStyle"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setValue:(NSNumber *)value {
+	NSNumber *oldValue = _value;
 	_value = value;
-	[self updateNSObject:@"value"];
+	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }
 
 -(void)setLabel:(HILabel *)label {
 	HILabel *oldValue = _label;
-	if(self.label) {
-		[self removeObserver:self forKeyPath:@"label.isUpdated"];
-	}
 	_label = label;
 	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setId:(NSString *)id {
+	NSString *oldValue = _id;
 	_id = id;
-	[self updateNSObject:@"id"];
+	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }
 
 -(void)setEvents:(id)events {
+	id oldValue = _events;
 	_events = events;
-	[self updateNSObject:@"events"];
+	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
+}
+
+- (void)destroy {
+    self.jsClassMethod = @{ @"class" : @"PlotLineOrBand", @"method" : @"destroy", @"id" : self.uuid };
 }
 
 @end

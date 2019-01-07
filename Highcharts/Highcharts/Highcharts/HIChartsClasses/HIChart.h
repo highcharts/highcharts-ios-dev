@@ -14,6 +14,12 @@
 #import "HIColor.h"
 #import "HIAnimationOptionsObject.h"
 #import "HICSSObject.h"
+#import "HIAnnotations.h"
+#import "HIXAxis.h"
+#import "HIYAxis.h"
+#import "HICredits.h"
+#import "HISeries.h"
+#import "HISubtitle.h"
 
 
 /**
@@ -447,5 +453,30 @@ Whether to apply styled mode. When in styled mode, no presentational attributes 
 @property(nonatomic, readwrite) NSNumber /* Bool */ *styledMode;
 
 -(NSDictionary *)getParams;
+
+-(void)addAnnotation:(HIAnnotations *)options;
+-(void)addXAxis:(HIXAxis *)options;
+-(void)addXAxis:(HIXAxis *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addXAxis:(HIXAxis *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addYAxis:(HIYAxis *)options;
+-(void)addYAxis:(HIYAxis *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addYAxis:(HIYAxis *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addCredits:(HICredits *)options;
+-(void)addSeries:(HISeries *)options;
+-(void)addSeries:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addSeries:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addSeriesAsDrilldown:(HIPoint *)point options:(HISeries *)options;
+-(void)destroy;
+-(void)drillUp;
+-(void)hideLoading;
+-(void)pauseSonify;
+-(void)pauseSonify:(NSNumber /* Bool */ *)fadeOut;
+-(void)redraw;
+-(void)redraw:(HIAnimationOptionsObject *)animation;
+-(void)removeAnnotation:(NSString *)id;
+-(void)setSubtitle:(HISubtitle *)options;
+-(void)setTitle:(HITitle *)titleOptions subtitleOptions:(HISubtitle *)subtitleOptions redraw:(NSNumber /* Bool */ *)redraw;
+-(void)showLoading:(NSString *)str;
+-(void)zoomOut;
 
 @end

@@ -59,51 +59,56 @@
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 -(void)setText:(NSString *)text {
+	NSString *oldValue = _text;
 	_text = text;
-	[self updateNSObject:@"text"];
+	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setFloating:(NSNumber *)floating {
+	NSNumber *oldValue = _floating;
 	_floating = floating;
-	[self updateNSObject:@"floating"];
+	[self updateNSObject:oldValue newValue:floating propertyName:@"floating"];
 }
 
 -(void)setWidthAdjust:(NSNumber *)widthAdjust {
+	NSNumber *oldValue = _widthAdjust;
 	_widthAdjust = widthAdjust;
-	[self updateNSObject:@"widthAdjust"];
+	[self updateNSObject:oldValue newValue:widthAdjust propertyName:@"widthAdjust"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 @end

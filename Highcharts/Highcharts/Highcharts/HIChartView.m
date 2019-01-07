@@ -12,7 +12,9 @@
 #import "HIGHTML.h"
 #import "HIGDependency.h"
 #import "HIGExport.h"
+#import "HIClassJSMethods.h"
 #import "HIFunctionSubclass.h"
+#import "HIChartsJSONSerializableSubclass.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
@@ -106,6 +108,7 @@ static BOOL preloaded = NO;
 - (void)dealloc
 {
     [self removeObserver:self forKeyPath:@"options.isUpdated"];
+    [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
 }
 
 - (void)didMoveToSuperview {
@@ -228,6 +231,8 @@ static BOOL preloaded = NO;
     // Prepare HTML with options.
     [self prepareHTML:options];
     
+    NSLog(@"%@", self.HTML.html);
+    
     // Load HTML
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
 }
@@ -249,6 +254,21 @@ static BOOL preloaded = NO;
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
 }
 
+- (void) callJSMethod:(NSDictionary *)dict {
+    NSLog(@"HELLO FROM CHART VIEW!!");
+    NSLog(@"%@", dict);
+    
+    NSString *jsMethod = [HIClassJSMethods getJCClassMethodString:dict];
+    NSLog(@"%@", jsMethod);
+    
+    if (jsMethod.length) {
+        [self.webView evaluateJavaScript:jsMethod completionHandler:nil];
+    }
+    else {
+        NSLog(@"IT IS NIL!");
+    }
+}
+
 #pragma mark - NSKeyValueObserving
 
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
@@ -263,6 +283,10 @@ static BOOL preloaded = NO;
             [self updateOptions];
         }
     }
+    else if ([keyPath isEqualToString:@"options.jsClassMethod"]) {
+        NSDictionary *kChangeNew = [change valueForKey:@"new"];
+        [self callJSMethod:kChangeNew];
+    }
 }
 
 #pragma mark - Setters / Getters
@@ -270,6 +294,7 @@ static BOOL preloaded = NO;
 - (void)setOptions:(HIOptions *)options {
     if (self.options) {
         [self removeObserver:self forKeyPath:@"options.isUpdated"];
+        [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
     }
     [self willChangeValueForKey:@"options"];
     _options = options;
@@ -277,6 +302,7 @@ static BOOL preloaded = NO;
     [self didChangeValueForKey:@"options"];
     if (options) {
         [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+        [self addObserver:self forKeyPath:@"options.jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
     }
 }
 
@@ -345,7 +371,7 @@ static BOOL preloaded = NO;
         
         if (closureID) {
             NSDictionary *dictionary = (NSDictionary *)message.body;
-
+            
             HIChartContext *context = [[HIChartContext alloc] initWithContext:dictionary];
             
             HIClosure closure = (HIClosure)self.closures[closureID];

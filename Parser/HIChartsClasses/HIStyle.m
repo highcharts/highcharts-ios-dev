@@ -30,13 +30,15 @@
 # pragma mark - Setters
 
 -(void)setTextOverflow:(NSString *)textOverflow {
+	NSString *oldValue = _textOverflow;
 	_textOverflow = textOverflow;
-	[self updateNSObject:@"textOverflow"];
+	[self updateNSObject:oldValue newValue:textOverflow propertyName:@"textOverflow"];
 }
 
 -(void)setWhiteSpace:(NSString *)whiteSpace {
+	NSString *oldValue = _whiteSpace;
 	_whiteSpace = whiteSpace;
-	[self updateNSObject:@"whiteSpace"];
+	[self updateNSObject:oldValue newValue:whiteSpace propertyName:@"whiteSpace"];
 }
 
 @end

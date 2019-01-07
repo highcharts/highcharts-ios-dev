@@ -29,6 +29,7 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+    params[@"_wrapperID"] = self.uuid;
 	if (self.outerRadius) {
 		params[@"outerRadius"] = self.outerRadius;
 	}
@@ -73,80 +74,85 @@
 # pragma mark - Setters
 
 -(void)setOuterRadius:(id)outerRadius {
+	id oldValue = _outerRadius;
 	_outerRadius = outerRadius;
-	[self updateNSObject:@"outerRadius"];
+	[self updateNSObject:oldValue newValue:outerRadius propertyName:@"outerRadius"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {
+	id oldValue = _innerRadius;
 	_innerRadius = innerRadius;
-	[self updateNSObject:@"innerRadius"];
+	[self updateNSObject:oldValue newValue:innerRadius propertyName:@"innerRadius"];
 }
 
 -(void)setThickness:(id)thickness {
+	id oldValue = _thickness;
 	_thickness = thickness;
-	[self updateNSObject:@"thickness"];
+	[self updateNSObject:oldValue newValue:thickness propertyName:@"thickness"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setFrom:(NSNumber *)from {
+	NSNumber *oldValue = _from;
 	_from = from;
-	[self updateNSObject:@"from"];
+	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setId:(NSString *)id {
+	NSString *oldValue = _id;
 	_id = id;
-	[self updateNSObject:@"id"];
+	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setTo:(NSNumber *)to {
+	NSNumber *oldValue = _to;
 	_to = to;
-	[self updateNSObject:@"to"];
+	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setLabel:(HILabel *)label {
 	HILabel *oldValue = _label;
-	if(self.label) {
-		[self removeObserver:self forKeyPath:@"label.isUpdated"];
-	}
 	_label = label;
 	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
 }
 
 -(void)setEvents:(id)events {
+	id oldValue = _events;
 	_events = events;
-	[self updateNSObject:@"events"];
+	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
+}
+
+- (void)destroy {
+    self.jsClassMethod = @{ @"class" : @"PlotLineOrBand", @"method" : @"destroy", @"id" : self.uuid };
 }
 
 @end

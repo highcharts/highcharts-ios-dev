@@ -46,37 +46,39 @@
 # pragma mark - Setters
 
 -(void)setColorIndex:(NSNumber *)colorIndex {
+	NSNumber *oldValue = _colorIndex;
 	_colorIndex = colorIndex;
-	[self updateNSObject:@"colorIndex"];
+	[self updateNSObject:oldValue newValue:colorIndex propertyName:@"colorIndex"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setColumn:(NSNumber *)column {
+	NSNumber *oldValue = _column;
 	_column = column;
-	[self updateNSObject:@"column"];
+	[self updateNSObject:oldValue newValue:column propertyName:@"column"];
 }
 
 -(void)setOffset:(NSNumber *)offset {
+	NSNumber *oldValue = _offset;
 	_offset = offset;
-	[self updateNSObject:@"offset"];
+	[self updateNSObject:oldValue newValue:offset propertyName:@"offset"];
 }
 
 -(void)setId:(NSString *)id {
+	NSString *oldValue = _id;
 	_id = id;
-	[self updateNSObject:@"id"];
+	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }
 
 -(void)setName:(NSString *)name {
+	NSString *oldValue = _name;
 	_name = name;
-	[self updateNSObject:@"name"];
+	[self updateNSObject:oldValue newValue:name propertyName:@"name"];
 }
 
 @end

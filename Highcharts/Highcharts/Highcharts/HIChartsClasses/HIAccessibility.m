@@ -151,204 +151,192 @@
 
 -(void)setScreenReaderSectionFormatter:(HIFunction *)screenReaderSectionFormatter {
 	HIFunction *oldValue = _screenReaderSectionFormatter;
-	if(self.screenReaderSectionFormatter) {
-		[self removeObserver:self forKeyPath:@"screenReaderSectionFormatter.isUpdated"];
-	}
 	_screenReaderSectionFormatter = screenReaderSectionFormatter;
 	[self updateHIObject:oldValue newValue:screenReaderSectionFormatter propertyName:@"screenReaderSectionFormatter"];
 }
 
 -(void)setDescribeSingleSeries:(NSNumber *)describeSingleSeries {
+	NSNumber *oldValue = _describeSingleSeries;
 	_describeSingleSeries = describeSingleSeries;
-	[self updateNSObject:@"describeSingleSeries"];
+	[self updateNSObject:oldValue newValue:describeSingleSeries propertyName:@"describeSingleSeries"];
 }
 
 -(void)setKeyboardNavigation:(HIKeyboardNavigation *)keyboardNavigation {
 	HIKeyboardNavigation *oldValue = _keyboardNavigation;
-	if(self.keyboardNavigation) {
-		[self removeObserver:self forKeyPath:@"keyboardNavigation.isUpdated"];
-	}
 	_keyboardNavigation = keyboardNavigation;
 	[self updateHIObject:oldValue newValue:keyboardNavigation propertyName:@"keyboardNavigation"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setPointDescriptionThreshold:(NSNumber *)pointDescriptionThreshold {
+	NSNumber *oldValue = _pointDescriptionThreshold;
 	_pointDescriptionThreshold = pointDescriptionThreshold;
-	[self updateNSObject:@"pointDescriptionThreshold"];
+	[self updateNSObject:oldValue newValue:pointDescriptionThreshold propertyName:@"pointDescriptionThreshold"];
 }
 
 -(void)setPointDescriptionFormatter:(HIFunction *)pointDescriptionFormatter {
 	HIFunction *oldValue = _pointDescriptionFormatter;
-	if(self.pointDescriptionFormatter) {
-		[self removeObserver:self forKeyPath:@"pointDescriptionFormatter.isUpdated"];
-	}
 	_pointDescriptionFormatter = pointDescriptionFormatter;
 	[self updateHIObject:oldValue newValue:pointDescriptionFormatter propertyName:@"pointDescriptionFormatter"];
 }
 
 -(void)setPointDateFormat:(NSString *)pointDateFormat {
+	NSString *oldValue = _pointDateFormat;
 	_pointDateFormat = pointDateFormat;
-	[self updateNSObject:@"pointDateFormat"];
+	[self updateNSObject:oldValue newValue:pointDateFormat propertyName:@"pointDateFormat"];
 }
 
 -(void)setSeriesDescriptionFormatter:(HIFunction *)seriesDescriptionFormatter {
 	HIFunction *oldValue = _seriesDescriptionFormatter;
-	if(self.seriesDescriptionFormatter) {
-		[self removeObserver:self forKeyPath:@"seriesDescriptionFormatter.isUpdated"];
-	}
 	_seriesDescriptionFormatter = seriesDescriptionFormatter;
 	[self updateHIObject:oldValue newValue:seriesDescriptionFormatter propertyName:@"seriesDescriptionFormatter"];
 }
 
 -(void)setOnTableAnchorClick:(HIFunction *)onTableAnchorClick {
 	HIFunction *oldValue = _onTableAnchorClick;
-	if(self.onTableAnchorClick) {
-		[self removeObserver:self forKeyPath:@"onTableAnchorClick.isUpdated"];
-	}
 	_onTableAnchorClick = onTableAnchorClick;
 	[self updateHIObject:oldValue newValue:onTableAnchorClick propertyName:@"onTableAnchorClick"];
 }
 
 -(void)setPointDateFormatter:(HIFunction *)pointDateFormatter {
 	HIFunction *oldValue = _pointDateFormatter;
-	if(self.pointDateFormatter) {
-		[self removeObserver:self forKeyPath:@"pointDateFormatter.isUpdated"];
-	}
 	_pointDateFormatter = pointDateFormatter;
 	[self updateHIObject:oldValue newValue:pointDateFormatter propertyName:@"pointDateFormatter"];
 }
 
 -(void)setSeries:(HISeries *)series {
 	HISeries *oldValue = _series;
-	if(self.series) {
-		[self removeObserver:self forKeyPath:@"series.isUpdated"];
-	}
 	_series = series;
 	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
 }
 
 -(void)setLongDescriptionHeading:(NSString *)longDescriptionHeading {
+	NSString *oldValue = _longDescriptionHeading;
 	_longDescriptionHeading = longDescriptionHeading;
-	[self updateNSObject:@"longDescriptionHeading"];
+	[self updateNSObject:oldValue newValue:longDescriptionHeading propertyName:@"longDescriptionHeading"];
 }
 
 -(void)setRangeSelectorMaxInput:(NSString *)rangeSelectorMaxInput {
+	NSString *oldValue = _rangeSelectorMaxInput;
 	_rangeSelectorMaxInput = rangeSelectorMaxInput;
-	[self updateNSObject:@"rangeSelectorMaxInput"];
+	[self updateNSObject:oldValue newValue:rangeSelectorMaxInput propertyName:@"rangeSelectorMaxInput"];
 }
 
 -(void)setStructureHeading:(NSString *)structureHeading {
+	NSString *oldValue = _structureHeading;
 	_structureHeading = structureHeading;
-	[self updateNSObject:@"structureHeading"];
+	[self updateNSObject:oldValue newValue:structureHeading propertyName:@"structureHeading"];
 }
 
 -(void)setChartContainerLabel:(NSString *)chartContainerLabel {
+	NSString *oldValue = _chartContainerLabel;
 	_chartContainerLabel = chartContainerLabel;
-	[self updateNSObject:@"chartContainerLabel"];
+	[self updateNSObject:oldValue newValue:chartContainerLabel propertyName:@"chartContainerLabel"];
 }
 
 -(void)setMapZoomOut:(NSString *)mapZoomOut {
+	NSString *oldValue = _mapZoomOut;
 	_mapZoomOut = mapZoomOut;
-	[self updateNSObject:@"mapZoomOut"];
+	[self updateNSObject:oldValue newValue:mapZoomOut propertyName:@"mapZoomOut"];
 }
 
 -(void)setChartTypes:(HIChartTypes *)chartTypes {
 	HIChartTypes *oldValue = _chartTypes;
-	if(self.chartTypes) {
-		[self removeObserver:self forKeyPath:@"chartTypes.isUpdated"];
-	}
 	_chartTypes = chartTypes;
 	[self updateHIObject:oldValue newValue:chartTypes propertyName:@"chartTypes"];
 }
 
 -(void)setAxis:(HIAxis *)axis {
 	HIAxis *oldValue = _axis;
-	if(self.axis) {
-		[self removeObserver:self forKeyPath:@"axis.isUpdated"];
-	}
 	_axis = axis;
 	[self updateHIObject:oldValue newValue:axis propertyName:@"axis"];
 }
 
 -(void)setRangeSelectorMinInput:(NSString *)rangeSelectorMinInput {
+	NSString *oldValue = _rangeSelectorMinInput;
 	_rangeSelectorMinInput = rangeSelectorMinInput;
-	[self updateNSObject:@"rangeSelectorMinInput"];
+	[self updateNSObject:oldValue newValue:rangeSelectorMinInput propertyName:@"rangeSelectorMinInput"];
 }
 
 -(void)setRangeSelectorButton:(NSString *)rangeSelectorButton {
+	NSString *oldValue = _rangeSelectorButton;
 	_rangeSelectorButton = rangeSelectorButton;
-	[self updateNSObject:@"rangeSelectorButton"];
+	[self updateNSObject:oldValue newValue:rangeSelectorButton propertyName:@"rangeSelectorButton"];
 }
 
 -(void)setExporting:(HIExporting *)exporting {
 	HIExporting *oldValue = _exporting;
-	if(self.exporting) {
-		[self removeObserver:self forKeyPath:@"exporting.isUpdated"];
-	}
 	_exporting = exporting;
 	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
 }
 
 -(void)setLegendItem:(NSString *)legendItem {
+	NSString *oldValue = _legendItem;
 	_legendItem = legendItem;
-	[self updateNSObject:@"legendItem"];
+	[self updateNSObject:oldValue newValue:legendItem propertyName:@"legendItem"];
 }
 
 -(void)setTableSummary:(NSString *)tableSummary {
+	NSString *oldValue = _tableSummary;
 	_tableSummary = tableSummary;
-	[self updateNSObject:@"tableSummary"];
+	[self updateNSObject:oldValue newValue:tableSummary propertyName:@"tableSummary"];
 }
 
 -(void)setNoDescription:(NSString *)noDescription {
+	NSString *oldValue = _noDescription;
 	_noDescription = noDescription;
-	[self updateNSObject:@"noDescription"];
+	[self updateNSObject:oldValue newValue:noDescription propertyName:@"noDescription"];
 }
 
 -(void)setViewAsDataTable:(NSString *)viewAsDataTable {
+	NSString *oldValue = _viewAsDataTable;
 	_viewAsDataTable = viewAsDataTable;
-	[self updateNSObject:@"viewAsDataTable"];
+	[self updateNSObject:oldValue newValue:viewAsDataTable propertyName:@"viewAsDataTable"];
 }
 
 -(void)setDefaultChartTitle:(NSString *)defaultChartTitle {
+	NSString *oldValue = _defaultChartTitle;
 	_defaultChartTitle = defaultChartTitle;
-	[self updateNSObject:@"defaultChartTitle"];
+	[self updateNSObject:oldValue newValue:defaultChartTitle propertyName:@"defaultChartTitle"];
 }
 
 -(void)setScreenReaderRegionLabel:(NSString *)screenReaderRegionLabel {
+	NSString *oldValue = _screenReaderRegionLabel;
 	_screenReaderRegionLabel = screenReaderRegionLabel;
-	[self updateNSObject:@"screenReaderRegionLabel"];
+	[self updateNSObject:oldValue newValue:screenReaderRegionLabel propertyName:@"screenReaderRegionLabel"];
 }
 
 -(void)setMapZoomIn:(NSString *)mapZoomIn {
+	NSString *oldValue = _mapZoomIn;
 	_mapZoomIn = mapZoomIn;
-	[self updateNSObject:@"mapZoomIn"];
+	[self updateNSObject:oldValue newValue:mapZoomIn propertyName:@"mapZoomIn"];
 }
 
 -(void)setChartHeading:(NSString *)chartHeading {
+	NSString *oldValue = _chartHeading;
 	_chartHeading = chartHeading;
-	[self updateNSObject:@"chartHeading"];
+	[self updateNSObject:oldValue newValue:chartHeading propertyName:@"chartHeading"];
 }
 
 -(void)setSvgContainerTitle:(NSString *)svgContainerTitle {
+	NSString *oldValue = _svgContainerTitle;
 	_svgContainerTitle = svgContainerTitle;
-	[self updateNSObject:@"svgContainerTitle"];
+	[self updateNSObject:oldValue newValue:svgContainerTitle propertyName:@"svgContainerTitle"];
 }
 
 -(void)setNavigationHint:(NSString *)navigationHint {
+	NSString *oldValue = _navigationHint;
 	_navigationHint = navigationHint;
-	[self updateNSObject:@"navigationHint"];
+	[self updateNSObject:oldValue newValue:navigationHint propertyName:@"navigationHint"];
 }
 
 -(void)setSeriesTypeDescriptions:(HISeriesTypeDescriptions *)seriesTypeDescriptions {
 	HISeriesTypeDescriptions *oldValue = _seriesTypeDescriptions;
-	if(self.seriesTypeDescriptions) {
-		[self removeObserver:self forKeyPath:@"seriesTypeDescriptions.isUpdated"];
-	}
 	_seriesTypeDescriptions = seriesTypeDescriptions;
 	[self updateHIObject:oldValue newValue:seriesTypeDescriptions propertyName:@"seriesTypeDescriptions"];
 }

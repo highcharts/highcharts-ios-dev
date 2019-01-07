@@ -124,61 +124,63 @@
 # pragma mark - Setters
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setMinFontSize:(NSNumber *)minFontSize {
+	NSNumber *oldValue = _minFontSize;
 	_minFontSize = minFontSize;
-	[self updateNSObject:@"minFontSize"];
+	[self updateNSObject:oldValue newValue:minFontSize propertyName:@"minFontSize"];
 }
 
 -(void)setMaxFontSize:(NSNumber *)maxFontSize {
+	NSNumber *oldValue = _maxFontSize;
 	_maxFontSize = maxFontSize;
-	[self updateNSObject:@"maxFontSize"];
+	[self updateNSObject:oldValue newValue:maxFontSize propertyName:@"maxFontSize"];
 }
 
 -(void)setAllowExtendPlayingField:(NSNumber *)allowExtendPlayingField {
+	NSNumber *oldValue = _allowExtendPlayingField;
 	_allowExtendPlayingField = allowExtendPlayingField;
-	[self updateNSObject:@"allowExtendPlayingField"];
+	[self updateNSObject:oldValue newValue:allowExtendPlayingField propertyName:@"allowExtendPlayingField"];
 }
 
 -(void)setSpiral:(NSString *)spiral {
+	NSString *oldValue = _spiral;
 	_spiral = spiral;
-	[self updateNSObject:@"spiral"];
+	[self updateNSObject:oldValue newValue:spiral propertyName:@"spiral"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setRotation:(HIRotation *)rotation {
 	HIRotation *oldValue = _rotation;
-	if(self.rotation) {
-		[self removeObserver:self forKeyPath:@"rotation.isUpdated"];
-	}
 	_rotation = rotation;
 	[self updateHIObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setPlacementStrategy:(NSString *)placementStrategy {
+	NSString *oldValue = _placementStrategy;
 	_placementStrategy = placementStrategy;
-	[self updateNSObject:@"placementStrategy"];
+	[self updateNSObject:oldValue newValue:placementStrategy propertyName:@"placementStrategy"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<NSString *> *)colors {
@@ -189,16 +191,14 @@
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setEdgeWidth:(NSNumber *)edgeWidth {
+	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
-	[self updateNSObject:@"edgeWidth"];
+	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
 }
 
 @end

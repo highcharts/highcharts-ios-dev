@@ -38,29 +38,25 @@
 # pragma mark - Setters
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setStroke:(HIColor *)stroke {
 	HIColor *oldValue = _stroke;
-	if(self.stroke) {
-		[self removeObserver:self forKeyPath:@"stroke.isUpdated"];
-	}
 	_stroke = stroke;
 	[self updateHIObject:oldValue newValue:stroke propertyName:@"stroke"];
 }
 
 -(void)setFill:(HIColor *)fill {
 	HIColor *oldValue = _fill;
-	if(self.fill) {
-		[self removeObserver:self forKeyPath:@"fill.isUpdated"];
-	}
 	_fill = fill;
 	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
 }

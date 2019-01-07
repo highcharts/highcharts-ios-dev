@@ -38,23 +38,27 @@
 # pragma mark - Setters
 
 -(void)setBottom:(NSNumber *)bottom {
+	NSNumber *oldValue = _bottom;
 	_bottom = bottom;
-	[self updateNSObject:@"bottom"];
+	[self updateNSObject:oldValue newValue:bottom propertyName:@"bottom"];
 }
 
 -(void)setLeft:(NSNumber *)left {
+	NSNumber *oldValue = _left;
 	_left = left;
-	[self updateNSObject:@"left"];
+	[self updateNSObject:oldValue newValue:left propertyName:@"left"];
 }
 
 -(void)setRight:(NSNumber *)right {
+	NSNumber *oldValue = _right;
 	_right = right;
-	[self updateNSObject:@"right"];
+	[self updateNSObject:oldValue newValue:right propertyName:@"right"];
 }
 
 -(void)setTop:(NSNumber *)top {
+	NSNumber *oldValue = _top;
 	_top = top;
-	[self updateNSObject:@"top"];
+	[self updateNSObject:oldValue newValue:top propertyName:@"top"];
 }
 
 @end

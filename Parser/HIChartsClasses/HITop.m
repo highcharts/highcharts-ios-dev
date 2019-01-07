@@ -35,21 +35,20 @@
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setVisible:(id)visible {
+	id oldValue = _visible;
 	_visible = visible;
-	[self updateNSObject:@"visible"];
+	[self updateNSObject:oldValue newValue:visible propertyName:@"visible"];
 }
 
 -(void)setSize:(NSNumber *)size {
+	NSNumber *oldValue = _size;
 	_size = size;
-	[self updateNSObject:@"size"];
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
 }
 
 @end

@@ -51,33 +51,25 @@
 # pragma mark - Setters
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setEnd:(HIFunction *)end {
 	HIFunction *oldValue = _end;
-	if(self.end) {
-		[self removeObserver:self forKeyPath:@"end.isUpdated"];
-	}
 	_end = end;
 	[self updateHIObject:oldValue newValue:end propertyName:@"end"];
 }
 
 -(void)setInit:(HIFunction *)init {
 	HIFunction *oldValue = _init;
-	if(self.init) {
-		[self removeObserver:self forKeyPath:@"init.isUpdated"];
-	}
 	_init = init;
 	[self updateHIObject:oldValue newValue:init propertyName:@"init"];
 }
 
 -(void)setStart:(HIFunction *)start {
 	HIFunction *oldValue = _start;
-	if(self.start) {
-		[self removeObserver:self forKeyPath:@"start.isUpdated"];
-	}
 	_start = start;
 	[self updateHIObject:oldValue newValue:start propertyName:@"start"];
 }

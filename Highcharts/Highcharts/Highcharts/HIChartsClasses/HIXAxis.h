@@ -16,6 +16,7 @@
 #import "HIPlotBands.h"
 #import "HIColor.h"
 #import "HIFunction.h"
+#import "HIAnimationOptionsObject.h"
 
 
 /**
@@ -612,5 +613,30 @@ A soft maximum for the axis. If the series data maximum is less than this, the a
 @property(nonatomic, readwrite) NSNumber *softMax;
 
 -(NSDictionary *)getParams;
+
+-(void)addPlotBand:(HIPlotBands *)options;
+-(void)addPlotLine:(HIPlotLines *)options;
+-(void)addTitle:(NSNumber /* Bool */ *)display;
+-(void)drawCrosshair;
+-(void)hideCrosshair;
+-(void)remove;
+-(void)remove:(NSNumber /* Bool */ *)redraw;
+-(void)removePlotBand:(NSString *)id;
+-(void)removePlotLine:(NSString *)id;
+-(void)renderLine;
+-(void)renderMinorTick:(NSNumber *)pos;
+-(void)renderTick:(NSNumber *)pos index:(NSNumber *)i;
+-(void)setAxisCategories:(NSArray<NSString *> *)categories;
+-(void)setAxisCategories:(NSArray<NSString *> *)categories redraw:(NSNumber /* Bool */ *)redraw;
+-(void)setExtremes;
+-(void)setExtremes:(NSNumber *)newMin;
+-(void)setExtremes:(NSNumber *)newMin newMax:(NSNumber *)newMax;
+-(void)setExtremes:(NSNumber *)newMin newMax:(NSNumber *)newMax redraw:(NSNumber /* Bool */ *)redraw;
+-(void)setExtremes:(NSNumber *)newMin newMax:(NSNumber *)newMax redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)setTickPositions;
+-(void)setAxisTitle:(HITitle *)title;
+-(void)setAxisTitle:(HITitle *)title redraw:(NSNumber /* Bool */ *)redraw;
+-(void)update:(HIXAxis *)options;
+-(void)update:(HIXAxis *)options redraw:(NSNumber /* Bool */ *)redraw;
 
 @end

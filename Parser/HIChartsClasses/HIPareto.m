@@ -75,8 +75,9 @@
 # pragma mark - Setters
 
 -(void)setBaseSeries:(id)baseSeries {
+	id oldValue = _baseSeries;
 	_baseSeries = baseSeries;
-	[self updateNSObject:@"baseSeries"];
+	[self updateNSObject:oldValue newValue:baseSeries propertyName:@"baseSeries"];
 }
 
 @end

@@ -106,124 +106,129 @@
 # pragma mark - Setters
 
 -(void)setAllowOverlap:(NSNumber *)allowOverlap {
+	NSNumber *oldValue = _allowOverlap;
 	_allowOverlap = allowOverlap;
-	[self updateNSObject:@"allowOverlap"];
+	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 -(void)setDistance:(NSNumber *)distance {
+	NSNumber *oldValue = _distance;
 	_distance = distance;
-	[self updateNSObject:@"distance"];
+	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setText:(NSString *)text {
+	NSString *oldValue = _text;
 	_text = text;
-	[self updateNSObject:@"text"];
+	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setFormat:(NSString *)format {
+	NSString *oldValue = _format;
 	_format = format;
-	[self updateNSObject:@"format"];
+	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
 }
 
 -(void)setCrop:(NSNumber *)crop {
+	NSNumber *oldValue = _crop;
 	_crop = crop;
-	[self updateNSObject:@"crop"];
+	[self updateNSObject:oldValue newValue:crop propertyName:@"crop"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setShape:(NSString *)shape {
+	NSString *oldValue = _shape;
 	_shape = shape;
-	[self updateNSObject:@"shape"];
+	[self updateNSObject:oldValue newValue:shape propertyName:@"shape"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
 	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setOverflow:(NSString *)overflow {
+	NSString *oldValue = _overflow;
 	_overflow = overflow;
-	[self updateNSObject:@"overflow"];
+	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {
 	HIFunction *oldValue = _formatter;
-	if(self.formatter) {
-		[self removeObserver:self forKeyPath:@"formatter.isUpdated"];
-	}
 	_formatter = formatter;
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
 -(void)setShadow:(NSNumber *)shadow {
+	NSNumber *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 @end

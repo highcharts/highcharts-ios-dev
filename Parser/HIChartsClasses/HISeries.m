@@ -307,251 +307,243 @@
 }
 
 -(void)setId:(NSString *)id {
+	NSString *oldValue = _id;
 	_id = id;
-	[self updateNSObject:@"id"];
+	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }
 
 -(void)setIndex:(NSNumber *)index {
+	NSNumber *oldValue = _index;
 	_index = index;
-	[self updateNSObject:@"index"];
+	[self updateNSObject:oldValue newValue:index propertyName:@"index"];
 }
 
 -(void)setLegendIndex:(NSNumber *)legendIndex {
+	NSNumber *oldValue = _legendIndex;
 	_legendIndex = legendIndex;
-	[self updateNSObject:@"legendIndex"];
+	[self updateNSObject:oldValue newValue:legendIndex propertyName:@"legendIndex"];
 }
 
 -(void)setName:(NSString *)name {
+	NSString *oldValue = _name;
 	_name = name;
-	[self updateNSObject:@"name"];
+	[self updateNSObject:oldValue newValue:name propertyName:@"name"];
 }
 
 -(void)setStack:(NSString *)stack {
+	NSString *oldValue = _stack;
 	_stack = stack;
-	[self updateNSObject:@"stack"];
+	[self updateNSObject:oldValue newValue:stack propertyName:@"stack"];
 }
 
 -(void)setType:(NSString *)type {
+	NSString *oldValue = _type;
 	_type = type;
-	[self updateNSObject:@"type"];
+	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
 -(void)setXAxis:(id)xAxis {
+	id oldValue = _xAxis;
 	_xAxis = xAxis;
-	[self updateNSObject:@"xAxis"];
+	[self updateNSObject:oldValue newValue:xAxis propertyName:@"xAxis"];
 }
 
 -(void)setYAxis:(id)yAxis {
+	id oldValue = _yAxis;
 	_yAxis = yAxis;
-	[self updateNSObject:@"yAxis"];
+	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setYAxisDescription:(NSString *)yAxisDescription {
+	NSString *oldValue = _yAxisDescription;
 	_yAxisDescription = yAxisDescription;
-	[self updateNSObject:@"yAxisDescription"];
+	[self updateNSObject:oldValue newValue:yAxisDescription propertyName:@"yAxisDescription"];
 }
 
 -(void)setXAxisDescription:(NSString *)xAxisDescription {
+	NSString *oldValue = _xAxisDescription;
 	_xAxisDescription = xAxisDescription;
-	[self updateNSObject:@"xAxisDescription"];
+	[self updateNSObject:oldValue newValue:xAxisDescription propertyName:@"xAxisDescription"];
 }
 
 -(void)setDefinition:(NSString *)definition {
+	NSString *oldValue = _definition;
 	_definition = definition;
-	[self updateNSObject:@"definition"];
+	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setSummary:(HISummary *)summary {
 	HISummary *oldValue = _summary;
-	if(self.summary) {
-		[self removeObserver:self forKeyPath:@"summary.isUpdated"];
-	}
 	_summary = summary;
 	[self updateHIObject:oldValue newValue:summary propertyName:@"summary"];
 }
 
 -(void)setPoint:(HIPoint *)point {
 	HIPoint *oldValue = _point;
-	if(self.point) {
-		[self removeObserver:self forKeyPath:@"point.isUpdated"];
-	}
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
 
 -(void)setSelected:(NSNumber *)selected {
+	NSNumber *oldValue = _selected;
 	_selected = selected;
-	[self updateNSObject:@"selected"];
+	[self updateNSObject:oldValue newValue:selected propertyName:@"selected"];
 }
 
 -(void)setColorIndex:(NSNumber *)colorIndex {
+	NSNumber *oldValue = _colorIndex;
 	_colorIndex = colorIndex;
-	[self updateNSObject:@"colorIndex"];
+	[self updateNSObject:oldValue newValue:colorIndex propertyName:@"colorIndex"];
 }
 
 -(void)setClip:(NSNumber *)clip {
+	NSNumber *oldValue = _clip;
 	_clip = clip;
-	[self updateNSObject:@"clip"];
+	[self updateNSObject:oldValue newValue:clip propertyName:@"clip"];
 }
 
 -(void)setNegativeColor:(HIColor *)negativeColor {
 	HIColor *oldValue = _negativeColor;
-	if(self.negativeColor) {
-		[self removeObserver:self forKeyPath:@"negativeColor.isUpdated"];
-	}
 	_negativeColor = negativeColor;
 	[self updateHIObject:oldValue newValue:negativeColor propertyName:@"negativeColor"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setPointInterval:(NSNumber *)pointInterval {
+	NSNumber *oldValue = _pointInterval;
 	_pointInterval = pointInterval;
-	[self updateNSObject:@"pointInterval"];
+	[self updateNSObject:oldValue newValue:pointInterval propertyName:@"pointInterval"];
 }
 
 -(void)setCropThreshold:(NSNumber *)cropThreshold {
+	NSNumber *oldValue = _cropThreshold;
 	_cropThreshold = cropThreshold;
-	[self updateNSObject:@"cropThreshold"];
+	[self updateNSObject:oldValue newValue:cropThreshold propertyName:@"cropThreshold"];
 }
 
 -(void)setStates:(HIStates *)states {
 	HIStates *oldValue = _states;
-	if(self.states) {
-		[self removeObserver:self forKeyPath:@"states.isUpdated"];
-	}
 	_states = states;
 	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
 }
 
 -(void)setSoftThreshold:(NSNumber *)softThreshold {
+	NSNumber *oldValue = _softThreshold;
 	_softThreshold = softThreshold;
-	[self updateNSObject:@"softThreshold"];
+	[self updateNSObject:oldValue newValue:softThreshold propertyName:@"softThreshold"];
 }
 
 -(void)setDragDrop:(HIDragDrop *)dragDrop {
 	HIDragDrop *oldValue = _dragDrop;
-	if(self.dragDrop) {
-		[self removeObserver:self forKeyPath:@"dragDrop.isUpdated"];
-	}
 	_dragDrop = dragDrop;
 	[self updateHIObject:oldValue newValue:dragDrop propertyName:@"dragDrop"];
 }
 
 -(void)setMarker:(HIMarker *)marker {
 	HIMarker *oldValue = _marker;
-	if(self.marker) {
-		[self removeObserver:self forKeyPath:@"marker.isUpdated"];
-	}
 	_marker = marker;
 	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
 }
 
 -(void)setTooltip:(HITooltip *)tooltip {
 	HITooltip *oldValue = _tooltip;
-	if(self.tooltip) {
-		[self removeObserver:self forKeyPath:@"tooltip.isUpdated"];
-	}
 	_tooltip = tooltip;
 	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
 }
 
 -(void)setPointDescriptionFormatter:(HIFunction *)pointDescriptionFormatter {
 	HIFunction *oldValue = _pointDescriptionFormatter;
-	if(self.pointDescriptionFormatter) {
-		[self removeObserver:self forKeyPath:@"pointDescriptionFormatter.isUpdated"];
-	}
 	_pointDescriptionFormatter = pointDescriptionFormatter;
 	[self updateHIObject:oldValue newValue:pointDescriptionFormatter propertyName:@"pointDescriptionFormatter"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {
+	NSString *oldValue = _dashStyle;
 	_dashStyle = dashStyle;
-	[self updateNSObject:@"dashStyle"];
+	[self updateNSObject:oldValue newValue:dashStyle propertyName:@"dashStyle"];
 }
 
 -(void)setPointPlacement:(id)pointPlacement {
+	id oldValue = _pointPlacement;
 	_pointPlacement = pointPlacement;
-	[self updateNSObject:@"pointPlacement"];
+	[self updateNSObject:oldValue newValue:pointPlacement propertyName:@"pointPlacement"];
 }
 
 -(void)setConnectNulls:(NSNumber *)connectNulls {
+	NSNumber *oldValue = _connectNulls;
 	_connectNulls = connectNulls;
-	[self updateNSObject:@"connectNulls"];
+	[self updateNSObject:oldValue newValue:connectNulls propertyName:@"connectNulls"];
 }
 
 -(void)setEnableMouseTracking:(NSNumber *)enableMouseTracking {
+	NSNumber *oldValue = _enableMouseTracking;
 	_enableMouseTracking = enableMouseTracking;
-	[self updateNSObject:@"enableMouseTracking"];
+	[self updateNSObject:oldValue newValue:enableMouseTracking propertyName:@"enableMouseTracking"];
 }
 
 -(void)setLabel:(HILabel *)label {
 	HILabel *oldValue = _label;
-	if(self.label) {
-		[self removeObserver:self forKeyPath:@"label.isUpdated"];
-	}
 	_label = label;
 	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
 }
 
 -(void)setStacking:(NSString *)stacking {
+	NSString *oldValue = _stacking;
 	_stacking = stacking;
-	[self updateNSObject:@"stacking"];
+	[self updateNSObject:oldValue newValue:stacking propertyName:@"stacking"];
 }
 
 -(void)setAnimation:(HIAnimationOptionsObject *)animation {
 	HIAnimationOptionsObject *oldValue = _animation;
-	if(self.animation) {
-		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
-	}
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setFindNearestPointBy:(NSString *)findNearestPointBy {
+	NSString *oldValue = _findNearestPointBy;
 	_findNearestPointBy = findNearestPointBy;
-	[self updateNSObject:@"findNearestPointBy"];
+	[self updateNSObject:oldValue newValue:findNearestPointBy propertyName:@"findNearestPointBy"];
 }
 
 -(void)setThreshold:(NSNumber *)threshold {
+	NSNumber *oldValue = _threshold;
 	_threshold = threshold;
-	[self updateNSObject:@"threshold"];
+	[self updateNSObject:oldValue newValue:threshold propertyName:@"threshold"];
 }
 
 -(void)setShowCheckbox:(NSNumber *)showCheckbox {
+	NSNumber *oldValue = _showCheckbox;
 	_showCheckbox = showCheckbox;
-	[self updateNSObject:@"showCheckbox"];
+	[self updateNSObject:oldValue newValue:showCheckbox propertyName:@"showCheckbox"];
 }
 
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
-	if(self.events) {
-		[self removeObserver:self forKeyPath:@"events.isUpdated"];
-	}
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setAnimationLimit:(NSNumber *)animationLimit {
+	NSNumber *oldValue = _animationLimit;
 	_animationLimit = animationLimit;
-	[self updateNSObject:@"animationLimit"];
+	[self updateNSObject:oldValue newValue:animationLimit propertyName:@"animationLimit"];
 }
 
 -(void)setKeys:(NSArray<NSString *> *)keys {
@@ -561,43 +553,51 @@
 }
 
 -(void)setTurboThreshold:(NSNumber *)turboThreshold {
+	NSNumber *oldValue = _turboThreshold;
 	_turboThreshold = turboThreshold;
-	[self updateNSObject:@"turboThreshold"];
+	[self updateNSObject:oldValue newValue:turboThreshold propertyName:@"turboThreshold"];
 }
 
 -(void)setSkipKeyboardNavigation:(NSNumber *)skipKeyboardNavigation {
+	NSNumber *oldValue = _skipKeyboardNavigation;
 	_skipKeyboardNavigation = skipKeyboardNavigation;
-	[self updateNSObject:@"skipKeyboardNavigation"];
+	[self updateNSObject:oldValue newValue:skipKeyboardNavigation propertyName:@"skipKeyboardNavigation"];
 }
 
 -(void)setAllowPointSelect:(NSNumber *)allowPointSelect {
+	NSNumber *oldValue = _allowPointSelect;
 	_allowPointSelect = allowPointSelect;
-	[self updateNSObject:@"allowPointSelect"];
+	[self updateNSObject:oldValue newValue:allowPointSelect propertyName:@"allowPointSelect"];
 }
 
 -(void)setStep:(NSString *)step {
+	NSString *oldValue = _step;
 	_step = step;
-	[self updateNSObject:@"step"];
+	[self updateNSObject:oldValue newValue:step propertyName:@"step"];
 }
 
 -(void)setGetExtremesFromAll:(NSNumber *)getExtremesFromAll {
+	NSNumber *oldValue = _getExtremesFromAll;
 	_getExtremesFromAll = getExtremesFromAll;
-	[self updateNSObject:@"getExtremesFromAll"];
+	[self updateNSObject:oldValue newValue:getExtremesFromAll propertyName:@"getExtremesFromAll"];
 }
 
 -(void)setExposeElementToA11y:(NSNumber *)exposeElementToA11y {
+	NSNumber *oldValue = _exposeElementToA11y;
 	_exposeElementToA11y = exposeElementToA11y;
-	[self updateNSObject:@"exposeElementToA11y"];
+	[self updateNSObject:oldValue newValue:exposeElementToA11y propertyName:@"exposeElementToA11y"];
 }
 
 -(void)setShadow:(NSNumber *)shadow {
+	NSNumber *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setZoneAxis:(NSString *)zoneAxis {
+	NSString *oldValue = _zoneAxis;
 	_zoneAxis = zoneAxis;
-	[self updateNSObject:@"zoneAxis"];
+	[self updateNSObject:oldValue newValue:zoneAxis propertyName:@"zoneAxis"];
 }
 
 -(void)setZones:(NSArray <HIZones *> *)zones {
@@ -607,67 +607,75 @@
 }
 
 -(void)setPointIntervalUnit:(NSString *)pointIntervalUnit {
+	NSString *oldValue = _pointIntervalUnit;
 	_pointIntervalUnit = pointIntervalUnit;
-	[self updateNSObject:@"pointIntervalUnit"];
+	[self updateNSObject:oldValue newValue:pointIntervalUnit propertyName:@"pointIntervalUnit"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
 -(void)setVisible:(NSNumber *)visible {
+	NSNumber *oldValue = _visible;
 	_visible = visible;
-	[self updateNSObject:@"visible"];
+	[self updateNSObject:oldValue newValue:visible propertyName:@"visible"];
 }
 
 -(void)setLinkedTo:(NSString *)linkedTo {
+	NSString *oldValue = _linkedTo;
 	_linkedTo = linkedTo;
-	[self updateNSObject:@"linkedTo"];
+	[self updateNSObject:oldValue newValue:linkedTo propertyName:@"linkedTo"];
 }
 
 -(void)setStickyTracking:(NSNumber *)stickyTracking {
+	NSNumber *oldValue = _stickyTracking;
 	_stickyTracking = stickyTracking;
-	[self updateNSObject:@"stickyTracking"];
+	[self updateNSObject:oldValue newValue:stickyTracking propertyName:@"stickyTracking"];
 }
 
 -(void)setDataLabels:(HIDataLabels *)dataLabels {
 	HIDataLabels *oldValue = _dataLabels;
-	if(self.dataLabels) {
-		[self removeObserver:self forKeyPath:@"dataLabels.isUpdated"];
-	}
 	_dataLabels = dataLabels;
 	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setCursor:(NSString *)cursor {
+	NSString *oldValue = _cursor;
 	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
+	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
 }
 
 -(void)setPointStart:(NSNumber *)pointStart {
+	NSNumber *oldValue = _pointStart;
 	_pointStart = pointStart;
-	[self updateNSObject:@"pointStart"];
+	[self updateNSObject:oldValue newValue:pointStart propertyName:@"pointStart"];
 }
 
 -(void)setLinecap:(NSString *)linecap {
+	NSString *oldValue = _linecap;
 	_linecap = linecap;
-	[self updateNSObject:@"linecap"];
+	[self updateNSObject:oldValue newValue:linecap propertyName:@"linecap"];
 }
 
 -(void)setConnectEnds:(NSNumber *)connectEnds {
+	NSNumber *oldValue = _connectEnds;
 	_connectEnds = connectEnds;
-	[self updateNSObject:@"connectEnds"];
+	[self updateNSObject:oldValue newValue:connectEnds propertyName:@"connectEnds"];
 }
 
 -(void)setBoostThreshold:(NSNumber *)boostThreshold {
+	NSNumber *oldValue = _boostThreshold;
 	_boostThreshold = boostThreshold;
-	[self updateNSObject:@"boostThreshold"];
+	[self updateNSObject:oldValue newValue:boostThreshold propertyName:@"boostThreshold"];
 }
 
 -(void)setShowInLegend:(NSNumber *)showInLegend {
+	NSNumber *oldValue = _showInLegend;
 	_showInLegend = showInLegend;
-	[self updateNSObject:@"showInLegend"];
+	[self updateNSObject:oldValue newValue:showInLegend propertyName:@"showInLegend"];
 }
 
 @end
