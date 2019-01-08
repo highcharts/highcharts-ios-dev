@@ -58,10 +58,24 @@ Sets an ID for an annotation. Can be user later when removing an annotation in `
 
 -(NSDictionary *)getParams;
 
+-(void)adjustLabelVisibility:(HILabels *)item;
+-(void)adjustShapeVisibility:(HIShapes *)item;
 -(void)destroy;
--(void)redraw;
--(void)render;
+-(void)destroyLabelItem:(HILabels *)item;
+-(void)destroyShapeItem:(HIShapes *)item;
+-(void)initLabel:(HILabels *)item;
+-(void)initShape:(HIShapes *)item;
+-(void)redrawLabelItem:(HILabels *)item;
+-(void)redrawLabelItem:(HILabels *)item animation:(NSNumber /* Bool */ *)animation;
+-(void)redrawShapeItem:(HIShapes *)item;
+-(void)redrawShapeItem:(HIShapes *)item animation:(NSNumber /* Bool */ *)animation;
+-(void)redrawLabelItems:(NSArray <HILabels *> *)items;
+-(void)redrawLabelItems:(NSArray <HILabels *> *)items animation:(NSNumber /* Bool */ *)animation;
+-(void)redrawShapeItems:(NSArray <HIShapes *> *)items;
+-(void)redrawShapeItems:(NSArray <HIShapes *> *)items animation:(NSNumber /* Bool */ *)animation;
+-(void)remove;
+-(void)setOptions;
 -(void)setVisibility;
--(void)setVisibility:(NSNumber /* Bool */ *)visibility;
+-(void)setVisibility:(NSNumber /* Bool */ *)visible;
 
 @end
