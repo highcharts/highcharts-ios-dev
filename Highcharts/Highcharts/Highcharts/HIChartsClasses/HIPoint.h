@@ -35,6 +35,8 @@ This number defines which yAxis the point is connected to. It refers to either t
 
 -(NSDictionary *)getParams;
 
+-(void)cancelSonify;
+-(void)cancelSonify:(NSNumber /* Bool */ *)fadeOut;
 -(void)onMouseOut;
 -(void)remove:(NSNumber /* Bool */ *)redraw;
 -(void)remove:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
@@ -45,6 +47,7 @@ This number defines which yAxis the point is connected to. It refers to either t
 -(void)setState;
 -(void)setState:(NSString *)state;
 -(void)setState:(NSString *)state move:(NSNumber /* Bool */ *)move;
+-(void)sonify:(NSDictionary *)options;
 -(void)tooltipFormatter:(NSString *)pointFormat;
 -(void)update:(HIPoint *)options;
 -(void)update:(HIPoint *)options redraw:(NSNumber /* Bool */ *)redraw;

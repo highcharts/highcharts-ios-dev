@@ -72,6 +72,14 @@
 	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }
 
+- (void)cancelSonify {
+    self.jsClassMethod = @{ @"class" : @"Point", @"method" : @"cancelSonify0", @"id" : self.uuid };
+}
+
+- (void)cancelSonify:(NSNumber *)fadeOut {
+    self.jsClassMethod = @{ @"class" : @"Point", @"method" : @"cancelSonify1", @"id" : self.uuid, @"params" : @[fadeOut] };
+}
+
 - (void)onMouseOut {
     self.jsClassMethod = @{ @"class" : @"Point", @"method" : @"onMouseOut", @"id" : self.uuid };
 }
@@ -110,6 +118,10 @@
 
 - (void)setState:(NSString *)state move:(NSNumber *)move {
     self.jsClassMethod = @{ @"class" : @"Point", @"method" : @"setState2", @"id" : self.uuid, @"params" : @[state, move] };
+}
+
+- (void)sonify:(NSDictionary *)options {
+    self.jsClassMethod = @{ @"class" : @"Point", @"method" : @"sonify", @"id" : self.uuid, @"params" : @[options] };
 }
 
 - (void)tooltipFormatter:(NSString *)pointFormat {

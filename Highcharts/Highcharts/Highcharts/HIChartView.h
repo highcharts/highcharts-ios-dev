@@ -73,4 +73,48 @@
 - (void)loadChart __attribute__((deprecated));
 - (void)reload __attribute__((deprecated));
 
+
+
+
+-(void)addAnnotation:(HIAnnotations *)options;
+-(void)addAnnotation:(HIAnnotations *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addXAxis:(HIXAxis *)options;
+-(void)addXAxis:(HIXAxis *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addXAxis:(HIXAxis *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addYAxis:(HIYAxis *)options;
+-(void)addYAxis:(HIYAxis *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addYAxis:(HIYAxis *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addCredits:(HICredits *)options;
+-(void)addSeries:(HISeries *)options;
+-(void)addSeries:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)addSeries:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw animation:(HIAnimationOptionsObject *)animation;
+-(void)addSeriesAsDrilldown:(HIPoint *)point options:(HISeries *)options;
+-(void)cancelSonify;
+-(void)cancelSonify:(NSNumber /* Bool */ *)fadeOut;
+-(void)destroy;
+-(void)drillUp;
+-(void)hideLoading;
+-(void)openInCloud;
+-(void)pauseSonify;
+-(void)pauseSonify:(NSNumber /* Bool */ *)fadeOut;
+-(void)print;
+-(void)redraw;
+-(void)redraw:(HIAnimationOptionsObject *)animation;
+-(void)removeAnnotationById:(NSString *)id;
+-(void)removeAnnotation:(HIAnnotations *)annotation;
+-(void)resetSonifyCursor;
+-(void)resetSonifyCursorEnd;
+-(void)setSonifyCursorToPoint:(HIPoint *)point;
+-(void)setSonifyCursorToPoints:(NSArray<HIPoint *> *)points;
+-(void)setSubtitle:(HISubtitle *)options;
+-(void)setTitle:(HITitle *)titleOptions subtitleOptions:(HISubtitle *)subtitleOptions redraw:(NSNumber /* Bool */ *)redraw;
+-(void)showLoading:(NSString *)str;
+-(void)sonify:(NSDictionary *)options;
+-(void)update:(HIOptions *)options;
+-(void)update:(HIOptions *)options redraw:(NSNumber /* Bool */ *)redraw;
+-(void)update:(HIOptions *)options redraw:(NSNumber /* Bool */ *)redraw oneToOne:(NSNumber /* Bool */ *)oneToOne;
+-(void)update:(HIOptions *)options redraw:(NSNumber /* Bool */ *)redraw oneToOne:(NSNumber /* Bool */ *)oneToOne animation:(HIAnimationOptionsObject *)animation;
+-(void)viewData;
+-(void)zoomOut;
+
 @end

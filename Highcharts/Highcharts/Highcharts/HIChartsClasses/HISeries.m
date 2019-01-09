@@ -805,6 +805,10 @@
     self.jsClassMethod = @{ @"class" : @"Series", @"method" : @"show", @"id" : self.uuid };
 }
 
+- (void)sonify:(NSDictionary *)options {
+    self.jsClassMethod = @{ @"class" : @"Series", @"method" : @"sonify", @"id" : self.uuid, @"params" : @[options] };
+}
+
 - (void)translate {
     self.jsClassMethod = @{ @"class" : @"Series", @"method" : @"translate", @"id" : self.uuid };
 }

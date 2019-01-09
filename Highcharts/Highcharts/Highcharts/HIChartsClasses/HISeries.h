@@ -591,6 +591,7 @@ Whether to display this particular series or series type in the legend. The defa
 -(void)setSeriesVisible:(NSNumber /* Bool */ *)visible;
 -(void)setSeriesVisible:(NSNumber /* Bool */ *)visible redraw:(NSNumber /* Bool */ *)redraw;
 -(void)show;
+-(void)sonify:(NSDictionary *)options;
 -(void)translate;
 -(void)update:(HISeries *)options;
 -(void)update:(HISeries *)options redraw:(NSNumber /* Bool */ *)redraw;
