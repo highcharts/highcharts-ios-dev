@@ -90,6 +90,9 @@ An object defining mouse events for the plot line. Supported properties are `cli
 
 -(NSDictionary *)getParams;
 
+/**
+ Remove the plot line.
+ */
 -(void)destroy;
 
 @end

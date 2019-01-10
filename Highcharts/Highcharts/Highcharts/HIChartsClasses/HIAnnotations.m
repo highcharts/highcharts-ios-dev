@@ -130,11 +130,11 @@
     self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"destroyItem", @"id" : self.uuid, @"params" : @[[item getParams]] };
 }
 
-- (void)initLabel:(HILabels *)item {
+- (void)initLabel:(HILabels *)labelOptions {
     self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"initLabel", @"id" : self.uuid, @"params" : @[[item getParams]] };
 }
 
-- (void)initShape:(HIShapes *)item {
+- (void)initShape:(HIShapes *)shapeOptions {
     self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"initShape", @"id" : self.uuid, @"params" : @[[item getParams]] };
 }
 

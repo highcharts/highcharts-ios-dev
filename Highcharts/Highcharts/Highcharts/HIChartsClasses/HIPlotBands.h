@@ -116,6 +116,9 @@ An object defining mouse events for the plot band. Supported properties are `cli
 
 -(NSDictionary *)getParams;
 
+/**
+ Remove the plot band.
+ */
 -(void)destroy;
 
 @end
