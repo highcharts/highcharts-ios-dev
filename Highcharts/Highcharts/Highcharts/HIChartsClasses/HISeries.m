@@ -775,8 +775,8 @@
     self.jsClassMethod = @{ @"class" : @"Series", @"method" : @"setData3", @"id" : self.uuid, @"params" : @[data, redraw, [animation getParams], updatePoints] };
 }
 
-- (void)setOptions:(HISeries *)options {
-    NSMutableDictionary *params = [[options getParams] mutableCopy];
+- (void)setOptions:(HISeries *)itemOptions {
+    NSMutableDictionary *params = [[itemOptions getParams] mutableCopy];
     [params removeObjectForKey:@"_wrapperID"];
     self.jsClassMethod = @{ @"class" : @"Series", @"method" : @"setOptions", @"id" : self.uuid, @"params" : @[params] };
 }
