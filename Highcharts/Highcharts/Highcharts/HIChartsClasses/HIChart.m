@@ -66,7 +66,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-    params[@"_wrapperID"] = self.uuid;
 	if (self.parallelAxes) {
 		params[@"parallelAxes"] = [self.parallelAxes getParams];
 	}

@@ -16,7 +16,6 @@
 #import "HIPlotBands.h"
 #import "HIColor.h"
 #import "HIFunction.h"
-#import "HIAnimationOptionsObject.h"
 
 
 /**

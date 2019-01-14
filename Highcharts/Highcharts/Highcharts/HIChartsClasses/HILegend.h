@@ -12,7 +12,6 @@
 #import "HIKeyboardNavigation.h"
 #import "HIColor.h"
 #import "HICSSObject.h"
-#import "HIPoint.h"
 #import "HISeries.h"
 
 

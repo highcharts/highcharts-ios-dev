@@ -23,7 +23,7 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-    params[@"_wrapperID"] = self.uuid;
+	params[@"_wrapperID"] = self.uuid;
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
@@ -131,11 +131,11 @@
 }
 
 - (void)initLabel:(HILabels *)labelOptions {
-    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"initLabel", @"id" : self.uuid, @"params" : @[[item getParams]] };
+    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"initLabel", @"id" : self.uuid, @"params" : @[[labelOptions getParams]] };
 }
 
 - (void)initShape:(HIShapes *)shapeOptions {
-    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"initShape", @"id" : self.uuid, @"params" : @[[item getParams]] };
+    self.jsClassMethod = @{ @"class" : @"Annotation", @"method" : @"initShape", @"id" : self.uuid, @"params" : @[[shapeOptions getParams]] };
 }
 
 - (void)redrawLabelItem:(HILabels *)item {

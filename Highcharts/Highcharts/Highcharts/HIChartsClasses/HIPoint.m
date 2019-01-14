@@ -21,7 +21,7 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-    params[@"_wrapperID"] = self.uuid;
+	params[@"_wrapperID"] = self.uuid;
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}

@@ -14,12 +14,6 @@
 #import "HIColor.h"
 #import "HIAnimationOptionsObject.h"
 #import "HICSSObject.h"
-#import "HIAnnotations.h"
-#import "HIXAxis.h"
-#import "HIYAxis.h"
-#import "HICredits.h"
-#import "HISeries.h"
-#import "HISubtitle.h"
 
 
 /**
