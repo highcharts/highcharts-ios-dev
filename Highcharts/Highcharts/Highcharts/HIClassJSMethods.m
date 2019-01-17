@@ -3,7 +3,7 @@
 //  Highcharts
 //
 //  License: www.highcharts.com/license
-//  Copyright © 2018 Highsoft AS. All rights reserved.
+//  Copyright © 2019 Highsoft AS. All rights reserved.
 //
 
 #import "HIClassJSMethods.h"
@@ -11,7 +11,7 @@
 
 @implementation HIClassJSMethods
 
-+ (NSString *)getJCClassMethodString:(NSDictionary *)dict {
++ (NSString *)getJSClassMethodString:(NSDictionary *)dict {
     
     NSMutableArray *args = [[NSMutableArray alloc] initWithObjects:[NSNull null], [NSNull null], [NSNull null], [NSNull null], [NSNull null], nil];
     NSMutableArray *params = [dict[@"params"] mutableCopy];
@@ -28,9 +28,6 @@
             }
         }
     }
-    
-    NSLog(@"%@", args);
-    NSLog(@"%@", params);
     
     NSDictionary *functions = @{
                                 @"Annotation":

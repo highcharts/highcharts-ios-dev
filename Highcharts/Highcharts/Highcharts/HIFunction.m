@@ -77,6 +77,18 @@
     }
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    [super copyWithZone:zone];
+    HIFunction *copyFunction = [[HIFunction allocWithZone: zone] init];
+    [copyFunction setBoth:self.both];
+    copyFunction.closureJSBody = [self.closureJSBody copyWithZone:zone];
+    copyFunction.function = [self.function copyWithZone:zone];
+    copyFunction.jsFunction = [self.jsFunction copyWithZone:zone];
+    copyFunction.closure = [self.closure copyWithZone:zone];
+    copyFunction.properties = [self.properties copyWithZone:zone];
+    return copyFunction;
+}
+
 # pragma mark - Setters/Getters
 
 -(void)setClosureJSBody:(NSString *)closureJSBody {
@@ -146,18 +158,6 @@
     else {
         return nil;
     }
-}
-
--(id)copyWithZone:(NSZone *)zone {
-    [super copyWithZone:zone];
-    HIFunction *copyFunction = [[HIFunction allocWithZone: zone] init];
-    [copyFunction setBoth:self.both];
-    copyFunction.closureJSBody = [self.closureJSBody copyWithZone:zone];
-    copyFunction.function = [self.function copyWithZone:zone];
-    copyFunction.jsFunction = [self.jsFunction copyWithZone:zone];
-    copyFunction.closure = [self.closure copyWithZone:zone];
-    copyFunction.properties = [self.properties copyWithZone:zone];
-    return copyFunction;
 }
 
 @end

@@ -231,8 +231,6 @@ static BOOL preloaded = NO;
     // Prepare HTML with options.
     [self prepareHTML:options];
     
-    NSLog(@"%@", self.HTML.html);
-    
     // Load HTML
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
 }
@@ -255,17 +253,10 @@ static BOOL preloaded = NO;
 }
 
 - (void) callJSMethod:(NSDictionary *)dict {
-    NSLog(@"HELLO FROM CHART VIEW!!");
-    NSLog(@"%@", dict);
-    
-    NSString *jsMethod = [HIClassJSMethods getJCClassMethodString:dict];
-    NSLog(@"%@", jsMethod);
+    NSString *jsMethod = [HIClassJSMethods getJSClassMethodString:dict];
     
     if (jsMethod.length) {
         [self.webView evaluateJavaScript:jsMethod completionHandler:nil];
-    }
-    else {
-        NSLog(@"IT IS NIL!");
     }
 }
 
@@ -306,27 +297,21 @@ static BOOL preloaded = NO;
     }
 }
 
-- (void)setTheme:(NSString *)theme
-{
+- (void)setTheme:(NSString *)theme {
     [self willChangeValueForKey:@"theme"];
     _theme = theme;
-    [self loadChartInternal];
     [self didChangeValueForKey:@"theme"];
 }
 
-- (void)setLang:(HILang *)lang
-{
+- (void)setLang:(HILang *)lang {
     [self willChangeValueForKey:@"lang"];
     _lang = lang;
-    [self loadChartInternal];
     [self didChangeValueForKey:@"lang"];
 }
 
-- (void)setGlobal:(HIGlobal *)global
-{
+- (void)setGlobal:(HIGlobal *)global {
     [self willChangeValueForKey:@"global"];
     _global = global;
-    [self loadChartInternal];
     [self didChangeValueForKey:@"global"];
 }
 
@@ -460,16 +445,7 @@ static BOOL preloaded = NO;
     return object;
 }
 
-#pragma mark - Deprecated
-
-- (void)setDebug:(BOOL)debug {}
-- (BOOL)debug { return NO; }
-- (void)reload { [self loadChartInternal]; }
-- (void)loadChart { [self loadChartInternal]; }
-
-
-
-
+#pragma mark - JS methods
 
 - (void)addAnnotation:(HIAnnotations *)options {
     NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAnnotation0", @"params" : @[[options getParams]] };
@@ -679,5 +655,12 @@ static BOOL preloaded = NO;
     NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"zoomOut" };
     [self callJSMethod:chartMethod];
 }
+
+#pragma mark - Deprecated
+
+- (void)setDebug:(BOOL)debug {}
+- (BOOL)debug { return NO; }
+- (void)reload { [self loadChartInternal]; }
+- (void)loadChart { [self loadChartInternal]; }
 
 @end

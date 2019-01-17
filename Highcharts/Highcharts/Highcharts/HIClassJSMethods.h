@@ -9,17 +9,17 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  This clas ...
+ *  This clas is needed to convert iOS methods on HI objects to string representation of JS method.
  */
 @interface HIClassJSMethods : NSObject
 
 /**
+ *  Prepares objects inside a method and returns JS method.
  *
+ *  @param dict Dictionary of needed params to JS method.
  *
- *
- *
- *
+ *  @return String representation of JS method.
  */
-+ (NSString *)getJCClassMethodString:(NSDictionary *) dict;
++ (NSString *)getJSClassMethodString:(NSDictionary *) dict;
 
 @end

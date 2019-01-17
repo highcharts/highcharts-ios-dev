@@ -27,6 +27,11 @@
     return nil;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    HIChartsJSONSerializable *copy = [[HIChartsJSONSerializable alloc] init];
+    return copy;
+}
+
 - (void)dealloc {
     [self removeObservers];
 }
@@ -50,6 +55,12 @@
     [self didChangeValueForKey:@"isUpdated"];
 }
 
+- (void)setJsClassMethod:(NSDictionary *)jsClassMethod {
+    [self willChangeValueForKey:@"jsClassMethod"];
+    _jsClassMethod = jsClassMethod;
+    [self didChangeValueForKey:@"jsClassMethod"];
+}
+
 -(void)updateHIObject:(HIChartsJSONSerializable *)oldValue newValue:(HIChartsJSONSerializable *)newValue propertyName:(NSString *)propertyName {
     if (oldValue) {
         [oldValue removeObserver:self forKeyPath:@"isUpdated"];
@@ -59,8 +70,8 @@
         [self setUpdated:YES];
         
         if (newValue) {
-            [newValue addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
             [newValue addObserver:self forKeyPath:@"isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+            [newValue addObserver:self forKeyPath:@"jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
             [self.currentObservers addObject:newValue];
         }
     }
@@ -142,26 +153,13 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"jsClassMethod"]) {
         NSDictionary *kChangeNew = [change valueForKey:@"new"];
-        NSLog(@"IT IS jsClassMethod FROM KVO : %@", kChangeNew);
-        NSLog(@"MY PRIVATE ID IS : %@", self.uuid);
         [self setJsClassMethod:kChangeNew];
     }
-    else {
+    else if ([keyPath isEqualToString:@"isUpdated"]) {
         NSString *kChangeNew = [change valueForKey:@"new"];
         BOOL value = kChangeNew.boolValue;
         [self setUpdated:value];
     }
-}
-
-- (void)setJsClassMethod:(NSDictionary *)jsClassMethod {
-    [self willChangeValueForKey:@"jsClassMethod"];
-    _jsClassMethod = jsClassMethod;
-    [self didChangeValueForKey:@"jsClassMethod"];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    HIChartsJSONSerializable *copy = [[HIChartsJSONSerializable alloc] init];
-    return copy;
 }
 
 @end

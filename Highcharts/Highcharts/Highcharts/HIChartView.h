@@ -66,15 +66,6 @@
  */
 @property (weak, nonatomic) id<HIChartViewDelegate> delegate;
 
-/** 
- *  Deprecated methods and attributes. 
- */
-@property (assign, nonatomic) BOOL debug __attribute__((deprecated));
-- (void)loadChart __attribute__((deprecated));
-- (void)reload __attribute__((deprecated));
-
-
-
 /**
  Add an annotation to the chart after render time.
  @param options The annotation options for the new, detailed annotation.
@@ -550,5 +541,12 @@
  * Highcharts.Chart#event:selection
  */
 -(void)zoomOut;
+
+/**
+ *  Deprecated methods and attributes.
+ */
+@property (assign, nonatomic) BOOL debug __attribute__((deprecated));
+- (void)loadChart __attribute__((deprecated));
+- (void)reload __attribute__((deprecated));
 
 @end
