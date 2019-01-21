@@ -74,16 +74,26 @@
     return [self initWithRGBA:red green:green blue:blue alpha:alpha];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    [super copyWithZone:zone];
+    HIColor *copyColor = [[HIColor allocWithZone: zone] init];
+    copyColor.string = [self.string copyWithZone:zone];
+    copyColor.dictionary = [self.dictionary copyWithZone:zone];
+    return copyColor;
+}
+
 # pragma mark - Setters/Getters
 
 -(void)setString:(NSString *)string {
+    NSString *oldValue = _string;
     _string = string;
-    [self updateNSObject:@"string"];
+    [self updateNSObject:oldValue newValue:string propertyName:@"string"];
 }
 
 -(void)setDictionary:(NSDictionary *)dictionary {
+    NSDictionary *oldValue = _dictionary;
     _dictionary = dictionary;
-    [self updateNSObject:@"dictionary"];
+    [self updateNSObject:oldValue newValue:dictionary propertyName:@"dictionary"];
 }
 
 -(id)getData {
@@ -96,14 +106,6 @@
     else {
         return nil;
     }
-}
-
--(id)copyWithZone:(NSZone *)zone {
-    [super copyWithZone:zone];
-    HIColor *copyColor = [[HIColor allocWithZone: zone] init];
-    copyColor.string = [self.string copyWithZone:zone];
-    copyColor.dictionary = [self.dictionary copyWithZone:zone];
-    return copyColor;
 }
 
 @end

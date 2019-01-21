@@ -58,56 +58,57 @@
 # pragma mark - Setters
 
 -(void)setLinkLength:(NSNumber *)linkLength {
+	NSNumber *oldValue = _linkLength;
 	_linkLength = linkLength;
-	[self updateNSObject:@"linkLength"];
+	[self updateNSObject:oldValue newValue:linkLength propertyName:@"linkLength"];
 }
 
 -(void)setGravitationalConstant:(NSNumber *)gravitationalConstant {
+	NSNumber *oldValue = _gravitationalConstant;
 	_gravitationalConstant = gravitationalConstant;
-	[self updateNSObject:@"gravitationalConstant"];
+	[self updateNSObject:oldValue newValue:gravitationalConstant propertyName:@"gravitationalConstant"];
 }
 
 -(void)setMaxIterations:(NSNumber *)maxIterations {
+	NSNumber *oldValue = _maxIterations;
 	_maxIterations = maxIterations;
-	[self updateNSObject:@"maxIterations"];
+	[self updateNSObject:oldValue newValue:maxIterations propertyName:@"maxIterations"];
 }
 
 -(void)setInitialPositions:(NSString *)initialPositions {
+	NSString *oldValue = _initialPositions;
 	_initialPositions = initialPositions;
-	[self updateNSObject:@"initialPositions"];
+	[self updateNSObject:oldValue newValue:initialPositions propertyName:@"initialPositions"];
 }
 
 -(void)setFriction:(NSNumber *)friction {
+	NSNumber *oldValue = _friction;
 	_friction = friction;
-	[self updateNSObject:@"friction"];
+	[self updateNSObject:oldValue newValue:friction propertyName:@"friction"];
 }
 
 -(void)setEnableSimulation:(NSNumber *)enableSimulation {
+	NSNumber *oldValue = _enableSimulation;
 	_enableSimulation = enableSimulation;
-	[self updateNSObject:@"enableSimulation"];
+	[self updateNSObject:oldValue newValue:enableSimulation propertyName:@"enableSimulation"];
 }
 
 -(void)setRepulsiveForce:(HIFunction *)repulsiveForce {
 	HIFunction *oldValue = _repulsiveForce;
-	if(self.repulsiveForce) {
-		[self removeObserver:self forKeyPath:@"repulsiveForce.isUpdated"];
-	}
 	_repulsiveForce = repulsiveForce;
 	[self updateHIObject:oldValue newValue:repulsiveForce propertyName:@"repulsiveForce"];
 }
 
 -(void)setAttractiveForce:(HIFunction *)attractiveForce {
 	HIFunction *oldValue = _attractiveForce;
-	if(self.attractiveForce) {
-		[self removeObserver:self forKeyPath:@"attractiveForce.isUpdated"];
-	}
 	_attractiveForce = attractiveForce;
 	[self updateHIObject:oldValue newValue:attractiveForce propertyName:@"attractiveForce"];
 }
 
 -(void)setType:(NSString *)type {
+	NSString *oldValue = _type;
 	_type = type;
-	[self updateNSObject:@"type"];
+	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
 @end

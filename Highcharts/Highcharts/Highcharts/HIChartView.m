@@ -12,7 +12,9 @@
 #import "HIGHTML.h"
 #import "HIGDependency.h"
 #import "HIGExport.h"
+#import "HIClassJSMethods.h"
 #import "HIFunctionSubclass.h"
+#import "HIChartsJSONSerializableSubclass.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
@@ -106,6 +108,7 @@ static BOOL preloaded = NO;
 - (void)dealloc
 {
     [self removeObserver:self forKeyPath:@"options.isUpdated"];
+    [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
 }
 
 - (void)didMoveToSuperview {
@@ -249,6 +252,14 @@ static BOOL preloaded = NO;
     [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
 }
 
+- (void) callJSMethod:(NSDictionary *)dict {
+    NSString *jsMethod = [HIClassJSMethods getJSClassMethodString:dict];
+    
+    if (jsMethod.length) {
+        [self.webView evaluateJavaScript:jsMethod completionHandler:nil];
+    }
+}
+
 #pragma mark - NSKeyValueObserving
 
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
@@ -263,6 +274,10 @@ static BOOL preloaded = NO;
             [self updateOptions];
         }
     }
+    else if ([keyPath isEqualToString:@"options.jsClassMethod"]) {
+        NSDictionary *kChangeNew = [change valueForKey:@"new"];
+        [self callJSMethod:kChangeNew];
+    }
 }
 
 #pragma mark - Setters / Getters
@@ -270,6 +285,7 @@ static BOOL preloaded = NO;
 - (void)setOptions:(HIOptions *)options {
     if (self.options) {
         [self removeObserver:self forKeyPath:@"options.isUpdated"];
+        [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
     }
     [self willChangeValueForKey:@"options"];
     _options = options;
@@ -277,30 +293,25 @@ static BOOL preloaded = NO;
     [self didChangeValueForKey:@"options"];
     if (options) {
         [self addObserver:self forKeyPath:@"options.isUpdated" options:NSKeyValueObservingOptionNew context:NULL];
+        [self addObserver:self forKeyPath:@"options.jsClassMethod" options:NSKeyValueObservingOptionNew context:NULL];
     }
 }
 
-- (void)setTheme:(NSString *)theme
-{
+- (void)setTheme:(NSString *)theme {
     [self willChangeValueForKey:@"theme"];
     _theme = theme;
-    [self loadChartInternal];
     [self didChangeValueForKey:@"theme"];
 }
 
-- (void)setLang:(HILang *)lang
-{
+- (void)setLang:(HILang *)lang {
     [self willChangeValueForKey:@"lang"];
     _lang = lang;
-    [self loadChartInternal];
     [self didChangeValueForKey:@"lang"];
 }
 
-- (void)setGlobal:(HIGlobal *)global
-{
+- (void)setGlobal:(HIGlobal *)global {
     [self willChangeValueForKey:@"global"];
     _global = global;
-    [self loadChartInternal];
     [self didChangeValueForKey:@"global"];
 }
 
@@ -345,7 +356,7 @@ static BOOL preloaded = NO;
         
         if (closureID) {
             NSDictionary *dictionary = (NSDictionary *)message.body;
-
+            
             HIChartContext *context = [[HIChartContext alloc] initWithContext:dictionary];
             
             HIClosure closure = (HIClosure)self.closures[closureID];
@@ -432,6 +443,217 @@ static BOOL preloaded = NO;
     else if ([object isKindOfClass:[NSString class]])
         return [NSMutableString stringWithString:object];
     return object;
+}
+
+#pragma mark - JS methods
+
+- (void)addAnnotation:(HIAnnotations *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAnnotation0", @"params" : @[[options getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addAnnotation:(HIAnnotations *)options redraw:(NSNumber *)redraw {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAnnotation1", @"params" : @[[options getParams], redraw] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addXAxis:(HIXAxis *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAxis0", @"params" : @[[options getParams], [[NSNumber alloc] initWithBool:true]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addXAxis:(HIXAxis *)options redraw:(NSNumber *)redraw {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAxis1", @"params" : @[[options getParams], [[NSNumber alloc] initWithBool:true], redraw] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addXAxis:(HIXAxis *)options redraw:(NSNumber *)redraw animation:(HIAnimationOptionsObject *)animation {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAxis2", @"params" : @[[options getParams], [[NSNumber alloc] initWithBool:true], redraw, [animation getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addYAxis:(HIYAxis *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAxis0", @"params" : @[[options getParams], [[NSNumber alloc] initWithBool:false]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addYAxis:(HIYAxis *)options redraw:(NSNumber *)redraw {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAxis1", @"params" : @[[options getParams], [[NSNumber alloc] initWithBool:false], redraw] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addYAxis:(HIYAxis *)options redraw:(NSNumber *)redraw animation:(HIAnimationOptionsObject *)animation {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addAxis2", @"params" : @[[options getParams], [[NSNumber alloc] initWithBool:false], redraw, [animation getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addCredits:(HICredits *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addCredits", @"params" : @[[options getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addSeries:(HISeries *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addSeries0", @"params" : @[[options getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addSeries:(HISeries *)options redraw:(NSNumber *)redraw {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addSeries1", @"params" : @[[options getParams], redraw] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addSeries:(HISeries *)options redraw:(NSNumber *)redraw animation:(HIAnimationOptionsObject *)animation {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addSeries2", @"params" : @[[options getParams], redraw, [animation getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addSeriesAsDrilldown:(HIPoint *)point options:(HISeries *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addSeriesAsDrilldown", @"params" : @[[point getParams], [options getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)cancelSonify {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"cancelSonify0" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)cancelSonify:(NSNumber *)fadeOut {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"cancelSonify1", @"params" : @[fadeOut] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)destroy {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"destroy" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)drillUp {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"drillUp" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)hideLoading {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"hideLoading" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)openInCloud {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"openInCloud" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)pauseSonify {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"pauseSonify0" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)pauseSonify:(NSNumber *)fadeOut {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"pauseSonify1", @"params" : @[fadeOut] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)print {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"print" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)redraw {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"redraw0" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)redraw:(HIAnimationOptionsObject *)animation {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"redraw1", @"params" : @[[animation getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)removeAnnotationById:(NSString *)id {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"removeAnnotation", @"params" : @[id] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)removeAnnotation:(HIAnnotations *)annotation {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"removeAnnotation", @"params" : @[[annotation getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)resetSonifyCursor {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"resetSonifyCursor" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)resetSonifyCursorEnd {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"resetSonifyCursorEnd" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)setSonifyCursorToPoint:(HIPoint *)point {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"setSonifyCursor", @"params" : @[[point getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)setSonifyCursorToPoints:(NSArray<HIPoint *> *)points {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (id obj in points) {
+        if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+            [array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+        }
+        else {
+            [array addObject: obj];
+        }
+    }
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"setSonifyCursor", @"params" : @[array] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)setSubtitle:(HISubtitle *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"setSubtitle", @"params" : @[[options getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)setTitle:(HITitle *)titleOptions subtitleOptions:(HISubtitle *)subtitleOptions redraw:(NSNumber *)redraw {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"setTitle", @"params" : @[[titleOptions getParams], [subtitleOptions getParams], redraw] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)showLoading:(NSString *)str {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"showLoading", @"params" : @[str] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)sonify:(NSDictionary *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"showLoading", @"params" : @[options] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)update:(HIOptions *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update0", @"params" : @[[options getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)update:(HIOptions *)options redraw:(NSNumber *)redraw {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update1", @"params" : @[[options getParams], redraw] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)update:(HIOptions *)options redraw:(NSNumber *)redraw oneToOne:(NSNumber *)oneToOne {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update2", @"params" : @[[options getParams], redraw, oneToOne] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)update:(HIOptions *)options redraw:(NSNumber *)redraw oneToOne:(NSNumber *)oneToOne animation:(HIAnimationOptionsObject *)animation {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update3", @"params" : @[[options getParams], redraw, oneToOne, [animation getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)viewData {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"viewData" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)zoomOut {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"zoomOut" };
+    [self callJSMethod:chartMethod];
 }
 
 #pragma mark - Deprecated

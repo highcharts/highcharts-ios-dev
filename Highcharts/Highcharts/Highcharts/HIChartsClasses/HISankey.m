@@ -115,33 +115,39 @@
 # pragma mark - Setters
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setCurveFactor:(NSNumber *)curveFactor {
+	NSNumber *oldValue = _curveFactor;
 	_curveFactor = curveFactor;
-	[self updateNSObject:@"curveFactor"];
+	[self updateNSObject:oldValue newValue:curveFactor propertyName:@"curveFactor"];
 }
 
 -(void)setNodePadding:(NSNumber *)nodePadding {
+	NSNumber *oldValue = _nodePadding;
 	_nodePadding = nodePadding;
-	[self updateNSObject:@"nodePadding"];
+	[self updateNSObject:oldValue newValue:nodePadding propertyName:@"nodePadding"];
 }
 
 -(void)setNodeWidth:(NSNumber *)nodeWidth {
+	NSNumber *oldValue = _nodeWidth;
 	_nodeWidth = nodeWidth;
-	[self updateNSObject:@"nodeWidth"];
+	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
 }
 
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
+	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
-	[self updateNSObject:@"linkOpacity"];
+	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
 }
 
 -(void)setMinPointLength:(NSNumber *)minPointLength {
+	NSNumber *oldValue = _minPointLength;
 	_minPointLength = minPointLength;
-	[self updateNSObject:@"minPointLength"];
+	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
 -(void)setColors:(NSArray<NSString *> *)colors {

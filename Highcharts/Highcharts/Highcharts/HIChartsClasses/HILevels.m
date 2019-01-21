@@ -71,74 +71,74 @@
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setColorVariation:(HIColorVariation *)colorVariation {
 	HIColorVariation *oldValue = _colorVariation;
-	if(self.colorVariation) {
-		[self removeObserver:self forKeyPath:@"colorVariation.isUpdated"];
-	}
 	_colorVariation = colorVariation;
 	[self updateHIObject:oldValue newValue:colorVariation propertyName:@"colorVariation"];
 }
 
 -(void)setLevelSize:(id)levelSize {
+	id oldValue = _levelSize;
 	_levelSize = levelSize;
-	[self updateNSObject:@"levelSize"];
+	[self updateNSObject:oldValue newValue:levelSize propertyName:@"levelSize"];
 }
 
 -(void)setBorderDashStyle:(NSString *)borderDashStyle {
+	NSString *oldValue = _borderDashStyle;
 	_borderDashStyle = borderDashStyle;
-	[self updateNSObject:@"borderDashStyle"];
+	[self updateNSObject:oldValue newValue:borderDashStyle propertyName:@"borderDashStyle"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setDataLabels:(id)dataLabels {
+	id oldValue = _dataLabels;
 	_dataLabels = dataLabels;
-	[self updateNSObject:@"dataLabels"];
+	[self updateNSObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setRotationMode:(NSString *)rotationMode {
+	NSString *oldValue = _rotationMode;
 	_rotationMode = rotationMode;
-	[self updateNSObject:@"rotationMode"];
+	[self updateNSObject:oldValue newValue:rotationMode propertyName:@"rotationMode"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
 	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setLevel:(NSNumber *)level {
+	NSNumber *oldValue = _level;
 	_level = level;
-	[self updateNSObject:@"level"];
+	[self updateNSObject:oldValue newValue:level propertyName:@"level"];
 }
 
 -(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {
+	NSString *oldValue = _layoutAlgorithm;
 	_layoutAlgorithm = layoutAlgorithm;
-	[self updateNSObject:@"layoutAlgorithm"];
+	[self updateNSObject:oldValue newValue:layoutAlgorithm propertyName:@"layoutAlgorithm"];
 }
 
 -(void)setLayoutStartingDirection:(NSString *)layoutStartingDirection {
+	NSString *oldValue = _layoutStartingDirection;
 	_layoutStartingDirection = layoutStartingDirection;
-	[self updateNSObject:@"layoutStartingDirection"];
+	[self updateNSObject:oldValue newValue:layoutStartingDirection propertyName:@"layoutStartingDirection"];
 }
 
 @end

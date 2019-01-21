@@ -198,7 +198,55 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/addPlotBand:">- addPlotBand:</option>
+		
+		<option value="//api/name/addPlotLine:">- addPlotLine:</option>
+		
+		<option value="//api/name/addTitle:">- addTitle:</option>
+		
+		<option value="//api/name/drawCrosshair">- drawCrosshair</option>
+		
 		<option value="//api/name/getParams">- getParams</option>
+		
+		<option value="//api/name/hideCrosshair">- hideCrosshair</option>
+		
+		<option value="//api/name/remove">- remove</option>
+		
+		<option value="//api/name/remove:">- remove:</option>
+		
+		<option value="//api/name/removePlotBand:">- removePlotBand:</option>
+		
+		<option value="//api/name/removePlotLine:">- removePlotLine:</option>
+		
+		<option value="//api/name/renderLine">- renderLine</option>
+		
+		<option value="//api/name/renderMinorTick:">- renderMinorTick:</option>
+		
+		<option value="//api/name/renderTick:index:">- renderTick:index:</option>
+		
+		<option value="//api/name/setAxisCategories:">- setAxisCategories:</option>
+		
+		<option value="//api/name/setAxisCategories:redraw:">- setAxisCategories:redraw:</option>
+		
+		<option value="//api/name/setAxisTitle:">- setAxisTitle:</option>
+		
+		<option value="//api/name/setAxisTitle:redraw:">- setAxisTitle:redraw:</option>
+		
+		<option value="//api/name/setExtremes">- setExtremes</option>
+		
+		<option value="//api/name/setExtremes:">- setExtremes:</option>
+		
+		<option value="//api/name/setExtremes:newMax:">- setExtremes:newMax:</option>
+		
+		<option value="//api/name/setExtremes:newMax:redraw:">- setExtremes:newMax:redraw:</option>
+		
+		<option value="//api/name/setExtremes:newMax:redraw:animation:">- setExtremes:newMax:redraw:animation:</option>
+		
+		<option value="//api/name/setTickPositions">- setTickPositions</option>
+		
+		<option value="//api/name/update:">- update:</option>
+		
+		<option value="//api/name/update:redraw:">- update:redraw:</option>
 		
 	</optgroup>
 	
@@ -3634,6 +3682,1459 @@
 			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getParams</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addPlotBand:" title="addPlotBand:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addPlotBand:">&ndash;&nbsp;addPlotBand:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a plot band after render time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addPlotBand:(HIPlotBands *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the plot band, as defined in <a href="https://api.highcharts.com/highcharts/xAxis.plotBands">xAxis.plotBands</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-addplotband/">Toggle the plot band from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addPlotLine:" title="addPlotLine:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addPlotLine:">&ndash;&nbsp;addPlotLine:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a plot line after render time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addPlotLine:(HIPlotLines *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the plot line, as defined in <a href="https://api.highcharts.com/highcharts/xAxis.plotLines">xAxis.plotLines</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-addplotline/">Toggle the plot line from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addTitle:" title="addTitle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addTitle:">&ndash;&nbsp;addTitle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds the title defined in axis.options.title.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addTitle:(NSNumber *)<em>display</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>display</code></th>
+						<td><p>Whether or not to display the title.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drawCrosshair" title="drawCrosshair"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drawCrosshair">&ndash;&nbsp;drawCrosshair</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Internal function to draw a crosshair.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)drawCrosshair</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Axis#event:afterDrawCrosshair</li>
+<li>Highcharts.Axis#event:drawCrosshair</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hideCrosshair" title="hideCrosshair"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hideCrosshair">&ndash;&nbsp;hideCrosshair</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Hide the crosshair if visible.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hideCrosshair</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove" title="remove"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove">&ndash;&nbsp;remove</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove the axis from the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addaxis/">Add and remove axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove:" title="remove:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove:">&ndash;&nbsp;remove:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove the axis from the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart following the remove.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addaxis/">Add and remove axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removePlotBand:" title="removePlotBand:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removePlotBand:">&ndash;&nbsp;removePlotBand:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a plot band by its id.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removePlotBand:(NSString *)<em>id</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>id</code></th>
+						<td><p>The plot band&rsquo;s <code>id</code> as given in the original configuration object or in the <code>addPlotBand</code> option.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-removeplotband/">Remove plot band by id</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-addplotband/">Toggle the plot band from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removePlotLine:" title="removePlotLine:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removePlotLine:">&ndash;&nbsp;removePlotLine:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a plot line by its id.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removePlotLine:(NSString *)<em>id</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>id</code></th>
+						<td><p>The plot line&rsquo;s <code>id</code> as given in the original configuration object or in the <code>addPlotLine</code> option.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-removeplotband/">Remove plot line by id</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-addplotline/">Toggle the plot line from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/renderLine" title="renderLine"></a>
+	<h3 class="method-title"><code><a href="#//api/name/renderLine">&ndash;&nbsp;renderLine</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Render the axis line. Called internally when rendering and redrawing the axis.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)renderLine</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/renderMinorTick:" title="renderMinorTick:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/renderMinorTick:">&ndash;&nbsp;renderMinorTick:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Render a minor tick into the given position. If a minor tick already exists in this position, move it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)renderMinorTick:(NSNumber *)<em>pos</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pos</code></th>
+						<td><p>The position in axis values.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/renderTick:index:" title="renderTick:index:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/renderTick:index:">&ndash;&nbsp;renderTick:index:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Render a major tick into the given position. If a tick already exists in this position, move it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)renderTick:(NSNumber *)<em>pos</em> index:(NSNumber *)<em>i</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pos</code></th>
+						<td><p>The position in axis values.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>i</code></th>
+						<td><p>The tick index.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAxisCategories:" title="setAxisCategories:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAxisCategories:">&ndash;&nbsp;setAxisCategories:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set new axis categories and optionally redraw.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setAxisCategories:(NSArray&lt;NSString*&gt; *)<em>categories</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>categories</code></th>
+						<td><p>The new categories.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setcategories/">Set categories by click on a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAxisCategories:redraw:" title="setAxisCategories:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAxisCategories:redraw:">&ndash;&nbsp;setAxisCategories:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set new axis categories and optionally redraw.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setAxisCategories:(NSArray&lt;NSString*&gt; *)<em>categories</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>categories</code></th>
+						<td><p>The new categories.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setcategories/">Set categories by click on a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setExtremes" title="setExtremes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtremes">&ndash;&nbsp;setExtremes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the minimum and maximum of the axes after render time. If the <code>startOnTick</code> and <code>endOnTick</code> options are true, the minimum and maximum values are rounded off to the nearest tick. To prevent this, these options can be set to false before calling setExtremes. Also, setExtremes will not allow a range lower than the <code>minRange</code> option, which by default is the range of five points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setExtremes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes/">Set extremes from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-datetime/">Set extremes on a datetime axis</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-off-ticks/">Set extremes off ticks</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setExtremes:" title="setExtremes:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtremes:">&ndash;&nbsp;setExtremes:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the minimum and maximum of the axes after render time. If the <code>startOnTick</code> and <code>endOnTick</code> options are true, the minimum and maximum values are rounded off to the nearest tick. To prevent this, these options can be set to false before calling setExtremes. Also, setExtremes will not allow a range lower than the <code>minRange</code> option, which by default is the range of five points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setExtremes:(NSNumber *)<em>newMin</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMin</code></th>
+						<td><p>The new minimum value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes/">Set extremes from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-datetime/">Set extremes on a datetime axis</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-off-ticks/">Set extremes off ticks</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setExtremes:newMax:" title="setExtremes:newMax:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtremes:newMax:">&ndash;&nbsp;setExtremes:newMax:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the minimum and maximum of the axes after render time. If the <code>startOnTick</code> and <code>endOnTick</code> options are true, the minimum and maximum values are rounded off to the nearest tick. To prevent this, these options can be set to false before calling setExtremes. Also, setExtremes will not allow a range lower than the <code>minRange</code> option, which by default is the range of five points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setExtremes:(NSNumber *)<em>newMin</em> newMax:(NSNumber *)<em>newMax</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMin</code></th>
+						<td><p>The new minimum value.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMax</code></th>
+						<td><p>The new maximum value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes/">Set extremes from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-datetime/">Set extremes on a datetime axis</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-off-ticks/">Set extremes off ticks</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setExtremes:newMax:redraw:" title="setExtremes:newMax:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtremes:newMax:redraw:">&ndash;&nbsp;setExtremes:newMax:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the minimum and maximum of the axes after render time. If the <code>startOnTick</code> and <code>endOnTick</code> options are true, the minimum and maximum values are rounded off to the nearest tick. To prevent this, these options can be set to false before calling setExtremes. Also, setExtremes will not allow a range lower than the <code>minRange</code> option, which by default is the range of five points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setExtremes:(NSNumber *)<em>newMin</em> newMax:(NSNumber *)<em>newMax</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMin</code></th>
+						<td><p>The new minimum value.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMax</code></th>
+						<td><p>The new maximum value.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart or wait for an explicit call to <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes/">Set extremes from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-datetime/">Set extremes on a datetime axis</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-off-ticks/">Set extremes off ticks</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setExtremes:newMax:redraw:animation:" title="setExtremes:newMax:redraw:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtremes:newMax:redraw:animation:">&ndash;&nbsp;setExtremes:newMax:redraw:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the minimum and maximum of the axes after render time. If the <code>startOnTick</code> and <code>endOnTick</code> options are true, the minimum and maximum values are rounded off to the nearest tick. To prevent this, these options can be set to false before calling setExtremes. Also, setExtremes will not allow a range lower than the <code>minRange</code> option, which by default is the range of five points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setExtremes:(NSNumber *)<em>newMin</em> newMax:(NSNumber *)<em>newMax</em> redraw:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMin</code></th>
+						<td><p>The new minimum value.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMax</code></th>
+						<td><p>The new maximum value.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart or wait for an explicit call to <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Enable or modify animations.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes/">Set extremes from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-datetime/">Set extremes on a datetime axis</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-setextremes-off-ticks/">Set extremes off ticks</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTickPositions" title="setTickPositions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTickPositions">&ndash;&nbsp;setTickPositions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Now we have computed the normalized tickInterval, get the tick positions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTickPositions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Axis#event:afterSetTickPositions</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAxisTitle:" title="setAxisTitle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAxisTitle:">&ndash;&nbsp;setAxisTitle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the axis title by options after render time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setAxisTitle:(HITitle *)<em>title</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>The additional title options.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-settitle/">Set a new Y axis title</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAxisTitle:redraw:" title="setAxisTitle:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAxisTitle:redraw:">&ndash;&nbsp;setAxisTitle:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the axis title by options after render time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setAxisTitle:(HITitle *)<em>title</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>The additional title options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after setting the title.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-settitle/">Set a new Y axis title</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:" title="update:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:">&ndash;&nbsp;update:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update an axis object with a new set of options. The options are merged with the existing options, so only new or altered options need to be specified.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIXAxis *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The new options that will be merged in with existing options on the axis.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-update/">Axis update demo</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:redraw:" title="update:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:redraw:">&ndash;&nbsp;update:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update an axis object with a new set of options. The options are merged with the existing options, so only new or altered options need to be specified.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIXAxis *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The new options that will be merged in with existing options on the axis.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the axis is altered. If doing more operations on the chart, it is a good idea to set redraw to false and call <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> after.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/axis-update/">Axis update demo</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIXAxis.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

@@ -55,50 +55,50 @@
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setRearLength:(NSString *)rearLength {
+	NSString *oldValue = _rearLength;
 	_rearLength = rearLength;
-	[self updateNSObject:@"rearLength"];
+	[self updateNSObject:oldValue newValue:rearLength propertyName:@"rearLength"];
 }
 
 -(void)setBaseLength:(NSString *)baseLength {
+	NSString *oldValue = _baseLength;
 	_baseLength = baseLength;
-	[self updateNSObject:@"baseLength"];
+	[self updateNSObject:oldValue newValue:baseLength propertyName:@"baseLength"];
 }
 
 -(void)setRadius:(NSString *)radius {
+	NSString *oldValue = _radius;
 	_radius = radius;
-	[self updateNSObject:@"radius"];
+	[self updateNSObject:oldValue newValue:radius propertyName:@"radius"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
 	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setTopWidth:(NSNumber *)topWidth {
+	NSNumber *oldValue = _topWidth;
 	_topWidth = topWidth;
-	[self updateNSObject:@"topWidth"];
+	[self updateNSObject:oldValue newValue:topWidth propertyName:@"topWidth"];
 }
 
 -(void)setBaseWidth:(NSNumber *)baseWidth {
+	NSNumber *oldValue = _baseWidth;
 	_baseWidth = baseWidth;
-	[self updateNSObject:@"baseWidth"];
+	[self updateNSObject:oldValue newValue:baseWidth propertyName:@"baseWidth"];
 }
 
 @end

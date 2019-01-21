@@ -79,114 +79,84 @@
 
 -(void)setMenuStyle:(HICSSObject *)menuStyle {
 	HICSSObject *oldValue = _menuStyle;
-	if(self.menuStyle) {
-		[self removeObserver:self forKeyPath:@"menuStyle.isUpdated"];
-	}
 	_menuStyle = menuStyle;
 	[self updateHIObject:oldValue newValue:menuStyle propertyName:@"menuStyle"];
 }
 
 -(void)setButtonOptions:(HIButtonOptions *)buttonOptions {
 	HIButtonOptions *oldValue = _buttonOptions;
-	if(self.buttonOptions) {
-		[self removeObserver:self forKeyPath:@"buttonOptions.isUpdated"];
-	}
 	_buttonOptions = buttonOptions;
 	[self updateHIObject:oldValue newValue:buttonOptions propertyName:@"buttonOptions"];
 }
 
 -(void)setBindingsClassName:(NSString *)bindingsClassName {
+	NSString *oldValue = _bindingsClassName;
 	_bindingsClassName = bindingsClassName;
-	[self updateNSObject:@"bindingsClassName"];
+	[self updateNSObject:oldValue newValue:bindingsClassName propertyName:@"bindingsClassName"];
 }
 
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
-	if(self.events) {
-		[self removeObserver:self forKeyPath:@"events.isUpdated"];
-	}
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setMenuItemStyle:(HICSSObject *)menuItemStyle {
 	HICSSObject *oldValue = _menuItemStyle;
-	if(self.menuItemStyle) {
-		[self removeObserver:self forKeyPath:@"menuItemStyle.isUpdated"];
-	}
 	_menuItemStyle = menuItemStyle;
 	[self updateHIObject:oldValue newValue:menuItemStyle propertyName:@"menuItemStyle"];
 }
 
 -(void)setMenuItemHoverStyle:(HICSSObject *)menuItemHoverStyle {
 	HICSSObject *oldValue = _menuItemHoverStyle;
-	if(self.menuItemHoverStyle) {
-		[self removeObserver:self forKeyPath:@"menuItemHoverStyle.isUpdated"];
-	}
 	_menuItemHoverStyle = menuItemHoverStyle;
 	[self updateHIObject:oldValue newValue:menuItemHoverStyle propertyName:@"menuItemHoverStyle"];
 }
 
 -(void)setBindings:(HIBindings *)bindings {
 	HIBindings *oldValue = _bindings;
-	if(self.bindings) {
-		[self removeObserver:self forKeyPath:@"bindings.isUpdated"];
-	}
 	_bindings = bindings;
 	[self updateHIObject:oldValue newValue:bindings propertyName:@"bindings"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setInactiveColor:(HIColor *)inactiveColor {
 	HIColor *oldValue = _inactiveColor;
-	if(self.inactiveColor) {
-		[self removeObserver:self forKeyPath:@"inactiveColor.isUpdated"];
-	}
 	_inactiveColor = inactiveColor;
 	[self updateHIObject:oldValue newValue:inactiveColor propertyName:@"inactiveColor"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setArrowSize:(NSNumber *)arrowSize {
+	NSNumber *oldValue = _arrowSize;
 	_arrowSize = arrowSize;
-	[self updateNSObject:@"arrowSize"];
+	[self updateNSObject:oldValue newValue:arrowSize propertyName:@"arrowSize"];
 }
 
 -(void)setAnimation:(HIAnimationOptionsObject *)animation {
 	HIAnimationOptionsObject *oldValue = _animation;
-	if(self.animation) {
-		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
-	}
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setActiveColor:(HIColor *)activeColor {
 	HIColor *oldValue = _activeColor;
-	if(self.activeColor) {
-		[self removeObserver:self forKeyPath:@"activeColor.isUpdated"];
-	}
 	_activeColor = activeColor;
 	[self updateHIObject:oldValue newValue:activeColor propertyName:@"activeColor"];
 }
 
 -(void)setPopup:(HIPopup *)popup {
 	HIPopup *oldValue = _popup;
-	if(self.popup) {
-		[self removeObserver:self forKeyPath:@"popup.isUpdated"];
-	}
 	_popup = popup;
 	[self updateHIObject:oldValue newValue:popup propertyName:@"popup"];
 }

@@ -77,6 +77,18 @@
     }
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    [super copyWithZone:zone];
+    HIFunction *copyFunction = [[HIFunction allocWithZone: zone] init];
+    [copyFunction setBoth:self.both];
+    copyFunction.closureJSBody = [self.closureJSBody copyWithZone:zone];
+    copyFunction.function = [self.function copyWithZone:zone];
+    copyFunction.jsFunction = [self.jsFunction copyWithZone:zone];
+    copyFunction.closure = [self.closure copyWithZone:zone];
+    copyFunction.properties = [self.properties copyWithZone:zone];
+    return copyFunction;
+}
+
 # pragma mark - Setters/Getters
 
 -(void)setClosureJSBody:(NSString *)closureJSBody {
@@ -104,6 +116,7 @@
 }
 
 -(void)setJsFunction:(NSString *)jsFunction {
+    NSString *oldValue = _jsFunction;
     if (jsFunction) {
         _jsFunction = jsFunction;
         self.function = jsFunction;
@@ -111,13 +124,13 @@
     else {
         _jsFunction = nil;
     }
-    [self updateNSObject:@"jsFunction"];
+    [self updateNSObject:oldValue newValue:jsFunction propertyName:@"jsFunction"];
 }
 
 -(void)setClosure:(HIClosure)closure {
+    HIClosure oldValue = _closure;
     if (closure) {
         _closure = closure;
-        _uuid = [[[NSUUID UUID] UUIDString] componentsSeparatedByString:@"-"][0];
         NSString *neededProperties = [NSString stringWithFormat:@"dictionary['uuid'] = '%@'; ", self.uuid];
         for (NSString* property in self.properties) {
             NSString *param = [NSString stringWithFormat:@"dictionary['%1$@'] = %1$@; ", property];
@@ -128,7 +141,7 @@
     else {
         _closure = nil;
     }
-    [self updateNSObject:@"closure"];
+    [self updateNSObject:oldValue newValue:closure propertyName:@"closure"];
 }
 
 -(void)setProperties:(NSArray<NSString *> *)properties {
@@ -145,19 +158,6 @@
     else {
         return nil;
     }
-}
-
--(id)copyWithZone:(NSZone *)zone {
-    [super copyWithZone:zone];
-    HIFunction *copyFunction = [[HIFunction allocWithZone: zone] init];
-    [copyFunction setBoth:self.both];
-    copyFunction.closureJSBody = [self.closureJSBody copyWithZone:zone];
-    copyFunction.uuid = [self. uuid copyWithZone:zone];
-    copyFunction.function = [self.function copyWithZone:zone];
-    copyFunction.jsFunction = [self.jsFunction copyWithZone:zone];
-    copyFunction.closure = [self.closure copyWithZone:zone];
-    copyFunction.properties = [self.properties copyWithZone:zone];
-    return copyFunction;
 }
 
 @end

@@ -46,41 +46,39 @@
 # pragma mark - Setters
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setCursor:(NSString *)cursor {
+	NSString *oldValue = _cursor;
 	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
+	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
 }
 
 -(void)setLineColor:(HIColor *)lineColor {
 	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
 @end

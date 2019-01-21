@@ -100,28 +100,33 @@
 # pragma mark - Setters
 
 -(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
 	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }
 
 -(void)setMaxSize:(id)maxSize {
+	id oldValue = _maxSize;
 	_maxSize = maxSize;
-	[self updateNSObject:@"maxSize"];
+	[self updateNSObject:oldValue newValue:maxSize propertyName:@"maxSize"];
 }
 
 -(void)setSizeBy:(NSString *)sizeBy {
+	NSString *oldValue = _sizeBy;
 	_sizeBy = sizeBy;
-	[self updateNSObject:@"sizeBy"];
+	[self updateNSObject:oldValue newValue:sizeBy propertyName:@"sizeBy"];
 }
 
 -(void)setDisplayNegative:(NSNumber *)displayNegative {
+	NSNumber *oldValue = _displayNegative;
 	_displayNegative = displayNegative;
-	[self updateNSObject:@"displayNegative"];
+	[self updateNSObject:oldValue newValue:displayNegative propertyName:@"displayNegative"];
 }
 
 -(void)setZThreshold:(NSNumber *)zThreshold {
+	NSNumber *oldValue = _zThreshold;
 	_zThreshold = zThreshold;
-	[self updateNSObject:@"zThreshold"];
+	[self updateNSObject:oldValue newValue:zThreshold propertyName:@"zThreshold"];
 }
 
 @end

@@ -30,6 +30,8 @@ types = dict()
 unknown_types_tree = set()
 series_description = ""
 series_data_description = ""
+class_methods = dict()
+
 filelicense = "/**\n* (c) 2009-2018 Highsoft AS\n*\n* License: www.highcharts.com/license\n" \
               "* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/\n" \
               "* In case of questions, please contact sales@highsoft.com\n*/\n\n"
@@ -504,14 +506,21 @@ def format_to_h(name, source):
                 imports += "#import \"{0}.h\"\n".format("HI" + upper_first(name))
 
     htext += "\n-(NSDictionary *)getParams;\n"
-    htext += "\n@end\n"
     htext = htext.replace('*default;', '*defaults;')
 
     if class_name == 'HILang':
         htext = prepare_lang_class(htext) # iOS Lang class
+    elif class_name + '.h' in class_methods:
+        htext += '\n' + class_methods[class_name + '.h']  + '\n'
 
-    for mathch in import_hi_set:
-        import_hi_string += "#import \"" + mathch + ".h\"\n"
+    htext += "\n@end\n"
+
+    if class_name + '.txt' in class_methods:
+        class_methods_imports = class_methods[class_name + '.txt'].splitlines()
+        import_hi_set.update(class_methods_imports)
+
+    for match in import_hi_set:
+        import_hi_string += "#import \"" + match + ".h\"\n"
 
     if 'HIColor' in import_hi_set:
         import_hi_set.remove('HIColor')
@@ -549,13 +558,14 @@ def create_setter(field):
                        "\t[self updateArrayObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
     elif 'HI' in setter_type:
         setter_text += "\t{0}oldValue = _{1};\n".format(setter_type, setter_attribute) + \
-                       "\tif(self.{0})".format(setter_attribute) + " {\n" + \
-                       "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
                        "\t_{0} = {0};\n".format(setter_attribute) + \
                        "\t[self updateHIObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
+        # "\tif(self.{0})".format(setter_attribute) + " {\n" + \
+        # "\t\t[self removeObserver:self forKeyPath:@\"{0}.isUpdated\"];".format(setter_attribute) + "\n\t}\n" + \
     else:
-        setter_text += "\t_{0} = {0};\n".format(setter_attribute) + \
-                       "\t[self updateNSObject:@\"{0}\"];\n".format(setter_attribute)
+        setter_text += "\t{0}oldValue = _{1};\n".format(re.sub(r'\bid\b', 'id ', setter_type), setter_attribute) + \
+                       "\t_{0} = {0};\n".format(setter_attribute) + \
+                       "\t[self updateNSObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format(setter_attribute)
 
     setter_text += "}"
 
@@ -584,6 +594,9 @@ def format_to_m(name, source):
         getParams += "[super getParams]];\n"
     else:
         getParams += "@{}];\n"
+
+    if class_name + '.m' in class_methods:
+        getParams += "\tparams[@\"_wrapperID\"] = self.uuid;\n"
 
     for field in classes[class_name]:
         variableName = re.sub(r'\bdefault\b', 'defaults', get_last(field.name))
@@ -639,6 +652,8 @@ def format_to_m(name, source):
     mtext += getParams
     if setters_text != "\n# pragma mark - Setters\n":
         mtext += setters_text
+    if class_name + '.m' in class_methods:
+        mtext += '\n' + class_methods[class_name + '.m'] + '\n'
     mtext += "\n@end"
     return mtext
 
@@ -743,9 +758,11 @@ def create_options_files():
     mtext += "\tif (self.additionalOptions) {\n\t\t[params addEntriesFromDictionary: self.additionalOptions];\n\t}\n\n"
 
     setters_text += "\n-(void)set{0}:({1}){2}".format("AdditionalOptions", "NSDictionary *", "additionalOptions") + " {\n" + \
+                  "\tNSDictionary *oldValue = _{0};\n".format("additionalOptions") + \
                   "\t_{0} = {0};\n".format("additionalOptions") + \
-                  "\t[self updateNSObject:@\"{0}\"];\n".format("additionalOptions") + \
+                  "\t[self updateNSObject:oldValue newValue:{0} propertyName:@\"{0}\"];\n".format("additionalOptions") + \
                   "}\n"
+                  # "\t[self updateNSObject:@\"{0}\"];\n".format("additionalOptions") + \
 
     copyWithZones += "\treturn copyOptions;\n}\n"
 
@@ -1485,8 +1502,17 @@ def print_unknown_tree_types():
         print type
     print "- - - - - - - - - - - - - - - - - - - - - - - - - - -  \n\n"
 
+def load_class_methods():
+    path = 'HIChartsMethods'
+
+    for filename in os.listdir(path):
+        with open(path + '/' + filename, 'r') as text:
+            global class_methods
+            class_methods[filename] = text.read()
 
 def main():
+    load_class_methods()
+
     create_namespace_structure()
     #print_namespace_structure()
 

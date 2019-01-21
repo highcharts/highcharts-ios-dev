@@ -46,33 +46,39 @@
 # pragma mark - Setters
 
 -(void)setTimeKDTree:(NSNumber *)timeKDTree {
+	NSNumber *oldValue = _timeKDTree;
 	_timeKDTree = timeKDTree;
-	[self updateNSObject:@"timeKDTree"];
+	[self updateNSObject:oldValue newValue:timeKDTree propertyName:@"timeKDTree"];
 }
 
 -(void)setTimeSeriesProcessing:(NSNumber *)timeSeriesProcessing {
+	NSNumber *oldValue = _timeSeriesProcessing;
 	_timeSeriesProcessing = timeSeriesProcessing;
-	[self updateNSObject:@"timeSeriesProcessing"];
+	[self updateNSObject:oldValue newValue:timeSeriesProcessing propertyName:@"timeSeriesProcessing"];
 }
 
 -(void)setTimeBufferCopy:(NSNumber *)timeBufferCopy {
+	NSNumber *oldValue = _timeBufferCopy;
 	_timeBufferCopy = timeBufferCopy;
-	[self updateNSObject:@"timeBufferCopy"];
+	[self updateNSObject:oldValue newValue:timeBufferCopy propertyName:@"timeBufferCopy"];
 }
 
 -(void)setTimeSetup:(NSNumber *)timeSetup {
+	NSNumber *oldValue = _timeSetup;
 	_timeSetup = timeSetup;
-	[self updateNSObject:@"timeSetup"];
+	[self updateNSObject:oldValue newValue:timeSetup propertyName:@"timeSetup"];
 }
 
 -(void)setTimeRendering:(NSNumber *)timeRendering {
+	NSNumber *oldValue = _timeRendering;
 	_timeRendering = timeRendering;
-	[self updateNSObject:@"timeRendering"];
+	[self updateNSObject:oldValue newValue:timeRendering propertyName:@"timeRendering"];
 }
 
 -(void)setShowSkipSummary:(NSNumber *)showSkipSummary {
+	NSNumber *oldValue = _showSkipSummary;
 	_showSkipSummary = showSkipSummary;
-	[self updateNSObject:@"showSkipSummary"];
+	[self updateNSObject:oldValue newValue:showSkipSummary propertyName:@"showSkipSummary"];
 }
 
 @end

@@ -30,13 +30,15 @@
 # pragma mark - Setters
 
 -(void)setAnimation:(NSNumber *)animation {
+	NSNumber *oldValue = _animation;
 	_animation = animation;
-	[self updateNSObject:@"animation"];
+	[self updateNSObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setPattern:(id)pattern {
+	id oldValue = _pattern;
 	_pattern = pattern;
-	[self updateNSObject:@"pattern"];
+	[self updateNSObject:oldValue newValue:pattern propertyName:@"pattern"];
 }
 
 @end

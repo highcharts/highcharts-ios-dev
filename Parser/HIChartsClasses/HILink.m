@@ -34,18 +34,21 @@
 # pragma mark - Setters
 
 -(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {
+	NSString *oldValue = _dashStyle;
 	_dashStyle = dashStyle;
-	[self updateNSObject:@"dashStyle"];
+	[self updateNSObject:oldValue newValue:dashStyle propertyName:@"dashStyle"];
 }
 
 @end

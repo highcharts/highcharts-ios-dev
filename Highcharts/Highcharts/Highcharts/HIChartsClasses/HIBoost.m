@@ -43,31 +43,32 @@
 
 -(void)setDebug:(HIDebug *)debug {
 	HIDebug *oldValue = _debug;
-	if(self.debug) {
-		[self removeObserver:self forKeyPath:@"debug.isUpdated"];
-	}
 	_debug = debug;
 	[self updateHIObject:oldValue newValue:debug propertyName:@"debug"];
 }
 
 -(void)setAllowForce:(NSNumber *)allowForce {
+	NSNumber *oldValue = _allowForce;
 	_allowForce = allowForce;
-	[self updateNSObject:@"allowForce"];
+	[self updateNSObject:oldValue newValue:allowForce propertyName:@"allowForce"];
 }
 
 -(void)setUseGPUTranslations:(NSNumber *)useGPUTranslations {
+	NSNumber *oldValue = _useGPUTranslations;
 	_useGPUTranslations = useGPUTranslations;
-	[self updateNSObject:@"useGPUTranslations"];
+	[self updateNSObject:oldValue newValue:useGPUTranslations propertyName:@"useGPUTranslations"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setSeriesThreshold:(NSNumber *)seriesThreshold {
+	NSNumber *oldValue = _seriesThreshold;
 	_seriesThreshold = seriesThreshold;
-	[self updateNSObject:@"seriesThreshold"];
+	[self updateNSObject:oldValue newValue:seriesThreshold propertyName:@"seriesThreshold"];
 }
 
 @end

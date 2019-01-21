@@ -31,16 +31,14 @@
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setHtml:(NSString *)html {
+	NSString *oldValue = _html;
 	_html = html;
-	[self updateNSObject:@"html"];
+	[self updateNSObject:oldValue newValue:html propertyName:@"html"];
 }
 
 @end

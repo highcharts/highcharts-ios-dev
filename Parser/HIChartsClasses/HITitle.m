@@ -86,87 +86,99 @@
 # pragma mark - Setters
 
 -(void)setWidthAdjust:(NSNumber *)widthAdjust {
+	NSNumber *oldValue = _widthAdjust;
 	_widthAdjust = widthAdjust;
-	[self updateNSObject:@"widthAdjust"];
+	[self updateNSObject:oldValue newValue:widthAdjust propertyName:@"widthAdjust"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 -(void)setText:(NSString *)text {
+	NSString *oldValue = _text;
 	_text = text;
-	[self updateNSObject:@"text"];
+	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setFloating:(NSNumber *)floating {
+	NSNumber *oldValue = _floating;
 	_floating = floating;
-	[self updateNSObject:@"floating"];
+	[self updateNSObject:oldValue newValue:floating propertyName:@"floating"];
 }
 
 -(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
 	_margin = margin;
-	[self updateNSObject:@"margin"];
+	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
 	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setReserveSpace:(NSNumber *)reserveSpace {
+	NSNumber *oldValue = _reserveSpace;
 	_reserveSpace = reserveSpace;
-	[self updateNSObject:@"reserveSpace"];
+	[self updateNSObject:oldValue newValue:reserveSpace propertyName:@"reserveSpace"];
 }
 
 -(void)setSkew3d:(NSNumber *)skew3d {
+	NSNumber *oldValue = _skew3d;
 	_skew3d = skew3d;
-	[self updateNSObject:@"skew3d"];
+	[self updateNSObject:oldValue newValue:skew3d propertyName:@"skew3d"];
 }
 
 -(void)setPosition3d:(NSString *)position3d {
+	NSString *oldValue = _position3d;
 	_position3d = position3d;
-	[self updateNSObject:@"position3d"];
+	[self updateNSObject:oldValue newValue:position3d propertyName:@"position3d"];
 }
 
 -(void)setOffset:(NSNumber *)offset {
+	NSNumber *oldValue = _offset;
 	_offset = offset;
-	[self updateNSObject:@"offset"];
+	[self updateNSObject:oldValue newValue:offset propertyName:@"offset"];
 }
 
 -(void)setTextAlign:(NSString *)textAlign {
+	NSString *oldValue = _textAlign;
 	_textAlign = textAlign;
-	[self updateNSObject:@"textAlign"];
+	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
 }
 
 @end

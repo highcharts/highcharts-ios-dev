@@ -39,28 +39,24 @@
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setRadius:(NSNumber *)radius {
+	NSNumber *oldValue = _radius;
 	_radius = radius;
-	[self updateNSObject:@"radius"];
+	[self updateNSObject:oldValue newValue:radius propertyName:@"radius"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
 	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }

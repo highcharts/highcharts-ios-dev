@@ -55,6 +55,7 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	params[@"_wrapperID"] = self.uuid;
 	if (self.symbolRadius) {
 		params[@"symbolRadius"] = self.symbolRadius;
 	}
@@ -177,238 +178,257 @@
 # pragma mark - Setters
 
 -(void)setSymbolRadius:(NSNumber *)symbolRadius {
+	NSNumber *oldValue = _symbolRadius;
 	_symbolRadius = symbolRadius;
-	[self updateNSObject:@"symbolRadius"];
+	[self updateNSObject:oldValue newValue:symbolRadius propertyName:@"symbolRadius"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setRtl:(NSNumber *)rtl {
+	NSNumber *oldValue = _rtl;
 	_rtl = rtl;
-	[self updateNSObject:@"rtl"];
+	[self updateNSObject:oldValue newValue:rtl propertyName:@"rtl"];
 }
 
 -(void)setSquareSymbol:(NSNumber *)squareSymbol {
+	NSNumber *oldValue = _squareSymbol;
 	_squareSymbol = squareSymbol;
-	[self updateNSObject:@"squareSymbol"];
+	[self updateNSObject:oldValue newValue:squareSymbol propertyName:@"squareSymbol"];
 }
 
 -(void)setItemWidth:(NSNumber *)itemWidth {
+	NSNumber *oldValue = _itemWidth;
 	_itemWidth = itemWidth;
-	[self updateNSObject:@"itemWidth"];
+	[self updateNSObject:oldValue newValue:itemWidth propertyName:@"itemWidth"];
 }
 
 -(void)setSymbolPadding:(NSNumber *)symbolPadding {
+	NSNumber *oldValue = _symbolPadding;
 	_symbolPadding = symbolPadding;
-	[self updateNSObject:@"symbolPadding"];
+	[self updateNSObject:oldValue newValue:symbolPadding propertyName:@"symbolPadding"];
 }
 
 -(void)setFloating:(NSNumber *)floating {
+	NSNumber *oldValue = _floating;
 	_floating = floating;
-	[self updateNSObject:@"floating"];
+	[self updateNSObject:oldValue newValue:floating propertyName:@"floating"];
 }
 
 -(void)setSymbolWidth:(NSNumber *)symbolWidth {
+	NSNumber *oldValue = _symbolWidth;
 	_symbolWidth = symbolWidth;
-	[self updateNSObject:@"symbolWidth"];
+	[self updateNSObject:oldValue newValue:symbolWidth propertyName:@"symbolWidth"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setLayout:(NSString *)layout {
+	NSString *oldValue = _layout;
 	_layout = layout;
-	[self updateNSObject:@"layout"];
+	[self updateNSObject:oldValue newValue:layout propertyName:@"layout"];
 }
 
 -(void)setTitle:(HITitle *)title {
 	HITitle *oldValue = _title;
-	if(self.title) {
-		[self removeObserver:self forKeyPath:@"title.isUpdated"];
-	}
 	_title = title;
 	[self updateHIObject:oldValue newValue:title propertyName:@"title"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setItemMarginBottom:(NSNumber *)itemMarginBottom {
+	NSNumber *oldValue = _itemMarginBottom;
 	_itemMarginBottom = itemMarginBottom;
-	[self updateNSObject:@"itemMarginBottom"];
+	[self updateNSObject:oldValue newValue:itemMarginBottom propertyName:@"itemMarginBottom"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
 	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setItemMarginTop:(NSNumber *)itemMarginTop {
+	NSNumber *oldValue = _itemMarginTop;
 	_itemMarginTop = itemMarginTop;
-	[self updateNSObject:@"itemMarginTop"];
+	[self updateNSObject:oldValue newValue:itemMarginTop propertyName:@"itemMarginTop"];
 }
 
 -(void)setBubbleLegend:(HIBubbleLegend *)bubbleLegend {
 	HIBubbleLegend *oldValue = _bubbleLegend;
-	if(self.bubbleLegend) {
-		[self removeObserver:self forKeyPath:@"bubbleLegend.isUpdated"];
-	}
 	_bubbleLegend = bubbleLegend;
 	[self updateHIObject:oldValue newValue:bubbleLegend propertyName:@"bubbleLegend"];
 }
 
 -(void)setLabelFormat:(NSString *)labelFormat {
+	NSString *oldValue = _labelFormat;
 	_labelFormat = labelFormat;
-	[self updateNSObject:@"labelFormat"];
+	[self updateNSObject:oldValue newValue:labelFormat propertyName:@"labelFormat"];
 }
 
 -(void)setItemStyle:(HICSSObject *)itemStyle {
 	HICSSObject *oldValue = _itemStyle;
-	if(self.itemStyle) {
-		[self removeObserver:self forKeyPath:@"itemStyle.isUpdated"];
-	}
 	_itemStyle = itemStyle;
 	[self updateHIObject:oldValue newValue:itemStyle propertyName:@"itemStyle"];
 }
 
 -(void)setReversed:(NSNumber *)reversed {
+	NSNumber *oldValue = _reversed;
 	_reversed = reversed;
-	[self updateNSObject:@"reversed"];
+	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
 }
 
 -(void)setItemCheckboxStyle:(HICSSObject *)itemCheckboxStyle {
 	HICSSObject *oldValue = _itemCheckboxStyle;
-	if(self.itemCheckboxStyle) {
-		[self removeObserver:self forKeyPath:@"itemCheckboxStyle.isUpdated"];
-	}
 	_itemCheckboxStyle = itemCheckboxStyle;
 	[self updateHIObject:oldValue newValue:itemCheckboxStyle propertyName:@"itemCheckboxStyle"];
 }
 
 -(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 -(void)setShadow:(NSNumber *)shadow {
+	NSNumber *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setItemHoverStyle:(HICSSObject *)itemHoverStyle {
 	HICSSObject *oldValue = _itemHoverStyle;
-	if(self.itemHoverStyle) {
-		[self removeObserver:self forKeyPath:@"itemHoverStyle.isUpdated"];
-	}
 	_itemHoverStyle = itemHoverStyle;
 	[self updateHIObject:oldValue newValue:itemHoverStyle propertyName:@"itemHoverStyle"];
 }
 
 -(void)setItemDistance:(NSNumber *)itemDistance {
+	NSNumber *oldValue = _itemDistance;
 	_itemDistance = itemDistance;
-	[self updateNSObject:@"itemDistance"];
+	[self updateNSObject:oldValue newValue:itemDistance propertyName:@"itemDistance"];
 }
 
 -(void)setNavigation:(HINavigation *)navigation {
 	HINavigation *oldValue = _navigation;
-	if(self.navigation) {
-		[self removeObserver:self forKeyPath:@"navigation.isUpdated"];
-	}
 	_navigation = navigation;
 	[self updateHIObject:oldValue newValue:navigation propertyName:@"navigation"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setKeyboardNavigation:(HIKeyboardNavigation *)keyboardNavigation {
 	HIKeyboardNavigation *oldValue = _keyboardNavigation;
-	if(self.keyboardNavigation) {
-		[self removeObserver:self forKeyPath:@"keyboardNavigation.isUpdated"];
-	}
 	_keyboardNavigation = keyboardNavigation;
 	[self updateHIObject:oldValue newValue:keyboardNavigation propertyName:@"keyboardNavigation"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setMaxHeight:(NSNumber *)maxHeight {
+	NSNumber *oldValue = _maxHeight;
 	_maxHeight = maxHeight;
-	[self updateNSObject:@"maxHeight"];
+	[self updateNSObject:oldValue newValue:maxHeight propertyName:@"maxHeight"];
 }
 
 -(void)setItemHiddenStyle:(HICSSObject *)itemHiddenStyle {
 	HICSSObject *oldValue = _itemHiddenStyle;
-	if(self.itemHiddenStyle) {
-		[self removeObserver:self forKeyPath:@"itemHiddenStyle.isUpdated"];
-	}
 	_itemHiddenStyle = itemHiddenStyle;
 	[self updateHIObject:oldValue newValue:itemHiddenStyle propertyName:@"itemHiddenStyle"];
 }
 
 -(void)setAlignColumns:(NSNumber *)alignColumns {
+	NSNumber *oldValue = _alignColumns;
 	_alignColumns = alignColumns;
-	[self updateNSObject:@"alignColumns"];
+	[self updateNSObject:oldValue newValue:alignColumns propertyName:@"alignColumns"];
 }
 
 -(void)setSymbolHeight:(NSNumber *)symbolHeight {
+	NSNumber *oldValue = _symbolHeight;
 	_symbolHeight = symbolHeight;
-	[self updateNSObject:@"symbolHeight"];
+	[self updateNSObject:oldValue newValue:symbolHeight propertyName:@"symbolHeight"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setLabelFormatter:(id)labelFormatter {
+	id oldValue = _labelFormatter;
 	_labelFormatter = labelFormatter;
-	[self updateNSObject:@"labelFormatter"];
+	[self updateNSObject:oldValue newValue:labelFormatter propertyName:@"labelFormatter"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
 	_margin = margin;
-	[self updateNSObject:@"margin"];
+	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
+}
+
+- (void)setPointText:(HIPoint *)item {
+    self.jsClassMethod = @{ @"class" : @"Legend", @"method" : @"setText", @"id" : self.uuid, @"params" : @[[item getParams]] };
+}
+
+- (void)setSeriesText:(HISeries *)item {
+    self.jsClassMethod = @{ @"class" : @"Legend", @"method" : @"setText", @"id" : self.uuid, @"params" : @[[item getParams]] };
+}
+
+- (void)update:(HILegend *)options {
+    NSMutableDictionary *params = [[options getParams] mutableCopy];
+    [params removeObjectForKey:@"_wrapperID"];
+    self.jsClassMethod = @{ @"class" : @"Legend", @"method" : @"update0", @"id" : self.uuid, @"params" : @[params] };
+}
+
+- (void)update:(HILegend *)options redraw:(NSNumber *)redraw {
+    NSMutableDictionary *params = [[options getParams] mutableCopy];
+    [params removeObjectForKey:@"_wrapperID"];
+    self.jsClassMethod = @{ @"class" : @"Legend", @"method" : @"update1", @"id" : self.uuid, @"params" : @[params, redraw] };
 }
 
 @end

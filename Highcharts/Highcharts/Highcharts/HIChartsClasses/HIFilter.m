@@ -34,18 +34,21 @@
 # pragma mark - Setters
 
 -(void)setOperator:(NSString *)operator {
+	NSString *oldValue = _operator;
 	_operator = operator;
-	[self updateNSObject:@"operator"];
+	[self updateNSObject:oldValue newValue:operator propertyName:@"operator"];
 }
 
 -(void)setProperty:(NSString *)property {
+	NSString *oldValue = _property;
 	_property = property;
-	[self updateNSObject:@"property"];
+	[self updateNSObject:oldValue newValue:property propertyName:@"property"];
 }
 
 -(void)setValue:(id)value {
+	id oldValue = _value;
 	_value = value;
-	[self updateNSObject:@"value"];
+	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }
 
 @end

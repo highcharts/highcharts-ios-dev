@@ -88,13 +88,93 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/addAnnotation:">- addAnnotation:</option>
+		
+		<option value="//api/name/addAnnotation:redraw:">- addAnnotation:redraw:</option>
+		
+		<option value="//api/name/addCredits:">- addCredits:</option>
+		
+		<option value="//api/name/addSeries:">- addSeries:</option>
+		
+		<option value="//api/name/addSeries:redraw:">- addSeries:redraw:</option>
+		
+		<option value="//api/name/addSeries:redraw:animation:">- addSeries:redraw:animation:</option>
+		
+		<option value="//api/name/addSeriesAsDrilldown:options:">- addSeriesAsDrilldown:options:</option>
+		
+		<option value="//api/name/addXAxis:">- addXAxis:</option>
+		
+		<option value="//api/name/addXAxis:redraw:">- addXAxis:redraw:</option>
+		
+		<option value="//api/name/addXAxis:redraw:animation:">- addXAxis:redraw:animation:</option>
+		
+		<option value="//api/name/addYAxis:">- addYAxis:</option>
+		
+		<option value="//api/name/addYAxis:redraw:">- addYAxis:redraw:</option>
+		
+		<option value="//api/name/addYAxis:redraw:animation:">- addYAxis:redraw:animation:</option>
+		
+		<option value="//api/name/cancelSonify">- cancelSonify</option>
+		
+		<option value="//api/name/cancelSonify:">- cancelSonify:</option>
+		
+		<option value="//api/name/destroy">- destroy</option>
+		
+		<option value="//api/name/drillUp">- drillUp</option>
+		
+		<option value="//api/name/hideLoading">- hideLoading</option>
+		
 		<option value="//api/name/loadChart">- loadChart</option>
 		
 		<option value="//api/name/loadJSONOptions:">- loadJSONOptions:</option>
 		
+		<option value="//api/name/openInCloud">- openInCloud</option>
+		
+		<option value="//api/name/pauseSonify">- pauseSonify</option>
+		
+		<option value="//api/name/pauseSonify:">- pauseSonify:</option>
+		
+		<option value="//api/name/print">- print</option>
+		
+		<option value="//api/name/redraw">- redraw</option>
+		
+		<option value="//api/name/redraw:">- redraw:</option>
+		
 		<option value="//api/name/reload">- reload</option>
 		
+		<option value="//api/name/removeAnnotation:">- removeAnnotation:</option>
+		
+		<option value="//api/name/removeAnnotationById:">- removeAnnotationById:</option>
+		
+		<option value="//api/name/resetSonifyCursor">- resetSonifyCursor</option>
+		
+		<option value="//api/name/resetSonifyCursorEnd">- resetSonifyCursorEnd</option>
+		
+		<option value="//api/name/setSonifyCursorToPoint:">- setSonifyCursorToPoint:</option>
+		
+		<option value="//api/name/setSonifyCursorToPoints:">- setSonifyCursorToPoints:</option>
+		
+		<option value="//api/name/setSubtitle:">- setSubtitle:</option>
+		
+		<option value="//api/name/setTitle:subtitleOptions:redraw:">- setTitle:subtitleOptions:redraw:</option>
+		
+		<option value="//api/name/showLoading:">- showLoading:</option>
+		
+		<option value="//api/name/sonify:">- sonify:</option>
+		
+		<option value="//api/name/update:">- update:</option>
+		
+		<option value="//api/name/update:redraw:">- update:redraw:</option>
+		
+		<option value="//api/name/update:redraw:oneToOne:">- update:redraw:oneToOne:</option>
+		
+		<option value="//api/name/update:redraw:oneToOne:animation:">- update:redraw:oneToOne:animation:</option>
+		
 		<option value="//api/name/updateOptions">- updateOptions</option>
+		
+		<option value="//api/name/viewData">- viewData</option>
+		
+		<option value="//api/name/zoomOut">- zoomOut</option>
 		
 	</optgroup>
 	
@@ -626,6 +706,2503 @@
 			<div class="method-subsection method-declaration"><code>- (void)reload</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addAnnotation:" title="addAnnotation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAnnotation:">&ndash;&nbsp;addAnnotation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add an annotation to the chart after render time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAnnotation:(HIAnnotations *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The annotation options for the new, detailed annotation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addAnnotation:redraw:" title="addAnnotation:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAnnotation:redraw:">&ndash;&nbsp;addAnnotation:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add an annotation to the chart after render time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAnnotation:(HIAnnotations *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The annotation options for the new, detailed annotation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addXAxis:" title="addXAxis:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addXAxis:">&ndash;&nbsp;addXAxis:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add an axis to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the axis as a configuration option instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addXAxis:(HIXAxis *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The axis options.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addaxis/">Add and remove axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addXAxis:redraw:" title="addXAxis:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addXAxis:redraw:">&ndash;&nbsp;addXAxis:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add an axis to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the axis as a configuration option instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addXAxis:(HIXAxis *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The axis options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after adding.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addaxis/">Add and remove axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addXAxis:redraw:animation:" title="addXAxis:redraw:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addXAxis:redraw:animation:">&ndash;&nbsp;addXAxis:redraw:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add an axis to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the axis as a configuration option instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addXAxis:(HIXAxis *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The axis options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after adding.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether and how to apply animation in the redraw.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addaxis/">Add and remove axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addYAxis:" title="addYAxis:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addYAxis:">&ndash;&nbsp;addYAxis:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add an axis to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the axis as a configuration option instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addYAxis:(HIYAxis *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The axis options.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addaxis/">Add and remove axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addYAxis:redraw:" title="addYAxis:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addYAxis:redraw:">&ndash;&nbsp;addYAxis:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add an axis to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the axis as a configuration option instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addYAxis:(HIYAxis *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The axis options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after adding.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addaxis/">Add and remove axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addYAxis:redraw:animation:" title="addYAxis:redraw:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addYAxis:redraw:animation:">&ndash;&nbsp;addYAxis:redraw:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add an axis to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the axis as a configuration option instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addYAxis:(HIYAxis *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The axis options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after adding.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether and how to apply animation in the redraw.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addaxis/">Add and remove axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addCredits:" title="addCredits:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addCredits:">&ndash;&nbsp;addCredits:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set a new credits label for the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addCredits:(HICredits *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new credits.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/credits-update/">Add and update credits</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addSeries:" title="addSeries:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addSeries:">&ndash;&nbsp;addSeries:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a series to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the series as a configuration option instead. With multiple axes, the <code>offset</code> is dynamically adjusted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addSeries:(HISeries *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The config options for the series.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:addSeries</li>
+<li>Highcharts.Chart#event:afterAddSeries</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addseries/">Add a series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addSeries:redraw:" title="addSeries:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addSeries:redraw:">&ndash;&nbsp;addSeries:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a series to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the series as a configuration option instead. With multiple axes, the <code>offset</code> is dynamically adjusted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addSeries:(HISeries *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The config options for the series.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after adding.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:addSeries</li>
+<li>Highcharts.Chart#event:afterAddSeries</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addseries/">Add a series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addSeries:redraw:animation:" title="addSeries:redraw:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addSeries:redraw:animation:">&ndash;&nbsp;addSeries:redraw:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a series to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the series as a configuration option instead. With multiple axes, the <code>offset</code> is dynamically adjusted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addSeries:(HISeries *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The config options for the series.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after adding.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether to apply animation, and optionally animation configuration.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:addSeries</li>
+<li>Highcharts.Chart#event:afterAddSeries</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-addseries/">Add a series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addSeriesAsDrilldown:options:" title="addSeriesAsDrilldown:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addSeriesAsDrilldown:options:">&ndash;&nbsp;addSeriesAsDrilldown:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a series to the chart as drilldown from a specific point in the parent series. This method is used for async drilldown, when clicking a point in a series should result in loading and displaying a more high-resolution series. When not async, the setup is simpler using the <a href="https://api.highcharts.com/highcharts/drilldown.series">drilldown.series</a> options structure.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addSeriesAsDrilldown:(HIPoint *)<em>point</em> options:(HISeries *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>point</code></th>
+						<td><p>The point from which the drilldown will start.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The series options for the new, detailed series.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/async/">Async drilldown</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelSonify" title="cancelSonify"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelSonify">&ndash;&nbsp;cancelSonify</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancel current sonification and reset cursor.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelSonify</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelSonify:" title="cancelSonify:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelSonify:">&ndash;&nbsp;cancelSonify:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancel current sonification and reset cursor.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelSonify:(NSNumber *)<em>fadeOut</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fadeOut</code></th>
+						<td><p>Fade out as we pause to avoid clicks.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroy" title="destroy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroy">&ndash;&nbsp;destroy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove the chart and purge memory. This method is called internally before adding a second chart into the same container, as well as on window unload to prevent leaks.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)destroy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:destroy</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-destroy/">Destroy the chart from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drillUp" title="drillUp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drillUp">&ndash;&nbsp;drillUp</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When the chart is drilled down to a child series, calling <code>chart.drillUp()</code> will drill up to the parent series. Requires the drilldown module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)drillUp</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hideLoading" title="hideLoading"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hideLoading">&ndash;&nbsp;hideLoading</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Hide the loading layer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hideLoading</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>See also:</strong></p>
+
+<ul>
+<li><a href="https://api.highcharts.com/class-reference/Highcharts.Chart#showLoading">Highcharts.Chart#showLoading</a></li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-hideloading/">Show and hide loading from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openInCloud" title="openInCloud"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openInCloud">&ndash;&nbsp;openInCloud</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Experimental function to send a chart&rsquo;s config to the Cloud for editing.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)openInCloud</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pauseSonify" title="pauseSonify"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pauseSonify">&ndash;&nbsp;pauseSonify</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pause the running sonification.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)pauseSonify</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pauseSonify:" title="pauseSonify:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pauseSonify:">&ndash;&nbsp;pauseSonify:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pause the running sonification.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)pauseSonify:(NSNumber *)<em>fadeOut</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fadeOut</code></th>
+						<td><p>Fade out as we pause to avoid clicks.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/print" title="print"></a>
+	<h3 class="method-title"><code><a href="#//api/name/print">&ndash;&nbsp;print</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Exporting module required. Clears away other elements in the page and prints the chart as it is displayed. By default, when the exporting module is enabled, a context button with a drop down menu in the upper right corner accesses this function.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)print</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:beforePrint</li>
+<li>Highcharts.Chart#event:afterPrint</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-print/">Print from a HTML button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redraw" title="redraw"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redraw">&ndash;&nbsp;redraw</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Redraw the chart after changes have been done to the data, axis extremes chart size or chart elements. All methods for updating axes, series or points have a parameter for redrawing the chart. This is true by default. But in many cases you want to do more than one operation on the chart before redrawing, for example add a number of points. In those cases it is a waste of resources to redraw the chart for each new point added. So you add the points and call <code>chart.redraw()</code> after.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)redraw</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:afterSetExtremes</li>
+<li>Highcharts.Chart#event:beforeRedraw</li>
+<li>Highcharts.Chart#event:predraw</li>
+<li>Highcharts.Chart#event:redraw</li>
+<li>Highcharts.Chart#event:render</li>
+<li>Highcharts.Chart#event:updatedData</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redraw:" title="redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redraw:">&ndash;&nbsp;redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Redraw the chart after changes have been done to the data, axis extremes chart size or chart elements. All methods for updating axes, series or points have a parameter for redrawing the chart. This is true by default. But in many cases you want to do more than one operation on the chart before redrawing, for example add a number of points. In those cases it is a waste of resources to redraw the chart for each new point added. So you add the points and call <code>chart.redraw()</code> after.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)redraw:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>If or how to apply animation to the redraw.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:afterSetExtremes</li>
+<li>Highcharts.Chart#event:beforeRedraw</li>
+<li>Highcharts.Chart#event:predraw</li>
+<li>Highcharts.Chart#event:redraw</li>
+<li>Highcharts.Chart#event:render</li>
+<li>Highcharts.Chart#event:updatedData</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeAnnotationById:" title="removeAnnotationById:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeAnnotationById:">&ndash;&nbsp;removeAnnotationById:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove an annotation from the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeAnnotationById:(NSString *)<em>id</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>id</code></th>
+						<td><p>The annotation&rsquo;s id.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeAnnotation:" title="removeAnnotation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeAnnotation:">&ndash;&nbsp;removeAnnotation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove an annotation from the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeAnnotation:(HIAnnotations *)<em>annotation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>annotation</code></th>
+						<td><p>The direct annotation object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resetSonifyCursor" title="resetSonifyCursor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resetSonifyCursor">&ndash;&nbsp;resetSonifyCursor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Reset cursor to start. Requires series.sonify or chart.sonify to have been played at some point earlier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)resetSonifyCursor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resetSonifyCursorEnd" title="resetSonifyCursorEnd"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resetSonifyCursorEnd">&ndash;&nbsp;resetSonifyCursorEnd</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Reset cursor to end. Requires series.sonify or chart.sonify to have been played at some point earlier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)resetSonifyCursorEnd</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSonifyCursorToPoint:" title="setSonifyCursorToPoint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSonifyCursorToPoint:">&ndash;&nbsp;setSonifyCursorToPoint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the cursor to a point in different series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSonifyCursorToPoint:(HIPoint *)<em>point</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>point</code></th>
+						<td><p>The point to set the cursor to.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSonifyCursorToPoints:" title="setSonifyCursorToPoints:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSonifyCursorToPoints:">&ndash;&nbsp;setSonifyCursorToPoints:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the cursor to a set of points in different series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSonifyCursorToPoints:(NSArray&lt;HIPoint*&gt; *)<em>points</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>points</code></th>
+						<td><p>The points to set the cursor to. If setting multiple points under the cursor, the points have to be in different series that are being played simultaneously.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSubtitle:" title="setSubtitle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSubtitle:">&ndash;&nbsp;setSubtitle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Shortcut to set the subtitle options. This can also be done from <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#update">Highcharts.Chart#update</a> or <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#setTitle">Highcharts.Chart#setTitle</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSubtitle:(HISubtitle *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>New subtitle options. The subtitle text itself is set by the <code>options.text</code> property.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTitle:subtitleOptions:redraw:" title="setTitle:subtitleOptions:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTitle:subtitleOptions:redraw:">&ndash;&nbsp;setTitle:subtitleOptions:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set a new title or subtitle for the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTitle:(HITitle *)<em>titleOptions</em> subtitleOptions:(HISubtitle *)<em>subtitleOptions</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>titleOptions</code></th>
+						<td><p>New title options. The title text itself is set by the <code>titleOptions.text</code> property.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>subtitleOptions</code></th>
+						<td><p>New subtitle options. The subtitle text itself is set by the <code>subtitleOptions.text</code> property.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart or wait for a later call to <code>chart.redraw()</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-settitle/">Set title text and styles</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showLoading:" title="showLoading:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showLoading:">&ndash;&nbsp;showLoading:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Dim the chart and show a loading text or symbol. Options for the loading screen are defined in <a href="https://api.highcharts.com/highcharts/loading">the loading options</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showLoading:(NSString *)<em>str</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>str</code></th>
+						<td><p>An optional text to show in the loading label instead of the default one. The default text is set in <a href="http://api.highcharts.com/highcharts/lang.loading">lang.loading</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-hideloading/">Show and hide loading from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-showloading/">Apply different text labels</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sonify:" title="sonify:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sonify:">&ndash;&nbsp;sonify:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sonify a chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sonify:(NSDictionary *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The options for sonifying this chart.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/chart-sequential/">Sonify a basic chart</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/chart-simultaneous/">Sonify series simultaneously</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/chart-custom-order/">Custom defined order of series</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/chart-earcon/">Earcons on chart</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/chart-events/">Sonification events on chart</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:" title="update:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:">&ndash;&nbsp;update:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIOptions *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new chart options.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>A special case is configuration objects that take arrays, for example <a href="https://api.highcharts.com/highcharts/xAxis">xAxis</a>, <a href="https://api.highcharts.com/highcharts/yAxis">yAxis</a> or <a href="https://api.highcharts.com/highcharts/series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same id is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart&rsquo;s series with the same index in the series array to be updated. When the <code>oneToOne</code> parameter is true, <code>chart.update</code> will also take care of adding and removing items from the collection. Read more under the parameter description below.</p>
+
+<p>See also the <a href="https://api.highcharts.com/highcharts/responsive">responsive option set</a>. Switching between <code>responsive.rules</code> basically runs <code>chart.update</code> under the hood.</p>
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:update</li>
+<li>Highcharts.Chart#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/">Update chart geometry</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:redraw:" title="update:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:redraw:">&ndash;&nbsp;update:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIOptions *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new chart options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>A special case is configuration objects that take arrays, for example <a href="https://api.highcharts.com/highcharts/xAxis">xAxis</a>, <a href="https://api.highcharts.com/highcharts/yAxis">yAxis</a> or <a href="https://api.highcharts.com/highcharts/series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same id is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart&rsquo;s series with the same index in the series array to be updated. When the <code>oneToOne</code> parameter is true, <code>chart.update</code> will also take care of adding and removing items from the collection. Read more under the parameter description below.</p>
+
+<p>See also the <a href="https://api.highcharts.com/highcharts/responsive">responsive option set</a>. Switching between <code>responsive.rules</code> basically runs <code>chart.update</code> under the hood.</p>
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:update</li>
+<li>Highcharts.Chart#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/">Update chart geometry</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:redraw:oneToOne:" title="update:redraw:oneToOne:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:redraw:oneToOne:">&ndash;&nbsp;update:redraw:oneToOne:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIOptions *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> oneToOne:(NSNumber *)<em>oneToOne</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new chart options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>oneToOne</code></th>
+						<td><p>When <code>true</code>, the <code>series</code>, <code>xAxis</code> and <code>yAxis</code> collections will be updated one to one, and items will be either added or removed to match the new updated options. For example, if the chart has two series and we call <code>chart.update</code> with a configuration containing three series, one will be added. If we call <code>chart.update</code> with one series, one will be removed. Setting an empty <code>series</code> array will remove all series, but leaving out the <code>series</code> property will leave all series untouched. If the series have id&rsquo;s, the new series options will be matched by id, and the remaining ones removed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>A special case is configuration objects that take arrays, for example <a href="https://api.highcharts.com/highcharts/xAxis">xAxis</a>, <a href="https://api.highcharts.com/highcharts/yAxis">yAxis</a> or <a href="https://api.highcharts.com/highcharts/series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same id is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart&rsquo;s series with the same index in the series array to be updated. When the <code>oneToOne</code> parameter is true, <code>chart.update</code> will also take care of adding and removing items from the collection. Read more under the parameter description below.</p>
+
+<p>See also the <a href="https://api.highcharts.com/highcharts/responsive">responsive option set</a>. Switching between <code>responsive.rules</code> basically runs <code>chart.update</code> under the hood.</p>
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:update</li>
+<li>Highcharts.Chart#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/">Update chart geometry</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:redraw:oneToOne:animation:" title="update:redraw:oneToOne:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:redraw:oneToOne:animation:">&ndash;&nbsp;update:redraw:oneToOne:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIOptions *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> oneToOne:(NSNumber *)<em>oneToOne</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new chart options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>oneToOne</code></th>
+						<td><p>When <code>true</code>, the <code>series</code>, <code>xAxis</code> and <code>yAxis</code> collections will be updated one to one, and items will be either added or removed to match the new updated options. For example, if the chart has two series and we call <code>chart.update</code> with a configuration containing three series, one will be added. If we call <code>chart.update</code> with one series, one will be removed. Setting an empty <code>series</code> array will remove all series, but leaving out the <code>series</code> property will leave all series untouched. If the series have id&rsquo;s, the new series options will be matched by id, and the remaining ones removed.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether to apply animation, and optionally animation configuration.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>A special case is configuration objects that take arrays, for example <a href="https://api.highcharts.com/highcharts/xAxis">xAxis</a>, <a href="https://api.highcharts.com/highcharts/yAxis">yAxis</a> or <a href="https://api.highcharts.com/highcharts/series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same id is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart&rsquo;s series with the same index in the series array to be updated. When the <code>oneToOne</code> parameter is true, <code>chart.update</code> will also take care of adding and removing items from the collection. Read more under the parameter description below.</p>
+
+<p>See also the <a href="https://api.highcharts.com/highcharts/responsive">responsive option set</a>. Switching between <code>responsive.rules</code> basically runs <code>chart.update</code> under the hood.</p>
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:update</li>
+<li>Highcharts.Chart#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/">Update chart geometry</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/viewData" title="viewData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/viewData">&ndash;&nbsp;viewData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Export-data module required. View the data in a table below the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)viewData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/zoomOut" title="zoomOut"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zoomOut">&ndash;&nbsp;zoomOut</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Zoom the chart out after a user has zoomed in. See also <a href="https://api.highcharts.com/class-reference/Highcharts.Axis#setExtremes">Axis.setExtremes</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)zoomOut</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:selection</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

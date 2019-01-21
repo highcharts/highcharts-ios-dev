@@ -35,21 +35,20 @@
 
 -(void)setPosition:(HIPosition *)position {
 	HIPosition *oldValue = _position;
-	if(self.position) {
-		[self removeObserver:self forKeyPath:@"position.isUpdated"];
-	}
 	_position = position;
 	[self updateHIObject:oldValue newValue:position propertyName:@"position"];
 }
 
 -(void)setTheme:(id)theme {
+	id oldValue = _theme;
 	_theme = theme;
-	[self updateNSObject:@"theme"];
+	[self updateNSObject:oldValue newValue:theme propertyName:@"theme"];
 }
 
 -(void)setRelativeTo:(NSString *)relativeTo {
+	NSString *oldValue = _relativeTo;
 	_relativeTo = relativeTo;
-	[self updateNSObject:@"relativeTo"];
+	[self updateNSObject:oldValue newValue:relativeTo propertyName:@"relativeTo"];
 }
 
 @end

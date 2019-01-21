@@ -104,73 +104,68 @@
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setConnectorColor:(HIColor *)connectorColor {
 	HIColor *oldValue = _connectorColor;
-	if(self.connectorColor) {
-		[self removeObserver:self forKeyPath:@"connectorColor.isUpdated"];
-	}
 	_connectorColor = connectorColor;
 	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
-	[self updateNSObject:@"zIndex"];
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setSizeBy:(NSString *)sizeBy {
+	NSString *oldValue = _sizeBy;
 	_sizeBy = sizeBy;
-	[self updateNSObject:@"sizeBy"];
+	[self updateNSObject:oldValue newValue:sizeBy propertyName:@"sizeBy"];
 }
 
 -(void)setLegendIndex:(NSNumber *)legendIndex {
+	NSNumber *oldValue = _legendIndex;
 	_legendIndex = legendIndex;
-	[self updateNSObject:@"legendIndex"];
+	[self updateNSObject:oldValue newValue:legendIndex propertyName:@"legendIndex"];
 }
 
 -(void)setConnectorWidth:(NSNumber *)connectorWidth {
+	NSNumber *oldValue = _connectorWidth;
 	_connectorWidth = connectorWidth;
-	[self updateNSObject:@"connectorWidth"];
+	[self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setLabels:(HILabels *)labels {
 	HILabels *oldValue = _labels;
-	if(self.labels) {
-		[self removeObserver:self forKeyPath:@"labels.isUpdated"];
-	}
 	_labels = labels;
 	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setSizeByAbsoluteValue:(NSNumber *)sizeByAbsoluteValue {
+	NSNumber *oldValue = _sizeByAbsoluteValue;
 	_sizeByAbsoluteValue = sizeByAbsoluteValue;
-	[self updateNSObject:@"sizeByAbsoluteValue"];
+	[self updateNSObject:oldValue newValue:sizeByAbsoluteValue propertyName:@"sizeByAbsoluteValue"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setRanges:(NSArray <HIRanges *> *)ranges {
@@ -180,33 +175,39 @@
 }
 
 -(void)setMaxSize:(NSNumber *)maxSize {
+	NSNumber *oldValue = _maxSize;
 	_maxSize = maxSize;
-	[self updateNSObject:@"maxSize"];
+	[self updateNSObject:oldValue newValue:maxSize propertyName:@"maxSize"];
 }
 
 -(void)setMinSize:(NSNumber *)minSize {
+	NSNumber *oldValue = _minSize;
 	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setConnectorClassName:(NSString *)connectorClassName {
+	NSString *oldValue = _connectorClassName;
 	_connectorClassName = connectorClassName;
-	[self updateNSObject:@"connectorClassName"];
+	[self updateNSObject:oldValue newValue:connectorClassName propertyName:@"connectorClassName"];
 }
 
 -(void)setZThreshold:(NSNumber *)zThreshold {
+	NSNumber *oldValue = _zThreshold;
 	_zThreshold = zThreshold;
-	[self updateNSObject:@"zThreshold"];
+	[self updateNSObject:oldValue newValue:zThreshold propertyName:@"zThreshold"];
 }
 
 -(void)setConnectorDistance:(NSNumber *)connectorDistance {
+	NSNumber *oldValue = _connectorDistance;
 	_connectorDistance = connectorDistance;
-	[self updateNSObject:@"connectorDistance"];
+	[self updateNSObject:oldValue newValue:connectorDistance propertyName:@"connectorDistance"];
 }
 
 @end

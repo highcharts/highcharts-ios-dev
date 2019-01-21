@@ -114,118 +114,141 @@
 # pragma mark - Setters
 
 -(void)setBackground:(NSString *)background {
+	NSString *oldValue = _background;
 	_background = background;
-	[self updateNSObject:@"background"];
+	[self updateNSObject:oldValue newValue:background propertyName:@"background"];
 }
 
 -(void)setBackgroundColor:(NSString *)backgroundColor {
+	NSString *oldValue = _backgroundColor;
 	_backgroundColor = backgroundColor;
-	[self updateNSObject:@"backgroundColor"];
+	[self updateNSObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setBorder:(NSString *)border {
+	NSString *oldValue = _border;
 	_border = border;
-	[self updateNSObject:@"border"];
+	[self updateNSObject:oldValue newValue:border propertyName:@"border"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setCursor:(NSString *)cursor {
+	NSString *oldValue = _cursor;
 	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
+	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
 }
 
 -(void)setFontFamily:(NSString *)fontFamily {
+	NSString *oldValue = _fontFamily;
 	_fontFamily = fontFamily;
-	[self updateNSObject:@"fontFamily"];
+	[self updateNSObject:oldValue newValue:fontFamily propertyName:@"fontFamily"];
 }
 
 -(void)setFontSize:(NSString *)fontSize {
+	NSString *oldValue = _fontSize;
 	_fontSize = fontSize;
-	[self updateNSObject:@"fontSize"];
+	[self updateNSObject:oldValue newValue:fontSize propertyName:@"fontSize"];
 }
 
 -(void)setFontWeight:(NSString *)fontWeight {
+	NSString *oldValue = _fontWeight;
 	_fontWeight = fontWeight;
-	[self updateNSObject:@"fontWeight"];
+	[self updateNSObject:oldValue newValue:fontWeight propertyName:@"fontWeight"];
 }
 
 -(void)setHeight:(NSNumber *)height {
+	NSNumber *oldValue = _height;
 	_height = height;
-	[self updateNSObject:@"height"];
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
 -(void)setOpacity:(NSNumber *)opacity {
+	NSNumber *oldValue = _opacity;
 	_opacity = opacity;
-	[self updateNSObject:@"opacity"];
+	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
 -(void)setPadding:(NSString *)padding {
+	NSString *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setPointerEvents:(NSString *)pointerEvents {
+	NSString *oldValue = _pointerEvents;
 	_pointerEvents = pointerEvents;
-	[self updateNSObject:@"pointerEvents"];
+	[self updateNSObject:oldValue newValue:pointerEvents propertyName:@"pointerEvents"];
 }
 
 -(void)setPosition:(NSString *)position {
+	NSString *oldValue = _position;
 	_position = position;
-	[self updateNSObject:@"position"];
+	[self updateNSObject:oldValue newValue:position propertyName:@"position"];
 }
 
 -(void)setTextAlign:(NSString *)textAlign {
+	NSString *oldValue = _textAlign;
 	_textAlign = textAlign;
-	[self updateNSObject:@"textAlign"];
+	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
 }
 
 -(void)setTextDecoration:(NSString *)textDecoration {
+	NSString *oldValue = _textDecoration;
 	_textDecoration = textDecoration;
-	[self updateNSObject:@"textDecoration"];
+	[self updateNSObject:oldValue newValue:textDecoration propertyName:@"textDecoration"];
 }
 
 -(void)setTextOutline:(NSString *)textOutline {
+	NSString *oldValue = _textOutline;
 	_textOutline = textOutline;
-	[self updateNSObject:@"textOutline"];
+	[self updateNSObject:oldValue newValue:textOutline propertyName:@"textOutline"];
 }
 
 -(void)setTextOverflow:(NSString *)textOverflow {
+	NSString *oldValue = _textOverflow;
 	_textOverflow = textOverflow;
-	[self updateNSObject:@"textOverflow"];
+	[self updateNSObject:oldValue newValue:textOverflow propertyName:@"textOverflow"];
 }
 
 -(void)setTop:(NSString *)top {
+	NSString *oldValue = _top;
 	_top = top;
-	[self updateNSObject:@"top"];
+	[self updateNSObject:oldValue newValue:top propertyName:@"top"];
 }
 
 -(void)setTransition:(NSString *)transition {
+	NSString *oldValue = _transition;
 	_transition = transition;
-	[self updateNSObject:@"transition"];
+	[self updateNSObject:oldValue newValue:transition propertyName:@"transition"];
 }
 
 -(void)setWhiteSpace:(NSString *)whiteSpace {
+	NSString *oldValue = _whiteSpace;
 	_whiteSpace = whiteSpace;
-	[self updateNSObject:@"whiteSpace"];
+	[self updateNSObject:oldValue newValue:whiteSpace propertyName:@"whiteSpace"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 @end

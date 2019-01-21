@@ -96,76 +96,86 @@
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
-	[self updateNSObject:@"verticalAlign"];
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
 -(void)setText:(NSString *)text {
+	NSString *oldValue = _text;
 	_text = text;
-	[self updateNSObject:@"text"];
+	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
 -(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
 	_align = align;
-	[self updateNSObject:@"align"];
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setTextAlign:(NSString *)textAlign {
+	NSString *oldValue = _textAlign;
 	_textAlign = textAlign;
-	[self updateNSObject:@"textAlign"];
+	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
 }
 
 -(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
-	[self updateNSObject:@"y"];
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
 	_x = x;
-	[self updateNSObject:@"x"];
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 -(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
 	_rotation = rotation;
-	[self updateNSObject:@"rotation"];
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setMinFontSize:(NSNumber *)minFontSize {
+	NSNumber *oldValue = _minFontSize;
 	_minFontSize = minFontSize;
-	[self updateNSObject:@"minFontSize"];
+	[self updateNSObject:oldValue newValue:minFontSize propertyName:@"minFontSize"];
 }
 
 -(void)setMaxFontSize:(NSNumber *)maxFontSize {
+	NSNumber *oldValue = _maxFontSize;
 	_maxFontSize = maxFontSize;
-	[self updateNSObject:@"maxFontSize"];
+	[self updateNSObject:oldValue newValue:maxFontSize propertyName:@"maxFontSize"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setConnectorNeighbourDistance:(NSNumber *)connectorNeighbourDistance {
+	NSNumber *oldValue = _connectorNeighbourDistance;
 	_connectorNeighbourDistance = connectorNeighbourDistance;
-	[self updateNSObject:@"connectorNeighbourDistance"];
+	[self updateNSObject:oldValue newValue:connectorNeighbourDistance propertyName:@"connectorNeighbourDistance"];
 }
 
 -(void)setOnArea:(NSNumber *)onArea {
+	NSNumber *oldValue = _onArea;
 	_onArea = onArea;
-	[self updateNSObject:@"onArea"];
+	[self updateNSObject:oldValue newValue:onArea propertyName:@"onArea"];
 }
 
 -(void)setBoxesToAvoid:(NSArray<HILabelIntersectBoxObject *> *)boxesToAvoid {
@@ -175,8 +185,9 @@
 }
 
 -(void)setConnectorAllowed:(NSNumber *)connectorAllowed {
+	NSNumber *oldValue = _connectorAllowed;
 	_connectorAllowed = connectorAllowed;
-	[self updateNSObject:@"connectorAllowed"];
+	[self updateNSObject:oldValue newValue:connectorAllowed propertyName:@"connectorAllowed"];
 }
 
 @end

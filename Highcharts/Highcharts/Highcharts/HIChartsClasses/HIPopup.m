@@ -274,318 +274,381 @@
 # pragma mark - Setters
 
 -(void)setHorizontalLine:(NSString *)horizontalLine {
+	NSString *oldValue = _horizontalLine;
 	_horizontalLine = horizontalLine;
-	[self updateNSObject:@"horizontalLine"];
+	[self updateNSObject:oldValue newValue:horizontalLine propertyName:@"horizontalLine"];
 }
 
 -(void)setBackgroundColors:(NSString *)backgroundColors {
+	NSString *oldValue = _backgroundColors;
 	_backgroundColors = backgroundColors;
-	[self updateNSObject:@"backgroundColors"];
+	[self updateNSObject:oldValue newValue:backgroundColors propertyName:@"backgroundColors"];
 }
 
 -(void)setSeries:(NSString *)series {
+	NSString *oldValue = _series;
 	_series = series;
-	[self updateNSObject:@"series"];
+	[self updateNSObject:oldValue newValue:series propertyName:@"series"];
 }
 
 -(void)setLabels:(NSString *)labels {
+	NSString *oldValue = _labels;
 	_labels = labels;
-	[self updateNSObject:@"labels"];
+	[self updateNSObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
 -(void)setHeight:(NSString *)height {
+	NSString *oldValue = _height;
 	_height = height;
-	[self updateNSObject:@"height"];
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setAddButton:(NSString *)addButton {
+	NSString *oldValue = _addButton;
 	_addButton = addButton;
-	[self updateNSObject:@"addButton"];
+	[self updateNSObject:oldValue newValue:addButton propertyName:@"addButton"];
 }
 
 -(void)setVerticalCounter:(NSString *)verticalCounter {
+	NSString *oldValue = _verticalCounter;
 	_verticalCounter = verticalCounter;
-	[self updateNSObject:@"verticalCounter"];
+	[self updateNSObject:oldValue newValue:verticalCounter propertyName:@"verticalCounter"];
 }
 
 -(void)setStroke:(NSString *)stroke {
+	NSString *oldValue = _stroke;
 	_stroke = stroke;
-	[self updateNSObject:@"stroke"];
+	[self updateNSObject:oldValue newValue:stroke propertyName:@"stroke"];
 }
 
 -(void)setFibonacci:(NSString *)fibonacci {
+	NSString *oldValue = _fibonacci;
 	_fibonacci = fibonacci;
-	[self updateNSObject:@"fibonacci"];
+	[self updateNSObject:oldValue newValue:fibonacci propertyName:@"fibonacci"];
 }
 
 -(void)setMeasure:(NSString *)measure {
+	NSString *oldValue = _measure;
 	_measure = measure;
-	[self updateNSObject:@"measure"];
+	[self updateNSObject:oldValue newValue:measure propertyName:@"measure"];
 }
 
 -(void)setRemoveButton:(NSString *)removeButton {
+	NSString *oldValue = _removeButton;
 	_removeButton = removeButton;
-	[self updateNSObject:@"removeButton"];
+	[self updateNSObject:oldValue newValue:removeButton propertyName:@"removeButton"];
 }
 
 -(void)setVerticalArrow:(NSString *)verticalArrow {
+	NSString *oldValue = _verticalArrow;
 	_verticalArrow = verticalArrow;
-	[self updateNSObject:@"verticalArrow"];
+	[self updateNSObject:oldValue newValue:verticalArrow propertyName:@"verticalArrow"];
 }
 
 -(void)setFill:(NSString *)fill {
+	NSString *oldValue = _fill;
 	_fill = fill;
-	[self updateNSObject:@"fill"];
+	[self updateNSObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 -(void)setBorderColor:(NSString *)borderColor {
+	NSString *oldValue = _borderColor;
 	_borderColor = borderColor;
-	[self updateNSObject:@"borderColor"];
+	[self updateNSObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setShapes:(NSString *)shapes {
+	NSString *oldValue = _shapes;
 	_shapes = shapes;
-	[self updateNSObject:@"shapes"];
+	[self updateNSObject:oldValue newValue:shapes propertyName:@"shapes"];
 }
 
 -(void)setStyle:(NSString *)style {
+	NSString *oldValue = _style;
 	_style = style;
-	[self updateNSObject:@"style"];
+	[self updateNSObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setCrosshairX:(NSString *)crosshairX {
+	NSString *oldValue = _crosshairX;
 	_crosshairX = crosshairX;
-	[self updateNSObject:@"crosshairX"];
+	[self updateNSObject:oldValue newValue:crosshairX propertyName:@"crosshairX"];
 }
 
 -(void)setCrosshairY:(NSString *)crosshairY {
+	NSString *oldValue = _crosshairY;
 	_crosshairY = crosshairY;
-	[self updateNSObject:@"crosshairY"];
+	[self updateNSObject:oldValue newValue:crosshairY propertyName:@"crosshairY"];
 }
 
 -(void)setArrowLine:(NSString *)arrowLine {
+	NSString *oldValue = _arrowLine;
 	_arrowLine = arrowLine;
-	[self updateNSObject:@"arrowLine"];
+	[self updateNSObject:oldValue newValue:arrowLine propertyName:@"arrowLine"];
 }
 
 -(void)setTypeOptions:(NSString *)typeOptions {
+	NSString *oldValue = _typeOptions;
 	_typeOptions = typeOptions;
-	[self updateNSObject:@"typeOptions"];
+	[self updateNSObject:oldValue newValue:typeOptions propertyName:@"typeOptions"];
 }
 
 -(void)setLabel:(NSString *)label {
+	NSString *oldValue = _label;
 	_label = label;
-	[self updateNSObject:@"label"];
+	[self updateNSObject:oldValue newValue:label propertyName:@"label"];
 }
 
 -(void)setConnector:(NSString *)connector {
+	NSString *oldValue = _connector;
 	_connector = connector;
-	[self updateNSObject:@"connector"];
+	[self updateNSObject:oldValue newValue:connector propertyName:@"connector"];
 }
 
 -(void)setArrowRay:(NSString *)arrowRay {
+	NSString *oldValue = _arrowRay;
 	_arrowRay = arrowRay;
-	[self updateNSObject:@"arrowRay"];
+	[self updateNSObject:oldValue newValue:arrowRay propertyName:@"arrowRay"];
 }
 
 -(void)setFontSize:(NSString *)fontSize {
+	NSString *oldValue = _fontSize;
 	_fontSize = fontSize;
-	[self updateNSObject:@"fontSize"];
+	[self updateNSObject:oldValue newValue:fontSize propertyName:@"fontSize"];
 }
 
 -(void)setBackgroundColor:(NSString *)backgroundColor {
+	NSString *oldValue = _backgroundColor;
 	_backgroundColor = backgroundColor;
-	[self updateNSObject:@"backgroundColor"];
+	[self updateNSObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setArrowSegment:(NSString *)arrowSegment {
+	NSString *oldValue = _arrowSegment;
 	_arrowSegment = arrowSegment;
-	[self updateNSObject:@"arrowSegment"];
+	[self updateNSObject:oldValue newValue:arrowSegment propertyName:@"arrowSegment"];
 }
 
 -(void)setRay:(NSString *)ray {
+	NSString *oldValue = _ray;
 	_ray = ray;
-	[self updateNSObject:@"ray"];
+	[self updateNSObject:oldValue newValue:ray propertyName:@"ray"];
 }
 
 -(void)setVerticalLabel:(NSString *)verticalLabel {
+	NSString *oldValue = _verticalLabel;
 	_verticalLabel = verticalLabel;
-	[self updateNSObject:@"verticalLabel"];
+	[self updateNSObject:oldValue newValue:verticalLabel propertyName:@"verticalLabel"];
 }
 
 -(void)setBorderRadius:(NSString *)borderRadius {
+	NSString *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setVolume:(NSString *)volume {
+	NSString *oldValue = _volume;
 	_volume = volume;
-	[self updateNSObject:@"volume"];
+	[self updateNSObject:oldValue newValue:volume propertyName:@"volume"];
 }
 
 -(void)setStrokeWidth:(NSString *)strokeWidth {
+	NSString *oldValue = _strokeWidth;
 	_strokeWidth = strokeWidth;
-	[self updateNSObject:@"strokeWidth"];
+	[self updateNSObject:oldValue newValue:strokeWidth propertyName:@"strokeWidth"];
 }
 
 -(void)setFormat:(NSString *)format {
+	NSString *oldValue = _format;
 	_format = format;
-	[self updateNSObject:@"format"];
+	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
 }
 
 -(void)setLabelOptions:(NSString *)labelOptions {
+	NSString *oldValue = _labelOptions;
 	_labelOptions = labelOptions;
-	[self updateNSObject:@"labelOptions"];
+	[self updateNSObject:oldValue newValue:labelOptions propertyName:@"labelOptions"];
 }
 
 -(void)setElliott5:(NSString *)elliott5 {
+	NSString *oldValue = _elliott5;
 	_elliott5 = elliott5;
-	[self updateNSObject:@"elliott5"];
+	[self updateNSObject:oldValue newValue:elliott5 propertyName:@"elliott5"];
 }
 
 -(void)setElliott3:(NSString *)elliott3 {
+	NSString *oldValue = _elliott3;
 	_elliott3 = elliott3;
-	[self updateNSObject:@"elliott3"];
+	[self updateNSObject:oldValue newValue:elliott3 propertyName:@"elliott3"];
 }
 
 -(void)setPadding:(NSString *)padding {
+	NSString *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setSimpleShapes:(NSString *)simpleShapes {
+	NSString *oldValue = _simpleShapes;
 	_simpleShapes = simpleShapes;
-	[self updateNSObject:@"simpleShapes"];
+	[self updateNSObject:oldValue newValue:simpleShapes propertyName:@"simpleShapes"];
 }
 
 -(void)setVerticalLine:(NSString *)verticalLine {
+	NSString *oldValue = _verticalLine;
 	_verticalLine = verticalLine;
-	[self updateNSObject:@"verticalLine"];
+	[self updateNSObject:oldValue newValue:verticalLine propertyName:@"verticalLine"];
 }
 
 -(void)setParallelChannel:(NSString *)parallelChannel {
+	NSString *oldValue = _parallelChannel;
 	_parallelChannel = parallelChannel;
-	[self updateNSObject:@"parallelChannel"];
+	[self updateNSObject:oldValue newValue:parallelChannel propertyName:@"parallelChannel"];
 }
 
 -(void)setBackground:(NSString *)background {
+	NSString *oldValue = _background;
 	_background = background;
-	[self updateNSObject:@"background"];
+	[self updateNSObject:oldValue newValue:background propertyName:@"background"];
 }
 
 -(void)setSaveButton:(NSString *)saveButton {
+	NSString *oldValue = _saveButton;
 	_saveButton = saveButton;
-	[self updateNSObject:@"saveButton"];
+	[self updateNSObject:oldValue newValue:saveButton propertyName:@"saveButton"];
 }
 
 -(void)setLine:(NSString *)line {
+	NSString *oldValue = _line;
 	_line = line;
-	[self updateNSObject:@"line"];
+	[self updateNSObject:oldValue newValue:line propertyName:@"line"];
 }
 
 -(void)setSegment:(NSString *)segment {
+	NSString *oldValue = _segment;
 	_segment = segment;
-	[self updateNSObject:@"segment"];
+	[self updateNSObject:oldValue newValue:segment propertyName:@"segment"];
 }
 
 -(void)setCircle:(NSString *)circle {
+	NSString *oldValue = _circle;
 	_circle = circle;
-	[self updateNSObject:@"circle"];
+	[self updateNSObject:oldValue newValue:circle propertyName:@"circle"];
 }
 
 -(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setMeasureX:(NSString *)measureX {
+	NSString *oldValue = _measureX;
 	_measureX = measureX;
-	[self updateNSObject:@"measureX"];
+	[self updateNSObject:oldValue newValue:measureX propertyName:@"measureX"];
 }
 
 -(void)setMeasureY:(NSString *)measureY {
+	NSString *oldValue = _measureY;
 	_measureY = measureY;
-	[self updateNSObject:@"measureY"];
+	[self updateNSObject:oldValue newValue:measureY propertyName:@"measureY"];
 }
 
 -(void)setInnerBackground:(NSString *)innerBackground {
+	NSString *oldValue = _innerBackground;
 	_innerBackground = innerBackground;
-	[self updateNSObject:@"innerBackground"];
+	[self updateNSObject:oldValue newValue:innerBackground propertyName:@"innerBackground"];
 }
 
 -(void)setName:(NSString *)name {
+	NSString *oldValue = _name;
 	_name = name;
-	[self updateNSObject:@"name"];
+	[self updateNSObject:oldValue newValue:name propertyName:@"name"];
 }
 
 -(void)setMeasureXY:(NSString *)measureXY {
+	NSString *oldValue = _measureXY;
 	_measureXY = measureXY;
-	[self updateNSObject:@"measureXY"];
+	[self updateNSObject:oldValue newValue:measureXY propertyName:@"measureXY"];
 }
 
 -(void)setOuterBackground:(NSString *)outerBackground {
+	NSString *oldValue = _outerBackground;
 	_outerBackground = outerBackground;
-	[self updateNSObject:@"outerBackground"];
+	[self updateNSObject:oldValue newValue:outerBackground propertyName:@"outerBackground"];
 }
 
 -(void)setRectangle:(NSString *)rectangle {
+	NSString *oldValue = _rectangle;
 	_rectangle = rectangle;
-	[self updateNSObject:@"rectangle"];
+	[self updateNSObject:oldValue newValue:rectangle propertyName:@"rectangle"];
 }
 
 -(void)setLines:(NSString *)lines {
+	NSString *oldValue = _lines;
 	_lines = lines;
-	[self updateNSObject:@"lines"];
+	[self updateNSObject:oldValue newValue:lines propertyName:@"lines"];
 }
 
 -(void)setPitchfork:(NSString *)pitchfork {
+	NSString *oldValue = _pitchfork;
 	_pitchfork = pitchfork;
-	[self updateNSObject:@"pitchfork"];
+	[self updateNSObject:oldValue newValue:pitchfork propertyName:@"pitchfork"];
 }
 
 -(void)setCrooked5:(NSString *)crooked5 {
+	NSString *oldValue = _crooked5;
 	_crooked5 = crooked5;
-	[self updateNSObject:@"crooked5"];
+	[self updateNSObject:oldValue newValue:crooked5 propertyName:@"crooked5"];
 }
 
 -(void)setTunnel:(NSString *)tunnel {
+	NSString *oldValue = _tunnel;
 	_tunnel = tunnel;
-	[self updateNSObject:@"tunnel"];
+	[self updateNSObject:oldValue newValue:tunnel propertyName:@"tunnel"];
 }
 
 -(void)setFlags:(NSString *)flags {
+	NSString *oldValue = _flags;
 	_flags = flags;
-	[self updateNSObject:@"flags"];
+	[self updateNSObject:oldValue newValue:flags propertyName:@"flags"];
 }
 
 -(void)setBorderWidth:(NSString *)borderWidth {
+	NSString *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setCrooked3:(NSString *)crooked3 {
+	NSString *oldValue = _crooked3;
 	_crooked3 = crooked3;
-	[self updateNSObject:@"crooked3"];
+	[self updateNSObject:oldValue newValue:crooked3 propertyName:@"crooked3"];
 }
 
 -(void)setTitle:(NSString *)title {
+	NSString *oldValue = _title;
 	_title = title;
-	[self updateNSObject:@"title"];
+	[self updateNSObject:oldValue newValue:title propertyName:@"title"];
 }
 
 -(void)setEditButton:(NSString *)editButton {
+	NSString *oldValue = _editButton;
 	_editButton = editButton;
-	[self updateNSObject:@"editButton"];
+	[self updateNSObject:oldValue newValue:editButton propertyName:@"editButton"];
 }
 
 -(void)setShapeOptions:(NSString *)shapeOptions {
+	NSString *oldValue = _shapeOptions;
 	_shapeOptions = shapeOptions;
-	[self updateNSObject:@"shapeOptions"];
+	[self updateNSObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
 }
 
 -(void)setInfinityLine:(NSString *)infinityLine {
+	NSString *oldValue = _infinityLine;
 	_infinityLine = infinityLine;
-	[self updateNSObject:@"infinityLine"];
+	[self updateNSObject:oldValue newValue:infinityLine propertyName:@"infinityLine"];
 }
 
 @end

@@ -82,96 +82,91 @@
 # pragma mark - Setters
 
 -(void)setRadiusPlus:(NSNumber *)radiusPlus {
+	NSNumber *oldValue = _radiusPlus;
 	_radiusPlus = radiusPlus;
-	[self updateNSObject:@"radiusPlus"];
+	[self updateNSObject:oldValue newValue:radiusPlus propertyName:@"radiusPlus"];
 }
 
 -(void)setBorderColor:(NSString *)borderColor {
+	NSString *oldValue = _borderColor;
 	_borderColor = borderColor;
-	[self updateNSObject:@"borderColor"];
+	[self updateNSObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setOpacity:(NSNumber *)opacity {
+	NSNumber *oldValue = _opacity;
 	_opacity = opacity;
-	[self updateNSObject:@"opacity"];
+	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
 -(void)setHalo:(HIHalo *)halo {
 	HIHalo *oldValue = _halo;
-	if(self.halo) {
-		[self removeObserver:self forKeyPath:@"halo.isUpdated"];
-	}
 	_halo = halo;
 	[self updateHIObject:oldValue newValue:halo propertyName:@"halo"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setAnimation:(HIAnimationOptionsObject *)animation {
 	HIAnimationOptionsObject *oldValue = _animation;
-	if(self.animation) {
-		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
-	}
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
-	[self updateNSObject:@"lineWidth"];
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
 -(void)setLineWidthPlus:(NSNumber *)lineWidthPlus {
+	NSNumber *oldValue = _lineWidthPlus;
 	_lineWidthPlus = lineWidthPlus;
-	[self updateNSObject:@"lineWidthPlus"];
+	[self updateNSObject:oldValue newValue:lineWidthPlus propertyName:@"lineWidthPlus"];
 }
 
 -(void)setRadius:(NSNumber *)radius {
+	NSNumber *oldValue = _radius;
 	_radius = radius;
-	[self updateNSObject:@"radius"];
+	[self updateNSObject:oldValue newValue:radius propertyName:@"radius"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;
-	if(self.fillColor) {
-		[self removeObserver:self forKeyPath:@"fillColor.isUpdated"];
-	}
 	_fillColor = fillColor;
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
 -(void)setLineColor:(HIColor *)lineColor {
 	HIColor *oldValue = _lineColor;
-	if(self.lineColor) {
-		[self removeObserver:self forKeyPath:@"lineColor.isUpdated"];
-	}
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setBrightness:(NSNumber *)brightness {
+	NSNumber *oldValue = _brightness;
 	_brightness = brightness;
-	[self updateNSObject:@"brightness"];
+	[self updateNSObject:oldValue newValue:brightness propertyName:@"brightness"];
 }
 
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
+	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
-	[self updateNSObject:@"linkOpacity"];
+	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
 }
 
 -(void)setShadow:(NSNumber *)shadow {
+	NSNumber *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
-	if(self.color) {
-		[self removeObserver:self forKeyPath:@"color.isUpdated"];
-	}
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }

@@ -35,27 +35,18 @@
 
 -(void)setHover:(HIHover *)hover {
 	HIHover *oldValue = _hover;
-	if(self.hover) {
-		[self removeObserver:self forKeyPath:@"hover.isUpdated"];
-	}
 	_hover = hover;
 	[self updateHIObject:oldValue newValue:hover propertyName:@"hover"];
 }
 
 -(void)setSelect:(HISelect *)select {
 	HISelect *oldValue = _select;
-	if(self.select) {
-		[self removeObserver:self forKeyPath:@"select.isUpdated"];
-	}
 	_select = select;
 	[self updateHIObject:oldValue newValue:select propertyName:@"select"];
 }
 
 -(void)setNormal:(HINormal *)normal {
 	HINormal *oldValue = _normal;
-	if(self.normal) {
-		[self removeObserver:self forKeyPath:@"normal.isUpdated"];
-	}
 	_normal = normal;
 	[self updateHIObject:oldValue newValue:normal propertyName:@"normal"];
 }

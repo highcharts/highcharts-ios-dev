@@ -43,13 +43,15 @@
 # pragma mark - Setters
 
 -(void)setLinearGradient:(id)linearGradient {
+	id oldValue = _linearGradient;
 	_linearGradient = linearGradient;
-	[self updateNSObject:@"linearGradient"];
+	[self updateNSObject:oldValue newValue:linearGradient propertyName:@"linearGradient"];
 }
 
 -(void)setRadialGradient:(id)radialGradient {
+	id oldValue = _radialGradient;
 	_radialGradient = radialGradient;
-	[self updateNSObject:@"radialGradient"];
+	[self updateNSObject:oldValue newValue:radialGradient propertyName:@"radialGradient"];
 }
 
 -(void)setStops:(NSArray<NSArray *> *)stops {

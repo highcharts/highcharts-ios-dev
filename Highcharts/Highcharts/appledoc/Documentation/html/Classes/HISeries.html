@@ -192,7 +192,77 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/addPoint:">- addPoint:</option>
+		
+		<option value="//api/name/addPoint:redraw:">- addPoint:redraw:</option>
+		
+		<option value="//api/name/addPoint:redraw:shift:">- addPoint:redraw:shift:</option>
+		
+		<option value="//api/name/addPoint:redraw:shift:animation:">- addPoint:redraw:shift:animation:</option>
+		
+		<option value="//api/name/animate:">- animate:</option>
+		
+		<option value="//api/name/drawGraph">- drawGraph</option>
+		
+		<option value="//api/name/drawPoints">- drawPoints</option>
+		
 		<option value="//api/name/getParams">- getParams</option>
+		
+		<option value="//api/name/hide">- hide</option>
+		
+		<option value="//api/name/onMouseOut">- onMouseOut</option>
+		
+		<option value="//api/name/onMouseOver">- onMouseOver</option>
+		
+		<option value="//api/name/remove">- remove</option>
+		
+		<option value="//api/name/remove:">- remove:</option>
+		
+		<option value="//api/name/remove:animation:">- remove:animation:</option>
+		
+		<option value="//api/name/remove:animation:withEvent:">- remove:animation:withEvent:</option>
+		
+		<option value="//api/name/removePoint:">- removePoint:</option>
+		
+		<option value="//api/name/removePoint:redraw:">- removePoint:redraw:</option>
+		
+		<option value="//api/name/removePoint:redraw:animation:">- removePoint:redraw:animation:</option>
+		
+		<option value="//api/name/render">- render</option>
+		
+		<option value="//api/name/select">- select</option>
+		
+		<option value="//api/name/select:">- select:</option>
+		
+		<option value="//api/name/setOptions:">- setOptions:</option>
+		
+		<option value="//api/name/setSeriesData:">- setSeriesData:</option>
+		
+		<option value="//api/name/setSeriesData:redraw:">- setSeriesData:redraw:</option>
+		
+		<option value="//api/name/setSeriesData:redraw:animation:">- setSeriesData:redraw:animation:</option>
+		
+		<option value="//api/name/setSeriesData:redraw:animation:updatePoints:">- setSeriesData:redraw:animation:updatePoints:</option>
+		
+		<option value="//api/name/setSeriesVisible">- setSeriesVisible</option>
+		
+		<option value="//api/name/setSeriesVisible:">- setSeriesVisible:</option>
+		
+		<option value="//api/name/setSeriesVisible:redraw:">- setSeriesVisible:redraw:</option>
+		
+		<option value="//api/name/setState">- setState</option>
+		
+		<option value="//api/name/setState:">- setState:</option>
+		
+		<option value="//api/name/show">- show</option>
+		
+		<option value="//api/name/sonify:">- sonify:</option>
+		
+		<option value="//api/name/translate">- translate</option>
+		
+		<option value="//api/name/update:">- update:</option>
+		
+		<option value="//api/name/update:redraw:">- update:redraw:</option>
 		
 	</optgroup>
 	
@@ -3368,6 +3438,2247 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getParams</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addPoint:" title="addPoint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addPoint:">&ndash;&nbsp;addPoint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a point to the series after render time. The point can be added at the end, or by giving it an X value, to the start or in the middle of the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addPoint:(HIData *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The point options. If options is a single number, a point with that y value is appended to the series. If it is an array, it will be interpreted as x and y values respectively. If it is an object, advanced options as outlined under <code>series.data</code> are applied.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-append/">Append point</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-append-and-shift/">Append and shift</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-x-and-y/">Both X and Y values given</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-pie/">Append pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addPoint:redraw:" title="addPoint:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addPoint:redraw:">&ndash;&nbsp;addPoint:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a point to the series after render time. The point can be added at the end, or by giving it an X value, to the start or in the middle of the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addPoint:(HIData *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The point options. If options is a single number, a point with that y value is appended to the series. If it is an array, it will be interpreted as x and y values respectively. If it is an object, advanced options as outlined under <code>series.data</code> are applied.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the point is added. When adding more than one point, it is highly recommended that the redraw option be set to false, and instead <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> is explicitly called after the adding of points is finished. Otherwise, the chart will redraw after adding each point.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-append/">Append point</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-append-and-shift/">Append and shift</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-x-and-y/">Both X and Y values given</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-pie/">Append pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addPoint:redraw:shift:" title="addPoint:redraw:shift:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addPoint:redraw:shift:">&ndash;&nbsp;addPoint:redraw:shift:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a point to the series after render time. The point can be added at the end, or by giving it an X value, to the start or in the middle of the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addPoint:(HIData *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> shift:(NSNumber *)<em>shift</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The point options. If options is a single number, a point with that y value is appended to the series. If it is an array, it will be interpreted as x and y values respectively. If it is an object, advanced options as outlined under <code>series.data</code> are applied.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the point is added. When adding more than one point, it is highly recommended that the redraw option be set to false, and instead <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> is explicitly called after the adding of points is finished. Otherwise, the chart will redraw after adding each point.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>shift</code></th>
+						<td><p>If true, a point is shifted off the start of the series as one is appended to the end.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-append/">Append point</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-append-and-shift/">Append and shift</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-x-and-y/">Both X and Y values given</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-pie/">Append pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addPoint:redraw:shift:animation:" title="addPoint:redraw:shift:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addPoint:redraw:shift:animation:">&ndash;&nbsp;addPoint:redraw:shift:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a point to the series after render time. The point can be added at the end, or by giving it an X value, to the start or in the middle of the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addPoint:(HIData *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> shift:(NSNumber *)<em>shift</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The point options. If options is a single number, a point with that y value is appended to the series. If it is an array, it will be interpreted as x and y values respectively. If it is an object, advanced options as outlined under <code>series.data</code> are applied.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the point is added. When adding more than one point, it is highly recommended that the redraw option be set to false, and instead <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> is explicitly called after the adding of points is finished. Otherwise, the chart will redraw after adding each point.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>shift</code></th>
+						<td><p>If true, a point is shifted off the start of the series as one is appended to the end.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether to apply animation, and optionally animation configuration.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-append/">Append point</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-append-and-shift/">Append and shift</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-x-and-y/">Both X and Y values given</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-addpoint-pie/">Append pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/animate:" title="animate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/animate:">&ndash;&nbsp;animate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Animate in the series. Called internally twice. First with the <code>init</code> parameter set to true, which sets up the initial state of the animation. Then when ready, it is called with the <code>init</code> parameter undefined, in order to perform the actual animation. After the second run, the function is removed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)animate:(NSNumber *)<em>init</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>init</code></th>
+						<td><p>Initialize the animation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drawGraph" title="drawGraph"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drawGraph">&ndash;&nbsp;drawGraph</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Draw the graph. Called internally when rendering line-like series types. The first time it generates the <code>series.graph</code> item and optionally other series-wide items like <code>series.area</code> for area charts. On subsequent calls these items are updated with new positions and attributes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)drawGraph</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drawPoints" title="drawPoints"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drawPoints">&ndash;&nbsp;drawPoints</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Draw the markers for line-like series types, and columns or other graphical representation for <a href="https://api.highcharts.com/class-reference/Highcharts.Point.html">Highcharts.Point</a> objects for other series types. The resulting element is typically stored as <a href="https://api.highcharts.com/class-reference/Highcharts.Point.html#.graphic">Highcharts.Point.graphic</a>, and is created on the first call and updated and moved on subsequent calls.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)drawPoints</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hide" title="hide"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hide">&ndash;&nbsp;hide</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Hide the series if visible. If the <a href="https://api.highcharts.com/highcharts/chart.ignoreHiddenSeries">chart.ignoreHiddenSeries</a> option is true, the chart is redrawn without this series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hide</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:hide</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-hide/">Toggle visibility from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onMouseOut" title="onMouseOut"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onMouseOut">&ndash;&nbsp;onMouseOut</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Runs on mouse out of the series graphical items.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onMouseOut</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:mouseOut</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onMouseOver" title="onMouseOver"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onMouseOver">&ndash;&nbsp;onMouseOver</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Runs on mouse over the series graphical items.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onMouseOver</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:mouseOver</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove" title="remove"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove">&ndash;&nbsp;remove</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a series and optionally redraw the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:remove</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-remove/">Remove first series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove:" title="remove:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove:">&ndash;&nbsp;remove:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a series and optionally redraw the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart or wait for an explicit call to <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:remove</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-remove/">Remove first series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove:animation:" title="remove:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove:animation:">&ndash;&nbsp;remove:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a series and optionally redraw the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart or wait for an explicit call to <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether to apply animation, and optionally animation configuration.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:remove</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-remove/">Remove first series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove:animation:withEvent:" title="remove:animation:withEvent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove:animation:withEvent:">&ndash;&nbsp;remove:animation:withEvent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a series and optionally redraw the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em> withEvent:(NSNumber *)<em>withEvent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart or wait for an explicit call to <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether to apply animation, and optionally animation configuration.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>withEvent</code></th>
+						<td><p>Used internally, whether to fire the series <code>remove</code> event.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:remove</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-remove/">Remove first series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removePoint:" title="removePoint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removePoint:">&ndash;&nbsp;removePoint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a point from the series. Unlike the <a href="https://api.highcharts.com/class-reference/Highcharts.Point.html#remove">Highcharts.Point#remove</a> method, this can also be done on a point that is not instanciated because it is outside the view or subject to Highstock data grouping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removePoint:(NSNumber *)<em>i</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>i</code></th>
+						<td><p>The index of the point in the data array.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:remove</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-removepoint/">Remove cropped point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removePoint:redraw:" title="removePoint:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removePoint:redraw:">&ndash;&nbsp;removePoint:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a point from the series. Unlike the <a href="https://api.highcharts.com/class-reference/Highcharts.Point.html#remove">Highcharts.Point#remove</a> method, this can also be done on a point that is not instanciated because it is outside the view or subject to Highstock data grouping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removePoint:(NSNumber *)<em>i</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>i</code></th>
+						<td><p>The index of the point in the data array.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the point is added. When removing more than one point, it is highly recommended that the <code>redraw</code> option be set to <code>false</code>, and instead <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> is explicitly called after the adding of points is finished.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:remove</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-removepoint/">Remove cropped point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removePoint:redraw:animation:" title="removePoint:redraw:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removePoint:redraw:animation:">&ndash;&nbsp;removePoint:redraw:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a point from the series. Unlike the <a href="https://api.highcharts.com/class-reference/Highcharts.Point.html#remove">Highcharts.Point#remove</a> method, this can also be done on a point that is not instanciated because it is outside the view or subject to Highstock data grouping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removePoint:(NSNumber *)<em>i</em> redraw:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>i</code></th>
+						<td><p>The index of the point in the data array.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the point is added. When removing more than one point, it is highly recommended that the <code>redraw</code> option be set to <code>false</code>, and instead <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> is explicitly called after the adding of points is finished.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether and optionally how the series should be animated.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:remove</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-removepoint/">Remove cropped point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/render" title="render"></a>
+	<h3 class="method-title"><code><a href="#//api/name/render">&ndash;&nbsp;render</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Render the graph and markers. Called internally when first rendering and later when redrawing the chart. This function can be extended in plugins, but normally shouldn&rsquo;t be called directly.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)render</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:afterRender</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/select" title="select"></a>
+	<h3 class="method-title"><code><a href="#//api/name/select">&ndash;&nbsp;select</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Select or unselect the series. This means its selected property is set, the checkbox in the legend is toggled and when selected, the series is returned by the <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#getSelectedSeries">Highcharts.Chart#getSelectedSeries</a> function.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)select</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:select</li>
+<li>Highcharts.Series#event:unselect</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-select/">Select a series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/select:" title="select:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/select:">&ndash;&nbsp;select:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Select or unselect the series. This means its selected property is set, the checkbox in the legend is toggled and when selected, the series is returned by the <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#getSelectedSeries">Highcharts.Chart#getSelectedSeries</a> function.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)select:(NSNumber *)<em>selected</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>selected</code></th>
+						<td><p>True to select the series, false to unselect. If undefined, the selection state is toggled.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:select</li>
+<li>Highcharts.Series#event:unselect</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-select/">Select a series from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeriesData:" title="setSeriesData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeriesData:">&ndash;&nbsp;setSeriesData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Apply a new set of data to the series and optionally redraw it. The new data array is passed by reference (except in case of <code>updatePoints</code>), and may later be mutated when updating the chart data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSeriesData:(NSArray *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Takes an array of data in the same format as described under <code>series.{type}.data</code> for the given series type, for example a line series would take data in the form described under <a href="https://api.highcharts.com/highcharts/series.line.data">series.line.data</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>Note the difference in behaviour when setting the same amount of points, or a different amount of points, as handled by the <code>updatePoints</code> parameter.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-setdata/">Set new data from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-setdata-pie/">Set data in a pie</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeriesData:redraw:" title="setSeriesData:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeriesData:redraw:">&ndash;&nbsp;setSeriesData:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Apply a new set of data to the series and optionally redraw it. The new data array is passed by reference (except in case of <code>updatePoints</code>), and may later be mutated when updating the chart data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSeriesData:(NSArray *)<em>data</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Takes an array of data in the same format as described under <code>series.{type}.data</code> for the given series type, for example a line series would take data in the form described under <a href="https://api.highcharts.com/highcharts/series.line.data">series.line.data</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the series is altered. If doing more operations on the chart, it is a good idea to set redraw to false and call <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> after.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>Note the difference in behaviour when setting the same amount of points, or a different amount of points, as handled by the <code>updatePoints</code> parameter.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-setdata/">Set new data from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-setdata-pie/">Set data in a pie</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeriesData:redraw:animation:" title="setSeriesData:redraw:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeriesData:redraw:animation:">&ndash;&nbsp;setSeriesData:redraw:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Apply a new set of data to the series and optionally redraw it. The new data array is passed by reference (except in case of <code>updatePoints</code>), and may later be mutated when updating the chart data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSeriesData:(NSArray *)<em>data</em> redraw:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Takes an array of data in the same format as described under <code>series.{type}.data</code> for the given series type, for example a line series would take data in the form described under <a href="https://api.highcharts.com/highcharts/series.line.data">series.line.data</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the series is altered. If doing more operations on the chart, it is a good idea to set redraw to false and call <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> after.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>When the updated data is the same length as the existing data, points will be updated by default, and animation visualizes how the points are changed. Set false to disable animation, or a configuration object to set duration or easing.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>Note the difference in behaviour when setting the same amount of points, or a different amount of points, as handled by the <code>updatePoints</code> parameter.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-setdata/">Set new data from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-setdata-pie/">Set data in a pie</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeriesData:redraw:animation:updatePoints:" title="setSeriesData:redraw:animation:updatePoints:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeriesData:redraw:animation:updatePoints:">&ndash;&nbsp;setSeriesData:redraw:animation:updatePoints:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Apply a new set of data to the series and optionally redraw it. The new data array is passed by reference (except in case of <code>updatePoints</code>), and may later be mutated when updating the chart data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSeriesData:(NSArray *)<em>data</em> redraw:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em> updatePoints:(NSNumber *)<em>updatePoints</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Takes an array of data in the same format as described under <code>series.{type}.data</code> for the given series type, for example a line series would take data in the form described under <a href="https://api.highcharts.com/highcharts/series.line.data">series.line.data</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the series is altered. If doing more operations on the chart, it is a good idea to set redraw to false and call <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> after.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>When the updated data is the same length as the existing data, points will be updated by default, and animation visualizes how the points are changed. Set false to disable animation, or a configuration object to set duration or easing.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>updatePoints</code></th>
+						<td><p>When this is true, points will be updated instead of replaced whenever possible. This occurs a) when the updated data is the same length as the existing data, b) when points are matched by their id&rsquo;s, or c) when points can be matched by X values. This allows updating with animation and performs better. In this case, the original array is not passed by reference. Set <code>false</code> to prevent.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>Note the difference in behaviour when setting the same amount of points, or a different amount of points, as handled by the <code>updatePoints</code> parameter.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-setdata/">Set new data from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-setdata-pie/">Set data in a pie</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setOptions:" title="setOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setOptions:">&ndash;&nbsp;setOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the series options by merging from the options tree. Called internally on initiating and updating series. This function will not redraw the series. For API usage, use <a href="https://api.highcharts.com/class-reference/Highcharts.Series.html#update">Highcharts.Series#update</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setOptions:(HISeries *)<em>itemOptions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>itemOptions</code></th>
+						<td><p>The series options.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:afterSetOptions</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setState" title="setState"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setState">&ndash;&nbsp;setState</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the state of the series. Called internally on mouse interaction operations, but it can also be called directly to visually highlight a series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setState</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setState:" title="setState:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setState:">&ndash;&nbsp;setState:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the state of the series. Called internally on mouse interaction operations, but it can also be called directly to visually highlight a series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setState:(NSString *)<em>state</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>state</code></th>
+						<td><p>Can be either <code>hover</code> or undefined to set to normal state.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeriesVisible" title="setSeriesVisible"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeriesVisible">&ndash;&nbsp;setSeriesVisible</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Show or hide the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSeriesVisible</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:hide</li>
+<li>Highcharts.Series#event:show</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeriesVisible:" title="setSeriesVisible:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeriesVisible:">&ndash;&nbsp;setSeriesVisible:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Show or hide the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSeriesVisible:(NSNumber *)<em>visible</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>visible</code></th>
+						<td><p>True to show the series, false to hide. If undefined, the visibility is toggled.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:hide</li>
+<li>Highcharts.Series#event:show</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeriesVisible:redraw:" title="setSeriesVisible:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeriesVisible:redraw:">&ndash;&nbsp;setSeriesVisible:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Show or hide the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSeriesVisible:(NSNumber *)<em>visible</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>visible</code></th>
+						<td><p>True to show the series, false to hide. If undefined, the visibility is toggled.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the series is altered. If doing more operations on the chart, it is a good idea to set redraw to false and call <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">chart.redraw()</a> after.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:hide</li>
+<li>Highcharts.Series#event:show</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/show" title="show"></a>
+	<h3 class="method-title"><code><a href="#//api/name/show">&ndash;&nbsp;show</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Show the series if hidden.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)show</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:show</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-hide/">Toggle visibility from a button</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sonify:" title="sonify:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sonify:">&ndash;&nbsp;sonify:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sonify a series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sonify:(NSDictionary *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The options for sonifying this series.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/series-basic/">Click on series to sonify</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/series-earcon/">Series with earcon</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/point-play-time/">Play y-axis by time</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/earcon-on-point/">Earcon set on point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/translate" title="translate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/translate">&ndash;&nbsp;translate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Translate data points from raw data values to chart specific positioning data needed later in the <code>drawPoints</code> and <code>drawGraph</code> functions. This function can be overridden in plugins and custom series type implementations.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)translate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#events:translate</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:" title="update:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:">&ndash;&nbsp;update:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the series with a new set of options. For a clean and precise handling of new options, all methods and elements from the series are removed, and it is initiated from scratch. Therefore, this method is more performance expensive than some other utility methods like <a href="https://api.highcharts.com/class-reference/Highcharts.Series.html#setData">Highcharts.Series#setData</a> or <a href="https://api.highcharts.com/class-reference/Highcharts.Series.html#setVisible">Highcharts.Series#setVisible</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HISeries *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>New options that will be merged with the series' existing options.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-update/">Updating series options</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:redraw:" title="update:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:redraw:">&ndash;&nbsp;update:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the series with a new set of options. For a clean and precise handling of new options, all methods and elements from the series are removed, and it is initiated from scratch. Therefore, this method is more performance expensive than some other utility methods like <a href="https://api.highcharts.com/class-reference/Highcharts.Series.html#setData">Highcharts.Series#setData</a> or <a href="https://api.highcharts.com/class-reference/Highcharts.Series.html#setVisible">Highcharts.Series#setVisible</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HISeries *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>New options that will be merged with the series' existing options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the series is altered. If doing more operations on the chart, it is a good idea to set redraw to false and call <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> after.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Series#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/series-update/">Updating series options</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

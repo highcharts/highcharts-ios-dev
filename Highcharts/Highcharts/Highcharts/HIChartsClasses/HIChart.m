@@ -241,170 +241,170 @@
 
 -(void)setParallelAxes:(HIParallelAxes *)parallelAxes {
 	HIParallelAxes *oldValue = _parallelAxes;
-	if(self.parallelAxes) {
-		[self removeObserver:self forKeyPath:@"parallelAxes.isUpdated"];
-	}
 	_parallelAxes = parallelAxes;
 	[self updateHIObject:oldValue newValue:parallelAxes propertyName:@"parallelAxes"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setSpacingBottom:(NSNumber *)spacingBottom {
+	NSNumber *oldValue = _spacingBottom;
 	_spacingBottom = spacingBottom;
-	[self updateNSObject:@"spacingBottom"];
+	[self updateNSObject:oldValue newValue:spacingBottom propertyName:@"spacingBottom"];
 }
 
 -(void)setPlotShadow:(NSNumber *)plotShadow {
+	NSNumber *oldValue = _plotShadow;
 	_plotShadow = plotShadow;
-	[self updateNSObject:@"plotShadow"];
+	[self updateNSObject:oldValue newValue:plotShadow propertyName:@"plotShadow"];
 }
 
 -(void)setHeight:(id)height {
+	id oldValue = _height;
 	_height = height;
-	[self updateNSObject:@"height"];
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setAlignTicks:(NSNumber *)alignTicks {
+	NSNumber *oldValue = _alignTicks;
 	_alignTicks = alignTicks;
-	[self updateNSObject:@"alignTicks"];
+	[self updateNSObject:oldValue newValue:alignTicks propertyName:@"alignTicks"];
 }
 
 -(void)setDisplayErrors:(NSNumber *)displayErrors {
+	NSNumber *oldValue = _displayErrors;
 	_displayErrors = displayErrors;
-	[self updateNSObject:@"displayErrors"];
+	[self updateNSObject:oldValue newValue:displayErrors propertyName:@"displayErrors"];
 }
 
 -(void)setMarginRight:(NSNumber *)marginRight {
+	NSNumber *oldValue = _marginRight;
 	_marginRight = marginRight;
-	[self updateNSObject:@"marginRight"];
+	[self updateNSObject:oldValue newValue:marginRight propertyName:@"marginRight"];
 }
 
 -(void)setPlotBorderColor:(HIColor *)plotBorderColor {
 	HIColor *oldValue = _plotBorderColor;
-	if(self.plotBorderColor) {
-		[self removeObserver:self forKeyPath:@"plotBorderColor.isUpdated"];
-	}
 	_plotBorderColor = plotBorderColor;
 	[self updateHIObject:oldValue newValue:plotBorderColor propertyName:@"plotBorderColor"];
 }
 
 -(void)setSpacingRight:(NSNumber *)spacingRight {
+	NSNumber *oldValue = _spacingRight;
 	_spacingRight = spacingRight;
-	[self updateNSObject:@"spacingRight"];
+	[self updateNSObject:oldValue newValue:spacingRight propertyName:@"spacingRight"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
 	_className = className;
-	[self updateNSObject:@"className"];
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setPolar:(NSNumber *)polar {
+	NSNumber *oldValue = _polar;
 	_polar = polar;
-	[self updateNSObject:@"polar"];
+	[self updateNSObject:oldValue newValue:polar propertyName:@"polar"];
 }
 
 -(void)setRenderTo:(NSString *)renderTo {
+	NSString *oldValue = _renderTo;
 	_renderTo = renderTo;
-	[self updateNSObject:@"renderTo"];
+	[self updateNSObject:oldValue newValue:renderTo propertyName:@"renderTo"];
 }
 
 -(void)setReflow:(NSNumber *)reflow {
+	NSNumber *oldValue = _reflow;
 	_reflow = reflow;
-	[self updateNSObject:@"reflow"];
+	[self updateNSObject:oldValue newValue:reflow propertyName:@"reflow"];
 }
 
 -(void)setZoomType:(NSString *)zoomType {
+	NSString *oldValue = _zoomType;
 	_zoomType = zoomType;
-	[self updateNSObject:@"zoomType"];
+	[self updateNSObject:oldValue newValue:zoomType propertyName:@"zoomType"];
 }
 
 -(void)setSpacingTop:(NSNumber *)spacingTop {
+	NSNumber *oldValue = _spacingTop;
 	_spacingTop = spacingTop;
-	[self updateNSObject:@"spacingTop"];
+	[self updateNSObject:oldValue newValue:spacingTop propertyName:@"spacingTop"];
 }
 
 -(void)setMarginBottom:(NSNumber *)marginBottom {
+	NSNumber *oldValue = _marginBottom;
 	_marginBottom = marginBottom;
-	[self updateNSObject:@"marginBottom"];
+	[self updateNSObject:oldValue newValue:marginBottom propertyName:@"marginBottom"];
 }
 
 -(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
 	_width = width;
-	[self updateNSObject:@"width"];
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setMarginLeft:(NSNumber *)marginLeft {
+	NSNumber *oldValue = _marginLeft;
 	_marginLeft = marginLeft;
-	[self updateNSObject:@"marginLeft"];
+	[self updateNSObject:oldValue newValue:marginLeft propertyName:@"marginLeft"];
 }
 
 -(void)setPlotBackgroundColor:(HIColor *)plotBackgroundColor {
 	HIColor *oldValue = _plotBackgroundColor;
-	if(self.plotBackgroundColor) {
-		[self removeObserver:self forKeyPath:@"plotBackgroundColor.isUpdated"];
-	}
 	_plotBackgroundColor = plotBackgroundColor;
 	[self updateHIObject:oldValue newValue:plotBackgroundColor propertyName:@"plotBackgroundColor"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
 	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setPanning:(NSNumber *)panning {
+	NSNumber *oldValue = _panning;
 	_panning = panning;
-	[self updateNSObject:@"panning"];
+	[self updateNSObject:oldValue newValue:panning propertyName:@"panning"];
 }
 
 -(void)setOptions3d:(HIOptions3d *)options3d {
 	HIOptions3d *oldValue = _options3d;
-	if(self.options3d) {
-		[self removeObserver:self forKeyPath:@"options3d.isUpdated"];
-	}
 	_options3d = options3d;
 	[self updateHIObject:oldValue newValue:options3d propertyName:@"options3d"];
 }
 
 -(void)setType:(NSString *)type {
+	NSString *oldValue = _type;
 	_type = type;
-	[self updateNSObject:@"type"];
+	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
-	if(self.events) {
-		[self removeObserver:self forKeyPath:@"events.isUpdated"];
-	}
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setSpacingLeft:(NSNumber *)spacingLeft {
+	NSNumber *oldValue = _spacingLeft;
 	_spacingLeft = spacingLeft;
-	[self updateNSObject:@"spacingLeft"];
+	[self updateNSObject:oldValue newValue:spacingLeft propertyName:@"spacingLeft"];
 }
 
 -(void)setDefinition:(NSString *)definition {
+	NSString *oldValue = _definition;
 	_definition = definition;
-	[self updateNSObject:@"definition"];
+	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setSpacing:(NSArray<NSNumber *> *)spacing {
@@ -414,118 +414,117 @@
 }
 
 -(void)setPanKey:(NSString *)panKey {
+	NSString *oldValue = _panKey;
 	_panKey = panKey;
-	[self updateNSObject:@"panKey"];
+	[self updateNSObject:oldValue newValue:panKey propertyName:@"panKey"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setScrollablePlotArea:(HIScrollablePlotArea *)scrollablePlotArea {
 	HIScrollablePlotArea *oldValue = _scrollablePlotArea;
-	if(self.scrollablePlotArea) {
-		[self removeObserver:self forKeyPath:@"scrollablePlotArea.isUpdated"];
-	}
 	_scrollablePlotArea = scrollablePlotArea;
 	[self updateHIObject:oldValue newValue:scrollablePlotArea propertyName:@"scrollablePlotArea"];
 }
 
 -(void)setShadow:(NSNumber *)shadow {
+	NSNumber *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setInverted:(NSNumber *)inverted {
+	NSNumber *oldValue = _inverted;
 	_inverted = inverted;
-	[self updateNSObject:@"inverted"];
+	[self updateNSObject:oldValue newValue:inverted propertyName:@"inverted"];
 }
 
 -(void)setAnimation:(HIAnimationOptionsObject *)animation {
 	HIAnimationOptionsObject *oldValue = _animation;
-	if(self.animation) {
-		[self removeObserver:self forKeyPath:@"animation.isUpdated"];
-	}
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setPlotBorderWidth:(NSNumber *)plotBorderWidth {
+	NSNumber *oldValue = _plotBorderWidth;
 	_plotBorderWidth = plotBorderWidth;
-	[self updateNSObject:@"plotBorderWidth"];
+	[self updateNSObject:oldValue newValue:plotBorderWidth propertyName:@"plotBorderWidth"];
 }
 
 -(void)setZoomKey:(NSString *)zoomKey {
+	NSString *oldValue = _zoomKey;
 	_zoomKey = zoomKey;
-	[self updateNSObject:@"zoomKey"];
+	[self updateNSObject:oldValue newValue:zoomKey propertyName:@"zoomKey"];
 }
 
 -(void)setIgnoreHiddenSeries:(NSNumber *)ignoreHiddenSeries {
+	NSNumber *oldValue = _ignoreHiddenSeries;
 	_ignoreHiddenSeries = ignoreHiddenSeries;
-	[self updateNSObject:@"ignoreHiddenSeries"];
+	[self updateNSObject:oldValue newValue:ignoreHiddenSeries propertyName:@"ignoreHiddenSeries"];
 }
 
 -(void)setSelectionMarkerFill:(HIColor *)selectionMarkerFill {
 	HIColor *oldValue = _selectionMarkerFill;
-	if(self.selectionMarkerFill) {
-		[self removeObserver:self forKeyPath:@"selectionMarkerFill.isUpdated"];
-	}
 	_selectionMarkerFill = selectionMarkerFill;
 	[self updateHIObject:oldValue newValue:selectionMarkerFill propertyName:@"selectionMarkerFill"];
 }
 
 -(void)setPlotBackgroundImage:(NSString *)plotBackgroundImage {
+	NSString *oldValue = _plotBackgroundImage;
 	_plotBackgroundImage = plotBackgroundImage;
-	[self updateNSObject:@"plotBackgroundImage"];
+	[self updateNSObject:oldValue newValue:plotBackgroundImage propertyName:@"plotBackgroundImage"];
 }
 
 -(void)setPinchType:(NSString *)pinchType {
+	NSString *oldValue = _pinchType;
 	_pinchType = pinchType;
-	[self updateNSObject:@"pinchType"];
+	[self updateNSObject:oldValue newValue:pinchType propertyName:@"pinchType"];
 }
 
 -(void)setColorCount:(NSNumber *)colorCount {
+	NSNumber *oldValue = _colorCount;
 	_colorCount = colorCount;
-	[self updateNSObject:@"colorCount"];
+	[self updateNSObject:oldValue newValue:colorCount propertyName:@"colorCount"];
 }
 
 -(void)setParallelCoordinates:(NSNumber *)parallelCoordinates {
+	NSNumber *oldValue = _parallelCoordinates;
 	_parallelCoordinates = parallelCoordinates;
-	[self updateNSObject:@"parallelCoordinates"];
+	[self updateNSObject:oldValue newValue:parallelCoordinates propertyName:@"parallelCoordinates"];
 }
 
 -(void)setResetZoomButton:(HIResetZoomButton *)resetZoomButton {
 	HIResetZoomButton *oldValue = _resetZoomButton;
-	if(self.resetZoomButton) {
-		[self removeObserver:self forKeyPath:@"resetZoomButton.isUpdated"];
-	}
 	_resetZoomButton = resetZoomButton;
 	[self updateHIObject:oldValue newValue:resetZoomButton propertyName:@"resetZoomButton"];
 }
 
 -(void)setShowAxes:(NSNumber *)showAxes {
+	NSNumber *oldValue = _showAxes;
 	_showAxes = showAxes;
-	[self updateNSObject:@"showAxes"];
+	[self updateNSObject:oldValue newValue:showAxes propertyName:@"showAxes"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setTypeDescription:(NSString *)typeDescription {
+	NSString *oldValue = _typeDescription;
 	_typeDescription = typeDescription;
-	[self updateNSObject:@"typeDescription"];
+	[self updateNSObject:oldValue newValue:typeDescription propertyName:@"typeDescription"];
 }
 
 -(void)setMarginTop:(NSNumber *)marginTop {
+	NSNumber *oldValue = _marginTop;
 	_marginTop = marginTop;
-	[self updateNSObject:@"marginTop"];
+	[self updateNSObject:oldValue newValue:marginTop propertyName:@"marginTop"];
 }
 
 -(void)setMargin:(NSArray<NSNumber *> *)margin {
@@ -535,8 +534,9 @@
 }
 
 -(void)setStyledMode:(NSNumber *)styledMode {
+	NSNumber *oldValue = _styledMode;
 	_styledMode = styledMode;
-	[self updateNSObject:@"styledMode"];
+	[self updateNSObject:oldValue newValue:styledMode propertyName:@"styledMode"];
 }
 
 @end

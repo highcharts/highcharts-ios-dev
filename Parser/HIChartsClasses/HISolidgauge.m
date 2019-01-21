@@ -79,18 +79,21 @@
 # pragma mark - Setters
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
-	[self updateNSObject:@"colorByPoint"];
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
 -(void)setOvershoot:(NSNumber *)overshoot {
+	NSNumber *oldValue = _overshoot;
 	_overshoot = overshoot;
-	[self updateNSObject:@"overshoot"];
+	[self updateNSObject:oldValue newValue:overshoot propertyName:@"overshoot"];
 }
 
 -(void)setRounded:(NSNumber *)rounded {
+	NSNumber *oldValue = _rounded;
 	_rounded = rounded;
-	[self updateNSObject:@"rounded"];
+	[self updateNSObject:oldValue newValue:rounded propertyName:@"rounded"];
 }
 
 @end

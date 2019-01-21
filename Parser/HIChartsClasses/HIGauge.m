@@ -83,28 +83,24 @@
 
 -(void)setDial:(HIDial *)dial {
 	HIDial *oldValue = _dial;
-	if(self.dial) {
-		[self removeObserver:self forKeyPath:@"dial.isUpdated"];
-	}
 	_dial = dial;
 	[self updateHIObject:oldValue newValue:dial propertyName:@"dial"];
 }
 
 -(void)setOvershoot:(NSNumber *)overshoot {
+	NSNumber *oldValue = _overshoot;
 	_overshoot = overshoot;
-	[self updateNSObject:@"overshoot"];
+	[self updateNSObject:oldValue newValue:overshoot propertyName:@"overshoot"];
 }
 
 -(void)setWrap:(NSNumber *)wrap {
+	NSNumber *oldValue = _wrap;
 	_wrap = wrap;
-	[self updateNSObject:@"wrap"];
+	[self updateNSObject:oldValue newValue:wrap propertyName:@"wrap"];
 }
 
 -(void)setPivot:(HIPivot *)pivot {
 	HIPivot *oldValue = _pivot;
-	if(self.pivot) {
-		[self removeObserver:self forKeyPath:@"pivot.isUpdated"];
-	}
 	_pivot = pivot;
 	[self updateHIObject:oldValue newValue:pivot propertyName:@"pivot"];
 }

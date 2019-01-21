@@ -118,123 +118,147 @@
 # pragma mark - Setters
 
 -(void)setPieCombination:(NSString *)pieCombination {
+	NSString *oldValue = _pieCombination;
 	_pieCombination = pieCombination;
-	[self updateNSObject:@"pieCombination"];
+	[self updateNSObject:oldValue newValue:pieCombination propertyName:@"pieCombination"];
 }
 
 -(void)setPie:(NSString *)pie {
+	NSString *oldValue = _pie;
 	_pie = pie;
-	[self updateNSObject:@"pie"];
+	[self updateNSObject:oldValue newValue:pie propertyName:@"pie"];
 }
 
 -(void)setLineCombination:(NSString *)lineCombination {
+	NSString *oldValue = _lineCombination;
 	_lineCombination = lineCombination;
-	[self updateNSObject:@"lineCombination"];
+	[self updateNSObject:oldValue newValue:lineCombination propertyName:@"lineCombination"];
 }
 
 -(void)setMapbubble:(NSString *)mapbubble {
+	NSString *oldValue = _mapbubble;
 	_mapbubble = mapbubble;
-	[self updateNSObject:@"mapbubble"];
+	[self updateNSObject:oldValue newValue:mapbubble propertyName:@"mapbubble"];
 }
 
 -(void)setSpline:(NSString *)spline {
+	NSString *oldValue = _spline;
 	_spline = spline;
-	[self updateNSObject:@"spline"];
+	[self updateNSObject:oldValue newValue:spline propertyName:@"spline"];
 }
 
 -(void)setBarCombination:(NSString *)barCombination {
+	NSString *oldValue = _barCombination;
 	_barCombination = barCombination;
-	[self updateNSObject:@"barCombination"];
+	[self updateNSObject:oldValue newValue:barCombination propertyName:@"barCombination"];
 }
 
 -(void)setBoxplotCombination:(NSString *)boxplotCombination {
+	NSString *oldValue = _boxplotCombination;
 	_boxplotCombination = boxplotCombination;
-	[self updateNSObject:@"boxplotCombination"];
+	[self updateNSObject:oldValue newValue:boxplotCombination propertyName:@"boxplotCombination"];
 }
 
 -(void)setSplineCombination:(NSString *)splineCombination {
+	NSString *oldValue = _splineCombination;
 	_splineCombination = splineCombination;
-	[self updateNSObject:@"splineCombination"];
+	[self updateNSObject:oldValue newValue:splineCombination propertyName:@"splineCombination"];
 }
 
 -(void)setScatterCombination:(NSString *)scatterCombination {
+	NSString *oldValue = _scatterCombination;
 	_scatterCombination = scatterCombination;
-	[self updateNSObject:@"scatterCombination"];
+	[self updateNSObject:oldValue newValue:scatterCombination propertyName:@"scatterCombination"];
 }
 
 -(void)setMaplineCombination:(NSString *)maplineCombination {
+	NSString *oldValue = _maplineCombination;
 	_maplineCombination = maplineCombination;
-	[self updateNSObject:@"maplineCombination"];
+	[self updateNSObject:oldValue newValue:maplineCombination propertyName:@"maplineCombination"];
 }
 
 -(void)setBubble:(NSString *)bubble {
+	NSString *oldValue = _bubble;
 	_bubble = bubble;
-	[self updateNSObject:@"bubble"];
+	[self updateNSObject:oldValue newValue:bubble propertyName:@"bubble"];
 }
 
 -(void)setBoxplot:(NSString *)boxplot {
+	NSString *oldValue = _boxplot;
 	_boxplot = boxplot;
-	[self updateNSObject:@"boxplot"];
+	[self updateNSObject:oldValue newValue:boxplot propertyName:@"boxplot"];
 }
 
 -(void)setColumnCombination:(NSString *)columnCombination {
+	NSString *oldValue = _columnCombination;
 	_columnCombination = columnCombination;
-	[self updateNSObject:@"columnCombination"];
+	[self updateNSObject:oldValue newValue:columnCombination propertyName:@"columnCombination"];
 }
 
 -(void)setMap:(NSString *)map {
+	NSString *oldValue = _map;
 	_map = map;
-	[self updateNSObject:@"map"];
+	[self updateNSObject:oldValue newValue:map propertyName:@"map"];
 }
 
 -(void)setLine:(NSString *)line {
+	NSString *oldValue = _line;
 	_line = line;
-	[self updateNSObject:@"line"];
+	[self updateNSObject:oldValue newValue:line propertyName:@"line"];
 }
 
 -(void)setMapline:(NSString *)mapline {
+	NSString *oldValue = _mapline;
 	_mapline = mapline;
-	[self updateNSObject:@"mapline"];
+	[self updateNSObject:oldValue newValue:mapline propertyName:@"mapline"];
 }
 
 -(void)setBar:(NSString *)bar {
+	NSString *oldValue = _bar;
 	_bar = bar;
-	[self updateNSObject:@"bar"];
+	[self updateNSObject:oldValue newValue:bar propertyName:@"bar"];
 }
 
 -(void)setMapCombination:(NSString *)mapCombination {
+	NSString *oldValue = _mapCombination;
 	_mapCombination = mapCombination;
-	[self updateNSObject:@"mapCombination"];
+	[self updateNSObject:oldValue newValue:mapCombination propertyName:@"mapCombination"];
 }
 
 -(void)setDefaults:(NSString *)defaults {
+	NSString *oldValue = _defaults;
 	_defaults = defaults;
-	[self updateNSObject:@"defaults"];
+	[self updateNSObject:oldValue newValue:defaults propertyName:@"defaults"];
 }
 
 -(void)setMapbubbleCombination:(NSString *)mapbubbleCombination {
+	NSString *oldValue = _mapbubbleCombination;
 	_mapbubbleCombination = mapbubbleCombination;
-	[self updateNSObject:@"mapbubbleCombination"];
+	[self updateNSObject:oldValue newValue:mapbubbleCombination propertyName:@"mapbubbleCombination"];
 }
 
 -(void)setDefaultCombination:(NSString *)defaultCombination {
+	NSString *oldValue = _defaultCombination;
 	_defaultCombination = defaultCombination;
-	[self updateNSObject:@"defaultCombination"];
+	[self updateNSObject:oldValue newValue:defaultCombination propertyName:@"defaultCombination"];
 }
 
 -(void)setColumn:(NSString *)column {
+	NSString *oldValue = _column;
 	_column = column;
-	[self updateNSObject:@"column"];
+	[self updateNSObject:oldValue newValue:column propertyName:@"column"];
 }
 
 -(void)setBubbleCombination:(NSString *)bubbleCombination {
+	NSString *oldValue = _bubbleCombination;
 	_bubbleCombination = bubbleCombination;
-	[self updateNSObject:@"bubbleCombination"];
+	[self updateNSObject:oldValue newValue:bubbleCombination propertyName:@"bubbleCombination"];
 }
 
 -(void)setScatter:(NSString *)scatter {
+	NSString *oldValue = _scatter;
 	_scatter = scatter;
-	[self updateNSObject:@"scatter"];
+	[self updateNSObject:oldValue newValue:scatter propertyName:@"scatter"];
 }
 
 @end

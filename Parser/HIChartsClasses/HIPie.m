@@ -133,21 +133,20 @@
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setMinSize:(NSNumber *)minSize {
+	NSNumber *oldValue = _minSize;
 	_minSize = minSize;
-	[self updateNSObject:@"minSize"];
+	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }
 
 -(void)setInnerSize:(id)innerSize {
+	id oldValue = _innerSize;
 	_innerSize = innerSize;
-	[self updateNSObject:@"innerSize"];
+	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
 }
 
 -(void)setCenter:(NSArray *)center {
@@ -157,18 +156,21 @@
 }
 
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {
+	NSNumber *oldValue = _slicedOffset;
 	_slicedOffset = slicedOffset;
-	[self updateNSObject:@"slicedOffset"];
+	[self updateNSObject:oldValue newValue:slicedOffset propertyName:@"slicedOffset"];
 }
 
 -(void)setDepth:(NSNumber *)depth {
+	NSNumber *oldValue = _depth;
 	_depth = depth;
-	[self updateNSObject:@"depth"];
+	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
 -(void)setEndAngle:(NSNumber *)endAngle {
+	NSNumber *oldValue = _endAngle;
 	_endAngle = endAngle;
-	[self updateNSObject:@"endAngle"];
+	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
 }
 
 -(void)setColors:(NSArray<NSString *> *)colors {
@@ -178,28 +180,33 @@
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {
+	NSNumber *oldValue = _startAngle;
 	_startAngle = startAngle;
-	[self updateNSObject:@"startAngle"];
+	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
 }
 
 -(void)setLegendType:(NSString *)legendType {
+	NSString *oldValue = _legendType;
 	_legendType = legendType;
-	[self updateNSObject:@"legendType"];
+	[self updateNSObject:oldValue newValue:legendType propertyName:@"legendType"];
 }
 
 -(void)setSize:(id)size {
+	id oldValue = _size;
 	_size = size;
-	[self updateNSObject:@"size"];
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
 }
 
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:@"ignoreHiddenPoint"];
+	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
 }
 
 @end

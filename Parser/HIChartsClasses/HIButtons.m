@@ -27,9 +27,6 @@
 
 -(void)setContextButton:(HIContextButton *)contextButton {
 	HIContextButton *oldValue = _contextButton;
-	if(self.contextButton) {
-		[self removeObserver:self forKeyPath:@"contextButton.isUpdated"];
-	}
 	_contextButton = contextButton;
 	[self updateHIObject:oldValue newValue:contextButton propertyName:@"contextButton"];
 }

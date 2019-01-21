@@ -154,200 +154,201 @@
 # pragma mark - Setters
 
 -(void)setFollowTouchMove:(NSNumber *)followTouchMove {
+	NSNumber *oldValue = _followTouchMove;
 	_followTouchMove = followTouchMove;
-	[self updateNSObject:@"followTouchMove"];
+	[self updateNSObject:oldValue newValue:followTouchMove propertyName:@"followTouchMove"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:@"borderRadius"];
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setHeaderFormat:(NSString *)headerFormat {
+	NSString *oldValue = _headerFormat;
 	_headerFormat = headerFormat;
-	[self updateNSObject:@"headerFormat"];
+	[self updateNSObject:oldValue newValue:headerFormat propertyName:@"headerFormat"];
 }
 
 -(void)setValueSuffix:(NSString *)valueSuffix {
+	NSString *oldValue = _valueSuffix;
 	_valueSuffix = valueSuffix;
-	[self updateNSObject:@"valueSuffix"];
+	[self updateNSObject:oldValue newValue:valueSuffix propertyName:@"valueSuffix"];
 }
 
 -(void)setValuePrefix:(NSString *)valuePrefix {
+	NSString *oldValue = _valuePrefix;
 	_valuePrefix = valuePrefix;
-	[self updateNSObject:@"valuePrefix"];
+	[self updateNSObject:oldValue newValue:valuePrefix propertyName:@"valuePrefix"];
 }
 
 -(void)setPositioner:(HIFunction *)positioner {
 	HIFunction *oldValue = _positioner;
-	if(self.positioner) {
-		[self removeObserver:self forKeyPath:@"positioner.isUpdated"];
-	}
 	_positioner = positioner;
 	[self updateHIObject:oldValue newValue:positioner propertyName:@"positioner"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
-	if(self.borderColor) {
-		[self removeObserver:self forKeyPath:@"borderColor.isUpdated"];
-	}
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setHeaderShape:(NSString *)headerShape {
+	NSString *oldValue = _headerShape;
 	_headerShape = headerShape;
-	[self updateNSObject:@"headerShape"];
+	[self updateNSObject:oldValue newValue:headerShape propertyName:@"headerShape"];
 }
 
 -(void)setFooterFormat:(NSString *)footerFormat {
+	NSString *oldValue = _footerFormat;
 	_footerFormat = footerFormat;
-	[self updateNSObject:@"footerFormat"];
+	[self updateNSObject:oldValue newValue:footerFormat propertyName:@"footerFormat"];
 }
 
 -(void)setOutside:(NSNumber *)outside {
+	NSNumber *oldValue = _outside;
 	_outside = outside;
-	[self updateNSObject:@"outside"];
+	[self updateNSObject:oldValue newValue:outside propertyName:@"outside"];
 }
 
 -(void)setAnimation:(NSNumber *)animation {
+	NSNumber *oldValue = _animation;
 	_animation = animation;
-	[self updateNSObject:@"animation"];
+	[self updateNSObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setSplit:(NSNumber *)split {
+	NSNumber *oldValue = _split;
 	_split = split;
-	[self updateNSObject:@"split"];
+	[self updateNSObject:oldValue newValue:split propertyName:@"split"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
 	HIColor *oldValue = _backgroundColor;
-	if(self.backgroundColor) {
-		[self removeObserver:self forKeyPath:@"backgroundColor.isUpdated"];
-	}
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setSnap:(NSNumber *)snap {
+	NSNumber *oldValue = _snap;
 	_snap = snap;
-	[self updateNSObject:@"snap"];
+	[self updateNSObject:oldValue newValue:snap propertyName:@"snap"];
 }
 
 -(void)setShared:(NSNumber *)shared {
+	NSNumber *oldValue = _shared;
 	_shared = shared;
-	[self updateNSObject:@"shared"];
+	[self updateNSObject:oldValue newValue:shared propertyName:@"shared"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {
 	HIFunction *oldValue = _formatter;
-	if(self.formatter) {
-		[self removeObserver:self forKeyPath:@"formatter.isUpdated"];
-	}
 	_formatter = formatter;
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
 -(void)setPointFormat:(NSString *)pointFormat {
+	NSString *oldValue = _pointFormat;
 	_pointFormat = pointFormat;
-	[self updateNSObject:@"pointFormat"];
+	[self updateNSObject:oldValue newValue:pointFormat propertyName:@"pointFormat"];
 }
 
 -(void)setXDateFormat:(NSString *)xDateFormat {
+	NSString *oldValue = _xDateFormat;
 	_xDateFormat = xDateFormat;
-	[self updateNSObject:@"xDateFormat"];
+	[self updateNSObject:oldValue newValue:xDateFormat propertyName:@"xDateFormat"];
 }
 
 -(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
 	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
-	if(self.dateTimeLabelFormats) {
-		[self removeObserver:self forKeyPath:@"dateTimeLabelFormats.isUpdated"];
-	}
 	_dateTimeLabelFormats = dateTimeLabelFormats;
 	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 -(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
 	_padding = padding;
-	[self updateNSObject:@"padding"];
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setShadow:(NSNumber *)shadow {
+	NSNumber *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:@"shadow"];
+	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
-	[self updateNSObject:@"enabled"];
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setShape:(NSString *)shape {
+	NSString *oldValue = _shape;
 	_shape = shape;
-	[self updateNSObject:@"shape"];
+	[self updateNSObject:oldValue newValue:shape propertyName:@"shape"];
 }
 
 -(void)setPointFormatter:(HIFunction *)pointFormatter {
 	HIFunction *oldValue = _pointFormatter;
-	if(self.pointFormatter) {
-		[self removeObserver:self forKeyPath:@"pointFormatter.isUpdated"];
-	}
 	_pointFormatter = pointFormatter;
 	[self updateHIObject:oldValue newValue:pointFormatter propertyName:@"pointFormatter"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
-	[self updateNSObject:@"borderWidth"];
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setFollowPointer:(NSNumber *)followPointer {
+	NSNumber *oldValue = _followPointer;
 	_followPointer = followPointer;
-	[self updateNSObject:@"followPointer"];
+	[self updateNSObject:oldValue newValue:followPointer propertyName:@"followPointer"];
 }
 
 -(void)setHideDelay:(NSNumber *)hideDelay {
+	NSNumber *oldValue = _hideDelay;
 	_hideDelay = hideDelay;
-	[self updateNSObject:@"hideDelay"];
+	[self updateNSObject:oldValue newValue:hideDelay propertyName:@"hideDelay"];
 }
 
 -(void)setValueDecimals:(NSNumber *)valueDecimals {
+	NSNumber *oldValue = _valueDecimals;
 	_valueDecimals = valueDecimals;
-	[self updateNSObject:@"valueDecimals"];
+	[self updateNSObject:oldValue newValue:valueDecimals propertyName:@"valueDecimals"];
 }
 
 -(void)setNodeFormatter:(HIFunction *)nodeFormatter {
 	HIFunction *oldValue = _nodeFormatter;
-	if(self.nodeFormatter) {
-		[self removeObserver:self forKeyPath:@"nodeFormatter.isUpdated"];
-	}
 	_nodeFormatter = nodeFormatter;
 	[self updateHIObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
 }
 
 -(void)setNodeFormat:(NSString *)nodeFormat {
+	NSString *oldValue = _nodeFormat;
 	_nodeFormat = nodeFormat;
-	[self updateNSObject:@"nodeFormat"];
+	[self updateNSObject:oldValue newValue:nodeFormat propertyName:@"nodeFormat"];
 }
 
 -(void)setDistance:(NSNumber *)distance {
+	NSNumber *oldValue = _distance;
 	_distance = distance;
-	[self updateNSObject:@"distance"];
+	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
 }
 
 @end

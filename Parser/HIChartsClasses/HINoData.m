@@ -39,34 +39,26 @@
 
 -(void)setPosition:(HIPosition *)position {
 	HIPosition *oldValue = _position;
-	if(self.position) {
-		[self removeObserver:self forKeyPath:@"position.isUpdated"];
-	}
 	_position = position;
 	[self updateHIObject:oldValue newValue:position propertyName:@"position"];
 }
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
-	if(self.style) {
-		[self removeObserver:self forKeyPath:@"style.isUpdated"];
-	}
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setAttr:(HISVGAttributes *)attr {
 	HISVGAttributes *oldValue = _attr;
-	if(self.attr) {
-		[self removeObserver:self forKeyPath:@"attr.isUpdated"];
-	}
 	_attr = attr;
 	[self updateHIObject:oldValue newValue:attr propertyName:@"attr"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
 	_useHTML = useHTML;
-	[self updateNSObject:@"useHTML"];
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 @end

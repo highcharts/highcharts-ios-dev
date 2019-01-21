@@ -26,8 +26,9 @@
 # pragma mark - Setters
 
 -(void)setHeight:(NSString *)height {
+	NSString *oldValue = _height;
 	_height = height;
-	[self updateNSObject:@"height"];
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 @end

@@ -38,23 +38,27 @@
 # pragma mark - Setters
 
 -(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
 	_color = color;
-	[self updateNSObject:@"color"];
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setCursor:(NSString *)cursor {
+	NSString *oldValue = _cursor;
 	_cursor = cursor;
-	[self updateNSObject:@"cursor"];
+	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
 }
 
 -(void)setTextDecoration:(NSString *)textDecoration {
+	NSString *oldValue = _textDecoration;
 	_textDecoration = textDecoration;
-	[self updateNSObject:@"textDecoration"];
+	[self updateNSObject:oldValue newValue:textDecoration propertyName:@"textDecoration"];
 }
 
 -(void)setFontWeight:(NSString *)fontWeight {
+	NSString *oldValue = _fontWeight;
 	_fontWeight = fontWeight;
-	[self updateNSObject:@"fontWeight"];
+	[self updateNSObject:oldValue newValue:fontWeight propertyName:@"fontWeight"];
 }
 
 @end
