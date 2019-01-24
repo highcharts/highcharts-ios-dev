@@ -49,8 +49,10 @@
 		34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34EC1CF61CDCC783001DB3A0 /* HIGOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */; };
-		CD24F6EB21E364A000D260E6 /* HIClassJSMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = CD24F6EA21E364A000D260E6 /* HIClassJSMethods.h */; };
-		CD24F6F021E3654700D260E6 /* HIClassJSMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CD24F6EF21E3654700D260E6 /* HIClassJSMethods.m */; };
+		CD1DF89121F9EECA005DF8A7 /* HIClassJSMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1DF88D21F9EECA005DF8A7 /* HIClassJSMethods.m */; };
+		CD1DF89221F9EECA005DF8A7 /* HICustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1DF88E21F9EECA005DF8A7 /* HICustomFont.h */; };
+		CD1DF89321F9EECA005DF8A7 /* HIClassJSMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1DF88F21F9EECA005DF8A7 /* HIClassJSMethods.h */; };
+		CD1DF89421F9EECA005DF8A7 /* HICustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */; };
 		CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3F77092056AE4300527CBE /* HIChartContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3F770C2056AE5F00527CBE /* HIChartContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3F770B2056AE5F00527CBE /* HIChartContext.m */; };
 		CD5B35961F90C469006159D7 /* HIChartsJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */; };
@@ -599,8 +601,10 @@
 		34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HIG.h"; sourceTree = "<group>"; };
 		34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HIG.m"; sourceTree = "<group>"; };
 		34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptionsTest.m; sourceTree = "<group>"; };
-		CD24F6EA21E364A000D260E6 /* HIClassJSMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIClassJSMethods.h; sourceTree = "<group>"; };
-		CD24F6EF21E3654700D260E6 /* HIClassJSMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIClassJSMethods.m; sourceTree = "<group>"; };
+		CD1DF88D21F9EECA005DF8A7 /* HIClassJSMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIClassJSMethods.m; path = Private/HIClassJSMethods.m; sourceTree = "<group>"; };
+		CD1DF88E21F9EECA005DF8A7 /* HICustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICustomFont.h; path = Private/HICustomFont.h; sourceTree = "<group>"; };
+		CD1DF88F21F9EECA005DF8A7 /* HIClassJSMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIClassJSMethods.h; path = Private/HIClassJSMethods.h; sourceTree = "<group>"; };
+		CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICustomFont.m; path = Private/HICustomFont.m; sourceTree = "<group>"; };
 		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
 		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
 		CD7E61E921C26C2E00D27447 /* HIPie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPie.h; sourceTree = "<group>"; };
@@ -1365,8 +1369,10 @@
 				CD91B2F92062741100BCEE37 /* HIGHTML.m */,
 				CD91B2F82062741100BCEE37 /* HIGJavaScript.h */,
 				CD91B2FA2062741200BCEE37 /* HIGJavaScript.m */,
-				CD24F6EA21E364A000D260E6 /* HIClassJSMethods.h */,
-				CD24F6EF21E3654700D260E6 /* HIClassJSMethods.m */,
+				CD1DF88F21F9EECA005DF8A7 /* HIClassJSMethods.h */,
+				CD1DF88D21F9EECA005DF8A7 /* HIClassJSMethods.m */,
+				CD1DF88E21F9EECA005DF8A7 /* HICustomFont.h */,
+				CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -1404,7 +1410,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD24F6EB21E364A000D260E6 /* HIClassJSMethods.h in Headers */,
 				CD7E645121C26C5E00D27447 /* HITitle.h in Headers */,
 				CD7E644321C26C5E00D27447 /* HISpline.h in Headers */,
 				CD7E64F721C26C5E00D27447 /* HIStates.h in Headers */,
@@ -1456,6 +1461,7 @@
 				CD7E64EC21C26C5E00D27447 /* HIContextButton.h in Headers */,
 				CD7E63E521C26C5E00D27447 /* HICrosshair.h in Headers */,
 				CD7E640021C26C5E00D27447 /* HIAnimation.h in Headers */,
+				CD1DF89221F9EECA005DF8A7 /* HICustomFont.h in Headers */,
 				CD91B3072062741200BCEE37 /* HIGExport.h in Headers */,
 				CD91B3002062741200BCEE37 /* HIChartsJSONSerializableSubclass.h in Headers */,
 				CD7E63B921C26C5E00D27447 /* HITreemap.h in Headers */,
@@ -1542,6 +1548,7 @@
 				CD7E649D21C26C5E00D27447 /* HISeries.h in Headers */,
 				CD7E63A921C26C5E00D27447 /* HILevels.h in Headers */,
 				CD7E634721C26C5D00D27447 /* HIPivot.h in Headers */,
+				CD1DF89321F9EECA005DF8A7 /* HIClassJSMethods.h in Headers */,
 				CD7E644421C26C5E00D27447 /* HISelect.h in Headers */,
 				CD7E63CB21C26C5E00D27447 /* HIPlotBands.h in Headers */,
 				CD7E650421C26C5E00D27447 /* HIRules.h in Headers */,
@@ -1723,7 +1730,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${GCC_PREPROCESSOR_DEFINITIONS}\" = \"TRIAL=1\" ]; then\n    uuidgen >> ${BUILT_PRODUCTS_DIR}/$TARGET_NAME.framework/VERSION.txt\nfi";
+			shellScript = "if [ \"${GCC_PREPROCESSOR_DEFINITIONS}\" = \"TRIAL=1\" ]; then\n    uuidgen >> ${BUILT_PRODUCTS_DIR}/$TARGET_NAME.framework/VERSION.txt\nfi\n";
 		};
 		CD91B2EF20626A5900BCEE37 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1736,7 +1743,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Highsoft AS\";\ncompanyID=\"com.highcharts.highcharts\";\ncompanyURL=\"https://www.highcharts.com\";\ntarget=\"iphoneos\";\noutputPath=\"${PROJECT_DIR}/appledoc/Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--output \"${outputPath}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--ignore Private \\\n--ignore .m \\\n--ignore HIGChartView.h \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--docset-platform-family \"${target}\" \\\n--no-create-docset \\\n--exit-threshold 2 \\\n--explicit-crossref \\\n--crossref-format \"#%@#\" \\\n--keep-undocumented-members \\\n--keep-undocumented-objects \\\n--search-undocumented-doc \\\n--templates \"${PROJECT_DIR}/appledoc/Template\" \\\n\"${PROJECT_DIR}/${PROJECT_NAME}\"";
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Highsoft AS\";\ncompanyID=\"com.highcharts.highcharts\";\ncompanyURL=\"https://www.highcharts.com\";\ntarget=\"iphoneos\";\noutputPath=\"${PROJECT_DIR}/appledoc/Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--output \"${outputPath}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--ignore Private \\\n--ignore .m \\\n--ignore HIGChartView.h \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--docset-platform-family \"${target}\" \\\n--no-create-docset \\\n--exit-threshold 2 \\\n--explicit-crossref \\\n--crossref-format \"#%@#\" \\\n--keep-undocumented-members \\\n--keep-undocumented-objects \\\n--search-undocumented-doc \\\n--templates \"${PROJECT_DIR}/appledoc/Template\" \\\n\"${PROJECT_DIR}/${PROJECT_NAME}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1748,6 +1755,7 @@
 				CD7E634E21C26C5D00D27447 /* HIPatternObject.m in Sources */,
 				CD7E636021C26C5D00D27447 /* HIAnimation.m in Sources */,
 				CD7E648E21C26C5E00D27447 /* HILevelSize.m in Sources */,
+				CD1DF89421F9EECA005DF8A7 /* HICustomFont.m in Sources */,
 				CD7E638A21C26C5D00D27447 /* HICSSObject.m in Sources */,
 				CD7E63D121C26C5E00D27447 /* HIFilter.m in Sources */,
 				CD7E64E721C26C5E00D27447 /* HIYear.m in Sources */,
@@ -1894,7 +1902,7 @@
 				CD7E642521C26C5E00D27447 /* HIDrilldown.m in Sources */,
 				CD7E639E21C26C5D00D27447 /* HIMarker.m in Sources */,
 				CD7E648921C26C5E00D27447 /* HIWordcloud.m in Sources */,
-				CD24F6F021E3654700D260E6 /* HIClassJSMethods.m in Sources */,
+				CD1DF89121F9EECA005DF8A7 /* HIClassJSMethods.m in Sources */,
 				CD7E647B21C26C5E00D27447 /* HIBottom.m in Sources */,
 				CD7E639221C26C5D00D27447 /* HIWindbarb.m in Sources */,
 				CD7E633C21C26C5D00D27447 /* HIBubble.m in Sources */,
