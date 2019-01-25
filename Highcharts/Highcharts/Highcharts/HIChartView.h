@@ -67,6 +67,15 @@
 @property (weak, nonatomic) id<HIChartViewDelegate> delegate;
 
 /**
+ *  An optional property to synchronously render the chart.
+ *
+ *  **Defaults to** `false`.
+ *
+ *  @note Usage not recommended.
+ */
+@property (class, nonatomic) NSNumber /* Bool */ *synced;
+
+/**
  Add an annotation to the chart after render time.
  @param options The annotation options for the new, detailed annotation.
  */

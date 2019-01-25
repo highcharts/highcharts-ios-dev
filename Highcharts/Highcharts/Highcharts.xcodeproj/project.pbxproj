@@ -59,6 +59,8 @@
 		CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
 		CD5B359A1F90C478006159D7 /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		CD5B359B1F90C47A006159D7 /* HIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 208980271E6412EA007280D7 /* HIColor.m */; };
+		CD77F94A21FB4BFD005E53CB /* HIWKSyncedWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */; };
+		CD77F94B21FB4BFD005E53CB /* HIWKSyncedWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */; };
 		CD7E633121C26C5D00D27447 /* HIPie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7E61E921C26C2E00D27447 /* HIPie.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD7E633221C26C5D00D27447 /* HISummary.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7E61EA21C26C2E00D27447 /* HISummary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD7E633321C26C5D00D27447 /* HITop.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E61EB21C26C2E00D27447 /* HITop.m */; };
@@ -603,6 +605,8 @@
 		CD24F6EF21E3654700D260E6 /* HIClassJSMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIClassJSMethods.m; sourceTree = "<group>"; };
 		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
 		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
+		CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWKSyncedWebView.h; path = Private/HIWKSyncedWebView.h; sourceTree = "<group>"; };
+		CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIWKSyncedWebView.m; path = Private/HIWKSyncedWebView.m; sourceTree = "<group>"; };
 		CD7E61E921C26C2E00D27447 /* HIPie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPie.h; sourceTree = "<group>"; };
 		CD7E61EA21C26C2E00D27447 /* HISummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISummary.h; sourceTree = "<group>"; };
 		CD7E61EB21C26C2E00D27447 /* HITop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITop.m; sourceTree = "<group>"; };
@@ -1367,6 +1371,8 @@
 				CD91B2FA2062741200BCEE37 /* HIGJavaScript.m */,
 				CD24F6EA21E364A000D260E6 /* HIClassJSMethods.h */,
 				CD24F6EF21E3654700D260E6 /* HIClassJSMethods.m */,
+				CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */,
+				CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -1493,6 +1499,7 @@
 				CD7E639021C26C5D00D27447 /* HIGauge.h in Headers */,
 				CD7E64BB21C26C5E00D27447 /* HITooltip.h in Headers */,
 				CD7E64CA21C26C5E00D27447 /* HIData.h in Headers */,
+				CD77F94A21FB4BFD005E53CB /* HIWKSyncedWebView.h in Headers */,
 				CD7E642221C26C5E00D27447 /* HIGradientColorObject.h in Headers */,
 				CD7E650721C26C5E00D27447 /* HINavigation.h in Headers */,
 				CD7E645C21C26C5E00D27447 /* HIPlotOptions.h in Headers */,
@@ -1888,6 +1895,7 @@
 				CD7E63B621C26C5E00D27447 /* HIVariablepie.m in Sources */,
 				CD7E643921C26C5E00D27447 /* HIPie.m in Sources */,
 				CD7E63D321C26C5E00D27447 /* HICondition.m in Sources */,
+				CD77F94B21FB4BFD005E53CB /* HIWKSyncedWebView.m in Sources */,
 				CD7E63A721C26C5E00D27447 /* HIResetZoomButton.m in Sources */,
 				CD7E64EA21C26C5E00D27447 /* HIXrange.m in Sources */,
 				CD7E63B221C26C5E00D27447 /* HITargetOptions.m in Sources */,
