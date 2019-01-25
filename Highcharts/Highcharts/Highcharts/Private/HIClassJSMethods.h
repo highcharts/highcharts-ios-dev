@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  This clas is needed to convert iOS methods on HI objects to string representation of JS method.
+ *  This class is needed to convert iOS methods on HI objects to string representation of JS method.
  */
 @interface HIClassJSMethods : NSObject
 

@@ -16,12 +16,12 @@
 #import "HIFunctionSubclass.h"
 #import "HIChartsJSONSerializableSubclass.h"
 #import "HIWKSyncedWebView.h"
+#import "HICustomFont.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
 @interface HIChartView () <WKNavigationDelegate, WKScriptMessageHandler>
 @property (nonatomic, strong) WKWebView *webView;
-@property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) HIGHTML *HTML;
 @property (nonatomic, weak) NSTimer *reloadTimer;
 @property (nonatomic, strong) NSMutableDictionary *closures;
@@ -30,13 +30,22 @@
 
 static BOOL preloaded = NO;
 static NSNumber *_synced = nil;
+static NSBundle *highchartsBundle = nil;
 
 @implementation HIChartView
 
 + (void)preload
 {
-    if (!preloaded) [HIGBundle preloadBundle:kHighchartsChartBundle];
+    if (!preloaded) {
+        [HIGBundle preloadBundle:kHighchartsChartBundle];
+        highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
+    }
     preloaded = YES;
+}
+
++ (void)addFont:(NSString *)path {
+    [self.class preload];
+    [HICustomFont addFont:path bundle:highchartsBundle];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -72,15 +81,15 @@ static NSNumber *_synced = nil;
 {
     self.layoutMargins = UIEdgeInsetsZero;
     self.preservesSuperviewLayoutMargins = NO;
-    self.highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
+    if (highchartsBundle == nil) highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
     
     self.additionalPlugins = @[ @"exporting", @"offline-exporting", @"accessibility", @"boost", @"data", @"drilldown" ];
     
     self.HTML = [[HIGHTML alloc] init];
     
-    self.HTML.baseURL = [self.highchartsBundle bundlePath];
+    self.HTML.baseURL = [highchartsBundle bundlePath];
     
-    [self.HTML loadHTML:[self.highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
+    [self.HTML loadHTML:[highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
     
     NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
     
@@ -233,7 +242,7 @@ static NSNumber *_synced = nil;
     [self prepareHTML:options];
     
     // Load HTML
-    [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
+    [self.webView loadHTMLString:self.HTML.html baseURL:[highchartsBundle bundleURL]];
     if ([_synced boolValue]) CFRunLoopRunInMode((CFStringRef)NSDefaultRunLoopMode, 1, NO);
 }
 
@@ -251,7 +260,7 @@ static NSNumber *_synced = nil;
     [self prepareHTML:options];
     
     // Load HTML
-    [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
+    [self.webView loadHTMLString:self.HTML.html baseURL:[highchartsBundle bundleURL]];
 }
 
 - (void) callJSMethod:(NSDictionary *)dict {

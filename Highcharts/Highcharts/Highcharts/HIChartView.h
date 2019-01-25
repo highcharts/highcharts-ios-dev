@@ -20,8 +20,19 @@
 
 /**
  *  An optional method to be called when the application starts. Speeds up subsequent chart loads.
+ *
+ *  @note In case of using #addFont:#, calling `preload` isn't necessary.
  */
 + (void)preload;
+
+/**
+ *  A method to add a custom font to the chart.
+ *
+ *  @param path an absolute path pointing to the location of the font.
+ *
+ *  @note Calling #preload# isn't necessary.
+ */
++ (void)addFont:(NSString *)path;
 
 /**
  *  A method for update the chart options manually.
@@ -30,6 +41,8 @@
 
 /**
  *  A method to load the chart options from JSON.
+ *
+ * @param options chart options in JSON format.
  */
 - (void)loadJSONOptions:(NSDictionary*)options;
 
@@ -37,10 +50,12 @@
  *  Options object that configures the chart.
  */
 @property (strong, nonatomic) HIOptions *options;
+
 /**
  *  Language object. The language object is global and it can't be set on each chart initiation.
  */
 @property (strong, nonatomic) HILang *lang;
+
 /**
  *  Global object. Global options that don't apply to each chart.
  */

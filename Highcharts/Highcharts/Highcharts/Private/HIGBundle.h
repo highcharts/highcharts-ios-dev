@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  This clas preloads and returns bundle assets needed.
+ *  This class preloads and returns bundle assets needed.
  */
 @interface HIGBundle : NSObject
 
