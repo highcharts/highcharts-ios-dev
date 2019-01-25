@@ -15,12 +15,12 @@
 #import "HIClassJSMethods.h"
 #import "HIFunctionSubclass.h"
 #import "HIChartsJSONSerializableSubclass.h"
+#import "HICustomFont.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
 
 @interface HIChartView () <WKNavigationDelegate, WKScriptMessageHandler>
 @property (nonatomic, strong) WKWebView *webView;
-@property (nonatomic, strong) NSBundle *highchartsBundle;
 @property (nonatomic, strong) HIGHTML *HTML;
 @property (nonatomic, weak) NSTimer *reloadTimer;
 @property (nonatomic, strong) NSMutableDictionary *closures;
@@ -28,13 +28,22 @@
 @end
 
 static BOOL preloaded = NO;
+static NSBundle *highchartsBundle = nil;
 
 @implementation HIChartView
 
 + (void)preload
 {
-    if (!preloaded) [HIGBundle preloadBundle:kHighchartsChartBundle];
+    if (!preloaded) {
+        [HIGBundle preloadBundle:kHighchartsChartBundle];
+        highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
+    }
     preloaded = YES;
+}
+
++ (void)addFont:(NSString *)path {
+    [self.class preload];
+    [HICustomFont addFont:path bundle:highchartsBundle];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -70,15 +79,15 @@ static BOOL preloaded = NO;
 {
     self.layoutMargins = UIEdgeInsetsZero;
     self.preservesSuperviewLayoutMargins = NO;
-    self.highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
+    if (highchartsBundle == nil) highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
     
     self.additionalPlugins = @[ @"exporting", @"offline-exporting", @"accessibility", @"boost", @"data", @"drilldown" ];
     
     self.HTML = [[HIGHTML alloc] init];
     
-    self.HTML.baseURL = [self.highchartsBundle bundlePath];
+    self.HTML.baseURL = [highchartsBundle bundlePath];
     
-    [self.HTML loadHTML:[self.highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
+    [self.HTML loadHTML:[highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
     
     NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
     
@@ -232,7 +241,7 @@ static BOOL preloaded = NO;
     [self prepareHTML:options];
     
     // Load HTML
-    [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
+    [self.webView loadHTMLString:self.HTML.html baseURL:[highchartsBundle bundleURL]];
 }
 
 - (void) loadJSONOptions:(NSDictionary *)jsonOptions {
@@ -249,7 +258,7 @@ static BOOL preloaded = NO;
     [self prepareHTML:options];
     
     // Load HTML
-    [self.webView loadHTMLString:self.HTML.html baseURL:[self.highchartsBundle bundleURL]];
+    [self.webView loadHTMLString:self.HTML.html baseURL:[highchartsBundle bundleURL]];
 }
 
 - (void) callJSMethod:(NSDictionary *)dict {
