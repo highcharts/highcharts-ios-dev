@@ -19,8 +19,8 @@
 	copyPolygon.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPolygon.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyPolygon.tooltip = [self.tooltip copyWithZone: zone];
-	copyPolygon.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPolygon.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyPolygon.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPolygon.linecap = [self.linecap copyWithZone: zone];
 	copyPolygon.point = [self.point copyWithZone: zone];
 	copyPolygon.selected = [self.selected copyWithZone: zone];

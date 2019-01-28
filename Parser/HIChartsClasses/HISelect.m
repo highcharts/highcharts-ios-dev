@@ -103,8 +103,8 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setAnimation:(HIAnimationOptionsObject *)animation {
-	HIAnimationOptionsObject *oldValue = _animation;
+-(void)setAnimation:(HIAnimation *)animation {
+	HIAnimation *oldValue = _animation;
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }

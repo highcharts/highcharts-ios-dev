@@ -26,10 +26,11 @@
 	copyScatter3d.yAxis = [self.yAxis copyWithZone: zone];
 	copyScatter3d.zIndex = [self.zIndex copyWithZone: zone];
 	copyScatter3d.tooltip = [self.tooltip copyWithZone: zone];
-	copyScatter3d.marker = [self.marker copyWithZone: zone];
-	copyScatter3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyScatter3d.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyScatter3d.jitter = [self.jitter copyWithZone: zone];
 	copyScatter3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyScatter3d.marker = [self.marker copyWithZone: zone];
+	copyScatter3d.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyScatter3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyScatter3d.linecap = [self.linecap copyWithZone: zone];
 	copyScatter3d.point = [self.point copyWithZone: zone];
 	copyScatter3d.selected = [self.selected copyWithZone: zone];
@@ -79,7 +80,18 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.jitter) {
+		params[@"jitter"] = [self.jitter getParams];
+	}
 	return params;
+}
+
+# pragma mark - Setters
+
+-(void)setJitter:(HIJitter *)jitter {
+	HIJitter *oldValue = _jitter;
+	_jitter = jitter;
+	[self updateHIObject:oldValue newValue:jitter propertyName:@"jitter"];
 }
 
 @end

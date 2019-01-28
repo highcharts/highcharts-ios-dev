@@ -20,8 +20,8 @@
 	copyVector.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyVector.tooltip = [self.tooltip copyWithZone: zone];
 	copyVector.rotationOrigin = [self.rotationOrigin copyWithZone: zone];
-	copyVector.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVector.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyVector.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVector.point = [self.point copyWithZone: zone];
 	copyVector.selected = [self.selected copyWithZone: zone];
 	copyVector.colorIndex = [self.colorIndex copyWithZone: zone];

@@ -44,7 +44,6 @@
 	copyPyramid.colors = [self.colors copyWithZone: zone];
 	copyPyramid.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyPyramid.startAngle = [self.startAngle copyWithZone: zone];
-	copyPyramid.legendType = [self.legendType copyWithZone: zone];
 	copyPyramid.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPyramid.events = [self.events copyWithZone: zone];
 	copyPyramid.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
@@ -135,9 +134,6 @@
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
-	}
-	if (self.legendType) {
-		params[@"legendType"] = self.legendType;
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
@@ -235,12 +231,6 @@
 	NSNumber *oldValue = _startAngle;
 	_startAngle = startAngle;
 	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
-}
-
--(void)setLegendType:(NSString *)legendType {
-	NSString *oldValue = _legendType;
-	_legendType = legendType;
-	[self updateNSObject:oldValue newValue:legendType propertyName:@"legendType"];
 }
 
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
