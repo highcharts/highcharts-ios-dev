@@ -41,9 +41,10 @@
 	copyBubble.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyBubble.sizeByAbsoluteValue = [self.sizeByAbsoluteValue copyWithZone: zone];
 	copyBubble.states = [self.states copyWithZone: zone];
-	copyBubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyBubble.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyBubble.jitter = [self.jitter copyWithZone: zone];
 	copyBubble.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyBubble.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyBubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBubble.linecap = [self.linecap copyWithZone: zone];
 	copyBubble.point = [self.point copyWithZone: zone];
 	copyBubble.selected = [self.selected copyWithZone: zone];
@@ -110,6 +111,9 @@
 	if (self.sizeByAbsoluteValue) {
 		params[@"sizeByAbsoluteValue"] = self.sizeByAbsoluteValue;
 	}
+	if (self.jitter) {
+		params[@"jitter"] = [self.jitter getParams];
+	}
 	return params;
 }
 
@@ -161,6 +165,12 @@
 	NSNumber *oldValue = _sizeByAbsoluteValue;
 	_sizeByAbsoluteValue = sizeByAbsoluteValue;
 	[self updateNSObject:oldValue newValue:sizeByAbsoluteValue propertyName:@"sizeByAbsoluteValue"];
+}
+
+-(void)setJitter:(HIJitter *)jitter {
+	HIJitter *oldValue = _jitter;
+	_jitter = jitter;
+	[self updateHIObject:oldValue newValue:jitter propertyName:@"jitter"];
 }
 
 @end

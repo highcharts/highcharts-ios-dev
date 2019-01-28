@@ -37,8 +37,8 @@
 
 # pragma mark - Setters
 
--(void)setPosition:(HIPosition *)position {
-	HIPosition *oldValue = _position;
+-(void)setPosition:(HIAlignObject *)position {
+	HIAlignObject *oldValue = _position;
 	_position = position;
 	[self updateHIObject:oldValue newValue:position propertyName:@"position"];
 }
