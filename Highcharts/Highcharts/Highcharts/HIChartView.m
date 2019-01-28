@@ -15,6 +15,7 @@
 #import "HIClassJSMethods.h"
 #import "HIFunctionSubclass.h"
 #import "HIChartsJSONSerializableSubclass.h"
+#import "HIWKSyncedWebView.h"
 #import "HICustomFont.h"
 
 #define kHighchartsChartBundle @"com.highcharts.charts.bundle"
@@ -28,6 +29,7 @@
 @end
 
 static BOOL preloaded = NO;
+static NSNumber *_synced = nil;
 static NSBundle *highchartsBundle = nil;
 
 @implementation HIChartView
@@ -99,8 +101,7 @@ static NSBundle *highchartsBundle = nil;
     configuration.userContentController = controller;
     
     self.closures = [[NSMutableDictionary alloc] init];
-    
-    self.webView = [[WKWebView alloc] initWithFrame:frame configuration:configuration];
+    self.webView = [[_synced boolValue] ? [HIWKSyncedWebView alloc] : [WKWebView alloc] initWithFrame:frame configuration:configuration];
     self.webView.scrollView.scrollEnabled = NO;
     self.webView.multipleTouchEnabled = NO;
     self.webView.navigationDelegate = self;
@@ -242,6 +243,7 @@ static NSBundle *highchartsBundle = nil;
     
     // Load HTML
     [self.webView loadHTMLString:self.HTML.html baseURL:[highchartsBundle bundleURL]];
+    if ([_synced boolValue]) CFRunLoopRunInMode((CFStringRef)NSDefaultRunLoopMode, 1, NO);
 }
 
 - (void) loadJSONOptions:(NSDictionary *)jsonOptions {
@@ -322,6 +324,17 @@ static NSBundle *highchartsBundle = nil;
     [self willChangeValueForKey:@"global"];
     _global = global;
     [self didChangeValueForKey:@"global"];
+}
+
++ (NSNumber *)synced {
+    if (_synced == nil) {
+        _synced = [[NSNumber alloc] initWithBool:false];
+    }
+    return _synced;
+}
+
++ (void)setSynced:(NSNumber *)synced {
+    _synced = [synced copy];
 }
 
 #pragma mark - WKWebViewDelegate
