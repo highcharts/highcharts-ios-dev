@@ -82,7 +82,7 @@
 @property (weak, nonatomic) id<HIChartViewDelegate> delegate;
 
 /**
- *  An optional property to synchronously render the chart.
+ *  An optional property to 'synchronously' render the chart.
  *
  *  **Defaults to** `false`.
  *
