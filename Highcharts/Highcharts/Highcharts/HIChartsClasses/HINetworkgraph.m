@@ -15,6 +15,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HINetworkgraph *copyNetworkgraph = [[HINetworkgraph allocWithZone: zone] init];
+	copyNetworkgraph.nodes = [self.nodes copyWithZone: zone];
 	copyNetworkgraph.data = [self.data copyWithZone: zone];
 	copyNetworkgraph.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyNetworkgraph.id = [self.id copyWithZone: zone];
@@ -62,6 +63,18 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.nodes) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.nodes) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"nodes"] = array;
+	}
 	if (self.layoutAlgorithm) {
 		params[@"layoutAlgorithm"] = [self.layoutAlgorithm getParams];
 	}
@@ -75,6 +88,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setNodes:(NSArray <HINodes *> *)nodes {
+	NSArray <HINodes *> *oldValue = _nodes;
+	_nodes = nodes;
+	[self updateArrayObject:oldValue newValue:nodes propertyName:@"nodes"];
+}
 
 -(void)setLayoutAlgorithm:(HILayoutAlgorithm *)layoutAlgorithm {
 	HILayoutAlgorithm *oldValue = _layoutAlgorithm;

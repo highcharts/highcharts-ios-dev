@@ -249,8 +249,8 @@
 	[self updateHIObject:oldValue newValue:title propertyName:@"title"];
 }
 
--(void)setWidth:(NSNumber *)width {
-	NSNumber *oldValue = _width;
+-(void)setWidth:(id)width {
+	id oldValue = _width;
 	_width = width;
 	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }

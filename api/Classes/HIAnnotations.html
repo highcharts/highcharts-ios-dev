@@ -80,7 +80,45 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/adjustLabelVisibility:">- adjustLabelVisibility:</option>
+		
+		<option value="//api/name/adjustShapeVisibility:">- adjustShapeVisibility:</option>
+		
+		<option value="//api/name/destroy">- destroy</option>
+		
+		<option value="//api/name/destroyLabelItem:">- destroyLabelItem:</option>
+		
+		<option value="//api/name/destroyShapeItem:">- destroyShapeItem:</option>
+		
 		<option value="//api/name/getParams">- getParams</option>
+		
+		<option value="//api/name/initLabel:">- initLabel:</option>
+		
+		<option value="//api/name/initShape:">- initShape:</option>
+		
+		<option value="//api/name/redrawLabelItem:">- redrawLabelItem:</option>
+		
+		<option value="//api/name/redrawLabelItem:animation:">- redrawLabelItem:animation:</option>
+		
+		<option value="//api/name/redrawLabelItems:">- redrawLabelItems:</option>
+		
+		<option value="//api/name/redrawLabelItems:animation:">- redrawLabelItems:animation:</option>
+		
+		<option value="//api/name/redrawShapeItem:">- redrawShapeItem:</option>
+		
+		<option value="//api/name/redrawShapeItem:animation:">- redrawShapeItem:animation:</option>
+		
+		<option value="//api/name/redrawShapeItems:">- redrawShapeItems:</option>
+		
+		<option value="//api/name/redrawShapeItems:animation:">- redrawShapeItems:animation:</option>
+		
+		<option value="//api/name/remove">- remove</option>
+		
+		<option value="//api/name/setOptions">- setOptions</option>
+		
+		<option value="//api/name/setVisibility">- setVisibility</option>
+		
+		<option value="//api/name/setVisibility:">- setVisibility:</option>
 		
 	</optgroup>
 	
@@ -451,6 +489,709 @@
 			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getParams</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/adjustLabelVisibility:" title="adjustLabelVisibility:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/adjustLabelVisibility:">&ndash;&nbsp;adjustLabelVisibility:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Hide or show annotaiton attached to points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)adjustLabelVisibility:(HILabels *)<em>item</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/adjustShapeVisibility:" title="adjustShapeVisibility:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/adjustShapeVisibility:">&ndash;&nbsp;adjustShapeVisibility:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Hide or show annotaiton attached to points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)adjustShapeVisibility:(HIShapes *)<em>item</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroy" title="destroy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroy">&ndash;&nbsp;destroy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Destroy the annotation. This function does not touch the chart that the annotation belongs to (all annotations are kept in the chart.annotations array) - it is recommended to use <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#removeAnnotation">Highcharts.Chart#removeAnnotation</a> instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)destroy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroyLabelItem:" title="destroyLabelItem:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroyLabelItem:">&ndash;&nbsp;destroyLabelItem:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Destroy a single item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)destroyLabelItem:(HILabels *)<em>item</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroyShapeItem:" title="destroyShapeItem:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroyShapeItem:">&ndash;&nbsp;destroyShapeItem:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Destroy a single item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)destroyShapeItem:(HIShapes *)<em>item</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initLabel:" title="initLabel:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initLabel:">&ndash;&nbsp;initLabel:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initialisation of a single label</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)initLabel:(HILabels *)<em>labelOptions</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initShape:" title="initShape:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initShape:">&ndash;&nbsp;initShape:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initialisation of a single shape</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)initShape:(HIShapes *)<em>shapeOptions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>shapeOptions</code></th>
+						<td><p>a confg object for a single shape</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redrawLabelItem:" title="redrawLabelItem:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redrawLabelItem:">&ndash;&nbsp;redrawLabelItem:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Redraw a single item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)redrawLabelItem:(HILabels *)<em>item</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redrawLabelItem:animation:" title="redrawLabelItem:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redrawLabelItem:animation:">&ndash;&nbsp;redrawLabelItem:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Redraw a single item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)redrawLabelItem:(HILabels *)<em>item</em> animation:(NSNumber *)<em>animation</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redrawShapeItem:" title="redrawShapeItem:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redrawShapeItem:">&ndash;&nbsp;redrawShapeItem:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Redraw a single item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)redrawShapeItem:(HIShapes *)<em>item</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redrawShapeItem:animation:" title="redrawShapeItem:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redrawShapeItem:animation:">&ndash;&nbsp;redrawShapeItem:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Redraw a single item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)redrawShapeItem:(HIShapes *)<em>item</em> animation:(NSNumber *)<em>animation</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redrawLabelItems:" title="redrawLabelItems:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redrawLabelItems:">&ndash;&nbsp;redrawLabelItems:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)redrawLabelItems:(NSArray&lt;HILabels*&gt; *)<em>items</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redrawLabelItems:animation:" title="redrawLabelItems:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redrawLabelItems:animation:">&ndash;&nbsp;redrawLabelItems:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)redrawLabelItems:(NSArray&lt;HILabels*&gt; *)<em>items</em> animation:(NSNumber *)<em>animation</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redrawShapeItems:" title="redrawShapeItems:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redrawShapeItems:">&ndash;&nbsp;redrawShapeItems:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)redrawShapeItems:(NSArray&lt;HIShapes*&gt; *)<em>items</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redrawShapeItems:animation:" title="redrawShapeItems:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redrawShapeItems:animation:">&ndash;&nbsp;redrawShapeItems:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)redrawShapeItems:(NSArray&lt;HIShapes*&gt; *)<em>items</em> animation:(NSNumber *)<em>animation</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove" title="remove"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove">&ndash;&nbsp;remove</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>See Highcharts.Annotation#destroy.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setOptions" title="setOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setOptions">&ndash;&nbsp;setOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set an annotation options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setVisibility" title="setVisibility"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setVisibility">&ndash;&nbsp;setVisibility</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the annotation&rsquo;s visibility.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setVisibility</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setVisibility:" title="setVisibility:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setVisibility:">&ndash;&nbsp;setVisibility:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the annotation&rsquo;s visibility.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setVisibility:(NSNumber *)<em>visible</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>visible</code></th>
+						<td><p>Whether to show or hide an annotation. If the param is omitted, the annotation&rsquo;s visibility is toggled.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

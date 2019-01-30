@@ -42,9 +42,9 @@
 	copyTreemap.interactByLeaf = [self.interactByLeaf copyWithZone: zone];
 	copyTreemap.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
 	copyTreemap.alternateStartingDirection = [self.alternateStartingDirection copyWithZone: zone];
-	copyTreemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyTreemap.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyTreemap.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyTreemap.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyTreemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTreemap.linecap = [self.linecap copyWithZone: zone];
 	copyTreemap.point = [self.point copyWithZone: zone];
 	copyTreemap.selected = [self.selected copyWithZone: zone];

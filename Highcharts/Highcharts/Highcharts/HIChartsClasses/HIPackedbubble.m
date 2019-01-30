@@ -38,9 +38,9 @@
 	copyPackedbubble.zThreshold = [self.zThreshold copyWithZone: zone];
 	copyPackedbubble.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyPackedbubble.states = [self.states copyWithZone: zone];
-	copyPackedbubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyPackedbubble.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPackedbubble.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyPackedbubble.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyPackedbubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPackedbubble.linecap = [self.linecap copyWithZone: zone];
 	copyPackedbubble.point = [self.point copyWithZone: zone];
 	copyPackedbubble.selected = [self.selected copyWithZone: zone];

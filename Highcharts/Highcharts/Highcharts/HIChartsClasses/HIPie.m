@@ -39,7 +39,6 @@
 	copyPie.states = [self.states copyWithZone: zone];
 	copyPie.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyPie.startAngle = [self.startAngle copyWithZone: zone];
-	copyPie.legendType = [self.legendType copyWithZone: zone];
 	copyPie.size = [self.size copyWithZone: zone];
 	copyPie.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
@@ -117,9 +116,6 @@
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
 	}
-	if (self.legendType) {
-		params[@"legendType"] = self.legendType;
-	}
 	if (self.size) {
 		params[@"size"] = self.size;
 	}
@@ -189,12 +185,6 @@
 	NSNumber *oldValue = _startAngle;
 	_startAngle = startAngle;
 	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
-}
-
--(void)setLegendType:(NSString *)legendType {
-	NSString *oldValue = _legendType;
-	_legendType = legendType;
-	[self updateNSObject:oldValue newValue:legendType propertyName:@"legendType"];
 }
 
 -(void)setSize:(id)size {

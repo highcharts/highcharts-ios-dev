@@ -44,7 +44,6 @@
 	copyFunnel.colors = [self.colors copyWithZone: zone];
 	copyFunnel.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyFunnel.startAngle = [self.startAngle copyWithZone: zone];
-	copyFunnel.legendType = [self.legendType copyWithZone: zone];
 	copyFunnel.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyFunnel.events = [self.events copyWithZone: zone];
 	copyFunnel.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
@@ -135,9 +134,6 @@
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
-	}
-	if (self.legendType) {
-		params[@"legendType"] = self.legendType;
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
@@ -235,12 +231,6 @@
 	NSNumber *oldValue = _startAngle;
 	_startAngle = startAngle;
 	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
-}
-
--(void)setLegendType:(NSString *)legendType {
-	NSString *oldValue = _legendType;
-	_legendType = legendType;
-	[self updateNSObject:oldValue newValue:legendType propertyName:@"legendType"];
 }
 
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {

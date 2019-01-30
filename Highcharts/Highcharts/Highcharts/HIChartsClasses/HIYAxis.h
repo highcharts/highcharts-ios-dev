@@ -423,10 +423,6 @@ A callback function returning array defining where the ticks are laid out on the
 /**
 The dash or dot style of the minor grid lines. For possible values, see [this demonstration](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/).
 
-**Accepted values:** `["Solid", "ShortDash", "ShortDot", "ShortDashDot",
-            "ShortDashDotDot", "Dot", "Dash" ,"LongDash",
-            "DashDot", "LongDashDot", "LongDashDotDot"]`.
-
 **Defaults to** `Solid`.
 
 **Try it**
@@ -478,10 +474,6 @@ Whether to show the axis line and title when the axis has no data.
 @property(nonatomic, readwrite) NSNumber /* Bool */ *showEmpty;
 /**
 The dash or dot style of the grid lines. For possible values, see [this demonstration](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/).
-
-**Accepted values:** `["Solid", "ShortDash", "ShortDot", "ShortDashDot",
-            "ShortDashDotDot", "Dot", "Dash" ,"LongDash", "DashDot",
-            "LongDashDot", "LongDashDotDot"]`.
 
 **Defaults to** `Solid`.
 

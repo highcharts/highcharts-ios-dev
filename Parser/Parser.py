@@ -285,7 +285,10 @@ hc_types = {
         #7.0.1
         "Highcharts.FormatterCallbackFunction.<Highcharts.AxisLabelsFormatterContextObject>": 'HIFunction',
         "Highcharts.FormatterCallbackFunction.<Highcharts.Point>": 'HIFunction',
-        "string|Highcharts.HTMLDOMElement": 'NSString'
+        "string|Highcharts.HTMLDOMElement": 'NSString',
+        #7.0.2
+        "Array.<(string|Highcharts.GradientColorObject|Highcharts.PatternObject)>": 'NSArray<NSString *>',
+        "string|function": 'NSString'
     }
 
 def get_type(x):

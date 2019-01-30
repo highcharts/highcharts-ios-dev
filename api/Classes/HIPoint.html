@@ -76,7 +76,41 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/cancelSonify">- cancelSonify</option>
+		
+		<option value="//api/name/cancelSonify:">- cancelSonify:</option>
+		
 		<option value="//api/name/getParams">- getParams</option>
+		
+		<option value="//api/name/onMouseOut">- onMouseOut</option>
+		
+		<option value="//api/name/remove:">- remove:</option>
+		
+		<option value="//api/name/remove:animation:">- remove:animation:</option>
+		
+		<option value="//api/name/select">- select</option>
+		
+		<option value="//api/name/select:">- select:</option>
+		
+		<option value="//api/name/select:accumulate:">- select:accumulate:</option>
+		
+		<option value="//api/name/setNestedProperty:value:key:">- setNestedProperty:value:key:</option>
+		
+		<option value="//api/name/setState">- setState</option>
+		
+		<option value="//api/name/setState:">- setState:</option>
+		
+		<option value="//api/name/setState:move:">- setState:move:</option>
+		
+		<option value="//api/name/sonify:">- sonify:</option>
+		
+		<option value="//api/name/tooltipFormatter:">- tooltipFormatter:</option>
+		
+		<option value="//api/name/update:">- update:</option>
+		
+		<option value="//api/name/update:redraw:">- update:redraw:</option>
+		
+		<option value="//api/name/update:redraw:animation:">- update:redraw:animation:</option>
 		
 	</optgroup>
 	
@@ -321,6 +355,1131 @@
 			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getParams</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelSonify" title="cancelSonify"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelSonify">&ndash;&nbsp;cancelSonify</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancel sonification of a point. Calls onEnd functions.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelSonify</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelSonify:" title="cancelSonify:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelSonify:">&ndash;&nbsp;cancelSonify:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancel sonification of a point. Calls onEnd functions.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelSonify:(NSNumber *)<em>fadeOut</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fadeOut</code></th>
+						<td><p>Whether or not to fade out as we stop. If false, the points are cancelled synchronously.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onMouseOut" title="onMouseOut"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onMouseOut">&ndash;&nbsp;onMouseOut</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Runs on mouse out from the point. Called internally from mouse and touch events.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onMouseOut</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:mouseOut</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove:" title="remove:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove:">&ndash;&nbsp;remove:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a point and optionally redraw the series and if necessary the axes</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart or wait for an explicit call. When doing more operations on the chart, for example running <code>point.remove()</code> in a loop, it is best practice to set <code>redraw</code> to false and call <code>chart.redraw()</code> after.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-remove/">Remove point and confirm</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-remove/">Remove pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remove:animation:" title="remove:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remove:animation:">&ndash;&nbsp;remove:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a point and optionally redraw the series and if necessary the axes</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)remove:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart or wait for an explicit call. When doing more operations on the chart, for example running <code>point.remove()</code> in a loop, it is best practice to set <code>redraw</code> to false and call <code>chart.redraw()</code> after.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether to apply animation, and optionally animation configuration.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-point-events-remove/">Remove point and confirm</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-remove/">Remove pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/select" title="select"></a>
+	<h3 class="method-title"><code><a href="#//api/name/select">&ndash;&nbsp;select</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Toggle the selection status of a point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)select</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>See also:</strong></p>
+
+<ul>
+<li><a href="https://api.highcharts.com/class-reference/Highcharts.Chart#getSelectedPoints">Highcharts.Chart#getSelectedPoints</a></li>
+</ul>
+
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:select</li>
+<li>Highcharts.Point#event:unselect</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-select/">Select a point from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/">Select a range of points through a drag selection</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/select:" title="select:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/select:">&ndash;&nbsp;select:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Toggle the selection status of a point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)select:(NSNumber *)<em>selected</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>selected</code></th>
+						<td><p>When <code>true</code>, the point is selected. When <code>false</code>, the point is unselected. When <code>null</code> or <code>undefined</code>, the selection state is toggled.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>See also:</strong></p>
+
+<ul>
+<li><a href="https://api.highcharts.com/class-reference/Highcharts.Chart#getSelectedPoints">Highcharts.Chart#getSelectedPoints</a></li>
+</ul>
+
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:select</li>
+<li>Highcharts.Point#event:unselect</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-select/">Select a point from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/">Select a range of points through a drag selection</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/select:accumulate:" title="select:accumulate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/select:accumulate:">&ndash;&nbsp;select:accumulate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Toggle the selection status of a point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)select:(NSNumber *)<em>selected</em> accumulate:(NSNumber *)<em>accumulate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>selected</code></th>
+						<td><p>When <code>true</code>, the point is selected. When <code>false</code>, the point is unselected. When <code>null</code> or <code>undefined</code>, the selection state is toggled.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>accumulate</code></th>
+						<td><p>When <code>true</code>, the selection is added to other selected points. When <code>false</code>, other selected points are deselected. Internally in Highcharts, when <a href="http://api.highcharts.com/highcharts/plotOptions.series.allowPointSelect">allowPointSelect</a> is <code>true</code>, selected points are accumulated on Control, Shift or Cmd clicking the point.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>See also:</strong></p>
+
+<ul>
+<li><a href="https://api.highcharts.com/class-reference/Highcharts.Chart#getSelectedPoints">Highcharts.Chart#getSelectedPoints</a></li>
+</ul>
+
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:select</li>
+<li>Highcharts.Point#event:unselect</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-select/">Select a point from a button</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/">Select a range of points through a drag selection</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setNestedProperty:value:key:" title="setNestedProperty:value:key:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setNestedProperty:value:key:">&ndash;&nbsp;setNestedProperty:value:key:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set a value in an object, on the property defined by key. The key supports nested properties using dot notation. The function modifies the input object and does not make a copy.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setNestedProperty:(id)<em>object</em> value:(id)<em>value</em> key:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>The object to set the value on.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value to set.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>Key to the property to set.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setState" title="setState"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setState">&ndash;&nbsp;setState</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the point&rsquo;s state.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setState</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:afterSetState</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setState:" title="setState:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setState:">&ndash;&nbsp;setState:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the point&rsquo;s state.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setState:(NSString *)<em>state</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>state</code></th>
+						<td><p>The new state, can be one of <code>''</code> (an empty string), <code>hover</code> or <code>select</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:afterSetState</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setState:move:" title="setState:move:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setState:move:">&ndash;&nbsp;setState:move:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the point&rsquo;s state.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setState:(NSString *)<em>state</em> move:(NSNumber *)<em>move</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>state</code></th>
+						<td><p>The new state, can be one of <code>''</code> (an empty string), <code>hover</code> or <code>select</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>move</code></th>
+						<td><p>State for animation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:afterSetState</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sonify:" title="sonify:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sonify:">&ndash;&nbsp;sonify:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sonify a single point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sonify:(NSDictionary *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>Options for the sonification of the point.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Requires:</strong></p>
+
+<ul>
+<li>module:modules/sonification</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/point-basic/">Click on points to sonify</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/sonification/point-advanced/">Sonify bubbles</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tooltipFormatter:" title="tooltipFormatter:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tooltipFormatter:">&ndash;&nbsp;tooltipFormatter:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Extendable method for formatting each point&rsquo;s tooltip line.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)tooltipFormatter:(NSString *)<em>pointFormat</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pointFormat</code></th>
+						<td><p>The point format.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:" title="update:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:">&ndash;&nbsp;update:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update point with new options (typically x/y data) and optionally redraw the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIPoint *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The point options. Point options are handled as described under the <code>series.type.data</code> item for each series type. For example for a line series, if options is a single number, the point will be given that number as the marin y value. If it is an array, it will be interpreted as x and y values respectively. If it is an object, advanced options are applied.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:update</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-update-column/">Update column value</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-update-pie/">Update pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:redraw:" title="update:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:redraw:">&ndash;&nbsp;update:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update point with new options (typically x/y data) and optionally redraw the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIPoint *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The point options. Point options are handled as described under the <code>series.type.data</code> item for each series type. For example for a line series, if options is a single number, the point will be given that number as the marin y value. If it is an array, it will be interpreted as x and y values respectively. If it is an object, advanced options are applied.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the point is updated. If doing more operations on the chart, it is best practice to set <code>redraw</code> to false and call <code>chart.redraw()</code> after.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:update</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-update-column/">Update column value</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-update-pie/">Update pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:redraw:animation:" title="update:redraw:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:redraw:animation:">&ndash;&nbsp;update:redraw:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update point with new options (typically x/y data) and optionally redraw the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HIPoint *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> animation:(HIAnimationOptionsObject *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The point options. Point options are handled as described under the <code>series.type.data</code> item for each series type. For example for a line series, if options is a single number, the point will be given that number as the marin y value. If it is an array, it will be interpreted as x and y values respectively. If it is an object, advanced options are applied.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the point is updated. If doing more operations on the chart, it is best practice to set <code>redraw</code> to false and call <code>chart.redraw()</code> after.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether to apply animation, and optionally animation configuration.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Point#event:update</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-update-column/">Update column value</a></li>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/point-update-pie/">Update pie slice</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

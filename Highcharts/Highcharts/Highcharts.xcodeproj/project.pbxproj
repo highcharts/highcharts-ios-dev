@@ -53,6 +53,12 @@
 		CD1DF89221F9EECA005DF8A7 /* HICustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1DF88E21F9EECA005DF8A7 /* HICustomFont.h */; };
 		CD1DF89321F9EECA005DF8A7 /* HIClassJSMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1DF88F21F9EECA005DF8A7 /* HIClassJSMethods.h */; };
 		CD1DF89421F9EECA005DF8A7 /* HICustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */; };
+		CD24FF8421FF439C00B1B147 /* HIAlignObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD24FF8221FF439C00B1B147 /* HIAlignObject.m */; };
+		CD24FF8521FF439C00B1B147 /* HIAlignObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD24FF8221FF439C00B1B147 /* HIAlignObject.m */; };
+		CD24FF8621FF439C00B1B147 /* HIAlignObject.h in Headers */ = {isa = PBXBuildFile; fileRef = CD24FF8321FF439C00B1B147 /* HIAlignObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD24FF8921FF43FE00B1B147 /* HIJitter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD24FF8721FF43FD00B1B147 /* HIJitter.m */; };
+		CD24FF8A21FF43FE00B1B147 /* HIJitter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD24FF8721FF43FD00B1B147 /* HIJitter.m */; };
+		CD24FF8B21FF43FE00B1B147 /* HIJitter.h in Headers */ = {isa = PBXBuildFile; fileRef = CD24FF8821FF43FE00B1B147 /* HIJitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3F77092056AE4300527CBE /* HIChartContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3F770C2056AE5F00527CBE /* HIChartContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3F770B2056AE5F00527CBE /* HIChartContext.m */; };
 		CD5B35961F90C469006159D7 /* HIChartsJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */; };
@@ -607,6 +613,10 @@
 		CD1DF88E21F9EECA005DF8A7 /* HICustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICustomFont.h; path = Private/HICustomFont.h; sourceTree = "<group>"; };
 		CD1DF88F21F9EECA005DF8A7 /* HIClassJSMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIClassJSMethods.h; path = Private/HIClassJSMethods.h; sourceTree = "<group>"; };
 		CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICustomFont.m; path = Private/HICustomFont.m; sourceTree = "<group>"; };
+		CD24FF8221FF439C00B1B147 /* HIAlignObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAlignObject.m; sourceTree = "<group>"; };
+		CD24FF8321FF439C00B1B147 /* HIAlignObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAlignObject.h; sourceTree = "<group>"; };
+		CD24FF8721FF43FD00B1B147 /* HIJitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIJitter.m; sourceTree = "<group>"; };
+		CD24FF8821FF43FE00B1B147 /* HIJitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIJitter.h; sourceTree = "<group>"; };
 		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
 		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
 		CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWKSyncedWebView.h; path = Private/HIWKSyncedWebView.h; sourceTree = "<group>"; };
@@ -976,6 +986,10 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				CD24FF8821FF43FE00B1B147 /* HIJitter.h */,
+				CD24FF8721FF43FD00B1B147 /* HIJitter.m */,
+				CD24FF8321FF439C00B1B147 /* HIAlignObject.h */,
+				CD24FF8221FF439C00B1B147 /* HIAlignObject.m */,
 				CD7E630421C26C5600D27447 /* HIAccessibility.h */,
 				CD7E62AB21C26C4800D27447 /* HIAccessibility.m */,
 				CD7E624D21C26C3A00D27447 /* HIActiveDataLabelStyle.h */,
@@ -1416,6 +1430,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD24FF8621FF439C00B1B147 /* HIAlignObject.h in Headers */,
 				CD7E645121C26C5E00D27447 /* HITitle.h in Headers */,
 				CD7E644321C26C5E00D27447 /* HISpline.h in Headers */,
 				CD7E64F721C26C5E00D27447 /* HIStates.h in Headers */,
@@ -1521,6 +1536,7 @@
 				CD7E647821C26C5E00D27447 /* HIColorAxis.h in Headers */,
 				CD7E636A21C26C5D00D27447 /* HISecond.h in Headers */,
 				CD7E63A421C26C5E00D27447 /* HIBullet.h in Headers */,
+				CD24FF8B21FF43FE00B1B147 /* HIJitter.h in Headers */,
 				CD7E64AD21C26C5E00D27447 /* HICredits.h in Headers */,
 				CD7E638721C26C5D00D27447 /* HIGlobal.h in Headers */,
 				CD7E650021C26C5E00D27447 /* HINoData.h in Headers */,
@@ -1855,6 +1871,7 @@
 				CD5B35971F90C46C006159D7 /* HIChartView.m in Sources */,
 				CD7E635B21C26C5D00D27447 /* HIRanges.m in Sources */,
 				CD7E643221C26C5E00D27447 /* HIBoost.m in Sources */,
+				CD24FF8921FF43FE00B1B147 /* HIJitter.m in Sources */,
 				CD7E645821C26C5E00D27447 /* HITooltip.m in Sources */,
 				CD7E63AA21C26C5E00D27447 /* HIFrame.m in Sources */,
 				CD5B35981F90C470006159D7 /* HIGChartView.m in Sources */,
@@ -1908,6 +1925,7 @@
 				CD7E64EA21C26C5E00D27447 /* HIXrange.m in Sources */,
 				CD7E63B221C26C5E00D27447 /* HITargetOptions.m in Sources */,
 				CD7E642521C26C5E00D27447 /* HIDrilldown.m in Sources */,
+				CD24FF8421FF439C00B1B147 /* HIAlignObject.m in Sources */,
 				CD7E639E21C26C5D00D27447 /* HIMarker.m in Sources */,
 				CD7E648921C26C5E00D27447 /* HIWordcloud.m in Sources */,
 				CD1DF89121F9EECA005DF8A7 /* HIClassJSMethods.m in Sources */,
@@ -1949,6 +1967,7 @@
 				CD7E646821C26C5E00D27447 /* HIAreasplinerange.m in Sources */,
 				CD7E64AF21C26C5E00D27447 /* HIPopup.m in Sources */,
 				CD7E638B21C26C5D00D27447 /* HICSSObject.m in Sources */,
+				CD24FF8521FF439C00B1B147 /* HIAlignObject.m in Sources */,
 				CD7E648A21C26C5E00D27447 /* HIWordcloud.m in Sources */,
 				CD7E650B21C26C5E00D27447 /* HIVenn.m in Sources */,
 				CD7E64C921C26C5E00D27447 /* HISecond.m in Sources */,
@@ -2087,6 +2106,7 @@
 				CD7E635121C26C5D00D27447 /* HINodes.m in Sources */,
 				CD7E63AB21C26C5E00D27447 /* HIFrame.m in Sources */,
 				CD7E63D721C26C5E00D27447 /* HIZAxis.m in Sources */,
+				CD24FF8A21FF43FE00B1B147 /* HIJitter.m in Sources */,
 				CD7E635A21C26C5D00D27447 /* HISpline.m in Sources */,
 				CD7E63FD21C26C5E00D27447 /* HIDefault.m in Sources */,
 				CD7E64DD21C26C5E00D27447 /* HIHalo.m in Sources */,
@@ -2206,7 +2226,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 7.0.1;
+				DYLIB_CURRENT_VERSION = 7.0.2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2348,7 +2368,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 7.0.1;
+				DYLIB_CURRENT_VERSION = 7.0.2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2377,7 +2397,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 7.0.1;
+				DYLIB_CURRENT_VERSION = 7.0.2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (

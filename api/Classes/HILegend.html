@@ -146,6 +146,14 @@
 		
 		<option value="//api/name/getParams">- getParams</option>
 		
+		<option value="//api/name/setPointText:">- setPointText:</option>
+		
+		<option value="//api/name/setSeriesText:">- setSeriesText:</option>
+		
+		<option value="//api/name/update:">- update:</option>
+		
+		<option value="//api/name/update:redraw:">- update:redraw:</option>
+		
 	</optgroup>
 	
 	
@@ -815,12 +823,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the legend box.</p>
+				<p>The width of the legend box. If a number is set, it translates to pixels. Since v7.0.2 it allows setting a percent string of the full chart width, for example <code>40%</code>. Defaults to the full chart width from legends below or above the chart, half the chart width for legends to the left and right.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id width</code></div>
 
 		    
 			
@@ -836,6 +844,7 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/width/">Aligned to the plot area</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/width-percent/">A percent of the chart width</a></li>
 </ul>
 
 			</div>
@@ -1332,9 +1341,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["top", "middle", "bottom"]</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/verticalalign/">Legend 100px from the top of the chart</a></li>
@@ -1583,9 +1590,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["left", "center", "right"]</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/align/">Legend at the right of the chart</a></li>
@@ -2149,6 +2154,257 @@
 			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getParams</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPointText:" title="setPointText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPointText:">&ndash;&nbsp;setPointText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the legend item text.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setPointText:(HIPoint *)<em>item</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>The item for which to update the text in the legend.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeriesText:" title="setSeriesText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeriesText:">&ndash;&nbsp;setSeriesText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the legend item text.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSeriesText:(HISeries *)<em>item</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>The item for which to update the text in the legend.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:" title="update:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:">&ndash;&nbsp;update:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the legend with new options. Equivalent to running <code>chart.update</code> with a legend configuration option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HILegend *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>Legend options.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Legends#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/legend-update/">Legend update</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:redraw:" title="update:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:redraw:">&ndash;&nbsp;update:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the legend with new options. Equivalent to running <code>chart.update</code> with a legend configuration option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HILegend *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>Legend options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart after the axis is altered. If doing more operations on the chart, it is a good idea to set redraw to false and call <a href="https://api.highcharts.com/class-reference/Highcharts.Chart.html#redraw">Highcharts.Chart#redraw</a> after. Whether to redraw the chart.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Legends#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/legend-update/">Legend update</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

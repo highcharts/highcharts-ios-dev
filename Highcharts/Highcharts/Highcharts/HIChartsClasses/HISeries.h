@@ -252,10 +252,6 @@ An additional class name to apply to the series' graphical elements. This option
 /**
 A name for the dash style to use for the graph, or for some series types the outline of each shape. In styled mode, the [stroke dash-array](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-dashstyle/) can be set with the same classes as listed under `series.color`.
 
-**Accepted values:** `["Dash","DashDot","Dot","LongDash","LongDashDot",
-            "LongDashDotDot","ShortDash","ShortDashDot",
-            "ShortDashDotDot","ShortDot","Solid"]`.
-
 **Defaults to** `Solid`.
 
 **Try it**
@@ -271,6 +267,7 @@ Possible values: `"on"`, `"between"`, `number`. In a column chart, when pointPla
 
 * [Between in a column chart](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/)
 * [Numeric placement for custom layout](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-numeric/)
+* [Placement in heatmap](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/heatmap-pointplacement/)
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber */ pointPlacement;
 /**
@@ -305,7 +302,7 @@ Series labels are placed as close to the series as possible in a natural way, se
 */
 @property(nonatomic, readwrite) HILabel *label;
 /**
-Whether to stack the values of each series on top of each other. Possible values are `undefined` to disable, `"normal"` to stack by value or `"percent"`. When stacking is enabled, data must be sorted in ascending X order. A special stacking option is with the streamgraph series type, where the stacking option is set to `"stream"`.
+Whether to stack the values of each series on top of each other. Possible values are `undefined` to disable, `"normal"` to stack by value or `"percent"`. When stacking is enabled, data must be sorted in ascending X order. A special stacking option is with the streamgraph series type, where the stacking option is set to `"stream"`. The second one is `"overlap"`, which only applies to waterfall series.
 
 **Accepted values:** `["normal", "percent"]`.
 
@@ -319,10 +316,12 @@ Whether to stack the values of each series on top of each other. Possible values
 * [Column](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-percent-column/)
 * [Bar](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-percent-bar/)
 * [Area](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-percent-area/)
+* [Waterfall with normal stacking](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-waterfall-with-normal-stacking)
+* [Waterfall with overlap stacking](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-waterfall-with-overlap-stacking)
 */
 @property(nonatomic, readwrite) NSString *stacking;
 /**
-Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see `chart.animation` and the animation parameter under the API methods. The following properties are supported:  duration The duration of the animation in milliseconds. easing Can be a string reference to an easing function set on the `Math` object or a function. See the _Custom easing function_ demo below.  Due to poor performance, animation is disabled in old IE browsers for several chart types.
+Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see `chart.animation` and the animation parameter under the API methods. The following properties are supported: - `duration`: The duration of the animation in milliseconds. - `easing`: Can be a string reference to an easing function set on  the `Math` object or a function. See the _Custom easing function_  demo below. Due to poor performance, animation is disabled in old IE browsers for several chart types.
 
 **Defaults to** `true`.
 
@@ -362,7 +361,7 @@ General event handlers for the series items. These event hooks can also be attac
 */
 @property(nonatomic, readwrite) HIEvents *events;
 /**
-For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation doesn't run if there is more than 250 points totally. To disable this cap, set `animationLimit` to `Infinity`.
+For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation does not run if there is more than 250 points totally. To disable this cap, set `animationLimit` to `Infinity`.
 */
 @property(nonatomic, readwrite) NSNumber *animationLimit;
 /**

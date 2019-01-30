@@ -68,6 +68,8 @@
 		
 		<option value="//api/name/useGPUTranslations">useGPUTranslations</option>
 		
+		<option value="//api/name/usePreallocated">usePreallocated</option>
+		
 	</optgroup>
 	
 
@@ -144,47 +146,6 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/debug" title="debug"></a>
-	<h3 class="method-title"><code><a href="#//api/name/debug">&nbsp;&nbsp;debug</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Debugging options for boost. Useful for benchmarking, and general timing.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDebug *debug</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBoost.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/allowForce" title="allowForce"></a>
 	<h3 class="method-title"><code><a href="#//api/name/allowForce">&nbsp;&nbsp;allowForce</a></code>
 </h3>
@@ -214,52 +175,6 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>true</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBoost.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/useGPUTranslations" title="useGPUTranslations"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useGPUTranslations">&nbsp;&nbsp;useGPUTranslations</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Enable or disable GPU translations. GPU translations are faster than doing the translation in JavaScript. This option may cause rendering issues with certain datasets. Namely, if your dataset has large numbers with small increments (such as timestamps), it won&rsquo;t work correctly. This is due to floating point precission.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useGPUTranslations</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
 			</div>
 			
 
@@ -353,6 +268,139 @@
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>null</code>.</p>
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBoost.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/usePreallocated" title="usePreallocated"></a>
+	<h3 class="method-title"><code><a href="#//api/name/usePreallocated">&nbsp;&nbsp;usePreallocated</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable pre-allocation of vertex buffers. Enabling this will make it so that the binary data arrays required for storing the series data will be allocated prior to transforming the data to a WebGL-compatible format. This saves a copy operation on the order of O(n) and so is significantly more performant. However, this is currently an experimental option, and may cause visual artifacts with some datasets. As such, care should be taken when using this setting to make sure that it doesn&rsquo;t cause any rendering glitches with the given use-case.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *usePreallocated</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBoost.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/useGPUTranslations" title="useGPUTranslations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useGPUTranslations">&nbsp;&nbsp;useGPUTranslations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable GPU translations. GPU translations are faster than doing the translation in JavaScript. This option may cause rendering issues with certain datasets. Namely, if your dataset has large numbers with small increments (such as timestamps), it won&rsquo;t work correctly. This is due to floating point precission.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useGPUTranslations</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBoost.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/debug" title="debug"></a>
+	<h3 class="method-title"><code><a href="#//api/name/debug">&nbsp;&nbsp;debug</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Debugging options for boost. Useful for benchmarking, and general timing.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDebug *debug</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
