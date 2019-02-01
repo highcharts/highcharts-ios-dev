@@ -48,7 +48,7 @@
 }
 
 -(instancetype)initWithRGBA:(int)red green:(int)green blue:(int)blue alpha:(double)alpha {
-    return [self initWithString:[NSString stringWithFormat:@"rgba(%d, %d, %d,%f)", red, green, blue, alpha]];
+    return [self initWithString:[NSString stringWithFormat:@"rgba(%d, %d, %d, %f)", red, green, blue, alpha]];
 }
 
 -(instancetype)initWithName:(NSString *)name {
@@ -66,11 +66,11 @@
 - (instancetype)initWithUIColor:(UIColor *)color {
     CGFloat r,g,b,a;
     [color getRed:&r green:&g blue:&b alpha:&a];
-    int red = (int) r * 255,
-        green = (int) g * 255,
-        blue = (int) b * 255,
-        alpha = (int) a * 255;
-
+    int red = (int) roundf(r * 255),
+        green = (int) roundf(g * 255),
+        blue = (int) roundf(b * 255);
+    double alpha = (double) a;
+    
     return [self initWithRGBA:red green:green blue:blue alpha:alpha];
 }
 
