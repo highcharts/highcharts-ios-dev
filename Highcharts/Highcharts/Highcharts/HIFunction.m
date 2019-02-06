@@ -95,7 +95,7 @@
     if(closureJSBody) {
         _closureJSBody = closureJSBody;
         if(!self.both) {
-            self.function = [NSString stringWithFormat:@"function() { %@ }", closureJSBody];
+            self.function = [NSString stringWithFormat:@"function(event) { %@ }", closureJSBody];
         }
         else if(self.jsFunction) {
             [self setFunction:self.jsFunction];
@@ -152,12 +152,7 @@
 }
 
 -(id)getFunction {
-    if (self.function) {
-        return self;
-    }
-    else {
-        return nil;
-    }
+    return self.function ? self : nil;
 }
 
 @end
