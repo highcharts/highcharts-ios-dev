@@ -1,5 +1,9 @@
 # Version 7.0.3
 
+## iOS:
+1. Fixed #156, `HIColor` outputs the wrong color.
+2. Fixed `HIFunction` bug.
+
 ## Framework:
 1. Added option treemap.events.setRootNode.
 2. Added option xAxis.margin to ensure a distance between multiple axes on the same side.
