@@ -67,6 +67,7 @@
 	copyBullet.animation = [self.animation copyWithZone: zone];
 	copyBullet.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBullet.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyBullet.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBullet.events = [self.events copyWithZone: zone];
 	copyBullet.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyBullet.definition = [self.definition copyWithZone: zone];

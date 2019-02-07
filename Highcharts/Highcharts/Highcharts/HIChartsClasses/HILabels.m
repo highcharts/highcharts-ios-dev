@@ -285,8 +285,8 @@
 	[self updateNSObject:oldValue newValue:step propertyName:@"step"];
 }
 
--(void)setOverflow:(id)overflow {
-	id oldValue = _overflow;
+-(void)setOverflow:(NSString *)overflow {
+	NSString *oldValue = _overflow;
 	_overflow = overflow;
 	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
 }

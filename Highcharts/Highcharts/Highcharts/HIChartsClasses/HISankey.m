@@ -39,6 +39,7 @@
 	copySankey.label = [self.label copyWithZone: zone];
 	copySankey.animation = [self.animation copyWithZone: zone];
 	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySankey.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySankey.events = [self.events copyWithZone: zone];
 	copySankey.definition = [self.definition copyWithZone: zone];
 	copySankey.keys = [self.keys copyWithZone: zone];

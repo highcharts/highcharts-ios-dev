@@ -53,6 +53,7 @@
 	copyPie.label = [self.label copyWithZone: zone];
 	copyPie.animation = [self.animation copyWithZone: zone];
 	copyPie.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyPie.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPie.definition = [self.definition copyWithZone: zone];
 	copyPie.keys = [self.keys copyWithZone: zone];
 	copyPie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
