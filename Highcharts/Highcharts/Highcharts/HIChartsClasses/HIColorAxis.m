@@ -66,6 +66,7 @@
 	copyColorAxis.lineColor = [self.lineColor copyWithZone: zone];
 	copyColorAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
 	copyColorAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyColorAxis.margin = [self.margin copyWithZone: zone];
 	copyColorAxis.softMax = [self.softMax copyWithZone: zone];
 	return copyColorAxis;
 }
@@ -276,6 +277,9 @@
 	}
 	if (self.minorTickInterval) {
 		params[@"minorTickInterval"] = self.minorTickInterval;
+	}
+	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	if (self.softMax) {
 		params[@"softMax"] = self.softMax;
@@ -619,6 +623,12 @@
 	id oldValue = _minorTickInterval;
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:oldValue newValue:minorTickInterval propertyName:@"minorTickInterval"];
+}
+
+-(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
+	_margin = margin;
+	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }
 
 -(void)setSoftMax:(NSNumber *)softMax {

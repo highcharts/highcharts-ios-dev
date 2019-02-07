@@ -36,6 +36,7 @@
 	copyEvents.mouseOver = [self.mouseOver copyWithZone: zone];
 	copyEvents.select = [self.select copyWithZone: zone];
 	copyEvents.dragStart = [self.dragStart copyWithZone: zone];
+	copyEvents.setRootNode = [self.setRootNode copyWithZone: zone];
 	copyEvents.selectButton = [self.selectButton copyWithZone: zone];
 	copyEvents.showPopup = [self.showPopup copyWithZone: zone];
 	copyEvents.hidePopup = [self.hidePopup copyWithZone: zone];
@@ -127,6 +128,9 @@
 	}
 	if (self.dragStart) {
 		params[@"dragStart"] = [self.dragStart getFunction];
+	}
+	if (self.setRootNode) {
+		params[@"setRootNode"] = [self.setRootNode getFunction];
 	}
 	if (self.selectButton) {
 		params[@"selectButton"] = [self.selectButton getFunction];
@@ -311,6 +315,12 @@
 	HIFunction *oldValue = _dragStart;
 	_dragStart = dragStart;
 	[self updateHIObject:oldValue newValue:dragStart propertyName:@"dragStart"];
+}
+
+-(void)setSetRootNode:(HIFunction *)setRootNode {
+	HIFunction *oldValue = _setRootNode;
+	_setRootNode = setRootNode;
+	[self updateHIObject:oldValue newValue:setRootNode propertyName:@"setRootNode"];
 }
 
 -(void)setSelectButton:(HIFunction *)selectButton {

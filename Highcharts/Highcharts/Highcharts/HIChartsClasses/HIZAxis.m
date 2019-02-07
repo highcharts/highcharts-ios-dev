@@ -69,6 +69,7 @@
 	copyZAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
 	copyZAxis.title = [self.title copyWithZone: zone];
 	copyZAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyZAxis.margin = [self.margin copyWithZone: zone];
 	copyZAxis.plotBands = [self.plotBands copyWithZone: zone];
 	copyZAxis.softMax = [self.softMax copyWithZone: zone];
 	return copyZAxis;
@@ -290,6 +291,9 @@
 	}
 	if (self.minorTickInterval) {
 		params[@"minorTickInterval"] = self.minorTickInterval;
+	}
+	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -663,6 +667,12 @@
 	id oldValue = _minorTickInterval;
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:oldValue newValue:minorTickInterval propertyName:@"minorTickInterval"];
+}
+
+-(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
+	_margin = margin;
+	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }
 
 -(void)setPlotBands:(NSArray <HIPlotBands *> *)plotBands {

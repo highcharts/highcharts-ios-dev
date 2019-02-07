@@ -41,6 +41,7 @@
 	copyLine.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyLine.threshold = [self.threshold copyWithZone: zone];
 	copyLine.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyLine.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyLine.events = [self.events copyWithZone: zone];
 	copyLine.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyLine.definition = [self.definition copyWithZone: zone];

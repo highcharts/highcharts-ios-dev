@@ -59,6 +59,7 @@
 	copyWindbarb.animation = [self.animation copyWithZone: zone];
 	copyWindbarb.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWindbarb.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyWindbarb.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyWindbarb.events = [self.events copyWithZone: zone];
 	copyWindbarb.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyWindbarb.definition = [self.definition copyWithZone: zone];

@@ -56,6 +56,7 @@
 	copyArea.animation = [self.animation copyWithZone: zone];
 	copyArea.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyArea.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyArea.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyArea.events = [self.events copyWithZone: zone];
 	copyArea.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyArea.definition = [self.definition copyWithZone: zone];

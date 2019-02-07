@@ -49,6 +49,7 @@
 	copySeries.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copySeries.threshold = [self.threshold copyWithZone: zone];
 	copySeries.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySeries.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySeries.events = [self.events copyWithZone: zone];
 	copySeries.animationLimit = [self.animationLimit copyWithZone: zone];
 	copySeries.keys = [self.keys copyWithZone: zone];
@@ -206,6 +207,9 @@
 	if (self.showCheckbox) {
 		params[@"showCheckbox"] = self.showCheckbox;
 	}
+	if (self.boostBlending) {
+		params[@"boostBlending"] = self.boostBlending;
+	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
@@ -361,30 +365,6 @@
 	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
--(void)setYAxisDescription:(NSString *)yAxisDescription {
-	NSString *oldValue = _yAxisDescription;
-	_yAxisDescription = yAxisDescription;
-	[self updateNSObject:oldValue newValue:yAxisDescription propertyName:@"yAxisDescription"];
-}
-
--(void)setXAxisDescription:(NSString *)xAxisDescription {
-	NSString *oldValue = _xAxisDescription;
-	_xAxisDescription = xAxisDescription;
-	[self updateNSObject:oldValue newValue:xAxisDescription propertyName:@"xAxisDescription"];
-}
-
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
-}
-
--(void)setSummary:(HISummary *)summary {
-	HISummary *oldValue = _summary;
-	_summary = summary;
-	[self updateHIObject:oldValue newValue:summary propertyName:@"summary"];
-}
-
 -(void)setPoint:(HIPoint *)point {
 	HIPoint *oldValue = _point;
 	_point = point;
@@ -535,6 +515,12 @@
 	[self updateNSObject:oldValue newValue:showCheckbox propertyName:@"showCheckbox"];
 }
 
+-(void)setBoostBlending:(NSString *)boostBlending {
+	NSString *oldValue = _boostBlending;
+	_boostBlending = boostBlending;
+	[self updateNSObject:oldValue newValue:boostBlending propertyName:@"boostBlending"];
+}
+
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
 	_events = events;
@@ -545,6 +531,12 @@
 	NSNumber *oldValue = _animationLimit;
 	_animationLimit = animationLimit;
 	[self updateNSObject:oldValue newValue:animationLimit propertyName:@"animationLimit"];
+}
+
+-(void)setDefinition:(NSString *)definition {
+	NSString *oldValue = _definition;
+	_definition = definition;
+	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setKeys:(NSArray<NSString *> *)keys {

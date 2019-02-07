@@ -43,6 +43,7 @@
 	copyWordcloud.className = [self.className copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWordcloud.label = [self.label copyWithZone: zone];
+	copyWordcloud.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyWordcloud.events = [self.events copyWithZone: zone];
 	copyWordcloud.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyWordcloud.definition = [self.definition copyWithZone: zone];

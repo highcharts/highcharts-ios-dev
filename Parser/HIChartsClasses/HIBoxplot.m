@@ -68,6 +68,7 @@
 	copyBoxplot.animation = [self.animation copyWithZone: zone];
 	copyBoxplot.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBoxplot.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyBoxplot.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBoxplot.events = [self.events copyWithZone: zone];
 	copyBoxplot.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyBoxplot.definition = [self.definition copyWithZone: zone];

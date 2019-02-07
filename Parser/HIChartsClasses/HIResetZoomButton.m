@@ -39,8 +39,8 @@
 	[self updateHIObject:oldValue newValue:position propertyName:@"position"];
 }
 
--(void)setTheme:(HITheme *)theme {
-	HITheme *oldValue = _theme;
+-(void)setTheme:(HISVGAttributes *)theme {
+	HISVGAttributes *oldValue = _theme;
 	_theme = theme;
 	[self updateHIObject:oldValue newValue:theme propertyName:@"theme"];
 }

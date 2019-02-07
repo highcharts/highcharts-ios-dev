@@ -60,6 +60,7 @@
 	copyWaterfall.animation = [self.animation copyWithZone: zone];
 	copyWaterfall.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWaterfall.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyWaterfall.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyWaterfall.events = [self.events copyWithZone: zone];
 	copyWaterfall.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyWaterfall.definition = [self.definition copyWithZone: zone];

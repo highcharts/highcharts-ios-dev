@@ -67,6 +67,9 @@
 		CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
 		CD5B359A1F90C478006159D7 /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		CD5B359B1F90C47A006159D7 /* HIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 208980271E6412EA007280D7 /* HIColor.m */; };
+		CD61A9BD220C427A008AB8CC /* HITraverseUpButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CD61A9BB220C427A008AB8CC /* HITraverseUpButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD61A9BE220C427A008AB8CC /* HITraverseUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD61A9BC220C427A008AB8CC /* HITraverseUpButton.m */; };
+		CD61A9BF220C427A008AB8CC /* HITraverseUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD61A9BC220C427A008AB8CC /* HITraverseUpButton.m */; };
 		CD77F94A21FB4BFD005E53CB /* HIWKSyncedWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */; };
 		CD77F94B21FB4BFD005E53CB /* HIWKSyncedWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */; };
 		CD7E633121C26C5D00D27447 /* HIPie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7E61E921C26C2E00D27447 /* HIPie.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -619,6 +622,8 @@
 		CD24FF8821FF43FE00B1B147 /* HIJitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIJitter.h; sourceTree = "<group>"; };
 		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
 		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
+		CD61A9BB220C427A008AB8CC /* HITraverseUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITraverseUpButton.h; sourceTree = "<group>"; };
+		CD61A9BC220C427A008AB8CC /* HITraverseUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITraverseUpButton.m; sourceTree = "<group>"; };
 		CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWKSyncedWebView.h; path = Private/HIWKSyncedWebView.h; sourceTree = "<group>"; };
 		CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIWKSyncedWebView.m; path = Private/HIWKSyncedWebView.m; sourceTree = "<group>"; };
 		CD7E61E921C26C2E00D27447 /* HIPie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPie.h; sourceTree = "<group>"; };
@@ -986,6 +991,8 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				CD61A9BB220C427A008AB8CC /* HITraverseUpButton.h */,
+				CD61A9BC220C427A008AB8CC /* HITraverseUpButton.m */,
 				CD24FF8821FF43FE00B1B147 /* HIJitter.h */,
 				CD24FF8721FF43FD00B1B147 /* HIJitter.m */,
 				CD24FF8321FF439C00B1B147 /* HIAlignObject.h */,
@@ -1590,6 +1597,7 @@
 				CD7E646021C26C5E00D27447 /* HITop.h in Headers */,
 				CD7E642921C26C5E00D27447 /* HILabelOptions.h in Headers */,
 				CD7E63E421C26C5E00D27447 /* HIArearange.h in Headers */,
+				CD61A9BD220C427A008AB8CC /* HITraverseUpButton.h in Headers */,
 				CD7E633121C26C5D00D27447 /* HIPie.h in Headers */,
 				CD7E64C321C26C5E00D27447 /* HIPolygon.h in Headers */,
 				CD7E643D21C26C5E00D27447 /* HIBottom.h in Headers */,
@@ -1855,6 +1863,7 @@
 				CD7E64D621C26C5E00D27447 /* HIAttributes.m in Sources */,
 				CD7E63D621C26C5E00D27447 /* HIZAxis.m in Sources */,
 				CD7E63A521C26C5E00D27447 /* HILink.m in Sources */,
+				CD61A9BE220C427A008AB8CC /* HITraverseUpButton.m in Sources */,
 				CD7E648021C26C5E00D27447 /* HILabel.m in Sources */,
 				CD7E649721C26C5E00D27447 /* HISolidgauge.m in Sources */,
 				CD7E63F421C26C5E00D27447 /* HIPoints.m in Sources */,
@@ -1984,6 +1993,7 @@
 				CD7E641721C26C5E00D27447 /* HIVector.m in Sources */,
 				CD7E639321C26C5D00D27447 /* HIWindbarb.m in Sources */,
 				CD7E650621C26C5E00D27447 /* HIBoxplot.m in Sources */,
+				CD61A9BF220C427A008AB8CC /* HITraverseUpButton.m in Sources */,
 				CD7E645021C26C5E00D27447 /* HIAnnotations.m in Sources */,
 				CD7E647E21C26C5E00D27447 /* HIHour.m in Sources */,
 				CD7E63DB21C26C5E00D27447 /* HISeriesTypeDescriptions.m in Sources */,
@@ -2226,7 +2236,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 7.0.2;
+				DYLIB_CURRENT_VERSION = 7.0.3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2368,7 +2378,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 7.0.2;
+				DYLIB_CURRENT_VERSION = 7.0.3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2397,7 +2407,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 7.0.2;
+				DYLIB_CURRENT_VERSION = 7.0.3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (

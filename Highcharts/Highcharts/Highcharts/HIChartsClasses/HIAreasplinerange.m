@@ -57,6 +57,7 @@
 	copyAreasplinerange.animation = [self.animation copyWithZone: zone];
 	copyAreasplinerange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyAreasplinerange.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyAreasplinerange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyAreasplinerange.events = [self.events copyWithZone: zone];
 	copyAreasplinerange.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyAreasplinerange.definition = [self.definition copyWithZone: zone];

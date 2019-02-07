@@ -36,6 +36,7 @@
 	copySolidgauge.label = [self.label copyWithZone: zone];
 	copySolidgauge.animation = [self.animation copyWithZone: zone];
 	copySolidgauge.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySolidgauge.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySolidgauge.events = [self.events copyWithZone: zone];
 	copySolidgauge.definition = [self.definition copyWithZone: zone];
 	copySolidgauge.keys = [self.keys copyWithZone: zone];

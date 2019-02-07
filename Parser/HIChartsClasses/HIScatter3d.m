@@ -53,6 +53,7 @@
 	copyScatter3d.animation = [self.animation copyWithZone: zone];
 	copyScatter3d.threshold = [self.threshold copyWithZone: zone];
 	copyScatter3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyScatter3d.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyScatter3d.events = [self.events copyWithZone: zone];
 	copyScatter3d.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyScatter3d.definition = [self.definition copyWithZone: zone];

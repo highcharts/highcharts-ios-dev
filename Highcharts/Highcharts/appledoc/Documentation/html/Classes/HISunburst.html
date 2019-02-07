@@ -58,7 +58,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/allowDrillToNode">allowDrillToNode</option>
+		<option value="//api/name/allowTraversingTree">allowTraversingTree</option>
 		
 		<option value="//api/name/borderColor">borderColor</option>
 		
@@ -83,6 +83,8 @@
 		<option value="//api/name/slicedOffset">slicedOffset</option>
 		
 		<option value="//api/name/startAngle">startAngle</option>
+		
+		<option value="//api/name/traverseUpButton">traverseUpButton</option>
 		
 	</optgroup>
 	
@@ -331,6 +333,47 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/traverseUpButton" title="traverseUpButton"></a>
+	<h3 class="method-title"><code><a href="#//api/name/traverseUpButton">&nbsp;&nbsp;traverseUpButton</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the button appearing when traversing down in a treemap.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITraverseUpButton *traverseUpButton</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISunburst.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/slicedOffset" title="slicedOffset"></a>
 	<h3 class="method-title"><code><a href="#//api/name/slicedOffset">&nbsp;&nbsp;slicedOffset</a></code>
 </h3>
@@ -366,47 +409,6 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISunburst.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/levelIsConstant" title="levelIsConstant"></a>
-	<h3 class="method-title"><code><a href="#//api/name/levelIsConstant">&nbsp;&nbsp;levelIsConstant</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Used together with the levels and <code>allowDrillToNode</code> options. When set to false the first level visible when drilling is considered to be level one. Otherwise the level will be the same as the tree structure.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *levelIsConstant</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -474,8 +476,49 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/allowDrillToNode" title="allowDrillToNode"></a>
-	<h3 class="method-title"><code><a href="#//api/name/allowDrillToNode">&nbsp;&nbsp;allowDrillToNode</a></code>
+	<a name="//api/name/levelIsConstant" title="levelIsConstant"></a>
+	<h3 class="method-title"><code><a href="#//api/name/levelIsConstant">&nbsp;&nbsp;levelIsConstant</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used together with the levels and <code>allowDrillToNode</code> options. When set to false the first level visible when drilling is considered to be level one. Otherwise the level will be the same as the tree structure.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *levelIsConstant</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISunburst.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/allowTraversingTree" title="allowTraversingTree"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowTraversingTree">&nbsp;&nbsp;allowTraversingTree</a></code>
 </h3>
 
 	<div class="method-info">
@@ -490,7 +533,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowDrillToNode</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowTraversingTree</code></div>
 
 		    
 			
@@ -503,13 +546,6 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">Allow drill to node</a></li>
-</ul>
-
 			</div>
 			
 

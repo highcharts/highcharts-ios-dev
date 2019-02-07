@@ -19,11 +19,12 @@
 	copySunburst.rootId = [self.rootId copyWithZone: zone];
 	copySunburst.levelSize = [self.levelSize copyWithZone: zone];
 	copySunburst.center = [self.center copyWithZone: zone];
+	copySunburst.traverseUpButton = [self.traverseUpButton copyWithZone: zone];
 	copySunburst.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copySunburst.levels = [self.levels copyWithZone: zone];
 	copySunburst.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySunburst.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
-	copySunburst.levels = [self.levels copyWithZone: zone];
-	copySunburst.allowDrillToNode = [self.allowDrillToNode copyWithZone: zone];
+	copySunburst.allowTraversingTree = [self.allowTraversingTree copyWithZone: zone];
 	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
 	copySunburst.point = [self.point copyWithZone: zone];
 	copySunburst.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -45,6 +46,7 @@
 	copySunburst.label = [self.label copyWithZone: zone];
 	copySunburst.animation = [self.animation copyWithZone: zone];
 	copySunburst.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySunburst.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySunburst.definition = [self.definition copyWithZone: zone];
 	copySunburst.keys = [self.keys copyWithZone: zone];
 	copySunburst.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
@@ -90,11 +92,11 @@
 		}
 		params[@"center"] = array;
 	}
+	if (self.traverseUpButton) {
+		params[@"traverseUpButton"] = [self.traverseUpButton getParams];
+	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
-	}
-	if (self.levelIsConstant) {
-		params[@"levelIsConstant"] = self.levelIsConstant;
 	}
 	if (self.levels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -108,8 +110,11 @@
 		}
 		params[@"levels"] = array;
 	}
-	if (self.allowDrillToNode) {
-		params[@"allowDrillToNode"] = self.allowDrillToNode;
+	if (self.levelIsConstant) {
+		params[@"levelIsConstant"] = self.levelIsConstant;
+	}
+	if (self.allowTraversingTree) {
+		params[@"allowTraversingTree"] = self.allowTraversingTree;
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
@@ -164,16 +169,16 @@
 	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
 }
 
+-(void)setTraverseUpButton:(HITraverseUpButton *)traverseUpButton {
+	HITraverseUpButton *oldValue = _traverseUpButton;
+	_traverseUpButton = traverseUpButton;
+	[self updateHIObject:oldValue newValue:traverseUpButton propertyName:@"traverseUpButton"];
+}
+
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {
 	NSNumber *oldValue = _slicedOffset;
 	_slicedOffset = slicedOffset;
 	[self updateNSObject:oldValue newValue:slicedOffset propertyName:@"slicedOffset"];
-}
-
--(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
-	NSNumber *oldValue = _levelIsConstant;
-	_levelIsConstant = levelIsConstant;
-	[self updateNSObject:oldValue newValue:levelIsConstant propertyName:@"levelIsConstant"];
 }
 
 -(void)setLevels:(NSArray <HILevels *> *)levels {
@@ -182,10 +187,16 @@
 	[self updateArrayObject:oldValue newValue:levels propertyName:@"levels"];
 }
 
--(void)setAllowDrillToNode:(NSNumber *)allowDrillToNode {
-	NSNumber *oldValue = _allowDrillToNode;
-	_allowDrillToNode = allowDrillToNode;
-	[self updateNSObject:oldValue newValue:allowDrillToNode propertyName:@"allowDrillToNode"];
+-(void)setLevelIsConstant:(NSNumber *)levelIsConstant {
+	NSNumber *oldValue = _levelIsConstant;
+	_levelIsConstant = levelIsConstant;
+	[self updateNSObject:oldValue newValue:levelIsConstant propertyName:@"levelIsConstant"];
+}
+
+-(void)setAllowTraversingTree:(NSNumber *)allowTraversingTree {
+	NSNumber *oldValue = _allowTraversingTree;
+	_allowTraversingTree = allowTraversingTree;
+	[self updateNSObject:oldValue newValue:allowTraversingTree propertyName:@"allowTraversingTree"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {

@@ -83,6 +83,7 @@
 	copyYAxis.crosshair = [self.crosshair copyWithZone: zone];
 	copyYAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
 	copyYAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyYAxis.margin = [self.margin copyWithZone: zone];
 	return copyYAxis;
 }
 
@@ -371,6 +372,9 @@
 	}
 	if (self.minorTickInterval) {
 		params[@"minorTickInterval"] = self.minorTickInterval;
+	}
+	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	return params;
 }
@@ -813,6 +817,12 @@
 	id oldValue = _minorTickInterval;
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:oldValue newValue:minorTickInterval propertyName:@"minorTickInterval"];
+}
+
+-(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
+	_margin = margin;
+	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }
 
 - (void)addPlotBand:(HIPlotBands *)options {
