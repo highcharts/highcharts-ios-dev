@@ -52,6 +52,7 @@
 	copyColumnrange.animation = [self.animation copyWithZone: zone];
 	copyColumnrange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyColumnrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyColumnrange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyColumnrange.events = [self.events copyWithZone: zone];
 	copyColumnrange.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyColumnrange.definition = [self.definition copyWithZone: zone];

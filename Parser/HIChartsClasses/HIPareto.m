@@ -34,6 +34,7 @@
 	copyPareto.label = [self.label copyWithZone: zone];
 	copyPareto.animation = [self.animation copyWithZone: zone];
 	copyPareto.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyPareto.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPareto.events = [self.events copyWithZone: zone];
 	copyPareto.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPareto.definition = [self.definition copyWithZone: zone];

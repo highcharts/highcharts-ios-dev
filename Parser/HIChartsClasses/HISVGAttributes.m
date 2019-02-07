@@ -19,6 +19,7 @@
 	copySVGAttributes.scaleX = [self.scaleX copyWithZone: zone];
 	copySVGAttributes.scaleY = [self.scaleY copyWithZone: zone];
 	copySVGAttributes.stroke = [self.stroke copyWithZone: zone];
+	copySVGAttributes.style = [self.style copyWithZone: zone];
 	copySVGAttributes.translateX = [self.translateX copyWithZone: zone];
 	copySVGAttributes.translateY = [self.translateY copyWithZone: zone];
 	copySVGAttributes.zIndex = [self.zIndex copyWithZone: zone];
@@ -72,6 +73,9 @@
 	}
 	if (self.stroke) {
 		params[@"stroke"] = self.stroke;
+	}
+	if (self.style) {
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.translateX) {
 		params[@"translateX"] = self.translateX;
@@ -139,6 +143,12 @@
 	NSString *oldValue = _stroke;
 	_stroke = stroke;
 	[self updateNSObject:oldValue newValue:stroke propertyName:@"stroke"];
+}
+
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setTranslateX:(NSNumber *)translateX {

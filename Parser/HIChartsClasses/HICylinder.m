@@ -56,6 +56,7 @@
 	copyCylinder.animation = [self.animation copyWithZone: zone];
 	copyCylinder.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyCylinder.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyCylinder.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyCylinder.events = [self.events copyWithZone: zone];
 	copyCylinder.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyCylinder.definition = [self.definition copyWithZone: zone];

@@ -54,6 +54,7 @@
 	copyXrange.label = [self.label copyWithZone: zone];
 	copyXrange.animation = [self.animation copyWithZone: zone];
 	copyXrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyXrange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyXrange.events = [self.events copyWithZone: zone];
 	copyXrange.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyXrange.definition = [self.definition copyWithZone: zone];

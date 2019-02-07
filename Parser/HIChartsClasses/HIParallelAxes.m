@@ -66,6 +66,7 @@
 	copyParallelAxes.tickAmount = [self.tickAmount copyWithZone: zone];
 	copyParallelAxes.crosshair = [self.crosshair copyWithZone: zone];
 	copyParallelAxes.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
+	copyParallelAxes.margin = [self.margin copyWithZone: zone];
 	return copyParallelAxes;
 }
 
@@ -266,6 +267,9 @@
 	}
 	if (self.minorTickInterval) {
 		params[@"minorTickInterval"] = self.minorTickInterval;
+	}
+	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	return params;
 }
@@ -606,6 +610,12 @@
 	id oldValue = _minorTickInterval;
 	_minorTickInterval = minorTickInterval;
 	[self updateNSObject:oldValue newValue:minorTickInterval propertyName:@"minorTickInterval"];
+}
+
+-(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
+	_margin = margin;
+	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }
 
 @end

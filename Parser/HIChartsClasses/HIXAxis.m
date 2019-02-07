@@ -74,6 +74,7 @@
 	copyXAxis.title = [self.title copyWithZone: zone];
 	copyXAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyXAxis.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyXAxis.margin = [self.margin copyWithZone: zone];
 	copyXAxis.plotBands = [self.plotBands copyWithZone: zone];
 	copyXAxis.softMax = [self.softMax copyWithZone: zone];
 	return copyXAxis;
@@ -319,6 +320,9 @@
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
+	}
+	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -722,6 +726,12 @@
 	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
 	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
+}
+
+-(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
+	_margin = margin;
+	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }
 
 -(void)setPlotBands:(NSArray <HIPlotBands *> *)plotBands {

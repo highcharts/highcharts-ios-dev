@@ -51,6 +51,7 @@
 	copyVariwide.animation = [self.animation copyWithZone: zone];
 	copyVariwide.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyVariwide.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyVariwide.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyVariwide.events = [self.events copyWithZone: zone];
 	copyVariwide.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyVariwide.definition = [self.definition copyWithZone: zone];

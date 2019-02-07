@@ -57,6 +57,7 @@
 	copyFunnel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyFunnel.label = [self.label copyWithZone: zone];
 	copyFunnel.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyFunnel.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyFunnel.definition = [self.definition copyWithZone: zone];
 	copyFunnel.keys = [self.keys copyWithZone: zone];
 	copyFunnel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];

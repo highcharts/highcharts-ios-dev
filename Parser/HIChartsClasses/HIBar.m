@@ -56,6 +56,7 @@
 	copyBar.animation = [self.animation copyWithZone: zone];
 	copyBar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBar.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyBar.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBar.events = [self.events copyWithZone: zone];
 	copyBar.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyBar.definition = [self.definition copyWithZone: zone];
