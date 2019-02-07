@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/draggable">draggable</option>
+		
 		<option value="//api/name/id">id</option>
 		
 		<option value="//api/name/labelOptions">labelOptions</option>
@@ -179,6 +181,47 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/shapes" title="shapes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shapes">&nbsp;&nbsp;shapes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the <code>shapeOptions</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIShapes*&gt; *shapes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/zIndex" title="zIndex"></a>
 	<h3 class="method-title"><code><a href="#//api/name/zIndex">&nbsp;&nbsp;zIndex</a></code>
 </h3>
@@ -271,47 +314,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/labels" title="labels"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An array of labels for the annotation. For options that apply to multiple labels, they can be added to the <code>labelOptions</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILabels*&gt; *labels</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/labelOptions" title="labelOptions"></a>
 	<h3 class="method-title"><code><a href="#//api/name/labelOptions">&nbsp;&nbsp;labelOptions</a></code>
 </h3>
@@ -353,8 +355,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/shapes" title="shapes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shapes">&nbsp;&nbsp;shapes</a></code>
+	<a name="//api/name/labels" title="labels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
 </h3>
 
 	<div class="method-info">
@@ -364,12 +366,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the <code>shapeOptions</code>.</p>
+				<p>An array of labels for the annotation. For options that apply to multiple labels, they can be added to the <code>labelOptions</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIShapes*&gt; *shapes</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILabels*&gt; *labels</code></div>
 
 		    
 			
@@ -378,6 +380,57 @@
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/draggable" title="draggable"></a>
+	<h3 class="method-title"><code><a href="#//api/name/draggable">&nbsp;&nbsp;draggable</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Allow an annotation to be draggable by a user. Possible values are <code>"x"</code>, <code>"xy"</code>, <code>"y"</code> and <code>""</code> (disabled).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *draggable</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/draggable/">Annotations draggable: &lsquo;xy&rsquo;</a></li>
+</ul>
+
+			</div>
 			
 
 			
