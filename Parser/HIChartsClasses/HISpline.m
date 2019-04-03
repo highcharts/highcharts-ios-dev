@@ -25,7 +25,7 @@
 	copySpline.xAxis = [self.xAxis copyWithZone: zone];
 	copySpline.yAxis = [self.yAxis copyWithZone: zone];
 	copySpline.zIndex = [self.zIndex copyWithZone: zone];
-	copySpline.point = [self.point copyWithZone: zone];
+	copySpline.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySpline.selected = [self.selected copyWithZone: zone];
 	copySpline.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySpline.clip = [self.clip copyWithZone: zone];
@@ -36,6 +36,7 @@
 	copySpline.states = [self.states copyWithZone: zone];
 	copySpline.softThreshold = [self.softThreshold copyWithZone: zone];
 	copySpline.dragDrop = [self.dragDrop copyWithZone: zone];
+	copySpline.point = [self.point copyWithZone: zone];
 	copySpline.marker = [self.marker copyWithZone: zone];
 	copySpline.tooltip = [self.tooltip copyWithZone: zone];
 	copySpline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -52,15 +53,17 @@
 	copySpline.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySpline.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySpline.events = [self.events copyWithZone: zone];
+	copySpline.opacity = [self.opacity copyWithZone: zone];
 	copySpline.animationLimit = [self.animationLimit copyWithZone: zone];
 	copySpline.definition = [self.definition copyWithZone: zone];
 	copySpline.keys = [self.keys copyWithZone: zone];
 	copySpline.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySpline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copySpline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySpline.accessibility = [self.accessibility copyWithZone: zone];
 	copySpline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copySpline.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySpline.shadow = [self.shadow copyWithZone: zone];
+	copySpline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySpline.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySpline.zones = [self.zones copyWithZone: zone];
 	copySpline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

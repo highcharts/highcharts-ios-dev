@@ -12,11 +12,12 @@
 	HINavigation *copyNavigation = [[HINavigation allocWithZone: zone] init];
 	copyNavigation.menuStyle = [self.menuStyle copyWithZone: zone];
 	copyNavigation.buttonOptions = [self.buttonOptions copyWithZone: zone];
+	copyNavigation.annotationsOptions = [self.annotationsOptions copyWithZone: zone];
 	copyNavigation.bindingsClassName = [self.bindingsClassName copyWithZone: zone];
-	copyNavigation.events = [self.events copyWithZone: zone];
-	copyNavigation.menuItemStyle = [self.menuItemStyle copyWithZone: zone];
 	copyNavigation.menuItemHoverStyle = [self.menuItemHoverStyle copyWithZone: zone];
+	copyNavigation.menuItemStyle = [self.menuItemStyle copyWithZone: zone];
 	copyNavigation.bindings = [self.bindings copyWithZone: zone];
+	copyNavigation.events = [self.events copyWithZone: zone];
 	copyNavigation.style = [self.style copyWithZone: zone];
 	copyNavigation.inactiveColor = [self.inactiveColor copyWithZone: zone];
 	copyNavigation.enabled = [self.enabled copyWithZone: zone];
@@ -36,20 +37,23 @@
 	if (self.buttonOptions) {
 		params[@"buttonOptions"] = [self.buttonOptions getParams];
 	}
+	if (self.annotationsOptions) {
+		params[@"annotationsOptions"] = [self.annotationsOptions getParams];
+	}
 	if (self.bindingsClassName) {
 		params[@"bindingsClassName"] = self.bindingsClassName;
-	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
-	}
-	if (self.menuItemStyle) {
-		params[@"menuItemStyle"] = [self.menuItemStyle getParams];
 	}
 	if (self.menuItemHoverStyle) {
 		params[@"menuItemHoverStyle"] = [self.menuItemHoverStyle getParams];
 	}
+	if (self.menuItemStyle) {
+		params[@"menuItemStyle"] = [self.menuItemStyle getParams];
+	}
 	if (self.bindings) {
 		params[@"bindings"] = [self.bindings getParams];
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
@@ -89,22 +93,16 @@
 	[self updateHIObject:oldValue newValue:buttonOptions propertyName:@"buttonOptions"];
 }
 
+-(void)setAnnotationsOptions:(HIAnnotationsOptions *)annotationsOptions {
+	HIAnnotationsOptions *oldValue = _annotationsOptions;
+	_annotationsOptions = annotationsOptions;
+	[self updateHIObject:oldValue newValue:annotationsOptions propertyName:@"annotationsOptions"];
+}
+
 -(void)setBindingsClassName:(NSString *)bindingsClassName {
 	NSString *oldValue = _bindingsClassName;
 	_bindingsClassName = bindingsClassName;
 	[self updateNSObject:oldValue newValue:bindingsClassName propertyName:@"bindingsClassName"];
-}
-
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
-	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
-}
-
--(void)setMenuItemStyle:(HICSSObject *)menuItemStyle {
-	HICSSObject *oldValue = _menuItemStyle;
-	_menuItemStyle = menuItemStyle;
-	[self updateHIObject:oldValue newValue:menuItemStyle propertyName:@"menuItemStyle"];
 }
 
 -(void)setMenuItemHoverStyle:(HICSSObject *)menuItemHoverStyle {
@@ -113,10 +111,22 @@
 	[self updateHIObject:oldValue newValue:menuItemHoverStyle propertyName:@"menuItemHoverStyle"];
 }
 
+-(void)setMenuItemStyle:(HICSSObject *)menuItemStyle {
+	HICSSObject *oldValue = _menuItemStyle;
+	_menuItemStyle = menuItemStyle;
+	[self updateHIObject:oldValue newValue:menuItemStyle propertyName:@"menuItemStyle"];
+}
+
 -(void)setBindings:(HIBindings *)bindings {
 	HIBindings *oldValue = _bindings;
 	_bindings = bindings;
 	[self updateHIObject:oldValue newValue:bindings propertyName:@"bindings"];
+}
+
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setStyle:(HICSSObject *)style {

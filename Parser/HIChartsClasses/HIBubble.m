@@ -46,7 +46,7 @@
 	copyBubble.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyBubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBubble.linecap = [self.linecap copyWithZone: zone];
-	copyBubble.point = [self.point copyWithZone: zone];
+	copyBubble.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyBubble.selected = [self.selected copyWithZone: zone];
 	copyBubble.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBubble.clip = [self.clip copyWithZone: zone];
@@ -54,6 +54,7 @@
 	copyBubble.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyBubble.point = [self.point copyWithZone: zone];
 	copyBubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBubble.className = [self.className copyWithZone: zone];
 	copyBubble.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -66,13 +67,15 @@
 	copyBubble.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBubble.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBubble.events = [self.events copyWithZone: zone];
+	copyBubble.opacity = [self.opacity copyWithZone: zone];
 	copyBubble.definition = [self.definition copyWithZone: zone];
 	copyBubble.keys = [self.keys copyWithZone: zone];
 	copyBubble.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyBubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyBubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyBubble.step = [self.step copyWithZone: zone];
 	copyBubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBubble.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyBubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBubble.zones = [self.zones copyWithZone: zone];
 	copyBubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBubble.visible = [self.visible copyWithZone: zone];

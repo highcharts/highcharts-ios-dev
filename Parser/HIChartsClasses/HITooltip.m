@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HITooltip *copyTooltip = [[HITooltip allocWithZone: zone] init];
 	copyTooltip.followTouchMove = [self.followTouchMove copyWithZone: zone];
+	copyTooltip.nullFormatter = [self.nullFormatter copyWithZone: zone];
 	copyTooltip.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyTooltip.headerFormat = [self.headerFormat copyWithZone: zone];
 	copyTooltip.valueSuffix = [self.valueSuffix copyWithZone: zone];
@@ -28,6 +29,7 @@
 	copyTooltip.snap = [self.snap copyWithZone: zone];
 	copyTooltip.shared = [self.shared copyWithZone: zone];
 	copyTooltip.formatter = [self.formatter copyWithZone: zone];
+	copyTooltip.nullFormat = [self.nullFormat copyWithZone: zone];
 	copyTooltip.pointFormat = [self.pointFormat copyWithZone: zone];
 	copyTooltip.xDateFormat = [self.xDateFormat copyWithZone: zone];
 	copyTooltip.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
@@ -40,8 +42,8 @@
 	copyTooltip.followPointer = [self.followPointer copyWithZone: zone];
 	copyTooltip.hideDelay = [self.hideDelay copyWithZone: zone];
 	copyTooltip.valueDecimals = [self.valueDecimals copyWithZone: zone];
-	copyTooltip.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyTooltip.nodeFormat = [self.nodeFormat copyWithZone: zone];
+	copyTooltip.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyTooltip.distance = [self.distance copyWithZone: zone];
 	return copyTooltip;
 }
@@ -51,6 +53,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.followTouchMove) {
 		params[@"followTouchMove"] = self.followTouchMove;
+	}
+	if (self.nullFormatter) {
+		params[@"nullFormatter"] = [self.nullFormatter getFunction];
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -103,6 +108,9 @@
 	if (self.formatter) {
 		params[@"formatter"] = [self.formatter getFunction];
 	}
+	if (self.nullFormat) {
+		params[@"nullFormat"] = self.nullFormat;
+	}
 	if (self.pointFormat) {
 		params[@"pointFormat"] = self.pointFormat;
 	}
@@ -139,11 +147,11 @@
 	if (self.valueDecimals) {
 		params[@"valueDecimals"] = self.valueDecimals;
 	}
-	if (self.nodeFormatter) {
-		params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
-	}
 	if (self.nodeFormat) {
 		params[@"nodeFormat"] = self.nodeFormat;
+	}
+	if (self.nodeFormatter) {
+		params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
 	}
 	if (self.distance) {
 		params[@"distance"] = self.distance;
@@ -157,6 +165,12 @@
 	NSNumber *oldValue = _followTouchMove;
 	_followTouchMove = followTouchMove;
 	[self updateNSObject:oldValue newValue:followTouchMove propertyName:@"followTouchMove"];
+}
+
+-(void)setNullFormatter:(HIFunction *)nullFormatter {
+	HIFunction *oldValue = _nullFormatter;
+	_nullFormatter = nullFormatter;
+	[self updateHIObject:oldValue newValue:nullFormatter propertyName:@"nullFormatter"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
@@ -261,6 +275,12 @@
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
+-(void)setNullFormat:(NSString *)nullFormat {
+	NSString *oldValue = _nullFormat;
+	_nullFormat = nullFormat;
+	[self updateNSObject:oldValue newValue:nullFormat propertyName:@"nullFormat"];
+}
+
 -(void)setPointFormat:(NSString *)pointFormat {
 	NSString *oldValue = _pointFormat;
 	_pointFormat = pointFormat;
@@ -333,16 +353,16 @@
 	[self updateNSObject:oldValue newValue:valueDecimals propertyName:@"valueDecimals"];
 }
 
+-(void)setNodeFormat:(NSString)nodeFormat {
+	NSStringoldValue = _nodeFormat;
+	_nodeFormat = nodeFormat;
+	[self updateNSObject:oldValue newValue:nodeFormat propertyName:@"nodeFormat"];
+}
+
 -(void)setNodeFormatter:(HIFunction *)nodeFormatter {
 	HIFunction *oldValue = _nodeFormatter;
 	_nodeFormatter = nodeFormatter;
 	[self updateHIObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
-}
-
--(void)setNodeFormat:(NSString *)nodeFormat {
-	NSString *oldValue = _nodeFormat;
-	_nodeFormat = nodeFormat;
-	[self updateNSObject:oldValue newValue:nodeFormat propertyName:@"nodeFormat"];
 }
 
 -(void)setDistance:(NSNumber *)distance {

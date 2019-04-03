@@ -28,7 +28,7 @@
 	copyArearange.lineColor = [self.lineColor copyWithZone: zone];
 	copyArearange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyArearange.linecap = [self.linecap copyWithZone: zone];
-	copyArearange.point = [self.point copyWithZone: zone];
+	copyArearange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyArearange.selected = [self.selected copyWithZone: zone];
 	copyArearange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyArearange.clip = [self.clip copyWithZone: zone];
@@ -37,6 +37,7 @@
 	copyArearange.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyArearange.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyArearange.states = [self.states copyWithZone: zone];
+	copyArearange.point = [self.point copyWithZone: zone];
 	copyArearange.marker = [self.marker copyWithZone: zone];
 	copyArearange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyArearange.className = [self.className copyWithZone: zone];
@@ -50,15 +51,17 @@
 	copyArearange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyArearange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyArearange.events = [self.events copyWithZone: zone];
+	copyArearange.opacity = [self.opacity copyWithZone: zone];
 	copyArearange.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyArearange.definition = [self.definition copyWithZone: zone];
 	copyArearange.keys = [self.keys copyWithZone: zone];
 	copyArearange.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyArearange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyArearange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyArearange.accessibility = [self.accessibility copyWithZone: zone];
 	copyArearange.step = [self.step copyWithZone: zone];
 	copyArearange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyArearange.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyArearange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArearange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyArearange.zones = [self.zones copyWithZone: zone];
 	copyArearange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

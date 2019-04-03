@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HIStates *copyStates = [[HIStates allocWithZone: zone] init];
 	copyStates.hover = [self.hover copyWithZone: zone];
+	copyStates.inactive = [self.inactive copyWithZone: zone];
 	copyStates.select = [self.select copyWithZone: zone];
 	copyStates.normal = [self.normal copyWithZone: zone];
 	return copyStates;
@@ -21,6 +22,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.hover) {
 		params[@"hover"] = [self.hover getParams];
+	}
+	if (self.inactive) {
+		params[@"inactive"] = [self.inactive getParams];
 	}
 	if (self.select) {
 		params[@"select"] = [self.select getParams];
@@ -37,6 +41,12 @@
 	HIHover *oldValue = _hover;
 	_hover = hover;
 	[self updateHIObject:oldValue newValue:hover propertyName:@"hover"];
+}
+
+-(void)setInactive:(HIInactive *)inactive {
+	HIInactive *oldValue = _inactive;
+	_inactive = inactive;
+	[self updateHIObject:oldValue newValue:inactive propertyName:@"inactive"];
 }
 
 -(void)setSelect:(HISelect *)select {
