@@ -288,7 +288,18 @@ hc_types = {
         "string|Highcharts.HTMLDOMElement": 'NSString',
         #7.0.2
         "Array.<(string|Highcharts.GradientColorObject|Highcharts.PatternObject)>": 'NSArray<NSString *>',
-        "string|function": 'NSString'
+        "string|function": 'NSString',
+        #7.1.1
+        "undefined|number": 'NSNumber',
+        "Highcharts.ScreenReaderFormatterCallbackFunction.<Highcharts.Chart>": 'HIFunction',
+        "Highcharts.ScreenReaderFormatterCallbackFunction.<Highcharts.Series>": 'HIFunction',
+        "Highcharts.ScreenReaderFormatterCallbackFunction.<Highcharts.Point>": 'HIFunction',
+        "boolean|number": 'NSNumber',
+        "Array.<number>|false": 'NSArray<NSNumber *>',
+        "Highcharts.AnnotationsOptions": '*',
+        "Highcharts.FormatterCallbackFunction.<Highcharts.SankeyNodeObject>": 'HIFunction',
+        "Highcharts.FormatterCallbackFunction.<Highcharts.StackItemObject>": 'HIFunction',
+        "null|*": '*'
     }
 
 def get_type(x):
@@ -551,6 +562,8 @@ def prepare_lang_class(text): # iOS Lang class
 
 def create_setter(field):
     setter_attribute = re.sub(r'\bdefault\b', 'defaults', get_last(field.name))
+    if field.name not in types:
+        types[field.name] = get_type(field.data_type)
     setter_type = re.sub('\s/(.?)+/', '', types[field.name])
 
     setter_text = "-(void)set{0}:({1}){2}".format(upper_first(setter_attribute), setter_type, setter_attribute) + " {\n"

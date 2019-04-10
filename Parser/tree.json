@@ -37537,7 +37537,7 @@
           },
           "marker": {
             "doclet": {
-              "extends": "plotOptions.line.marker"
+              "extends": "plotOptions.series.marker"
             },
             "meta": {
               "fullname": "plotOptions.item.marker",
@@ -42286,7 +42286,7 @@
                           "value": "highcharts/series-packedbubble/parentnode-style/"
                         }
                       ],
-                      "extends": "plotOptions.line.marker",
+                      "extends": "plotOptions.series.marker",
                       "exclude": [
                         "states"
                       ],
@@ -52388,7 +52388,8 @@
                     "brightness"
                   ],
                   "products": [
-                    "highmaps"
+                    "highmaps",
+                    "highcharts"
                   ],
                   "since": "1.0.0",
                   "type": {
@@ -65320,7 +65321,7 @@
                   "Array.<(number|Array.<number>|*)>"
                 ]
               },
-              "extends": "series.funnel3d.data",
+              "extends": "series.line.data",
               "products": [
                 "highcharts"
               ],
@@ -69048,7 +69049,7 @@
                   "Array.<(number|Array.<number>|*)>"
                 ]
               },
-              "extends": "series.pyramid3d.data",
+              "extends": "series.line.data",
               "products": [
                 "highcharts"
               ],
