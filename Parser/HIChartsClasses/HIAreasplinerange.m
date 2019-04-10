@@ -37,7 +37,7 @@
 	copyAreasplinerange.lineColor = [self.lineColor copyWithZone: zone];
 	copyAreasplinerange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyAreasplinerange.linecap = [self.linecap copyWithZone: zone];
-	copyAreasplinerange.point = [self.point copyWithZone: zone];
+	copyAreasplinerange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyAreasplinerange.selected = [self.selected copyWithZone: zone];
 	copyAreasplinerange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyAreasplinerange.clip = [self.clip copyWithZone: zone];
@@ -46,6 +46,7 @@
 	copyAreasplinerange.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyAreasplinerange.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyAreasplinerange.states = [self.states copyWithZone: zone];
+	copyAreasplinerange.point = [self.point copyWithZone: zone];
 	copyAreasplinerange.marker = [self.marker copyWithZone: zone];
 	copyAreasplinerange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyAreasplinerange.className = [self.className copyWithZone: zone];
@@ -59,14 +60,16 @@
 	copyAreasplinerange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyAreasplinerange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyAreasplinerange.events = [self.events copyWithZone: zone];
+	copyAreasplinerange.opacity = [self.opacity copyWithZone: zone];
 	copyAreasplinerange.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyAreasplinerange.definition = [self.definition copyWithZone: zone];
 	copyAreasplinerange.keys = [self.keys copyWithZone: zone];
 	copyAreasplinerange.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyAreasplinerange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyAreasplinerange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyAreasplinerange.accessibility = [self.accessibility copyWithZone: zone];
 	copyAreasplinerange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyAreasplinerange.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyAreasplinerange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyAreasplinerange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyAreasplinerange.zones = [self.zones copyWithZone: zone];
 	copyAreasplinerange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

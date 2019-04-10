@@ -11,13 +11,14 @@
 	[super copyWithZone:zone];
 	HIZAxis *copyZAxis = [[HIZAxis allocWithZone: zone] init];
 	copyZAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyZAxis.pane = [self.pane copyWithZone: zone];
 	copyZAxis.minPadding = [self.minPadding copyWithZone: zone];
 	copyZAxis.labels = [self.labels copyWithZone: zone];
 	copyZAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
-	copyZAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyZAxis.accessibility = [self.accessibility copyWithZone: zone];
 	copyZAxis.visible = [self.visible copyWithZone: zone];
 	copyZAxis.alignTicks = [self.alignTicks copyWithZone: zone];
-	copyZAxis.pane = [self.pane copyWithZone: zone];
+	copyZAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
 	copyZAxis.tickWidth = [self.tickWidth copyWithZone: zone];
 	copyZAxis.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
 	copyZAxis.reversed = [self.reversed copyWithZone: zone];
@@ -41,17 +42,16 @@
 	copyZAxis.tickLength = [self.tickLength copyWithZone: zone];
 	copyZAxis.ceiling = [self.ceiling copyWithZone: zone];
 	copyZAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
-	copyZAxis.definition = [self.definition copyWithZone: zone];
 	copyZAxis.opposite = [self.opposite copyWithZone: zone];
 	copyZAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
 	copyZAxis.max = [self.max copyWithZone: zone];
-	copyZAxis.gridLineWidth = [self.gridLineWidth copyWithZone: zone];
+	copyZAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyZAxis.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyZAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyZAxis.startOnTick = [self.startOnTick copyWithZone: zone];
 	copyZAxis.offset = [self.offset copyWithZone: zone];
 	copyZAxis.tickColor = [self.tickColor copyWithZone: zone];
-	copyZAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
+	copyZAxis.gridLineWidth = [self.gridLineWidth copyWithZone: zone];
 	copyZAxis.tickInterval = [self.tickInterval copyWithZone: zone];
 	copyZAxis.tickPosition = [self.tickPosition copyWithZone: zone];
 	copyZAxis.categories = [self.categories copyWithZone: zone];
@@ -82,6 +82,9 @@
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
+	if (self.pane) {
+		params[@"pane"] = self.pane;
+	}
 	if (self.minPadding) {
 		params[@"minPadding"] = self.minPadding;
 	}
@@ -91,8 +94,8 @@
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
 	}
-	if (self.dateTimeLabelFormats) {
-		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
@@ -100,8 +103,8 @@
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
 	}
-	if (self.pane) {
-		params[@"pane"] = self.pane;
+	if (self.minTickInterval) {
+		params[@"minTickInterval"] = self.minTickInterval;
 	}
 	if (self.tickWidth) {
 		params[@"tickWidth"] = self.tickWidth;
@@ -199,9 +202,6 @@
 	if (self.gridLineDashStyle) {
 		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
 	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
-	}
 	if (self.opposite) {
 		params[@"opposite"] = self.opposite;
 	}
@@ -211,8 +211,8 @@
 	if (self.max) {
 		params[@"max"] = self.max;
 	}
-	if (self.gridLineWidth) {
-		params[@"gridLineWidth"] = self.gridLineWidth;
+	if (self.dateTimeLabelFormats) {
+		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
 	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
@@ -229,8 +229,8 @@
 	if (self.tickColor) {
 		params[@"tickColor"] = [self.tickColor getData];
 	}
-	if (self.minTickInterval) {
-		params[@"minTickInterval"] = self.minTickInterval;
+	if (self.gridLineWidth) {
+		params[@"gridLineWidth"] = self.gridLineWidth;
 	}
 	if (self.tickInterval) {
 		params[@"tickInterval"] = self.tickInterval;
@@ -293,7 +293,6 @@
 		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.margin) {
-		params[@"margin"] = self.margin;
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -321,6 +320,12 @@
 	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
 }
 
+-(void)setPane:(NSNumber *)pane {
+	NSNumber *oldValue = _pane;
+	_pane = pane;
+	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
+}
+
 -(void)setMinPadding:(NSNumber *)minPadding {
 	NSNumber *oldValue = _minPadding;
 	_minPadding = minPadding;
@@ -339,10 +344,10 @@
 	[self updateNSObject:oldValue newValue:gridZIndex propertyName:@"gridZIndex"];
 }
 
--(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
-	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
-	_dateTimeLabelFormats = dateTimeLabelFormats;
-	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
+-(void)setAccessibility:(HIAccessibility *)accessibility {
+	HIAccessibility *oldValue = _accessibility;
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
 -(void)setVisible:(NSNumber *)visible {
@@ -357,10 +362,10 @@
 	[self updateNSObject:oldValue newValue:alignTicks propertyName:@"alignTicks"];
 }
 
--(void)setPane:(NSNumber *)pane {
-	NSNumber *oldValue = _pane;
-	_pane = pane;
-	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
+-(void)setMinTickInterval:(NSNumber *)minTickInterval {
+	NSNumber *oldValue = _minTickInterval;
+	_minTickInterval = minTickInterval;
+	[self updateNSObject:oldValue newValue:minTickInterval propertyName:@"minTickInterval"];
 }
 
 -(void)setTickWidth:(NSNumber *)tickWidth {
@@ -501,12 +506,6 @@
 	[self updateNSObject:oldValue newValue:gridLineDashStyle propertyName:@"gridLineDashStyle"];
 }
 
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
-}
-
 -(void)setOpposite:(NSNumber *)opposite {
 	NSNumber *oldValue = _opposite;
 	_opposite = opposite;
@@ -525,10 +524,10 @@
 	[self updateNSObject:oldValue newValue:max propertyName:@"max"];
 }
 
--(void)setGridLineWidth:(NSNumber *)gridLineWidth {
-	NSNumber *oldValue = _gridLineWidth;
-	_gridLineWidth = gridLineWidth;
-	[self updateNSObject:oldValue newValue:gridLineWidth propertyName:@"gridLineWidth"];
+-(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
+	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
+	_dateTimeLabelFormats = dateTimeLabelFormats;
+	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 -(void)setMinorTicks:(NSNumber *)minorTicks {
@@ -561,10 +560,10 @@
 	[self updateHIObject:oldValue newValue:tickColor propertyName:@"tickColor"];
 }
 
--(void)setMinTickInterval:(NSNumber *)minTickInterval {
-	NSNumber *oldValue = _minTickInterval;
-	_minTickInterval = minTickInterval;
-	[self updateNSObject:oldValue newValue:minTickInterval propertyName:@"minTickInterval"];
+-(void)setGridLineWidth:(NSNumber *)gridLineWidth {
+	NSNumber *oldValue = _gridLineWidth;
+	_gridLineWidth = gridLineWidth;
+	[self updateNSObject:oldValue newValue:gridLineWidth propertyName:@"gridLineWidth"];
 }
 
 -(void)setTickInterval:(NSNumber *)tickInterval {
@@ -669,8 +668,8 @@
 	[self updateNSObject:oldValue newValue:minorTickInterval propertyName:@"minorTickInterval"];
 }
 
--(void)setMargin:(NSNumber *)margin {
-	NSNumber *oldValue = _margin;
+-(void)setMargin:(id)margin {
+	id oldValue = _margin;
 	_margin = margin;
 	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }

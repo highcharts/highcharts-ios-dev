@@ -32,11 +32,12 @@
 	copyVenn.states = [self.states copyWithZone: zone];
 	copyVenn.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVenn.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyVenn.point = [self.point copyWithZone: zone];
+	copyVenn.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyVenn.selected = [self.selected copyWithZone: zone];
 	copyVenn.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVenn.color = [self.color copyWithZone: zone];
 	copyVenn.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyVenn.point = [self.point copyWithZone: zone];
 	copyVenn.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVenn.className = [self.className copyWithZone: zone];
 	copyVenn.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -50,9 +51,10 @@
 	copyVenn.keys = [self.keys copyWithZone: zone];
 	copyVenn.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyVenn.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyVenn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyVenn.accessibility = [self.accessibility copyWithZone: zone];
 	copyVenn.step = [self.step copyWithZone: zone];
 	copyVenn.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyVenn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVenn.visible = [self.visible copyWithZone: zone];
 	copyVenn.cursor = [self.cursor copyWithZone: zone];
 	copyVenn.boostThreshold = [self.boostThreshold copyWithZone: zone];
@@ -64,9 +66,6 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
-	}
-	if (self.opacity) {
-		params[@"opacity"] = self.opacity;
 	}
 	if (self.borderDashStyle) {
 		params[@"borderDashStyle"] = self.borderDashStyle;
@@ -83,12 +82,6 @@
 	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
-}
-
--(void)setOpacity:(NSNumber *)opacity {
-	NSNumber *oldValue = _opacity;
-	_opacity = opacity;
-	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
 -(void)setBorderDashStyle:(NSString *)borderDashStyle {
