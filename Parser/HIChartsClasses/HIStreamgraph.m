@@ -36,7 +36,7 @@
 	copyStreamgraph.lineColor = [self.lineColor copyWithZone: zone];
 	copyStreamgraph.threshold = [self.threshold copyWithZone: zone];
 	copyStreamgraph.linecap = [self.linecap copyWithZone: zone];
-	copyStreamgraph.point = [self.point copyWithZone: zone];
+	copyStreamgraph.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyStreamgraph.selected = [self.selected copyWithZone: zone];
 	copyStreamgraph.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyStreamgraph.clip = [self.clip copyWithZone: zone];
@@ -46,6 +46,7 @@
 	copyStreamgraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyStreamgraph.states = [self.states copyWithZone: zone];
 	copyStreamgraph.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyStreamgraph.point = [self.point copyWithZone: zone];
 	copyStreamgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyStreamgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyStreamgraph.className = [self.className copyWithZone: zone];
@@ -59,15 +60,17 @@
 	copyStreamgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyStreamgraph.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyStreamgraph.events = [self.events copyWithZone: zone];
+	copyStreamgraph.opacity = [self.opacity copyWithZone: zone];
 	copyStreamgraph.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyStreamgraph.definition = [self.definition copyWithZone: zone];
 	copyStreamgraph.keys = [self.keys copyWithZone: zone];
 	copyStreamgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyStreamgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyStreamgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyStreamgraph.accessibility = [self.accessibility copyWithZone: zone];
 	copyStreamgraph.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyStreamgraph.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyStreamgraph.shadow = [self.shadow copyWithZone: zone];
+	copyStreamgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyStreamgraph.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyStreamgraph.zones = [self.zones copyWithZone: zone];
 	copyStreamgraph.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

@@ -22,17 +22,21 @@
 	copySankey.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySankey.states = [self.states copyWithZone: zone];
 	copySankey.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copySankey.levels = [self.levels copyWithZone: zone];
+	copySankey.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySankey.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copySankey.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySankey.minPointLength = [self.minPointLength copyWithZone: zone];
 	copySankey.colors = [self.colors copyWithZone: zone];
+	copySankey.borderColor = [self.borderColor copyWithZone: zone];
 	copySankey.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copySankey.point = [self.point copyWithZone: zone];
+	copySankey.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySankey.selected = [self.selected copyWithZone: zone];
 	copySankey.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySankey.clip = [self.clip copyWithZone: zone];
 	copySankey.color = [self.color copyWithZone: zone];
 	copySankey.dragDrop = [self.dragDrop copyWithZone: zone];
+	copySankey.point = [self.point copyWithZone: zone];
 	copySankey.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySankey.className = [self.className copyWithZone: zone];
 	copySankey.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
@@ -41,13 +45,15 @@
 	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySankey.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySankey.events = [self.events copyWithZone: zone];
+	copySankey.opacity = [self.opacity copyWithZone: zone];
 	copySankey.definition = [self.definition copyWithZone: zone];
 	copySankey.keys = [self.keys copyWithZone: zone];
 	copySankey.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySankey.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copySankey.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySankey.accessibility = [self.accessibility copyWithZone: zone];
 	copySankey.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copySankey.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copySankey.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySankey.visible = [self.visible copyWithZone: zone];
 	copySankey.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySankey.cursor = [self.cursor copyWithZone: zone];
@@ -80,6 +86,21 @@
 	if (self.nodeWidth) {
 		params[@"nodeWidth"] = self.nodeWidth;
 	}
+	if (self.levels) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.levels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"levels"] = array;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
 	}
@@ -97,6 +118,9 @@
 			}
 		}
 		params[@"colors"] = array;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.nodes) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -139,6 +163,18 @@
 	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
 }
 
+-(void)setLevels:(NSArray <HILevels *> *)levels {
+	NSArray <HILevels *> *oldValue = _levels;
+	_levels = levels;
+	[self updateArrayObject:oldValue newValue:levels propertyName:@"levels"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
+	_borderWidth = borderWidth;
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+}
+
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
@@ -155,6 +191,12 @@
 	NSArray<NSString *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setNodes:(NSArray <HINodes *> *)nodes {

@@ -10,14 +10,14 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIMarker *copyMarker = [[HIMarker allocWithZone: zone] init];
+	copyMarker.states = [self.states copyWithZone: zone];
 	copyMarker.enabled = [self.enabled copyWithZone: zone];
 	copyMarker.color = [self.color copyWithZone: zone];
 	copyMarker.animation = [self.animation copyWithZone: zone];
 	copyMarker.symbol = [self.symbol copyWithZone: zone];
-	copyMarker.states = [self.states copyWithZone: zone];
+	copyMarker.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyMarker.fillColor = [self.fillColor copyWithZone: zone];
 	copyMarker.lineColor = [self.lineColor copyWithZone: zone];
-	copyMarker.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyMarker.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyMarker.height = [self.height copyWithZone: zone];
 	copyMarker.width = [self.width copyWithZone: zone];
@@ -29,6 +29,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.states) {
+		params[@"states"] = [self.states getParams];
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -41,17 +44,14 @@
 	if (self.symbol) {
 		params[@"symbol"] = self.symbol;
 	}
-	if (self.states) {
-		params[@"states"] = [self.states getParams];
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
-	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = self.fillColor;
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = self.lineColor;
 	}
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
@@ -72,6 +72,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setStates:(HIStates *)states {
+	HIStates *oldValue = _states;
+	_states = states;
+	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
+}
 
 -(void)setEnabled:(NSNumber *)enabled {
 	NSNumber *oldValue = _enabled;
@@ -97,28 +103,22 @@
 	[self updateNSObject:oldValue newValue:symbol propertyName:@"symbol"];
 }
 
--(void)setStates:(HIStates *)states {
-	HIStates *oldValue = _states;
-	_states = states;
-	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
 -(void)setLineWidth:(NSNumber *)lineWidth {
 	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
 	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
+}
+
+-(void)setFillColor:(id)fillColor {
+	id oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateNSObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setLineColor:(NSString *)lineColor {
+	NSString *oldValue = _lineColor;
+	_lineColor = lineColor;
+	[self updateNSObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setFillOpacity:(NSNumber *)fillOpacity {

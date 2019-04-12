@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HISVGAttributes *copySVGAttributes = [[HISVGAttributes allocWithZone: zone] init];
 	copySVGAttributes.d = [self.d copyWithZone: zone];
+	copySVGAttributes.fill = [self.fill copyWithZone: zone];
 	copySVGAttributes.inverted = [self.inverted copyWithZone: zone];
 	copySVGAttributes.matrix = [self.matrix copyWithZone: zone];
 	copySVGAttributes.rotation = [self.rotation copyWithZone: zone];
@@ -40,6 +41,9 @@
 			}
 		}
 		params[@"d"] = array;
+	}
+	if (self.fill) {
+		params[@"fill"] = self.fill;
 	}
 	if (self.inverted) {
 		params[@"inverted"] = self.inverted;
@@ -75,7 +79,7 @@
 		params[@"stroke"] = self.stroke;
 	}
 	if (self.style) {
-		params[@"style"] = [self.style getParams];
+		params[@"style"] = self.style;
 	}
 	if (self.translateX) {
 		params[@"translateX"] = self.translateX;
@@ -95,6 +99,12 @@
 	NSArray *oldValue = _d;
 	_d = d;
 	[self updateArrayObject:oldValue newValue:d propertyName:@"d"];
+}
+
+-(void)setFill:(NSString *)fill {
+	NSString *oldValue = _fill;
+	_fill = fill;
+	[self updateNSObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 -(void)setInverted:(NSNumber *)inverted {
@@ -148,7 +158,7 @@
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
 	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+	[self updateNSObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setTranslateX:(NSNumber *)translateX {

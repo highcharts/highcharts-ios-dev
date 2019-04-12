@@ -84,9 +84,13 @@
 		
 		<option value="//api/name/cylinder">cylinder</option>
 		
+		<option value="//api/name/dependencywheel">dependencywheel</option>
+		
 		<option value="//api/name/errorbar">errorbar</option>
 		
 		<option value="//api/name/funnel">funnel</option>
+		
+		<option value="//api/name/funnel3d">funnel3d</option>
 		
 		<option value="//api/name/gauge">gauge</option>
 		
@@ -94,9 +98,13 @@
 		
 		<option value="//api/name/histogram">histogram</option>
 		
+		<option value="//api/name/item">item</option>
+		
 		<option value="//api/name/line">line</option>
 		
 		<option value="//api/name/networkgraph">networkgraph</option>
+		
+		<option value="//api/name/organization">organization</option>
 		
 		<option value="//api/name/packedbubble">packedbubble</option>
 		
@@ -107,6 +115,8 @@
 		<option value="//api/name/polygon">polygon</option>
 		
 		<option value="//api/name/pyramid">pyramid</option>
+		
+		<option value="//api/name/pyramid3d">pyramid3d</option>
 		
 		<option value="//api/name/sankey">sankey</option>
 		
@@ -125,6 +135,8 @@
 		<option value="//api/name/sunburst">sunburst</option>
 		
 		<option value="//api/name/tilemap">tilemap</option>
+		
+		<option value="//api/name/timeline">timeline</option>
 		
 		<option value="//api/name/treemap">treemap</option>
 		
@@ -553,6 +565,59 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/item" title="item"></a>
+	<h3 class="method-title"><code><a href="#//api/name/item">&nbsp;&nbsp;item</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An item chart is an infographic chart where a number of items are laid out in either a rectangular or circular pattern. It can be used to visualize counts within a group, or for the circular pattern, typically a parliament. The circular layout has much in common with a pie chart. Many of the item series options, like <code>center</code>, <code>size</code> and data label positioning, are inherited from the pie series and don&rsquo;t apply for rectangular layouts. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>item</code> series are defined in  <code>plotOptions.item</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     item: {       // shared options for all item series     }   },   series: [{     // specific options for this series instance     type: 'item'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIItem *item</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/parliament-chart">Parliament chart (circular item chart)</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-item/rectangular">Rectangular item chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-item/symbols">Infographic with symbols</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/vector" title="vector"></a>
 	<h3 class="method-title"><code><a href="#//api/name/vector">&nbsp;&nbsp;vector</a></code>
 </h3>
@@ -800,6 +865,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/pyramid3d" title="pyramid3d"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pyramid3d">&nbsp;&nbsp;pyramid3d</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A pyramid3d is a 3d version of pyramid series type. Pyramid charts are a type of chart often used to visualize stages in a sales project, where the top are the initial stages with the most clients. It requires that the <code>highcharts-3d.js</code>, <code>cylinder.js</code>, <code>funnel3d.js</code> and <code>pyramid3d</code> modules are loaded. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>pyramid3d</code> series are defined in  <code>plotOptions.pyramid3d</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     pyramid3d: {       // shared options for all pyramid3d series     }   },   series: [{     // specific options for this series instance     type: 'pyramid3d'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPyramid3d *pyramid3d</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pyramid3d/">Pyramid3d</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/sankey" title="sankey"></a>
 	<h3 class="method-title"><code><a href="#//api/name/sankey">&nbsp;&nbsp;sankey</a></code>
 </h3>
@@ -885,6 +1001,57 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pareto/">Pareto diagram</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dependencywheel" title="dependencywheel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dependencywheel">&nbsp;&nbsp;dependencywheel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A dependency wheel chart is a type of flow diagram, where all nodes are laid out in a circle, and the flow between the are drawn as link bands. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>dependencywheel</code> series are defined in  <code>plotOptions.dependencywheel</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     dependencywheel: {       // shared options for all dependencywheel series     }   },   series: [{     // specific options for this series instance     type: 'dependencywheel'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDependencywheel *dependencywheel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/dependency-wheel/">Dependency wheel</a></li>
 </ul>
 
 			</div>
@@ -1007,6 +1174,110 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/timeline" title="timeline"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timeline">&nbsp;&nbsp;timeline</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The timeline series presents given events along a drawn line. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>timeline</code> series are defined in  <code>plotOptions.timeline</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     timeline: {       // shared options for all timeline series     }   },   series: [{     // specific options for this series instance     type: 'timeline'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HITimeline *timeline</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-timeline/alternate-labels">Timeline series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-timeline/inverted">Inverted timeline</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-timeline/datetime-axis">With true datetime axis</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/funnel3d" title="funnel3d"></a>
+	<h3 class="method-title"><code><a href="#//api/name/funnel3d">&nbsp;&nbsp;funnel3d</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A funnel3d is a 3d version of funnel series type. Funnel charts are a type of chart often used to visualize stages in a sales project, where the top are the initial stages with the most clients. It requires that the <code>highcharts-3d.js</code>, <code>cylinder.js</code> and <code>funnel3d.js</code> module are loaded. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>funnel3d</code> series are defined in  <code>plotOptions.funnel3d</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     funnel3d: {       // shared options for all funnel3d series     }   },   series: [{     // specific options for this series instance     type: 'funnel3d'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunnel3d *funnel3d</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel3d/">Funnel3d</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/column" title="column"></a>
 	<h3 class="method-title"><code><a href="#//api/name/column">&nbsp;&nbsp;column</a></code>
 </h3>
@@ -1090,6 +1361,59 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-large-dataset/">Treemap</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/waterfall" title="waterfall"></a>
+	<h3 class="method-title"><code><a href="#//api/name/waterfall">&nbsp;&nbsp;waterfall</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A waterfall chart displays sequentially introduced positive or negative values in cumulative columns. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>waterfall</code> series are defined in  <code>plotOptions.waterfall</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     waterfall: {       // shared options for all waterfall series     }   },   series: [{     // specific options for this series instance     type: 'waterfall'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIWaterfall *waterfall</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/">Waterfall chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/waterfall-inverted/">Horizontal (inverted) waterfall</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/waterfall-stacked/">Stacked waterfall chart</a></li>
 </ul>
 
 			</div>
@@ -2046,7 +2370,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A packed bubble series is a two dimensional series type, where each point renders a value in X, Y position. Each point is drawn as a bubble where the bubbles don&rsquo;t overlap with each other and the radius of the bubble related to the value. Requires <code>highcharts-more.js</code>. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>packedbubble</code> series are defined in  <code>plotOptions.packedbubble</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     packedbubble: {       // shared options for all packedbubble series     }   },   series: [{     // specific options for this series instance     type: 'packedbubble'   }] });</code></p>
+				<p>A packed bubble series is a two dimensional series type, where each point renders a value in X, Y position. Each point is drawn as a bubble where the bubbles don&rsquo;t overlap with each other and the radius of the bubble relates to the value. Requires <code>highcharts-more.js</code>. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>packedbubble</code> series are defined in  <code>plotOptions.packedbubble</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     packedbubble: {       // shared options for all packedbubble series     }   },   series: [{     // specific options for this series instance     type: 'packedbubble'   }] });</code></p>
 			</div>
 			
 		    
@@ -2066,7 +2390,8 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/packed-bubble/">Packed-bubble chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/packed-bubble/">Packed bubble chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/packed-bubble-split/">Split packed bubble chart</a></li>
 </ul>
 
 			</div>
@@ -2241,59 +2566,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/waterfall" title="waterfall"></a>
-	<h3 class="method-title"><code><a href="#//api/name/waterfall">&nbsp;&nbsp;waterfall</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A waterfall chart displays sequentially introduced positive or negative values in cumulative columns. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>waterfall</code> series are defined in  <code>plotOptions.waterfall</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     waterfall: {       // shared options for all waterfall series     }   },   series: [{     // specific options for this series instance     type: 'waterfall'   }] });</code></p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIWaterfall *waterfall</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/">Waterfall chart</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/waterfall-inverted/">Horizontal (inverted) waterfall</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/waterfall-stacked/">Stacked waterfall chart</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/windbarb" title="windbarb"></a>
 	<h3 class="method-title"><code><a href="#//api/name/windbarb">&nbsp;&nbsp;windbarb</a></code>
 </h3>
@@ -2377,6 +2649,60 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/bullet-graph/">Bullet graph</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/organization" title="organization"></a>
+	<h3 class="method-title"><code><a href="#//api/name/organization">&nbsp;&nbsp;organization</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An organization chart is a diagram that shows the structure of an organization and the relationships and relative ranks of its parts and positions. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>organization</code> series are defined in  <code>plotOptions.organization</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     organization: {       // shared options for all organization series     }   },   series: [{     // specific options for this series instance     type: 'organization'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIOrganization *organization</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/organization-chart/">Organization chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/horizontal/">Horizontal organization chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/borderless">Borderless design</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/center-layout">Centered layout</a></li>
 </ul>
 
 			</div>

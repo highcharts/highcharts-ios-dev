@@ -22,6 +22,9 @@
 	copyLevels.level = [self.level copyWithZone: zone];
 	copyLevels.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyLevels.layoutStartingDirection = [self.layoutStartingDirection copyWithZone: zone];
+	copyLevels.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyLevels.states = [self.states copyWithZone: zone];
+	copyLevels.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	return copyLevels;
 }
 
@@ -63,6 +66,15 @@
 	}
 	if (self.layoutStartingDirection) {
 		params[@"layoutStartingDirection"] = self.layoutStartingDirection;
+	}
+	if (self.colorByPoint) {
+		params[@"colorByPoint"] = self.colorByPoint;
+	}
+	if (self.states) {
+		params[@"states"] = self.states;
+	}
+	if (self.linkOpacity) {
+		params[@"linkOpacity"] = self.linkOpacity;
 	}
 	return params;
 }
@@ -139,6 +151,24 @@
 	NSString *oldValue = _layoutStartingDirection;
 	_layoutStartingDirection = layoutStartingDirection;
 	[self updateNSObject:oldValue newValue:layoutStartingDirection propertyName:@"layoutStartingDirection"];
+}
+
+-(void)setColorByPoint:(NSNumber *)colorByPoint {
+	NSNumber *oldValue = _colorByPoint;
+	_colorByPoint = colorByPoint;
+	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
+}
+
+-(void)setStates:(id)states {
+	id oldValue = _states;
+	_states = states;
+	[self updateNSObject:oldValue newValue:states propertyName:@"states"];
+}
+
+-(void)setLinkOpacity:(NSNumber *)linkOpacity {
+	NSNumber *oldValue = _linkOpacity;
+	_linkOpacity = linkOpacity;
+	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
 }
 
 @end

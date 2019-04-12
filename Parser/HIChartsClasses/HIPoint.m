@@ -10,11 +10,11 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIPoint *copyPoint = [[HIPoint allocWithZone: zone] init];
-	copyPoint.events = [self.events copyWithZone: zone];
 	copyPoint.y = [self.y copyWithZone: zone];
 	copyPoint.x = [self.x copyWithZone: zone];
 	copyPoint.xAxis = [self.xAxis copyWithZone: zone];
 	copyPoint.yAxis = [self.yAxis copyWithZone: zone];
+	copyPoint.events = [self.events copyWithZone: zone];
 	return copyPoint;
 }
 
@@ -22,9 +22,6 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	params[@"_wrapperID"] = self.uuid;
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
-	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
@@ -37,16 +34,13 @@
 	if (self.yAxis) {
 		params[@"yAxis"] = self.yAxis;
 	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
 	return params;
 }
 
 # pragma mark - Setters
-
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
-	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
-}
 
 -(void)setY:(NSNumber *)y {
 	NSNumber *oldValue = _y;
@@ -70,6 +64,12 @@
 	id oldValue = _yAxis;
 	_yAxis = yAxis;
 	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
+}
+
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 - (void)cancelSonify {

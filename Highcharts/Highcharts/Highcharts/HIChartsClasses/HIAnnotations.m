@@ -11,12 +11,13 @@
 	[super copyWithZone:zone];
 	HIAnnotations *copyAnnotations = [[HIAnnotations allocWithZone: zone] init];
 	copyAnnotations.shapes = [self.shapes copyWithZone: zone];
+	copyAnnotations.shapeOptions = [self.shapeOptions copyWithZone: zone];
 	copyAnnotations.zIndex = [self.zIndex copyWithZone: zone];
 	copyAnnotations.visible = [self.visible copyWithZone: zone];
-	copyAnnotations.labelOptions = [self.labelOptions copyWithZone: zone];
 	copyAnnotations.labels = [self.labels copyWithZone: zone];
+	copyAnnotations.labelOptions = [self.labelOptions copyWithZone: zone];
+	copyAnnotations.events = [self.events copyWithZone: zone];
 	copyAnnotations.draggable = [self.draggable copyWithZone: zone];
-	copyAnnotations.shapeOptions = [self.shapeOptions copyWithZone: zone];
 	copyAnnotations.id = [self.id copyWithZone: zone];
 	return copyAnnotations;
 }
@@ -37,14 +38,14 @@
 		}
 		params[@"shapes"] = array;
 	}
+	if (self.shapeOptions) {
+		params[@"shapeOptions"] = [self.shapeOptions getParams];
+	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
-	}
-	if (self.labelOptions) {
-		params[@"labelOptions"] = [self.labelOptions getParams];
 	}
 	if (self.labels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -58,11 +59,14 @@
 		}
 		params[@"labels"] = array;
 	}
+	if (self.labelOptions) {
+		params[@"labelOptions"] = [self.labelOptions getParams];
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
 	if (self.draggable) {
 		params[@"draggable"] = self.draggable;
-	}
-	if (self.shapeOptions) {
-		params[@"shapeOptions"] = [self.shapeOptions getParams];
 	}
 	if (self.id) {
 		params[@"id"] = self.id;
@@ -78,6 +82,12 @@
 	[self updateArrayObject:oldValue newValue:shapes propertyName:@"shapes"];
 }
 
+-(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
+	HIShapeOptions *oldValue = _shapeOptions;
+	_shapeOptions = shapeOptions;
+	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
+}
+
 -(void)setZIndex:(NSNumber *)zIndex {
 	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
@@ -90,28 +100,28 @@
 	[self updateNSObject:oldValue newValue:visible propertyName:@"visible"];
 }
 
--(void)setLabelOptions:(HILabelOptions *)labelOptions {
-	HILabelOptions *oldValue = _labelOptions;
-	_labelOptions = labelOptions;
-	[self updateHIObject:oldValue newValue:labelOptions propertyName:@"labelOptions"];
-}
-
 -(void)setLabels:(NSArray <HILabels *> *)labels {
 	NSArray <HILabels *> *oldValue = _labels;
 	_labels = labels;
 	[self updateArrayObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
+-(void)setLabelOptions:(HILabelOptions *)labelOptions {
+	HILabelOptions *oldValue = _labelOptions;
+	_labelOptions = labelOptions;
+	[self updateHIObject:oldValue newValue:labelOptions propertyName:@"labelOptions"];
+}
+
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+}
+
 -(void)setDraggable:(NSString *)draggable {
 	NSString *oldValue = _draggable;
 	_draggable = draggable;
 	[self updateNSObject:oldValue newValue:draggable propertyName:@"draggable"];
-}
-
--(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
-	HIShapeOptions *oldValue = _shapeOptions;
-	_shapeOptions = shapeOptions;
-	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
 }
 
 -(void)setId:(NSString *)id {

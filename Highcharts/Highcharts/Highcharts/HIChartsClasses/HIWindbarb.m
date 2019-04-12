@@ -20,6 +20,7 @@
 	copyWindbarb.tooltip = [self.tooltip copyWithZone: zone];
 	copyWindbarb.yOffset = [self.yOffset copyWithZone: zone];
 	copyWindbarb.states = [self.states copyWithZone: zone];
+	copyWindbarb.dataGrouping = [self.dataGrouping copyWithZone: zone];
 	copyWindbarb.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyWindbarb.xOffset = [self.xOffset copyWithZone: zone];
 	copyWindbarb.pointPadding = [self.pointPadding copyWithZone: zone];
@@ -43,14 +44,14 @@
 	copyWindbarb.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyWindbarb.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWindbarb.grouping = [self.grouping copyWithZone: zone];
-	copyWindbarb.point = [self.point copyWithZone: zone];
+	copyWindbarb.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyWindbarb.selected = [self.selected copyWithZone: zone];
 	copyWindbarb.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyWindbarb.clip = [self.clip copyWithZone: zone];
 	copyWindbarb.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyWindbarb.color = [self.color copyWithZone: zone];
 	copyWindbarb.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyWindbarb.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyWindbarb.point = [self.point copyWithZone: zone];
 	copyWindbarb.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWindbarb.className = [self.className copyWithZone: zone];
 	copyWindbarb.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -61,14 +62,16 @@
 	copyWindbarb.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyWindbarb.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyWindbarb.events = [self.events copyWithZone: zone];
+	copyWindbarb.opacity = [self.opacity copyWithZone: zone];
 	copyWindbarb.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyWindbarb.definition = [self.definition copyWithZone: zone];
 	copyWindbarb.keys = [self.keys copyWithZone: zone];
 	copyWindbarb.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyWindbarb.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyWindbarb.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyWindbarb.accessibility = [self.accessibility copyWithZone: zone];
 	copyWindbarb.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyWindbarb.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyWindbarb.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWindbarb.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWindbarb.zones = [self.zones copyWithZone: zone];
 	copyWindbarb.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -101,6 +104,9 @@
 	}
 	if (self.yOffset) {
 		params[@"yOffset"] = self.yOffset;
+	}
+	if (self.dataGrouping) {
+		params[@"dataGrouping"] = [self.dataGrouping getParams];
 	}
 	if (self.xOffset) {
 		params[@"xOffset"] = self.xOffset;
@@ -186,6 +192,12 @@
 	NSNumber *oldValue = _yOffset;
 	_yOffset = yOffset;
 	[self updateNSObject:oldValue newValue:yOffset propertyName:@"yOffset"];
+}
+
+-(void)setDataGrouping:(HIDataGrouping *)dataGrouping {
+	HIDataGrouping *oldValue = _dataGrouping;
+	_dataGrouping = dataGrouping;
+	[self updateHIObject:oldValue newValue:dataGrouping propertyName:@"dataGrouping"];
 }
 
 -(void)setXOffset:(NSNumber *)xOffset {

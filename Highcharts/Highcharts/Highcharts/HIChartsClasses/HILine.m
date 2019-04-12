@@ -16,7 +16,7 @@
 	[super copyWithZone:zone];
 	HILine *copyLine = [[HILine allocWithZone: zone] init];
 	copyLine.linecap = [self.linecap copyWithZone: zone];
-	copyLine.point = [self.point copyWithZone: zone];
+	copyLine.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyLine.selected = [self.selected copyWithZone: zone];
 	copyLine.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyLine.clip = [self.clip copyWithZone: zone];
@@ -27,6 +27,7 @@
 	copyLine.states = [self.states copyWithZone: zone];
 	copyLine.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyLine.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyLine.point = [self.point copyWithZone: zone];
 	copyLine.marker = [self.marker copyWithZone: zone];
 	copyLine.tooltip = [self.tooltip copyWithZone: zone];
 	copyLine.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -43,16 +44,18 @@
 	copyLine.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyLine.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyLine.events = [self.events copyWithZone: zone];
+	copyLine.opacity = [self.opacity copyWithZone: zone];
 	copyLine.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyLine.definition = [self.definition copyWithZone: zone];
 	copyLine.keys = [self.keys copyWithZone: zone];
 	copyLine.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyLine.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyLine.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyLine.accessibility = [self.accessibility copyWithZone: zone];
 	copyLine.step = [self.step copyWithZone: zone];
 	copyLine.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyLine.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyLine.shadow = [self.shadow copyWithZone: zone];
+	copyLine.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyLine.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLine.zones = [self.zones copyWithZone: zone];
 	copyLine.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

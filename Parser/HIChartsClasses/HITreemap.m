@@ -29,11 +29,12 @@
 	copyTreemap.states = [self.states copyWithZone: zone];
 	copyTreemap.colors = [self.colors copyWithZone: zone];
 	copyTreemap.sortIndex = [self.sortIndex copyWithZone: zone];
+	copyTreemap.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyTreemap.tooltip = [self.tooltip copyWithZone: zone];
 	copyTreemap.allowTraversingTree = [self.allowTraversingTree copyWithZone: zone];
 	copyTreemap.events = [self.events copyWithZone: zone];
 	copyTreemap.opacity = [self.opacity copyWithZone: zone];
-	copyTreemap.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyTreemap.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyTreemap.layoutStartingDirection = [self.layoutStartingDirection copyWithZone: zone];
 	copyTreemap.levels = [self.levels copyWithZone: zone];
 	copyTreemap.interactByLeaf = [self.interactByLeaf copyWithZone: zone];
@@ -47,7 +48,7 @@
 	copyTreemap.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyTreemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTreemap.linecap = [self.linecap copyWithZone: zone];
-	copyTreemap.point = [self.point copyWithZone: zone];
+	copyTreemap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyTreemap.selected = [self.selected copyWithZone: zone];
 	copyTreemap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyTreemap.clip = [self.clip copyWithZone: zone];
@@ -56,6 +57,7 @@
 	copyTreemap.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyTreemap.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyTreemap.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyTreemap.point = [self.point copyWithZone: zone];
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTreemap.className = [self.className copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -67,15 +69,15 @@
 	copyTreemap.threshold = [self.threshold copyWithZone: zone];
 	copyTreemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTreemap.boostBlending = [self.boostBlending copyWithZone: zone];
-	copyTreemap.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyTreemap.definition = [self.definition copyWithZone: zone];
 	copyTreemap.keys = [self.keys copyWithZone: zone];
 	copyTreemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyTreemap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyTreemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyTreemap.accessibility = [self.accessibility copyWithZone: zone];
 	copyTreemap.step = [self.step copyWithZone: zone];
 	copyTreemap.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyTreemap.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyTreemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTreemap.zones = [self.zones copyWithZone: zone];
 	copyTreemap.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -109,14 +111,11 @@
 	if (self.sortIndex) {
 		params[@"sortIndex"] = self.sortIndex;
 	}
-	if (self.allowTraversingTree) {
-		params[@"allowTraversingTree"] = self.allowTraversingTree;
-	}
-	if (self.opacity) {
-		params[@"opacity"] = self.opacity;
-	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
+	}
+	if (self.allowTraversingTree) {
+		params[@"allowTraversingTree"] = self.allowTraversingTree;
 	}
 	if (self.layoutStartingDirection) {
 		params[@"layoutStartingDirection"] = self.layoutStartingDirection;
@@ -171,22 +170,16 @@
 	[self updateNSObject:oldValue newValue:sortIndex propertyName:@"sortIndex"];
 }
 
--(void)setAllowTraversingTree:(NSNumber *)allowTraversingTree {
-	NSNumber *oldValue = _allowTraversingTree;
-	_allowTraversingTree = allowTraversingTree;
-	[self updateNSObject:oldValue newValue:allowTraversingTree propertyName:@"allowTraversingTree"];
-}
-
--(void)setOpacity:(NSNumber *)opacity {
-	NSNumber *oldValue = _opacity;
-	_opacity = opacity;
-	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
-}
-
 -(void)setColorByPoint:(NSNumber *)colorByPoint {
 	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
+}
+
+-(void)setAllowTraversingTree:(NSNumber *)allowTraversingTree {
+	NSNumber *oldValue = _allowTraversingTree;
+	_allowTraversingTree = allowTraversingTree;
+	[self updateNSObject:oldValue newValue:allowTraversingTree propertyName:@"allowTraversingTree"];
 }
 
 -(void)setLayoutStartingDirection:(NSString *)layoutStartingDirection {

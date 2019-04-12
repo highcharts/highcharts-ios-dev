@@ -32,11 +32,12 @@
 	copyParallelAxes.maxPadding = [self.maxPadding copyWithZone: zone];
 	copyParallelAxes.lineColor = [self.lineColor copyWithZone: zone];
 	copyParallelAxes.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyParallelAxes.pane = [self.pane copyWithZone: zone];
 	copyParallelAxes.gridZIndex = [self.gridZIndex copyWithZone: zone];
-	copyParallelAxes.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyParallelAxes.accessibility = [self.accessibility copyWithZone: zone];
 	copyParallelAxes.visible = [self.visible copyWithZone: zone];
 	copyParallelAxes.alignTicks = [self.alignTicks copyWithZone: zone];
-	copyParallelAxes.pane = [self.pane copyWithZone: zone];
+	copyParallelAxes.minTickInterval = [self.minTickInterval copyWithZone: zone];
 	copyParallelAxes.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
 	copyParallelAxes.startOfWeek = [self.startOfWeek copyWithZone: zone];
 	copyParallelAxes.tickPositions = [self.tickPositions copyWithZone: zone];
@@ -51,12 +52,11 @@
 	copyParallelAxes.tickLength = [self.tickLength copyWithZone: zone];
 	copyParallelAxes.ceiling = [self.ceiling copyWithZone: zone];
 	copyParallelAxes.showEmpty = [self.showEmpty copyWithZone: zone];
-	copyParallelAxes.definition = [self.definition copyWithZone: zone];
 	copyParallelAxes.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
+	copyParallelAxes.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyParallelAxes.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyParallelAxes.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyParallelAxes.tickColor = [self.tickColor copyWithZone: zone];
-	copyParallelAxes.minTickInterval = [self.minTickInterval copyWithZone: zone];
 	copyParallelAxes.tickInterval = [self.tickInterval copyWithZone: zone];
 	copyParallelAxes.tickPosition = [self.tickPosition copyWithZone: zone];
 	copyParallelAxes.categories = [self.categories copyWithZone: zone];
@@ -139,11 +139,14 @@
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
+	if (self.pane) {
+		params[@"pane"] = self.pane;
+	}
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
 	}
-	if (self.dateTimeLabelFormats) {
-		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
@@ -151,8 +154,8 @@
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
 	}
-	if (self.pane) {
-		params[@"pane"] = self.pane;
+	if (self.minTickInterval) {
+		params[@"minTickInterval"] = self.minTickInterval;
 	}
 	if (self.showFirstLabel) {
 		params[@"showFirstLabel"] = self.showFirstLabel;
@@ -214,11 +217,11 @@
 	if (self.showEmpty) {
 		params[@"showEmpty"] = self.showEmpty;
 	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
-	}
 	if (self.minorTickPosition) {
 		params[@"minorTickPosition"] = self.minorTickPosition;
+	}
+	if (self.dateTimeLabelFormats) {
+		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
 	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
@@ -228,9 +231,6 @@
 	}
 	if (self.tickColor) {
 		params[@"tickColor"] = [self.tickColor getData];
-	}
-	if (self.minTickInterval) {
-		params[@"minTickInterval"] = self.minTickInterval;
 	}
 	if (self.tickInterval) {
 		params[@"tickInterval"] = self.tickInterval;
@@ -269,7 +269,6 @@
 		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.margin) {
-		params[@"margin"] = self.margin;
 	}
 	return params;
 }
@@ -408,16 +407,22 @@
 	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
 }
 
+-(void)setPane:(NSNumber *)pane {
+	NSNumber *oldValue = _pane;
+	_pane = pane;
+	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
+}
+
 -(void)setGridZIndex:(NSNumber *)gridZIndex {
 	NSNumber *oldValue = _gridZIndex;
 	_gridZIndex = gridZIndex;
 	[self updateNSObject:oldValue newValue:gridZIndex propertyName:@"gridZIndex"];
 }
 
--(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
-	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
-	_dateTimeLabelFormats = dateTimeLabelFormats;
-	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
+-(void)setAccessibility:(HIAccessibility *)accessibility {
+	HIAccessibility *oldValue = _accessibility;
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
 -(void)setVisible:(NSNumber *)visible {
@@ -432,10 +437,10 @@
 	[self updateNSObject:oldValue newValue:alignTicks propertyName:@"alignTicks"];
 }
 
--(void)setPane:(NSNumber *)pane {
-	NSNumber *oldValue = _pane;
-	_pane = pane;
-	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
+-(void)setMinTickInterval:(NSNumber *)minTickInterval {
+	NSNumber *oldValue = _minTickInterval;
+	_minTickInterval = minTickInterval;
+	[self updateNSObject:oldValue newValue:minTickInterval propertyName:@"minTickInterval"];
 }
 
 -(void)setShowFirstLabel:(NSNumber *)showFirstLabel {
@@ -522,16 +527,16 @@
 	[self updateNSObject:oldValue newValue:showEmpty propertyName:@"showEmpty"];
 }
 
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
-}
-
 -(void)setMinorTickPosition:(NSString *)minorTickPosition {
 	NSString *oldValue = _minorTickPosition;
 	_minorTickPosition = minorTickPosition;
 	[self updateNSObject:oldValue newValue:minorTickPosition propertyName:@"minorTickPosition"];
+}
+
+-(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
+	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
+	_dateTimeLabelFormats = dateTimeLabelFormats;
+	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 -(void)setMinorTicks:(NSNumber *)minorTicks {
@@ -550,12 +555,6 @@
 	HIColor *oldValue = _tickColor;
 	_tickColor = tickColor;
 	[self updateHIObject:oldValue newValue:tickColor propertyName:@"tickColor"];
-}
-
--(void)setMinTickInterval:(NSNumber *)minTickInterval {
-	NSNumber *oldValue = _minTickInterval;
-	_minTickInterval = minTickInterval;
-	[self updateNSObject:oldValue newValue:minTickInterval propertyName:@"minTickInterval"];
 }
 
 -(void)setTickInterval:(NSNumber *)tickInterval {

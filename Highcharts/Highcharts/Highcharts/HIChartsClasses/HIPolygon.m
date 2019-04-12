@@ -22,7 +22,7 @@
 	copyPolygon.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyPolygon.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPolygon.linecap = [self.linecap copyWithZone: zone];
-	copyPolygon.point = [self.point copyWithZone: zone];
+	copyPolygon.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyPolygon.selected = [self.selected copyWithZone: zone];
 	copyPolygon.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPolygon.clip = [self.clip copyWithZone: zone];
@@ -32,6 +32,7 @@
 	copyPolygon.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPolygon.states = [self.states copyWithZone: zone];
 	copyPolygon.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyPolygon.point = [self.point copyWithZone: zone];
 	copyPolygon.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPolygon.className = [self.className copyWithZone: zone];
 	copyPolygon.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -43,15 +44,17 @@
 	copyPolygon.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPolygon.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPolygon.events = [self.events copyWithZone: zone];
+	copyPolygon.opacity = [self.opacity copyWithZone: zone];
 	copyPolygon.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPolygon.definition = [self.definition copyWithZone: zone];
 	copyPolygon.keys = [self.keys copyWithZone: zone];
 	copyPolygon.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPolygon.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyPolygon.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyPolygon.accessibility = [self.accessibility copyWithZone: zone];
 	copyPolygon.step = [self.step copyWithZone: zone];
 	copyPolygon.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPolygon.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyPolygon.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPolygon.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPolygon.zones = [self.zones copyWithZone: zone];
 	copyPolygon.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

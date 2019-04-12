@@ -34,7 +34,7 @@
 	copyVariwide.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyVariwide.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVariwide.grouping = [self.grouping copyWithZone: zone];
-	copyVariwide.point = [self.point copyWithZone: zone];
+	copyVariwide.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyVariwide.selected = [self.selected copyWithZone: zone];
 	copyVariwide.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVariwide.clip = [self.clip copyWithZone: zone];
@@ -42,6 +42,7 @@
 	copyVariwide.color = [self.color copyWithZone: zone];
 	copyVariwide.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyVariwide.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyVariwide.point = [self.point copyWithZone: zone];
 	copyVariwide.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVariwide.className = [self.className copyWithZone: zone];
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -53,15 +54,17 @@
 	copyVariwide.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVariwide.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyVariwide.events = [self.events copyWithZone: zone];
+	copyVariwide.opacity = [self.opacity copyWithZone: zone];
 	copyVariwide.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyVariwide.definition = [self.definition copyWithZone: zone];
 	copyVariwide.keys = [self.keys copyWithZone: zone];
 	copyVariwide.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyVariwide.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyVariwide.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyVariwide.accessibility = [self.accessibility copyWithZone: zone];
 	copyVariwide.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyVariwide.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyVariwide.shadow = [self.shadow copyWithZone: zone];
+	copyVariwide.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVariwide.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVariwide.zones = [self.zones copyWithZone: zone];
 	copyVariwide.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

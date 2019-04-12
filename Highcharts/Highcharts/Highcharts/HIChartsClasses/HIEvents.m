@@ -45,6 +45,8 @@
 	copyEvents.hide = [self.hide copyWithZone: zone];
 	copyEvents.show = [self.show copyWithZone: zone];
 	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
+	copyEvents.add = [self.add copyWithZone: zone];
+	copyEvents.afterUpdate = [self.afterUpdate copyWithZone: zone];
 	return copyEvents;
 }
 
@@ -155,6 +157,10 @@
 	}
 	if (self.afterAnimate) {
 		params[@"afterAnimate"] = [self.afterAnimate getFunction];
+	}
+	if (self.add) {
+	}
+	if (self.afterUpdate) {
 	}
 	return params;
 }
@@ -369,6 +375,18 @@
 	HIFunction *oldValue = _afterAnimate;
 	_afterAnimate = afterAnimate;
 	[self updateHIObject:oldValue newValue:afterAnimate propertyName:@"afterAnimate"];
+}
+
+-(void)setAdd:(HIFunction *)add {
+	HIFunction *oldValue = _add;
+	_add = add;
+	[self updateNSObject:oldValue newValue:add propertyName:@"add"];
+}
+
+-(void)setAfterUpdate:(HIFunction *)afterUpdate {
+	HIFunction *oldValue = _afterUpdate;
+	_afterUpdate = afterUpdate;
+	[self updateNSObject:oldValue newValue:afterUpdate propertyName:@"afterUpdate"];
 }
 
 @end

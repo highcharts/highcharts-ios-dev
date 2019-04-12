@@ -15,6 +15,7 @@
 	copyLang.downloadPNG = [self.downloadPNG copyWithZone: zone];
 	copyLang.accessibility = [self.accessibility copyWithZone: zone];
 	copyLang.shortWeekdays = [self.shortWeekdays copyWithZone: zone];
+	copyLang.viewFullscreen = [self.viewFullscreen copyWithZone: zone];
 	copyLang.noData = [self.noData copyWithZone: zone];
 	copyLang.loading = [self.loading copyWithZone: zone];
 	copyLang.numericSymbols = [self.numericSymbols copyWithZone: zone];
@@ -65,6 +66,9 @@
 			}
 		}
 		params[@"shortWeekdays"] = array;
+	}
+	if (self.viewFullscreen) {
+		params[@"viewFullscreen"] = self.viewFullscreen;
 	}
 	if (self.noData) {
 		params[@"noData"] = self.noData;
@@ -198,6 +202,12 @@
 	NSArray<NSString *> *oldValue = _shortWeekdays;
 	_shortWeekdays = shortWeekdays;
 	[self updateArrayObject:oldValue newValue:shortWeekdays propertyName:@"shortWeekdays"];
+}
+
+-(void)setViewFullscreen:(NSString *)viewFullscreen {
+	NSString *oldValue = _viewFullscreen;
+	_viewFullscreen = viewFullscreen;
+	[self updateNSObject:oldValue newValue:viewFullscreen propertyName:@"viewFullscreen"];
 }
 
 -(void)setNoData:(NSString *)noData {

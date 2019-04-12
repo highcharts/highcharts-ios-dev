@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HIScrollablePlotArea *copyScrollablePlotArea = [[HIScrollablePlotArea allocWithZone: zone] init];
 	copyScrollablePlotArea.minWidth = [self.minWidth copyWithZone: zone];
+	copyScrollablePlotArea.opacity = [self.opacity copyWithZone: zone];
 	copyScrollablePlotArea.scrollPositionX = [self.scrollPositionX copyWithZone: zone];
 	return copyScrollablePlotArea;
 }
@@ -20,6 +21,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.minWidth) {
 		params[@"minWidth"] = self.minWidth;
+	}
+	if (self.opacity) {
+		params[@"opacity"] = self.opacity;
 	}
 	if (self.scrollPositionX) {
 		params[@"scrollPositionX"] = self.scrollPositionX;
@@ -33,6 +37,12 @@
 	NSNumber *oldValue = _minWidth;
 	_minWidth = minWidth;
 	[self updateNSObject:oldValue newValue:minWidth propertyName:@"minWidth"];
+}
+
+-(void)setOpacity:(NSNumber *)opacity {
+	NSNumber *oldValue = _opacity;
+	_opacity = opacity;
+	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
 -(void)setScrollPositionX:(NSNumber *)scrollPositionX {

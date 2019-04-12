@@ -48,6 +48,7 @@
 	copyPyramid.events = [self.events copyWithZone: zone];
 	copyPyramid.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyPyramid.linecap = [self.linecap copyWithZone: zone];
+	copyPyramid.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyPyramid.selected = [self.selected copyWithZone: zone];
 	copyPyramid.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPyramid.color = [self.color copyWithZone: zone];
@@ -55,15 +56,16 @@
 	copyPyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid.className = [self.className copyWithZone: zone];
 	copyPyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyPyramid.label = [self.label copyWithZone: zone];
 	copyPyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPyramid.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyPyramid.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid.definition = [self.definition copyWithZone: zone];
 	copyPyramid.keys = [self.keys copyWithZone: zone];
 	copyPyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyPyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyPyramid.accessibility = [self.accessibility copyWithZone: zone];
 	copyPyramid.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPyramid.shadow = [self.shadow copyWithZone: zone];
+	copyPyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPyramid.visible = [self.visible copyWithZone: zone];
 	copyPyramid.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPyramid.cursor = [self.cursor copyWithZone: zone];

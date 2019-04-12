@@ -13,6 +13,7 @@
 	copyLegend.symbolRadius = [self.symbolRadius copyWithZone: zone];
 	copyLegend.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyLegend.rtl = [self.rtl copyWithZone: zone];
+	copyLegend.accessibility = [self.accessibility copyWithZone: zone];
 	copyLegend.squareSymbol = [self.squareSymbol copyWithZone: zone];
 	copyLegend.itemWidth = [self.itemWidth copyWithZone: zone];
 	copyLegend.symbolPadding = [self.symbolPadding copyWithZone: zone];
@@ -38,7 +39,6 @@
 	copyLegend.itemDistance = [self.itemDistance copyWithZone: zone];
 	copyLegend.navigation = [self.navigation copyWithZone: zone];
 	copyLegend.align = [self.align copyWithZone: zone];
-	copyLegend.keyboardNavigation = [self.keyboardNavigation copyWithZone: zone];
 	copyLegend.enabled = [self.enabled copyWithZone: zone];
 	copyLegend.maxHeight = [self.maxHeight copyWithZone: zone];
 	copyLegend.itemHiddenStyle = [self.itemHiddenStyle copyWithZone: zone];
@@ -64,6 +64,9 @@
 	}
 	if (self.rtl) {
 		params[@"rtl"] = self.rtl;
+	}
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
 	}
 	if (self.squareSymbol) {
 		params[@"squareSymbol"] = self.squareSymbol;
@@ -140,9 +143,6 @@
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
-	if (self.keyboardNavigation) {
-		params[@"keyboardNavigation"] = [self.keyboardNavigation getParams];
-	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -193,6 +193,12 @@
 	NSNumber *oldValue = _rtl;
 	_rtl = rtl;
 	[self updateNSObject:oldValue newValue:rtl propertyName:@"rtl"];
+}
+
+-(void)setAccessibility:(HIAccessibility *)accessibility {
+	HIAccessibility *oldValue = _accessibility;
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
 -(void)setSquareSymbol:(NSNumber *)squareSymbol {
@@ -343,12 +349,6 @@
 	NSString *oldValue = _align;
 	_align = align;
 	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
-}
-
--(void)setKeyboardNavigation:(HIKeyboardNavigation *)keyboardNavigation {
-	HIKeyboardNavigation *oldValue = _keyboardNavigation;
-	_keyboardNavigation = keyboardNavigation;
-	[self updateHIObject:oldValue newValue:keyboardNavigation propertyName:@"keyboardNavigation"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {

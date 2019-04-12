@@ -36,7 +36,7 @@
 	copyBellcurve.threshold = [self.threshold copyWithZone: zone];
 	copyBellcurve.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyBellcurve.linecap = [self.linecap copyWithZone: zone];
-	copyBellcurve.point = [self.point copyWithZone: zone];
+	copyBellcurve.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyBellcurve.selected = [self.selected copyWithZone: zone];
 	copyBellcurve.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBellcurve.clip = [self.clip copyWithZone: zone];
@@ -45,6 +45,7 @@
 	copyBellcurve.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBellcurve.states = [self.states copyWithZone: zone];
 	copyBellcurve.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyBellcurve.point = [self.point copyWithZone: zone];
 	copyBellcurve.tooltip = [self.tooltip copyWithZone: zone];
 	copyBellcurve.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBellcurve.className = [self.className copyWithZone: zone];
@@ -57,15 +58,17 @@
 	copyBellcurve.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBellcurve.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBellcurve.events = [self.events copyWithZone: zone];
+	copyBellcurve.opacity = [self.opacity copyWithZone: zone];
 	copyBellcurve.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyBellcurve.definition = [self.definition copyWithZone: zone];
 	copyBellcurve.keys = [self.keys copyWithZone: zone];
 	copyBellcurve.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBellcurve.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyBellcurve.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyBellcurve.accessibility = [self.accessibility copyWithZone: zone];
 	copyBellcurve.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBellcurve.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBellcurve.shadow = [self.shadow copyWithZone: zone];
+	copyBellcurve.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBellcurve.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBellcurve.zones = [self.zones copyWithZone: zone];
 	copyBellcurve.lineWidth = [self.lineWidth copyWithZone: zone];

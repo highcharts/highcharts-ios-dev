@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/accessibility">accessibility</option>
+		
 		<option value="//api/name/allowHTML">allowHTML</option>
 		
 		<option value="//api/name/buttons">buttons</option>
@@ -168,6 +170,47 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/accessibility" title="accessibility"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accessibility">&nbsp;&nbsp;accessibility</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Accessibility options for the exporting menu. Requires the Accessibility module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIExportingAccessibility *accessibility</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIExporting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/menuItemDefinitions" title="menuItemDefinitions"></a>
 	<h3 class="method-title"><code><a href="#//api/name/menuItemDefinitions">&nbsp;&nbsp;menuItemDefinitions</a></code>
 </h3>
@@ -196,7 +239,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{"printChart": {}, "separator": {}, "downloadPNG": {}, "downloadJPEG": {}, "downloadPDF": {}, "downloadSVG": {}}</code>.</p>
+				<p><strong>Defaults to</strong> <code>{"viewFullscreen": {}, "printChart": {}, "separator": {}, "downloadPNG": {}, "downloadJPEG": {}, "downloadPDF": {}, "downloadSVG": {}}</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -681,11 +724,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["image/png", "image/jpeg", "application/pdf", "image/svg+xml"]</code>.</p>
-			</div>
-			
 
 			
 
@@ -1092,7 +1130,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Additional chart options to be merged into an exported chart. For example, a common use case is to add data labels to improve readability of the exported chart, or to add a printer-friendly color scheme.</p>
+				<p>Additional chart options to be merged into the chart before exporting to an image format. This does not apply to printing the chart via the export menu. For example, a common use case is to add data labels to improve readability of the exported chart, or to add a printer-friendly color scheme to exported PDFs.</p>
 			</div>
 			
 		    

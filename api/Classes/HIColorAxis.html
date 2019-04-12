@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/accessibility">accessibility</option>
+		
 		<option value="//api/name/alignTicks">alignTicks</option>
 		
 		<option value="//api/name/ceiling">ceiling</option>
@@ -67,8 +69,6 @@
 		<option value="//api/name/dataClassColor">dataClassColor</option>
 		
 		<option value="//api/name/dataClasses">dataClasses</option>
-		
-		<option value="//api/name/definition">definition</option>
 		
 		<option value="//api/name/endOnTick">endOnTick</option>
 		
@@ -682,9 +682,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["linear", "logarithmic"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>linear</code>.</p>
+				<p><strong>Defaults to</strong> <code>linear</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1350,6 +1348,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/pane" title="pane"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pane">&nbsp;&nbsp;pane</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Refers to the index in the <code>panes</code> array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pane</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter">Two gauges with different center</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIColorAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/gridZIndex" title="gridZIndex"></a>
 	<h3 class="method-title"><code><a href="#//api/name/gridZIndex">&nbsp;&nbsp;gridZIndex</a></code>
 </h3>
@@ -1387,6 +1436,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIColorAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/accessibility" title="accessibility"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accessibility">&nbsp;&nbsp;accessibility</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Accessibility options for an axis. Requires the accessibility module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAccessibility *accessibility</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1495,57 +1585,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pane" title="pane"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pane">&nbsp;&nbsp;pane</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Refers to the index in the <code>panes</code> array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pane</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter">Two gauges with different center</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColorAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/tickWidth" title="tickWidth"></a>
 	<h3 class="method-title"><code><a href="#//api/name/tickWidth">&nbsp;&nbsp;tickWidth</a></code>
 </h3>
@@ -1557,7 +1596,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The pixel width of the major tick marks. In styled mode, the stroke width is given in the <code>.highcharts-tick</code> class.</p>
+				<p>The pixel width of the major tick marks. Defaults to 0 on category axes, otherwise 1. In styled mode, the stroke width is given in the <code>.highcharts-tick</code> class.</p>
 			</div>
 			
 		    
@@ -1574,9 +1613,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickwidth/">10 px width</a></li>
@@ -2301,47 +2338,6 @@
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColorAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/definition" title="definition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p><em>Requires Accessibility module</em> Description of the axis to screen reader users.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			

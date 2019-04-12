@@ -32,7 +32,7 @@
 	copyScatter3d.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyScatter3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyScatter3d.linecap = [self.linecap copyWithZone: zone];
-	copyScatter3d.point = [self.point copyWithZone: zone];
+	copyScatter3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyScatter3d.selected = [self.selected copyWithZone: zone];
 	copyScatter3d.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyScatter3d.clip = [self.clip copyWithZone: zone];
@@ -43,6 +43,7 @@
 	copyScatter3d.states = [self.states copyWithZone: zone];
 	copyScatter3d.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyScatter3d.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyScatter3d.point = [self.point copyWithZone: zone];
 	copyScatter3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyScatter3d.className = [self.className copyWithZone: zone];
 	copyScatter3d.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -55,15 +56,17 @@
 	copyScatter3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyScatter3d.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyScatter3d.events = [self.events copyWithZone: zone];
+	copyScatter3d.opacity = [self.opacity copyWithZone: zone];
 	copyScatter3d.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyScatter3d.definition = [self.definition copyWithZone: zone];
 	copyScatter3d.keys = [self.keys copyWithZone: zone];
 	copyScatter3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyScatter3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyScatter3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyScatter3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyScatter3d.step = [self.step copyWithZone: zone];
 	copyScatter3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyScatter3d.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyScatter3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyScatter3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyScatter3d.zones = [self.zones copyWithZone: zone];
 	copyScatter3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

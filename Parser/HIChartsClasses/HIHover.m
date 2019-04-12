@@ -15,12 +15,12 @@
 	copyHover.opacity = [self.opacity copyWithZone: zone];
 	copyHover.halo = [self.halo copyWithZone: zone];
 	copyHover.enabled = [self.enabled copyWithZone: zone];
-	copyHover.animation = [self.animation copyWithZone: zone];
-	copyHover.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyHover.lineWidthPlus = [self.lineWidthPlus copyWithZone: zone];
 	copyHover.radius = [self.radius copyWithZone: zone];
 	copyHover.fillColor = [self.fillColor copyWithZone: zone];
 	copyHover.lineColor = [self.lineColor copyWithZone: zone];
+	copyHover.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyHover.animation = [self.animation copyWithZone: zone];
 	copyHover.brightness = [self.brightness copyWithZone: zone];
 	copyHover.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyHover.shadow = [self.shadow copyWithZone: zone];
@@ -46,12 +46,6 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.animation) {
-		params[@"animation"] = [self.animation getParams];
-	}
-	if (self.lineWidth) {
-		params[@"lineWidth"] = self.lineWidth;
-	}
 	if (self.lineWidthPlus) {
 		params[@"lineWidthPlus"] = self.lineWidthPlus;
 	}
@@ -63,6 +57,12 @@
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.brightness) {
 		params[@"brightness"] = self.brightness;
@@ -111,18 +111,6 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setAnimation:(HIAnimationOptionsObject *)animation {
-	HIAnimationOptionsObject *oldValue = _animation;
-	_animation = animation;
-	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
-}
-
--(void)setLineWidth:(NSNumber *)lineWidth {
-	NSNumber *oldValue = _lineWidth;
-	_lineWidth = lineWidth;
-	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
-}
-
 -(void)setLineWidthPlus:(NSNumber *)lineWidthPlus {
 	NSNumber *oldValue = _lineWidthPlus;
 	_lineWidthPlus = lineWidthPlus;
@@ -145,6 +133,18 @@
 	HIColor *oldValue = _lineColor;
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
+	_lineWidth = lineWidth;
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
+}
+
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setBrightness:(NSNumber *)brightness {

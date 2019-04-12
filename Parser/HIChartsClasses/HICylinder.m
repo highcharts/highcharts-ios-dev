@@ -39,7 +39,7 @@
 	copyCylinder.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyCylinder.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyCylinder.grouping = [self.grouping copyWithZone: zone];
-	copyCylinder.point = [self.point copyWithZone: zone];
+	copyCylinder.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyCylinder.selected = [self.selected copyWithZone: zone];
 	copyCylinder.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyCylinder.clip = [self.clip copyWithZone: zone];
@@ -47,6 +47,7 @@
 	copyCylinder.color = [self.color copyWithZone: zone];
 	copyCylinder.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyCylinder.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyCylinder.point = [self.point copyWithZone: zone];
 	copyCylinder.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyCylinder.className = [self.className copyWithZone: zone];
 	copyCylinder.pointPlacement = [self.pointPlacement copyWithZone: zone];
@@ -58,15 +59,17 @@
 	copyCylinder.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyCylinder.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyCylinder.events = [self.events copyWithZone: zone];
+	copyCylinder.opacity = [self.opacity copyWithZone: zone];
 	copyCylinder.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyCylinder.definition = [self.definition copyWithZone: zone];
 	copyCylinder.keys = [self.keys copyWithZone: zone];
 	copyCylinder.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyCylinder.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyCylinder.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyCylinder.accessibility = [self.accessibility copyWithZone: zone];
 	copyCylinder.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyCylinder.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyCylinder.shadow = [self.shadow copyWithZone: zone];
+	copyCylinder.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyCylinder.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyCylinder.zones = [self.zones copyWithZone: zone];
 	copyCylinder.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

@@ -33,7 +33,7 @@
 	copyArea.threshold = [self.threshold copyWithZone: zone];
 	copyArea.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyArea.linecap = [self.linecap copyWithZone: zone];
-	copyArea.point = [self.point copyWithZone: zone];
+	copyArea.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyArea.selected = [self.selected copyWithZone: zone];
 	copyArea.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyArea.clip = [self.clip copyWithZone: zone];
@@ -43,6 +43,7 @@
 	copyArea.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyArea.states = [self.states copyWithZone: zone];
 	copyArea.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyArea.point = [self.point copyWithZone: zone];
 	copyArea.marker = [self.marker copyWithZone: zone];
 	copyArea.tooltip = [self.tooltip copyWithZone: zone];
 	copyArea.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -58,16 +59,18 @@
 	copyArea.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyArea.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyArea.events = [self.events copyWithZone: zone];
+	copyArea.opacity = [self.opacity copyWithZone: zone];
 	copyArea.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyArea.definition = [self.definition copyWithZone: zone];
 	copyArea.keys = [self.keys copyWithZone: zone];
 	copyArea.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyArea.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyArea.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyArea.accessibility = [self.accessibility copyWithZone: zone];
 	copyArea.step = [self.step copyWithZone: zone];
 	copyArea.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyArea.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyArea.shadow = [self.shadow copyWithZone: zone];
+	copyArea.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArea.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyArea.zones = [self.zones copyWithZone: zone];
 	copyArea.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

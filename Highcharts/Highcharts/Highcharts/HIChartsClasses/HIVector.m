@@ -22,7 +22,7 @@
 	copyVector.rotationOrigin = [self.rotationOrigin copyWithZone: zone];
 	copyVector.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyVector.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyVector.point = [self.point copyWithZone: zone];
+	copyVector.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyVector.selected = [self.selected copyWithZone: zone];
 	copyVector.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVector.clip = [self.clip copyWithZone: zone];
@@ -31,6 +31,7 @@
 	copyVector.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyVector.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVector.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyVector.point = [self.point copyWithZone: zone];
 	copyVector.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVector.className = [self.className copyWithZone: zone];
 	copyVector.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
@@ -40,14 +41,16 @@
 	copyVector.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVector.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyVector.events = [self.events copyWithZone: zone];
+	copyVector.opacity = [self.opacity copyWithZone: zone];
 	copyVector.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyVector.definition = [self.definition copyWithZone: zone];
 	copyVector.keys = [self.keys copyWithZone: zone];
 	copyVector.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyVector.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyVector.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyVector.accessibility = [self.accessibility copyWithZone: zone];
 	copyVector.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyVector.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyVector.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVector.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVector.zones = [self.zones copyWithZone: zone];
 	copyVector.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

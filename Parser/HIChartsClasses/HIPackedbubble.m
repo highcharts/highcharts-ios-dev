@@ -26,14 +26,17 @@
 	copyPackedbubble.yAxis = [self.yAxis copyWithZone: zone];
 	copyPackedbubble.zIndex = [self.zIndex copyWithZone: zone];
 	copyPackedbubble.minSize = [self.minSize copyWithZone: zone];
+	copyPackedbubble.sizeBy = [self.sizeBy copyWithZone: zone];
+	copyPackedbubble.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
+	copyPackedbubble.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyPackedbubble.draggable = [self.draggable copyWithZone: zone];
 	copyPackedbubble.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPackedbubble.maxSize = [self.maxSize copyWithZone: zone];
 	copyPackedbubble.tooltip = [self.tooltip copyWithZone: zone];
-	copyPackedbubble.sizeBy = [self.sizeBy copyWithZone: zone];
+	copyPackedbubble.useSimulation = [self.useSimulation copyWithZone: zone];
 	copyPackedbubble.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPackedbubble.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyPackedbubble.turboThreshold = [self.turboThreshold copyWithZone: zone];
-	copyPackedbubble.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPackedbubble.displayNegative = [self.displayNegative copyWithZone: zone];
 	copyPackedbubble.zThreshold = [self.zThreshold copyWithZone: zone];
 	copyPackedbubble.softThreshold = [self.softThreshold copyWithZone: zone];
@@ -42,7 +45,7 @@
 	copyPackedbubble.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPackedbubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPackedbubble.linecap = [self.linecap copyWithZone: zone];
-	copyPackedbubble.point = [self.point copyWithZone: zone];
+	copyPackedbubble.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyPackedbubble.selected = [self.selected copyWithZone: zone];
 	copyPackedbubble.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPackedbubble.clip = [self.clip copyWithZone: zone];
@@ -50,6 +53,7 @@
 	copyPackedbubble.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyPackedbubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPackedbubble.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyPackedbubble.point = [self.point copyWithZone: zone];
 	copyPackedbubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPackedbubble.className = [self.className copyWithZone: zone];
 	copyPackedbubble.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -61,11 +65,13 @@
 	copyPackedbubble.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPackedbubble.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPackedbubble.events = [self.events copyWithZone: zone];
+	copyPackedbubble.opacity = [self.opacity copyWithZone: zone];
 	copyPackedbubble.definition = [self.definition copyWithZone: zone];
 	copyPackedbubble.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyPackedbubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyPackedbubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyPackedbubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPackedbubble.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyPackedbubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPackedbubble.zones = [self.zones copyWithZone: zone];
 	copyPackedbubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyPackedbubble.visible = [self.visible copyWithZone: zone];
@@ -83,11 +89,20 @@
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
 	}
+	if (self.sizeBy) {
+		params[@"sizeBy"] = self.sizeBy;
+	}
+	if (self.layoutAlgorithm) {
+		params[@"layoutAlgorithm"] = [self.layoutAlgorithm getParams];
+	}
+	if (self.draggable) {
+		params[@"draggable"] = self.draggable;
+	}
 	if (self.maxSize) {
 		params[@"maxSize"] = self.maxSize;
 	}
-	if (self.sizeBy) {
-		params[@"sizeBy"] = self.sizeBy;
+	if (self.useSimulation) {
+		params[@"useSimulation"] = self.useSimulation;
 	}
 	if (self.displayNegative) {
 		params[@"displayNegative"] = self.displayNegative;
@@ -106,16 +121,34 @@
 	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }
 
+-(void)setSizeBy:(NSString *)sizeBy {
+	NSString *oldValue = _sizeBy;
+	_sizeBy = sizeBy;
+	[self updateNSObject:oldValue newValue:sizeBy propertyName:@"sizeBy"];
+}
+
+-(void)setLayoutAlgorithm:(HILayoutAlgorithm *)layoutAlgorithm {
+	HILayoutAlgorithm *oldValue = _layoutAlgorithm;
+	_layoutAlgorithm = layoutAlgorithm;
+	[self updateHIObject:oldValue newValue:layoutAlgorithm propertyName:@"layoutAlgorithm"];
+}
+
+-(void)setDraggable:(NSNumber *)draggable {
+	NSNumber *oldValue = _draggable;
+	_draggable = draggable;
+	[self updateNSObject:oldValue newValue:draggable propertyName:@"draggable"];
+}
+
 -(void)setMaxSize:(id)maxSize {
 	id oldValue = _maxSize;
 	_maxSize = maxSize;
 	[self updateNSObject:oldValue newValue:maxSize propertyName:@"maxSize"];
 }
 
--(void)setSizeBy:(NSString *)sizeBy {
-	NSString *oldValue = _sizeBy;
-	_sizeBy = sizeBy;
-	[self updateNSObject:oldValue newValue:sizeBy propertyName:@"sizeBy"];
+-(void)setUseSimulation:(NSNumber *)useSimulation {
+	NSNumber *oldValue = _useSimulation;
+	_useSimulation = useSimulation;
+	[self updateNSObject:oldValue newValue:useSimulation propertyName:@"useSimulation"];
 }
 
 -(void)setDisplayNegative:(NSNumber *)displayNegative {

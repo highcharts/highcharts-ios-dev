@@ -16,7 +16,7 @@
 	[super copyWithZone:zone];
 	HIPareto *copyPareto = [[HIPareto allocWithZone: zone] init];
 	copyPareto.linecap = [self.linecap copyWithZone: zone];
-	copyPareto.point = [self.point copyWithZone: zone];
+	copyPareto.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyPareto.selected = [self.selected copyWithZone: zone];
 	copyPareto.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPareto.clip = [self.clip copyWithZone: zone];
@@ -24,6 +24,7 @@
 	copyPareto.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPareto.states = [self.states copyWithZone: zone];
 	copyPareto.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyPareto.point = [self.point copyWithZone: zone];
 	copyPareto.marker = [self.marker copyWithZone: zone];
 	copyPareto.tooltip = [self.tooltip copyWithZone: zone];
 	copyPareto.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -36,13 +37,15 @@
 	copyPareto.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPareto.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPareto.events = [self.events copyWithZone: zone];
+	copyPareto.opacity = [self.opacity copyWithZone: zone];
 	copyPareto.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPareto.definition = [self.definition copyWithZone: zone];
 	copyPareto.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPareto.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyPareto.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyPareto.accessibility = [self.accessibility copyWithZone: zone];
 	copyPareto.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPareto.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
+	copyPareto.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPareto.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPareto.visible = [self.visible copyWithZone: zone];
 	copyPareto.linkedTo = [self.linkedTo copyWithZone: zone];

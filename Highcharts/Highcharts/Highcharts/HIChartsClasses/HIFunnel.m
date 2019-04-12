@@ -48,6 +48,7 @@
 	copyFunnel.events = [self.events copyWithZone: zone];
 	copyFunnel.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyFunnel.linecap = [self.linecap copyWithZone: zone];
+	copyFunnel.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyFunnel.selected = [self.selected copyWithZone: zone];
 	copyFunnel.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyFunnel.color = [self.color copyWithZone: zone];
@@ -55,15 +56,16 @@
 	copyFunnel.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyFunnel.className = [self.className copyWithZone: zone];
 	copyFunnel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyFunnel.label = [self.label copyWithZone: zone];
 	copyFunnel.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyFunnel.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyFunnel.opacity = [self.opacity copyWithZone: zone];
 	copyFunnel.definition = [self.definition copyWithZone: zone];
 	copyFunnel.keys = [self.keys copyWithZone: zone];
 	copyFunnel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyFunnel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyFunnel.accessibility = [self.accessibility copyWithZone: zone];
 	copyFunnel.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyFunnel.shadow = [self.shadow copyWithZone: zone];
+	copyFunnel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyFunnel.visible = [self.visible copyWithZone: zone];
 	copyFunnel.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyFunnel.cursor = [self.cursor copyWithZone: zone];

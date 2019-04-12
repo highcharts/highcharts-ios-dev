@@ -43,6 +43,7 @@
 	copyPie.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyPie.linecap = [self.linecap copyWithZone: zone];
+	copyPie.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyPie.selected = [self.selected copyWithZone: zone];
 	copyPie.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPie.color = [self.color copyWithZone: zone];
@@ -50,16 +51,17 @@
 	copyPie.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPie.className = [self.className copyWithZone: zone];
 	copyPie.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyPie.label = [self.label copyWithZone: zone];
 	copyPie.animation = [self.animation copyWithZone: zone];
 	copyPie.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPie.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyPie.opacity = [self.opacity copyWithZone: zone];
 	copyPie.definition = [self.definition copyWithZone: zone];
 	copyPie.keys = [self.keys copyWithZone: zone];
 	copyPie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyPie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyPie.accessibility = [self.accessibility copyWithZone: zone];
 	copyPie.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPie.shadow = [self.shadow copyWithZone: zone];
+	copyPie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPie.visible = [self.visible copyWithZone: zone];
 	copyPie.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPie.cursor = [self.cursor copyWithZone: zone];

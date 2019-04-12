@@ -58,7 +58,13 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/approximation">approximation</option>
+		
 		<option value="//api/name/attractiveForce">attractiveForce</option>
+		
+		<option value="//api/name/bubblePadding">bubblePadding</option>
+		
+		<option value="//api/name/dragBetweenSeries">dragBetweenSeries</option>
 		
 		<option value="//api/name/enableSimulation">enableSimulation</option>
 		
@@ -66,13 +72,29 @@
 		
 		<option value="//api/name/gravitationalConstant">gravitationalConstant</option>
 		
+		<option value="//api/name/initialPositionRadius">initialPositionRadius</option>
+		
 		<option value="//api/name/initialPositions">initialPositions</option>
+		
+		<option value="//api/name/integration">integration</option>
 		
 		<option value="//api/name/linkLength">linkLength</option>
 		
 		<option value="//api/name/maxIterations">maxIterations</option>
 		
+		<option value="//api/name/maxSpeed">maxSpeed</option>
+		
+		<option value="//api/name/parentNodeLimit">parentNodeLimit</option>
+		
+		<option value="//api/name/parentNodeOptions">parentNodeOptions</option>
+		
 		<option value="//api/name/repulsiveForce">repulsiveForce</option>
+		
+		<option value="//api/name/seriesInteraction">seriesInteraction</option>
+		
+		<option value="//api/name/splitSeries">splitSeries</option>
+		
+		<option value="//api/name/theta">theta</option>
 		
 		<option value="//api/name/type">type</option>
 		
@@ -117,6 +139,12 @@
 
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Options for layout algorithm when simulation is enabled. Inside there are options to change the speed, padding, initial bubbles positions and more.</p>
+					</div>
+					
 					
 
 					
@@ -130,8 +158,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/linkLength" title="linkLength"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkLength">&nbsp;&nbsp;linkLength</a></code>
+	<a name="//api/name/seriesInteraction" title="seriesInteraction"></a>
+	<h3 class="method-title"><code><a href="#//api/name/seriesInteraction">&nbsp;&nbsp;seriesInteraction</a></code>
 </h3>
 
 	<div class="method-info">
@@ -141,12 +169,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Ideal length (px) of the link between two nodes. When not defined, length is calculated as: <code>Math.pow(availableWidth * availableHeight / nodesLength, 0.4);</code> Note: Because of the algorithm specification, length of each link might be not exactly as specified.</p>
+				<p>Whether series should interact with each other or not. When <code>parentNodeLimit</code> is set to true, thi option should be set to false to avoid sticking points in wrong series parentNode.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *linkLength</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *seriesInteraction</code></div>
 
 		    
 			
@@ -202,7 +230,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/forces/">Custom forces</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/forces/">Custom forces with Euler integration</a></li>
 </ul>
 
 			</div>
@@ -274,7 +302,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Initial layout algorithm for positioning nodes. Can be one of built-in options (&ldquo;circle&rdquo;, &ldquo;random&rdquo;) or a function where positions should be set on each node (<code>this.nodes</code>) as <code>node.plotX</code> and <code>node.plotY</code></p>
+				<p>Initial layout algorithm for positioning nodes. Can be one of the built-in options (&ldquo;circle&rdquo;, &ldquo;random&rdquo;) or a function where positions should be set on each node (<code>this.nodes</code>) as <code>node.plotX</code> and <code>node.plotY</code>.</p>
 			</div>
 			
 		    
@@ -291,12 +319,104 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["circle", "random"]</code>.</p>
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/initial-positions/">Initial positions with callback</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parentNodeOptions" title="parentNodeOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parentNodeOptions">&nbsp;&nbsp;parentNodeOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Layout algorithm options for parent nodes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIParentNodeOptions *parentNodeOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initialPositionRadius" title="initialPositionRadius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initialPositionRadius">&nbsp;&nbsp;initialPositionRadius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>initialPositions</code> are set to &lsquo;circle&rsquo;, <code>initialPositionRadius</code> is a distance from the center of circle, in which nodes are created.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *initialPositionRadius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/initial-positions/">Initial positions with callback</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-packedbubble/initial-radius/">Initial radius set to 200</a></li>
 </ul>
 
 			</div>
@@ -333,6 +453,98 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *friction</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dragBetweenSeries" title="dragBetweenSeries"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dragBetweenSeries">&nbsp;&nbsp;dragBetweenSeries</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>In case of split series, this option allows user to drag and drop points between series, for changing point related series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *dragBetweenSeries</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-packedbubble/packed-dashboard/">Example of drag'n drop bubbles for bubble kanban</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/maxSpeed" title="maxSpeed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxSpeed">&nbsp;&nbsp;maxSpeed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Max speed that node can get in one iteration. In terms of simulation, it&rsquo;s a maximum translation (in pixels) that a node can move (in both, x and y, dimensions). While <code>friction</code> is applied on all nodes, max speed is applied only for nodes that move very fast, for example small or disconnected ones.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *maxSpeed</code></div>
 
 		    
 			
@@ -408,8 +620,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/repulsiveForce" title="repulsiveForce"></a>
-	<h3 class="method-title"><code><a href="#//api/name/repulsiveForce">&nbsp;&nbsp;repulsiveForce</a></code>
+	<a name="//api/name/bubblePadding" title="bubblePadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bubblePadding">&nbsp;&nbsp;bubblePadding</a></code>
 </h3>
 
 	<div class="method-info">
@@ -419,12 +631,53 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Repulsive force applied on a node. Passed are two arguments: - <code>d</code> - which is current distance between two nodes - <code>k</code> - which is desired distance between two nodes</p>
+				<p>The distance between two bubbles, when the algorithm starts to treat two bubbles as overlapping. The <code>bubblePadding</code> is also the expected distance between all the bubbles on simulation end.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *repulsiveForce</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *bubblePadding</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/splitSeries" title="splitSeries"></a>
+	<h3 class="method-title"><code><a href="#//api/name/splitSeries">&nbsp;&nbsp;splitSeries</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to split series into individual groups or to mix all series together.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *splitSeries</code></div>
 
 		    
 			
@@ -436,14 +689,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>function (d, k) { return k * k / d; }</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/forces/">Custom forces</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
 			</div>
 			
 
@@ -461,8 +707,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/attractiveForce" title="attractiveForce"></a>
-	<h3 class="method-title"><code><a href="#//api/name/attractiveForce">&nbsp;&nbsp;attractiveForce</a></code>
+	<a name="//api/name/parentNodeLimit" title="parentNodeLimit"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parentNodeLimit">&nbsp;&nbsp;parentNodeLimit</a></code>
 </h3>
 
 	<div class="method-info">
@@ -472,12 +718,53 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Attraction force applied on a node which is conected to another node by a link. Passed are two arguments: - <code>d</code> - which is current distance between two nodes - <code>k</code> - which is desired distance between two nodes</p>
+				<p>Whether bubbles should interact with their parentNode to keep them inside.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *attractiveForce</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *parentNodeLimit</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/integration" title="integration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/integration">&nbsp;&nbsp;integration</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Integration type. Available options are <code>'euler'</code> and <code>'verlet'</code>. Integration determines how forces are applied on particles. In Euler integration, force is applied direct as <code>newPosition += velocity;</code>. In Verlet integration, new position is based on a previous posittion without velocity: <code>newPosition += previousPosition - newPosition</code>. Note that different integrations give different results as forces are different. In Highcharts v7.0.x only <code>'euler'</code> integration was supported.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *integration</code></div>
 
 		    
 			
@@ -489,12 +776,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>function (d, k) { return k * k / d; }</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["euler", "verlet"]</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/forces/">Custom forces</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/integration-comparison/">Comparison of Verlet and Euler integrations</a></li>
 </ul>
 
 			</div>
@@ -543,6 +830,259 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["reingold-fruchterman"]</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/linkLength" title="linkLength"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkLength">&nbsp;&nbsp;linkLength</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Ideal length (px) of the link between two nodes. When not defined, length is calculated as: <code>Math.pow(availableWidth * availableHeight / nodesLength, 0.4);</code> Note: Because of the algorithm specification, length of each link might be not exactly as specified.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *linkLength</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/styled-links/">Numerical values</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/approximation" title="approximation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/approximation">&nbsp;&nbsp;approximation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Approximation used to calculate repulsive forces affecting nodes. By default, when calculateing net force, nodes are compared against each other, which gives O(N<sup>2</sup>) complexity. Using Barnes-Hut approximation, we decrease this to O(N log N), but the resulting graph will have different layout. Barnes-Hut approximation divides space into rectangles via quad tree, where forces exerted on nodes are calculated directly for nearby cells, and for all others, cells are treated as a separate node with center of mass.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *approximation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["barnes-hut", "none"]</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/barnes-hut-approximation/">A graph with Barnes-Hut approximation</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/repulsiveForce" title="repulsiveForce"></a>
+	<h3 class="method-title"><code><a href="#//api/name/repulsiveForce">&nbsp;&nbsp;repulsiveForce</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Repulsive force applied on a node. Passed are two arguments: - <code>d</code> - which is current distance between two nodes - <code>k</code> - which is desired distance between two nodes In <code>verlet</code> integration, defaults to: <code>function (d, k) { return (k-d) / d * (k &gt; d ? 1 : 0) }</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *repulsiveForce</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>function (d, k) { return k * k / d; }</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/forces/">Custom forces with Euler integration</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/cuboids/">Custom forces with Verlet integration</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/theta" title="theta"></a>
+	<h3 class="method-title"><code><a href="#//api/name/theta">&nbsp;&nbsp;theta</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Barnes-Hut approximation only. Deteremines when distance between cell and node is small enough to caculate forces. Value of <code>theta</code> is compared directly with quotient <code>s / d</code>, where <code>s</code> is the size of the cell, and <code>d</code> is distance between center of cell&rsquo;s mass and currently compared node.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *theta</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/attractiveForce" title="attractiveForce"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attractiveForce">&nbsp;&nbsp;attractiveForce</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Attraction force applied on a node which is conected to another node by a link. Passed are two arguments: - <code>d</code> - which is current distance between two nodes - <code>k</code> - which is desired distance between two nodes In <code>verlet</code> integration, defaults to: <code>function (d, k) { return (k-d) / d; }</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *attractiveForce</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>function (d, k) { return k * k / d; }</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/forces/">Custom forces with Euler integration</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-networkgraph/cuboids/">Custom forces with Verlet integration</a></li>
+</ul>
+
 			</div>
 			
 
