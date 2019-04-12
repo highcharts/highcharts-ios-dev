@@ -58,11 +58,17 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/borderColor">borderColor</option>
+		
+		<option value="//api/name/borderWidth">borderWidth</option>
+		
 		<option value="//api/name/colorByPoint">colorByPoint</option>
 		
 		<option value="//api/name/colors">colors</option>
 		
 		<option value="//api/name/curveFactor">curveFactor</option>
+		
+		<option value="//api/name/levels">levels</option>
 		
 		<option value="//api/name/linkOpacity">linkOpacity</option>
 		
@@ -225,7 +231,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Higher numbers makes the links in a sankey diagram render more curved. A <code>curveFactor</code> of 0 makes the lines straight.</p>
+				<p>Higher numbers makes the links in a sankey diagram or dependency wheelrender more curved. A <code>curveFactor</code> of 0 makes the lines straight.</p>
 			</div>
 			
 		    
@@ -266,7 +272,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The padding between nodes in a sankey diagram, in pixels.</p>
+				<p>The padding between nodes in a sankey diagram or dependency wheel, in pixels.</p>
 			</div>
 			
 		    
@@ -307,7 +313,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The pixel width of each node in a sankey diagram, or the height in case the chart is inverted.</p>
+				<p>The pixel width of each node in a sankey diagram or dependency wheel, or the height in case the chart is inverted.</p>
 			</div>
 			
 		    
@@ -321,6 +327,110 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISankey.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/levels" title="levels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/levels">&nbsp;&nbsp;levels</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set options on specific levels. Takes precedence over series options, but not point options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HILevels*&gt; *levels</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst">Sunburst chart</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISankey.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderWidth" title="borderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width of the border surrounding each column or bar. Defaults to <code>1</code> when there is room for a border, but to <code>0</code> when the columns are so dense that a border would cover the next column. In styled mode, the stroke width can be set with the <code>.highcharts-point</code> rule.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/">2px black border</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -455,6 +565,59 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISankey.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the border surrounding each column or bar. In styled mode, the border stroke can be set with the <code>.highcharts-point</code> rule.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>#ffffff</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/">Dark gray border</a></li>
+</ul>
+
+			</div>
 			
 
 			

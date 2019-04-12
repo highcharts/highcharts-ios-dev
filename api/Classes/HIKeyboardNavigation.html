@@ -64,7 +64,11 @@
 		
 		<option value="//api/name/mode">mode</option>
 		
+		<option value="//api/name/order">order</option>
+		
 		<option value="//api/name/skipNullPoints">skipNullPoints</option>
+		
+		<option value="//api/name/wrapAround">wrapAround</option>
 		
 	</optgroup>
 	
@@ -110,7 +114,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Keyboard navigation for the legend. Requires the Accessibility module.</p>
+						<p>Options for keyboard navigation.</p>
 					</div>
 					
 					
@@ -126,6 +130,47 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/skipNullPoints" title="skipNullPoints"></a>
+	<h3 class="method-title"><code><a href="#//api/name/skipNullPoints">&nbsp;&nbsp;skipNullPoints</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Skip null points when navigating through points with the keyboard.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *skipNullPoints</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIKeyboardNavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/enabled" title="enabled"></a>
 	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
@@ -137,7 +182,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable/disable keyboard navigation for the legend. Requires the Accessibility module.</p>
+				<p>Enable keyboard navigation for the chart.</p>
 			</div>
 			
 		    
@@ -152,10 +197,46 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIKeyboardNavigation.h</code></p>
 			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/wrapAround" title="wrapAround"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wrapAround">&nbsp;&nbsp;wrapAround</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not to wrap around when reaching the end of arrow-key navigation for an element in the chart.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *wrapAround</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -223,6 +304,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/order" title="order"></a>
+	<h3 class="method-title"><code><a href="#//api/name/order">&nbsp;&nbsp;order</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Order of tab navigation in the chart. Determines which elements are tabbed to first. Available elements are: <code>series</code>, <code>zoom</code>, <code>rangeSelector</code>, <code>chartMenu</code>, <code>legend</code>. In addition, any custom components can be added here.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id order</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIKeyboardNavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/mode" title="mode"></a>
 	<h3 class="method-title"><code><a href="#//api/name/mode">&nbsp;&nbsp;mode</a></code>
 </h3>
@@ -234,7 +356,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set the keyboard navigation mode for the chart. Can be &ldquo;normal&rdquo; or &ldquo;serialize&rdquo;. In normal mode, left/right arrow keys move between points in a series, while up/down arrow keys move between series. Up/down navigation acts intelligently to figure out which series makes sense to move to from any given point. In &ldquo;serialize&rdquo; mode, points are instead navigated as a single list. Left/right behaves as in &ldquo;normal&rdquo; mode. Up/down arrow keys will behave like left/right. This is useful for unifying navigation behavior with/without screen readers enabled.</p>
+				<p>Set the keyboard navigation mode for the chart. Can be &ldquo;normal&rdquo; or &ldquo;serialize&rdquo;. In normal mode, left/right arrow keys move between points in a series, while up/down arrow keys move between series. Up/down navigation acts intelligently to figure out which series makes sense to move to from any given point. In &ldquo;serialize&rdquo; mode, points are instead navigated as a single list. Left/right behaves as in &ldquo;normal&rdquo; mode. Up/down arrow keys will behave like left/right. This can be useful for unifying navigation behavior with/without screen readers enabled.</p>
 			</div>
 			
 		    
@@ -255,47 +377,6 @@
 
 <p><strong>Defaults to</strong> <code>normal</code>.</p>
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIKeyboardNavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/skipNullPoints" title="skipNullPoints"></a>
-	<h3 class="method-title"><code><a href="#//api/name/skipNullPoints">&nbsp;&nbsp;skipNullPoints</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Skip null points when navigating through points with the keyboard.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *skipNullPoints</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			

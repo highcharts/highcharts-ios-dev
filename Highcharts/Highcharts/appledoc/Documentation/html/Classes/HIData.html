@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/accessibility">accessibility</option>
+		
 		<option value="//api/name/beforeParse">beforeParse</option>
 		
 		<option value="//api/name/borderColor">borderColor</option>
@@ -114,6 +116,8 @@
 		
 		<option value="//api/name/googleSpreadsheetWorksheet">googleSpreadsheetWorksheet</option>
 		
+		<option value="//api/name/gradientForSides">gradientForSides</option>
+		
 		<option value="//api/name/high">high</option>
 		
 		<option value="//api/name/id">id</option>
@@ -125,6 +129,8 @@
 		<option value="//api/name/isSum">isSum</option>
 		
 		<option value="//api/name/itemDelimiter">itemDelimiter</option>
+		
+		<option value="//api/name/label">label</option>
 		
 		<option value="//api/name/labelrank">labelrank</option>
 		
@@ -1944,7 +1950,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>
+				<p>The name of the point as shown in the legend, tooltip, dataLabels etc.</p>
 			</div>
 			
 		    
@@ -2081,6 +2087,22 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/accessibility" title="accessibility"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accessibility">&nbsp;&nbsp;accessibility</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDataAccessibility *accessibility</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/dataLabels" title="dataLabels"></a>
 	<h3 class="method-title"><code><a href="#//api/name/dataLabels">&nbsp;&nbsp;dataLabels</a></code>
 </h3>
@@ -2097,7 +2119,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id dataLabels</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDataLabelsOptionsObject *dataLabels</code></div>
 
 		    
 			
@@ -2496,8 +2518,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/weight" title="weight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
+	<a name="//api/name/label" title="label"></a>
+	<h3 class="method-title"><code><a href="#//api/name/label">&nbsp;&nbsp;label</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2507,12 +2529,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The value of a bubble. The bubble&rsquo;s size proportional to its <code>value</code>.</p>
+				<p>The label of event.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *weight</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *label</code></div>
 
 		    
 			
@@ -2849,6 +2871,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/sliced" title="sliced"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sliced">&nbsp;&nbsp;sliced</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to display a slice offset from the center.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sliced</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/">One sliced point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/pointPadding" title="pointPadding"></a>
 	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
 </h3>
@@ -3047,57 +3120,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sliced" title="sliced"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sliced">&nbsp;&nbsp;sliced</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to display a slice offset from the center.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sliced</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/">One sliced point</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/to" title="to"></a>
 	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
 </h3>
@@ -3156,6 +3178,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *from</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/weight" title="weight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The weight of the link.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *weight</code></div>
 
 		    
 			
@@ -3607,6 +3670,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/gradientForSides" title="gradientForSides"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gradientForSides">&nbsp;&nbsp;gradientForSides</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>By deafult sides fill is set to a gradient through this option being set to <code>true</code>. Set to <code>false</code> to get solid color for the sides.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *gradientForSides</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			

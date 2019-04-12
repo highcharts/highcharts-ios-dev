@@ -60,6 +60,8 @@
 		
 		<option value="//api/name/hover">hover</option>
 		
+		<option value="//api/name/inactive">inactive</option>
+		
 		<option value="//api/name/normal">normal</option>
 		
 		<option value="//api/name/select">select</option>
@@ -105,12 +107,6 @@
 
                     
 					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A wrapper object for all the series options in specific states.</p>
-					</div>
-					
 					
 
 					
@@ -137,6 +133,47 @@
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIHover *hover</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/inactive" title="inactive"></a>
+	<h3 class="method-title"><code><a href="#//api/name/inactive">&nbsp;&nbsp;inactive</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The opposite state of a hover for a single point node/link.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIInactive *inactive</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIStates.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -167,7 +204,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The normal state of a single point marker. Currently only used for setting animation when returning to normal state from hover.</p>
+				<p>The normal state of a series, or for point items in column, pie and similar series. Currently only used for setting animation when returning to normal state from hover.</p>
 			</div>
 			
 		    

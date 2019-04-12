@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/accessibility">accessibility</option>
+		
 		<option value="//api/name/alignTicks">alignTicks</option>
 		
 		<option value="//api/name/allowDecimals">allowDecimals</option>
@@ -71,8 +73,6 @@
 		<option value="//api/name/crosshair">crosshair</option>
 		
 		<option value="//api/name/dateTimeLabelFormats">dateTimeLabelFormats</option>
-		
-		<option value="//api/name/definition">definition</option>
 		
 		<option value="//api/name/endOnTick">endOnTick</option>
 		
@@ -768,10 +768,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["linear", "logarithmic", "datetime", "category",
-            "treegrid"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>linear</code>.</p>
+				<p><strong>Defaults to</strong> <code>linear</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1378,6 +1375,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/pane" title="pane"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pane">&nbsp;&nbsp;pane</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Refers to the index in the <code>panes</code> array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pane</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter">Two gauges with different center</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIParallelAxes.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/gridZIndex" title="gridZIndex"></a>
 	<h3 class="method-title"><code><a href="#//api/name/gridZIndex">&nbsp;&nbsp;gridZIndex</a></code>
 </h3>
@@ -1431,8 +1479,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dateTimeLabelFormats" title="dateTimeLabelFormats"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dateTimeLabelFormats">&nbsp;&nbsp;dateTimeLabelFormats</a></code>
+	<a name="//api/name/accessibility" title="accessibility"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accessibility">&nbsp;&nbsp;accessibility</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1442,12 +1490,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see <code>dateFormat</code>. Defaults to: {   millisecond: &lsquo;%H:%M:%S.%L&rsquo;,   second: &lsquo;%H:%M:%S&rsquo;,   minute: &lsquo;%H:%M&rsquo;,   hour: &lsquo;%H:%M&rsquo;,   day: &lsquo;%e. %b&rsquo;,   week: &lsquo;%e. %b&rsquo;,   month: &lsquo;%b \&rsquo;%y',   year: &lsquo;%Y&rsquo; }</p>
+				<p>Accessibility options for an axis. Requires the accessibility module.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAccessibility *accessibility</code></div>
 
 		    
 			
@@ -1456,16 +1504,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/datetimelabelformats/">Different day format on X axis</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -1574,8 +1612,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pane" title="pane"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pane">&nbsp;&nbsp;pane</a></code>
+	<a name="//api/name/minTickInterval" title="minTickInterval"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minTickInterval">&nbsp;&nbsp;minTickInterval</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1585,12 +1623,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Refers to the index in the <code>panes</code> array. Used for circular gauges and polar charts. When the option is not set then first pane will be used.</p>
+				<p>The minimum tick interval allowed in axis values. For example on zooming in on an axis with daily data, this can be used to prevent the axis from showing hours. Defaults to the closest distance between two points on the axis.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pane</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minTickInterval</code></div>
 
 		    
 			
@@ -1599,16 +1637,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter">Two gauges with different center</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -2305,56 +2333,13 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/showempty/">When clicking the legend to hide series, one axis preserves line and title, the other doesn&rsquo;t</a></li>
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIParallelAxes.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/definition" title="definition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p><em>Requires Accessibility module</em> Description of the axis to screen reader users.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -2406,6 +2391,57 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickposition-outside/">Outside by default</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickposition-inside/">Inside</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIParallelAxes.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateTimeLabelFormats" title="dateTimeLabelFormats"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateTimeLabelFormats">&nbsp;&nbsp;dateTimeLabelFormats</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see <code>dateFormat</code>. Defaults to: {   millisecond: &lsquo;%H:%M:%S.%L&rsquo;,   second: &lsquo;%H:%M:%S&rsquo;,   minute: &lsquo;%H:%M&rsquo;,   hour: &lsquo;%H:%M&rsquo;,   day: &lsquo;%e. %b&rsquo;,   week: &lsquo;%e. %b&rsquo;,   month: &lsquo;%b \&rsquo;%y',   year: &lsquo;%Y&rsquo; }</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDateTimeLabelFormats *dateTimeLabelFormats</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/datetimelabelformats/">Different day format on X axis</a></li>
 </ul>
 
 			</div>
@@ -2569,47 +2605,6 @@
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIParallelAxes.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/minTickInterval" title="minTickInterval"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minTickInterval">&nbsp;&nbsp;minTickInterval</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The minimum tick interval allowed in axis values. For example on zooming in on an axis with daily data, this can be used to prevent the axis from showing hours. Defaults to the closest distance between two points on the axis.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minTickInterval</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
