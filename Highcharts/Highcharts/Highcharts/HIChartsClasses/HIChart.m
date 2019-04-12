@@ -37,7 +37,6 @@
 	copyChart.type = [self.type copyWithZone: zone];
 	copyChart.events = [self.events copyWithZone: zone];
 	copyChart.spacingLeft = [self.spacingLeft copyWithZone: zone];
-	copyChart.definition = [self.definition copyWithZone: zone];
 	copyChart.spacing = [self.spacing copyWithZone: zone];
 	copyChart.panKey = [self.panKey copyWithZone: zone];
 	copyChart.style = [self.style copyWithZone: zone];
@@ -56,7 +55,6 @@
 	copyChart.resetZoomButton = [self.resetZoomButton copyWithZone: zone];
 	copyChart.showAxes = [self.showAxes copyWithZone: zone];
 	copyChart.borderWidth = [self.borderWidth copyWithZone: zone];
-	copyChart.typeDescription = [self.typeDescription copyWithZone: zone];
 	copyChart.marginTop = [self.marginTop copyWithZone: zone];
 	copyChart.margin = [self.margin copyWithZone: zone];
 	copyChart.styledMode = [self.styledMode copyWithZone: zone];
@@ -147,9 +145,6 @@
 	if (self.spacingLeft) {
 		params[@"spacingLeft"] = self.spacingLeft;
 	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
-	}
 	if (self.spacing) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.spacing) {
@@ -212,9 +207,6 @@
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.typeDescription) {
-		params[@"typeDescription"] = self.typeDescription;
 	}
 	if (self.marginTop) {
 		params[@"marginTop"] = self.marginTop;
@@ -401,12 +393,6 @@
 	[self updateNSObject:oldValue newValue:spacingLeft propertyName:@"spacingLeft"];
 }
 
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
-}
-
 -(void)setSpacing:(NSArray<NSNumber *> *)spacing {
 	NSArray<NSNumber *> *oldValue = _spacing;
 	_spacing = spacing;
@@ -513,12 +499,6 @@
 	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
-}
-
--(void)setTypeDescription:(NSString *)typeDescription {
-	NSString *oldValue = _typeDescription;
-	_typeDescription = typeDescription;
-	[self updateNSObject:oldValue newValue:typeDescription propertyName:@"typeDescription"];
 }
 
 -(void)setMarginTop:(NSNumber *)marginTop {

@@ -23,7 +23,7 @@
 	copyAreaspline.threshold = [self.threshold copyWithZone: zone];
 	copyAreaspline.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyAreaspline.linecap = [self.linecap copyWithZone: zone];
-	copyAreaspline.point = [self.point copyWithZone: zone];
+	copyAreaspline.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyAreaspline.selected = [self.selected copyWithZone: zone];
 	copyAreaspline.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyAreaspline.clip = [self.clip copyWithZone: zone];
@@ -33,6 +33,7 @@
 	copyAreaspline.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyAreaspline.states = [self.states copyWithZone: zone];
 	copyAreaspline.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyAreaspline.point = [self.point copyWithZone: zone];
 	copyAreaspline.marker = [self.marker copyWithZone: zone];
 	copyAreaspline.tooltip = [self.tooltip copyWithZone: zone];
 	copyAreaspline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -48,15 +49,17 @@
 	copyAreaspline.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyAreaspline.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyAreaspline.events = [self.events copyWithZone: zone];
+	copyAreaspline.opacity = [self.opacity copyWithZone: zone];
 	copyAreaspline.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyAreaspline.definition = [self.definition copyWithZone: zone];
 	copyAreaspline.keys = [self.keys copyWithZone: zone];
 	copyAreaspline.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyAreaspline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copyAreaspline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyAreaspline.accessibility = [self.accessibility copyWithZone: zone];
 	copyAreaspline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyAreaspline.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyAreaspline.shadow = [self.shadow copyWithZone: zone];
+	copyAreaspline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyAreaspline.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyAreaspline.zones = [self.zones copyWithZone: zone];
 	copyAreaspline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

@@ -17,17 +17,23 @@
 	copyPlotOptions.bar = [self.bar copyWithZone: zone];
 	copyPlotOptions.variwide = [self.variwide copyWithZone: zone];
 	copyPlotOptions.areasplinerange = [self.areasplinerange copyWithZone: zone];
+	copyPlotOptions.item = [self.item copyWithZone: zone];
 	copyPlotOptions.vector = [self.vector copyWithZone: zone];
 	copyPlotOptions.columnpyramid = [self.columnpyramid copyWithZone: zone];
 	copyPlotOptions.arearange = [self.arearange copyWithZone: zone];
 	copyPlotOptions.bellcurve = [self.bellcurve copyWithZone: zone];
 	copyPlotOptions.series = [self.series copyWithZone: zone];
+	copyPlotOptions.pyramid3d = [self.pyramid3d copyWithZone: zone];
 	copyPlotOptions.sankey = [self.sankey copyWithZone: zone];
 	copyPlotOptions.pareto = [self.pareto copyWithZone: zone];
+	copyPlotOptions.dependencywheel = [self.dependencywheel copyWithZone: zone];
 	copyPlotOptions.heatmap = [self.heatmap copyWithZone: zone];
 	copyPlotOptions.solidgauge = [self.solidgauge copyWithZone: zone];
+	copyPlotOptions.timeline = [self.timeline copyWithZone: zone];
+	copyPlotOptions.funnel3d = [self.funnel3d copyWithZone: zone];
 	copyPlotOptions.column = [self.column copyWithZone: zone];
 	copyPlotOptions.treemap = [self.treemap copyWithZone: zone];
+	copyPlotOptions.waterfall = [self.waterfall copyWithZone: zone];
 	copyPlotOptions.columnrange = [self.columnrange copyWithZone: zone];
 	copyPlotOptions.venn = [self.venn copyWithZone: zone];
 	copyPlotOptions.spline = [self.spline copyWithZone: zone];
@@ -50,9 +56,9 @@
 	copyPlotOptions.scatter3d = [self.scatter3d copyWithZone: zone];
 	copyPlotOptions.boxplot = [self.boxplot copyWithZone: zone];
 	copyPlotOptions.errorbar = [self.errorbar copyWithZone: zone];
-	copyPlotOptions.waterfall = [self.waterfall copyWithZone: zone];
 	copyPlotOptions.windbarb = [self.windbarb copyWithZone: zone];
 	copyPlotOptions.bullet = [self.bullet copyWithZone: zone];
+	copyPlotOptions.organization = [self.organization copyWithZone: zone];
 	return copyPlotOptions;
 }
 
@@ -80,6 +86,9 @@
 	if (self.areasplinerange) {
 		params[@"areasplinerange"] = [self.areasplinerange getParams];
 	}
+	if (self.item) {
+		params[@"item"] = [self.item getParams];
+	}
 	if (self.vector) {
 		params[@"vector"] = [self.vector getParams];
 	}
@@ -95,11 +104,17 @@
 	if (self.series) {
 		params[@"series"] = [self.series getParams];
 	}
+	if (self.pyramid3d) {
+		params[@"pyramid3d"] = [self.pyramid3d getParams];
+	}
 	if (self.sankey) {
 		params[@"sankey"] = [self.sankey getParams];
 	}
 	if (self.pareto) {
 		params[@"pareto"] = [self.pareto getParams];
+	}
+	if (self.dependencywheel) {
+		params[@"dependencywheel"] = [self.dependencywheel getParams];
 	}
 	if (self.heatmap) {
 		params[@"heatmap"] = [self.heatmap getParams];
@@ -107,11 +122,20 @@
 	if (self.solidgauge) {
 		params[@"solidgauge"] = [self.solidgauge getParams];
 	}
+	if (self.timeline) {
+		params[@"timeline"] = [self.timeline getParams];
+	}
+	if (self.funnel3d) {
+		params[@"funnel3d"] = [self.funnel3d getParams];
+	}
 	if (self.column) {
 		params[@"column"] = [self.column getParams];
 	}
 	if (self.treemap) {
 		params[@"treemap"] = [self.treemap getParams];
+	}
+	if (self.waterfall) {
+		params[@"waterfall"] = [self.waterfall getParams];
 	}
 	if (self.columnrange) {
 		params[@"columnrange"] = [self.columnrange getParams];
@@ -179,14 +203,14 @@
 	if (self.errorbar) {
 		params[@"errorbar"] = [self.errorbar getParams];
 	}
-	if (self.waterfall) {
-		params[@"waterfall"] = [self.waterfall getParams];
-	}
 	if (self.windbarb) {
 		params[@"windbarb"] = [self.windbarb getParams];
 	}
 	if (self.bullet) {
 		params[@"bullet"] = [self.bullet getParams];
+	}
+	if (self.organization) {
+		params[@"organization"] = [self.organization getParams];
 	}
 	return params;
 }
@@ -235,6 +259,12 @@
 	[self updateHIObject:oldValue newValue:areasplinerange propertyName:@"areasplinerange"];
 }
 
+-(void)setItem:(HIItem *)item {
+	HIItem *oldValue = _item;
+	_item = item;
+	[self updateHIObject:oldValue newValue:item propertyName:@"item"];
+}
+
 -(void)setVector:(HIVector *)vector {
 	HIVector *oldValue = _vector;
 	_vector = vector;
@@ -265,6 +295,12 @@
 	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
 }
 
+-(void)setPyramid3d:(HIPyramid3d *)pyramid3d {
+	HIPyramid3d *oldValue = _pyramid3d;
+	_pyramid3d = pyramid3d;
+	[self updateHIObject:oldValue newValue:pyramid3d propertyName:@"pyramid3d"];
+}
+
 -(void)setSankey:(HISankey *)sankey {
 	HISankey *oldValue = _sankey;
 	_sankey = sankey;
@@ -275,6 +311,12 @@
 	HIPareto *oldValue = _pareto;
 	_pareto = pareto;
 	[self updateHIObject:oldValue newValue:pareto propertyName:@"pareto"];
+}
+
+-(void)setDependencywheel:(HIDependencywheel *)dependencywheel {
+	HIDependencywheel *oldValue = _dependencywheel;
+	_dependencywheel = dependencywheel;
+	[self updateHIObject:oldValue newValue:dependencywheel propertyName:@"dependencywheel"];
 }
 
 -(void)setHeatmap:(HIHeatmap *)heatmap {
@@ -289,6 +331,18 @@
 	[self updateHIObject:oldValue newValue:solidgauge propertyName:@"solidgauge"];
 }
 
+-(void)setTimeline:(HITimeline *)timeline {
+	HITimeline *oldValue = _timeline;
+	_timeline = timeline;
+	[self updateHIObject:oldValue newValue:timeline propertyName:@"timeline"];
+}
+
+-(void)setFunnel3d:(HIFunnel3d *)funnel3d {
+	HIFunnel3d *oldValue = _funnel3d;
+	_funnel3d = funnel3d;
+	[self updateHIObject:oldValue newValue:funnel3d propertyName:@"funnel3d"];
+}
+
 -(void)setColumn:(HIColumn *)column {
 	HIColumn *oldValue = _column;
 	_column = column;
@@ -299,6 +353,12 @@
 	HITreemap *oldValue = _treemap;
 	_treemap = treemap;
 	[self updateHIObject:oldValue newValue:treemap propertyName:@"treemap"];
+}
+
+-(void)setWaterfall:(HIWaterfall *)waterfall {
+	HIWaterfall *oldValue = _waterfall;
+	_waterfall = waterfall;
+	[self updateHIObject:oldValue newValue:waterfall propertyName:@"waterfall"];
 }
 
 -(void)setColumnrange:(HIColumnrange *)columnrange {
@@ -433,12 +493,6 @@
 	[self updateHIObject:oldValue newValue:errorbar propertyName:@"errorbar"];
 }
 
--(void)setWaterfall:(HIWaterfall *)waterfall {
-	HIWaterfall *oldValue = _waterfall;
-	_waterfall = waterfall;
-	[self updateHIObject:oldValue newValue:waterfall propertyName:@"waterfall"];
-}
-
 -(void)setWindbarb:(HIWindbarb *)windbarb {
 	HIWindbarb *oldValue = _windbarb;
 	_windbarb = windbarb;
@@ -449,6 +503,12 @@
 	HIBullet *oldValue = _bullet;
 	_bullet = bullet;
 	[self updateHIObject:oldValue newValue:bullet propertyName:@"bullet"];
+}
+
+-(void)setOrganization:(HIOrganization *)organization {
+	HIOrganization *oldValue = _organization;
+	_organization = organization;
+	[self updateHIObject:oldValue newValue:organization propertyName:@"organization"];
 }
 
 @end

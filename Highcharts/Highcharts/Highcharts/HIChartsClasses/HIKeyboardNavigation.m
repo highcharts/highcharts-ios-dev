@@ -10,37 +10,56 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIKeyboardNavigation *copyKeyboardNavigation = [[HIKeyboardNavigation allocWithZone: zone] init];
-	copyKeyboardNavigation.enabled = [self.enabled copyWithZone: zone];
-	copyKeyboardNavigation.focusBorder = [self.focusBorder copyWithZone: zone];
-	copyKeyboardNavigation.mode = [self.mode copyWithZone: zone];
 	copyKeyboardNavigation.skipNullPoints = [self.skipNullPoints copyWithZone: zone];
+	copyKeyboardNavigation.enabled = [self.enabled copyWithZone: zone];
+	copyKeyboardNavigation.wrapAround = [self.wrapAround copyWithZone: zone];
+	copyKeyboardNavigation.focusBorder = [self.focusBorder copyWithZone: zone];
+	copyKeyboardNavigation.order = [self.order copyWithZone: zone];
+	copyKeyboardNavigation.mode = [self.mode copyWithZone: zone];
 	return copyKeyboardNavigation;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.skipNullPoints) {
+		params[@"skipNullPoints"] = self.skipNullPoints;
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
+	}
+	if (self.wrapAround) {
+		params[@"wrapAround"] = self.wrapAround;
 	}
 	if (self.focusBorder) {
 		params[@"focusBorder"] = [self.focusBorder getParams];
 	}
+	if (self.order) {
+	}
 	if (self.mode) {
 		params[@"mode"] = self.mode;
-	}
-	if (self.skipNullPoints) {
-		params[@"skipNullPoints"] = self.skipNullPoints;
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
+-(void)setSkipNullPoints:(NSNumber *)skipNullPoints {
+	NSNumber *oldValue = _skipNullPoints;
+	_skipNullPoints = skipNullPoints;
+	[self updateNSObject:oldValue newValue:skipNullPoints propertyName:@"skipNullPoints"];
+}
+
 -(void)setEnabled:(NSNumber *)enabled {
 	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
+}
+
+-(void)setWrapAround:(NSNumber *)wrapAround {
+	NSNumber *oldValue = _wrapAround;
+	_wrapAround = wrapAround;
+	[self updateNSObject:oldValue newValue:wrapAround propertyName:@"wrapAround"];
 }
 
 -(void)setFocusBorder:(HIFocusBorder *)focusBorder {
@@ -49,16 +68,16 @@
 	[self updateHIObject:oldValue newValue:focusBorder propertyName:@"focusBorder"];
 }
 
+-(void)setOrder:(id)order {
+	id oldValue = _order;
+	_order = order;
+	[self updateNSObject:oldValue newValue:order propertyName:@"order"];
+}
+
 -(void)setMode:(NSString *)mode {
 	NSString *oldValue = _mode;
 	_mode = mode;
 	[self updateNSObject:oldValue newValue:mode propertyName:@"mode"];
-}
-
--(void)setSkipNullPoints:(NSNumber *)skipNullPoints {
-	NSNumber *oldValue = _skipNullPoints;
-	_skipNullPoints = skipNullPoints;
-	[self updateNSObject:oldValue newValue:skipNullPoints propertyName:@"skipNullPoints"];
 }
 
 @end

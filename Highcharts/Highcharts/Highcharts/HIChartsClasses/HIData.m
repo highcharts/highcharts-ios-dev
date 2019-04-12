@@ -47,6 +47,7 @@
 	copyData.name = [self.name copyWithZone: zone];
 	copyData.color = [self.color copyWithZone: zone];
 	copyData.selected = [self.selected copyWithZone: zone];
+	copyData.accessibility = [self.accessibility copyWithZone: zone];
 	copyData.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyData.className = [self.className copyWithZone: zone];
 	copyData.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -57,7 +58,7 @@
 	copyData.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyData.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyData.marker = [self.marker copyWithZone: zone];
-	copyData.weight = [self.weight copyWithZone: zone];
+	copyData.label = [self.label copyWithZone: zone];
 	copyData.direction = [self.direction copyWithZone: zone];
 	copyData.length = [self.length copyWithZone: zone];
 	copyData.target = [self.target copyWithZone: zone];
@@ -65,13 +66,14 @@
 	copyData.borderColor = [self.borderColor copyWithZone: zone];
 	copyData.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyData.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyData.value = [self.value copyWithZone: zone];
 	copyData.isIntermediateSum = [self.isIntermediateSum copyWithZone: zone];
 	copyData.isSum = [self.isSum copyWithZone: zone];
-	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.to = [self.to copyWithZone: zone];
 	copyData.from = [self.from copyWithZone: zone];
+	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyData.radius = [self.radius copyWithZone: zone];
 	copyData.outgoing = [self.outgoing copyWithZone: zone];
@@ -81,6 +83,7 @@
 	copyData.parent = [self.parent copyWithZone: zone];
 	copyData.colorValue = [self.colorValue copyWithZone: zone];
 	copyData.sets = [self.sets copyWithZone: zone];
+	copyData.gradientForSides = [self.gradientForSides copyWithZone: zone];
 	return copyData;
 }
 
@@ -225,8 +228,11 @@
 	if (self.selected) {
 		params[@"selected"] = self.selected;
 	}
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
+	}
 	if (self.dataLabels) {
-		params[@"dataLabels"] = self.dataLabels;
+		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -255,8 +261,8 @@
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
 	}
-	if (self.weight) {
-		params[@"weight"] = self.weight;
+	if (self.label) {
+		params[@"label"] = self.label;
 	}
 	if (self.direction) {
 		params[@"direction"] = self.direction;
@@ -279,6 +285,9 @@
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
+	if (self.sliced) {
+		params[@"sliced"] = self.sliced;
+	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
@@ -291,14 +300,14 @@
 	if (self.isSum) {
 		params[@"isSum"] = self.isSum;
 	}
-	if (self.sliced) {
-		params[@"sliced"] = self.sliced;
-	}
 	if (self.to) {
 		params[@"to"] = self.to;
 	}
 	if (self.from) {
 		params[@"from"] = self.from;
+	}
+	if (self.weight) {
+		params[@"weight"] = self.weight;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -335,6 +344,9 @@
 			}
 		}
 		params[@"sets"] = array;
+	}
+	if (self.gradientForSides) {
+		params[@"gradientForSides"] = self.gradientForSides;
 	}
 	return params;
 }
@@ -563,10 +575,16 @@
 	[self updateNSObject:oldValue newValue:selected propertyName:@"selected"];
 }
 
--(void)setDataLabels:(id)dataLabels {
-	id oldValue = _dataLabels;
+-(void)setAccessibility:(HIDataAccessibility *)accessibility {
+	HIDataAccessibility *oldValue = _accessibility;
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
+}
+
+-(void)setDataLabels:(HIDataLabelsOptionsObject *)dataLabels {
+	HIDataLabelsOptionsObject *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
-	[self updateNSObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
+	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -623,10 +641,10 @@
 	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
 }
 
--(void)setWeight:(NSNumber *)weight {
-	NSNumber *oldValue = _weight;
-	_weight = weight;
-	[self updateNSObject:oldValue newValue:weight propertyName:@"weight"];
+-(void)setLabel:(NSString *)label {
+	NSString *oldValue = _label;
+	_label = label;
+	[self updateNSObject:oldValue newValue:label propertyName:@"label"];
 }
 
 -(void)setDirection:(NSNumber *)direction {
@@ -671,6 +689,12 @@
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
+-(void)setSliced:(NSNumber *)sliced {
+	NSNumber *oldValue = _sliced;
+	_sliced = sliced;
+	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
+}
+
 -(void)setPointPadding:(NSNumber *)pointPadding {
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
@@ -695,12 +719,6 @@
 	[self updateNSObject:oldValue newValue:isSum propertyName:@"isSum"];
 }
 
--(void)setSliced:(NSNumber *)sliced {
-	NSNumber *oldValue = _sliced;
-	_sliced = sliced;
-	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
-}
-
 -(void)setTo:(NSString *)to {
 	NSString *oldValue = _to;
 	_to = to;
@@ -711,6 +729,12 @@
 	NSString *oldValue = _from;
 	_from = from;
 	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
+}
+
+-(void)setWeight:(NSNumber *)weight {
+	NSNumber *oldValue = _weight;
+	_weight = weight;
+	[self updateNSObject:oldValue newValue:weight propertyName:@"weight"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {
@@ -765,6 +789,12 @@
 	NSArray<NSString *> *oldValue = _sets;
 	_sets = sets;
 	[self updateArrayObject:oldValue newValue:sets propertyName:@"sets"];
+}
+
+-(void)setGradientForSides:(NSNumber *)gradientForSides {
+	NSNumber *oldValue = _gradientForSides;
+	_gradientForSides = gradientForSides;
+	[self updateNSObject:oldValue newValue:gradientForSides propertyName:@"gradientForSides"];
 }
 
 @end

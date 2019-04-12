@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIExporting *copyExporting = [[HIExporting allocWithZone: zone] init];
+	copyExporting.accessibility = [self.accessibility copyWithZone: zone];
 	copyExporting.menuItemDefinitions = [self.menuItemDefinitions copyWithZone: zone];
 	copyExporting.sourceHeight = [self.sourceHeight copyWithZone: zone];
 	copyExporting.sourceWidth = [self.sourceWidth copyWithZone: zone];
@@ -41,6 +42,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
+	}
 	if (self.menuItemDefinitions) {
 		params[@"menuItemDefinitions"] = self.menuItemDefinitions;
 	}
@@ -120,6 +124,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setAccessibility:(HIExportingAccessibility *)accessibility {
+	HIExportingAccessibility *oldValue = _accessibility;
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
+}
 
 -(void)setMenuItemDefinitions:(id)menuItemDefinitions {
 	id oldValue = _menuItemDefinitions;

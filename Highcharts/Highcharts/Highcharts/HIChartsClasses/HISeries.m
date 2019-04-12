@@ -24,7 +24,7 @@
 	copySeries.xAxisDescription = [self.xAxisDescription copyWithZone: zone];
 	copySeries.definition = [self.definition copyWithZone: zone];
 	copySeries.summary = [self.summary copyWithZone: zone];
-	copySeries.point = [self.point copyWithZone: zone];
+	copySeries.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySeries.selected = [self.selected copyWithZone: zone];
 	copySeries.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySeries.clip = [self.clip copyWithZone: zone];
@@ -35,6 +35,7 @@
 	copySeries.states = [self.states copyWithZone: zone];
 	copySeries.softThreshold = [self.softThreshold copyWithZone: zone];
 	copySeries.dragDrop = [self.dragDrop copyWithZone: zone];
+	copySeries.point = [self.point copyWithZone: zone];
 	copySeries.marker = [self.marker copyWithZone: zone];
 	copySeries.tooltip = [self.tooltip copyWithZone: zone];
 	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -51,15 +52,17 @@
 	copySeries.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySeries.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySeries.events = [self.events copyWithZone: zone];
+	copySeries.opacity = [self.opacity copyWithZone: zone];
 	copySeries.animationLimit = [self.animationLimit copyWithZone: zone];
 	copySeries.keys = [self.keys copyWithZone: zone];
 	copySeries.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySeries.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
-	copySeries.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySeries.accessibility = [self.accessibility copyWithZone: zone];
 	copySeries.step = [self.step copyWithZone: zone];
 	copySeries.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copySeries.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySeries.shadow = [self.shadow copyWithZone: zone];
+	copySeries.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySeries.zones = [self.zones copyWithZone: zone];
 	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -132,8 +135,8 @@
 	if (self.summary) {
 		params[@"summary"] = [self.summary getParams];
 	}
-	if (self.point) {
-		params[@"point"] = [self.point getParams];
+	if (self.includeInDataExport) {
+		params[@"includeInDataExport"] = self.includeInDataExport;
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
@@ -164,6 +167,9 @@
 	}
 	if (self.dragDrop) {
 		params[@"dragDrop"] = [self.dragDrop getParams];
+	}
+	if (self.point) {
+		params[@"point"] = [self.point getParams];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
@@ -213,6 +219,9 @@
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
+	if (self.opacity) {
+		params[@"opacity"] = self.opacity;
+	}
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
 	}
@@ -234,8 +243,8 @@
 	if (self.skipKeyboardNavigation) {
 		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
 	}
-	if (self.allowPointSelect) {
-		params[@"allowPointSelect"] = self.allowPointSelect;
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
 	}
 	if (self.step) {
 		params[@"step"] = self.step;
@@ -248,6 +257,9 @@
 	}
 	if (self.shadow) {
 		params[@"shadow"] = self.shadow;
+	}
+	if (self.allowPointSelect) {
+		params[@"allowPointSelect"] = self.allowPointSelect;
 	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
@@ -365,10 +377,34 @@
 	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
-	_point = point;
-	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+-(void)setYAxisDescription:(NSString *)yAxisDescription {
+	NSString *oldValue = _yAxisDescription;
+	_yAxisDescription = yAxisDescription;
+	[self updateNSObject:oldValue newValue:yAxisDescription propertyName:@"yAxisDescription"];
+}
+
+-(void)setXAxisDescription:(NSString *)xAxisDescription {
+	NSString *oldValue = _xAxisDescription;
+	_xAxisDescription = xAxisDescription;
+	[self updateNSObject:oldValue newValue:xAxisDescription propertyName:@"xAxisDescription"];
+}
+
+-(void)setDefinition:(NSString *)definition {
+	NSString *oldValue = _definition;
+	_definition = definition;
+	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
+}
+
+-(void)setSummary:(HISummary *)summary {
+	HISummary *oldValue = _summary;
+	_summary = summary;
+	[self updateHIObject:oldValue newValue:summary propertyName:@"summary"];
+}
+
+-(void)setIncludeInDataExport:(NSNumber *)includeInDataExport {
+	NSNumber *oldValue = _includeInDataExport;
+	_includeInDataExport = includeInDataExport;
+	[self updateNSObject:oldValue newValue:includeInDataExport propertyName:@"includeInDataExport"];
 }
 
 -(void)setSelected:(NSNumber *)selected {
@@ -429,6 +465,12 @@
 	HIDragDrop *oldValue = _dragDrop;
 	_dragDrop = dragDrop;
 	[self updateHIObject:oldValue newValue:dragDrop propertyName:@"dragDrop"];
+}
+
+-(void)setPoint:(HIPoint *)point {
+	HIPoint *oldValue = _point;
+	_point = point;
+	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
 
 -(void)setMarker:(HIMarker *)marker {
@@ -527,16 +569,16 @@
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
+-(void)setOpacity:(NSNumber *)opacity {
+	NSNumber *oldValue = _opacity;
+	_opacity = opacity;
+	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
+}
+
 -(void)setAnimationLimit:(NSNumber *)animationLimit {
 	NSNumber *oldValue = _animationLimit;
 	_animationLimit = animationLimit;
 	[self updateNSObject:oldValue newValue:animationLimit propertyName:@"animationLimit"];
-}
-
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setKeys:(NSArray<NSString *> *)keys {
@@ -557,10 +599,10 @@
 	[self updateNSObject:oldValue newValue:skipKeyboardNavigation propertyName:@"skipKeyboardNavigation"];
 }
 
--(void)setAllowPointSelect:(NSNumber *)allowPointSelect {
-	NSNumber *oldValue = _allowPointSelect;
-	_allowPointSelect = allowPointSelect;
-	[self updateNSObject:oldValue newValue:allowPointSelect propertyName:@"allowPointSelect"];
+-(void)setAccessibility:(HISeriesAccessibility *)accessibility {
+	HISeriesAccessibility *oldValue = _accessibility;
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
 -(void)setStep:(NSString *)step {
@@ -585,6 +627,12 @@
 	NSNumber *oldValue = _shadow;
 	_shadow = shadow;
 	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
+}
+
+-(void)setAllowPointSelect:(NSNumber *)allowPointSelect {
+	NSNumber *oldValue = _allowPointSelect;
+	_allowPointSelect = allowPointSelect;
+	[self updateNSObject:oldValue newValue:allowPointSelect propertyName:@"allowPointSelect"];
 }
 
 -(void)setZoneAxis:(NSString *)zoneAxis {
@@ -629,8 +677,8 @@
 	[self updateNSObject:oldValue newValue:stickyTracking propertyName:@"stickyTracking"];
 }
 
--(void)setDataLabels:(HIDataLabels *)dataLabels {
-	HIDataLabels *oldValue = _dataLabels;
+-(void)setDataLabels:(HIDataLabelsOptionsObject *)dataLabels {
+	HIDataLabelsOptionsObject *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
 	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }

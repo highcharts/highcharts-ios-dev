@@ -33,10 +33,11 @@
 	copyColorAxis.tickLength = [self.tickLength copyWithZone: zone];
 	copyColorAxis.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyColorAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
+	copyColorAxis.pane = [self.pane copyWithZone: zone];
 	copyColorAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
+	copyColorAxis.accessibility = [self.accessibility copyWithZone: zone];
 	copyColorAxis.visible = [self.visible copyWithZone: zone];
 	copyColorAxis.alignTicks = [self.alignTicks copyWithZone: zone];
-	copyColorAxis.pane = [self.pane copyWithZone: zone];
 	copyColorAxis.tickWidth = [self.tickWidth copyWithZone: zone];
 	copyColorAxis.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
 	copyColorAxis.startOfWeek = [self.startOfWeek copyWithZone: zone];
@@ -52,7 +53,6 @@
 	copyColorAxis.softMin = [self.softMin copyWithZone: zone];
 	copyColorAxis.ceiling = [self.ceiling copyWithZone: zone];
 	copyColorAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
-	copyColorAxis.definition = [self.definition copyWithZone: zone];
 	copyColorAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
 	copyColorAxis.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyColorAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
@@ -161,17 +161,20 @@
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
+	if (self.pane) {
+		params[@"pane"] = self.pane;
+	}
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
+	}
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
-	}
-	if (self.pane) {
-		params[@"pane"] = self.pane;
 	}
 	if (self.tickWidth) {
 		params[@"tickWidth"] = self.tickWidth;
@@ -236,9 +239,6 @@
 	if (self.gridLineDashStyle) {
 		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
 	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
-	}
 	if (self.minorTickPosition) {
 		params[@"minorTickPosition"] = self.minorTickPosition;
 	}
@@ -279,7 +279,6 @@
 		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.margin) {
-		params[@"margin"] = self.margin;
 	}
 	if (self.softMax) {
 		params[@"softMax"] = self.softMax;
@@ -427,10 +426,22 @@
 	[self updateHIObject:oldValue newValue:minorTickColor propertyName:@"minorTickColor"];
 }
 
+-(void)setPane:(NSNumber *)pane {
+	NSNumber *oldValue = _pane;
+	_pane = pane;
+	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
+}
+
 -(void)setGridZIndex:(NSNumber *)gridZIndex {
 	NSNumber *oldValue = _gridZIndex;
 	_gridZIndex = gridZIndex;
 	[self updateNSObject:oldValue newValue:gridZIndex propertyName:@"gridZIndex"];
+}
+
+-(void)setAccessibility:(HIAccessibility *)accessibility {
+	HIAccessibility *oldValue = _accessibility;
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
 -(void)setVisible:(NSNumber *)visible {
@@ -443,12 +454,6 @@
 	NSNumber *oldValue = _alignTicks;
 	_alignTicks = alignTicks;
 	[self updateNSObject:oldValue newValue:alignTicks propertyName:@"alignTicks"];
-}
-
--(void)setPane:(NSNumber *)pane {
-	NSNumber *oldValue = _pane;
-	_pane = pane;
-	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
 }
 
 -(void)setTickWidth:(NSNumber *)tickWidth {
@@ -539,12 +544,6 @@
 	NSString *oldValue = _gridLineDashStyle;
 	_gridLineDashStyle = gridLineDashStyle;
 	[self updateNSObject:oldValue newValue:gridLineDashStyle propertyName:@"gridLineDashStyle"];
-}
-
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setMinorTickPosition:(NSString *)minorTickPosition {
