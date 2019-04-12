@@ -83,7 +83,7 @@ static NSBundle *highchartsBundle = nil;
     self.preservesSuperviewLayoutMargins = NO;
     if (highchartsBundle == nil) highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
     
-    self.additionalPlugins = @[ @"exporting", @"offline-exporting", @"accessibility", @"boost", @"data", @"drilldown" ];
+    self.additionalPlugins = @[ @"exporting", @"offline-exporting", @"accessibility", @"boost", @"data", @"drilldown", @"svg2pdf", @"jspdf", @"rgbColor", @"export-csv", @"moment", @"moment-with-locales", @"moment-timezone", @"moment-timezone-with-data-2012-2022", @"moment-timezone-with-data" ];
     
     self.HTML = [[HIGHTML alloc] init];
     
