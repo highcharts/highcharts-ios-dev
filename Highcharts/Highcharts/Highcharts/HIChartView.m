@@ -140,6 +140,7 @@ static NSBundle *highchartsBundle = nil;
 
 - (void)dealloc
 {
+    self.webView.navigationDelegate = nil;
     [self removeObserver:self forKeyPath:@"options.isUpdated"];
     [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
 }
