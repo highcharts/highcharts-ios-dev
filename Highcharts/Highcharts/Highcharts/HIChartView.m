@@ -115,6 +115,29 @@ static NSBundle *highchartsBundle = nil;
     self.webView.scrollView.opaque = NO;
 }
 
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    [super willMoveToSuperview:newSuperview];
+    if (newSuperview != nil) {
+        [self removeScriptMesssageHandlers];
+        [self addScriptMessageHandlers];
+    }
+}
+
+- (void)removeFromSuperview {
+    [super removeFromSuperview];
+    [self removeScriptMesssageHandlers];
+}
+
+- (void)removeScriptMesssageHandlers {
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"observe"];
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"exporting"];
+}
+
+- (void)addScriptMessageHandlers {
+    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"observe"];
+    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"exporting"];
+}
+
 - (void)dealloc
 {
     [self removeObserver:self forKeyPath:@"options.isUpdated"];
