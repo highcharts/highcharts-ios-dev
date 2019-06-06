@@ -115,8 +115,32 @@ static NSBundle *highchartsBundle = nil;
     self.webView.scrollView.opaque = NO;
 }
 
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    [super willMoveToSuperview:newSuperview];
+    if (newSuperview != nil) {
+        [self removeScriptMesssageHandlers];
+        [self addScriptMessageHandlers];
+    }
+}
+
+- (void)removeFromSuperview {
+    [super removeFromSuperview];
+    [self removeScriptMesssageHandlers];
+}
+
+- (void)removeScriptMesssageHandlers {
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"observe"];
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"exporting"];
+}
+
+- (void)addScriptMessageHandlers {
+    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"observe"];
+    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"exporting"];
+}
+
 - (void)dealloc
 {
+    self.webView.navigationDelegate = nil;
     [self removeObserver:self forKeyPath:@"options.isUpdated"];
     [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
 }
@@ -649,22 +673,30 @@ static NSBundle *highchartsBundle = nil;
 }
 
 - (void)update:(HIOptions *)options {
-    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update0", @"params" : @[[options getParams]] };
+    NSMutableDictionary *mutableOptions = [[options getParams] mutableCopy];
+    [self prepareHIObjects:mutableOptions];
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update0", @"params" : @[mutableOptions] };
     [self callJSMethod:chartMethod];
 }
 
 - (void)update:(HIOptions *)options redraw:(NSNumber *)redraw {
-    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update1", @"params" : @[[options getParams], redraw] };
+    NSMutableDictionary *mutableOptions = [[options getParams] mutableCopy];
+    [self prepareHIObjects:mutableOptions];
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update1", @"params" : @[mutableOptions, redraw] };
     [self callJSMethod:chartMethod];
 }
 
 - (void)update:(HIOptions *)options redraw:(NSNumber *)redraw oneToOne:(NSNumber *)oneToOne {
-    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update2", @"params" : @[[options getParams], redraw, oneToOne] };
+    NSMutableDictionary *mutableOptions = [[options getParams] mutableCopy];
+    [self prepareHIObjects:mutableOptions];
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update2", @"params" : @[mutableOptions, redraw, oneToOne] };
     [self callJSMethod:chartMethod];
 }
 
 - (void)update:(HIOptions *)options redraw:(NSNumber *)redraw oneToOne:(NSNumber *)oneToOne animation:(HIAnimationOptionsObject *)animation {
-    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update3", @"params" : @[[options getParams], redraw, oneToOne, [animation getParams]] };
+    NSMutableDictionary *mutableOptions = [[options getParams] mutableCopy];
+    [self prepareHIObjects:mutableOptions];
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update3", @"params" : @[mutableOptions, redraw, oneToOne, [animation getParams]] };
     [self callJSMethod:chartMethod];
 }
 
