@@ -299,7 +299,14 @@ hc_types = {
         "Highcharts.AnnotationsOptions": '*',
         "Highcharts.FormatterCallbackFunction.<Highcharts.SankeyNodeObject>": 'HIFunction',
         "Highcharts.FormatterCallbackFunction.<Highcharts.StackItemObject>": 'HIFunction',
-        "null|*": '*'
+        "null|*": '*',
+        #7.1.2
+        "Highcharts.DataLabelsOptionsObject|Array.<Highcharts.DataLabelsOptionsObject>": 'NSArray<HIDataLabelsOptionsObject *>',
+        "Array.<(string|Highcharts.MockPointOptionsObject)>": 'NSArray<HIMockPointOptionsObject *>',
+        "string|Highcharts.MockPointOptionsObject": 'HIMockPointOptionsObject',
+        "string|number|function": 'id /* NSString, NSNumber, Function */',
+        "Highcharts.EventCallbackFunction.<Highcharts.Annotation>": 'HIFunction',
+        "string|Highcharts.CursorValue": 'NSString'
     }
 
 def get_type(x):
