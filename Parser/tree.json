@@ -35685,7 +35685,7 @@
           },
           "marker": {
             "doclet": {
-              "extends": "plotOptions.line.marker"
+              "extends": "plotOptions.series.marker"
             },
             "meta": {
               "fullname": "plotOptions.item.marker",
@@ -50251,7 +50251,8 @@
                     "brightness"
                   ],
                   "products": [
-                    "highmaps"
+                    "highmaps",
+                    "highcharts"
                   ],
                   "type": {
                     "names": [
