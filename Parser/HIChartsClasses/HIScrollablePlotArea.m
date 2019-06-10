@@ -12,6 +12,8 @@
 	HIScrollablePlotArea *copyScrollablePlotArea = [[HIScrollablePlotArea allocWithZone: zone] init];
 	copyScrollablePlotArea.minWidth = [self.minWidth copyWithZone: zone];
 	copyScrollablePlotArea.opacity = [self.opacity copyWithZone: zone];
+	copyScrollablePlotArea.minHeight = [self.minHeight copyWithZone: zone];
+	copyScrollablePlotArea.scrollPositionY = [self.scrollPositionY copyWithZone: zone];
 	copyScrollablePlotArea.scrollPositionX = [self.scrollPositionX copyWithZone: zone];
 	return copyScrollablePlotArea;
 }
@@ -24,6 +26,12 @@
 	}
 	if (self.opacity) {
 		params[@"opacity"] = self.opacity;
+	}
+	if (self.minHeight) {
+		params[@"minHeight"] = self.minHeight;
+	}
+	if (self.scrollPositionY) {
+		params[@"scrollPositionY"] = self.scrollPositionY;
 	}
 	if (self.scrollPositionX) {
 		params[@"scrollPositionX"] = self.scrollPositionX;
@@ -43,6 +51,18 @@
 	NSNumber *oldValue = _opacity;
 	_opacity = opacity;
 	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
+}
+
+-(void)setMinHeight:(NSNumber *)minHeight {
+	NSNumber *oldValue = _minHeight;
+	_minHeight = minHeight;
+	[self updateNSObject:oldValue newValue:minHeight propertyName:@"minHeight"];
+}
+
+-(void)setScrollPositionY:(NSNumber *)scrollPositionY {
+	NSNumber *oldValue = _scrollPositionY;
+	_scrollPositionY = scrollPositionY;
+	[self updateNSObject:oldValue newValue:scrollPositionY propertyName:@"scrollPositionY"];
 }
 
 -(void)setScrollPositionX:(NSNumber *)scrollPositionX {

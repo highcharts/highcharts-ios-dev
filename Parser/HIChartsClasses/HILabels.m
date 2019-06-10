@@ -10,8 +10,6 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HILabels *copyLabels = [[HILabels allocWithZone: zone] init];
-	copyLabels.items = [self.items copyWithZone: zone];
-	copyLabels.style = [self.style copyWithZone: zone];
 	copyLabels.distance = [self.distance copyWithZone: zone];
 	copyLabels.align = [self.align copyWithZone: zone];
 	copyLabels.y = [self.y copyWithZone: zone];
@@ -20,6 +18,7 @@
 	copyLabels.autoRotationLimit = [self.autoRotationLimit copyWithZone: zone];
 	copyLabels.position3d = [self.position3d copyWithZone: zone];
 	copyLabels.rotation = [self.rotation copyWithZone: zone];
+	copyLabels.style = [self.style copyWithZone: zone];
 	copyLabels.reserveSpace = [self.reserveSpace copyWithZone: zone];
 	copyLabels.useHTML = [self.useHTML copyWithZone: zone];
 	copyLabels.skew3d = [self.skew3d copyWithZone: zone];
@@ -49,21 +48,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.items) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.items) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"items"] = array;
-	}
-	if (self.style) {
-		params[@"style"] = [self.style getParams];
-	}
 	if (self.distance) {
 		params[@"distance"] = self.distance;
 	}
@@ -87,6 +71,9 @@
 	}
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
+	}
+	if (self.style) {
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.reserveSpace) {
 		params[@"reserveSpace"] = self.reserveSpace;
@@ -171,20 +158,8 @@
 
 # pragma mark - Setters
 
--(void)setItems:(NSArray <HIItems *> *)items {
-	NSArray <HIItems *> *oldValue = _items;
-	_items = items;
-	[self updateArrayObject:oldValue newValue:items propertyName:@"items"];
-}
-
--(void)setStyle:(HICSSObject *)style {
-	HICSSObject *oldValue = _style;
-	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
-}
-
--(void)setDistance:(NSNumber *)distance {
-	NSNumber *oldValue = _distance;
+-(void)setDistance:(id)distance {
+	id oldValue = _distance;
 	_distance = distance;
 	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
 }
@@ -229,6 +204,12 @@
 	NSNumber *oldValue = _rotation;
 	_rotation = rotation;
 	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
+}
+
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setReserveSpace:(NSNumber *)reserveSpace {
@@ -297,8 +278,8 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
+-(void)setPoint:(HIMockPointOptionsObject *)point {
+	HIMockPointOptionsObject *oldValue = _point;
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }

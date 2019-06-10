@@ -34,7 +34,6 @@
 	copyColumn.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyColumn.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyColumn.crisp = [self.crisp copyWithZone: zone];
-	copyColumn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumn.depth = [self.depth copyWithZone: zone];
 	copyColumn.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyColumn.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -75,6 +74,7 @@
 	copyColumn.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyColumn.visible = [self.visible copyWithZone: zone];
 	copyColumn.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyColumn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumn.cursor = [self.cursor copyWithZone: zone];
 	copyColumn.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumn.boostThreshold = [self.boostThreshold copyWithZone: zone];

@@ -30,7 +30,6 @@
 	copyFunnel.width = [self.width copyWithZone: zone];
 	copyFunnel.animation = [self.animation copyWithZone: zone];
 	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
-	copyFunnel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
 	copyFunnel.minSize = [self.minSize copyWithZone: zone];
 	copyFunnel.innerSize = [self.innerSize copyWithZone: zone];
@@ -40,6 +39,7 @@
 	copyFunnel.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyFunnel.depth = [self.depth copyWithZone: zone];
 	copyFunnel.tooltip = [self.tooltip copyWithZone: zone];
+	copyFunnel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyFunnel.endAngle = [self.endAngle copyWithZone: zone];
 	copyFunnel.colors = [self.colors copyWithZone: zone];
 	copyFunnel.borderWidth = [self.borderWidth copyWithZone: zone];

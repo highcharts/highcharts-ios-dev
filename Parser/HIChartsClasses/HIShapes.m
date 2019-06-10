@@ -19,6 +19,7 @@
 	copyShapes.width = [self.width copyWithZone: zone];
 	copyShapes.stroke = [self.stroke copyWithZone: zone];
 	copyShapes.r = [self.r copyWithZone: zone];
+	copyShapes.snap = [self.snap copyWithZone: zone];
 	copyShapes.type = [self.type copyWithZone: zone];
 	copyShapes.fill = [self.fill copyWithZone: zone];
 	return copyShapes;
@@ -63,6 +64,9 @@
 	if (self.r) {
 		params[@"r"] = self.r;
 	}
+	if (self.snap) {
+		params[@"snap"] = self.snap;
+	}
 	if (self.type) {
 		params[@"type"] = self.type;
 	}
@@ -74,8 +78,8 @@
 
 # pragma mark - Setters
 
--(void)setPoints:(NSArray <HIPoints *> *)points {
-	NSArray <HIPoints *> *oldValue = _points;
+-(void)setPoints:(NSArray<HIMockPointOptionsObject *> *)points {
+	NSArray<HIMockPointOptionsObject *> *oldValue = _points;
 	_points = points;
 	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
 }
@@ -92,8 +96,8 @@
 	[self updateNSObject:oldValue newValue:markerStart propertyName:@"markerStart"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
+-(void)setPoint:(HIMockPointOptionsObject *)point {
+	HIMockPointOptionsObject *oldValue = _point;
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
@@ -126,6 +130,12 @@
 	NSNumber *oldValue = _r;
 	_r = r;
 	[self updateNSObject:oldValue newValue:r propertyName:@"r"];
+}
+
+-(void)setSnap:(NSNumber *)snap {
+	NSNumber *oldValue = _snap;
+	_snap = snap;
+	[self updateNSObject:oldValue newValue:snap propertyName:@"snap"];
 }
 
 -(void)setType:(NSString *)type {

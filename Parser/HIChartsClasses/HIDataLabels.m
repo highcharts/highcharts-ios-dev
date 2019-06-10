@@ -25,12 +25,7 @@
 	copyDataLabels.shadow = [self.shadow copyWithZone: zone];
 	copyDataLabels.formatter = [self.formatter copyWithZone: zone];
 	copyDataLabels.distance = [self.distance copyWithZone: zone];
-	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
-	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
-	copyDataLabels.align = [self.align copyWithZone: zone];
-	copyDataLabels.overflow = [self.overflow copyWithZone: zone];
-	copyDataLabels.inside = [self.inside copyWithZone: zone];
-	copyDataLabels.crop = [self.crop copyWithZone: zone];
+	copyDataLabels.y = [self.y copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -82,22 +77,8 @@
 	if (self.distance) {
 		params[@"distance"] = self.distance;
 	}
-	if (self.nodeFormatter) {
-	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
-	}
-	if (self.align) {
-		params[@"align"] = self.align;
-	}
-	if (self.overflow) {
-		params[@"overflow"] = self.overflow;
-	}
-	if (self.inside) {
-		params[@"inside"] = self.inside;
-	}
-	if (self.crop) {
-		params[@"crop"] = self.crop;
+	if (self.y) {
+		params[@"y"] = self.y;
 	}
 	return params;
 }
@@ -194,40 +175,10 @@
 	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
 }
 
--(void)setNodeFormatter:(id)nodeFormatter {
-	id oldValue = _nodeFormatter;
-	_nodeFormatter = nodeFormatter;
-	[self updateNSObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
-}
-
--(void)setUseHTML:(NSNumber *)useHTML {
-	NSNumber *oldValue = _useHTML;
-	_useHTML = useHTML;
-	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
-}
-
--(void)setAlign:(NSString *)align {
-	NSString *oldValue = _align;
-	_align = align;
-	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
-}
-
--(void)setOverflow:(NSString *)overflow {
-	NSString *oldValue = _overflow;
-	_overflow = overflow;
-	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
-}
-
--(void)setInside:(NSNumber *)inside {
-	NSNumber *oldValue = _inside;
-	_inside = inside;
-	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
-}
-
--(void)setCrop:(NSNumber *)crop {
-	NSNumber *oldValue = _crop;
-	_crop = crop;
-	[self updateNSObject:oldValue newValue:crop propertyName:@"crop"];
+-(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
+	_y = y;
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 @end

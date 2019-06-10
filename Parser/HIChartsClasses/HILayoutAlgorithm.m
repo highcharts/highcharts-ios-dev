@@ -24,8 +24,8 @@
 	copyLayoutAlgorithm.splitSeries = [self.splitSeries copyWithZone: zone];
 	copyLayoutAlgorithm.parentNodeLimit = [self.parentNodeLimit copyWithZone: zone];
 	copyLayoutAlgorithm.integration = [self.integration copyWithZone: zone];
-	copyLayoutAlgorithm.type = [self.type copyWithZone: zone];
 	copyLayoutAlgorithm.linkLength = [self.linkLength copyWithZone: zone];
+	copyLayoutAlgorithm.type = [self.type copyWithZone: zone];
 	copyLayoutAlgorithm.approximation = [self.approximation copyWithZone: zone];
 	copyLayoutAlgorithm.repulsiveForce = [self.repulsiveForce copyWithZone: zone];
 	copyLayoutAlgorithm.theta = [self.theta copyWithZone: zone];
@@ -78,11 +78,11 @@
 	if (self.integration) {
 		params[@"integration"] = self.integration;
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
-	}
 	if (self.linkLength) {
 		params[@"linkLength"] = self.linkLength;
+	}
+	if (self.type) {
+		params[@"type"] = self.type;
 	}
 	if (self.approximation) {
 		params[@"approximation"] = self.approximation;
@@ -185,16 +185,16 @@
 	[self updateNSObject:oldValue newValue:integration propertyName:@"integration"];
 }
 
--(void)setType:(NSString *)type {
-	NSString *oldValue = _type;
-	_type = type;
-	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
-}
-
 -(void)setLinkLength:(NSNumber *)linkLength {
 	NSNumber *oldValue = _linkLength;
 	_linkLength = linkLength;
 	[self updateNSObject:oldValue newValue:linkLength propertyName:@"linkLength"];
+}
+
+-(void)setType:(NSString *)type {
+	NSString *oldValue = _type;
+	_type = type;
+	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
 -(void)setApproximation:(NSString *)approximation {

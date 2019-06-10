@@ -664,7 +664,7 @@ Specific tick interval in axis units for the minor ticks. On a linear axis, if `
 /**
 If there are multiple axes on the same side of the chart, the pixel margin between the axes. Defaults to 0 on vertical axes, 15 on horizontal axes.
 */
-@property(nonatomic, readwrite) id margin;
+@property(nonatomic, readwrite) NSNumber *margin;
 
 -(NSDictionary *)getParams;
 

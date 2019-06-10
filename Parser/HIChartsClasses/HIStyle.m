@@ -11,8 +11,11 @@
 	[super copyWithZone:zone];
 	HIStyle *copyStyle = [[HIStyle allocWithZone: zone] init];
 	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
-	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
 	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
+	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
+	copyStyle.stroke = [self.stroke copyWithZone: zone];
+	copyStyle.stroke-width = [self.stroke-width copyWithZone: zone];
+	copyStyle.fill = [self.fill copyWithZone: zone];
 	return copyStyle;
 }
 
@@ -22,11 +25,20 @@
 	if (self.fontWeight) {
 		params[@"fontWeight"] = self.fontWeight;
 	}
+	if (self.textOutline) {
+		params[@"textOutline"] = self.textOutline;
+	}
 	if (self.fontSize) {
 		params[@"fontSize"] = self.fontSize;
 	}
-	if (self.textOutline) {
-		params[@"textOutline"] = self.textOutline;
+	if (self.stroke) {
+		params[@"stroke"] = self.stroke;
+	}
+	if (self.stroke-width) {
+		params[@"stroke-width"] = self.stroke-width;
+	}
+	if (self.fill) {
+		params[@"fill"] = self.fill;
 	}
 	return params;
 }
@@ -39,16 +51,34 @@
 	[self updateNSObject:oldValue newValue:fontWeight propertyName:@"fontWeight"];
 }
 
+-(void)setTextOutline:(NSString *)textOutline {
+	NSString *oldValue = _textOutline;
+	_textOutline = textOutline;
+	[self updateNSObject:oldValue newValue:textOutline propertyName:@"textOutline"];
+}
+
 -(void)setFontSize:(NSString *)fontSize {
 	NSString *oldValue = _fontSize;
 	_fontSize = fontSize;
 	[self updateNSObject:oldValue newValue:fontSize propertyName:@"fontSize"];
 }
 
--(void)setTextOutline:(NSString *)textOutline {
-	NSString *oldValue = _textOutline;
-	_textOutline = textOutline;
-	[self updateNSObject:oldValue newValue:textOutline propertyName:@"textOutline"];
+-(void)setStroke:(NSString *)stroke {
+	NSString *oldValue = _stroke;
+	_stroke = stroke;
+	[self updateNSObject:oldValue newValue:stroke propertyName:@"stroke"];
+}
+
+-(void)setStroke-width:(NSNumber *)stroke-width {
+	NSNumber *oldValue = _stroke-width;
+	_stroke-width = stroke-width;
+	[self updateNSObject:oldValue newValue:stroke-width propertyName:@"stroke-width"];
+}
+
+-(void)setFill:(NSString *)fill {
+	NSString *oldValue = _fill;
+	_fill = fill;
+	[self updateNSObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 @end

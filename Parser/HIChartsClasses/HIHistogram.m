@@ -48,7 +48,6 @@
 	copyHistogram.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyHistogram.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyHistogram.crisp = [self.crisp copyWithZone: zone];
-	copyHistogram.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyHistogram.depth = [self.depth copyWithZone: zone];
 	copyHistogram.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyHistogram.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -84,6 +83,7 @@
 	copyHistogram.zones = [self.zones copyWithZone: zone];
 	copyHistogram.visible = [self.visible copyWithZone: zone];
 	copyHistogram.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyHistogram.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyHistogram.cursor = [self.cursor copyWithZone: zone];
 	copyHistogram.pointStart = [self.pointStart copyWithZone: zone];
 	copyHistogram.showInLegend = [self.showInLegend copyWithZone: zone];

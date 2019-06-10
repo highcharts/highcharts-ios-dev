@@ -19,26 +19,26 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.animation) {
-		params[@"animation"] = self.animation;
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.pattern) {
-		params[@"pattern"] = self.pattern;
+		params[@"pattern"] = [self.pattern getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setAnimation:(NSNumber *)animation {
-	NSNumber *oldValue = _animation;
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
 	_animation = animation;
-	[self updateNSObject:oldValue newValue:animation propertyName:@"animation"];
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
--(void)setPattern:(id)pattern {
-	id oldValue = _pattern;
+-(void)setPattern:(HIPatternOptionsObject *)pattern {
+	HIPatternOptionsObject *oldValue = _pattern;
 	_pattern = pattern;
-	[self updateNSObject:oldValue newValue:pattern propertyName:@"pattern"];
+	[self updateHIObject:oldValue newValue:pattern propertyName:@"pattern"];
 }
 
 @end

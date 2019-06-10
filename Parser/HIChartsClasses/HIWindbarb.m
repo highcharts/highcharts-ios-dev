@@ -39,7 +39,6 @@
 	copyWindbarb.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyWindbarb.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyWindbarb.crisp = [self.crisp copyWithZone: zone];
-	copyWindbarb.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyWindbarb.depth = [self.depth copyWithZone: zone];
 	copyWindbarb.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyWindbarb.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -77,6 +76,7 @@
 	copyWindbarb.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyWindbarb.visible = [self.visible copyWithZone: zone];
 	copyWindbarb.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyWindbarb.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
 	copyWindbarb.pointStart = [self.pointStart copyWithZone: zone];
 	copyWindbarb.showInLegend = [self.showInLegend copyWithZone: zone];

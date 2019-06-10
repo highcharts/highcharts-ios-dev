@@ -46,7 +46,6 @@
 	copyBullet.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBullet.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyBullet.crisp = [self.crisp copyWithZone: zone];
-	copyBullet.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBullet.depth = [self.depth copyWithZone: zone];
 	copyBullet.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBullet.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -86,6 +85,7 @@
 	copyBullet.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBullet.visible = [self.visible copyWithZone: zone];
 	copyBullet.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyBullet.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBullet.cursor = [self.cursor copyWithZone: zone];
 	copyBullet.pointStart = [self.pointStart copyWithZone: zone];
 	copyBullet.showInLegend = [self.showInLegend copyWithZone: zone];

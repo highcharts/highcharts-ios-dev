@@ -29,7 +29,6 @@
 	copyXrange.partialFill = [self.partialFill copyWithZone: zone];
 	copyXrange.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyXrange.tooltip = [self.tooltip copyWithZone: zone];
-	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyXrange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyXrange.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyXrange.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -71,6 +70,7 @@
 	copyXrange.zones = [self.zones copyWithZone: zone];
 	copyXrange.visible = [self.visible copyWithZone: zone];
 	copyXrange.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyXrange.cursor = [self.cursor copyWithZone: zone];
 	copyXrange.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyXrange;

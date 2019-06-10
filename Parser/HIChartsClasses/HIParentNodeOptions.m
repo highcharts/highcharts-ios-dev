@@ -19,6 +19,7 @@
 	copyParentNodeOptions.initialPositions = [self.initialPositions copyWithZone: zone];
 	copyParentNodeOptions.friction = [self.friction copyWithZone: zone];
 	copyParentNodeOptions.integration = [self.integration copyWithZone: zone];
+	copyParentNodeOptions.linkLength = [self.linkLength copyWithZone: zone];
 	copyParentNodeOptions.type = [self.type copyWithZone: zone];
 	return copyParentNodeOptions;
 }
@@ -52,6 +53,9 @@
 	}
 	if (self.integration) {
 		params[@"integration"] = self.integration;
+	}
+	if (self.linkLength) {
+		params[@"linkLength"] = self.linkLength;
 	}
 	if (self.type) {
 		params[@"type"] = self.type;
@@ -113,6 +117,12 @@
 	NSString *oldValue = _integration;
 	_integration = integration;
 	[self updateNSObject:oldValue newValue:integration propertyName:@"integration"];
+}
+
+-(void)setLinkLength:(NSNumber *)linkLength {
+	NSNumber *oldValue = _linkLength;
+	_linkLength = linkLength;
+	[self updateNSObject:oldValue newValue:linkLength propertyName:@"linkLength"];
 }
 
 -(void)setType:(NSString *)type {

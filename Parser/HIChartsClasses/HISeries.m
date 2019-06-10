@@ -292,7 +292,16 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.dataLabels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"dataLabels"] = array;
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
@@ -677,10 +686,10 @@
 	[self updateNSObject:oldValue newValue:stickyTracking propertyName:@"stickyTracking"];
 }
 
--(void)setDataLabels:(HIDataLabelsOptionsObject *)dataLabels {
-	HIDataLabelsOptionsObject *oldValue = _dataLabels;
+-(void)setDataLabels:(NSArray<HIDataLabelsOptionsObject *> *)dataLabels {
+	NSArray<HIDataLabelsOptionsObject *> *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
-	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
+	[self updateArrayObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setCursor:(NSString *)cursor {

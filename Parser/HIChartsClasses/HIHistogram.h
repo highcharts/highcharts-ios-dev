@@ -42,8 +42,6 @@
 
 /**
 An integer identifying the index to use for the base series, or a string representing the id of the series.
-
-**Defaults to** `undefined`.
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ baseSeries;
 /**
@@ -62,8 +60,6 @@ Width of each bin. By default the bin's width is calculated as `(max-min) / numb
 @property(nonatomic, readwrite) NSNumber *binWidth;
 /**
 A preferable number of bins. It is a suggestion, so a histogram may have a different number of bins. By default it is set to the square root of the base series' data length. Available options are: `square-root`, `sturges`, `rice`. You can also define a function which takes a `baseSeries` as a parameter and should return a positive integer.
-
-**Accepted values:** `["square-root", "sturges", "rice"]`.
 */
 @property(nonatomic, readwrite) id /* NSString, NSNumber, Function */ binsNumber;
 /**

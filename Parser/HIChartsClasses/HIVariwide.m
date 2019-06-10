@@ -30,7 +30,6 @@
 	copyVariwide.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyVariwide.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyVariwide.colorByPoint = [self.colorByPoint copyWithZone: zone];
-	copyVariwide.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVariwide.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyVariwide.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVariwide.grouping = [self.grouping copyWithZone: zone];
@@ -70,6 +69,7 @@
 	copyVariwide.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyVariwide.visible = [self.visible copyWithZone: zone];
 	copyVariwide.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyVariwide.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVariwide.cursor = [self.cursor copyWithZone: zone];
 	copyVariwide.pointStart = [self.pointStart copyWithZone: zone];
 	copyVariwide.showInLegend = [self.showInLegend copyWithZone: zone];
