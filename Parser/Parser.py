@@ -306,7 +306,11 @@ hc_types = {
         "string|Highcharts.MockPointOptionsObject": 'HIMockPointOptionsObject',
         "string|number|function": 'id /* NSString, NSNumber, Function */',
         "Highcharts.EventCallbackFunction.<Highcharts.Annotation>": 'HIFunction',
-        "string|Highcharts.CursorValue": 'NSString'
+        #namespace
+        "string|function|undefined": 'NSString',
+        "string|HICSSObject|undefined": 'HICSSObject',
+        "boolean|HIAnimationOptionsObject|undefined": 'HIAnimationOptionsObject',
+        "Highcharts.FormatterCallbackFunction.<Highcharts.SankeyNodeObject>|undefined": 'HIFunction'
     }
 
 def get_type(x):
@@ -1253,7 +1257,7 @@ def create_namespace_class(node):
                 types = doclet["types"]
 
                 for ind, type in enumerate(types):
-                    if '\"' in type:
+                    if '\"' in type or '\'' in type:
                         types[ind] = 'string'
                     elif 'Highcharts.Dictionary.<Highcharts.' in type:
                         types[ind] = "Object"
@@ -1381,8 +1385,15 @@ def get_namespace_type(name):
         for index, type in enumerate(types):
             type = get_namespace_array_type(type)
 
+            ori_type = type
+
             while type in namespace_types:
                 type = namespace_types[type]
+
+            if type == default_type and 'Highcharts.' in ori_type and ori_type in namespace_structure and \
+                    (namespace_structure[ori_type].kind == 'class' or namespace_structure[ori_type].kind == 'interface'):
+                type = ori_type.replace('Highcharts.', 'HI')
+                hc_types[type] = type
 
             if type.startswith('Array'):
                 type = get_namespace_array_type(type)
@@ -1400,7 +1411,7 @@ def get_namespace_type(name):
                 else:
                     unknown_type_namespace.add(type)
                     type = default_type
-            elif not type in hc_types:
+            elif not type in hc_types and not type.startswith('HI'):
                 unknown_type_namespace.add(type)
                 type = default_type
 
@@ -1410,9 +1421,8 @@ def get_namespace_type(name):
 
         new_type = '|'.join(types)
 
-        if not new_type in hc_types:
-            unknown_type_namespace.add(new_type)
-            new_type = default_type
+        if new_type.startswith('HI') and new_type.endswith('|undefined'):
+            new_type = types[0]
 
         return new_type
     else:
