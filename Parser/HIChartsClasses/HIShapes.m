@@ -78,8 +78,8 @@
 
 # pragma mark - Setters
 
--(void)setPoints:(NSArray<HIMockPointOptionsObject *> *)points {
-	NSArray<HIMockPointOptionsObject *> *oldValue = _points;
+-(void)setPoints:(NSArray <HIPoint *> *)points {
+	NSArray <HIPoint *> *oldValue = _points;
 	_points = points;
 	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
 }
@@ -96,8 +96,8 @@
 	[self updateNSObject:oldValue newValue:markerStart propertyName:@"markerStart"];
 }
 
--(void)setPoint:(HIMockPointOptionsObject *)point {
-	HIMockPointOptionsObject *oldValue = _point;
+-(void)setPoint:(HIPoint *)point {
+	HIPoint *oldValue = _point;
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }

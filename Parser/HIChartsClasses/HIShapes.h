@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
+#import "HIPoint.h"
 #import "HIColor.h"
-#import "HIMockPointOptionsObject.h"
 
 
 /**
@@ -18,7 +18,7 @@ An array of shapes for the annotation. For options that apply to multiple shapes
 /**
 An array of points for the shape. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point's id.
 */
-@property(nonatomic, readwrite) NSArray<HIMockPointOptionsObject *> *points;
+@property(nonatomic, readwrite) NSArray <HIPoint *> *points;
 /**
 Id of the marker which will be drawn at the final vertex of the path. Custom markers can be defined in defs property.
 
@@ -38,7 +38,7 @@ Id of the marker which will be drawn at the first vertex of the path. Custom mar
 /**
 This option defines the point to which the shape will be connected. It can be either the point which exists in the series - it is referenced by the point's id - or a new point with defined x, y properties and optionally axes.
 */
-@property(nonatomic, readwrite) HIMockPointOptionsObject *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 The pixel stroke width of the shape.
 

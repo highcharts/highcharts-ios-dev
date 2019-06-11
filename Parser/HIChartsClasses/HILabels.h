@@ -6,8 +6,8 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
+#import "HIPoint.h"
 #import "HIColor.h"
-#import "HIMockPointOptionsObject.h"
 #import "HIFunction.h"
 #import "HICSSObject.h"
 #import "HIShadowOptionsObject.h"
@@ -204,7 +204,7 @@ This option defines the point to which the label will be connected. It can be ei
 
 * [Attach annotation to a mock point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-point/)
 */
-@property(nonatomic, readwrite) HIMockPointOptionsObject *point;
+@property(nonatomic, readwrite) HIPoint *point;
 /**
 Whether to allow the annotation's labels to overlap. To make the labels less sensitive for overlapping, the can be set to 0.
 

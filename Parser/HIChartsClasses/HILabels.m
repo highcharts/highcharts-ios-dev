@@ -278,8 +278,8 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setPoint:(HIMockPointOptionsObject *)point {
-	HIMockPointOptionsObject *oldValue = _point;
+-(void)setPoint:(HIPoint *)point {
+	HIPoint *oldValue = _point;
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
