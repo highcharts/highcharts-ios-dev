@@ -231,18 +231,15 @@ hc_types = {
         "undefined" : 'id',
         "null" : 'id',
         "Object|undefined": 'id',
-        "false|Highcharts.XAxisCrosshairOptions|Highcharts.YAxisCrosshairOptions": 'id',
         "Array.<Point>": 'NSArray',
         "string|Array.<(number|string)>": 'NSArray /* <NSNumber, NSString> */',
         "Highcharts.Dictionary.<function()>": 'NSDictionary',
         "Highcharts.Dictionary.<(boolean|number|string)>": 'NSDictionary',
         "Highcharts.Dictionary.<string>": 'NSDictionary /* <NSString, NSString> */',
         # tree
-        "Highcharts.PlotSeriesDataLabelsOptions": 'id',
-        "Highcharts.Options": 'NSDictionary',
-        "boolean|Highcharts.ShadowOptionsObject": 'NSNumber /* Bool */',
-        "string|Highcharts.SVGDOMElement": 'NSString',
-        "boolean|Highcharts.CSSObject": 'NSNumber /* Bool */',
+        "Highcharts.Options": 'HIOptions',
+        "boolean|Highcharts.ShadowOptionsObject": 'HIShadowOptionsObject',
+        "boolean|Highcharts.CSSObject": 'HICSSObject',
         #color fixes
         "Highcharts.ColorString": 'HIColor',
         "Highcharts.ColorString|null": 'HIColor',
@@ -266,7 +263,6 @@ hc_types = {
         "*|Array.<*>": 'NSArray',
         "function|undefined": 'HIFunction',
         "string|undefined": 'NSString',
-        "Highcharts.GradientColorObject": 'HIColor',
         # tree-namespace
         "Array.<Array.<number, string>>|undefined": 'NSArray<NSArray *>',
         "string|*": 'NSString',
@@ -296,31 +292,28 @@ hc_types = {
         "Highcharts.ScreenReaderFormatterCallbackFunction.<Highcharts.Point>": 'HIFunction',
         "boolean|number": 'NSNumber',
         "Array.<number>|false": 'NSArray<NSNumber *>',
-        "Highcharts.AnnotationsOptions": '*',
         "Highcharts.FormatterCallbackFunction.<Highcharts.SankeyNodeObject>": 'HIFunction',
         "Highcharts.FormatterCallbackFunction.<Highcharts.StackItemObject>": 'HIFunction',
         "null|*": '*',
         #7.1.2
-        "Highcharts.DataLabelsOptionsObject|Array.<Highcharts.DataLabelsOptionsObject>": 'NSArray<HIDataLabelsOptionsObject *>',
         "Array.<(string|Highcharts.MockPointOptionsObject)>": 'NSArray<HIMockPointOptionsObject *>',
         "string|Highcharts.MockPointOptionsObject": 'HIMockPointOptionsObject',
         "string|number|function": 'id /* NSString, NSNumber, Function */',
         "Highcharts.EventCallbackFunction.<Highcharts.Annotation>": 'HIFunction',
-        "Highcharts.MapDataObject|Array.<Highcharts.MapDataObject>": 'NSArray<HIMapDataObject *>',
-        "Highcharts.SeriesAreaRangeDataLabelsOptionsObject|Array.<Highcharts.SeriesAreaRangeDataLabelsOptionsObject>": 'NSArray<HISeriesAreaRangeDataLabelsOptionsObject *>',
-        "Highcharts.SeriesPieDataLabelsOptionsObject|Array.<Highcharts.SeriesPieDataLabelsOptionsObject>": 'NSArray<HISeriesPieDataLabelsOptionsObject *>',
-        "Highcharts.SeriesSunburstDataLabelsOptionsObject|Array.<Highcharts.SeriesSunburstDataLabelsOptionsObject>": 'NSArray<HISeriesSunburstDataLabelsOptionsObject *>',
-        "Highcharts.SeriesNetworkDataLabelsOptionsObject|Array.<Highcharts.SeriesNetworkDataLabelsOptionsObject>": 'NSArray<HISeriesNetworkDataLabelsOptionsObject *>',
-        "Highcharts.SeriesPackedBubbleDataLabelsOptionsObject|Array.<Highcharts.SeriesPackedBubbleDataLabelsOptionsObject>": 'NSArray<HISeriesPackedBubbleDataLabelsOptionsObject *>',
-        "Highcharts.SeriesSankeyDataLabelsOptionsObject|Array.<Highcharts.SeriesSankeyDataLabelsOptionsObject>": 'NSArray<HISeriesSankeyDataLabelsOptionsObject *>',
         "Highcharts.FormatterCallbackFunction.<Highcharts.BubbleLegendFormatterContextObject>": 'HIFunction',
-        "Highcharts.SeriesOrganizationDataLabelsOptionsObject|Array.<Highcharts.SeriesOrganizationDataLabelsOptionsObject>": 'NSArray<HISeriesOrganizationDataLabelsOptionsObject *>',
-        "Highcharts.PlotSeriesOptions": 'HIPlotSeriesOptions',
         #namespace
         "string|function|undefined": 'NSString',
         "string|HICSSObject|undefined": 'HICSSObject',
         "boolean|HIAnimationOptionsObject|undefined": 'HIAnimationOptionsObject',
-        "Highcharts.FormatterCallbackFunction.<Highcharts.SankeyNodeObject>|undefined": 'HIFunction'
+        "Highcharts.FormatterCallbackFunction.<Highcharts.SankeyNodeObject>|undefined": 'HIFunction',
+        "string|HIGradientColorObject|HIPatternObject|undefined": 'HIColor',
+        "string|boolean|undefined": 'NSString',
+        "boolean|HIShadowOptionsObject|undefined": 'HIShadowOptionsObject',
+        "string|Highcharts.CSSObject|undefined": 'HICSSObject',
+        "string|Highcharts.GradientColorObject|Highcharts.PatternObject|undefined": 'HIColor',
+        "boolean|Highcharts.ShadowOptionsObject|undefined": 'HIShadowOptionsObject',
+        "boolean|Highcharts.AnimationOptionsObject|undefined": 'HIAnimationOptionsObject',
+        "string|Highcharts.SVGAttributes": 'HISVGAttributes'
     }
 
 def get_type(x):
@@ -1080,6 +1073,9 @@ def create_class(node):
 
                     data_type = '|'.join(types)
 
+                    if len(types) == 2 and types[1] == 'Array.<' + types[0] + '>':
+                        data_type = types[1]
+
                     if 'Highcharts.' in data_type and data_type not in hc_types:
                         new_types_from_namespace.add(data_type)
                         data_type = type_from_namespace(data_type)
@@ -1276,6 +1272,9 @@ def create_namespace_class(node):
 
                 data_type = '|'.join(types)
 
+                if len(types) == 2 and types[1] == 'Array.<' + types[0] + '>':
+                    data_type = types[1]
+
                 namespace_types[node.name] = data_type
             else:
                 namespace_types[node.name] = "*"
@@ -1400,11 +1399,6 @@ def get_namespace_type(name):
             while type in namespace_types:
                 type = namespace_types[type]
 
-            if type == default_type and 'Highcharts.' in ori_type and ori_type in namespace_structure and \
-                    (namespace_structure[ori_type].kind == 'class' or namespace_structure[ori_type].kind == 'interface'):
-                type = ori_type.replace('Highcharts.', 'HI')
-                hc_types[type] = type
-
             if type.startswith('Array'):
                 type = get_namespace_array_type(type)
             elif '<(' not in type and ')>' not in type and len(type.split('|')) > 1:
@@ -1415,13 +1409,20 @@ def get_namespace_type(name):
                         sp = new
                     splitted[ind] = sp
                 type = '|'.join(splitted)
+            elif type == default_type and 'Highcharts.' in ori_type:
+                if ori_type in namespace_structure and \
+                    (namespace_structure[ori_type].kind == 'class' or namespace_structure[ori_type].kind == 'interface'):
+                    type = ori_type
+                    hc_types[type] = ori_type.replace('Highcharts.', 'HI')
+                else:
+                    unknown_type_namespace.add(type)
             elif type in namespace_structure:
                 if namespace_structure[type].kind == "class":
                     type = 'Object'
                 else:
                     unknown_type_namespace.add(type)
                     type = default_type
-            elif not type in hc_types and not type.startswith('HI'):
+            elif not type in hc_types:
                 unknown_type_namespace.add(type)
                 type = default_type
 
@@ -1431,7 +1432,7 @@ def get_namespace_type(name):
 
         new_type = '|'.join(types)
 
-        if new_type.startswith('HI') and new_type.endswith('|undefined'):
+        if new_type.startswith('Highcharts.') and new_type.endswith('|undefined'):
             new_type = types[0]
 
         return new_type

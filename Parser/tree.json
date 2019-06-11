@@ -21379,7 +21379,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.AnnotationsOptions"
+              "*"
             ]
           },
           "extends": "annotations",
