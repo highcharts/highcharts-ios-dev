@@ -56,7 +56,7 @@ Whether to apply a drop shadow to the plot area. Requires that plotBackgroundCol
 
 * [Plot shadow](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotshadow/)
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *plotShadow;
+@property(nonatomic, readwrite) HICSSObject *plotShadow;
 /**
 An explicit height for the chart. If a _number_, the height is given in pixels. If given a _percentage string_ (for example `'56%'`), the height is given as the percentage of the actual chart width. This allows for preserving the aspect ratio across responsive sizes. By default (when `null`) the height is calculated from the offset height of the containing element, or 400 pixels if the containing element's height is 0.
 
@@ -303,7 +303,7 @@ Whether to apply a drop shadow to the outer chart area. Requires that background
 
 * [Shadow](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/shadow/)
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) HICSSObject *shadow;
 /**
 Whether to invert the axes so that the x axis is vertical and y axis is horizontal. When `true`, the x axis is `reversed` by default.
 

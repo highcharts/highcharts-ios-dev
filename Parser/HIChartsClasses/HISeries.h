@@ -17,10 +17,11 @@
 #import "HIAccessibility.h"
 #import "HIZones.h"
 #import "HIColor.h"
+#import "HIShadowOptionsObject.h"
 #import "HIFunction.h"
-#import "HIAnimationOptionsObject.h"
-#import "HIDataLabelsOptionsObject.h"
 #import "HIData.h"
+#import "HIDataLabelsOptionsObject.h"
+#import "HIAnimationOptionsObject.h"
 
 
 /**
@@ -433,7 +434,7 @@ Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an
 
 * [Shadow enabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/)
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) HIShadowOptionsObject *shadow;
 /**
 Allow this series' points to be selected by clicking on the graphic (columns, point markers, pie slices, map areas etc). The selected points can be handled by point select and unselect events, or collectively by the `getSelectedPoints` function. And alternative way of selecting points is through dragging.
 

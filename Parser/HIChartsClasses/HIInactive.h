@@ -10,20 +10,13 @@
 
 
 /**
-The opposite state of a hover for series.
-
-**Try it**
-
-* [Disabled inactive state by setting opacity](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-inactive-opacity)
+The opposite state of a hover for a single point node. Applied to all not connected nodes to the hovered one.
 */
 @interface HIInactive: HIChartsJSONSerializable
 
-/**
-Opacity of series elements (dataLabels, line, area). Set to 1 to disable inactive state.
-*/
 @property(nonatomic, readwrite) NSNumber *opacity;
 /**
-The animation for entering the inactive state.
+Animation when not hovering over the node.
 */
 @property(nonatomic, readwrite) HIAnimationOptionsObject *animation;
 /**

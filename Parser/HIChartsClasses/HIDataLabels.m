@@ -69,7 +69,7 @@
 		params[@"backgroundColor"] = self.backgroundColor;
 	}
 	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+		params[@"shadow"] = [self.shadow getParams];
 	}
 	if (self.formatter) {
 		params[@"formatter"] = [self.formatter getFunction];
@@ -157,10 +157,10 @@
 	[self updateNSObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
-	NSNumber *oldValue = _shadow;
+-(void)setShadow:(HICSSObject *)shadow {
+	HICSSObject *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
+	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setFormatter:(HIFunction *)formatter {

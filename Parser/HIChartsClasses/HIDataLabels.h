@@ -8,6 +8,7 @@
 
 #import "HIStyle.h"
 #import "HIFunction.h"
+#import "HICSSObject.h"
 
 
 /**
@@ -54,7 +55,7 @@ The color of the line connecting the data label to the point. The default color 
 /**
 Shadow options for the data label.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) HICSSObject *shadow;
 @property(nonatomic, readwrite) HIFunction *formatter;
 /**
 A pixel value defining the distance between the data label and the point. Negative numbers puts the label on top of the point.

@@ -256,7 +256,7 @@
 		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
 	}
 	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+		params[@"shadow"] = [self.shadow getParams];
 	}
 	if (self.allowPointSelect) {
 		params[@"allowPointSelect"] = self.allowPointSelect;
@@ -632,10 +632,10 @@
 	[self updateNSObject:oldValue newValue:exposeElementToA11y propertyName:@"exposeElementToA11y"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
-	NSNumber *oldValue = _shadow;
+-(void)setShadow:(HIShadowOptionsObject *)shadow {
+	HIShadowOptionsObject *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
+	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setAllowPointSelect:(NSNumber *)allowPointSelect {

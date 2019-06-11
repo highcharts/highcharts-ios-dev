@@ -129,7 +129,7 @@
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
 	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+		params[@"shadow"] = [self.shadow getParams];
 	}
 	if (self.itemHoverStyle) {
 		params[@"itemHoverStyle"] = [self.itemHoverStyle getParams];
@@ -321,10 +321,10 @@
 	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
-	NSNumber *oldValue = _shadow;
+-(void)setShadow:(HICSSObject *)shadow {
+	HICSSObject *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
+	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setItemHoverStyle:(HICSSObject *)itemHoverStyle {

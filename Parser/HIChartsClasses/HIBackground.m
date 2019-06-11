@@ -42,7 +42,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = [self.backgroundColor getData];
+		params[@"backgroundColor"] = [self.backgroundColor getParams];
 	}
 	return params;
 }
@@ -85,8 +85,8 @@
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
--(void)setBackgroundColor:(HIColor *)backgroundColor {
-	HIColor *oldValue = _backgroundColor;
+-(void)setBackgroundColor:(HIGradientColorObject *)backgroundColor {
+	HIGradientColorObject *oldValue = _backgroundColor;
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
