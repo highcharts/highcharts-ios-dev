@@ -282,7 +282,7 @@ hc_types = {
         "Highcharts.FormatterCallbackFunction.<Highcharts.Point>": 'HIFunction',
         "string|Highcharts.HTMLDOMElement": 'NSString',
         #7.0.2
-        "Array.<(string|Highcharts.GradientColorObject|Highcharts.PatternObject)>": 'NSArray<NSString *>',
+        "Array.<(string|Highcharts.GradientColorObject|Highcharts.PatternObject)>": 'NSArray<HIColor *>',
         "string|function": 'NSString',
         #7.1.1
         "undefined|number": 'NSNumber',
@@ -1069,9 +1069,12 @@ def create_class(node):
                     if len(types) == 2 and types[1] == 'Array.<' + types[0] + '>':
                         data_type = types[1]
 
-                    if 'Highcharts.' in data_type and data_type not in hc_types:
-                        new_types_from_namespace.add(data_type)
-                        data_type = type_from_namespace(data_type)
+                    if 'Highcharts.' in data_type:
+                        if data_type not in hc_types:
+                            new_types_from_namespace.add(data_type)
+                            data_type = type_from_namespace(data_type)
+                        else:
+                            find_namespace_type(data_type)
 
             if "products" in doclet:
                 products = doclet["products"]

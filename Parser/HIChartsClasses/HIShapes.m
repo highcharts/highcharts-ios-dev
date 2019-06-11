@@ -78,8 +78,8 @@
 
 # pragma mark - Setters
 
--(void)setPoints:(NSArray <HIPoint *> *)points {
-	NSArray <HIPoint *> *oldValue = _points;
+-(void)setPoints:(NSArray <HIPoints *> *)points {
+	NSArray <HIPoints *> *oldValue = _points;
 	_points = points;
 	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
 }

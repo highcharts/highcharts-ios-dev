@@ -112,6 +112,7 @@
 #import "HIGuideBox.h"
 #import "HIMarker.h"
 #import "HITilemap.h"
+#import "HIAlignObject.h"
 #import "HITheme.h"
 #import "HIPie.h"
 #import "HILevels.h"
