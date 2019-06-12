@@ -810,7 +810,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to allow the tooltip to render outside the chart&rsquo;s SVG element box. By default (<code>false</code>), the tooltip is rendered within the chart&rsquo;s SVG element, which results in the tooltip being aligned inside the chart area. For small charts, this may result in clipping or overlapping. When <code>true</code>, a separate SVG element is created and overlaid on the page, allowing the tooltip to be aligned inside the page itself.</p>
+				<p>Whether to allow the tooltip to render outside the chart&rsquo;s SVG element box. By default (<code>false</code>), the tooltip is rendered within the chart&rsquo;s SVG element, which results in the tooltip being aligned inside the chart area. For small charts, this may result in clipping or overlapping. When <code>true</code>, a separate SVG element is created and overlaid on the page, allowing the tooltip to be aligned inside the page itself. Defaults to <code>true</code> if <code>chart.scrollablePlotArea</code> is activated, otherwise <code>false</code>.</p>
 			</div>
 			
 		    
@@ -827,7 +827,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 
 <p><strong>Try it</strong></p>
 

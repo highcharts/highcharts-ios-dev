@@ -827,8 +827,10 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Try it</strong></p>
 
-<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,
-            <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank">with a z index, the series with the highest z index is on top</a>.</p>
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,</p>
+
+<pre><code>        &lt;a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank"&gt;with a z index, the series with the highest z index is on top&lt;/a&gt;.
+</code></pre>
 			</div>
 			
 
@@ -2570,7 +2572,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISeriesAccessibility *accessibility</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAccessibility *accessibility</code></div>
 
 		    
 			
@@ -2762,7 +2764,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIShadowOptionsObject *shadow</code></div>
 
 		    
 			
@@ -3236,7 +3238,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDataLabelsOptionsObject *dataLabels</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIDataLabelsOptionsObject*&gt; *dataLabels</code></div>
 
 		    
 			
@@ -3248,7 +3250,9 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>{"align": "center", "formatter": function () { return H.numberFormat(this.y, -1); }, "padding": 5, "style": {"fontSize": "11px", "fontWeight": "bold", "color": "contrast", "textOutline": "1px contrast"}, "verticalAlign": "bottom", "x":0, "y": 0}</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-enabled">Data labels enabled</a></li>

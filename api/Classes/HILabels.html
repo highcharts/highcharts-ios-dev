@@ -86,8 +86,6 @@
 		
 		<option value="//api/name/formatter">formatter</option>
 		
-		<option value="//api/name/items">items</option>
-		
 		<option value="//api/name/overflow">overflow</option>
 		
 		<option value="//api/name/padding">padding</option>
@@ -168,7 +166,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>HTML labels that can be positioned anywhere in the chart area.</p>
+						<p>The axis labels show the number or category for each tick.</p>
 					</div>
 					
 					
@@ -184,93 +182,6 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/items" title="items"></a>
-	<h3 class="method-title"><code><a href="#//api/name/items">&nbsp;&nbsp;items</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An HTML label that can be positioned anywhere in the chart area.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIItems*&gt; *items</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/style" title="style"></a>
-	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Shared CSS styles for all labels.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *style</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{"color": "#333333", "position": "absolute"}</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/distance" title="distance"></a>
 	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
 </h3>
@@ -282,12 +193,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Angular gauges and solid gauges only. The label&rsquo;s pixel distance from the perimeter of the plot area.</p>
+				<p>Angular gauges and solid gauges only. The label&rsquo;s pixel distance from the perimeter of the plot area. Since v7.1.2: If it&rsquo;s a percentage string, it is interpreted the same as <code>series.radius</code>, so label can be aligned under the gauge&rsquo;s shape.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id distance</code></div>
 
 		    
 			
@@ -300,6 +211,13 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>-25</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/labels-distance/">Labels centered under the arc</a></li>
+</ul>
+
 			</div>
 			
 
@@ -328,7 +246,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>What part of the string the given position is anchored to. Can be one of <code>"left"</code>, <code>"center"</code> or <code>"right"</code>. The exact position also depends on the <code>labels.x</code> setting. Angular gauges and solid gauges defaults to <code>"center"</code>.</p>
+				<p>What part of the string the given position is anchored to. Can be one of <code>"left"</code>, <code>"center"</code> or <code>"right"</code>. The exact position also depends on the <code>labels.x</code> setting. Angular gauges and solid gauges defaults to <code>"center"</code>. Solid gauges with two labels have additional option <code>"auto"</code> for automatic horizontal and vertical alignment.</p>
 			</div>
 			
 		    
@@ -351,6 +269,7 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/labels-align-left/">Left</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-solidgauge/labels-auto-aligned/">Solid gauge labels auto aligned</a></li>
 </ul>
 
 			</div>
@@ -665,6 +584,59 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-rotation/">X axis labels rotated 90Â°</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>CSS styles for the label. Use <code>whiteSpace: 'nowrap'</code> to prevent wrapping of category labels. Use <code>textOverflow: 'none'</code> to prevent ellipsis (dots). In styled mode, the labels are styled with the <code>.highcharts-axis-labels</code> class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *style</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{"color": "#666666", "cursor": "default", "fontSize": "11px"}</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-style/">Red X axis labels</a></li>
 </ul>
 
 			</div>
@@ -1248,7 +1220,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>This option defines the point to which the label will be connected. It can be either the point which exists in the series - it is referenced by the point&rsquo;s id - or a new point with defined x, y properies and optionally axes.</p>
+				<p>This option defines the point to which the label will be connected. It can be either the point which exists in the series - it is referenced by the point&rsquo;s id - or a new point with defined x, y properties and optionally axes.</p>
 			</div>
 			
 		    
@@ -1814,7 +1786,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIShadowOptionsObject *shadow</code></div>
 
 		    
 			

@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/controlPointOptions">controlPointOptions</option>
+		
 		<option value="//api/name/draggable">draggable</option>
 		
 		<option value="//api/name/events">events</option>
@@ -143,6 +145,47 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/controlPointOptions" title="controlPointOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/controlPointOptions">&nbsp;&nbsp;controlPointOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for annotation&rsquo;s control points. Each control point inherits options from controlPointOptions object. Options from the controlPointOptions can be overwritten by options in a specific control point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIControlPointOptions *controlPointOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotationsOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/shapes" title="shapes"></a>
 	<h3 class="method-title"><code><a href="#//api/name/shapes">&nbsp;&nbsp;shapes</a></code>
 </h3>
@@ -399,8 +442,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/events" title="events"></a>
-	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
 </h3>
 
 	<div class="method-info">
@@ -408,10 +451,35 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets an ID for an annotation. Can be user later when removing an annotation in <code>Chart#removeAnnotation(id)</code> method.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotationsOptions.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -443,7 +511,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Accepted values:</strong> <code>["x", "xy", "y", ""]</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/draggable/">Annotations draggable: &lsquo;xy&rsquo;</a></li>
@@ -466,8 +536,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/id" title="id"></a>
-	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
+	<a name="//api/name/events" title="events"></a>
+	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
 </h3>
 
 	<div class="method-info">
@@ -477,12 +547,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sets an ID for an annotation. Can be user later when removing an annotation in <code>Chart#removeAnnotation(id)</code> method.</p>
+				<p>Events available in annotations.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
 
 		    
 			

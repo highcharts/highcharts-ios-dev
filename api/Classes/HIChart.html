@@ -385,7 +385,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *plotShadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *plotShadow</code></div>
 
 		    
 			
@@ -1167,7 +1167,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id width</code></div>
 
 		    
 			
@@ -1755,7 +1755,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for a scrollable plot area. This feature provides a minimum width for the plot area of the chart. If the width gets smaller than this, typically on mobile devices, a native browser scrollbar is presented below the chart. This scrollbar provides smooth scrolling for the contents of the plot area, whereas the title, legend and axes are fixed.</p>
+				<p>Options for a scrollable plot area. This feature provides a minimum size for the plot area of the chart. If the size gets smaller than this, typically on mobile devices, a native browser scrollbar is presented. This scrollbar provides smooth scrolling for the contents of the plot area, whereas the title, legend and unaffected axes are fixed. Since v7.1.2, a scrollable plot area can be defined for either horizontal or vertical scrolling, depending on whether the <code>minWidth</code> or <code>minHeight</code> option is set.</p>
 			</div>
 			
 		    
@@ -1776,6 +1776,7 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/scrollable-plotarea">Scrollable plot area</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/scrollable-plotarea-vertical">Vertically scrollable plot area</a></li>
 </ul>
 
 			</div>
@@ -1811,7 +1812,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *shadow</code></div>
 
 		    
 			

@@ -58,11 +58,15 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/minHeight">minHeight</option>
+		
 		<option value="//api/name/minWidth">minWidth</option>
 		
 		<option value="//api/name/opacity">opacity</option>
 		
 		<option value="//api/name/scrollPositionX">scrollPositionX</option>
+		
+		<option value="//api/name/scrollPositionY">scrollPositionY</option>
 		
 	</optgroup>
 	
@@ -108,12 +112,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for a scrollable plot area. This feature provides a minimum width for the plot area of the chart. If the width gets smaller than this, typically on mobile devices, a native browser scrollbar is presented below the chart. This scrollbar provides smooth scrolling for the contents of the plot area, whereas the title, legend and axes are fixed.</p>
+						<p>Options for a scrollable plot area. This feature provides a minimum size for the plot area of the chart. If the size gets smaller than this, typically on mobile devices, a native browser scrollbar is presented. This scrollbar provides smooth scrolling for the contents of the plot area, whereas the title, legend and unaffected axes are fixed. Since v7.1.2, a scrollable plot area can be defined for either horizontal or vertical scrolling, depending on whether the <code>minWidth</code> or <code>minHeight</code> option is set.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/scrollable-plotarea">Scrollable plot area</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/scrollable-plotarea-vertical">Vertically scrollable plot area</a></li>
 </ul>
 
 					</div>
@@ -209,6 +214,88 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIScrollablePlotArea.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minHeight" title="minHeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minHeight">&nbsp;&nbsp;minHeight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The minimum height for the plot area. If it gets smaller than this, the plot area will become scrollable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minHeight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIScrollablePlotArea.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/scrollPositionY" title="scrollPositionY"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scrollPositionY">&nbsp;&nbsp;scrollPositionY</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The initial scrolling position of the scrollable plot area. Ranges from 0 to 1, where 0 aligns the plot area to the top and 1 aligns it to the bottom.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *scrollPositionY</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			

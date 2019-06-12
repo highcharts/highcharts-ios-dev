@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPlotNetworkDataLabelsOptionsObject Class Reference</title>
+	<title>HIShadowOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,17 +58,15 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/format">format</option>
+		<option value="//api/name/color">color</option>
 		
-		<option value="//api/name/formatter">formatter</option>
+		<option value="//api/name/offsetX">offsetX</option>
 		
-		<option value="//api/name/linkFormat">linkFormat</option>
+		<option value="//api/name/offsetY">offsetY</option>
 		
-		<option value="//api/name/linkFormatter">linkFormatter</option>
+		<option value="//api/name/opacity">opacity</option>
 		
-		<option value="//api/name/linkTextPath">linkTextPath</option>
-		
-		<option value="//api/name/textPath">textPath</option>
+		<option value="//api/name/width">width</option>
 		
 	</optgroup>
 	
@@ -95,7 +93,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPlotNetworkDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIShadowOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -104,7 +102,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPlotNetworkDataLabelsOptionsObject.h</td>
+	<td>HIShadowOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -114,7 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Data labels options</p>
+						<p>The shadow options.</p>
 					</div>
 					
 					
@@ -130,8 +128,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/format" title="format"></a>
-	<h3 class="method-title"><code><a href="#//api/name/format">&nbsp;&nbsp;format</a></code>
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
 </h3>
 
 	<div class="method-info">
@@ -141,12 +139,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>node</em> in the networkgraph. In v7.0 defaults to <code>{key}</code>, since v7.1 defaults to <code>undefined</code> and <code>formatter</code> is used instead.</p>
+				<p>The shadow color.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *format</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *color</code></div>
 
 		    
 			
@@ -164,15 +162,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotNetworkDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/formatter" title="formatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
+	<a name="//api/name/offsetX" title="offsetX"></a>
+	<h3 class="method-title"><code><a href="#//api/name/offsetX">&nbsp;&nbsp;offsetX</a></code>
 </h3>
 
 	<div class="method-info">
@@ -182,12 +180,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback JavaScript function to format the data label for a node. Note that if a <code>format</code> is defined, the format takes precedence and the formatter is ignored.</p>
+				<p>The horizontal offset from the element.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *offsetX</code></div>
 
 		    
 			
@@ -205,15 +203,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotNetworkDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/linkFormat" title="linkFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkFormat">&nbsp;&nbsp;linkFormat</a></code>
+	<a name="//api/name/offsetY" title="offsetY"></a>
+	<h3 class="method-title"><code><a href="#//api/name/offsetY">&nbsp;&nbsp;offsetY</a></code>
 </h3>
 
 	<div class="method-info">
@@ -223,12 +221,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>links</em> in the networkgraph. (Default: <code>undefined</code>)</p>
+				<p>The vertical offset from the element.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *linkFormat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *offsetY</code></div>
 
 		    
 			
@@ -246,15 +244,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotNetworkDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/linkFormatter" title="linkFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkFormatter">&nbsp;&nbsp;linkFormatter</a></code>
+	<a name="//api/name/opacity" title="opacity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/opacity">&nbsp;&nbsp;opacity</a></code>
 </h3>
 
 	<div class="method-info">
@@ -264,12 +262,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback to format data labels for <em>links</em> in the sankey diagram. The <code>linkFormat</code> option takes precedence over the <code>linkFormatter</code>.</p>
+				<p>The shadow opacity.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *linkFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *opacity</code></div>
 
 		    
 			
@@ -287,15 +285,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotNetworkDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/linkTextPath" title="linkTextPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkTextPath">&nbsp;&nbsp;linkTextPath</a></code>
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
 </h3>
 
 	<div class="method-info">
@@ -305,12 +303,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for a <em>link</em> label text which should follow link connection. <strong>Note:</strong> Only SVG-based renderer supports this option.</p>
+				<p>The shadow width or distance from the element.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id linkTextPath</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
 
 		    
 			
@@ -328,48 +326,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotNetworkDataLabelsOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/textPath" title="textPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/textPath">&nbsp;&nbsp;textPath</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Options for a <em>node</em> label text which should follow marker&rsquo;s shape. <strong>Note:</strong> Only SVG-based renderer supports this option.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id textPath</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotNetworkDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
 			</div>
 			
 			

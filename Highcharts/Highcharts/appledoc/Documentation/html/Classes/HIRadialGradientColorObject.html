@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISeriesSunburstDataLabelsOptionsObject Class Reference</title>
+	<title>HIRadialGradientColorObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,11 +58,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/align">align</option>
+		<option value="//api/name/cx">cx</option>
 		
-		<option value="//api/name/allowOverlap">allowOverlap</option>
+		<option value="//api/name/cy">cy</option>
 		
-		<option value="//api/name/rotationMode">rotationMode</option>
+		<option value="//api/name/r">r</option>
 		
 	</optgroup>
 	
@@ -89,7 +89,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISeriesSunburstDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIRadialGradientColorObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -98,7 +98,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISeriesSunburstDataLabelsOptionsObject.h</td>
+	<td>HIRadialGradientColorObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -108,7 +108,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for data labels in the sunburst series.</p>
+						<p>Defines the center position and the radius for a gradient.</p>
 					</div>
 					
 					
@@ -124,40 +124,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/align" title="align"></a>
-	<h3 class="method-title"><code><a href="#//api/name/align">&nbsp;&nbsp;align</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id align</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/allowOverlap" title="allowOverlap"></a>
-	<h3 class="method-title"><code><a href="#//api/name/allowOverlap">&nbsp;&nbsp;allowOverlap</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id allowOverlap</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/rotationMode" title="rotationMode"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rotationMode">&nbsp;&nbsp;rotationMode</a></code>
+	<a name="//api/name/cx" title="cx"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cx">&nbsp;&nbsp;cx</a></code>
 </h3>
 
 	<div class="method-info">
@@ -167,12 +135,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are <code>auto</code>, <code>parallel</code> and <code>perpendicular</code>. When <code>auto</code>, the best fit will be computed for the point. The <code>series.rotation</code> option takes precedence over <code>rotationMode</code>.</p>
+				<p>Center horizontal position relative to the shape. Float ranges 0-1.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rotationMode</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *cx</code></div>
 
 		    
 			
@@ -190,7 +158,89 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesSunburstDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIRadialGradientColorObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cy" title="cy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cy">&nbsp;&nbsp;cy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Center vertical position relative to the shape. Float ranges 0-1.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *cy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIRadialGradientColorObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/r" title="r"></a>
+	<h3 class="method-title"><code><a href="#//api/name/r">&nbsp;&nbsp;r</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Radius relative to the shape. Float ranges 0-1.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *r</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIRadialGradientColorObject.h</code></p>
 			</div>
 			
 			

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPlotAreaRangeDataLabelsOptionsObject Class Reference</title>
+	<title>HISeriesPackedBubbleDataLabelsTextPath Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,13 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/xHigh">xHigh</option>
+		<option value="//api/name/attributes">attributes</option>
 		
-		<option value="//api/name/xLow">xLow</option>
-		
-		<option value="//api/name/yHigh">yHigh</option>
-		
-		<option value="//api/name/yLow">yLow</option>
+		<option value="//api/name/enabled">enabled</option>
 		
 	</optgroup>
 	
@@ -91,7 +87,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPlotAreaRangeDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HISeriesPackedBubbleDataLabelsTextPath Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -100,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPlotAreaRangeDataLabelsOptionsObject.h</td>
+	<td>HISeriesPackedBubbleDataLabelsTextPath.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,7 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Extended data labels for range series types. Range series data labels use no <code>x</code> and <code>y</code> options. Instead, they have <code>xLow</code>, <code>xHigh</code>, <code>yLow</code> and <code>yHigh</code> options to allow the higher and lower data label sets individually.</p>
+						<p>*Note:** Only SVG-based renderer supports this option.</p>
 					</div>
 					
 					
@@ -126,8 +122,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/xHigh" title="xHigh"></a>
-	<h3 class="method-title"><code><a href="#//api/name/xHigh">&nbsp;&nbsp;xHigh</a></code>
+	<a name="//api/name/attributes" title="attributes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
 </h3>
 
 	<div class="method-info">
@@ -137,12 +133,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>X offset of the higher data labels relative to the point value.</p>
+				<p>Presentation attributes for the text path.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *xHigh</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attributes</code></div>
 
 		    
 			
@@ -160,15 +156,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotAreaRangeDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsTextPath.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/xLow" title="xLow"></a>
-	<h3 class="method-title"><code><a href="#//api/name/xLow">&nbsp;&nbsp;xLow</a></code>
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -178,12 +174,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>X offset of the lower data labels relative to the point value.</p>
+				<p>Enable or disable <code>textPath</code> option for link&rsquo;s or marker&rsquo;s data labels.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *xLow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
 
 		    
 			
@@ -201,89 +197,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotAreaRangeDataLabelsOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/yHigh" title="yHigh"></a>
-	<h3 class="method-title"><code><a href="#//api/name/yHigh">&nbsp;&nbsp;yHigh</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Y offset of the higher data labels relative to the point value.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *yHigh</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotAreaRangeDataLabelsOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/yLow" title="yLow"></a>
-	<h3 class="method-title"><code><a href="#//api/name/yLow">&nbsp;&nbsp;yLow</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Y offset of the lower data labels relative to the point value.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *yLow</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotAreaRangeDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsTextPath.h</code></p>
 			</div>
 			
 			

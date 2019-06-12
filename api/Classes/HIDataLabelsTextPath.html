@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIDataAccessibility Class Reference</title>
+	<title>HIDataLabelsTextPath Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,7 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/definition">definition</option>
+		<option value="//api/name/attributes">attributes</option>
+		
+		<option value="//api/name/enabled">enabled</option>
 		
 	</optgroup>
 	
@@ -85,7 +87,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIDataAccessibility Class Reference</h1>
+					<h1 class="title">HIDataLabelsTextPath Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -94,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDataAccessibility.h</td>
+	<td>HIDataLabelsTextPath.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,11 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>&copy; 2009-2018 Highsoft AS</p>
-
-<p>License: www.highcharts.com/license
-For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
-In case of questions, please contact sales@highsoft.com</p>
+						<p>Options for a label text which should follow marker&rsquo;s shape. <strong>Note:</strong> Only SVG-based renderer supports this option.</p>
 					</div>
 					
 					
@@ -124,8 +122,8 @@ In case of questions, please contact sales@highsoft.com</p>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/definition" title="definition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
+	<a name="//api/name/attributes" title="attributes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
 </h3>
 
 	<div class="method-info">
@@ -135,12 +133,12 @@ In case of questions, please contact sales@highsoft.com</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Provide a description of the data point, announced to screen readers.</p>
+				<p>Presentation attributes for the text path.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attributes</code></div>
 
 		    
 			
@@ -149,11 +147,6 @@ In case of questions, please contact sales@highsoft.com</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
 			
 
 			
@@ -163,7 +156,48 @@ In case of questions, please contact sales@highsoft.com</p>
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataAccessibility.h</code></p>
+				<p><code class="declared-in-ref">HIDataLabelsTextPath.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable <code>textPath</code> option for link&rsquo;s or marker&rsquo;s data labels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsTextPath.h</code></p>
 			</div>
 			
 			

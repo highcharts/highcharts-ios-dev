@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIItems Class Reference</title>
+	<title>HIShadowOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,15 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/html">html</option>
+		<option value="//api/name/color">color</option>
 		
-		<option value="//api/name/style">style</option>
+		<option value="//api/name/offsetX">offsetX</option>
+		
+		<option value="//api/name/offsetY">offsetY</option>
+		
+		<option value="//api/name/opacity">opacity</option>
+		
+		<option value="//api/name/width">width</option>
 		
 	</optgroup>
 	
@@ -87,7 +93,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIItems Class Reference</h1>
+					<h1 class="title">HIShadowOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +102,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIItems.h</td>
+	<td>HIShadowOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>An HTML label that can be positioned anywhere in the chart area.</p>
+						<p>The shadow options.</p>
 					</div>
 					
 					
@@ -122,8 +128,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/style" title="style"></a>
-	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +139,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>CSS styles for each label. To position the label, use left and top like this: style: {   left: &lsquo;100px&rsquo;,   top: &lsquo;100px&rsquo; }</p>
+				<p>The shadow color.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *style</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *color</code></div>
 
 		    
 			
@@ -156,15 +162,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIItems.h</code></p>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/html" title="html"></a>
-	<h3 class="method-title"><code><a href="#//api/name/html">&nbsp;&nbsp;html</a></code>
+	<a name="//api/name/offsetX" title="offsetX"></a>
+	<h3 class="method-title"><code><a href="#//api/name/offsetX">&nbsp;&nbsp;offsetX</a></code>
 </h3>
 
 	<div class="method-info">
@@ -174,12 +180,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Inner HTML or text for the label.</p>
+				<p>The horizontal offset from the element.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *html</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *offsetX</code></div>
 
 		    
 			
@@ -197,7 +203,130 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIItems.h</code></p>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/offsetY" title="offsetY"></a>
+	<h3 class="method-title"><code><a href="#//api/name/offsetY">&nbsp;&nbsp;offsetY</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The vertical offset from the element.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *offsetY</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/opacity" title="opacity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/opacity">&nbsp;&nbsp;opacity</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The shadow opacity.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *opacity</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The shadow width or distance from the element.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIShadowOptionsObject.h</code></p>
 			</div>
 			
 			

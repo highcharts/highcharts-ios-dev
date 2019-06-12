@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPlotPieDataLabelsOptionsObject Class Reference</title>
+	<title>HIPatternOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,21 +58,25 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/alignTo">alignTo</option>
+		<option value="//api/name/aspectRatio">aspectRatio</option>
 		
-		<option value="//api/name/connectorColor">connectorColor</option>
+		<option value="//api/name/color">color</option>
 		
-		<option value="//api/name/connectorPadding">connectorPadding</option>
+		<option value="//api/name/height">height</option>
 		
-		<option value="//api/name/connectorShape">connectorShape</option>
+		<option value="//api/name/id">id</option>
 		
-		<option value="//api/name/connectorWidth">connectorWidth</option>
+		<option value="//api/name/image">image</option>
 		
-		<option value="//api/name/crookDistance">crookDistance</option>
+		<option value="//api/name/opacity">opacity</option>
 		
-		<option value="//api/name/distance">distance</option>
+		<option value="//api/name/path">path</option>
 		
-		<option value="//api/name/softConnector">softConnector</option>
+		<option value="//api/name/width">width</option>
+		
+		<option value="//api/name/x">x</option>
+		
+		<option value="//api/name/y">y</option>
 		
 	</optgroup>
 	
@@ -99,7 +103,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPlotPieDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIPatternOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -108,7 +112,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPlotPieDataLabelsOptionsObject.h</td>
+	<td>HIPatternOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -118,7 +122,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for the series data labels, appearing next to each data point. Since v6.2.0, multiple data labels can be applied to each single point by defining them as an array of configs. In styled mode, the data labels can be styled with the <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names.</p>
+						<p>Pattern options</p>
 					</div>
 					
 					
@@ -134,8 +138,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/alignTo" title="alignTo"></a>
-	<h3 class="method-title"><code><a href="#//api/name/alignTo">&nbsp;&nbsp;alignTo</a></code>
+	<a name="//api/name/aspectRatio" title="aspectRatio"></a>
+	<h3 class="method-title"><code><a href="#//api/name/aspectRatio">&nbsp;&nbsp;aspectRatio</a></code>
 </h3>
 
 	<div class="method-info">
@@ -145,12 +149,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Alignment method for data labels. Possible values are: - <code>toPlotEdges</code>: each label touches the nearest vertical edge of the plot area - <code>connectors</code>: connectors have the same x position and the widest label of each half (left &amp; right) touches the nearest vertical edge of the plot area.</p>
+				<p>For automatically calculated width and height on images, it is possible to set an aspect ratio. The image will be zoomed to fill the bounding box, maintaining the aspect ratio defined.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *alignTo</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *aspectRatio</code></div>
 
 		    
 			
@@ -168,15 +172,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotPieDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/connectorColor" title="connectorColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/connectorColor">&nbsp;&nbsp;connectorColor</a></code>
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
 </h3>
 
 	<div class="method-info">
@@ -186,12 +190,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the line connecting the data label to the pie slice. The default color is the same as the point&rsquo;s color. In styled mode, the connector stroke is given in the <code>.highcharts-data-label-connector</code> class.</p>
+				<p>Pattern color, used as default path stroke.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *connectorColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *color</code></div>
 
 		    
 			
@@ -209,15 +213,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotPieDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/connectorPadding" title="connectorPadding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/connectorPadding">&nbsp;&nbsp;connectorPadding</a></code>
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
 </h3>
 
 	<div class="method-info">
@@ -227,12 +231,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The distance from the data label to the connector. Note that data labels also have a default <code>padding</code>, so in order for the connector to touch the text, the <code>padding</code> must also be 0.</p>
+				<p>Analogous to pattern.width.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorPadding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *height</code></div>
 
 		    
 			
@@ -250,15 +254,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotPieDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/connectorShape" title="connectorShape"></a>
-	<h3 class="method-title"><code><a href="#//api/name/connectorShape">&nbsp;&nbsp;connectorShape</a></code>
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
 </h3>
 
 	<div class="method-info">
@@ -268,12 +272,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Specifies the method that is used to generate the connector path. Highcharts provides 3 built-in connector shapes: <code>'fixedOffset'</code> (default), <code>'straight'</code> and <code>'crookedLine'</code>. Using <code>'crookedLine'</code> has the most sense (in most of the cases) when <code>'alignTo'</code> is set. Users can provide their own method by passing a function instead of a String. 3 arguments are passed to the callback: - Object that holds the information about the coordinates of the label (<code>x</code> &amp; <code>y</code> properties) and how the label is located in relation to the pie (<code>alignment</code> property). <code>alignment</code> can by one of the following: <code>'left'</code> (pie on the left side of the data label), <code>'right'</code> (pie on the right side of the data label) or <code>'center'</code> (data label overlaps the pie). - Object that holds the information about the position of the connector. Its <code>touchingSliceAt</code> porperty tells the position of the place where the connector touches the slice. - Data label options The function has to return an SVG path definition in array form (see the example).</p>
+				<p>ID to assign to the pattern. This is automatically computed if not added, and identical patterns are reused. To refer to an existing pattern for a Highcharts color, use <code>color: "url(#pattern-id)"</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id connectorShape</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
 
 		    
 			
@@ -291,15 +295,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotPieDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/connectorWidth" title="connectorWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/connectorWidth">&nbsp;&nbsp;connectorWidth</a></code>
+	<a name="//api/name/image" title="image"></a>
+	<h3 class="method-title"><code><a href="#//api/name/image">&nbsp;&nbsp;image</a></code>
 </h3>
 
 	<div class="method-info">
@@ -309,12 +313,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the line connecting the data label to the pie slice. In styled mode, the connector stroke width is given in the <code>.highcharts-data-label-connector</code> class.</p>
+				<p>URL to an image to use as the pattern.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *image</code></div>
 
 		    
 			
@@ -332,15 +336,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotPieDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/crookDistance" title="crookDistance"></a>
-	<h3 class="method-title"><code><a href="#//api/name/crookDistance">&nbsp;&nbsp;crookDistance</a></code>
+	<a name="//api/name/opacity" title="opacity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/opacity">&nbsp;&nbsp;opacity</a></code>
 </h3>
 
 	<div class="method-info">
@@ -350,12 +354,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Works only if <code>connectorShape</code> is <code>'crookedLine'</code>. It defines how far from the vertical plot edge the coonnector path should be crooked.</p>
+				<p>Opacity of the pattern as a float value from 0 to 1.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *crookDistance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *opacity</code></div>
 
 		    
 			
@@ -373,15 +377,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotPieDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/distance" title="distance"></a>
-	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+	<a name="//api/name/path" title="path"></a>
+	<h3 class="method-title"><code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
 </h3>
 
 	<div class="method-info">
@@ -391,12 +395,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The distance of the data label from the pie&rsquo;s edge. Negative numbers put the data label on top of the pie slices. Connectors are only shown for data labels outside the pie.</p>
+				<p>Either an SVG path as string, or an object. As an object, supply the path string in the <code>path.d</code> property. Other supported properties are standard SVG attributes like <code>path.stroke</code> and <code>path.fill</code>. If a path is supplied for the pattern, the <code>image</code> property is ignored.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *path</code></div>
 
 		    
 			
@@ -414,15 +418,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotPieDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/softConnector" title="softConnector"></a>
-	<h3 class="method-title"><code><a href="#//api/name/softConnector">&nbsp;&nbsp;softConnector</a></code>
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
 </h3>
 
 	<div class="method-info">
@@ -432,12 +436,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to render the connector as a soft arc or a line with sharp break. Works only if <code>connectorShape</code> equals to <code>fixedOffset</code>.</p>
+				<p>Width of the pattern. For images this is automatically set to the width of the element bounding box if not supplied. For non-image patterns the default is 32px. Note that automatic resizing of image patterns to fill a bounding box dynamically is only supported for patterns with an automatically calculated ID.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *softConnector</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
 
 		    
 			
@@ -455,7 +459,89 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotPieDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Horizontal offset of the pattern. Defaults to 0.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Vertical offset of the pattern. Defaults to 0.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPatternOptionsObject.h</code></p>
 			</div>
 			
 			

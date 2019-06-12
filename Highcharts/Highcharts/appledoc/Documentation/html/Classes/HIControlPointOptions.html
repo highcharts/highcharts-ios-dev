@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPlotSankeyDataLabelsOptionsObject Class Reference</title>
+	<title>HIControlPointOptions Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,17 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/nodeFormat">nodeFormat</option>
+		<option value="//api/name/height">height</option>
 		
-		<option value="//api/name/nodeFormatter">nodeFormatter</option>
+		<option value="//api/name/positioner">positioner</option>
+		
+		<option value="//api/name/style">style</option>
+		
+		<option value="//api/name/symbol">symbol</option>
+		
+		<option value="//api/name/visible">visible</option>
+		
+		<option value="//api/name/width">width</option>
 		
 	</optgroup>
 	
@@ -87,7 +95,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPlotSankeyDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIControlPointOptions Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +104,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPlotSankeyDataLabelsOptionsObject.h</td>
+	<td>HIControlPointOptions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +114,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for the series data labels, appearing next to each data point. Since v6.2.0, multiple data labels can be applied to each single point by defining them as an array of configs. In styled mode, the data labels can be styled with the <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names.</p>
+						<p>Options for annotation&rsquo;s control points. Each control point inherits options from controlPointOptions object. Options from the controlPointOptions can be overwritten by options in a specific control point.</p>
 					</div>
 					
 					
@@ -122,8 +130,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/nodeFormat" title="nodeFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nodeFormat">&nbsp;&nbsp;nodeFormat</a></code>
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
 </h3>
 
 	<div class="method-info">
@@ -131,40 +139,15 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>nodes</em> in the sankey diagram. By default the <code>nodeFormatter</code> returns <code>{point.name}</code>.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nodeFormat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotSankeyDataLabelsOptionsObject.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/nodeFormatter" title="nodeFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nodeFormatter">&nbsp;&nbsp;nodeFormatter</a></code>
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
 </h3>
 
 	<div class="method-info">
@@ -172,35 +155,74 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Callback to format data labels for <em>nodes</em> in the sankey diagram. The <code>nodeFormat</code> option takes precedence over the <code>nodeFormatter</code>.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id nodeFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/symbol" title="symbol"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbol">&nbsp;&nbsp;symbol</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *symbol</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *height</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/visible" title="visible"></a>
+	<h3 class="method-title"><code><a href="#//api/name/visible">&nbsp;&nbsp;visible</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *visible</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/positioner" title="positioner"></a>
+	<h3 class="method-title"><code><a href="#//api/name/positioner">&nbsp;&nbsp;positioner</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
-			
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id positioner</code></div>
 
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotSankeyDataLabelsOptionsObject.h</code></p>
-			</div>
-			
-			
+		    
 		</div>
 	</div>
 </div><div class="section-method">
