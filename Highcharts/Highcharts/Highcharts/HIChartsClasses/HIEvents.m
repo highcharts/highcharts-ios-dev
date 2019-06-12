@@ -159,8 +159,10 @@
 		params[@"afterAnimate"] = [self.afterAnimate getFunction];
 	}
 	if (self.add) {
+		params[@"add"] = [self.add getFunction];
 	}
 	if (self.afterUpdate) {
+		params[@"afterUpdate"] = [self.afterUpdate getFunction];
 	}
 	return params;
 }
@@ -380,13 +382,13 @@
 -(void)setAdd:(HIFunction *)add {
 	HIFunction *oldValue = _add;
 	_add = add;
-	[self updateNSObject:oldValue newValue:add propertyName:@"add"];
+	[self updateHIObject:oldValue newValue:add propertyName:@"add"];
 }
 
 -(void)setAfterUpdate:(HIFunction *)afterUpdate {
 	HIFunction *oldValue = _afterUpdate;
 	_afterUpdate = afterUpdate;
-	[self updateNSObject:oldValue newValue:afterUpdate propertyName:@"afterUpdate"];
+	[self updateHIObject:oldValue newValue:afterUpdate propertyName:@"afterUpdate"];
 }
 
 @end

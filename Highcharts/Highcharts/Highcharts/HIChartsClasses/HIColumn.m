@@ -34,7 +34,6 @@
 	copyColumn.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyColumn.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyColumn.crisp = [self.crisp copyWithZone: zone];
-	copyColumn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumn.depth = [self.depth copyWithZone: zone];
 	copyColumn.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyColumn.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -75,6 +74,7 @@
 	copyColumn.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyColumn.visible = [self.visible copyWithZone: zone];
 	copyColumn.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyColumn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumn.cursor = [self.cursor copyWithZone: zone];
 	copyColumn.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumn.boostThreshold = [self.boostThreshold copyWithZone: zone];
@@ -112,13 +112,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -190,8 +185,8 @@
 	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

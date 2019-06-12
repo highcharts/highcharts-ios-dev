@@ -115,8 +115,8 @@
 	[self updateNSObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setLineColor:(NSString *)lineColor {
-	NSString *oldValue = _lineColor;
+-(void)setLineColor:(id)lineColor {
+	id oldValue = _lineColor;
 	_lineColor = lineColor;
 	[self updateNSObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }

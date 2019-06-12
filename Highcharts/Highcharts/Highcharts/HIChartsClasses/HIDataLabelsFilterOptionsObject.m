@@ -1,7 +1,7 @@
 #import "HIChartsJSONSerializableSubclass.h"
-#import "HIFilter.h"
+#import "HIDataLabelsFilterOptionsObject.h"
 
-@implementation HIFilter
+@implementation HIDataLabelsFilterOptionsObject
 
 -(instancetype)init {
 	return [super init];
@@ -9,11 +9,11 @@
 
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
-	HIFilter *copyFilter = [[HIFilter allocWithZone: zone] init];
-	copyFilter.operator = [self.operator copyWithZone: zone];
-	copyFilter.property = [self.property copyWithZone: zone];
-	copyFilter.value = [self.value copyWithZone: zone];
-	return copyFilter;
+	HIDataLabelsFilterOptionsObject *copyDataLabelsFilterOptionsObject = [[HIDataLabelsFilterOptionsObject allocWithZone: zone] init];
+	copyDataLabelsFilterOptionsObject.operator = [self.operator copyWithZone: zone];
+	copyDataLabelsFilterOptionsObject.property = [self.property copyWithZone: zone];
+	copyDataLabelsFilterOptionsObject.value = [self.value copyWithZone: zone];
+	return copyDataLabelsFilterOptionsObject;
 }
 
 -(NSDictionary *)getParams
@@ -45,8 +45,8 @@
 	[self updateNSObject:oldValue newValue:property propertyName:@"property"];
 }
 
--(void)setValue:(id)value {
-	id oldValue = _value;
+-(void)setValue:(NSNumber *)value {
+	NSNumber *oldValue = _value;
 	_value = value;
 	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }

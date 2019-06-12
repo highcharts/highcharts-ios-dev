@@ -237,7 +237,7 @@ hc_types = {
         "Highcharts.Dictionary.<(boolean|number|string)>": 'NSDictionary',
         "Highcharts.Dictionary.<string>": 'NSDictionary /* <NSString, NSString> */',
         # tree
-        "Highcharts.Options": 'HIOptions',
+        "Highcharts.Options": 'NSDictionary',
         "boolean|Highcharts.ShadowOptionsObject": 'HIShadowOptionsObject',
         "boolean|Highcharts.CSSObject": 'HICSSObject',
         #color fixes

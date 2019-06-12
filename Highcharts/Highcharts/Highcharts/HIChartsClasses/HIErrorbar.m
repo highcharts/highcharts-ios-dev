@@ -52,7 +52,6 @@
 	copyErrorbar.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyErrorbar.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyErrorbar.crisp = [self.crisp copyWithZone: zone];
-	copyErrorbar.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyErrorbar.depth = [self.depth copyWithZone: zone];
 	copyErrorbar.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyErrorbar.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -87,6 +86,7 @@
 	copyErrorbar.zones = [self.zones copyWithZone: zone];
 	copyErrorbar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyErrorbar.visible = [self.visible copyWithZone: zone];
+	copyErrorbar.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyErrorbar.cursor = [self.cursor copyWithZone: zone];
 	copyErrorbar.pointStart = [self.pointStart copyWithZone: zone];
 	copyErrorbar.boostThreshold = [self.boostThreshold copyWithZone: zone];
@@ -136,13 +136,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -247,8 +242,8 @@
 	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

@@ -74,7 +74,7 @@
 		params[@"spacingBottom"] = self.spacingBottom;
 	}
 	if (self.plotShadow) {
-		params[@"plotShadow"] = self.plotShadow;
+		params[@"plotShadow"] = [self.plotShadow getParams];
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
@@ -167,7 +167,7 @@
 		params[@"scrollablePlotArea"] = [self.scrollablePlotArea getParams];
 	}
 	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+		params[@"shadow"] = [self.shadow getParams];
 	}
 	if (self.inverted) {
 		params[@"inverted"] = self.inverted;
@@ -249,10 +249,10 @@
 	[self updateNSObject:oldValue newValue:spacingBottom propertyName:@"spacingBottom"];
 }
 
--(void)setPlotShadow:(NSNumber *)plotShadow {
-	NSNumber *oldValue = _plotShadow;
+-(void)setPlotShadow:(HICSSObject *)plotShadow {
+	HICSSObject *oldValue = _plotShadow;
 	_plotShadow = plotShadow;
-	[self updateNSObject:oldValue newValue:plotShadow propertyName:@"plotShadow"];
+	[self updateHIObject:oldValue newValue:plotShadow propertyName:@"plotShadow"];
 }
 
 -(void)setHeight:(id)height {
@@ -339,8 +339,8 @@
 	[self updateNSObject:oldValue newValue:marginBottom propertyName:@"marginBottom"];
 }
 
--(void)setWidth:(NSNumber *)width {
-	NSNumber *oldValue = _width;
+-(void)setWidth:(id)width {
+	id oldValue = _width;
 	_width = width;
 	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
@@ -417,10 +417,10 @@
 	[self updateHIObject:oldValue newValue:scrollablePlotArea propertyName:@"scrollablePlotArea"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
-	NSNumber *oldValue = _shadow;
+-(void)setShadow:(HICSSObject *)shadow {
+	HICSSObject *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
+	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setInverted:(NSNumber *)inverted {

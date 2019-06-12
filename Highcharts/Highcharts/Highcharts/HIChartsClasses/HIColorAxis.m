@@ -279,6 +279,7 @@
 		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	if (self.softMax) {
 		params[@"softMax"] = self.softMax;

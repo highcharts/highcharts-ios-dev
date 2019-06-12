@@ -79,7 +79,7 @@
 		params[@"stroke"] = self.stroke;
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.translateX) {
 		params[@"translateX"] = self.translateX;
@@ -119,8 +119,8 @@
 	[self updateArrayObject:oldValue newValue:matrix propertyName:@"matrix"];
 }
 
--(void)setRotation:(NSString *)rotation {
-	NSString *oldValue = _rotation;
+-(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
 	_rotation = rotation;
 	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
@@ -158,7 +158,7 @@
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
 	_style = style;
-	[self updateNSObject:oldValue newValue:style propertyName:@"style"];
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setTranslateX:(NSNumber *)translateX {

@@ -30,7 +30,6 @@
 	copyVariwide.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyVariwide.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyVariwide.colorByPoint = [self.colorByPoint copyWithZone: zone];
-	copyVariwide.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVariwide.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyVariwide.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVariwide.grouping = [self.grouping copyWithZone: zone];
@@ -70,6 +69,7 @@
 	copyVariwide.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyVariwide.visible = [self.visible copyWithZone: zone];
 	copyVariwide.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyVariwide.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVariwide.cursor = [self.cursor copyWithZone: zone];
 	copyVariwide.pointStart = [self.pointStart copyWithZone: zone];
 	copyVariwide.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -106,13 +106,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -169,8 +164,8 @@
 	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

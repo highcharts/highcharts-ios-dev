@@ -37,7 +37,6 @@
 	copyColumnpyramid.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyColumnpyramid.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyColumnpyramid.groupPadding = [self.groupPadding copyWithZone: zone];
-	copyColumnpyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumnpyramid.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyColumnpyramid.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyColumnpyramid.grouping = [self.grouping copyWithZone: zone];
@@ -74,6 +73,7 @@
 	copyColumnpyramid.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyColumnpyramid.visible = [self.visible copyWithZone: zone];
 	copyColumnpyramid.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyColumnpyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumnpyramid.cursor = [self.cursor copyWithZone: zone];
 	copyColumnpyramid.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumnpyramid.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -94,13 +94,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -148,8 +143,8 @@
 	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
