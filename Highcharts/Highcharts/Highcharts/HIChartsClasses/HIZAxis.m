@@ -293,6 +293,7 @@
 		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];

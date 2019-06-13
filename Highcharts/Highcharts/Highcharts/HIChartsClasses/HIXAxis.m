@@ -322,6 +322,7 @@
 		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];

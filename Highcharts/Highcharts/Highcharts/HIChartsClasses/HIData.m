@@ -74,6 +74,7 @@
 	copyData.to = [self.to copyWithZone: zone];
 	copyData.from = [self.from copyWithZone: zone];
 	copyData.weight = [self.weight copyWithZone: zone];
+	copyData.gradientForSides = [self.gradientForSides copyWithZone: zone];
 	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyData.radius = [self.radius copyWithZone: zone];
 	copyData.outgoing = [self.outgoing copyWithZone: zone];
@@ -83,7 +84,6 @@
 	copyData.parent = [self.parent copyWithZone: zone];
 	copyData.colorValue = [self.colorValue copyWithZone: zone];
 	copyData.sets = [self.sets copyWithZone: zone];
-	copyData.gradientForSides = [self.gradientForSides copyWithZone: zone];
 	return copyData;
 }
 
@@ -232,7 +232,16 @@
 		params[@"accessibility"] = [self.accessibility getParams];
 	}
 	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.dataLabels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"dataLabels"] = array;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -309,6 +318,9 @@
 	if (self.weight) {
 		params[@"weight"] = self.weight;
 	}
+	if (self.gradientForSides) {
+		params[@"gradientForSides"] = self.gradientForSides;
+	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
 	}
@@ -344,9 +356,6 @@
 			}
 		}
 		params[@"sets"] = array;
-	}
-	if (self.gradientForSides) {
-		params[@"gradientForSides"] = self.gradientForSides;
 	}
 	return params;
 }
@@ -575,16 +584,16 @@
 	[self updateNSObject:oldValue newValue:selected propertyName:@"selected"];
 }
 
--(void)setAccessibility:(HIDataAccessibility *)accessibility {
-	HIDataAccessibility *oldValue = _accessibility;
+-(void)setAccessibility:(HIAccessibility *)accessibility {
+	HIAccessibility *oldValue = _accessibility;
 	_accessibility = accessibility;
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
--(void)setDataLabels:(HIDataLabelsOptionsObject *)dataLabels {
-	HIDataLabelsOptionsObject *oldValue = _dataLabels;
+-(void)setDataLabels:(NSArray<HIDataLabelsOptionsObject *> *)dataLabels {
+	NSArray<HIDataLabelsOptionsObject *> *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
-	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
+	[self updateArrayObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -737,6 +746,12 @@
 	[self updateNSObject:oldValue newValue:weight propertyName:@"weight"];
 }
 
+-(void)setGradientForSides:(NSNumber *)gradientForSides {
+	NSNumber *oldValue = _gradientForSides;
+	_gradientForSides = gradientForSides;
+	[self updateNSObject:oldValue newValue:gradientForSides propertyName:@"gradientForSides"];
+}
+
 -(void)setInnerRadius:(id)innerRadius {
 	id oldValue = _innerRadius;
 	_innerRadius = innerRadius;
@@ -789,12 +804,6 @@
 	NSArray<NSString *> *oldValue = _sets;
 	_sets = sets;
 	[self updateArrayObject:oldValue newValue:sets propertyName:@"sets"];
-}
-
--(void)setGradientForSides:(NSNumber *)gradientForSides {
-	NSNumber *oldValue = _gradientForSides;
-	_gradientForSides = gradientForSides;
-	[self updateNSObject:oldValue newValue:gradientForSides propertyName:@"gradientForSides"];
 }
 
 @end

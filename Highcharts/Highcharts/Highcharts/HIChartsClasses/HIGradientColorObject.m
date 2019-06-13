@@ -20,10 +20,10 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.linearGradient) {
-		params[@"linearGradient"] = self.linearGradient;
+		params[@"linearGradient"] = [self.linearGradient getParams];
 	}
 	if (self.radialGradient) {
-		params[@"radialGradient"] = self.radialGradient;
+		params[@"radialGradient"] = [self.radialGradient getParams];
 	}
 	if (self.stops) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -42,16 +42,16 @@
 
 # pragma mark - Setters
 
--(void)setLinearGradient:(id)linearGradient {
-	id oldValue = _linearGradient;
+-(void)setLinearGradient:(HILinearGradientColorObject *)linearGradient {
+	HILinearGradientColorObject *oldValue = _linearGradient;
 	_linearGradient = linearGradient;
-	[self updateNSObject:oldValue newValue:linearGradient propertyName:@"linearGradient"];
+	[self updateHIObject:oldValue newValue:linearGradient propertyName:@"linearGradient"];
 }
 
--(void)setRadialGradient:(id)radialGradient {
-	id oldValue = _radialGradient;
+-(void)setRadialGradient:(HIRadialGradientColorObject *)radialGradient {
+	HIRadialGradientColorObject *oldValue = _radialGradient;
 	_radialGradient = radialGradient;
-	[self updateNSObject:oldValue newValue:radialGradient propertyName:@"radialGradient"];
+	[self updateHIObject:oldValue newValue:radialGradient propertyName:@"radialGradient"];
 }
 
 -(void)setStops:(NSArray<NSArray *> *)stops {

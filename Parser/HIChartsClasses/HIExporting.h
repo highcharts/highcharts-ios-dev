@@ -10,6 +10,7 @@
 #import "HIButtons.h"
 #import "HICsv.h"
 #import "HIFunction.h"
+#import "HIOptions.h"
 
 
 /**
@@ -161,7 +162,7 @@ Additional chart options to be merged into the chart before exporting to an imag
 
 * [Added data labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/)
 */
-@property(nonatomic, readwrite) NSDictionary *chartOptions;
+@property(nonatomic, readwrite) HIOptions *chartOptions;
 /**
 Function to call if the offline-exporting module fails to export a chart on the client side, and `fallbackToExportServer` is disabled. If left undefined, an exception is thrown instead. Receives two parameters, the exporting options, and the error from the module.
 */

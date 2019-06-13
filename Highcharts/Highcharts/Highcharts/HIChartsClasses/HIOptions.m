@@ -44,9 +44,6 @@
 		}
 		params[@"series"] = array;
 	}
-	if (self.labels) {
-		params[@"labels"] = [self.labels getParams];
-	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
 	}
@@ -165,7 +162,6 @@
 	copyOptions.subtitle = [self.subtitle copyWithZone: zone];
 	copyOptions.yAxis = [self.yAxis copyWithZone: zone];
 	copyOptions.series = [self.series copyWithZone: zone];
-	copyOptions.labels = [self.labels copyWithZone: zone];
 	copyOptions.accessibility = [self.accessibility copyWithZone: zone];
 	copyOptions.colors = [self.colors copyWithZone: zone];
 	copyOptions.pane = [self.pane copyWithZone: zone];
@@ -210,12 +206,6 @@
 	NSArray<HISeries *> *oldValue = _series;
 	_series = series;
 	[self updateArrayObject:oldValue newValue:series propertyName:@"series"];
-}
-
--(void)setLabels:(HILabels *)labels {
-	HILabels *oldValue = _labels;
-	_labels = labels;
-	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
 -(void)setAccessibility:(HIAccessibility *)accessibility {

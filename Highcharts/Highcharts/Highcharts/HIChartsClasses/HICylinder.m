@@ -34,7 +34,6 @@
 	copyCylinder.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyCylinder.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyCylinder.crisp = [self.crisp copyWithZone: zone];
-	copyCylinder.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyCylinder.depth = [self.depth copyWithZone: zone];
 	copyCylinder.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyCylinder.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -75,6 +74,7 @@
 	copyCylinder.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyCylinder.visible = [self.visible copyWithZone: zone];
 	copyCylinder.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyCylinder.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyCylinder.cursor = [self.cursor copyWithZone: zone];
 	copyCylinder.pointStart = [self.pointStart copyWithZone: zone];
 	copyCylinder.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -111,13 +111,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -189,8 +184,8 @@
 	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

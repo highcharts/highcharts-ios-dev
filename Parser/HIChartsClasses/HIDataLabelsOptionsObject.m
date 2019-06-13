@@ -33,6 +33,7 @@
 	copyDataLabelsOptionsObject.shadow = [self.shadow copyWithZone: zone];
 	copyDataLabelsOptionsObject.shape = [self.shape copyWithZone: zone];
 	copyDataLabelsOptionsObject.style = [self.style copyWithZone: zone];
+	copyDataLabelsOptionsObject.textPath = [self.textPath copyWithZone: zone];
 	copyDataLabelsOptionsObject.useHTML = [self.useHTML copyWithZone: zone];
 	copyDataLabelsOptionsObject.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyDataLabelsOptionsObject.x = [self.x copyWithZone: zone];
@@ -51,7 +52,7 @@
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
 	if (self.backgroundColor) {
-		params[@"backgroundColor"] = self.backgroundColor;
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = self.borderColor;
@@ -78,7 +79,7 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.filter) {
-		params[@"filter"] = self.filter;
+		params[@"filter"] = [self.filter getParams];
 	}
 	if (self.format) {
 		params[@"format"] = self.format;
@@ -105,13 +106,16 @@
 		params[@"rotation"] = self.rotation;
 	}
 	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+		params[@"shadow"] = [self.shadow getParams];
 	}
 	if (self.shape) {
 		params[@"shape"] = self.shape;
 	}
 	if (self.style) {
-		params[@"style"] = self.style;
+		params[@"style"] = [self.style getParams];
+	}
+	if (self.textPath) {
+		params[@"textPath"] = [self.textPath getParams];
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
@@ -145,10 +149,10 @@
 	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
 }
 
--(void)setBackgroundColor:(id)backgroundColor {
-	id oldValue = _backgroundColor;
+-(void)setBackgroundColor:(HIColor *)backgroundColor {
+	HIColor *oldValue = _backgroundColor;
 	_backgroundColor = backgroundColor;
-	[self updateNSObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setBorderColor:(NSString *)borderColor {
@@ -199,10 +203,10 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setFilter:(id)filter {
-	id oldValue = _filter;
+-(void)setFilter:(HIDataLabelsFilterOptionsObject *)filter {
+	HIDataLabelsFilterOptionsObject *oldValue = _filter;
 	_filter = filter;
-	[self updateNSObject:oldValue newValue:filter propertyName:@"filter"];
+	[self updateHIObject:oldValue newValue:filter propertyName:@"filter"];
 }
 
 -(void)setFormat:(NSString *)format {
@@ -223,8 +227,8 @@
 	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
 }
 
--(void)setNullFormat:(id)nullFormat {
-	id oldValue = _nullFormat;
+-(void)setNullFormat:(NSString *)nullFormat {
+	NSString *oldValue = _nullFormat;
 	_nullFormat = nullFormat;
 	[self updateNSObject:oldValue newValue:nullFormat propertyName:@"nullFormat"];
 }
@@ -253,10 +257,10 @@
 	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
-	NSNumber *oldValue = _shadow;
+-(void)setShadow:(HIShadowOptionsObject *)shadow {
+	HIShadowOptionsObject *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
+	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setShape:(NSString *)shape {
@@ -265,10 +269,16 @@
 	[self updateNSObject:oldValue newValue:shape propertyName:@"shape"];
 }
 
--(void)setStyle:(id)style {
-	id oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	_style = style;
-	[self updateNSObject:oldValue newValue:style propertyName:@"style"];
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
+
+-(void)setTextPath:(HIDataLabelsTextPath *)textPath {
+	HIDataLabelsTextPath *oldValue = _textPath;
+	_textPath = textPath;
+	[self updateHIObject:oldValue newValue:textPath propertyName:@"textPath"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {

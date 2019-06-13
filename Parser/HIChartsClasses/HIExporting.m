@@ -103,7 +103,7 @@
 		params[@"allowHTML"] = self.allowHTML;
 	}
 	if (self.chartOptions) {
-		params[@"chartOptions"] = self.chartOptions;
+		params[@"chartOptions"] = [self.chartOptions getParams];
 	}
 	if (self.error) {
 		params[@"error"] = [self.error getFunction];
@@ -245,10 +245,10 @@
 	[self updateNSObject:oldValue newValue:allowHTML propertyName:@"allowHTML"];
 }
 
--(void)setChartOptions:(NSDictionary *)chartOptions {
-	NSDictionary *oldValue = _chartOptions;
+-(void)setChartOptions:(HIOptions *)chartOptions {
+	HIOptions *oldValue = _chartOptions;
 	_chartOptions = chartOptions;
-	[self updateNSObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
+	[self updateHIObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
 }
 
 -(void)setError:(HIFunction *)error {

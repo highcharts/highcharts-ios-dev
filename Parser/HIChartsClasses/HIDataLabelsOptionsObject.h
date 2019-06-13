@@ -6,8 +6,12 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIChartsJSONSerializable.h"
+#import "HIColor.h"
+#import "HIDataLabelsTextPath.h"
+#import "HIDataLabelsFilterOptionsObject.h"
+#import "HIShadowOptionsObject.h"
 #import "HIFunction.h"
+#import "HICSSObject.h"
 
 
 /**
@@ -26,7 +30,7 @@ Whether to allow data labels to overlap. To make the labels less sensitive for o
 /**
 The background color or gradient for the data label.
 */
-@property(nonatomic, readwrite) id backgroundColor;
+@property(nonatomic, readwrite) HIColor *backgroundColor;
 /**
 The border color for the data label. Defaults to `undefined`.
 */
@@ -62,7 +66,7 @@ Enable or disable the data labels.
 /**
 A declarative filter to control of which data labels to display. The declarative filter is designed for use when callback functions are not available, like when the chart options require a pure JSON structure or for use with graphical editors. For programmatic control, use the `formatter` instead, and return `undefined` to disable a single data label.
 */
-@property(nonatomic, readwrite) id filter;
+@property(nonatomic, readwrite) HIDataLabelsFilterOptionsObject *filter;
 /**
 A [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) for the data label. Available variables are the same as for `formatter`.
 */
@@ -78,7 +82,7 @@ For points with an extent, like columns or map areas, whether to align the data 
 /**
 Format for points with the value of null. Works analogously to `format`. `nullFormat` can be applied only to series which support displaying null points.
 */
-@property(nonatomic, readwrite) id nullFormat;
+@property(nonatomic, readwrite) NSString *nullFormat;
 /**
 Callback JavaScript function that defines formatting for points with the value of null. Works analogously to `formatter`. `nullPointFormatter` can be applied only to series which support displaying null points.
 */
@@ -98,7 +102,7 @@ Text rotation in degrees. Note that due to a more complex structure, backgrounds
 /**
 The shadow of the box. Works best with `borderWidth` or `backgroundColor`. Since 2.3 the shadow can be an object configuration containing `color`, `offsetX`, `offsetY`, `opacity` and `width`.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *shadow;
+@property(nonatomic, readwrite) HIShadowOptionsObject *shadow;
 /**
 The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
 */
@@ -106,7 +110,11 @@ The name of a symbol to use for the border around the label. Symbols are predefi
 /**
 Styles for the label. The default `color` setting is `"contrast"`, which is a pseudo color that Highcharts picks up and applies the maximum contrast to the underlying point item, for example the bar in a bar chart. The `textOutline` is a pseudo property that applies an outline of the given width with the given color, which by default is the maximum contrast to the text. So a bright text color will result in a black text outline for maximum readability on a mixed background. In some cases, especially with grayscale text, the text outline doesn't work well, in which cases it can be disabled by setting it to `"none"`. When `useHTML` is true, the `textOutline` will not be picked up. In this, case, the same effect can be acheived through the `text-shadow` CSS property. For some series types, where each point has an extent, like for example tree maps, the data label may overflow the point. There are two strategies for handling overflow. By default, the text will wrap to multiple lines. The other strategy is to set `style.textOverflow` to `ellipsis`, which will keep the text on one line plus it will break inside long words.
 */
-@property(nonatomic, readwrite) id style;
+@property(nonatomic, readwrite) HICSSObject *style;
+/**
+Options for a label text which should follow marker's shape. Border and background are disabled for a label that follows a path. **Note:** Only SVG-based renderer supports this option. Setting `useHTML` to true will disable this option.
+*/
+@property(nonatomic, readwrite) HIDataLabelsTextPath *textPath;
 /**
 Whether to [use HTML](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html) to render the labels.
 */

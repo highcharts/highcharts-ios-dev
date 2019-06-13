@@ -373,8 +373,8 @@
 	[self updateNSObject:oldValue newValue:mapZoomOut propertyName:@"mapZoomOut"];
 }
 
--(void)setSeries:(HISeries *)series {
-	HISeries *oldValue = _series;
+-(void)setSeries:(HIAccessibilitySeries *)series {
+	HIAccessibilitySeries *oldValue = _series;
 	_series = series;
 	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
 }
@@ -403,8 +403,8 @@
 	[self updateNSObject:oldValue newValue:rangeSelectorButton propertyName:@"rangeSelectorButton"];
 }
 
--(void)setExporting:(HIExporting *)exporting {
-	HIExporting *oldValue = _exporting;
+-(void)setExporting:(HIAccessibilityExporting *)exporting {
+	HIAccessibilityExporting *oldValue = _exporting;
 	_exporting = exporting;
 	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
 }

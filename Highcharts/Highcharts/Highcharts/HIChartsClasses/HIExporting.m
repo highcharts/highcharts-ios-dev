@@ -125,8 +125,8 @@
 
 # pragma mark - Setters
 
--(void)setAccessibility:(HIExportingAccessibility *)accessibility {
-	HIExportingAccessibility *oldValue = _accessibility;
+-(void)setAccessibility:(HIAccessibility *)accessibility {
+	HIAccessibility *oldValue = _accessibility;
 	_accessibility = accessibility;
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }

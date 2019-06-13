@@ -82,8 +82,6 @@
 		
 		<option value="//api/name/exporting">exporting</option>
 		
-		<option value="//api/name/labels">labels</option>
-		
 		<option value="//api/name/legend">legend</option>
 		
 		<option value="//api/name/loading">loading</option>
@@ -267,47 +265,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HISeries*&gt; *series</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/labels" title="labels"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labels">&nbsp;&nbsp;labels</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>HTML labels that can be positioned anywhere in the chart area.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabels *labels</code></div>
 
 		    
 			
@@ -805,7 +762,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for configuring annotations, for example labels, arrows or shapes. Annotations can be tied to points, axis coordinates or chart pixel coordinates.</p>
+				<p>A basic type of an annotation. It allows to add custom labels or shapes. The items can be tied to points, axis coordinates or chart pixel coordinates.</p>
 			</div>
 			
 		    
@@ -828,6 +785,7 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/basic/">Basic annotations</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/annotations/">Advanced annotations</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/annotations">Styled mode</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations-advanced/controllable">Controllable items</a></li>
 </ul>
 
 			</div>
@@ -1126,7 +1084,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the <a href="https://www.highcharts.com/docs/working-with-data/data-module">tutorial article on the Data module</a>. It requires the <code>modules/data.js</code> file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the <code>series.data</code> option.</p>
+				<p>The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the <a href="https://www.highcharts.com/docs/working-with-data/data-module">tutorial article on the Data module</a>. It requires the <code>modules/data.js</code> file to be loaded. Please note that the default way of adding data in Highcharts, without the need of a module, is through the <code>series._type_.data</code> option.</p>
 			</div>
 			
 		    

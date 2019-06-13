@@ -22,7 +22,7 @@
 		params[@"condition"] = [self.condition getParams];
 	}
 	if (self.chartOptions) {
-		params[@"chartOptions"] = self.chartOptions;
+		params[@"chartOptions"] = [self.chartOptions getParams];
 	}
 	return params;
 }
@@ -35,10 +35,10 @@
 	[self updateHIObject:oldValue newValue:condition propertyName:@"condition"];
 }
 
--(void)setChartOptions:(NSDictionary *)chartOptions {
-	NSDictionary *oldValue = _chartOptions;
+-(void)setChartOptions:(HIOptions *)chartOptions {
+	HIOptions *oldValue = _chartOptions;
 	_chartOptions = chartOptions;
-	[self updateNSObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
+	[self updateHIObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
 }
 
 @end

@@ -19,7 +19,6 @@
 	copyWaterfall.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyWaterfall.upColor = [self.upColor copyWithZone: zone];
 	copyWaterfall.color = [self.color copyWithZone: zone];
-	copyWaterfall.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyWaterfall.states = [self.states copyWithZone: zone];
 	copyWaterfall.lineColor = [self.lineColor copyWithZone: zone];
 	copyWaterfall.lineWidth = [self.lineWidth copyWithZone: zone];
@@ -79,6 +78,7 @@
 	copyWaterfall.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyWaterfall.visible = [self.visible copyWithZone: zone];
 	copyWaterfall.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyWaterfall.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
 	copyWaterfall.pointStart = [self.pointStart copyWithZone: zone];
 	copyWaterfall.boostThreshold = [self.boostThreshold copyWithZone: zone];
@@ -125,13 +125,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -218,8 +213,8 @@
 	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

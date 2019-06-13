@@ -58,8 +58,6 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/align">align</option>
-		
 		<option value="//api/name/allowOverlap">allowOverlap</option>
 		
 		<option value="//api/name/alternate">alternate</option>
@@ -78,27 +76,19 @@
 		
 		<option value="//api/name/connectorWidth">connectorWidth</option>
 		
-		<option value="//api/name/crop">crop</option>
-		
 		<option value="//api/name/distance">distance</option>
 		
 		<option value="//api/name/enabled">enabled</option>
 		
 		<option value="//api/name/formatter">formatter</option>
 		
-		<option value="//api/name/inside">inside</option>
-		
-		<option value="//api/name/nodeFormatter">nodeFormatter</option>
-		
-		<option value="//api/name/overflow">overflow</option>
-		
 		<option value="//api/name/shadow">shadow</option>
 		
 		<option value="//api/name/style">style</option>
 		
-		<option value="//api/name/useHTML">useHTML</option>
-		
 		<option value="//api/name/verticalAlign">verticalAlign</option>
+		
+		<option value="//api/name/y">y</option>
 		
 	</optgroup>
 	
@@ -145,6 +135,8 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>Options for the series data labels, appearing next to each data point. Since v6.2.0, multiple data labels can be applied to each single point by defining them as an array of configs. In styled mode, the data labels can be styled with the <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names (<a href="https://www.highcharts.com/samples/highcharts/css/series-datalabels">see example</a>).</p>
+
+<p><strong>Defaults to</strong> <code>{"align": "right", "crop": false, "inside": false, "overflow": "allow"}</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -471,7 +463,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *shadow</code></div>
 
 		    
 			
@@ -553,59 +545,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/nodeFormatter" title="nodeFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nodeFormatter">&nbsp;&nbsp;nodeFormatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A callback for defining the format for <em>nodes</em> in the organization chart. The <code>nodeFormat</code> option takes precedence over <code>nodeFormatter</code>. In an organization chart, the <code>nodeFormatter</code> is a quite complex function of the available options, striving for a good default layout of cards with or without images. In organization chart, the data labels come with <code>useHTML</code> set to true, meaning they will be rendered as true HTML above the SVG.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *nodeFormatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/datalabels-nodeformatter">Modify the default label format output</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/useHTML" title="useHTML"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
 
 	<div class="method-info">
@@ -614,71 +555,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/align" title="align"></a>
-	<h3 class="method-title"><code><a href="#//api/name/align">&nbsp;&nbsp;align</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *align</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/overflow" title="overflow"></a>
-	<h3 class="method-title"><code><a href="#//api/name/overflow">&nbsp;&nbsp;overflow</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *overflow</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/inside" title="inside"></a>
-	<h3 class="method-title"><code><a href="#//api/name/inside">&nbsp;&nbsp;inside</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *inside</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/crop" title="crop"></a>
-	<h3 class="method-title"><code><a href="#//api/name/crop">&nbsp;&nbsp;crop</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *crop</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
 
 		    
 		</div>

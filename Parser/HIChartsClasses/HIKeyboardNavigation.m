@@ -35,6 +35,16 @@
 		params[@"focusBorder"] = [self.focusBorder getParams];
 	}
 	if (self.order) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.order) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"order"] = array;
 	}
 	if (self.mode) {
 		params[@"mode"] = self.mode;
@@ -68,10 +78,10 @@
 	[self updateHIObject:oldValue newValue:focusBorder propertyName:@"focusBorder"];
 }
 
--(void)setOrder:(id)order {
-	id oldValue = _order;
+-(void)setOrder:(NSArray<NSString *> *)order {
+	NSArray<NSString *> *oldValue = _order;
 	_order = order;
-	[self updateNSObject:oldValue newValue:order propertyName:@"order"];
+	[self updateArrayObject:oldValue newValue:order propertyName:@"order"];
 }
 
 -(void)setMode:(NSString *)mode {

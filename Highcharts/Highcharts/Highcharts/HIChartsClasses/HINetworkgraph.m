@@ -17,7 +17,6 @@
 	HINetworkgraph *copyNetworkgraph = [[HINetworkgraph allocWithZone: zone] init];
 	copyNetworkgraph.nodes = [self.nodes copyWithZone: zone];
 	copyNetworkgraph.data = [self.data copyWithZone: zone];
-	copyNetworkgraph.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyNetworkgraph.id = [self.id copyWithZone: zone];
 	copyNetworkgraph.index = [self.index copyWithZone: zone];
 	copyNetworkgraph.legendIndex = [self.legendIndex copyWithZone: zone];
@@ -25,6 +24,7 @@
 	copyNetworkgraph.type = [self.type copyWithZone: zone];
 	copyNetworkgraph.zIndex = [self.zIndex copyWithZone: zone];
 	copyNetworkgraph.states = [self.states copyWithZone: zone];
+	copyNetworkgraph.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyNetworkgraph.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyNetworkgraph.draggable = [self.draggable copyWithZone: zone];
 	copyNetworkgraph.link = [self.link copyWithZone: zone];

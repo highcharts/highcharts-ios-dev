@@ -17,10 +17,10 @@
 	copyPlotBands.zIndex = [self.zIndex copyWithZone: zone];
 	copyPlotBands.from = [self.from copyWithZone: zone];
 	copyPlotBands.color = [self.color copyWithZone: zone];
-	copyPlotBands.id = [self.id copyWithZone: zone];
 	copyPlotBands.className = [self.className copyWithZone: zone];
 	copyPlotBands.to = [self.to copyWithZone: zone];
 	copyPlotBands.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyPlotBands.id = [self.id copyWithZone: zone];
 	copyPlotBands.label = [self.label copyWithZone: zone];
 	copyPlotBands.events = [self.events copyWithZone: zone];
 	return copyPlotBands;
@@ -51,9 +51,6 @@
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
@@ -62,6 +59,9 @@
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.id) {
+		params[@"id"] = self.id;
 	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];
@@ -115,12 +115,6 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setId:(NSString *)id {
-	NSString *oldValue = _id;
-	_id = id;
-	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
-}
-
 -(void)setClassName:(NSString *)className {
 	NSString *oldValue = _className;
 	_className = className;
@@ -137,6 +131,12 @@
 	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+}
+
+-(void)setId:(NSString *)id {
+	NSString *oldValue = _id;
+	_id = id;
+	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }
 
 -(void)setLabel:(HILabel *)label {

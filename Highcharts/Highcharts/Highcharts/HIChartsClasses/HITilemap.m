@@ -22,7 +22,6 @@
 	copyTilemap.colsize = [self.colsize copyWithZone: zone];
 	copyTilemap.color = [self.color copyWithZone: zone];
 	copyTilemap.tooltip = [self.tooltip copyWithZone: zone];
-	copyTilemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTilemap.animation = [self.animation copyWithZone: zone];
 	copyTilemap.nullColor = [self.nullColor copyWithZone: zone];
 	copyTilemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -53,6 +52,7 @@
 	copyTilemap.zones = [self.zones copyWithZone: zone];
 	copyTilemap.visible = [self.visible copyWithZone: zone];
 	copyTilemap.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyTilemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTilemap.cursor = [self.cursor copyWithZone: zone];
 	copyTilemap.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyTilemap.showInLegend = [self.showInLegend copyWithZone: zone];

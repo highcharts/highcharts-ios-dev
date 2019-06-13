@@ -322,6 +322,7 @@
 		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	if (self.plotBands) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -727,8 +728,8 @@
 	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
--(void)setMargin:(id)margin {
-	id oldValue = _margin;
+-(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
 	_margin = margin;
 	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }

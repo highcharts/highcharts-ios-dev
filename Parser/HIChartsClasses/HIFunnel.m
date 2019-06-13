@@ -30,7 +30,6 @@
 	copyFunnel.width = [self.width copyWithZone: zone];
 	copyFunnel.animation = [self.animation copyWithZone: zone];
 	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
-	copyFunnel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
 	copyFunnel.minSize = [self.minSize copyWithZone: zone];
 	copyFunnel.innerSize = [self.innerSize copyWithZone: zone];
@@ -40,6 +39,7 @@
 	copyFunnel.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyFunnel.depth = [self.depth copyWithZone: zone];
 	copyFunnel.tooltip = [self.tooltip copyWithZone: zone];
+	copyFunnel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyFunnel.endAngle = [self.endAngle copyWithZone: zone];
 	copyFunnel.colors = [self.colors copyWithZone: zone];
 	copyFunnel.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -122,13 +122,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -218,8 +213,8 @@
 	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

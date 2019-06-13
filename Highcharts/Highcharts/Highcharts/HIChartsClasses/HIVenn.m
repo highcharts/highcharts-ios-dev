@@ -28,7 +28,6 @@
 	copyVenn.clip = [self.clip copyWithZone: zone];
 	copyVenn.brighten = [self.brighten copyWithZone: zone];
 	copyVenn.tooltip = [self.tooltip copyWithZone: zone];
-	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVenn.states = [self.states copyWithZone: zone];
 	copyVenn.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVenn.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -56,6 +55,7 @@
 	copyVenn.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyVenn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVenn.visible = [self.visible copyWithZone: zone];
+	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVenn.cursor = [self.cursor copyWithZone: zone];
 	copyVenn.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyVenn;

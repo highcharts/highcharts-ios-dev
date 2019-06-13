@@ -90,7 +90,7 @@ The minimum tick interval allowed in axis values. For example on zooming in on a
 */
 @property(nonatomic, readwrite) NSNumber *minTickInterval;
 /**
-The pixel width of the major tick marks. Defaults to 0 on category axes, otherwise 1. In styled mode, the stroke width is given in the `.highcharts-tick` class.
+The pixel width of the major tick marks. Defaults to 0 on category axes, otherwise 1. In styled mode, the stroke width is given in the `.highcharts-tick` class, but in order for the element to be generated on category axes, the option must be explicitly set to 1.
 
 **Try it**
 
@@ -542,7 +542,7 @@ Specific tick interval in axis units for the minor ticks. On a linear axis, if `
 /**
 If there are multiple axes on the same side of the chart, the pixel margin between the axes. Defaults to 0 on vertical axes, 15 on horizontal axes.
 */
-@property(nonatomic, readwrite) id margin;
+@property(nonatomic, readwrite) NSNumber *margin;
 /**
 An array of colored bands stretching across the plot area marking an interval on the axis. In styled mode, the plot bands are styled by the `.highcharts-plot-band` class in addition to the `className` option.
 */

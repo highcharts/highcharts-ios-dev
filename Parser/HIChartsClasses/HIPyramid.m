@@ -30,7 +30,6 @@
 	copyPyramid.states = [self.states copyWithZone: zone];
 	copyPyramid.width = [self.width copyWithZone: zone];
 	copyPyramid.animation = [self.animation copyWithZone: zone];
-	copyPyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPyramid.borderColor = [self.borderColor copyWithZone: zone];
 	copyPyramid.minSize = [self.minSize copyWithZone: zone];
 	copyPyramid.innerSize = [self.innerSize copyWithZone: zone];
@@ -40,6 +39,7 @@
 	copyPyramid.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyPyramid.depth = [self.depth copyWithZone: zone];
 	copyPyramid.tooltip = [self.tooltip copyWithZone: zone];
+	copyPyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPyramid.endAngle = [self.endAngle copyWithZone: zone];
 	copyPyramid.colors = [self.colors copyWithZone: zone];
 	copyPyramid.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -122,13 +122,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -218,8 +213,8 @@
 	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

@@ -374,6 +374,7 @@
 		params[@"minorTickInterval"] = self.minorTickInterval;
 	}
 	if (self.margin) {
+		params[@"margin"] = self.margin;
 	}
 	return params;
 }
@@ -818,8 +819,8 @@
 	[self updateNSObject:oldValue newValue:minorTickInterval propertyName:@"minorTickInterval"];
 }
 
--(void)setMargin:(id)margin {
-	id oldValue = _margin;
+-(void)setMargin:(NSNumber *)margin {
+	NSNumber *oldValue = _margin;
 	_margin = margin;
 	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }

@@ -268,11 +268,11 @@ Fires after the series has finished its initial animation, or in case animation 
 /**
 Event callback when annotation is added to the chart.
 */
-@property(nonatomic, readwrite) id add;
+@property(nonatomic, readwrite) HIFunction *add;
 /**
 Event callback when annotation is updated (e.g.draganddropppedorresizedbycontrolpoints).
 */
-@property(nonatomic, readwrite) id afterUpdate;
+@property(nonatomic, readwrite) HIFunction *afterUpdate;
 
 -(NSDictionary *)getParams;
 

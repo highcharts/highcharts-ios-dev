@@ -13,12 +13,12 @@
 	copyPlotLines.zIndex = [self.zIndex copyWithZone: zone];
 	copyPlotLines.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPlotLines.color = [self.color copyWithZone: zone];
-	copyPlotLines.value = [self.value copyWithZone: zone];
 	copyPlotLines.label = [self.label copyWithZone: zone];
+	copyPlotLines.value = [self.value copyWithZone: zone];
+	copyPlotLines.events = [self.events copyWithZone: zone];
 	copyPlotLines.className = [self.className copyWithZone: zone];
 	copyPlotLines.width = [self.width copyWithZone: zone];
 	copyPlotLines.id = [self.id copyWithZone: zone];
-	copyPlotLines.events = [self.events copyWithZone: zone];
 	return copyPlotLines;
 }
 
@@ -35,11 +35,14 @@
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
+	if (self.label) {
+		params[@"label"] = [self.label getParams];
+	}
 	if (self.value) {
 		params[@"value"] = self.value;
 	}
-	if (self.label) {
-		params[@"label"] = [self.label getParams];
+	if (self.events) {
+		params[@"events"] = self.events;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -49,9 +52,6 @@
 	}
 	if (self.id) {
 		params[@"id"] = self.id;
-	}
-	if (self.events) {
-		params[@"events"] = self.events;
 	}
 	return params;
 }
@@ -76,16 +76,22 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
+-(void)setLabel:(HILabel *)label {
+	HILabel *oldValue = _label;
+	_label = label;
+	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
+}
+
 -(void)setValue:(NSNumber *)value {
 	NSNumber *oldValue = _value;
 	_value = value;
 	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }
 
--(void)setLabel:(HILabel *)label {
-	HILabel *oldValue = _label;
-	_label = label;
-	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
+-(void)setEvents:(id)events {
+	id oldValue = _events;
+	_events = events;
+	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -104,12 +110,6 @@
 	NSString *oldValue = _id;
 	_id = id;
 	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
-}
-
--(void)setEvents:(id)events {
-	id oldValue = _events;
-	_events = events;
-	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
 }
 
 - (void)destroy {

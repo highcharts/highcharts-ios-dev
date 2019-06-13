@@ -16,12 +16,14 @@
 	[super copyWithZone:zone];
 	HISolidgauge *copySolidgauge = [[HISolidgauge allocWithZone: zone] init];
 	copySolidgauge.colorByPoint = [self.colorByPoint copyWithZone: zone];
-	copySolidgauge.linecap = [self.linecap copyWithZone: zone];
-	copySolidgauge.overshoot = [self.overshoot copyWithZone: zone];
 	copySolidgauge.rounded = [self.rounded copyWithZone: zone];
+	copySolidgauge.innerRadius = [self.innerRadius copyWithZone: zone];
+	copySolidgauge.overshoot = [self.overshoot copyWithZone: zone];
+	copySolidgauge.dataLabels = [self.dataLabels copyWithZone: zone];
+	copySolidgauge.radius = [self.radius copyWithZone: zone];
+	copySolidgauge.linecap = [self.linecap copyWithZone: zone];
 	copySolidgauge.threshold = [self.threshold copyWithZone: zone];
 	copySolidgauge.tooltip = [self.tooltip copyWithZone: zone];
-	copySolidgauge.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySolidgauge.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySolidgauge.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySolidgauge.selected = [self.selected copyWithZone: zone];
@@ -71,11 +73,17 @@
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
+	if (self.rounded) {
+		params[@"rounded"] = self.rounded;
+	}
+	if (self.innerRadius) {
+		params[@"innerRadius"] = self.innerRadius;
+	}
 	if (self.overshoot) {
 		params[@"overshoot"] = self.overshoot;
 	}
-	if (self.rounded) {
-		params[@"rounded"] = self.rounded;
+	if (self.radius) {
+		params[@"radius"] = self.radius;
 	}
 	return params;
 }
@@ -88,16 +96,28 @@
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
+-(void)setRounded:(NSNumber *)rounded {
+	NSNumber *oldValue = _rounded;
+	_rounded = rounded;
+	[self updateNSObject:oldValue newValue:rounded propertyName:@"rounded"];
+}
+
+-(void)setInnerRadius:(id)innerRadius {
+	id oldValue = _innerRadius;
+	_innerRadius = innerRadius;
+	[self updateNSObject:oldValue newValue:innerRadius propertyName:@"innerRadius"];
+}
+
 -(void)setOvershoot:(NSNumber *)overshoot {
 	NSNumber *oldValue = _overshoot;
 	_overshoot = overshoot;
 	[self updateNSObject:oldValue newValue:overshoot propertyName:@"overshoot"];
 }
 
--(void)setRounded:(NSNumber *)rounded {
-	NSNumber *oldValue = _rounded;
-	_rounded = rounded;
-	[self updateNSObject:oldValue newValue:rounded propertyName:@"rounded"];
+-(void)setRadius:(id)radius {
+	id oldValue = _radius;
+	_radius = radius;
+	[self updateNSObject:oldValue newValue:radius propertyName:@"radius"];
 }
 
 @end

@@ -28,7 +28,6 @@
 	copyHeatmap.colsize = [self.colsize copyWithZone: zone];
 	copyHeatmap.color = [self.color copyWithZone: zone];
 	copyHeatmap.tooltip = [self.tooltip copyWithZone: zone];
-	copyHeatmap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyHeatmap.states = [self.states copyWithZone: zone];
 	copyHeatmap.rowsize = [self.rowsize copyWithZone: zone];
 	copyHeatmap.animation = [self.animation copyWithZone: zone];
@@ -61,6 +60,7 @@
 	copyHeatmap.zones = [self.zones copyWithZone: zone];
 	copyHeatmap.visible = [self.visible copyWithZone: zone];
 	copyHeatmap.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyHeatmap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyHeatmap.cursor = [self.cursor copyWithZone: zone];
 	copyHeatmap.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyHeatmap.showInLegend = [self.showInLegend copyWithZone: zone];

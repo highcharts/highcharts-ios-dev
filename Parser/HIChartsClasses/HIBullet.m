@@ -46,7 +46,6 @@
 	copyBullet.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBullet.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyBullet.crisp = [self.crisp copyWithZone: zone];
-	copyBullet.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBullet.depth = [self.depth copyWithZone: zone];
 	copyBullet.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBullet.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -86,6 +85,7 @@
 	copyBullet.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBullet.visible = [self.visible copyWithZone: zone];
 	copyBullet.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyBullet.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBullet.cursor = [self.cursor copyWithZone: zone];
 	copyBullet.pointStart = [self.pointStart copyWithZone: zone];
 	copyBullet.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -115,13 +115,8 @@
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.colors) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
 	}
@@ -199,8 +194,8 @@
 	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
 }
 
--(void)setColors:(NSArray<NSString *> *)colors {
-	NSArray<NSString *> *oldValue = _colors;
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }

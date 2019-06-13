@@ -60,6 +60,8 @@
 		
 		<option value="//api/name/align">align</option>
 		
+		<option value="//api/name/alignTo">alignTo</option>
+		
 		<option value="//api/name/allowOverlap">allowOverlap</option>
 		
 		<option value="//api/name/backgroundColor">backgroundColor</option>
@@ -74,9 +76,21 @@
 		
 		<option value="//api/name/color">color</option>
 		
+		<option value="//api/name/connectorColor">connectorColor</option>
+		
+		<option value="//api/name/connectorPadding">connectorPadding</option>
+		
+		<option value="//api/name/connectorShape">connectorShape</option>
+		
+		<option value="//api/name/connectorWidth">connectorWidth</option>
+		
+		<option value="//api/name/crookDistance">crookDistance</option>
+		
 		<option value="//api/name/crop">crop</option>
 		
 		<option value="//api/name/defer">defer</option>
+		
+		<option value="//api/name/distance">distance</option>
 		
 		<option value="//api/name/enabled">enabled</option>
 		
@@ -88,6 +102,16 @@
 		
 		<option value="//api/name/inside">inside</option>
 		
+		<option value="//api/name/linkFormat">linkFormat</option>
+		
+		<option value="//api/name/linkFormatter">linkFormatter</option>
+		
+		<option value="//api/name/linkTextPath">linkTextPath</option>
+		
+		<option value="//api/name/nodeFormat">nodeFormat</option>
+		
+		<option value="//api/name/nodeFormatter">nodeFormatter</option>
+		
 		<option value="//api/name/nullFormat">nullFormat</option>
 		
 		<option value="//api/name/nullFormatter">nullFormatter</option>
@@ -98,11 +122,17 @@
 		
 		<option value="//api/name/rotation">rotation</option>
 		
+		<option value="//api/name/rotationMode">rotationMode</option>
+		
 		<option value="//api/name/shadow">shadow</option>
 		
 		<option value="//api/name/shape">shape</option>
 		
+		<option value="//api/name/softConnector">softConnector</option>
+		
 		<option value="//api/name/style">style</option>
+		
+		<option value="//api/name/textPath">textPath</option>
 		
 		<option value="//api/name/useHTML">useHTML</option>
 		
@@ -110,7 +140,15 @@
 		
 		<option value="//api/name/x">x</option>
 		
+		<option value="//api/name/xHigh">xHigh</option>
+		
+		<option value="//api/name/xLow">xLow</option>
+		
 		<option value="//api/name/y">y</option>
+		
+		<option value="//api/name/yHigh">yHigh</option>
+		
+		<option value="//api/name/yLow">yLow</option>
 		
 		<option value="//api/name/zIndex">zIndex</option>
 		
@@ -272,7 +310,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *backgroundColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *backgroundColor</code></div>
 
 		    
 			
@@ -641,7 +679,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id filter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDataLabelsFilterOptionsObject *filter</code></div>
 
 		    
 			
@@ -805,7 +843,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id nullFormat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nullFormat</code></div>
 
 		    
 			
@@ -1010,7 +1048,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *shadow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIShadowOptionsObject *shadow</code></div>
 
 		    
 			
@@ -1093,6 +1131,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *style</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/textPath" title="textPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/textPath">&nbsp;&nbsp;textPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for a label text which should follow marker&rsquo;s shape. Border and background are disabled for a label that follows a path. <strong>Note:</strong> Only SVG-based renderer supports this option. Setting <code>useHTML</code> to true will disable this option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDataLabelsTextPath *textPath</code></div>
 
 		    
 			
@@ -1298,6 +1377,744 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zIndex</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/xHigh" title="xHigh"></a>
+	<h3 class="method-title"><code><a href="#//api/name/xHigh">&nbsp;&nbsp;xHigh</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>X offset of the higher data labels relative to the point value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *xHigh</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/xLow" title="xLow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/xLow">&nbsp;&nbsp;xLow</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>X offset of the lower data labels relative to the point value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *xLow</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/yHigh" title="yHigh"></a>
+	<h3 class="method-title"><code><a href="#//api/name/yHigh">&nbsp;&nbsp;yHigh</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Y offset of the higher data labels relative to the point value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *yHigh</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/yLow" title="yLow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/yLow">&nbsp;&nbsp;yLow</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Y offset of the lower data labels relative to the point value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *yLow</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/linkFormat" title="linkFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkFormat">&nbsp;&nbsp;linkFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>links</em> in the networkgraph. (Default: <code>undefined</code>)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *linkFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/linkFormatter" title="linkFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkFormatter">&nbsp;&nbsp;linkFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback to format data labels for <em>links</em> in the sankey diagram. The <code>linkFormat</code> option takes precedence over the <code>linkFormatter</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *linkFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/linkTextPath" title="linkTextPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkTextPath">&nbsp;&nbsp;linkTextPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for a <em>link</em> label text which should follow link connection. Border and background are disabled for a label that follows a path. <strong>Note:</strong> Only SVG-based renderer supports this option. Setting <code>useHTML</code> to true will disable this option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDataLabelsTextPath *linkTextPath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nodeFormatter" title="nodeFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeFormatter">&nbsp;&nbsp;nodeFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A callback for defining the format for <em>nodes</em> in the organization chart. The <code>nodeFormat</code> option takes precedence over <code>nodeFormatter</code>. In an organization chart, the <code>nodeFormatter</code> is a quite complex function of the available options, striving for a good default layout of cards with or without images. In organization chart, the data labels come with <code>useHTML</code> set to true, meaning they will be rendered as true HTML above the SVG.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *nodeFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/alignTo" title="alignTo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alignTo">&nbsp;&nbsp;alignTo</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Alignment method for data labels. Possible values are: - <code>toPlotEdges</code>: each label touches the nearest vertical edge of the plot area - <code>connectors</code>: connectors have the same x position and the widest label of each half (left &amp; right) touches the nearest vertical edge of the plot area.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *alignTo</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectorColor" title="connectorColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorColor">&nbsp;&nbsp;connectorColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the line connecting the data label to the pie slice. The default color is the same as the point&rsquo;s color. In styled mode, the connector stroke is given in the <code>.highcharts-data-label-connector</code> class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *connectorColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectorPadding" title="connectorPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorPadding">&nbsp;&nbsp;connectorPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The distance from the data label to the connector. Note that data labels also have a default <code>padding</code>, so in order for the connector to touch the text, the <code>padding</code> must also be 0.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorPadding</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectorShape" title="connectorShape"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorShape">&nbsp;&nbsp;connectorShape</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Specifies the method that is used to generate the connector path. Highcharts provides 3 built-in connector shapes: <code>'fixedOffset'</code> (default), <code>'straight'</code> and <code>'crookedLine'</code>. Using <code>'crookedLine'</code> has the most sense (in most of the cases) when <code>'alignTo'</code> is set. Users can provide their own method by passing a function instead of a String. 3 arguments are passed to the callback: - Object that holds the information about the coordinates of the label (<code>x</code> &amp; <code>y</code> properties) and how the label is located in relation to the pie (<code>alignment</code> property). <code>alignment</code> can by one of the following: <code>'left'</code> (pie on the left side of the data label), <code>'right'</code> (pie on the right side of the data label) or <code>'center'</code> (data label overlaps the pie). - Object that holds the information about the position of the connector. Its <code>touchingSliceAt</code> porperty tells the position of the place where the connector touches the slice. - Data label options The function has to return an SVG path definition in array form (see the example).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *connectorShape</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectorWidth" title="connectorWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorWidth">&nbsp;&nbsp;connectorWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width of the line connecting the data label to the pie slice. In styled mode, the connector stroke width is given in the <code>.highcharts-data-label-connector</code> class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/crookDistance" title="crookDistance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/crookDistance">&nbsp;&nbsp;crookDistance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Works only if <code>connectorShape</code> is <code>'crookedLine'</code>. It defines how far from the vertical plot edge the coonnector path should be crooked.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *crookDistance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/distance" title="distance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The distance of the data label from the pie&rsquo;s edge. Negative numbers put the data label on top of the pie slices. Can also be defined as a percentage of pie&rsquo;s radius. Connectors are only shown for data labels outside the pie.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/softConnector" title="softConnector"></a>
+	<h3 class="method-title"><code><a href="#//api/name/softConnector">&nbsp;&nbsp;softConnector</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to render the connector as a soft arc or a line with sharp break. Works only if <code>connectorShape</code> equals to <code>fixedOffset</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *softConnector</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nodeFormat" title="nodeFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeFormat">&nbsp;&nbsp;nodeFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>nodes</em> in the sankey diagram. By default the <code>nodeFormatter</code> returns <code>{point.name}</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nodeFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rotationMode" title="rotationMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rotationMode">&nbsp;&nbsp;rotationMode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are <code>auto</code>, <code>parallel</code> and <code>perpendicular</code>. When <code>auto</code>, the best fit will be computed for the point. The <code>series.rotation</code> option takes precedence over <code>rotationMode</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rotationMode</code></div>
 
 		    
 			
