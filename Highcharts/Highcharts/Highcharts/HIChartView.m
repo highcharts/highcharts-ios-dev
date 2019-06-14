@@ -138,11 +138,12 @@ static NSBundle *highchartsBundle = nil;
     [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"exporting"];
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     self.webView.navigationDelegate = nil;
-    [self removeObserver:self forKeyPath:@"options.isUpdated"];
-    [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
+    if (self.options) {
+        [self removeObserver:self forKeyPath:@"options.isUpdated"];
+        [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
+    }
 }
 
 - (void)didMoveToSuperview {
