@@ -76,7 +76,6 @@
 	copyTreemap.accessibility = [self.accessibility copyWithZone: zone];
 	copyTreemap.step = [self.step copyWithZone: zone];
 	copyTreemap.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyTreemap.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyTreemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTreemap.zones = [self.zones copyWithZone: zone];

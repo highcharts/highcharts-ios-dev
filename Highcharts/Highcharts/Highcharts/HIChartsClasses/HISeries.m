@@ -1,6 +1,5 @@
 #import "HIChartsJSONSerializableSubclass.h"
 #import "HISeries.h"
-#import "HIPie.h"
 
 @implementation HISeries
 
@@ -61,7 +60,6 @@
 	copySeries.accessibility = [self.accessibility copyWithZone: zone];
 	copySeries.step = [self.step copyWithZone: zone];
 	copySeries.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copySeries.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySeries.shadow = [self.shadow copyWithZone: zone];
 	copySeries.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -253,9 +251,6 @@
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
 	}
-	if (self.exposeElementToA11y) {
-		params[@"exposeElementToA11y"] = self.exposeElementToA11y;
-	}
 	if (self.shadow) {
 		params[@"shadow"] = [self.shadow getParams];
 	}
@@ -293,23 +288,16 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.dataLabels) {
-        if ([self isKindOfClass:[HIPie class]]) {
-            id obj = [self.dataLabels firstObject];
-            if (obj && [obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-                params[@"dataLabels"] = [(HIChartsJSONSerializable *)obj getParams];
-            }
-        } else {
-            NSMutableArray *array = [[NSMutableArray alloc] init];
-            for (id obj in self.dataLabels) {
-                if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-                    [array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-                }
-                else {
-                    [array addObject: obj];
-                }
-            }
-            params[@"dataLabels"] = array;
-        }
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.dataLabels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"dataLabels"] = array;
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
@@ -632,12 +620,6 @@
 	NSNumber *oldValue = _getExtremesFromAll;
 	_getExtremesFromAll = getExtremesFromAll;
 	[self updateNSObject:oldValue newValue:getExtremesFromAll propertyName:@"getExtremesFromAll"];
-}
-
--(void)setExposeElementToA11y:(NSNumber *)exposeElementToA11y {
-	NSNumber *oldValue = _exposeElementToA11y;
-	_exposeElementToA11y = exposeElementToA11y;
-	[self updateNSObject:oldValue newValue:exposeElementToA11y propertyName:@"exposeElementToA11y"];
 }
 
 -(void)setShadow:(HIShadowOptionsObject *)shadow {

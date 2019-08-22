@@ -66,7 +66,6 @@
 	copyBellcurve.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBellcurve.accessibility = [self.accessibility copyWithZone: zone];
 	copyBellcurve.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyBellcurve.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBellcurve.shadow = [self.shadow copyWithZone: zone];
 	copyBellcurve.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBellcurve.zoneAxis = [self.zoneAxis copyWithZone: zone];

@@ -70,7 +70,6 @@
 	copyPackedbubble.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPackedbubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyPackedbubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyPackedbubble.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPackedbubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPackedbubble.zones = [self.zones copyWithZone: zone];
 	copyPackedbubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

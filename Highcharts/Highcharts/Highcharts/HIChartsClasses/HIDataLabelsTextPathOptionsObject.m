@@ -1,7 +1,7 @@
 #import "HIChartsJSONSerializableSubclass.h"
-#import "HISeriesPackedBubbleDataLabelsTextPath.h"
+#import "HIDataLabelsTextPathOptionsObject.h"
 
-@implementation HISeriesPackedBubbleDataLabelsTextPath
+@implementation HIDataLabelsTextPathOptionsObject
 
 -(instancetype)init {
 	return [super init];
@@ -9,10 +9,10 @@
 
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
-	HISeriesPackedBubbleDataLabelsTextPath *copySeriesPackedBubbleDataLabelsTextPath = [[HISeriesPackedBubbleDataLabelsTextPath allocWithZone: zone] init];
-	copySeriesPackedBubbleDataLabelsTextPath.attributes = [self.attributes copyWithZone: zone];
-	copySeriesPackedBubbleDataLabelsTextPath.enabled = [self.enabled copyWithZone: zone];
-	return copySeriesPackedBubbleDataLabelsTextPath;
+	HIDataLabelsTextPathOptionsObject *copyDataLabelsTextPathOptionsObject = [[HIDataLabelsTextPathOptionsObject allocWithZone: zone] init];
+	copyDataLabelsTextPathOptionsObject.attributes = [self.attributes copyWithZone: zone];
+	copyDataLabelsTextPathOptionsObject.enabled = [self.enabled copyWithZone: zone];
+	return copyDataLabelsTextPathOptionsObject;
 }
 
 -(NSDictionary *)getParams

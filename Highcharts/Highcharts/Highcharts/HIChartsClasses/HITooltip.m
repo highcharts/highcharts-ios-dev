@@ -38,6 +38,7 @@
 	copyTooltip.enabled = [self.enabled copyWithZone: zone];
 	copyTooltip.shape = [self.shape copyWithZone: zone];
 	copyTooltip.pointFormatter = [self.pointFormatter copyWithZone: zone];
+	copyTooltip.className = [self.className copyWithZone: zone];
 	copyTooltip.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyTooltip.followPointer = [self.followPointer copyWithZone: zone];
 	copyTooltip.hideDelay = [self.hideDelay copyWithZone: zone];
@@ -124,7 +125,7 @@
 		params[@"padding"] = self.padding;
 	}
 	if (self.shadow) {
-		params[@"shadow"] = self.shadow;
+		params[@"shadow"] = [self.shadow getParams];
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
@@ -134,6 +135,9 @@
 	}
 	if (self.pointFormatter) {
 		params[@"pointFormatter"] = [self.pointFormatter getFunction];
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -305,10 +309,10 @@
 	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
--(void)setShadow:(NSNumber *)shadow {
-	NSNumber *oldValue = _shadow;
+-(void)setShadow:(HIShadowOptionsObject *)shadow {
+	HIShadowOptionsObject *oldValue = _shadow;
 	_shadow = shadow;
-	[self updateNSObject:oldValue newValue:shadow propertyName:@"shadow"];
+	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
@@ -327,6 +331,12 @@
 	HIFunction *oldValue = _pointFormatter;
 	_pointFormatter = pointFormatter;
 	[self updateHIObject:oldValue newValue:pointFormatter propertyName:@"pointFormatter"];
+}
+
+-(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
+	_className = className;
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {

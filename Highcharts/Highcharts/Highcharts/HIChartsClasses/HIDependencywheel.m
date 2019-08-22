@@ -30,6 +30,7 @@
 	copyDependencywheel.center = [self.center copyWithZone: zone];
 	copyDependencywheel.curveFactor = [self.curveFactor copyWithZone: zone];
 	copyDependencywheel.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyDependencywheel.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copyDependencywheel.nodePadding = [self.nodePadding copyWithZone: zone];
 	copyDependencywheel.tooltip = [self.tooltip copyWithZone: zone];
 	copyDependencywheel.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -39,7 +40,6 @@
 	copyDependencywheel.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDependencywheel.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyDependencywheel.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyDependencywheel.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyDependencywheel.colors = [self.colors copyWithZone: zone];
 	copyDependencywheel.borderColor = [self.borderColor copyWithZone: zone];
 	copyDependencywheel.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -65,7 +65,6 @@
 	copyDependencywheel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyDependencywheel.accessibility = [self.accessibility copyWithZone: zone];
 	copyDependencywheel.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyDependencywheel.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyDependencywheel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyDependencywheel.visible = [self.visible copyWithZone: zone];
 	copyDependencywheel.linkedTo = [self.linkedTo copyWithZone: zone];
@@ -109,6 +108,9 @@
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
+	if (self.minLinkWidth) {
+		params[@"minLinkWidth"] = self.minLinkWidth;
+	}
 	if (self.nodePadding) {
 		params[@"nodePadding"] = self.nodePadding;
 	}
@@ -132,9 +134,6 @@
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
-	}
-	if (self.minPointLength) {
-		params[@"minPointLength"] = self.minPointLength;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -181,6 +180,12 @@
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
+-(void)setMinLinkWidth:(NSNumber *)minLinkWidth {
+	NSNumber *oldValue = _minLinkWidth;
+	_minLinkWidth = minLinkWidth;
+	[self updateNSObject:oldValue newValue:minLinkWidth propertyName:@"minLinkWidth"];
+}
+
 -(void)setNodePadding:(NSNumber *)nodePadding {
 	NSNumber *oldValue = _nodePadding;
 	_nodePadding = nodePadding;
@@ -209,12 +214,6 @@
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
 	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
-}
-
--(void)setMinPointLength:(NSNumber *)minPointLength {
-	NSNumber *oldValue = _minPointLength;
-	_minPointLength = minPointLength;
-	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

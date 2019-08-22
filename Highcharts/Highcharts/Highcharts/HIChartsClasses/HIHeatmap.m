@@ -54,7 +54,6 @@
 	copyHeatmap.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyHeatmap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyHeatmap.accessibility = [self.accessibility copyWithZone: zone];
-	copyHeatmap.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyHeatmap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyHeatmap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyHeatmap.zones = [self.zones copyWithZone: zone];

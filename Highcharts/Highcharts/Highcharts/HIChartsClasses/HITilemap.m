@@ -46,7 +46,6 @@
 	copyTilemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyTilemap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTilemap.accessibility = [self.accessibility copyWithZone: zone];
-	copyTilemap.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyTilemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTilemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTilemap.zones = [self.zones copyWithZone: zone];

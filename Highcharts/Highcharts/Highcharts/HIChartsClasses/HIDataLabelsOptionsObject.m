@@ -39,24 +39,6 @@
 	copyDataLabelsOptionsObject.x = [self.x copyWithZone: zone];
 	copyDataLabelsOptionsObject.y = [self.y copyWithZone: zone];
 	copyDataLabelsOptionsObject.zIndex = [self.zIndex copyWithZone: zone];
-    copyDataLabelsOptionsObject.xHigh = [self.xHigh copyWithZone: zone];
-    copyDataLabelsOptionsObject.xLow = [self.xLow copyWithZone: zone];
-    copyDataLabelsOptionsObject.yHigh = [self.yHigh copyWithZone: zone];
-    copyDataLabelsOptionsObject.yLow = [self.yLow copyWithZone: zone];
-    copyDataLabelsOptionsObject.linkFormat = [self.linkFormat copyWithZone: zone];
-    copyDataLabelsOptionsObject.linkFormatter = [self.linkFormatter copyWithZone: zone];
-    copyDataLabelsOptionsObject.linkTextPath = [self.linkTextPath copyWithZone: zone];
-    copyDataLabelsOptionsObject.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
-    copyDataLabelsOptionsObject.alignTo = [self.alignTo copyWithZone: zone];
-    copyDataLabelsOptionsObject.connectorColor = [self.connectorColor copyWithZone: zone];
-    copyDataLabelsOptionsObject.connectorPadding = [self.connectorPadding copyWithZone: zone];
-    copyDataLabelsOptionsObject.connectorShape = [self.connectorShape copyWithZone: zone];
-    copyDataLabelsOptionsObject.connectorWidth = [self.connectorWidth copyWithZone: zone];
-    copyDataLabelsOptionsObject.crookDistance = [self.crookDistance copyWithZone: zone];
-    copyDataLabelsOptionsObject.distance = [self.distance copyWithZone: zone];
-    copyDataLabelsOptionsObject.softConnector = [self.softConnector copyWithZone: zone];
-    copyDataLabelsOptionsObject.nodeFormat = [self.nodeFormat copyWithZone: zone];
-    copyDataLabelsOptionsObject.rotationMode = [self.rotationMode copyWithZone: zone];
 	return copyDataLabelsOptionsObject;
 }
 
@@ -73,7 +55,7 @@
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = self.borderColor;
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -85,7 +67,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.color) {
-		params[@"color"] = self.color;
+		params[@"color"] = [self.color getData];
 	}
 	if (self.crop) {
 		params[@"crop"] = self.crop;
@@ -150,60 +132,6 @@
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
-    if (self.xHigh) {
-        params[@"xHigh"] = self.xHigh;
-    }
-    if (self.xLow) {
-        params[@"xLow"] = self.xLow;
-    }
-    if (self.yHigh) {
-        params[@"yHigh"] = self.yHigh;
-    }
-    if (self.yLow) {
-        params[@"yLow"] = self.yLow;
-    }
-    if (self.linkFormat) {
-        params[@"linkFormat"] = self.linkFormat;
-    }
-    if (self.linkFormatter) {
-        params[@"linkFormatter"] = [self.linkFormatter getFunction];
-    }
-    if (self.linkTextPath) {
-        params[@"linkTextPath"] = [self.linkTextPath getParams];
-    }
-    if (self.nodeFormatter) {
-        params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
-    }
-    if (self.alignTo) {
-        params[@"alignTo"] = self.alignTo;
-    }
-    if (self.connectorColor) {
-        params[@"connectorColor"] = self.connectorColor;
-    }
-    if (self.connectorPadding) {
-        params[@"connectorPadding"] = self.connectorPadding;
-    }
-    if (self.connectorShape) {
-        params[@"connectorShape"] = self.connectorShape;
-    }
-    if (self.connectorWidth) {
-        params[@"connectorWidth"] = self.connectorWidth;
-    }
-    if (self.crookDistance) {
-        params[@"crookDistance"] = self.crookDistance;
-    }
-    if (self.distance) {
-        params[@"distance"] = self.distance;
-    }
-    if (self.softConnector) {
-        params[@"softConnector"] = self.softConnector;
-    }
-    if (self.nodeFormat) {
-        params[@"nodeFormat"] = self.nodeFormat;
-    }
-    if (self.rotationMode) {
-        params[@"rotationMode"] = self.rotationMode;
-    }
 	return params;
 }
 
@@ -227,10 +155,10 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
--(void)setBorderColor:(NSString *)borderColor {
-	NSString *oldValue = _borderColor;
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
-	[self updateNSObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
@@ -251,10 +179,10 @@
 	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
--(void)setColor:(NSString *)color {
-	NSString *oldValue = _color;
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
 	_color = color;
-	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setCrop:(NSNumber *)crop {
@@ -347,8 +275,8 @@
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
--(void)setTextPath:(HIDataLabelsTextPath *)textPath {
-	HIDataLabelsTextPath *oldValue = _textPath;
+-(void)setTextPath:(HIDataLabelsTextPathOptionsObject *)textPath {
+	HIDataLabelsTextPathOptionsObject *oldValue = _textPath;
 	_textPath = textPath;
 	[self updateHIObject:oldValue newValue:textPath propertyName:@"textPath"];
 }
@@ -381,114 +309,6 @@
 	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
 	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
-}
-
--(void)setXHigh:(NSNumber *)xHigh {
-    NSNumber *oldValue = _xHigh;
-    _xHigh = xHigh;
-    [self updateNSObject:oldValue newValue:xHigh propertyName:@"xHigh"];
-}
-
--(void)setXLow:(NSNumber *)xLow {
-    NSNumber *oldValue = _xLow;
-    _xLow = xLow;
-    [self updateNSObject:oldValue newValue:xLow propertyName:@"xLow"];
-}
-
--(void)setYHigh:(NSNumber *)yHigh {
-    NSNumber *oldValue = _yHigh;
-    _yHigh = yHigh;
-    [self updateNSObject:oldValue newValue:yHigh propertyName:@"yHigh"];
-}
-
--(void)setYLow:(NSNumber *)yLow {
-    NSNumber *oldValue = _yLow;
-    _yLow = yLow;
-    [self updateNSObject:oldValue newValue:yLow propertyName:@"yLow"];
-}
-
--(void)setLinkFormat:(NSString *)linkFormat {
-    NSString *oldValue = _linkFormat;
-    _linkFormat = linkFormat;
-    [self updateNSObject:oldValue newValue:linkFormat propertyName:@"linkFormat"];
-}
-
--(void)setLinkFormatter:(HIFunction *)linkFormatter {
-    HIFunction *oldValue = _linkFormatter;
-    _linkFormatter = linkFormatter;
-    [self updateHIObject:oldValue newValue:linkFormatter propertyName:@"linkFormatter"];
-}
-
--(void)setLinkTextPath:(HIDataLabelsTextPath *)linkTextPath {
-    HIDataLabelsTextPath *oldValue = _linkTextPath;
-    _linkTextPath = linkTextPath;
-    [self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
-}
-
--(void)setNodeFormatter:(HIFunction *)nodeFormatter {
-    HIFunction *oldValue = _nodeFormatter;
-    _nodeFormatter = nodeFormatter;
-    [self updateHIObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
-}
-
--(void)setAlignTo:(NSString *)alignTo {
-    NSString *oldValue = _alignTo;
-    _alignTo = alignTo;
-    [self updateNSObject:oldValue newValue:alignTo propertyName:@"alignTo"];
-}
-
--(void)setConnectorColor:(NSString *)connectorColor {
-    NSString *oldValue = _connectorColor;
-    _connectorColor = connectorColor;
-    [self updateNSObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
-}
-
--(void)setConnectorPadding:(NSNumber *)connectorPadding {
-    NSNumber *oldValue = _connectorPadding;
-    _connectorPadding = connectorPadding;
-    [self updateNSObject:oldValue newValue:connectorPadding propertyName:@"connectorPadding"];
-}
-
--(void)setConnectorShape:(NSString *)connectorShape {
-    NSString *oldValue = _connectorShape;
-    _connectorShape = connectorShape;
-    [self updateNSObject:oldValue newValue:connectorShape propertyName:@"connectorShape"];
-}
-
--(void)setConnectorWidth:(NSNumber *)connectorWidth {
-    NSNumber *oldValue = _connectorWidth;
-    _connectorWidth = connectorWidth;
-    [self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
-}
-
--(void)setCrookDistance:(NSString *)crookDistance {
-    NSString *oldValue = _crookDistance;
-    _crookDistance = crookDistance;
-    [self updateNSObject:oldValue newValue:crookDistance propertyName:@"crookDistance"];
-}
-
--(void)setDistance:(NSNumber *)distance {
-    NSNumber *oldValue = _distance;
-    _distance = distance;
-    [self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
-}
-
--(void)setSoftConnector:(NSNumber *)softConnector {
-    NSNumber *oldValue = _softConnector;
-    _softConnector = softConnector;
-    [self updateNSObject:oldValue newValue:softConnector propertyName:@"softConnector"];
-}
-
--(void)setNodeFormat:(NSString *)nodeFormat {
-    NSString *oldValue = _nodeFormat;
-    _nodeFormat = nodeFormat;
-    [self updateNSObject:oldValue newValue:nodeFormat propertyName:@"nodeFormat"];
-}
-
--(void)setRotationMode:(NSString *)rotationMode {
-    NSString *oldValue = _rotationMode;
-    _rotationMode = rotationMode;
-    [self updateNSObject:oldValue newValue:rotationMode propertyName:@"rotationMode"];
 }
 
 @end

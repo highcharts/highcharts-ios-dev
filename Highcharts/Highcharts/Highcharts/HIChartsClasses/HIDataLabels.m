@@ -10,6 +10,8 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIDataLabels *copyDataLabels = [[HIDataLabels allocWithZone: zone] init];
+	copyDataLabels.y = [self.y copyWithZone: zone];
+	copyDataLabels.align = [self.align copyWithZone: zone];
 	copyDataLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyDataLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
 	copyDataLabels.borderColor = [self.borderColor copyWithZone: zone];
@@ -25,13 +27,20 @@
 	copyDataLabels.shadow = [self.shadow copyWithZone: zone];
 	copyDataLabels.formatter = [self.formatter copyWithZone: zone];
 	copyDataLabels.distance = [self.distance copyWithZone: zone];
-	copyDataLabels.y = [self.y copyWithZone: zone];
+	copyDataLabels.padding = [self.padding copyWithZone: zone];
+	copyDataLabels.x = [self.x copyWithZone: zone];
 	return copyDataLabels;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.y) {
+		params[@"y"] = self.y;
+	}
+	if (self.align) {
+		params[@"align"] = self.align;
+	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
 	}
@@ -77,13 +86,28 @@
 	if (self.distance) {
 		params[@"distance"] = self.distance;
 	}
-	if (self.y) {
-		params[@"y"] = self.y;
+	if (self.padding) {
+		params[@"padding"] = self.padding;
+	}
+	if (self.x) {
+		params[@"x"] = self.x;
 	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
+	_y = y;
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
+}
+
+-(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
+	_align = align;
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
+}
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {
 	NSString *oldValue = _verticalAlign;
@@ -175,10 +199,16 @@
 	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
 }
 
--(void)setY:(NSNumber *)y {
-	NSNumber *oldValue = _y;
-	_y = y;
-	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
+-(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
+	_padding = padding;
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
+}
+
+-(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
+	_x = x;
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
 @end
