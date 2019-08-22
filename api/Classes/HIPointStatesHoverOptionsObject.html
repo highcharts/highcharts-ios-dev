@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISeriesAccessibility Class Reference</title>
+	<title>HIPointStatesHoverOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,15 +58,21 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/definition">definition</option>
+		<option value="//api/name/animation">animation</option>
 		
 		<option value="//api/name/enabled">enabled</option>
 		
-		<option value="//api/name/exposeAsGroupOnly">exposeAsGroupOnly</option>
+		<option value="//api/name/fillColor">fillColor</option>
 		
-		<option value="//api/name/keyboardNavigation">keyboardNavigation</option>
+		<option value="//api/name/lineColor">lineColor</option>
 		
-		<option value="//api/name/pointDescriptionFormatter">pointDescriptionFormatter</option>
+		<option value="//api/name/lineWidth">lineWidth</option>
+		
+		<option value="//api/name/lineWidthPlus">lineWidthPlus</option>
+		
+		<option value="//api/name/radius">radius</option>
+		
+		<option value="//api/name/radiusPlus">radiusPlus</option>
 		
 	</optgroup>
 	
@@ -93,7 +99,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISeriesAccessibility Class Reference</h1>
+					<h1 class="title">HIPointStatesHoverOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -102,7 +108,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISeriesAccessibility.h</td>
+	<td>HIPointStatesHoverOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,7 +118,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Accessibility options for a series. Requires the accessibility module.</p>
+						<p>The hover state for a single point marker.</p>
 					</div>
 					
 					
@@ -128,8 +134,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/definition" title="definition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
+	<a name="//api/name/animation" title="animation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
 </h3>
 
 	<div class="method-info">
@@ -139,12 +145,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Provide a description of the series, announced to screen readers.</p>
+				<p>Animation when hovering over the point marker.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimationOptionsObject *animation</code></div>
 
 		    
 			
@@ -153,11 +159,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
 			
 
 			
@@ -167,7 +168,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesAccessibility.h</code></p>
+				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
 			</div>
 			
 			
@@ -185,7 +186,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable/disable accessibility functionality for a specific series.</p>
+				<p>Enable or disable the point marker.</p>
 			</div>
 			
 		    
@@ -200,11 +201,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
-			
 
 			
 
@@ -213,15 +209,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesAccessibility.h</code></p>
+				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/exposeAsGroupOnly" title="exposeAsGroupOnly"></a>
-	<h3 class="method-title"><code><a href="#//api/name/exposeAsGroupOnly">&nbsp;&nbsp;exposeAsGroupOnly</a></code>
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -231,12 +227,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Expose only the series element to screen readers, not its points.</p>
+				<p>The fill color of the marker in hover state. When <code>undefined</code>, the series' or point&rsquo;s fillColor for normal state is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *exposeAsGroupOnly</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
 
 		    
 			
@@ -245,11 +241,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
 			
 
 			
@@ -259,15 +250,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesAccessibility.h</code></p>
+				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/keyboardNavigation" title="keyboardNavigation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/keyboardNavigation">&nbsp;&nbsp;keyboardNavigation</a></code>
+	<a name="//api/name/lineColor" title="lineColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -277,12 +268,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Keyboard navigation for a series.</p>
+				<p>The color of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s lineColor for normal state is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIKeyboardNavigation *keyboardNavigation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
 
 		    
 			
@@ -300,15 +291,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesAccessibility.h</code></p>
+				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pointDescriptionFormatter" title="pointDescriptionFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionFormatter">&nbsp;&nbsp;pointDescriptionFormatter</a></code>
+	<a name="//api/name/lineWidth" title="lineWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -318,12 +309,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Formatter function to use instead of the default for point descriptions. Same as <code>accessibility.pointDescriptionFormatter</code>, but for a single series.</p>
+				<p>The width of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s lineWidth for normal state is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
 
 		    
 			
@@ -332,11 +323,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
 			
 
 			
@@ -346,7 +332,130 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesAccessibility.h</code></p>
+				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lineWidthPlus" title="lineWidthPlus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineWidthPlus">&nbsp;&nbsp;lineWidthPlus</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The additional line width for a hovered point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidthPlus</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/radius" title="radius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The radius of the point marker. In hover state, it defaults to the normal state&rsquo;s radius + 2 as per the radiusPlus option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/radiusPlus" title="radiusPlus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/radiusPlus">&nbsp;&nbsp;radiusPlus</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The number of pixels to increase the radius of the hovered point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radiusPlus</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
 			</div>
 			
 			

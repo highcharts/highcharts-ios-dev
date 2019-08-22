@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISeriesPackedBubbleDataLabelsTextPath Class Reference</title>
+	<title>HIPointStatesNormalOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/attributes">attributes</option>
-		
-		<option value="//api/name/enabled">enabled</option>
+		<option value="//api/name/animation">animation</option>
 		
 	</optgroup>
 	
@@ -87,7 +85,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISeriesPackedBubbleDataLabelsTextPath Class Reference</h1>
+					<h1 class="title">HIPointStatesNormalOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +94,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISeriesPackedBubbleDataLabelsTextPath.h</td>
+	<td>HIPointStatesNormalOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +104,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>*Note:** Only SVG-based renderer supports this option.</p>
+						<p>The normal state of a single point marker. Currently only used for setting animation when returning to normal state from hover.</p>
 					</div>
 					
 					
@@ -122,8 +120,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/attributes" title="attributes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
+	<a name="//api/name/animation" title="animation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +131,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Presentation attributes for the text path.</p>
+				<p>Animation when returning to normal state after hovering.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attributes</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimationOptionsObject *animation</code></div>
 
 		    
 			
@@ -156,48 +154,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsTextPath.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Enable or disable <code>textPath</code> option for link&rsquo;s or marker&rsquo;s data labels.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsTextPath.h</code></p>
+				<p><code class="declared-in-ref">HIPointStatesNormalOptionsObject.h</code></p>
 			</div>
 			
 			

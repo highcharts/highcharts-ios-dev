@@ -76,6 +76,8 @@
 		
 		<option value="//api/name/events">events</option>
 		
+		<option value="//api/name/iconsURL">iconsURL</option>
+		
 		<option value="//api/name/inactiveColor">inactiveColor</option>
 		
 		<option value="//api/name/menuItemHoverStyle">menuItemHoverStyle</option>
@@ -242,8 +244,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/annotationsOptions" title="annotationsOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/annotationsOptions">&nbsp;&nbsp;annotationsOptions</a></code>
+	<a name="//api/name/iconsURL" title="iconsURL"></a>
+	<h3 class="method-title"><code><a href="#//api/name/iconsURL">&nbsp;&nbsp;iconsURL</a></code>
 </h3>
 
 	<div class="method-info">
@@ -253,12 +255,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Additional options to be merged into all annotations.</p>
+				<p>Path where Highcharts will look for icons. Change this to use icons from a different server.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnnotationsOptions *annotationsOptions</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id iconsURL</code></div>
 
 		    
 			
@@ -267,16 +269,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/stocktools/navigation-annotation-options">Set red color of all line annotations</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -334,8 +326,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/menuItemHoverStyle" title="menuItemHoverStyle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/menuItemHoverStyle">&nbsp;&nbsp;menuItemHoverStyle</a></code>
+	<a name="//api/name/annotationsOptions" title="annotationsOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/annotationsOptions">&nbsp;&nbsp;annotationsOptions</a></code>
 </h3>
 
 	<div class="method-info">
@@ -345,12 +337,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>CSS styles for the hover state of the individual items within the popup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML.</p>
+				<p>Additional options to be merged into all annotations.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *menuItemHoverStyle</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnnotationsOptions *annotationsOptions</code></div>
 
 		    
 			
@@ -362,12 +354,10 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{"background": "#335cad", "color": "#ffffff"}</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/">Bold text on hover</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/stocktools/navigation-annotation-options">Set red color of all line annotations</a></li>
 </ul>
 
 			</div>
@@ -472,6 +462,59 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/stocktools/stocktools-thresholds">Custom bindings in Highstock</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/menuItemHoverStyle" title="menuItemHoverStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/menuItemHoverStyle">&nbsp;&nbsp;menuItemHoverStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>CSS styles for the hover state of the individual items within the popup menu appearing by default when the export icon is clicked. The menu items are rendered in HTML.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *menuItemHoverStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{"background": "#335cad", "color": "#ffffff"}</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/">Bold text on hover</a></li>
 </ul>
 
 			</div>

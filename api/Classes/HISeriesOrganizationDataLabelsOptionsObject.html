@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIDataLabelsTextPath Class Reference</title>
+	<title>HISeriesOrganizationDataLabelsOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/attributes">attributes</option>
-		
-		<option value="//api/name/enabled">enabled</option>
+		<option value="//api/name/nodeFormatter">nodeFormatter</option>
 		
 	</optgroup>
 	
@@ -87,7 +85,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIDataLabelsTextPath Class Reference</h1>
+					<h1 class="title">HISeriesOrganizationDataLabelsOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,18 +94,12 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDataLabelsTextPath.h</td>
+	<td>HISeriesOrganizationDataLabelsOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for a label text which should follow marker&rsquo;s shape. <strong>Note:</strong> Only SVG-based renderer supports this option.</p>
-					</div>
 					
 					
 
@@ -122,8 +114,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/attributes" title="attributes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
+	<a name="//api/name/nodeFormatter" title="nodeFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeFormatter">&nbsp;&nbsp;nodeFormatter</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +125,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Presentation attributes for the text path.</p>
+				<p>A callback for defining the format for <em>nodes</em> in the organization chart. The <code>nodeFormat</code> option takes precedence over <code>nodeFormatter</code>. In an organization chart, the <code>nodeFormatter</code> is a quite complex function of the available options, striving for a good default layout of cards with or without images. In organization chart, the data labels come with <code>useHTML</code> set to true, meaning they will be rendered as true HTML above the SVG.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attributes</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *nodeFormatter</code></div>
 
 		    
 			
@@ -156,48 +148,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabelsTextPath.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Enable or disable <code>textPath</code> option for link&rsquo;s or marker&rsquo;s data labels.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabelsTextPath.h</code></p>
+				<p><code class="declared-in-ref">HISeriesOrganizationDataLabelsOptionsObject.h</code></p>
 			</div>
 			
 			

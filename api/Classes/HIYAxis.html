@@ -206,6 +206,8 @@
 		
 		<option value="//api/name/visible">visible</option>
 		
+		<option value="//api/name/zoomEnabled">zoomEnabled</option>
+		
 	</optgroup>
 	
 
@@ -325,7 +327,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don&rsquo;t want the lowest data value to appear on the edge of the plot area. When the axis' <code>min</code> option is set or a max extreme is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p>
+				<p>Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don&rsquo;t want the lowest data value to appear on the edge of the plot area. When the axis' <code>min</code> option is set or a max extreme is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored. Also the <code>softThreshold</code> option takes precedence over <code>minPadding</code>, so if the data is tangent to the threshold, <code>minPadding</code> may not apply unless <code>softThreshold</code> is set to false.</p>
 			</div>
 			
 		    
@@ -1593,7 +1595,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don&rsquo;t want the highest data value to appear on the edge of the plot area. When the axis' <code>max</code> option is set or a max extreme is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored.</p>
+				<p>Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don&rsquo;t want the highest data value to appear on the edge of the plot area. When the axis' <code>max</code> option is set or a max extreme is set using <code>axis.setExtremes()</code>, the maxPadding will be ignored. Also the <code>softThreshold</code> option takes precedence over <code>maxPadding</code>, so if the data is tangent to the threshold, <code>maxPadding</code> may not apply unless <code>softThreshold</code> is set to false.</p>
 			</div>
 			
 		    
@@ -1765,6 +1767,59 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/">A 1px line on Y axis</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/">Axes in styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/zoomEnabled" title="zoomEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zoomEnabled">&nbsp;&nbsp;zoomEnabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to zoom axis. If <code>chart.zoomType</code> is set, the option allows to disable zooming on an individual axis.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zoomEnabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>enabled</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/zoomenabled/">Zoom enabled is false</a></li>
 </ul>
 
 			</div>
