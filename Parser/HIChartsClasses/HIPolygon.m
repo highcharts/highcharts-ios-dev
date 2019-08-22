@@ -53,7 +53,6 @@
 	copyPolygon.accessibility = [self.accessibility copyWithZone: zone];
 	copyPolygon.step = [self.step copyWithZone: zone];
 	copyPolygon.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyPolygon.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPolygon.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPolygon.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPolygon.zones = [self.zones copyWithZone: zone];

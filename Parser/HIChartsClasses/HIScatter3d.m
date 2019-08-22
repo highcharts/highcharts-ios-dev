@@ -65,7 +65,6 @@
 	copyScatter3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyScatter3d.step = [self.step copyWithZone: zone];
 	copyScatter3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyScatter3d.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyScatter3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyScatter3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyScatter3d.zones = [self.zones copyWithZone: zone];

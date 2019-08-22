@@ -42,7 +42,7 @@
 		params[@"value"] = self.value;
 	}
 	if (self.events) {
-		params[@"events"] = self.events;
+		params[@"events"] = [self.events getParams];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -88,10 +88,10 @@
 	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }
 
--(void)setEvents:(id)events {
-	id oldValue = _events;
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
 	_events = events;
-	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setClassName:(NSString *)className {

@@ -71,7 +71,7 @@
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.states) {
-		params[@"states"] = self.states;
+		params[@"states"] = [self.states getParams];
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
@@ -159,10 +159,10 @@
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
--(void)setStates:(id)states {
-	id oldValue = _states;
+-(void)setStates:(HIPointStatesOptionsObject *)states {
+	HIPointStatesOptionsObject *oldValue = _states;
 	_states = states;
-	[self updateNSObject:oldValue newValue:states propertyName:@"states"];
+	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
 }
 
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {

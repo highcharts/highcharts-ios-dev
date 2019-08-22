@@ -32,6 +32,7 @@
 	copyColorAxis.maxPadding = [self.maxPadding copyWithZone: zone];
 	copyColorAxis.tickLength = [self.tickLength copyWithZone: zone];
 	copyColorAxis.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyColorAxis.zoomEnabled = [self.zoomEnabled copyWithZone: zone];
 	copyColorAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyColorAxis.pane = [self.pane copyWithZone: zone];
 	copyColorAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
@@ -157,6 +158,9 @@
 	}
 	if (self.showInLegend) {
 		params[@"showInLegend"] = self.showInLegend;
+	}
+	if (self.zoomEnabled) {
+		params[@"zoomEnabled"] = self.zoomEnabled;
 	}
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
@@ -419,6 +423,12 @@
 	NSNumber *oldValue = _showInLegend;
 	_showInLegend = showInLegend;
 	[self updateNSObject:oldValue newValue:showInLegend propertyName:@"showInLegend"];
+}
+
+-(void)setZoomEnabled:(NSNumber *)zoomEnabled {
+	NSNumber *oldValue = _zoomEnabled;
+	_zoomEnabled = zoomEnabled;
+	[self updateNSObject:oldValue newValue:zoomEnabled propertyName:@"zoomEnabled"];
 }
 
 -(void)setMinorTickColor:(HIColor *)minorTickColor {

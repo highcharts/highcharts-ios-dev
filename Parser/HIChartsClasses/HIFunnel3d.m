@@ -74,7 +74,6 @@
 	copyFunnel3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyFunnel3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyFunnel3d.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyFunnel3d.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyFunnel3d.zoneAxis = [self.zoneAxis copyWithZone: zone];

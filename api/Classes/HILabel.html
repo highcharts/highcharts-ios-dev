@@ -68,6 +68,8 @@
 		
 		<option value="//api/name/enabled">enabled</option>
 		
+		<option value="//api/name/formatter">formatter</option>
+		
 		<option value="//api/name/maxFontSize">maxFontSize</option>
 		
 		<option value="//api/name/minFontSize">minFontSize</option>
@@ -348,8 +350,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/textAlign" title="textAlign"></a>
-	<h3 class="method-title"><code><a href="#//api/name/textAlign">&nbsp;&nbsp;textAlign</a></code>
+	<a name="//api/name/useHTML" title="useHTML"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
 </h3>
 
 	<div class="method-info">
@@ -359,12 +361,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The text alignment for the label. While <code>align</code> determines where the texts anchor point is placed within the plot band, <code>textAlign</code> determines how the text is aligned against its anchor point. Possible values are &ldquo;left&rdquo;, &ldquo;center&rdquo; and &ldquo;right&rdquo;. Defaults to the same as the <code>align</code> option.</p>
+				<p>Whether to <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the labels.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *textAlign</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
 
 		    
 			
@@ -376,12 +378,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-textalign/">Text label in bottom position</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
 			</div>
 			
 
@@ -552,8 +549,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/useHTML" title="useHTML"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
+	<a name="//api/name/formatter" title="formatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
 </h3>
 
 	<div class="method-info">
@@ -563,12 +560,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the labels.</p>
+				<p>Callback JavaScript function to format the label. Useful properties like the value of plot line or the range of plot band (<code>from</code> &amp; <code>to</code> properties) can be found in <code>this.options</code> object.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
 
 		    
 			
@@ -580,7 +577,63 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-plotbands-label-formatter">Label formatters for plot line and plot band.</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILabel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/textAlign" title="textAlign"></a>
+	<h3 class="method-title"><code><a href="#//api/name/textAlign">&nbsp;&nbsp;textAlign</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The text alignment for the label. While <code>align</code> determines where the texts anchor point is placed within the plot band, <code>textAlign</code> determines how the text is aligned against its anchor point. Possible values are &ldquo;left&rdquo;, &ldquo;center&rdquo; and &ldquo;right&rdquo;. Defaults to the same as the <code>align</code> option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *textAlign</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotlines-label-textalign/">Text label in bottom position</a></li>
+</ul>
+
 			</div>
 			
 

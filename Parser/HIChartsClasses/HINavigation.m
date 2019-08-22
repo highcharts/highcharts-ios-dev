@@ -12,11 +12,12 @@
 	HINavigation *copyNavigation = [[HINavigation allocWithZone: zone] init];
 	copyNavigation.menuStyle = [self.menuStyle copyWithZone: zone];
 	copyNavigation.buttonOptions = [self.buttonOptions copyWithZone: zone];
-	copyNavigation.annotationsOptions = [self.annotationsOptions copyWithZone: zone];
+	copyNavigation.iconsURL = [self.iconsURL copyWithZone: zone];
 	copyNavigation.bindingsClassName = [self.bindingsClassName copyWithZone: zone];
-	copyNavigation.menuItemHoverStyle = [self.menuItemHoverStyle copyWithZone: zone];
+	copyNavigation.annotationsOptions = [self.annotationsOptions copyWithZone: zone];
 	copyNavigation.menuItemStyle = [self.menuItemStyle copyWithZone: zone];
 	copyNavigation.bindings = [self.bindings copyWithZone: zone];
+	copyNavigation.menuItemHoverStyle = [self.menuItemHoverStyle copyWithZone: zone];
 	copyNavigation.events = [self.events copyWithZone: zone];
 	copyNavigation.style = [self.style copyWithZone: zone];
 	copyNavigation.inactiveColor = [self.inactiveColor copyWithZone: zone];
@@ -37,20 +38,22 @@
 	if (self.buttonOptions) {
 		params[@"buttonOptions"] = [self.buttonOptions getParams];
 	}
-	if (self.annotationsOptions) {
-		params[@"annotationsOptions"] = [self.annotationsOptions getParams];
+	if (self.iconsURL) {
 	}
 	if (self.bindingsClassName) {
 		params[@"bindingsClassName"] = self.bindingsClassName;
 	}
-	if (self.menuItemHoverStyle) {
-		params[@"menuItemHoverStyle"] = [self.menuItemHoverStyle getParams];
+	if (self.annotationsOptions) {
+		params[@"annotationsOptions"] = [self.annotationsOptions getParams];
 	}
 	if (self.menuItemStyle) {
 		params[@"menuItemStyle"] = [self.menuItemStyle getParams];
 	}
 	if (self.bindings) {
 		params[@"bindings"] = [self.bindings getParams];
+	}
+	if (self.menuItemHoverStyle) {
+		params[@"menuItemHoverStyle"] = [self.menuItemHoverStyle getParams];
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -93,10 +96,10 @@
 	[self updateHIObject:oldValue newValue:buttonOptions propertyName:@"buttonOptions"];
 }
 
--(void)setAnnotationsOptions:(HIAnnotationsOptions *)annotationsOptions {
-	HIAnnotationsOptions *oldValue = _annotationsOptions;
-	_annotationsOptions = annotationsOptions;
-	[self updateHIObject:oldValue newValue:annotationsOptions propertyName:@"annotationsOptions"];
+-(void)setIconsURL:(id)iconsURL {
+	id oldValue = _iconsURL;
+	_iconsURL = iconsURL;
+	[self updateNSObject:oldValue newValue:iconsURL propertyName:@"iconsURL"];
 }
 
 -(void)setBindingsClassName:(NSString *)bindingsClassName {
@@ -105,10 +108,10 @@
 	[self updateNSObject:oldValue newValue:bindingsClassName propertyName:@"bindingsClassName"];
 }
 
--(void)setMenuItemHoverStyle:(HICSSObject *)menuItemHoverStyle {
-	HICSSObject *oldValue = _menuItemHoverStyle;
-	_menuItemHoverStyle = menuItemHoverStyle;
-	[self updateHIObject:oldValue newValue:menuItemHoverStyle propertyName:@"menuItemHoverStyle"];
+-(void)setAnnotationsOptions:(HIAnnotationsOptions *)annotationsOptions {
+	HIAnnotationsOptions *oldValue = _annotationsOptions;
+	_annotationsOptions = annotationsOptions;
+	[self updateHIObject:oldValue newValue:annotationsOptions propertyName:@"annotationsOptions"];
 }
 
 -(void)setMenuItemStyle:(HICSSObject *)menuItemStyle {
@@ -121,6 +124,12 @@
 	HIBindings *oldValue = _bindings;
 	_bindings = bindings;
 	[self updateHIObject:oldValue newValue:bindings propertyName:@"bindings"];
+}
+
+-(void)setMenuItemHoverStyle:(HICSSObject *)menuItemHoverStyle {
+	HICSSObject *oldValue = _menuItemHoverStyle;
+	_menuItemHoverStyle = menuItemHoverStyle;
+	[self updateHIObject:oldValue newValue:menuItemHoverStyle propertyName:@"menuItemHoverStyle"];
 }
 
 -(void)setEvents:(HIEvents *)events {

@@ -84,6 +84,8 @@
 		
 		<option value="//api/name/csvURL">csvURL</option>
 		
+		<option value="//api/name/dashStyle">dashStyle</option>
+		
 		<option value="//api/name/dataLabels">dataLabels</option>
 		
 		<option value="//api/name/dataRefreshRate">dataRefreshRate</option>
@@ -2774,6 +2776,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/dashStyle" title="dashStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dashStyle">&nbsp;&nbsp;dashStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A name for the dash style to use for the column or bar. Overrides dashStyle on the series. In styled mode, the stroke dash-array can be set with the same classes as listed under <code>data.color</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dashStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/pointWidth" title="pointWidth"></a>
 	<h3 class="method-title"><code><a href="#//api/name/pointWidth">&nbsp;&nbsp;pointWidth</a></code>
 </h3>
@@ -3202,8 +3245,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/weight" title="weight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
+	<a name="//api/name/gradientForSides" title="gradientForSides"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gradientForSides">&nbsp;&nbsp;gradientForSides</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3213,12 +3256,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The weight of the link.</p>
+				<p>By deafult sides fill is set to a gradient through this option being set to <code>true</code>. Set to <code>false</code> to get solid color for the sides.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *weight</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *gradientForSides</code></div>
 
 		    
 			
@@ -3243,8 +3286,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/gradientForSides" title="gradientForSides"></a>
-	<h3 class="method-title"><code><a href="#//api/name/gradientForSides">&nbsp;&nbsp;gradientForSides</a></code>
+	<a name="//api/name/weight" title="weight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3254,12 +3297,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>By deafult sides fill is set to a gradient through this option being set to <code>true</code>. Set to <code>false</code> to get solid color for the sides.</p>
+				<p>The weight of the link.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *gradientForSides</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *weight</code></div>
 
 		    
 			

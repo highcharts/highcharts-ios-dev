@@ -16,6 +16,10 @@
 	copyEvents.pointBreak = [self.pointBreak copyWithZone: zone];
 	copyEvents.setExtremes = [self.setExtremes copyWithZone: zone];
 	copyEvents.afterSetExtremes = [self.afterSetExtremes copyWithZone: zone];
+	copyEvents.mouseover = [self.mouseover copyWithZone: zone];
+	copyEvents.mouseout = [self.mouseout copyWithZone: zone];
+	copyEvents.click = [self.click copyWithZone: zone];
+	copyEvents.mousemove = [self.mousemove copyWithZone: zone];
 	copyEvents.load = [self.load copyWithZone: zone];
 	copyEvents.selection = [self.selection copyWithZone: zone];
 	copyEvents.render = [self.render copyWithZone: zone];
@@ -25,7 +29,6 @@
 	copyEvents.drillupall = [self.drillupall copyWithZone: zone];
 	copyEvents.drilldown = [self.drilldown copyWithZone: zone];
 	copyEvents.redraw = [self.redraw copyWithZone: zone];
-	copyEvents.click = [self.click copyWithZone: zone];
 	copyEvents.afterPrint = [self.afterPrint copyWithZone: zone];
 	copyEvents.unselect = [self.unselect copyWithZone: zone];
 	copyEvents.drop = [self.drop copyWithZone: zone];
@@ -71,6 +74,18 @@
 	if (self.afterSetExtremes) {
 		params[@"afterSetExtremes"] = [self.afterSetExtremes getFunction];
 	}
+	if (self.mouseover) {
+		params[@"mouseover"] = [self.mouseover getFunction];
+	}
+	if (self.mouseout) {
+		params[@"mouseout"] = [self.mouseout getFunction];
+	}
+	if (self.click) {
+		params[@"click"] = [self.click getFunction];
+	}
+	if (self.mousemove) {
+		params[@"mousemove"] = [self.mousemove getFunction];
+	}
 	if (self.load) {
 		params[@"load"] = [self.load getFunction];
 	}
@@ -97,9 +112,6 @@
 	}
 	if (self.redraw) {
 		params[@"redraw"] = [self.redraw getFunction];
-	}
-	if (self.click) {
-		params[@"click"] = [self.click getFunction];
 	}
 	if (self.afterPrint) {
 		params[@"afterPrint"] = [self.afterPrint getFunction];
@@ -205,6 +217,30 @@
 	[self updateHIObject:oldValue newValue:afterSetExtremes propertyName:@"afterSetExtremes"];
 }
 
+-(void)setMouseover:(HIFunction *)mouseover {
+	HIFunction *oldValue = _mouseover;
+	_mouseover = mouseover;
+	[self updateHIObject:oldValue newValue:mouseover propertyName:@"mouseover"];
+}
+
+-(void)setMouseout:(HIFunction *)mouseout {
+	HIFunction *oldValue = _mouseout;
+	_mouseout = mouseout;
+	[self updateHIObject:oldValue newValue:mouseout propertyName:@"mouseout"];
+}
+
+-(void)setClick:(HIFunction *)click {
+	HIFunction *oldValue = _click;
+	_click = click;
+	[self updateHIObject:oldValue newValue:click propertyName:@"click"];
+}
+
+-(void)setMousemove:(HIFunction *)mousemove {
+	HIFunction *oldValue = _mousemove;
+	_mousemove = mousemove;
+	[self updateHIObject:oldValue newValue:mousemove propertyName:@"mousemove"];
+}
+
 -(void)setLoad:(HIFunction *)load {
 	HIFunction *oldValue = _load;
 	_load = load;
@@ -257,12 +293,6 @@
 	HIFunction *oldValue = _redraw;
 	_redraw = redraw;
 	[self updateHIObject:oldValue newValue:redraw propertyName:@"redraw"];
-}
-
--(void)setClick:(HIFunction *)click {
-	HIFunction *oldValue = _click;
-	_click = click;
-	[self updateHIObject:oldValue newValue:click propertyName:@"click"];
 }
 
 -(void)setAfterPrint:(HIFunction *)afterPrint {

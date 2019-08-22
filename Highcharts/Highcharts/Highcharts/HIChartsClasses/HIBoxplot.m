@@ -49,6 +49,7 @@
 	copyBoxplot.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBoxplot.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyBoxplot.crisp = [self.crisp copyWithZone: zone];
+	copyBoxplot.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBoxplot.depth = [self.depth copyWithZone: zone];
 	copyBoxplot.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBoxplot.grouping = [self.grouping copyWithZone: zone];
@@ -78,7 +79,6 @@
 	copyBoxplot.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBoxplot.accessibility = [self.accessibility copyWithZone: zone];
 	copyBoxplot.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyBoxplot.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBoxplot.shadow = [self.shadow copyWithZone: zone];
 	copyBoxplot.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBoxplot.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -86,7 +86,6 @@
 	copyBoxplot.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBoxplot.visible = [self.visible copyWithZone: zone];
 	copyBoxplot.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBoxplot.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBoxplot.cursor = [self.cursor copyWithZone: zone];
 	copyBoxplot.pointStart = [self.pointStart copyWithZone: zone];
 	copyBoxplot.boostThreshold = [self.boostThreshold copyWithZone: zone];

@@ -60,7 +60,6 @@
 	copyArearange.accessibility = [self.accessibility copyWithZone: zone];
 	copyArearange.step = [self.step copyWithZone: zone];
 	copyArearange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyArearange.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyArearange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArearange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyArearange.zones = [self.zones copyWithZone: zone];

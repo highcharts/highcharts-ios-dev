@@ -13,6 +13,8 @@
 	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
 	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
+	copyStyle.color = [self.color copyWithZone: zone];
+	copyStyle.cursor = [self.cursor copyWithZone: zone];
 	copyStyle.stroke = [self.stroke copyWithZone: zone];
 	copyStyle.stroke-width = [self.stroke-width copyWithZone: zone];
 	copyStyle.fill = [self.fill copyWithZone: zone];
@@ -30,6 +32,12 @@
 	}
 	if (self.fontSize) {
 		params[@"fontSize"] = self.fontSize;
+	}
+	if (self.color) {
+		params[@"color"] = self.color;
+	}
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
 	}
 	if (self.stroke) {
 		params[@"stroke"] = self.stroke;
@@ -61,6 +69,18 @@
 	NSString *oldValue = _fontSize;
 	_fontSize = fontSize;
 	[self updateNSObject:oldValue newValue:fontSize propertyName:@"fontSize"];
+}
+
+-(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
+	_color = color;
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setCursor:(NSString *)cursor {
+	NSString *oldValue = _cursor;
+	_cursor = cursor;
+	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
 }
 
 -(void)setStroke:(NSString *)stroke {

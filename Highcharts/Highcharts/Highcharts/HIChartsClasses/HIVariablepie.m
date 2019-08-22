@@ -64,7 +64,6 @@
 	copyVariablepie.keys = [self.keys copyWithZone: zone];
 	copyVariablepie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVariablepie.accessibility = [self.accessibility copyWithZone: zone];
-	copyVariablepie.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyVariablepie.shadow = [self.shadow copyWithZone: zone];
 	copyVariablepie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVariablepie.visible = [self.visible copyWithZone: zone];
@@ -181,8 +180,8 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setMinSize:(NSNumber *)minSize {
-	NSNumber *oldValue = _minSize;
+-(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
 	_minSize = minSize;
 	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }

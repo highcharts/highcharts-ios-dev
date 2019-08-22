@@ -44,6 +44,7 @@
 	copyBar.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBar.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyBar.crisp = [self.crisp copyWithZone: zone];
+	copyBar.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBar.depth = [self.depth copyWithZone: zone];
 	copyBar.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBar.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -76,7 +77,6 @@
 	copyBar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBar.accessibility = [self.accessibility copyWithZone: zone];
 	copyBar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyBar.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBar.shadow = [self.shadow copyWithZone: zone];
 	copyBar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBar.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -84,7 +84,6 @@
 	copyBar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBar.visible = [self.visible copyWithZone: zone];
 	copyBar.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBar.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBar.cursor = [self.cursor copyWithZone: zone];
 	copyBar.pointStart = [self.pointStart copyWithZone: zone];
 	copyBar.boostThreshold = [self.boostThreshold copyWithZone: zone];

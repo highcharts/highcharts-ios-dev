@@ -122,8 +122,8 @@
 	[self updateHIObject:oldValue newValue:labelOptions propertyName:@"labelOptions"];
 }
 
--(void)setId:(NSString *)id {
-	NSString *oldValue = _id;
+-(void)setId:(id)id {
+	id oldValue = _id;
 	_id = id;
 	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }

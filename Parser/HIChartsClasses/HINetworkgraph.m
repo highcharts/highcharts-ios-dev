@@ -53,7 +53,6 @@
 	copyNetworkgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyNetworkgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyNetworkgraph.accessibility = [self.accessibility copyWithZone: zone];
-	copyNetworkgraph.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyNetworkgraph.shadow = [self.shadow copyWithZone: zone];
 	copyNetworkgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyNetworkgraph.zones = [self.zones copyWithZone: zone];

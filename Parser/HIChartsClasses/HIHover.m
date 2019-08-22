@@ -13,7 +13,6 @@
 	copyHover.radiusPlus = [self.radiusPlus copyWithZone: zone];
 	copyHover.borderColor = [self.borderColor copyWithZone: zone];
 	copyHover.opacity = [self.opacity copyWithZone: zone];
-	copyHover.halo = [self.halo copyWithZone: zone];
 	copyHover.enabled = [self.enabled copyWithZone: zone];
 	copyHover.lineWidthPlus = [self.lineWidthPlus copyWithZone: zone];
 	copyHover.radius = [self.radius copyWithZone: zone];
@@ -21,6 +20,7 @@
 	copyHover.lineColor = [self.lineColor copyWithZone: zone];
 	copyHover.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyHover.animation = [self.animation copyWithZone: zone];
+	copyHover.halo = [self.halo copyWithZone: zone];
 	copyHover.brightness = [self.brightness copyWithZone: zone];
 	copyHover.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyHover.shadow = [self.shadow copyWithZone: zone];
@@ -39,9 +39,6 @@
 	}
 	if (self.opacity) {
 		params[@"opacity"] = self.opacity;
-	}
-	if (self.halo) {
-		params[@"halo"] = [self.halo getParams];
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
@@ -63,6 +60,9 @@
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.halo) {
+		params[@"halo"] = [self.halo getParams];
 	}
 	if (self.brightness) {
 		params[@"brightness"] = self.brightness;
@@ -97,12 +97,6 @@
 	NSNumber *oldValue = _opacity;
 	_opacity = opacity;
 	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
-}
-
--(void)setHalo:(HIHalo *)halo {
-	HIHalo *oldValue = _halo;
-	_halo = halo;
-	[self updateHIObject:oldValue newValue:halo propertyName:@"halo"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
@@ -145,6 +139,12 @@
 	HIAnimationOptionsObject *oldValue = _animation;
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
+-(void)setHalo:(HIHalo *)halo {
+	HIHalo *oldValue = _halo;
+	_halo = halo;
+	[self updateHIObject:oldValue newValue:halo propertyName:@"halo"];
 }
 
 -(void)setBrightness:(NSNumber *)brightness {

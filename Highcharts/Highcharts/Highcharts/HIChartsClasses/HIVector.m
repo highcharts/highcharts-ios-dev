@@ -49,7 +49,6 @@
 	copyVector.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVector.accessibility = [self.accessibility copyWithZone: zone];
 	copyVector.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyVector.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyVector.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVector.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVector.zones = [self.zones copyWithZone: zone];

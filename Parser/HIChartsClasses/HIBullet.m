@@ -46,6 +46,7 @@
 	copyBullet.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBullet.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyBullet.crisp = [self.crisp copyWithZone: zone];
+	copyBullet.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBullet.depth = [self.depth copyWithZone: zone];
 	copyBullet.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBullet.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -77,7 +78,6 @@
 	copyBullet.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBullet.accessibility = [self.accessibility copyWithZone: zone];
 	copyBullet.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyBullet.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBullet.shadow = [self.shadow copyWithZone: zone];
 	copyBullet.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBullet.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -85,7 +85,6 @@
 	copyBullet.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBullet.visible = [self.visible copyWithZone: zone];
 	copyBullet.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBullet.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBullet.cursor = [self.cursor copyWithZone: zone];
 	copyBullet.pointStart = [self.pointStart copyWithZone: zone];
 	copyBullet.showInLegend = [self.showInLegend copyWithZone: zone];

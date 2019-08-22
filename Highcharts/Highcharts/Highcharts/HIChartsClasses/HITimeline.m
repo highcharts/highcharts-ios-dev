@@ -54,7 +54,6 @@
 	copyTimeline.keys = [self.keys copyWithZone: zone];
 	copyTimeline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTimeline.accessibility = [self.accessibility copyWithZone: zone];
-	copyTimeline.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyTimeline.shadow = [self.shadow copyWithZone: zone];
 	copyTimeline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTimeline.visible = [self.visible copyWithZone: zone];

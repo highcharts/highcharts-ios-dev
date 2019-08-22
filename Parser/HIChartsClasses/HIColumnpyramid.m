@@ -37,6 +37,7 @@
 	copyColumnpyramid.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyColumnpyramid.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyColumnpyramid.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyColumnpyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumnpyramid.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyColumnpyramid.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyColumnpyramid.grouping = [self.grouping copyWithZone: zone];
@@ -67,13 +68,11 @@
 	copyColumnpyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumnpyramid.accessibility = [self.accessibility copyWithZone: zone];
 	copyColumnpyramid.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyColumnpyramid.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyColumnpyramid.shadow = [self.shadow copyWithZone: zone];
 	copyColumnpyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumnpyramid.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyColumnpyramid.visible = [self.visible copyWithZone: zone];
 	copyColumnpyramid.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyColumnpyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumnpyramid.cursor = [self.cursor copyWithZone: zone];
 	copyColumnpyramid.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumnpyramid.showInLegend = [self.showInLegend copyWithZone: zone];

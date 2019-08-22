@@ -52,7 +52,6 @@
 	copySunburst.keys = [self.keys copyWithZone: zone];
 	copySunburst.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySunburst.accessibility = [self.accessibility copyWithZone: zone];
-	copySunburst.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySunburst.shadow = [self.shadow copyWithZone: zone];
 	copySunburst.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySunburst.visible = [self.visible copyWithZone: zone];

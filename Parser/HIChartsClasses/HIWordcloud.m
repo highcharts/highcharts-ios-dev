@@ -53,7 +53,6 @@
 	copyWordcloud.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyWordcloud.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWordcloud.accessibility = [self.accessibility copyWithZone: zone];
-	copyWordcloud.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyWordcloud.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWordcloud.visible = [self.visible copyWithZone: zone];
 	copyWordcloud.linkedTo = [self.linkedTo copyWithZone: zone];

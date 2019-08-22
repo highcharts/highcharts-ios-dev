@@ -15,6 +15,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIVenn *copyVenn = [[HIVenn allocWithZone: zone] init];
+	copyVenn.states = [self.states copyWithZone: zone];
 	copyVenn.data = [self.data copyWithZone: zone];
 	copyVenn.id = [self.id copyWithZone: zone];
 	copyVenn.index = [self.index copyWithZone: zone];
@@ -28,7 +29,6 @@
 	copyVenn.clip = [self.clip copyWithZone: zone];
 	copyVenn.brighten = [self.brighten copyWithZone: zone];
 	copyVenn.tooltip = [self.tooltip copyWithZone: zone];
-	copyVenn.states = [self.states copyWithZone: zone];
 	copyVenn.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVenn.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVenn.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -52,7 +52,6 @@
 	copyVenn.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVenn.accessibility = [self.accessibility copyWithZone: zone];
 	copyVenn.step = [self.step copyWithZone: zone];
-	copyVenn.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyVenn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVenn.visible = [self.visible copyWithZone: zone];
 	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];

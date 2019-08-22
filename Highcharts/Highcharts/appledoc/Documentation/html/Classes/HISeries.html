@@ -100,8 +100,6 @@
 		
 		<option value="//api/name/events">events</option>
 		
-		<option value="//api/name/exposeElementToA11y">exposeElementToA11y</option>
-		
 		<option value="//api/name/findNearestPointBy">findNearestPointBy</option>
 		
 		<option value="//api/name/getExtremesFromAll">getExtremesFromAll</option>
@@ -2012,7 +2010,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["normal", "percent"]</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["normal", "overlap", "percent", "stream"]</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -2697,57 +2695,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/exposeElementToA11y" title="exposeElementToA11y"></a>
-	<h3 class="method-title"><code><a href="#//api/name/exposeElementToA11y">&nbsp;&nbsp;exposeElementToA11y</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>By default, series are exposed to screen readers as regions. By enabling this option, the series element itself will be exposed in the same way as the data points. This is useful if the series is not used as a grouping entity in the chart, but you still want to attach a description to the series. Requires the Accessibility module.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *exposeElementToA11y</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/art-grants/">Accessible data visualization</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeries.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/shadow" title="shadow"></a>
 	<h3 class="method-title"><code><a href="#//api/name/shadow">&nbsp;&nbsp;shadow</a></code>
 </h3>
@@ -3250,9 +3197,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{"align": "center", "formatter": function () { return H.numberFormat(this.y, -1); }, "padding": 5, "style": {"fontSize": "11px", "fontWeight": "bold", "color": "contrast", "textOutline": "1px contrast"}, "verticalAlign": "bottom", "x":0, "y": 0}</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-enabled">Data labels enabled</a></li>

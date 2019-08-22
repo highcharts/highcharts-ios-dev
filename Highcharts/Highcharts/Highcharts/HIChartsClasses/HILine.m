@@ -53,7 +53,6 @@
 	copyLine.accessibility = [self.accessibility copyWithZone: zone];
 	copyLine.step = [self.step copyWithZone: zone];
 	copyLine.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyLine.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyLine.shadow = [self.shadow copyWithZone: zone];
 	copyLine.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyLine.zoneAxis = [self.zoneAxis copyWithZone: zone];

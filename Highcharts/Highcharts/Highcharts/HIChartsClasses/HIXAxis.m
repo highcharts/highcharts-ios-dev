@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIXAxis *copyXAxis = [[HIXAxis allocWithZone: zone] init];
+	copyXAxis.zoomEnabled = [self.zoomEnabled copyWithZone: zone];
 	copyXAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyXAxis.pane = [self.pane copyWithZone: zone];
 	copyXAxis.minPadding = [self.minPadding copyWithZone: zone];
@@ -84,6 +85,9 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	params[@"_wrapperID"] = self.uuid;
+	if (self.zoomEnabled) {
+		params[@"zoomEnabled"] = self.zoomEnabled;
+	}
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
 	}
@@ -343,6 +347,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setZoomEnabled:(NSNumber *)zoomEnabled {
+	NSNumber *oldValue = _zoomEnabled;
+	_zoomEnabled = zoomEnabled;
+	[self updateNSObject:oldValue newValue:zoomEnabled propertyName:@"zoomEnabled"];
+}
 
 -(void)setMinorTickColor:(HIColor *)minorTickColor {
 	HIColor *oldValue = _minorTickColor;

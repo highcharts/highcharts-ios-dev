@@ -34,6 +34,7 @@
 	copyCylinder.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyCylinder.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyCylinder.crisp = [self.crisp copyWithZone: zone];
+	copyCylinder.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyCylinder.depth = [self.depth copyWithZone: zone];
 	copyCylinder.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyCylinder.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -66,7 +67,6 @@
 	copyCylinder.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyCylinder.accessibility = [self.accessibility copyWithZone: zone];
 	copyCylinder.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyCylinder.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyCylinder.shadow = [self.shadow copyWithZone: zone];
 	copyCylinder.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyCylinder.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -74,7 +74,6 @@
 	copyCylinder.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyCylinder.visible = [self.visible copyWithZone: zone];
 	copyCylinder.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyCylinder.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyCylinder.cursor = [self.cursor copyWithZone: zone];
 	copyCylinder.pointStart = [self.pointStart copyWithZone: zone];
 	copyCylinder.showInLegend = [self.showInLegend copyWithZone: zone];

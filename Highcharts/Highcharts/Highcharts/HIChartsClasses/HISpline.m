@@ -61,7 +61,6 @@
 	copySpline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySpline.accessibility = [self.accessibility copyWithZone: zone];
 	copySpline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copySpline.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySpline.shadow = [self.shadow copyWithZone: zone];
 	copySpline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySpline.zoneAxis = [self.zoneAxis copyWithZone: zone];

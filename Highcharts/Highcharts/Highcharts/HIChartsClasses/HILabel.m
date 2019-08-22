@@ -14,11 +14,12 @@
 	copyLabel.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyLabel.text = [self.text copyWithZone: zone];
 	copyLabel.align = [self.align copyWithZone: zone];
-	copyLabel.textAlign = [self.textAlign copyWithZone: zone];
+	copyLabel.useHTML = [self.useHTML copyWithZone: zone];
 	copyLabel.y = [self.y copyWithZone: zone];
 	copyLabel.x = [self.x copyWithZone: zone];
 	copyLabel.rotation = [self.rotation copyWithZone: zone];
-	copyLabel.useHTML = [self.useHTML copyWithZone: zone];
+	copyLabel.formatter = [self.formatter copyWithZone: zone];
+	copyLabel.textAlign = [self.textAlign copyWithZone: zone];
 	copyLabel.minFontSize = [self.minFontSize copyWithZone: zone];
 	copyLabel.maxFontSize = [self.maxFontSize copyWithZone: zone];
 	copyLabel.enabled = [self.enabled copyWithZone: zone];
@@ -44,8 +45,8 @@
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
-	if (self.textAlign) {
-		params[@"textAlign"] = self.textAlign;
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
@@ -56,8 +57,11 @@
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
 	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
+	if (self.formatter) {
+		params[@"formatter"] = [self.formatter getFunction];
+	}
+	if (self.textAlign) {
+		params[@"textAlign"] = self.textAlign;
 	}
 	if (self.minFontSize) {
 		params[@"minFontSize"] = self.minFontSize;
@@ -118,10 +122,10 @@
 	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
--(void)setTextAlign:(NSString *)textAlign {
-	NSString *oldValue = _textAlign;
-	_textAlign = textAlign;
-	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
+-(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
+	_useHTML = useHTML;
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setY:(NSNumber *)y {
@@ -142,10 +146,16 @@
 	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
--(void)setUseHTML:(NSNumber *)useHTML {
-	NSNumber *oldValue = _useHTML;
-	_useHTML = useHTML;
-	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
+-(void)setFormatter:(HIFunction *)formatter {
+	HIFunction *oldValue = _formatter;
+	_formatter = formatter;
+	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
+}
+
+-(void)setTextAlign:(NSString *)textAlign {
+	NSString *oldValue = _textAlign;
+	_textAlign = textAlign;
+	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
 }
 
 -(void)setMinFontSize:(NSNumber *)minFontSize {

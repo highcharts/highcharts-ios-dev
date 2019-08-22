@@ -32,7 +32,6 @@
 	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
 	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
 	copyFunnel.minSize = [self.minSize copyWithZone: zone];
-	copyFunnel.innerSize = [self.innerSize copyWithZone: zone];
 	copyFunnel.clip = [self.clip copyWithZone: zone];
 	copyFunnel.point = [self.point copyWithZone: zone];
 	copyFunnel.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -63,7 +62,6 @@
 	copyFunnel.keys = [self.keys copyWithZone: zone];
 	copyFunnel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel.accessibility = [self.accessibility copyWithZone: zone];
-	copyFunnel.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyFunnel.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyFunnel.visible = [self.visible copyWithZone: zone];
@@ -107,9 +105,6 @@
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
-	}
-	if (self.innerSize) {
-		params[@"innerSize"] = self.innerSize;
 	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
@@ -183,16 +178,10 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setMinSize:(NSNumber *)minSize {
-	NSNumber *oldValue = _minSize;
+-(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
 	_minSize = minSize;
 	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
-}
-
--(void)setInnerSize:(id)innerSize {
-	id oldValue = _innerSize;
-	_innerSize = innerSize;
-	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
 }
 
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {

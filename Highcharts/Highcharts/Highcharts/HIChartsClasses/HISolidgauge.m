@@ -19,11 +19,11 @@
 	copySolidgauge.rounded = [self.rounded copyWithZone: zone];
 	copySolidgauge.innerRadius = [self.innerRadius copyWithZone: zone];
 	copySolidgauge.overshoot = [self.overshoot copyWithZone: zone];
-	copySolidgauge.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySolidgauge.radius = [self.radius copyWithZone: zone];
 	copySolidgauge.linecap = [self.linecap copyWithZone: zone];
 	copySolidgauge.threshold = [self.threshold copyWithZone: zone];
 	copySolidgauge.tooltip = [self.tooltip copyWithZone: zone];
+	copySolidgauge.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySolidgauge.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySolidgauge.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySolidgauge.selected = [self.selected copyWithZone: zone];
@@ -46,7 +46,6 @@
 	copySolidgauge.keys = [self.keys copyWithZone: zone];
 	copySolidgauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySolidgauge.accessibility = [self.accessibility copyWithZone: zone];
-	copySolidgauge.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySolidgauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySolidgauge.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copySolidgauge.lineWidth = [self.lineWidth copyWithZone: zone];

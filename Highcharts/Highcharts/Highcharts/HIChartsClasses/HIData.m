@@ -64,6 +64,7 @@
 	copyData.target = [self.target copyWithZone: zone];
 	copyData.targetOptions = [self.targetOptions copyWithZone: zone];
 	copyData.borderColor = [self.borderColor copyWithZone: zone];
+	copyData.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyData.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyData.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyData.sliced = [self.sliced copyWithZone: zone];
@@ -73,8 +74,8 @@
 	copyData.isSum = [self.isSum copyWithZone: zone];
 	copyData.to = [self.to copyWithZone: zone];
 	copyData.from = [self.from copyWithZone: zone];
-	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.gradientForSides = [self.gradientForSides copyWithZone: zone];
+	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyData.radius = [self.radius copyWithZone: zone];
 	copyData.outgoing = [self.outgoing copyWithZone: zone];
@@ -288,6 +289,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.dashStyle) {
+		params[@"dashStyle"] = self.dashStyle;
+	}
 	if (self.pointWidth) {
 		params[@"pointWidth"] = self.pointWidth;
 	}
@@ -315,11 +319,11 @@
 	if (self.from) {
 		params[@"from"] = self.from;
 	}
-	if (self.weight) {
-		params[@"weight"] = self.weight;
-	}
 	if (self.gradientForSides) {
 		params[@"gradientForSides"] = self.gradientForSides;
+	}
+	if (self.weight) {
+		params[@"weight"] = self.weight;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -686,6 +690,12 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
+-(void)setDashStyle:(NSString *)dashStyle {
+	NSString *oldValue = _dashStyle;
+	_dashStyle = dashStyle;
+	[self updateNSObject:oldValue newValue:dashStyle propertyName:@"dashStyle"];
+}
+
 -(void)setPointWidth:(NSNumber *)pointWidth {
 	NSNumber *oldValue = _pointWidth;
 	_pointWidth = pointWidth;
@@ -740,16 +750,16 @@
 	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
 }
 
--(void)setWeight:(NSNumber *)weight {
-	NSNumber *oldValue = _weight;
-	_weight = weight;
-	[self updateNSObject:oldValue newValue:weight propertyName:@"weight"];
-}
-
 -(void)setGradientForSides:(NSNumber *)gradientForSides {
 	NSNumber *oldValue = _gradientForSides;
 	_gradientForSides = gradientForSides;
 	[self updateNSObject:oldValue newValue:gradientForSides propertyName:@"gradientForSides"];
+}
+
+-(void)setWeight:(NSNumber *)weight {
+	NSNumber *oldValue = _weight;
+	_weight = weight;
+	[self updateNSObject:oldValue newValue:weight propertyName:@"weight"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {

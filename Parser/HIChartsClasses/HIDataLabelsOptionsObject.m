@@ -55,7 +55,7 @@
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.borderColor) {
-		params[@"borderColor"] = self.borderColor;
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -67,7 +67,7 @@
 		params[@"className"] = self.className;
 	}
 	if (self.color) {
-		params[@"color"] = self.color;
+		params[@"color"] = [self.color getData];
 	}
 	if (self.crop) {
 		params[@"crop"] = self.crop;
@@ -155,10 +155,10 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
--(void)setBorderColor:(NSString *)borderColor {
-	NSString *oldValue = _borderColor;
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
-	[self updateNSObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
@@ -179,10 +179,10 @@
 	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
--(void)setColor:(NSString *)color {
-	NSString *oldValue = _color;
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
 	_color = color;
-	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setCrop:(NSNumber *)crop {
@@ -275,8 +275,8 @@
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
--(void)setTextPath:(HIDataLabelsTextPath *)textPath {
-	HIDataLabelsTextPath *oldValue = _textPath;
+-(void)setTextPath:(HIDataLabelsTextPathOptionsObject *)textPath {
+	HIDataLabelsTextPathOptionsObject *oldValue = _textPath;
 	_textPath = textPath;
 	[self updateHIObject:oldValue newValue:textPath propertyName:@"textPath"];
 }

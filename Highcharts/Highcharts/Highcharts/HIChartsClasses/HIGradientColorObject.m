@@ -54,8 +54,8 @@
 	[self updateHIObject:oldValue newValue:radialGradient propertyName:@"radialGradient"];
 }
 
--(void)setStops:(NSArray<NSArray *> *)stops {
-	NSArray<NSArray *> *oldValue = _stops;
+-(void)setStops:(NSArray *)stops {
+	NSArray *oldValue = _stops;
 	_stops = stops;
 	[self updateArrayObject:oldValue newValue:stops propertyName:@"stops"];
 }

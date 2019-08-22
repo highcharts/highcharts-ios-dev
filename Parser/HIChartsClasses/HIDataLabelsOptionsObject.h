@@ -7,10 +7,10 @@
 */
 
 #import "HIColor.h"
-#import "HIDataLabelsTextPath.h"
 #import "HIDataLabelsFilterOptionsObject.h"
 #import "HIShadowOptionsObject.h"
 #import "HIFunction.h"
+#import "HIDataLabelsTextPathOptionsObject.h"
 #import "HICSSObject.h"
 
 
@@ -34,7 +34,7 @@ The background color or gradient for the data label.
 /**
 The border color for the data label. Defaults to `undefined`.
 */
-@property(nonatomic, readwrite) NSString *borderColor;
+@property(nonatomic, readwrite) HIColor *borderColor;
 /**
 The border radius in pixels for the data label.
 */
@@ -50,7 +50,7 @@ A class name for the data label. Particularly in styled mode, this can be used t
 /**
 The text color for the data labels. Defaults to `undefined`. For certain series types, like column or map, the data labels can be drawn inside the points. In this case the data label will be drawn with maximum contrast by default. Additionally, it will be given a `text-outline` style with the opposite color, to further increase the contrast. This can be overridden by setting the `text-outline` style to `none` in the `dataLabels.style` option.
 */
-@property(nonatomic, readwrite) NSString *color;
+@property(nonatomic, readwrite) HIColor *color;
 /**
 Whether to hide data labels that are outside the plot area. By default, the data label is moved inside the plot area according to the `overflow` option.
 */
@@ -114,7 +114,7 @@ Styles for the label. The default `color` setting is `"contrast"`, which is a ps
 /**
 Options for a label text which should follow marker's shape. Border and background are disabled for a label that follows a path. **Note:** Only SVG-based renderer supports this option. Setting `useHTML` to true will disable this option.
 */
-@property(nonatomic, readwrite) HIDataLabelsTextPath *textPath;
+@property(nonatomic, readwrite) HIDataLabelsTextPathOptionsObject *textPath;
 /**
 Whether to [use HTML](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html) to render the labels.
 */

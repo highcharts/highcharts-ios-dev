@@ -67,6 +67,7 @@
 		params[@"label"] = [self.label getParams];
 	}
 	if (self.events) {
+		params[@"events"] = [self.events getParams];
 	}
 	return params;
 }
@@ -145,10 +146,10 @@
 	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
 }
 
--(void)setEvents:(id)events {
-	id oldValue = _events;
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
 	_events = events;
-	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 - (void)destroy {

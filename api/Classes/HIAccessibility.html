@@ -72,6 +72,8 @@
 		
 		<option value="//api/name/chartTypes">chartTypes</option>
 		
+		<option value="//api/name/credits">credits</option>
+		
 		<option value="//api/name/customComponents">customComponents</option>
 		
 		<option value="//api/name/defaultChartTitle">defaultChartTitle</option>
@@ -87,6 +89,8 @@
 		<option value="//api/name/exporting">exporting</option>
 		
 		<option value="//api/name/exposeAsGroupOnly">exposeAsGroupOnly</option>
+		
+		<option value="//api/name/highContrastTheme">highContrastTheme</option>
 		
 		<option value="//api/name/keyboardNavigation">keyboardNavigation</option>
 		
@@ -109,6 +113,8 @@
 		<option value="//api/name/pointDescriptionFormatter">pointDescriptionFormatter</option>
 		
 		<option value="//api/name/pointDescriptionThreshold">pointDescriptionThreshold</option>
+		
+		<option value="//api/name/pointNavigationThreshold">pointNavigationThreshold</option>
 		
 		<option value="//api/name/pointValueDecimals">pointValueDecimals</option>
 		
@@ -210,6 +216,170 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/axisRangeDateFormat" title="axisRangeDateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/axisRangeDateFormat">&nbsp;&nbsp;axisRangeDateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Date format to use to describe range of datetime axes. For an overview of the replacement codes, see <code>dateFormat</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *axisRangeDateFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDateFormat" title="pointDateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDateFormat">&nbsp;&nbsp;pointDateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Date format to use for points on datetime axes when describing them to screen reader users. Defaults to the same format as in tooltip. For an overview of the replacement codes, see <code>dateFormat</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointDateFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/highContrastTheme" title="highContrastTheme"></a>
+	<h3 class="method-title"><code><a href="#//api/name/highContrastTheme">&nbsp;&nbsp;highContrastTheme</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Theme to apply to the chart when Windows High Contrast Mode is detected.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id highContrastTheme</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/definition" title="definition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A text description of the chart. If the Accessibility module is loaded, this is included by default as a long description of the chart in the hidden screen reader information region. Note: It is considered a best practice to make the description of the chart visible to all users, so consider if this can be placed in text around the chart instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/addTableShortcut" title="addTableShortcut"></a>
 	<h3 class="method-title"><code><a href="#//api/name/addTableShortcut">&nbsp;&nbsp;addTableShortcut</a></code>
 </h3>
@@ -297,6 +467,252 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/seriesDescriptionFormatter" title="seriesDescriptionFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/seriesDescriptionFormatter">&nbsp;&nbsp;seriesDescriptionFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to use instead of the default for series descriptions. Receives one argument, <code>series</code>, referring to the series to describe. Should return a string with the description of the series for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *seriesDescriptionFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDescriptionThreshold" title="pointDescriptionThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionThreshold">&nbsp;&nbsp;pointDescriptionThreshold</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When a series contains more points than this, we no longer expose information about individual points to screen readers. Set to <code>false</code> to disable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointDescriptionThreshold</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDescriptionFormatter" title="pointDescriptionFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionFormatter">&nbsp;&nbsp;pointDescriptionFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to use instead of the default for point descriptions. Receives one argument, <code>point</code>, referring to the point to describe. Should return a string with the description of the point for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/announceNewData" title="announceNewData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/announceNewData">&nbsp;&nbsp;announceNewData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for announcing new data to screen reader users. Useful for dynamic data applications and drilldown. Keep in mind that frequent announcements will not be useful to users, as they won&rsquo;t have time to explore the new data. For these applications, consider making snapshots of the data accessible, and do the announcements in batches.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnnounceNewData *announceNewData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/describeSingleSeries" title="describeSingleSeries"></a>
+	<h3 class="method-title"><code><a href="#//api/name/describeSingleSeries">&nbsp;&nbsp;describeSingleSeries</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not to add series descriptions to charts with a single series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *describeSingleSeries</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointNavigationThreshold" title="pointNavigationThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointNavigationThreshold">&nbsp;&nbsp;pointNavigationThreshold</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When a series contains more points than this, we no longer allow keyboard navigation for it. Set to <code>false</code> to disable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointNavigationThreshold</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/customComponents" title="customComponents"></a>
 	<h3 class="method-title"><code><a href="#//api/name/customComponents">&nbsp;&nbsp;customComponents</a></code>
 </h3>
@@ -332,47 +748,6 @@
 </ul>
 
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointValueDecimals" title="pointValueDecimals"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointValueDecimals">&nbsp;&nbsp;pointValueDecimals</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Decimals to use for the values in the point descriptions. Uses <code>tooltip.valueDecimals</code> if not defined.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointValueDecimals</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -435,8 +810,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/onTableAnchorClick" title="onTableAnchorClick"></a>
-	<h3 class="method-title"><code><a href="#//api/name/onTableAnchorClick">&nbsp;&nbsp;onTableAnchorClick</a></code>
+	<a name="//api/name/pointValueSuffix" title="pointValueSuffix"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointValueSuffix">&nbsp;&nbsp;pointValueSuffix</a></code>
 </h3>
 
 	<div class="method-info">
@@ -446,12 +821,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Function to run upon clicking the &ldquo;View as Data Table&rdquo; link in the screen reader region. By default Highcharts will insert and set focus to a data table representation of the chart.</p>
+				<p>Suffix to add to the values in the point descriptions. Uses <code>tooltip.valueSuffix</code> if not defined.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onTableAnchorClick</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointValueSuffix</code></div>
 
 		    
 			
@@ -476,8 +851,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/seriesDescriptionFormatter" title="seriesDescriptionFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/seriesDescriptionFormatter">&nbsp;&nbsp;seriesDescriptionFormatter</a></code>
+	<a name="//api/name/pointValueDecimals" title="pointValueDecimals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointValueDecimals">&nbsp;&nbsp;pointValueDecimals</a></code>
 </h3>
 
 	<div class="method-info">
@@ -487,12 +862,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Formatter function to use instead of the default for series descriptions. Receives one argument, <code>series</code>, referring to the series to describe. Should return a string with the description of the series for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that series.</p>
+				<p>Decimals to use for the values in the point descriptions. Uses <code>tooltip.valueDecimals</code> if not defined.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *seriesDescriptionFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointValueDecimals</code></div>
 
 		    
 			
@@ -599,88 +974,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pointValueSuffix" title="pointValueSuffix"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointValueSuffix">&nbsp;&nbsp;pointValueSuffix</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Suffix to add to the values in the point descriptions. Uses <code>tooltip.valueSuffix</code> if not defined.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointValueSuffix</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/axisRangeDateFormat" title="axisRangeDateFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/axisRangeDateFormat">&nbsp;&nbsp;axisRangeDateFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Date format to use to describe range of datetime axes. For an overview of the replacement codes, see <code>dateFormat</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *axisRangeDateFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/pointValuePrefix" title="pointValuePrefix"></a>
 	<h3 class="method-title"><code><a href="#//api/name/pointValuePrefix">&nbsp;&nbsp;pointValuePrefix</a></code>
 </h3>
@@ -698,170 +991,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointValuePrefix</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointDescriptionFormatter" title="pointDescriptionFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionFormatter">&nbsp;&nbsp;pointDescriptionFormatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Formatter function to use instead of the default for point descriptions. Receives one argument, <code>point</code>, referring to the point to describe. Should return a string with the description of the point for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that point.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointDateFormat" title="pointDateFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointDateFormat">&nbsp;&nbsp;pointDateFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Date format to use for points on datetime axes when describing them to screen reader users. Defaults to the same format as in tooltip. For an overview of the replacement codes, see <code>dateFormat</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointDateFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/announceNewData" title="announceNewData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/announceNewData">&nbsp;&nbsp;announceNewData</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Options for announcing new data to screen reader users. Useful for dynamic data applications and drilldown. Keep in mind that frequent announcements will not be useful to users, as they won&rsquo;t have time to explore the new data. For these applications, consider making snapshots of the data accessible, and do the announcements in batches.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnnounceNewData *announceNewData</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointDescriptionThreshold" title="pointDescriptionThreshold"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionThreshold">&nbsp;&nbsp;pointDescriptionThreshold</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>When a series contains more points than this, we no longer expose information about individual points to screen readers. Set to <code>false</code> to disable.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointDescriptionThreshold</code></div>
 
 		    
 			
@@ -927,8 +1056,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/describeSingleSeries" title="describeSingleSeries"></a>
-	<h3 class="method-title"><code><a href="#//api/name/describeSingleSeries">&nbsp;&nbsp;describeSingleSeries</a></code>
+	<a name="//api/name/onTableAnchorClick" title="onTableAnchorClick"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onTableAnchorClick">&nbsp;&nbsp;onTableAnchorClick</a></code>
 </h3>
 
 	<div class="method-info">
@@ -938,12 +1067,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether or not to add series descriptions to charts with a single series.</p>
+				<p>Function to run upon clicking the &ldquo;View as Data Table&rdquo; link in the screen reader region. By default Highcharts will insert and set focus to a data table representation of the chart.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *describeSingleSeries</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onTableAnchorClick</code></div>
 
 		    
 			
@@ -985,47 +1114,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDateFormatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/definition" title="definition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A text description of the chart. If the Accessibility module is loaded, this is included by default as a long description of the chart in the hidden screen reader information region. Note: It is considered a best practice to make the description of the chart visible to all users, so consider if this can be placed in text around the chart instead.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
 
 		    
 			
@@ -1431,6 +1519,22 @@
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/credits" title="credits"></a>
+	<h3 class="method-title"><code><a href="#//api/name/credits">&nbsp;&nbsp;credits</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *credits</code></div>
+
+		    
 		</div>
 	</div>
 </div><div class="section-method">
