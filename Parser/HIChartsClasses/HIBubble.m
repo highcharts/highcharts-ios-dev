@@ -73,7 +73,6 @@
 	copyBubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyBubble.step = [self.step copyWithZone: zone];
 	copyBubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyBubble.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyBubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBubble.zones = [self.zones copyWithZone: zone];
 	copyBubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];

@@ -32,7 +32,6 @@
 	copyPyramid.animation = [self.animation copyWithZone: zone];
 	copyPyramid.borderColor = [self.borderColor copyWithZone: zone];
 	copyPyramid.minSize = [self.minSize copyWithZone: zone];
-	copyPyramid.innerSize = [self.innerSize copyWithZone: zone];
 	copyPyramid.clip = [self.clip copyWithZone: zone];
 	copyPyramid.point = [self.point copyWithZone: zone];
 	copyPyramid.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -63,7 +62,6 @@
 	copyPyramid.keys = [self.keys copyWithZone: zone];
 	copyPyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid.accessibility = [self.accessibility copyWithZone: zone];
-	copyPyramid.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPyramid.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPyramid.visible = [self.visible copyWithZone: zone];
@@ -107,9 +105,6 @@
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
-	}
-	if (self.innerSize) {
-		params[@"innerSize"] = self.innerSize;
 	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
@@ -183,16 +178,10 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setMinSize:(NSNumber *)minSize {
-	NSNumber *oldValue = _minSize;
+-(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
 	_minSize = minSize;
 	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
-}
-
--(void)setInnerSize:(id)innerSize {
-	id oldValue = _innerSize;
-	_innerSize = innerSize;
-	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
 }
 
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {

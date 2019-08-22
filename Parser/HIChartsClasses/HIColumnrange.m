@@ -63,7 +63,6 @@
 	copyColumnrange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumnrange.accessibility = [self.accessibility copyWithZone: zone];
 	copyColumnrange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyColumnrange.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyColumnrange.shadow = [self.shadow copyWithZone: zone];
 	copyColumnrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumnrange.zoneAxis = [self.zoneAxis copyWithZone: zone];

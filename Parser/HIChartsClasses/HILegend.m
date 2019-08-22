@@ -162,6 +162,7 @@
 		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.labelFormatter) {
+		params[@"labelFormatter"] = [self.labelFormatter getFunction];
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
@@ -387,10 +388,10 @@
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
--(void)setLabelFormatter:(id)labelFormatter {
-	id oldValue = _labelFormatter;
+-(void)setLabelFormatter:(HIFunction *)labelFormatter {
+	HIFunction *oldValue = _labelFormatter;
 	_labelFormatter = labelFormatter;
-	[self updateNSObject:oldValue newValue:labelFormatter propertyName:@"labelFormatter"];
+	[self updateHIObject:oldValue newValue:labelFormatter propertyName:@"labelFormatter"];
 }
 
 -(void)setY:(NSNumber *)y {

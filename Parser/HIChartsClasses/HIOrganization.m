@@ -37,12 +37,12 @@
 	copyOrganization.linkLineWidth = [self.linkLineWidth copyWithZone: zone];
 	copyOrganization.hangingIndent = [self.hangingIndent copyWithZone: zone];
 	copyOrganization.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyOrganization.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copyOrganization.nodePadding = [self.nodePadding copyWithZone: zone];
 	copyOrganization.states = [self.states copyWithZone: zone];
 	copyOrganization.levels = [self.levels copyWithZone: zone];
 	copyOrganization.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyOrganization.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyOrganization.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyOrganization.colors = [self.colors copyWithZone: zone];
 	copyOrganization.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyOrganization.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -67,7 +67,6 @@
 	copyOrganization.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyOrganization.accessibility = [self.accessibility copyWithZone: zone];
 	copyOrganization.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyOrganization.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyOrganization.visible = [self.visible copyWithZone: zone];
 	copyOrganization.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyOrganization.cursor = [self.cursor copyWithZone: zone];
@@ -116,6 +115,9 @@
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
 	}
+	if (self.minLinkWidth) {
+		params[@"minLinkWidth"] = self.minLinkWidth;
+	}
 	if (self.nodePadding) {
 		params[@"nodePadding"] = self.nodePadding;
 	}
@@ -133,9 +135,6 @@
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
-	}
-	if (self.minPointLength) {
-		params[@"minPointLength"] = self.minPointLength;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -209,6 +208,12 @@
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
+-(void)setMinLinkWidth:(NSNumber *)minLinkWidth {
+	NSNumber *oldValue = _minLinkWidth;
+	_minLinkWidth = minLinkWidth;
+	[self updateNSObject:oldValue newValue:minLinkWidth propertyName:@"minLinkWidth"];
+}
+
 -(void)setNodePadding:(NSNumber *)nodePadding {
 	NSNumber *oldValue = _nodePadding;
 	_nodePadding = nodePadding;
@@ -225,12 +230,6 @@
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
 	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
-}
-
--(void)setMinPointLength:(NSNumber *)minPointLength {
-	NSNumber *oldValue = _minPointLength;
-	_minPointLength = minPointLength;
-	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

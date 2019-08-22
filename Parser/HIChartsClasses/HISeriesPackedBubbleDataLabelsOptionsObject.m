@@ -12,6 +12,9 @@
 	HISeriesPackedBubbleDataLabelsOptionsObject *copySeriesPackedBubbleDataLabelsOptionsObject = [[HISeriesPackedBubbleDataLabelsOptionsObject allocWithZone: zone] init];
 	copySeriesPackedBubbleDataLabelsOptionsObject.format = [self.format copyWithZone: zone];
 	copySeriesPackedBubbleDataLabelsOptionsObject.formatter = [self.formatter copyWithZone: zone];
+	copySeriesPackedBubbleDataLabelsOptionsObject.parentNodeFormat = [self.parentNodeFormat copyWithZone: zone];
+	copySeriesPackedBubbleDataLabelsOptionsObject.parentNodeFormatter = [self.parentNodeFormatter copyWithZone: zone];
+	copySeriesPackedBubbleDataLabelsOptionsObject.parentNodeTextPath = [self.parentNodeTextPath copyWithZone: zone];
 	copySeriesPackedBubbleDataLabelsOptionsObject.textPath = [self.textPath copyWithZone: zone];
 	return copySeriesPackedBubbleDataLabelsOptionsObject;
 }
@@ -24,6 +27,15 @@
 	}
 	if (self.formatter) {
 		params[@"formatter"] = [self.formatter getFunction];
+	}
+	if (self.parentNodeFormat) {
+		params[@"parentNodeFormat"] = self.parentNodeFormat;
+	}
+	if (self.parentNodeFormatter) {
+		params[@"parentNodeFormatter"] = self.parentNodeFormatter;
+	}
+	if (self.parentNodeTextPath) {
+		params[@"parentNodeTextPath"] = [self.parentNodeTextPath getParams];
 	}
 	if (self.textPath) {
 		params[@"textPath"] = [self.textPath getParams];
@@ -45,8 +57,26 @@
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
--(void)setTextPath:(HISeriesPackedBubbleDataLabelsTextPath *)textPath {
-	HISeriesPackedBubbleDataLabelsTextPath *oldValue = _textPath;
+-(void)setParentNodeFormat:(NSString *)parentNodeFormat {
+	NSString *oldValue = _parentNodeFormat;
+	_parentNodeFormat = parentNodeFormat;
+	[self updateNSObject:oldValue newValue:parentNodeFormat propertyName:@"parentNodeFormat"];
+}
+
+-(void)setParentNodeFormatter:(id)parentNodeFormatter {
+	id oldValue = _parentNodeFormatter;
+	_parentNodeFormatter = parentNodeFormatter;
+	[self updateNSObject:oldValue newValue:parentNodeFormatter propertyName:@"parentNodeFormatter"];
+}
+
+-(void)setParentNodeTextPath:(HISeriesPackedBubbleDataLabelsTextPathOptionsObject *)parentNodeTextPath {
+	HISeriesPackedBubbleDataLabelsTextPathOptionsObject *oldValue = _parentNodeTextPath;
+	_parentNodeTextPath = parentNodeTextPath;
+	[self updateHIObject:oldValue newValue:parentNodeTextPath propertyName:@"parentNodeTextPath"];
+}
+
+-(void)setTextPath:(HISeriesPackedBubbleDataLabelsTextPathOptionsObject *)textPath {
+	HISeriesPackedBubbleDataLabelsTextPathOptionsObject *oldValue = _textPath;
 	_textPath = textPath;
 	[self updateHIObject:oldValue newValue:textPath propertyName:@"textPath"];
 }

@@ -50,7 +50,6 @@
 	copyItem.keys = [self.keys copyWithZone: zone];
 	copyItem.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyItem.accessibility = [self.accessibility copyWithZone: zone];
-	copyItem.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyItem.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyItem.visible = [self.visible copyWithZone: zone];
 	copyItem.linkedTo = [self.linkedTo copyWithZone: zone];
@@ -155,8 +154,8 @@
 	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
 }
 
--(void)setMinSize:(NSNumber *)minSize {
-	NSNumber *oldValue = _minSize;
+-(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
 	_minSize = minSize;
 	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }

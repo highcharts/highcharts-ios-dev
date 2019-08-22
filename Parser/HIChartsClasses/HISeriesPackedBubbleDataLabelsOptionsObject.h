@@ -7,7 +7,7 @@
 */
 
 #import "HIFunction.h"
-#import "HISeriesPackedBubbleDataLabelsTextPath.h"
+#import "HISeriesPackedBubbleDataLabelsTextPathOptionsObject.h"
 
 
 /**
@@ -23,10 +23,19 @@ The [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-st
 Callback JavaScript function to format the data label for a node. Note that if a `format` is defined, the format takes precedence and the formatter is ignored.
 */
 @property(nonatomic, readwrite) HIFunction *formatter;
+@property(nonatomic, readwrite) NSString *parentNodeFormat;
+/**
+Callback to format data labels for _parentNodes_. The `parentNodeFormat` option takes precedence over the `parentNodeFormatter`.
+*/
+@property(nonatomic, readwrite) id parentNodeFormatter;
+/**
+Options for a _parentNode_ label text.
+*/
+@property(nonatomic, readwrite) HISeriesPackedBubbleDataLabelsTextPathOptionsObject *parentNodeTextPath;
 /**
 Options for a _node_ label text which should follow marker's shape. **Note:** Only SVG-based renderer supports this option.
 */
-@property(nonatomic, readwrite) HISeriesPackedBubbleDataLabelsTextPath *textPath;
+@property(nonatomic, readwrite) HISeriesPackedBubbleDataLabelsTextPathOptionsObject *textPath;
 
 -(NSDictionary *)getParams;
 

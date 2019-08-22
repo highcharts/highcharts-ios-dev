@@ -28,7 +28,7 @@
 		params[@"alignTo"] = self.alignTo;
 	}
 	if (self.connectorColor) {
-		params[@"connectorColor"] = self.connectorColor;
+		params[@"connectorColor"] = [self.connectorColor getData];
 	}
 	if (self.connectorPadding) {
 		params[@"connectorPadding"] = self.connectorPadding;
@@ -59,10 +59,10 @@
 	[self updateNSObject:oldValue newValue:alignTo propertyName:@"alignTo"];
 }
 
--(void)setConnectorColor:(NSString *)connectorColor {
-	NSString *oldValue = _connectorColor;
+-(void)setConnectorColor:(HIColor *)connectorColor {
+	HIColor *oldValue = _connectorColor;
 	_connectorColor = connectorColor;
-	[self updateNSObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
+	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
 -(void)setConnectorPadding:(NSNumber *)connectorPadding {

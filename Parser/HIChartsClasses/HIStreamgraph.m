@@ -68,7 +68,6 @@
 	copyStreamgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyStreamgraph.accessibility = [self.accessibility copyWithZone: zone];
 	copyStreamgraph.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyStreamgraph.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyStreamgraph.shadow = [self.shadow copyWithZone: zone];
 	copyStreamgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyStreamgraph.zoneAxis = [self.zoneAxis copyWithZone: zone];

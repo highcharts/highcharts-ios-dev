@@ -82,7 +82,6 @@
 	copyPyramid3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyPyramid3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyPyramid3d.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPyramid3d.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];

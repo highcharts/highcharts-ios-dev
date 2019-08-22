@@ -7,6 +7,7 @@
 */
 
 #import "HIChartsJSONSerializable.h"
+#import "HIColor.h"
 
 
 /**
@@ -21,7 +22,7 @@ Alignment method for data labels. Possible values are: - `toPlotEdges`: each lab
 /**
 The color of the line connecting the data label to the pie slice. The default color is the same as the point's color. In styled mode, the connector stroke is given in the `.highcharts-data-label-connector` class.
 */
-@property(nonatomic, readwrite) NSString *connectorColor;
+@property(nonatomic, readwrite) HIColor *connectorColor;
 /**
 The distance from the data label to the connector. Note that data labels also have a default `padding`, so in order for the connector to touch the text, the `padding` must also be 0.
 */
@@ -45,7 +46,7 @@ The distance of the data label from the pie's edge. Negative numbers put the dat
 /**
 Whether to render the connector as a soft arc or a line with sharp break. Works only if `connectorShape` equals to `fixedOffset`.
 */
-@property(nonatomic, readwrite) NSNumber *softConnector;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *softConnector;
 
 -(NSDictionary *)getParams;
 

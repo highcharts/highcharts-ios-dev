@@ -10,26 +10,28 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIAccessibility *copyAccessibility = [[HIAccessibility allocWithZone: zone] init];
+	copyAccessibility.axisRangeDateFormat = [self.axisRangeDateFormat copyWithZone: zone];
+	copyAccessibility.pointDateFormat = [self.pointDateFormat copyWithZone: zone];
+	copyAccessibility.highContrastTheme = [self.highContrastTheme copyWithZone: zone];
+	copyAccessibility.definition = [self.definition copyWithZone: zone];
 	copyAccessibility.addTableShortcut = [self.addTableShortcut copyWithZone: zone];
 	copyAccessibility.landmarkVerbosity = [self.landmarkVerbosity copyWithZone: zone];
-	copyAccessibility.customComponents = [self.customComponents copyWithZone: zone];
-	copyAccessibility.pointValueDecimals = [self.pointValueDecimals copyWithZone: zone];
-	copyAccessibility.screenReaderSectionFormatter = [self.screenReaderSectionFormatter copyWithZone: zone];
-	copyAccessibility.onTableAnchorClick = [self.onTableAnchorClick copyWithZone: zone];
 	copyAccessibility.seriesDescriptionFormatter = [self.seriesDescriptionFormatter copyWithZone: zone];
+	copyAccessibility.pointDescriptionThreshold = [self.pointDescriptionThreshold copyWithZone: zone];
+	copyAccessibility.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
+	copyAccessibility.announceNewData = [self.announceNewData copyWithZone: zone];
+	copyAccessibility.describeSingleSeries = [self.describeSingleSeries copyWithZone: zone];
+	copyAccessibility.pointNavigationThreshold = [self.pointNavigationThreshold copyWithZone: zone];
+	copyAccessibility.customComponents = [self.customComponents copyWithZone: zone];
+	copyAccessibility.screenReaderSectionFormatter = [self.screenReaderSectionFormatter copyWithZone: zone];
+	copyAccessibility.pointValueSuffix = [self.pointValueSuffix copyWithZone: zone];
+	copyAccessibility.pointValueDecimals = [self.pointValueDecimals copyWithZone: zone];
 	copyAccessibility.keyboardNavigation = [self.keyboardNavigation copyWithZone: zone];
 	copyAccessibility.enabled = [self.enabled copyWithZone: zone];
-	copyAccessibility.pointValueSuffix = [self.pointValueSuffix copyWithZone: zone];
-	copyAccessibility.axisRangeDateFormat = [self.axisRangeDateFormat copyWithZone: zone];
 	copyAccessibility.pointValuePrefix = [self.pointValuePrefix copyWithZone: zone];
-	copyAccessibility.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyAccessibility.pointDateFormat = [self.pointDateFormat copyWithZone: zone];
-	copyAccessibility.announceNewData = [self.announceNewData copyWithZone: zone];
-	copyAccessibility.pointDescriptionThreshold = [self.pointDescriptionThreshold copyWithZone: zone];
 	copyAccessibility.typeDescription = [self.typeDescription copyWithZone: zone];
-	copyAccessibility.describeSingleSeries = [self.describeSingleSeries copyWithZone: zone];
+	copyAccessibility.onTableAnchorClick = [self.onTableAnchorClick copyWithZone: zone];
 	copyAccessibility.pointDateFormatter = [self.pointDateFormatter copyWithZone: zone];
-	copyAccessibility.definition = [self.definition copyWithZone: zone];
 	copyAccessibility.exposeAsGroupOnly = [self.exposeAsGroupOnly copyWithZone: zone];
 	copyAccessibility.rangeDescription = [self.rangeDescription copyWithZone: zone];
 	copyAccessibility.legendLabel = [self.legendLabel copyWithZone: zone];
@@ -44,6 +46,7 @@
 	copyAccessibility.rangeSelectorMinInput = [self.rangeSelectorMinInput copyWithZone: zone];
 	copyAccessibility.rangeSelectorButton = [self.rangeSelectorButton copyWithZone: zone];
 	copyAccessibility.exporting = [self.exporting copyWithZone: zone];
+	copyAccessibility.credits = [self.credits copyWithZone: zone];
 	copyAccessibility.legendItem = [self.legendItem copyWithZone: zone];
 	copyAccessibility.tableSummary = [self.tableSummary copyWithZone: zone];
 	copyAccessibility.viewAsDataTable = [self.viewAsDataTable copyWithZone: zone];
@@ -62,26 +65,53 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.axisRangeDateFormat) {
+		params[@"axisRangeDateFormat"] = self.axisRangeDateFormat;
+	}
+	if (self.pointDateFormat) {
+		params[@"pointDateFormat"] = self.pointDateFormat;
+	}
+	if (self.highContrastTheme) {
+		params[@"highContrastTheme"] = self.highContrastTheme;
+	}
+	if (self.definition) {
+		params[@"definition"] = self.definition;
+	}
 	if (self.addTableShortcut) {
 		params[@"addTableShortcut"] = self.addTableShortcut;
 	}
 	if (self.landmarkVerbosity) {
 		params[@"landmarkVerbosity"] = self.landmarkVerbosity;
 	}
+	if (self.seriesDescriptionFormatter) {
+		params[@"seriesDescriptionFormatter"] = [self.seriesDescriptionFormatter getFunction];
+	}
+	if (self.pointDescriptionThreshold) {
+		params[@"pointDescriptionThreshold"] = self.pointDescriptionThreshold;
+	}
+	if (self.pointDescriptionFormatter) {
+		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
+	}
+	if (self.announceNewData) {
+		params[@"announceNewData"] = [self.announceNewData getParams];
+	}
+	if (self.describeSingleSeries) {
+		params[@"describeSingleSeries"] = self.describeSingleSeries;
+	}
+	if (self.pointNavigationThreshold) {
+		params[@"pointNavigationThreshold"] = self.pointNavigationThreshold;
+	}
 	if (self.customComponents) {
 		params[@"customComponents"] = self.customComponents;
-	}
-	if (self.pointValueDecimals) {
-		params[@"pointValueDecimals"] = self.pointValueDecimals;
 	}
 	if (self.screenReaderSectionFormatter) {
 		params[@"screenReaderSectionFormatter"] = [self.screenReaderSectionFormatter getFunction];
 	}
-	if (self.onTableAnchorClick) {
-		params[@"onTableAnchorClick"] = [self.onTableAnchorClick getFunction];
+	if (self.pointValueSuffix) {
+		params[@"pointValueSuffix"] = self.pointValueSuffix;
 	}
-	if (self.seriesDescriptionFormatter) {
-		params[@"seriesDescriptionFormatter"] = [self.seriesDescriptionFormatter getFunction];
+	if (self.pointValueDecimals) {
+		params[@"pointValueDecimals"] = self.pointValueDecimals;
 	}
 	if (self.keyboardNavigation) {
 		params[@"keyboardNavigation"] = [self.keyboardNavigation getParams];
@@ -89,38 +119,17 @@
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
-	if (self.pointValueSuffix) {
-		params[@"pointValueSuffix"] = self.pointValueSuffix;
-	}
-	if (self.axisRangeDateFormat) {
-		params[@"axisRangeDateFormat"] = self.axisRangeDateFormat;
-	}
 	if (self.pointValuePrefix) {
 		params[@"pointValuePrefix"] = self.pointValuePrefix;
-	}
-	if (self.pointDescriptionFormatter) {
-		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
-	}
-	if (self.pointDateFormat) {
-		params[@"pointDateFormat"] = self.pointDateFormat;
-	}
-	if (self.announceNewData) {
-		params[@"announceNewData"] = [self.announceNewData getParams];
-	}
-	if (self.pointDescriptionThreshold) {
-		params[@"pointDescriptionThreshold"] = self.pointDescriptionThreshold;
 	}
 	if (self.typeDescription) {
 		params[@"typeDescription"] = self.typeDescription;
 	}
-	if (self.describeSingleSeries) {
-		params[@"describeSingleSeries"] = self.describeSingleSeries;
+	if (self.onTableAnchorClick) {
+		params[@"onTableAnchorClick"] = [self.onTableAnchorClick getFunction];
 	}
 	if (self.pointDateFormatter) {
 		params[@"pointDateFormatter"] = [self.pointDateFormatter getFunction];
-	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
 	}
 	if (self.exposeAsGroupOnly) {
 		params[@"exposeAsGroupOnly"] = self.exposeAsGroupOnly;
@@ -164,6 +173,9 @@
 	if (self.exporting) {
 		params[@"exporting"] = [self.exporting getParams];
 	}
+	if (self.credits) {
+		params[@"credits"] = self.credits;
+	}
 	if (self.legendItem) {
 		params[@"legendItem"] = self.legendItem;
 	}
@@ -205,6 +217,30 @@
 
 # pragma mark - Setters
 
+-(void)setAxisRangeDateFormat:(NSString *)axisRangeDateFormat {
+	NSString *oldValue = _axisRangeDateFormat;
+	_axisRangeDateFormat = axisRangeDateFormat;
+	[self updateNSObject:oldValue newValue:axisRangeDateFormat propertyName:@"axisRangeDateFormat"];
+}
+
+-(void)setPointDateFormat:(NSString *)pointDateFormat {
+	NSString *oldValue = _pointDateFormat;
+	_pointDateFormat = pointDateFormat;
+	[self updateNSObject:oldValue newValue:pointDateFormat propertyName:@"pointDateFormat"];
+}
+
+-(void)setHighContrastTheme:(id)highContrastTheme {
+	id oldValue = _highContrastTheme;
+	_highContrastTheme = highContrastTheme;
+	[self updateNSObject:oldValue newValue:highContrastTheme propertyName:@"highContrastTheme"];
+}
+
+-(void)setDefinition:(NSString *)definition {
+	NSString *oldValue = _definition;
+	_definition = definition;
+	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
+}
+
 -(void)setAddTableShortcut:(NSNumber *)addTableShortcut {
 	NSNumber *oldValue = _addTableShortcut;
 	_addTableShortcut = addTableShortcut;
@@ -217,16 +253,46 @@
 	[self updateNSObject:oldValue newValue:landmarkVerbosity propertyName:@"landmarkVerbosity"];
 }
 
+-(void)setSeriesDescriptionFormatter:(HIFunction *)seriesDescriptionFormatter {
+	HIFunction *oldValue = _seriesDescriptionFormatter;
+	_seriesDescriptionFormatter = seriesDescriptionFormatter;
+	[self updateHIObject:oldValue newValue:seriesDescriptionFormatter propertyName:@"seriesDescriptionFormatter"];
+}
+
+-(void)setPointDescriptionThreshold:(NSNumber *)pointDescriptionThreshold {
+	NSNumber *oldValue = _pointDescriptionThreshold;
+	_pointDescriptionThreshold = pointDescriptionThreshold;
+	[self updateNSObject:oldValue newValue:pointDescriptionThreshold propertyName:@"pointDescriptionThreshold"];
+}
+
+-(void)setPointDescriptionFormatter:(HIFunction *)pointDescriptionFormatter {
+	HIFunction *oldValue = _pointDescriptionFormatter;
+	_pointDescriptionFormatter = pointDescriptionFormatter;
+	[self updateHIObject:oldValue newValue:pointDescriptionFormatter propertyName:@"pointDescriptionFormatter"];
+}
+
+-(void)setAnnounceNewData:(HIAnnounceNewData *)announceNewData {
+	HIAnnounceNewData *oldValue = _announceNewData;
+	_announceNewData = announceNewData;
+	[self updateHIObject:oldValue newValue:announceNewData propertyName:@"announceNewData"];
+}
+
+-(void)setDescribeSingleSeries:(NSNumber *)describeSingleSeries {
+	NSNumber *oldValue = _describeSingleSeries;
+	_describeSingleSeries = describeSingleSeries;
+	[self updateNSObject:oldValue newValue:describeSingleSeries propertyName:@"describeSingleSeries"];
+}
+
+-(void)setPointNavigationThreshold:(NSNumber *)pointNavigationThreshold {
+	NSNumber *oldValue = _pointNavigationThreshold;
+	_pointNavigationThreshold = pointNavigationThreshold;
+	[self updateNSObject:oldValue newValue:pointNavigationThreshold propertyName:@"pointNavigationThreshold"];
+}
+
 -(void)setCustomComponents:(id)customComponents {
 	id oldValue = _customComponents;
 	_customComponents = customComponents;
 	[self updateNSObject:oldValue newValue:customComponents propertyName:@"customComponents"];
-}
-
--(void)setPointValueDecimals:(NSString *)pointValueDecimals {
-	NSString *oldValue = _pointValueDecimals;
-	_pointValueDecimals = pointValueDecimals;
-	[self updateNSObject:oldValue newValue:pointValueDecimals propertyName:@"pointValueDecimals"];
 }
 
 -(void)setScreenReaderSectionFormatter:(HIFunction *)screenReaderSectionFormatter {
@@ -235,16 +301,16 @@
 	[self updateHIObject:oldValue newValue:screenReaderSectionFormatter propertyName:@"screenReaderSectionFormatter"];
 }
 
--(void)setOnTableAnchorClick:(HIFunction *)onTableAnchorClick {
-	HIFunction *oldValue = _onTableAnchorClick;
-	_onTableAnchorClick = onTableAnchorClick;
-	[self updateHIObject:oldValue newValue:onTableAnchorClick propertyName:@"onTableAnchorClick"];
+-(void)setPointValueSuffix:(NSString *)pointValueSuffix {
+	NSString *oldValue = _pointValueSuffix;
+	_pointValueSuffix = pointValueSuffix;
+	[self updateNSObject:oldValue newValue:pointValueSuffix propertyName:@"pointValueSuffix"];
 }
 
--(void)setSeriesDescriptionFormatter:(HIFunction *)seriesDescriptionFormatter {
-	HIFunction *oldValue = _seriesDescriptionFormatter;
-	_seriesDescriptionFormatter = seriesDescriptionFormatter;
-	[self updateHIObject:oldValue newValue:seriesDescriptionFormatter propertyName:@"seriesDescriptionFormatter"];
+-(void)setPointValueDecimals:(NSString *)pointValueDecimals {
+	NSString *oldValue = _pointValueDecimals;
+	_pointValueDecimals = pointValueDecimals;
+	[self updateNSObject:oldValue newValue:pointValueDecimals propertyName:@"pointValueDecimals"];
 }
 
 -(void)setKeyboardNavigation:(HIKeyboardNavigation *)keyboardNavigation {
@@ -259,46 +325,10 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setPointValueSuffix:(NSString *)pointValueSuffix {
-	NSString *oldValue = _pointValueSuffix;
-	_pointValueSuffix = pointValueSuffix;
-	[self updateNSObject:oldValue newValue:pointValueSuffix propertyName:@"pointValueSuffix"];
-}
-
--(void)setAxisRangeDateFormat:(NSString *)axisRangeDateFormat {
-	NSString *oldValue = _axisRangeDateFormat;
-	_axisRangeDateFormat = axisRangeDateFormat;
-	[self updateNSObject:oldValue newValue:axisRangeDateFormat propertyName:@"axisRangeDateFormat"];
-}
-
 -(void)setPointValuePrefix:(NSString *)pointValuePrefix {
 	NSString *oldValue = _pointValuePrefix;
 	_pointValuePrefix = pointValuePrefix;
 	[self updateNSObject:oldValue newValue:pointValuePrefix propertyName:@"pointValuePrefix"];
-}
-
--(void)setPointDescriptionFormatter:(HIFunction *)pointDescriptionFormatter {
-	HIFunction *oldValue = _pointDescriptionFormatter;
-	_pointDescriptionFormatter = pointDescriptionFormatter;
-	[self updateHIObject:oldValue newValue:pointDescriptionFormatter propertyName:@"pointDescriptionFormatter"];
-}
-
--(void)setPointDateFormat:(NSString *)pointDateFormat {
-	NSString *oldValue = _pointDateFormat;
-	_pointDateFormat = pointDateFormat;
-	[self updateNSObject:oldValue newValue:pointDateFormat propertyName:@"pointDateFormat"];
-}
-
--(void)setAnnounceNewData:(HIAnnounceNewData *)announceNewData {
-	HIAnnounceNewData *oldValue = _announceNewData;
-	_announceNewData = announceNewData;
-	[self updateHIObject:oldValue newValue:announceNewData propertyName:@"announceNewData"];
-}
-
--(void)setPointDescriptionThreshold:(NSNumber *)pointDescriptionThreshold {
-	NSNumber *oldValue = _pointDescriptionThreshold;
-	_pointDescriptionThreshold = pointDescriptionThreshold;
-	[self updateNSObject:oldValue newValue:pointDescriptionThreshold propertyName:@"pointDescriptionThreshold"];
 }
 
 -(void)setTypeDescription:(NSString *)typeDescription {
@@ -307,22 +337,16 @@
 	[self updateNSObject:oldValue newValue:typeDescription propertyName:@"typeDescription"];
 }
 
--(void)setDescribeSingleSeries:(NSNumber *)describeSingleSeries {
-	NSNumber *oldValue = _describeSingleSeries;
-	_describeSingleSeries = describeSingleSeries;
-	[self updateNSObject:oldValue newValue:describeSingleSeries propertyName:@"describeSingleSeries"];
+-(void)setOnTableAnchorClick:(HIFunction *)onTableAnchorClick {
+	HIFunction *oldValue = _onTableAnchorClick;
+	_onTableAnchorClick = onTableAnchorClick;
+	[self updateHIObject:oldValue newValue:onTableAnchorClick propertyName:@"onTableAnchorClick"];
 }
 
 -(void)setPointDateFormatter:(HIFunction *)pointDateFormatter {
 	HIFunction *oldValue = _pointDateFormatter;
 	_pointDateFormatter = pointDateFormatter;
 	[self updateHIObject:oldValue newValue:pointDateFormatter propertyName:@"pointDateFormatter"];
-}
-
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setExposeAsGroupOnly:(NSNumber *)exposeAsGroupOnly {
@@ -407,6 +431,12 @@
 	HIExporting *oldValue = _exporting;
 	_exporting = exporting;
 	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
+}
+
+-(void)setCredits:(NSString *)credits {
+	NSString *oldValue = _credits;
+	_credits = credits;
+	[self updateNSObject:oldValue newValue:credits propertyName:@"credits"];
 }
 
 -(void)setLegendItem:(NSString *)legendItem {

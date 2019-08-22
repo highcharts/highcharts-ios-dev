@@ -16,6 +16,7 @@
 	[super copyWithZone:zone];
 	HISankey *copySankey = [[HISankey allocWithZone: zone] init];
 	copySankey.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copySankey.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copySankey.curveFactor = [self.curveFactor copyWithZone: zone];
 	copySankey.nodePadding = [self.nodePadding copyWithZone: zone];
 	copySankey.tooltip = [self.tooltip copyWithZone: zone];
@@ -26,7 +27,6 @@
 	copySankey.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySankey.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copySankey.showInLegend = [self.showInLegend copyWithZone: zone];
-	copySankey.minPointLength = [self.minPointLength copyWithZone: zone];
 	copySankey.colors = [self.colors copyWithZone: zone];
 	copySankey.borderColor = [self.borderColor copyWithZone: zone];
 	copySankey.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -52,7 +52,6 @@
 	copySankey.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySankey.accessibility = [self.accessibility copyWithZone: zone];
 	copySankey.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copySankey.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copySankey.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySankey.visible = [self.visible copyWithZone: zone];
 	copySankey.linkedTo = [self.linkedTo copyWithZone: zone];
@@ -76,6 +75,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
+	}
+	if (self.minLinkWidth) {
+		params[@"minLinkWidth"] = self.minLinkWidth;
 	}
 	if (self.curveFactor) {
 		params[@"curveFactor"] = self.curveFactor;
@@ -103,9 +105,6 @@
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
-	}
-	if (self.minPointLength) {
-		params[@"minPointLength"] = self.minPointLength;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -138,6 +137,12 @@
 	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
+}
+
+-(void)setMinLinkWidth:(NSNumber *)minLinkWidth {
+	NSNumber *oldValue = _minLinkWidth;
+	_minLinkWidth = minLinkWidth;
+	[self updateNSObject:oldValue newValue:minLinkWidth propertyName:@"minLinkWidth"];
 }
 
 -(void)setCurveFactor:(NSNumber *)curveFactor {
@@ -174,12 +179,6 @@
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
 	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
-}
-
--(void)setMinPointLength:(NSNumber *)minPointLength {
-	NSNumber *oldValue = _minPointLength;
-	_minPointLength = minPointLength;
-	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

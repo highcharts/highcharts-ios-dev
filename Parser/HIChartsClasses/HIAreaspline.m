@@ -57,7 +57,6 @@
 	copyAreaspline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyAreaspline.accessibility = [self.accessibility copyWithZone: zone];
 	copyAreaspline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyAreaspline.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyAreaspline.shadow = [self.shadow copyWithZone: zone];
 	copyAreaspline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyAreaspline.zoneAxis = [self.zoneAxis copyWithZone: zone];

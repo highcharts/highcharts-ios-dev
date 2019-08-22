@@ -44,7 +44,6 @@
 	copyGauge.keys = [self.keys copyWithZone: zone];
 	copyGauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyGauge.accessibility = [self.accessibility copyWithZone: zone];
-	copyGauge.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyGauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyGauge.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyGauge.lineWidth = [self.lineWidth copyWithZone: zone];
@@ -85,8 +84,8 @@
 
 # pragma mark - Setters
 
--(void)setDial:(HIDial *)dial {
-	HIDial *oldValue = _dial;
+-(void)setDial:(HICSSObject *)dial {
+	HICSSObject *oldValue = _dial;
 	_dial = dial;
 	[self updateHIObject:oldValue newValue:dial propertyName:@"dial"];
 }
@@ -103,8 +102,8 @@
 	[self updateNSObject:oldValue newValue:wrap propertyName:@"wrap"];
 }
 
--(void)setPivot:(HIPivot *)pivot {
-	HIPivot *oldValue = _pivot;
+-(void)setPivot:(HICSSObject *)pivot {
+	HICSSObject *oldValue = _pivot;
 	_pivot = pivot;
 	[self updateHIObject:oldValue newValue:pivot propertyName:@"pivot"];
 }

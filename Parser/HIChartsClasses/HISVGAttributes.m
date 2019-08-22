@@ -43,7 +43,7 @@
 		params[@"d"] = array;
 	}
 	if (self.fill) {
-		params[@"fill"] = self.fill;
+		params[@"fill"] = [self.fill getData];
 	}
 	if (self.inverted) {
 		params[@"inverted"] = self.inverted;
@@ -76,7 +76,7 @@
 		params[@"scaleY"] = self.scaleY;
 	}
 	if (self.stroke) {
-		params[@"stroke"] = self.stroke;
+		params[@"stroke"] = [self.stroke getData];
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
@@ -101,10 +101,10 @@
 	[self updateArrayObject:oldValue newValue:d propertyName:@"d"];
 }
 
--(void)setFill:(NSString *)fill {
-	NSString *oldValue = _fill;
+-(void)setFill:(HIColor *)fill {
+	HIColor *oldValue = _fill;
 	_fill = fill;
-	[self updateNSObject:oldValue newValue:fill propertyName:@"fill"];
+	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 -(void)setInverted:(NSNumber *)inverted {
@@ -149,10 +149,10 @@
 	[self updateNSObject:oldValue newValue:scaleY propertyName:@"scaleY"];
 }
 
--(void)setStroke:(NSString *)stroke {
-	NSString *oldValue = _stroke;
+-(void)setStroke:(HIColor *)stroke {
+	HIColor *oldValue = _stroke;
 	_stroke = stroke;
-	[self updateNSObject:oldValue newValue:stroke propertyName:@"stroke"];
+	[self updateHIObject:oldValue newValue:stroke propertyName:@"stroke"];
 }
 
 -(void)setStyle:(HICSSObject *)style {

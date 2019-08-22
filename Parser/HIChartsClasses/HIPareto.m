@@ -44,7 +44,6 @@
 	copyPareto.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPareto.accessibility = [self.accessibility copyWithZone: zone];
 	copyPareto.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyPareto.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyPareto.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPareto.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPareto.visible = [self.visible copyWithZone: zone];

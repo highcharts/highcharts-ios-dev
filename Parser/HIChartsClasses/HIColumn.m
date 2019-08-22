@@ -34,6 +34,7 @@
 	copyColumn.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyColumn.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyColumn.crisp = [self.crisp copyWithZone: zone];
+	copyColumn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumn.depth = [self.depth copyWithZone: zone];
 	copyColumn.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyColumn.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -66,7 +67,6 @@
 	copyColumn.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumn.accessibility = [self.accessibility copyWithZone: zone];
 	copyColumn.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyColumn.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyColumn.shadow = [self.shadow copyWithZone: zone];
 	copyColumn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumn.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -74,7 +74,6 @@
 	copyColumn.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyColumn.visible = [self.visible copyWithZone: zone];
 	copyColumn.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyColumn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumn.cursor = [self.cursor copyWithZone: zone];
 	copyColumn.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumn.boostThreshold = [self.boostThreshold copyWithZone: zone];

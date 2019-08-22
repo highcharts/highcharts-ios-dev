@@ -39,6 +39,7 @@
 	copyYAxis.lineColor = [self.lineColor copyWithZone: zone];
 	copyYAxis.title = [self.title copyWithZone: zone];
 	copyYAxis.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyYAxis.zoomEnabled = [self.zoomEnabled copyWithZone: zone];
 	copyYAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyYAxis.pane = [self.pane copyWithZone: zone];
 	copyYAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
@@ -204,6 +205,9 @@
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
+	}
+	if (self.zoomEnabled) {
+		params[@"zoomEnabled"] = self.zoomEnabled;
 	}
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
@@ -553,6 +557,12 @@
 	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
 	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
+}
+
+-(void)setZoomEnabled:(NSNumber *)zoomEnabled {
+	NSNumber *oldValue = _zoomEnabled;
+	_zoomEnabled = zoomEnabled;
+	[self updateNSObject:oldValue newValue:zoomEnabled propertyName:@"zoomEnabled"];
 }
 
 -(void)setMinorTickColor:(HIColor *)minorTickColor {

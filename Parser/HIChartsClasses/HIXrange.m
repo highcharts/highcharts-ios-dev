@@ -39,6 +39,7 @@
 	copyXrange.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyXrange.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyXrange.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyXrange.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyXrange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyXrange.grouping = [self.grouping copyWithZone: zone];
@@ -63,14 +64,12 @@
 	copyXrange.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyXrange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyXrange.accessibility = [self.accessibility copyWithZone: zone];
-	copyXrange.exposeElementToA11y = [self.exposeElementToA11y copyWithZone: zone];
 	copyXrange.shadow = [self.shadow copyWithZone: zone];
 	copyXrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyXrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyXrange.zones = [self.zones copyWithZone: zone];
 	copyXrange.visible = [self.visible copyWithZone: zone];
 	copyXrange.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyXrange.cursor = [self.cursor copyWithZone: zone];
 	copyXrange.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyXrange;

@@ -31,6 +31,7 @@
 	copyParallelAxes.startOnTick = [self.startOnTick copyWithZone: zone];
 	copyParallelAxes.maxPadding = [self.maxPadding copyWithZone: zone];
 	copyParallelAxes.lineColor = [self.lineColor copyWithZone: zone];
+	copyParallelAxes.zoomEnabled = [self.zoomEnabled copyWithZone: zone];
 	copyParallelAxes.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyParallelAxes.pane = [self.pane copyWithZone: zone];
 	copyParallelAxes.gridZIndex = [self.gridZIndex copyWithZone: zone];
@@ -135,6 +136,9 @@
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.zoomEnabled) {
+		params[@"zoomEnabled"] = self.zoomEnabled;
 	}
 	if (self.minorTickColor) {
 		params[@"minorTickColor"] = [self.minorTickColor getData];
@@ -400,6 +404,12 @@
 	HIColor *oldValue = _lineColor;
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setZoomEnabled:(NSNumber *)zoomEnabled {
+	NSNumber *oldValue = _zoomEnabled;
+	_zoomEnabled = zoomEnabled;
+	[self updateNSObject:oldValue newValue:zoomEnabled propertyName:@"zoomEnabled"];
 }
 
 -(void)setMinorTickColor:(HIColor *)minorTickColor {
