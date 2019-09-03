@@ -382,7 +382,7 @@ static NSBundle *highchartsBundle = nil;
         HIGExport *export = [[HIGExport alloc] init];
         export.viewController = self.viewController;
         
-        [export response:url.absoluteString];
+        [export response:url.absoluteString filename:self.options.exporting.filename];
         
         return;
     }
@@ -425,7 +425,7 @@ static NSBundle *highchartsBundle = nil;
             HIGExport *export = [[HIGExport alloc] init];
             export.viewController = self.viewController;
             
-            [export response:messageBody];
+            [export response:messageBody filename:self.options.exporting.filename];
         }
     }
 }
