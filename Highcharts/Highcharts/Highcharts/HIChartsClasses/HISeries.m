@@ -1,5 +1,6 @@
 #import "HIChartsJSONSerializableSubclass.h"
 #import "HISeries.h"
+#import "HIPie.h"
 
 @implementation HISeries
 
@@ -288,16 +289,23 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.dataLabels) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.dataLabels) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"dataLabels"] = array;
+        if ([self isKindOfClass:[HIPie class]]) {
+            id obj = [self.dataLabels firstObject];
+            if (obj && [obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+                params[@"dataLabels"] = [(HIChartsJSONSerializable *)obj getParams];
+            }
+        } else {
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            for (id obj in self.dataLabels) {
+                if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+                    [array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+                }
+                else {
+                    [array addObject: obj];
+                }
+            }
+            params[@"dataLabels"] = array;
+        }
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
