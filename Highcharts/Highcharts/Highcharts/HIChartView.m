@@ -447,8 +447,8 @@ static NSBundle *highchartsBundle = nil;
     else if (self.lang.downloadJPEG) {
         shareImageTitle = self.lang.downloadJPEG;
     }
-    
-    UIAlertAction *shareImageActtion = [UIAlertAction actionWithTitle:shareImageTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+
+    UIAlertAction *sharePNGAction = [UIAlertAction actionWithTitle:shareImageTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self.webView evaluateJavaScript:@"shareChart(\"image\");" completionHandler:nil];
     }];
     
@@ -461,12 +461,26 @@ static NSBundle *highchartsBundle = nil;
     }];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:self.lang.cancelButtonTitle ? self.lang.cancelButtonTitle : @"Cancel" style:UIAlertActionStyleCancel handler:nil];
-    
-    [actionSheet addAction:shareImageActtion];
-    [actionSheet addAction:sharePDFAction];
-    [actionSheet addAction:shareCSVAction];
+
+    NSArray *menuItmes = self.options.exporting.buttons.contextButton.menuItems;
+    if (menuItmes) {
+        if ([menuItmes containsObject:@"sharePNG"]) {
+            [actionSheet addAction:sharePNGAction];
+        }
+        if ([menuItmes containsObject:@"sharePDF"]) {
+            [actionSheet addAction:sharePDFAction];
+        }
+        if ([menuItmes containsObject:@"shareCSV"]) {
+            [actionSheet addAction:shareCSVAction];
+        }
+    } else {
+        [actionSheet addAction:sharePNGAction];
+        [actionSheet addAction:sharePDFAction];
+        [actionSheet addAction:shareCSVAction];
+    }
+
     [actionSheet addAction:cancelAction];
-    
+
     [self.viewController presentViewController:actionSheet animated:YES completion:nil];
 }
 
