@@ -449,15 +449,15 @@ static NSBundle *highchartsBundle = nil;
     }
 
     UIAlertAction *sharePNGAction = [UIAlertAction actionWithTitle:shareImageTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.webView evaluateJavaScript:@"shareChart(\"image\");" completionHandler:nil];
+        [self exportToPNG];
     }];
     
     UIAlertAction *sharePDFAction = [UIAlertAction actionWithTitle:self.lang.downloadPDF ? self.lang.downloadPDF : @"Share PDF" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.webView evaluateJavaScript:@"shareChart(\"pdf\");" completionHandler:nil];
+        [self exportToPDF];
     }];
     
     UIAlertAction *shareCSVAction = [UIAlertAction actionWithTitle:self.lang.downloadCSV ? self.lang.downloadCSV : @"Share CSV" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.webView evaluateJavaScript:@"shareChart(\"csv\");" completionHandler:nil];
+        [self exportToCSV];
     }];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:self.lang.cancelButtonTitle ? self.lang.cancelButtonTitle : @"Cancel" style:UIAlertActionStyleCancel handler:nil];
@@ -482,6 +482,18 @@ static NSBundle *highchartsBundle = nil;
     [actionSheet addAction:cancelAction];
 
     [self.viewController presentViewController:actionSheet animated:YES completion:nil];
+}
+
+- (void)exportToPNG {
+    [self.webView evaluateJavaScript:@"shareChart(\"image\");" completionHandler:nil];
+}
+
+- (void)exportToPDF {
+    [self.webView evaluateJavaScript:@"shareChart(\"pdf\");" completionHandler:nil];
+}
+
+- (void)exportToCSV {
+    [self.webView evaluateJavaScript:@"shareChart(\"csv\");" completionHandler:nil];
 }
 
 #pragma mark - NSMutableCopying recursively
