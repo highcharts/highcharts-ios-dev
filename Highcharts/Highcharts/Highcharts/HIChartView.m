@@ -382,7 +382,7 @@ static NSBundle *highchartsBundle = nil;
         HIGExport *export = [[HIGExport alloc] init];
         export.viewController = self.viewController;
         
-        [export response:url.absoluteString];
+        [export response:url.absoluteString filename:self.options.exporting.filename];
         
         return;
     }
@@ -425,7 +425,7 @@ static NSBundle *highchartsBundle = nil;
             HIGExport *export = [[HIGExport alloc] init];
             export.viewController = self.viewController;
             
-            [export response:messageBody];
+            [export response:messageBody filename:self.options.exporting.filename];
         }
     }
 }
@@ -447,27 +447,53 @@ static NSBundle *highchartsBundle = nil;
     else if (self.lang.downloadJPEG) {
         shareImageTitle = self.lang.downloadJPEG;
     }
-    
-    UIAlertAction *shareImageActtion = [UIAlertAction actionWithTitle:shareImageTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.webView evaluateJavaScript:@"shareChart(\"image\");" completionHandler:nil];
+
+    UIAlertAction *sharePNGAction = [UIAlertAction actionWithTitle:shareImageTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self exportToPNG];
     }];
     
     UIAlertAction *sharePDFAction = [UIAlertAction actionWithTitle:self.lang.downloadPDF ? self.lang.downloadPDF : @"Share PDF" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.webView evaluateJavaScript:@"shareChart(\"pdf\");" completionHandler:nil];
+        [self exportToPDF];
     }];
     
     UIAlertAction *shareCSVAction = [UIAlertAction actionWithTitle:self.lang.downloadCSV ? self.lang.downloadCSV : @"Share CSV" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.webView evaluateJavaScript:@"shareChart(\"csv\");" completionHandler:nil];
+        [self exportToCSV];
     }];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:self.lang.cancelButtonTitle ? self.lang.cancelButtonTitle : @"Cancel" style:UIAlertActionStyleCancel handler:nil];
-    
-    [actionSheet addAction:shareImageActtion];
-    [actionSheet addAction:sharePDFAction];
-    [actionSheet addAction:shareCSVAction];
+
+    NSArray *menuItmes = self.options.exporting.buttons.contextButton.menuItems;
+    if (menuItmes) {
+        if ([menuItmes containsObject:@"sharePNG"]) {
+            [actionSheet addAction:sharePNGAction];
+        }
+        if ([menuItmes containsObject:@"sharePDF"]) {
+            [actionSheet addAction:sharePDFAction];
+        }
+        if ([menuItmes containsObject:@"shareCSV"]) {
+            [actionSheet addAction:shareCSVAction];
+        }
+    } else {
+        [actionSheet addAction:sharePNGAction];
+        [actionSheet addAction:sharePDFAction];
+        [actionSheet addAction:shareCSVAction];
+    }
+
     [actionSheet addAction:cancelAction];
-    
+
     [self.viewController presentViewController:actionSheet animated:YES completion:nil];
+}
+
+- (void)exportToPNG {
+    [self.webView evaluateJavaScript:@"shareChart(\"image\");" completionHandler:nil];
+}
+
+- (void)exportToPDF {
+    [self.webView evaluateJavaScript:@"shareChart(\"pdf\");" completionHandler:nil];
+}
+
+- (void)exportToCSV {
+    [self.webView evaluateJavaScript:@"shareChart(\"csv\");" completionHandler:nil];
 }
 
 #pragma mark - NSMutableCopying recursively

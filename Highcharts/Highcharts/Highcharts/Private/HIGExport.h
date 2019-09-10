@@ -18,7 +18,7 @@
  *
  *  @param params from JS runtime.
  */
-- (void)response:(NSString*)params;
+- (void)response:(NSString*)params filename:(NSString*)filename;
 
 /**
  *  This method take action for specified objects.
