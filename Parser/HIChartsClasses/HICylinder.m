@@ -46,10 +46,10 @@
 	copyCylinder.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyCylinder.color = [self.color copyWithZone: zone];
 	copyCylinder.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyCylinder.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyCylinder.colorKey = [self.colorKey copyWithZone: zone];
 	copyCylinder.point = [self.point copyWithZone: zone];
 	copyCylinder.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyCylinder.className = [self.className copyWithZone: zone];
+	copyCylinder.cursor = [self.cursor copyWithZone: zone];
 	copyCylinder.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyCylinder.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyCylinder.label = [self.label copyWithZone: zone];
@@ -74,7 +74,7 @@
 	copyCylinder.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyCylinder.visible = [self.visible copyWithZone: zone];
 	copyCylinder.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyCylinder.cursor = [self.cursor copyWithZone: zone];
+	copyCylinder.className = [self.className copyWithZone: zone];
 	copyCylinder.pointStart = [self.pointStart copyWithZone: zone];
 	copyCylinder.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyCylinder.data = [self.data copyWithZone: zone];

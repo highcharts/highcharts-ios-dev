@@ -58,9 +58,10 @@
 	copyBullet.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyBullet.color = [self.color copyWithZone: zone];
 	copyBullet.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyBullet.colorKey = [self.colorKey copyWithZone: zone];
 	copyBullet.point = [self.point copyWithZone: zone];
 	copyBullet.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyBullet.className = [self.className copyWithZone: zone];
+	copyBullet.cursor = [self.cursor copyWithZone: zone];
 	copyBullet.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBullet.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBullet.label = [self.label copyWithZone: zone];
@@ -85,7 +86,7 @@
 	copyBullet.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBullet.visible = [self.visible copyWithZone: zone];
 	copyBullet.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBullet.cursor = [self.cursor copyWithZone: zone];
+	copyBullet.className = [self.className copyWithZone: zone];
 	copyBullet.pointStart = [self.pointStart copyWithZone: zone];
 	copyBullet.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyBullet;

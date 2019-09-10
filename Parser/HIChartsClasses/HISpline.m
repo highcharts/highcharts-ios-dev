@@ -34,13 +34,14 @@
 	copySpline.pointInterval = [self.pointInterval copyWithZone: zone];
 	copySpline.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copySpline.states = [self.states copyWithZone: zone];
+	copySpline.colorKey = [self.colorKey copyWithZone: zone];
 	copySpline.softThreshold = [self.softThreshold copyWithZone: zone];
 	copySpline.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySpline.point = [self.point copyWithZone: zone];
 	copySpline.marker = [self.marker copyWithZone: zone];
 	copySpline.tooltip = [self.tooltip copyWithZone: zone];
 	copySpline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySpline.className = [self.className copyWithZone: zone];
+	copySpline.cursor = [self.cursor copyWithZone: zone];
 	copySpline.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySpline.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copySpline.connectNulls = [self.connectNulls copyWithZone: zone];
@@ -63,6 +64,7 @@
 	copySpline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copySpline.shadow = [self.shadow copyWithZone: zone];
 	copySpline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySpline.colorAxis = [self.colorAxis copyWithZone: zone];
 	copySpline.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySpline.zones = [self.zones copyWithZone: zone];
 	copySpline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -71,7 +73,7 @@
 	copySpline.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySpline.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySpline.dataLabels = [self.dataLabels copyWithZone: zone];
-	copySpline.cursor = [self.cursor copyWithZone: zone];
+	copySpline.className = [self.className copyWithZone: zone];
 	copySpline.pointStart = [self.pointStart copyWithZone: zone];
 	copySpline.linecap = [self.linecap copyWithZone: zone];
 	copySpline.connectEnds = [self.connectEnds copyWithZone: zone];

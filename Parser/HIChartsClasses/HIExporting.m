@@ -82,7 +82,7 @@
 		params[@"tableCaption"] = self.tableCaption;
 	}
 	if (self.formAttributes) {
-		params[@"formAttributes"] = self.formAttributes;
+		params[@"formAttributes"] = [self.formAttributes getParams];
 	}
 	if (self.useMultiLevelHeaders) {
 		params[@"useMultiLevelHeaders"] = self.useMultiLevelHeaders;
@@ -203,10 +203,10 @@
 	[self updateNSObject:oldValue newValue:tableCaption propertyName:@"tableCaption"];
 }
 
--(void)setFormAttributes:(id)formAttributes {
-	id oldValue = _formAttributes;
+-(void)setFormAttributes:(HIHTMLAttributes *)formAttributes {
+	HIHTMLAttributes *oldValue = _formAttributes;
 	_formAttributes = formAttributes;
-	[self updateNSObject:oldValue newValue:formAttributes propertyName:@"formAttributes"];
+	[self updateHIObject:oldValue newValue:formAttributes propertyName:@"formAttributes"];
 }
 
 -(void)setUseMultiLevelHeaders:(NSNumber *)useMultiLevelHeaders {

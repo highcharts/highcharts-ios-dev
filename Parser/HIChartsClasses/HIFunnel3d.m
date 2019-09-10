@@ -54,10 +54,11 @@
 	copyFunnel3d.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyFunnel3d.color = [self.color copyWithZone: zone];
 	copyFunnel3d.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyFunnel3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyFunnel3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyFunnel3d.point = [self.point copyWithZone: zone];
 	copyFunnel3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyFunnel3d.className = [self.className copyWithZone: zone];
+	copyFunnel3d.cursor = [self.cursor copyWithZone: zone];
 	copyFunnel3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyFunnel3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyFunnel3d.label = [self.label copyWithZone: zone];
@@ -81,7 +82,7 @@
 	copyFunnel3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyFunnel3d.visible = [self.visible copyWithZone: zone];
 	copyFunnel3d.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyFunnel3d.cursor = [self.cursor copyWithZone: zone];
+	copyFunnel3d.className = [self.className copyWithZone: zone];
 	copyFunnel3d.pointStart = [self.pointStart copyWithZone: zone];
 	copyFunnel3d.data = [self.data copyWithZone: zone];
 	copyFunnel3d.id = [self.id copyWithZone: zone];

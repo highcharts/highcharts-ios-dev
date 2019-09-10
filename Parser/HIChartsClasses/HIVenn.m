@@ -35,10 +35,10 @@
 	copyVenn.selected = [self.selected copyWithZone: zone];
 	copyVenn.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVenn.color = [self.color copyWithZone: zone];
-	copyVenn.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyVenn.colorKey = [self.colorKey copyWithZone: zone];
 	copyVenn.point = [self.point copyWithZone: zone];
 	copyVenn.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyVenn.className = [self.className copyWithZone: zone];
+	copyVenn.cursor = [self.cursor copyWithZone: zone];
 	copyVenn.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyVenn.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVenn.animation = [self.animation copyWithZone: zone];
@@ -53,9 +53,10 @@
 	copyVenn.accessibility = [self.accessibility copyWithZone: zone];
 	copyVenn.step = [self.step copyWithZone: zone];
 	copyVenn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyVenn.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVenn.visible = [self.visible copyWithZone: zone];
 	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyVenn.cursor = [self.cursor copyWithZone: zone];
+	copyVenn.className = [self.className copyWithZone: zone];
 	copyVenn.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyVenn;
 }

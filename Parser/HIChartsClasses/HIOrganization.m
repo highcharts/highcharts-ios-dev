@@ -50,10 +50,9 @@
 	copyOrganization.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyOrganization.clip = [self.clip copyWithZone: zone];
 	copyOrganization.color = [self.color copyWithZone: zone];
-	copyOrganization.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyOrganization.point = [self.point copyWithZone: zone];
 	copyOrganization.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyOrganization.className = [self.className copyWithZone: zone];
+	copyOrganization.cursor = [self.cursor copyWithZone: zone];
 	copyOrganization.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyOrganization.label = [self.label copyWithZone: zone];
 	copyOrganization.animation = [self.animation copyWithZone: zone];
@@ -69,7 +68,7 @@
 	copyOrganization.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyOrganization.visible = [self.visible copyWithZone: zone];
 	copyOrganization.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyOrganization.cursor = [self.cursor copyWithZone: zone];
+	copyOrganization.className = [self.className copyWithZone: zone];
 	return copyOrganization;
 }
 
