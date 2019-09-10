@@ -841,7 +841,7 @@
           "description": "Options for annotation's control points. Each control point\ninherits options from controlPointOptions object.\nOptions from the controlPointOptions can be overwritten\nby options in a specific control point.",
           "type": {
             "names": [
-              "Annotation.ControlPoint.Options"
+              "*"
             ]
           },
           "since": "6.0.0"
@@ -2768,8 +2768,7 @@
               ],
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.MockPointOptionsObject"
+                  "*"
                 ]
               },
               "since": "6.0.0"
@@ -3917,8 +3916,7 @@
               "description": "This option defines the point to which the shape will be\nconnected. It can be either the point which exists in the\nseries - it is referenced by the point's id - or a new point with\ndefined x, y properties and optionally axes.",
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.MockPointOptionsObject"
+                  "*"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -3939,7 +3937,7 @@
               ],
               "type": {
                 "names": [
-                  "Array.<(string|Highcharts.MockPointOptionsObject)>"
+                  "Array.<*>"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -21943,7 +21941,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.AnnotationsOptions"
+              "*"
             ]
           },
           "extends": "annotations",
