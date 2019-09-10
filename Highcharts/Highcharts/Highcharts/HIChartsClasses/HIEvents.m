@@ -27,6 +27,7 @@
 	copyEvents.drillup = [self.drillup copyWithZone: zone];
 	copyEvents.beforePrint = [self.beforePrint copyWithZone: zone];
 	copyEvents.drillupall = [self.drillupall copyWithZone: zone];
+	copyEvents.exportData = [self.exportData copyWithZone: zone];
 	copyEvents.drilldown = [self.drilldown copyWithZone: zone];
 	copyEvents.redraw = [self.redraw copyWithZone: zone];
 	copyEvents.afterPrint = [self.afterPrint copyWithZone: zone];
@@ -106,6 +107,9 @@
 	}
 	if (self.drillupall) {
 		params[@"drillupall"] = [self.drillupall getFunction];
+	}
+	if (self.exportData) {
+		params[@"exportData"] = [self.exportData getFunction];
 	}
 	if (self.drilldown) {
 		params[@"drilldown"] = [self.drilldown getFunction];
@@ -281,6 +285,12 @@
 	HIFunction *oldValue = _drillupall;
 	_drillupall = drillupall;
 	[self updateHIObject:oldValue newValue:drillupall propertyName:@"drillupall"];
+}
+
+-(void)setExportData:(HIFunction *)exportData {
+	HIFunction *oldValue = _exportData;
+	_exportData = exportData;
+	[self updateHIObject:oldValue newValue:exportData propertyName:@"exportData"];
 }
 
 -(void)setDrilldown:(HIFunction *)drilldown {

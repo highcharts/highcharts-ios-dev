@@ -39,6 +39,7 @@
 		params[@"buttonOptions"] = [self.buttonOptions getParams];
 	}
 	if (self.iconsURL) {
+		params[@"iconsURL"] = self.iconsURL;
 	}
 	if (self.bindingsClassName) {
 		params[@"bindingsClassName"] = self.bindingsClassName;
@@ -96,8 +97,8 @@
 	[self updateHIObject:oldValue newValue:buttonOptions propertyName:@"buttonOptions"];
 }
 
--(void)setIconsURL:(id)iconsURL {
-	id oldValue = _iconsURL;
+-(void)setIconsURL:(NSString *)iconsURL {
+	NSString *oldValue = _iconsURL;
 	_iconsURL = iconsURL;
 	[self updateNSObject:oldValue newValue:iconsURL propertyName:@"iconsURL"];
 }

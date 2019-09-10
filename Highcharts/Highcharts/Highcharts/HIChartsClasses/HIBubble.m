@@ -31,10 +31,11 @@
 	copyBubble.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyBubble.zMin = [self.zMin copyWithZone: zone];
 	copyBubble.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyBubble.maxSize = [self.maxSize copyWithZone: zone];
 	copyBubble.tooltip = [self.tooltip copyWithZone: zone];
 	copyBubble.minSize = [self.minSize copyWithZone: zone];
 	copyBubble.zoneAxis = [self.zoneAxis copyWithZone: zone];
-	copyBubble.maxSize = [self.maxSize copyWithZone: zone];
+	copyBubble.colorKey = [self.colorKey copyWithZone: zone];
 	copyBubble.displayNegative = [self.displayNegative copyWithZone: zone];
 	copyBubble.zThreshold = [self.zThreshold copyWithZone: zone];
 	copyBubble.softThreshold = [self.softThreshold copyWithZone: zone];
@@ -55,7 +56,7 @@
 	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBubble.point = [self.point copyWithZone: zone];
 	copyBubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyBubble.className = [self.className copyWithZone: zone];
+	copyBubble.cursor = [self.cursor copyWithZone: zone];
 	copyBubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBubble.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyBubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
@@ -74,12 +75,13 @@
 	copyBubble.step = [self.step copyWithZone: zone];
 	copyBubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyBubble.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyBubble.zones = [self.zones copyWithZone: zone];
 	copyBubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBubble.visible = [self.visible copyWithZone: zone];
 	copyBubble.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyBubble.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyBubble.cursor = [self.cursor copyWithZone: zone];
+	copyBubble.className = [self.className copyWithZone: zone];
 	copyBubble.pointStart = [self.pointStart copyWithZone: zone];
 	copyBubble.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyBubble.boostThreshold = [self.boostThreshold copyWithZone: zone];
@@ -99,11 +101,11 @@
 	if (self.zMin) {
 		params[@"zMin"] = self.zMin;
 	}
-	if (self.minSize) {
-		params[@"minSize"] = self.minSize;
-	}
 	if (self.maxSize) {
 		params[@"maxSize"] = self.maxSize;
+	}
+	if (self.minSize) {
+		params[@"minSize"] = self.minSize;
 	}
 	if (self.displayNegative) {
 		params[@"displayNegative"] = self.displayNegative;
@@ -140,16 +142,16 @@
 	[self updateNSObject:oldValue newValue:zMin propertyName:@"zMin"];
 }
 
--(void)setMinSize:(id)minSize {
-	id oldValue = _minSize;
-	_minSize = minSize;
-	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
-}
-
 -(void)setMaxSize:(id)maxSize {
 	id oldValue = _maxSize;
 	_maxSize = maxSize;
 	[self updateNSObject:oldValue newValue:maxSize propertyName:@"maxSize"];
+}
+
+-(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
+	_minSize = minSize;
+	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
 }
 
 -(void)setDisplayNegative:(NSNumber *)displayNegative {

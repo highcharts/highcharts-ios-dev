@@ -62,10 +62,11 @@
 	copyPyramid3d.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyPyramid3d.color = [self.color copyWithZone: zone];
 	copyPyramid3d.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid3d.point = [self.point copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyPyramid3d.className = [self.className copyWithZone: zone];
+	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
 	copyPyramid3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyPyramid3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid3d.label = [self.label copyWithZone: zone];
@@ -89,7 +90,7 @@
 	copyPyramid3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyPyramid3d.visible = [self.visible copyWithZone: zone];
 	copyPyramid3d.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
+	copyPyramid3d.className = [self.className copyWithZone: zone];
 	copyPyramid3d.pointStart = [self.pointStart copyWithZone: zone];
 	return copyPyramid3d;
 }

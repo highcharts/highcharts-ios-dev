@@ -47,10 +47,11 @@
 	copyColumnpyramid.clip = [self.clip copyWithZone: zone];
 	copyColumnpyramid.color = [self.color copyWithZone: zone];
 	copyColumnpyramid.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyColumnpyramid.colorKey = [self.colorKey copyWithZone: zone];
 	copyColumnpyramid.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumnpyramid.point = [self.point copyWithZone: zone];
 	copyColumnpyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyColumnpyramid.className = [self.className copyWithZone: zone];
+	copyColumnpyramid.cursor = [self.cursor copyWithZone: zone];
 	copyColumnpyramid.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyColumnpyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumnpyramid.label = [self.label copyWithZone: zone];
@@ -70,10 +71,11 @@
 	copyColumnpyramid.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyColumnpyramid.shadow = [self.shadow copyWithZone: zone];
 	copyColumnpyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyColumnpyramid.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyColumnpyramid.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyColumnpyramid.visible = [self.visible copyWithZone: zone];
 	copyColumnpyramid.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyColumnpyramid.cursor = [self.cursor copyWithZone: zone];
+	copyColumnpyramid.className = [self.className copyWithZone: zone];
 	copyColumnpyramid.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumnpyramid.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyColumnpyramid;

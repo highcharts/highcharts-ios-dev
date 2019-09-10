@@ -17,6 +17,7 @@
 	HIArearange *copyArearange = [[HIArearange allocWithZone: zone] init];
 	copyArearange.tooltip = [self.tooltip copyWithZone: zone];
 	copyArearange.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyArearange.colorKey = [self.colorKey copyWithZone: zone];
 	copyArearange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyArearange.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyArearange.threshold = [self.threshold copyWithZone: zone];
@@ -40,7 +41,7 @@
 	copyArearange.point = [self.point copyWithZone: zone];
 	copyArearange.marker = [self.marker copyWithZone: zone];
 	copyArearange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyArearange.className = [self.className copyWithZone: zone];
+	copyArearange.cursor = [self.cursor copyWithZone: zone];
 	copyArearange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyArearange.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyArearange.connectNulls = [self.connectNulls copyWithZone: zone];
@@ -61,13 +62,14 @@
 	copyArearange.step = [self.step copyWithZone: zone];
 	copyArearange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyArearange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyArearange.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyArearange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyArearange.zones = [self.zones copyWithZone: zone];
 	copyArearange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyArearange.visible = [self.visible copyWithZone: zone];
 	copyArearange.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyArearange.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyArearange.cursor = [self.cursor copyWithZone: zone];
+	copyArearange.className = [self.className copyWithZone: zone];
 	copyArearange.pointStart = [self.pointStart copyWithZone: zone];
 	copyArearange.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyArearange.boostThreshold = [self.boostThreshold copyWithZone: zone];

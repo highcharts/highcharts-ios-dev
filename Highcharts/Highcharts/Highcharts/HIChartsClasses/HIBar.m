@@ -56,10 +56,11 @@
 	copyBar.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyBar.color = [self.color copyWithZone: zone];
 	copyBar.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyBar.colorKey = [self.colorKey copyWithZone: zone];
 	copyBar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBar.point = [self.point copyWithZone: zone];
 	copyBar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyBar.className = [self.className copyWithZone: zone];
+	copyBar.cursor = [self.cursor copyWithZone: zone];
 	copyBar.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBar.label = [self.label copyWithZone: zone];
@@ -79,12 +80,13 @@
 	copyBar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBar.shadow = [self.shadow copyWithZone: zone];
 	copyBar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyBar.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyBar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBar.zones = [self.zones copyWithZone: zone];
 	copyBar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBar.visible = [self.visible copyWithZone: zone];
 	copyBar.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBar.cursor = [self.cursor copyWithZone: zone];
+	copyBar.className = [self.className copyWithZone: zone];
 	copyBar.pointStart = [self.pointStart copyWithZone: zone];
 	copyBar.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyBar.showInLegend = [self.showInLegend copyWithZone: zone];

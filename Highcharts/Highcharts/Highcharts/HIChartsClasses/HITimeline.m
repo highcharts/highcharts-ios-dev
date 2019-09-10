@@ -29,6 +29,7 @@
 	copyTimeline.tooltip = [self.tooltip copyWithZone: zone];
 	copyTimeline.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTimeline.states = [self.states copyWithZone: zone];
+	copyTimeline.colorKey = [self.colorKey copyWithZone: zone];
 	copyTimeline.marker = [self.marker copyWithZone: zone];
 	copyTimeline.legendType = [self.legendType copyWithZone: zone];
 	copyTimeline.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -42,7 +43,7 @@
 	copyTimeline.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTimeline.point = [self.point copyWithZone: zone];
 	copyTimeline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyTimeline.className = [self.className copyWithZone: zone];
+	copyTimeline.cursor = [self.cursor copyWithZone: zone];
 	copyTimeline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTimeline.label = [self.label copyWithZone: zone];
 	copyTimeline.animation = [self.animation copyWithZone: zone];
@@ -56,9 +57,10 @@
 	copyTimeline.accessibility = [self.accessibility copyWithZone: zone];
 	copyTimeline.shadow = [self.shadow copyWithZone: zone];
 	copyTimeline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyTimeline.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyTimeline.visible = [self.visible copyWithZone: zone];
 	copyTimeline.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyTimeline.cursor = [self.cursor copyWithZone: zone];
+	copyTimeline.className = [self.className copyWithZone: zone];
 	return copyTimeline;
 }
 

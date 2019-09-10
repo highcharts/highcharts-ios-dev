@@ -203,8 +203,8 @@
 	[self updateNSObject:oldValue newValue:tableCaption propertyName:@"tableCaption"];
 }
 
--(void)setFormAttributes:(id)formAttributes {
-	id oldValue = _formAttributes;
+-(void)setFormAttributes:(NSDictionary *)formAttributes {
+	NSDictionary *oldValue = _formAttributes;
 	_formAttributes = formAttributes;
 	[self updateNSObject:oldValue newValue:formAttributes propertyName:@"formAttributes"];
 }
