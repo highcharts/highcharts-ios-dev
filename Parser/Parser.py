@@ -313,7 +313,9 @@ hc_types = {
         "Array.<(number|string|null), (number|string|null)>": 'NSArray /* <NSNumber, NSString> */',
         "Highcharts.EventCallbackFunction.<Highcharts.PlotLineOrBand>": 'HIFunction',
         "Highcharts.FormatterCallbackFunction.<Highcharts.PlotLineOrBand>": 'HIFunction',
-        "string|null|undefined": 'NSString'
+        "string|null|undefined": 'NSString',
+        #7.2.0
+        "number|string|boolean": 'id /* NSNumber, NSString */'
     }
 
 def get_type(x):
