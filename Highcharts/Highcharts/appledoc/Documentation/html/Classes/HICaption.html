@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISubtitle Class Reference</title>
+	<title>HICaption Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -62,6 +62,8 @@
 		
 		<option value="//api/name/floating">floating</option>
 		
+		<option value="//api/name/margin">margin</option>
+		
 		<option value="//api/name/style">style</option>
 		
 		<option value="//api/name/text">text</option>
@@ -69,8 +71,6 @@
 		<option value="//api/name/useHTML">useHTML</option>
 		
 		<option value="//api/name/verticalAlign">verticalAlign</option>
-		
-		<option value="//api/name/widthAdjust">widthAdjust</option>
 		
 		<option value="//api/name/x">x</option>
 		
@@ -101,7 +101,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISubtitle Class Reference</h1>
+					<h1 class="title">HICaption Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -110,7 +110,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISubtitle.h</td>
+	<td>HICaption.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -120,7 +120,14 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The chart&rsquo;s subtitle. This can be used both to display a subtitle below the main title, and to display random text anywhere in the chart. The subtitle can be updated after chart initialization through the <code>Chart.setTitle</code> method.</p>
+						<p>The chart&rsquo;s caption, which will render below the chart and will be part of exported charts. The caption can be updated after chart initialization through the <code>Chart.update</code> or <code>Chart.caption.update</code> methods.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/caption/text/">A chart with a caption</a></li>
+</ul>
+
 					</div>
 					
 					
@@ -147,7 +154,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>CSS styles for the title. In styled mode, the subtitle style is given in the <code>.highcharts-subtitle</code> class.</p>
+				<p>CSS styles for the caption. In styled mode, the caption style is given in the <code>.highcharts-caption</code> class.</p>
 			</div>
 			
 		    
@@ -169,7 +176,6 @@
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/style/">Custom color and weight</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/">Styled mode</a></li>
 </ul>
 
@@ -183,7 +189,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			
@@ -201,7 +207,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The vertical alignment of the title. Can be one of <code>"top"</code>, <code>"middle"</code> and <code>"bottom"</code>. When middle, the subtitle behaves as floating.</p>
+				<p>The vertical alignment of the caption. Can be one of <code>"top"</code>, <code>"middle"</code> and <code>"bottom"</code>. When middle, the caption behaves as floating.</p>
 			</div>
 			
 		    
@@ -216,16 +222,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/">Footnote at the bottom right of plot area</a></li>
-</ul>
-
-			</div>
-			
 
 			
 
@@ -234,7 +230,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			
@@ -252,7 +248,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The subtitle of the chart.</p>
+				<p>The caption text of the chart.</p>
 			</div>
 			
 		    
@@ -272,8 +268,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/text/">Custom subtitle</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/text-formatted/">Formatted and linked text.</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/caption/text/">Custom caption</a></li>
 </ul>
 
 			</div>
@@ -286,7 +281,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			
@@ -304,7 +299,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The horizontal alignment of the subtitle. Can be one of &ldquo;left&rdquo;, &ldquo;center&rdquo; and &ldquo;right&rdquo;.</p>
+				<p>The horizontal alignment of the caption. Can be one of &ldquo;left&rdquo;, &ldquo;center&rdquo; and &ldquo;right&rdquo;.</p>
 			</div>
 			
 		    
@@ -319,16 +314,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/align/">Footnote at right of plot area</a></li>
-</ul>
-
-			</div>
-			
 
 			
 
@@ -337,7 +322,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			
@@ -355,7 +340,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The y position of the subtitle relative to the alignment within <code>chart.spacingTop</code> and <code>chart.spacingBottom</code>. By default the subtitle is laid out below the title unless the title is floating.</p>
+				<p>The y position of the caption relative to the alignment within <code>chart.spacingTop</code> and <code>chart.spacingBottom</code>.</p>
 			</div>
 			
 		    
@@ -370,16 +355,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/verticalalign/">Footnote at the bottom right of plot area</a></li>
-</ul>
-
-			</div>
-			
 
 			
 
@@ -388,7 +363,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			
@@ -406,7 +381,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The x position of the subtitle relative to the alignment within <code>chart.spacingLeft</code> and <code>chart.spacingRight</code>.</p>
+				<p>The x position of the caption relative to the alignment within <code>chart.spacingLeft</code> and <code>chart.spacingRight</code>.</p>
 			</div>
 			
 		    
@@ -424,13 +399,6 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>0</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/align/">Footnote at right of plot area</a></li>
-</ul>
-
 			</div>
 			
 
@@ -441,7 +409,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			
@@ -459,7 +427,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When the subtitle is floating, the plot area will not move to make space for it.</p>
+				<p>When the caption is floating, the plot area will not move to make space for it.</p>
 			</div>
 			
 		    
@@ -477,13 +445,6 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/subtitle/floating/">Floating title and subtitle</a></li>
-</ul>
-
 			</div>
 			
 
@@ -494,15 +455,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/widthAdjust" title="widthAdjust"></a>
-	<h3 class="method-title"><code><a href="#//api/name/widthAdjust">&nbsp;&nbsp;widthAdjust</a></code>
+	<a name="//api/name/margin" title="margin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/margin">&nbsp;&nbsp;margin</a></code>
 </h3>
 
 	<div class="method-info">
@@ -512,12 +473,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Adjustment made to the subtitle width, normally to reserve space for the exporting burger menu.</p>
+				<p>The margin between the caption and the plot area.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *widthAdjust</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *margin</code></div>
 
 		    
 			
@@ -526,16 +487,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/">Wider menu, greater padding</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -545,7 +496,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			
@@ -591,7 +542,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISubtitle.h</code></p>
+				<p><code class="declared-in-ref">HICaption.h</code></p>
 			</div>
 			
 			

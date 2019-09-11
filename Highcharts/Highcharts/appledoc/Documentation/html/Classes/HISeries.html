@@ -76,7 +76,11 @@
 		
 		<option value="//api/name/color">color</option>
 		
+		<option value="//api/name/colorAxis">colorAxis</option>
+		
 		<option value="//api/name/colorIndex">colorIndex</option>
+		
+		<option value="//api/name/colorKey">colorKey</option>
 		
 		<option value="//api/name/connectEnds">connectEnds</option>
 		
@@ -1415,6 +1419,60 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/colorKey" title="colorKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorKey">&nbsp;&nbsp;colorKey</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines what data value should be used to calculate point color if <code>colorAxis</code> is used. Requires to set <code>min</code> and <code>max</code> if some custom point property is used or if approximation for data grouping is set to <code>'sum'</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *colorKey</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>y</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/custom-color-key/">Custom color key</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/changed-default-color-key/">Changed default color key</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/softThreshold" title="softThreshold"></a>
 	<h3 class="method-title"><code><a href="#//api/name/softThreshold">&nbsp;&nbsp;softThreshold</a></code>
 </h3>
@@ -1674,8 +1732,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/className" title="className"></a>
-	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
+	<a name="//api/name/cursor" title="cursor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cursor">&nbsp;&nbsp;cursor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1685,12 +1743,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An additional class name to apply to the series' graphical elements. This option does not replace default class names of the graphical element.</p>
+				<p>You can set the cursor to &ldquo;pointer&rdquo; if you have click events attached to the series, to signal to the user that the points and lines can be clicked. In styled mode, the series cursor can be set with the same classes as listed under <code>series.color</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *cursor</code></div>
 
 		    
 			
@@ -1699,6 +1757,18 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/">On line graph</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/">On columns</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/">On scatter markers</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -2802,6 +2872,60 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/colorAxis" title="colorAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/colorAxis">&nbsp;&nbsp;colorAxis</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When using dual or multiple color axes, this number defines which colorAxis the particular series is connected to. It refers to either the {@link #colorAxis.id|axis id} or the index of the axis in the colorAxis array, with 0 being the first. Set this option to false to prevent a series from connecting to the default color axis. Since v7.2.0 the option can also be an axis id or an axis index instead of a boolean flag.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id colorAxis</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>0</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/coloraxis-with-pie/">Color axis with pie series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/multiple-coloraxis/">Multiple color axis</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/zoneAxis" title="zoneAxis"></a>
 	<h3 class="method-title"><code><a href="#//api/name/zoneAxis">&nbsp;&nbsp;zoneAxis</a></code>
 </h3>
@@ -3221,8 +3345,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/cursor" title="cursor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/cursor">&nbsp;&nbsp;cursor</a></code>
+	<a name="//api/name/className" title="className"></a>
+	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3232,12 +3356,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>You can set the cursor to &ldquo;pointer&rdquo; if you have click events attached to the series, to signal to the user that the points and lines can be clicked. In styled mode, the series cursor can be set with the same classes as listed under <code>series.color</code>.</p>
+				<p>An additional class name to apply to the series' graphical elements. This option does not replace default class names of the graphical element.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *cursor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
 
 		    
 			
@@ -3246,18 +3370,6 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/">On line graph</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/">On columns</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/">On scatter markers</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -3482,7 +3594,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to display this particular series or series type in the legend. The default value is <code>true</code> for standalone series, <code>false</code> for linked series.</p>
+				<p>Whether to display this particular series or series type in the legend. Standalone series are shown in legend by default, and linked series are not. Since v7.2.0 it is possible to show series that use colorAxis by setting this option to <code>true</code>.</p>
 			</div>
 			
 		    
@@ -3499,9 +3611,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/">One series in the legend, one hidden</a></li>
