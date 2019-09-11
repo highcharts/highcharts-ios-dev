@@ -34,13 +34,14 @@
 	copySeries.pointInterval = [self.pointInterval copyWithZone: zone];
 	copySeries.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copySeries.states = [self.states copyWithZone: zone];
+	copySeries.colorKey = [self.colorKey copyWithZone: zone];
 	copySeries.softThreshold = [self.softThreshold copyWithZone: zone];
 	copySeries.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySeries.point = [self.point copyWithZone: zone];
 	copySeries.marker = [self.marker copyWithZone: zone];
 	copySeries.tooltip = [self.tooltip copyWithZone: zone];
 	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySeries.className = [self.className copyWithZone: zone];
+	copySeries.cursor = [self.cursor copyWithZone: zone];
 	copySeries.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySeries.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copySeries.connectNulls = [self.connectNulls copyWithZone: zone];
@@ -63,6 +64,7 @@
 	copySeries.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copySeries.shadow = [self.shadow copyWithZone: zone];
 	copySeries.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySeries.colorAxis = [self.colorAxis copyWithZone: zone];
 	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySeries.zones = [self.zones copyWithZone: zone];
 	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -71,7 +73,7 @@
 	copySeries.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySeries.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySeries.dataLabels = [self.dataLabels copyWithZone: zone];
-	copySeries.cursor = [self.cursor copyWithZone: zone];
+	copySeries.className = [self.className copyWithZone: zone];
 	copySeries.pointStart = [self.pointStart copyWithZone: zone];
 	copySeries.linecap = [self.linecap copyWithZone: zone];
 	copySeries.connectEnds = [self.connectEnds copyWithZone: zone];
@@ -162,6 +164,9 @@
 	if (self.states) {
 		params[@"states"] = [self.states getParams];
 	}
+	if (self.colorKey) {
+		params[@"colorKey"] = self.colorKey;
+	}
 	if (self.softThreshold) {
 		params[@"softThreshold"] = self.softThreshold;
 	}
@@ -180,8 +185,8 @@
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
 	}
-	if (self.className) {
-		params[@"className"] = self.className;
+	if (self.cursor) {
+		params[@"cursor"] = self.cursor;
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
@@ -258,6 +263,9 @@
 	if (self.allowPointSelect) {
 		params[@"allowPointSelect"] = self.allowPointSelect;
 	}
+	if (self.colorAxis) {
+		params[@"colorAxis"] = self.colorAxis;
+	}
 	if (self.zoneAxis) {
 		params[@"zoneAxis"] = self.zoneAxis;
 	}
@@ -307,8 +315,8 @@
             params[@"dataLabels"] = array;
         }
 	}
-	if (self.cursor) {
-		params[@"cursor"] = self.cursor;
+	if (self.className) {
+		params[@"className"] = self.className;
 	}
 	if (self.pointStart) {
 		params[@"pointStart"] = self.pointStart;
@@ -468,6 +476,12 @@
 	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
 }
 
+-(void)setColorKey:(NSString *)colorKey {
+	NSString *oldValue = _colorKey;
+	_colorKey = colorKey;
+	[self updateNSObject:oldValue newValue:colorKey propertyName:@"colorKey"];
+}
+
 -(void)setSoftThreshold:(NSNumber *)softThreshold {
 	NSNumber *oldValue = _softThreshold;
 	_softThreshold = softThreshold;
@@ -504,10 +518,10 @@
 	[self updateHIObject:oldValue newValue:pointDescriptionFormatter propertyName:@"pointDescriptionFormatter"];
 }
 
--(void)setClassName:(NSString *)className {
-	NSString *oldValue = _className;
-	_className = className;
-	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
+-(void)setCursor:(NSString *)cursor {
+	NSString *oldValue = _cursor;
+	_cursor = cursor;
+	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {
@@ -642,6 +656,12 @@
 	[self updateNSObject:oldValue newValue:allowPointSelect propertyName:@"allowPointSelect"];
 }
 
+-(void)setColorAxis:(id)colorAxis {
+	id oldValue = _colorAxis;
+	_colorAxis = colorAxis;
+	[self updateNSObject:oldValue newValue:colorAxis propertyName:@"colorAxis"];
+}
+
 -(void)setZoneAxis:(NSString *)zoneAxis {
 	NSString *oldValue = _zoneAxis;
 	_zoneAxis = zoneAxis;
@@ -690,10 +710,10 @@
 	[self updateArrayObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
--(void)setCursor:(NSString *)cursor {
-	NSString *oldValue = _cursor;
-	_cursor = cursor;
-	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
+-(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
+	_className = className;
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setPointStart:(NSNumber *)pointStart {

@@ -20,6 +20,7 @@
 	copyWindbarb.tooltip = [self.tooltip copyWithZone: zone];
 	copyWindbarb.yOffset = [self.yOffset copyWithZone: zone];
 	copyWindbarb.states = [self.states copyWithZone: zone];
+	copyWindbarb.colorKey = [self.colorKey copyWithZone: zone];
 	copyWindbarb.dataGrouping = [self.dataGrouping copyWithZone: zone];
 	copyWindbarb.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyWindbarb.xOffset = [self.xOffset copyWithZone: zone];
@@ -53,7 +54,7 @@
 	copyWindbarb.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyWindbarb.point = [self.point copyWithZone: zone];
 	copyWindbarb.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyWindbarb.className = [self.className copyWithZone: zone];
+	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
 	copyWindbarb.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyWindbarb.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWindbarb.label = [self.label copyWithZone: zone];
@@ -71,12 +72,13 @@
 	copyWindbarb.accessibility = [self.accessibility copyWithZone: zone];
 	copyWindbarb.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyWindbarb.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyWindbarb.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyWindbarb.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWindbarb.zones = [self.zones copyWithZone: zone];
 	copyWindbarb.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyWindbarb.visible = [self.visible copyWithZone: zone];
 	copyWindbarb.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
+	copyWindbarb.className = [self.className copyWithZone: zone];
 	copyWindbarb.pointStart = [self.pointStart copyWithZone: zone];
 	copyWindbarb.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyWindbarb.data = [self.data copyWithZone: zone];

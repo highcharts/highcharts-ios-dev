@@ -48,10 +48,9 @@
 	copyDependencywheel.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyDependencywheel.clip = [self.clip copyWithZone: zone];
 	copyDependencywheel.color = [self.color copyWithZone: zone];
-	copyDependencywheel.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyDependencywheel.point = [self.point copyWithZone: zone];
 	copyDependencywheel.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyDependencywheel.className = [self.className copyWithZone: zone];
+	copyDependencywheel.cursor = [self.cursor copyWithZone: zone];
 	copyDependencywheel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyDependencywheel.label = [self.label copyWithZone: zone];
 	copyDependencywheel.animation = [self.animation copyWithZone: zone];
@@ -68,7 +67,7 @@
 	copyDependencywheel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyDependencywheel.visible = [self.visible copyWithZone: zone];
 	copyDependencywheel.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyDependencywheel.cursor = [self.cursor copyWithZone: zone];
+	copyDependencywheel.className = [self.className copyWithZone: zone];
 	return copyDependencywheel;
 }
 

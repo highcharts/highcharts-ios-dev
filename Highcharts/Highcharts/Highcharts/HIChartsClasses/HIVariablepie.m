@@ -28,33 +28,34 @@
 	copyVariablepie.zMin = [self.zMin copyWithZone: zone];
 	copyVariablepie.tooltip = [self.tooltip copyWithZone: zone];
 	copyVariablepie.maxPointSize = [self.maxPointSize copyWithZone: zone];
-	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
-	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
-	copyVariablepie.innerSize = [self.innerSize copyWithZone: zone];
-	copyVariablepie.center = [self.center copyWithZone: zone];
+	copyVariablepie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyVariablepie.clip = [self.clip copyWithZone: zone];
 	copyVariablepie.point = [self.point copyWithZone: zone];
-	copyVariablepie.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyVariablepie.slicedOffset = [self.slicedOffset copyWithZone: zone];
-	copyVariablepie.depth = [self.depth copyWithZone: zone];
-	copyVariablepie.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyVariablepie.endAngle = [self.endAngle copyWithZone: zone];
-	copyVariablepie.colors = [self.colors copyWithZone: zone];
+	copyVariablepie.color = [self.color copyWithZone: zone];
 	copyVariablepie.states = [self.states copyWithZone: zone];
-	copyVariablepie.borderWidth = [self.borderWidth copyWithZone: zone];
-	copyVariablepie.startAngle = [self.startAngle copyWithZone: zone];
+	copyVariablepie.colors = [self.colors copyWithZone: zone];
 	copyVariablepie.size = [self.size copyWithZone: zone];
-	copyVariablepie.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
+	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
+	copyVariablepie.fillColor = [self.fillColor copyWithZone: zone];
+	copyVariablepie.startAngle = [self.startAngle copyWithZone: zone];
 	copyVariablepie.events = [self.events copyWithZone: zone];
-	copyVariablepie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	copyVariablepie.endAngle = [self.endAngle copyWithZone: zone];
+	copyVariablepie.innerSize = [self.innerSize copyWithZone: zone];
+	copyVariablepie.center = [self.center copyWithZone: zone];
+	copyVariablepie.slicedOffset = [self.slicedOffset copyWithZone: zone];
+	copyVariablepie.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyVariablepie.depth = [self.depth copyWithZone: zone];
+	copyVariablepie.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyVariablepie.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyVariablepie.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVariablepie.linecap = [self.linecap copyWithZone: zone];
 	copyVariablepie.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyVariablepie.selected = [self.selected copyWithZone: zone];
 	copyVariablepie.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyVariablepie.color = [self.color copyWithZone: zone];
-	copyVariablepie.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyVariablepie.colorKey = [self.colorKey copyWithZone: zone];
 	copyVariablepie.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyVariablepie.className = [self.className copyWithZone: zone];
+	copyVariablepie.cursor = [self.cursor copyWithZone: zone];
 	copyVariablepie.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariablepie.animation = [self.animation copyWithZone: zone];
 	copyVariablepie.showCheckbox = [self.showCheckbox copyWithZone: zone];
@@ -66,9 +67,10 @@
 	copyVariablepie.accessibility = [self.accessibility copyWithZone: zone];
 	copyVariablepie.shadow = [self.shadow copyWithZone: zone];
 	copyVariablepie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyVariablepie.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVariablepie.visible = [self.visible copyWithZone: zone];
 	copyVariablepie.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyVariablepie.cursor = [self.cursor copyWithZone: zone];
+	copyVariablepie.className = [self.className copyWithZone: zone];
 	return copyVariablepie;
 }
 
@@ -90,11 +92,33 @@
 	if (self.maxPointSize) {
 		params[@"maxPointSize"] = self.maxPointSize;
 	}
+	if (self.ignoreHiddenPoint) {
+		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.colors) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
+		}
+		params[@"colors"] = array;
+	}
+	if (self.size) {
+		params[@"size"] = self.size;
+	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.startAngle) {
+		params[@"startAngle"] = self.startAngle;
+	}
+	if (self.endAngle) {
+		params[@"endAngle"] = self.endAngle;
 	}
 	if (self.innerSize) {
 		params[@"innerSize"] = self.innerSize;
@@ -117,27 +141,8 @@
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
-	if (self.endAngle) {
-		params[@"endAngle"] = self.endAngle;
-	}
-	if (self.colors) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
-		}
-		params[@"colors"] = array;
-	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.startAngle) {
-		params[@"startAngle"] = self.startAngle;
-	}
-	if (self.size) {
-		params[@"size"] = self.size;
-	}
-	if (self.ignoreHiddenPoint) {
-		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
 	}
 	return params;
 }
@@ -174,6 +179,24 @@
 	[self updateNSObject:oldValue newValue:maxPointSize propertyName:@"maxPointSize"];
 }
 
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	NSNumber *oldValue = _ignoreHiddenPoint;
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
+}
+
+-(void)setColors:(NSArray<HIColor *> *)colors {
+	NSArray<HIColor *> *oldValue = _colors;
+	_colors = colors;
+	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setSize:(id)size {
+	id oldValue = _size;
+	_size = size;
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
+}
+
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
@@ -184,6 +207,24 @@
 	id oldValue = _minSize;
 	_minSize = minSize;
 	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setStartAngle:(NSNumber *)startAngle {
+	NSNumber *oldValue = _startAngle;
+	_startAngle = startAngle;
+	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
+}
+
+-(void)setEndAngle:(NSNumber *)endAngle {
+	NSNumber *oldValue = _endAngle;
+	_endAngle = endAngle;
+	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
 }
 
 -(void)setInnerSize:(id)innerSize {
@@ -210,40 +251,10 @@
 	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
--(void)setEndAngle:(NSNumber *)endAngle {
-	NSNumber *oldValue = _endAngle;
-	_endAngle = endAngle;
-	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
-}
-
--(void)setColors:(NSArray<HIColor *> *)colors {
-	NSArray<HIColor *> *oldValue = _colors;
-	_colors = colors;
-	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
-}
-
 -(void)setBorderWidth:(NSNumber *)borderWidth {
 	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
-}
-
--(void)setStartAngle:(NSNumber *)startAngle {
-	NSNumber *oldValue = _startAngle;
-	_startAngle = startAngle;
-	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
-}
-
--(void)setSize:(id)size {
-	id oldValue = _size;
-	_size = size;
-	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
-}
-
--(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
-	NSNumber *oldValue = _ignoreHiddenPoint;
-	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
 }
 
 @end

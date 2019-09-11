@@ -33,6 +33,7 @@
 	copyErrorbar.medianWidth = [self.medianWidth copyWithZone: zone];
 	copyErrorbar.whiskerColor = [self.whiskerColor copyWithZone: zone];
 	copyErrorbar.medianColor = [self.medianColor copyWithZone: zone];
+	copyErrorbar.colorKey = [self.colorKey copyWithZone: zone];
 	copyErrorbar.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
 	copyErrorbar.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyErrorbar.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -63,7 +64,7 @@
 	copyErrorbar.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyErrorbar.point = [self.point copyWithZone: zone];
 	copyErrorbar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyErrorbar.className = [self.className copyWithZone: zone];
+	copyErrorbar.cursor = [self.cursor copyWithZone: zone];
 	copyErrorbar.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyErrorbar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyErrorbar.label = [self.label copyWithZone: zone];
@@ -82,11 +83,12 @@
 	copyErrorbar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyErrorbar.shadow = [self.shadow copyWithZone: zone];
 	copyErrorbar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyErrorbar.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyErrorbar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyErrorbar.zones = [self.zones copyWithZone: zone];
 	copyErrorbar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyErrorbar.visible = [self.visible copyWithZone: zone];
-	copyErrorbar.cursor = [self.cursor copyWithZone: zone];
+	copyErrorbar.className = [self.className copyWithZone: zone];
 	copyErrorbar.pointStart = [self.pointStart copyWithZone: zone];
 	copyErrorbar.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyErrorbar.showInLegend = [self.showInLegend copyWithZone: zone];

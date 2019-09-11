@@ -40,7 +40,7 @@
 	copyNetworkgraph.point = [self.point copyWithZone: zone];
 	copyNetworkgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyNetworkgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyNetworkgraph.className = [self.className copyWithZone: zone];
+	copyNetworkgraph.cursor = [self.cursor copyWithZone: zone];
 	copyNetworkgraph.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyNetworkgraph.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyNetworkgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
@@ -59,7 +59,7 @@
 	copyNetworkgraph.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyNetworkgraph.visible = [self.visible copyWithZone: zone];
 	copyNetworkgraph.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyNetworkgraph.cursor = [self.cursor copyWithZone: zone];
+	copyNetworkgraph.className = [self.className copyWithZone: zone];
 	return copyNetworkgraph;
 }
 

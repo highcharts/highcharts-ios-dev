@@ -38,10 +38,10 @@
 	copyWordcloud.selected = [self.selected copyWithZone: zone];
 	copyWordcloud.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyWordcloud.color = [self.color copyWithZone: zone];
-	copyWordcloud.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyWordcloud.colorKey = [self.colorKey copyWithZone: zone];
 	copyWordcloud.point = [self.point copyWithZone: zone];
 	copyWordcloud.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyWordcloud.className = [self.className copyWithZone: zone];
+	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWordcloud.label = [self.label copyWithZone: zone];
 	copyWordcloud.boostBlending = [self.boostBlending copyWithZone: zone];
@@ -56,7 +56,7 @@
 	copyWordcloud.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWordcloud.visible = [self.visible copyWithZone: zone];
 	copyWordcloud.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
+	copyWordcloud.className = [self.className copyWithZone: zone];
 	copyWordcloud.data = [self.data copyWithZone: zone];
 	copyWordcloud.id = [self.id copyWithZone: zone];
 	copyWordcloud.index = [self.index copyWithZone: zone];

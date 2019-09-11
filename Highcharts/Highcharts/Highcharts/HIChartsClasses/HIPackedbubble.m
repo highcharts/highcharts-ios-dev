@@ -37,6 +37,7 @@
 	copyPackedbubble.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPackedbubble.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyPackedbubble.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyPackedbubble.colorKey = [self.colorKey copyWithZone: zone];
 	copyPackedbubble.displayNegative = [self.displayNegative copyWithZone: zone];
 	copyPackedbubble.zThreshold = [self.zThreshold copyWithZone: zone];
 	copyPackedbubble.softThreshold = [self.softThreshold copyWithZone: zone];
@@ -52,10 +53,9 @@
 	copyPackedbubble.color = [self.color copyWithZone: zone];
 	copyPackedbubble.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyPackedbubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
-	copyPackedbubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPackedbubble.point = [self.point copyWithZone: zone];
 	copyPackedbubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyPackedbubble.className = [self.className copyWithZone: zone];
+	copyPackedbubble.cursor = [self.cursor copyWithZone: zone];
 	copyPackedbubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPackedbubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPackedbubble.label = [self.label copyWithZone: zone];
@@ -71,11 +71,12 @@
 	copyPackedbubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyPackedbubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPackedbubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyPackedbubble.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyPackedbubble.zones = [self.zones copyWithZone: zone];
 	copyPackedbubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyPackedbubble.visible = [self.visible copyWithZone: zone];
 	copyPackedbubble.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyPackedbubble.cursor = [self.cursor copyWithZone: zone];
+	copyPackedbubble.className = [self.className copyWithZone: zone];
 	copyPackedbubble.pointStart = [self.pointStart copyWithZone: zone];
 	copyPackedbubble.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyPackedbubble.showInLegend = [self.showInLegend copyWithZone: zone];

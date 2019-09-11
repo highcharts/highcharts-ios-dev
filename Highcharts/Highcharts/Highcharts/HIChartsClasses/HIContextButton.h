@@ -27,9 +27,9 @@ See `navigation.buttonOptions.symbolFill`.
 */
 @property(nonatomic, readwrite) HIColor *symbolFill;
 /**
-A collection of strings pointing to config options for the menu items. The config options are defined in the `menuItemDefinitions` option. By default, there is the "View in full screen" and "Print" menu items, plus one menu item for each of the available export types.
+A collection of strings pointing to config options for the menu items.
 
-**Defaults to** `["viewFullscreen", "printChart", "separator", "downloadPNG", "downloadJPEG", "downloadPDF", "downloadSVG"]`.
+**Defaults to** `["sharePNG", "sharePDF", "shareCSV"]`.
 
 **Try it**
 

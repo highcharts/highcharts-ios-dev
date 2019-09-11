@@ -25,13 +25,14 @@
 	copyLine.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyLine.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyLine.states = [self.states copyWithZone: zone];
+	copyLine.colorKey = [self.colorKey copyWithZone: zone];
 	copyLine.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyLine.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyLine.point = [self.point copyWithZone: zone];
 	copyLine.marker = [self.marker copyWithZone: zone];
 	copyLine.tooltip = [self.tooltip copyWithZone: zone];
 	copyLine.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyLine.className = [self.className copyWithZone: zone];
+	copyLine.cursor = [self.cursor copyWithZone: zone];
 	copyLine.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyLine.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyLine.connectNulls = [self.connectNulls copyWithZone: zone];
@@ -55,6 +56,7 @@
 	copyLine.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyLine.shadow = [self.shadow copyWithZone: zone];
 	copyLine.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyLine.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyLine.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLine.zones = [self.zones copyWithZone: zone];
 	copyLine.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -63,7 +65,7 @@
 	copyLine.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyLine.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyLine.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyLine.cursor = [self.cursor copyWithZone: zone];
+	copyLine.className = [self.className copyWithZone: zone];
 	copyLine.pointStart = [self.pointStart copyWithZone: zone];
 	copyLine.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyLine.boostThreshold = [self.boostThreshold copyWithZone: zone];

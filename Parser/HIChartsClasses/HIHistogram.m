@@ -58,10 +58,10 @@
 	copyHistogram.clip = [self.clip copyWithZone: zone];
 	copyHistogram.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyHistogram.color = [self.color copyWithZone: zone];
-	copyHistogram.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyHistogram.colorKey = [self.colorKey copyWithZone: zone];
 	copyHistogram.point = [self.point copyWithZone: zone];
 	copyHistogram.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyHistogram.className = [self.className copyWithZone: zone];
+	copyHistogram.cursor = [self.cursor copyWithZone: zone];
 	copyHistogram.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyHistogram.label = [self.label copyWithZone: zone];
 	copyHistogram.animation = [self.animation copyWithZone: zone];
@@ -79,11 +79,12 @@
 	copyHistogram.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyHistogram.shadow = [self.shadow copyWithZone: zone];
 	copyHistogram.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyHistogram.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyHistogram.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyHistogram.zones = [self.zones copyWithZone: zone];
 	copyHistogram.visible = [self.visible copyWithZone: zone];
 	copyHistogram.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyHistogram.cursor = [self.cursor copyWithZone: zone];
+	copyHistogram.className = [self.className copyWithZone: zone];
 	copyHistogram.pointStart = [self.pointStart copyWithZone: zone];
 	copyHistogram.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyHistogram;

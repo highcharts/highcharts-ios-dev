@@ -40,6 +40,7 @@
 	copyTreemap.interactByLeaf = [self.interactByLeaf copyWithZone: zone];
 	copyTreemap.alternateStartingDirection = [self.alternateStartingDirection copyWithZone: zone];
 	copyTreemap.traverseUpButton = [self.traverseUpButton copyWithZone: zone];
+	copyTreemap.colorKey = [self.colorKey copyWithZone: zone];
 	copyTreemap.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyTreemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTreemap.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
@@ -56,10 +57,9 @@
 	copyTreemap.color = [self.color copyWithZone: zone];
 	copyTreemap.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyTreemap.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyTreemap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTreemap.point = [self.point copyWithZone: zone];
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyTreemap.className = [self.className copyWithZone: zone];
+	copyTreemap.cursor = [self.cursor copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyTreemap.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyTreemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
@@ -77,12 +77,13 @@
 	copyTreemap.step = [self.step copyWithZone: zone];
 	copyTreemap.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyTreemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyTreemap.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTreemap.zones = [self.zones copyWithZone: zone];
 	copyTreemap.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyTreemap.visible = [self.visible copyWithZone: zone];
 	copyTreemap.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyTreemap.cursor = [self.cursor copyWithZone: zone];
+	copyTreemap.className = [self.className copyWithZone: zone];
 	copyTreemap.pointStart = [self.pointStart copyWithZone: zone];
 	copyTreemap.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyTreemap.boostThreshold = [self.boostThreshold copyWithZone: zone];

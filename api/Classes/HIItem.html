@@ -64,6 +64,8 @@
 		
 		<option value="//api/name/endAngle">endAngle</option>
 		
+		<option value="//api/name/fillColor">fillColor</option>
+		
 		<option value="//api/name/ignoreHiddenPoint">ignoreHiddenPoint</option>
 		
 		<option value="//api/name/innerSize">innerSize</option>
@@ -466,8 +468,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/minSize" title="minSize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minSize">&nbsp;&nbsp;minSize</a></code>
+	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -477,12 +479,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.</p>
+				<p>Equivalent to <code>chart.ignoreHiddenSeries</code>, this option tells whether the series shall be redrawn as if the hidden point were <code>null</code>. The default value changed from <code>false</code> to <code>true</code> with Highcharts 3.0.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id minSize</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
 
 		    
 			
@@ -494,58 +496,10 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>80</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIItem.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/center" title="center"></a>
-	<h3 class="method-title"><code><a href="#//api/name/center">&nbsp;&nbsp;center</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The center of the pie chart relative to the plot area. Can be percentages or pixel values. The default behaviour (as of 3.0) is to center the pie so that all slices and data labels are within the plot area. As a consequence, the pie may actually jump around in a chart with dynamic values, as the data labels move. In that case, the center should be explicitly set, for example to <code>["50%", "50%"]</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *center</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>[null, null]</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/">Centered at 100, 100</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/">True, the hiddden point is ignored</a></li>
 </ul>
 
 			</div>
@@ -667,8 +621,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
-	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
+	<a name="//api/name/minSize" title="minSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minSize">&nbsp;&nbsp;minSize</a></code>
 </h3>
 
 	<div class="method-info">
@@ -678,12 +632,58 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Equivalent to <code>chart.ignoreHiddenSeries</code>, this option tells whether the series shall be redrawn as if the hidden point were <code>null</code>. The default value changed from <code>false</code> to <code>true</code> with Highcharts 3.0.</p>
+				<p>The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id minSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>80</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIItem.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If the total sum of the pie&rsquo;s values is 0, the series is represented as an empty circle . The <code>fillColor</code> option defines the color of that circle. Use <code>pie.borderWidth</code> to set the border thickness.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
 
 		    
 			
@@ -698,7 +698,60 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/">True, the hiddden point is ignored</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-emptyseries/">Empty pie series</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIItem.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/center" title="center"></a>
+	<h3 class="method-title"><code><a href="#//api/name/center">&nbsp;&nbsp;center</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The center of the pie chart relative to the plot area. Can be percentages or pixel values. The default behaviour (as of 3.0) is to center the pie so that all slices and data labels are within the plot area. As a consequence, the pie may actually jump around in a chart with dynamic values, as the data labels move. In that case, the center should be explicitly set, for example to <code>["50%", "50%"]</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *center</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>[null, null]</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-center/">Centered at 100, 100</a></li>
 </ul>
 
 			</div>

@@ -35,10 +35,9 @@
 	copySankey.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySankey.clip = [self.clip copyWithZone: zone];
 	copySankey.color = [self.color copyWithZone: zone];
-	copySankey.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySankey.point = [self.point copyWithZone: zone];
 	copySankey.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySankey.className = [self.className copyWithZone: zone];
+	copySankey.cursor = [self.cursor copyWithZone: zone];
 	copySankey.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySankey.label = [self.label copyWithZone: zone];
 	copySankey.animation = [self.animation copyWithZone: zone];
@@ -55,7 +54,7 @@
 	copySankey.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySankey.visible = [self.visible copyWithZone: zone];
 	copySankey.linkedTo = [self.linkedTo copyWithZone: zone];
-	copySankey.cursor = [self.cursor copyWithZone: zone];
+	copySankey.className = [self.className copyWithZone: zone];
 	copySankey.nodes = [self.nodes copyWithZone: zone];
 	copySankey.data = [self.data copyWithZone: zone];
 	copySankey.id = [self.id copyWithZone: zone];

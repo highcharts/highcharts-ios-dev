@@ -29,10 +29,9 @@
 	copyGauge.clip = [self.clip copyWithZone: zone];
 	copyGauge.color = [self.color copyWithZone: zone];
 	copyGauge.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyGauge.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyGauge.point = [self.point copyWithZone: zone];
 	copyGauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyGauge.className = [self.className copyWithZone: zone];
+	copyGauge.cursor = [self.cursor copyWithZone: zone];
 	copyGauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyGauge.label = [self.label copyWithZone: zone];
 	copyGauge.animation = [self.animation copyWithZone: zone];
@@ -50,7 +49,7 @@
 	copyGauge.visible = [self.visible copyWithZone: zone];
 	copyGauge.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyGauge.stickyTracking = [self.stickyTracking copyWithZone: zone];
-	copyGauge.cursor = [self.cursor copyWithZone: zone];
+	copyGauge.className = [self.className copyWithZone: zone];
 	copyGauge.pointStart = [self.pointStart copyWithZone: zone];
 	copyGauge.data = [self.data copyWithZone: zone];
 	copyGauge.id = [self.id copyWithZone: zone];
@@ -84,8 +83,8 @@
 
 # pragma mark - Setters
 
--(void)setDial:(HICSSObject *)dial {
-	HICSSObject *oldValue = _dial;
+-(void)setDial:(HIDial *)dial {
+	HIDial *oldValue = _dial;
 	_dial = dial;
 	[self updateHIObject:oldValue newValue:dial propertyName:@"dial"];
 }
@@ -102,8 +101,8 @@
 	[self updateNSObject:oldValue newValue:wrap propertyName:@"wrap"];
 }
 
--(void)setPivot:(HICSSObject *)pivot {
-	HICSSObject *oldValue = _pivot;
+-(void)setPivot:(HIPivot *)pivot {
+	HIPivot *oldValue = _pivot;
 	_pivot = pivot;
 	[self updateHIObject:oldValue newValue:pivot propertyName:@"pivot"];
 }

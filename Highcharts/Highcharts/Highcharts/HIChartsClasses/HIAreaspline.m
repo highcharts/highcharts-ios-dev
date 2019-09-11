@@ -32,12 +32,13 @@
 	copyAreaspline.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyAreaspline.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyAreaspline.states = [self.states copyWithZone: zone];
+	copyAreaspline.colorKey = [self.colorKey copyWithZone: zone];
 	copyAreaspline.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyAreaspline.point = [self.point copyWithZone: zone];
 	copyAreaspline.marker = [self.marker copyWithZone: zone];
 	copyAreaspline.tooltip = [self.tooltip copyWithZone: zone];
 	copyAreaspline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyAreaspline.className = [self.className copyWithZone: zone];
+	copyAreaspline.cursor = [self.cursor copyWithZone: zone];
 	copyAreaspline.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyAreaspline.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyAreaspline.connectNulls = [self.connectNulls copyWithZone: zone];
@@ -59,6 +60,7 @@
 	copyAreaspline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyAreaspline.shadow = [self.shadow copyWithZone: zone];
 	copyAreaspline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyAreaspline.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyAreaspline.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyAreaspline.zones = [self.zones copyWithZone: zone];
 	copyAreaspline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
@@ -67,7 +69,7 @@
 	copyAreaspline.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyAreaspline.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyAreaspline.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyAreaspline.cursor = [self.cursor copyWithZone: zone];
+	copyAreaspline.className = [self.className copyWithZone: zone];
 	copyAreaspline.pointStart = [self.pointStart copyWithZone: zone];
 	copyAreaspline.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyAreaspline.boostThreshold = [self.boostThreshold copyWithZone: zone];

@@ -25,24 +25,24 @@
 	copySunburst.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySunburst.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
 	copySunburst.allowTraversingTree = [self.allowTraversingTree copyWithZone: zone];
-	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
 	copySunburst.point = [self.point copyWithZone: zone];
-	copySunburst.showInLegend = [self.showInLegend copyWithZone: zone];
-	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
-	copySunburst.colors = [self.colors copyWithZone: zone];
+	copySunburst.color = [self.color copyWithZone: zone];
 	copySunburst.states = [self.states copyWithZone: zone];
-	copySunburst.borderWidth = [self.borderWidth copyWithZone: zone];
-	copySunburst.startAngle = [self.startAngle copyWithZone: zone];
+	copySunburst.colors = [self.colors copyWithZone: zone];
 	copySunburst.size = [self.size copyWithZone: zone];
-	copySunburst.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
+	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
+	copySunburst.fillColor = [self.fillColor copyWithZone: zone];
+	copySunburst.startAngle = [self.startAngle copyWithZone: zone];
 	copySunburst.events = [self.events copyWithZone: zone];
+	copySunburst.borderWidth = [self.borderWidth copyWithZone: zone];
+	copySunburst.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copySunburst.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySunburst.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySunburst.selected = [self.selected copyWithZone: zone];
 	copySunburst.colorIndex = [self.colorIndex copyWithZone: zone];
-	copySunburst.color = [self.color copyWithZone: zone];
-	copySunburst.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySunburst.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copySunburst.className = [self.className copyWithZone: zone];
+	copySunburst.cursor = [self.cursor copyWithZone: zone];
 	copySunburst.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySunburst.animation = [self.animation copyWithZone: zone];
 	copySunburst.showCheckbox = [self.showCheckbox copyWithZone: zone];
@@ -56,7 +56,7 @@
 	copySunburst.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySunburst.visible = [self.visible copyWithZone: zone];
 	copySunburst.linkedTo = [self.linkedTo copyWithZone: zone];
-	copySunburst.cursor = [self.cursor copyWithZone: zone];
+	copySunburst.className = [self.className copyWithZone: zone];
 	copySunburst.data = [self.data copyWithZone: zone];
 	copySunburst.id = [self.id copyWithZone: zone];
 	copySunburst.index = [self.index copyWithZone: zone];
@@ -117,9 +117,6 @@
 	if (self.allowTraversingTree) {
 		params[@"allowTraversingTree"] = self.allowTraversingTree;
 	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -127,14 +124,20 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
+	if (self.size) {
+		params[@"size"] = self.size;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
 	}
-	if (self.size) {
-		params[@"size"] = self.size;
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	return params;
 }
@@ -195,22 +198,28 @@
 	[self updateNSObject:oldValue newValue:allowTraversingTree propertyName:@"allowTraversingTree"];
 }
 
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	NSNumber *oldValue = _borderWidth;
-	_borderWidth = borderWidth;
-	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+-(void)setSize:(id)size {
+	id oldValue = _size;
+	_size = size;
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {
@@ -219,10 +228,10 @@
 	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
 }
 
--(void)setSize:(id)size {
-	id oldValue = _size;
-	_size = size;
-	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
+	_borderWidth = borderWidth;
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 @end

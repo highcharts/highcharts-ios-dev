@@ -29,6 +29,7 @@
 	copyBoxplot.whiskerColor = [self.whiskerColor copyWithZone: zone];
 	copyBoxplot.tooltip = [self.tooltip copyWithZone: zone];
 	copyBoxplot.medianColor = [self.medianColor copyWithZone: zone];
+	copyBoxplot.colorKey = [self.colorKey copyWithZone: zone];
 	copyBoxplot.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
 	copyBoxplot.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyBoxplot.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -62,7 +63,7 @@
 	copyBoxplot.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBoxplot.point = [self.point copyWithZone: zone];
 	copyBoxplot.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyBoxplot.className = [self.className copyWithZone: zone];
+	copyBoxplot.cursor = [self.cursor copyWithZone: zone];
 	copyBoxplot.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBoxplot.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBoxplot.label = [self.label copyWithZone: zone];
@@ -81,12 +82,13 @@
 	copyBoxplot.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBoxplot.shadow = [self.shadow copyWithZone: zone];
 	copyBoxplot.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyBoxplot.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyBoxplot.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBoxplot.zones = [self.zones copyWithZone: zone];
 	copyBoxplot.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBoxplot.visible = [self.visible copyWithZone: zone];
 	copyBoxplot.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBoxplot.cursor = [self.cursor copyWithZone: zone];
+	copyBoxplot.className = [self.className copyWithZone: zone];
 	copyBoxplot.pointStart = [self.pointStart copyWithZone: zone];
 	copyBoxplot.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyBoxplot.showInLegend = [self.showInLegend copyWithZone: zone];

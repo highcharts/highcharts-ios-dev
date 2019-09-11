@@ -23,24 +23,26 @@
 	copyItem.startAngle = [self.startAngle copyWithZone: zone];
 	copyItem.marker = [self.marker copyWithZone: zone];
 	copyItem.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyItem.minSize = [self.minSize copyWithZone: zone];
-	copyItem.center = [self.center copyWithZone: zone];
+	copyItem.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyItem.clip = [self.clip copyWithZone: zone];
 	copyItem.point = [self.point copyWithZone: zone];
-	copyItem.tooltip = [self.tooltip copyWithZone: zone];
-	copyItem.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyItem.colors = [self.colors copyWithZone: zone];
+	copyItem.color = [self.color copyWithZone: zone];
 	copyItem.states = [self.states copyWithZone: zone];
+	copyItem.colors = [self.colors copyWithZone: zone];
 	copyItem.size = [self.size copyWithZone: zone];
-	copyItem.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyItem.tooltip = [self.tooltip copyWithZone: zone];
+	copyItem.minSize = [self.minSize copyWithZone: zone];
+	copyItem.fillColor = [self.fillColor copyWithZone: zone];
 	copyItem.events = [self.events copyWithZone: zone];
-	copyItem.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	copyItem.center = [self.center copyWithZone: zone];
+	copyItem.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyItem.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyItem.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyItem.selected = [self.selected copyWithZone: zone];
 	copyItem.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyItem.color = [self.color copyWithZone: zone];
+	copyItem.colorKey = [self.colorKey copyWithZone: zone];
 	copyItem.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyItem.className = [self.className copyWithZone: zone];
+	copyItem.cursor = [self.cursor copyWithZone: zone];
 	copyItem.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyItem.animation = [self.animation copyWithZone: zone];
 	copyItem.showCheckbox = [self.showCheckbox copyWithZone: zone];
@@ -51,9 +53,10 @@
 	copyItem.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyItem.accessibility = [self.accessibility copyWithZone: zone];
 	copyItem.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyItem.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyItem.visible = [self.visible copyWithZone: zone];
 	copyItem.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyItem.cursor = [self.cursor copyWithZone: zone];
+	copyItem.className = [self.className copyWithZone: zone];
 	copyItem.data = [self.data copyWithZone: zone];
 	copyItem.id = [self.id copyWithZone: zone];
 	copyItem.index = [self.index copyWithZone: zone];
@@ -85,8 +88,24 @@
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
 	}
+	if (self.ignoreHiddenPoint) {
+		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.colors) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (HIColor *obj in self.colors) {
+			[array addObject:[obj getData]];
+		}
+		params[@"colors"] = array;
+	}
+	if (self.size) {
+		params[@"size"] = self.size;
+	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -99,19 +118,6 @@
 			}
 		}
 		params[@"center"] = array;
-	}
-	if (self.colors) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (HIColor *obj in self.colors) {
-			[array addObject:[obj getData]];
-		}
-		params[@"colors"] = array;
-	}
-	if (self.size) {
-		params[@"size"] = self.size;
-	}
-	if (self.ignoreHiddenPoint) {
-		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
 	}
 	return params;
 }
@@ -154,16 +160,10 @@
 	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
 }
 
--(void)setMinSize:(id)minSize {
-	id oldValue = _minSize;
-	_minSize = minSize;
-	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
-}
-
--(void)setCenter:(NSArray *)center {
-	NSArray *oldValue = _center;
-	_center = center;
-	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	NSNumber *oldValue = _ignoreHiddenPoint;
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {
@@ -178,10 +178,22 @@
 	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
 }
 
--(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
-	NSNumber *oldValue = _ignoreHiddenPoint;
-	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
+-(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
+	_minSize = minSize;
+	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setCenter:(NSArray *)center {
+	NSArray *oldValue = _center;
+	_center = center;
+	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
 }
 
 @end

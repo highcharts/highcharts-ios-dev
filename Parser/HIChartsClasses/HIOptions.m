@@ -141,7 +141,19 @@
 		params[@"legend"] = [self.legend getParams];
 	}
 	if (self.colorAxis) {
-		params[@"colorAxis"] = [self.colorAxis getParams];
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.colorAxis) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"colorAxis"] = array;
+	}
+	if (self.caption) {
+		params[@"caption"] = [self.caption getParams];
 	}
 	if (self.time) {
 		params[@"time"] = [self.time getParams];
@@ -183,6 +195,7 @@
 	copyOptions.data = [self.data copyWithZone: zone];
 	copyOptions.legend = [self.legend copyWithZone: zone];
 	copyOptions.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyOptions.caption = [self.caption copyWithZone: zone];
 	copyOptions.time = [self.time copyWithZone: zone];
 	copyOptions.navigation = [self.navigation copyWithZone: zone];
 	return copyOptions;
@@ -328,10 +341,16 @@
 	[self updateHIObject:oldValue newValue:legend propertyName:@"legend"];
 }
 
--(void)setColorAxis:(HIColorAxis *)colorAxis {
-	HIColorAxis *oldValue = _colorAxis;
+-(void)setColorAxis:(NSArray<HIColorAxis *> *)colorAxis {
+	NSArray<HIColorAxis *> *oldValue = _colorAxis;
 	_colorAxis = colorAxis;
-	[self updateHIObject:oldValue newValue:colorAxis propertyName:@"colorAxis"];
+	[self updateArrayObject:oldValue newValue:colorAxis propertyName:@"colorAxis"];
+}
+
+-(void)setCaption:(HICaption *)caption {
+	HICaption *oldValue = _caption;
+	_caption = caption;
+	[self updateHIObject:oldValue newValue:caption propertyName:@"caption"];
 }
 
 -(void)setTime:(HITime *)time {

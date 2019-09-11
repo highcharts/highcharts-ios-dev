@@ -50,10 +50,11 @@
 	copyWaterfall.clip = [self.clip copyWithZone: zone];
 	copyWaterfall.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyWaterfall.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyWaterfall.colorKey = [self.colorKey copyWithZone: zone];
 	copyWaterfall.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyWaterfall.point = [self.point copyWithZone: zone];
 	copyWaterfall.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyWaterfall.className = [self.className copyWithZone: zone];
+	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
 	copyWaterfall.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyWaterfall.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWaterfall.label = [self.label copyWithZone: zone];
@@ -73,12 +74,13 @@
 	copyWaterfall.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyWaterfall.shadow = [self.shadow copyWithZone: zone];
 	copyWaterfall.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyWaterfall.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyWaterfall.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWaterfall.zones = [self.zones copyWithZone: zone];
 	copyWaterfall.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyWaterfall.visible = [self.visible copyWithZone: zone];
 	copyWaterfall.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
+	copyWaterfall.className = [self.className copyWithZone: zone];
 	copyWaterfall.pointStart = [self.pointStart copyWithZone: zone];
 	copyWaterfall.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyWaterfall.showInLegend = [self.showInLegend copyWithZone: zone];

@@ -41,10 +41,11 @@
 	copyVariwide.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyVariwide.color = [self.color copyWithZone: zone];
 	copyVariwide.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyVariwide.colorKey = [self.colorKey copyWithZone: zone];
 	copyVariwide.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVariwide.point = [self.point copyWithZone: zone];
 	copyVariwide.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
-	copyVariwide.className = [self.className copyWithZone: zone];
+	copyVariwide.cursor = [self.cursor copyWithZone: zone];
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyVariwide.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariwide.label = [self.label copyWithZone: zone];
@@ -64,12 +65,13 @@
 	copyVariwide.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyVariwide.shadow = [self.shadow copyWithZone: zone];
 	copyVariwide.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyVariwide.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVariwide.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVariwide.zones = [self.zones copyWithZone: zone];
 	copyVariwide.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyVariwide.visible = [self.visible copyWithZone: zone];
 	copyVariwide.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyVariwide.cursor = [self.cursor copyWithZone: zone];
+	copyVariwide.className = [self.className copyWithZone: zone];
 	copyVariwide.pointStart = [self.pointStart copyWithZone: zone];
 	copyVariwide.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVariwide.data = [self.data copyWithZone: zone];
