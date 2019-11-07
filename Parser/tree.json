@@ -2770,8 +2770,7 @@
               ],
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.MockPointOptionsObject"
+                  "*"
                 ]
               },
               "requires": [
@@ -3905,8 +3904,7 @@
               "description": "This option defines the point to which the shape will be\nconnected. It can be either the point which exists in the\nseries - it is referenced by the point's id - or a new point with\ndefined x, y properties and optionally axes.",
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.MockPointOptionsObject"
+                  "*"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -3927,7 +3925,7 @@
               ],
               "type": {
                 "names": [
-                  "Array.<(string|Highcharts.MockPointOptionsObject)>"
+                  "Array.<*>"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -22009,7 +22007,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.AnnotationsOptions"
+              "*"
             ]
           },
           "extends": "annotations",
