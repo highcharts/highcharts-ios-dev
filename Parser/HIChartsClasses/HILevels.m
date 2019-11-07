@@ -47,7 +47,7 @@
 		params[@"color"] = [self.color getData];
 	}
 	if (self.dataLabels) {
-		params[@"dataLabels"] = self.dataLabels;
+		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.rotationMode) {
 		params[@"rotationMode"] = self.rotationMode;
@@ -111,10 +111,10 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setDataLabels:(id)dataLabels {
-	id oldValue = _dataLabels;
+-(void)setDataLabels:(HIDataLabelsOptionsObject *)dataLabels {
+	HIDataLabelsOptionsObject *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
-	[self updateNSObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
+	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setRotationMode:(NSString *)rotationMode {

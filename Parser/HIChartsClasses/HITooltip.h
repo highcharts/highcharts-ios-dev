@@ -235,6 +235,12 @@ Whether to apply a drop shadow to the tooltip.
 */
 @property(nonatomic, readwrite) HIShadowOptionsObject *shadow;
 /**
+Distance from point to tooltip in pixels.
+
+**Defaults to** `16`.
+*/
+@property(nonatomic, readwrite) NSNumber *distance;
+/**
 Enable or disable the tooltip.
 
 **Try it**
@@ -292,7 +298,6 @@ How many decimals to show in each series' y value. This is overridable in each s
 A callback for defining the format for _nodes_ in the chart's tooltip, as opposed to links.
 */
 @property(nonatomic, readwrite) HIFunction *nodeFormatter;
-@property(nonatomic, readwrite) NSNumber *distance;
 
 -(NSDictionary *)getParams;
 

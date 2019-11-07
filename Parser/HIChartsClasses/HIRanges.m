@@ -30,6 +30,7 @@
 		params[@"connectorColor"] = [self.connectorColor getData];
 	}
 	if (self.value) {
+		params[@"value"] = self.value;
 	}
 	return params;
 }
@@ -54,8 +55,8 @@
 	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
--(void)setValue:(id)value {
-	id oldValue = _value;
+-(void)setValue:(NSNumber *)value {
+	NSNumber *oldValue = _value;
 	_value = value;
 	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }

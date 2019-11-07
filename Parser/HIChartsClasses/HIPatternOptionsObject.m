@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HIPatternOptionsObject *copyPatternOptionsObject = [[HIPatternOptionsObject allocWithZone: zone] init];
 	copyPatternOptionsObject.aspectRatio = [self.aspectRatio copyWithZone: zone];
+	copyPatternOptionsObject.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyPatternOptionsObject.color = [self.color copyWithZone: zone];
 	copyPatternOptionsObject.height = [self.height copyWithZone: zone];
 	copyPatternOptionsObject.id = [self.id copyWithZone: zone];
@@ -28,6 +29,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.aspectRatio) {
 		params[@"aspectRatio"] = self.aspectRatio;
+	}
+	if (self.backgroundColor) {
+		params[@"backgroundColor"] = self.backgroundColor;
 	}
 	if (self.color) {
 		params[@"color"] = self.color;
@@ -65,6 +69,12 @@
 	NSNumber *oldValue = _aspectRatio;
 	_aspectRatio = aspectRatio;
 	[self updateNSObject:oldValue newValue:aspectRatio propertyName:@"aspectRatio"];
+}
+
+-(void)setBackgroundColor:(NSString *)backgroundColor {
+	NSString *oldValue = _backgroundColor;
+	_backgroundColor = backgroundColor;
+	[self updateNSObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setColor:(NSString *)color {

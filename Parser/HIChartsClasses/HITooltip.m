@@ -35,6 +35,7 @@
 	copyTooltip.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyTooltip.padding = [self.padding copyWithZone: zone];
 	copyTooltip.shadow = [self.shadow copyWithZone: zone];
+	copyTooltip.distance = [self.distance copyWithZone: zone];
 	copyTooltip.enabled = [self.enabled copyWithZone: zone];
 	copyTooltip.shape = [self.shape copyWithZone: zone];
 	copyTooltip.pointFormatter = [self.pointFormatter copyWithZone: zone];
@@ -45,7 +46,6 @@
 	copyTooltip.valueDecimals = [self.valueDecimals copyWithZone: zone];
 	copyTooltip.nodeFormat = [self.nodeFormat copyWithZone: zone];
 	copyTooltip.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
-	copyTooltip.distance = [self.distance copyWithZone: zone];
 	return copyTooltip;
 }
 
@@ -127,6 +127,9 @@
 	if (self.shadow) {
 		params[@"shadow"] = [self.shadow getParams];
 	}
+	if (self.distance) {
+		params[@"distance"] = self.distance;
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -156,9 +159,6 @@
 	}
 	if (self.nodeFormatter) {
 		params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
-	}
-	if (self.distance) {
-		params[@"distance"] = self.distance;
 	}
 	return params;
 }
@@ -315,6 +315,12 @@
 	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
+-(void)setDistance:(NSNumber *)distance {
+	NSNumber *oldValue = _distance;
+	_distance = distance;
+	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
+}
+
 -(void)setEnabled:(NSNumber *)enabled {
 	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
@@ -373,12 +379,6 @@
 	HIFunction *oldValue = _nodeFormatter;
 	_nodeFormatter = nodeFormatter;
 	[self updateHIObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
-}
-
--(void)setDistance:(NSNumber *)distance {
-	NSNumber *oldValue = _distance;
-	_distance = distance;
-	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
 }
 
 @end
