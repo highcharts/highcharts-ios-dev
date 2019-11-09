@@ -560,6 +560,21 @@ static NSBundle *highchartsBundle = nil;
     [self callJSMethod:chartMethod];
 }
 
+- (void)addColorAxis:(HIColorAxis *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addColorAxis0", @"params" : @[[options getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addColorAxis:(HIColorAxis *)options redraw:(NSNumber *)redraw {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addColorAxis1", @"params" : @[[options getParams], redraw] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)addColorAxis:(HIColorAxis *)options redraw:(NSNumber *)redraw animation:(HIAnimationOptionsObject *)animation {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addColorAxis2", @"params" : @[[options getParams], redraw, [animation getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
 - (void)addCredits:(HICredits *)options {
     NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"addCredits", @"params" : @[[options getParams]] };
     [self callJSMethod:chartMethod];
@@ -657,6 +672,21 @@ static NSBundle *highchartsBundle = nil;
 
 - (void)resetSonifyCursorEnd {
     NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"resetSonifyCursorEnd" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)setCaption:(HICaption *)options {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"setCaption", @"params" : @[[options getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)setClassName {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"setClassName0" };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)setClassName:(NSString *)className {
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"setClassName1", @"params" : @[className] };
     [self callJSMethod:chartMethod];
 }
 
