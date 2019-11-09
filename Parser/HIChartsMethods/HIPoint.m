@@ -10,6 +10,10 @@
     self.jsClassMethod = @{ @"class" : @"Point", @"method" : @"onMouseOut", @"id" : self.uuid };
 }
 
+- (void)onMouseOver {
+    self.jsClassMethod = @{ @"class" : @"Point", @"method" : @"onMouseOver", @"id" : self.uuid };
+}
+
 - (void)remove:(NSNumber *)redraw {
     self.jsClassMethod = @{ @"class" : @"Point", @"method" : @"remove0", @"id" : self.uuid, @"params" : @[redraw] };
 }

@@ -28,6 +28,11 @@
 -(void)onMouseOut;
 
 /**
+ Runs on mouse over the point. Called internally from mouse and touch events.
+ */
+-(void)onMouseOver;
+
+/**
  Remove a point and optionally redraw the series and if necessary the axes
  
  **Try it**
