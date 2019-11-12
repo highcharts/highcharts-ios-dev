@@ -829,10 +829,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Try it</strong></p>
 
-<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,</p>
-
-<pre><code>        &lt;a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank"&gt;with a z index, the series with the highest z index is on top&lt;/a&gt;.
-</code></pre>
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,
+            <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank">with a z index, the series with the highest z index is on top</a>.</p>
 			</div>
 			
 
@@ -1025,7 +1023,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Export-data module required. When set to <code>false</code> will prevent the series data from being included in any form of data export. Since version 6.0.0 until 7.1.0 the option was existing undocumented as <code>includeInCSVExport</code>.</p>
+				<p>When set to <code>false</code> will prevent the series data from being included in any form of data export. Since version 6.0.0 until 7.1.0 the option was existing undocumented as <code>includeInCSVExport</code>.</p>
 			</div>
 			
 		    
@@ -1525,7 +1523,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The draggable-points module allows points to be moved around or modified in the chart. In addition to the options mentioned under the <code>dragDrop</code> API structure, the module fires three events, <code>point.dragStart</code>, <code>point.drag</code> and <code>point.drop</code>. It requires the <code>modules/draggable-points.js</code> file to be loaded.</p>
+				<p>The draggable-points module allows points to be moved around or modified in the chart. In addition to the options mentioned under the <code>dragDrop</code> API structure, the module fires three events, <code>point.dragStart</code>, <code>point.drag</code> and <code>point.drop</code>.</p>
 			</div>
 			
 		    
@@ -2010,7 +2008,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Series labels are placed as close to the series as possible in a natural way, seeking to avoid other series. The goal of this feature is to make the chart more easily readable, like if a human designer placed the labels in the optimal position. The series labels currently work with series types having a <code>graph</code> or an <code>area</code>. Requires the <code>series-label.js</code> module.</p>
+				<p>Series labels are placed as close to the series as possible in a natural way, seeking to avoid other series. The goal of this feature is to make the chart more easily readable, like if a human designer placed the labels in the optimal position. The series labels currently work with series types having a <code>graph</code> or an <code>area</code>.</p>
 			</div>
 			
 		    
@@ -2553,7 +2551,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable.</p>
+				<p>When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable. Note: In boost mode turbo threshold is forced. Only array of numbers or two dimensional arrays are allowed.</p>
 			</div>
 			
 		    
@@ -3250,7 +3248,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn&rsquo;t triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip when not shared. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.</p>
+				<p>Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn&rsquo;t triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip when not shared. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc. <strong>Note:</strong> The boost module will force this option because of technical limitations.</p>
 			</div>
 			
 		    
@@ -3548,7 +3546,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the <code>boostThreshold</code> to 0. Setting it to 1 will force boosting. Note that the <code>cropThreshold</code> also affects this setting. When zooming in on a series that has fewer points than the <code>cropThreshold</code>, all points are rendered although outside the visible plot area, and the <code>boostThreshold</code> won&rsquo;t take effect. Requires <code>modules/boost.js</code>.</p>
+				<p>Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the <code>boostThreshold</code> to 0. Setting it to 1 will force boosting. Note that the <code>cropThreshold</code> also affects this setting. When zooming in on a series that has fewer points than the <code>cropThreshold</code>, all points are rendered although outside the visible plot area, and the <code>boostThreshold</code> won&rsquo;t take effect.</p>
 			</div>
 			
 		    

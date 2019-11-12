@@ -81,16 +81,6 @@
 	copyWindbarb.className = [self.className copyWithZone: zone];
 	copyWindbarb.pointStart = [self.pointStart copyWithZone: zone];
 	copyWindbarb.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyWindbarb.data = [self.data copyWithZone: zone];
-	copyWindbarb.id = [self.id copyWithZone: zone];
-	copyWindbarb.index = [self.index copyWithZone: zone];
-	copyWindbarb.legendIndex = [self.legendIndex copyWithZone: zone];
-	copyWindbarb.name = [self.name copyWithZone: zone];
-	copyWindbarb.stack = [self.stack copyWithZone: zone];
-	copyWindbarb.type = [self.type copyWithZone: zone];
-	copyWindbarb.xAxis = [self.xAxis copyWithZone: zone];
-	copyWindbarb.yAxis = [self.yAxis copyWithZone: zone];
-	copyWindbarb.zIndex = [self.zIndex copyWithZone: zone];
 	return copyWindbarb;
 }
 

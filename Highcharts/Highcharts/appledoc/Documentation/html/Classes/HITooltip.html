@@ -138,7 +138,23 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/defaultFormatter:">- defaultFormatter:</option>
+		
+		<option value="//api/name/destroy">- destroy</option>
+		
+		<option value="//api/name/getLabel">- getLabel</option>
+		
 		<option value="//api/name/getParams">- getParams</option>
+		
+		<option value="//api/name/hide">- hide</option>
+		
+		<option value="//api/name/hide:">- hide:</option>
+		
+		<option value="//api/name/refreshByPoint:">- refreshByPoint:</option>
+		
+		<option value="//api/name/refreshByPoints:">- refreshByPoints:</option>
+		
+		<option value="//api/name/update:">- update:</option>
 		
 	</optgroup>
 	
@@ -1460,6 +1476,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/distance" title="distance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Distance from point to tooltip in pixels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>16</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/enabled" title="enabled"></a>
 	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
@@ -1893,22 +1955,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/distance" title="distance"></a>
-	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/getParams" title="getParams"></a>
 	<h3 class="method-title"><code><a href="#//api/name/getParams">&ndash;&nbsp;getParams</a></code>
 </h3>
@@ -1922,6 +1968,394 @@
 			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getParams</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultFormatter:" title="defaultFormatter:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultFormatter:">&ndash;&nbsp;defaultFormatter:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>In case no user defined formatter is given, this will be used. Note that the context here is an object holding point, series, x, y etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)defaultFormatter:(HITooltip *)<em>tooltip</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tooltip</code></th>
+						<td><p>Tooltip</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroy" title="destroy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroy">&ndash;&nbsp;destroy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes and destroys the tooltip and its elements.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)destroy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getLabel" title="getLabel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getLabel">&ndash;&nbsp;getLabel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates the Tooltip label element if it does not exist.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getLabel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hide" title="hide"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hide">&ndash;&nbsp;hide</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Hides the tooltip with a fade out animation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hide</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hide:" title="hide:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hide:">&ndash;&nbsp;hide:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Hides the tooltip with a fade out animation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hide:(NSNumber *)<em>delay</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>delay</code></th>
+						<td><p>The fade out in milliseconds. If no value is provided the value of the tooltip.hideDelay option is used. A value of 0 disables the fade out animation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/refreshByPoint:" title="refreshByPoint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/refreshByPoint:">&ndash;&nbsp;refreshByPoint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Refresh the tooltip&rsquo;s text and position.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)refreshByPoint:(HIPoint *)<em>point</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>point</code></th>
+						<td><p>A point.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/refreshByPoints:" title="refreshByPoints:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/refreshByPoints:">&ndash;&nbsp;refreshByPoints:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Refresh the tooltip&rsquo;s text and position.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)refreshByPoints:(NSArray&lt;HIPoint*&gt; *)<em>points</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>points</code></th>
+						<td><p>An array of points.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/update:" title="update:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/update:">&ndash;&nbsp;update:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Updates the tooltip with the provided tooltip options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)update:(HITooltip *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The tooltip options to update.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

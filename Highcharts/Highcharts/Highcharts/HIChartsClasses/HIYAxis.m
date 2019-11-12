@@ -427,8 +427,8 @@
 	[self updateArrayObject:oldValue newValue:plotBands propertyName:@"plotBands"];
 }
 
--(void)setStops:(NSArray<NSArray *> *)stops {
-	NSArray<NSArray *> *oldValue = _stops;
+-(void)setStops:(NSArray<HIGradientColorStopObject *> *)stops {
+	NSArray<HIGradientColorStopObject *> *oldValue = _stops;
 	_stops = stops;
 	[self updateArrayObject:oldValue newValue:stops propertyName:@"stops"];
 }

@@ -16,14 +16,6 @@
 	[super copyWithZone:zone];
 	HITreemap *copyTreemap = [[HITreemap allocWithZone: zone] init];
 	copyTreemap.data = [self.data copyWithZone: zone];
-	copyTreemap.id = [self.id copyWithZone: zone];
-	copyTreemap.index = [self.index copyWithZone: zone];
-	copyTreemap.legendIndex = [self.legendIndex copyWithZone: zone];
-	copyTreemap.name = [self.name copyWithZone: zone];
-	copyTreemap.type = [self.type copyWithZone: zone];
-	copyTreemap.xAxis = [self.xAxis copyWithZone: zone];
-	copyTreemap.yAxis = [self.yAxis copyWithZone: zone];
-	copyTreemap.zIndex = [self.zIndex copyWithZone: zone];
 	copyTreemap.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyTreemap.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyTreemap.states = [self.states copyWithZone: zone];

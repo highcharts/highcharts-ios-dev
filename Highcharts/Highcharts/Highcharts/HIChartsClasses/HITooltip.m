@@ -35,6 +35,7 @@
 	copyTooltip.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyTooltip.padding = [self.padding copyWithZone: zone];
 	copyTooltip.shadow = [self.shadow copyWithZone: zone];
+	copyTooltip.distance = [self.distance copyWithZone: zone];
 	copyTooltip.enabled = [self.enabled copyWithZone: zone];
 	copyTooltip.shape = [self.shape copyWithZone: zone];
 	copyTooltip.pointFormatter = [self.pointFormatter copyWithZone: zone];
@@ -45,13 +46,13 @@
 	copyTooltip.valueDecimals = [self.valueDecimals copyWithZone: zone];
 	copyTooltip.nodeFormat = [self.nodeFormat copyWithZone: zone];
 	copyTooltip.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
-	copyTooltip.distance = [self.distance copyWithZone: zone];
 	return copyTooltip;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+    params[@"_wrapperID"] = self.uuid;
 	if (self.followTouchMove) {
 		params[@"followTouchMove"] = self.followTouchMove;
 	}
@@ -127,6 +128,9 @@
 	if (self.shadow) {
 		params[@"shadow"] = [self.shadow getParams];
 	}
+	if (self.distance) {
+		params[@"distance"] = self.distance;
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -156,9 +160,6 @@
 	}
 	if (self.nodeFormatter) {
 		params[@"nodeFormatter"] = [self.nodeFormatter getFunction];
-	}
-	if (self.distance) {
-		params[@"distance"] = self.distance;
 	}
 	return params;
 }
@@ -315,6 +316,12 @@
 	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }
 
+-(void)setDistance:(NSNumber *)distance {
+	NSNumber *oldValue = _distance;
+	_distance = distance;
+	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
+}
+
 -(void)setEnabled:(NSNumber *)enabled {
 	NSNumber *oldValue = _enabled;
 	_enabled = enabled;
@@ -375,10 +382,47 @@
 	[self updateHIObject:oldValue newValue:nodeFormatter propertyName:@"nodeFormatter"];
 }
 
--(void)setDistance:(NSNumber *)distance {
-	NSNumber *oldValue = _distance;
-	_distance = distance;
-	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
+-(void)defaultFormatter:(HITooltip *)tooltip {
+    self.jsClassMethod = @{ @"class" : @"Tooltip", @"method" : @"defaultFormatter", @"id" : self.uuid, @"params" : @[[tooltip getParams]] };
+}
+
+-(void)destroy {
+    self.jsClassMethod = @{ @"class" : @"Tooltip", @"method" : @"destroy", @"id" : self.uuid };
+}
+
+-(void)getLabel {
+    self.jsClassMethod = @{ @"class" : @"Tooltip", @"method" : @"getLabel", @"id" : self.uuid };
+}
+
+-(void)hide {
+    self.jsClassMethod = @{ @"class" : @"Tooltip", @"method" : @"hide0", @"id" : self.uuid };
+}
+
+-(void)hide:(NSNumber *)delay {
+    self.jsClassMethod = @{ @"class" : @"Tooltip", @"method" : @"hide1", @"id" : self.uuid, @"params" : @[delay] };
+}
+
+-(void)refreshByPoint:(HIPoint *)point {
+    NSDictionary *params = [point getParams];
+    NSString *pointID = params[@"_wrapperID"];
+    self.jsClassMethod = @{ @"class" : @"Tooltip", @"method" : @"refresh0", @"id" : self.uuid, @"pointID" : pointID };
+}
+
+-(void)refreshByPoints:(NSArray<HIPoint *> *)points {
+    NSMutableArray *pointIDs = [[NSMutableArray alloc] init];
+    for (HIPoint* point in points) {
+        NSDictionary *params = [point getParams];
+        NSString *pointID = params[@"_wrapperID"];
+        [pointIDs addObject:[NSString stringWithFormat:@"%@%@%@", @"\"", pointID, @"\""]];
+    }
+    NSString *pointIDsString = [NSString stringWithFormat:@"%@%@%@", @"[", [pointIDs componentsJoinedByString:@", "], @"]"];
+    self.jsClassMethod = @{ @"class" : @"Tooltip", @"method" : @"refresh1", @"id" : self.uuid, @"pointIDs" : pointIDsString };
+}
+
+-(void)update:(HITooltip *)options {
+    NSMutableDictionary *params = [[options getParams] mutableCopy];
+    [params removeObjectForKey:@"_wrapperID"];
+    self.jsClassMethod = @{ @"class" : @"Tooltip", @"method" : @"update", @"id" : self.uuid, @"params" : @[params] };
 }
 
 @end
