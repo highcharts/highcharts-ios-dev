@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIFilter Class Reference</title>
+	<title>HITimelineDataLabelsOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,11 +58,17 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/operator">operator</option>
+		<option value="//api/name/alternate">alternate</option>
 		
-		<option value="//api/name/property">property</option>
+		<option value="//api/name/connectorColor">connectorColor</option>
 		
-		<option value="//api/name/value">value</option>
+		<option value="//api/name/connectorWidth">connectorWidth</option>
+		
+		<option value="//api/name/distance">distance</option>
+		
+		<option value="//api/name/formatter">formatter</option>
+		
+		<option value="//api/name/width">width</option>
 		
 	</optgroup>
 	
@@ -89,7 +95,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIFilter Class Reference</h1>
+					<h1 class="title">HITimelineDataLabelsOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -98,25 +104,12 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIFilter.h</td>
+	<td>HITimelineDataLabelsOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A declarative filter for which data labels to display. The declarative filter is designed for use when callback functions are not available, like when the chart options require a pure JSON structure or for use with graphical editors. For programmatic control, use the <code>formatter</code> instead, and return <code>undefined</code> to disable a single data label.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-monochrome">Data labels filtered by percentage</a></li>
-</ul>
-
-					</div>
 					
 					
 
@@ -131,8 +124,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/operator" title="operator"></a>
-	<h3 class="method-title"><code><a href="#//api/name/operator">&nbsp;&nbsp;operator</a></code>
+	<a name="//api/name/alternate" title="alternate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alternate">&nbsp;&nbsp;alternate</a></code>
 </h3>
 
 	<div class="method-info">
@@ -142,12 +135,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The operator to compare by. Can be one of <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code>, and <code>===</code>.</p>
+				<p>Whether to position data labels alternately. For example, if <code>distance</code> is set equal to <code>100</code>, then data labels will be positioned alternately (on both sides of the point) at a distance of 100px.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *operator</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alternate</code></div>
 
 		    
 			
@@ -156,11 +149,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["&gt;", "&lt;", "&gt;=", "&lt;=", "==", "==="]</code>.</p>
-			</div>
 			
 
 			
@@ -170,15 +158,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIFilter.h</code></p>
+				<p><code class="declared-in-ref">HITimelineDataLabelsOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/property" title="property"></a>
-	<h3 class="method-title"><code><a href="#//api/name/property">&nbsp;&nbsp;property</a></code>
+	<a name="//api/name/connectorColor" title="connectorColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorColor">&nbsp;&nbsp;connectorColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -188,12 +176,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The point property to filter by. Point options are passed directly to properties, additionally there are <code>y</code> value, <code>percentage</code> and others listed under <a href="https://api.highcharts.com/class-reference/Highcharts.Point">Point</a> members.</p>
+				<p>The color of the line connecting the data label to the point. The default color is the same as the point&rsquo;s color.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *property</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *connectorColor</code></div>
 
 		    
 			
@@ -211,15 +199,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIFilter.h</code></p>
+				<p><code class="declared-in-ref">HITimelineDataLabelsOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/value" title="value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+	<a name="//api/name/connectorWidth" title="connectorWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorWidth">&nbsp;&nbsp;connectorWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -229,12 +217,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The value to compare against.</p>
+				<p>The width of the line connecting the data label to the point. In styled mode, the connector stroke width is given in the <code>.highcharts-data-label-connector</code> class.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorWidth</code></div>
 
 		    
 			
@@ -252,10 +240,83 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIFilter.h</code></p>
+				<p><code class="declared-in-ref">HITimelineDataLabelsOptionsObject.h</code></p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/distance" title="distance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A pixel value defining the distance between the data label and the point. Negative numbers puts the label on top of the point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITimelineDataLabelsOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/formatter" title="formatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
+
+		    
 		</div>
 	</div>
 </div><div class="section-method">
