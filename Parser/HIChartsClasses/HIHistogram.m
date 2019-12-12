@@ -60,6 +60,7 @@
 	copyHistogram.color = [self.color copyWithZone: zone];
 	copyHistogram.colorKey = [self.colorKey copyWithZone: zone];
 	copyHistogram.point = [self.point copyWithZone: zone];
+	copyHistogram.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyHistogram.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHistogram.cursor = [self.cursor copyWithZone: zone];
 	copyHistogram.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];

@@ -46,6 +46,7 @@
 	copyBellcurve.states = [self.states copyWithZone: zone];
 	copyBellcurve.colorKey = [self.colorKey copyWithZone: zone];
 	copyBellcurve.point = [self.point copyWithZone: zone];
+	copyBellcurve.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBellcurve.tooltip = [self.tooltip copyWithZone: zone];
 	copyBellcurve.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBellcurve.cursor = [self.cursor copyWithZone: zone];

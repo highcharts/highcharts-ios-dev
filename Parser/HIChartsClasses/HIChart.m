@@ -49,6 +49,7 @@
 	copyChart.ignoreHiddenSeries = [self.ignoreHiddenSeries copyWithZone: zone];
 	copyChart.selectionMarkerFill = [self.selectionMarkerFill copyWithZone: zone];
 	copyChart.plotBackgroundImage = [self.plotBackgroundImage copyWithZone: zone];
+	copyChart.numberFormatter = [self.numberFormatter copyWithZone: zone];
 	copyChart.pinchType = [self.pinchType copyWithZone: zone];
 	copyChart.colorCount = [self.colorCount copyWithZone: zone];
 	copyChart.parallelCoordinates = [self.parallelCoordinates copyWithZone: zone];
@@ -131,7 +132,7 @@
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.panning) {
-		params[@"panning"] = self.panning;
+		params[@"panning"] = [self.panning getParams];
 	}
 	if (self.options3d) {
 		params[@"options3d"] = [self.options3d getParams];
@@ -189,6 +190,9 @@
 	}
 	if (self.plotBackgroundImage) {
 		params[@"plotBackgroundImage"] = self.plotBackgroundImage;
+	}
+	if (self.numberFormatter) {
+		params[@"numberFormatter"] = [self.numberFormatter getFunction];
 	}
 	if (self.pinchType) {
 		params[@"pinchType"] = self.pinchType;
@@ -363,10 +367,10 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
--(void)setPanning:(NSNumber *)panning {
-	NSNumber *oldValue = _panning;
+-(void)setPanning:(HIPanning *)panning {
+	HIPanning *oldValue = _panning;
 	_panning = panning;
-	[self updateNSObject:oldValue newValue:panning propertyName:@"panning"];
+	[self updateHIObject:oldValue newValue:panning propertyName:@"panning"];
 }
 
 -(void)setOptions3d:(HIOptions3d *)options3d {
@@ -463,6 +467,12 @@
 	NSString *oldValue = _plotBackgroundImage;
 	_plotBackgroundImage = plotBackgroundImage;
 	[self updateNSObject:oldValue newValue:plotBackgroundImage propertyName:@"plotBackgroundImage"];
+}
+
+-(void)setNumberFormatter:(HIFunction *)numberFormatter {
+	HIFunction *oldValue = _numberFormatter;
+	_numberFormatter = numberFormatter;
+	[self updateHIObject:oldValue newValue:numberFormatter propertyName:@"numberFormatter"];
 }
 
 -(void)setPinchType:(NSString *)pinchType {

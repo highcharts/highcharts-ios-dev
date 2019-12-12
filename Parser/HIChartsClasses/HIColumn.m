@@ -49,6 +49,7 @@
 	copyColumn.colorKey = [self.colorKey copyWithZone: zone];
 	copyColumn.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumn.point = [self.point copyWithZone: zone];
+	copyColumn.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyColumn.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumn.cursor = [self.cursor copyWithZone: zone];
 	copyColumn.pointPlacement = [self.pointPlacement copyWithZone: zone];

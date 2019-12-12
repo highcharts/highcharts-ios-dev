@@ -30,6 +30,7 @@
 	copyGauge.color = [self.color copyWithZone: zone];
 	copyGauge.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyGauge.point = [self.point copyWithZone: zone];
+	copyGauge.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyGauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyGauge.cursor = [self.cursor copyWithZone: zone];
 	copyGauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];

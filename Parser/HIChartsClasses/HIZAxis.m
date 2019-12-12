@@ -13,6 +13,7 @@
 	copyZAxis.zoomEnabled = [self.zoomEnabled copyWithZone: zone];
 	copyZAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyZAxis.pane = [self.pane copyWithZone: zone];
+	copyZAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
 	copyZAxis.minPadding = [self.minPadding copyWithZone: zone];
 	copyZAxis.labels = [self.labels copyWithZone: zone];
 	copyZAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
@@ -22,16 +23,17 @@
 	copyZAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
 	copyZAxis.tickWidth = [self.tickWidth copyWithZone: zone];
 	copyZAxis.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
-	copyZAxis.reversed = [self.reversed copyWithZone: zone];
+	copyZAxis.maxPadding = [self.maxPadding copyWithZone: zone];
 	copyZAxis.startOfWeek = [self.startOfWeek copyWithZone: zone];
 	copyZAxis.id = [self.id copyWithZone: zone];
 	copyZAxis.tickPositions = [self.tickPositions copyWithZone: zone];
 	copyZAxis.minRange = [self.minRange copyWithZone: zone];
-	copyZAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
+	copyZAxis.angle = [self.angle copyWithZone: zone];
 	copyZAxis.allowDecimals = [self.allowDecimals copyWithZone: zone];
 	copyZAxis.floor = [self.floor copyWithZone: zone];
 	copyZAxis.minorGridLineColor = [self.minorGridLineColor copyWithZone: zone];
 	copyZAxis.tickPositioner = [self.tickPositioner copyWithZone: zone];
+	copyZAxis.reversed = [self.reversed copyWithZone: zone];
 	copyZAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
 	copyZAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyZAxis.endOnTick = [self.endOnTick copyWithZone: zone];
@@ -39,7 +41,7 @@
 	copyZAxis.units = [self.units copyWithZone: zone];
 	copyZAxis.softMin = [self.softMin copyWithZone: zone];
 	copyZAxis.type = [self.type copyWithZone: zone];
-	copyZAxis.events = [self.events copyWithZone: zone];
+	copyZAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
 	copyZAxis.tickLength = [self.tickLength copyWithZone: zone];
 	copyZAxis.ceiling = [self.ceiling copyWithZone: zone];
 	copyZAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
@@ -51,6 +53,7 @@
 	copyZAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyZAxis.startOnTick = [self.startOnTick copyWithZone: zone];
 	copyZAxis.offset = [self.offset copyWithZone: zone];
+	copyZAxis.softMax = [self.softMax copyWithZone: zone];
 	copyZAxis.tickColor = [self.tickColor copyWithZone: zone];
 	copyZAxis.gridLineWidth = [self.gridLineWidth copyWithZone: zone];
 	copyZAxis.tickInterval = [self.tickInterval copyWithZone: zone];
@@ -64,7 +67,7 @@
 	copyZAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
 	copyZAxis.min = [self.min copyWithZone: zone];
 	copyZAxis.uniqueNames = [self.uniqueNames copyWithZone: zone];
-	copyZAxis.maxPadding = [self.maxPadding copyWithZone: zone];
+	copyZAxis.events = [self.events copyWithZone: zone];
 	copyZAxis.className = [self.className copyWithZone: zone];
 	copyZAxis.tickAmount = [self.tickAmount copyWithZone: zone];
 	copyZAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
@@ -72,7 +75,6 @@
 	copyZAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyZAxis.margin = [self.margin copyWithZone: zone];
 	copyZAxis.plotBands = [self.plotBands copyWithZone: zone];
-	copyZAxis.softMax = [self.softMax copyWithZone: zone];
 	return copyZAxis;
 }
 
@@ -88,6 +90,9 @@
 	}
 	if (self.pane) {
 		params[@"pane"] = self.pane;
+	}
+	if (self.tickmarkPlacement) {
+		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
 	}
 	if (self.minPadding) {
 		params[@"minPadding"] = self.minPadding;
@@ -116,8 +121,8 @@
 	if (self.showFirstLabel) {
 		params[@"showFirstLabel"] = self.showFirstLabel;
 	}
-	if (self.reversed) {
-		params[@"reversed"] = self.reversed;
+	if (self.maxPadding) {
+		params[@"maxPadding"] = self.maxPadding;
 	}
 	if (self.startOfWeek) {
 		params[@"startOfWeek"] = self.startOfWeek;
@@ -140,8 +145,8 @@
 	if (self.minRange) {
 		params[@"minRange"] = self.minRange;
 	}
-	if (self.tickmarkPlacement) {
-		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
+	if (self.angle) {
+		params[@"angle"] = self.angle;
 	}
 	if (self.allowDecimals) {
 		params[@"allowDecimals"] = self.allowDecimals;
@@ -154,6 +159,9 @@
 	}
 	if (self.tickPositioner) {
 		params[@"tickPositioner"] = [self.tickPositioner getFunction];
+	}
+	if (self.reversed) {
+		params[@"reversed"] = self.reversed;
 	}
 	if (self.minorGridLineDashStyle) {
 		params[@"minorGridLineDashStyle"] = self.minorGridLineDashStyle;
@@ -194,8 +202,8 @@
 	if (self.type) {
 		params[@"type"] = self.type;
 	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
+	if (self.gridLineInterpolation) {
+		params[@"gridLineInterpolation"] = self.gridLineInterpolation;
 	}
 	if (self.tickLength) {
 		params[@"tickLength"] = self.tickLength;
@@ -229,6 +237,9 @@
 	}
 	if (self.offset) {
 		params[@"offset"] = self.offset;
+	}
+	if (self.softMax) {
+		params[@"softMax"] = self.softMax;
 	}
 	if (self.tickColor) {
 		params[@"tickColor"] = [self.tickColor getData];
@@ -278,8 +289,8 @@
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
 	}
-	if (self.maxPadding) {
-		params[@"maxPadding"] = self.maxPadding;
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -311,9 +322,6 @@
 		}
 		params[@"plotBands"] = array;
 	}
-	if (self.softMax) {
-		params[@"softMax"] = self.softMax;
-	}
 	return params;
 }
 
@@ -335,6 +343,12 @@
 	NSNumber *oldValue = _pane;
 	_pane = pane;
 	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
+}
+
+-(void)setTickmarkPlacement:(NSString *)tickmarkPlacement {
+	NSString *oldValue = _tickmarkPlacement;
+	_tickmarkPlacement = tickmarkPlacement;
+	[self updateNSObject:oldValue newValue:tickmarkPlacement propertyName:@"tickmarkPlacement"];
 }
 
 -(void)setMinPadding:(NSNumber *)minPadding {
@@ -391,10 +405,10 @@
 	[self updateNSObject:oldValue newValue:showFirstLabel propertyName:@"showFirstLabel"];
 }
 
--(void)setReversed:(NSNumber *)reversed {
-	NSNumber *oldValue = _reversed;
-	_reversed = reversed;
-	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
+-(void)setMaxPadding:(NSNumber *)maxPadding {
+	NSNumber *oldValue = _maxPadding;
+	_maxPadding = maxPadding;
+	[self updateNSObject:oldValue newValue:maxPadding propertyName:@"maxPadding"];
 }
 
 -(void)setStartOfWeek:(NSNumber *)startOfWeek {
@@ -421,10 +435,10 @@
 	[self updateNSObject:oldValue newValue:minRange propertyName:@"minRange"];
 }
 
--(void)setTickmarkPlacement:(NSString *)tickmarkPlacement {
-	NSString *oldValue = _tickmarkPlacement;
-	_tickmarkPlacement = tickmarkPlacement;
-	[self updateNSObject:oldValue newValue:tickmarkPlacement propertyName:@"tickmarkPlacement"];
+-(void)setAngle:(NSNumber *)angle {
+	NSNumber *oldValue = _angle;
+	_angle = angle;
+	[self updateNSObject:oldValue newValue:angle propertyName:@"angle"];
 }
 
 -(void)setAllowDecimals:(NSNumber *)allowDecimals {
@@ -449,6 +463,12 @@
 	HIFunction *oldValue = _tickPositioner;
 	_tickPositioner = tickPositioner;
 	[self updateHIObject:oldValue newValue:tickPositioner propertyName:@"tickPositioner"];
+}
+
+-(void)setReversed:(NSNumber *)reversed {
+	NSNumber *oldValue = _reversed;
+	_reversed = reversed;
+	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
 }
 
 -(void)setMinorGridLineDashStyle:(NSString *)minorGridLineDashStyle {
@@ -493,10 +513,10 @@
 	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
-	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+-(void)setGridLineInterpolation:(NSString *)gridLineInterpolation {
+	NSString *oldValue = _gridLineInterpolation;
+	_gridLineInterpolation = gridLineInterpolation;
+	[self updateNSObject:oldValue newValue:gridLineInterpolation propertyName:@"gridLineInterpolation"];
 }
 
 -(void)setTickLength:(NSNumber *)tickLength {
@@ -563,6 +583,12 @@
 	NSNumber *oldValue = _offset;
 	_offset = offset;
 	[self updateNSObject:oldValue newValue:offset propertyName:@"offset"];
+}
+
+-(void)setSoftMax:(NSNumber *)softMax {
+	NSNumber *oldValue = _softMax;
+	_softMax = softMax;
+	[self updateNSObject:oldValue newValue:softMax propertyName:@"softMax"];
 }
 
 -(void)setTickColor:(HIColor *)tickColor {
@@ -643,10 +669,10 @@
 	[self updateNSObject:oldValue newValue:uniqueNames propertyName:@"uniqueNames"];
 }
 
--(void)setMaxPadding:(NSNumber *)maxPadding {
-	NSNumber *oldValue = _maxPadding;
-	_maxPadding = maxPadding;
-	[self updateNSObject:oldValue newValue:maxPadding propertyName:@"maxPadding"];
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -689,12 +715,6 @@
 	NSArray <HIPlotBands *> *oldValue = _plotBands;
 	_plotBands = plotBands;
 	[self updateArrayObject:oldValue newValue:plotBands propertyName:@"plotBands"];
-}
-
--(void)setSoftMax:(NSNumber *)softMax {
-	NSNumber *oldValue = _softMax;
-	_softMax = softMax;
-	[self updateNSObject:oldValue newValue:softMax propertyName:@"softMax"];
 }
 
 - (void)addPlotBand:(HIPlotBands *)options {

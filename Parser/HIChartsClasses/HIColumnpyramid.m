@@ -50,6 +50,7 @@
 	copyColumnpyramid.colorKey = [self.colorKey copyWithZone: zone];
 	copyColumnpyramid.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumnpyramid.point = [self.point copyWithZone: zone];
+	copyColumnpyramid.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyColumnpyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumnpyramid.cursor = [self.cursor copyWithZone: zone];
 	copyColumnpyramid.pointPlacement = [self.pointPlacement copyWithZone: zone];

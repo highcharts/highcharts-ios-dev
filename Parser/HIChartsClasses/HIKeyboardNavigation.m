@@ -10,21 +10,17 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIKeyboardNavigation *copyKeyboardNavigation = [[HIKeyboardNavigation allocWithZone: zone] init];
-	copyKeyboardNavigation.skipNullPoints = [self.skipNullPoints copyWithZone: zone];
 	copyKeyboardNavigation.enabled = [self.enabled copyWithZone: zone];
 	copyKeyboardNavigation.wrapAround = [self.wrapAround copyWithZone: zone];
 	copyKeyboardNavigation.focusBorder = [self.focusBorder copyWithZone: zone];
 	copyKeyboardNavigation.order = [self.order copyWithZone: zone];
-	copyKeyboardNavigation.mode = [self.mode copyWithZone: zone];
+	copyKeyboardNavigation.seriesNavigation = [self.seriesNavigation copyWithZone: zone];
 	return copyKeyboardNavigation;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.skipNullPoints) {
-		params[@"skipNullPoints"] = self.skipNullPoints;
-	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -46,19 +42,13 @@
 		}
 		params[@"order"] = array;
 	}
-	if (self.mode) {
-		params[@"mode"] = self.mode;
+	if (self.seriesNavigation) {
+		params[@"seriesNavigation"] = [self.seriesNavigation getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
-
--(void)setSkipNullPoints:(NSNumber *)skipNullPoints {
-	NSNumber *oldValue = _skipNullPoints;
-	_skipNullPoints = skipNullPoints;
-	[self updateNSObject:oldValue newValue:skipNullPoints propertyName:@"skipNullPoints"];
-}
 
 -(void)setEnabled:(NSNumber *)enabled {
 	NSNumber *oldValue = _enabled;
@@ -84,10 +74,10 @@
 	[self updateArrayObject:oldValue newValue:order propertyName:@"order"];
 }
 
--(void)setMode:(NSString *)mode {
-	NSString *oldValue = _mode;
-	_mode = mode;
-	[self updateNSObject:oldValue newValue:mode propertyName:@"mode"];
+-(void)setSeriesNavigation:(HISeriesNavigation *)seriesNavigation {
+	HISeriesNavigation *oldValue = _seriesNavigation;
+	_seriesNavigation = seriesNavigation;
+	[self updateHIObject:oldValue newValue:seriesNavigation propertyName:@"seriesNavigation"];
 }
 
 @end
