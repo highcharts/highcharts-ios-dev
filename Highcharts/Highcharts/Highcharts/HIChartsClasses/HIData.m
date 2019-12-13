@@ -83,6 +83,7 @@
 	copyData.x2 = [self.x2 copyWithZone: zone];
 	copyData.partialFill = [self.partialFill copyWithZone: zone];
 	copyData.parent = [self.parent copyWithZone: zone];
+	copyData.colorValue = [self.colorValue copyWithZone: zone];
 	copyData.sets = [self.sets copyWithZone: zone];
 	return copyData;
 }
@@ -344,6 +345,9 @@
 	}
 	if (self.parent) {
 		params[@"parent"] = self.parent;
+	}
+	if (self.colorValue) {
+		params[@"colorValue"] = self.colorValue;
 	}
 	if (self.sets) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -798,6 +802,12 @@
 	NSString *oldValue = _parent;
 	_parent = parent;
 	[self updateNSObject:oldValue newValue:parent propertyName:@"parent"];
+}
+
+-(void)setColorValue:(NSNumber *)colorValue {
+	NSNumber *oldValue = _colorValue;
+	_colorValue = colorValue;
+	[self updateNSObject:oldValue newValue:colorValue propertyName:@"colorValue"];
 }
 
 -(void)setSets:(NSArray<NSString *> *)sets {

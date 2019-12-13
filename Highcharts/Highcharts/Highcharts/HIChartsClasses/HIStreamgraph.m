@@ -48,6 +48,7 @@
 	copyStreamgraph.colorKey = [self.colorKey copyWithZone: zone];
 	copyStreamgraph.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyStreamgraph.point = [self.point copyWithZone: zone];
+	copyStreamgraph.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyStreamgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyStreamgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyStreamgraph.cursor = [self.cursor copyWithZone: zone];

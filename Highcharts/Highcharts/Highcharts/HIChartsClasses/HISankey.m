@@ -36,6 +36,7 @@
 	copySankey.clip = [self.clip copyWithZone: zone];
 	copySankey.color = [self.color copyWithZone: zone];
 	copySankey.point = [self.point copyWithZone: zone];
+	copySankey.dataSorting = [self.dataSorting copyWithZone: zone];
 	copySankey.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySankey.cursor = [self.cursor copyWithZone: zone];
 	copySankey.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];

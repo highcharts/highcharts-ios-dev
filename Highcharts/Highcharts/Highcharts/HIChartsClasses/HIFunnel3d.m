@@ -57,6 +57,7 @@
 	copyFunnel3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyFunnel3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyFunnel3d.point = [self.point copyWithZone: zone];
+	copyFunnel3d.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyFunnel3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyFunnel3d.cursor = [self.cursor copyWithZone: zone];
 	copyFunnel3d.pointPlacement = [self.pointPlacement copyWithZone: zone];

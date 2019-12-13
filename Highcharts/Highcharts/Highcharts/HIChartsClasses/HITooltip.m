@@ -12,6 +12,7 @@
 	HITooltip *copyTooltip = [[HITooltip allocWithZone: zone] init];
 	copyTooltip.followTouchMove = [self.followTouchMove copyWithZone: zone];
 	copyTooltip.nullFormatter = [self.nullFormatter copyWithZone: zone];
+	copyTooltip.clusterFormat = [self.clusterFormat copyWithZone: zone];
 	copyTooltip.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyTooltip.headerFormat = [self.headerFormat copyWithZone: zone];
 	copyTooltip.valueSuffix = [self.valueSuffix copyWithZone: zone];
@@ -52,12 +53,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-    params[@"_wrapperID"] = self.uuid;
+	params[@"_wrapperID"] = self.uuid;
 	if (self.followTouchMove) {
 		params[@"followTouchMove"] = self.followTouchMove;
 	}
 	if (self.nullFormatter) {
 		params[@"nullFormatter"] = [self.nullFormatter getFunction];
+	}
+	if (self.clusterFormat) {
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -176,6 +179,12 @@
 	HIFunction *oldValue = _nullFormatter;
 	_nullFormatter = nullFormatter;
 	[self updateHIObject:oldValue newValue:nullFormatter propertyName:@"nullFormatter"];
+}
+
+-(void)setClusterFormat:(id)clusterFormat {
+	id oldValue = _clusterFormat;
+	_clusterFormat = clusterFormat;
+	[self updateNSObject:oldValue newValue:clusterFormat propertyName:@"clusterFormat"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {

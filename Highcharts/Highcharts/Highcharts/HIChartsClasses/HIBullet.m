@@ -60,6 +60,7 @@
 	copyBullet.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBullet.colorKey = [self.colorKey copyWithZone: zone];
 	copyBullet.point = [self.point copyWithZone: zone];
+	copyBullet.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBullet.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBullet.cursor = [self.cursor copyWithZone: zone];
 	copyBullet.pointPlacement = [self.pointPlacement copyWithZone: zone];

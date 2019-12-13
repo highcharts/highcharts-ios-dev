@@ -28,7 +28,7 @@
 		params[@"timezone"] = self.timezone;
 	}
 	if (self.getTimezoneOffset) {
-		params[@"getTimezoneOffset"] = [self.getTimezoneOffset getFunction];
+		params[@"getTimezoneOffset"] = self.getTimezoneOffset;
 	}
 	if (self.timezoneOffset) {
 		params[@"timezoneOffset"] = self.timezoneOffset;
@@ -53,10 +53,10 @@
 	[self updateNSObject:oldValue newValue:timezone propertyName:@"timezone"];
 }
 
--(void)setGetTimezoneOffset:(HIFunction *)getTimezoneOffset {
-	HIFunction *oldValue = _getTimezoneOffset;
+-(void)setGetTimezoneOffset:(NSString *)getTimezoneOffset {
+	NSString *oldValue = _getTimezoneOffset;
 	_getTimezoneOffset = getTimezoneOffset;
-	[self updateHIObject:oldValue newValue:getTimezoneOffset propertyName:@"getTimezoneOffset"];
+	[self updateNSObject:oldValue newValue:getTimezoneOffset propertyName:@"getTimezoneOffset"];
 }
 
 -(void)setTimezoneOffset:(NSNumber *)timezoneOffset {

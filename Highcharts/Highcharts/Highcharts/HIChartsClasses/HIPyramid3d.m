@@ -65,6 +65,7 @@
 	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid3d.point = [self.point copyWithZone: zone];
+	copyPyramid3d.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
 	copyPyramid3d.pointPlacement = [self.pointPlacement copyWithZone: zone];

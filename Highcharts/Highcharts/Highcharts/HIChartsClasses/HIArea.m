@@ -45,6 +45,7 @@
 	copyArea.colorKey = [self.colorKey copyWithZone: zone];
 	copyArea.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyArea.point = [self.point copyWithZone: zone];
+	copyArea.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyArea.marker = [self.marker copyWithZone: zone];
 	copyArea.tooltip = [self.tooltip copyWithZone: zone];
 	copyArea.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];

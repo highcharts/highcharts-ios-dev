@@ -40,13 +40,13 @@
 }
 
 -(void)setExportRegionLabel:(NSString *)exportRegionLabel {
-    NSString *oldValue = exportRegionLabel;
+    NSString *oldValue = _exportRegionLabel;
     _exportRegionLabel = exportRegionLabel;
     [self updateNSObject:oldValue newValue:exportRegionLabel propertyName:@"exportRegionLabel"];
 }
 
 -(void)setMenuButtonLabel:(NSString *)menuButtonLabel {
-    NSString *oldValue = menuButtonLabel;
+    NSString *oldValue = _menuButtonLabel;
     _menuButtonLabel = menuButtonLabel;
     [self updateNSObject:oldValue newValue:menuButtonLabel propertyName:@"menuButtonLabel"];
 }

@@ -21,8 +21,12 @@
 	copySeries.xAxis = [self.xAxis copyWithZone: zone];
 	copySeries.yAxis = [self.yAxis copyWithZone: zone];
 	copySeries.zIndex = [self.zIndex copyWithZone: zone];
+	copySeries.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
+	copySeries.pointDescriptionEnabledThreshold = [self.pointDescriptionEnabledThreshold copyWithZone: zone];
+	copySeries.describeSingleSeries = [self.describeSingleSeries copyWithZone: zone];
 	copySeries.yAxisDescription = [self.yAxisDescription copyWithZone: zone];
 	copySeries.xAxisDescription = [self.xAxisDescription copyWithZone: zone];
+	copySeries.nullPointValue = [self.nullPointValue copyWithZone: zone];
 	copySeries.definition = [self.definition copyWithZone: zone];
 	copySeries.summary = [self.summary copyWithZone: zone];
 	copySeries.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -38,6 +42,7 @@
 	copySeries.softThreshold = [self.softThreshold copyWithZone: zone];
 	copySeries.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySeries.point = [self.point copyWithZone: zone];
+	copySeries.dataSorting = [self.dataSorting copyWithZone: zone];
 	copySeries.marker = [self.marker copyWithZone: zone];
 	copySeries.tooltip = [self.tooltip copyWithZone: zone];
 	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -125,11 +130,23 @@
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
+	if (self.descriptionFormatter) {
+		params[@"descriptionFormatter"] = [self.descriptionFormatter getFunction];
+	}
+	if (self.pointDescriptionEnabledThreshold) {
+		params[@"pointDescriptionEnabledThreshold"] = self.pointDescriptionEnabledThreshold;
+	}
+	if (self.describeSingleSeries) {
+		params[@"describeSingleSeries"] = self.describeSingleSeries;
+	}
 	if (self.yAxisDescription) {
 		params[@"yAxisDescription"] = self.yAxisDescription;
 	}
 	if (self.xAxisDescription) {
 		params[@"xAxisDescription"] = self.xAxisDescription;
+	}
+	if (self.nullPointValue) {
+		params[@"nullPointValue"] = self.nullPointValue;
 	}
 	if (self.definition) {
 		params[@"definition"] = self.definition;
@@ -175,6 +192,9 @@
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
+	}
+	if (self.dataSorting) {
+		params[@"dataSorting"] = [self.dataSorting getParams];
 	}
 	if (self.marker) {
 		params[@"marker"] = [self.marker getParams];
@@ -398,6 +418,24 @@
 	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
+-(void)setDescriptionFormatter:(HIFunction *)descriptionFormatter {
+	HIFunction *oldValue = _descriptionFormatter;
+	_descriptionFormatter = descriptionFormatter;
+	[self updateHIObject:oldValue newValue:descriptionFormatter propertyName:@"descriptionFormatter"];
+}
+
+-(void)setPointDescriptionEnabledThreshold:(NSNumber *)pointDescriptionEnabledThreshold {
+	NSNumber *oldValue = _pointDescriptionEnabledThreshold;
+	_pointDescriptionEnabledThreshold = pointDescriptionEnabledThreshold;
+	[self updateNSObject:oldValue newValue:pointDescriptionEnabledThreshold propertyName:@"pointDescriptionEnabledThreshold"];
+}
+
+-(void)setDescribeSingleSeries:(NSNumber *)describeSingleSeries {
+	NSNumber *oldValue = _describeSingleSeries;
+	_describeSingleSeries = describeSingleSeries;
+	[self updateNSObject:oldValue newValue:describeSingleSeries propertyName:@"describeSingleSeries"];
+}
+
 -(void)setYAxisDescription:(NSString *)yAxisDescription {
 	NSString *oldValue = _yAxisDescription;
 	_yAxisDescription = yAxisDescription;
@@ -408,6 +446,12 @@
 	NSString *oldValue = _xAxisDescription;
 	_xAxisDescription = xAxisDescription;
 	[self updateNSObject:oldValue newValue:xAxisDescription propertyName:@"xAxisDescription"];
+}
+
+-(void)setNullPointValue:(NSString *)nullPointValue {
+	NSString *oldValue = _nullPointValue;
+	_nullPointValue = nullPointValue;
+	[self updateNSObject:oldValue newValue:nullPointValue propertyName:@"nullPointValue"];
 }
 
 -(void)setDefinition:(NSString *)definition {
@@ -498,6 +542,12 @@
 	HIPoint *oldValue = _point;
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+}
+
+-(void)setDataSorting:(HIDataSortingOptionsObject *)dataSorting {
+	HIDataSortingOptionsObject *oldValue = _dataSorting;
+	_dataSorting = dataSorting;
+	[self updateHIObject:oldValue newValue:dataSorting propertyName:@"dataSorting"];
 }
 
 -(void)setMarker:(HIMarker *)marker {

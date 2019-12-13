@@ -48,6 +48,7 @@
 	copyAreasplinerange.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyAreasplinerange.states = [self.states copyWithZone: zone];
 	copyAreasplinerange.point = [self.point copyWithZone: zone];
+	copyAreasplinerange.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyAreasplinerange.marker = [self.marker copyWithZone: zone];
 	copyAreasplinerange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyAreasplinerange.cursor = [self.cursor copyWithZone: zone];
