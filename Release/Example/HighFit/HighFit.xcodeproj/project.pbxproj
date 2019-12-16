@@ -225,6 +225,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -271,7 +272,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 112bef3bdec791a7739aeb94e74bf6d43edf2c0d 644f7e73deb0e81eb81b416feadaa46307ae7f9ff1e0d900ea4d034222c85505";
+			shellScript = "./Fabric.framework/run 112bef3bdec791a7739aeb94e74bf6d43edf2c0d 644f7e73deb0e81eb81b416feadaa46307ae7f9ff1e0d900ea4d034222c85505\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
