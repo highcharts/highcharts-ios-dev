@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIDataLabelsFilterOptionsObject Class Reference</title>
+	<title>HITextPath Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,11 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/operator">operator</option>
+		<option value="//api/name/attributes">attributes</option>
 		
-		<option value="//api/name/property">property</option>
-		
-		<option value="//api/name/value">value</option>
+		<option value="//api/name/enabled">enabled</option>
 		
 	</optgroup>
 	
@@ -89,7 +87,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIDataLabelsFilterOptionsObject Class Reference</h1>
+					<h1 class="title">HITextPath Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -98,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDataLabelsFilterOptionsObject.h</td>
+	<td>HITextPath.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -108,7 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A declarative filter to control of which data labels to display. The declarative filter is designed for use when callback functions are not available, like when the chart options require a pure JSON structure or for use with graphical editors. For programmatic control, use the <code>formatter</code> instead, and return <code>undefined</code> to disable a single data label.</p>
+						<p>Options for a label text which should follow marker&rsquo;s shape. Border and background are disabled for a label that follows a path. <strong>Note:</strong> Only SVG-based renderer supports this option. Setting <code>useHTML</code> to true will disable this option.</p>
 					</div>
 					
 					
@@ -124,8 +122,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/operator" title="operator"></a>
-	<h3 class="method-title"><code><a href="#//api/name/operator">&nbsp;&nbsp;operator</a></code>
+	<a name="//api/name/attributes" title="attributes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
 </h3>
 
 	<div class="method-info">
@@ -135,12 +133,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The operator to compare by. Can be one of <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code>, and <code>===</code>.</p>
+				<p>Presentation attributes for the text path.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *operator</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attributes</code></div>
 
 		    
 			
@@ -158,15 +156,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabelsFilterOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HITextPath.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/property" title="property"></a>
-	<h3 class="method-title"><code><a href="#//api/name/property">&nbsp;&nbsp;property</a></code>
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -176,12 +174,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The point property to filter by. Point options are passed directly to properties, additionally there are <code>y</code> value, <code>percentage</code> and others listed under {@link Highcharts.Point} members.</p>
+				<p>Enable or disable <code>textPath</code> option for link&rsquo;s or marker&rsquo;s data labels.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *property</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
 
 		    
 			
@@ -199,48 +197,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabelsFilterOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/value" title="value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The value to compare against.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *value</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabelsFilterOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HITextPath.h</code></p>
 			</div>
 			
 			

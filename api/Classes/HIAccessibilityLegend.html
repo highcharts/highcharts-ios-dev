@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPointStatesOptionsObject Class Reference</title>
+	<title>HIAccessibilityLegend Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,13 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/hover">hover</option>
+		<option value="//api/name/legendItem">legendItem</option>
 		
-		<option value="//api/name/inactive">inactive</option>
-		
-		<option value="//api/name/normal">normal</option>
-		
-		<option value="//api/name/select">select</option>
+		<option value="//api/name/legendLabel">legendLabel</option>
 		
 	</optgroup>
 	
@@ -91,7 +87,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPointStatesOptionsObject Class Reference</h1>
+					<h1 class="title">HIAccessibilityLegend Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -100,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPointStatesOptionsObject.h</td>
+	<td>HIAccessibilityLegend.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,7 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>States for a single point marker.</p>
+						<p>Language options for accessibility of the legend.</p>
 					</div>
 					
 					
@@ -126,8 +122,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/hover" title="hover"></a>
-	<h3 class="method-title"><code><a href="#//api/name/hover">&nbsp;&nbsp;hover</a></code>
+	<a name="//api/name/legendItem" title="legendItem"></a>
+	<h3 class="method-title"><code><a href="#//api/name/legendItem">&nbsp;&nbsp;legendItem</a></code>
 </h3>
 
 	<div class="method-info">
@@ -137,12 +133,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The hover state for a single point marker.</p>
+				<p>*Defaults to** <code>"Toggle visibility of {itemName}"</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPointStatesHoverOptionsObject *hover</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *legendItem</code></div>
 
 		    
 			
@@ -160,15 +156,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIAccessibilityLegend.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/inactive" title="inactive"></a>
-	<h3 class="method-title"><code><a href="#//api/name/inactive">&nbsp;&nbsp;inactive</a></code>
+	<a name="//api/name/legendLabel" title="legendLabel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/legendLabel">&nbsp;&nbsp;legendLabel</a></code>
 </h3>
 
 	<div class="method-info">
@@ -178,12 +174,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The hover state for a single point marker.</p>
+				<p>*Defaults to** <code>"Toggle series visibility"</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPointStatesInactiveOptionsObject *inactive</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *legendLabel</code></div>
 
 		    
 			
@@ -201,89 +197,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/normal" title="normal"></a>
-	<h3 class="method-title"><code><a href="#//api/name/normal">&nbsp;&nbsp;normal</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The hover state for a single point marker.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPointStatesNormalOptionsObject *normal</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/select" title="select"></a>
-	<h3 class="method-title"><code><a href="#//api/name/select">&nbsp;&nbsp;select</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The hover state for a single point marker.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPointStatesSelectOptionsObject *select</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIAccessibilityLegend.h</code></p>
 			</div>
 			
 			

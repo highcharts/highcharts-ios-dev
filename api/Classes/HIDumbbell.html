@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISeriesPackedBubbleDataLabelsOptionsObject Class Reference</title>
+	<title>HIDumbbell Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,17 +58,19 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/format">format</option>
+		<option value="//api/name/connectorColor">connectorColor</option>
 		
-		<option value="//api/name/formatter">formatter</option>
+		<option value="//api/name/connectorWidth">connectorWidth</option>
 		
-		<option value="//api/name/parentNodeFormat">parentNodeFormat</option>
+		<option value="//api/name/groupPadding">groupPadding</option>
 		
-		<option value="//api/name/parentNodeFormatter">parentNodeFormatter</option>
+		<option value="//api/name/lineColor">lineColor</option>
 		
-		<option value="//api/name/parentNodeTextPath">parentNodeTextPath</option>
+		<option value="//api/name/lowColor">lowColor</option>
 		
-		<option value="//api/name/textPath">textPath</option>
+		<option value="//api/name/negativeFillColor">negativeFillColor</option>
+		
+		<option value="//api/name/pointPadding">pointPadding</option>
 		
 	</optgroup>
 	
@@ -95,16 +97,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISeriesPackedBubbleDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIDumbbell Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISeriesPackedBubbleDataLabelsOptionsObject.h</td>
+	<td>HIDumbbell.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -114,7 +116,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Data labels options</p>
+						<p>A <code>dumbbell</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+
+<p>Configuration options for the series are given in three levels:</p>
+
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>dumbbell</code> series are defined in <code>plotOptions.dumbbell</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
+
+
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        dumbbell: {
+            // shared options for all dumbbell series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;dumbbell&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -130,8 +158,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/format" title="format"></a>
-	<h3 class="method-title"><code><a href="#//api/name/format">&nbsp;&nbsp;format</a></code>
+	<a name="//api/name/connectorColor" title="connectorColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorColor">&nbsp;&nbsp;connectorColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -141,12 +169,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>node</em> in the networkgraph. In v7.0 defaults to <code>{key}</code>, since v7.1 defaults to <code>undefined</code> and <code>formatter</code> is used instead.</p>
+				<p>Color of the line that connects the dumbbell point&rsquo;s values. By default it is the series' color.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *format</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *connectorColor</code></div>
 
 		    
 			
@@ -164,15 +192,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDumbbell.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/formatter" title="formatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
+	<a name="//api/name/connectorWidth" title="connectorWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorWidth">&nbsp;&nbsp;connectorWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -182,12 +210,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback JavaScript function to format the data label for a node. Note that if a <code>format</code> is defined, the format takes precedence and the formatter is ignored.</p>
+				<p>Pixel width of the line that connects the dumbbell point&rsquo;s values.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorWidth</code></div>
 
 		    
 			
@@ -205,15 +233,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDumbbell.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/parentNodeFormat" title="parentNodeFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parentNodeFormat">&nbsp;&nbsp;parentNodeFormat</a></code>
+	<a name="//api/name/pointPadding" title="pointPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
 </h3>
 
 	<div class="method-info">
@@ -222,14 +250,30 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *parentNodeFormat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/parentNodeFormatter" title="parentNodeFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parentNodeFormatter">&nbsp;&nbsp;parentNodeFormatter</a></code>
+	<a name="//api/name/groupPadding" title="groupPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupPadding">&nbsp;&nbsp;groupPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *groupPadding</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lowColor" title="lowColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lowColor">&nbsp;&nbsp;lowColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -239,12 +283,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback to format data labels for <em>parentNodes</em>. The <code>parentNodeFormat</code> option takes precedence over the <code>parentNodeFormatter</code>.</p>
+				<p>Color of the start markers in a dumbbell graph.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id parentNodeFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lowColor</code></div>
 
 		    
 			
@@ -262,15 +306,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDumbbell.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/parentNodeTextPath" title="parentNodeTextPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parentNodeTextPath">&nbsp;&nbsp;parentNodeTextPath</a></code>
+	<a name="//api/name/negativeFillColor" title="negativeFillColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/negativeFillColor">&nbsp;&nbsp;negativeFillColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -280,12 +324,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for a <em>parentNode</em> label text.</p>
+				<p>A separate color for the negative part of the area. In styled mode, a negative color is set with the <code>.highcharts-negative</code> class name.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISeriesPackedBubbleDataLabelsTextPathOptionsObject *parentNodeTextPath</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *negativeFillColor</code></div>
 
 		    
 			
@@ -294,6 +338,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/">Negative color in styled mode</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -303,15 +357,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDumbbell.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/textPath" title="textPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/textPath">&nbsp;&nbsp;textPath</a></code>
+	<a name="//api/name/lineColor" title="lineColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -321,12 +375,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for a <em>node</em> label text which should follow marker&rsquo;s shape. <strong>Note:</strong> Only SVG-based renderer supports this option.</p>
+				<p>A separate color for the graph line. By default the line takes the <code>color</code> of the series, but the lineColor setting allows setting a separate color for the line without altering the <code>fillColor</code>. In styled mode, the line stroke can be set with the <code>.highcharts-graph</code> class name.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISeriesPackedBubbleDataLabelsTextPathOptionsObject *textPath</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
 
 		    
 			
@@ -335,6 +389,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/">Dark gray line</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -344,7 +408,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesPackedBubbleDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDumbbell.h</code></p>
 			</div>
 			
 			

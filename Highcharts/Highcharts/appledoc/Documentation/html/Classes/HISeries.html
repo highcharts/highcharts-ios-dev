@@ -96,7 +96,13 @@
 		
 		<option value="//api/name/dataLabels">dataLabels</option>
 		
+		<option value="//api/name/dataSorting">dataSorting</option>
+		
 		<option value="//api/name/definition">definition</option>
+		
+		<option value="//api/name/describeSingleSeries">describeSingleSeries</option>
+		
+		<option value="//api/name/descriptionFormatter">descriptionFormatter</option>
 		
 		<option value="//api/name/dragDrop">dragDrop</option>
 		
@@ -132,9 +138,13 @@
 		
 		<option value="//api/name/negativeColor">negativeColor</option>
 		
+		<option value="//api/name/nullPointValue">nullPointValue</option>
+		
 		<option value="//api/name/opacity">opacity</option>
 		
 		<option value="//api/name/point">point</option>
+		
+		<option value="//api/name/pointDescriptionEnabledThreshold">pointDescriptionEnabledThreshold</option>
 		
 		<option value="//api/name/pointDescriptionFormatter">pointDescriptionFormatter</option>
 		
@@ -829,9 +839,134 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Try it</strong></p>
 
-<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,
-            <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank">with a z index, the series with the highest z index is on top</a>.</p>
+<p><a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,</p>
+
+<pre><code>        &lt;a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank"&gt;with a z index, the series with the highest z index is on top&lt;/a&gt;.
+</code></pre>
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/descriptionFormatter" title="descriptionFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/descriptionFormatter">&nbsp;&nbsp;descriptionFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to use instead of the default for series descriptions. Receives one argument, <code>series</code>, referring to the series to describe. Should return a string with the description of the series for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *descriptionFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDescriptionEnabledThreshold" title="pointDescriptionEnabledThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionEnabledThreshold">&nbsp;&nbsp;pointDescriptionEnabledThreshold</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When a series contains more points than this, we no longer expose information about individual points to screen readers. Set to <code>false</code> to disable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointDescriptionEnabledThreshold</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/describeSingleSeries" title="describeSingleSeries"></a>
+	<h3 class="method-title"><code><a href="#//api/name/describeSingleSeries">&nbsp;&nbsp;describeSingleSeries</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not to add series descriptions to charts with a single series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *describeSingleSeries</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -906,6 +1041,47 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *xAxisDescription</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nullPointValue" title="nullPointValue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nullPointValue">&nbsp;&nbsp;nullPointValue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Description for the value of null points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nullPointValue</code></div>
 
 		    
 			
@@ -1211,7 +1387,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color for the parts of the graph or points that are below the <code>threshold</code>.</p>
+				<p>The color for the parts of the graph or points that are below the <code>threshold</code>. Note that <code>zones</code> takes precedence over the negative color. Using <code>negativeColor</code> is equivalent to applying a zone with value of 0.</p>
 			</div>
 			
 		    
@@ -1583,6 +1759,47 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPoint *point</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataSorting" title="dataSorting"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataSorting">&nbsp;&nbsp;dataSorting</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the series data sorting.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDataSortingOptionsObject *dataSorting</code></div>
 
 		    
 			
@@ -2633,7 +2850,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Accessibility options for a series. Requires the accessibility module.</p>
+				<p>Accessibility options for a series.</p>
 			</div>
 			
 		    
@@ -3197,7 +3414,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <code>id</code> of another series to link to. Additionally, the value can be &ldquo;:previous&rdquo; to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.</p>
+				<p>The <code>id</code> of another series to link to. Additionally, the value can be &ldquo;:previous&rdquo; to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series. If master series uses data sorting and linked series does not have its own sorting definition, the linked series will be sorted in the same order as the master one.</p>
 			</div>
 			
 		    
@@ -3307,7 +3524,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIDataLabelsOptionsObject*&gt; *dataLabels</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIDataLabels*&gt; *dataLabels</code></div>
 
 		    
 			
@@ -3324,6 +3541,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-enabled">Data labels enabled</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-multiple">Multiple data labels on a bar series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels">Style mode example</a></li>
 </ul>
 
 			</div>

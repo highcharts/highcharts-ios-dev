@@ -78,11 +78,15 @@
 		
 		<option value="//api/name/click">click</option>
 		
+		<option value="//api/name/closePopup">closePopup</option>
+		
 		<option value="//api/name/deselectButton">deselectButton</option>
 		
 		<option value="//api/name/drag">drag</option>
 		
 		<option value="//api/name/dragStart">dragStart</option>
+		
+		<option value="//api/name/drillToCluster">drillToCluster</option>
 		
 		<option value="//api/name/drilldown">drilldown</option>
 		
@@ -95,8 +99,6 @@
 		<option value="//api/name/exportData">exportData</option>
 		
 		<option value="//api/name/hide">hide</option>
-		
-		<option value="//api/name/hidePopup">hidePopup</option>
 		
 		<option value="//api/name/legendItemClick">legendItemClick</option>
 		
@@ -702,7 +704,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Fires when an area of the chart has been selected. Selection is enabled by setting the chart&rsquo;s zoomType. One parameter, <code>event</code>, is passed to the function, containing common event information. The default action for the selection event is to zoom the chart to the selected area. It can be prevented by calling <code>event.preventDefault()</code> or return false. Information on the selected area can be found through <code>event.xAxis</code> and <code>event.yAxis</code>, which are arrays containing the axes of each dimension and each axis' min and max values. The primary axes are <code>event.xAxis[0]</code> and <code>event.yAxis[0]</code>. Remember the unit of a datetime axis is milliseconds since 1970-01-01 00:00:00. selection: function(event) {   // log the min and max of the primary, datetime x-axis   console.log(     Highcharts.dateFormat(       &lsquo;%Y-%m-%d %H:%M:%S&rsquo;,       event.xAxis[0].min     ),     Highcharts.dateFormat(       &lsquo;%Y-%m-%d %H:%M:%S&rsquo;,       event.xAxis[0].max     )   );   // log the min and max of the y axis   console.log(event.yAxis[0].min, event.yAxis[0].max); }</p>
+				<p>Fires when an area of the chart has been selected. Selection is enabled by setting the chart&rsquo;s zoomType. One parameter, <code>event</code>, is passed to the function, containing common event information. The default action for the selection event is to zoom the chart to the selected area. It can be prevented by calling <code>event.preventDefault()</code> or return false. Information on the selected area can be found through <code>event.xAxis</code> and <code>event.yAxis</code>, which are arrays containing the axes of each dimension and each axis' min and max values. The primary axes are <code>event.xAxis[0]</code> and <code>event.yAxis[0]</code>. Remember the unit of a datetime axis is milliseconds since 1970-01-01 00:00:00. <code>js selection: function(event) {   // log the min and max of the primary, datetime x-axis   console.log(     Highcharts.dateFormat(       '%Y-%m-%d %H:%M:%S',       event.xAxis[0].min     ),     Highcharts.dateFormat(       '%Y-%m-%d %H:%M:%S',       event.xAxis[0].max     )   );   // log the min and max of the y axis   console.log(event.yAxis[0].min, event.yAxis[0].max); }</code></p>
 			</div>
 			
 		    
@@ -1146,6 +1148,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drillToCluster" title="drillToCluster"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drillToCluster">&nbsp;&nbsp;drillToCluster</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the cluster point is clicked and <code>drillToCluster</code> is enabled. One parameter, <code>event</code>, is passed to the function. The default action is to zoom to the cluster points range. This can be prevented by calling <code>event.preventDefault()</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *drillToCluster</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1674,6 +1717,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/closePopup" title="closePopup"></a>
+	<h3 class="method-title"><code><a href="#//api/name/closePopup">&nbsp;&nbsp;closePopup</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A <code>closePopup</code> event. Fired when Popup should be hidden, for example when clicking on an annotation again.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *closePopup</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/selectButton" title="selectButton"></a>
 	<h3 class="method-title"><code><a href="#//api/name/selectButton">&nbsp;&nbsp;selectButton</a></code>
 </h3>
@@ -1743,47 +1827,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *showPopup</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/hidePopup" title="hidePopup"></a>
-	<h3 class="method-title"><code><a href="#//api/name/hidePopup">&nbsp;&nbsp;hidePopup</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A <code>hidePopop</code> event. Fired when Popup should be hidden, for exampole when clicking on an annotation again.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *hidePopup</code></div>
 
 		    
 			

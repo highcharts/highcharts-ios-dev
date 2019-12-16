@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPointStatesSelectOptionsObject Class Reference</title>
+	<title>HIDataSorting Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -60,13 +60,9 @@
 		
 		<option value="//api/name/enabled">enabled</option>
 		
-		<option value="//api/name/fillColor">fillColor</option>
+		<option value="//api/name/matchByName">matchByName</option>
 		
-		<option value="//api/name/lineColor">lineColor</option>
-		
-		<option value="//api/name/lineWidth">lineWidth</option>
-		
-		<option value="//api/name/radius">radius</option>
+		<option value="//api/name/sortKey">sortKey</option>
 		
 	</optgroup>
 	
@@ -93,7 +89,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPointStatesSelectOptionsObject Class Reference</h1>
+					<h1 class="title">HIDataSorting Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -102,7 +98,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPointStatesSelectOptionsObject.h</td>
+	<td>HIDataSorting.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,7 +108,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The appearance of the point marker when selected. In order to allow a point to be selected, set the <code>series.allowPointSelect</code> option to true.</p>
+						<p>Options for the series data sorting.</p>
 					</div>
 					
 					
@@ -128,6 +124,57 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/matchByName" title="matchByName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchByName">&nbsp;&nbsp;matchByName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to allow matching points by name in an update. If this option is disabled, points will be matched by order.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *matchByName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/match-by-name/">Enabled match by name</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataSorting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/enabled" title="enabled"></a>
 	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
@@ -139,7 +186,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable visible feedback for selection.</p>
+				<p>Enable or disable data sorting for the series. Use <code>xAxis.reversed</code> to change the sorting order.</p>
 			</div>
 			
 		    
@@ -154,6 +201,19 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/animation/">Data sorting in scatter-3d</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/labels-animation/">Axis labels animation</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/dependent-sorting/">Dependent series sorting</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/independent-sorting/">Independent series sorting</a></li>
+</ul>
+
+			</div>
+			
 
 			
 
@@ -162,15 +222,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesSelectOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDataSorting.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fillColor" title="fillColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+	<a name="//api/name/sortKey" title="sortKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sortKey">&nbsp;&nbsp;sortKey</a></code>
 </h3>
 
 	<div class="method-info">
@@ -180,12 +240,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The fill color of the point marker.</p>
+				<p>Determines what data value should be used to sort by.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *sortKey</code></div>
 
 		    
 			
@@ -194,6 +254,18 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>y</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/sort-key/">Sort key as <code>z</code> value</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -203,130 +275,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesSelectOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lineColor" title="lineColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The color of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s color is used.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesSelectOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lineWidth" title="lineWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The width of the point marker&rsquo;s outline.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesSelectOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/radius" title="radius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The radius of the point marker. In hover state, it defaults to the normal state&rsquo;s radius + 2.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesSelectOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDataSorting.h</code></p>
 			</div>
 			
 			

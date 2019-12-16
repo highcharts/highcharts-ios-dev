@@ -62,11 +62,9 @@
 		
 		<option value="//api/name/focusBorder">focusBorder</option>
 		
-		<option value="//api/name/mode">mode</option>
-		
 		<option value="//api/name/order">order</option>
 		
-		<option value="//api/name/skipNullPoints">skipNullPoints</option>
+		<option value="//api/name/seriesNavigation">seriesNavigation</option>
 		
 		<option value="//api/name/wrapAround">wrapAround</option>
 		
@@ -114,7 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for keyboard navigation.</p>
+						<p>Options for keyboard navigation for the legend.</p>
 					</div>
 					
 					
@@ -130,47 +128,6 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/skipNullPoints" title="skipNullPoints"></a>
-	<h3 class="method-title"><code><a href="#//api/name/skipNullPoints">&nbsp;&nbsp;skipNullPoints</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Skip null points when navigating through points with the keyboard.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *skipNullPoints</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIKeyboardNavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/enabled" title="enabled"></a>
 	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
@@ -182,7 +139,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable keyboard navigation for the chart.</p>
+				<p>Enable keyboard navigation for the legend.</p>
 			</div>
 			
 		    
@@ -345,8 +302,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/mode" title="mode"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mode">&nbsp;&nbsp;mode</a></code>
+	<a name="//api/name/seriesNavigation" title="seriesNavigation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/seriesNavigation">&nbsp;&nbsp;seriesNavigation</a></code>
 </h3>
 
 	<div class="method-info">
@@ -356,12 +313,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set the keyboard navigation mode for the chart. Can be &ldquo;normal&rdquo; or &ldquo;serialize&rdquo;. In normal mode, left/right arrow keys move between points in a series, while up/down arrow keys move between series. Up/down navigation acts intelligently to figure out which series makes sense to move to from any given point. In &ldquo;serialize&rdquo; mode, points are instead navigated as a single list. Left/right behaves as in &ldquo;normal&rdquo; mode. Up/down arrow keys will behave like left/right. This can be useful for unifying navigation behavior with/without screen readers enabled.</p>
+				<p>Options for the keyboard navigation of data points and series.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *mode</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISeriesNavigation *seriesNavigation</code></div>
 
 		    
 			
@@ -370,13 +327,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["normal", "serialize"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>normal</code>.</p>
-			</div>
 			
 
 			

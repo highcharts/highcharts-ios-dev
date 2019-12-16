@@ -166,7 +166,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The axis labels show the number or category for each tick.</p>
+						<p>The axis labels show the number or category for each tick. Since v8.0.0: Labels are animated in categorized x-axis with updating data if <code>tickInterval</code> and <code>step</code> is set to 1.</p>
 					</div>
 					
 					
@@ -814,7 +814,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback JavaScript function to format the label. The value is given by <code>this.value</code>. Additional properties for <code>this</code> are <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>. The value of the default label formatter can be retrieved by calling <code>this.axis.defaultLabelFormatter.call(this)</code> within the function. Defaults to: function() {   return this.value; }</p>
+				<p>Callback JavaScript function to format the label. The value is given by <code>this.value</code>. Additional properties for <code>this</code> are <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>. The value of the default label formatter can be retrieved by calling <code>this.axis.defaultLabelFormatter.call(this)</code> within the function. Defaults to: <code>js function() {   return this.value; }</code></p>
 			</div>
 			
 		    

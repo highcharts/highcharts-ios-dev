@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPointStatesHoverOptionsObject Class Reference</title>
+	<title>HILollipop Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,21 +58,17 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/animation">animation</option>
+		<option value="//api/name/connectorColor">connectorColor</option>
 		
-		<option value="//api/name/enabled">enabled</option>
+		<option value="//api/name/connectorWidth">connectorWidth</option>
 		
-		<option value="//api/name/fillColor">fillColor</option>
+		<option value="//api/name/groupPadding">groupPadding</option>
 		
 		<option value="//api/name/lineColor">lineColor</option>
 		
-		<option value="//api/name/lineWidth">lineWidth</option>
+		<option value="//api/name/negativeFillColor">negativeFillColor</option>
 		
-		<option value="//api/name/lineWidthPlus">lineWidthPlus</option>
-		
-		<option value="//api/name/radius">radius</option>
-		
-		<option value="//api/name/radiusPlus">radiusPlus</option>
+		<option value="//api/name/pointPadding">pointPadding</option>
 		
 	</optgroup>
 	
@@ -99,16 +95,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPointStatesHoverOptionsObject Class Reference</h1>
+					<h1 class="title">HILollipop Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPointStatesHoverOptionsObject.h</td>
+	<td>HILollipop.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -118,7 +114,33 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The hover state for a single point marker.</p>
+						<p>A <code>lollipop</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+
+<p>Configuration options for the series are given in three levels:</p>
+
+<ol>
+<li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
+<li><p>Options for all <code>lollipop</code> series are defined in <code>plotOptions.lollipop</code>.</p></li>
+<li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
+</ol>
+
+
+<p><pre>
+Highcharts.chart(&lsquo;container&rsquo;, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        lollipop: {
+            // shared options for all lollipop series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: &lsquo;lollipop&rsquo;
+    }]
+});
+<pre></p>
 					</div>
 					
 					
@@ -134,8 +156,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/animation" title="animation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
+	<a name="//api/name/connectorColor" title="connectorColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorColor">&nbsp;&nbsp;connectorColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -145,12 +167,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Animation when hovering over the point marker.</p>
+				<p>Color of the line that connects the dumbbell point&rsquo;s values. By default it is the series' color.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimationOptionsObject *animation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *connectorColor</code></div>
 
 		    
 			
@@ -168,15 +190,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HILollipop.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+	<a name="//api/name/connectorWidth" title="connectorWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorWidth">&nbsp;&nbsp;connectorWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -186,12 +208,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable the point marker.</p>
+				<p>Pixel width of the line that connects the dumbbell point&rsquo;s values.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorWidth</code></div>
 
 		    
 			
@@ -209,15 +231,47 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HILollipop.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fillColor" title="fillColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+	<a name="//api/name/pointPadding" title="pointPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupPadding" title="groupPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupPadding">&nbsp;&nbsp;groupPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *groupPadding</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/negativeFillColor" title="negativeFillColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/negativeFillColor">&nbsp;&nbsp;negativeFillColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -227,12 +281,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The fill color of the marker in hover state. When <code>undefined</code>, the series' or point&rsquo;s fillColor for normal state is used.</p>
+				<p>A separate color for the negative part of the area. In styled mode, a negative color is set with the <code>.highcharts-negative</code> class name.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *negativeFillColor</code></div>
 
 		    
 			
@@ -241,6 +295,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/">Negative color in styled mode</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -250,7 +314,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HILollipop.h</code></p>
 			</div>
 			
 			
@@ -268,7 +332,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s lineColor for normal state is used.</p>
+				<p>A separate color for the graph line. By default the line takes the <code>color</code> of the series, but the lineColor setting allows setting a separate color for the line without altering the <code>fillColor</code>. In styled mode, the line stroke can be set with the <code>.highcharts-graph</code> class name.</p>
 			</div>
 			
 		    
@@ -283,46 +347,15 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
 
-			
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-linecolor/">Dark gray line</a></li>
+</ul>
 
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
 			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lineWidth" title="lineWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The width of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s lineWidth for normal state is used.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
 			
 
 			
@@ -332,130 +365,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lineWidthPlus" title="lineWidthPlus"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineWidthPlus">&nbsp;&nbsp;lineWidthPlus</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The additional line width for a hovered point.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidthPlus</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/radius" title="radius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The radius of the point marker. In hover state, it defaults to the normal state&rsquo;s radius + 2 as per the radiusPlus option.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/radiusPlus" title="radiusPlus"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radiusPlus">&nbsp;&nbsp;radiusPlus</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The number of pixels to increase the radius of the hovered point.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radiusPlus</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HILollipop.h</code></p>
 			</div>
 			
 			

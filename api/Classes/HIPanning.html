@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HITimelineDataLabelsOptionsObject Class Reference</title>
+	<title>HIPanning Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,17 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/alternate">alternate</option>
+		<option value="//api/name/enabled">enabled</option>
 		
-		<option value="//api/name/connectorColor">connectorColor</option>
-		
-		<option value="//api/name/connectorWidth">connectorWidth</option>
-		
-		<option value="//api/name/distance">distance</option>
-		
-		<option value="//api/name/formatter">formatter</option>
-		
-		<option value="//api/name/width">width</option>
+		<option value="//api/name/type">type</option>
 		
 	</optgroup>
 	
@@ -95,7 +87,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HITimelineDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIPanning Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -104,12 +96,25 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HITimelineDataLabelsOptionsObject.h</td>
+	<td>HIPanning.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Allow panning in a chart. Best used with <code>panKey</code> to combine zooming and panning. On touch devices, when the <code>tooltip.followTouchMove</code> option is <code>true</code> (default), panning requires two fingers. To allow panning with one finger, set <code>followTouchMove</code> to <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/pankey/">Zooming and panning</a></li>
+</ul>
+
+					</div>
 					
 					
 
@@ -124,8 +129,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/alternate" title="alternate"></a>
-	<h3 class="method-title"><code><a href="#//api/name/alternate">&nbsp;&nbsp;alternate</a></code>
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
 </h3>
 
 	<div class="method-info">
@@ -135,12 +140,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to position data labels alternately. For example, if <code>distance</code> is set equal to <code>100</code>, then data labels will be positioned alternately (on both sides of the point) at a distance of 100px.</p>
+				<p>Decides in what dimensions the user can pan the chart. Can be one of <code>x</code>, <code>y</code>, or <code>xy</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alternate</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *type</code></div>
 
 		    
 			
@@ -149,6 +154,13 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["x", "y", "xy"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>x</code>.</p>
+			</div>
 			
 
 			
@@ -158,15 +170,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITimelineDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPanning.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/connectorColor" title="connectorColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/connectorColor">&nbsp;&nbsp;connectorColor</a></code>
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -176,12 +188,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the line connecting the data label to the point. The default color is the same as the point&rsquo;s color.</p>
+				<p>Enable or disable chart panning.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *connectorColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
 
 		    
 			
@@ -190,6 +202,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+			</div>
 			
 
 			
@@ -199,124 +216,10 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITimelineDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPanning.h</code></p>
 			</div>
 			
 			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/connectorWidth" title="connectorWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/connectorWidth">&nbsp;&nbsp;connectorWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The width of the line connecting the data label to the point. In styled mode, the connector stroke width is given in the <code>.highcharts-data-label-connector</code> class.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITimelineDataLabelsOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/distance" title="distance"></a>
-	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A pixel value defining the distance between the data label and the point. Negative numbers puts the label on top of the point.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *distance</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITimelineDataLabelsOptionsObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/formatter" title="formatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/width" title="width"></a>
-	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
-
-		    
 		</div>
 	</div>
 </div><div class="section-method">

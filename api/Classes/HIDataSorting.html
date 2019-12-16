@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISeriesSankeyDataLabelsOptionsObject Class Reference</title>
+	<title>HIDataSorting Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/nodeFormat">nodeFormat</option>
+		<option value="//api/name/enabled">enabled</option>
 		
-		<option value="//api/name/nodeFormatter">nodeFormatter</option>
+		<option value="//api/name/matchByName">matchByName</option>
+		
+		<option value="//api/name/sortKey">sortKey</option>
 		
 	</optgroup>
 	
@@ -87,7 +89,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISeriesSankeyDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIDataSorting Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +98,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISeriesSankeyDataLabelsOptionsObject.h</td>
+	<td>HIDataSorting.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +108,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for the series data labels, appearing next to each data point. Since v6.2.0, multiple data labels can be applied to each single point by defining them as an array of configs. In styled mode, the data labels can be styled with the <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names.</p>
+						<p>Options for the series data sorting.</p>
 					</div>
 					
 					
@@ -122,8 +124,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/nodeFormat" title="nodeFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nodeFormat">&nbsp;&nbsp;nodeFormat</a></code>
+	<a name="//api/name/matchByName" title="matchByName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchByName">&nbsp;&nbsp;matchByName</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +135,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>nodes</em> in the sankey diagram. By default the <code>nodeFormatter</code> returns <code>{point.name}</code>.</p>
+				<p>Whether to allow matching points by name in an update. If this option is disabled, points will be matched by order.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nodeFormat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *matchByName</code></div>
 
 		    
 			
@@ -147,6 +149,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/match-by-name/">Enabled match by name</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -156,15 +168,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesSankeyDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDataSorting.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/nodeFormatter" title="nodeFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nodeFormatter">&nbsp;&nbsp;nodeFormatter</a></code>
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -174,12 +186,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback to format data labels for <em>nodes</em> in the sankey diagram. The <code>nodeFormat</code> option takes precedence over the <code>nodeFormatter</code>.</p>
+				<p>Enable or disable data sorting for the series. Use <code>xAxis.reversed</code> to change the sorting order.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *nodeFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
 
 		    
 			
@@ -188,6 +200,19 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/animation/">Data sorting in scatter-3d</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/labels-animation/">Axis labels animation</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/dependent-sorting/">Dependent series sorting</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/independent-sorting/">Independent series sorting</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -197,7 +222,60 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesSankeyDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIDataSorting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sortKey" title="sortKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sortKey">&nbsp;&nbsp;sortKey</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines what data value should be used to sort by.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *sortKey</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>y</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/datasorting/sort-key/">Sort key as <code>z</code> value</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataSorting.h</code></p>
 			</div>
 			
 			

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIDataLabelsTextPathOptionsObject Class Reference</title>
+	<title>HIPanning Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/attributes">attributes</option>
-		
 		<option value="//api/name/enabled">enabled</option>
+		
+		<option value="//api/name/type">type</option>
 		
 	</optgroup>
 	
@@ -87,7 +87,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIDataLabelsTextPathOptionsObject Class Reference</h1>
+					<h1 class="title">HIPanning Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDataLabelsTextPathOptionsObject.h</td>
+	<td>HIPanning.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +106,14 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for a label text which should follow marker&rsquo;s shape. <strong>Note:</strong> Only SVG-based renderer supports this option.</p>
+						<p>Allow panning in a chart. Best used with <code>panKey</code> to combine zooming and panning. On touch devices, when the <code>tooltip.followTouchMove</code> option is <code>true</code> (default), panning requires two fingers. To allow panning with one finger, set <code>followTouchMove</code> to <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/pankey/">Zooming and panning</a></li>
+</ul>
+
 					</div>
 					
 					
@@ -122,8 +129,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/attributes" title="attributes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +140,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Presentation attributes for the text path.</p>
+				<p>Decides in what dimensions the user can pan the chart. Can be one of <code>x</code>, <code>y</code>, or <code>xy</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attributes</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *type</code></div>
 
 		    
 			
@@ -147,6 +154,13 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["x", "y", "xy"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>x</code>.</p>
+			</div>
 			
 
 			
@@ -156,7 +170,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabelsTextPathOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPanning.h</code></p>
 			</div>
 			
 			
@@ -174,7 +188,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable <code>textPath</code> option for link&rsquo;s or marker&rsquo;s data labels.</p>
+				<p>Enable or disable chart panning.</p>
 			</div>
 			
 		    
@@ -189,6 +203,11 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+			</div>
+			
 
 			
 
@@ -197,7 +216,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabelsTextPathOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIPanning.h</code></p>
 			</div>
 			
 			
