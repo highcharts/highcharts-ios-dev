@@ -6,18 +6,18 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HISVGAttributes.h"
+#import "HIChartsJSONSerializable.h"
 
 
 /**
-**Note:** Only SVG-based renderer supports this option.
-*/
-@interface HISeriesPackedBubbleDataLabelsTextPathOptionsObject: HIChartsJSONSerializable
+Options for a _parentNode_ label text. **Note:** Only SVG-based renderer supports this option.
 
-/**
-Presentation attributes for the text path.
+**Try it**
+
+* [Dashboard with dataLabels on parentNodes](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-packedbubble/packed-dashboard)
 */
-@property(nonatomic, readwrite) HISVGAttributes *attributes;
+@interface HIParentNodeTextPath: HIChartsJSONSerializable
+
 /**
 Enable or disable `textPath` option for link's or marker's data labels.
 */

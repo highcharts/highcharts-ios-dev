@@ -10,13 +10,13 @@
 
 
 /**
- */
-@interface HIPointStatesInactiveOptionsObject: HIChartsJSONSerializable
-
-/**
-Opacity of inactive markers.
+Chart and map zoom accessibility language options.
 */
-@property(nonatomic, readwrite) NSNumber *opacity;
+@interface HIZoom: HIChartsJSONSerializable
+
+@property(nonatomic, readwrite) NSString *mapZoomIn;
+@property(nonatomic, readwrite) NSString *resetZoomButton;
+@property(nonatomic, readwrite) NSString *mapZoomOut;
 
 -(NSDictionary *)getParams;
 
