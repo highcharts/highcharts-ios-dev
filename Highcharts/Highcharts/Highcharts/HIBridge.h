@@ -196,7 +196,3 @@
 #import "HIColor.h"
 #import "HIFunction.h"
 #import "HIOptions.h"
-#import "HIDataLabelsFilterOptionsObject.h"
-#import "HIDataLabelsFilterOptionsObject.h"
-#import "HIDataLabelsTextPathOptionsObject.h"
-#import "HIPointStatesOptionsObject.h"

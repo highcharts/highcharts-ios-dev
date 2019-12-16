@@ -2988,6 +2988,7 @@
               ],
               "type": {
                 "names": [
+                  "string",
                   "*"
                 ]
               },
@@ -4129,6 +4130,7 @@
               "description": "This option defines the point to which the shape will be\nconnected. It can be either the point which exists in the\nseries - it is referenced by the point's id - or a new point with\ndefined x, y properties and optionally axes.",
               "type": {
                 "names": [
+                  "string",
                   "*"
                 ]
               },
@@ -4150,7 +4152,7 @@
               ],
               "type": {
                 "names": [
-                  "Array.<(*)>"
+                  "Array.<*>"
                 ]
               },
               "extends": "annotations.labels.point",

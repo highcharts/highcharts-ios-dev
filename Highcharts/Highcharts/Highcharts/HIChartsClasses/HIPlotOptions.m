@@ -386,7 +386,7 @@
 }
 
 -(void)setPackedBubble:(HIPackedbubble *)packedBubble {
-	HIPackedbubble *oldValue = _packedBubble;
+    HIPackedbubble *oldValue = _packedBubble;
 	_packedBubble = packedBubble;
 	[self updateHIObject:oldValue newValue:packedBubble propertyName:@"packedBubble"];
 }

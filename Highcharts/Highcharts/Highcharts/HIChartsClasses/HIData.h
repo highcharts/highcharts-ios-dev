@@ -7,6 +7,7 @@
 */
 
 #import "HIAccessibility.h"
+#import "HIDataLabels.h"
 #import "HIDragDrop.h"
 #import "HIEvents.h"
 #import "HIMarker.h"
@@ -14,7 +15,6 @@
 #import "HIPartialFill.h"
 #import "HIColor.h"
 #import "HIFunction.h"
-#import "HIDataLabelsOptionsObject.h"
 
 
 /**
@@ -317,7 +317,7 @@ Individual data label for each point. The options are the same as the ones for `
 
 * [Show a label for the last value](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/datalabels/)
 */
-@property(nonatomic, readwrite) NSArray<HIDataLabelsOptionsObject *> *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 An additional, individual class name for the data point's graphic representation.
 */

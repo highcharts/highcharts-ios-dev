@@ -12,7 +12,7 @@
 #import "HIMarker.h"
 #import "HIEvents.h"
 #import "HIAnimationOptionsObject.h"
-#import "HIDataLabelsOptionsObject.h"
+#import "HIDataLabels.h"
 
 
 /**
@@ -60,7 +60,7 @@ Options for layout algorithm. Inside there are options to change the type of the
 /**
 Options for the cluster data labels.
 */
-@property(nonatomic, readwrite) HIDataLabelsOptionsObject *dataLabels;
+@property(nonatomic, readwrite) HIDataLabels *dataLabels;
 /**
 Zoom the plot area to the cluster points range when a cluster is clicked.
 */

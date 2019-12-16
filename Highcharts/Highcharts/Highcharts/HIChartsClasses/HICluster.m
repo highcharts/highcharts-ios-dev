@@ -104,8 +104,8 @@
 	[self updateHIObject:oldValue newValue:layoutAlgorithm propertyName:@"layoutAlgorithm"];
 }
 
--(void)setDataLabels:(HIDataLabelsOptionsObject *)dataLabels {
-	HIDataLabelsOptionsObject *oldValue = _dataLabels;
+-(void)setDataLabels:(HIDataLabels *)dataLabels {
+	HIDataLabels *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
 	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }

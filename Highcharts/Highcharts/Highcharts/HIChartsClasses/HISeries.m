@@ -754,8 +754,8 @@
 	[self updateNSObject:oldValue newValue:stickyTracking propertyName:@"stickyTracking"];
 }
 
--(void)setDataLabels:(NSArray<HIDataLabelsOptionsObject *> *)dataLabels {
-	NSArray<HIDataLabelsOptionsObject *> *oldValue = _dataLabels;
+-(void)setDataLabels:(NSArray <HIDataLabels *> *)dataLabels {
+	NSArray <HIDataLabels *> *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
 	[self updateArrayObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
