@@ -59,6 +59,7 @@
 	copyBar.colorKey = [self.colorKey copyWithZone: zone];
 	copyBar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBar.point = [self.point copyWithZone: zone];
+	copyBar.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBar.cursor = [self.cursor copyWithZone: zone];
 	copyBar.pointPlacement = [self.pointPlacement copyWithZone: zone];

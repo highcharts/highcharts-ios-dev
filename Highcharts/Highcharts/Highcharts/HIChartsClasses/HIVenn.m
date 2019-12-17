@@ -29,7 +29,9 @@
 	copyVenn.clip = [self.clip copyWithZone: zone];
 	copyVenn.brighten = [self.brighten copyWithZone: zone];
 	copyVenn.tooltip = [self.tooltip copyWithZone: zone];
+	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVenn.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyVenn.cluster = [self.cluster copyWithZone: zone];
 	copyVenn.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVenn.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyVenn.selected = [self.selected copyWithZone: zone];
@@ -37,6 +39,7 @@
 	copyVenn.color = [self.color copyWithZone: zone];
 	copyVenn.colorKey = [self.colorKey copyWithZone: zone];
 	copyVenn.point = [self.point copyWithZone: zone];
+	copyVenn.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyVenn.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVenn.cursor = [self.cursor copyWithZone: zone];
 	copyVenn.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -55,7 +58,6 @@
 	copyVenn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVenn.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVenn.visible = [self.visible copyWithZone: zone];
-	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVenn.className = [self.className copyWithZone: zone];
 	copyVenn.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyVenn;
@@ -72,6 +74,9 @@
 	}
 	if (self.brighten) {
 		params[@"brighten"] = self.brighten;
+	}
+	if (self.cluster) {
+		params[@"cluster"] = [self.cluster getParams];
 	}
 	return params;
 }
@@ -94,6 +99,12 @@
 	NSNumber *oldValue = _brighten;
 	_brighten = brighten;
 	[self updateNSObject:oldValue newValue:brighten propertyName:@"brighten"];
+}
+
+-(void)setCluster:(HICluster *)cluster {
+	HICluster *oldValue = _cluster;
+	_cluster = cluster;
+	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

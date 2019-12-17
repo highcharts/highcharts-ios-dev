@@ -19,6 +19,7 @@
 	copyWaterfall.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyWaterfall.upColor = [self.upColor copyWithZone: zone];
 	copyWaterfall.color = [self.color copyWithZone: zone];
+	copyWaterfall.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyWaterfall.states = [self.states copyWithZone: zone];
 	copyWaterfall.lineColor = [self.lineColor copyWithZone: zone];
 	copyWaterfall.lineWidth = [self.lineWidth copyWithZone: zone];
@@ -39,7 +40,6 @@
 	copyWaterfall.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyWaterfall.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyWaterfall.crisp = [self.crisp copyWithZone: zone];
-	copyWaterfall.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyWaterfall.depth = [self.depth copyWithZone: zone];
 	copyWaterfall.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyWaterfall.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -53,6 +53,7 @@
 	copyWaterfall.colorKey = [self.colorKey copyWithZone: zone];
 	copyWaterfall.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyWaterfall.point = [self.point copyWithZone: zone];
+	copyWaterfall.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyWaterfall.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
 	copyWaterfall.pointPlacement = [self.pointPlacement copyWithZone: zone];

@@ -64,6 +64,8 @@
 		
 		<option value="//api/name/bubblePadding">bubblePadding</option>
 		
+		<option value="//api/name/distance">distance</option>
+		
 		<option value="//api/name/dragBetweenSeries">dragBetweenSeries</option>
 		
 		<option value="//api/name/enableSimulation">enableSimulation</option>
@@ -72,11 +74,17 @@
 		
 		<option value="//api/name/gravitationalConstant">gravitationalConstant</option>
 		
+		<option value="//api/name/gridSize">gridSize</option>
+		
 		<option value="//api/name/initialPositionRadius">initialPositionRadius</option>
 		
 		<option value="//api/name/initialPositions">initialPositions</option>
 		
 		<option value="//api/name/integration">integration</option>
+		
+		<option value="//api/name/iterations">iterations</option>
+		
+		<option value="//api/name/kmeansThreshold">kmeansThreshold</option>
 		
 		<option value="//api/name/linkLength">linkLength</option>
 		
@@ -882,6 +890,170 @@
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["reingold-fruchterman"]</code>.</p>
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/distance" title="distance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>type</code> is set to <code>kmeans</code>, <code>distance</code> is a maximum distance between point and cluster center so that this point will be inside the cluster. The distance is either a number defining pixels or a percentage defining a percentage of the plot area width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id distance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/gridSize" title="gridSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gridSize">&nbsp;&nbsp;gridSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>type</code> is set to the <code>grid</code>, <code>gridSize</code> is a size of a grid square element either as a number defining pixels, or a percentage defining a percentage of the plot area width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id gridSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/kmeansThreshold" title="kmeansThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/kmeansThreshold">&nbsp;&nbsp;kmeansThreshold</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>type</code> is set to <code>undefined</code> and there are more visible points than the kmeansThreshold the <code>grid</code> algorithm is used to find clusters, otherwise <code>kmeans</code>. It ensures good performance on large datasets and better clusters arrangement after the zoom.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *kmeansThreshold</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILayoutAlgorithm.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/iterations" title="iterations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/iterations">&nbsp;&nbsp;iterations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>type</code> is set to <code>kmeans</code>, <code>iterations</code> are the number of iterations that this algorithm will be repeated to find clusters positions.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *iterations</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			

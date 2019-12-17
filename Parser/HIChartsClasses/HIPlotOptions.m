@@ -12,6 +12,7 @@
 	HIPlotOptions *copyPlotOptions = [[HIPlotOptions allocWithZone: zone] init];
 	copyPlotOptions.gauge = [self.gauge copyWithZone: zone];
 	copyPlotOptions.variablepie = [self.variablepie copyWithZone: zone];
+	copyPlotOptions.dumbbell = [self.dumbbell copyWithZone: zone];
 	copyPlotOptions.streamgraph = [self.streamgraph copyWithZone: zone];
 	copyPlotOptions.networkgraph = [self.networkgraph copyWithZone: zone];
 	copyPlotOptions.bar = [self.bar copyWithZone: zone];
@@ -24,17 +25,18 @@
 	copyPlotOptions.bellcurve = [self.bellcurve copyWithZone: zone];
 	copyPlotOptions.series = [self.series copyWithZone: zone];
 	copyPlotOptions.pyramid3d = [self.pyramid3d copyWithZone: zone];
-	copyPlotOptions.sankey = [self.sankey copyWithZone: zone];
 	copyPlotOptions.pareto = [self.pareto copyWithZone: zone];
 	copyPlotOptions.dependencywheel = [self.dependencywheel copyWithZone: zone];
 	copyPlotOptions.heatmap = [self.heatmap copyWithZone: zone];
 	copyPlotOptions.solidgauge = [self.solidgauge copyWithZone: zone];
 	copyPlotOptions.timeline = [self.timeline copyWithZone: zone];
 	copyPlotOptions.funnel3d = [self.funnel3d copyWithZone: zone];
+	copyPlotOptions.lollipop = [self.lollipop copyWithZone: zone];
 	copyPlotOptions.column = [self.column copyWithZone: zone];
 	copyPlotOptions.treemap = [self.treemap copyWithZone: zone];
 	copyPlotOptions.waterfall = [self.waterfall copyWithZone: zone];
 	copyPlotOptions.columnrange = [self.columnrange copyWithZone: zone];
+	copyPlotOptions.packedBubble = [self.packedBubble copyWithZone: zone];
 	copyPlotOptions.venn = [self.venn copyWithZone: zone];
 	copyPlotOptions.spline = [self.spline copyWithZone: zone];
 	copyPlotOptions.area = [self.area copyWithZone: zone];
@@ -46,6 +48,7 @@
 	copyPlotOptions.sunburst = [self.sunburst copyWithZone: zone];
 	copyPlotOptions.wordcloud = [self.wordcloud copyWithZone: zone];
 	copyPlotOptions.scatter = [self.scatter copyWithZone: zone];
+	copyPlotOptions.sankey = [self.sankey copyWithZone: zone];
 	copyPlotOptions.cylinder = [self.cylinder copyWithZone: zone];
 	copyPlotOptions.pyramid = [self.pyramid copyWithZone: zone];
 	copyPlotOptions.tilemap = [self.tilemap copyWithZone: zone];
@@ -70,6 +73,9 @@
 	}
 	if (self.variablepie) {
 		params[@"variablepie"] = [self.variablepie getParams];
+	}
+	if (self.dumbbell) {
+		params[@"dumbbell"] = [self.dumbbell getParams];
 	}
 	if (self.streamgraph) {
 		params[@"streamgraph"] = [self.streamgraph getParams];
@@ -107,9 +113,6 @@
 	if (self.pyramid3d) {
 		params[@"pyramid3d"] = [self.pyramid3d getParams];
 	}
-	if (self.sankey) {
-		params[@"sankey"] = [self.sankey getParams];
-	}
 	if (self.pareto) {
 		params[@"pareto"] = [self.pareto getParams];
 	}
@@ -128,6 +131,9 @@
 	if (self.funnel3d) {
 		params[@"funnel3d"] = [self.funnel3d getParams];
 	}
+	if (self.lollipop) {
+		params[@"lollipop"] = [self.lollipop getParams];
+	}
 	if (self.column) {
 		params[@"column"] = [self.column getParams];
 	}
@@ -139,6 +145,9 @@
 	}
 	if (self.columnrange) {
 		params[@"columnrange"] = [self.columnrange getParams];
+	}
+	if (self.packedBubble) {
+		params[@"packedBubble"] = [self.packedBubble getParams];
 	}
 	if (self.venn) {
 		params[@"venn"] = [self.venn getParams];
@@ -172,6 +181,9 @@
 	}
 	if (self.scatter) {
 		params[@"scatter"] = [self.scatter getParams];
+	}
+	if (self.sankey) {
+		params[@"sankey"] = [self.sankey getParams];
 	}
 	if (self.cylinder) {
 		params[@"cylinder"] = [self.cylinder getParams];
@@ -227,6 +239,12 @@
 	HIVariablepie *oldValue = _variablepie;
 	_variablepie = variablepie;
 	[self updateHIObject:oldValue newValue:variablepie propertyName:@"variablepie"];
+}
+
+-(void)setDumbbell:(HIDumbbell *)dumbbell {
+	HIDumbbell *oldValue = _dumbbell;
+	_dumbbell = dumbbell;
+	[self updateHIObject:oldValue newValue:dumbbell propertyName:@"dumbbell"];
 }
 
 -(void)setStreamgraph:(HIStreamgraph *)streamgraph {
@@ -301,12 +319,6 @@
 	[self updateHIObject:oldValue newValue:pyramid3d propertyName:@"pyramid3d"];
 }
 
--(void)setSankey:(HISankey *)sankey {
-	HISankey *oldValue = _sankey;
-	_sankey = sankey;
-	[self updateHIObject:oldValue newValue:sankey propertyName:@"sankey"];
-}
-
 -(void)setPareto:(HIPareto *)pareto {
 	HIPareto *oldValue = _pareto;
 	_pareto = pareto;
@@ -343,6 +355,12 @@
 	[self updateHIObject:oldValue newValue:funnel3d propertyName:@"funnel3d"];
 }
 
+-(void)setLollipop:(HILollipop *)lollipop {
+	HILollipop *oldValue = _lollipop;
+	_lollipop = lollipop;
+	[self updateHIObject:oldValue newValue:lollipop propertyName:@"lollipop"];
+}
+
 -(void)setColumn:(HIColumn *)column {
 	HIColumn *oldValue = _column;
 	_column = column;
@@ -365,6 +383,12 @@
 	HIColumnrange *oldValue = _columnrange;
 	_columnrange = columnrange;
 	[self updateHIObject:oldValue newValue:columnrange propertyName:@"columnrange"];
+}
+
+-(void)setPackedBubble:(HIPackedBubble *)packedBubble {
+	HIPackedBubble *oldValue = _packedBubble;
+	_packedBubble = packedBubble;
+	[self updateHIObject:oldValue newValue:packedBubble propertyName:@"packedBubble"];
 }
 
 -(void)setVenn:(HIVenn *)venn {
@@ -431,6 +455,12 @@
 	HIScatter *oldValue = _scatter;
 	_scatter = scatter;
 	[self updateHIObject:oldValue newValue:scatter propertyName:@"scatter"];
+}
+
+-(void)setSankey:(HISankey *)sankey {
+	HISankey *oldValue = _sankey;
+	_sankey = sankey;
+	[self updateHIObject:oldValue newValue:sankey propertyName:@"sankey"];
 }
 
 -(void)setCylinder:(HICylinder *)cylinder {

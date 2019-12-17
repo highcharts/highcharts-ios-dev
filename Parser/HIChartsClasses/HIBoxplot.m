@@ -62,6 +62,7 @@
 	copyBoxplot.color = [self.color copyWithZone: zone];
 	copyBoxplot.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBoxplot.point = [self.point copyWithZone: zone];
+	copyBoxplot.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBoxplot.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBoxplot.cursor = [self.cursor copyWithZone: zone];
 	copyBoxplot.pointPlacement = [self.pointPlacement copyWithZone: zone];

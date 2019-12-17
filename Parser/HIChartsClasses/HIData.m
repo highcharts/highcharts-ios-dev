@@ -83,6 +83,7 @@
 	copyData.x2 = [self.x2 copyWithZone: zone];
 	copyData.partialFill = [self.partialFill copyWithZone: zone];
 	copyData.parent = [self.parent copyWithZone: zone];
+	copyData.colorValue = [self.colorValue copyWithZone: zone];
 	copyData.sets = [self.sets copyWithZone: zone];
 	return copyData;
 }
@@ -232,16 +233,7 @@
 		params[@"accessibility"] = [self.accessibility getParams];
 	}
 	if (self.dataLabels) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.dataLabels) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"dataLabels"] = array;
+		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -344,6 +336,9 @@
 	}
 	if (self.parent) {
 		params[@"parent"] = self.parent;
+	}
+	if (self.colorValue) {
+		params[@"colorValue"] = self.colorValue;
 	}
 	if (self.sets) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -590,10 +585,10 @@
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
--(void)setDataLabels:(NSArray<HIDataLabelsOptionsObject *> *)dataLabels {
-	NSArray<HIDataLabelsOptionsObject *> *oldValue = _dataLabels;
+-(void)setDataLabels:(HIDataLabels *)dataLabels {
+	HIDataLabels *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
-	[self updateArrayObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
+	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -798,6 +793,12 @@
 	NSString *oldValue = _parent;
 	_parent = parent;
 	[self updateNSObject:oldValue newValue:parent propertyName:@"parent"];
+}
+
+-(void)setColorValue:(NSNumber *)colorValue {
+	NSNumber *oldValue = _colorValue;
+	_colorValue = colorValue;
+	[self updateNSObject:oldValue newValue:colorValue propertyName:@"colorValue"];
 }
 
 -(void)setSets:(NSArray<NSString *> *)sets {

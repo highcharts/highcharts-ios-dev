@@ -11,10 +11,15 @@
 	[super copyWithZone:zone];
 	HIStyle *copyStyle = [[HIStyle allocWithZone: zone] init];
 	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
-	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
 	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
+	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
 	copyStyle.color = [self.color copyWithZone: zone];
 	copyStyle.cursor = [self.cursor copyWithZone: zone];
+	copyStyle.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyStyle.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyStyle.textOverflow = [self.textOverflow copyWithZone: zone];
+	copyStyle.pointerEvents = [self.pointerEvents copyWithZone: zone];
+	copyStyle.whiteSpace = [self.whiteSpace copyWithZone: zone];
 	copyStyle.stroke = [self.stroke copyWithZone: zone];
 	copyStyle.strokeWidth = [self.strokeWidth copyWithZone: zone];
 	copyStyle.fill = [self.fill copyWithZone: zone];
@@ -27,17 +32,32 @@
 	if (self.fontWeight) {
 		params[@"fontWeight"] = self.fontWeight;
 	}
-	if (self.textOutline) {
-		params[@"textOutline"] = self.textOutline;
-	}
 	if (self.fontSize) {
 		params[@"fontSize"] = self.fontSize;
+	}
+	if (self.textOutline) {
+		params[@"textOutline"] = self.textOutline;
 	}
 	if (self.color) {
 		params[@"color"] = self.color;
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
+	}
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
+	}
+	if (self.textOverflow) {
+		params[@"textOverflow"] = self.textOverflow;
+	}
+	if (self.pointerEvents) {
+		params[@"pointerEvents"] = self.pointerEvents;
+	}
+	if (self.whiteSpace) {
+		params[@"whiteSpace"] = self.whiteSpace;
 	}
 	if (self.stroke) {
 		params[@"stroke"] = self.stroke;
@@ -59,16 +79,16 @@
 	[self updateNSObject:oldValue newValue:fontWeight propertyName:@"fontWeight"];
 }
 
--(void)setTextOutline:(NSString *)textOutline {
-	NSString *oldValue = _textOutline;
-	_textOutline = textOutline;
-	[self updateNSObject:oldValue newValue:textOutline propertyName:@"textOutline"];
-}
-
 -(void)setFontSize:(NSString *)fontSize {
 	NSString *oldValue = _fontSize;
 	_fontSize = fontSize;
 	[self updateNSObject:oldValue newValue:fontSize propertyName:@"fontSize"];
+}
+
+-(void)setTextOutline:(NSString *)textOutline {
+	NSString *oldValue = _textOutline;
+	_textOutline = textOutline;
+	[self updateNSObject:oldValue newValue:textOutline propertyName:@"textOutline"];
 }
 
 -(void)setColor:(NSString *)color {
@@ -81,6 +101,36 @@
 	NSString *oldValue = _cursor;
 	_cursor = cursor;
 	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+}
+
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
+	_lineWidth = lineWidth;
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
+}
+
+-(void)setTextOverflow:(NSString *)textOverflow {
+	NSString *oldValue = _textOverflow;
+	_textOverflow = textOverflow;
+	[self updateNSObject:oldValue newValue:textOverflow propertyName:@"textOverflow"];
+}
+
+-(void)setPointerEvents:(NSString *)pointerEvents {
+	NSString *oldValue = _pointerEvents;
+	_pointerEvents = pointerEvents;
+	[self updateNSObject:oldValue newValue:pointerEvents propertyName:@"pointerEvents"];
+}
+
+-(void)setWhiteSpace:(NSString *)whiteSpace {
+	NSString *oldValue = _whiteSpace;
+	_whiteSpace = whiteSpace;
+	[self updateNSObject:oldValue newValue:whiteSpace propertyName:@"whiteSpace"];
 }
 
 -(void)setStroke:(NSString *)stroke {

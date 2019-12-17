@@ -29,6 +29,7 @@
 	copyXrange.partialFill = [self.partialFill copyWithZone: zone];
 	copyXrange.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyXrange.tooltip = [self.tooltip copyWithZone: zone];
+	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyXrange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyXrange.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyXrange.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -39,7 +40,6 @@
 	copyXrange.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyXrange.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyXrange.groupPadding = [self.groupPadding copyWithZone: zone];
-	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyXrange.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyXrange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyXrange.grouping = [self.grouping copyWithZone: zone];
@@ -50,6 +50,7 @@
 	copyXrange.color = [self.color copyWithZone: zone];
 	copyXrange.colorKey = [self.colorKey copyWithZone: zone];
 	copyXrange.point = [self.point copyWithZone: zone];
+	copyXrange.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyXrange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyXrange.cursor = [self.cursor copyWithZone: zone];
 	copyXrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];

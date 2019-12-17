@@ -20,6 +20,7 @@
 	copyVector.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyVector.tooltip = [self.tooltip copyWithZone: zone];
 	copyVector.rotationOrigin = [self.rotationOrigin copyWithZone: zone];
+	copyVector.cluster = [self.cluster copyWithZone: zone];
 	copyVector.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyVector.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVector.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -32,6 +33,7 @@
 	copyVector.colorKey = [self.colorKey copyWithZone: zone];
 	copyVector.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVector.point = [self.point copyWithZone: zone];
+	copyVector.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyVector.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVector.cursor = [self.cursor copyWithZone: zone];
 	copyVector.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
@@ -82,6 +84,9 @@
 	if (self.rotationOrigin) {
 		params[@"rotationOrigin"] = self.rotationOrigin;
 	}
+	if (self.cluster) {
+		params[@"cluster"] = [self.cluster getParams];
+	}
 	return params;
 }
 
@@ -97,6 +102,12 @@
 	NSString *oldValue = _rotationOrigin;
 	_rotationOrigin = rotationOrigin;
 	[self updateNSObject:oldValue newValue:rotationOrigin propertyName:@"rotationOrigin"];
+}
+
+-(void)setCluster:(HICluster *)cluster {
+	HICluster *oldValue = _cluster;
+	_cluster = cluster;
+	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

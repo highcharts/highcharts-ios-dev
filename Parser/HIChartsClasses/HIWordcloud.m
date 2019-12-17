@@ -40,6 +40,7 @@
 	copyWordcloud.color = [self.color copyWithZone: zone];
 	copyWordcloud.colorKey = [self.colorKey copyWithZone: zone];
 	copyWordcloud.point = [self.point copyWithZone: zone];
+	copyWordcloud.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyWordcloud.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];

@@ -38,6 +38,7 @@
 	copyNetworkgraph.color = [self.color copyWithZone: zone];
 	copyNetworkgraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyNetworkgraph.point = [self.point copyWithZone: zone];
+	copyNetworkgraph.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyNetworkgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyNetworkgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyNetworkgraph.cursor = [self.cursor copyWithZone: zone];

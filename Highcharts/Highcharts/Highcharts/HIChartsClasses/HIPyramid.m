@@ -30,6 +30,7 @@
 	copyPyramid.states = [self.states copyWithZone: zone];
 	copyPyramid.width = [self.width copyWithZone: zone];
 	copyPyramid.animation = [self.animation copyWithZone: zone];
+	copyPyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPyramid.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyPyramid.clip = [self.clip copyWithZone: zone];
 	copyPyramid.point = [self.point copyWithZone: zone];
@@ -43,7 +44,6 @@
 	copyPyramid.events = [self.events copyWithZone: zone];
 	copyPyramid.endAngle = [self.endAngle copyWithZone: zone];
 	copyPyramid.slicedOffset = [self.slicedOffset copyWithZone: zone];
-	copyPyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPyramid.depth = [self.depth copyWithZone: zone];
 	copyPyramid.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyPyramid.stickyTracking = [self.stickyTracking copyWithZone: zone];

@@ -96,9 +96,13 @@
 		
 		<option value="//api/name/gridZIndex">gridZIndex</option>
 		
+		<option value="//api/name/height">height</option>
+		
 		<option value="//api/name/id">id</option>
 		
 		<option value="//api/name/labels">labels</option>
+		
+		<option value="//api/name/left">left</option>
 		
 		<option value="//api/name/lineColor">lineColor</option>
 		
@@ -198,6 +202,8 @@
 		
 		<option value="//api/name/tooltipValueFormat">tooltipValueFormat</option>
 		
+		<option value="//api/name/top">top</option>
+		
 		<option value="//api/name/type">type</option>
 		
 		<option value="//api/name/uniqueNames">uniqueNames</option>
@@ -205,6 +211,8 @@
 		<option value="//api/name/units">units</option>
 		
 		<option value="//api/name/visible">visible</option>
+		
+		<option value="//api/name/width">width</option>
 		
 		<option value="//api/name/zoomEnabled">zoomEnabled</option>
 		
@@ -380,12 +388,53 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The axis labels show the number or category for each tick.</p>
+				<p>The axis labels show the number or category for each tick. Since v8.0.0: Labels are animated in categorized x-axis with updating data if <code>tickInterval</code> and <code>step</code> is set to 1.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabels *labels</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The height of the Y axis. If it&rsquo;s a number, it is interpreted as pixels. Since Highcharts 2: If it&rsquo;s a percentage string, it is interpreted as percentages of the total plot height.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id height</code></div>
 
 		    
 			
@@ -495,59 +544,6 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/softmin-softmax/">Soft min and max</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIYAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/angle" title="angle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/angle">&nbsp;&nbsp;angle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>In a polar chart, this is the angle of the Y axis in degrees, where 0 is up and 90 is right. The angle determines the position of the axis line and the labels, though the coordinate system is unaffected.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *angle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/angle/">Dual axis polar chart</a></li>
 </ul>
 
 			</div>
@@ -901,60 +897,6 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-minorgrid/">Logarithmic with minor grid lines</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/type-log-negative/">Logarithmic with extension to emulate negative values</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIYAxis.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/gridLineInterpolation" title="gridLineInterpolation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/gridLineInterpolation">&nbsp;&nbsp;gridLineInterpolation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Polar charts only. Whether the grid lines should draw as a polygon with straight lines between categories, or as circles. Can be either <code>circle</code> or <code>polygon</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *gridLineInterpolation</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["circle", "polygon"]</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/polar-spider/">Polygon grid lines</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlineinterpolation/">Circle and polygon</a></li>
 </ul>
 
 			</div>
@@ -1343,8 +1285,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/reversedStacks" title="reversedStacks"></a>
-	<h3 class="method-title"><code><a href="#//api/name/reversedStacks">&nbsp;&nbsp;reversedStacks</a></code>
+	<a name="//api/name/lineWidth" title="lineWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1354,12 +1296,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If <code>true</code>, the first series in a stack will be drawn on top in a positive, non-reversed Y axis. If <code>false</code>, the first series is in the base of the stack.</p>
+				<p>The width of the line marking the axis itself. In styled mode, the stroke width is given in the <code>.highcharts-axis-line</code> or <code>.highcharts-xaxis-line</code> class.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversedStacks</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
 
 		    
 			
@@ -1371,12 +1313,13 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/reversedstacks-false/">Non-reversed stacks</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/">A 1px line on Y axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/">Axes in styled mode</a></li>
 </ul>
 
 			</div>
@@ -1743,8 +1686,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/lineWidth" title="lineWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
+	<a name="//api/name/reversedStacks" title="reversedStacks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reversedStacks">&nbsp;&nbsp;reversedStacks</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1754,12 +1697,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the line marking the axis itself. In styled mode, the stroke width is given in the <code>.highcharts-axis-line</code> or <code>.highcharts-xaxis-line</code> class.</p>
+				<p>If <code>true</code>, the first series in a stack will be drawn on top in a positive, non-reversed Y axis. If <code>false</code>, the first series is in the base of the stack.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversedStacks</code></div>
 
 		    
 			
@@ -1771,16 +1714,56 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1</code>.</p>
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/">A 1px line on Y axis</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/">Axes in styled mode</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/reversedstacks-false/">Non-reversed stacks</a></li>
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/top" title="top"></a>
+	<h3 class="method-title"><code><a href="#//api/name/top">&nbsp;&nbsp;top</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The top position of the Y axis. If it&rsquo;s a number, it is interpreted as pixel position relative to the chart. Since Highcharts 2: If it&rsquo;s a percentage string, it is interpreted as percentages of the plot height, offset from plot area top.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id top</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1935,6 +1918,60 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter">Two gauges with different center</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tickmarkPlacement" title="tickmarkPlacement"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tickmarkPlacement">&nbsp;&nbsp;tickmarkPlacement</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For categorized axes only. If <code>on</code> the tick mark is placed in the center of the category, if <code>between</code> the tick mark is placed between categories. The default is <code>between</code> if the <code>tickInterval</code> is 1, else <code>on</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tickmarkPlacement</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["on", "between"]</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-between/">&ldquo;between&rdquo; by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-on/">&ldquo;on&rdquo;</a></li>
 </ul>
 
 			</div>
@@ -2439,8 +2476,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tickmarkPlacement" title="tickmarkPlacement"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tickmarkPlacement">&nbsp;&nbsp;tickmarkPlacement</a></code>
+	<a name="//api/name/angle" title="angle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/angle">&nbsp;&nbsp;angle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2450,12 +2487,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For categorized axes only. If <code>on</code> the tick mark is placed in the center of the category, if <code>between</code> the tick mark is placed between categories. The default is <code>between</code> if the <code>tickInterval</code> is 1, else <code>on</code>.</p>
+				<p>In a polar chart, this is the angle of the Y axis in degrees, where 0 is up and 90 is right. The angle determines the position of the axis line and the labels, though the coordinate system is unaffected. Since v8.0.0 this option is also applicable for X axis (inverted polar).</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tickmarkPlacement</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *angle</code></div>
 
 		    
 			
@@ -2467,13 +2504,13 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["on", "between"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>0</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-between/">&ldquo;between&rdquo; by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickmarkplacement-on/">&ldquo;on&rdquo;</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/angle/">Custom X axis' angle on inverted polar chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/angle/">Dual axis polar chart</a></li>
 </ul>
 
 			</div>
@@ -2756,6 +2793,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width as the horizontal axis. If it&rsquo;s a number, it is interpreted as pixels. Since Highcharts v5.0.13: If it&rsquo;s a percentage string, it is interpreted as percentages of the total plot width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id width</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/minorTickLength" title="minorTickLength"></a>
 	<h3 class="method-title"><code><a href="#//api/name/minorTickLength">&nbsp;&nbsp;minorTickLength</a></code>
 </h3>
@@ -2818,7 +2896,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Datetime axis only. An array determining what time intervals the ticks are allowed to fall on. Each array item is an array where the first value is the time unit and the second value another array of allowed multiples. Defaults to: units: [[   &lsquo;millisecond&rsquo;, // unit name   [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples ], [   &lsquo;second&rsquo;,   [1, 2, 5, 10, 15, 30] ], [   &lsquo;minute&rsquo;,   [1, 2, 5, 10, 15, 30] ], [   &lsquo;hour&rsquo;,   [1, 2, 3, 4, 6, 8, 12] ], [   &lsquo;day&rsquo;,   [1] ], [   &lsquo;week&rsquo;,   [1] ], [   &lsquo;month&rsquo;,   [1, 3, 6] ], [   &lsquo;year&rsquo;,   null ]]</p>
+				<p>Datetime axis only. An array determining what time intervals the ticks are allowed to fall on. Each array item is an array where the first value is the time unit and the second value another array of allowed multiples. Defaults to: <code>js units: [[   'millisecond', // unit name   [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples ], [   'second',   [1, 2, 5, 10, 15, 30] ], [   'minute',   [1, 2, 5, 10, 15, 30] ], [   'hour',   [1, 2, 3, 4, 6, 8, 12] ], [   'day',   [1] ], [   'week',   [1] ], [   'month',   [1, 3, 6] ], [   'year',   null ]]</code></p>
 			</div>
 			
 		    
@@ -2848,8 +2926,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/events" title="events"></a>
-	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+	<a name="//api/name/gridLineInterpolation" title="gridLineInterpolation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gridLineInterpolation">&nbsp;&nbsp;gridLineInterpolation</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2859,12 +2937,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Event handlers for the axis.</p>
+				<p>Polar charts only. Whether the grid lines should draw as a polygon with straight lines between categories, or as circles. Can be either <code>circle</code> or <code>polygon</code>. Since v8.0.0 this option is also applicable for X axis (inverted polar).</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *gridLineInterpolation</code></div>
 
 		    
 			
@@ -2873,6 +2951,20 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["circle", "polygon"]</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/polar-spider/">Polygon grid lines</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/gridlineinterpolation/">Circle and polygon on inverted polar</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlineinterpolation/">Circle and polygon</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -3212,7 +3304,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see <code>dateFormat</code>. Defaults to: {   millisecond: &lsquo;%H:%M:%S.%L&rsquo;,   second: &lsquo;%H:%M:%S&rsquo;,   minute: &lsquo;%H:%M&rsquo;,   hour: &lsquo;%H:%M&rsquo;,   day: &lsquo;%e. %b&rsquo;,   week: &lsquo;%e. %b&rsquo;,   month: &lsquo;%b \&rsquo;%y',   year: &lsquo;%Y&rsquo; }</p>
+				<p>For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see <code>dateFormat</code>. Defaults to: <code>js {   millisecond: '%H:%M:%S.%L',   second: '%H:%M:%S',   minute: '%H:%M',   hour: '%H:%M',   day: '%e. %b',   week: '%e. %b',   month: '%b \'%y',   year: '%Y' }</code></p>
 			</div>
 			
 		    
@@ -3582,7 +3674,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <code>name</code> and setting axis <code>type</code> to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array. Example: categories: [&lsquo;Apples&rsquo;, &lsquo;Bananas&rsquo;, &lsquo;Oranges&rsquo;]</p>
+				<p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <code>name</code> and setting axis <code>type</code> to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array. Example: <code>categories: ['Apples', 'Bananas', 'Oranges']</code></p>
 			</div>
 			
 		    
@@ -3818,6 +3910,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/events" title="events"></a>
+	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Event handlers for the axis.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -4112,6 +4245,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *margin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIYAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/left" title="left"></a>
+	<h3 class="method-title"><code><a href="#//api/name/left">&nbsp;&nbsp;left</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The left position as the horizontal axis. If it&rsquo;s a number, it is interpreted as pixel position relative to the chart. Since Highcharts v5.0.13: If it&rsquo;s a percentage string, it is interpreted as percentages of the plot width, offset from plot area left.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id left</code></div>
 
 		    
 			

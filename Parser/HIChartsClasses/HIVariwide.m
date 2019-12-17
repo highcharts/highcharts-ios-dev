@@ -44,6 +44,7 @@
 	copyVariwide.colorKey = [self.colorKey copyWithZone: zone];
 	copyVariwide.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVariwide.point = [self.point copyWithZone: zone];
+	copyVariwide.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyVariwide.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVariwide.cursor = [self.cursor copyWithZone: zone];
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];

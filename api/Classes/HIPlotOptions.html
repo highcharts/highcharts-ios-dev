@@ -86,6 +86,8 @@
 		
 		<option value="//api/name/dependencywheel">dependencywheel</option>
 		
+		<option value="//api/name/dumbbell">dumbbell</option>
+		
 		<option value="//api/name/errorbar">errorbar</option>
 		
 		<option value="//api/name/funnel">funnel</option>
@@ -102,9 +104,13 @@
 		
 		<option value="//api/name/line">line</option>
 		
+		<option value="//api/name/lollipop">lollipop</option>
+		
 		<option value="//api/name/networkgraph">networkgraph</option>
 		
 		<option value="//api/name/organization">organization</option>
+		
+		<option value="//api/name/packedBubble">packedBubble</option>
 		
 		<option value="//api/name/packedbubble">packedbubble</option>
 		
@@ -299,6 +305,58 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/variable-radius-pie/">Variable-radius pie chart</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dumbbell" title="dumbbell"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dumbbell">&nbsp;&nbsp;dumbbell</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The dumbbell series is a cartesian series with higher and lower values for each point along an X axis, connected with a line between the values. Requires <code>highcharts-more.js</code> and <code>modules/dumbbell.js</code>. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>dumbbell</code> series are defined in  <code>plotOptions.dumbbell</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     dumbbell: {       // shared options for all dumbbell series     }   },   series: [{     // specific options for this series instance     type: 'dumbbell'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDumbbell *dumbbell</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/dumbbell/">Dumbbell chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-dumbbell/styled-mode-dumbbell/">Styled mode</a></li>
 </ul>
 
 			</div>
@@ -916,59 +974,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sankey" title="sankey"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sankey">&nbsp;&nbsp;sankey</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A sankey diagram is a type of flow diagram, in which the width of the link between two nodes is shown proportionally to the flow quantity. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>sankey</code> series are defined in  <code>plotOptions.sankey</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     sankey: {       // shared options for all sankey series     }   },   series: [{     // specific options for this series instance     type: 'sankey'   }] });</code></p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISankey *sankey</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sankey-diagram/">Sankey diagram</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-inverted/">Inverted sankey diagram</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing">Sankey diagram with outgoing links</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/pareto" title="pareto"></a>
 	<h3 class="method-title"><code><a href="#//api/name/pareto">&nbsp;&nbsp;pareto</a></code>
 </h3>
@@ -1278,6 +1283,58 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/lollipop" title="lollipop"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lollipop">&nbsp;&nbsp;lollipop</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The lollipop series is a carteseian series with a line anchored from the x axis and a dot at the end to mark the value. Requires <code>highcharts-more.js</code>, <code>modules/dumbbell.js</code> and <code>modules/lollipop.js</code>. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>lollipop</code> series are defined in  <code>plotOptions.lollipop</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     lollipop: {       // shared options for all lollipop series     }   },   series: [{     // specific options for this series instance     type: 'lollipop'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILollipop *lollipop</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/lollipop/">Lollipop chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-dumbbell/styled-mode-dumbbell/">Styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/column" title="column"></a>
 	<h3 class="method-title"><code><a href="#//api/name/column">&nbsp;&nbsp;column</a></code>
 </h3>
@@ -1481,6 +1538,22 @@
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/packedBubble" title="packedBubble"></a>
+	<h3 class="method-title"><code><a href="#//api/name/packedBubble">&nbsp;&nbsp;packedBubble</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPackedbubble *packedBubble</code></div>
+
+		    
 		</div>
 	</div>
 </div><div class="section-method">
@@ -2029,6 +2102,59 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/scatter/">Scatter plot</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sankey" title="sankey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sankey">&nbsp;&nbsp;sankey</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A sankey diagram is a type of flow diagram, in which the width of the link between two nodes is shown proportionally to the flow quantity. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>sankey</code> series are defined in  <code>plotOptions.sankey</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     sankey: {       // shared options for all sankey series     }   },   series: [{     // specific options for this series instance     type: 'sankey'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISankey *sankey</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sankey-diagram/">Sankey diagram</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-inverted/">Inverted sankey diagram</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing">Sankey diagram with outgoing links</a></li>
 </ul>
 
 			</div>

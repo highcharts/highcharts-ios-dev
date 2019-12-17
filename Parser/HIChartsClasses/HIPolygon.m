@@ -34,6 +34,7 @@
 	copyPolygon.colorKey = [self.colorKey copyWithZone: zone];
 	copyPolygon.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPolygon.point = [self.point copyWithZone: zone];
+	copyPolygon.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyPolygon.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPolygon.cursor = [self.cursor copyWithZone: zone];
 	copyPolygon.dashStyle = [self.dashStyle copyWithZone: zone];

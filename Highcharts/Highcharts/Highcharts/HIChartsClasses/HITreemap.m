@@ -45,6 +45,7 @@
 	copyTreemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTreemap.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
 	copyTreemap.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyTreemap.cluster = [self.cluster copyWithZone: zone];
 	copyTreemap.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyTreemap.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyTreemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -58,6 +59,7 @@
 	copyTreemap.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyTreemap.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyTreemap.point = [self.point copyWithZone: zone];
+	copyTreemap.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTreemap.cursor = [self.cursor copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -142,6 +144,9 @@
 	if (self.levelIsConstant) {
 		params[@"levelIsConstant"] = self.levelIsConstant;
 	}
+	if (self.cluster) {
+		params[@"cluster"] = [self.cluster getParams];
+	}
 	return params;
 }
 
@@ -217,6 +222,12 @@
 	NSNumber *oldValue = _levelIsConstant;
 	_levelIsConstant = levelIsConstant;
 	[self updateNSObject:oldValue newValue:levelIsConstant propertyName:@"levelIsConstant"];
+}
+
+-(void)setCluster:(HICluster *)cluster {
+	HICluster *oldValue = _cluster;
+	_cluster = cluster;
+	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

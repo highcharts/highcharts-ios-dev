@@ -17,6 +17,7 @@
 	HIScatter *copyScatter = [[HIScatter allocWithZone: zone] init];
 	copyScatter.jitter = [self.jitter copyWithZone: zone];
 	copyScatter.tooltip = [self.tooltip copyWithZone: zone];
+	copyScatter.cluster = [self.cluster copyWithZone: zone];
 	copyScatter.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyScatter.marker = [self.marker copyWithZone: zone];
 	copyScatter.lineWidth = [self.lineWidth copyWithZone: zone];
@@ -35,6 +36,7 @@
 	copyScatter.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyScatter.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyScatter.point = [self.point copyWithZone: zone];
+	copyScatter.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyScatter.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyScatter.cursor = [self.cursor copyWithZone: zone];
 	copyScatter.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -88,6 +90,9 @@
 	if (self.jitter) {
 		params[@"jitter"] = [self.jitter getParams];
 	}
+	if (self.cluster) {
+		params[@"cluster"] = [self.cluster getParams];
+	}
 	return params;
 }
 
@@ -97,6 +102,12 @@
 	HIJitter *oldValue = _jitter;
 	_jitter = jitter;
 	[self updateHIObject:oldValue newValue:jitter propertyName:@"jitter"];
+}
+
+-(void)setCluster:(HICluster *)cluster {
+	HICluster *oldValue = _cluster;
+	_cluster = cluster;
+	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

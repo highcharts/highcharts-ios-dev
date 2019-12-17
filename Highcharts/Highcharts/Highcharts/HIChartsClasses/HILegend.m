@@ -49,6 +49,8 @@
 	copyLegend.y = [self.y copyWithZone: zone];
 	copyLegend.x = [self.x copyWithZone: zone];
 	copyLegend.margin = [self.margin copyWithZone: zone];
+	copyLegend.legendLabel = [self.legendLabel copyWithZone: zone];
+	copyLegend.legendItem = [self.legendItem copyWithZone: zone];
 	return copyLegend;
 }
 
@@ -172,6 +174,12 @@
 	}
 	if (self.margin) {
 		params[@"margin"] = self.margin;
+	}
+	if (self.legendLabel) {
+		params[@"legendLabel"] = self.legendLabel;
+	}
+	if (self.legendItem) {
+		params[@"legendItem"] = self.legendItem;
 	}
 	return params;
 }
@@ -410,6 +418,18 @@
 	NSNumber *oldValue = _margin;
 	_margin = margin;
 	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
+}
+
+-(void)setLegendLabel:(NSString *)legendLabel {
+	NSString *oldValue = _legendLabel;
+	_legendLabel = legendLabel;
+	[self updateNSObject:oldValue newValue:legendLabel propertyName:@"legendLabel"];
+}
+
+-(void)setLegendItem:(NSString *)legendItem {
+	NSString *oldValue = _legendItem;
+	_legendItem = legendItem;
+	[self updateNSObject:oldValue newValue:legendItem propertyName:@"legendItem"];
 }
 
 - (void)setPointText:(HIPoint *)item {

@@ -15,6 +15,7 @@
 	copyParallelAxes.offset = [self.offset copyWithZone: zone];
 	copyParallelAxes.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyParallelAxes.minPadding = [self.minPadding copyWithZone: zone];
+	copyParallelAxes.height = [self.height copyWithZone: zone];
 	copyParallelAxes.softMax = [self.softMax copyWithZone: zone];
 	copyParallelAxes.min = [self.min copyWithZone: zone];
 	copyParallelAxes.endOnTick = [self.endOnTick copyWithZone: zone];
@@ -26,14 +27,16 @@
 	copyParallelAxes.opposite = [self.opposite copyWithZone: zone];
 	copyParallelAxes.reversed = [self.reversed copyWithZone: zone];
 	copyParallelAxes.tooltipValueFormat = [self.tooltipValueFormat copyWithZone: zone];
-	copyParallelAxes.reversedStacks = [self.reversedStacks copyWithZone: zone];
 	copyParallelAxes.showLastLabel = [self.showLastLabel copyWithZone: zone];
 	copyParallelAxes.startOnTick = [self.startOnTick copyWithZone: zone];
 	copyParallelAxes.maxPadding = [self.maxPadding copyWithZone: zone];
 	copyParallelAxes.lineColor = [self.lineColor copyWithZone: zone];
+	copyParallelAxes.reversedStacks = [self.reversedStacks copyWithZone: zone];
+	copyParallelAxes.top = [self.top copyWithZone: zone];
 	copyParallelAxes.zoomEnabled = [self.zoomEnabled copyWithZone: zone];
 	copyParallelAxes.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyParallelAxes.pane = [self.pane copyWithZone: zone];
+	copyParallelAxes.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
 	copyParallelAxes.gridZIndex = [self.gridZIndex copyWithZone: zone];
 	copyParallelAxes.accessibility = [self.accessibility copyWithZone: zone];
 	copyParallelAxes.visible = [self.visible copyWithZone: zone];
@@ -43,13 +46,12 @@
 	copyParallelAxes.startOfWeek = [self.startOfWeek copyWithZone: zone];
 	copyParallelAxes.tickPositions = [self.tickPositions copyWithZone: zone];
 	copyParallelAxes.minRange = [self.minRange copyWithZone: zone];
-	copyParallelAxes.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
 	copyParallelAxes.allowDecimals = [self.allowDecimals copyWithZone: zone];
 	copyParallelAxes.floor = [self.floor copyWithZone: zone];
 	copyParallelAxes.tickPositioner = [self.tickPositioner copyWithZone: zone];
+	copyParallelAxes.width = [self.width copyWithZone: zone];
 	copyParallelAxes.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyParallelAxes.units = [self.units copyWithZone: zone];
-	copyParallelAxes.events = [self.events copyWithZone: zone];
 	copyParallelAxes.tickLength = [self.tickLength copyWithZone: zone];
 	copyParallelAxes.ceiling = [self.ceiling copyWithZone: zone];
 	copyParallelAxes.showEmpty = [self.showEmpty copyWithZone: zone];
@@ -63,11 +65,13 @@
 	copyParallelAxes.categories = [self.categories copyWithZone: zone];
 	copyParallelAxes.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyParallelAxes.uniqueNames = [self.uniqueNames copyWithZone: zone];
+	copyParallelAxes.events = [self.events copyWithZone: zone];
 	copyParallelAxes.className = [self.className copyWithZone: zone];
 	copyParallelAxes.tickAmount = [self.tickAmount copyWithZone: zone];
 	copyParallelAxes.crosshair = [self.crosshair copyWithZone: zone];
 	copyParallelAxes.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyParallelAxes.margin = [self.margin copyWithZone: zone];
+	copyParallelAxes.left = [self.left copyWithZone: zone];
 	return copyParallelAxes;
 }
 
@@ -88,6 +92,9 @@
 	}
 	if (self.minPadding) {
 		params[@"minPadding"] = self.minPadding;
+	}
+	if (self.height) {
+		params[@"height"] = self.height;
 	}
 	if (self.softMax) {
 		params[@"softMax"] = self.softMax;
@@ -122,9 +129,6 @@
 	if (self.tooltipValueFormat) {
 		params[@"tooltipValueFormat"] = self.tooltipValueFormat;
 	}
-	if (self.reversedStacks) {
-		params[@"reversedStacks"] = self.reversedStacks;
-	}
 	if (self.showLastLabel) {
 		params[@"showLastLabel"] = self.showLastLabel;
 	}
@@ -137,6 +141,12 @@
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
 	}
+	if (self.reversedStacks) {
+		params[@"reversedStacks"] = self.reversedStacks;
+	}
+	if (self.top) {
+		params[@"top"] = self.top;
+	}
 	if (self.zoomEnabled) {
 		params[@"zoomEnabled"] = self.zoomEnabled;
 	}
@@ -145,6 +155,9 @@
 	}
 	if (self.pane) {
 		params[@"pane"] = self.pane;
+	}
+	if (self.tickmarkPlacement) {
+		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
 	}
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
@@ -182,9 +195,6 @@
 	if (self.minRange) {
 		params[@"minRange"] = self.minRange;
 	}
-	if (self.tickmarkPlacement) {
-		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
-	}
 	if (self.allowDecimals) {
 		params[@"allowDecimals"] = self.allowDecimals;
 	}
@@ -193,6 +203,9 @@
 	}
 	if (self.tickPositioner) {
 		params[@"tickPositioner"] = [self.tickPositioner getFunction];
+	}
+	if (self.width) {
+		params[@"width"] = self.width;
 	}
 	if (self.minorTickLength) {
 		params[@"minorTickLength"] = self.minorTickLength;
@@ -208,9 +221,6 @@
 			}
 		}
 		params[@"units"] = array;
-	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
 	}
 	if (self.tickLength) {
 		params[@"tickLength"] = self.tickLength;
@@ -260,6 +270,9 @@
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
 	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
@@ -274,6 +287,9 @@
 	}
 	if (self.margin) {
 		params[@"margin"] = self.margin;
+	}
+	if (self.left) {
+		params[@"left"] = self.left;
 	}
 	return params;
 }
@@ -308,6 +324,12 @@
 	NSNumber *oldValue = _minPadding;
 	_minPadding = minPadding;
 	[self updateNSObject:oldValue newValue:minPadding propertyName:@"minPadding"];
+}
+
+-(void)setHeight:(id)height {
+	id oldValue = _height;
+	_height = height;
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setSoftMax:(NSNumber *)softMax {
@@ -376,12 +398,6 @@
 	[self updateNSObject:oldValue newValue:tooltipValueFormat propertyName:@"tooltipValueFormat"];
 }
 
--(void)setReversedStacks:(NSNumber *)reversedStacks {
-	NSNumber *oldValue = _reversedStacks;
-	_reversedStacks = reversedStacks;
-	[self updateNSObject:oldValue newValue:reversedStacks propertyName:@"reversedStacks"];
-}
-
 -(void)setShowLastLabel:(NSNumber *)showLastLabel {
 	NSNumber *oldValue = _showLastLabel;
 	_showLastLabel = showLastLabel;
@@ -406,6 +422,18 @@
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
+-(void)setReversedStacks:(NSNumber *)reversedStacks {
+	NSNumber *oldValue = _reversedStacks;
+	_reversedStacks = reversedStacks;
+	[self updateNSObject:oldValue newValue:reversedStacks propertyName:@"reversedStacks"];
+}
+
+-(void)setTop:(id)top {
+	id oldValue = _top;
+	_top = top;
+	[self updateNSObject:oldValue newValue:top propertyName:@"top"];
+}
+
 -(void)setZoomEnabled:(NSNumber *)zoomEnabled {
 	NSNumber *oldValue = _zoomEnabled;
 	_zoomEnabled = zoomEnabled;
@@ -422,6 +450,12 @@
 	NSNumber *oldValue = _pane;
 	_pane = pane;
 	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
+}
+
+-(void)setTickmarkPlacement:(NSString *)tickmarkPlacement {
+	NSString *oldValue = _tickmarkPlacement;
+	_tickmarkPlacement = tickmarkPlacement;
+	[self updateNSObject:oldValue newValue:tickmarkPlacement propertyName:@"tickmarkPlacement"];
 }
 
 -(void)setGridZIndex:(NSNumber *)gridZIndex {
@@ -478,12 +512,6 @@
 	[self updateNSObject:oldValue newValue:minRange propertyName:@"minRange"];
 }
 
--(void)setTickmarkPlacement:(NSString *)tickmarkPlacement {
-	NSString *oldValue = _tickmarkPlacement;
-	_tickmarkPlacement = tickmarkPlacement;
-	[self updateNSObject:oldValue newValue:tickmarkPlacement propertyName:@"tickmarkPlacement"];
-}
-
 -(void)setAllowDecimals:(NSNumber *)allowDecimals {
 	NSNumber *oldValue = _allowDecimals;
 	_allowDecimals = allowDecimals;
@@ -502,6 +530,12 @@
 	[self updateHIObject:oldValue newValue:tickPositioner propertyName:@"tickPositioner"];
 }
 
+-(void)setWidth:(id)width {
+	id oldValue = _width;
+	_width = width;
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
+}
+
 -(void)setMinorTickLength:(NSNumber *)minorTickLength {
 	NSNumber *oldValue = _minorTickLength;
 	_minorTickLength = minorTickLength;
@@ -512,12 +546,6 @@
 	NSArray<NSArray *> *oldValue = _units;
 	_units = units;
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
-}
-
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
-	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setTickLength:(NSNumber *)tickLength {
@@ -598,6 +626,12 @@
 	[self updateNSObject:oldValue newValue:uniqueNames propertyName:@"uniqueNames"];
 }
 
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+}
+
 -(void)setClassName:(NSString *)className {
 	NSString *oldValue = _className;
 	_className = className;
@@ -626,6 +660,12 @@
 	NSNumber *oldValue = _margin;
 	_margin = margin;
 	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
+}
+
+-(void)setLeft:(id)left {
+	id oldValue = _left;
+	_left = left;
+	[self updateNSObject:oldValue newValue:left propertyName:@"left"];
 }
 
 @end

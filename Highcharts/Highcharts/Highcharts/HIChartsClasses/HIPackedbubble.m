@@ -1,5 +1,5 @@
 #import "HIChartsJSONSerializableSubclass.h"
-#import "HIPackedbubble.h"
+#import "HIPackedBubble.h"
 
 @implementation HIPackedbubble
 
@@ -54,6 +54,7 @@
 	copyPackedbubble.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyPackedbubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPackedbubble.point = [self.point copyWithZone: zone];
+	copyPackedbubble.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyPackedbubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPackedbubble.cursor = [self.cursor copyWithZone: zone];
 	copyPackedbubble.dashStyle = [self.dashStyle copyWithZone: zone];

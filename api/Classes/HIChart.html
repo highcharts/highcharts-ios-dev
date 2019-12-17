@@ -94,6 +94,8 @@
 		
 		<option value="//api/name/marginTop">marginTop</option>
 		
+		<option value="//api/name/numberFormatter">numberFormatter</option>
+		
 		<option value="//api/name/options3d">options3d</option>
 		
 		<option value="//api/name/panKey">panKey</option>
@@ -225,7 +227,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Common options for all yAxes rendered in a parallel coordinates plot. This feature requires <code>modules/parallel-coordinates.js</code>. The default options are:  parallelAxes: {  lineWidth: 1,    // classic mode only  gridlinesWidth: 0, // classic mode only  title: {    text: &lsquo;&rsquo;,    reserveSpace: false  },  labels: {    x: 0,    y: 0,    align: &lsquo;center&rsquo;,    reserveSpace: false  },  offset: 0 }</p>
+				<p>Common options for all yAxes rendered in a parallel coordinates plot. This feature requires <code>modules/parallel-coordinates.js</code>. The default options are: <code>js parallelAxes: {  lineWidth: 1,    // classic mode only  gridlinesWidth: 0, // classic mode only  title: {    text: '',    reserveSpace: false  },  labels: {    x: 0,    y: 0,    align: 'center',    reserveSpace: false  },  offset: 0 }</code></p>
 			</div>
 			
 		    
@@ -1373,7 +1375,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *panning</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPanning *panning</code></div>
 
 		    
 			
@@ -1385,9 +1387,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/pankey/">Zooming and panning</a></li>
@@ -1913,7 +1913,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the initial series animation, see <code>plotOptions.series.animation</code>. The animation can either be set as a boolean or a configuration object. If <code>true</code>, it will use the &lsquo;swing&rsquo; jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:  duration The duration of the animation in milliseconds. easing A string reference to an easing function set on the <code>Math</code> object. See <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</p>
+				<p>Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the initial series animation, see <code>plotOptions.series.animation</code>. The animation can either be set as a boolean or a configuration object. If <code>true</code>, it will use the &lsquo;swing&rsquo; jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported: - <strong>duration</strong>: The duration of the animation in milliseconds. - <strong>easing</strong>: A string reference to an easing function set on the  <code>Math</code> object. See  <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</p>
 			</div>
 			
 		    
@@ -2187,6 +2187,57 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbackgroundimage/">Skies</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChart.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/numberFormatter" title="numberFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/numberFormatter">&nbsp;&nbsp;numberFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback function to override the default function that formats all the numbers in the chart. Returns a string with the formatted number.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *numberFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/highcharts-numberformat">Arabic digits in Highcharts</a></li>
 </ul>
 
 			</div>

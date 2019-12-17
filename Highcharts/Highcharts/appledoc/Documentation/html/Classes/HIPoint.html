@@ -58,7 +58,19 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/dateFormat">dateFormat</option>
+		
+		<option value="//api/name/dateFormatter">dateFormatter</option>
+		
+		<option value="//api/name/descriptionFormatter">descriptionFormatter</option>
+		
 		<option value="//api/name/events">events</option>
+		
+		<option value="//api/name/valueDecimals">valueDecimals</option>
+		
+		<option value="//api/name/valuePrefix">valuePrefix</option>
+		
+		<option value="//api/name/valueSuffix">valueSuffix</option>
 		
 		<option value="//api/name/x">x</option>
 		
@@ -148,14 +160,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>This option defines the point to which the label will be connected. It can be either the point which exists in the series - it is referenced by the point&rsquo;s id - or a new point with defined x, y properties and optionally axes.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-point/">Attach annotation to a mock point</a></li>
-</ul>
-
+						<p>Properties for each single point.</p>
 					</div>
 					
 					
@@ -171,6 +176,22 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/events" title="events"></a>
+	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/y" title="y"></a>
 	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
@@ -335,8 +356,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/events" title="events"></a>
-	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+	<a name="//api/name/valueSuffix" title="valueSuffix"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueSuffix">&nbsp;&nbsp;valueSuffix</a></code>
 </h3>
 
 	<div class="method-info">
@@ -344,10 +365,240 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Suffix to add to the values in the point descriptions. Uses <code>tooltip.valueSuffix</code> if not defined.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valueSuffix</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateFormat" title="dateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateFormat">&nbsp;&nbsp;dateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Date format to use for points on datetime axes when describing them to screen reader users. Defaults to the same format as in tooltip. For an overview of the replacement codes, see <code>dateFormat</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dateFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateFormatter" title="dateFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateFormatter">&nbsp;&nbsp;dateFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to determine the date/time format used with points on datetime axes when describing them to screen reader users. Receives one argument, <code>point</code>, referring to the point to describe. Should return a date format string compatible with <code>dateFormat</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *dateFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valuePrefix" title="valuePrefix"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valuePrefix">&nbsp;&nbsp;valuePrefix</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Prefix to add to the values in the point descriptions. Uses <code>tooltip.valuePrefix</code> if not defined.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valuePrefix</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/descriptionFormatter" title="descriptionFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/descriptionFormatter">&nbsp;&nbsp;descriptionFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to use instead of the default for point descriptions. Receives one argument, <code>point</code>, referring to the point to describe. Should return a string with the description of the point for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *descriptionFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valueDecimals" title="valueDecimals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueDecimals">&nbsp;&nbsp;valueDecimals</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decimals to use for the values in the point descriptions. Uses <code>tooltip.valueDecimals</code> if not defined.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *valueDecimals</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

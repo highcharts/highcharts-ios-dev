@@ -12,6 +12,7 @@
 	HIPatternObject *copyPatternObject = [[HIPatternObject allocWithZone: zone] init];
 	copyPatternObject.animation = [self.animation copyWithZone: zone];
 	copyPatternObject.pattern = [self.pattern copyWithZone: zone];
+	copyPatternObject.patternIndex = [self.patternIndex copyWithZone: zone];
 	return copyPatternObject;
 }
 
@@ -23,6 +24,9 @@
 	}
 	if (self.pattern) {
 		params[@"pattern"] = [self.pattern getParams];
+	}
+	if (self.patternIndex) {
+		params[@"patternIndex"] = self.patternIndex;
 	}
 	return params;
 }
@@ -39,6 +43,12 @@
 	HIPatternOptionsObject *oldValue = _pattern;
 	_pattern = pattern;
 	[self updateHIObject:oldValue newValue:pattern propertyName:@"pattern"];
+}
+
+-(void)setPatternIndex:(NSNumber *)patternIndex {
+	NSNumber *oldValue = _patternIndex;
+	_patternIndex = patternIndex;
+	[self updateNSObject:oldValue newValue:patternIndex propertyName:@"patternIndex"];
 }
 
 @end

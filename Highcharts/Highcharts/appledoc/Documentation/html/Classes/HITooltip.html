@@ -70,6 +70,8 @@
 		
 		<option value="//api/name/className">className</option>
 		
+		<option value="//api/name/clusterFormat">clusterFormat</option>
+		
 		<option value="//api/name/dateTimeLabelFormats">dateTimeLabelFormats</option>
 		
 		<option value="//api/name/distance">distance</option>
@@ -284,6 +286,58 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-nullformat">Format data label and tooltip for null point.</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clusterFormat" title="clusterFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clusterFormat">&nbsp;&nbsp;clusterFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The HTML of the cluster point&rsquo;s in the tooltip. Works only with marker-clusters module and analogously to <code>pointFormat</code>. The cluster tooltip can be also formatted using <code>tooltip.formatter</code> callback function and <code>point.isCluster</code> flag.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id clusterFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/marker-clusters/grid">Format tooltip for cluster points.</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/marker-clusters/europe/">Format tooltip for clusters using tooltip.formatter</a></li>
 </ul>
 
 			</div>
@@ -693,9 +747,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{"color": "#333333", "cursor": "default", "fontSize": "12px", "pointerEvents": "none", "whiteSpace": "nowrap"}</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/style/">Greater padding, bold text</a></li>
@@ -1144,7 +1196,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback function to format the text of the tooltip from scratch. In case of single or <code>shared</code> tooltips, a string should be returned. In case of <code>split</code> tooltips, it should return an array where the first item is the header, and subsequent items are mapped to the points. Return <code>false</code> to disable tooltip for a specific point on series. A subset of HTML is supported. Unless <code>useHTML</code> is true, the HTML of the tooltip is parsed and converted to SVG, therefore this isn&rsquo;t a complete HTML renderer. The following tags are supported: <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;br/&gt;</code>, <code>&lt;span&gt;</code>. Spans can be styled with a <code>style</code> attribute, but only text-related CSS that is shared with SVG is handled. The available data in the formatter differ a bit depending on whether the tooltip is shared or split, or belongs to a single point. In a shared/split tooltip, all properties except <code>x</code>, which is common for all points, are kept in an array, <code>this.points</code>. Available data are:  this.percentage (not shared) / this.points[i].percentage (shared)  Stacked series and pies only. The point&rsquo;s percentage of the total.  this.point (not shared) / this.points[i].point (shared) The point object. The point name, if defined, is available through <code>this.point.name</code>. this.points In a shared tooltip, this is an array containing all other properties for each point. this.series (not shared) / this.points[i].series (shared) The series object. The series name is available through <code>this.series.name</code>. this.total (not shared) / this.points[i].total (shared) Stacked series only. The total value at this point&rsquo;s x value.  this.x The x value. This property is the same regardless of the tooltip being shared or not. this.y (not shared) / this.points[i].y (shared) The y value.</p>
+				<p>Callback function to format the text of the tooltip from scratch. In case of single or <code>shared</code> tooltips, a string should be returned. In case of <code>split</code> tooltips, it should return an array where the first item is the header, and subsequent items are mapped to the points. Return <code>false</code> to disable tooltip for a specific point on series. A subset of HTML is supported. Unless <code>useHTML</code> is true, the HTML of the tooltip is parsed and converted to SVG, therefore this isn&rsquo;t a complete HTML renderer. The following HTML tags are supported: <code>b</code>, <code>br</code>, <code>em</code>, <code>i</code>, <code>span</code>, <code>strong</code>. Spans can be styled with a <code>style</code> attribute, but only text-related CSS, that is shared with SVG, is handled. The available data in the formatter differ a bit depending on whether the tooltip is shared or split, or belongs to a single point. In a shared/split tooltip, all properties except <code>x</code>, which is common for all points, are kept in an array, <code>this.points</code>. Available data are: - <strong>this.percentage (not shared) </strong>  <strong>this.points[i].percentage (shared)</strong>:  Stacked series and pies only. The point&rsquo;s percentage of the total. - <strong>this.point (not shared) / this.points[i].point (shared)</strong>:  The point object. The point name, if defined, is available through  <code>this.point.name</code>. - <strong>this.points</strong>:  In a shared tooltip, this is an array containing all other  properties for each point. - <strong>this.series (not shared) / this.points[i].series (shared)</strong>:  The series object. The series name is available through  <code>this.series.name</code>. - <strong>this.total (not shared) / this.points[i].total (shared)</strong>:  Stacked series only. The total value at this point&rsquo;s x value. - <strong>this.x</strong>:  The x value. This property is the same regardless of the tooltip  being shared or not. - <strong>this.y (not shared) / this.points[i].y (shared)</strong>:  The y value.</p>
 			</div>
 			
 		    
@@ -1266,9 +1318,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>&lt;span style="color:{point.color}"&gt;\u25CF&lt;/span&gt; {series.name}: &lt;b&gt;{point.y}&lt;/b&gt;&lt;br/&gt;</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/pointformat/">A different point format with value suffix</a></li>

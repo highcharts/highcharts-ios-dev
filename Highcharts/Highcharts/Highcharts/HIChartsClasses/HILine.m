@@ -29,6 +29,7 @@
 	copyLine.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyLine.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyLine.point = [self.point copyWithZone: zone];
+	copyLine.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyLine.marker = [self.marker copyWithZone: zone];
 	copyLine.tooltip = [self.tooltip copyWithZone: zone];
 	copyLine.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];

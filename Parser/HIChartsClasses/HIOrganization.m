@@ -51,6 +51,7 @@
 	copyOrganization.clip = [self.clip copyWithZone: zone];
 	copyOrganization.color = [self.color copyWithZone: zone];
 	copyOrganization.point = [self.point copyWithZone: zone];
+	copyOrganization.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyOrganization.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyOrganization.cursor = [self.cursor copyWithZone: zone];
 	copyOrganization.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];

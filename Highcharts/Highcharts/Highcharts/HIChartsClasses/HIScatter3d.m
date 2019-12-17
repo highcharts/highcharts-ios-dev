@@ -44,6 +44,7 @@
 	copyScatter3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyScatter3d.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyScatter3d.point = [self.point copyWithZone: zone];
+	copyScatter3d.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyScatter3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyScatter3d.cursor = [self.cursor copyWithZone: zone];
 	copyScatter3d.dashStyle = [self.dashStyle copyWithZone: zone];

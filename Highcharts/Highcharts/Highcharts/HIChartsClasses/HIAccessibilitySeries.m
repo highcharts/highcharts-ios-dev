@@ -50,13 +50,13 @@
 }
 
 -(void)setXAxisDescription:(NSString *)xAxisDescription {
-    NSString *oldValue = xAxisDescription;
+    NSString *oldValue = _xAxisDescription;
     _xAxisDescription = xAxisDescription;
     [self updateNSObject:oldValue newValue:xAxisDescription propertyName:@"xAxisDescription"];
 }
 
 -(void)setYAxisDescription:(NSString *)yAxisDescription {
-    NSString *oldValue = yAxisDescription;
+    NSString *oldValue = _yAxisDescription;
     _yAxisDescription = yAxisDescription;
     [self updateNSObject:oldValue newValue:yAxisDescription propertyName:@"yAxisDescription"];
 }

@@ -38,6 +38,7 @@
 	copySpline.softThreshold = [self.softThreshold copyWithZone: zone];
 	copySpline.dragDrop = [self.dragDrop copyWithZone: zone];
 	copySpline.point = [self.point copyWithZone: zone];
+	copySpline.dataSorting = [self.dataSorting copyWithZone: zone];
 	copySpline.marker = [self.marker copyWithZone: zone];
 	copySpline.tooltip = [self.tooltip copyWithZone: zone];
 	copySpline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];

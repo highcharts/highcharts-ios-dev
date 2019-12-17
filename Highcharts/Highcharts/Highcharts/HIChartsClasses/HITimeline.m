@@ -42,6 +42,7 @@
 	copyTimeline.color = [self.color copyWithZone: zone];
 	copyTimeline.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTimeline.point = [self.point copyWithZone: zone];
+	copyTimeline.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyTimeline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTimeline.cursor = [self.cursor copyWithZone: zone];
 	copyTimeline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];

@@ -25,6 +25,7 @@
 	copyPareto.states = [self.states copyWithZone: zone];
 	copyPareto.colorKey = [self.colorKey copyWithZone: zone];
 	copyPareto.point = [self.point copyWithZone: zone];
+	copyPareto.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyPareto.marker = [self.marker copyWithZone: zone];
 	copyPareto.tooltip = [self.tooltip copyWithZone: zone];
 	copyPareto.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];

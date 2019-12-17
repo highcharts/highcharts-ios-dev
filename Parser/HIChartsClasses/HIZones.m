@@ -11,6 +11,9 @@
 	[super copyWithZone:zone];
 	HIZones *copyZones = [[HIZones allocWithZone: zone] init];
 	copyZones.className = [self.className copyWithZone: zone];
+	copyZones.marker = [self.marker copyWithZone: zone];
+	copyZones.from = [self.from copyWithZone: zone];
+	copyZones.to = [self.to copyWithZone: zone];
 	copyZones.color = [self.color copyWithZone: zone];
 	copyZones.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyZones.fillColor = [self.fillColor copyWithZone: zone];
@@ -23,6 +26,15 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.className) {
 		params[@"className"] = self.className;
+	}
+	if (self.marker) {
+		params[@"marker"] = [self.marker getParams];
+	}
+	if (self.from) {
+		params[@"from"] = self.from;
+	}
+	if (self.to) {
+		params[@"to"] = self.to;
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
@@ -45,6 +57,24 @@
 	NSString *oldValue = _className;
 	_className = className;
 	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
+}
+
+-(void)setMarker:(HIMarker *)marker {
+	HIMarker *oldValue = _marker;
+	_marker = marker;
+	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
+}
+
+-(void)setFrom:(NSNumber *)from {
+	NSNumber *oldValue = _from;
+	_from = from;
+	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
+}
+
+-(void)setTo:(NSNumber *)to {
+	NSNumber *oldValue = _to;
+	_to = to;
+	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
 }
 
 -(void)setColor:(HIColor *)color {

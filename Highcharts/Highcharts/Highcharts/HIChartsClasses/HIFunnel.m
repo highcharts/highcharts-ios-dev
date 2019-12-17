@@ -30,6 +30,7 @@
 	copyFunnel.width = [self.width copyWithZone: zone];
 	copyFunnel.animation = [self.animation copyWithZone: zone];
 	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
+	copyFunnel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyFunnel.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyFunnel.clip = [self.clip copyWithZone: zone];
 	copyFunnel.point = [self.point copyWithZone: zone];
@@ -43,7 +44,6 @@
 	copyFunnel.events = [self.events copyWithZone: zone];
 	copyFunnel.endAngle = [self.endAngle copyWithZone: zone];
 	copyFunnel.slicedOffset = [self.slicedOffset copyWithZone: zone];
-	copyFunnel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyFunnel.depth = [self.depth copyWithZone: zone];
 	copyFunnel.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyFunnel.stickyTracking = [self.stickyTracking copyWithZone: zone];

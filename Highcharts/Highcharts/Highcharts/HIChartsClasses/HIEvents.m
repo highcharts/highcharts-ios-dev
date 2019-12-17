@@ -31,6 +31,7 @@
 	copyEvents.drilldown = [self.drilldown copyWithZone: zone];
 	copyEvents.redraw = [self.redraw copyWithZone: zone];
 	copyEvents.afterPrint = [self.afterPrint copyWithZone: zone];
+	copyEvents.drillToCluster = [self.drillToCluster copyWithZone: zone];
 	copyEvents.unselect = [self.unselect copyWithZone: zone];
 	copyEvents.drop = [self.drop copyWithZone: zone];
 	copyEvents.update = [self.update copyWithZone: zone];
@@ -41,9 +42,9 @@
 	copyEvents.select = [self.select copyWithZone: zone];
 	copyEvents.dragStart = [self.dragStart copyWithZone: zone];
 	copyEvents.setRootNode = [self.setRootNode copyWithZone: zone];
+	copyEvents.closePopup = [self.closePopup copyWithZone: zone];
 	copyEvents.selectButton = [self.selectButton copyWithZone: zone];
 	copyEvents.showPopup = [self.showPopup copyWithZone: zone];
-	copyEvents.hidePopup = [self.hidePopup copyWithZone: zone];
 	copyEvents.deselectButton = [self.deselectButton copyWithZone: zone];
 	copyEvents.legendItemClick = [self.legendItemClick copyWithZone: zone];
 	copyEvents.hide = [self.hide copyWithZone: zone];
@@ -120,6 +121,9 @@
 	if (self.afterPrint) {
 		params[@"afterPrint"] = [self.afterPrint getFunction];
 	}
+	if (self.drillToCluster) {
+		params[@"drillToCluster"] = [self.drillToCluster getFunction];
+	}
 	if (self.unselect) {
 		params[@"unselect"] = [self.unselect getFunction];
 	}
@@ -150,14 +154,14 @@
 	if (self.setRootNode) {
 		params[@"setRootNode"] = [self.setRootNode getFunction];
 	}
+	if (self.closePopup) {
+		params[@"closePopup"] = [self.closePopup getFunction];
+	}
 	if (self.selectButton) {
 		params[@"selectButton"] = [self.selectButton getFunction];
 	}
 	if (self.showPopup) {
 		params[@"showPopup"] = [self.showPopup getFunction];
-	}
-	if (self.hidePopup) {
-		params[@"hidePopup"] = [self.hidePopup getFunction];
 	}
 	if (self.deselectButton) {
 		params[@"deselectButton"] = [self.deselectButton getFunction];
@@ -311,6 +315,12 @@
 	[self updateHIObject:oldValue newValue:afterPrint propertyName:@"afterPrint"];
 }
 
+-(void)setDrillToCluster:(HIFunction *)drillToCluster {
+	HIFunction *oldValue = _drillToCluster;
+	_drillToCluster = drillToCluster;
+	[self updateHIObject:oldValue newValue:drillToCluster propertyName:@"drillToCluster"];
+}
+
 -(void)setUnselect:(HIFunction *)unselect {
 	HIFunction *oldValue = _unselect;
 	_unselect = unselect;
@@ -371,6 +381,12 @@
 	[self updateHIObject:oldValue newValue:setRootNode propertyName:@"setRootNode"];
 }
 
+-(void)setClosePopup:(HIFunction *)closePopup {
+	HIFunction *oldValue = _closePopup;
+	_closePopup = closePopup;
+	[self updateHIObject:oldValue newValue:closePopup propertyName:@"closePopup"];
+}
+
 -(void)setSelectButton:(HIFunction *)selectButton {
 	HIFunction *oldValue = _selectButton;
 	_selectButton = selectButton;
@@ -381,12 +397,6 @@
 	HIFunction *oldValue = _showPopup;
 	_showPopup = showPopup;
 	[self updateHIObject:oldValue newValue:showPopup propertyName:@"showPopup"];
-}
-
--(void)setHidePopup:(HIFunction *)hidePopup {
-	HIFunction *oldValue = _hidePopup;
-	_hidePopup = hidePopup;
-	[self updateHIObject:oldValue newValue:hidePopup propertyName:@"hidePopup"];
 }
 
 -(void)setDeselectButton:(HIFunction *)deselectButton {

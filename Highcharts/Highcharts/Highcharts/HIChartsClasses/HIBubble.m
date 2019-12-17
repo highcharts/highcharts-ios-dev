@@ -33,6 +33,7 @@
 	copyBubble.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBubble.maxSize = [self.maxSize copyWithZone: zone];
 	copyBubble.tooltip = [self.tooltip copyWithZone: zone];
+	copyBubble.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBubble.minSize = [self.minSize copyWithZone: zone];
 	copyBubble.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBubble.colorKey = [self.colorKey copyWithZone: zone];
@@ -55,6 +56,7 @@
 	copyBubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBubble.point = [self.point copyWithZone: zone];
+	copyBubble.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBubble.cursor = [self.cursor copyWithZone: zone];
 	copyBubble.dashStyle = [self.dashStyle copyWithZone: zone];
@@ -80,7 +82,6 @@
 	copyBubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBubble.visible = [self.visible copyWithZone: zone];
 	copyBubble.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBubble.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBubble.className = [self.className copyWithZone: zone];
 	copyBubble.pointStart = [self.pointStart copyWithZone: zone];
 	copyBubble.connectEnds = [self.connectEnds copyWithZone: zone];

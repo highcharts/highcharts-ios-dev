@@ -48,6 +48,7 @@
 	copyCylinder.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyCylinder.colorKey = [self.colorKey copyWithZone: zone];
 	copyCylinder.point = [self.point copyWithZone: zone];
+	copyCylinder.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyCylinder.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyCylinder.cursor = [self.cursor copyWithZone: zone];
 	copyCylinder.pointPlacement = [self.pointPlacement copyWithZone: zone];

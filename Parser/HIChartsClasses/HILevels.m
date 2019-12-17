@@ -111,8 +111,8 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setDataLabels:(HIDataLabelsOptionsObject *)dataLabels {
-	HIDataLabelsOptionsObject *oldValue = _dataLabels;
+-(void)setDataLabels:(HIDataLabels *)dataLabels {
+	HIDataLabels *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
 	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
@@ -159,8 +159,8 @@
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
--(void)setStates:(HIPointStatesOptionsObject *)states {
-	HIPointStatesOptionsObject *oldValue = _states;
+-(void)setStates:(HIStates *)states {
+	HIStates *oldValue = _states;
 	_states = states;
 	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
 }

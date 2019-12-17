@@ -46,6 +46,7 @@
 	copyColumnrange.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyColumnrange.colorKey = [self.colorKey copyWithZone: zone];
 	copyColumnrange.point = [self.point copyWithZone: zone];
+	copyColumnrange.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyColumnrange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumnrange.cursor = [self.cursor copyWithZone: zone];
 	copyColumnrange.pointPlacement = [self.pointPlacement copyWithZone: zone];

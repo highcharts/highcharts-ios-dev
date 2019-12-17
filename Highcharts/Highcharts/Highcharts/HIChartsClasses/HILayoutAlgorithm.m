@@ -26,6 +26,10 @@
 	copyLayoutAlgorithm.integration = [self.integration copyWithZone: zone];
 	copyLayoutAlgorithm.linkLength = [self.linkLength copyWithZone: zone];
 	copyLayoutAlgorithm.type = [self.type copyWithZone: zone];
+	copyLayoutAlgorithm.distance = [self.distance copyWithZone: zone];
+	copyLayoutAlgorithm.gridSize = [self.gridSize copyWithZone: zone];
+	copyLayoutAlgorithm.kmeansThreshold = [self.kmeansThreshold copyWithZone: zone];
+	copyLayoutAlgorithm.iterations = [self.iterations copyWithZone: zone];
 	copyLayoutAlgorithm.approximation = [self.approximation copyWithZone: zone];
 	copyLayoutAlgorithm.repulsiveForce = [self.repulsiveForce copyWithZone: zone];
 	copyLayoutAlgorithm.theta = [self.theta copyWithZone: zone];
@@ -83,6 +87,18 @@
 	}
 	if (self.type) {
 		params[@"type"] = self.type;
+	}
+	if (self.distance) {
+		params[@"distance"] = self.distance;
+	}
+	if (self.gridSize) {
+		params[@"gridSize"] = self.gridSize;
+	}
+	if (self.kmeansThreshold) {
+		params[@"kmeansThreshold"] = self.kmeansThreshold;
+	}
+	if (self.iterations) {
+		params[@"iterations"] = self.iterations;
 	}
 	if (self.approximation) {
 		params[@"approximation"] = self.approximation;
@@ -195,6 +211,30 @@
 	NSString *oldValue = _type;
 	_type = type;
 	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
+}
+
+-(void)setDistance:(id)distance {
+	id oldValue = _distance;
+	_distance = distance;
+	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
+}
+
+-(void)setGridSize:(id)gridSize {
+	id oldValue = _gridSize;
+	_gridSize = gridSize;
+	[self updateNSObject:oldValue newValue:gridSize propertyName:@"gridSize"];
+}
+
+-(void)setKmeansThreshold:(NSNumber *)kmeansThreshold {
+	NSNumber *oldValue = _kmeansThreshold;
+	_kmeansThreshold = kmeansThreshold;
+	[self updateNSObject:oldValue newValue:kmeansThreshold propertyName:@"kmeansThreshold"];
+}
+
+-(void)setIterations:(NSNumber *)iterations {
+	NSNumber *oldValue = _iterations;
+	_iterations = iterations;
+	[self updateNSObject:oldValue newValue:iterations propertyName:@"iterations"];
 }
 
 -(void)setApproximation:(NSString *)approximation {

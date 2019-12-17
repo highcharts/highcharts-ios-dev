@@ -53,6 +53,7 @@
 	copyWindbarb.color = [self.color copyWithZone: zone];
 	copyWindbarb.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyWindbarb.point = [self.point copyWithZone: zone];
+	copyWindbarb.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyWindbarb.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
 	copyWindbarb.pointPlacement = [self.pointPlacement copyWithZone: zone];

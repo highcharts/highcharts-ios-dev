@@ -63,6 +63,7 @@
 	copyErrorbar.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyErrorbar.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyErrorbar.point = [self.point copyWithZone: zone];
+	copyErrorbar.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyErrorbar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyErrorbar.cursor = [self.cursor copyWithZone: zone];
 	copyErrorbar.pointPlacement = [self.pointPlacement copyWithZone: zone];

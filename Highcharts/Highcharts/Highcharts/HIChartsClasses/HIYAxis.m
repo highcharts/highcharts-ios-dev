@@ -12,9 +12,9 @@
 	HIYAxis *copyYAxis = [[HIYAxis allocWithZone: zone] init];
 	copyYAxis.minPadding = [self.minPadding copyWithZone: zone];
 	copyYAxis.labels = [self.labels copyWithZone: zone];
+	copyYAxis.height = [self.height copyWithZone: zone];
 	copyYAxis.maxColor = [self.maxColor copyWithZone: zone];
 	copyYAxis.softMax = [self.softMax copyWithZone: zone];
-	copyYAxis.angle = [self.angle copyWithZone: zone];
 	copyYAxis.min = [self.min copyWithZone: zone];
 	copyYAxis.plotBands = [self.plotBands copyWithZone: zone];
 	copyYAxis.stops = [self.stops copyWithZone: zone];
@@ -22,7 +22,6 @@
 	copyYAxis.max = [self.max copyWithZone: zone];
 	copyYAxis.softMin = [self.softMin copyWithZone: zone];
 	copyYAxis.type = [self.type copyWithZone: zone];
-	copyYAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
 	copyYAxis.tickPixelInterval = [self.tickPixelInterval copyWithZone: zone];
 	copyYAxis.tickWidth = [self.tickWidth copyWithZone: zone];
 	copyYAxis.opposite = [self.opposite copyWithZone: zone];
@@ -30,7 +29,7 @@
 	copyYAxis.plotLines = [self.plotLines copyWithZone: zone];
 	copyYAxis.gridLineWidth = [self.gridLineWidth copyWithZone: zone];
 	copyYAxis.tooltipValueFormat = [self.tooltipValueFormat copyWithZone: zone];
-	copyYAxis.reversedStacks = [self.reversedStacks copyWithZone: zone];
+	copyYAxis.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyYAxis.minColor = [self.minColor copyWithZone: zone];
 	copyYAxis.showLastLabel = [self.showLastLabel copyWithZone: zone];
 	copyYAxis.startOnTick = [self.startOnTick copyWithZone: zone];
@@ -38,10 +37,12 @@
 	copyYAxis.maxPadding = [self.maxPadding copyWithZone: zone];
 	copyYAxis.lineColor = [self.lineColor copyWithZone: zone];
 	copyYAxis.title = [self.title copyWithZone: zone];
-	copyYAxis.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyYAxis.reversedStacks = [self.reversedStacks copyWithZone: zone];
+	copyYAxis.top = [self.top copyWithZone: zone];
 	copyYAxis.zoomEnabled = [self.zoomEnabled copyWithZone: zone];
 	copyYAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyYAxis.pane = [self.pane copyWithZone: zone];
+	copyYAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
 	copyYAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
 	copyYAxis.accessibility = [self.accessibility copyWithZone: zone];
 	copyYAxis.visible = [self.visible copyWithZone: zone];
@@ -52,15 +53,16 @@
 	copyYAxis.id = [self.id copyWithZone: zone];
 	copyYAxis.tickPositions = [self.tickPositions copyWithZone: zone];
 	copyYAxis.minRange = [self.minRange copyWithZone: zone];
-	copyYAxis.tickmarkPlacement = [self.tickmarkPlacement copyWithZone: zone];
+	copyYAxis.angle = [self.angle copyWithZone: zone];
 	copyYAxis.allowDecimals = [self.allowDecimals copyWithZone: zone];
 	copyYAxis.floor = [self.floor copyWithZone: zone];
 	copyYAxis.minorGridLineColor = [self.minorGridLineColor copyWithZone: zone];
 	copyYAxis.tickPositioner = [self.tickPositioner copyWithZone: zone];
 	copyYAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
+	copyYAxis.width = [self.width copyWithZone: zone];
 	copyYAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyYAxis.units = [self.units copyWithZone: zone];
-	copyYAxis.events = [self.events copyWithZone: zone];
+	copyYAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
 	copyYAxis.tickLength = [self.tickLength copyWithZone: zone];
 	copyYAxis.ceiling = [self.ceiling copyWithZone: zone];
 	copyYAxis.showEmpty = [self.showEmpty copyWithZone: zone];
@@ -79,12 +81,14 @@
 	copyYAxis.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyYAxis.alternateGridColor = [self.alternateGridColor copyWithZone: zone];
 	copyYAxis.uniqueNames = [self.uniqueNames copyWithZone: zone];
+	copyYAxis.events = [self.events copyWithZone: zone];
 	copyYAxis.className = [self.className copyWithZone: zone];
 	copyYAxis.tickAmount = [self.tickAmount copyWithZone: zone];
 	copyYAxis.crosshair = [self.crosshair copyWithZone: zone];
 	copyYAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
 	copyYAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyYAxis.margin = [self.margin copyWithZone: zone];
+	copyYAxis.left = [self.left copyWithZone: zone];
 	return copyYAxis;
 }
 
@@ -98,14 +102,14 @@
 	if (self.labels) {
 		params[@"labels"] = [self.labels getParams];
 	}
+	if (self.height) {
+		params[@"height"] = self.height;
+	}
 	if (self.maxColor) {
 		params[@"maxColor"] = [self.maxColor getData];
 	}
 	if (self.softMax) {
 		params[@"softMax"] = self.softMax;
-	}
-	if (self.angle) {
-		params[@"angle"] = self.angle;
 	}
 	if (self.min) {
 		params[@"min"] = self.min;
@@ -146,9 +150,6 @@
 	if (self.type) {
 		params[@"type"] = self.type;
 	}
-	if (self.gridLineInterpolation) {
-		params[@"gridLineInterpolation"] = self.gridLineInterpolation;
-	}
 	if (self.tickPixelInterval) {
 		params[@"tickPixelInterval"] = self.tickPixelInterval;
 	}
@@ -179,8 +180,8 @@
 	if (self.tooltipValueFormat) {
 		params[@"tooltipValueFormat"] = self.tooltipValueFormat;
 	}
-	if (self.reversedStacks) {
-		params[@"reversedStacks"] = self.reversedStacks;
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.minColor) {
 		params[@"minColor"] = [self.minColor getData];
@@ -203,8 +204,11 @@
 	if (self.title) {
 		params[@"title"] = [self.title getParams];
 	}
-	if (self.lineWidth) {
-		params[@"lineWidth"] = self.lineWidth;
+	if (self.reversedStacks) {
+		params[@"reversedStacks"] = self.reversedStacks;
+	}
+	if (self.top) {
+		params[@"top"] = self.top;
 	}
 	if (self.zoomEnabled) {
 		params[@"zoomEnabled"] = self.zoomEnabled;
@@ -214,6 +218,9 @@
 	}
 	if (self.pane) {
 		params[@"pane"] = self.pane;
+	}
+	if (self.tickmarkPlacement) {
+		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
 	}
 	if (self.gridZIndex) {
 		params[@"gridZIndex"] = self.gridZIndex;
@@ -254,8 +261,8 @@
 	if (self.minRange) {
 		params[@"minRange"] = self.minRange;
 	}
-	if (self.tickmarkPlacement) {
-		params[@"tickmarkPlacement"] = self.tickmarkPlacement;
+	if (self.angle) {
+		params[@"angle"] = self.angle;
 	}
 	if (self.allowDecimals) {
 		params[@"allowDecimals"] = self.allowDecimals;
@@ -272,6 +279,9 @@
 	if (self.minorGridLineDashStyle) {
 		params[@"minorGridLineDashStyle"] = self.minorGridLineDashStyle;
 	}
+	if (self.width) {
+		params[@"width"] = self.width;
+	}
 	if (self.minorTickLength) {
 		params[@"minorTickLength"] = self.minorTickLength;
 	}
@@ -287,8 +297,8 @@
 		}
 		params[@"units"] = array;
 	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
+	if (self.gridLineInterpolation) {
+		params[@"gridLineInterpolation"] = self.gridLineInterpolation;
 	}
 	if (self.tickLength) {
 		params[@"tickLength"] = self.tickLength;
@@ -362,6 +372,9 @@
 	if (self.uniqueNames) {
 		params[@"uniqueNames"] = self.uniqueNames;
 	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
@@ -380,6 +393,9 @@
 	if (self.margin) {
 		params[@"margin"] = self.margin;
 	}
+	if (self.left) {
+		params[@"left"] = self.left;
+	}
 	return params;
 }
 
@@ -397,6 +413,12 @@
 	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
+-(void)setHeight:(id)height {
+	id oldValue = _height;
+	_height = height;
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
+}
+
 -(void)setMaxColor:(HIColor *)maxColor {
 	HIColor *oldValue = _maxColor;
 	_maxColor = maxColor;
@@ -407,12 +429,6 @@
 	NSNumber *oldValue = _softMax;
 	_softMax = softMax;
 	[self updateNSObject:oldValue newValue:softMax propertyName:@"softMax"];
-}
-
--(void)setAngle:(NSNumber *)angle {
-	NSNumber *oldValue = _angle;
-	_angle = angle;
-	[self updateNSObject:oldValue newValue:angle propertyName:@"angle"];
 }
 
 -(void)setMin:(NSNumber *)min {
@@ -457,12 +473,6 @@
 	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
--(void)setGridLineInterpolation:(NSString *)gridLineInterpolation {
-	NSString *oldValue = _gridLineInterpolation;
-	_gridLineInterpolation = gridLineInterpolation;
-	[self updateNSObject:oldValue newValue:gridLineInterpolation propertyName:@"gridLineInterpolation"];
-}
-
 -(void)setTickPixelInterval:(NSNumber *)tickPixelInterval {
 	NSNumber *oldValue = _tickPixelInterval;
 	_tickPixelInterval = tickPixelInterval;
@@ -505,10 +515,10 @@
 	[self updateNSObject:oldValue newValue:tooltipValueFormat propertyName:@"tooltipValueFormat"];
 }
 
--(void)setReversedStacks:(NSNumber *)reversedStacks {
-	NSNumber *oldValue = _reversedStacks;
-	_reversedStacks = reversedStacks;
-	[self updateNSObject:oldValue newValue:reversedStacks propertyName:@"reversedStacks"];
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
+	_lineWidth = lineWidth;
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
 -(void)setMinColor:(HIColor *)minColor {
@@ -553,10 +563,16 @@
 	[self updateHIObject:oldValue newValue:title propertyName:@"title"];
 }
 
--(void)setLineWidth:(NSNumber *)lineWidth {
-	NSNumber *oldValue = _lineWidth;
-	_lineWidth = lineWidth;
-	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
+-(void)setReversedStacks:(NSNumber *)reversedStacks {
+	NSNumber *oldValue = _reversedStacks;
+	_reversedStacks = reversedStacks;
+	[self updateNSObject:oldValue newValue:reversedStacks propertyName:@"reversedStacks"];
+}
+
+-(void)setTop:(id)top {
+	id oldValue = _top;
+	_top = top;
+	[self updateNSObject:oldValue newValue:top propertyName:@"top"];
 }
 
 -(void)setZoomEnabled:(NSNumber *)zoomEnabled {
@@ -575,6 +591,12 @@
 	NSNumber *oldValue = _pane;
 	_pane = pane;
 	[self updateNSObject:oldValue newValue:pane propertyName:@"pane"];
+}
+
+-(void)setTickmarkPlacement:(NSString *)tickmarkPlacement {
+	NSString *oldValue = _tickmarkPlacement;
+	_tickmarkPlacement = tickmarkPlacement;
+	[self updateNSObject:oldValue newValue:tickmarkPlacement propertyName:@"tickmarkPlacement"];
 }
 
 -(void)setGridZIndex:(NSNumber *)gridZIndex {
@@ -637,10 +659,10 @@
 	[self updateNSObject:oldValue newValue:minRange propertyName:@"minRange"];
 }
 
--(void)setTickmarkPlacement:(NSString *)tickmarkPlacement {
-	NSString *oldValue = _tickmarkPlacement;
-	_tickmarkPlacement = tickmarkPlacement;
-	[self updateNSObject:oldValue newValue:tickmarkPlacement propertyName:@"tickmarkPlacement"];
+-(void)setAngle:(NSNumber *)angle {
+	NSNumber *oldValue = _angle;
+	_angle = angle;
+	[self updateNSObject:oldValue newValue:angle propertyName:@"angle"];
 }
 
 -(void)setAllowDecimals:(NSNumber *)allowDecimals {
@@ -673,6 +695,12 @@
 	[self updateNSObject:oldValue newValue:minorGridLineDashStyle propertyName:@"minorGridLineDashStyle"];
 }
 
+-(void)setWidth:(id)width {
+	id oldValue = _width;
+	_width = width;
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
+}
+
 -(void)setMinorTickLength:(NSNumber *)minorTickLength {
 	NSNumber *oldValue = _minorTickLength;
 	_minorTickLength = minorTickLength;
@@ -685,10 +713,10 @@
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
 }
 
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
-	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+-(void)setGridLineInterpolation:(NSString *)gridLineInterpolation {
+	NSString *oldValue = _gridLineInterpolation;
+	_gridLineInterpolation = gridLineInterpolation;
+	[self updateNSObject:oldValue newValue:gridLineInterpolation propertyName:@"gridLineInterpolation"];
 }
 
 -(void)setTickLength:(NSNumber *)tickLength {
@@ -799,6 +827,12 @@
 	[self updateNSObject:oldValue newValue:uniqueNames propertyName:@"uniqueNames"];
 }
 
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+}
+
 -(void)setClassName:(NSString *)className {
 	NSString *oldValue = _className;
 	_className = className;
@@ -833,6 +867,12 @@
 	NSNumber *oldValue = _margin;
 	_margin = margin;
 	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
+}
+
+-(void)setLeft:(id)left {
+	id oldValue = _left;
+	_left = left;
+	[self updateNSObject:oldValue newValue:left propertyName:@"left"];
 }
 
 - (void)addPlotBand:(HIPlotBands *)options {
