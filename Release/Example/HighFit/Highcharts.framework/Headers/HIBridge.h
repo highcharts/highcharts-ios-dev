@@ -102,7 +102,7 @@
 #import "HIYear.h"
 #import "HIDateTimeLabelFormats.h"
 #import "HICylinder.h"
-#import "HIPackedbubble.h"
+#import "HIPackedBubble.h"
 #import "HIRight.h"
 #import "HIStreamgraph.h"
 #import "HIAnimationOptionsObject.h"
