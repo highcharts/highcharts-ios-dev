@@ -317,7 +317,9 @@ hc_types = {
         #7.2.0
         "number|string|boolean": 'id /* NSNumber, NSString */',
         #8.0.0
-        "Array.<(*)>": 'NSArray'
+        "Array.<(*)>": 'NSArray',
+        #8.0.4
+        "Array.<(string|*)>": 'NSArray /* <NSString, id> */'
     }
 
 def get_type(x):
