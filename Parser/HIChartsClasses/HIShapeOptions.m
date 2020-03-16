@@ -10,6 +10,8 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIShapeOptions *copyShapeOptions = [[HIShapeOptions allocWithZone: zone] init];
+	copyShapeOptions.src = [self.src copyWithZone: zone];
+	copyShapeOptions.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyShapeOptions.strokeWidth = [self.strokeWidth copyWithZone: zone];
 	copyShapeOptions.height = [self.height copyWithZone: zone];
 	copyShapeOptions.width = [self.width copyWithZone: zone];
@@ -24,6 +26,12 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.src) {
+		params[@"src"] = self.src;
+	}
+	if (self.dashStyle) {
+		params[@"dashStyle"] = self.dashStyle;
+	}
 	if (self.strokeWidth) {
 		params[@"strokeWidth"] = self.strokeWidth;
 	}
@@ -52,6 +60,18 @@
 }
 
 # pragma mark - Setters
+
+-(void)setSrc:(NSString *)src {
+	NSString *oldValue = _src;
+	_src = src;
+	[self updateNSObject:oldValue newValue:src propertyName:@"src"];
+}
+
+-(void)setDashStyle:(NSString *)dashStyle {
+	NSString *oldValue = _dashStyle;
+	_dashStyle = dashStyle;
+	[self updateNSObject:oldValue newValue:dashStyle propertyName:@"dashStyle"];
+}
 
 -(void)setStrokeWidth:(NSNumber *)strokeWidth {
 	NSNumber *oldValue = _strokeWidth;

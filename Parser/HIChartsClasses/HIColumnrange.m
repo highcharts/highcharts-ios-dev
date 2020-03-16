@@ -47,11 +47,13 @@
 	copyColumnrange.colorKey = [self.colorKey copyWithZone: zone];
 	copyColumnrange.point = [self.point copyWithZone: zone];
 	copyColumnrange.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyColumnrange.label = [self.label copyWithZone: zone];
 	copyColumnrange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumnrange.cursor = [self.cursor copyWithZone: zone];
+	copyColumnrange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyColumnrange.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyColumnrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyColumnrange.label = [self.label copyWithZone: zone];
+	copyColumnrange.custom = [self.custom copyWithZone: zone];
 	copyColumnrange.animation = [self.animation copyWithZone: zone];
 	copyColumnrange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyColumnrange.showCheckbox = [self.showCheckbox copyWithZone: zone];

@@ -36,7 +36,6 @@
 	copyPlotOptions.treemap = [self.treemap copyWithZone: zone];
 	copyPlotOptions.waterfall = [self.waterfall copyWithZone: zone];
 	copyPlotOptions.columnrange = [self.columnrange copyWithZone: zone];
-	copyPlotOptions.packedBubble = [self.packedBubble copyWithZone: zone];
 	copyPlotOptions.venn = [self.venn copyWithZone: zone];
 	copyPlotOptions.spline = [self.spline copyWithZone: zone];
 	copyPlotOptions.area = [self.area copyWithZone: zone];
@@ -145,9 +144,6 @@
 	}
 	if (self.columnrange) {
 		params[@"columnrange"] = [self.columnrange getParams];
-	}
-	if (self.packedBubble) {
-		params[@"packedBubble"] = [self.packedBubble getParams];
 	}
 	if (self.venn) {
 		params[@"venn"] = [self.venn getParams];
@@ -383,12 +379,6 @@
 	HIColumnrange *oldValue = _columnrange;
 	_columnrange = columnrange;
 	[self updateHIObject:oldValue newValue:columnrange propertyName:@"columnrange"];
-}
-
--(void)setPackedBubble:(HIPackedBubble *)packedBubble {
-	HIPackedBubble *oldValue = _packedBubble;
-	_packedBubble = packedBubble;
-	[self updateHIObject:oldValue newValue:packedBubble propertyName:@"packedBubble"];
 }
 
 -(void)setVenn:(HIVenn *)venn {

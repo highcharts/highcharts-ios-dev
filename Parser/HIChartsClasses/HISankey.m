@@ -36,11 +36,12 @@
 	copySankey.clip = [self.clip copyWithZone: zone];
 	copySankey.color = [self.color copyWithZone: zone];
 	copySankey.point = [self.point copyWithZone: zone];
-	copySankey.dataSorting = [self.dataSorting copyWithZone: zone];
+	copySankey.label = [self.label copyWithZone: zone];
 	copySankey.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySankey.cursor = [self.cursor copyWithZone: zone];
+	copySankey.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySankey.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copySankey.label = [self.label copyWithZone: zone];
+	copySankey.custom = [self.custom copyWithZone: zone];
 	copySankey.animation = [self.animation copyWithZone: zone];
 	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySankey.boostBlending = [self.boostBlending copyWithZone: zone];

@@ -33,20 +33,20 @@
 
 # pragma mark - Setters
 
--(void)setRectangleAnnotation:(HIStockToolsBindingsObject *)rectangleAnnotation {
-	HIStockToolsBindingsObject *oldValue = _rectangleAnnotation;
+-(void)setRectangleAnnotation:(HINavigationBindingsOptionsObject *)rectangleAnnotation {
+	HINavigationBindingsOptionsObject *oldValue = _rectangleAnnotation;
 	_rectangleAnnotation = rectangleAnnotation;
 	[self updateHIObject:oldValue newValue:rectangleAnnotation propertyName:@"rectangleAnnotation"];
 }
 
--(void)setLabelAnnotation:(HIStockToolsBindingsObject *)labelAnnotation {
-	HIStockToolsBindingsObject *oldValue = _labelAnnotation;
+-(void)setLabelAnnotation:(HINavigationBindingsOptionsObject *)labelAnnotation {
+	HINavigationBindingsOptionsObject *oldValue = _labelAnnotation;
 	_labelAnnotation = labelAnnotation;
 	[self updateHIObject:oldValue newValue:labelAnnotation propertyName:@"labelAnnotation"];
 }
 
--(void)setCircleAnnotation:(HIStockToolsBindingsObject *)circleAnnotation {
-	HIStockToolsBindingsObject *oldValue = _circleAnnotation;
+-(void)setCircleAnnotation:(HINavigationBindingsOptionsObject *)circleAnnotation {
+	HINavigationBindingsOptionsObject *oldValue = _circleAnnotation;
 	_circleAnnotation = circleAnnotation;
 	[self updateHIObject:oldValue newValue:circleAnnotation propertyName:@"circleAnnotation"];
 }

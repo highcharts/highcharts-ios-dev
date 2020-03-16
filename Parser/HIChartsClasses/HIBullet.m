@@ -60,12 +60,13 @@
 	copyBullet.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBullet.colorKey = [self.colorKey copyWithZone: zone];
 	copyBullet.point = [self.point copyWithZone: zone];
-	copyBullet.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyBullet.label = [self.label copyWithZone: zone];
 	copyBullet.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBullet.cursor = [self.cursor copyWithZone: zone];
+	copyBullet.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBullet.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBullet.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyBullet.label = [self.label copyWithZone: zone];
+	copyBullet.custom = [self.custom copyWithZone: zone];
 	copyBullet.stacking = [self.stacking copyWithZone: zone];
 	copyBullet.animation = [self.animation copyWithZone: zone];
 	copyBullet.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

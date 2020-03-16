@@ -58,11 +58,9 @@ Options for annotation's labels. Each label inherits options from the labelOptio
 /**
 Sets an ID for an annotation. Can be user later when removing an annotation in `Chart#removeAnnotation(id)` method.
 */
-@property(nonatomic, readwrite) id /* NSString, NSNumber */ id;
+@property(nonatomic, readwrite) id /* NSNumber, NSString */ id;
 /**
-Allow an annotation to be draggable by a user. Possible values are `"x"`, `"xy"`, `"y"` and `""` (disabled).
-
-**Accepted values:** `["x", "xy", "y", ""]`.
+Allow an annotation to be draggable by a user. Possible values are `'x'`, `'xy'`, `'y'` and `''` (disabled).
 
 **Try it**
 

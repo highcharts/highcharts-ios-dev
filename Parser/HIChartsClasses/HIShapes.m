@@ -10,10 +10,12 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIShapes *copyShapes = [[HIShapes allocWithZone: zone] init];
+	copyShapes.src = [self.src copyWithZone: zone];
 	copyShapes.points = [self.points copyWithZone: zone];
 	copyShapes.markerEnd = [self.markerEnd copyWithZone: zone];
 	copyShapes.markerStart = [self.markerStart copyWithZone: zone];
 	copyShapes.point = [self.point copyWithZone: zone];
+	copyShapes.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyShapes.strokeWidth = [self.strokeWidth copyWithZone: zone];
 	copyShapes.height = [self.height copyWithZone: zone];
 	copyShapes.width = [self.width copyWithZone: zone];
@@ -28,6 +30,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.src) {
+		params[@"src"] = self.src;
+	}
 	if (self.points) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.points) {
@@ -48,6 +53,9 @@
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
+	}
+	if (self.dashStyle) {
+		params[@"dashStyle"] = self.dashStyle;
 	}
 	if (self.strokeWidth) {
 		params[@"strokeWidth"] = self.strokeWidth;
@@ -78,6 +86,12 @@
 
 # pragma mark - Setters
 
+-(void)setSrc:(NSString *)src {
+	NSString *oldValue = _src;
+	_src = src;
+	[self updateNSObject:oldValue newValue:src propertyName:@"src"];
+}
+
 -(void)setPoints:(NSArray <HIPoints *> *)points {
 	NSArray <HIPoints *> *oldValue = _points;
 	_points = points;
@@ -100,6 +114,12 @@
 	HIPoint *oldValue = _point;
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+}
+
+-(void)setDashStyle:(NSString *)dashStyle {
+	NSString *oldValue = _dashStyle;
+	_dashStyle = dashStyle;
+	[self updateNSObject:oldValue newValue:dashStyle propertyName:@"dashStyle"];
 }
 
 -(void)setStrokeWidth:(NSNumber *)strokeWidth {

@@ -99,7 +99,7 @@
 		params[@"annotations"] = array;
 	}
 	if (self.defs) {
-		params[@"defs"] = self.defs;
+		params[@"defs"] = [self.defs getParams];
 	}
 	if (self.chart) {
 		params[@"chart"] = [self.chart getParams];
@@ -293,10 +293,10 @@
 	[self updateArrayObject:oldValue newValue:annotations propertyName:@"annotations"];
 }
 
--(void)setDefs:(id )defs {
-	id  oldValue = _defs;
+-(void)setDefs:(HIDefs *)defs {
+	HIDefs *oldValue = _defs;
 	_defs = defs;
-	[self updateNSObject:oldValue newValue:defs propertyName:@"defs"];
+	[self updateHIObject:oldValue newValue:defs propertyName:@"defs"];
 }
 
 -(void)setChart:(HIChart *)chart {

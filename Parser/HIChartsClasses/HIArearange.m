@@ -41,13 +41,14 @@
 	copyArearange.point = [self.point copyWithZone: zone];
 	copyArearange.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyArearange.marker = [self.marker copyWithZone: zone];
+	copyArearange.label = [self.label copyWithZone: zone];
 	copyArearange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyArearange.cursor = [self.cursor copyWithZone: zone];
 	copyArearange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyArearange.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyArearange.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyArearange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyArearange.label = [self.label copyWithZone: zone];
+	copyArearange.custom = [self.custom copyWithZone: zone];
 	copyArearange.animation = [self.animation copyWithZone: zone];
 	copyArearange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyArearange.showCheckbox = [self.showCheckbox copyWithZone: zone];

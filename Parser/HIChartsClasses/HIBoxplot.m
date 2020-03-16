@@ -63,11 +63,13 @@
 	copyBoxplot.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBoxplot.point = [self.point copyWithZone: zone];
 	copyBoxplot.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyBoxplot.label = [self.label copyWithZone: zone];
 	copyBoxplot.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBoxplot.cursor = [self.cursor copyWithZone: zone];
+	copyBoxplot.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBoxplot.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBoxplot.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyBoxplot.label = [self.label copyWithZone: zone];
+	copyBoxplot.custom = [self.custom copyWithZone: zone];
 	copyBoxplot.animation = [self.animation copyWithZone: zone];
 	copyBoxplot.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBoxplot.showCheckbox = [self.showCheckbox copyWithZone: zone];

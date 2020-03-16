@@ -38,13 +38,14 @@
 	copyAreaspline.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyAreaspline.marker = [self.marker copyWithZone: zone];
 	copyAreaspline.tooltip = [self.tooltip copyWithZone: zone];
+	copyAreaspline.label = [self.label copyWithZone: zone];
 	copyAreaspline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyAreaspline.cursor = [self.cursor copyWithZone: zone];
 	copyAreaspline.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyAreaspline.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyAreaspline.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyAreaspline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyAreaspline.label = [self.label copyWithZone: zone];
+	copyAreaspline.custom = [self.custom copyWithZone: zone];
 	copyAreaspline.stacking = [self.stacking copyWithZone: zone];
 	copyAreaspline.animation = [self.animation copyWithZone: zone];
 	copyAreaspline.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

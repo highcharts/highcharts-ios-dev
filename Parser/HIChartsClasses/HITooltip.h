@@ -22,7 +22,7 @@ Options for the tooltip that appears when the user hovers over a series or point
 /**
 Whether the tooltip should update as the finger moves on a touch device. If this is `true` and `chart.panning` is set,`followTouchMove` will take over one-finger touches, so the user needs to use two fingers for zooming and panning. Note the difference to `followPointer` that only defines the _position_ of the tooltip. If `followPointer` is false in for example a column series, the tooltip will show above or below the column, but as `followTouchMove` is true, the tooltip will jump from column to column as the user swipes across the plot area.
 
-**Defaults to** `true`.
+**Defaults to** `True`.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *followTouchMove;
 /**
@@ -83,6 +83,14 @@ A callback function to place the tooltip in a default position. The callback rec
 * [A fixed tooltip position](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/positioner/)
 */
 @property(nonatomic, readwrite) HIFunction *positioner;
+/**
+Prevents the tooltip from switching or closing, when touched or pointed.
+
+**Try it**
+
+* [Tooltip sticks on pointer contact](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/stickoncontact/)
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *stickOnContact;
 /**
 Use HTML to render the contents of the tooltip instead of SVG. Using HTML allows advanced formatting like tables and images in the tooltip. It is also recommended for rtl languages as it works around rtl bugs in early Firefox.
 
@@ -145,8 +153,6 @@ Enable or disable animation of the tooltip.
 @property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
 /**
 Split the tooltip into one label per series, with the header close to the axis. This is recommended over `shared` tooltips for charts with multiple line series, generally making them easier to read. This option takes precedence over `tooltip.shared`.
-
-**Defaults to** `false`.
 
 **Try it**
 
@@ -281,8 +287,6 @@ The pixel width of the tooltip border. In styled mode, the stroke width is set i
 @property(nonatomic, readwrite) NSNumber *borderWidth;
 /**
 Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for pie, polygon, map, sankey and wordcloud series by override in the `plotOptions` for those series types. For touch moves to behave the same way, `followTouchMove` must be `true` also.
-
-**Defaults to** `false`.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *followPointer;
 /**

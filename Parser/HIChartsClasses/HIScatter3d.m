@@ -45,12 +45,13 @@
 	copyScatter3d.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyScatter3d.point = [self.point copyWithZone: zone];
 	copyScatter3d.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyScatter3d.label = [self.label copyWithZone: zone];
 	copyScatter3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyScatter3d.cursor = [self.cursor copyWithZone: zone];
 	copyScatter3d.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyScatter3d.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyScatter3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyScatter3d.label = [self.label copyWithZone: zone];
+	copyScatter3d.custom = [self.custom copyWithZone: zone];
 	copyScatter3d.stacking = [self.stacking copyWithZone: zone];
 	copyScatter3d.animation = [self.animation copyWithZone: zone];
 	copyScatter3d.threshold = [self.threshold copyWithZone: zone];

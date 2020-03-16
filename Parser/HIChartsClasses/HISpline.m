@@ -41,13 +41,14 @@
 	copySpline.dataSorting = [self.dataSorting copyWithZone: zone];
 	copySpline.marker = [self.marker copyWithZone: zone];
 	copySpline.tooltip = [self.tooltip copyWithZone: zone];
+	copySpline.label = [self.label copyWithZone: zone];
 	copySpline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySpline.cursor = [self.cursor copyWithZone: zone];
 	copySpline.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySpline.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copySpline.connectNulls = [self.connectNulls copyWithZone: zone];
 	copySpline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copySpline.label = [self.label copyWithZone: zone];
+	copySpline.custom = [self.custom copyWithZone: zone];
 	copySpline.stacking = [self.stacking copyWithZone: zone];
 	copySpline.animation = [self.animation copyWithZone: zone];
 	copySpline.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

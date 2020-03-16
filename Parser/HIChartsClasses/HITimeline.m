@@ -42,11 +42,11 @@
 	copyTimeline.color = [self.color copyWithZone: zone];
 	copyTimeline.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTimeline.point = [self.point copyWithZone: zone];
-	copyTimeline.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyTimeline.label = [self.label copyWithZone: zone];
 	copyTimeline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTimeline.cursor = [self.cursor copyWithZone: zone];
 	copyTimeline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyTimeline.label = [self.label copyWithZone: zone];
+	copyTimeline.custom = [self.custom copyWithZone: zone];
 	copyTimeline.animation = [self.animation copyWithZone: zone];
 	copyTimeline.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTimeline.boostBlending = [self.boostBlending copyWithZone: zone];

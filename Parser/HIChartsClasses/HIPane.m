@@ -10,10 +10,11 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIPane *copyPane = [[HIPane allocWithZone: zone] init];
-	copyPane.endAngle = [self.endAngle copyWithZone: zone];
-	copyPane.startAngle = [self.startAngle copyWithZone: zone];
+	copyPane.innerSize = [self.innerSize copyWithZone: zone];
 	copyPane.center = [self.center copyWithZone: zone];
+	copyPane.endAngle = [self.endAngle copyWithZone: zone];
 	copyPane.background = [self.background copyWithZone: zone];
+	copyPane.startAngle = [self.startAngle copyWithZone: zone];
 	copyPane.size = [self.size copyWithZone: zone];
 	return copyPane;
 }
@@ -21,11 +22,8 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.endAngle) {
-		params[@"endAngle"] = self.endAngle;
-	}
-	if (self.startAngle) {
-		params[@"startAngle"] = self.startAngle;
+	if (self.innerSize) {
+		params[@"innerSize"] = self.innerSize;
 	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -39,6 +37,9 @@
 		}
 		params[@"center"] = array;
 	}
+	if (self.endAngle) {
+		params[@"endAngle"] = self.endAngle;
+	}
 	if (self.background) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.background) {
@@ -51,6 +52,9 @@
 		}
 		params[@"background"] = array;
 	}
+	if (self.startAngle) {
+		params[@"startAngle"] = self.startAngle;
+	}
 	if (self.size) {
 		params[@"size"] = self.size;
 	}
@@ -59,16 +63,10 @@
 
 # pragma mark - Setters
 
--(void)setEndAngle:(NSNumber *)endAngle {
-	NSNumber *oldValue = _endAngle;
-	_endAngle = endAngle;
-	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
-}
-
--(void)setStartAngle:(NSNumber *)startAngle {
-	NSNumber *oldValue = _startAngle;
-	_startAngle = startAngle;
-	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
+-(void)setInnerSize:(id)innerSize {
+	id oldValue = _innerSize;
+	_innerSize = innerSize;
+	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
 }
 
 -(void)setCenter:(NSArray *)center {
@@ -77,10 +75,22 @@
 	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
 }
 
+-(void)setEndAngle:(NSNumber *)endAngle {
+	NSNumber *oldValue = _endAngle;
+	_endAngle = endAngle;
+	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
+}
+
 -(void)setBackground:(NSArray <HIBackground *> *)background {
 	NSArray <HIBackground *> *oldValue = _background;
 	_background = background;
 	[self updateArrayObject:oldValue newValue:background propertyName:@"background"];
+}
+
+-(void)setStartAngle:(NSNumber *)startAngle {
+	NSNumber *oldValue = _startAngle;
+	_startAngle = startAngle;
+	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
 }
 
 -(void)setSize:(id)size {

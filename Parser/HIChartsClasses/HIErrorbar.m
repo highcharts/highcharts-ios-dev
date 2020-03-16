@@ -64,11 +64,13 @@
 	copyErrorbar.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyErrorbar.point = [self.point copyWithZone: zone];
 	copyErrorbar.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyErrorbar.label = [self.label copyWithZone: zone];
 	copyErrorbar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyErrorbar.cursor = [self.cursor copyWithZone: zone];
+	copyErrorbar.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyErrorbar.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyErrorbar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyErrorbar.label = [self.label copyWithZone: zone];
+	copyErrorbar.custom = [self.custom copyWithZone: zone];
 	copyErrorbar.animation = [self.animation copyWithZone: zone];
 	copyErrorbar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyErrorbar.showCheckbox = [self.showCheckbox copyWithZone: zone];

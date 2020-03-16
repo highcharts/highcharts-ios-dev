@@ -32,11 +32,11 @@
 	copySolidgauge.color = [self.color copyWithZone: zone];
 	copySolidgauge.pointInterval = [self.pointInterval copyWithZone: zone];
 	copySolidgauge.point = [self.point copyWithZone: zone];
-	copySolidgauge.dataSorting = [self.dataSorting copyWithZone: zone];
+	copySolidgauge.label = [self.label copyWithZone: zone];
 	copySolidgauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySolidgauge.cursor = [self.cursor copyWithZone: zone];
 	copySolidgauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copySolidgauge.label = [self.label copyWithZone: zone];
+	copySolidgauge.custom = [self.custom copyWithZone: zone];
 	copySolidgauge.animation = [self.animation copyWithZone: zone];
 	copySolidgauge.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySolidgauge.boostBlending = [self.boostBlending copyWithZone: zone];

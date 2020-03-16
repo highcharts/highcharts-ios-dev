@@ -57,12 +57,13 @@
 	copyFunnel3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyFunnel3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyFunnel3d.point = [self.point copyWithZone: zone];
-	copyFunnel3d.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyFunnel3d.label = [self.label copyWithZone: zone];
 	copyFunnel3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyFunnel3d.cursor = [self.cursor copyWithZone: zone];
+	copyFunnel3d.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyFunnel3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyFunnel3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyFunnel3d.label = [self.label copyWithZone: zone];
+	copyFunnel3d.custom = [self.custom copyWithZone: zone];
 	copyFunnel3d.stacking = [self.stacking copyWithZone: zone];
 	copyFunnel3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyFunnel3d.showCheckbox = [self.showCheckbox copyWithZone: zone];

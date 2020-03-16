@@ -49,11 +49,12 @@
 	copyDependencywheel.clip = [self.clip copyWithZone: zone];
 	copyDependencywheel.color = [self.color copyWithZone: zone];
 	copyDependencywheel.point = [self.point copyWithZone: zone];
-	copyDependencywheel.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyDependencywheel.label = [self.label copyWithZone: zone];
 	copyDependencywheel.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyDependencywheel.cursor = [self.cursor copyWithZone: zone];
+	copyDependencywheel.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyDependencywheel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyDependencywheel.label = [self.label copyWithZone: zone];
+	copyDependencywheel.custom = [self.custom copyWithZone: zone];
 	copyDependencywheel.animation = [self.animation copyWithZone: zone];
 	copyDependencywheel.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyDependencywheel.boostBlending = [self.boostBlending copyWithZone: zone];

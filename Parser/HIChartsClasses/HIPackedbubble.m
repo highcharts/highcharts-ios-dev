@@ -54,12 +54,12 @@
 	copyPackedbubble.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyPackedbubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPackedbubble.point = [self.point copyWithZone: zone];
-	copyPackedbubble.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyPackedbubble.label = [self.label copyWithZone: zone];
 	copyPackedbubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPackedbubble.cursor = [self.cursor copyWithZone: zone];
 	copyPackedbubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPackedbubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyPackedbubble.label = [self.label copyWithZone: zone];
+	copyPackedbubble.custom = [self.custom copyWithZone: zone];
 	copyPackedbubble.stacking = [self.stacking copyWithZone: zone];
 	copyPackedbubble.animation = [self.animation copyWithZone: zone];
 	copyPackedbubble.threshold = [self.threshold copyWithZone: zone];

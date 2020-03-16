@@ -44,6 +44,7 @@
 	copySunburst.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySunburst.cursor = [self.cursor copyWithZone: zone];
 	copySunburst.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copySunburst.custom = [self.custom copyWithZone: zone];
 	copySunburst.animation = [self.animation copyWithZone: zone];
 	copySunburst.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySunburst.boostBlending = [self.boostBlending copyWithZone: zone];

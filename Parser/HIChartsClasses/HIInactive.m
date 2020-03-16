@@ -12,6 +12,7 @@
 	HIInactive *copyInactive = [[HIInactive allocWithZone: zone] init];
 	copyInactive.opacity = [self.opacity copyWithZone: zone];
 	copyInactive.animation = [self.animation copyWithZone: zone];
+	copyInactive.enabled = [self.enabled copyWithZone: zone];
 	copyInactive.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	return copyInactive;
 }
@@ -24,6 +25,9 @@
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
@@ -43,6 +47,12 @@
 	HIAnimationOptionsObject *oldValue = _animation;
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
+	_enabled = enabled;
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
