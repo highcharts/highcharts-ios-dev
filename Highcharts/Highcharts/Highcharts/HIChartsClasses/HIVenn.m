@@ -39,11 +39,11 @@
 	copyVenn.color = [self.color copyWithZone: zone];
 	copyVenn.colorKey = [self.colorKey copyWithZone: zone];
 	copyVenn.point = [self.point copyWithZone: zone];
-	copyVenn.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyVenn.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVenn.cursor = [self.cursor copyWithZone: zone];
 	copyVenn.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyVenn.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyVenn.custom = [self.custom copyWithZone: zone];
 	copyVenn.animation = [self.animation copyWithZone: zone];
 	copyVenn.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVenn.boostBlending = [self.boostBlending copyWithZone: zone];

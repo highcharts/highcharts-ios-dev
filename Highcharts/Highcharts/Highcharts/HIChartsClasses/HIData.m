@@ -43,19 +43,20 @@
 	copyData.low = [self.low copyWithZone: zone];
 	copyData.labelrank = [self.labelrank copyWithZone: zone];
 	copyData.y = [self.y copyWithZone: zone];
-	copyData.definition = [self.definition copyWithZone: zone];
+	copyData.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyData.name = [self.name copyWithZone: zone];
 	copyData.color = [self.color copyWithZone: zone];
 	copyData.selected = [self.selected copyWithZone: zone];
 	copyData.accessibility = [self.accessibility copyWithZone: zone];
-	copyData.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyData.custom = [self.custom copyWithZone: zone];
 	copyData.className = [self.className copyWithZone: zone];
 	copyData.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyData.id = [self.id copyWithZone: zone];
 	copyData.x = [self.x copyWithZone: zone];
 	copyData.drilldown = [self.drilldown copyWithZone: zone];
+	copyData.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyData.events = [self.events copyWithZone: zone];
-	copyData.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyData.definition = [self.definition copyWithZone: zone];
 	copyData.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyData.marker = [self.marker copyWithZone: zone];
 	copyData.label = [self.label copyWithZone: zone];
@@ -67,6 +68,8 @@
 	copyData.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyData.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyData.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyData.connectorColor = [self.connectorColor copyWithZone: zone];
+	copyData.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyData.value = [self.value copyWithZone: zone];
@@ -80,6 +83,7 @@
 	copyData.radius = [self.radius copyWithZone: zone];
 	copyData.outgoing = [self.outgoing copyWithZone: zone];
 	copyData.z = [self.z copyWithZone: zone];
+	copyData.lowColor = [self.lowColor copyWithZone: zone];
 	copyData.x2 = [self.x2 copyWithZone: zone];
 	copyData.partialFill = [self.partialFill copyWithZone: zone];
 	copyData.parent = [self.parent copyWithZone: zone];
@@ -217,8 +221,8 @@
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
+	if (self.colorIndex) {
+		params[@"colorIndex"] = self.colorIndex;
 	}
 	if (self.name) {
 		params[@"name"] = self.name;
@@ -232,8 +236,8 @@
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
 	}
-	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
+	if (self.custom) {
+		params[@"custom"] = self.custom;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -250,11 +254,14 @@
 	if (self.drilldown) {
 		params[@"drilldown"] = self.drilldown;
 	}
+	if (self.dataLabels) {
+		params[@"dataLabels"] = [self.dataLabels getParams];
+	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
-	if (self.colorIndex) {
-		params[@"colorIndex"] = self.colorIndex;
+	if (self.definition) {
+		params[@"definition"] = self.definition;
 	}
 	if (self.legendIndex) {
 		params[@"legendIndex"] = self.legendIndex;
@@ -288,6 +295,12 @@
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.connectorColor) {
+		params[@"connectorColor"] = self.connectorColor;
+	}
+	if (self.connectorWidth) {
+		params[@"connectorWidth"] = self.connectorWidth;
 	}
 	if (self.sliced) {
 		params[@"sliced"] = self.sliced;
@@ -327,6 +340,9 @@
 	}
 	if (self.z) {
 		params[@"z"] = self.z;
+	}
+	if (self.lowColor) {
+		params[@"lowColor"] = [self.lowColor getData];
 	}
 	if (self.x2) {
 		params[@"x2"] = self.x2;
@@ -555,10 +571,10 @@
 	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
+-(void)setColorIndex:(NSNumber *)colorIndex {
+	NSNumber *oldValue = _colorIndex;
+	_colorIndex = colorIndex;
+	[self updateNSObject:oldValue newValue:colorIndex propertyName:@"colorIndex"];
 }
 
 -(void)setName:(NSString *)name {
@@ -585,10 +601,10 @@
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
--(void)setDataLabels:(HIDataLabels *)dataLabels {
-	HIDataLabels *oldValue = _dataLabels;
-	_dataLabels = dataLabels;
-	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
+-(void)setCustom:(NSDictionary *)custom {
+	NSDictionary *oldValue = _custom;
+	_custom = custom;
+	[self updateNSObject:oldValue newValue:custom propertyName:@"custom"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -621,16 +637,22 @@
 	[self updateNSObject:oldValue newValue:drilldown propertyName:@"drilldown"];
 }
 
+-(void)setDataLabels:(HIDataLabels *)dataLabels {
+	HIDataLabels *oldValue = _dataLabels;
+	_dataLabels = dataLabels;
+	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
+}
+
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
--(void)setColorIndex:(NSNumber *)colorIndex {
-	NSNumber *oldValue = _colorIndex;
-	_colorIndex = colorIndex;
-	[self updateNSObject:oldValue newValue:colorIndex propertyName:@"colorIndex"];
+-(void)setDefinition:(NSString *)definition {
+	NSString *oldValue = _definition;
+	_definition = definition;
+	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setLegendIndex:(NSNumber *)legendIndex {
@@ -697,6 +719,18 @@
 	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+}
+
+-(void)setConnectorColor:(NSString *)connectorColor {
+	NSString *oldValue = _connectorColor;
+	_connectorColor = connectorColor;
+	[self updateNSObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
+}
+
+-(void)setConnectorWidth:(NSNumber *)connectorWidth {
+	NSNumber *oldValue = _connectorWidth;
+	_connectorWidth = connectorWidth;
+	[self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
 }
 
 -(void)setSliced:(NSNumber *)sliced {
@@ -775,6 +809,12 @@
 	NSNumber *oldValue = _z;
 	_z = z;
 	[self updateNSObject:oldValue newValue:z propertyName:@"z"];
+}
+
+-(void)setLowColor:(HIColor *)lowColor {
+	HIColor *oldValue = _lowColor;
+	_lowColor = lowColor;
+	[self updateHIObject:oldValue newValue:lowColor propertyName:@"lowColor"];
 }
 
 -(void)setX2:(NSNumber *)x2 {

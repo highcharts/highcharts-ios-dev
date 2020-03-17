@@ -27,9 +27,9 @@
 	copyLang.viewData = [self.viewData copyWithZone: zone];
 	copyLang.contextButtonTitle = [self.contextButtonTitle copyWithZone: zone];
 	copyLang.invalidDate = [self.invalidDate copyWithZone: zone];
+	copyLang.exitFullscreen = [self.exitFullscreen copyWithZone: zone];
 	copyLang.resetZoom = [self.resetZoom copyWithZone: zone];
 	copyLang.downloadPDF = [self.downloadPDF copyWithZone: zone];
-	copyLang.openInCloud = [self.openInCloud copyWithZone: zone];
 	copyLang.resetZoomTitle = [self.resetZoomTitle copyWithZone: zone];
 	copyLang.months = [self.months copyWithZone: zone];
 	copyLang.shortMonths = [self.shortMonths copyWithZone: zone];
@@ -121,14 +121,14 @@
 	if (self.invalidDate) {
 		params[@"invalidDate"] = self.invalidDate;
 	}
+	if (self.exitFullscreen) {
+		params[@"exitFullscreen"] = self.exitFullscreen;
+	}
 	if (self.resetZoom) {
 		params[@"resetZoom"] = self.resetZoom;
 	}
 	if (self.downloadPDF) {
 		params[@"downloadPDF"] = self.downloadPDF;
-	}
-	if (self.openInCloud) {
-		params[@"openInCloud"] = self.openInCloud;
 	}
 	if (self.resetZoomTitle) {
 		params[@"resetZoomTitle"] = self.resetZoomTitle;
@@ -276,6 +276,12 @@
 	[self updateNSObject:oldValue newValue:invalidDate propertyName:@"invalidDate"];
 }
 
+-(void)setExitFullscreen:(NSString *)exitFullscreen {
+	NSString *oldValue = _exitFullscreen;
+	_exitFullscreen = exitFullscreen;
+	[self updateNSObject:oldValue newValue:exitFullscreen propertyName:@"exitFullscreen"];
+}
+
 -(void)setResetZoom:(NSString *)resetZoom {
 	NSString *oldValue = _resetZoom;
 	_resetZoom = resetZoom;
@@ -286,12 +292,6 @@
 	NSString *oldValue = _downloadPDF;
 	_downloadPDF = downloadPDF;
 	[self updateNSObject:oldValue newValue:downloadPDF propertyName:@"downloadPDF"];
-}
-
--(void)setOpenInCloud:(NSString *)openInCloud {
-	NSString *oldValue = _openInCloud;
-	_openInCloud = openInCloud;
-	[self updateNSObject:oldValue newValue:openInCloud propertyName:@"openInCloud"];
 }
 
 -(void)setResetZoomTitle:(NSString *)resetZoomTitle {

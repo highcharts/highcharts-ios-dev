@@ -34,10 +34,11 @@
 	copyVector.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVector.point = [self.point copyWithZone: zone];
 	copyVector.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyVector.label = [self.label copyWithZone: zone];
 	copyVector.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVector.cursor = [self.cursor copyWithZone: zone];
 	copyVector.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyVector.label = [self.label copyWithZone: zone];
+	copyVector.custom = [self.custom copyWithZone: zone];
 	copyVector.animation = [self.animation copyWithZone: zone];
 	copyVector.threshold = [self.threshold copyWithZone: zone];
 	copyVector.showCheckbox = [self.showCheckbox copyWithZone: zone];

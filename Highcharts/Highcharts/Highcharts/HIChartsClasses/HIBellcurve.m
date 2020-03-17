@@ -48,12 +48,13 @@
 	copyBellcurve.point = [self.point copyWithZone: zone];
 	copyBellcurve.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBellcurve.tooltip = [self.tooltip copyWithZone: zone];
+	copyBellcurve.label = [self.label copyWithZone: zone];
 	copyBellcurve.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBellcurve.cursor = [self.cursor copyWithZone: zone];
 	copyBellcurve.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBellcurve.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBellcurve.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyBellcurve.label = [self.label copyWithZone: zone];
+	copyBellcurve.custom = [self.custom copyWithZone: zone];
 	copyBellcurve.animation = [self.animation copyWithZone: zone];
 	copyBellcurve.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBellcurve.showCheckbox = [self.showCheckbox copyWithZone: zone];

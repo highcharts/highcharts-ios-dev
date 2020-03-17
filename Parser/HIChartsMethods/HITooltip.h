@@ -27,7 +27,7 @@
 
 /**
  Refresh the tooltip's text and position.
- @param points An array of points.
+ @param point A point.
  */
 -(void)refreshByPoint:(HIPoint *)point;
 

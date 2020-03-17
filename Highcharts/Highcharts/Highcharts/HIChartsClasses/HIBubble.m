@@ -57,12 +57,13 @@
 	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBubble.point = [self.point copyWithZone: zone];
 	copyBubble.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyBubble.label = [self.label copyWithZone: zone];
 	copyBubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBubble.cursor = [self.cursor copyWithZone: zone];
 	copyBubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBubble.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyBubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyBubble.label = [self.label copyWithZone: zone];
+	copyBubble.custom = [self.custom copyWithZone: zone];
 	copyBubble.stacking = [self.stacking copyWithZone: zone];
 	copyBubble.animation = [self.animation copyWithZone: zone];
 	copyBubble.threshold = [self.threshold copyWithZone: zone];

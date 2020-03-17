@@ -1,7 +1,7 @@
 #import "HIChartsJSONSerializableSubclass.h"
-#import "HIStockToolsBindingsObject.h"
+#import "HINavigationBindingsOptionsObject.h"
 
-@implementation HIStockToolsBindingsObject
+@implementation HINavigationBindingsOptionsObject
 
 -(instancetype)init {
 	return [super init];
@@ -9,13 +9,13 @@
 
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
-	HIStockToolsBindingsObject *copyStockToolsBindingsObject = [[HIStockToolsBindingsObject allocWithZone: zone] init];
-	copyStockToolsBindingsObject.className = [self.className copyWithZone: zone];
-	copyStockToolsBindingsObject.end = [self.end copyWithZone: zone];
-	copyStockToolsBindingsObject.initial = [self.initial copyWithZone: zone];
-	copyStockToolsBindingsObject.start = [self.start copyWithZone: zone];
-	copyStockToolsBindingsObject.steps = [self.steps copyWithZone: zone];
-	return copyStockToolsBindingsObject;
+	HINavigationBindingsOptionsObject *copyNavigationBindingsOptionsObject = [[HINavigationBindingsOptionsObject allocWithZone: zone] init];
+	copyNavigationBindingsOptionsObject.className = [self.className copyWithZone: zone];
+	copyNavigationBindingsOptionsObject.end = [self.end copyWithZone: zone];
+	copyNavigationBindingsOptionsObject.initial = [self.initial copyWithZone: zone];
+	copyNavigationBindingsOptionsObject.start = [self.start copyWithZone: zone];
+	copyNavigationBindingsOptionsObject.steps = [self.steps copyWithZone: zone];
+	return copyNavigationBindingsOptionsObject;
 }
 
 -(NSDictionary *)getParams

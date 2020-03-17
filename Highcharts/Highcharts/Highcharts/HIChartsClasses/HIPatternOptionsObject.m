@@ -18,6 +18,7 @@
 	copyPatternOptionsObject.image = [self.image copyWithZone: zone];
 	copyPatternOptionsObject.opacity = [self.opacity copyWithZone: zone];
 	copyPatternOptionsObject.path = [self.path copyWithZone: zone];
+	copyPatternOptionsObject.patternTransform = [self.patternTransform copyWithZone: zone];
 	copyPatternOptionsObject.width = [self.width copyWithZone: zone];
 	copyPatternOptionsObject.x = [self.x copyWithZone: zone];
 	copyPatternOptionsObject.y = [self.y copyWithZone: zone];
@@ -50,6 +51,9 @@
 	}
 	if (self.path) {
 		params[@"path"] = [self.path getParams];
+	}
+	if (self.patternTransform) {
+		params[@"patternTransform"] = self.patternTransform;
 	}
 	if (self.width) {
 		params[@"width"] = self.width;
@@ -111,6 +115,12 @@
 	HISVGAttributes *oldValue = _path;
 	_path = path;
 	[self updateHIObject:oldValue newValue:path propertyName:@"path"];
+}
+
+-(void)setPatternTransform:(NSString *)patternTransform {
+	NSString *oldValue = _patternTransform;
+	_patternTransform = patternTransform;
+	[self updateNSObject:oldValue newValue:patternTransform propertyName:@"patternTransform"];
 }
 
 -(void)setWidth:(NSNumber *)width {

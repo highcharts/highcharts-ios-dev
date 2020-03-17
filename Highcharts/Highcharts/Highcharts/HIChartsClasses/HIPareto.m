@@ -28,12 +28,13 @@
 	copyPareto.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyPareto.marker = [self.marker copyWithZone: zone];
 	copyPareto.tooltip = [self.tooltip copyWithZone: zone];
+	copyPareto.label = [self.label copyWithZone: zone];
 	copyPareto.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPareto.cursor = [self.cursor copyWithZone: zone];
 	copyPareto.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPareto.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyPareto.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyPareto.label = [self.label copyWithZone: zone];
+	copyPareto.custom = [self.custom copyWithZone: zone];
 	copyPareto.animation = [self.animation copyWithZone: zone];
 	copyPareto.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPareto.boostBlending = [self.boostBlending copyWithZone: zone];

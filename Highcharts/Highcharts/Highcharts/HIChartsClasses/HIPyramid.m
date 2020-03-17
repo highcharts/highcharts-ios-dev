@@ -56,6 +56,7 @@
 	copyPyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid.cursor = [self.cursor copyWithZone: zone];
 	copyPyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyPyramid.custom = [self.custom copyWithZone: zone];
 	copyPyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPyramid.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPyramid.opacity = [self.opacity copyWithZone: zone];

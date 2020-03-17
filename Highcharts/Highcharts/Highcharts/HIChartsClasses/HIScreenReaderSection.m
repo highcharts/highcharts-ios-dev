@@ -12,12 +12,14 @@
 	HIScreenReaderSection *copyScreenReaderSection = [[HIScreenReaderSection allocWithZone: zone] init];
 	copyScreenReaderSection.beforeChartFormatter = [self.beforeChartFormatter copyWithZone: zone];
 	copyScreenReaderSection.onViewDataTableClick = [self.onViewDataTableClick copyWithZone: zone];
+	copyScreenReaderSection.onPlayAsSoundClick = [self.onPlayAsSoundClick copyWithZone: zone];
 	copyScreenReaderSection.afterChartFormat = [self.afterChartFormat copyWithZone: zone];
 	copyScreenReaderSection.axisRangeDateFormat = [self.axisRangeDateFormat copyWithZone: zone];
 	copyScreenReaderSection.beforeChartFormat = [self.beforeChartFormat copyWithZone: zone];
 	copyScreenReaderSection.afterChartFormatter = [self.afterChartFormatter copyWithZone: zone];
 	copyScreenReaderSection.beforeRegionLabel = [self.beforeRegionLabel copyWithZone: zone];
 	copyScreenReaderSection.afterRegionLabel = [self.afterRegionLabel copyWithZone: zone];
+	copyScreenReaderSection.annotations = [self.annotations copyWithZone: zone];
 	copyScreenReaderSection.endOfChartMarker = [self.endOfChartMarker copyWithZone: zone];
 	return copyScreenReaderSection;
 }
@@ -30,6 +32,9 @@
 	}
 	if (self.onViewDataTableClick) {
 		params[@"onViewDataTableClick"] = [self.onViewDataTableClick getFunction];
+	}
+	if (self.onPlayAsSoundClick) {
+		params[@"onPlayAsSoundClick"] = [self.onPlayAsSoundClick getFunction];
 	}
 	if (self.afterChartFormat) {
 		params[@"afterChartFormat"] = self.afterChartFormat;
@@ -49,6 +54,9 @@
 	if (self.afterRegionLabel) {
 		params[@"afterRegionLabel"] = self.afterRegionLabel;
 	}
+	if (self.annotations) {
+		params[@"annotations"] = [self.annotations getParams];
+	}
 	if (self.endOfChartMarker) {
 		params[@"endOfChartMarker"] = self.endOfChartMarker;
 	}
@@ -67,6 +75,12 @@
 	HIFunction *oldValue = _onViewDataTableClick;
 	_onViewDataTableClick = onViewDataTableClick;
 	[self updateHIObject:oldValue newValue:onViewDataTableClick propertyName:@"onViewDataTableClick"];
+}
+
+-(void)setOnPlayAsSoundClick:(HIFunction *)onPlayAsSoundClick {
+	HIFunction *oldValue = _onPlayAsSoundClick;
+	_onPlayAsSoundClick = onPlayAsSoundClick;
+	[self updateHIObject:oldValue newValue:onPlayAsSoundClick propertyName:@"onPlayAsSoundClick"];
 }
 
 -(void)setAfterChartFormat:(NSString *)afterChartFormat {
@@ -103,6 +117,12 @@
 	NSString *oldValue = _afterRegionLabel;
 	_afterRegionLabel = afterRegionLabel;
 	[self updateNSObject:oldValue newValue:afterRegionLabel propertyName:@"afterRegionLabel"];
+}
+
+-(void)setAnnotations:(HIAnnotations *)annotations {
+	HIAnnotations *oldValue = _annotations;
+	_annotations = annotations;
+	[self updateHIObject:oldValue newValue:annotations propertyName:@"annotations"];
 }
 
 -(void)setEndOfChartMarker:(NSString *)endOfChartMarker {

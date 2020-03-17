@@ -319,7 +319,7 @@ hc_types = {
         #8.0.0
         "Array.<(*)>": 'NSArray',
         #8.0.4
-        "Array.<(string|*)>": 'NSArray /* <NSString, id> */'
+        "Array.<(string|*)>": 'NSArray'
     }
 
 def get_type(x):

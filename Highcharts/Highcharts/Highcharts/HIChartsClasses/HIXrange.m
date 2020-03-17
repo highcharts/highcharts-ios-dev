@@ -50,11 +50,12 @@
 	copyXrange.color = [self.color copyWithZone: zone];
 	copyXrange.colorKey = [self.colorKey copyWithZone: zone];
 	copyXrange.point = [self.point copyWithZone: zone];
-	copyXrange.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyXrange.label = [self.label copyWithZone: zone];
 	copyXrange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyXrange.cursor = [self.cursor copyWithZone: zone];
+	copyXrange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyXrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyXrange.label = [self.label copyWithZone: zone];
+	copyXrange.custom = [self.custom copyWithZone: zone];
 	copyXrange.animation = [self.animation copyWithZone: zone];
 	copyXrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyXrange.boostBlending = [self.boostBlending copyWithZone: zone];

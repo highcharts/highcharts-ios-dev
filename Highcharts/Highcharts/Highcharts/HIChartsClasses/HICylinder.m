@@ -49,11 +49,13 @@
 	copyCylinder.colorKey = [self.colorKey copyWithZone: zone];
 	copyCylinder.point = [self.point copyWithZone: zone];
 	copyCylinder.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyCylinder.label = [self.label copyWithZone: zone];
 	copyCylinder.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyCylinder.cursor = [self.cursor copyWithZone: zone];
+	copyCylinder.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyCylinder.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyCylinder.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyCylinder.label = [self.label copyWithZone: zone];
+	copyCylinder.custom = [self.custom copyWithZone: zone];
 	copyCylinder.stacking = [self.stacking copyWithZone: zone];
 	copyCylinder.animation = [self.animation copyWithZone: zone];
 	copyCylinder.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

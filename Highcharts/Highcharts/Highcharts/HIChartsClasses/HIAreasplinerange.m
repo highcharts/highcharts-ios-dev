@@ -50,13 +50,14 @@
 	copyAreasplinerange.point = [self.point copyWithZone: zone];
 	copyAreasplinerange.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyAreasplinerange.marker = [self.marker copyWithZone: zone];
+	copyAreasplinerange.label = [self.label copyWithZone: zone];
 	copyAreasplinerange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyAreasplinerange.cursor = [self.cursor copyWithZone: zone];
 	copyAreasplinerange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyAreasplinerange.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyAreasplinerange.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyAreasplinerange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyAreasplinerange.label = [self.label copyWithZone: zone];
+	copyAreasplinerange.custom = [self.custom copyWithZone: zone];
 	copyAreasplinerange.animation = [self.animation copyWithZone: zone];
 	copyAreasplinerange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyAreasplinerange.showCheckbox = [self.showCheckbox copyWithZone: zone];

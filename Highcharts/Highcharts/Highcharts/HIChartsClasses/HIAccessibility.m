@@ -27,6 +27,7 @@
 	copyAccessibility.rangeDescription = [self.rangeDescription copyWithZone: zone];
 	copyAccessibility.defaultChartTitle = [self.defaultChartTitle copyWithZone: zone];
 	copyAccessibility.svgContainerLabel = [self.svgContainerLabel copyWithZone: zone];
+	copyAccessibility.thousandsSep = [self.thousandsSep copyWithZone: zone];
 	copyAccessibility.chartTypes = [self.chartTypes copyWithZone: zone];
 	copyAccessibility.table = [self.table copyWithZone: zone];
 	copyAccessibility.zoom = [self.zoom copyWithZone: zone];
@@ -36,7 +37,7 @@
 	copyAccessibility.exporting = [self.exporting copyWithZone: zone];
 	copyAccessibility.rangeSelector = [self.rangeSelector copyWithZone: zone];
 	copyAccessibility.svgContainerTitle = [self.svgContainerTitle copyWithZone: zone];
-	copyAccessibility.thousandsSep = [self.thousandsSep copyWithZone: zone];
+	copyAccessibility.sonification = [self.sonification copyWithZone: zone];
 	copyAccessibility.graphicContainerLabel = [self.graphicContainerLabel copyWithZone: zone];
 	copyAccessibility.legend = [self.legend copyWithZone: zone];
 	copyAccessibility.chartContainerLabel = [self.chartContainerLabel copyWithZone: zone];
@@ -98,6 +99,9 @@
 	if (self.svgContainerLabel) {
 		params[@"svgContainerLabel"] = self.svgContainerLabel;
 	}
+	if (self.thousandsSep) {
+		params[@"thousandsSep"] = self.thousandsSep;
+	}
 	if (self.chartTypes) {
 		params[@"chartTypes"] = [self.chartTypes getParams];
 	}
@@ -125,8 +129,8 @@
 	if (self.svgContainerTitle) {
 		params[@"svgContainerTitle"] = self.svgContainerTitle;
 	}
-	if (self.thousandsSep) {
-		params[@"thousandsSep"] = self.thousandsSep;
+	if (self.sonification) {
+		params[@"sonification"] = [self.sonification getParams];
 	}
 	if (self.graphicContainerLabel) {
 		params[@"graphicContainerLabel"] = self.graphicContainerLabel;
@@ -247,6 +251,12 @@
 	[self updateNSObject:oldValue newValue:svgContainerLabel propertyName:@"svgContainerLabel"];
 }
 
+-(void)setThousandsSep:(NSString *)thousandsSep {
+	NSString *oldValue = _thousandsSep;
+	_thousandsSep = thousandsSep;
+	[self updateNSObject:oldValue newValue:thousandsSep propertyName:@"thousandsSep"];
+}
+
 -(void)setChartTypes:(HIChartTypes *)chartTypes {
 	HIChartTypes *oldValue = _chartTypes;
 	_chartTypes = chartTypes;
@@ -301,10 +311,10 @@
 	[self updateNSObject:oldValue newValue:svgContainerTitle propertyName:@"svgContainerTitle"];
 }
 
--(void)setThousandsSep:(NSString *)thousandsSep {
-	NSString *oldValue = _thousandsSep;
-	_thousandsSep = thousandsSep;
-	[self updateNSObject:oldValue newValue:thousandsSep propertyName:@"thousandsSep"];
+-(void)setSonification:(HISonification *)sonification {
+	HISonification *oldValue = _sonification;
+	_sonification = sonification;
+	[self updateHIObject:oldValue newValue:sonification propertyName:@"sonification"];
 }
 
 -(void)setGraphicContainerLabel:(NSString *)graphicContainerLabel {

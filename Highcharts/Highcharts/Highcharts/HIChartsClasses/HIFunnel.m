@@ -56,6 +56,7 @@
 	copyFunnel.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyFunnel.cursor = [self.cursor copyWithZone: zone];
 	copyFunnel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyFunnel.custom = [self.custom copyWithZone: zone];
 	copyFunnel.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyFunnel.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyFunnel.opacity = [self.opacity copyWithZone: zone];

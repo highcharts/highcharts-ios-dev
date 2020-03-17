@@ -38,12 +38,12 @@
 	copyNetworkgraph.color = [self.color copyWithZone: zone];
 	copyNetworkgraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyNetworkgraph.point = [self.point copyWithZone: zone];
-	copyNetworkgraph.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyNetworkgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyNetworkgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyNetworkgraph.cursor = [self.cursor copyWithZone: zone];
 	copyNetworkgraph.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyNetworkgraph.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyNetworkgraph.custom = [self.custom copyWithZone: zone];
 	copyNetworkgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyNetworkgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyNetworkgraph.boostBlending = [self.boostBlending copyWithZone: zone];

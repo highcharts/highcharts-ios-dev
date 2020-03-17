@@ -44,6 +44,7 @@
 	copyItem.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyItem.cursor = [self.cursor copyWithZone: zone];
 	copyItem.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
+	copyItem.custom = [self.custom copyWithZone: zone];
 	copyItem.animation = [self.animation copyWithZone: zone];
 	copyItem.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyItem.boostBlending = [self.boostBlending copyWithZone: zone];

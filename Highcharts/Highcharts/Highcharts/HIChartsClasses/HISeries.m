@@ -1,6 +1,5 @@
 #import "HIChartsJSONSerializableSubclass.h"
 #import "HISeries.h"
-#import "HIPie.h"
 
 @implementation HISeries
 
@@ -24,11 +23,12 @@
 	copySeries.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
 	copySeries.pointDescriptionEnabledThreshold = [self.pointDescriptionEnabledThreshold copyWithZone: zone];
 	copySeries.describeSingleSeries = [self.describeSingleSeries copyWithZone: zone];
-	copySeries.yAxisDescription = [self.yAxisDescription copyWithZone: zone];
-	copySeries.xAxisDescription = [self.xAxisDescription copyWithZone: zone];
-	copySeries.nullPointValue = [self.nullPointValue copyWithZone: zone];
 	copySeries.definition = [self.definition copyWithZone: zone];
+	copySeries.xAxisDescription = [self.xAxisDescription copyWithZone: zone];
+	copySeries.yAxisDescription = [self.yAxisDescription copyWithZone: zone];
+	copySeries.pointAnnotationsDescription = [self.pointAnnotationsDescription copyWithZone: zone];
 	copySeries.summary = [self.summary copyWithZone: zone];
+	copySeries.nullPointValue = [self.nullPointValue copyWithZone: zone];
 	copySeries.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySeries.selected = [self.selected copyWithZone: zone];
 	copySeries.colorIndex = [self.colorIndex copyWithZone: zone];
@@ -45,13 +45,14 @@
 	copySeries.dataSorting = [self.dataSorting copyWithZone: zone];
 	copySeries.marker = [self.marker copyWithZone: zone];
 	copySeries.tooltip = [self.tooltip copyWithZone: zone];
+	copySeries.label = [self.label copyWithZone: zone];
 	copySeries.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySeries.cursor = [self.cursor copyWithZone: zone];
 	copySeries.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySeries.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copySeries.connectNulls = [self.connectNulls copyWithZone: zone];
 	copySeries.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copySeries.label = [self.label copyWithZone: zone];
+	copySeries.custom = [self.custom copyWithZone: zone];
 	copySeries.stacking = [self.stacking copyWithZone: zone];
 	copySeries.animation = [self.animation copyWithZone: zone];
 	copySeries.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
@@ -139,20 +140,23 @@
 	if (self.describeSingleSeries) {
 		params[@"describeSingleSeries"] = self.describeSingleSeries;
 	}
-	if (self.yAxisDescription) {
-		params[@"yAxisDescription"] = self.yAxisDescription;
+	if (self.definition) {
+		params[@"definition"] = self.definition;
 	}
 	if (self.xAxisDescription) {
 		params[@"xAxisDescription"] = self.xAxisDescription;
 	}
-	if (self.nullPointValue) {
-		params[@"nullPointValue"] = self.nullPointValue;
+	if (self.yAxisDescription) {
+		params[@"yAxisDescription"] = self.yAxisDescription;
 	}
-	if (self.definition) {
-		params[@"definition"] = self.definition;
+	if (self.pointAnnotationsDescription) {
+		params[@"pointAnnotationsDescription"] = self.pointAnnotationsDescription;
 	}
 	if (self.summary) {
 		params[@"summary"] = [self.summary getParams];
+	}
+	if (self.nullPointValue) {
+		params[@"nullPointValue"] = self.nullPointValue;
 	}
 	if (self.includeInDataExport) {
 		params[@"includeInDataExport"] = self.includeInDataExport;
@@ -202,6 +206,9 @@
 	if (self.tooltip) {
 		params[@"tooltip"] = [self.tooltip getParams];
 	}
+	if (self.label) {
+		params[@"label"] = [self.label getParams];
+	}
 	if (self.pointDescriptionFormatter) {
 		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
 	}
@@ -220,8 +227,8 @@
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
 	}
-	if (self.label) {
-		params[@"label"] = [self.label getParams];
+	if (self.custom) {
+		params[@"custom"] = self.custom;
 	}
 	if (self.stacking) {
 		params[@"stacking"] = self.stacking;
@@ -317,23 +324,16 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.dataLabels) {
-        if ([self isKindOfClass:[HIPie class]]) {
-            id obj = [self.dataLabels firstObject];
-            if (obj && [obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-                params[@"dataLabels"] = [(HIChartsJSONSerializable *)obj getParams];
-            }
-        } else {
-            NSMutableArray *array = [[NSMutableArray alloc] init];
-            for (id obj in self.dataLabels) {
-                if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-                    [array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-                }
-                else {
-                    [array addObject: obj];
-                }
-            }
-            params[@"dataLabels"] = array;
-        }
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.dataLabels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"dataLabels"] = array;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -436,10 +436,10 @@
 	[self updateNSObject:oldValue newValue:describeSingleSeries propertyName:@"describeSingleSeries"];
 }
 
--(void)setYAxisDescription:(NSString *)yAxisDescription {
-	NSString *oldValue = _yAxisDescription;
-	_yAxisDescription = yAxisDescription;
-	[self updateNSObject:oldValue newValue:yAxisDescription propertyName:@"yAxisDescription"];
+-(void)setDefinition:(NSString *)definition {
+	NSString *oldValue = _definition;
+	_definition = definition;
+	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
 -(void)setXAxisDescription:(NSString *)xAxisDescription {
@@ -448,22 +448,28 @@
 	[self updateNSObject:oldValue newValue:xAxisDescription propertyName:@"xAxisDescription"];
 }
 
--(void)setNullPointValue:(NSString *)nullPointValue {
-	NSString *oldValue = _nullPointValue;
-	_nullPointValue = nullPointValue;
-	[self updateNSObject:oldValue newValue:nullPointValue propertyName:@"nullPointValue"];
+-(void)setYAxisDescription:(NSString *)yAxisDescription {
+	NSString *oldValue = _yAxisDescription;
+	_yAxisDescription = yAxisDescription;
+	[self updateNSObject:oldValue newValue:yAxisDescription propertyName:@"yAxisDescription"];
 }
 
--(void)setDefinition:(NSString *)definition {
-	NSString *oldValue = _definition;
-	_definition = definition;
-	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
+-(void)setPointAnnotationsDescription:(NSString *)pointAnnotationsDescription {
+	NSString *oldValue = _pointAnnotationsDescription;
+	_pointAnnotationsDescription = pointAnnotationsDescription;
+	[self updateNSObject:oldValue newValue:pointAnnotationsDescription propertyName:@"pointAnnotationsDescription"];
 }
 
 -(void)setSummary:(HISummary *)summary {
 	HISummary *oldValue = _summary;
 	_summary = summary;
 	[self updateHIObject:oldValue newValue:summary propertyName:@"summary"];
+}
+
+-(void)setNullPointValue:(NSString *)nullPointValue {
+	NSString *oldValue = _nullPointValue;
+	_nullPointValue = nullPointValue;
+	[self updateNSObject:oldValue newValue:nullPointValue propertyName:@"nullPointValue"];
 }
 
 -(void)setIncludeInDataExport:(NSNumber *)includeInDataExport {
@@ -562,6 +568,12 @@
 	[self updateHIObject:oldValue newValue:tooltip propertyName:@"tooltip"];
 }
 
+-(void)setLabel:(HILabel *)label {
+	HILabel *oldValue = _label;
+	_label = label;
+	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
+}
+
 -(void)setPointDescriptionFormatter:(HIFunction *)pointDescriptionFormatter {
 	HIFunction *oldValue = _pointDescriptionFormatter;
 	_pointDescriptionFormatter = pointDescriptionFormatter;
@@ -598,10 +610,10 @@
 	[self updateNSObject:oldValue newValue:enableMouseTracking propertyName:@"enableMouseTracking"];
 }
 
--(void)setLabel:(HILabel *)label {
-	HILabel *oldValue = _label;
-	_label = label;
-	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
+-(void)setCustom:(NSDictionary *)custom {
+	NSDictionary *oldValue = _custom;
+	_custom = custom;
+	[self updateNSObject:oldValue newValue:custom propertyName:@"custom"];
 }
 
 -(void)setStacking:(NSString *)stacking {

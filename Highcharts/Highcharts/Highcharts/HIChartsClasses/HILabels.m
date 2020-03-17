@@ -31,17 +31,18 @@
 	copyLabels.overflow = [self.overflow copyWithZone: zone];
 	copyLabels.enabled = [self.enabled copyWithZone: zone];
 	copyLabels.point = [self.point copyWithZone: zone];
-	copyLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
-	copyLabels.borderColor = [self.borderColor copyWithZone: zone];
-	copyLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyLabels.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyLabels.text = [self.text copyWithZone: zone];
+	copyLabels.accessibility = [self.accessibility copyWithZone: zone];
 	copyLabels.crop = [self.crop copyWithZone: zone];
-	copyLabels.className = [self.className copyWithZone: zone];
 	copyLabels.shape = [self.shape copyWithZone: zone];
-	copyLabels.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyLabels.borderColor = [self.borderColor copyWithZone: zone];
 	copyLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
 	copyLabels.shadow = [self.shadow copyWithZone: zone];
+	copyLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
+	copyLabels.className = [self.className copyWithZone: zone];
+	copyLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	return copyLabels;
 }
 
@@ -120,38 +121,41 @@
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
 	}
-	if (self.allowOverlap) {
-		params[@"allowOverlap"] = self.allowOverlap;
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
-	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
+	if (self.accessibility) {
+		params[@"accessibility"] = [self.accessibility getParams];
+	}
 	if (self.crop) {
 		params[@"crop"] = self.crop;
-	}
-	if (self.className) {
-		params[@"className"] = self.className;
 	}
 	if (self.shape) {
 		params[@"shape"] = self.shape;
 	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
+	if (self.allowOverlap) {
+		params[@"allowOverlap"] = self.allowOverlap;
+	}
 	if (self.shadow) {
 		params[@"shadow"] = [self.shadow getParams];
+	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	return params;
 }
@@ -284,24 +288,6 @@
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
 
--(void)setAllowOverlap:(NSNumber *)allowOverlap {
-	NSNumber *oldValue = _allowOverlap;
-	_allowOverlap = allowOverlap;
-	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
-}
-
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	NSString *oldValue = _verticalAlign;
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
-}
-
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
@@ -314,16 +300,16 @@
 	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
+-(void)setAccessibility:(HILabelsAccessibility *)accessibility {
+	HILabelsAccessibility *oldValue = _accessibility;
+	_accessibility = accessibility;
+	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
+}
+
 -(void)setCrop:(NSNumber *)crop {
 	NSNumber *oldValue = _crop;
 	_crop = crop;
 	[self updateNSObject:oldValue newValue:crop propertyName:@"crop"];
-}
-
--(void)setClassName:(NSString *)className {
-	NSString *oldValue = _className;
-	_className = className;
-	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setShape:(NSString *)shape {
@@ -332,10 +318,10 @@
 	[self updateNSObject:oldValue newValue:shape propertyName:@"shape"];
 }
 
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	NSNumber *oldValue = _borderWidth;
-	_borderWidth = borderWidth;
-	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setBackgroundColor:(HIColor *)backgroundColor {
@@ -344,10 +330,34 @@
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
+-(void)setAllowOverlap:(NSNumber *)allowOverlap {
+	NSNumber *oldValue = _allowOverlap;
+	_allowOverlap = allowOverlap;
+	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
+}
+
 -(void)setShadow:(HIShadowOptionsObject *)shadow {
 	HIShadowOptionsObject *oldValue = _shadow;
 	_shadow = shadow;
 	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
+}
+
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
+}
+
+-(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
+	_className = className;
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
+	_borderWidth = borderWidth;
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 @end

@@ -44,10 +44,11 @@
 	copyHeatmap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyHeatmap.point = [self.point copyWithZone: zone];
 	copyHeatmap.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyHeatmap.label = [self.label copyWithZone: zone];
 	copyHeatmap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHeatmap.cursor = [self.cursor copyWithZone: zone];
 	copyHeatmap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyHeatmap.label = [self.label copyWithZone: zone];
+	copyHeatmap.custom = [self.custom copyWithZone: zone];
 	copyHeatmap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyHeatmap.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyHeatmap.events = [self.events copyWithZone: zone];
