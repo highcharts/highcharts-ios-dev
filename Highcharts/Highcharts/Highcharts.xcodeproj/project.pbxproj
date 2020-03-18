@@ -57,7 +57,6 @@
 		CD3F770C2056AE5F00527CBE /* HIChartContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3F770B2056AE5F00527CBE /* HIChartContext.m */; };
 		CD5B35961F90C469006159D7 /* HIChartsJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */; };
 		CD5B35971F90C46C006159D7 /* HIChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIChartView.m */; };
-		CD5B35981F90C470006159D7 /* HIGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC14493A1F4A926E00612B1C /* HIGChartView.m */; };
 		CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
 		CD5B359A1F90C478006159D7 /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		CD5B359B1F90C47A006159D7 /* HIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 208980271E6412EA007280D7 /* HIColor.m */; };
@@ -487,8 +486,7 @@
 		CDF0F8642421396D00F7A7B4 /* HILabelsAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF0F8632421396D00F7A7B4 /* HILabelsAccessibility.m */; };
 		CDF0F86624213AFF00F7A7B4 /* HILabelOptionsAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF0F86524213AFF00F7A7B4 /* HILabelOptionsAccessibility.m */; };
 		CDF0F86824213B1600F7A7B4 /* HILabelOptionsAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CDF0F86724213B1600F7A7B4 /* HILabelOptionsAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC1449381F4A854900612B1C /* HIGChartViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC14493B1F4A926E00612B1C /* HIGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449391F4A926E00612B1C /* HIGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC1449381F4A854900612B1C /* HIChartViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449371F4A854900612B1C /* HIChartViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -959,9 +957,7 @@
 		CDF0F8632421396D00F7A7B4 /* HILabelsAccessibility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HILabelsAccessibility.m; sourceTree = "<group>"; };
 		CDF0F86524213AFF00F7A7B4 /* HILabelOptionsAccessibility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HILabelOptionsAccessibility.m; sourceTree = "<group>"; };
 		CDF0F86724213B1600F7A7B4 /* HILabelOptionsAccessibility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HILabelOptionsAccessibility.h; sourceTree = "<group>"; };
-		EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartViewDelegate.h; sourceTree = "<group>"; };
-		EC1449391F4A926E00612B1C /* HIGChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGChartView.h; sourceTree = "<group>"; };
-		EC14493A1F4A926E00612B1C /* HIGChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGChartView.m; sourceTree = "<group>"; };
+		EC1449371F4A854900612B1C /* HIChartViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIChartViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1485,11 +1481,9 @@
 				2011ABB31E7013F30027DA10 /* HIChartsClasses */,
 				208C104F1E5C4BD8005C425F /* HIChartsJSONSerializable.h */,
 				208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */,
-				EC1449371F4A854900612B1C /* HIGChartViewDelegate.h */,
+				EC1449371F4A854900612B1C /* HIChartViewDelegate.h */,
 				345BA00E1C39AFB9001DAB1B /* HIChartView.h */,
 				345BA00F1C39AFB9001DAB1B /* HIChartView.m */,
-				EC1449391F4A926E00612B1C /* HIGChartView.h */,
-				EC14493A1F4A926E00612B1C /* HIGChartView.m */,
 				34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */,
 				34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */,
 				34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */,
@@ -1729,8 +1723,7 @@
 				CD1DF89321F9EECA005DF8A7 /* HIClassJSMethods.h in Headers */,
 				CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */,
 				CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */,
-				EC14493B1F4A926E00612B1C /* HIGChartView.h in Headers */,
-				EC1449381F4A854900612B1C /* HIGChartViewDelegate.h in Headers */,
+				EC1449381F4A854900612B1C /* HIChartViewDelegate.h in Headers */,
 				202957701E64175B002447E0 /* HIBridge.h in Headers */,
 				208980261E641223007280D7 /* HIColor.h in Headers */,
 				208C10531E5C4BD8005C425F /* HIChartsJSONSerializable.h in Headers */,
@@ -1787,7 +1780,7 @@
 		343E13811C38513D006DDD68 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Highsoft AS";
 				TargetAttributes = {
 					20B0FEC21E7068490049A5E5 = {
@@ -1811,11 +1804,11 @@
 			};
 			buildConfigurationList = 343E13841C38513D006DDD68 /* Build configuration list for PBXProject "Highcharts" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 343E13801C38513D006DDD68;
 			productRefGroup = 343E138B1C38513D006DDD68 /* Products */;
@@ -1990,7 +1983,6 @@
 				CDD68342242131430022E38A /* HILinkTextPath.m in Sources */,
 				CDD68328242131430022E38A /* HIDataClasses.m in Sources */,
 				CDD68376242131430022E38A /* HIShadowOptionsObject.m in Sources */,
-				CD5B35981F90C470006159D7 /* HIGChartView.m in Sources */,
 				CDD682CE242131430022E38A /* HISubtitle.m in Sources */,
 				CDD682BD242131430022E38A /* HIAreasplinerange.m in Sources */,
 				CDD6837B242131430022E38A /* HILoading.m in Sources */,
@@ -2176,18 +2168,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -2266,18 +2267,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -2318,18 +2328,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
