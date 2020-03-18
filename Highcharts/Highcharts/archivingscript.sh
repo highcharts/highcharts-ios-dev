@@ -6,7 +6,7 @@ xcodebuild -project Highcharts.xcodeproj -configuration Release -scheme Highchar
 
 xcodebuild -scheme Highcharts archive -project Highcharts.xcodeproj -configuration Release -sdk iphoneos -archivePath Archive -arch armv7 -arch armv7s -arch arm64 only_active_arch=no
 
-xcodebuild build -project Highcharts.xcodeproj -configuration Release -scheme Highcharts -sdk iphonesimulator SYMROOT=Build only_active_arch=no -arch x86_64 -arch i386
+xcodebuild build -project Highcharts.xcodeproj -configuration Release -scheme Highcharts -sdk iphonesimulator SYMROOT=Build only_active_arch=no -arch x86_64
 
 cp -RL Archive.xcarchive/Products/Library/Frameworks/ Build/Release-universal/
 
