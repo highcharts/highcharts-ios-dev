@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIStockToolsBindingsObject Class Reference</title>
+	<title>HIArrow Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,15 +58,21 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/className">className</option>
+		<option value="//api/name/children">children</option>
 		
-		<option value="//api/name/end">end</option>
+		<option value="//api/name/id">id</option>
 		
-		<option value="//api/name/initial">initial</option>
+		<option value="//api/name/markerHeight">markerHeight</option>
 		
-		<option value="//api/name/start">start</option>
+		<option value="//api/name/markerWidth">markerWidth</option>
 		
-		<option value="//api/name/steps">steps</option>
+		<option value="//api/name/refX">refX</option>
+		
+		<option value="//api/name/refY">refY</option>
+		
+		<option value="//api/name/render">render</option>
+		
+		<option value="//api/name/tagName">tagName</option>
 		
 	</optgroup>
 	
@@ -93,7 +99,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIStockToolsBindingsObject Class Reference</h1>
+					<h1 class="title">HIArrow Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -102,18 +108,12 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIStockToolsBindingsObject.h</td>
+	<td>HIArrow.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A config object for bindings in Stock Tools module.</p>
-					</div>
 					
 					
 
@@ -128,8 +128,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/className" title="className"></a>
-	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
+	<a name="//api/name/refY" title="refY"></a>
+	<h3 class="method-title"><code><a href="#//api/name/refY">&nbsp;&nbsp;refY</a></code>
 </h3>
 
 	<div class="method-info">
@@ -137,40 +137,15 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>ClassName of the element for a binding.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *refY</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/end" title="end"></a>
-	<h3 class="method-title"><code><a href="#//api/name/end">&nbsp;&nbsp;end</a></code>
+	<a name="//api/name/refX" title="refX"></a>
+	<h3 class="method-title"><code><a href="#//api/name/refX">&nbsp;&nbsp;refX</a></code>
 </h3>
 
 	<div class="method-info">
@@ -178,40 +153,15 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Last event to be fired after last step event.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *end</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *refX</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initial" title="initial"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initial">&nbsp;&nbsp;initial</a></code>
+	<a name="//api/name/render" title="render"></a>
+	<h3 class="method-title"><code><a href="#//api/name/render">&nbsp;&nbsp;render</a></code>
 </h3>
 
 	<div class="method-info">
@@ -219,40 +169,15 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Initial event, fired on a button click.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *initial</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *render</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/start" title="start"></a>
-	<h3 class="method-title"><code><a href="#//api/name/start">&nbsp;&nbsp;start</a></code>
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="method-title"><code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
 </h3>
 
 	<div class="method-info">
@@ -260,40 +185,15 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Event fired on first click on a chart.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *start</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *id</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/steps" title="steps"></a>
-	<h3 class="method-title"><code><a href="#//api/name/steps">&nbsp;&nbsp;steps</a></code>
+	<a name="//api/name/tagName" title="tagName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tagName">&nbsp;&nbsp;tagName</a></code>
 </h3>
 
 	<div class="method-info">
@@ -301,35 +201,58 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Last event to be fired after last step event. Array of step events to be called sequentially after each user click.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIFunction*&gt; *steps</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tagName</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/markerWidth" title="markerWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markerWidth">&nbsp;&nbsp;markerWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *markerWidth</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/children" title="children"></a>
+	<h3 class="method-title"><code><a href="#//api/name/children">&nbsp;&nbsp;children</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *children</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/markerHeight" title="markerHeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markerHeight">&nbsp;&nbsp;markerHeight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
-			
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *markerHeight</code></div>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIStockToolsBindingsObject.h</code></p>
-			</div>
-			
-			
+		    
 		</div>
 	</div>
 </div><div class="section-method">
@@ -365,7 +288,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
