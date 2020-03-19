@@ -64,6 +64,8 @@
 		
 		<option value="//api/name/afterRegionLabel">afterRegionLabel</option>
 		
+		<option value="//api/name/annotations">annotations</option>
+		
 		<option value="//api/name/axisRangeDateFormat">axisRangeDateFormat</option>
 		
 		<option value="//api/name/beforeChartFormat">beforeChartFormat</option>
@@ -73,6 +75,8 @@
 		<option value="//api/name/beforeRegionLabel">beforeRegionLabel</option>
 		
 		<option value="//api/name/endOfChartMarker">endOfChartMarker</option>
+		
+		<option value="//api/name/onPlayAsSoundClick">onPlayAsSoundClick</option>
 		
 		<option value="//api/name/onViewDataTableClick">onViewDataTableClick</option>
 		
@@ -218,6 +222,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/onPlayAsSoundClick" title="onPlayAsSoundClick"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onPlayAsSoundClick">&nbsp;&nbsp;onPlayAsSoundClick</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Function to run upon clicking the &ldquo;Play as sound&rdquo; button in the screen reader region. By default Highcharts will call the <code>chart.sonify</code> function.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onPlayAsSoundClick</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIScreenReaderSection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/afterChartFormat" title="afterChartFormat"></a>
 	<h3 class="method-title"><code><a href="#//api/name/afterChartFormat">&nbsp;&nbsp;afterChartFormat</a></code>
 </h3>
@@ -311,7 +356,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Format for the screen reader information region before the chart. Supported HTML tags are <code>&lt;h1-7&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;a&gt;</code>, and <code>&lt;button&gt;</code>. Attributes are not supported, except for id on <code>&lt;div&gt;</code>, <code>&lt;a&gt;</code>, and <code>&lt;button&gt;</code>. Id is required on <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> in the format <code>&lt;tag id="abcd"&gt;</code>. Numbers, lower- and uppercase letters, &ldquo;-&rdquo; and &ldquo;#&rdquo; are valid characters in IDs.</p>
+				<p>Format for the screen reader information region before the chart. Supported HTML tags are <code>&lt;h1-7&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>, and <code>&lt;button&gt;</code>. Attributes are not supported, except for id on <code>&lt;div&gt;</code>, <code>&lt;a&gt;</code>, and <code>&lt;button&gt;</code>. Id is required on <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> in the format <code>&lt;tag id="abcd"&gt;</code>. Numbers, lower- and uppercase letters, &ldquo;-&rdquo; and &ldquo;#&rdquo; are valid characters in IDs.</p>
 			</div>
 			
 		    
@@ -414,6 +459,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/annotations" title="annotations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/annotations">&nbsp;&nbsp;annotations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Language options for annotation descriptions.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnnotations *annotations</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIScreenReaderSection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/endOfChartMarker" title="endOfChartMarker"></a>
 	<h3 class="method-title"><code><a href="#//api/name/endOfChartMarker">&nbsp;&nbsp;endOfChartMarker</a></code>
 </h3>
@@ -487,7 +573,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

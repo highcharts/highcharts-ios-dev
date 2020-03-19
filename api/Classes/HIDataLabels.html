@@ -359,8 +359,8 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/">Bold labels</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotOptions/pie-datalabels-overflow/">Long labels truncated with an ellipsis in a pie</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotOptions/pie-datalabels-overflow-wrap/">Long labels are wrapped in a pie</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-overflow/">Long labels truncated with an ellipsis in a pie</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-overflow-wrap/">Long labels are wrapped in a pie</a></li>
 </ul>
 
 			</div>
@@ -391,7 +391,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are <code>auto</code>, <code>parallel</code> and <code>perpendicular</code>. When <code>auto</code>, the best fit will be computed for the point. The <code>series.rotation</code> option takes precedence over <code>rotationMode</code>.</p>
+				<p>Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are <code>auto</code>, <code>circular</code>, <code>parallel</code> and <code>perpendicular</code>. When <code>auto</code>, the best fit will be computed for the point. The <code>circular</code> option works similiar to <code>auto</code>, but uses the <code>textPath</code> feature - labels are curved, resulting in a better layout, however multiple lines and <code>textOutline</code> are not supported. The <code>series.rotation</code> option takes precedence over <code>rotationMode</code>.</p>
 			</div>
 			
 		    
@@ -408,7 +408,14 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["auto", "perpendicular", "parallel"]</code>.</p>
+				<p><strong>Accepted values:</strong> <code>["auto", "perpendicular", "parallel", "circular"]</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-datalabels-rotationmode-circular/">Circular rotation mode</a></li>
+</ul>
+
 			</div>
 			
 
@@ -1767,6 +1774,73 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/parentNodeFormat" title="parentNodeFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parentNodeFormat">&nbsp;&nbsp;parentNodeFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *parentNodeFormat</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parentNodeTextPath" title="parentNodeTextPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parentNodeTextPath">&nbsp;&nbsp;parentNodeTextPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for a <em>parentNode</em> label text. <strong>Note:</strong> Only SVG-based renderer supports this option.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIParentNodeTextPath *parentNodeTextPath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-packedbubble/packed-dashboard">Dashboard with dataLabels on parentNodes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/parentNodeFormatter" title="parentNodeFormatter"></a>
 	<h3 class="method-title"><code><a href="#//api/name/parentNodeFormatter">&nbsp;&nbsp;parentNodeFormatter</a></code>
 </h3>
@@ -1808,8 +1882,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/parentNodeTextPath" title="parentNodeTextPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parentNodeTextPath">&nbsp;&nbsp;parentNodeTextPath</a></code>
+	<a name="//api/name/attributes" title="attributes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1819,12 +1893,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for a <em>parentNode</em> label text. <strong>Note:</strong> Only SVG-based renderer supports this option.</p>
+				<p>Presentation attributes for the text path.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIParentNodeTextPath *parentNodeTextPath</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attributes</code></div>
 
 		    
 			
@@ -1833,16 +1907,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-packedbubble/packed-dashboard">Dashboard with dataLabels on parentNodes</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -2466,63 +2530,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/attributes" title="attributes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Presentation attributes for the text path.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attributes</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/parentNodeFormat" title="parentNodeFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parentNodeFormat">&nbsp;&nbsp;parentNodeFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *parentNodeFormat</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/getParams" title="getParams"></a>
 	<h3 class="method-title"><code><a href="#//api/name/getParams">&ndash;&nbsp;getParams</a></code>
 </h3>
@@ -2555,7 +2562,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
