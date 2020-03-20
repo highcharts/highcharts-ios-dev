@@ -50,11 +50,13 @@
 	copyColumn.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumn.point = [self.point copyWithZone: zone];
 	copyColumn.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyColumn.label = [self.label copyWithZone: zone];
 	copyColumn.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumn.cursor = [self.cursor copyWithZone: zone];
+	copyColumn.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyColumn.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyColumn.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyColumn.label = [self.label copyWithZone: zone];
+	copyColumn.custom = [self.custom copyWithZone: zone];
 	copyColumn.stacking = [self.stacking copyWithZone: zone];
 	copyColumn.animation = [self.animation copyWithZone: zone];
 	copyColumn.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

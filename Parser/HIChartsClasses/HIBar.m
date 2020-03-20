@@ -60,11 +60,12 @@
 	copyBar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBar.point = [self.point copyWithZone: zone];
 	copyBar.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyBar.label = [self.label copyWithZone: zone];
 	copyBar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBar.cursor = [self.cursor copyWithZone: zone];
 	copyBar.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyBar.label = [self.label copyWithZone: zone];
+	copyBar.custom = [self.custom copyWithZone: zone];
 	copyBar.stacking = [self.stacking copyWithZone: zone];
 	copyBar.animation = [self.animation copyWithZone: zone];
 	copyBar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
@@ -91,6 +92,7 @@
 	copyBar.pointStart = [self.pointStart copyWithZone: zone];
 	copyBar.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyBar.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyBar.dashStyle = [self.dashStyle copyWithZone: zone];
 	return copyBar;
 }
 

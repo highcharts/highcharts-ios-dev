@@ -45,11 +45,13 @@
 	copyVariwide.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVariwide.point = [self.point copyWithZone: zone];
 	copyVariwide.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyVariwide.label = [self.label copyWithZone: zone];
 	copyVariwide.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVariwide.cursor = [self.cursor copyWithZone: zone];
+	copyVariwide.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyVariwide.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyVariwide.label = [self.label copyWithZone: zone];
+	copyVariwide.custom = [self.custom copyWithZone: zone];
 	copyVariwide.stacking = [self.stacking copyWithZone: zone];
 	copyVariwide.animation = [self.animation copyWithZone: zone];
 	copyVariwide.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

@@ -37,12 +37,13 @@
 	copyScatter.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyScatter.point = [self.point copyWithZone: zone];
 	copyScatter.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyScatter.label = [self.label copyWithZone: zone];
 	copyScatter.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyScatter.cursor = [self.cursor copyWithZone: zone];
 	copyScatter.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyScatter.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyScatter.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyScatter.label = [self.label copyWithZone: zone];
+	copyScatter.custom = [self.custom copyWithZone: zone];
 	copyScatter.stacking = [self.stacking copyWithZone: zone];
 	copyScatter.animation = [self.animation copyWithZone: zone];
 	copyScatter.threshold = [self.threshold copyWithZone: zone];

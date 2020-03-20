@@ -15,12 +15,7 @@
 	copyPoint.x = [self.x copyWithZone: zone];
 	copyPoint.xAxis = [self.xAxis copyWithZone: zone];
 	copyPoint.yAxis = [self.yAxis copyWithZone: zone];
-	copyPoint.valueSuffix = [self.valueSuffix copyWithZone: zone];
-	copyPoint.dateFormat = [self.dateFormat copyWithZone: zone];
-	copyPoint.dateFormatter = [self.dateFormatter copyWithZone: zone];
-	copyPoint.valuePrefix = [self.valuePrefix copyWithZone: zone];
-	copyPoint.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
-	copyPoint.valueDecimals = [self.valueDecimals copyWithZone: zone];
+	copyPoint.valueDescriptionFormat = [self.valueDescriptionFormat copyWithZone: zone];
 	return copyPoint;
 }
 
@@ -43,23 +38,8 @@
 	if (self.yAxis) {
 		params[@"yAxis"] = self.yAxis;
 	}
-	if (self.valueSuffix) {
-		params[@"valueSuffix"] = self.valueSuffix;
-	}
-	if (self.dateFormat) {
-		params[@"dateFormat"] = self.dateFormat;
-	}
-	if (self.dateFormatter) {
-		params[@"dateFormatter"] = [self.dateFormatter getFunction];
-	}
-	if (self.valuePrefix) {
-		params[@"valuePrefix"] = self.valuePrefix;
-	}
-	if (self.descriptionFormatter) {
-		params[@"descriptionFormatter"] = [self.descriptionFormatter getFunction];
-	}
-	if (self.valueDecimals) {
-		params[@"valueDecimals"] = self.valueDecimals;
+	if (self.valueDescriptionFormat) {
+		params[@"valueDescriptionFormat"] = self.valueDescriptionFormat;
 	}
 	return params;
 }
@@ -96,40 +76,10 @@
 	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }
 
--(void)setValueSuffix:(NSString *)valueSuffix {
-	NSString *oldValue = _valueSuffix;
-	_valueSuffix = valueSuffix;
-	[self updateNSObject:oldValue newValue:valueSuffix propertyName:@"valueSuffix"];
-}
-
--(void)setDateFormat:(NSString *)dateFormat {
-	NSString *oldValue = _dateFormat;
-	_dateFormat = dateFormat;
-	[self updateNSObject:oldValue newValue:dateFormat propertyName:@"dateFormat"];
-}
-
--(void)setDateFormatter:(HIFunction *)dateFormatter {
-	HIFunction *oldValue = _dateFormatter;
-	_dateFormatter = dateFormatter;
-	[self updateHIObject:oldValue newValue:dateFormatter propertyName:@"dateFormatter"];
-}
-
--(void)setValuePrefix:(NSString *)valuePrefix {
-	NSString *oldValue = _valuePrefix;
-	_valuePrefix = valuePrefix;
-	[self updateNSObject:oldValue newValue:valuePrefix propertyName:@"valuePrefix"];
-}
-
--(void)setDescriptionFormatter:(HIFunction *)descriptionFormatter {
-	HIFunction *oldValue = _descriptionFormatter;
-	_descriptionFormatter = descriptionFormatter;
-	[self updateHIObject:oldValue newValue:descriptionFormatter propertyName:@"descriptionFormatter"];
-}
-
--(void)setValueDecimals:(NSNumber *)valueDecimals {
-	NSNumber *oldValue = _valueDecimals;
-	_valueDecimals = valueDecimals;
-	[self updateNSObject:oldValue newValue:valueDecimals propertyName:@"valueDecimals"];
+-(void)setValueDescriptionFormat:(NSString *)valueDescriptionFormat {
+	NSString *oldValue = _valueDescriptionFormat;
+	_valueDescriptionFormat = valueDescriptionFormat;
+	[self updateNSObject:oldValue newValue:valueDescriptionFormat propertyName:@"valueDescriptionFormat"];
 }
 
 - (void)cancelSonify {

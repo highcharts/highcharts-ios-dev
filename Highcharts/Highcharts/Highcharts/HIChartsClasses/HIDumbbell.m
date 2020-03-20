@@ -18,6 +18,7 @@
 	copyDumbbell.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyDumbbell.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyDumbbell.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyDumbbell.pointRange = [self.pointRange copyWithZone: zone];
 	copyDumbbell.states = [self.states copyWithZone: zone];
 	copyDumbbell.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyDumbbell.lowColor = [self.lowColor copyWithZone: zone];
@@ -42,13 +43,14 @@
 	copyDumbbell.point = [self.point copyWithZone: zone];
 	copyDumbbell.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyDumbbell.marker = [self.marker copyWithZone: zone];
+	copyDumbbell.label = [self.label copyWithZone: zone];
 	copyDumbbell.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyDumbbell.cursor = [self.cursor copyWithZone: zone];
 	copyDumbbell.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyDumbbell.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyDumbbell.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyDumbbell.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyDumbbell.label = [self.label copyWithZone: zone];
+	copyDumbbell.custom = [self.custom copyWithZone: zone];
 	copyDumbbell.animation = [self.animation copyWithZone: zone];
 	copyDumbbell.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyDumbbell.showCheckbox = [self.showCheckbox copyWithZone: zone];
@@ -75,6 +77,16 @@
 	copyDumbbell.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyDumbbell.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyDumbbell.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyDumbbell.data = [self.data copyWithZone: zone];
+	copyDumbbell.id = [self.id copyWithZone: zone];
+	copyDumbbell.index = [self.index copyWithZone: zone];
+	copyDumbbell.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyDumbbell.name = [self.name copyWithZone: zone];
+	copyDumbbell.stack = [self.stack copyWithZone: zone];
+	copyDumbbell.type = [self.type copyWithZone: zone];
+	copyDumbbell.xAxis = [self.xAxis copyWithZone: zone];
+	copyDumbbell.yAxis = [self.yAxis copyWithZone: zone];
+	copyDumbbell.zIndex = [self.zIndex copyWithZone: zone];
 	return copyDumbbell;
 }
 
@@ -89,6 +101,9 @@
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
+	}
+	if (self.pointRange) {
+		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -123,6 +138,12 @@
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
+}
+
+-(void)setPointRange:(NSNumber *)pointRange {
+	NSNumber *oldValue = _pointRange;
+	_pointRange = pointRange;
+	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {

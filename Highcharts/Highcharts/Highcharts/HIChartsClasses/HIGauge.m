@@ -30,11 +30,11 @@
 	copyGauge.color = [self.color copyWithZone: zone];
 	copyGauge.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyGauge.point = [self.point copyWithZone: zone];
-	copyGauge.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyGauge.label = [self.label copyWithZone: zone];
 	copyGauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyGauge.cursor = [self.cursor copyWithZone: zone];
 	copyGauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyGauge.label = [self.label copyWithZone: zone];
+	copyGauge.custom = [self.custom copyWithZone: zone];
 	copyGauge.animation = [self.animation copyWithZone: zone];
 	copyGauge.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyGauge.boostBlending = [self.boostBlending copyWithZone: zone];

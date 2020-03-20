@@ -15,10 +15,21 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HILollipop *copyLollipop = [[HILollipop allocWithZone: zone] init];
+	copyLollipop.data = [self.data copyWithZone: zone];
+	copyLollipop.id = [self.id copyWithZone: zone];
+	copyLollipop.index = [self.index copyWithZone: zone];
+	copyLollipop.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyLollipop.name = [self.name copyWithZone: zone];
+	copyLollipop.stack = [self.stack copyWithZone: zone];
+	copyLollipop.type = [self.type copyWithZone: zone];
+	copyLollipop.xAxis = [self.xAxis copyWithZone: zone];
+	copyLollipop.yAxis = [self.yAxis copyWithZone: zone];
+	copyLollipop.zIndex = [self.zIndex copyWithZone: zone];
 	copyLollipop.tooltip = [self.tooltip copyWithZone: zone];
 	copyLollipop.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyLollipop.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyLollipop.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyLollipop.pointRange = [self.pointRange copyWithZone: zone];
 	copyLollipop.states = [self.states copyWithZone: zone];
 	copyLollipop.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyLollipop.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -41,13 +52,14 @@
 	copyLollipop.point = [self.point copyWithZone: zone];
 	copyLollipop.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyLollipop.marker = [self.marker copyWithZone: zone];
+	copyLollipop.label = [self.label copyWithZone: zone];
 	copyLollipop.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyLollipop.cursor = [self.cursor copyWithZone: zone];
 	copyLollipop.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyLollipop.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyLollipop.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyLollipop.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyLollipop.label = [self.label copyWithZone: zone];
+	copyLollipop.custom = [self.custom copyWithZone: zone];
 	copyLollipop.animation = [self.animation copyWithZone: zone];
 	copyLollipop.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyLollipop.showCheckbox = [self.showCheckbox copyWithZone: zone];
@@ -89,6 +101,9 @@
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
+	if (self.pointRange) {
+		params[@"pointRange"] = self.pointRange;
+	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
 	}
@@ -119,6 +134,12 @@
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
+}
+
+-(void)setPointRange:(NSNumber *)pointRange {
+	NSNumber *oldValue = _pointRange;
+	_pointRange = pointRange;
+	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {

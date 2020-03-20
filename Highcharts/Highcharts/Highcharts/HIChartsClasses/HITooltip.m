@@ -18,6 +18,7 @@
 	copyTooltip.valueSuffix = [self.valueSuffix copyWithZone: zone];
 	copyTooltip.valuePrefix = [self.valuePrefix copyWithZone: zone];
 	copyTooltip.positioner = [self.positioner copyWithZone: zone];
+	copyTooltip.stickOnContact = [self.stickOnContact copyWithZone: zone];
 	copyTooltip.useHTML = [self.useHTML copyWithZone: zone];
 	copyTooltip.borderColor = [self.borderColor copyWithZone: zone];
 	copyTooltip.style = [self.style copyWithZone: zone];
@@ -76,6 +77,9 @@
 	}
 	if (self.positioner) {
 		params[@"positioner"] = [self.positioner getFunction];
+	}
+	if (self.stickOnContact) {
+		params[@"stickOnContact"] = self.stickOnContact;
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
@@ -215,6 +219,12 @@
 	HIFunction *oldValue = _positioner;
 	_positioner = positioner;
 	[self updateHIObject:oldValue newValue:positioner propertyName:@"positioner"];
+}
+
+-(void)setStickOnContact:(NSNumber *)stickOnContact {
+	NSNumber *oldValue = _stickOnContact;
+	_stickOnContact = stickOnContact;
+	[self updateNSObject:oldValue newValue:stickOnContact propertyName:@"stickOnContact"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {

@@ -20,6 +20,10 @@
 	copyAnnotations.id = [self.id copyWithZone: zone];
 	copyAnnotations.draggable = [self.draggable copyWithZone: zone];
 	copyAnnotations.events = [self.events copyWithZone: zone];
+	copyAnnotations.descriptionMultiplePoints = [self.descriptionMultiplePoints copyWithZone: zone];
+	copyAnnotations.descriptionSinglePoint = [self.descriptionSinglePoint copyWithZone: zone];
+	copyAnnotations.descriptionNoPoints = [self.descriptionNoPoints copyWithZone: zone];
+	copyAnnotations.heading = [self.heading copyWithZone: zone];
 	return copyAnnotations;
 }
 
@@ -74,6 +78,18 @@
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
+	}
+	if (self.descriptionMultiplePoints) {
+		params[@"descriptionMultiplePoints"] = self.descriptionMultiplePoints;
+	}
+	if (self.descriptionSinglePoint) {
+		params[@"descriptionSinglePoint"] = self.descriptionSinglePoint;
+	}
+	if (self.descriptionNoPoints) {
+		params[@"descriptionNoPoints"] = self.descriptionNoPoints;
+	}
+	if (self.heading) {
+		params[@"heading"] = self.heading;
 	}
 	return params;
 }
@@ -138,6 +154,30 @@
 	HIEvents *oldValue = _events;
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+}
+
+-(void)setDescriptionMultiplePoints:(NSString *)descriptionMultiplePoints {
+	NSString *oldValue = _descriptionMultiplePoints;
+	_descriptionMultiplePoints = descriptionMultiplePoints;
+	[self updateNSObject:oldValue newValue:descriptionMultiplePoints propertyName:@"descriptionMultiplePoints"];
+}
+
+-(void)setDescriptionSinglePoint:(NSString *)descriptionSinglePoint {
+	NSString *oldValue = _descriptionSinglePoint;
+	_descriptionSinglePoint = descriptionSinglePoint;
+	[self updateNSObject:oldValue newValue:descriptionSinglePoint propertyName:@"descriptionSinglePoint"];
+}
+
+-(void)setDescriptionNoPoints:(NSString *)descriptionNoPoints {
+	NSString *oldValue = _descriptionNoPoints;
+	_descriptionNoPoints = descriptionNoPoints;
+	[self updateNSObject:oldValue newValue:descriptionNoPoints propertyName:@"descriptionNoPoints"];
+}
+
+-(void)setHeading:(NSString *)heading {
+	NSString *oldValue = _heading;
+	_heading = heading;
+	[self updateNSObject:oldValue newValue:heading propertyName:@"heading"];
 }
 
 - (void)adjustLabelVisibility:(HILabels *)item {

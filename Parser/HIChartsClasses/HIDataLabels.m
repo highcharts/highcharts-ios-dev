@@ -47,8 +47,10 @@
 	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
 	copyDataLabels.xLow = [self.xLow copyWithZone: zone];
 	copyDataLabels.yLow = [self.yLow copyWithZone: zone];
-	copyDataLabels.parentNodeFormatter = [self.parentNodeFormatter copyWithZone: zone];
+	copyDataLabels.parentNodeFormat = [self.parentNodeFormat copyWithZone: zone];
 	copyDataLabels.parentNodeTextPath = [self.parentNodeTextPath copyWithZone: zone];
+	copyDataLabels.parentNodeFormatter = [self.parentNodeFormatter copyWithZone: zone];
+	copyDataLabels.attributes = [self.attributes copyWithZone: zone];
 	copyDataLabels.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyDataLabels.alternate = [self.alternate copyWithZone: zone];
 	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
@@ -63,8 +65,6 @@
 	copyDataLabels.connectorPadding = [self.connectorPadding copyWithZone: zone];
 	copyDataLabels.connectorShape = [self.connectorShape copyWithZone: zone];
 	copyDataLabels.crookDistance = [self.crookDistance copyWithZone: zone];
-	copyDataLabels.attributes = [self.attributes copyWithZone: zone];
-	copyDataLabels.parentNodeFormat = [self.parentNodeFormat copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -182,11 +182,17 @@
 	if (self.yLow) {
 		params[@"yLow"] = self.yLow;
 	}
-	if (self.parentNodeFormatter) {
-		params[@"parentNodeFormatter"] = [self.parentNodeFormatter getFunction];
+	if (self.parentNodeFormat) {
+		params[@"parentNodeFormat"] = self.parentNodeFormat;
 	}
 	if (self.parentNodeTextPath) {
 		params[@"parentNodeTextPath"] = [self.parentNodeTextPath getParams];
+	}
+	if (self.parentNodeFormatter) {
+		params[@"parentNodeFormatter"] = [self.parentNodeFormatter getFunction];
+	}
+	if (self.attributes) {
+		params[@"attributes"] = [self.attributes getParams];
 	}
 	if (self.connectorWidth) {
 		params[@"connectorWidth"] = self.connectorWidth;
@@ -229,12 +235,6 @@
 	}
 	if (self.crookDistance) {
 		params[@"crookDistance"] = self.crookDistance;
-	}
-	if (self.attributes) {
-		params[@"attributes"] = [self.attributes getParams];
-	}
-	if (self.parentNodeFormat) {
-		params[@"parentNodeFormat"] = self.parentNodeFormat;
 	}
 	return params;
 }
@@ -463,16 +463,28 @@
 	[self updateNSObject:oldValue newValue:yLow propertyName:@"yLow"];
 }
 
--(void)setParentNodeFormatter:(HIFunction *)parentNodeFormatter {
-	HIFunction *oldValue = _parentNodeFormatter;
-	_parentNodeFormatter = parentNodeFormatter;
-	[self updateHIObject:oldValue newValue:parentNodeFormatter propertyName:@"parentNodeFormatter"];
+-(void)setParentNodeFormat:(NSString *)parentNodeFormat {
+	NSString *oldValue = _parentNodeFormat;
+	_parentNodeFormat = parentNodeFormat;
+	[self updateNSObject:oldValue newValue:parentNodeFormat propertyName:@"parentNodeFormat"];
 }
 
 -(void)setParentNodeTextPath:(HIParentNodeTextPath *)parentNodeTextPath {
 	HIParentNodeTextPath *oldValue = _parentNodeTextPath;
 	_parentNodeTextPath = parentNodeTextPath;
 	[self updateHIObject:oldValue newValue:parentNodeTextPath propertyName:@"parentNodeTextPath"];
+}
+
+-(void)setParentNodeFormatter:(HIFunction *)parentNodeFormatter {
+	HIFunction *oldValue = _parentNodeFormatter;
+	_parentNodeFormatter = parentNodeFormatter;
+	[self updateHIObject:oldValue newValue:parentNodeFormatter propertyName:@"parentNodeFormatter"];
+}
+
+-(void)setAttributes:(HISVGAttributes *)attributes {
+	HISVGAttributes *oldValue = _attributes;
+	_attributes = attributes;
+	[self updateHIObject:oldValue newValue:attributes propertyName:@"attributes"];
 }
 
 -(void)setConnectorWidth:(NSNumber *)connectorWidth {
@@ -557,18 +569,6 @@
 	NSString *oldValue = _crookDistance;
 	_crookDistance = crookDistance;
 	[self updateNSObject:oldValue newValue:crookDistance propertyName:@"crookDistance"];
-}
-
--(void)setAttributes:(HISVGAttributes *)attributes {
-	HISVGAttributes *oldValue = _attributes;
-	_attributes = attributes;
-	[self updateHIObject:oldValue newValue:attributes propertyName:@"attributes"];
-}
-
--(void)setParentNodeFormat:(NSString *)parentNodeFormat {
-	NSString *oldValue = _parentNodeFormat;
-	_parentNodeFormat = parentNodeFormat;
-	[self updateNSObject:oldValue newValue:parentNodeFormat propertyName:@"parentNodeFormat"];
 }
 
 @end

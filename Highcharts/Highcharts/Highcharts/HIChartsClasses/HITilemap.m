@@ -35,11 +35,11 @@
 	copyTilemap.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyTilemap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTilemap.point = [self.point copyWithZone: zone];
-	copyTilemap.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyTilemap.label = [self.label copyWithZone: zone];
 	copyTilemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTilemap.cursor = [self.cursor copyWithZone: zone];
 	copyTilemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyTilemap.label = [self.label copyWithZone: zone];
+	copyTilemap.custom = [self.custom copyWithZone: zone];
 	copyTilemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTilemap.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyTilemap.events = [self.events copyWithZone: zone];

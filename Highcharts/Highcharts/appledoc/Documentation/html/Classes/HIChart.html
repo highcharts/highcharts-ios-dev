@@ -1421,7 +1421,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options to render charts in 3 dimensions. This feature requires <code>highcharts-3d.js</code>, found in the download package or online at <a href="http://code.highcharts.com/highcharts-3d.js">https://code.highcharts.com/highcharts-3d.js</a>.</p>
+				<p>Options to render charts in 3 dimensions. This feature requires <code>highcharts-3d.js</code>, found in the download package or online at <a href="https://code.highcharts.com/highcharts-3d.js">https://code.highcharts.com/highcharts-3d.js</a>.</p>
 			</div>
 			
 		    
@@ -1913,7 +1913,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the initial series animation, see <code>plotOptions.series.animation</code>. The animation can either be set as a boolean or a configuration object. If <code>true</code>, it will use the &lsquo;swing&rsquo; jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported: - <strong>duration</strong>: The duration of the animation in milliseconds. - <strong>easing</strong>: A string reference to an easing function set on the  <code>Math</code> object. See  <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</p>
+				<p>Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the initial series animation, see <code>plotOptions.series.animation</code>. The animation can either be set as a boolean or a configuration object. If <code>true</code>, it will use the &lsquo;swing&rsquo; jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported: - <strong>duration</strong>: The duration of the animation in milliseconds. - <strong>easing</strong>: A string reference to an easing function set on the  <code>Math</code> object. See  <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>. When zooming on a series with less than 100 points, the chart redraw will be done with animation, but in case of more data points, it is necessary to set this option to ensure animation on zoom.</p>
 			</div>
 			
 		    
@@ -1930,7 +1930,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -2724,7 +2724,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

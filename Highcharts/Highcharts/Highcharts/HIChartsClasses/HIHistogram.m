@@ -61,10 +61,12 @@
 	copyHistogram.colorKey = [self.colorKey copyWithZone: zone];
 	copyHistogram.point = [self.point copyWithZone: zone];
 	copyHistogram.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyHistogram.label = [self.label copyWithZone: zone];
 	copyHistogram.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHistogram.cursor = [self.cursor copyWithZone: zone];
+	copyHistogram.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyHistogram.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyHistogram.label = [self.label copyWithZone: zone];
+	copyHistogram.custom = [self.custom copyWithZone: zone];
 	copyHistogram.animation = [self.animation copyWithZone: zone];
 	copyHistogram.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyHistogram.showCheckbox = [self.showCheckbox copyWithZone: zone];

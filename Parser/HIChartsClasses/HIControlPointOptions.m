@@ -38,6 +38,7 @@
 		params[@"visible"] = self.visible;
 	}
 	if (self.positioner) {
+		params[@"positioner"] = [self.positioner getFunction];
 	}
 	return params;
 }
@@ -74,10 +75,10 @@
 	[self updateNSObject:oldValue newValue:visible propertyName:@"visible"];
 }
 
--(void)setPositioner:(id)positioner {
-	id oldValue = _positioner;
+-(void)setPositioner:(HIFunction *)positioner {
+	HIFunction *oldValue = _positioner;
 	_positioner = positioner;
-	[self updateNSObject:oldValue newValue:positioner propertyName:@"positioner"];
+	[self updateHIObject:oldValue newValue:positioner propertyName:@"positioner"];
 }
 
 @end

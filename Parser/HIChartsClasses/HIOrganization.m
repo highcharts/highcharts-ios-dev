@@ -51,11 +51,12 @@
 	copyOrganization.clip = [self.clip copyWithZone: zone];
 	copyOrganization.color = [self.color copyWithZone: zone];
 	copyOrganization.point = [self.point copyWithZone: zone];
-	copyOrganization.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyOrganization.label = [self.label copyWithZone: zone];
 	copyOrganization.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyOrganization.cursor = [self.cursor copyWithZone: zone];
+	copyOrganization.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyOrganization.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyOrganization.label = [self.label copyWithZone: zone];
+	copyOrganization.custom = [self.custom copyWithZone: zone];
 	copyOrganization.animation = [self.animation copyWithZone: zone];
 	copyOrganization.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyOrganization.boostBlending = [self.boostBlending copyWithZone: zone];

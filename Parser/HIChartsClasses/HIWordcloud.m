@@ -40,11 +40,12 @@
 	copyWordcloud.color = [self.color copyWithZone: zone];
 	copyWordcloud.colorKey = [self.colorKey copyWithZone: zone];
 	copyWordcloud.point = [self.point copyWithZone: zone];
-	copyWordcloud.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyWordcloud.label = [self.label copyWithZone: zone];
 	copyWordcloud.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
+	copyWordcloud.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyWordcloud.label = [self.label copyWithZone: zone];
+	copyWordcloud.custom = [self.custom copyWithZone: zone];
 	copyWordcloud.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyWordcloud.events = [self.events copyWithZone: zone];
 	copyWordcloud.opacity = [self.opacity copyWithZone: zone];

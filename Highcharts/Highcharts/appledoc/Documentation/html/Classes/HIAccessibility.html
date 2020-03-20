@@ -108,6 +108,8 @@
 		
 		<option value="//api/name/seriesTypeDescriptions">seriesTypeDescriptions</option>
 		
+		<option value="//api/name/sonification">sonification</option>
+		
 		<option value="//api/name/svgContainerLabel">svgContainerLabel</option>
 		
 		<option value="//api/name/svgContainerTitle">svgContainerTitle</option>
@@ -164,7 +166,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for configuring accessibility for the chart. Requires the <a href="https://code.highcharts.com/modules/accessibility.js">accessibility module</a> to be loaded. For a description of the module and information on its features, see <a href="http://www.highcharts.com/docs/chart-concepts/accessibility">Highcharts Accessibility</a>.</p>
+						<p>Options for configuring accessibility for the chart. Requires the <a href="https://code.highcharts.com/modules/accessibility.js">accessibility module</a> to be loaded. For a description of the module and information on its features, see <a href="https://www.highcharts.com/docs/chart-concepts/accessibility">Highcharts Accessibility</a>.</p>
 					</div>
 					
 					
@@ -852,6 +854,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/thousandsSep" title="thousandsSep"></a>
+	<h3 class="method-title"><code><a href="#//api/name/thousandsSep">&nbsp;&nbsp;thousandsSep</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Thousands separator to use when formatting numbers for screen readers. Note that many screen readers will not handle space as a thousands separator, and will consider &ldquo;11 700&rdquo; as two numbers. Set to <code>null</code> to use the separator defined in <code>lang.thousandsSep</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *thousandsSep</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/chartTypes" title="chartTypes"></a>
 	<h3 class="method-title"><code><a href="#//api/name/chartTypes">&nbsp;&nbsp;chartTypes</a></code>
 </h3>
@@ -1171,8 +1214,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/thousandsSep" title="thousandsSep"></a>
-	<h3 class="method-title"><code><a href="#//api/name/thousandsSep">&nbsp;&nbsp;thousandsSep</a></code>
+	<a name="//api/name/sonification" title="sonification"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sonification">&nbsp;&nbsp;sonification</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1182,12 +1225,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Thousands separator to use when formatting numbers for screen readers. Note that many screen readers will not handle space as a thousands separator, and will consider &ldquo;11 700&rdquo; as two numbers. Set to <code>null</code> to use the separator defined in <code>lang.thousandsSep</code>.</p>
+				<p>Language options for sonification.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *thousandsSep</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISonification *sonification</code></div>
 
 		    
 			
@@ -1383,7 +1426,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

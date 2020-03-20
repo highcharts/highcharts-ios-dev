@@ -54,11 +54,12 @@
 	copyWindbarb.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyWindbarb.point = [self.point copyWithZone: zone];
 	copyWindbarb.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyWindbarb.label = [self.label copyWithZone: zone];
 	copyWindbarb.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
 	copyWindbarb.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyWindbarb.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyWindbarb.label = [self.label copyWithZone: zone];
+	copyWindbarb.custom = [self.custom copyWithZone: zone];
 	copyWindbarb.animation = [self.animation copyWithZone: zone];
 	copyWindbarb.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWindbarb.showCheckbox = [self.showCheckbox copyWithZone: zone];

@@ -51,11 +51,12 @@
 	copyColumnpyramid.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumnpyramid.point = [self.point copyWithZone: zone];
 	copyColumnpyramid.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyColumnpyramid.label = [self.label copyWithZone: zone];
 	copyColumnpyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumnpyramid.cursor = [self.cursor copyWithZone: zone];
 	copyColumnpyramid.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyColumnpyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyColumnpyramid.label = [self.label copyWithZone: zone];
+	copyColumnpyramid.custom = [self.custom copyWithZone: zone];
 	copyColumnpyramid.stacking = [self.stacking copyWithZone: zone];
 	copyColumnpyramid.animation = [self.animation copyWithZone: zone];
 	copyColumnpyramid.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
@@ -79,6 +80,7 @@
 	copyColumnpyramid.className = [self.className copyWithZone: zone];
 	copyColumnpyramid.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumnpyramid.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyColumnpyramid.dashStyle = [self.dashStyle copyWithZone: zone];
 	return copyColumnpyramid;
 }
 

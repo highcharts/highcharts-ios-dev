@@ -64,6 +64,8 @@
 		
 		<option value="//api/name/endAngle">endAngle</option>
 		
+		<option value="//api/name/innerSize">innerSize</option>
+		
 		<option value="//api/name/size">size</option>
 		
 		<option value="//api/name/startAngle">startAngle</option>
@@ -128,8 +130,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/endAngle" title="endAngle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/endAngle">&nbsp;&nbsp;endAngle</a></code>
+	<a name="//api/name/innerSize" title="innerSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/innerSize">&nbsp;&nbsp;innerSize</a></code>
 </h3>
 
 	<div class="method-info">
@@ -139,12 +141,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to <code>startAngle</code> + 360.</p>
+				<p>The inner size of the pane, either as a number defining pixels, or a percentage defining a percentage of the pane&rsquo;s size.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *endAngle</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerSize</code></div>
 
 		    
 			
@@ -159,58 +161,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/">VU-meter with custom start and end angle</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPane.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/startAngle" title="startAngle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startAngle">&nbsp;&nbsp;startAngle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The start angle of the polar X axis or gauge axis, given in degrees where 0 is north. Defaults to 0.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startAngle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/">VU-meter with custom start and end angle</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-polar/column-inverted-inner">The inner size set to 20%</a></li>
 </ul>
 
 			</div>
@@ -283,6 +234,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/endAngle" title="endAngle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/endAngle">&nbsp;&nbsp;endAngle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to <code>startAngle</code> + 360.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *endAngle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/">VU-meter with custom start and end angle</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPane.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/background" title="background"></a>
 	<h3 class="method-title"><code><a href="#//api/name/background">&nbsp;&nbsp;background</a></code>
 </h3>
@@ -334,6 +336,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/startAngle" title="startAngle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startAngle">&nbsp;&nbsp;startAngle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The start angle of the polar X axis or gauge axis, given in degrees where 0 is north. Defaults to 0.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *startAngle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-vu-meter/">VU-meter with custom start and end angle</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPane.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/size" title="size"></a>
 	<h3 class="method-title"><code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
 </h3>
@@ -345,7 +398,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The size of the pane, either as a number defining pixels, or a percentage defining a percentage of the plot are.</p>
+				<p>The size of the pane, either as a number defining pixels, or a percentage defining a percentage of the available plot area (the smallest of the plot height or plot width).</p>
 			</div>
 			
 		    
@@ -417,7 +470,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

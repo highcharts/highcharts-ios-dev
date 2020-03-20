@@ -50,13 +50,14 @@
 	copyStreamgraph.point = [self.point copyWithZone: zone];
 	copyStreamgraph.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyStreamgraph.tooltip = [self.tooltip copyWithZone: zone];
+	copyStreamgraph.label = [self.label copyWithZone: zone];
 	copyStreamgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyStreamgraph.cursor = [self.cursor copyWithZone: zone];
 	copyStreamgraph.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyStreamgraph.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyStreamgraph.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyStreamgraph.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyStreamgraph.label = [self.label copyWithZone: zone];
+	copyStreamgraph.custom = [self.custom copyWithZone: zone];
 	copyStreamgraph.animation = [self.animation copyWithZone: zone];
 	copyStreamgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyStreamgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];

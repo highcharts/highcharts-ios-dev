@@ -54,11 +54,12 @@
 	copyWaterfall.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyWaterfall.point = [self.point copyWithZone: zone];
 	copyWaterfall.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyWaterfall.label = [self.label copyWithZone: zone];
 	copyWaterfall.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
 	copyWaterfall.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyWaterfall.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyWaterfall.label = [self.label copyWithZone: zone];
+	copyWaterfall.custom = [self.custom copyWithZone: zone];
 	copyWaterfall.stacking = [self.stacking copyWithZone: zone];
 	copyWaterfall.animation = [self.animation copyWithZone: zone];
 	copyWaterfall.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

@@ -65,12 +65,13 @@
 	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid3d.point = [self.point copyWithZone: zone];
-	copyPyramid3d.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyPyramid3d.label = [self.label copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
+	copyPyramid3d.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPyramid3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyPyramid3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyPyramid3d.label = [self.label copyWithZone: zone];
+	copyPyramid3d.custom = [self.custom copyWithZone: zone];
 	copyPyramid3d.stacking = [self.stacking copyWithZone: zone];
 	copyPyramid3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyPyramid3d.showCheckbox = [self.showCheckbox copyWithZone: zone];

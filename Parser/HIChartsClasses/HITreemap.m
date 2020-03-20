@@ -59,13 +59,13 @@
 	copyTreemap.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyTreemap.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyTreemap.point = [self.point copyWithZone: zone];
-	copyTreemap.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyTreemap.label = [self.label copyWithZone: zone];
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTreemap.cursor = [self.cursor copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyTreemap.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyTreemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyTreemap.label = [self.label copyWithZone: zone];
+	copyTreemap.custom = [self.custom copyWithZone: zone];
 	copyTreemap.stacking = [self.stacking copyWithZone: zone];
 	copyTreemap.animation = [self.animation copyWithZone: zone];
 	copyTreemap.threshold = [self.threshold copyWithZone: zone];

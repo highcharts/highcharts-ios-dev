@@ -90,6 +90,8 @@
 		
 		<option value="//api/name/cursor">cursor</option>
 		
+		<option value="//api/name/custom">custom</option>
+		
 		<option value="//api/name/dashStyle">dashStyle</option>
 		
 		<option value="//api/name/data">data</option>
@@ -143,6 +145,8 @@
 		<option value="//api/name/opacity">opacity</option>
 		
 		<option value="//api/name/point">point</option>
+		
+		<option value="//api/name/pointAnnotationsDescription">pointAnnotationsDescription</option>
 		
 		<option value="//api/name/pointDescriptionEnabledThreshold">pointDescriptionEnabledThreshold</option>
 		
@@ -983,8 +987,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/yAxisDescription" title="yAxisDescription"></a>
-	<h3 class="method-title"><code><a href="#//api/name/yAxisDescription">&nbsp;&nbsp;yAxisDescription</a></code>
+	<a name="//api/name/definition" title="definition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
 </h3>
 
 	<div class="method-info">
@@ -994,12 +998,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>yAxis description for series if there are multiple yAxes in the chart.</p>
+				<p>User supplied description text. This is added in the point comment description by default if present.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *yAxisDescription</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
 
 		    
 			
@@ -1065,8 +1069,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/nullPointValue" title="nullPointValue"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nullPointValue">&nbsp;&nbsp;nullPointValue</a></code>
+	<a name="//api/name/yAxisDescription" title="yAxisDescription"></a>
+	<h3 class="method-title"><code><a href="#//api/name/yAxisDescription">&nbsp;&nbsp;yAxisDescription</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1076,12 +1080,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Description for the value of null points.</p>
+				<p>yAxis description for series if there are multiple yAxes in the chart.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nullPointValue</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *yAxisDescription</code></div>
 
 		    
 			
@@ -1106,8 +1110,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/definition" title="definition"></a>
-	<h3 class="method-title"><code><a href="#//api/name/definition">&nbsp;&nbsp;definition</a></code>
+	<a name="//api/name/pointAnnotationsDescription" title="pointAnnotationsDescription"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointAnnotationsDescription">&nbsp;&nbsp;pointAnnotationsDescription</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1117,12 +1121,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User supplied description text. This is added after the main summary if present.</p>
+				<p>Description for annotations on a point, as it is made available to assistive technology.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *definition</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointAnnotationsDescription</code></div>
 
 		    
 			
@@ -1164,6 +1168,47 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISummary *summary</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nullPointValue" title="nullPointValue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nullPointValue">&nbsp;&nbsp;nullPointValue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Description for the value of null points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nullPointValue</code></div>
 
 		    
 			
@@ -1906,6 +1951,59 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/label" title="label"></a>
+	<h3 class="method-title"><code><a href="#//api/name/label">&nbsp;&nbsp;label</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Series labels are placed as close to the series as possible in a natural way, seeking to avoid other series. The goal of this feature is to make the chart more easily readable, like if a human designer placed the labels in the optimal position. The series labels currently work with series types having a <code>graph</code> or an <code>area</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabel *label</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart">Line chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph">Stream graph</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart">Stock chart</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/pointDescriptionFormatter" title="pointDescriptionFormatter"></a>
 	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionFormatter">&nbsp;&nbsp;pointDescriptionFormatter</a></code>
 </h3>
@@ -2011,7 +2109,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A name for the dash style to use for the graph, or for some series types the outline of each shape. In styled mode, the <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-dashstyle/">stroke dash-array</a> can be set with the same classes as listed under <code>series.color</code>.</p>
+				<p>Name of the dash style to use for the graph, or for some series types the outline of each shape. In styled mode, the <a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-dashstyle/">stroke dash-array</a> can be set with the same classes as listed under <code>series.color</code>.</p>
 			</div>
 			
 		    
@@ -2214,8 +2312,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/label" title="label"></a>
-	<h3 class="method-title"><code><a href="#//api/name/label">&nbsp;&nbsp;label</a></code>
+	<a name="//api/name/custom" title="custom"></a>
+	<h3 class="method-title"><code><a href="#//api/name/custom">&nbsp;&nbsp;custom</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2225,12 +2323,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Series labels are placed as close to the series as possible in a natural way, seeking to avoid other series. The goal of this feature is to make the chart more easily readable, like if a human designer placed the labels in the optimal position. The series labels currently work with series types having a <code>graph</code> or an <code>area</code>.</p>
+				<p>A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILabel *label</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *custom</code></div>
 
 		    
 			
@@ -2245,9 +2343,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart">Line chart</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph">Stream graph</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart">Stock chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/custom/">Point and series with custom data</a></li>
 </ul>
 
 			</div>
@@ -2357,7 +2453,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -3482,7 +3578,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -6123,7 +6219,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

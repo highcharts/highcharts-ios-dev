@@ -35,12 +35,13 @@
 	copyPolygon.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPolygon.point = [self.point copyWithZone: zone];
 	copyPolygon.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyPolygon.label = [self.label copyWithZone: zone];
 	copyPolygon.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPolygon.cursor = [self.cursor copyWithZone: zone];
 	copyPolygon.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPolygon.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyPolygon.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyPolygon.label = [self.label copyWithZone: zone];
+	copyPolygon.custom = [self.custom copyWithZone: zone];
 	copyPolygon.stacking = [self.stacking copyWithZone: zone];
 	copyPolygon.animation = [self.animation copyWithZone: zone];
 	copyPolygon.showCheckbox = [self.showCheckbox copyWithZone: zone];

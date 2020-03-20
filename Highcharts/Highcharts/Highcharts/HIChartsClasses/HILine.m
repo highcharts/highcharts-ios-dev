@@ -32,13 +32,14 @@
 	copyLine.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyLine.marker = [self.marker copyWithZone: zone];
 	copyLine.tooltip = [self.tooltip copyWithZone: zone];
+	copyLine.label = [self.label copyWithZone: zone];
 	copyLine.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyLine.cursor = [self.cursor copyWithZone: zone];
 	copyLine.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyLine.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyLine.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyLine.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
-	copyLine.label = [self.label copyWithZone: zone];
+	copyLine.custom = [self.custom copyWithZone: zone];
 	copyLine.stacking = [self.stacking copyWithZone: zone];
 	copyLine.animation = [self.animation copyWithZone: zone];
 	copyLine.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
