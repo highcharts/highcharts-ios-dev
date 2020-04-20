@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     options.title = title
 
     let subtitle = HISubtitle()
-    title.text = "According to the Standard Atmosphere Model"
+    subtitle.text = "According to the Standard Atmosphere Model"
     options.subtitle = subtitle
 
     let xAxis = HIXAxis()

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     options.title = title
 
     let subtitle = HISubtitle()
-    title.text = "Pinch the chart to zoom in"
+    subtitle.text = "Pinch the chart to zoom in"
     options.subtitle = subtitle
 
     let xAxis = HIXAxis()

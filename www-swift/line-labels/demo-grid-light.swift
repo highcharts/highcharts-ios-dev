@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     options.title = title
 
     let subtitle = HISubtitle()
-    title.text = "Source: WorldClimate.com"
+    subtitle.text = "Source: WorldClimate.com"
     options.subtitle = subtitle
 
     let xAxis = HIXAxis()
