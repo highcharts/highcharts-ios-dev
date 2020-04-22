@@ -7,6 +7,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
 
     let chartView = HIChartView(frame: view.bounds)
+    chartView.theme = "sand-signika"
 
     let options = HIOptions()
 
