@@ -78,6 +78,7 @@
 	copyArea.zones = [self.zones copyWithZone: zone];
 	copyArea.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyArea.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyArea.crisp = [self.crisp copyWithZone: zone];
 	copyArea.visible = [self.visible copyWithZone: zone];
 	copyArea.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyArea.stickyTracking = [self.stickyTracking copyWithZone: zone];

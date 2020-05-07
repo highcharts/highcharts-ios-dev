@@ -182,14 +182,6 @@ Padding between each value groups, in x axis units.
 */
 @property(nonatomic, readwrite) NSNumber *groupPadding;
 /**
-When true, each column edge is rounded to its nearest pixel in order to render sharp on screen. In some cases, when there are a lot of densely packed columns, this leads to visible difference in column widths or distance between columns. In these cases, setting `crisp` to `false` may look better, even though each column is rendered blurry.
-
-**Try it**
-
-* [Crisp is false](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/)
-*/
-@property(nonatomic, readwrite) NSNumber /* Bool */ *crisp;
-/**
 Depth of the columns in a 3D column chart.
 
 **Defaults to** `25`.

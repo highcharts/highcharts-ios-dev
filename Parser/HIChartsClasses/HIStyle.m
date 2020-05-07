@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIStyle *copyStyle = [[HIStyle allocWithZone: zone] init];
+	copyStyle.transition = [self.transition copyWithZone: zone];
 	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
 	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
@@ -28,6 +29,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.transition) {
+		params[@"transition"] = self.transition;
+	}
 	if (self.fontWeight) {
 		params[@"fontWeight"] = self.fontWeight;
 	}
@@ -68,6 +72,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setTransition:(NSString *)transition {
+	NSString *oldValue = _transition;
+	_transition = transition;
+	[self updateNSObject:oldValue newValue:transition propertyName:@"transition"];
+}
 
 -(void)setFontWeight:(NSString *)fontWeight {
 	NSString *oldValue = _fontWeight;

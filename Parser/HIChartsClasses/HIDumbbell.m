@@ -17,6 +17,7 @@
 	HIDumbbell *copyDumbbell = [[HIDumbbell allocWithZone: zone] init];
 	copyDumbbell.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyDumbbell.connectorWidth = [self.connectorWidth copyWithZone: zone];
+	copyDumbbell.crisp = [self.crisp copyWithZone: zone];
 	copyDumbbell.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyDumbbell.pointRange = [self.pointRange copyWithZone: zone];
 	copyDumbbell.states = [self.states copyWithZone: zone];

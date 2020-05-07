@@ -537,6 +537,14 @@ Pixel width of the graph line.
 */
 @property(nonatomic, readwrite) NSNumber *lineWidth;
 /**
+When true, each point or column edge is rounded to its nearest pixel in order to render sharp on screen. In some cases, when there are a lot of densely packed columns, this leads to visible difference in column widths or distance between columns. In these cases, setting `crisp` to `false` may look better, even though each column is rendered blurry.
+
+**Try it**
+
+* [Crisp is false](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/)
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *crisp;
+/**
 Set the initial visibility of the series.
 
 **Defaults to** `true`.

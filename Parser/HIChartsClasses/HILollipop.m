@@ -28,6 +28,7 @@
 	copyLollipop.tooltip = [self.tooltip copyWithZone: zone];
 	copyLollipop.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyLollipop.connectorWidth = [self.connectorWidth copyWithZone: zone];
+	copyLollipop.crisp = [self.crisp copyWithZone: zone];
 	copyLollipop.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyLollipop.pointRange = [self.pointRange copyWithZone: zone];
 	copyLollipop.states = [self.states copyWithZone: zone];

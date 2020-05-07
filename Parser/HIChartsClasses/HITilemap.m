@@ -15,11 +15,12 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HITilemap *copyTilemap = [[HITilemap allocWithZone: zone] init];
-	copyTilemap.rowsize = [self.rowsize copyWithZone: zone];
 	copyTilemap.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyTilemap.colsize = [self.colsize copyWithZone: zone];
+	copyTilemap.rowsize = [self.rowsize copyWithZone: zone];
 	copyTilemap.states = [self.states copyWithZone: zone];
 	copyTilemap.tileShape = [self.tileShape copyWithZone: zone];
-	copyTilemap.colsize = [self.colsize copyWithZone: zone];
+	copyTilemap.clip = [self.clip copyWithZone: zone];
 	copyTilemap.color = [self.color copyWithZone: zone];
 	copyTilemap.tooltip = [self.tooltip copyWithZone: zone];
 	copyTilemap.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -30,7 +31,6 @@
 	copyTilemap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyTilemap.selected = [self.selected copyWithZone: zone];
 	copyTilemap.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyTilemap.clip = [self.clip copyWithZone: zone];
 	copyTilemap.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyTilemap.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyTilemap.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -53,6 +53,7 @@
 	copyTilemap.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyTilemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTilemap.zones = [self.zones copyWithZone: zone];
+	copyTilemap.crisp = [self.crisp copyWithZone: zone];
 	copyTilemap.visible = [self.visible copyWithZone: zone];
 	copyTilemap.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyTilemap.className = [self.className copyWithZone: zone];
@@ -73,17 +74,17 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.rowsize) {
-		params[@"rowsize"] = self.rowsize;
-	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
-	if (self.tileShape) {
-		params[@"tileShape"] = self.tileShape;
-	}
 	if (self.colsize) {
 		params[@"colsize"] = self.colsize;
+	}
+	if (self.rowsize) {
+		params[@"rowsize"] = self.rowsize;
+	}
+	if (self.tileShape) {
+		params[@"tileShape"] = self.tileShape;
 	}
 	if (self.nullColor) {
 		params[@"nullColor"] = [self.nullColor getData];
@@ -93,28 +94,28 @@
 
 # pragma mark - Setters
 
--(void)setRowsize:(NSNumber *)rowsize {
-	NSNumber *oldValue = _rowsize;
-	_rowsize = rowsize;
-	[self updateNSObject:oldValue newValue:rowsize propertyName:@"rowsize"];
-}
-
 -(void)setPointPadding:(NSNumber *)pointPadding {
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setTileShape:(NSString *)tileShape {
-	NSString *oldValue = _tileShape;
-	_tileShape = tileShape;
-	[self updateNSObject:oldValue newValue:tileShape propertyName:@"tileShape"];
-}
-
 -(void)setColsize:(NSNumber *)colsize {
 	NSNumber *oldValue = _colsize;
 	_colsize = colsize;
 	[self updateNSObject:oldValue newValue:colsize propertyName:@"colsize"];
+}
+
+-(void)setRowsize:(NSNumber *)rowsize {
+	NSNumber *oldValue = _rowsize;
+	_rowsize = rowsize;
+	[self updateNSObject:oldValue newValue:rowsize propertyName:@"rowsize"];
+}
+
+-(void)setTileShape:(NSString *)tileShape {
+	NSString *oldValue = _tileShape;
+	_tileShape = tileShape;
+	[self updateNSObject:oldValue newValue:tileShape propertyName:@"tileShape"];
 }
 
 -(void)setNullColor:(HIColor *)nullColor {

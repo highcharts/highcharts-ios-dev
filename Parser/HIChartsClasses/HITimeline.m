@@ -59,6 +59,7 @@
 	copyTimeline.shadow = [self.shadow copyWithZone: zone];
 	copyTimeline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTimeline.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyTimeline.crisp = [self.crisp copyWithZone: zone];
 	copyTimeline.visible = [self.visible copyWithZone: zone];
 	copyTimeline.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyTimeline.className = [self.className copyWithZone: zone];

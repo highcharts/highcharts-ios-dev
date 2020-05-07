@@ -74,6 +74,7 @@
 	copyBellcurve.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBellcurve.zones = [self.zones copyWithZone: zone];
 	copyBellcurve.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyBellcurve.crisp = [self.crisp copyWithZone: zone];
 	copyBellcurve.visible = [self.visible copyWithZone: zone];
 	copyBellcurve.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyBellcurve.stickyTracking = [self.stickyTracking copyWithZone: zone];

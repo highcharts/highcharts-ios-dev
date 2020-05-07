@@ -14,12 +14,12 @@
 	copyDataLabels.defer = [self.defer copyWithZone: zone];
 	copyDataLabels.style = [self.style copyWithZone: zone];
 	copyDataLabels.rotationMode = [self.rotationMode copyWithZone: zone];
-	copyDataLabels.y = [self.y copyWithZone: zone];
-	copyDataLabels.align = [self.align copyWithZone: zone];
 	copyDataLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
-	copyDataLabels.inside = [self.inside copyWithZone: zone];
-	copyDataLabels.enabled = [self.enabled copyWithZone: zone];
 	copyDataLabels.format = [self.format copyWithZone: zone];
+	copyDataLabels.align = [self.align copyWithZone: zone];
+	copyDataLabels.enabled = [self.enabled copyWithZone: zone];
+	copyDataLabels.inside = [self.inside copyWithZone: zone];
+	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.crop = [self.crop copyWithZone: zone];
 	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyDataLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
@@ -83,23 +83,23 @@
 	if (self.rotationMode) {
 		params[@"rotationMode"] = self.rotationMode;
 	}
-	if (self.y) {
-		params[@"y"] = self.y;
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
+	if (self.format) {
+		params[@"format"] = self.format;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
 	}
 	if (self.inside) {
 		params[@"inside"] = self.inside;
 	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
-	if (self.format) {
-		params[@"format"] = self.format;
+	if (self.y) {
+		params[@"y"] = self.y;
 	}
 	if (self.crop) {
 		params[@"crop"] = self.crop;
@@ -265,28 +265,22 @@
 	[self updateNSObject:oldValue newValue:rotationMode propertyName:@"rotationMode"];
 }
 
--(void)setY:(id)y {
-	id oldValue = _y;
-	_y = y;
-	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
-}
-
--(void)setAlign:(id)align {
-	id oldValue = _align;
-	_align = align;
-	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
-}
-
--(void)setVerticalAlign:(id)verticalAlign {
-	id oldValue = _verticalAlign;
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
 	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
 
--(void)setInside:(NSNumber *)inside {
-	NSNumber *oldValue = _inside;
-	_inside = inside;
-	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
+-(void)setFormat:(NSString *)format {
+	NSString *oldValue = _format;
+	_format = format;
+	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
+}
+
+-(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
+	_align = align;
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
@@ -295,10 +289,16 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setFormat:(NSString *)format {
-	NSString *oldValue = _format;
-	_format = format;
-	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
+-(void)setInside:(NSNumber *)inside {
+	NSNumber *oldValue = _inside;
+	_inside = inside;
+	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
+}
+
+-(void)setY:(id)y {
+	id oldValue = _y;
+	_y = y;
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setCrop:(NSNumber *)crop {

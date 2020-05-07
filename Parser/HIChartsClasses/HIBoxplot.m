@@ -25,18 +25,21 @@
 	copyBoxplot.yAxis = [self.yAxis copyWithZone: zone];
 	copyBoxplot.zIndex = [self.zIndex copyWithZone: zone];
 	copyBoxplot.stemWidth = [self.stemWidth copyWithZone: zone];
+	copyBoxplot.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyBoxplot.medianWidth = [self.medianWidth copyWithZone: zone];
 	copyBoxplot.whiskerColor = [self.whiskerColor copyWithZone: zone];
 	copyBoxplot.tooltip = [self.tooltip copyWithZone: zone];
 	copyBoxplot.medianColor = [self.medianColor copyWithZone: zone];
 	copyBoxplot.colorKey = [self.colorKey copyWithZone: zone];
 	copyBoxplot.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
-	copyBoxplot.whiskerLength = [self.whiskerLength copyWithZone: zone];
-	copyBoxplot.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyBoxplot.whiskerDashStyle = [self.whiskerDashStyle copyWithZone: zone];
+	copyBoxplot.fillColor = [self.fillColor copyWithZone: zone];
+	copyBoxplot.medianDashStyle = [self.medianDashStyle copyWithZone: zone];
 	copyBoxplot.whiskerWidth = [self.whiskerWidth copyWithZone: zone];
 	copyBoxplot.threshold = [self.threshold copyWithZone: zone];
+	copyBoxplot.boxDashStyle = [self.boxDashStyle copyWithZone: zone];
 	copyBoxplot.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyBoxplot.fillColor = [self.fillColor copyWithZone: zone];
+	copyBoxplot.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBoxplot.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyBoxplot.pointRange = [self.pointRange copyWithZone: zone];
 	copyBoxplot.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -49,7 +52,6 @@
 	copyBoxplot.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyBoxplot.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBoxplot.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyBoxplot.crisp = [self.crisp copyWithZone: zone];
 	copyBoxplot.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBoxplot.depth = [self.depth copyWithZone: zone];
 	copyBoxplot.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -89,6 +91,7 @@
 	copyBoxplot.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBoxplot.zones = [self.zones copyWithZone: zone];
 	copyBoxplot.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyBoxplot.crisp = [self.crisp copyWithZone: zone];
 	copyBoxplot.visible = [self.visible copyWithZone: zone];
 	copyBoxplot.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyBoxplot.className = [self.className copyWithZone: zone];
@@ -105,6 +108,9 @@
 	if (self.stemWidth) {
 		params[@"stemWidth"] = self.stemWidth;
 	}
+	if (self.whiskerLength) {
+		params[@"whiskerLength"] = self.whiskerLength;
+	}
 	if (self.medianWidth) {
 		params[@"medianWidth"] = self.medianWidth;
 	}
@@ -117,14 +123,20 @@
 	if (self.stemDashStyle) {
 		params[@"stemDashStyle"] = self.stemDashStyle;
 	}
-	if (self.whiskerLength) {
-		params[@"whiskerLength"] = self.whiskerLength;
+	if (self.whiskerDashStyle) {
+		params[@"whiskerDashStyle"] = self.whiskerDashStyle;
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.medianDashStyle) {
+		params[@"medianDashStyle"] = self.medianDashStyle;
 	}
 	if (self.whiskerWidth) {
 		params[@"whiskerWidth"] = self.whiskerWidth;
 	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
+	if (self.boxDashStyle) {
+		params[@"boxDashStyle"] = self.boxDashStyle;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
@@ -160,9 +172,6 @@
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
 	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
-	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
@@ -178,6 +187,12 @@
 	NSNumber *oldValue = _stemWidth;
 	_stemWidth = stemWidth;
 	[self updateNSObject:oldValue newValue:stemWidth propertyName:@"stemWidth"];
+}
+
+-(void)setWhiskerLength:(id)whiskerLength {
+	id oldValue = _whiskerLength;
+	_whiskerLength = whiskerLength;
+	[self updateNSObject:oldValue newValue:whiskerLength propertyName:@"whiskerLength"];
 }
 
 -(void)setMedianWidth:(NSNumber *)medianWidth {
@@ -204,10 +219,22 @@
 	[self updateNSObject:oldValue newValue:stemDashStyle propertyName:@"stemDashStyle"];
 }
 
--(void)setWhiskerLength:(id)whiskerLength {
-	id oldValue = _whiskerLength;
-	_whiskerLength = whiskerLength;
-	[self updateNSObject:oldValue newValue:whiskerLength propertyName:@"whiskerLength"];
+-(void)setWhiskerDashStyle:(NSString *)whiskerDashStyle {
+	NSString *oldValue = _whiskerDashStyle;
+	_whiskerDashStyle = whiskerDashStyle;
+	[self updateNSObject:oldValue newValue:whiskerDashStyle propertyName:@"whiskerDashStyle"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setMedianDashStyle:(NSString *)medianDashStyle {
+	NSString *oldValue = _medianDashStyle;
+	_medianDashStyle = medianDashStyle;
+	[self updateNSObject:oldValue newValue:medianDashStyle propertyName:@"medianDashStyle"];
 }
 
 -(void)setWhiskerWidth:(NSNumber *)whiskerWidth {
@@ -216,10 +243,10 @@
 	[self updateNSObject:oldValue newValue:whiskerWidth propertyName:@"whiskerWidth"];
 }
 
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+-(void)setBoxDashStyle:(NSString *)boxDashStyle {
+	NSString *oldValue = _boxDashStyle;
+	_boxDashStyle = boxDashStyle;
+	[self updateNSObject:oldValue newValue:boxDashStyle propertyName:@"boxDashStyle"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
@@ -280,12 +307,6 @@
 	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

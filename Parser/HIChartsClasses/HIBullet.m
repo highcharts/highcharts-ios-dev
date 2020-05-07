@@ -45,7 +45,6 @@
 	copyBullet.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyBullet.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBullet.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyBullet.crisp = [self.crisp copyWithZone: zone];
 	copyBullet.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBullet.depth = [self.depth copyWithZone: zone];
 	copyBullet.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -86,6 +85,7 @@
 	copyBullet.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBullet.zones = [self.zones copyWithZone: zone];
 	copyBullet.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyBullet.crisp = [self.crisp copyWithZone: zone];
 	copyBullet.visible = [self.visible copyWithZone: zone];
 	copyBullet.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyBullet.className = [self.className copyWithZone: zone];
@@ -142,9 +142,6 @@
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -242,12 +239,6 @@
 	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

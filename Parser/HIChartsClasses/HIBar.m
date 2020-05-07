@@ -43,7 +43,6 @@
 	copyBar.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyBar.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyBar.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyBar.crisp = [self.crisp copyWithZone: zone];
 	copyBar.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBar.depth = [self.depth copyWithZone: zone];
 	copyBar.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -86,6 +85,7 @@
 	copyBar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBar.zones = [self.zones copyWithZone: zone];
 	copyBar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyBar.crisp = [self.crisp copyWithZone: zone];
 	copyBar.visible = [self.visible copyWithZone: zone];
 	copyBar.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyBar.className = [self.className copyWithZone: zone];
@@ -141,9 +141,6 @@
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -235,12 +232,6 @@
 	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {
