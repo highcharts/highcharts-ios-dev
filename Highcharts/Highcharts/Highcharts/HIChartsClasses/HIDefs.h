@@ -6,8 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIArrow.h"
-#import "HIReverseArrow.h"
+#import "HISVGDefinitionObject.h"
 
 
 /**
@@ -20,8 +19,8 @@ Styled mode only. Configuration object for adding SVG definitions for reusable e
 */
 @interface HIDefs: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) HIReverseArrow *reverseArrow;
-@property(nonatomic, readwrite) HIArrow *arrow;
+@property(nonatomic, readwrite) HISVGDefinitionObject *reverseArrow;
+@property(nonatomic, readwrite) HISVGDefinitionObject *arrow;
 
 -(NSDictionary *)getParams;
 

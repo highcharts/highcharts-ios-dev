@@ -50,7 +50,6 @@
 	copyPyramid3d.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyPyramid3d.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyPyramid3d.groupPadding = [self.groupPadding copyWithZone: zone];
-	copyPyramid3d.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid3d.depth = [self.depth copyWithZone: zone];
 	copyPyramid3d.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyPyramid3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -90,6 +89,7 @@
 	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPyramid3d.zones = [self.zones copyWithZone: zone];
 	copyPyramid3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyPyramid3d.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid3d.visible = [self.visible copyWithZone: zone];
 	copyPyramid3d.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPyramid3d.className = [self.className copyWithZone: zone];
@@ -154,9 +154,6 @@
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
-	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -272,12 +269,6 @@
 	NSNumber *oldValue = _groupPadding;
 	_groupPadding = groupPadding;
 	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

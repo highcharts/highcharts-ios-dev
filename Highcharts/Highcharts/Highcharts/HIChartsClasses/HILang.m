@@ -14,6 +14,7 @@
 	copyLang.downloadXLS = [self.downloadXLS copyWithZone: zone];
 	copyLang.downloadPNG = [self.downloadPNG copyWithZone: zone];
 	copyLang.accessibility = [self.accessibility copyWithZone: zone];
+	copyLang.exportData = [self.exportData copyWithZone: zone];
 	copyLang.shortWeekdays = [self.shortWeekdays copyWithZone: zone];
 	copyLang.viewFullscreen = [self.viewFullscreen copyWithZone: zone];
 	copyLang.noData = [self.noData copyWithZone: zone];
@@ -54,6 +55,9 @@
 	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
+	}
+	if (self.exportData) {
+		params[@"exportData"] = [self.exportData getParams];
 	}
 	if (self.shortWeekdays) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -196,6 +200,12 @@
 	HIAccessibility *oldValue = _accessibility;
 	_accessibility = accessibility;
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
+}
+
+-(void)setExportData:(HIExportData *)exportData {
+	HIExportData *oldValue = _exportData;
+	_exportData = exportData;
+	[self updateHIObject:oldValue newValue:exportData propertyName:@"exportData"];
 }
 
 -(void)setShortWeekdays:(NSArray<NSString *> *)shortWeekdays {

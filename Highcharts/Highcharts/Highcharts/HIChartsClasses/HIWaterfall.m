@@ -39,7 +39,6 @@
 	copyWaterfall.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyWaterfall.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyWaterfall.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyWaterfall.crisp = [self.crisp copyWithZone: zone];
 	copyWaterfall.depth = [self.depth copyWithZone: zone];
 	copyWaterfall.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyWaterfall.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -80,6 +79,7 @@
 	copyWaterfall.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWaterfall.zones = [self.zones copyWithZone: zone];
 	copyWaterfall.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyWaterfall.crisp = [self.crisp copyWithZone: zone];
 	copyWaterfall.visible = [self.visible copyWithZone: zone];
 	copyWaterfall.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyWaterfall.className = [self.className copyWithZone: zone];
@@ -150,9 +150,6 @@
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -256,12 +253,6 @@
 	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

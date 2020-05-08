@@ -76,6 +76,7 @@
 	copySeries.zones = [self.zones copyWithZone: zone];
 	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copySeries.lineWidth = [self.lineWidth copyWithZone: zone];
+	copySeries.crisp = [self.crisp copyWithZone: zone];
 	copySeries.visible = [self.visible copyWithZone: zone];
 	copySeries.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySeries.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -314,6 +315,9 @@
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
+	}
+	if (self.crisp) {
+		params[@"crisp"] = self.crisp;
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
@@ -754,6 +758,12 @@
 	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
 	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
+}
+
+-(void)setCrisp:(NSNumber *)crisp {
+	NSNumber *oldValue = _crisp;
+	_crisp = crisp;
+	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setVisible:(NSNumber *)visible {

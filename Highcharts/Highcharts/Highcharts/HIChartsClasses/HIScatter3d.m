@@ -72,6 +72,7 @@
 	copyScatter3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyScatter3d.zones = [self.zones copyWithZone: zone];
 	copyScatter3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyScatter3d.crisp = [self.crisp copyWithZone: zone];
 	copyScatter3d.visible = [self.visible copyWithZone: zone];
 	copyScatter3d.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyScatter3d.dataLabels = [self.dataLabels copyWithZone: zone];

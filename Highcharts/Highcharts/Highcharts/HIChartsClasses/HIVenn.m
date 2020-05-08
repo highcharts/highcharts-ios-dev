@@ -57,6 +57,7 @@
 	copyVenn.step = [self.step copyWithZone: zone];
 	copyVenn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVenn.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyVenn.crisp = [self.crisp copyWithZone: zone];
 	copyVenn.visible = [self.visible copyWithZone: zone];
 	copyVenn.className = [self.className copyWithZone: zone];
 	copyVenn.boostThreshold = [self.boostThreshold copyWithZone: zone];

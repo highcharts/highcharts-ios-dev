@@ -11,13 +11,17 @@
 	[super copyWithZone:zone];
 	HIStackLabels *copyStackLabels = [[HIStackLabels allocWithZone: zone] init];
 	copyStackLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
+	copyStackLabels.borderColor = [self.borderColor copyWithZone: zone];
 	copyStackLabels.style = [self.style copyWithZone: zone];
 	copyStackLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyStackLabels.format = [self.format copyWithZone: zone];
+	copyStackLabels.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyStackLabels.align = [self.align copyWithZone: zone];
 	copyStackLabels.enabled = [self.enabled copyWithZone: zone];
 	copyStackLabels.crop = [self.crop copyWithZone: zone];
 	copyStackLabels.textAlign = [self.textAlign copyWithZone: zone];
+	copyStackLabels.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyStackLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyStackLabels.y = [self.y copyWithZone: zone];
 	copyStackLabels.x = [self.x copyWithZone: zone];
 	copyStackLabels.overflow = [self.overflow copyWithZone: zone];
@@ -33,6 +37,9 @@
 	if (self.allowOverlap) {
 		params[@"allowOverlap"] = self.allowOverlap;
 	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
+	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
@@ -41,6 +48,9 @@
 	}
 	if (self.format) {
 		params[@"format"] = self.format;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
@@ -53,6 +63,12 @@
 	}
 	if (self.textAlign) {
 		params[@"textAlign"] = self.textAlign;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.backgroundColor) {
+		params[@"backgroundColor"] = [self.backgroundColor getData];
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
@@ -83,6 +99,12 @@
 	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
 }
 
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
 	_style = style;
@@ -99,6 +121,12 @@
 	NSString *oldValue = _format;
 	_format = format;
 	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setAlign:(NSString *)align {
@@ -123,6 +151,18 @@
 	NSString *oldValue = _textAlign;
 	_textAlign = textAlign;
 	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
+	_borderWidth = borderWidth;
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+}
+
+-(void)setBackgroundColor:(HIColor *)backgroundColor {
+	HIColor *oldValue = _backgroundColor;
+	_backgroundColor = backgroundColor;
+	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
 }
 
 -(void)setY:(NSNumber *)y {
