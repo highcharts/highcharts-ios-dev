@@ -1,6 +1,9 @@
 #import "HIChartsJSONSerializableSubclass.h"
 #import "HISeries.h"
 #import "HIPie.h"
+#import "HIItem.h"
+#import "HIFunnel.h"
+#import "HIVariablepie.h"
 
 @implementation HISeries
 
@@ -329,7 +332,7 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.dataLabels) {
-        if ([self isKindOfClass:[HIPie class]]) {
+        if ([self isKindOfClass:[HIPie class]] || [self isKindOfClass:[HIItem class]] || [self isKindOfClass:[HIFunnel class]] || [self isKindOfClass:[HIVariablepie class]]) {
             id obj = [self.dataLabels firstObject];
             if (obj && [obj isKindOfClass: [HIChartsJSONSerializable class]]) {
                 params[@"dataLabels"] = [(HIChartsJSONSerializable *)obj getParams];
