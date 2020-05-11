@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HINoData Class Reference</title>
+	<title>HIExportData Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,13 +58,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/attr">attr</option>
+		<option value="//api/name/categoryDatetimeHeader">categoryDatetimeHeader</option>
 		
-		<option value="//api/name/position">position</option>
-		
-		<option value="//api/name/style">style</option>
-		
-		<option value="//api/name/useHTML">useHTML</option>
+		<option value="//api/name/categoryHeader">categoryHeader</option>
 		
 	</optgroup>
 	
@@ -91,7 +87,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HINoData Class Reference</h1>
+					<h1 class="title">HIExportData Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -100,7 +96,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HINoData.h</td>
+	<td>HIExportData.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,15 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for displaying a message like &ldquo;No data to display&rdquo;. This feature requires the file no-data-to-display.js to be loaded in the page. The actual text to display is set in the lang.noData option.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line">Line chart with no-data module</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-pie">Pie chart with no-data module</a></li>
-</ul>
-
+						<p>The text for exported table.</p>
 					</div>
 					
 					
@@ -134,8 +122,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/position" title="position"></a>
-	<h3 class="method-title"><code><a href="#//api/name/position">&nbsp;&nbsp;position</a></code>
+	<a name="//api/name/categoryHeader" title="categoryHeader"></a>
+	<h3 class="method-title"><code><a href="#//api/name/categoryHeader">&nbsp;&nbsp;categoryHeader</a></code>
 </h3>
 
 	<div class="method-info">
@@ -145,12 +133,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The position of the no-data label, relative to the plot area.</p>
+				<p>The category column title.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAlignObject *position</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *categoryHeader</code></div>
 
 		    
 			
@@ -168,15 +156,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINoData.h</code></p>
+				<p><code class="declared-in-ref">HIExportData.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/style" title="style"></a>
-	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+	<a name="//api/name/categoryDatetimeHeader" title="categoryDatetimeHeader"></a>
+	<h3 class="method-title"><code><a href="#//api/name/categoryDatetimeHeader">&nbsp;&nbsp;categoryDatetimeHeader</a></code>
 </h3>
 
 	<div class="method-info">
@@ -186,63 +174,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>CSS styles for the no-data label.</p>
+				<p>The category column title when axis type set to &ldquo;datetime&rdquo;.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICSSObject *style</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line">Styled no-data text</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINoData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/attr" title="attr"></a>
-	<h3 class="method-title"><code><a href="#//api/name/attr">&nbsp;&nbsp;attr</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An object of additional SVG attributes for the no-data label.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGAttributes *attr</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *categoryDatetimeHeader</code></div>
 
 		    
 			
@@ -260,53 +197,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINoData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/useHTML" title="useHTML"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useHTML">&nbsp;&nbsp;useHTML</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to insert the label as HTML, or as pseudo-HTML rendered with SVG.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useHTML</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HINoData.h</code></p>
+				<p><code class="declared-in-ref">HIExportData.h</code></p>
 			</div>
 			
 			
