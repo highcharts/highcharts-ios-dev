@@ -1,7 +1,7 @@
 /*
  Highcharts JS v8.1.0 (2020-05-05)
 
- (c) 2009-2018 Torstein Honsi
+ (c) 2009-2020 Torstein Honsi
 
  License: www.highcharts.com/license
 */
