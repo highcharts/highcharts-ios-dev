@@ -64,6 +64,7 @@
 	copyPie.shadow = [self.shadow copyWithZone: zone];
 	copyPie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPie.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyPie.crisp = [self.crisp copyWithZone: zone];
 	copyPie.visible = [self.visible copyWithZone: zone];
 	copyPie.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPie.className = [self.className copyWithZone: zone];

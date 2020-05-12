@@ -33,7 +33,6 @@
 	copyColumnrange.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyColumnrange.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyColumnrange.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyColumnrange.crisp = [self.crisp copyWithZone: zone];
 	copyColumnrange.depth = [self.depth copyWithZone: zone];
 	copyColumnrange.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyColumnrange.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -73,6 +72,7 @@
 	copyColumnrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyColumnrange.zones = [self.zones copyWithZone: zone];
 	copyColumnrange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyColumnrange.crisp = [self.crisp copyWithZone: zone];
 	copyColumnrange.visible = [self.visible copyWithZone: zone];
 	copyColumnrange.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyColumnrange.className = [self.className copyWithZone: zone];
@@ -136,9 +136,6 @@
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -230,12 +227,6 @@
 	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

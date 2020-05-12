@@ -49,6 +49,7 @@
 	copySolidgauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySolidgauge.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copySolidgauge.lineWidth = [self.lineWidth copyWithZone: zone];
+	copySolidgauge.crisp = [self.crisp copyWithZone: zone];
 	copySolidgauge.visible = [self.visible copyWithZone: zone];
 	copySolidgauge.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySolidgauge.stickyTracking = [self.stickyTracking copyWithZone: zone];

@@ -58,6 +58,7 @@
 	copyNetworkgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyNetworkgraph.zones = [self.zones copyWithZone: zone];
 	copyNetworkgraph.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyNetworkgraph.crisp = [self.crisp copyWithZone: zone];
 	copyNetworkgraph.visible = [self.visible copyWithZone: zone];
 	copyNetworkgraph.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyNetworkgraph.className = [self.className copyWithZone: zone];

@@ -99,6 +99,10 @@ For area-like series, allow the font size to vary so that small areas get a smal
 */
 @property(nonatomic, readwrite) NSNumber *minFontSize;
 /**
+A format string for the label, with support for a subset of HTML. Variables are enclosed by curly brackets. Available variables are `name`, `options.xxx`, `color` and other members from the `series` object. Use this option also to set a static text for the label.
+*/
+@property(nonatomic, readwrite) NSString *format;
+/**
 For area-like series, allow the font size to vary so that small areas get a smaller font size. The default applies this effect to area-like series but not line-like series.
 */
 @property(nonatomic, readwrite) NSNumber *maxFontSize;

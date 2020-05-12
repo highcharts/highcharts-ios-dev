@@ -9,7 +9,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 <!-- 	<header>
@@ -58,9 +58,21 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/dateFormat">dateFormat</option>
+		
+		<option value="//api/name/dateFormatter">dateFormatter</option>
+		
+		<option value="//api/name/descriptionFormatter">descriptionFormatter</option>
+		
 		<option value="//api/name/events">events</option>
 		
+		<option value="//api/name/valueDecimals">valueDecimals</option>
+		
 		<option value="//api/name/valueDescriptionFormat">valueDescriptionFormat</option>
+		
+		<option value="//api/name/valuePrefix">valuePrefix</option>
+		
+		<option value="//api/name/valueSuffix">valueSuffix</option>
 		
 		<option value="//api/name/x">x</option>
 		
@@ -363,6 +375,252 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valueDescriptionFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valueSuffix" title="valueSuffix"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueSuffix">&nbsp;&nbsp;valueSuffix</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Suffix to add to the values in the point descriptions. Uses <code>tooltip.valueSuffix</code> if not defined.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valueSuffix</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateFormat" title="dateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateFormat">&nbsp;&nbsp;dateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Date format to use for points on datetime axes when describing them to screen reader users. Defaults to the same format as in tooltip. For an overview of the replacement codes, see <code>dateFormat</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dateFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateFormatter" title="dateFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateFormatter">&nbsp;&nbsp;dateFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to determine the date/time format used with points on datetime axes when describing them to screen reader users. Receives one argument, <code>point</code>, referring to the point to describe. Should return a date format string compatible with <code>dateFormat</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *dateFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valuePrefix" title="valuePrefix"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valuePrefix">&nbsp;&nbsp;valuePrefix</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Prefix to add to the values in the point descriptions. Uses <code>tooltip.valuePrefix</code> if not defined.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valuePrefix</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/descriptionFormatter" title="descriptionFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/descriptionFormatter">&nbsp;&nbsp;descriptionFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to use instead of the default for point descriptions. Receives one argument, <code>point</code>, referring to the point to describe. Should return a string with the description of the point for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that point. Note: Prefer using <code>accessibility.point.valueDescriptionFormat</code> instead if possible, as default functionality such as describing annotations will be preserved.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *descriptionFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valueDecimals" title="valueDecimals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueDecimals">&nbsp;&nbsp;valueDecimals</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decimals to use for the values in the point descriptions. Uses <code>tooltip.valueDecimals</code> if not defined.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *valueDecimals</code></div>
 
 		    
 			
@@ -1593,7 +1851,7 @@
 	            <a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon" target="_blank"><i class="fa fa-linkedin"></i></a>
 	            <a href="https://github.com/highcharts/highcharts" title="Github" class="social-icon" target="_blank"><i class="fa fa-github"></i></a>
 	            
-				<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank">appledoc 2.2.1 (build 1334)</a>.</p>
+				<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank">appledoc 2.2.1 (build 1333)</a>.</p>
 				
 	        </div>
 	    </div>

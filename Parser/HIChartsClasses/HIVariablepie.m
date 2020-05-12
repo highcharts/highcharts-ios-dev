@@ -69,6 +69,7 @@
 	copyVariablepie.shadow = [self.shadow copyWithZone: zone];
 	copyVariablepie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVariablepie.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyVariablepie.crisp = [self.crisp copyWithZone: zone];
 	copyVariablepie.visible = [self.visible copyWithZone: zone];
 	copyVariablepie.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyVariablepie.className = [self.className copyWithZone: zone];

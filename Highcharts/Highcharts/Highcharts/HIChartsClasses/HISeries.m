@@ -1,6 +1,9 @@
 #import "HIChartsJSONSerializableSubclass.h"
 #import "HISeries.h"
 #import "HIPie.h"
+#import "HIItem.h"
+#import "HIFunnel.h"
+#import "HIVariablepie.h"
 
 @implementation HISeries
 
@@ -76,6 +79,7 @@
 	copySeries.zones = [self.zones copyWithZone: zone];
 	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copySeries.lineWidth = [self.lineWidth copyWithZone: zone];
+	copySeries.crisp = [self.crisp copyWithZone: zone];
 	copySeries.visible = [self.visible copyWithZone: zone];
 	copySeries.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySeries.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -315,6 +319,9 @@
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
 	}
+	if (self.crisp) {
+		params[@"crisp"] = self.crisp;
+	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
 	}
@@ -325,7 +332,7 @@
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
 	if (self.dataLabels) {
-        if ([self isKindOfClass:[HIPie class]]) {
+        if ([self isKindOfClass:[HIPie class]] || [self isKindOfClass:[HIItem class]] || [self isKindOfClass:[HIFunnel class]] || [self isKindOfClass:[HIVariablepie class]]) {
             id obj = [self.dataLabels firstObject];
             if (obj && [obj isKindOfClass: [HIChartsJSONSerializable class]]) {
                 params[@"dataLabels"] = [(HIChartsJSONSerializable *)obj getParams];
@@ -754,6 +761,12 @@
 	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
 	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
+}
+
+-(void)setCrisp:(NSNumber *)crisp {
+	NSNumber *oldValue = _crisp;
+	_crisp = crisp;
+	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setVisible:(NSNumber *)visible {

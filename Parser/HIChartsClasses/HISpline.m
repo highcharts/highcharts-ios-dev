@@ -71,6 +71,7 @@
 	copySpline.zones = [self.zones copyWithZone: zone];
 	copySpline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copySpline.lineWidth = [self.lineWidth copyWithZone: zone];
+	copySpline.crisp = [self.crisp copyWithZone: zone];
 	copySpline.visible = [self.visible copyWithZone: zone];
 	copySpline.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySpline.stickyTracking = [self.stickyTracking copyWithZone: zone];

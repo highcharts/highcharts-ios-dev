@@ -36,11 +36,15 @@
 	copyData.switchRowsAndColumns = [self.switchRowsAndColumns copyWithZone: zone];
 	copyData.decimalPoint = [self.decimalPoint copyWithZone: zone];
 	copyData.columnsURL = [self.columnsURL copyWithZone: zone];
-	copyData.high = [self.high copyWithZone: zone];
 	copyData.q1 = [self.q1 copyWithZone: zone];
 	copyData.q3 = [self.q3 copyWithZone: zone];
 	copyData.median = [self.median copyWithZone: zone];
+	copyData.high = [self.high copyWithZone: zone];
+	copyData.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
+	copyData.whiskerDashStyle = [self.whiskerDashStyle copyWithZone: zone];
 	copyData.low = [self.low copyWithZone: zone];
+	copyData.medianDashStyle = [self.medianDashStyle copyWithZone: zone];
+	copyData.boxDashStyle = [self.boxDashStyle copyWithZone: zone];
 	copyData.labelrank = [self.labelrank copyWithZone: zone];
 	copyData.y = [self.y copyWithZone: zone];
 	copyData.colorIndex = [self.colorIndex copyWithZone: zone];
@@ -200,9 +204,6 @@
 	if (self.columnsURL) {
 		params[@"columnsURL"] = self.columnsURL;
 	}
-	if (self.high) {
-		params[@"high"] = self.high;
-	}
 	if (self.q1) {
 		params[@"q1"] = self.q1;
 	}
@@ -212,8 +213,23 @@
 	if (self.median) {
 		params[@"median"] = self.median;
 	}
+	if (self.high) {
+		params[@"high"] = self.high;
+	}
+	if (self.stemDashStyle) {
+		params[@"stemDashStyle"] = self.stemDashStyle;
+	}
+	if (self.whiskerDashStyle) {
+		params[@"whiskerDashStyle"] = self.whiskerDashStyle;
+	}
 	if (self.low) {
 		params[@"low"] = self.low;
+	}
+	if (self.medianDashStyle) {
+		params[@"medianDashStyle"] = self.medianDashStyle;
+	}
+	if (self.boxDashStyle) {
+		params[@"boxDashStyle"] = self.boxDashStyle;
 	}
 	if (self.labelrank) {
 		params[@"labelrank"] = self.labelrank;
@@ -529,12 +545,6 @@
 	[self updateNSObject:oldValue newValue:columnsURL propertyName:@"columnsURL"];
 }
 
--(void)setHigh:(NSNumber *)high {
-	NSNumber *oldValue = _high;
-	_high = high;
-	[self updateNSObject:oldValue newValue:high propertyName:@"high"];
-}
-
 -(void)setQ1:(NSNumber *)q1 {
 	NSNumber *oldValue = _q1;
 	_q1 = q1;
@@ -553,10 +563,40 @@
 	[self updateNSObject:oldValue newValue:median propertyName:@"median"];
 }
 
+-(void)setHigh:(NSNumber *)high {
+	NSNumber *oldValue = _high;
+	_high = high;
+	[self updateNSObject:oldValue newValue:high propertyName:@"high"];
+}
+
+-(void)setStemDashStyle:(NSString *)stemDashStyle {
+	NSString *oldValue = _stemDashStyle;
+	_stemDashStyle = stemDashStyle;
+	[self updateNSObject:oldValue newValue:stemDashStyle propertyName:@"stemDashStyle"];
+}
+
+-(void)setWhiskerDashStyle:(NSString *)whiskerDashStyle {
+	NSString *oldValue = _whiskerDashStyle;
+	_whiskerDashStyle = whiskerDashStyle;
+	[self updateNSObject:oldValue newValue:whiskerDashStyle propertyName:@"whiskerDashStyle"];
+}
+
 -(void)setLow:(NSNumber *)low {
 	NSNumber *oldValue = _low;
 	_low = low;
 	[self updateNSObject:oldValue newValue:low propertyName:@"low"];
+}
+
+-(void)setMedianDashStyle:(NSString *)medianDashStyle {
+	NSString *oldValue = _medianDashStyle;
+	_medianDashStyle = medianDashStyle;
+	[self updateNSObject:oldValue newValue:medianDashStyle propertyName:@"medianDashStyle"];
+}
+
+-(void)setBoxDashStyle:(NSString *)boxDashStyle {
+	NSString *oldValue = _boxDashStyle;
+	_boxDashStyle = boxDashStyle;
+	[self updateNSObject:oldValue newValue:boxDashStyle propertyName:@"boxDashStyle"];
 }
 
 -(void)setLabelrank:(NSNumber *)labelrank {

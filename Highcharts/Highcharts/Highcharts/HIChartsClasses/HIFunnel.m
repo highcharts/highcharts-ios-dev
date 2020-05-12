@@ -67,6 +67,7 @@
 	copyFunnel.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyFunnel.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyFunnel.crisp = [self.crisp copyWithZone: zone];
 	copyFunnel.visible = [self.visible copyWithZone: zone];
 	copyFunnel.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyFunnel.className = [self.className copyWithZone: zone];

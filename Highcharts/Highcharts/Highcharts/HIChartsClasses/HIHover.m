@@ -13,8 +13,12 @@
 	copyHover.radiusPlus = [self.radiusPlus copyWithZone: zone];
 	copyHover.borderColor = [self.borderColor copyWithZone: zone];
 	copyHover.opacity = [self.opacity copyWithZone: zone];
-	copyHover.enabled = [self.enabled copyWithZone: zone];
+	copyHover.width = [self.width copyWithZone: zone];
+	copyHover.heightPlus = [self.heightPlus copyWithZone: zone];
 	copyHover.lineWidthPlus = [self.lineWidthPlus copyWithZone: zone];
+	copyHover.widthPlus = [self.widthPlus copyWithZone: zone];
+	copyHover.height = [self.height copyWithZone: zone];
+	copyHover.enabled = [self.enabled copyWithZone: zone];
 	copyHover.radius = [self.radius copyWithZone: zone];
 	copyHover.fillColor = [self.fillColor copyWithZone: zone];
 	copyHover.lineColor = [self.lineColor copyWithZone: zone];
@@ -41,11 +45,23 @@
 	if (self.opacity) {
 		params[@"opacity"] = self.opacity;
 	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
+	if (self.width) {
+		params[@"width"] = self.width;
+	}
+	if (self.heightPlus) {
+		params[@"heightPlus"] = self.heightPlus;
 	}
 	if (self.lineWidthPlus) {
 		params[@"lineWidthPlus"] = self.lineWidthPlus;
+	}
+	if (self.widthPlus) {
+		params[@"widthPlus"] = self.widthPlus;
+	}
+	if (self.height) {
+		params[@"height"] = self.height;
+	}
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
 	}
 	if (self.radius) {
 		params[@"radius"] = self.radius;
@@ -103,16 +119,40 @@
 	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
--(void)setEnabled:(NSNumber *)enabled {
-	NSNumber *oldValue = _enabled;
-	_enabled = enabled;
-	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
+-(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
+	_width = width;
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
+}
+
+-(void)setHeightPlus:(NSNumber *)heightPlus {
+	NSNumber *oldValue = _heightPlus;
+	_heightPlus = heightPlus;
+	[self updateNSObject:oldValue newValue:heightPlus propertyName:@"heightPlus"];
 }
 
 -(void)setLineWidthPlus:(NSNumber *)lineWidthPlus {
 	NSNumber *oldValue = _lineWidthPlus;
 	_lineWidthPlus = lineWidthPlus;
 	[self updateNSObject:oldValue newValue:lineWidthPlus propertyName:@"lineWidthPlus"];
+}
+
+-(void)setWidthPlus:(NSNumber *)widthPlus {
+	NSNumber *oldValue = _widthPlus;
+	_widthPlus = widthPlus;
+	[self updateNSObject:oldValue newValue:widthPlus propertyName:@"widthPlus"];
+}
+
+-(void)setHeight:(NSNumber *)height {
+	NSNumber *oldValue = _height;
+	_height = height;
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
+	_enabled = enabled;
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setRadius:(NSNumber *)radius {

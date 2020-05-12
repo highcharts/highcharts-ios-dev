@@ -39,7 +39,6 @@
 	copyWindbarb.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyWindbarb.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyWindbarb.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyWindbarb.crisp = [self.crisp copyWithZone: zone];
 	copyWindbarb.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyWindbarb.depth = [self.depth copyWithZone: zone];
 	copyWindbarb.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -78,6 +77,7 @@
 	copyWindbarb.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWindbarb.zones = [self.zones copyWithZone: zone];
 	copyWindbarb.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyWindbarb.crisp = [self.crisp copyWithZone: zone];
 	copyWindbarb.visible = [self.visible copyWithZone: zone];
 	copyWindbarb.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyWindbarb.className = [self.className copyWithZone: zone];
@@ -156,9 +156,6 @@
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -280,12 +277,6 @@
 	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

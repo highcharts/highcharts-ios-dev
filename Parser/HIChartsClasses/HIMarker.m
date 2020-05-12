@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIMarker *copyMarker = [[HIMarker allocWithZone: zone] init];
+	copyMarker.states = [self.states copyWithZone: zone];
 	copyMarker.symbol = [self.symbol copyWithZone: zone];
 	copyMarker.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyMarker.radius = [self.radius copyWithZone: zone];
@@ -18,7 +19,6 @@
 	copyMarker.height = [self.height copyWithZone: zone];
 	copyMarker.width = [self.width copyWithZone: zone];
 	copyMarker.fillColor = [self.fillColor copyWithZone: zone];
-	copyMarker.states = [self.states copyWithZone: zone];
 	copyMarker.color = [self.color copyWithZone: zone];
 	copyMarker.animation = [self.animation copyWithZone: zone];
 	copyMarker.fillOpacity = [self.fillOpacity copyWithZone: zone];
@@ -29,6 +29,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.states) {
+		params[@"states"] = [self.states getParams];
+	}
 	if (self.symbol) {
 		params[@"symbol"] = self.symbol;
 	}
@@ -53,9 +56,6 @@
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
-	if (self.states) {
-		params[@"states"] = [self.states getParams];
-	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
@@ -72,6 +72,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setStates:(HIStates *)states {
+	HIStates *oldValue = _states;
+	_states = states;
+	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
+}
 
 -(void)setSymbol:(NSString *)symbol {
 	NSString *oldValue = _symbol;
@@ -119,12 +125,6 @@
 	HIColor *oldValue = _fillColor;
 	_fillColor = fillColor;
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setStates:(HIStates *)states {
-	HIStates *oldValue = _states;
-	_states = states;
-	[self updateHIObject:oldValue newValue:states propertyName:@"states"];
 }
 
 -(void)setColor:(HIColor *)color {

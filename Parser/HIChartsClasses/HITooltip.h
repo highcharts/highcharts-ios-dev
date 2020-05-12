@@ -340,7 +340,7 @@ A callback for defining the format for _nodes_ in the chart's tooltip, as oppose
 
 /**
  Refresh the tooltip's text and position.
- @param points An array of points.
+ @param point A point.
  */
 -(void)refreshByPoint:(HIPoint *)point;
 

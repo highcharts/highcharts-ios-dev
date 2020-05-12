@@ -61,6 +61,7 @@
 	copyPolygon.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPolygon.zones = [self.zones copyWithZone: zone];
 	copyPolygon.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyPolygon.crisp = [self.crisp copyWithZone: zone];
 	copyPolygon.visible = [self.visible copyWithZone: zone];
 	copyPolygon.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPolygon.dataLabels = [self.dataLabels copyWithZone: zone];

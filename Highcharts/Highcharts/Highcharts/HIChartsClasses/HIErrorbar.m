@@ -30,16 +30,19 @@
 	copyErrorbar.tooltip = [self.tooltip copyWithZone: zone];
 	copyErrorbar.grouping = [self.grouping copyWithZone: zone];
 	copyErrorbar.stemWidth = [self.stemWidth copyWithZone: zone];
+	copyErrorbar.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyErrorbar.medianWidth = [self.medianWidth copyWithZone: zone];
 	copyErrorbar.whiskerColor = [self.whiskerColor copyWithZone: zone];
 	copyErrorbar.medianColor = [self.medianColor copyWithZone: zone];
 	copyErrorbar.colorKey = [self.colorKey copyWithZone: zone];
 	copyErrorbar.stemDashStyle = [self.stemDashStyle copyWithZone: zone];
-	copyErrorbar.whiskerLength = [self.whiskerLength copyWithZone: zone];
-	copyErrorbar.dragDrop = [self.dragDrop copyWithZone: zone];
-	copyErrorbar.threshold = [self.threshold copyWithZone: zone];
-	copyErrorbar.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyErrorbar.whiskerDashStyle = [self.whiskerDashStyle copyWithZone: zone];
 	copyErrorbar.fillColor = [self.fillColor copyWithZone: zone];
+	copyErrorbar.medianDashStyle = [self.medianDashStyle copyWithZone: zone];
+	copyErrorbar.threshold = [self.threshold copyWithZone: zone];
+	copyErrorbar.boxDashStyle = [self.boxDashStyle copyWithZone: zone];
+	copyErrorbar.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyErrorbar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyErrorbar.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyErrorbar.pointRange = [self.pointRange copyWithZone: zone];
 	copyErrorbar.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -52,7 +55,6 @@
 	copyErrorbar.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyErrorbar.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyErrorbar.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyErrorbar.crisp = [self.crisp copyWithZone: zone];
 	copyErrorbar.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyErrorbar.depth = [self.depth copyWithZone: zone];
 	copyErrorbar.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -90,6 +92,7 @@
 	copyErrorbar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyErrorbar.zones = [self.zones copyWithZone: zone];
 	copyErrorbar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyErrorbar.crisp = [self.crisp copyWithZone: zone];
 	copyErrorbar.visible = [self.visible copyWithZone: zone];
 	copyErrorbar.className = [self.className copyWithZone: zone];
 	copyErrorbar.pointStart = [self.pointStart copyWithZone: zone];
@@ -111,6 +114,9 @@
 	if (self.stemWidth) {
 		params[@"stemWidth"] = self.stemWidth;
 	}
+	if (self.whiskerLength) {
+		params[@"whiskerLength"] = self.whiskerLength;
+	}
 	if (self.medianWidth) {
 		params[@"medianWidth"] = self.medianWidth;
 	}
@@ -123,11 +129,17 @@
 	if (self.stemDashStyle) {
 		params[@"stemDashStyle"] = self.stemDashStyle;
 	}
-	if (self.whiskerLength) {
-		params[@"whiskerLength"] = self.whiskerLength;
+	if (self.whiskerDashStyle) {
+		params[@"whiskerDashStyle"] = self.whiskerDashStyle;
 	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.medianDashStyle) {
+		params[@"medianDashStyle"] = self.medianDashStyle;
+	}
+	if (self.boxDashStyle) {
+		params[@"boxDashStyle"] = self.boxDashStyle;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
@@ -163,9 +175,6 @@
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
 	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
-	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
 	}
@@ -192,6 +201,12 @@
 	[self updateNSObject:oldValue newValue:stemWidth propertyName:@"stemWidth"];
 }
 
+-(void)setWhiskerLength:(id)whiskerLength {
+	id oldValue = _whiskerLength;
+	_whiskerLength = whiskerLength;
+	[self updateNSObject:oldValue newValue:whiskerLength propertyName:@"whiskerLength"];
+}
+
 -(void)setMedianWidth:(NSNumber *)medianWidth {
 	NSNumber *oldValue = _medianWidth;
 	_medianWidth = medianWidth;
@@ -216,16 +231,28 @@
 	[self updateNSObject:oldValue newValue:stemDashStyle propertyName:@"stemDashStyle"];
 }
 
--(void)setWhiskerLength:(id)whiskerLength {
-	id oldValue = _whiskerLength;
-	_whiskerLength = whiskerLength;
-	[self updateNSObject:oldValue newValue:whiskerLength propertyName:@"whiskerLength"];
+-(void)setWhiskerDashStyle:(NSString *)whiskerDashStyle {
+	NSString *oldValue = _whiskerDashStyle;
+	_whiskerDashStyle = whiskerDashStyle;
+	[self updateNSObject:oldValue newValue:whiskerDashStyle propertyName:@"whiskerDashStyle"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;
 	_fillColor = fillColor;
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setMedianDashStyle:(NSString *)medianDashStyle {
+	NSString *oldValue = _medianDashStyle;
+	_medianDashStyle = medianDashStyle;
+	[self updateNSObject:oldValue newValue:medianDashStyle propertyName:@"medianDashStyle"];
+}
+
+-(void)setBoxDashStyle:(NSString *)boxDashStyle {
+	NSString *oldValue = _boxDashStyle;
+	_boxDashStyle = boxDashStyle;
+	[self updateNSObject:oldValue newValue:boxDashStyle propertyName:@"boxDashStyle"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
@@ -286,12 +313,6 @@
 	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

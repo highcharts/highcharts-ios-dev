@@ -81,6 +81,7 @@
 	copyBubble.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyBubble.zones = [self.zones copyWithZone: zone];
 	copyBubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyBubble.crisp = [self.crisp copyWithZone: zone];
 	copyBubble.visible = [self.visible copyWithZone: zone];
 	copyBubble.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyBubble.className = [self.className copyWithZone: zone];

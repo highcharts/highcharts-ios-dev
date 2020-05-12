@@ -55,6 +55,7 @@
 	copySunburst.accessibility = [self.accessibility copyWithZone: zone];
 	copySunburst.shadow = [self.shadow copyWithZone: zone];
 	copySunburst.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySunburst.crisp = [self.crisp copyWithZone: zone];
 	copySunburst.visible = [self.visible copyWithZone: zone];
 	copySunburst.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySunburst.className = [self.className copyWithZone: zone];

@@ -83,6 +83,7 @@
 	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTreemap.zones = [self.zones copyWithZone: zone];
 	copyTreemap.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyTreemap.crisp = [self.crisp copyWithZone: zone];
 	copyTreemap.visible = [self.visible copyWithZone: zone];
 	copyTreemap.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyTreemap.className = [self.className copyWithZone: zone];
