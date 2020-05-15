@@ -42,7 +42,6 @@
 	copyFunnel3d.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyFunnel3d.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyFunnel3d.groupPadding = [self.groupPadding copyWithZone: zone];
-	copyFunnel3d.crisp = [self.crisp copyWithZone: zone];
 	copyFunnel3d.depth = [self.depth copyWithZone: zone];
 	copyFunnel3d.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyFunnel3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -82,6 +81,7 @@
 	copyFunnel3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyFunnel3d.zones = [self.zones copyWithZone: zone];
 	copyFunnel3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyFunnel3d.crisp = [self.crisp copyWithZone: zone];
 	copyFunnel3d.visible = [self.visible copyWithZone: zone];
 	copyFunnel3d.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyFunnel3d.className = [self.className copyWithZone: zone];
@@ -162,9 +162,6 @@
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
-	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -292,12 +289,6 @@
 	NSNumber *oldValue = _groupPadding;
 	_groupPadding = groupPadding;
 	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

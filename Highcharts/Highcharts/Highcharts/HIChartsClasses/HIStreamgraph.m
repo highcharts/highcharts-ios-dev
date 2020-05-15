@@ -77,6 +77,7 @@
 	copyStreamgraph.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyStreamgraph.zones = [self.zones copyWithZone: zone];
 	copyStreamgraph.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyStreamgraph.crisp = [self.crisp copyWithZone: zone];
 	copyStreamgraph.visible = [self.visible copyWithZone: zone];
 	copyStreamgraph.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyStreamgraph.stickyTracking = [self.stickyTracking copyWithZone: zone];

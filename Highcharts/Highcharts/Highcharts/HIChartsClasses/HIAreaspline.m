@@ -67,6 +67,7 @@
 	copyAreaspline.zones = [self.zones copyWithZone: zone];
 	copyAreaspline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyAreaspline.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyAreaspline.crisp = [self.crisp copyWithZone: zone];
 	copyAreaspline.visible = [self.visible copyWithZone: zone];
 	copyAreaspline.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyAreaspline.stickyTracking = [self.stickyTracking copyWithZone: zone];

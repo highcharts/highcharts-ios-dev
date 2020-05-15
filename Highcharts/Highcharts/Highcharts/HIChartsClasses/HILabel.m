@@ -21,6 +21,7 @@
 	copyLabel.formatter = [self.formatter copyWithZone: zone];
 	copyLabel.textAlign = [self.textAlign copyWithZone: zone];
 	copyLabel.minFontSize = [self.minFontSize copyWithZone: zone];
+	copyLabel.format = [self.format copyWithZone: zone];
 	copyLabel.maxFontSize = [self.maxFontSize copyWithZone: zone];
 	copyLabel.enabled = [self.enabled copyWithZone: zone];
 	copyLabel.connectorNeighbourDistance = [self.connectorNeighbourDistance copyWithZone: zone];
@@ -65,6 +66,9 @@
 	}
 	if (self.minFontSize) {
 		params[@"minFontSize"] = self.minFontSize;
+	}
+	if (self.format) {
+		params[@"format"] = self.format;
 	}
 	if (self.maxFontSize) {
 		params[@"maxFontSize"] = self.maxFontSize;
@@ -162,6 +166,12 @@
 	NSNumber *oldValue = _minFontSize;
 	_minFontSize = minFontSize;
 	[self updateNSObject:oldValue newValue:minFontSize propertyName:@"minFontSize"];
+}
+
+-(void)setFormat:(NSString *)format {
+	NSString *oldValue = _format;
+	_format = format;
+	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
 }
 
 -(void)setMaxFontSize:(NSNumber *)maxFontSize {

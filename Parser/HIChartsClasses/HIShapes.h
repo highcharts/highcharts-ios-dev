@@ -27,7 +27,7 @@ The URL for an image to use as the annotation shape. Note, type has to be set to
 /**
 An array of points for the shape. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point's id.
 */
-@property(nonatomic, readwrite) NSArray /* <NSString, id> */ <HIPoints *> *points;
+@property(nonatomic, readwrite) NSArray <HIPoints *> *points;
 /**
 Id of the marker which will be drawn at the final vertex of the path. Custom markers can be defined in defs property.
 

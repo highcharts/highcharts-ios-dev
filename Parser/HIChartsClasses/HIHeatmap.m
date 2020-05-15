@@ -15,6 +15,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIHeatmap *copyHeatmap = [[HIHeatmap allocWithZone: zone] init];
+	copyHeatmap.marker = [self.marker copyWithZone: zone];
 	copyHeatmap.data = [self.data copyWithZone: zone];
 	copyHeatmap.id = [self.id copyWithZone: zone];
 	copyHeatmap.index = [self.index copyWithZone: zone];
@@ -26,6 +27,7 @@
 	copyHeatmap.zIndex = [self.zIndex copyWithZone: zone];
 	copyHeatmap.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyHeatmap.colsize = [self.colsize copyWithZone: zone];
+	copyHeatmap.clip = [self.clip copyWithZone: zone];
 	copyHeatmap.color = [self.color copyWithZone: zone];
 	copyHeatmap.tooltip = [self.tooltip copyWithZone: zone];
 	copyHeatmap.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -38,7 +40,6 @@
 	copyHeatmap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyHeatmap.selected = [self.selected copyWithZone: zone];
 	copyHeatmap.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyHeatmap.clip = [self.clip copyWithZone: zone];
 	copyHeatmap.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyHeatmap.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyHeatmap.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -62,6 +63,7 @@
 	copyHeatmap.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyHeatmap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyHeatmap.zones = [self.zones copyWithZone: zone];
+	copyHeatmap.crisp = [self.crisp copyWithZone: zone];
 	copyHeatmap.visible = [self.visible copyWithZone: zone];
 	copyHeatmap.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyHeatmap.className = [self.className copyWithZone: zone];

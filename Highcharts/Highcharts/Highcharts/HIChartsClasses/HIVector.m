@@ -57,6 +57,7 @@
 	copyVector.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVector.zones = [self.zones copyWithZone: zone];
 	copyVector.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyVector.crisp = [self.crisp copyWithZone: zone];
 	copyVector.visible = [self.visible copyWithZone: zone];
 	copyVector.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyVector.dataLabels = [self.dataLabels copyWithZone: zone];

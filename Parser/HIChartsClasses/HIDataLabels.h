@@ -58,12 +58,12 @@ Decides how the data label will be rotated relative to the perimeter of the sunb
 * [Circular rotation mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-datalabels-rotationmode-circular/)
 */
 @property(nonatomic, readwrite) NSString *rotationMode;
-@property(nonatomic, readwrite) id y;
-@property(nonatomic, readwrite) id align;
-@property(nonatomic, readwrite) id verticalAlign;
-@property(nonatomic, readwrite) NSNumber /* Bool */ *inside;
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+@property(nonatomic, readwrite) NSString *verticalAlign;
 @property(nonatomic, readwrite) NSString *format;
+@property(nonatomic, readwrite) NSString *align;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *inside;
+@property(nonatomic, readwrite) id y;
 @property(nonatomic, readwrite) NSNumber /* Bool */ *crop;
 /**
 Callback to format data labels for _nodes_ in the sankey diagram. The `nodeFormat` option takes precedence over the `nodeFormatter`.

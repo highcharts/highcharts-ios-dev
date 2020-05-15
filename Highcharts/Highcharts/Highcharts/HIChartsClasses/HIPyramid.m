@@ -67,6 +67,7 @@
 	copyPyramid.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPyramid.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyPyramid.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid.visible = [self.visible copyWithZone: zone];
 	copyPyramid.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPyramid.className = [self.className copyWithZone: zone];

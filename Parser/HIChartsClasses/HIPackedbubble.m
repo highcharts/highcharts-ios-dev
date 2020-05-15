@@ -26,6 +26,7 @@
 	copyPackedbubble.yAxis = [self.yAxis copyWithZone: zone];
 	copyPackedbubble.zIndex = [self.zIndex copyWithZone: zone];
 	copyPackedbubble.minSize = [self.minSize copyWithZone: zone];
+	copyPackedbubble.crisp = [self.crisp copyWithZone: zone];
 	copyPackedbubble.sizeBy = [self.sizeBy copyWithZone: zone];
 	copyPackedbubble.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyPackedbubble.dataLabels = [self.dataLabels copyWithZone: zone];

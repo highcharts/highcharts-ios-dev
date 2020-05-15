@@ -9,7 +9,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 <!-- 	<header>
@@ -58,11 +58,11 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/boxDashStyle">boxDashStyle</option>
+		
 		<option value="//api/name/colorByPoint">colorByPoint</option>
 		
 		<option value="//api/name/colors">colors</option>
-		
-		<option value="//api/name/crisp">crisp</option>
 		
 		<option value="//api/name/depth">depth</option>
 		
@@ -80,6 +80,8 @@
 		
 		<option value="//api/name/medianColor">medianColor</option>
 		
+		<option value="//api/name/medianDashStyle">medianDashStyle</option>
+		
 		<option value="//api/name/medianWidth">medianWidth</option>
 		
 		<option value="//api/name/minPointLength">minPointLength</option>
@@ -95,6 +97,8 @@
 		<option value="//api/name/stemWidth">stemWidth</option>
 		
 		<option value="//api/name/whiskerColor">whiskerColor</option>
+		
+		<option value="//api/name/whiskerDashStyle">whiskerDashStyle</option>
 		
 		<option value="//api/name/whiskerLength">whiskerLength</option>
 		
@@ -220,6 +224,57 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/">Error bar styling</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBoxplot.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/whiskerLength" title="whiskerLength"></a>
+	<h3 class="method-title"><code><a href="#//api/name/whiskerLength">&nbsp;&nbsp;whiskerLength</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set <code>0</code> to disable whiskers.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id whiskerLength</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">True by default</a></li>
 </ul>
 
 			</div>
@@ -451,8 +506,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/whiskerLength" title="whiskerLength"></a>
-	<h3 class="method-title"><code><a href="#//api/name/whiskerLength">&nbsp;&nbsp;whiskerLength</a></code>
+	<a name="//api/name/whiskerDashStyle" title="whiskerDashStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/whiskerDashStyle">&nbsp;&nbsp;whiskerDashStyle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -462,12 +517,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set <code>0</code> to disable whiskers.</p>
+				<p>The dash style of the whiskers.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id whiskerLength</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *whiskerDashStyle</code></div>
 
 		    
 			
@@ -479,10 +534,120 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>Solid</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">True by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBoxplot.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The fill color of the box. In styled mode, the fill color can be set with the <code>.highcharts-boxplot-box</code> class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>#ffffff</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBoxplot.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/medianDashStyle" title="medianDashStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/medianDashStyle">&nbsp;&nbsp;medianDashStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The dash style of the median.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *medianDashStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>Solid</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a></li>
 </ul>
 
 			</div>
@@ -554,8 +719,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fillColor" title="fillColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+	<a name="//api/name/boxDashStyle" title="boxDashStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/boxDashStyle">&nbsp;&nbsp;boxDashStyle</a></code>
 </h3>
 
 	<div class="method-info">
@@ -565,12 +730,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The fill color of the box. In styled mode, the fill color can be set with the <code>.highcharts-boxplot-box</code> class.</p>
+				<p>The dash style of the box.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *boxDashStyle</code></div>
 
 		    
 			
@@ -582,12 +747,13 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#ffffff</code>.</p>
+				<p><strong>Defaults to</strong> <code>Solid</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a></li>
 </ul>
 
 			</div>
@@ -1099,57 +1265,6 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/crisp" title="crisp"></a>
-	<h3 class="method-title"><code><a href="#//api/name/crisp">&nbsp;&nbsp;crisp</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>When true, each column edge is rounded to its nearest pixel in order to render sharp on screen. In some cases, when there are a lot of densely packed columns, this leads to visible difference in column widths or distance between columns. In these cases, setting <code>crisp</code> to <code>false</code> may look better, even though each column is rendered blurry.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *crisp</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/">Crisp is false</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBoxplot.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/depth" title="depth"></a>
 	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
 </h3>
@@ -1289,7 +1404,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 	            <a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon" target="_blank"><i class="fa fa-linkedin"></i></a>
 	            <a href="https://github.com/highcharts/highcharts" title="Github" class="social-icon" target="_blank"><i class="fa fa-github"></i></a>
 	            
-				<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank">appledoc 2.2.1 (build 1334)</a>.</p>
+				<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank">appledoc 2.2.1 (build 1333)</a>.</p>
 				
 	        </div>
 	    </div>

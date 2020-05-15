@@ -55,6 +55,8 @@
 		CD1DF89421F9EECA005DF8A7 /* HICustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */; };
 		CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3F77092056AE4300527CBE /* HIChartContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3F770C2056AE5F00527CBE /* HIChartContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3F770B2056AE5F00527CBE /* HIChartContext.m */; };
+		CD5411802465B0A400BA03D0 /* HIExportData.h in Headers */ = {isa = PBXBuildFile; fileRef = CD54117E2465B0A400BA03D0 /* HIExportData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD5411812465B0A400BA03D0 /* HIExportData.m in Sources */ = {isa = PBXBuildFile; fileRef = CD54117F2465B0A400BA03D0 /* HIExportData.m */; };
 		CD5B35961F90C469006159D7 /* HIChartsJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */; };
 		CD5B35971F90C46C006159D7 /* HIChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIChartView.m */; };
 		CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
@@ -531,6 +533,8 @@
 		CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICustomFont.m; path = Private/HICustomFont.m; sourceTree = "<group>"; };
 		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
 		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
+		CD54117E2465B0A400BA03D0 /* HIExportData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIExportData.h; sourceTree = "<group>"; };
+		CD54117F2465B0A400BA03D0 /* HIExportData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIExportData.m; sourceTree = "<group>"; };
 		CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWKSyncedWebView.h; path = Private/HIWKSyncedWebView.h; sourceTree = "<group>"; };
 		CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIWKSyncedWebView.m; path = Private/HIWKSyncedWebView.m; sourceTree = "<group>"; };
 		CD91B2F02062741000BCEE37 /* HIGDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGDependency.m; path = Private/HIGDependency.m; sourceTree = "<group>"; };
@@ -982,6 +986,8 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				CD54117E2465B0A400BA03D0 /* HIExportData.h */,
+				CD54117F2465B0A400BA03D0 /* HIExportData.m */,
 				CDD683D4242131940022E38A /* HIAccessibilityExporting.h */,
 				CDD683D7242131940022E38A /* HIAccessibilityExporting.m */,
 				CDD683D5242131940022E38A /* HIAccessibilityLegend.h */,
@@ -1593,6 +1599,7 @@
 				CDD682DF242131430022E38A /* HIWaterfall.h in Headers */,
 				CDD6827B242131420022E38A /* HIEvents.h in Headers */,
 				CDD68293242131420022E38A /* HIBoxplot.h in Headers */,
+				CD5411802465B0A400BA03D0 /* HIExportData.h in Headers */,
 				CDD6833F242131430022E38A /* HIVenn.h in Headers */,
 				CDD6828E242131420022E38A /* HIChartTypes.h in Headers */,
 				CDD68382242131430022E38A /* HILinkTextPath.h in Headers */,
@@ -1912,6 +1919,7 @@
 				CDDF95D51F9F5D260021A129 /* HIFunction.m in Sources */,
 				CDD68282242131420022E38A /* HICaption.m in Sources */,
 				CDD6837C242131430022E38A /* HIRanges.m in Sources */,
+				CD5411812465B0A400BA03D0 /* HIExportData.m in Sources */,
 				CDD682A7242131430022E38A /* HILayoutAlgorithm.m in Sources */,
 				CDD68394242131430022E38A /* HILevels.m in Sources */,
 				CDD683DD242131940022E38A /* HIAccessibilityExporting.m in Sources */,
@@ -2229,7 +2237,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 8.0.4;
+				DYLIB_CURRENT_VERSION = 8.1.0;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2241,7 +2249,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 8.0.4;
+				MARKETING_VERSION = 8.1.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -2391,7 +2399,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 8.0.4;
+				DYLIB_CURRENT_VERSION = 8.1.0;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2402,7 +2410,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 8.0.4;
+				MARKETING_VERSION = 8.1.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -2422,7 +2430,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 8.0.4;
+				DYLIB_CURRENT_VERSION = 8.1.0;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2433,7 +2441,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 8.0.4;
+				MARKETING_VERSION = 8.1.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";

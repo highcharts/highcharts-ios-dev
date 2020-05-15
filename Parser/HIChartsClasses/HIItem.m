@@ -22,6 +22,7 @@
 	copyItem.endAngle = [self.endAngle copyWithZone: zone];
 	copyItem.startAngle = [self.startAngle copyWithZone: zone];
 	copyItem.marker = [self.marker copyWithZone: zone];
+	copyItem.crisp = [self.crisp copyWithZone: zone];
 	copyItem.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyItem.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyItem.clip = [self.clip copyWithZone: zone];

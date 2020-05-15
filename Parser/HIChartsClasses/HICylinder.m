@@ -33,7 +33,6 @@
 	copyCylinder.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyCylinder.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyCylinder.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyCylinder.crisp = [self.crisp copyWithZone: zone];
 	copyCylinder.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyCylinder.depth = [self.depth copyWithZone: zone];
 	copyCylinder.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -75,6 +74,7 @@
 	copyCylinder.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyCylinder.zones = [self.zones copyWithZone: zone];
 	copyCylinder.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyCylinder.crisp = [self.crisp copyWithZone: zone];
 	copyCylinder.visible = [self.visible copyWithZone: zone];
 	copyCylinder.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyCylinder.className = [self.className copyWithZone: zone];
@@ -138,9 +138,6 @@
 	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.crisp) {
-		params[@"crisp"] = self.crisp;
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
@@ -232,12 +229,6 @@
 	NSNumber *oldValue = _edgeWidth;
 	_edgeWidth = edgeWidth;
 	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setCrisp:(NSNumber *)crisp {
-	NSNumber *oldValue = _crisp;
-	_crisp = crisp;
-	[self updateNSObject:oldValue newValue:crisp propertyName:@"crisp"];
 }
 
 -(void)setDepth:(NSNumber *)depth {

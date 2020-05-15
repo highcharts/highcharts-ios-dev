@@ -15,6 +15,10 @@
 	copySelect.enabled = [self.enabled copyWithZone: zone];
 	copySelect.fillColor = [self.fillColor copyWithZone: zone];
 	copySelect.lineColor = [self.lineColor copyWithZone: zone];
+	copySelect.width = [self.width copyWithZone: zone];
+	copySelect.heightPlus = [self.heightPlus copyWithZone: zone];
+	copySelect.widthPlus = [self.widthPlus copyWithZone: zone];
+	copySelect.height = [self.height copyWithZone: zone];
 	copySelect.borderColor = [self.borderColor copyWithZone: zone];
 	copySelect.color = [self.color copyWithZone: zone];
 	copySelect.animation = [self.animation copyWithZone: zone];
@@ -40,6 +44,18 @@
 	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.width) {
+		params[@"width"] = self.width;
+	}
+	if (self.heightPlus) {
+		params[@"heightPlus"] = self.heightPlus;
+	}
+	if (self.widthPlus) {
+		params[@"widthPlus"] = self.widthPlus;
+	}
+	if (self.height) {
+		params[@"height"] = self.height;
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
@@ -89,6 +105,30 @@
 	HIColor *oldValue = _lineColor;
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setWidth:(NSNumber *)width {
+	NSNumber *oldValue = _width;
+	_width = width;
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
+}
+
+-(void)setHeightPlus:(NSNumber *)heightPlus {
+	NSNumber *oldValue = _heightPlus;
+	_heightPlus = heightPlus;
+	[self updateNSObject:oldValue newValue:heightPlus propertyName:@"heightPlus"];
+}
+
+-(void)setWidthPlus:(NSNumber *)widthPlus {
+	NSNumber *oldValue = _widthPlus;
+	_widthPlus = widthPlus;
+	[self updateNSObject:oldValue newValue:widthPlus propertyName:@"widthPlus"];
+}
+
+-(void)setHeight:(NSNumber *)height {
+	NSNumber *oldValue = _height;
+	_height = height;
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
