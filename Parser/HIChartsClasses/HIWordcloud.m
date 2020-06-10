@@ -32,6 +32,7 @@
 	copyWordcloud.states = [self.states copyWithZone: zone];
 	copyWordcloud.colors = [self.colors copyWithZone: zone];
 	copyWordcloud.borderColor = [self.borderColor copyWithZone: zone];
+	copyWordcloud.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyWordcloud.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyWordcloud.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWordcloud.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -115,6 +116,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	if (self.edgeWidth) {
 		params[@"edgeWidth"] = self.edgeWidth;
 	}
@@ -193,6 +197,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setEdgeWidth:(NSNumber *)edgeWidth {

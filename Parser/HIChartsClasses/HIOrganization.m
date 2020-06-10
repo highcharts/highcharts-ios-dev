@@ -44,6 +44,7 @@
 	copyOrganization.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyOrganization.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyOrganization.colors = [self.colors copyWithZone: zone];
+	copyOrganization.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyOrganization.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyOrganization.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyOrganization.selected = [self.selected copyWithZone: zone];
@@ -144,6 +145,9 @@
 		}
 		params[@"colors"] = array;
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	return params;
 }
 
@@ -237,6 +241,12 @@
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 @end

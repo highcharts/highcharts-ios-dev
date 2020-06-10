@@ -82,6 +82,7 @@
 #import "HIPopup.h"
 #import "HIExportData.h"
 #import "HIEvents.h"
+#import "HIParentNode.h"
 #import "HIDataGrouping.h"
 #import "HIData.h"
 #import "HIGradientColorStopObject.h"

@@ -10,13 +10,14 @@
 
 
 /**
- */
-@interface HIParentNodeTextPath: HIChartsJSONSerializable
+Series options for parent nodes.
+*/
+@interface HIParentNode: HIChartsJSONSerializable
 
 /**
-Enable or disable `textPath` option for link's or marker's data labels.
+Allow this series' parent nodes to be selected by clicking on the graph.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *allowPointSelect;
 
 -(NSDictionary *)getParams;
 
