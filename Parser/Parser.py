@@ -319,7 +319,11 @@ hc_types = {
         #8.0.0
         "Array.<(*)>": 'NSArray',
         #8.0.4
-        "Array.<(string|*)>": 'NSArray'
+        "Array.<(string|*)>": 'NSArray',
+        #8.1.1
+        "Array.<Array.<Highcharts.SVGPathCommand, number?, number?, number?, number?, number?, number?, number?>>": 'NSArray',
+        "string|Array.<Array.<string, number?, number?, number?, number?, number?, number?, number?>>|undefined": 'NSArray',
+        "Highcharts.FormatterCallbackFunction.<Series>": 'HIFunction'
     }
 
 def get_type(x):
