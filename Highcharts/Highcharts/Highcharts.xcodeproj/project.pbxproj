@@ -54,16 +54,16 @@
 		CD1DF89321F9EECA005DF8A7 /* HIClassJSMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1DF88F21F9EECA005DF8A7 /* HIClassJSMethods.h */; };
 		CD1DF89421F9EECA005DF8A7 /* HICustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */; };
 		CD39922924928073003DA6C0 /* HIParentNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CD39922824928073003DA6C0 /* HIParentNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD39922B24928406003DA6C0 /* HIAccessibilityExporting.h in Headers */ = {isa = PBXBuildFile; fileRef = CD39922A24928406003DA6C0 /* HIAccessibilityExporting.h */; };
+		CD39922B24928406003DA6C0 /* HIAccessibilityExporting.h in Headers */ = {isa = PBXBuildFile; fileRef = CD39922A24928406003DA6C0 /* HIAccessibilityExporting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD39922D24928413003DA6C0 /* HIAccessibilityExporting.m in Sources */ = {isa = PBXBuildFile; fileRef = CD39922C24928413003DA6C0 /* HIAccessibilityExporting.m */; };
-		CD39923024928453003DA6C0 /* HIAccessibilitySeries.h in Headers */ = {isa = PBXBuildFile; fileRef = CD39922E24928453003DA6C0 /* HIAccessibilitySeries.h */; };
+		CD39923024928453003DA6C0 /* HIAccessibilitySeries.h in Headers */ = {isa = PBXBuildFile; fileRef = CD39922E24928453003DA6C0 /* HIAccessibilitySeries.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD39923124928453003DA6C0 /* HIAccessibilitySeries.m in Sources */ = {isa = PBXBuildFile; fileRef = CD39922F24928453003DA6C0 /* HIAccessibilitySeries.m */; };
 		CD3992342492849A003DA6C0 /* HILabelOptionsAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3992322492849A003DA6C0 /* HILabelOptionsAccessibility.m */; };
-		CD3992352492849A003DA6C0 /* HILabelOptionsAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3992332492849A003DA6C0 /* HILabelOptionsAccessibility.h */; };
-		CD399238249284FC003DA6C0 /* HIAccessibilityLegend.h in Headers */ = {isa = PBXBuildFile; fileRef = CD399236249284FC003DA6C0 /* HIAccessibilityLegend.h */; };
+		CD3992352492849A003DA6C0 /* HILabelOptionsAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3992332492849A003DA6C0 /* HILabelOptionsAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD399238249284FC003DA6C0 /* HIAccessibilityLegend.h in Headers */ = {isa = PBXBuildFile; fileRef = CD399236249284FC003DA6C0 /* HIAccessibilityLegend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD399239249284FC003DA6C0 /* HIAccessibilityLegend.m in Sources */ = {isa = PBXBuildFile; fileRef = CD399237249284FC003DA6C0 /* HIAccessibilityLegend.m */; };
 		CD39923C24928519003DA6C0 /* HILabelsAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD39923A24928519003DA6C0 /* HILabelsAccessibility.m */; };
-		CD39923D24928519003DA6C0 /* HILabelsAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CD39923B24928519003DA6C0 /* HILabelsAccessibility.h */; };
+		CD39923D24928519003DA6C0 /* HILabelsAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CD39923B24928519003DA6C0 /* HILabelsAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3F77092056AE4300527CBE /* HIChartContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3F770C2056AE5F00527CBE /* HIChartContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3F770B2056AE5F00527CBE /* HIChartContext.m */; };
 		CD5B35961F90C469006159D7 /* HIChartsJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */; };
@@ -1551,7 +1551,6 @@
 				CD7C760B24927DB000180780 /* HIButtonOptions.h in Headers */,
 				CD7C765024927DB000180780 /* HISeries.h in Headers */,
 				CD7C761724927DB000180780 /* HIAreasplinerange.h in Headers */,
-				CD39922B24928406003DA6C0 /* HIAccessibilityExporting.h in Headers */,
 				CD7C762B24927DB000180780 /* HITextPath.h in Headers */,
 				CD7C763024927DB000180780 /* HICondition.h in Headers */,
 				CD7C76AC24927DB000180780 /* HIBubbleLegend.h in Headers */,
@@ -1575,17 +1574,14 @@
 				CD7C767724927DB000180780 /* HIReverseArrow.h in Headers */,
 				CD7C768E24927DB000180780 /* HISecond.h in Headers */,
 				CD7C759924927DB000180780 /* HIScreenReaderSection.h in Headers */,
-				CD91B3032062741200BCEE37 /* HIGHTML.h in Headers */,
 				CD7C757324927DB000180780 /* HIStackLabels.h in Headers */,
 				CD7C76E024927DB000180780 /* HIParentNodeTextPath.h in Headers */,
 				CD7C761024927DB000180780 /* HIStyle.h in Headers */,
-				CD91B3042062741200BCEE37 /* HIGJavaScript.h in Headers */,
 				CD7C76B724927DB000180780 /* HILeft.h in Headers */,
 				CD7C767924927DB000180780 /* HIFilter.h in Headers */,
 				CD7C75EE24927DB000180780 /* HIBindings.h in Headers */,
 				CD7C761A24927DB000180780 /* HIAxis.h in Headers */,
 				CD7C76B324927DB000180780 /* HIRules.h in Headers */,
-				CD91B2FD2062741200BCEE37 /* HIGBundle.h in Headers */,
 				CD7C75CD24927DB000180780 /* HIRangeSelector.h in Headers */,
 				CD7C76AD24927DB000180780 /* HITilemap.h in Headers */,
 				CD7C760E24927DB000180780 /* HICSSObject.h in Headers */,
@@ -1607,35 +1603,27 @@
 				CD7C768F24927DB000180780 /* HINodes.h in Headers */,
 				CD7C75FC24927DB000180780 /* HIPolygon.h in Headers */,
 				CD7C757B24927DB000180780 /* HIDateTimeLabelFormats.h in Headers */,
-				CD399238249284FC003DA6C0 /* HIAccessibilityLegend.h in Headers */,
-				CD91B3012062741200BCEE37 /* HIGDependency.h in Headers */,
 				CD7C76F924927DB000180780 /* HIGauge.h in Headers */,
 				CD7C75D724927DB000180780 /* HIMarker.h in Headers */,
 				CD7C762A24927DB000180780 /* HICrosshair.h in Headers */,
 				CD7C766724927DB000180780 /* HIGradientColorObject.h in Headers */,
 				CD7C75C824927DB000180780 /* HIBottom.h in Headers */,
-				CD91B3022062741200BCEE37 /* HIFunctionSubclass.h in Headers */,
 				CD7C765D24927DB000180780 /* HICredits.h in Headers */,
-				CD1DF89221F9EECA005DF8A7 /* HICustomFont.h in Headers */,
 				CD7C762124927DB000180780 /* HISolidgauge.h in Headers */,
-				CD91B3072062741200BCEE37 /* HIGExport.h in Headers */,
 				CD7C75A224927DB000180780 /* HISonification.h in Headers */,
 				CD7C769624927DB000180780 /* HIZones.h in Headers */,
-				CD91B3002062741200BCEE37 /* HIChartsJSONSerializableSubclass.h in Headers */,
 				CD7C764E24927DB000180780 /* HIErrorbar.h in Headers */,
 				CD7C759C24927DB000180780 /* HIZoom.h in Headers */,
 				CD7C758924927DB000180780 /* HITop.h in Headers */,
 				CD7C769F24927DB000180780 /* HITheme.h in Headers */,
 				CD7C75BF24927DB000180780 /* HIPyramid3d.h in Headers */,
 				CD7C76A124927DB000180780 /* HISVGAttributes.h in Headers */,
-				CD77F94A21FB4BFD005E53CB /* HIWKSyncedWebView.h in Headers */,
 				CD7C760724927DB000180780 /* HIOptions3d.h in Headers */,
 				CD7C75B124927DB000180780 /* HISelect.h in Headers */,
 				CD7C76C124927DB000180780 /* HISummary.h in Headers */,
 				CD7C762E24927DB000180780 /* HILink.h in Headers */,
 				CD7C75D624927DB000180780 /* HIColorVariation.h in Headers */,
 				CD7C76CC24927DB000180780 /* HIGradientColorStopObject.h in Headers */,
-				CD1DF89321F9EECA005DF8A7 /* HIClassJSMethods.h in Headers */,
 				CD7C770124927DB000180780 /* HIDial.h in Headers */,
 				CD7C770A24927DB000180780 /* HIBubble.h in Headers */,
 				CD7C75FA24927DB000180780 /* HIExporting.h in Headers */,
@@ -1725,17 +1713,29 @@
 				CD7C767D24927DB000180780 /* HIXAxis.h in Headers */,
 				CD7C760224927DB000180780 /* HIBack.h in Headers */,
 				CD7C762424927DB000180780 /* HILang.h in Headers */,
-				CD39923D24928519003DA6C0 /* HILabelsAccessibility.h in Headers */,
 				CD7C769A24927DB000180780 /* HIPackedbubble.h in Headers */,
 				CD7C761824927DB000180780 /* HILabelOptions.h in Headers */,
 				CD7C767124927DB000180780 /* HIRadialGradientColorObject.h in Headers */,
 				CD7C76BD24927DB000180780 /* HITime.h in Headers */,
+				CD39922B24928406003DA6C0 /* HIAccessibilityExporting.h in Headers */,
+				CD91B3032062741200BCEE37 /* HIGHTML.h in Headers */,
+				CD91B3042062741200BCEE37 /* HIGJavaScript.h in Headers */,
+				CD91B2FD2062741200BCEE37 /* HIGBundle.h in Headers */,
+				CD399238249284FC003DA6C0 /* HIAccessibilityLegend.h in Headers */,
+				CD91B3012062741200BCEE37 /* HIGDependency.h in Headers */,
+				CD91B3022062741200BCEE37 /* HIFunctionSubclass.h in Headers */,
+				CD1DF89221F9EECA005DF8A7 /* HICustomFont.h in Headers */,
+				CD91B3072062741200BCEE37 /* HIGExport.h in Headers */,
+				CD91B3002062741200BCEE37 /* HIChartsJSONSerializableSubclass.h in Headers */,
+				CD77F94A21FB4BFD005E53CB /* HIWKSyncedWebView.h in Headers */,
+				CD1DF89321F9EECA005DF8A7 /* HIClassJSMethods.h in Headers */,
+				CD39923D24928519003DA6C0 /* HILabelsAccessibility.h in Headers */,
+				CD3992352492849A003DA6C0 /* HILabelOptionsAccessibility.h in Headers */,
+				CD39923024928453003DA6C0 /* HIAccessibilitySeries.h in Headers */,
 				CD7C76EA24927DB000180780 /* HITraverseUpButton.h in Headers */,
 				CD7C768024927DB000180780 /* HIScatter3d.h in Headers */,
 				CD7C75D224927DB000180780 /* HIFocusBorder.h in Headers */,
 				CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */,
-				CD3992352492849A003DA6C0 /* HILabelOptionsAccessibility.h in Headers */,
-				CD39923024928453003DA6C0 /* HIAccessibilitySeries.h in Headers */,
 				CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */,
 				EC1449381F4A854900612B1C /* HIChartViewDelegate.h in Headers */,
 				202957701E64175B002447E0 /* HIBridge.h in Headers */,
@@ -2245,7 +2245,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 8.1.0;
+				DYLIB_CURRENT_VERSION = 8.1.1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2257,7 +2257,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 8.1.0;
+				MARKETING_VERSION = 8.1.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -2407,7 +2407,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 8.1.0;
+				DYLIB_CURRENT_VERSION = 8.1.1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2418,7 +2418,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 8.1.0;
+				MARKETING_VERSION = 8.1.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -2438,7 +2438,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 8.1.0;
+				DYLIB_CURRENT_VERSION = 8.1.1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2449,7 +2449,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 8.1.0;
+				MARKETING_VERSION = 8.1.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
