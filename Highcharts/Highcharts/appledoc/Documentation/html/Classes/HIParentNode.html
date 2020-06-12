@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HITable Class Reference</title>
+	<title>HIParentNode Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,9 +58,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/tableSummary">tableSummary</option>
-		
-		<option value="//api/name/viewAsDataTableButtonText">viewAsDataTableButtonText</option>
+		<option value="//api/name/allowPointSelect">allowPointSelect</option>
 		
 	</optgroup>
 	
@@ -87,7 +85,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HITable Class Reference</h1>
+					<h1 class="title">HIParentNode Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +94,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HITable.h</td>
+	<td>HIParentNode.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +104,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Accessibility language options for the data table.</p>
+						<p>Series options for parent nodes.</p>
 					</div>
 					
 					
@@ -122,8 +120,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/tableSummary" title="tableSummary"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tableSummary">&nbsp;&nbsp;tableSummary</a></code>
+	<a name="//api/name/allowPointSelect" title="allowPointSelect"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowPointSelect">&nbsp;&nbsp;allowPointSelect</a></code>
 </h3>
 
 	<div class="method-info">
@@ -131,26 +129,35 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Allow this series' parent nodes to be selected by clicking on the graph.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *tableSummary</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowPointSelect</code></div>
 
 		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/viewAsDataTableButtonText" title="viewAsDataTableButtonText"></a>
-	<h3 class="method-title"><code><a href="#//api/name/viewAsDataTableButtonText">&nbsp;&nbsp;viewAsDataTableButtonText</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *viewAsDataTableButtonText</code></div>
+			
 
-		    
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIParentNode.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
