@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISeriesOrganizationDataLabelsOptionsObject Class Reference</title>
+	<title>HIParentNode Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/nodeFormatter">nodeFormatter</option>
+		<option value="//api/name/allowPointSelect">allowPointSelect</option>
 		
 	</optgroup>
 	
@@ -85,7 +85,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISeriesOrganizationDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIParentNode Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -94,12 +94,18 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISeriesOrganizationDataLabelsOptionsObject.h</td>
+	<td>HIParentNode.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Series options for parent nodes.</p>
+					</div>
 					
 					
 
@@ -114,8 +120,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/nodeFormatter" title="nodeFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nodeFormatter">&nbsp;&nbsp;nodeFormatter</a></code>
+	<a name="//api/name/allowPointSelect" title="allowPointSelect"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowPointSelect">&nbsp;&nbsp;allowPointSelect</a></code>
 </h3>
 
 	<div class="method-info">
@@ -125,12 +131,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A callback for defining the format for <em>nodes</em> in the organization chart. The <code>nodeFormat</code> option takes precedence over <code>nodeFormatter</code>. In an organization chart, the <code>nodeFormatter</code> is a quite complex function of the available options, striving for a good default layout of cards with or without images. In organization chart, the data labels come with <code>useHTML</code> set to true, meaning they will be rendered as true HTML above the SVG.</p>
+				<p>Allow this series' parent nodes to be selected by clicking on the graph.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *nodeFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowPointSelect</code></div>
 
 		    
 			
@@ -148,7 +154,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesOrganizationDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIParentNode.h</code></p>
 			</div>
 			
 			
@@ -187,7 +193,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

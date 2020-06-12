@@ -43,6 +43,7 @@
 	copyHistogram.threshold = [self.threshold copyWithZone: zone];
 	copyHistogram.borderColor = [self.borderColor copyWithZone: zone];
 	copyHistogram.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyHistogram.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyHistogram.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyHistogram.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyHistogram.colorByPoint = [self.colorByPoint copyWithZone: zone];
@@ -138,6 +139,9 @@
 	}
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
+	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
 	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
@@ -238,6 +242,12 @@
 	HIColor *oldValue = _edgeColor;
 	_edgeColor = edgeColor;
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {

@@ -26,6 +26,7 @@
 	copyVariwide.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVariwide.threshold = [self.threshold copyWithZone: zone];
 	copyVariwide.borderColor = [self.borderColor copyWithZone: zone];
+	copyVariwide.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyVariwide.tooltip = [self.tooltip copyWithZone: zone];
 	copyVariwide.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyVariwide.pointWidth = [self.pointWidth copyWithZone: zone];
@@ -118,6 +119,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
@@ -178,6 +182,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {

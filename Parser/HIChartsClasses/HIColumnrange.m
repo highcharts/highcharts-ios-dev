@@ -27,6 +27,7 @@
 	copyColumnrange.colors = [self.colors copyWithZone: zone];
 	copyColumnrange.borderColor = [self.borderColor copyWithZone: zone];
 	copyColumnrange.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyColumnrange.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyColumnrange.tooltip = [self.tooltip copyWithZone: zone];
 	copyColumnrange.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyColumnrange.pointWidth = [self.pointWidth copyWithZone: zone];
@@ -122,6 +123,9 @@
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
@@ -197,6 +201,12 @@
 	HIColor *oldValue = _edgeColor;
 	_edgeColor = edgeColor;
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {

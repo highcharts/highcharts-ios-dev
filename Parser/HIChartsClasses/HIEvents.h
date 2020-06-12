@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2018 Highsoft AS
+* (c) 2009-2020 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -117,7 +117,7 @@ Callback that fires while exporting data. This allows the modification of data r
 */
 @property(nonatomic, readwrite) HIFunction *exportData;
 /**
-Fires when a drilldown point is clicked, before the new series is added. This event is also utilized for async drilldown, where the seriesOptions are not added by option, but rather loaded async. Note that when clicking a category label to trigger multiple series drilldown, one `drilldown` event is triggered per point in the category. Event arguments: - `category`: If a category label was clicked, which index. - `originalEvent`: The original browser event (usually click) that triggered  the drilldown. - `point`: The originating point. - `points`: If a category label was clicked, this array holds all points  corresponing to the category. - `seriesOptions`: Options for the new series.
+Fires when a drilldown point is clicked, before the new series is added. This event is also utilized for async drilldown, where the seriesOptions are not added by option, but rather loaded async. Note that when clicking a category label to trigger multiple series drilldown, one `drilldown` event is triggered per point in the category. Event arguments: - `category`: If a category label was clicked, which index. - `originalEvent`: The original browser event (usually click) that triggered  the drilldown. - `point`: The originating point. - `points`: If a category label was clicked, this array holds all points  corresponding to the category. - `seriesOptions`: Options for the new series.
 
 **Try it**
 

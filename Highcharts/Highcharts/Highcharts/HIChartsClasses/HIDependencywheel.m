@@ -42,6 +42,7 @@
 	copyDependencywheel.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyDependencywheel.colors = [self.colors copyWithZone: zone];
 	copyDependencywheel.borderColor = [self.borderColor copyWithZone: zone];
+	copyDependencywheel.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyDependencywheel.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyDependencywheel.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyDependencywheel.selected = [self.selected copyWithZone: zone];
@@ -146,6 +147,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	return params;
 }
 
@@ -227,6 +231,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 @end

@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2018 Highsoft AS
+* (c) 2009-2020 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -117,7 +117,7 @@ A [format](https://www.highcharts.com/docs/chart-concepts/labels-and-string-form
 */
 @property(nonatomic, readwrite) NSString *format;
 /**
-When either the borderWidth or the backgroundColor is set, this  is the padding within the box.
+When either the borderWidth or the backgroundColor is set, this is the padding within the box.
 
 **Try it**
 
