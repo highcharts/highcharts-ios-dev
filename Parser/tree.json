@@ -1,9 +1,9 @@
 {
   "_meta": {
     "branch": "master",
-    "commit": "f945c7ade",
-    "version": "8.1.1",
-    "date": "Tue Jun 09 2020 11:05:55 GMT+0200 (sentraleuropeisk sommertid)"
+    "commit": "4832c0f62",
+    "version": "8.1.2",
+    "date": "Tue Jun 16 2020 15:07:19 GMT+0200 (sentraleuropeisk sommertid)"
   },
   "accessibility": {
     "doclet": {
@@ -1142,8 +1142,8 @@
         "meta": {
           "fullname": "annotations.controlPointOptions",
           "name": "controlPointOptions",
-          "line": 1020,
-          "lineEnd": 1029,
+          "line": 1017,
+          "lineEnd": 1026,
           "column": 8,
           "filename": "highcharts/js/annotations/annotations.src.js"
         },
@@ -1160,8 +1160,8 @@
             "meta": {
               "fullname": "annotations.controlPointOptions.height",
               "name": "height",
-              "line": 1037,
-              "lineEnd": 1037,
+              "line": 1034,
+              "lineEnd": 1034,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 10
@@ -1178,8 +1178,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 1031,
-              "lineEnd": 1034
+              "line": 1028,
+              "lineEnd": 1031
             },
             "children": {}
           },
@@ -1194,8 +1194,8 @@
             "meta": {
               "fullname": "annotations.controlPointOptions.style",
               "name": "style",
-              "line": 1038,
-              "lineEnd": 1038,
+              "line": 1035,
+              "lineEnd": 1035,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js"
             },
@@ -1212,8 +1212,8 @@
                 "meta": {
                   "fullname": "annotations.controlPointOptions.style.fill",
                   "name": "fill",
-                  "line": 1041,
-                  "lineEnd": 1041,
+                  "line": 1038,
+                  "lineEnd": 1038,
                   "column": 16,
                   "filename": "highcharts/js/annotations/annotations.src.js",
                   "default": "white"
@@ -1232,8 +1232,8 @@
                 "meta": {
                   "fullname": "annotations.controlPointOptions.style.stroke",
                   "name": "stroke",
-                  "line": 1039,
-                  "lineEnd": 1039,
+                  "line": 1036,
+                  "lineEnd": 1036,
                   "column": 16,
                   "filename": "highcharts/js/annotations/annotations.src.js",
                   "default": "black"
@@ -1252,8 +1252,8 @@
                 "meta": {
                   "fullname": "annotations.controlPointOptions.style.stroke-width",
                   "name": "stroke-width",
-                  "line": 1040,
-                  "lineEnd": 1040,
+                  "line": 1037,
+                  "lineEnd": 1037,
                   "column": 16,
                   "filename": "highcharts/js/annotations/annotations.src.js",
                   "default": 2
@@ -1274,8 +1274,8 @@
             "meta": {
               "fullname": "annotations.controlPointOptions.symbol",
               "name": "symbol",
-              "line": 1031,
-              "lineEnd": 1034,
+              "line": 1028,
+              "lineEnd": 1031,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "circle"
@@ -1294,8 +1294,8 @@
             "meta": {
               "fullname": "annotations.controlPointOptions.visible",
               "name": "visible",
-              "line": 1043,
-              "lineEnd": 1043,
+              "line": 1040,
+              "lineEnd": 1040,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": false
@@ -1314,8 +1314,8 @@
             "meta": {
               "fullname": "annotations.controlPointOptions.width",
               "name": "width",
-              "line": 1036,
-              "lineEnd": 1036,
+              "line": 1033,
+              "lineEnd": 1033,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 10
@@ -1350,8 +1350,8 @@
           "filename": "highcharts/js/annotations/types/CrookedLine.js",
           "name": "crookedLine",
           "fullname": "annotations.crookedLine",
-          "line": 56,
-          "lineEnd": 64,
+          "line": 81,
+          "lineEnd": 89,
           "column": 0
         },
         "children": {
@@ -1370,8 +1370,8 @@
             "meta": {
               "fullname": "annotations.crookedLine.controlPointOptions",
               "name": "controlPointOptions",
-              "line": 120,
-              "lineEnd": 122,
+              "line": 145,
+              "lineEnd": 147,
               "column": 4,
               "filename": "highcharts/js/annotations/types/CrookedLine.js"
             },
@@ -1387,8 +1387,8 @@
                 "meta": {
                   "fullname": "annotations.crookedLine.controlPointOptions.events",
                   "name": "events",
-                  "line": 131,
-                  "lineEnd": 131,
+                  "line": 156,
+                  "lineEnd": 156,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/CrookedLine.js"
                 },
@@ -1402,8 +1402,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/types/CrookedLine.js",
-              "line": 66,
-              "lineEnd": 69
+              "line": 91,
+              "lineEnd": 94
             },
             "children": {}
           },
@@ -1413,8 +1413,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/types/CrookedLine.js",
-              "line": 70,
-              "lineEnd": 73
+              "line": 95,
+              "lineEnd": 98
             },
             "children": {}
           },
@@ -1431,8 +1431,8 @@
             "meta": {
               "fullname": "annotations.crookedLine.typeOptions",
               "name": "typeOptions",
-              "line": 66,
-              "lineEnd": 69,
+              "line": 91,
+              "lineEnd": 94,
               "column": 4,
               "filename": "highcharts/js/annotations/types/CrookedLine.js"
             },
@@ -1458,8 +1458,8 @@
                 "meta": {
                   "fullname": "annotations.crookedLine.typeOptions.line",
                   "name": "line",
-                  "line": 90,
-                  "lineEnd": 93,
+                  "line": 115,
+                  "lineEnd": 118,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/CrookedLine.js"
                 },
@@ -1476,8 +1476,8 @@
                     "meta": {
                       "fullname": "annotations.crookedLine.typeOptions.line.fill",
                       "name": "fill",
-                      "line": 117,
-                      "lineEnd": 117,
+                      "line": 142,
+                      "lineEnd": 142,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/CrookedLine.js",
                       "default": "none"
@@ -1496,8 +1496,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/annotations/types/CrookedLine.js",
-                  "line": 90,
-                  "lineEnd": 93
+                  "line": 115,
+                  "lineEnd": 118
                 },
                 "children": {
                   "controlPoint": {
@@ -1514,8 +1514,8 @@
                     },
                     "meta": {
                       "filename": "highcharts/js/annotations/types/CrookedLine.js",
-                      "line": 106,
-                      "lineEnd": 110
+                      "line": 131,
+                      "lineEnd": 135
                     },
                     "children": {}
                   },
@@ -1530,8 +1530,8 @@
                     },
                     "meta": {
                       "filename": "highcharts/js/annotations/types/CrookedLine.js",
-                      "line": 94,
-                      "lineEnd": 99
+                      "line": 119,
+                      "lineEnd": 124
                     },
                     "children": {}
                   },
@@ -1546,8 +1546,8 @@
                     },
                     "meta": {
                       "filename": "highcharts/js/annotations/types/CrookedLine.js",
-                      "line": 100,
-                      "lineEnd": 105
+                      "line": 125,
+                      "lineEnd": 130
                     },
                     "children": {}
                   }
@@ -1567,8 +1567,8 @@
                 "meta": {
                   "fullname": "annotations.crookedLine.typeOptions.xAxis",
                   "name": "xAxis",
-                  "line": 78,
-                  "lineEnd": 82,
+                  "line": 103,
+                  "lineEnd": 107,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/CrookedLine.js",
                   "default": 0
@@ -1589,8 +1589,8 @@
                 "meta": {
                   "fullname": "annotations.crookedLine.typeOptions.yAxis",
                   "name": "yAxis",
-                  "line": 84,
-                  "lineEnd": 88,
+                  "line": 109,
+                  "lineEnd": 113,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/CrookedLine.js",
                   "default": 0
@@ -1624,8 +1624,8 @@
         "meta": {
           "fullname": "annotations.draggable",
           "name": "draggable",
-          "line": 577,
-          "lineEnd": 585,
+          "line": 574,
+          "lineEnd": 582,
           "column": 8,
           "filename": "highcharts/js/annotations/annotations.src.js",
           "default": "xy"
@@ -1654,8 +1654,8 @@
           "filename": "highcharts/js/annotations/types/ElliottWave.js",
           "name": "elliottWave",
           "fullname": "annotations.elliottWave",
-          "line": 29,
-          "lineEnd": 38,
+          "line": 49,
+          "lineEnd": 58,
           "column": 0
         },
         "children": {
@@ -1670,8 +1670,8 @@
             "meta": {
               "fullname": "annotations.elliottWave.labelOptions",
               "name": "labelOptions",
-              "line": 53,
-              "lineEnd": 53,
+              "line": 73,
+              "lineEnd": 73,
               "column": 4,
               "filename": "highcharts/js/annotations/types/ElliottWave.js"
             },
@@ -1688,8 +1688,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.labelOptions.align",
                   "name": "align",
-                  "line": 54,
-                  "lineEnd": 54,
+                  "line": 74,
+                  "lineEnd": 74,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js",
                   "default": "center"
@@ -1708,8 +1708,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.labelOptions.allowOverlap",
                   "name": "allowOverlap",
-                  "line": 55,
-                  "lineEnd": 55,
+                  "line": 75,
+                  "lineEnd": 75,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js",
                   "default": true
@@ -1728,8 +1728,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.labelOptions.backgroundColor",
                   "name": "backgroundColor",
-                  "line": 59,
-                  "lineEnd": 59,
+                  "line": 79,
+                  "lineEnd": 79,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js",
                   "default": "none"
@@ -1748,8 +1748,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.labelOptions.borderWidth",
                   "name": "borderWidth",
-                  "line": 60,
-                  "lineEnd": 60,
+                  "line": 80,
+                  "lineEnd": 80,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js",
                   "default": 0
@@ -1768,8 +1768,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.labelOptions.crop",
                   "name": "crop",
-                  "line": 56,
-                  "lineEnd": 56,
+                  "line": 76,
+                  "lineEnd": 76,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js",
                   "default": true
@@ -1788,8 +1788,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.labelOptions.overflow",
                   "name": "overflow",
-                  "line": 57,
-                  "lineEnd": 57,
+                  "line": 77,
+                  "lineEnd": 77,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js",
                   "default": "none"
@@ -1808,8 +1808,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.labelOptions.type",
                   "name": "type",
-                  "line": 58,
-                  "lineEnd": 58,
+                  "line": 78,
+                  "lineEnd": 78,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js",
                   "default": "rect"
@@ -1828,8 +1828,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.labelOptions.y",
                   "name": "y",
-                  "line": 61,
-                  "lineEnd": 61,
+                  "line": 81,
+                  "lineEnd": 81,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js",
                   "default": -5
@@ -1849,8 +1849,8 @@
             "meta": {
               "fullname": "annotations.elliottWave.typeOptions",
               "name": "typeOptions",
-              "line": 40,
-              "lineEnd": 40,
+              "line": 60,
+              "lineEnd": 60,
               "column": 4,
               "filename": "highcharts/js/annotations/types/ElliottWave.js"
             },
@@ -1866,8 +1866,8 @@
                 "meta": {
                   "fullname": "annotations.elliottWave.typeOptions.line",
                   "name": "line",
-                  "line": 49,
-                  "lineEnd": 49,
+                  "line": 69,
+                  "lineEnd": 69,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/ElliottWave.js"
                 },
@@ -1884,8 +1884,8 @@
                     "meta": {
                       "fullname": "annotations.elliottWave.typeOptions.line.strokeWidth",
                       "name": "strokeWidth",
-                      "line": 50,
-                      "lineEnd": 50,
+                      "line": 70,
+                      "lineEnd": 70,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/ElliottWave.js",
                       "default": 1
@@ -1910,8 +1910,8 @@
                     },
                     "meta": {
                       "filename": "highcharts/js/annotations/types/ElliottWave.js",
-                      "line": 41,
-                      "lineEnd": 44
+                      "line": 61,
+                      "lineEnd": 64
                     },
                     "children": {}
                   }
@@ -1937,8 +1937,8 @@
         "meta": {
           "fullname": "annotations.events",
           "name": "events",
-          "line": 1046,
-          "lineEnd": 1052,
+          "line": 1043,
+          "lineEnd": 1049,
           "column": 8,
           "filename": "highcharts/js/annotations/annotations.src.js"
         },
@@ -1955,8 +1955,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 1046,
-              "lineEnd": 1052
+              "line": 1043,
+              "lineEnd": 1049
             },
             "children": {}
           },
@@ -1972,8 +1972,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 1053,
-              "lineEnd": 1060
+              "line": 1050,
+              "lineEnd": 1057
             },
             "children": {}
           },
@@ -1989,8 +1989,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 1061,
-              "lineEnd": 1067
+              "line": 1058,
+              "lineEnd": 1064
             },
             "children": {}
           }
@@ -2018,8 +2018,8 @@
           "filename": "highcharts/js/annotations/types/Fibonacci.js",
           "name": "fibonacci",
           "fullname": "annotations.fibonacci",
-          "line": 93,
-          "lineEnd": 102,
+          "line": 123,
+          "lineEnd": 132,
           "column": 0
         },
         "children": {
@@ -2034,8 +2034,8 @@
             "meta": {
               "fullname": "annotations.fibonacci.labelOptions",
               "name": "labelOptions",
-              "line": 148,
-              "lineEnd": 148,
+              "line": 178,
+              "lineEnd": 178,
               "column": 4,
               "filename": "highcharts/js/annotations/types/Fibonacci.js"
             },
@@ -2052,8 +2052,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.align",
                   "name": "align",
-                  "line": 150,
-                  "lineEnd": 150,
+                  "line": 180,
+                  "lineEnd": 180,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": "right"
@@ -2072,8 +2072,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.allowOverlap",
                   "name": "allowOverlap",
-                  "line": 149,
-                  "lineEnd": 149,
+                  "line": 179,
+                  "lineEnd": 179,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": true
@@ -2092,8 +2092,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.backgroundColor",
                   "name": "backgroundColor",
-                  "line": 151,
-                  "lineEnd": 151,
+                  "line": 181,
+                  "lineEnd": 181,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": "none"
@@ -2112,8 +2112,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.borderWidth",
                   "name": "borderWidth",
-                  "line": 152,
-                  "lineEnd": 152,
+                  "line": 182,
+                  "lineEnd": 182,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": 0
@@ -2132,8 +2132,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.crop",
                   "name": "crop",
-                  "line": 153,
-                  "lineEnd": 153,
+                  "line": 183,
+                  "lineEnd": 183,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": false
@@ -2152,8 +2152,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.overflow",
                   "name": "overflow",
-                  "line": 154,
-                  "lineEnd": 154,
+                  "line": 184,
+                  "lineEnd": 184,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": "none"
@@ -2172,8 +2172,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.shape",
                   "name": "shape",
-                  "line": 155,
-                  "lineEnd": 155,
+                  "line": 185,
+                  "lineEnd": 185,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": "rect"
@@ -2191,8 +2191,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.style",
                   "name": "style",
-                  "line": 156,
-                  "lineEnd": 156,
+                  "line": 186,
+                  "lineEnd": 186,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js"
                 },
@@ -2209,8 +2209,8 @@
                     "meta": {
                       "fullname": "annotations.fibonacci.labelOptions.style.color",
                       "name": "color",
-                      "line": 157,
-                      "lineEnd": 157,
+                      "line": 187,
+                      "lineEnd": 187,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Fibonacci.js",
                       "default": "grey"
@@ -2231,8 +2231,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.verticalAlign",
                   "name": "verticalAlign",
-                  "line": 159,
-                  "lineEnd": 159,
+                  "line": 189,
+                  "lineEnd": 189,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": "middle"
@@ -2251,8 +2251,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.labelOptions.y",
                   "name": "y",
-                  "line": 160,
-                  "lineEnd": 160,
+                  "line": 190,
+                  "lineEnd": 190,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": 0
@@ -2272,8 +2272,8 @@
             "meta": {
               "fullname": "annotations.fibonacci.typeOptions",
               "name": "typeOptions",
-              "line": 104,
-              "lineEnd": 104,
+              "line": 134,
+              "lineEnd": 134,
               "column": 4,
               "filename": "highcharts/js/annotations/types/Fibonacci.js"
             },
@@ -2285,8 +2285,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.typeOptions.backgroundColors",
                   "name": "backgroundColors",
-                  "line": 109,
-                  "lineEnd": 122,
+                  "line": 139,
+                  "lineEnd": 152,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js"
                 },
@@ -2305,8 +2305,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.typeOptions.height",
                   "name": "height",
-                  "line": 105,
-                  "lineEnd": 107,
+                  "line": 135,
+                  "lineEnd": 137,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": 2
@@ -2326,8 +2326,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.typeOptions.labels",
                   "name": "labels",
-                  "line": 139,
-                  "lineEnd": 145,
+                  "line": 169,
+                  "lineEnd": 175,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js"
                 },
@@ -2346,8 +2346,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.typeOptions.lineColor",
                   "name": "lineColor",
-                  "line": 131,
-                  "lineEnd": 133,
+                  "line": 161,
+                  "lineEnd": 163,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js",
                   "default": "grey"
@@ -2361,8 +2361,8 @@
                 "meta": {
                   "fullname": "annotations.fibonacci.typeOptions.lineColors",
                   "name": "lineColors",
-                  "line": 135,
-                  "lineEnd": 137,
+                  "line": 165,
+                  "lineEnd": 167,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Fibonacci.js"
                 },
@@ -2385,8 +2385,8 @@
         },
         "meta": {
           "filename": "highcharts/js/annotations/annotations.src.js",
-          "line": 562,
-          "lineEnd": 569
+          "line": 559,
+          "lineEnd": 566
         },
         "children": {}
       },
@@ -2410,8 +2410,8 @@
         },
         "meta": {
           "filename": "highcharts/js/annotations/types/InfinityLine.js",
-          "line": 101,
-          "lineEnd": 110
+          "line": 136,
+          "lineEnd": 145
         },
         "children": {}
       },
@@ -2431,8 +2431,8 @@
         "meta": {
           "fullname": "annotations.labelOptions",
           "name": "labelOptions",
-          "line": 587,
-          "lineEnd": 593,
+          "line": 584,
+          "lineEnd": 590,
           "column": 8,
           "filename": "highcharts/js/annotations/annotations.src.js"
         },
@@ -2499,8 +2499,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.align",
               "name": "align",
-              "line": 595,
-              "lineEnd": 603,
+              "line": 592,
+              "lineEnd": 600,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "center"
@@ -2530,8 +2530,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.allowOverlap",
               "name": "allowOverlap",
-              "line": 605,
-              "lineEnd": 612,
+              "line": 602,
+              "lineEnd": 609,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": false
@@ -2563,8 +2563,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.backgroundColor",
               "name": "backgroundColor",
-              "line": 614,
-              "lineEnd": 622,
+              "line": 611,
+              "lineEnd": 619,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "rgba(0, 0, 0, 0.75)"
@@ -2594,8 +2594,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.borderColor",
               "name": "borderColor",
-              "line": 624,
-              "lineEnd": 631,
+              "line": 621,
+              "lineEnd": 628,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "black"
@@ -2625,8 +2625,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.borderRadius",
               "name": "borderRadius",
-              "line": 633,
-              "lineEnd": 638,
+              "line": 630,
+              "lineEnd": 635,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 3
@@ -2656,8 +2656,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.borderWidth",
               "name": "borderWidth",
-              "line": 640,
-              "lineEnd": 645,
+              "line": 637,
+              "lineEnd": 642,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 1
@@ -2687,8 +2687,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.className",
               "name": "className",
-              "line": 647,
-              "lineEnd": 654,
+              "line": 644,
+              "lineEnd": 651,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": ""
@@ -2718,8 +2718,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.crop",
               "name": "crop",
-              "line": 656,
-              "lineEnd": 662,
+              "line": 653,
+              "lineEnd": 659,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": false
@@ -2747,8 +2747,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 664,
-              "lineEnd": 672
+              "line": 661,
+              "lineEnd": 669
             },
             "children": {}
           },
@@ -2776,8 +2776,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 673,
-              "lineEnd": 685
+              "line": 670,
+              "lineEnd": 682
             },
             "children": {}
           },
@@ -2804,8 +2804,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.formatter",
               "name": "formatter",
-              "line": 664,
-              "lineEnd": 672,
+              "line": 661,
+              "lineEnd": 669,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js"
             },
@@ -2835,8 +2835,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.overflow",
               "name": "overflow",
-              "line": 712,
-              "lineEnd": 721,
+              "line": 709,
+              "lineEnd": 718,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "justify"
@@ -2866,8 +2866,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.padding",
               "name": "padding",
-              "line": 723,
-              "lineEnd": 729,
+              "line": 720,
+              "lineEnd": 726,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 5
@@ -2898,8 +2898,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.shadow",
               "name": "shadow",
-              "line": 731,
-              "lineEnd": 740,
+              "line": 728,
+              "lineEnd": 737,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": false
@@ -2929,8 +2929,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.shape",
               "name": "shape",
-              "line": 742,
-              "lineEnd": 749,
+              "line": 739,
+              "lineEnd": 746,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "callout"
@@ -2962,8 +2962,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.style",
               "name": "style",
-              "line": 751,
-              "lineEnd": 760,
+              "line": 748,
+              "lineEnd": 757,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js"
             },
@@ -2993,8 +2993,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 686,
-              "lineEnd": 696
+              "line": 683,
+              "lineEnd": 693
             },
             "children": {}
           },
@@ -3012,8 +3012,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.useHTML",
               "name": "useHTML",
-              "line": 769,
-              "lineEnd": 772,
+              "line": 766,
+              "lineEnd": 769,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": false
@@ -3043,8 +3043,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.verticalAlign",
               "name": "verticalAlign",
-              "line": 774,
-              "lineEnd": 781,
+              "line": 771,
+              "lineEnd": 778,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "bottom"
@@ -3074,8 +3074,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.x",
               "name": "x",
-              "line": 783,
-              "lineEnd": 790,
+              "line": 780,
+              "lineEnd": 787,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 0
@@ -3105,8 +3105,8 @@
             "meta": {
               "fullname": "annotations.labelOptions.y",
               "name": "y",
-              "line": 792,
-              "lineEnd": 799,
+              "line": 789,
+              "lineEnd": 796,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": -16
@@ -3128,8 +3128,8 @@
         },
         "meta": {
           "filename": "highcharts/js/annotations/annotations.src.js",
-          "line": 802,
-          "lineEnd": 810
+          "line": 799,
+          "lineEnd": 807
         },
         "children": {
           "point": {
@@ -3158,8 +3158,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 811,
-              "lineEnd": 824
+              "line": 808,
+              "lineEnd": 821
             },
             "children": {
               "x": {
@@ -3174,8 +3174,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/annotations/annotations.src.js",
-                  "line": 825,
-                  "lineEnd": 831
+                  "line": 822,
+                  "lineEnd": 828
                 },
                 "children": {}
               },
@@ -3193,8 +3193,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/annotations/annotations.src.js",
-                  "line": 839,
-                  "lineEnd": 848
+                  "line": 836,
+                  "lineEnd": 845
                 },
                 "children": {}
               },
@@ -3210,8 +3210,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/annotations/annotations.src.js",
-                  "line": 832,
-                  "lineEnd": 838
+                  "line": 829,
+                  "lineEnd": 835
                 },
                 "children": {}
               },
@@ -3229,8 +3229,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/annotations/annotations.src.js",
-                  "line": 849,
-                  "lineEnd": 858
+                  "line": 846,
+                  "lineEnd": 855
                 },
                 "children": {}
               }
@@ -3831,8 +3831,8 @@
           "filename": "highcharts/js/annotations/types/Pitchfork.js",
           "name": "pitchfork",
           "fullname": "annotations.pitchfork",
-          "line": 113,
-          "lineEnd": 122,
+          "line": 148,
+          "lineEnd": 157,
           "column": 0
         },
         "children": {
@@ -3847,8 +3847,8 @@
             "meta": {
               "fullname": "annotations.pitchfork.typeOptions",
               "name": "typeOptions",
-              "line": 124,
-              "lineEnd": 124,
+              "line": 159,
+              "lineEnd": 159,
               "column": 4,
               "filename": "highcharts/js/annotations/types/Pitchfork.js"
             },
@@ -3867,8 +3867,8 @@
                 "meta": {
                   "fullname": "annotations.pitchfork.typeOptions.innerBackground",
                   "name": "innerBackground",
-                  "line": 125,
-                  "lineEnd": 130,
+                  "line": 160,
+                  "lineEnd": 165,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Pitchfork.js"
                 },
@@ -3885,8 +3885,8 @@
                     "meta": {
                       "fullname": "annotations.pitchfork.typeOptions.innerBackground.fill",
                       "name": "fill",
-                      "line": 132,
-                      "lineEnd": 132,
+                      "line": 167,
+                      "lineEnd": 167,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Pitchfork.js",
                       "default": "rgba(130, 170, 255, 0.4)"
@@ -3905,8 +3905,8 @@
                     "meta": {
                       "fullname": "annotations.pitchfork.typeOptions.innerBackground.strokeWidth",
                       "name": "strokeWidth",
-                      "line": 133,
-                      "lineEnd": 133,
+                      "line": 168,
+                      "lineEnd": 168,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Pitchfork.js",
                       "default": 0
@@ -3929,8 +3929,8 @@
                 "meta": {
                   "fullname": "annotations.pitchfork.typeOptions.outerBackground",
                   "name": "outerBackground",
-                  "line": 135,
-                  "lineEnd": 140,
+                  "line": 170,
+                  "lineEnd": 175,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Pitchfork.js"
                 },
@@ -3947,8 +3947,8 @@
                     "meta": {
                       "fullname": "annotations.pitchfork.typeOptions.outerBackground.fill",
                       "name": "fill",
-                      "line": 142,
-                      "lineEnd": 142,
+                      "line": 177,
+                      "lineEnd": 177,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Pitchfork.js",
                       "default": "rgba(156, 229, 161, 0.4)"
@@ -3967,8 +3967,8 @@
                     "meta": {
                       "fullname": "annotations.pitchfork.typeOptions.outerBackground.strokeWidth",
                       "name": "strokeWidth",
-                      "line": 143,
-                      "lineEnd": 143,
+                      "line": 178,
+                      "lineEnd": 178,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Pitchfork.js",
                       "default": 0
@@ -3997,8 +3997,8 @@
         "meta": {
           "fullname": "annotations.shapeOptions",
           "name": "shapeOptions",
-          "line": 802,
-          "lineEnd": 810,
+          "line": 799,
+          "lineEnd": 807,
           "column": 8,
           "filename": "highcharts/js/annotations/annotations.src.js"
         },
@@ -4030,8 +4030,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 973,
-              "lineEnd": 981
+              "line": 970,
+              "lineEnd": 978
             },
             "children": {}
           },
@@ -4060,8 +4060,8 @@
             "meta": {
               "fullname": "annotations.shapeOptions.fill",
               "name": "fill",
-              "line": 998,
-              "lineEnd": 1005,
+              "line": 995,
+              "lineEnd": 1002,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "rgba(0, 0, 0, 0.75)"
@@ -4089,8 +4089,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 943,
-              "lineEnd": 951
+              "line": 940,
+              "lineEnd": 948
             },
             "children": {}
           },
@@ -4117,8 +4117,8 @@
             "meta": {
               "fullname": "annotations.shapeOptions.r",
               "name": "r",
-              "line": 1007,
-              "lineEnd": 1012,
+              "line": 1004,
+              "lineEnd": 1009,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 0
@@ -4139,8 +4139,8 @@
             "meta": {
               "fullname": "annotations.shapeOptions.snap",
               "name": "snap",
-              "line": 1014,
-              "lineEnd": 1017,
+              "line": 1011,
+              "lineEnd": 1014,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 2
@@ -4171,8 +4171,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 962,
-              "lineEnd": 972
+              "line": 959,
+              "lineEnd": 969
             },
             "children": {}
           },
@@ -4199,8 +4199,8 @@
             "meta": {
               "fullname": "annotations.shapeOptions.stroke",
               "name": "stroke",
-              "line": 934,
-              "lineEnd": 942,
+              "line": 931,
+              "lineEnd": 939,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": "rgba(0, 0, 0, 0.75)"
@@ -4230,8 +4230,8 @@
             "meta": {
               "fullname": "annotations.shapeOptions.strokeWidth",
               "name": "strokeWidth",
-              "line": 991,
-              "lineEnd": 996,
+              "line": 988,
+              "lineEnd": 993,
               "column": 12,
               "filename": "highcharts/js/annotations/annotations.src.js",
               "default": 1
@@ -4260,8 +4260,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 952,
-              "lineEnd": 961
+              "line": 949,
+              "lineEnd": 958
             },
             "children": {}
           },
@@ -4286,8 +4286,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 934,
-              "lineEnd": 942
+              "line": 931,
+              "lineEnd": 939
             },
             "children": {}
           }
@@ -4306,8 +4306,8 @@
         },
         "meta": {
           "filename": "highcharts/js/annotations/annotations.src.js",
-          "line": 859,
-          "lineEnd": 867
+          "line": 856,
+          "lineEnd": 864
         },
         "children": {
           "markerEnd": {
@@ -4334,8 +4334,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 902,
-              "lineEnd": 913
+              "line": 899,
+              "lineEnd": 910
             },
             "children": {}
           },
@@ -4369,8 +4369,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 914,
-              "lineEnd": 925
+              "line": 911,
+              "lineEnd": 922
             },
             "children": {}
           },
@@ -4381,7 +4381,7 @@
               "type": {
                 "names": [
                   "string",
-                  "*"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -4389,8 +4389,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 868,
-              "lineEnd": 878
+              "line": 865,
+              "lineEnd": 875
             },
             "children": {}
           },
@@ -4411,8 +4411,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 879,
-              "lineEnd": 890
+              "line": 876,
+              "lineEnd": 887
             },
             "children": {}
           },
@@ -4440,8 +4440,8 @@
             },
             "meta": {
               "filename": "highcharts/js/annotations/annotations.src.js",
-              "line": 891,
-              "lineEnd": 901
+              "line": 888,
+              "lineEnd": 898
             },
             "children": {}
           }
@@ -4469,8 +4469,8 @@
           "filename": "highcharts/js/annotations/types/Tunnel.js",
           "name": "tunnel",
           "fullname": "annotations.tunnel",
-          "line": 95,
-          "lineEnd": 103,
+          "line": 120,
+          "lineEnd": 128,
           "column": 0
         },
         "children": {
@@ -4485,8 +4485,8 @@
             "meta": {
               "fullname": "annotations.tunnel.controlPointOptions",
               "name": "controlPointOptions",
-              "line": 152,
-              "lineEnd": 155,
+              "line": 177,
+              "lineEnd": 180,
               "column": 4,
               "filename": "highcharts/js/annotations/types/Tunnel.js"
             },
@@ -4502,8 +4502,8 @@
                 "meta": {
                   "fullname": "annotations.tunnel.controlPointOptions.events",
                   "name": "events",
-                  "line": 157,
-                  "lineEnd": 157,
+                  "line": 182,
+                  "lineEnd": 182,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Tunnel.js"
                 },
@@ -4522,8 +4522,8 @@
             "meta": {
               "fullname": "annotations.tunnel.typeOptions",
               "name": "typeOptions",
-              "line": 105,
-              "lineEnd": 105,
+              "line": 130,
+              "lineEnd": 130,
               "column": 4,
               "filename": "highcharts/js/annotations/types/Tunnel.js"
             },
@@ -4550,8 +4550,8 @@
                 "meta": {
                   "fullname": "annotations.tunnel.typeOptions.background",
                   "name": "background",
-                  "line": 108,
-                  "lineEnd": 114,
+                  "line": 133,
+                  "lineEnd": 139,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Tunnel.js"
                 },
@@ -4568,8 +4568,8 @@
                     "meta": {
                       "fullname": "annotations.tunnel.typeOptions.background.fill",
                       "name": "fill",
-                      "line": 116,
-                      "lineEnd": 116,
+                      "line": 141,
+                      "lineEnd": 141,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Tunnel.js",
                       "default": "rgba(130, 170, 255, 0.4)"
@@ -4588,8 +4588,8 @@
                     "meta": {
                       "fullname": "annotations.tunnel.typeOptions.background.strokeWidth",
                       "name": "strokeWidth",
-                      "line": 117,
-                      "lineEnd": 117,
+                      "line": 142,
+                      "lineEnd": 142,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Tunnel.js",
                       "default": 0
@@ -4611,8 +4611,8 @@
                 "meta": {
                   "fullname": "annotations.tunnel.typeOptions.height",
                   "name": "height",
-                  "line": 122,
-                  "lineEnd": 124,
+                  "line": 147,
+                  "lineEnd": 149,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Tunnel.js",
                   "default": -2
@@ -4631,8 +4631,8 @@
                 "meta": {
                   "fullname": "annotations.tunnel.typeOptions.heightControlPoint",
                   "name": "heightControlPoint",
-                  "line": 126,
-                  "lineEnd": 132,
+                  "line": 151,
+                  "lineEnd": 157,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Tunnel.js"
                 },
@@ -4648,8 +4648,8 @@
                     "meta": {
                       "fullname": "annotations.tunnel.typeOptions.heightControlPoint.events",
                       "name": "events",
-                      "line": 142,
-                      "lineEnd": 142,
+                      "line": 167,
+                      "lineEnd": 167,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Tunnel.js"
                     },
@@ -4668,8 +4668,8 @@
                 "meta": {
                   "fullname": "annotations.tunnel.typeOptions.line",
                   "name": "line",
-                  "line": 119,
-                  "lineEnd": 119,
+                  "line": 144,
+                  "lineEnd": 144,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Tunnel.js"
                 },
@@ -4686,8 +4686,8 @@
                     "meta": {
                       "fullname": "annotations.tunnel.typeOptions.line.strokeWidth",
                       "name": "strokeWidth",
-                      "line": 120,
-                      "lineEnd": 120,
+                      "line": 145,
+                      "lineEnd": 145,
                       "column": 12,
                       "filename": "highcharts/js/annotations/types/Tunnel.js",
                       "default": 1
@@ -4708,8 +4708,8 @@
                 "meta": {
                   "fullname": "annotations.tunnel.typeOptions.xAxis",
                   "name": "xAxis",
-                  "line": 106,
-                  "lineEnd": 106,
+                  "line": 131,
+                  "lineEnd": 131,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Tunnel.js",
                   "default": 0
@@ -4728,8 +4728,8 @@
                 "meta": {
                   "fullname": "annotations.tunnel.typeOptions.yAxis",
                   "name": "yAxis",
-                  "line": 107,
-                  "lineEnd": 107,
+                  "line": 132,
+                  "lineEnd": 132,
                   "column": 8,
                   "filename": "highcharts/js/annotations/types/Tunnel.js",
                   "default": 0
@@ -5054,8 +5054,8 @@
         "meta": {
           "fullname": "annotations.visible",
           "name": "visible",
-          "line": 562,
-          "lineEnd": 569,
+          "line": 559,
+          "lineEnd": 566,
           "column": 8,
           "filename": "highcharts/js/annotations/annotations.src.js",
           "default": true
@@ -5076,8 +5076,8 @@
         "meta": {
           "fullname": "annotations.zIndex",
           "name": "zIndex",
-          "line": 1074,
-          "lineEnd": 1076,
+          "line": 1071,
+          "lineEnd": 1073,
           "column": 8,
           "filename": "highcharts/js/annotations/annotations.src.js",
           "default": 6
@@ -6314,8 +6314,8 @@
             },
             "meta": {
               "filename": "highcharts/js/modules/export-data.src.js",
-              "line": 64,
-              "lineEnd": 72
+              "line": 65,
+              "lineEnd": 73
             },
             "children": {}
           },
@@ -6679,7 +6679,8 @@
           "type": {
             "names": [
               "string",
-              "Array.<*>"
+              "Array.<*>",
+              "Highcharts.GeoJSON"
             ]
           },
           "since": "5.0.0",
@@ -7667,8 +7668,8 @@
         "meta": {
           "fullname": "chart.parallelAxes",
           "name": "parallelAxes",
-          "line": 49,
-          "lineEnd": 84,
+          "line": 48,
+          "lineEnd": 83,
           "column": 4,
           "filename": "highcharts/js/modules/parallel-coordinates.src.js"
         },
@@ -7684,8 +7685,8 @@
             "meta": {
               "fullname": "chart.parallelAxes.labels",
               "name": "labels",
-              "line": 100,
-              "lineEnd": 100,
+              "line": 99,
+              "lineEnd": 99,
               "column": 8,
               "filename": "highcharts/js/modules/parallel-coordinates.src.js"
             },
@@ -7702,8 +7703,8 @@
                 "meta": {
                   "fullname": "chart.parallelAxes.labels.align",
                   "name": "align",
-                  "line": 103,
-                  "lineEnd": 103,
+                  "line": 102,
+                  "lineEnd": 102,
                   "column": 12,
                   "filename": "highcharts/js/modules/parallel-coordinates.src.js",
                   "default": "center"
@@ -7722,8 +7723,8 @@
                 "meta": {
                   "fullname": "chart.parallelAxes.labels.reserveSpace",
                   "name": "reserveSpace",
-                  "line": 104,
-                  "lineEnd": 104,
+                  "line": 103,
+                  "lineEnd": 103,
                   "column": 12,
                   "filename": "highcharts/js/modules/parallel-coordinates.src.js",
                   "default": false
@@ -7742,8 +7743,8 @@
                 "meta": {
                   "fullname": "chart.parallelAxes.labels.x",
                   "name": "x",
-                  "line": 101,
-                  "lineEnd": 101,
+                  "line": 100,
+                  "lineEnd": 100,
                   "column": 12,
                   "filename": "highcharts/js/modules/parallel-coordinates.src.js",
                   "default": 0
@@ -7762,8 +7763,8 @@
                 "meta": {
                   "fullname": "chart.parallelAxes.labels.y",
                   "name": "y",
-                  "line": 102,
-                  "lineEnd": 102,
+                  "line": 101,
+                  "lineEnd": 101,
                   "column": 12,
                   "filename": "highcharts/js/modules/parallel-coordinates.src.js",
                   "default": 4
@@ -7784,8 +7785,8 @@
             "meta": {
               "fullname": "chart.parallelAxes.lineWidth",
               "name": "lineWidth",
-              "line": 86,
-              "lineEnd": 86,
+              "line": 85,
+              "lineEnd": 85,
               "column": 8,
               "filename": "highcharts/js/modules/parallel-coordinates.src.js",
               "default": 1
@@ -7804,8 +7805,8 @@
             "meta": {
               "fullname": "chart.parallelAxes.offset",
               "name": "offset",
-              "line": 106,
-              "lineEnd": 106,
+              "line": 105,
+              "lineEnd": 105,
               "column": 8,
               "filename": "highcharts/js/modules/parallel-coordinates.src.js",
               "default": 0
@@ -7840,8 +7841,8 @@
             "meta": {
               "fullname": "chart.parallelAxes.title",
               "name": "title",
-              "line": 87,
-              "lineEnd": 95,
+              "line": 86,
+              "lineEnd": 94,
               "column": 8,
               "filename": "highcharts/js/modules/parallel-coordinates.src.js"
             },
@@ -7858,8 +7859,8 @@
                 "meta": {
                   "fullname": "chart.parallelAxes.title.reserveSpace",
                   "name": "reserveSpace",
-                  "line": 98,
-                  "lineEnd": 98,
+                  "line": 97,
+                  "lineEnd": 97,
                   "column": 12,
                   "filename": "highcharts/js/modules/parallel-coordinates.src.js",
                   "default": false
@@ -7878,8 +7879,8 @@
                 "meta": {
                   "fullname": "chart.parallelAxes.title.text",
                   "name": "text",
-                  "line": 97,
-                  "lineEnd": 97,
+                  "line": 96,
+                  "lineEnd": 96,
                   "column": 12,
                   "filename": "highcharts/js/modules/parallel-coordinates.src.js",
                   "default": ""
@@ -7932,8 +7933,8 @@
         "meta": {
           "fullname": "chart.parallelCoordinates",
           "name": "parallelCoordinates",
-          "line": 33,
-          "lineEnd": 47,
+          "line": 32,
+          "lineEnd": 46,
           "column": 4,
           "filename": "highcharts/js/modules/parallel-coordinates.src.js",
           "default": false
@@ -8307,8 +8308,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts-map/GeoJSON.js",
-          "line": 86,
-          "lineEnd": 95
+          "line": 190,
+          "lineEnd": 199
         },
         "children": {}
       },
@@ -11621,8 +11622,8 @@
     },
     "meta": {
       "filename": "highcharts/js/modules/data.src.js",
-      "line": 93,
-      "lineEnd": 113
+      "line": 94,
+      "lineEnd": 114
     },
     "children": {
       "beforeParse": {
@@ -11652,8 +11653,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 114,
-          "lineEnd": 124
+          "line": 115,
+          "lineEnd": 125
         },
         "children": {}
       },
@@ -11687,8 +11688,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 125,
-          "lineEnd": 140
+          "line": 126,
+          "lineEnd": 141
         },
         "children": {}
       },
@@ -11713,8 +11714,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 411,
-          "lineEnd": 420
+          "line": 412,
+          "lineEnd": 421
         },
         "children": {}
       },
@@ -11748,8 +11749,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 141,
-          "lineEnd": 156
+          "line": 142,
+          "lineEnd": 157
         },
         "children": {}
       },
@@ -11780,8 +11781,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 157,
-          "lineEnd": 176
+          "line": 158,
+          "lineEnd": 177
         },
         "children": {}
       },
@@ -11810,8 +11811,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 389,
-          "lineEnd": 400
+          "line": 390,
+          "lineEnd": 401
         },
         "children": {}
       },
@@ -11837,8 +11838,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 421,
-          "lineEnd": 439
+          "line": 422,
+          "lineEnd": 440
         },
         "children": {}
       },
@@ -11873,8 +11874,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 177,
-          "lineEnd": 193
+          "line": 178,
+          "lineEnd": 194
         },
         "children": {}
       },
@@ -11906,8 +11907,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 194,
-          "lineEnd": 207
+          "line": 195,
+          "lineEnd": 208
         },
         "children": {}
       },
@@ -11937,8 +11938,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 440,
-          "lineEnd": 456
+          "line": 441,
+          "lineEnd": 457
         },
         "children": {}
       },
@@ -11969,8 +11970,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 208,
-          "lineEnd": 218
+          "line": 209,
+          "lineEnd": 219
         },
         "children": {}
       },
@@ -12001,8 +12002,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 219,
-          "lineEnd": 229
+          "line": 220,
+          "lineEnd": 230
         },
         "children": {}
       },
@@ -12046,8 +12047,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 230,
-          "lineEnd": 243
+          "line": 231,
+          "lineEnd": 244
         },
         "children": {}
       },
@@ -12078,8 +12079,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 244,
-          "lineEnd": 254
+          "line": 245,
+          "lineEnd": 255
         },
         "children": {}
       },
@@ -12110,8 +12111,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 255,
-          "lineEnd": 266
+          "line": 256,
+          "lineEnd": 267
         },
         "children": {}
       },
@@ -12142,8 +12143,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 267,
-          "lineEnd": 281
+          "line": 268,
+          "lineEnd": 282
         },
         "children": {}
       },
@@ -12175,8 +12176,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 282,
-          "lineEnd": 292
+          "line": 283,
+          "lineEnd": 293
         },
         "children": {}
       },
@@ -12195,8 +12196,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 308,
-          "lineEnd": 317
+          "line": 309,
+          "lineEnd": 318
         },
         "children": {}
       },
@@ -12230,8 +12231,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 293,
-          "lineEnd": 307
+          "line": 294,
+          "lineEnd": 308
         },
         "children": {}
       },
@@ -12265,8 +12266,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 318,
-          "lineEnd": 330
+          "line": 319,
+          "lineEnd": 331
         },
         "children": {}
       },
@@ -12291,8 +12292,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 401,
-          "lineEnd": 410
+          "line": 402,
+          "lineEnd": 411
         },
         "children": {}
       },
@@ -12323,8 +12324,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 331,
-          "lineEnd": 341
+          "line": 332,
+          "lineEnd": 342
         },
         "children": {}
       },
@@ -12356,8 +12357,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 342,
-          "lineEnd": 352
+          "line": 343,
+          "lineEnd": 353
         },
         "children": {}
       },
@@ -12389,8 +12390,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 353,
-          "lineEnd": 363
+          "line": 354,
+          "lineEnd": 364
         },
         "children": {}
       },
@@ -12422,8 +12423,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 364,
-          "lineEnd": 376
+          "line": 365,
+          "lineEnd": 377
         },
         "children": {}
       },
@@ -12455,8 +12456,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/data.src.js",
-          "line": 377,
-          "lineEnd": 388
+          "line": 378,
+          "lineEnd": 389
         },
         "children": {}
       }
@@ -13780,8 +13781,8 @@
         "meta": {
           "fullname": "exporting.csv",
           "name": "csv",
-          "line": 90,
-          "lineEnd": 101,
+          "line": 91,
+          "lineEnd": 102,
           "column": 8,
           "filename": "highcharts/js/modules/export-data.src.js"
         },
@@ -13810,8 +13811,8 @@
             "meta": {
               "fullname": "exporting.csv.columnHeaderFormatter",
               "name": "columnHeaderFormatter",
-              "line": 124,
-              "lineEnd": 151,
+              "line": 125,
+              "lineEnd": 152,
               "column": 12,
               "filename": "highcharts/js/modules/export-data.src.js",
               "default": null
@@ -13832,8 +13833,8 @@
             "meta": {
               "fullname": "exporting.csv.dateFormat",
               "name": "dateFormat",
-              "line": 153,
-              "lineEnd": 156,
+              "line": 154,
+              "lineEnd": 157,
               "column": 12,
               "filename": "highcharts/js/modules/export-data.src.js",
               "default": "%Y-%m-%d %H:%M:%S"
@@ -13855,8 +13856,8 @@
             "meta": {
               "fullname": "exporting.csv.decimalPoint",
               "name": "decimalPoint",
-              "line": 158,
-              "lineEnd": 165,
+              "line": 159,
+              "lineEnd": 166,
               "column": 12,
               "filename": "highcharts/js/modules/export-data.src.js",
               "default": null
@@ -13878,8 +13879,8 @@
             "meta": {
               "fullname": "exporting.csv.itemDelimiter",
               "name": "itemDelimiter",
-              "line": 167,
-              "lineEnd": 174,
+              "line": 168,
+              "lineEnd": 175,
               "column": 12,
               "filename": "highcharts/js/modules/export-data.src.js",
               "default": null
@@ -13900,8 +13901,8 @@
             "meta": {
               "fullname": "exporting.csv.lineDelimiter",
               "name": "lineDelimiter",
-              "line": 176,
-              "lineEnd": 178,
+              "line": 177,
+              "lineEnd": 179,
               "column": 12,
               "filename": "highcharts/js/modules/export-data.src.js",
               "default": "\n"
@@ -14231,8 +14232,8 @@
         "meta": {
           "fullname": "exporting.showTable",
           "name": "showTable",
-          "line": 181,
-          "lineEnd": 192,
+          "line": 182,
+          "lineEnd": 193,
           "column": 8,
           "filename": "highcharts/js/modules/export-data.src.js",
           "default": false
@@ -14327,8 +14328,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/export-data.src.js",
-          "line": 90,
-          "lineEnd": 101
+          "line": 91,
+          "lineEnd": 102
         },
         "children": {}
       },
@@ -14402,8 +14403,8 @@
         "meta": {
           "fullname": "exporting.useMultiLevelHeaders",
           "name": "useMultiLevelHeaders",
-          "line": 194,
-          "lineEnd": 204,
+          "line": 195,
+          "lineEnd": 205,
           "column": 8,
           "filename": "highcharts/js/modules/export-data.src.js",
           "default": true
@@ -14436,8 +14437,8 @@
         "meta": {
           "fullname": "exporting.useRowspanHeaders",
           "name": "useRowspanHeaders",
-          "line": 206,
-          "lineEnd": 215,
+          "line": 207,
+          "lineEnd": 216,
           "column": 8,
           "filename": "highcharts/js/modules/export-data.src.js",
           "default": true
@@ -14765,8 +14766,8 @@
       "filename": "highcharts/js/parts/RangeSelector.js",
       "name": "lang",
       "fullname": "lang",
-      "line": 473,
-      "lineEnd": 495,
+      "line": 474,
+      "lineEnd": 496,
       "column": 0
     },
     "children": {
@@ -17270,8 +17271,8 @@
         "meta": {
           "fullname": "lang.downloadCSV",
           "name": "downloadCSV",
-          "line": 224,
-          "lineEnd": 229,
+          "line": 225,
+          "lineEnd": 230,
           "column": 8,
           "filename": "highcharts/js/modules/export-data.src.js",
           "default": "Download CSV"
@@ -17395,8 +17396,8 @@
         "meta": {
           "fullname": "lang.downloadXLS",
           "name": "downloadXLS",
-          "line": 231,
-          "lineEnd": 236,
+          "line": 232,
+          "lineEnd": 237,
           "column": 8,
           "filename": "highcharts/js/modules/export-data.src.js",
           "default": "Download XLS"
@@ -17470,8 +17471,8 @@
         "meta": {
           "fullname": "lang.exportData",
           "name": "exportData",
-          "line": 238,
-          "lineEnd": 243,
+          "line": 239,
+          "lineEnd": 244,
           "column": 8,
           "filename": "highcharts/js/modules/export-data.src.js"
         },
@@ -17490,8 +17491,8 @@
             "meta": {
               "fullname": "lang.exportData.categoryDatetimeHeader",
               "name": "categoryDatetimeHeader",
-              "line": 249,
-              "lineEnd": 251,
+              "line": 250,
+              "lineEnd": 252,
               "column": 12,
               "filename": "highcharts/js/modules/export-data.src.js",
               "default": "DateTime"
@@ -17512,8 +17513,8 @@
             "meta": {
               "fullname": "lang.exportData.categoryHeader",
               "name": "categoryHeader",
-              "line": 245,
-              "lineEnd": 247,
+              "line": 246,
+              "lineEnd": 248,
               "column": 12,
               "filename": "highcharts/js/modules/export-data.src.js",
               "default": "Category"
@@ -19047,8 +19048,8 @@
         "meta": {
           "fullname": "lang.rangeSelectorFrom",
           "name": "rangeSelectorFrom",
-          "line": 503,
-          "lineEnd": 508,
+          "line": 504,
+          "lineEnd": 509,
           "column": 4,
           "filename": "highcharts/js/parts/RangeSelector.js",
           "default": "From"
@@ -19072,8 +19073,8 @@
         "meta": {
           "fullname": "lang.rangeSelectorTo",
           "name": "rangeSelectorTo",
-          "line": 510,
-          "lineEnd": 514,
+          "line": 511,
+          "lineEnd": 515,
           "column": 4,
           "filename": "highcharts/js/parts/RangeSelector.js",
           "default": "To"
@@ -19097,8 +19098,8 @@
         "meta": {
           "fullname": "lang.rangeSelectorZoom",
           "name": "rangeSelectorZoom",
-          "line": 497,
-          "lineEnd": 501,
+          "line": 498,
+          "lineEnd": 502,
           "column": 4,
           "filename": "highcharts/js/parts/RangeSelector.js",
           "default": "Zoom"
@@ -20258,8 +20259,8 @@
         "meta": {
           "fullname": "lang.viewData",
           "name": "viewData",
-          "line": 254,
-          "lineEnd": 259,
+          "line": 255,
+          "lineEnd": 260,
           "column": 8,
           "filename": "highcharts/js/modules/export-data.src.js",
           "default": "View data table"
@@ -23925,7 +23926,7 @@
           ],
           "type": {
             "names": [
-              "*"
+              "Highcharts.AnnotationsOptions"
             ]
           },
           "extends": "annotations",
@@ -28189,11 +28190,11 @@
       }
     },
     "meta": {
-      "filename": "highcharts/js/parts-more/WaterfallSeries.js",
+      "filename": "highcharts/js/parts-map/MapSeries.js",
       "name": "plotOptions",
       "fullname": "plotOptions",
-      "line": 159,
-      "lineEnd": 159,
+      "line": 30,
+      "lineEnd": 41,
       "column": 0
     },
     "children": {
@@ -33471,8 +33472,8 @@
             "meta": {
               "fullname": "plotOptions.column.borderColor",
               "name": "borderColor",
-              "line": 379,
-              "lineEnd": 394,
+              "line": 385,
+              "lineEnd": 400,
               "column": 4,
               "filename": "highcharts/js/parts/ColumnSeries.js",
               "default": "#ffffff"
@@ -33552,8 +33553,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/ColumnSeries.js",
-              "line": 379,
-              "lineEnd": 394
+              "line": 385,
+              "lineEnd": 400
             },
             "children": {}
           },
@@ -33798,18 +33799,19 @@
               },
               "y": {
                 "doclet": {
+                  "description": "The y position offset of the label relative to the point in\npixels.",
                   "type": {
                     "names": [
-                      "string"
+                      "number"
                     ]
                   },
-                  "default": "undefined"
+                  "default": null
                 },
                 "meta": {
                   "fullname": "plotOptions.column.dataLabels.y",
                   "name": "y",
                   "line": 339,
-                  "lineEnd": 339,
+                  "lineEnd": 344,
                   "column": 8,
                   "filename": "highcharts/js/parts/ColumnSeries.js",
                   "default": "undefined"
@@ -34255,8 +34257,8 @@
             "meta": {
               "fullname": "plotOptions.column.softThreshold",
               "name": "softThreshold",
-              "line": 341,
-              "lineEnd": 355,
+              "line": 347,
+              "lineEnd": 361,
               "column": 4,
               "filename": "highcharts/js/parts/ColumnSeries.js",
               "default": false
@@ -34491,8 +34493,8 @@
             "meta": {
               "fullname": "plotOptions.column.stickyTracking",
               "name": "stickyTracking",
-              "line": 363,
-              "lineEnd": 363,
+              "line": 369,
+              "lineEnd": 369,
               "column": 4,
               "filename": "highcharts/js/parts/ColumnSeries.js",
               "default": false
@@ -34517,8 +34519,8 @@
             "meta": {
               "fullname": "plotOptions.column.threshold",
               "name": "threshold",
-              "line": 367,
-              "lineEnd": 377,
+              "line": 373,
+              "lineEnd": 383,
               "column": 4,
               "filename": "highcharts/js/parts/ColumnSeries.js",
               "default": 0
@@ -34536,8 +34538,8 @@
             "meta": {
               "fullname": "plotOptions.column.tooltip",
               "name": "tooltip",
-              "line": 364,
-              "lineEnd": 364,
+              "line": 370,
+              "lineEnd": 370,
               "column": 4,
               "filename": "highcharts/js/parts/ColumnSeries.js"
             },
@@ -34554,8 +34556,8 @@
                 "meta": {
                   "fullname": "plotOptions.column.tooltip.distance",
                   "name": "distance",
-                  "line": 365,
-                  "lineEnd": 365,
+                  "line": 371,
+                  "lineEnd": 371,
                   "column": 8,
                   "filename": "highcharts/js/parts/ColumnSeries.js",
                   "default": 6
@@ -51223,7 +51225,7 @@
                   "description": "Options for the cluster data labels.",
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.DataLabelsOptions"
                     ]
                   },
                   "since": "8.0.0"
@@ -51634,7 +51636,7 @@
                   ],
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.PointMarkerOptionsObject"
                     ]
                   },
                   "since": "8.0.0"
@@ -56212,8 +56214,8 @@
             },
             "meta": {
               "filename": "highcharts/js/modules/export-data.src.js",
-              "line": 73,
-              "lineEnd": 84
+              "line": 74,
+              "lineEnd": 85
             },
             "children": {}
           },
@@ -68852,8 +68854,8 @@
       "filename": "highcharts/js/parts/RangeSelector.js",
       "name": "rangeSelector",
       "fullname": "rangeSelector",
-      "line": 50,
-      "lineEnd": 58,
+      "line": 51,
+      "lineEnd": 59,
       "column": 4
     },
     "children": {
@@ -68885,8 +68887,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 60,
-          "lineEnd": 73
+          "line": 61,
+          "lineEnd": 74
         },
         "children": {}
       },
@@ -68903,8 +68905,8 @@
         "meta": {
           "fullname": "rangeSelector.buttonPosition",
           "name": "buttonPosition",
-          "line": 410,
-          "lineEnd": 415,
+          "line": 411,
+          "lineEnd": 416,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js"
         },
@@ -68938,8 +68940,8 @@
             "meta": {
               "fullname": "rangeSelector.buttonPosition.align",
               "name": "align",
-              "line": 422,
-              "lineEnd": 431,
+              "line": 423,
+              "lineEnd": 432,
               "column": 12,
               "filename": "highcharts/js/parts/RangeSelector.js",
               "default": "left"
@@ -68960,8 +68962,8 @@
             "meta": {
               "fullname": "rangeSelector.buttonPosition.x",
               "name": "x",
-              "line": 433,
-              "lineEnd": 435,
+              "line": 434,
+              "lineEnd": 436,
               "column": 12,
               "filename": "highcharts/js/parts/RangeSelector.js",
               "default": 0
@@ -68982,8 +68984,8 @@
             "meta": {
               "fullname": "rangeSelector.buttonPosition.y",
               "name": "y",
-              "line": 437,
-              "lineEnd": 439,
+              "line": 438,
+              "lineEnd": 440,
               "column": 12,
               "filename": "highcharts/js/parts/RangeSelector.js",
               "default": 0
@@ -69004,8 +69006,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 200,
-          "lineEnd": 206
+          "line": 201,
+          "lineEnd": 207
         },
         "children": {}
       },
@@ -69036,8 +69038,8 @@
         "meta": {
           "fullname": "rangeSelector.buttonTheme",
           "name": "buttonTheme",
-          "line": 230,
-          "lineEnd": 249,
+          "line": 231,
+          "lineEnd": 250,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js"
         },
@@ -69069,8 +69071,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 74,
-          "lineEnd": 109
+          "line": 75,
+          "lineEnd": 110
         },
         "children": {
           "count": {
@@ -69085,8 +69087,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/RangeSelector.js",
-              "line": 110,
-              "lineEnd": 117
+              "line": 111,
+              "lineEnd": 118
             },
             "children": {}
           },
@@ -69120,8 +69122,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/RangeSelector.js",
-              "line": 174,
-              "lineEnd": 185
+              "line": 175,
+              "lineEnd": 186
             },
             "children": {}
           },
@@ -69161,8 +69163,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/RangeSelector.js",
-                  "line": 118,
-                  "lineEnd": 136
+                  "line": 119,
+                  "lineEnd": 137
                 },
                 "children": {}
               }
@@ -69196,8 +69198,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/RangeSelector.js",
-              "line": 137,
-              "lineEnd": 148
+              "line": 138,
+              "lineEnd": 149
             },
             "children": {}
           },
@@ -69229,8 +69231,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/RangeSelector.js",
-              "line": 149,
-              "lineEnd": 160
+              "line": 150,
+              "lineEnd": 161
             },
             "children": {}
           },
@@ -69262,8 +69264,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/RangeSelector.js",
-              "line": 161,
-              "lineEnd": 173
+              "line": 162,
+              "lineEnd": 174
             },
             "children": {}
           },
@@ -69278,8 +69280,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/RangeSelector.js",
-              "line": 186,
-              "lineEnd": 191
+              "line": 187,
+              "lineEnd": 192
             },
             "children": {}
           },
@@ -69294,8 +69296,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/RangeSelector.js",
-              "line": 192,
-              "lineEnd": 199
+              "line": 193,
+              "lineEnd": 200
             },
             "children": {}
           }
@@ -69328,8 +69330,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 207,
-          "lineEnd": 216
+          "line": 208,
+          "lineEnd": 217
         },
         "children": {}
       },
@@ -69362,8 +69364,8 @@
         "meta": {
           "fullname": "rangeSelector.floating",
           "name": "floating",
-          "line": 260,
-          "lineEnd": 269,
+          "line": 261,
+          "lineEnd": 270,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js",
           "default": false
@@ -69386,8 +69388,8 @@
         "meta": {
           "fullname": "rangeSelector.height",
           "name": "height",
-          "line": 285,
-          "lineEnd": 292,
+          "line": 286,
+          "lineEnd": 293,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js",
           "default": "undefined"
@@ -69422,8 +69424,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 294,
-          "lineEnd": 304
+          "line": 295,
+          "lineEnd": 305
         },
         "children": {}
       },
@@ -69455,8 +69457,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 305,
-          "lineEnd": 315
+          "line": 306,
+          "lineEnd": 316
         },
         "children": {}
       },
@@ -69487,8 +69489,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 316,
-          "lineEnd": 326
+          "line": 317,
+          "lineEnd": 327
         },
         "children": {}
       },
@@ -69520,8 +69522,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 327,
-          "lineEnd": 337
+          "line": 328,
+          "lineEnd": 338
         },
         "children": {}
       },
@@ -69552,8 +69554,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 338,
-          "lineEnd": 348
+          "line": 339,
+          "lineEnd": 349
         },
         "children": {}
       },
@@ -69584,8 +69586,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 349,
-          "lineEnd": 359
+          "line": 350,
+          "lineEnd": 360
         },
         "children": {}
       },
@@ -69616,8 +69618,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 360,
-          "lineEnd": 371
+          "line": 361,
+          "lineEnd": 372
         },
         "children": {}
       },
@@ -69648,8 +69650,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 372,
-          "lineEnd": 382
+          "line": 373,
+          "lineEnd": 383
         },
         "children": {}
       },
@@ -69666,8 +69668,8 @@
         "meta": {
           "fullname": "rangeSelector.inputPosition",
           "name": "inputPosition",
-          "line": 294,
-          "lineEnd": 304,
+          "line": 295,
+          "lineEnd": 305,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js"
         },
@@ -69701,8 +69703,8 @@
             "meta": {
               "fullname": "rangeSelector.inputPosition.align",
               "name": "align",
-              "line": 390,
-              "lineEnd": 399,
+              "line": 391,
+              "lineEnd": 400,
               "column": 12,
               "filename": "highcharts/js/parts/RangeSelector.js",
               "default": "right"
@@ -69723,8 +69725,8 @@
             "meta": {
               "fullname": "rangeSelector.inputPosition.x",
               "name": "x",
-              "line": 401,
-              "lineEnd": 403,
+              "line": 402,
+              "lineEnd": 404,
               "column": 12,
               "filename": "highcharts/js/parts/RangeSelector.js",
               "default": 0
@@ -69745,8 +69747,8 @@
             "meta": {
               "fullname": "rangeSelector.inputPosition.y",
               "name": "y",
-              "line": 405,
-              "lineEnd": 407,
+              "line": 406,
+              "lineEnd": 408,
               "column": 12,
               "filename": "highcharts/js/parts/RangeSelector.js",
               "default": 0
@@ -69781,8 +69783,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 442,
-          "lineEnd": 454
+          "line": 443,
+          "lineEnd": 455
         },
         "children": {}
       },
@@ -69813,8 +69815,8 @@
         "meta": {
           "fullname": "rangeSelector.labelStyle",
           "name": "labelStyle",
-          "line": 442,
-          "lineEnd": 454,
+          "line": 443,
+          "lineEnd": 455,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js"
         },
@@ -69831,8 +69833,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/RangeSelector.js",
-          "line": 410,
-          "lineEnd": 415
+          "line": 411,
+          "lineEnd": 416
         },
         "children": {}
       },
@@ -69872,8 +69874,8 @@
         "meta": {
           "fullname": "rangeSelector.verticalAlign",
           "name": "verticalAlign",
-          "line": 60,
-          "lineEnd": 73,
+          "line": 61,
+          "lineEnd": 74,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js",
           "default": "top"
@@ -69894,8 +69896,8 @@
         "meta": {
           "fullname": "rangeSelector.x",
           "name": "x",
-          "line": 271,
-          "lineEnd": 276,
+          "line": 272,
+          "lineEnd": 277,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js",
           "default": 0
@@ -69916,8 +69918,8 @@
         "meta": {
           "fullname": "rangeSelector.y",
           "name": "y",
-          "line": 278,
-          "lineEnd": 283,
+          "line": 279,
+          "lineEnd": 284,
           "column": 8,
           "filename": "highcharts/js/parts/RangeSelector.js",
           "default": 0
@@ -71131,7 +71133,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "plotOptions.arearange.dataLabels",
+                  "extends": "series.arearange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -72453,8 +72455,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/ColumnSeries.js",
-          "line": 923,
-          "lineEnd": 932
+          "line": 929,
+          "lineEnd": 938
         },
         "children": {
           "data": {
@@ -72519,8 +72521,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/ColumnSeries.js",
-              "line": 933,
-              "lineEnd": 992
+              "line": 939,
+              "lineEnd": 998
             },
             "children": {
               "borderColor": {
@@ -72555,8 +72557,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/ColumnSeries.js",
-                  "line": 993,
-                  "lineEnd": 1005
+                  "line": 999,
+                  "lineEnd": 1011
                 },
                 "children": {}
               },
@@ -72590,8 +72592,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/ColumnSeries.js",
-                  "line": 1006,
-                  "lineEnd": 1018
+                  "line": 1012,
+                  "lineEnd": 1024
                 },
                 "children": {}
               },
@@ -72609,8 +72611,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/ColumnSeries.js",
-                  "line": 1019,
-                  "lineEnd": 1030
+                  "line": 1025,
+                  "lineEnd": 1036
                 },
                 "children": {}
               },
@@ -72667,8 +72669,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/ColumnSeries.js",
-                  "line": 1040,
-                  "lineEnd": 1044
+                  "line": 1046,
+                  "lineEnd": 1050
                 },
                 "children": {}
               },
@@ -72687,8 +72689,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/ColumnSeries.js",
-                  "line": 1045,
-                  "lineEnd": 1049
+                  "line": 1051,
+                  "lineEnd": 1055
                 },
                 "children": {}
               }
@@ -72933,7 +72935,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "plotOptions.columnrange.dataLabels",
+                  "extends": "series.columnrange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -75795,7 +75797,7 @@
                     }
                   ],
                   "declare": "Highcharts.DataLabelsOptions",
-                  "extends": "plotOptions.series.dataLabels",
+                  "extends": "plotOptions.line.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock",
@@ -76355,7 +76357,7 @@
                   ],
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.DataLabelsOptions"
                     ]
                   },
                   "products": [
@@ -77983,7 +77985,7 @@
                 "doclet": {
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.SeriesPieDataLabelsOptionsObject"
                     ]
                   },
                   "products": [
@@ -86949,8 +86951,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3058,
-          "lineEnd": 3076
+          "line": 3067,
+          "lineEnd": 3085
         },
         "children": {}
       },
@@ -86995,8 +86997,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3077,
-          "lineEnd": 3093
+          "line": 3086,
+          "lineEnd": 3102
         },
         "children": {}
       },
@@ -87027,16 +87029,14 @@
           ],
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           }
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3094,
-          "lineEnd": 3105
+          "line": 3103,
+          "lineEnd": 3114
         },
         "children": {}
       },
@@ -87136,8 +87136,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3106,
-          "lineEnd": 3124
+          "line": 3115,
+          "lineEnd": 3133
         },
         "children": {
           "breakSize": {
@@ -87158,8 +87158,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3125,
-              "lineEnd": 3136
+              "line": 3134,
+              "lineEnd": 3145
             },
             "children": {}
           },
@@ -87180,8 +87180,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3137,
-              "lineEnd": 3144
+              "line": 3146,
+              "lineEnd": 3153
             },
             "children": {}
           },
@@ -87203,8 +87203,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3145,
-              "lineEnd": 3154
+              "line": 3154,
+              "lineEnd": 3163
             },
             "children": {}
           },
@@ -87225,8 +87225,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3155,
-              "lineEnd": 3162
+              "line": 3164,
+              "lineEnd": 3171
             },
             "children": {}
           }
@@ -87269,8 +87269,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3163,
-          "lineEnd": 3182
+          "line": 3172,
+          "lineEnd": 3191
         },
         "children": {}
       },
@@ -87311,8 +87311,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3183,
-          "lineEnd": 3195
+          "line": 3192,
+          "lineEnd": 3204
         },
         "children": {}
       },
@@ -87347,8 +87347,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3196,
-          "lineEnd": 3207
+          "line": 3205,
+          "lineEnd": 3216
         },
         "children": {}
       },
@@ -87402,8 +87402,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3208,
-          "lineEnd": 3232
+          "line": 3217,
+          "lineEnd": 3241
         },
         "children": {
           "className": {
@@ -87418,8 +87418,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3233,
-              "lineEnd": 3239
+              "line": 3242,
+              "lineEnd": 3248
             },
             "children": {}
           },
@@ -87447,9 +87447,7 @@
               ],
               "type": {
                 "names": [
-                  "Highcharts.ColorString",
-                  "Highcharts.GradientColorObject",
-                  "Highcharts.PatternObject"
+                  "Highcharts.ColorType"
                 ]
               },
               "defaultvalue": "#cccccc",
@@ -87457,8 +87455,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3240,
-              "lineEnd": 3252
+              "line": 3249,
+              "lineEnd": 3261
             },
             "children": {}
           },
@@ -87498,8 +87496,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3253,
-              "lineEnd": 3267
+              "line": 3262,
+              "lineEnd": 3276
             },
             "children": {}
           },
@@ -87541,8 +87539,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3268,
-              "lineEnd": 3283
+              "line": 3277,
+              "lineEnd": 3292
             },
             "children": {
               "align": {
@@ -87560,8 +87558,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3284,
-                  "lineEnd": 3293
+                  "line": 3293,
+                  "lineEnd": 3302
                 },
                 "children": {}
               },
@@ -87570,31 +87568,7 @@
                   "description": "The background color for the label. Defaults to the related series\ncolor, or `#666666` if that is not available.",
                   "type": {
                     "names": [
-                      "Highcharts.ColorString",
-                      "Highcharts.GradientColorObject",
-                      "Highcharts.PatternObject"
-                    ]
-                  },
-                  "since": "4.1.0",
-                  "products": [
-                    "highstock"
-                  ]
-                },
-                "meta": {
-                  "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3294,
-                  "lineEnd": 3302
-                },
-                "children": {}
-              },
-              "borderColor": {
-                "doclet": {
-                  "description": "The border color for the crosshair label",
-                  "type": {
-                    "names": [
-                      "Highcharts.ColorString",
-                      "Highcharts.GradientColorObject",
-                      "Highcharts.PatternObject"
+                      "Highcharts.ColorType"
                     ]
                   },
                   "since": "4.1.0",
@@ -87605,7 +87579,27 @@
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
                   "line": 3303,
-                  "lineEnd": 3310
+                  "lineEnd": 3311
+                },
+                "children": {}
+              },
+              "borderColor": {
+                "doclet": {
+                  "description": "The border color for the crosshair label",
+                  "type": {
+                    "names": [
+                      "Highcharts.ColorType"
+                    ]
+                  },
+                  "since": "4.1.0",
+                  "products": [
+                    "highstock"
+                  ]
+                },
+                "meta": {
+                  "filename": "highcharts/js/parts/Axis.js",
+                  "line": 3312,
+                  "lineEnd": 3319
                 },
                 "children": {}
               },
@@ -87625,8 +87619,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3311,
-                  "lineEnd": 3319
+                  "line": 3320,
+                  "lineEnd": 3328
                 },
                 "children": {}
               },
@@ -87646,8 +87640,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3320,
-                  "lineEnd": 3328
+                  "line": 3329,
+                  "lineEnd": 3337
                 },
                 "children": {}
               },
@@ -87682,8 +87676,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3329,
-                  "lineEnd": 3340
+                  "line": 3338,
+                  "lineEnd": 3349
                 },
                 "children": {}
               },
@@ -87702,8 +87696,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3341,
-                  "lineEnd": 3349
+                  "line": 3350,
+                  "lineEnd": 3358
                 },
                 "children": {}
               },
@@ -87722,8 +87716,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3350,
-                  "lineEnd": 3357
+                  "line": 3359,
+                  "lineEnd": 3366
                 },
                 "children": {}
               },
@@ -87743,8 +87737,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3358,
-                  "lineEnd": 3366
+                  "line": 3367,
+                  "lineEnd": 3375
                 },
                 "children": {}
               },
@@ -87764,8 +87758,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3367,
-                  "lineEnd": 3375
+                  "line": 3376,
+                  "lineEnd": 3384
                 },
                 "children": {}
               },
@@ -87785,8 +87779,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts/Axis.js",
-                  "line": 3376,
-                  "lineEnd": 3384
+                  "line": 3385,
+                  "lineEnd": 3393
                 },
                 "children": {}
               }
@@ -87828,8 +87822,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3385,
-              "lineEnd": 3398
+              "line": 3394,
+              "lineEnd": 3407
             },
             "children": {}
           },
@@ -87875,8 +87869,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3399,
-              "lineEnd": 3414
+              "line": 3408,
+              "lineEnd": 3423
             },
             "children": {}
           },
@@ -87893,8 +87887,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3415,
-              "lineEnd": 3423
+              "line": 3424,
+              "lineEnd": 3432
             },
             "children": {}
           }
@@ -88012,8 +88006,8 @@
         "meta": {
           "fullname": "xAxis.dateTimeLabelFormats",
           "name": "dateTimeLabelFormats",
-          "line": 3058,
-          "lineEnd": 3076,
+          "line": 3067,
+          "lineEnd": 3085,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js"
         },
@@ -88031,8 +88025,8 @@
             "meta": {
               "fullname": "xAxis.dateTimeLabelFormats.day",
               "name": "day",
-              "line": 3500,
-              "lineEnd": 3503,
+              "line": 3509,
+              "lineEnd": 3512,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -88049,8 +88043,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.day.main",
                   "name": "main",
-                  "line": 3505,
-                  "lineEnd": 3505,
+                  "line": 3514,
+                  "lineEnd": 3514,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "%e. %b"
@@ -88072,8 +88066,8 @@
             "meta": {
               "fullname": "xAxis.dateTimeLabelFormats.hour",
               "name": "hour",
-              "line": 3492,
-              "lineEnd": 3495,
+              "line": 3501,
+              "lineEnd": 3504,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -88090,8 +88084,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.hour.main",
                   "name": "main",
-                  "line": 3497,
-                  "lineEnd": 3497,
+                  "line": 3506,
+                  "lineEnd": 3506,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "%H:%M"
@@ -88110,8 +88104,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.hour.range",
                   "name": "range",
-                  "line": 3498,
-                  "lineEnd": 3498,
+                  "line": 3507,
+                  "lineEnd": 3507,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": false
@@ -88133,8 +88127,8 @@
             "meta": {
               "fullname": "xAxis.dateTimeLabelFormats.millisecond",
               "name": "millisecond",
-              "line": 3468,
-              "lineEnd": 3471,
+              "line": 3477,
+              "lineEnd": 3480,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -88151,8 +88145,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.millisecond.main",
                   "name": "main",
-                  "line": 3473,
-                  "lineEnd": 3473,
+                  "line": 3482,
+                  "lineEnd": 3482,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "%H:%M:%S.%L"
@@ -88171,8 +88165,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.millisecond.range",
                   "name": "range",
-                  "line": 3474,
-                  "lineEnd": 3474,
+                  "line": 3483,
+                  "lineEnd": 3483,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": false
@@ -88194,8 +88188,8 @@
             "meta": {
               "fullname": "xAxis.dateTimeLabelFormats.minute",
               "name": "minute",
-              "line": 3484,
-              "lineEnd": 3487,
+              "line": 3493,
+              "lineEnd": 3496,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -88212,8 +88206,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.minute.main",
                   "name": "main",
-                  "line": 3489,
-                  "lineEnd": 3489,
+                  "line": 3498,
+                  "lineEnd": 3498,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "%H:%M"
@@ -88232,8 +88226,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.minute.range",
                   "name": "range",
-                  "line": 3490,
-                  "lineEnd": 3490,
+                  "line": 3499,
+                  "lineEnd": 3499,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": false
@@ -88255,8 +88249,8 @@
             "meta": {
               "fullname": "xAxis.dateTimeLabelFormats.month",
               "name": "month",
-              "line": 3514,
-              "lineEnd": 3517,
+              "line": 3523,
+              "lineEnd": 3526,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -88273,8 +88267,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.month.main",
                   "name": "main",
-                  "line": 3519,
-                  "lineEnd": 3519,
+                  "line": 3528,
+                  "lineEnd": 3528,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "%b '%y"
@@ -88296,8 +88290,8 @@
             "meta": {
               "fullname": "xAxis.dateTimeLabelFormats.second",
               "name": "second",
-              "line": 3476,
-              "lineEnd": 3479,
+              "line": 3485,
+              "lineEnd": 3488,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -88314,8 +88308,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.second.main",
                   "name": "main",
-                  "line": 3481,
-                  "lineEnd": 3481,
+                  "line": 3490,
+                  "lineEnd": 3490,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "%H:%M:%S"
@@ -88334,8 +88328,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.second.range",
                   "name": "range",
-                  "line": 3482,
-                  "lineEnd": 3482,
+                  "line": 3491,
+                  "lineEnd": 3491,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": false
@@ -88357,8 +88351,8 @@
             "meta": {
               "fullname": "xAxis.dateTimeLabelFormats.week",
               "name": "week",
-              "line": 3507,
-              "lineEnd": 3510,
+              "line": 3516,
+              "lineEnd": 3519,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -88375,8 +88369,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.week.main",
                   "name": "main",
-                  "line": 3512,
-                  "lineEnd": 3512,
+                  "line": 3521,
+                  "lineEnd": 3521,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "%e. %b"
@@ -88398,8 +88392,8 @@
             "meta": {
               "fullname": "xAxis.dateTimeLabelFormats.year",
               "name": "year",
-              "line": 3521,
-              "lineEnd": 3524,
+              "line": 3530,
+              "lineEnd": 3533,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -88416,8 +88410,8 @@
                 "meta": {
                   "fullname": "xAxis.dateTimeLabelFormats.year.main",
                   "name": "main",
-                  "line": 3526,
-                  "lineEnd": 3526,
+                  "line": 3535,
+                  "lineEnd": 3535,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "%Y"
@@ -88484,8 +88478,8 @@
         "meta": {
           "fullname": "xAxis.endOnTick",
           "name": "endOnTick",
-          "line": 3529,
-          "lineEnd": 3547,
+          "line": 3538,
+          "lineEnd": 3556,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": false
@@ -88503,8 +88497,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3549,
-          "lineEnd": 3554
+          "line": 3558,
+          "lineEnd": 3563
         },
         "children": {
           "afterBreaks": {
@@ -88541,8 +88535,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3555,
-              "lineEnd": 3567
+              "line": 3564,
+              "lineEnd": 3576
             },
             "children": {}
           },
@@ -88559,8 +88553,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3568,
-              "lineEnd": 3586
+              "line": 3577,
+              "lineEnd": 3595
             },
             "children": {}
           },
@@ -88599,8 +88593,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3587,
-              "lineEnd": 3600
+              "line": 3596,
+              "lineEnd": 3609
             },
             "children": {}
           },
@@ -88621,8 +88615,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3601,
-              "lineEnd": 3608
+              "line": 3610,
+              "lineEnd": 3617
             },
             "children": {}
           },
@@ -88654,8 +88648,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3609,
-              "lineEnd": 3628
+              "line": 3618,
+              "lineEnd": 3637
             },
             "children": {}
           }
@@ -88703,8 +88697,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3629,
-          "lineEnd": 3643
+          "line": 3638,
+          "lineEnd": 3652
         },
         "children": {}
       },
@@ -88878,9 +88872,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           },
           "defaultvalue": "#e6e6e6",
@@ -88889,8 +88881,8 @@
         "meta": {
           "fullname": "xAxis.gridLineColor",
           "name": "gridLineColor",
-          "line": 5001,
-          "lineEnd": 5019,
+          "line": 5010,
+          "lineEnd": 5028,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "#e6e6e6"
@@ -88932,8 +88924,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3644,
-          "lineEnd": 3657
+          "line": 3653,
+          "lineEnd": 3666
         },
         "children": {}
       },
@@ -89028,8 +89020,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5022,
-          "lineEnd": 5038
+          "line": 5031,
+          "lineEnd": 5047
         },
         "children": {}
       },
@@ -89067,8 +89059,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3658,
-          "lineEnd": 3668
+          "line": 3667,
+          "lineEnd": 3677
         },
         "children": {}
       },
@@ -89088,8 +89080,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5040,
-          "lineEnd": 5050
+          "line": 5049,
+          "lineEnd": 5059
         },
         "children": {}
       },
@@ -89127,8 +89119,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3669,
-          "lineEnd": 3681
+          "line": 3678,
+          "lineEnd": 3690
         },
         "children": {}
       },
@@ -89199,8 +89191,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3694,
-              "lineEnd": 3712
+              "line": 3703,
+              "lineEnd": 3721
             },
             "children": {}
           },
@@ -89248,8 +89240,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3713,
-              "lineEnd": 3732
+              "line": 3722,
+              "lineEnd": 3741
             },
             "children": {}
           },
@@ -89285,8 +89277,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3733,
-              "lineEnd": 3748
+              "line": 3742,
+              "lineEnd": 3757
             },
             "children": {}
           },
@@ -89306,8 +89298,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3749,
-              "lineEnd": 3757
+              "line": 3758,
+              "lineEnd": 3766
             },
             "children": {}
           },
@@ -89352,8 +89344,8 @@
             "meta": {
               "fullname": "xAxis.labels.enabled",
               "name": "enabled",
-              "line": 3694,
-              "lineEnd": 3712,
+              "line": 3703,
+              "lineEnd": 3721,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": true
@@ -89390,8 +89382,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3770,
-              "lineEnd": 3781
+              "line": 3779,
+              "lineEnd": 3790
             },
             "children": {}
           },
@@ -89429,14 +89421,14 @@
               ],
               "type": {
                 "names": [
-                  "Highcharts.FormatterCallbackFunction.<Highcharts.AxisLabelsFormatterContextObject>"
+                  "Highcharts.AxisLabelsFormatterCallbackFunction"
                 ]
               }
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3782,
-              "lineEnd": 3805
+              "line": 3791,
+              "lineEnd": 3814
             },
             "children": {}
           },
@@ -89469,8 +89461,8 @@
             "meta": {
               "fullname": "xAxis.labels.indentation",
               "name": "indentation",
-              "line": 3770,
-              "lineEnd": 3781,
+              "line": 3779,
+              "lineEnd": 3790,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": 10
@@ -89491,8 +89483,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3818,
-              "lineEnd": 3829
+              "line": 3827,
+              "lineEnd": 3838
             },
             "children": {}
           },
@@ -89510,8 +89502,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3830,
-              "lineEnd": 3841
+              "line": 3839,
+              "lineEnd": 3850
             },
             "children": {}
           },
@@ -89531,8 +89523,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3842,
-              "lineEnd": 3850
+              "line": 3851,
+              "lineEnd": 3859
             },
             "children": {}
           },
@@ -89615,8 +89607,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3851,
-              "lineEnd": 3874
+              "line": 3860,
+              "lineEnd": 3883
             },
             "children": {}
           },
@@ -89647,8 +89639,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3875,
-              "lineEnd": 3884
+              "line": 3884,
+              "lineEnd": 3893
             },
             "children": {}
           },
@@ -89723,8 +89715,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3885,
-              "lineEnd": 3897
+              "line": 3894,
+              "lineEnd": 3906
             },
             "children": {}
           },
@@ -89762,8 +89754,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3898,
-              "lineEnd": 3920
+              "line": 3907,
+              "lineEnd": 3929
             },
             "children": {}
           },
@@ -89794,8 +89786,8 @@
             "meta": {
               "fullname": "xAxis.labels.style",
               "name": "style",
-              "line": 3937,
-              "lineEnd": 3947,
+              "line": 3946,
+              "lineEnd": 3956,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -89813,8 +89805,8 @@
                 "meta": {
                   "fullname": "xAxis.labels.style.color",
                   "name": "color",
-                  "line": 3969,
-                  "lineEnd": 3969,
+                  "line": 3978,
+                  "lineEnd": 3978,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "#666666"
@@ -89834,8 +89826,8 @@
                 "meta": {
                   "fullname": "xAxis.labels.style.cursor",
                   "name": "cursor",
-                  "line": 3971,
-                  "lineEnd": 3971,
+                  "line": 3980,
+                  "lineEnd": 3980,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "default"
@@ -89855,8 +89847,8 @@
                 "meta": {
                   "fullname": "xAxis.labels.style.fontSize",
                   "name": "fontSize",
-                  "line": 3973,
-                  "lineEnd": 3973,
+                  "line": 3982,
+                  "lineEnd": 3982,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "11px"
@@ -89877,8 +89869,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3921,
-              "lineEnd": 3928
+              "line": 3930,
+              "lineEnd": 3937
             },
             "children": {}
           },
@@ -89910,8 +89902,8 @@
             "meta": {
               "fullname": "xAxis.labels.x",
               "name": "x",
-              "line": 3818,
-              "lineEnd": 3829,
+              "line": 3827,
+              "lineEnd": 3838,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": 0
@@ -89944,8 +89936,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3937,
-              "lineEnd": 3947
+              "line": 3946,
+              "lineEnd": 3956
             },
             "children": {}
           },
@@ -89961,8 +89953,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 3948,
-              "lineEnd": 3954
+              "line": 3957,
+              "lineEnd": 3963
             },
             "children": {}
           }
@@ -89984,8 +89976,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3977,
-          "lineEnd": 3988
+          "line": 3986,
+          "lineEnd": 3997
         },
         "children": {}
       },
@@ -90030,9 +90022,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           },
           "defaultvalue": "#ccd6eb",
@@ -90041,8 +90031,8 @@
         "meta": {
           "fullname": "xAxis.lineColor",
           "name": "lineColor",
-          "line": 4963,
-          "lineEnd": 4982,
+          "line": 4972,
+          "lineEnd": 4991,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "#ccd6eb"
@@ -90097,8 +90087,8 @@
         "meta": {
           "fullname": "xAxis.lineWidth",
           "name": "lineWidth",
-          "line": 4984,
-          "lineEnd": 4999,
+          "line": 4993,
+          "lineEnd": 5008,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 1
@@ -90144,8 +90134,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4000,
-          "lineEnd": 4016
+          "line": 4009,
+          "lineEnd": 4025
         },
         "children": {}
       },
@@ -90161,8 +90151,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4842,
-          "lineEnd": 4850
+          "line": 4851,
+          "lineEnd": 4859
         },
         "children": {}
       },
@@ -90214,8 +90204,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4017,
-          "lineEnd": 4040
+          "line": 4026,
+          "lineEnd": 4049
         },
         "children": {}
       },
@@ -90267,8 +90257,8 @@
         "meta": {
           "fullname": "xAxis.maxPadding",
           "name": "maxPadding",
-          "line": 3977,
-          "lineEnd": 3988,
+          "line": 3986,
+          "lineEnd": 3997,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 0.01
@@ -90327,8 +90317,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4060,
-          "lineEnd": 4067
+          "line": 4069,
+          "lineEnd": 4076
         },
         "children": {}
       },
@@ -90380,8 +90370,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4068,
-          "lineEnd": 4092
+          "line": 4077,
+          "lineEnd": 4101
         },
         "children": {}
       },
@@ -90438,8 +90428,8 @@
         "meta": {
           "fullname": "xAxis.minPadding",
           "name": "minPadding",
-          "line": 4160,
-          "lineEnd": 4183,
+          "line": 4169,
+          "lineEnd": 4192,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 0.01
@@ -90486,8 +90476,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4216,
-          "lineEnd": 4242
+          "line": 4225,
+          "lineEnd": 4251
         },
         "children": {}
       },
@@ -90503,8 +90493,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4243,
-          "lineEnd": 4252
+          "line": 4252,
+          "lineEnd": 4261
         },
         "children": {}
       },
@@ -90543,9 +90533,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           },
           "defaultvalue": "#f2f2f2",
@@ -90554,8 +90542,8 @@
         "meta": {
           "fullname": "xAxis.minorGridLineColor",
           "name": "minorGridLineColor",
-          "line": 4842,
-          "lineEnd": 4850,
+          "line": 4851,
+          "lineEnd": 4859,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "#f2f2f2"
@@ -90597,8 +90585,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4093,
-          "lineEnd": 4106
+          "line": 4102,
+          "lineEnd": 4115
         },
         "children": {}
       },
@@ -90645,8 +90633,8 @@
         "meta": {
           "fullname": "xAxis.minorGridLineWidth",
           "name": "minorGridLineWidth",
-          "line": 4937,
-          "lineEnd": 4949,
+          "line": 4946,
+          "lineEnd": 4958,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 1
@@ -90680,9 +90668,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           },
           "defaultvalue": "#999999",
@@ -90691,8 +90677,8 @@
         "meta": {
           "fullname": "xAxis.minorTickColor",
           "name": "minorTickColor",
-          "line": 4951,
-          "lineEnd": 4961,
+          "line": 4960,
+          "lineEnd": 4970,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "#999999"
@@ -90762,8 +90748,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4107,
-          "lineEnd": 4136
+          "line": 4116,
+          "lineEnd": 4145
         },
         "children": {}
       },
@@ -90802,8 +90788,8 @@
         "meta": {
           "fullname": "xAxis.minorTickLength",
           "name": "minorTickLength",
-          "line": 4060,
-          "lineEnd": 4067,
+          "line": 4069,
+          "lineEnd": 4076,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 2
@@ -90853,8 +90839,8 @@
         "meta": {
           "fullname": "xAxis.minorTickPosition",
           "name": "minorTickPosition",
-          "line": 4146,
-          "lineEnd": 4158,
+          "line": 4155,
+          "lineEnd": 4167,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "outside"
@@ -90895,8 +90881,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4184,
-          "lineEnd": 4195
+          "line": 4193,
+          "lineEnd": 4204
         },
         "children": {}
       },
@@ -90934,8 +90920,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4160,
-          "lineEnd": 4183
+          "line": 4169,
+          "lineEnd": 4192
         },
         "children": {}
       },
@@ -90980,8 +90966,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4253,
-          "lineEnd": 4271
+          "line": 4262,
+          "lineEnd": 4280
         },
         "children": {}
       },
@@ -91019,8 +91005,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4272,
-          "lineEnd": 4286
+          "line": 4281,
+          "lineEnd": 4295
         },
         "children": {}
       },
@@ -91062,8 +91048,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4287,
-          "lineEnd": 4309
+          "line": 4296,
+          "lineEnd": 4318
         },
         "children": {}
       },
@@ -91098,8 +91084,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4310,
-          "lineEnd": 4323
+          "line": 4319,
+          "lineEnd": 4332
         },
         "children": {}
       },
@@ -91126,8 +91112,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4324,
-          "lineEnd": 4335
+          "line": 4333,
+          "lineEnd": 4344
         },
         "children": {}
       },
@@ -92657,8 +92643,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4336,
-          "lineEnd": 4347
+          "line": 4345,
+          "lineEnd": 4356
         },
         "children": {}
       },
@@ -92696,8 +92682,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4348,
-          "lineEnd": 4361
+          "line": 4357,
+          "lineEnd": 4370
         },
         "children": {}
       },
@@ -92740,8 +92726,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4363,
-          "lineEnd": 4379
+          "line": 4372,
+          "lineEnd": 4388
         },
         "children": {}
       },
@@ -92771,8 +92757,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4380,
-          "lineEnd": 4396
+          "line": 4389,
+          "lineEnd": 4405
         },
         "children": {}
       },
@@ -92812,8 +92798,8 @@
         "meta": {
           "fullname": "xAxis.showEmpty",
           "name": "showEmpty",
-          "line": 4216,
-          "lineEnd": 4242,
+          "line": 4225,
+          "lineEnd": 4251,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": true
@@ -92854,8 +92840,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4410,
-          "lineEnd": 4421
+          "line": 4419,
+          "lineEnd": 4430
         },
         "children": {}
       },
@@ -92898,8 +92884,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4422,
-          "lineEnd": 4435
+          "line": 4431,
+          "lineEnd": 4444
         },
         "children": {}
       },
@@ -92929,8 +92915,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4436,
-          "lineEnd": 4448
+          "line": 4445,
+          "lineEnd": 4457
         },
         "children": {}
       },
@@ -92960,8 +92946,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4449,
-          "lineEnd": 4461
+          "line": 4458,
+          "lineEnd": 4470
         },
         "children": {}
       },
@@ -93019,8 +93005,8 @@
         "meta": {
           "fullname": "xAxis.startOfWeek",
           "name": "startOfWeek",
-          "line": 4410,
-          "lineEnd": 4421,
+          "line": 4419,
+          "lineEnd": 4430,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 1
@@ -93069,8 +93055,8 @@
         "meta": {
           "fullname": "xAxis.startOnTick",
           "name": "startOnTick",
-          "line": 4478,
-          "lineEnd": 4492,
+          "line": 4487,
+          "lineEnd": 4501,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": false
@@ -93116,8 +93102,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4494,
-          "lineEnd": 4511
+          "line": 4503,
+          "lineEnd": 4520
         },
         "children": {}
       },
@@ -93156,9 +93142,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           },
           "defaultvalue": "#ccd6eb",
@@ -93167,8 +93151,8 @@
         "meta": {
           "fullname": "xAxis.tickColor",
           "name": "tickColor",
-          "line": 5021,
-          "lineEnd": 5021,
+          "line": 5030,
+          "lineEnd": 5030,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "#ccd6eb"
@@ -93213,8 +93197,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4512,
-          "lineEnd": 4545
+          "line": 4521,
+          "lineEnd": 4554
         },
         "children": {}
       },
@@ -93253,8 +93237,8 @@
         "meta": {
           "fullname": "xAxis.tickLength",
           "name": "tickLength",
-          "line": 4494,
-          "lineEnd": 4511,
+          "line": 4503,
+          "lineEnd": 4520,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 10
@@ -93301,8 +93285,8 @@
         "meta": {
           "fullname": "xAxis.tickPixelInterval",
           "name": "tickPixelInterval",
-          "line": 4555,
-          "lineEnd": 4571,
+          "line": 4564,
+          "lineEnd": 4580,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 100
@@ -93352,8 +93336,8 @@
         "meta": {
           "fullname": "xAxis.tickPosition",
           "name": "tickPosition",
-          "line": 4588,
-          "lineEnd": 4600,
+          "line": 4597,
+          "lineEnd": 4609,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "outside"
@@ -93396,8 +93380,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4602,
-          "lineEnd": 4618
+          "line": 4611,
+          "lineEnd": 4627
         },
         "children": {}
       },
@@ -93437,8 +93421,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4619,
-          "lineEnd": 4633
+          "line": 4628,
+          "lineEnd": 4642
         },
         "children": {}
       },
@@ -93500,8 +93484,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4634,
-          "lineEnd": 4655
+          "line": 4643,
+          "lineEnd": 4664
         },
         "children": {}
       },
@@ -93545,8 +93529,8 @@
         "meta": {
           "fullname": "xAxis.tickmarkPlacement",
           "name": "tickmarkPlacement",
-          "line": 4573,
-          "lineEnd": 4586,
+          "line": 4582,
+          "lineEnd": 4595,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "between"
@@ -93633,8 +93617,8 @@
             "meta": {
               "fullname": "xAxis.title.align",
               "name": "align",
-              "line": 4665,
-              "lineEnd": 4672,
+              "line": 4674,
+              "lineEnd": 4681,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": "middle"
@@ -93656,8 +93640,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4665,
-              "lineEnd": 4672
+              "line": 4674,
+              "lineEnd": 4681
             },
             "children": {}
           },
@@ -93687,8 +93671,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4673,
-              "lineEnd": 4682
+              "line": 4682,
+              "lineEnd": 4691
             },
             "children": {}
           },
@@ -93726,8 +93710,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4683,
-              "lineEnd": 4697
+              "line": 4692,
+              "lineEnd": 4706
             },
             "children": {}
           },
@@ -93790,8 +93774,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4698,
-              "lineEnd": 4706
+              "line": 4707,
+              "lineEnd": 4715
             },
             "children": {}
           },
@@ -93822,8 +93806,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4707,
-              "lineEnd": 4717
+              "line": 4716,
+              "lineEnd": 4726
             },
             "children": {}
           },
@@ -93899,8 +93883,8 @@
             "meta": {
               "fullname": "xAxis.title.style",
               "name": "style",
-              "line": 4797,
-              "lineEnd": 4812,
+              "line": 4806,
+              "lineEnd": 4821,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -93918,8 +93902,8 @@
                 "meta": {
                   "fullname": "xAxis.title.style.color",
                   "name": "color",
-                  "line": 4814,
-                  "lineEnd": 4814,
+                  "line": 4823,
+                  "lineEnd": 4823,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "#666666"
@@ -93962,8 +93946,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4718,
-              "lineEnd": 4729
+              "line": 4727,
+              "lineEnd": 4738
             },
             "children": {}
           },
@@ -93978,8 +93962,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4730,
-              "lineEnd": 4753
+              "line": 4739,
+              "lineEnd": 4762
             },
             "children": {}
           },
@@ -94000,8 +93984,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4754,
-              "lineEnd": 4762
+              "line": 4763,
+              "lineEnd": 4771
             },
             "children": {}
           },
@@ -94023,8 +94007,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4763,
-              "lineEnd": 4771
+              "line": 4772,
+              "lineEnd": 4780
             },
             "children": {}
           },
@@ -94044,8 +94028,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 4772,
-              "lineEnd": 4778
+              "line": 4781,
+              "lineEnd": 4787
             },
             "children": {}
           }
@@ -94067,8 +94051,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3989,
-          "lineEnd": 3999
+          "line": 3998,
+          "lineEnd": 4008
         },
         "children": {}
       },
@@ -94132,8 +94116,8 @@
         "meta": {
           "fullname": "xAxis.type",
           "name": "type",
-          "line": 4818,
-          "lineEnd": 4840,
+          "line": 4827,
+          "lineEnd": 4849,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": "linear"
@@ -94179,8 +94163,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4851,
-          "lineEnd": 4870
+          "line": 4860,
+          "lineEnd": 4879
         },
         "children": {}
       },
@@ -94200,8 +94184,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4871,
-          "lineEnd": 4909
+          "line": 4880,
+          "lineEnd": 4918
         },
         "children": {}
       },
@@ -94223,8 +94207,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 4910,
-          "lineEnd": 4919
+          "line": 4919,
+          "lineEnd": 4928
         },
         "children": {}
       },
@@ -94244,8 +94228,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5051,
-          "lineEnd": 5061
+          "line": 5060,
+          "lineEnd": 5070
         },
         "children": {}
       },
@@ -94276,8 +94260,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 3424,
-          "lineEnd": 3435
+          "line": 3433,
+          "lineEnd": 3444
         },
         "children": {}
       }
@@ -94303,8 +94287,8 @@
       "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
       "name": "yAxis",
       "fullname": "yAxis",
-      "line": 435,
-      "lineEnd": 443,
+      "line": 444,
+      "lineEnd": 452,
       "column": 20
     },
     "children": {
@@ -94361,8 +94345,8 @@
         "meta": {
           "fullname": "yAxis.endOnTick",
           "name": "endOnTick",
-          "line": 5098,
-          "lineEnd": 5121,
+          "line": 5107,
+          "lineEnd": 5130,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": true
@@ -94381,8 +94365,8 @@
         "meta": {
           "fullname": "yAxis.gridLineWidth",
           "name": "gridLineWidth",
-          "line": 5830,
-          "lineEnd": 5830,
+          "line": 5839,
+          "lineEnd": 5839,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 1
@@ -94423,8 +94407,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5122,
-          "lineEnd": 5137
+          "line": 5131,
+          "lineEnd": 5146
         },
         "children": {}
       },
@@ -94436,8 +94420,8 @@
           "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
           "name": "labels",
           "fullname": "yAxis.labels",
-          "line": 435,
-          "lineEnd": 443,
+          "line": 444,
+          "lineEnd": 452,
           "column": 20
         },
         "children": {
@@ -94488,8 +94472,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5346,
-              "lineEnd": 5366
+              "line": 5355,
+              "lineEnd": 5375
             },
             "children": {}
           },
@@ -94524,8 +94508,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5229,
-              "lineEnd": 5244
+              "line": 5238,
+              "lineEnd": 5253
             },
             "children": {}
           },
@@ -94558,8 +94542,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
-              "line": 396,
-              "lineEnd": 408
+              "line": 405,
+              "lineEnd": 417
             },
             "children": {
               "level": {
@@ -94576,8 +94560,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
-                  "line": 410,
-                  "lineEnd": 419
+                  "line": 419,
+                  "lineEnd": 428
                 },
                 "children": {}
               },
@@ -94594,8 +94578,8 @@
                 },
                 "meta": {
                   "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
-                  "line": 423,
-                  "lineEnd": 429
+                  "line": 432,
+                  "lineEnd": 438
                 },
                 "children": {}
               }
@@ -94617,8 +94601,8 @@
               "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
               "name": "symbol",
               "fullname": "yAxis.labels.symbol",
-              "line": 435,
-              "lineEnd": 443,
+              "line": 444,
+              "lineEnd": 452,
               "column": 20
             },
             "children": {
@@ -94634,8 +94618,8 @@
                 "meta": {
                   "fullname": "yAxis.labels.symbol.height",
                   "name": "height",
-                  "line": 456,
-                  "lineEnd": 456,
+                  "line": 465,
+                  "lineEnd": 465,
                   "column": 24,
                   "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
                   "default": 10
@@ -94654,8 +94638,8 @@
                 "meta": {
                   "fullname": "yAxis.labels.symbol.padding",
                   "name": "padding",
-                  "line": 458,
-                  "lineEnd": 458,
+                  "line": 467,
+                  "lineEnd": 467,
                   "column": 24,
                   "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
                   "default": 5
@@ -94675,8 +94659,8 @@
                 "meta": {
                   "fullname": "yAxis.labels.symbol.type",
                   "name": "type",
-                  "line": 445,
-                  "lineEnd": 452,
+                  "line": 454,
+                  "lineEnd": 461,
                   "column": 24,
                   "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
                   "default": "triangle"
@@ -94695,8 +94679,8 @@
                 "meta": {
                   "fullname": "yAxis.labels.symbol.width",
                   "name": "width",
-                  "line": 457,
-                  "lineEnd": 457,
+                  "line": 466,
+                  "lineEnd": 466,
                   "column": 24,
                   "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
                   "default": 10
@@ -94715,8 +94699,8 @@
                 "meta": {
                   "fullname": "yAxis.labels.symbol.x",
                   "name": "x",
-                  "line": 454,
-                  "lineEnd": 454,
+                  "line": 463,
+                  "lineEnd": 463,
                   "column": 24,
                   "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
                   "default": -5
@@ -94735,8 +94719,8 @@
                 "meta": {
                   "fullname": "yAxis.labels.symbol.y",
                   "name": "y",
-                  "line": 455,
-                  "lineEnd": 455,
+                  "line": 464,
+                  "lineEnd": 464,
                   "column": 24,
                   "filename": "highcharts/js/parts-gantt/TreeGridAxis.js",
                   "default": -5
@@ -94773,8 +94757,8 @@
             "meta": {
               "fullname": "yAxis.labels.x",
               "name": "x",
-              "line": 5346,
-              "lineEnd": 5366,
+              "line": 5355,
+              "lineEnd": 5375,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": -8
@@ -94818,8 +94802,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5245,
-              "lineEnd": 5257
+              "line": 5254,
+              "lineEnd": 5266
             },
             "children": {}
           }
@@ -94835,16 +94819,14 @@
           },
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           }
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5376,
-          "lineEnd": 5383
+          "line": 5385,
+          "lineEnd": 5392
         },
         "children": {}
       },
@@ -94860,8 +94842,8 @@
         "meta": {
           "fullname": "yAxis.lineWidth",
           "name": "lineWidth",
-          "line": 5831,
-          "lineEnd": 5831,
+          "line": 5840,
+          "lineEnd": 5840,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 0
@@ -94909,8 +94891,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5384,
-          "lineEnd": 5395
+          "line": 5393,
+          "lineEnd": 5404
         },
         "children": {}
       },
@@ -94934,9 +94916,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           },
           "defaultvalue": "#003399",
@@ -94947,8 +94927,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5138,
-          "lineEnd": 5150
+          "line": 5147,
+          "lineEnd": 5159
         },
         "children": {}
       },
@@ -95031,8 +95011,8 @@
         "meta": {
           "fullname": "yAxis.maxPadding",
           "name": "maxPadding",
-          "line": 5280,
-          "lineEnd": 5298,
+          "line": 5289,
+          "lineEnd": 5307,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 0.05
@@ -95080,8 +95060,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5396,
-          "lineEnd": 5407
+          "line": 5405,
+          "lineEnd": 5416
         },
         "children": {}
       },
@@ -95105,9 +95085,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.ColorString",
-              "Highcharts.GradientColorObject",
-              "Highcharts.PatternObject"
+              "Highcharts.ColorType"
             ]
           },
           "defaultvalue": "#e6ebf5",
@@ -95118,8 +95096,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5151,
-          "lineEnd": 5163
+          "line": 5160,
+          "lineEnd": 5172
         },
         "children": {}
       },
@@ -95202,8 +95180,8 @@
         "meta": {
           "fullname": "yAxis.minPadding",
           "name": "minPadding",
-          "line": 5300,
-          "lineEnd": 5318,
+          "line": 5309,
+          "lineEnd": 5327,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 0.05
@@ -95263,8 +95241,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5320,
-          "lineEnd": 5334
+          "line": 5329,
+          "lineEnd": 5343
         },
         "children": {}
       },
@@ -95871,8 +95849,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5164,
-          "lineEnd": 5179
+          "line": 5173,
+          "lineEnd": 5188
         },
         "children": {}
       },
@@ -95915,8 +95893,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5180,
-          "lineEnd": 5195
+          "line": 5189,
+          "lineEnd": 5204
         },
         "children": {}
       },
@@ -95949,8 +95927,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5408,
-          "lineEnd": 5425
+          "line": 5417,
+          "lineEnd": 5434
         },
         "children": {
           "enabled": {
@@ -95984,8 +95962,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5426,
-              "lineEnd": 5437
+              "line": 5435,
+              "lineEnd": 5446
             },
             "children": {}
           },
@@ -96005,8 +95983,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5438,
-              "lineEnd": 5446
+              "line": 5447,
+              "lineEnd": 5455
             },
             "children": {}
           },
@@ -96026,8 +96004,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5447,
-              "lineEnd": 5457
+              "line": 5456,
+              "lineEnd": 5466
             },
             "children": {}
           },
@@ -96047,8 +96025,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5458,
-              "lineEnd": 5467
+              "line": 5467,
+              "lineEnd": 5476
             },
             "children": {}
           },
@@ -96068,8 +96046,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5468,
-              "lineEnd": 5476
+              "line": 5477,
+              "lineEnd": 5485
             },
             "children": {}
           }
@@ -96091,8 +96069,8 @@
         "meta": {
           "fullname": "yAxis.showLastLabel",
           "name": "showLastLabel",
-          "line": 5341,
-          "lineEnd": 5341,
+          "line": 5350,
+          "lineEnd": 5350,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": true
@@ -96125,8 +96103,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5477,
-          "lineEnd": 5493
+          "line": 5486,
+          "lineEnd": 5502
         },
         "children": {}
       },
@@ -96156,8 +96134,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5494,
-          "lineEnd": 5510
+          "line": 5503,
+          "lineEnd": 5519
         },
         "children": {}
       },
@@ -96176,8 +96154,8 @@
         "meta": {
           "fullname": "yAxis.stackLabels",
           "name": "stackLabels",
-          "line": 5677,
-          "lineEnd": 5692,
+          "line": 5686,
+          "lineEnd": 5701,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js"
         },
@@ -96226,8 +96204,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5511,
-              "lineEnd": 5528
+              "line": 5520,
+              "lineEnd": 5537
             },
             "children": {}
           },
@@ -96263,8 +96241,8 @@
             "meta": {
               "fullname": "yAxis.stackLabels.allowOverlap",
               "name": "allowOverlap",
-              "line": 5703,
-              "lineEnd": 5711,
+              "line": 5712,
+              "lineEnd": 5720,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": false
@@ -96291,17 +96269,15 @@
               ],
               "type": {
                 "names": [
-                  "Highcharts.ColorString",
-                  "Highcharts.GradientColorObject",
-                  "Highcharts.PatternObject"
+                  "Highcharts.ColorType"
                 ]
               },
               "since": "8.1.0"
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5713,
-              "lineEnd": 5721
+              "line": 5722,
+              "lineEnd": 5730
             },
             "children": {}
           },
@@ -96325,17 +96301,15 @@
               ],
               "type": {
                 "names": [
-                  "Highcharts.ColorString",
-                  "Highcharts.GradientColorObject",
-                  "Highcharts.PatternObject"
+                  "Highcharts.ColorType"
                 ]
               },
               "since": "8.1.0"
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5722,
-              "lineEnd": 5730
+              "line": 5731,
+              "lineEnd": 5739
             },
             "children": {}
           },
@@ -96367,8 +96341,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5731,
-              "lineEnd": 5740
+              "line": 5740,
+              "lineEnd": 5749
             },
             "children": {}
           },
@@ -96400,8 +96374,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5741,
-              "lineEnd": 5750
+              "line": 5750,
+              "lineEnd": 5759
             },
             "children": {}
           },
@@ -96419,8 +96393,8 @@
             "meta": {
               "fullname": "yAxis.stackLabels.crop",
               "name": "crop",
-              "line": 5763,
-              "lineEnd": 5772,
+              "line": 5772,
+              "lineEnd": 5781,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": true
@@ -96466,8 +96440,8 @@
             "meta": {
               "fullname": "yAxis.stackLabels.enabled",
               "name": "enabled",
-              "line": 5713,
-              "lineEnd": 5721,
+              "line": 5722,
+              "lineEnd": 5730,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": false
@@ -96491,8 +96465,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5529,
-              "lineEnd": 5538
+              "line": 5538,
+              "lineEnd": 5547
             },
             "children": {}
           },
@@ -96527,8 +96501,8 @@
             "meta": {
               "fullname": "yAxis.stackLabels.formatter",
               "name": "formatter",
-              "line": 5789,
-              "lineEnd": 5789,
+              "line": 5798,
+              "lineEnd": 5798,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -96557,8 +96531,8 @@
             "meta": {
               "fullname": "yAxis.stackLabels.overflow",
               "name": "overflow",
-              "line": 5774,
-              "lineEnd": 5787,
+              "line": 5783,
+              "lineEnd": 5796,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": "justify"
@@ -96596,8 +96570,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5539,
-              "lineEnd": 5550
+              "line": 5548,
+              "lineEnd": 5559
             },
             "children": {}
           },
@@ -96632,8 +96606,8 @@
             "meta": {
               "fullname": "yAxis.stackLabels.style",
               "name": "style",
-              "line": 5806,
-              "lineEnd": 5818,
+              "line": 5815,
+              "lineEnd": 5827,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js"
             },
@@ -96651,8 +96625,8 @@
                 "meta": {
                   "fullname": "yAxis.stackLabels.style.color",
                   "name": "color",
-                  "line": 5820,
-                  "lineEnd": 5820,
+                  "line": 5829,
+                  "lineEnd": 5829,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "#000000"
@@ -96672,8 +96646,8 @@
                 "meta": {
                   "fullname": "yAxis.stackLabels.style.fontSize",
                   "name": "fontSize",
-                  "line": 5822,
-                  "lineEnd": 5822,
+                  "line": 5831,
+                  "lineEnd": 5831,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "11px"
@@ -96693,8 +96667,8 @@
                 "meta": {
                   "fullname": "yAxis.stackLabels.style.fontWeight",
                   "name": "fontWeight",
-                  "line": 5824,
-                  "lineEnd": 5824,
+                  "line": 5833,
+                  "lineEnd": 5833,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "bold"
@@ -96714,8 +96688,8 @@
                 "meta": {
                   "fullname": "yAxis.stackLabels.style.textOutline",
                   "name": "textOutline",
-                  "line": 5826,
-                  "lineEnd": 5826,
+                  "line": 5835,
+                  "lineEnd": 5835,
                   "column": 16,
                   "filename": "highcharts/js/parts/Axis.js",
                   "default": "1px contrast"
@@ -96754,8 +96728,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5551,
-              "lineEnd": 5566
+              "line": 5560,
+              "lineEnd": 5575
             },
             "children": {}
           },
@@ -96776,8 +96750,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5567,
-              "lineEnd": 5576
+              "line": 5576,
+              "lineEnd": 5585
             },
             "children": {}
           },
@@ -96825,8 +96799,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5577,
-              "lineEnd": 5594
+              "line": 5586,
+              "lineEnd": 5603
             },
             "children": {}
           },
@@ -96860,8 +96834,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5595,
-              "lineEnd": 5607
+              "line": 5604,
+              "lineEnd": 5616
             },
             "children": {}
           },
@@ -96895,8 +96869,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5608,
-              "lineEnd": 5620
+              "line": 5617,
+              "lineEnd": 5629
             },
             "children": {}
           }
@@ -96953,8 +96927,8 @@
         "meta": {
           "fullname": "yAxis.startOnTick",
           "name": "startOnTick",
-          "line": 5376,
-          "lineEnd": 5383,
+          "line": 5385,
+          "lineEnd": 5392,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": true
@@ -97025,8 +96999,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5196,
-          "lineEnd": 5217
+          "line": 5205,
+          "lineEnd": 5226
         },
         "children": {}
       },
@@ -97047,8 +97021,8 @@
         "meta": {
           "fullname": "yAxis.tickPixelInterval",
           "name": "tickPixelInterval",
-          "line": 5320,
-          "lineEnd": 5334,
+          "line": 5329,
+          "lineEnd": 5343,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js",
           "default": 72
@@ -97094,8 +97068,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5218,
-          "lineEnd": 5228
+          "line": 5227,
+          "lineEnd": 5237
         },
         "children": {}
       },
@@ -97110,8 +97084,8 @@
         "meta": {
           "fullname": "yAxis.title",
           "name": "title",
-          "line": 5641,
-          "lineEnd": 5641,
+          "line": 5650,
+          "lineEnd": 5650,
           "column": 8,
           "filename": "highcharts/js/parts/Axis.js"
         },
@@ -97143,8 +97117,8 @@
             },
             "meta": {
               "filename": "highcharts/js/parts/Axis.js",
-              "line": 5642,
-              "lineEnd": 5652
+              "line": 5651,
+              "lineEnd": 5661
             },
             "children": {}
           },
@@ -97176,8 +97150,8 @@
             "meta": {
               "fullname": "yAxis.title.rotation",
               "name": "rotation",
-              "line": 5642,
-              "lineEnd": 5652,
+              "line": 5651,
+              "lineEnd": 5661,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": 270
@@ -97222,8 +97196,8 @@
             "meta": {
               "fullname": "yAxis.title.text",
               "name": "text",
-              "line": 5661,
-              "lineEnd": 5674,
+              "line": 5670,
+              "lineEnd": 5683,
               "column": 12,
               "filename": "highcharts/js/parts/Axis.js",
               "default": "Values"
@@ -97266,8 +97240,8 @@
         },
         "meta": {
           "filename": "highcharts/js/modules/parallel-coordinates.src.js",
-          "line": 405,
-          "lineEnd": 432
+          "line": 277,
+          "lineEnd": 304
         },
         "children": {}
       },
@@ -97305,8 +97279,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5677,
-          "lineEnd": 5692
+          "line": 5686,
+          "lineEnd": 5701
         },
         "children": {}
       },
@@ -97364,8 +97338,8 @@
         },
         "meta": {
           "filename": "highcharts/js/parts/Axis.js",
-          "line": 5098,
-          "lineEnd": 5121
+          "line": 5107,
+          "lineEnd": 5130
         },
         "children": {}
       }
@@ -97422,8 +97396,8 @@
     },
     "meta": {
       "filename": "highcharts/js/parts/Axis.js",
-      "line": 5834,
-      "lineEnd": 5854
+      "line": 5843,
+      "lineEnd": 5863
     },
     "children": {}
   }
