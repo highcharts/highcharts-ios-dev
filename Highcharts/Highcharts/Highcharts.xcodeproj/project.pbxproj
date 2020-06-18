@@ -488,6 +488,8 @@
 		CD91B3052062741200BCEE37 /* HIGHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = CD91B2F92062741100BCEE37 /* HIGHTML.m */; };
 		CD91B3062062741200BCEE37 /* HIGJavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = CD91B2FA2062741200BCEE37 /* HIGJavaScript.m */; };
 		CD91B3072062741200BCEE37 /* HIGExport.h in Headers */ = {isa = PBXBuildFile; fileRef = CD91B2FB2062741200BCEE37 /* HIGExport.h */; };
+		CDDC8EF0249B6D0D00A727F6 /* HIGeoJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDC8EEE249B6D0D00A727F6 /* HIGeoJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDDC8EF1249B6D0D00A727F6 /* HIGeoJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDC8EEF249B6D0D00A727F6 /* HIGeoJSON.m */; };
 		CDDF95D51F9F5D260021A129 /* HIFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDF95D41F9F5D260021A129 /* HIFunction.m */; };
 		CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDF95D61F9F5D480021A129 /* HIFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC1449381F4A854900612B1C /* HIChartViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449371F4A854900612B1C /* HIChartViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -963,6 +965,8 @@
 		CD91B2F92062741100BCEE37 /* HIGHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGHTML.m; path = Private/HIGHTML.m; sourceTree = "<group>"; };
 		CD91B2FA2062741200BCEE37 /* HIGJavaScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGJavaScript.m; path = Private/HIGJavaScript.m; sourceTree = "<group>"; };
 		CD91B2FB2062741200BCEE37 /* HIGExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIGExport.h; path = Private/HIGExport.h; sourceTree = "<group>"; };
+		CDDC8EEE249B6D0D00A727F6 /* HIGeoJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGeoJSON.h; sourceTree = "<group>"; };
+		CDDC8EEF249B6D0D00A727F6 /* HIGeoJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGeoJSON.m; sourceTree = "<group>"; };
 		CDDF95D41F9F5D260021A129 /* HIFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIFunction.m; sourceTree = "<group>"; };
 		CDDF95D61F9F5D480021A129 /* HIFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFunction.h; sourceTree = "<group>"; };
 		EC1449371F4A854900612B1C /* HIChartViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIChartViewDelegate.h; sourceTree = "<group>"; };
@@ -990,6 +994,8 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				CDDC8EEE249B6D0D00A727F6 /* HIGeoJSON.h */,
+				CDDC8EEF249B6D0D00A727F6 /* HIGeoJSON.m */,
 				CD39923B24928519003DA6C0 /* HILabelsAccessibility.h */,
 				CD39923A24928519003DA6C0 /* HILabelsAccessibility.m */,
 				CD399236249284FC003DA6C0 /* HIAccessibilityLegend.h */,
@@ -1617,6 +1623,7 @@
 				CD7C758924927DB000180780 /* HITop.h in Headers */,
 				CD7C769F24927DB000180780 /* HITheme.h in Headers */,
 				CD7C75BF24927DB000180780 /* HIPyramid3d.h in Headers */,
+				CDDC8EF0249B6D0D00A727F6 /* HIGeoJSON.h in Headers */,
 				CD7C76A124927DB000180780 /* HISVGAttributes.h in Headers */,
 				CD7C760724927DB000180780 /* HIOptions3d.h in Headers */,
 				CD7C75B124927DB000180780 /* HISelect.h in Headers */,
@@ -1957,6 +1964,7 @@
 				CD7C76D024927DB000180780 /* HIXAxis.m in Sources */,
 				CD7C759324927DB000180780 /* HIGauge.m in Sources */,
 				CD7C768624927DB000180780 /* HIMonth.m in Sources */,
+				CDDC8EF1249B6D0D00A727F6 /* HIGeoJSON.m in Sources */,
 				CD7C757D24927DB000180780 /* HIShapes.m in Sources */,
 				CD7C769E24927DB000180780 /* HITable.m in Sources */,
 				CD7C75E924927DB000180780 /* HILayoutAlgorithm.m in Sources */,
