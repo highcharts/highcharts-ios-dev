@@ -50,6 +50,7 @@
 	copyErrorbar.colors = [self.colors copyWithZone: zone];
 	copyErrorbar.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyErrorbar.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyErrorbar.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyErrorbar.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyErrorbar.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyErrorbar.colorByPoint = [self.colorByPoint copyWithZone: zone];
@@ -159,6 +160,9 @@
 	}
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
+	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
 	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
@@ -283,6 +287,12 @@
 	HIColor *oldValue = _edgeColor;
 	_edgeColor = edgeColor;
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {

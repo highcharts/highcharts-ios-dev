@@ -295,8 +295,8 @@
 	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
 }
 
--(void)setY:(id)y {
-	id oldValue = _y;
+-(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
 	_y = y;
 	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }

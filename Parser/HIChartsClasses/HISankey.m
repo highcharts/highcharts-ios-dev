@@ -29,6 +29,7 @@
 	copySankey.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySankey.colors = [self.colors copyWithZone: zone];
 	copySankey.borderColor = [self.borderColor copyWithZone: zone];
+	copySankey.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copySankey.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySankey.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySankey.selected = [self.selected copyWithZone: zone];
@@ -117,6 +118,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	if (self.nodes) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.nodes) {
@@ -192,6 +196,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setNodes:(NSArray <HINodes *> *)nodes {

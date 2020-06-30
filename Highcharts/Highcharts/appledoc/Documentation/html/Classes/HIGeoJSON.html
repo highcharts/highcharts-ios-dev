@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISeriesNetworkgraphDataLabelsOptionsObject Class Reference</title>
+	<title>HIGeoJSON Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,15 +58,21 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/format">format</option>
+		<option value="//api/name/copyright">copyright</option>
 		
-		<option value="//api/name/formatter">formatter</option>
+		<option value="//api/name/copyrightShort">copyrightShort</option>
 		
-		<option value="//api/name/linkFormat">linkFormat</option>
+		<option value="//api/name/crs">crs</option>
 		
-		<option value="//api/name/linkFormatter">linkFormatter</option>
+		<option value="//api/name/features">features</option>
 		
-		<option value="//api/name/linkTextPath">linkTextPath</option>
+		<option value="//api/name/hcTransform">hcTransform</option>
+		
+		<option value="//api/name/title">title</option>
+		
+		<option value="//api/name/type">type</option>
+		
+		<option value="//api/name/version">version</option>
 		
 	</optgroup>
 	
@@ -93,7 +99,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISeriesNetworkgraphDataLabelsOptionsObject Class Reference</h1>
+					<h1 class="title">HIGeoJSON Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -102,7 +108,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISeriesNetworkgraphDataLabelsOptionsObject.h</td>
+	<td>HIGeoJSON.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,7 +118,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Data labels options</p>
+						<p>Represents the loose structure of a geographic JSON file.</p>
 					</div>
 					
 					
@@ -128,8 +134,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/format" title="format"></a>
-	<h3 class="method-title"><code><a href="#//api/name/format">&nbsp;&nbsp;format</a></code>
+	<a name="//api/name/copyright" title="copyright"></a>
+	<h3 class="method-title"><code><a href="#//api/name/copyright">&nbsp;&nbsp;copyright</a></code>
 </h3>
 
 	<div class="method-info">
@@ -139,12 +145,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>node</em> in the networkgraph. In v7.0 defaults to <code>{key}</code>, since v7.1 defaults to <code>undefined</code> and <code>formatter</code> is used instead.</p>
+				<p>Full copyright note of the geographic data.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *format</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *copyright</code></div>
 
 		    
 			
@@ -162,15 +168,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNetworkgraphDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/formatter" title="formatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
+	<a name="//api/name/copyrightShort" title="copyrightShort"></a>
+	<h3 class="method-title"><code><a href="#//api/name/copyrightShort">&nbsp;&nbsp;copyrightShort</a></code>
 </h3>
 
 	<div class="method-info">
@@ -180,12 +186,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback JavaScript function to format the data label for a node. Note that if a <code>format</code> is defined, the format takes precedence and the formatter is ignored.</p>
+				<p>Short copyright note of the geographic data suitable for watermarks.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *formatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *copyrightShort</code></div>
 
 		    
 			
@@ -203,15 +209,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNetworkgraphDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/linkFormat" title="linkFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkFormat">&nbsp;&nbsp;linkFormat</a></code>
+	<a name="//api/name/crs" title="crs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/crs">&nbsp;&nbsp;crs</a></code>
 </h3>
 
 	<div class="method-info">
@@ -221,12 +227,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>links</em> in the networkgraph. (Default: <code>undefined</code>)</p>
+				<p>Additional meta information based on the coordinate reference system.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *linkFormat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id crs</code></div>
 
 		    
 			
@@ -244,15 +250,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNetworkgraphDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/linkFormatter" title="linkFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkFormatter">&nbsp;&nbsp;linkFormatter</a></code>
+	<a name="//api/name/features" title="features"></a>
+	<h3 class="method-title"><code><a href="#//api/name/features">&nbsp;&nbsp;features</a></code>
 </h3>
 
 	<div class="method-info">
@@ -262,12 +268,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback to format data labels for <em>links</em> in the sankey diagram. The <code>linkFormat</code> option takes precedence over the <code>linkFormatter</code>.</p>
+				<p>Data sets of geographic features.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *linkFormatter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *features</code></div>
 
 		    
 			
@@ -285,15 +291,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNetworkgraphDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/linkTextPath" title="linkTextPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkTextPath">&nbsp;&nbsp;linkTextPath</a></code>
+	<a name="//api/name/hcTransform" title="hcTransform"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hcTransform">&nbsp;&nbsp;hcTransform</a></code>
 </h3>
 
 	<div class="method-info">
@@ -303,12 +309,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for a <em>link</em> label text which should follow link connection. Border and background are disabled for a label that follows a path. <strong>Note:</strong> Only SVG-based renderer supports this option. Setting <code>useHTML</code> to true will disable this option.</p>
+				<p>Map projections and transformations to be used when calculating between lat/lon and chart values. Required for lat/lon support on maps. Allows resizing, rotating, and moving portions of a map within its projected coordinate system while still retaining lat/lon support. If using lat/lon on a portion of the map that does not match a <code>hitZone</code>, the definition with the key <code>default</code> is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDataLabelsTextPathOptionsObject *linkTextPath</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id hcTransform</code></div>
 
 		    
 			
@@ -326,7 +332,130 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNetworkgraphDataLabelsOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/title" title="title"></a>
+	<h3 class="method-title"><code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Title of the geographic data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *title</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Type of the geographic data. Type of an optimized map collection is <code>FeatureCollection</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *type</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/version" title="version"></a>
+	<h3 class="method-title"><code><a href="#//api/name/version">&nbsp;&nbsp;version</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Version of the geographic data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *version</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
@@ -365,7 +494,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

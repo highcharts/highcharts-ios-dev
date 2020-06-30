@@ -33,8 +33,9 @@
 	copyPackedbubble.draggable = [self.draggable copyWithZone: zone];
 	copyPackedbubble.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPackedbubble.maxSize = [self.maxSize copyWithZone: zone];
-	copyPackedbubble.tooltip = [self.tooltip copyWithZone: zone];
+	copyPackedbubble.parentNode = [self.parentNode copyWithZone: zone];
 	copyPackedbubble.useSimulation = [self.useSimulation copyWithZone: zone];
+	copyPackedbubble.tooltip = [self.tooltip copyWithZone: zone];
 	copyPackedbubble.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPackedbubble.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyPackedbubble.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -103,6 +104,9 @@
 	if (self.maxSize) {
 		params[@"maxSize"] = self.maxSize;
 	}
+	if (self.parentNode) {
+		params[@"parentNode"] = [self.parentNode getParams];
+	}
 	if (self.useSimulation) {
 		params[@"useSimulation"] = self.useSimulation;
 	}
@@ -145,6 +149,12 @@
 	id oldValue = _maxSize;
 	_maxSize = maxSize;
 	[self updateNSObject:oldValue newValue:maxSize propertyName:@"maxSize"];
+}
+
+-(void)setParentNode:(HIParentNode *)parentNode {
+	HIParentNode *oldValue = _parentNode;
+	_parentNode = parentNode;
+	[self updateHIObject:oldValue newValue:parentNode propertyName:@"parentNode"];
 }
 
 -(void)setUseSimulation:(NSNumber *)useSimulation {

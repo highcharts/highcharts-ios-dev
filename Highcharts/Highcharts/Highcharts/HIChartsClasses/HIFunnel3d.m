@@ -38,6 +38,7 @@
 	copyFunnel3d.threshold = [self.threshold copyWithZone: zone];
 	copyFunnel3d.borderColor = [self.borderColor copyWithZone: zone];
 	copyFunnel3d.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyFunnel3d.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyFunnel3d.tooltip = [self.tooltip copyWithZone: zone];
 	copyFunnel3d.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyFunnel3d.pointWidth = [self.pointWidth copyWithZone: zone];
@@ -153,6 +154,9 @@
 	}
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
+	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
 	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
@@ -271,6 +275,12 @@
 	HIColor *oldValue = _edgeColor;
 	_edgeColor = edgeColor;
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {

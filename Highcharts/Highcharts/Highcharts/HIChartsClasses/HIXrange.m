@@ -37,6 +37,7 @@
 	copyXrange.states = [self.states copyWithZone: zone];
 	copyXrange.colors = [self.colors copyWithZone: zone];
 	copyXrange.borderColor = [self.borderColor copyWithZone: zone];
+	copyXrange.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyXrange.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyXrange.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyXrange.groupPadding = [self.groupPadding copyWithZone: zone];
@@ -110,6 +111,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
@@ -176,6 +180,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIPointStatesHoverOptionsObject Class Reference</title>
+	<title>HIGeoJSON Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -58,21 +58,21 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/animation">animation</option>
+		<option value="//api/name/copyright">copyright</option>
 		
-		<option value="//api/name/enabled">enabled</option>
+		<option value="//api/name/copyrightShort">copyrightShort</option>
 		
-		<option value="//api/name/fillColor">fillColor</option>
+		<option value="//api/name/crs">crs</option>
 		
-		<option value="//api/name/lineColor">lineColor</option>
+		<option value="//api/name/features">features</option>
 		
-		<option value="//api/name/lineWidth">lineWidth</option>
+		<option value="//api/name/hcTransform">hcTransform</option>
 		
-		<option value="//api/name/lineWidthPlus">lineWidthPlus</option>
+		<option value="//api/name/title">title</option>
 		
-		<option value="//api/name/radius">radius</option>
+		<option value="//api/name/type">type</option>
 		
-		<option value="//api/name/radiusPlus">radiusPlus</option>
+		<option value="//api/name/version">version</option>
 		
 	</optgroup>
 	
@@ -99,7 +99,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIPointStatesHoverOptionsObject Class Reference</h1>
+					<h1 class="title">HIGeoJSON Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -108,7 +108,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIPointStatesHoverOptionsObject.h</td>
+	<td>HIGeoJSON.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -118,7 +118,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The hover state for a single point marker.</p>
+						<p>Represents the loose structure of a geographic JSON file.</p>
 					</div>
 					
 					
@@ -134,8 +134,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/animation" title="animation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
+	<a name="//api/name/copyright" title="copyright"></a>
+	<h3 class="method-title"><code><a href="#//api/name/copyright">&nbsp;&nbsp;copyright</a></code>
 </h3>
 
 	<div class="method-info">
@@ -145,12 +145,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Animation when hovering over the point marker.</p>
+				<p>Full copyright note of the geographic data.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimationOptionsObject *animation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *copyright</code></div>
 
 		    
 			
@@ -168,15 +168,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+	<a name="//api/name/copyrightShort" title="copyrightShort"></a>
+	<h3 class="method-title"><code><a href="#//api/name/copyrightShort">&nbsp;&nbsp;copyrightShort</a></code>
 </h3>
 
 	<div class="method-info">
@@ -186,12 +186,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable the point marker.</p>
+				<p>Short copyright note of the geographic data suitable for watermarks.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *copyrightShort</code></div>
 
 		    
 			
@@ -209,15 +209,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fillColor" title="fillColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+	<a name="//api/name/crs" title="crs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/crs">&nbsp;&nbsp;crs</a></code>
 </h3>
 
 	<div class="method-info">
@@ -227,12 +227,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The fill color of the marker in hover state. When <code>undefined</code>, the series' or point&rsquo;s fillColor for normal state is used.</p>
+				<p>Additional meta information based on the coordinate reference system.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id crs</code></div>
 
 		    
 			
@@ -250,15 +250,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/lineColor" title="lineColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
+	<a name="//api/name/features" title="features"></a>
+	<h3 class="method-title"><code><a href="#//api/name/features">&nbsp;&nbsp;features</a></code>
 </h3>
 
 	<div class="method-info">
@@ -268,12 +268,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s lineColor for normal state is used.</p>
+				<p>Data sets of geographic features.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *features</code></div>
 
 		    
 			
@@ -291,15 +291,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/lineWidth" title="lineWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
+	<a name="//api/name/hcTransform" title="hcTransform"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hcTransform">&nbsp;&nbsp;hcTransform</a></code>
 </h3>
 
 	<div class="method-info">
@@ -309,12 +309,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s lineWidth for normal state is used.</p>
+				<p>Map projections and transformations to be used when calculating between lat/lon and chart values. Required for lat/lon support on maps. Allows resizing, rotating, and moving portions of a map within its projected coordinate system while still retaining lat/lon support. If using lat/lon on a portion of the map that does not match a <code>hitZone</code>, the definition with the key <code>default</code> is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id hcTransform</code></div>
 
 		    
 			
@@ -332,15 +332,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/lineWidthPlus" title="lineWidthPlus"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lineWidthPlus">&nbsp;&nbsp;lineWidthPlus</a></code>
+	<a name="//api/name/title" title="title"></a>
+	<h3 class="method-title"><code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
 </h3>
 
 	<div class="method-info">
@@ -350,12 +350,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The additional line width for a hovered point.</p>
+				<p>Title of the geographic data.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidthPlus</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *title</code></div>
 
 		    
 			
@@ -373,15 +373,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/radius" title="radius"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
 </h3>
 
 	<div class="method-info">
@@ -391,12 +391,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The radius of the point marker. In hover state, it defaults to the normal state&rsquo;s radius + 2 as per the radiusPlus option.</p>
+				<p>Type of the geographic data. Type of an optimized map collection is <code>FeatureCollection</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *type</code></div>
 
 		    
 			
@@ -414,15 +414,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/radiusPlus" title="radiusPlus"></a>
-	<h3 class="method-title"><code><a href="#//api/name/radiusPlus">&nbsp;&nbsp;radiusPlus</a></code>
+	<a name="//api/name/version" title="version"></a>
+	<h3 class="method-title"><code><a href="#//api/name/version">&nbsp;&nbsp;version</a></code>
 </h3>
 
 	<div class="method-info">
@@ -432,12 +432,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The number of pixels to increase the radius of the hovered point.</p>
+				<p>Version of the geographic data.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radiusPlus</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *version</code></div>
 
 		    
 			
@@ -455,7 +455,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPointStatesHoverOptionsObject.h</code></p>
+				<p><code class="declared-in-ref">HIGeoJSON.h</code></p>
 			</div>
 			
 			
@@ -494,7 +494,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2019 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

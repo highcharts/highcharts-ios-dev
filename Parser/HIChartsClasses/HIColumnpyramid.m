@@ -32,6 +32,7 @@
 	copyColumnpyramid.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyColumnpyramid.colors = [self.colors copyWithZone: zone];
 	copyColumnpyramid.borderColor = [self.borderColor copyWithZone: zone];
+	copyColumnpyramid.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyColumnpyramid.tooltip = [self.tooltip copyWithZone: zone];
 	copyColumnpyramid.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyColumnpyramid.pointWidth = [self.pointWidth copyWithZone: zone];
@@ -106,6 +107,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
@@ -157,6 +161,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {

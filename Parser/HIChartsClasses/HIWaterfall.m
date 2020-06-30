@@ -33,6 +33,7 @@
 	copyWaterfall.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyWaterfall.threshold = [self.threshold copyWithZone: zone];
 	copyWaterfall.edgeColor = [self.edgeColor copyWithZone: zone];
+	copyWaterfall.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyWaterfall.tooltip = [self.tooltip copyWithZone: zone];
 	copyWaterfall.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyWaterfall.pointWidth = [self.pointWidth copyWithZone: zone];
@@ -136,6 +137,9 @@
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
 	}
+	if (self.centerInCategory) {
+		params[@"centerInCategory"] = self.centerInCategory;
+	}
 	if (self.maxPointWidth) {
 		params[@"maxPointWidth"] = self.maxPointWidth;
 	}
@@ -223,6 +227,12 @@
 	HIColor *oldValue = _edgeColor;
 	_edgeColor = edgeColor;
 	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
+}
+
+-(void)setCenterInCategory:(NSNumber *)centerInCategory {
+	NSNumber *oldValue = _centerInCategory;
+	_centerInCategory = centerInCategory;
+	[self updateNSObject:oldValue newValue:centerInCategory propertyName:@"centerInCategory"];
 }
 
 -(void)setMaxPointWidth:(NSNumber *)maxPointWidth {

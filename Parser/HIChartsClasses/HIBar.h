@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2018 Highsoft AS
+* (c) 2009-2020 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -99,6 +99,14 @@ The color of the border surrounding each column or bar. In styled mode, the bord
 3D columns only. The color of the edges. Similar to `borderColor`, except it defaults to the same color as the column.
 */
 @property(nonatomic, readwrite) HIColor *edgeColor;
+/**
+When `true`, the columns will center in the category, ignoring null or missing points. When `false`, space will be reserved for null or missing points.
+
+**Try it**
+
+* [Center in category](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-column/centerincategory/)
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *centerInCategory;
 /**
 The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.
 

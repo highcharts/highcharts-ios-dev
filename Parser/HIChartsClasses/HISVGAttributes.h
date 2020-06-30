@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2018 Highsoft AS
+* (c) 2009-2020 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -15,7 +15,7 @@ An object of key-value pairs for SVG attributes. Attributes in Highcharts elemen
 */
 @interface HISVGAttributes: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) NSArray /* <NSNumber, NSString> */ *d;
+@property(nonatomic, readwrite) NSArray *d;
 @property(nonatomic, readwrite) HIColor *fill;
 @property(nonatomic, readwrite) NSNumber /* Bool */ *inverted;
 @property(nonatomic, readwrite) NSArray<NSNumber *> *matrix;
