@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     options.title = title
 
     let subtitle = HISubtitle()
-    title.text = "Click the plot area to add a point. Click a point to remove it."
+    subtitle.text = "Click the plot area to add a point. Click a point to remove it."
     options.subtitle = subtitle
 
     let accessibility = HIAccessibility()
