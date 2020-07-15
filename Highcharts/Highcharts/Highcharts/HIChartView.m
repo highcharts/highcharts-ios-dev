@@ -94,8 +94,6 @@ static NSBundle *highchartsBundle = nil;
     NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
     
     WKUserContentController *controller = [[WKUserContentController alloc] init];
-    [controller addScriptMessageHandler:self name:@"observe"];
-    [controller addScriptMessageHandler:self name:@"exporting"];
     
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.userContentController = controller;
