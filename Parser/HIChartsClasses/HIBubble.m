@@ -53,7 +53,6 @@
 	copyBubble.clip = [self.clip copyWithZone: zone];
 	copyBubble.color = [self.color copyWithZone: zone];
 	copyBubble.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyBubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBubble.point = [self.point copyWithZone: zone];
 	copyBubble.dataSorting = [self.dataSorting copyWithZone: zone];

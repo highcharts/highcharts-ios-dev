@@ -58,7 +58,6 @@
 	copyPyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid.custom = [self.custom copyWithZone: zone];
 	copyPyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyPyramid.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPyramid.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid.definition = [self.definition copyWithZone: zone];
 	copyPyramid.keys = [self.keys copyWithZone: zone];

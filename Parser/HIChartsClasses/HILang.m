@@ -14,8 +14,9 @@
 	copyLang.downloadXLS = [self.downloadXLS copyWithZone: zone];
 	copyLang.downloadPNG = [self.downloadPNG copyWithZone: zone];
 	copyLang.accessibility = [self.accessibility copyWithZone: zone];
-	copyLang.exportData = [self.exportData copyWithZone: zone];
+	copyLang.hideData = [self.hideData copyWithZone: zone];
 	copyLang.shortWeekdays = [self.shortWeekdays copyWithZone: zone];
+	copyLang.exportData = [self.exportData copyWithZone: zone];
 	copyLang.viewFullscreen = [self.viewFullscreen copyWithZone: zone];
 	copyLang.noData = [self.noData copyWithZone: zone];
 	copyLang.loading = [self.loading copyWithZone: zone];
@@ -56,8 +57,8 @@
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
 	}
-	if (self.exportData) {
-		params[@"exportData"] = [self.exportData getParams];
+	if (self.hideData) {
+		params[@"hideData"] = self.hideData;
 	}
 	if (self.shortWeekdays) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -70,6 +71,9 @@
 			}
 		}
 		params[@"shortWeekdays"] = array;
+	}
+	if (self.exportData) {
+		params[@"exportData"] = [self.exportData getParams];
 	}
 	if (self.viewFullscreen) {
 		params[@"viewFullscreen"] = self.viewFullscreen;
@@ -202,16 +206,22 @@
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
 }
 
--(void)setExportData:(HIExportData *)exportData {
-	HIExportData *oldValue = _exportData;
-	_exportData = exportData;
-	[self updateHIObject:oldValue newValue:exportData propertyName:@"exportData"];
+-(void)setHideData:(NSString *)hideData {
+	NSString *oldValue = _hideData;
+	_hideData = hideData;
+	[self updateNSObject:oldValue newValue:hideData propertyName:@"hideData"];
 }
 
 -(void)setShortWeekdays:(NSArray<NSString *> *)shortWeekdays {
 	NSArray<NSString *> *oldValue = _shortWeekdays;
 	_shortWeekdays = shortWeekdays;
 	[self updateArrayObject:oldValue newValue:shortWeekdays propertyName:@"shortWeekdays"];
+}
+
+-(void)setExportData:(HIExportData *)exportData {
+	HIExportData *oldValue = _exportData;
+	_exportData = exportData;
+	[self updateHIObject:oldValue newValue:exportData propertyName:@"exportData"];
 }
 
 -(void)setViewFullscreen:(NSString *)viewFullscreen {

@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIAnnotationsOptions *copyAnnotationsOptions = [[HIAnnotationsOptions allocWithZone: zone] init];
+	copyAnnotationsOptions.animation = [self.animation copyWithZone: zone];
 	copyAnnotationsOptions.controlPointOptions = [self.controlPointOptions copyWithZone: zone];
 	copyAnnotationsOptions.shapes = [self.shapes copyWithZone: zone];
 	copyAnnotationsOptions.shapeOptions = [self.shapeOptions copyWithZone: zone];
@@ -26,6 +27,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
 	if (self.controlPointOptions) {
 		params[@"controlPointOptions"] = [self.controlPointOptions getParams];
 	}
@@ -78,6 +82,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setAnimation:(HIAnimation *)animation {
+	HIAnimation *oldValue = _animation;
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
 
 -(void)setControlPointOptions:(HIControlPointOptions *)controlPointOptions {
 	HIControlPointOptions *oldValue = _controlPointOptions;
