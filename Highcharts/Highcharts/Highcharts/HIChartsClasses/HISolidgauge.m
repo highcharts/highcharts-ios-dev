@@ -39,7 +39,6 @@
 	copySolidgauge.custom = [self.custom copyWithZone: zone];
 	copySolidgauge.animation = [self.animation copyWithZone: zone];
 	copySolidgauge.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copySolidgauge.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySolidgauge.events = [self.events copyWithZone: zone];
 	copySolidgauge.opacity = [self.opacity copyWithZone: zone];
 	copySolidgauge.definition = [self.definition copyWithZone: zone];

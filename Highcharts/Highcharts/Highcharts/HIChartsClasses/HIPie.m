@@ -15,14 +15,6 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIPie *copyPie = [[HIPie allocWithZone: zone] init];
-	copyPie.data = [self.data copyWithZone: zone];
-	copyPie.events = [self.events copyWithZone: zone];
-	copyPie.id = [self.id copyWithZone: zone];
-	copyPie.index = [self.index copyWithZone: zone];
-	copyPie.legendIndex = [self.legendIndex copyWithZone: zone];
-	copyPie.name = [self.name copyWithZone: zone];
-	copyPie.type = [self.type copyWithZone: zone];
-	copyPie.zIndex = [self.zIndex copyWithZone: zone];
 	copyPie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyPie.clip = [self.clip copyWithZone: zone];
 	copyPie.point = [self.point copyWithZone: zone];
@@ -35,6 +27,7 @@
 	copyPie.minSize = [self.minSize copyWithZone: zone];
 	copyPie.fillColor = [self.fillColor copyWithZone: zone];
 	copyPie.startAngle = [self.startAngle copyWithZone: zone];
+	copyPie.events = [self.events copyWithZone: zone];
 	copyPie.endAngle = [self.endAngle copyWithZone: zone];
 	copyPie.innerSize = [self.innerSize copyWithZone: zone];
 	copyPie.center = [self.center copyWithZone: zone];
@@ -55,7 +48,6 @@
 	copyPie.custom = [self.custom copyWithZone: zone];
 	copyPie.animation = [self.animation copyWithZone: zone];
 	copyPie.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyPie.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPie.opacity = [self.opacity copyWithZone: zone];
 	copyPie.definition = [self.definition copyWithZone: zone];
 	copyPie.keys = [self.keys copyWithZone: zone];
@@ -68,6 +60,13 @@
 	copyPie.visible = [self.visible copyWithZone: zone];
 	copyPie.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPie.className = [self.className copyWithZone: zone];
+	copyPie.data = [self.data copyWithZone: zone];
+	copyPie.id = [self.id copyWithZone: zone];
+	copyPie.index = [self.index copyWithZone: zone];
+	copyPie.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyPie.name = [self.name copyWithZone: zone];
+	copyPie.type = [self.type copyWithZone: zone];
+	copyPie.zIndex = [self.zIndex copyWithZone: zone];
 	return copyPie;
 }
 

@@ -45,7 +45,6 @@
 	copyBoxplot.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyBoxplot.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBoxplot.colors = [self.colors copyWithZone: zone];
-	copyBoxplot.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyBoxplot.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyBoxplot.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyBoxplot.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
@@ -64,6 +63,7 @@
 	copyBoxplot.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyBoxplot.color = [self.color copyWithZone: zone];
 	copyBoxplot.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyBoxplot.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyBoxplot.point = [self.point copyWithZone: zone];
 	copyBoxplot.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBoxplot.label = [self.label copyWithZone: zone];
@@ -76,7 +76,6 @@
 	copyBoxplot.animation = [self.animation copyWithZone: zone];
 	copyBoxplot.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBoxplot.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyBoxplot.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBoxplot.events = [self.events copyWithZone: zone];
 	copyBoxplot.opacity = [self.opacity copyWithZone: zone];
 	copyBoxplot.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -97,7 +96,6 @@
 	copyBoxplot.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyBoxplot.className = [self.className copyWithZone: zone];
 	copyBoxplot.pointStart = [self.pointStart copyWithZone: zone];
-	copyBoxplot.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyBoxplot.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyBoxplot.stacking = [self.stacking copyWithZone: zone];
 	return copyBoxplot;

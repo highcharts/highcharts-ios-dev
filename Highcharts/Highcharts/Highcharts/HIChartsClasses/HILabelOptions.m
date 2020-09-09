@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HILabelOptions *copyLabelOptions = [[HILabelOptions allocWithZone: zone] init];
+	copyLabelOptions.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyLabelOptions.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyLabelOptions.text = [self.text copyWithZone: zone];
 	copyLabelOptions.accessibility = [self.accessibility copyWithZone: zone];
@@ -38,6 +39,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.includeInDataExport) {
+		params[@"includeInDataExport"] = self.includeInDataExport;
+	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
@@ -108,6 +112,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setIncludeInDataExport:(NSNumber *)includeInDataExport {
+	NSNumber *oldValue = _includeInDataExport;
+	_includeInDataExport = includeInDataExport;
+	[self updateNSObject:oldValue newValue:includeInDataExport propertyName:@"includeInDataExport"];
+}
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	NSNumber *oldValue = _borderRadius;

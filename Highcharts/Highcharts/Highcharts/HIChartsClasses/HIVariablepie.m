@@ -60,7 +60,6 @@
 	copyVariablepie.custom = [self.custom copyWithZone: zone];
 	copyVariablepie.animation = [self.animation copyWithZone: zone];
 	copyVariablepie.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyVariablepie.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyVariablepie.opacity = [self.opacity copyWithZone: zone];
 	copyVariablepie.definition = [self.definition copyWithZone: zone];
 	copyVariablepie.keys = [self.keys copyWithZone: zone];

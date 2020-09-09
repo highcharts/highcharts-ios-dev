@@ -39,7 +39,6 @@
 	copyScatter3d.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyScatter3d.color = [self.color copyWithZone: zone];
 	copyScatter3d.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyScatter3d.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyScatter3d.states = [self.states copyWithZone: zone];
 	copyScatter3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyScatter3d.softThreshold = [self.softThreshold copyWithZone: zone];
@@ -56,7 +55,6 @@
 	copyScatter3d.animation = [self.animation copyWithZone: zone];
 	copyScatter3d.threshold = [self.threshold copyWithZone: zone];
 	copyScatter3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyScatter3d.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyScatter3d.events = [self.events copyWithZone: zone];
 	copyScatter3d.opacity = [self.opacity copyWithZone: zone];
 	copyScatter3d.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -79,7 +77,6 @@
 	copyScatter3d.className = [self.className copyWithZone: zone];
 	copyScatter3d.pointStart = [self.pointStart copyWithZone: zone];
 	copyScatter3d.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyScatter3d.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyScatter3d.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyScatter3d;
 }

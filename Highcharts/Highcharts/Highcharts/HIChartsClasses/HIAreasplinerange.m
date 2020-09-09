@@ -33,9 +33,8 @@
 	copyAreasplinerange.shadow = [self.shadow copyWithZone: zone];
 	copyAreasplinerange.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyAreasplinerange.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyAreasplinerange.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyAreasplinerange.fillColor = [self.fillColor copyWithZone: zone];
 	copyAreasplinerange.lineColor = [self.lineColor copyWithZone: zone];
+	copyAreasplinerange.fillColor = [self.fillColor copyWithZone: zone];
 	copyAreasplinerange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyAreasplinerange.linecap = [self.linecap copyWithZone: zone];
 	copyAreasplinerange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -47,6 +46,7 @@
 	copyAreasplinerange.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyAreasplinerange.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyAreasplinerange.states = [self.states copyWithZone: zone];
+	copyAreasplinerange.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyAreasplinerange.point = [self.point copyWithZone: zone];
 	copyAreasplinerange.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyAreasplinerange.marker = [self.marker copyWithZone: zone];
@@ -61,7 +61,6 @@
 	copyAreasplinerange.animation = [self.animation copyWithZone: zone];
 	copyAreasplinerange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyAreasplinerange.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyAreasplinerange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyAreasplinerange.events = [self.events copyWithZone: zone];
 	copyAreasplinerange.opacity = [self.opacity copyWithZone: zone];
 	copyAreasplinerange.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -83,7 +82,6 @@
 	copyAreasplinerange.className = [self.className copyWithZone: zone];
 	copyAreasplinerange.pointStart = [self.pointStart copyWithZone: zone];
 	copyAreasplinerange.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyAreasplinerange.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyAreasplinerange.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyAreasplinerange;
 }
@@ -97,11 +95,11 @@
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
@@ -123,16 +121,16 @@
 	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
 }
 
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
 -(void)setLineColor:(HIColor *)lineColor {
 	HIColor *oldValue = _lineColor;
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
 -(void)setFillOpacity:(NSNumber *)fillOpacity {

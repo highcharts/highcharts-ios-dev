@@ -19,11 +19,14 @@
 	copyAnnotations.labelOptions = [self.labelOptions copyWithZone: zone];
 	copyAnnotations.id = [self.id copyWithZone: zone];
 	copyAnnotations.draggable = [self.draggable copyWithZone: zone];
+	copyAnnotations.animation = [self.animation copyWithZone: zone];
 	copyAnnotations.events = [self.events copyWithZone: zone];
 	copyAnnotations.descriptionMultiplePoints = [self.descriptionMultiplePoints copyWithZone: zone];
 	copyAnnotations.descriptionSinglePoint = [self.descriptionSinglePoint copyWithZone: zone];
 	copyAnnotations.descriptionNoPoints = [self.descriptionNoPoints copyWithZone: zone];
 	copyAnnotations.heading = [self.heading copyWithZone: zone];
+	copyAnnotations.itemDelimiter = [self.itemDelimiter copyWithZone: zone];
+	copyAnnotations.join = [self.join copyWithZone: zone];
 	return copyAnnotations;
 }
 
@@ -76,6 +79,9 @@
 	if (self.draggable) {
 		params[@"draggable"] = self.draggable;
 	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
@@ -90,6 +96,12 @@
 	}
 	if (self.heading) {
 		params[@"heading"] = self.heading;
+	}
+	if (self.itemDelimiter) {
+		params[@"itemDelimiter"] = self.itemDelimiter;
+	}
+	if (self.join) {
+		params[@"join"] = self.join;
 	}
 	return params;
 }
@@ -150,6 +162,12 @@
 	[self updateNSObject:oldValue newValue:draggable propertyName:@"draggable"];
 }
 
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
 	_events = events;
@@ -178,6 +196,18 @@
 	NSString *oldValue = _heading;
 	_heading = heading;
 	[self updateNSObject:oldValue newValue:heading propertyName:@"heading"];
+}
+
+-(void)setItemDelimiter:(NSString *)itemDelimiter {
+	NSString *oldValue = _itemDelimiter;
+	_itemDelimiter = itemDelimiter;
+	[self updateNSObject:oldValue newValue:itemDelimiter propertyName:@"itemDelimiter"];
+}
+
+-(void)setJoin:(NSNumber *)join {
+	NSNumber *oldValue = _join;
+	_join = join;
+	[self updateNSObject:oldValue newValue:join propertyName:@"join"];
 }
 
 - (void)adjustLabelVisibility:(HILabels *)item {

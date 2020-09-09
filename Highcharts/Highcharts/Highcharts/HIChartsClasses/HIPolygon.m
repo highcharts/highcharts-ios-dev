@@ -29,7 +29,6 @@
 	copyPolygon.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyPolygon.color = [self.color copyWithZone: zone];
 	copyPolygon.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyPolygon.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPolygon.states = [self.states copyWithZone: zone];
 	copyPolygon.colorKey = [self.colorKey copyWithZone: zone];
 	copyPolygon.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -45,7 +44,6 @@
 	copyPolygon.stacking = [self.stacking copyWithZone: zone];
 	copyPolygon.animation = [self.animation copyWithZone: zone];
 	copyPolygon.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyPolygon.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPolygon.events = [self.events copyWithZone: zone];
 	copyPolygon.opacity = [self.opacity copyWithZone: zone];
 	copyPolygon.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -68,7 +66,6 @@
 	copyPolygon.className = [self.className copyWithZone: zone];
 	copyPolygon.pointStart = [self.pointStart copyWithZone: zone];
 	copyPolygon.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyPolygon.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyPolygon.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPolygon.data = [self.data copyWithZone: zone];
 	copyPolygon.id = [self.id copyWithZone: zone];

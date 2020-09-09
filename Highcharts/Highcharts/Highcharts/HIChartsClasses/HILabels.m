@@ -31,6 +31,7 @@
 	copyLabels.overflow = [self.overflow copyWithZone: zone];
 	copyLabels.enabled = [self.enabled copyWithZone: zone];
 	copyLabels.point = [self.point copyWithZone: zone];
+	copyLabels.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyLabels.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyLabels.text = [self.text copyWithZone: zone];
 	copyLabels.accessibility = [self.accessibility copyWithZone: zone];
@@ -120,6 +121,9 @@
 	}
 	if (self.point) {
 		params[@"point"] = [self.point getParams];
+	}
+	if (self.includeInDataExport) {
+		params[@"includeInDataExport"] = self.includeInDataExport;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -286,6 +290,12 @@
 	HIPoint *oldValue = _point;
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+}
+
+-(void)setIncludeInDataExport:(NSNumber *)includeInDataExport {
+	NSNumber *oldValue = _includeInDataExport;
+	_includeInDataExport = includeInDataExport;
+	[self updateNSObject:oldValue newValue:includeInDataExport propertyName:@"includeInDataExport"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {

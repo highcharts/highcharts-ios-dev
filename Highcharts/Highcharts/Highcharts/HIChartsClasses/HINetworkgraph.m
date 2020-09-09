@@ -36,7 +36,6 @@
 	copyNetworkgraph.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyNetworkgraph.clip = [self.clip copyWithZone: zone];
 	copyNetworkgraph.color = [self.color copyWithZone: zone];
-	copyNetworkgraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyNetworkgraph.point = [self.point copyWithZone: zone];
 	copyNetworkgraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyNetworkgraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -46,7 +45,6 @@
 	copyNetworkgraph.custom = [self.custom copyWithZone: zone];
 	copyNetworkgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyNetworkgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyNetworkgraph.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyNetworkgraph.events = [self.events copyWithZone: zone];
 	copyNetworkgraph.opacity = [self.opacity copyWithZone: zone];
 	copyNetworkgraph.definition = [self.definition copyWithZone: zone];

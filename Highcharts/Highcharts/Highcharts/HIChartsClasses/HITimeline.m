@@ -49,7 +49,6 @@
 	copyTimeline.custom = [self.custom copyWithZone: zone];
 	copyTimeline.animation = [self.animation copyWithZone: zone];
 	copyTimeline.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyTimeline.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyTimeline.events = [self.events copyWithZone: zone];
 	copyTimeline.opacity = [self.opacity copyWithZone: zone];
 	copyTimeline.definition = [self.definition copyWithZone: zone];

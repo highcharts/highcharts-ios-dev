@@ -30,7 +30,6 @@
 	copyWaterfall.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyWaterfall.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyWaterfall.colors = [self.colors copyWithZone: zone];
-	copyWaterfall.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyWaterfall.threshold = [self.threshold copyWithZone: zone];
 	copyWaterfall.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyWaterfall.centerInCategory = [self.centerInCategory copyWithZone: zone];
@@ -51,6 +50,7 @@
 	copyWaterfall.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyWaterfall.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyWaterfall.colorKey = [self.colorKey copyWithZone: zone];
+	copyWaterfall.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyWaterfall.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyWaterfall.point = [self.point copyWithZone: zone];
 	copyWaterfall.dataSorting = [self.dataSorting copyWithZone: zone];
@@ -64,7 +64,6 @@
 	copyWaterfall.animation = [self.animation copyWithZone: zone];
 	copyWaterfall.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWaterfall.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyWaterfall.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyWaterfall.events = [self.events copyWithZone: zone];
 	copyWaterfall.opacity = [self.opacity copyWithZone: zone];
 	copyWaterfall.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -85,7 +84,6 @@
 	copyWaterfall.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyWaterfall.className = [self.className copyWithZone: zone];
 	copyWaterfall.pointStart = [self.pointStart copyWithZone: zone];
-	copyWaterfall.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyWaterfall.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyWaterfall.data = [self.data copyWithZone: zone];
 	copyWaterfall.id = [self.id copyWithZone: zone];

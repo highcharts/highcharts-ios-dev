@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIExportData *copyExportData = [[HIExportData allocWithZone: zone] init];
+	copyExportData.annotationHeader = [self.annotationHeader copyWithZone: zone];
 	copyExportData.categoryHeader = [self.categoryHeader copyWithZone: zone];
 	copyExportData.categoryDatetimeHeader = [self.categoryDatetimeHeader copyWithZone: zone];
 	return copyExportData;
@@ -18,6 +19,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.annotationHeader) {
+		params[@"annotationHeader"] = self.annotationHeader;
+	}
 	if (self.categoryHeader) {
 		params[@"categoryHeader"] = self.categoryHeader;
 	}
@@ -28,6 +32,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setAnnotationHeader:(NSString *)annotationHeader {
+	NSString *oldValue = _annotationHeader;
+	_annotationHeader = annotationHeader;
+	[self updateNSObject:oldValue newValue:annotationHeader propertyName:@"annotationHeader"];
+}
 
 -(void)setCategoryHeader:(NSString *)categoryHeader {
 	NSString *oldValue = _categoryHeader;

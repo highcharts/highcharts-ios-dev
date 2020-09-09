@@ -23,7 +23,6 @@
 	copyColumn.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyColumn.states = [self.states copyWithZone: zone];
 	copyColumn.colors = [self.colors copyWithZone: zone];
-	copyColumn.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyColumn.threshold = [self.threshold copyWithZone: zone];
 	copyColumn.borderColor = [self.borderColor copyWithZone: zone];
 	copyColumn.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -47,6 +46,7 @@
 	copyColumn.color = [self.color copyWithZone: zone];
 	copyColumn.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyColumn.colorKey = [self.colorKey copyWithZone: zone];
+	copyColumn.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyColumn.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumn.point = [self.point copyWithZone: zone];
 	copyColumn.dataSorting = [self.dataSorting copyWithZone: zone];

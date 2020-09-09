@@ -58,7 +58,6 @@
 	copyDependencywheel.custom = [self.custom copyWithZone: zone];
 	copyDependencywheel.animation = [self.animation copyWithZone: zone];
 	copyDependencywheel.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyDependencywheel.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyDependencywheel.events = [self.events copyWithZone: zone];
 	copyDependencywheel.opacity = [self.opacity copyWithZone: zone];
 	copyDependencywheel.definition = [self.definition copyWithZone: zone];
