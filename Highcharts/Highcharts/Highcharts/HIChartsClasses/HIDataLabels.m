@@ -257,8 +257,8 @@
 	[self updateNSObject:oldValue newValue:defer propertyName:@"defer"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }

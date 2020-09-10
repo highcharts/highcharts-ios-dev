@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIStyle.h"
+#import "HICSSObject.h"
 #import "HIFilter.h"
 #import "HITextPath.h"
 #import "HIParentNodeTextPath.h"
