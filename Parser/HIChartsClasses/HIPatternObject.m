@@ -20,7 +20,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.animation) {
-		params[@"animation"] = [self.animation getParams];
+		params[@"animation"] = self.animation;
 	}
 	if (self.pattern) {
 		params[@"pattern"] = [self.pattern getParams];
@@ -33,10 +33,10 @@
 
 # pragma mark - Setters
 
--(void)setAnimation:(HIAnimationOptionsObject *)animation {
-	HIAnimationOptionsObject *oldValue = _animation;
+-(void)setAnimation:(NSNumber *)animation {
+	NSNumber *oldValue = _animation;
 	_animation = animation;
-	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+	[self updateNSObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setPattern:(HIPatternOptionsObject *)pattern {

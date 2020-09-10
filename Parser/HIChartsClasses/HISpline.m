@@ -54,7 +54,6 @@
 	copySpline.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copySpline.threshold = [self.threshold copyWithZone: zone];
 	copySpline.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copySpline.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySpline.events = [self.events copyWithZone: zone];
 	copySpline.opacity = [self.opacity copyWithZone: zone];
 	copySpline.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -80,7 +79,6 @@
 	copySpline.pointStart = [self.pointStart copyWithZone: zone];
 	copySpline.linecap = [self.linecap copyWithZone: zone];
 	copySpline.connectEnds = [self.connectEnds copyWithZone: zone];
-	copySpline.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copySpline.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copySpline;
 }

@@ -30,10 +30,9 @@
 	copyStreamgraph.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyStreamgraph.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyStreamgraph.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyStreamgraph.trackByArea = [self.trackByArea copyWithZone: zone];
-	copyStreamgraph.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyStreamgraph.fillColor = [self.fillColor copyWithZone: zone];
 	copyStreamgraph.lineColor = [self.lineColor copyWithZone: zone];
+	copyStreamgraph.fillColor = [self.fillColor copyWithZone: zone];
+	copyStreamgraph.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyStreamgraph.threshold = [self.threshold copyWithZone: zone];
 	copyStreamgraph.linecap = [self.linecap copyWithZone: zone];
 	copyStreamgraph.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -46,6 +45,7 @@
 	copyStreamgraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyStreamgraph.states = [self.states copyWithZone: zone];
 	copyStreamgraph.colorKey = [self.colorKey copyWithZone: zone];
+	copyStreamgraph.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyStreamgraph.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyStreamgraph.point = [self.point copyWithZone: zone];
 	copyStreamgraph.dataSorting = [self.dataSorting copyWithZone: zone];
@@ -61,7 +61,6 @@
 	copyStreamgraph.animation = [self.animation copyWithZone: zone];
 	copyStreamgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyStreamgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyStreamgraph.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyStreamgraph.events = [self.events copyWithZone: zone];
 	copyStreamgraph.opacity = [self.opacity copyWithZone: zone];
 	copyStreamgraph.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -85,7 +84,6 @@
 	copyStreamgraph.className = [self.className copyWithZone: zone];
 	copyStreamgraph.pointStart = [self.pointStart copyWithZone: zone];
 	copyStreamgraph.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyStreamgraph.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyStreamgraph.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyStreamgraph;
 }
@@ -99,14 +97,14 @@
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
-	if (self.trackByArea) {
-		params[@"trackByArea"] = self.trackByArea;
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
+	if (self.trackByArea) {
+		params[@"trackByArea"] = self.trackByArea;
 	}
 	return params;
 }
@@ -125,10 +123,10 @@
 	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
 }
 
--(void)setTrackByArea:(NSNumber *)trackByArea {
-	NSNumber *oldValue = _trackByArea;
-	_trackByArea = trackByArea;
-	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
@@ -137,10 +135,10 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+-(void)setTrackByArea:(NSNumber *)trackByArea {
+	NSNumber *oldValue = _trackByArea;
+	_trackByArea = trackByArea;
+	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
 }
 
 @end

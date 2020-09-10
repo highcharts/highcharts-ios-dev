@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/annotations">annotations</option>
+		
 		<option value="//api/name/columnHeaderFormatter">columnHeaderFormatter</option>
 		
 		<option value="//api/name/dateFormat">dateFormat</option>
@@ -188,8 +190,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/decimalPoint" title="decimalPoint"></a>
-	<h3 class="method-title"><code><a href="#//api/name/decimalPoint">&nbsp;&nbsp;decimalPoint</a></code>
+	<a name="//api/name/itemDelimiter" title="itemDelimiter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemDelimiter">&nbsp;&nbsp;itemDelimiter</a></code>
 </h3>
 
 	<div class="method-info">
@@ -199,12 +201,53 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Which decimal point to use for exported CSV. Defaults to the same as the browser locale, typically <code>.</code> (English) or <code>,</code> (German, French etc).</p>
+				<p>The item delimiter in the exported data. Use <code>;</code> for direct exporting to Excel. Defaults to a best guess based on the browser locale. If the locale <em>decimal point</em> is <code>,</code>, the <code>itemDelimiter</code> defaults to <code>;</code>, otherwise the <code>itemDelimiter</code> defaults to <code>,</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *decimalPoint</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *itemDelimiter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HICsv.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dateFormat" title="dateFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dateFormat">&nbsp;&nbsp;dateFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Which date format to use for exported dates on a datetime X axis. See <code>Highcharts.dateFormat</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dateFormat</code></div>
 
 		    
 			
@@ -270,8 +313,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/itemDelimiter" title="itemDelimiter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/itemDelimiter">&nbsp;&nbsp;itemDelimiter</a></code>
+	<a name="//api/name/decimalPoint" title="decimalPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/decimalPoint">&nbsp;&nbsp;decimalPoint</a></code>
 </h3>
 
 	<div class="method-info">
@@ -281,12 +324,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The item delimiter in the exported data. Use <code>;</code> for direct exporting to Excel. Defaults to a best guess based on the browser locale. If the locale <em>decimal point</em> is <code>,</code>, the <code>itemDelimiter</code> defaults to <code>;</code>, otherwise the <code>itemDelimiter</code> defaults to <code>,</code>.</p>
+				<p>Which decimal point to use for exported CSV. Defaults to the same as the browser locale, typically <code>.</code> (English) or <code>,</code> (German, French etc).</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *itemDelimiter</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *decimalPoint</code></div>
 
 		    
 			
@@ -311,8 +354,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dateFormat" title="dateFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dateFormat">&nbsp;&nbsp;dateFormat</a></code>
+	<a name="//api/name/annotations" title="annotations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/annotations">&nbsp;&nbsp;annotations</a></code>
 </h3>
 
 	<div class="method-info">
@@ -322,12 +365,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Which date format to use for exported dates on a datetime X axis. See <code>Highcharts.dateFormat</code>.</p>
+				<p>Options for annotations in the export-data table.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *dateFormat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnnotations *annotations</code></div>
 
 		    
 			

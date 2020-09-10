@@ -10,36 +10,58 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HITime *copyTime = [[HITime allocWithZone: zone] init];
+	copyTime.useUTC = [self.useUTC copyWithZone: zone];
+	copyTime.getTimezoneOffset = [self.getTimezoneOffset copyWithZone: zone];
+	copyTime.moment = [self.moment copyWithZone: zone];
 	copyTime.Date = [self.Date copyWithZone: zone];
 	copyTime.timezone = [self.timezone copyWithZone: zone];
-	copyTime.getTimezoneOffset = [self.getTimezoneOffset copyWithZone: zone];
 	copyTime.timezoneOffset = [self.timezoneOffset copyWithZone: zone];
-	copyTime.useUTC = [self.useUTC copyWithZone: zone];
 	return copyTime;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.useUTC) {
+		params[@"useUTC"] = self.useUTC;
+	}
+	if (self.getTimezoneOffset) {
+		params[@"getTimezoneOffset"] = [self.getTimezoneOffset getFunction];
+	}
+	if (self.moment) {
+		params[@"moment"] = [self.moment getFunction];
+	}
 	if (self.Date) {
 		params[@"Date"] = self.Date;
 	}
 	if (self.timezone) {
 		params[@"timezone"] = self.timezone;
 	}
-	if (self.getTimezoneOffset) {
-		params[@"getTimezoneOffset"] = [self.getTimezoneOffset getFunction];
-	}
 	if (self.timezoneOffset) {
 		params[@"timezoneOffset"] = self.timezoneOffset;
-	}
-	if (self.useUTC) {
-		params[@"useUTC"] = self.useUTC;
 	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setUseUTC:(NSNumber *)useUTC {
+	NSNumber *oldValue = _useUTC;
+	_useUTC = useUTC;
+	[self updateNSObject:oldValue newValue:useUTC propertyName:@"useUTC"];
+}
+
+-(void)setGetTimezoneOffset:(HIFunction *)getTimezoneOffset {
+	HIFunction *oldValue = _getTimezoneOffset;
+	_getTimezoneOffset = getTimezoneOffset;
+	[self updateHIObject:oldValue newValue:getTimezoneOffset propertyName:@"getTimezoneOffset"];
+}
+
+-(void)setMoment:(HIFunction *)moment {
+	HIFunction *oldValue = _moment;
+	_moment = moment;
+	[self updateHIObject:oldValue newValue:moment propertyName:@"moment"];
+}
 
 -(void)setDate:(id)Date {
 	id oldValue = _Date;
@@ -53,22 +75,10 @@
 	[self updateNSObject:oldValue newValue:timezone propertyName:@"timezone"];
 }
 
--(void)setGetTimezoneOffset:(HIFunction *)getTimezoneOffset {
-	HIFunction *oldValue = _getTimezoneOffset;
-	_getTimezoneOffset = getTimezoneOffset;
-	[self updateHIObject:oldValue newValue:getTimezoneOffset propertyName:@"getTimezoneOffset"];
-}
-
 -(void)setTimezoneOffset:(NSNumber *)timezoneOffset {
 	NSNumber *oldValue = _timezoneOffset;
 	_timezoneOffset = timezoneOffset;
 	[self updateNSObject:oldValue newValue:timezoneOffset propertyName:@"timezoneOffset"];
-}
-
--(void)setUseUTC:(NSNumber *)useUTC {
-	NSNumber *oldValue = _useUTC;
-	_useUTC = useUTC;
-	[self updateNSObject:oldValue newValue:useUTC propertyName:@"useUTC"];
 }
 
 @end

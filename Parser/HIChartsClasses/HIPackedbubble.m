@@ -54,7 +54,6 @@
 	copyPackedbubble.clip = [self.clip copyWithZone: zone];
 	copyPackedbubble.color = [self.color copyWithZone: zone];
 	copyPackedbubble.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyPackedbubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPackedbubble.point = [self.point copyWithZone: zone];
 	copyPackedbubble.label = [self.label copyWithZone: zone];
 	copyPackedbubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -66,7 +65,6 @@
 	copyPackedbubble.animation = [self.animation copyWithZone: zone];
 	copyPackedbubble.threshold = [self.threshold copyWithZone: zone];
 	copyPackedbubble.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyPackedbubble.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPackedbubble.events = [self.events copyWithZone: zone];
 	copyPackedbubble.opacity = [self.opacity copyWithZone: zone];
 	copyPackedbubble.definition = [self.definition copyWithZone: zone];
@@ -81,7 +79,6 @@
 	copyPackedbubble.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPackedbubble.className = [self.className copyWithZone: zone];
 	copyPackedbubble.pointStart = [self.pointStart copyWithZone: zone];
-	copyPackedbubble.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyPackedbubble.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyPackedbubble;
 }

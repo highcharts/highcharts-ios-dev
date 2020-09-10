@@ -39,7 +39,6 @@
 	copyHistogram.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyHistogram.states = [self.states copyWithZone: zone];
 	copyHistogram.colors = [self.colors copyWithZone: zone];
-	copyHistogram.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyHistogram.threshold = [self.threshold copyWithZone: zone];
 	copyHistogram.borderColor = [self.borderColor copyWithZone: zone];
 	copyHistogram.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -59,6 +58,7 @@
 	copyHistogram.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyHistogram.color = [self.color copyWithZone: zone];
 	copyHistogram.colorKey = [self.colorKey copyWithZone: zone];
+	copyHistogram.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyHistogram.point = [self.point copyWithZone: zone];
 	copyHistogram.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyHistogram.label = [self.label copyWithZone: zone];
@@ -70,7 +70,6 @@
 	copyHistogram.animation = [self.animation copyWithZone: zone];
 	copyHistogram.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyHistogram.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyHistogram.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyHistogram.events = [self.events copyWithZone: zone];
 	copyHistogram.opacity = [self.opacity copyWithZone: zone];
 	copyHistogram.animationLimit = [self.animationLimit copyWithZone: zone];

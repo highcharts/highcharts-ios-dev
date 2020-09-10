@@ -42,7 +42,6 @@
 	copyVector.animation = [self.animation copyWithZone: zone];
 	copyVector.threshold = [self.threshold copyWithZone: zone];
 	copyVector.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyVector.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyVector.events = [self.events copyWithZone: zone];
 	copyVector.opacity = [self.opacity copyWithZone: zone];
 	copyVector.animationLimit = [self.animationLimit copyWithZone: zone];

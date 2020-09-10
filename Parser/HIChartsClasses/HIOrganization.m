@@ -60,7 +60,6 @@
 	copyOrganization.custom = [self.custom copyWithZone: zone];
 	copyOrganization.animation = [self.animation copyWithZone: zone];
 	copyOrganization.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyOrganization.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyOrganization.events = [self.events copyWithZone: zone];
 	copyOrganization.opacity = [self.opacity copyWithZone: zone];
 	copyOrganization.definition = [self.definition copyWithZone: zone];

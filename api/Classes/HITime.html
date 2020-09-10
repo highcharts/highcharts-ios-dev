@@ -62,6 +62,8 @@
 		
 		<option value="//api/name/getTimezoneOffset">getTimezoneOffset</option>
 		
+		<option value="//api/name/moment">moment</option>
+		
 		<option value="//api/name/timezone">timezone</option>
 		
 		<option value="//api/name/timezoneOffset">timezoneOffset</option>
@@ -136,6 +138,150 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/useUTC" title="useUTC"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useUTC">&nbsp;&nbsp;useUTC</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to use UTC time for axis scaling, tickmark placement and time display in <code>Highcharts.dateFormat</code>. Advantages of using UTC is that the time displays equally regardless of the user agent&rsquo;s time zone settings. Local time can be used when the data is loaded in real time or when correct Daylight Saving Time transitions are required.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useUTC</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/useutc-true/">True by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/useutc-false/">False</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITime.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getTimezoneOffset" title="getTimezoneOffset"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getTimezoneOffset">&nbsp;&nbsp;getTimezoneOffset</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A callback to return the time zone offset for a given datetime. It takes the timestamp in terms of milliseconds since January 1 1970, and returns the timezone offset in minutes. This provides a hook for drawing time based charts in specific time zones using their local DST crossover dates, with the help of external libraries.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *getTimezoneOffset</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/gettimezoneoffset/">Use moment.js to draw Oslo time regardless of browser locale</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITime.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/moment" title="moment"></a>
+	<h3 class="method-title"><code><a href="#//api/name/moment">&nbsp;&nbsp;moment</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Allows to manually load the <code>moment.js</code> library from Highcharts options instead of the <code>window</code>. In case of loading the library from a <code>script</code> tag, this option is not needed, it will be loaded from there by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *moment</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITime.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/Date" title="Date"></a>
 	<h3 class="method-title"><code><a href="#//api/name/Date">&nbsp;&nbsp;Date</a></code>
 </h3>
@@ -228,57 +374,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getTimezoneOffset" title="getTimezoneOffset"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getTimezoneOffset">&nbsp;&nbsp;getTimezoneOffset</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A callback to return the time zone offset for a given datetime. It takes the timestamp in terms of milliseconds since January 1 1970, and returns the timezone offset in minutes. This provides a hook for drawing time based charts in specific time zones using their local DST crossover dates, with the help of external libraries.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *getTimezoneOffset</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/gettimezoneoffset/">Use moment.js to draw Oslo time regardless of browser locale</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITime.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/timezoneOffset" title="timezoneOffset"></a>
 	<h3 class="method-title"><code><a href="#//api/name/timezoneOffset">&nbsp;&nbsp;timezoneOffset</a></code>
 </h3>
@@ -311,58 +406,6 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/timezoneoffset/">Timezone offset</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITime.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/useUTC" title="useUTC"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useUTC">&nbsp;&nbsp;useUTC</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to use UTC time for axis scaling, tickmark placement and time display in <code>Highcharts.dateFormat</code>. Advantages of using UTC is that the time displays equally regardless of the user agent&rsquo;s time zone settings. Local time can be used when the data is loaded in real time or when correct Daylight Saving Time transitions are required.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useUTC</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/useutc-true/">True by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/useutc-false/">False</a></li>
 </ul>
 
 			</div>

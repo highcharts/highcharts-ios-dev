@@ -58,6 +58,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/animation">animation</option>
+		
 		<option value="//api/name/controlPointOptions">controlPointOptions</option>
 		
 		<option value="//api/name/descriptionMultiplePoints">descriptionMultiplePoints</option>
@@ -73,6 +75,10 @@
 		<option value="//api/name/heading">heading</option>
 		
 		<option value="//api/name/id">id</option>
+		
+		<option value="//api/name/itemDelimiter">itemDelimiter</option>
+		
+		<option value="//api/name/join">join</option>
 		
 		<option value="//api/name/labelOptions">labelOptions</option>
 		
@@ -583,6 +589,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/animation" title="animation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enable or disable the initial animation when a series is displayed for the <code>annotation</code>. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation. For other animations, see <code>chart.animation</code> and the animation parameter under the API methods. The following properties are supported: - <code>defer</code>: The animation delay time in milliseconds.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimationOptionsObject *animation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/defer/">Animation defer settings</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/events" title="events"></a>
 	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
 </h3>
@@ -685,6 +742,98 @@
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *heading</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/itemDelimiter" title="itemDelimiter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemDelimiter">&nbsp;&nbsp;itemDelimiter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The way to mark the separator for annotations combined in one export-data table cell.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *itemDelimiter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/join" title="join"></a>
+	<h3 class="method-title"><code><a href="#//api/name/join">&nbsp;&nbsp;join</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When several labels are assigned to a specific point, they will be displayed in one field in the table.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *join</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/join-annotations/">Concatenate point annotations with itemDelimiter set.</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotations.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

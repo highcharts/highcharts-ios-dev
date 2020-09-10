@@ -62,7 +62,6 @@
 	copyColumnpyramid.animation = [self.animation copyWithZone: zone];
 	copyColumnpyramid.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyColumnpyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyColumnpyramid.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyColumnpyramid.events = [self.events copyWithZone: zone];
 	copyColumnpyramid.opacity = [self.opacity copyWithZone: zone];
 	copyColumnpyramid.animationLimit = [self.animationLimit copyWithZone: zone];

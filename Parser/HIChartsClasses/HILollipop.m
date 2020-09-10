@@ -39,7 +39,6 @@
 	copyLollipop.threshold = [self.threshold copyWithZone: zone];
 	copyLollipop.shadow = [self.shadow copyWithZone: zone];
 	copyLollipop.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyLollipop.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyLollipop.lineColor = [self.lineColor copyWithZone: zone];
 	copyLollipop.linecap = [self.linecap copyWithZone: zone];
 	copyLollipop.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -50,6 +49,7 @@
 	copyLollipop.color = [self.color copyWithZone: zone];
 	copyLollipop.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyLollipop.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyLollipop.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyLollipop.point = [self.point copyWithZone: zone];
 	copyLollipop.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyLollipop.marker = [self.marker copyWithZone: zone];
@@ -64,7 +64,6 @@
 	copyLollipop.animation = [self.animation copyWithZone: zone];
 	copyLollipop.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyLollipop.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyLollipop.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyLollipop.events = [self.events copyWithZone: zone];
 	copyLollipop.opacity = [self.opacity copyWithZone: zone];
 	copyLollipop.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -85,7 +84,6 @@
 	copyLollipop.className = [self.className copyWithZone: zone];
 	copyLollipop.pointStart = [self.pointStart copyWithZone: zone];
 	copyLollipop.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyLollipop.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyLollipop.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyLollipop;
 }

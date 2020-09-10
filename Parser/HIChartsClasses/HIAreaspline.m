@@ -16,10 +16,9 @@
 	[super copyWithZone:zone];
 	HIAreaspline *copyAreaspline = [[HIAreaspline allocWithZone: zone] init];
 	copyAreaspline.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyAreaspline.trackByArea = [self.trackByArea copyWithZone: zone];
-	copyAreaspline.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyAreaspline.fillColor = [self.fillColor copyWithZone: zone];
 	copyAreaspline.lineColor = [self.lineColor copyWithZone: zone];
+	copyAreaspline.fillColor = [self.fillColor copyWithZone: zone];
+	copyAreaspline.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyAreaspline.threshold = [self.threshold copyWithZone: zone];
 	copyAreaspline.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyAreaspline.linecap = [self.linecap copyWithZone: zone];
@@ -33,6 +32,7 @@
 	copyAreaspline.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyAreaspline.states = [self.states copyWithZone: zone];
 	copyAreaspline.colorKey = [self.colorKey copyWithZone: zone];
+	copyAreaspline.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyAreaspline.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyAreaspline.point = [self.point copyWithZone: zone];
 	copyAreaspline.dataSorting = [self.dataSorting copyWithZone: zone];
@@ -50,7 +50,6 @@
 	copyAreaspline.animation = [self.animation copyWithZone: zone];
 	copyAreaspline.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyAreaspline.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyAreaspline.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyAreaspline.events = [self.events copyWithZone: zone];
 	copyAreaspline.opacity = [self.opacity copyWithZone: zone];
 	copyAreaspline.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -75,7 +74,6 @@
 	copyAreaspline.className = [self.className copyWithZone: zone];
 	copyAreaspline.pointStart = [self.pointStart copyWithZone: zone];
 	copyAreaspline.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyAreaspline.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyAreaspline.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyAreaspline.data = [self.data copyWithZone: zone];
 	copyAreaspline.id = [self.id copyWithZone: zone];
@@ -96,14 +94,14 @@
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
-	if (self.trackByArea) {
-		params[@"trackByArea"] = self.trackByArea;
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
+	if (self.trackByArea) {
+		params[@"trackByArea"] = self.trackByArea;
 	}
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
@@ -119,10 +117,10 @@
 	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
 }
 
--(void)setTrackByArea:(NSNumber *)trackByArea {
-	NSNumber *oldValue = _trackByArea;
-	_trackByArea = trackByArea;
-	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {
@@ -131,10 +129,10 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+-(void)setTrackByArea:(NSNumber *)trackByArea {
+	NSNumber *oldValue = _trackByArea;
+	_trackByArea = trackByArea;
+	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
 }
 
 -(void)setFillOpacity:(NSNumber *)fillOpacity {

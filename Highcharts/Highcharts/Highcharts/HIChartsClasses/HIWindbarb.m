@@ -30,7 +30,6 @@
 	copyWindbarb.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyWindbarb.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyWindbarb.colors = [self.colors copyWithZone: zone];
-	copyWindbarb.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyWindbarb.threshold = [self.threshold copyWithZone: zone];
 	copyWindbarb.borderColor = [self.borderColor copyWithZone: zone];
 	copyWindbarb.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -52,6 +51,7 @@
 	copyWindbarb.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyWindbarb.color = [self.color copyWithZone: zone];
 	copyWindbarb.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyWindbarb.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyWindbarb.point = [self.point copyWithZone: zone];
 	copyWindbarb.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyWindbarb.label = [self.label copyWithZone: zone];
@@ -63,7 +63,6 @@
 	copyWindbarb.animation = [self.animation copyWithZone: zone];
 	copyWindbarb.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWindbarb.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyWindbarb.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyWindbarb.events = [self.events copyWithZone: zone];
 	copyWindbarb.opacity = [self.opacity copyWithZone: zone];
 	copyWindbarb.animationLimit = [self.animationLimit copyWithZone: zone];

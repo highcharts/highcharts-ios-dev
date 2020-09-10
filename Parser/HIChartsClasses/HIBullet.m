@@ -36,7 +36,6 @@
 	copyBullet.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyBullet.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBullet.colors = [self.colors copyWithZone: zone];
-	copyBullet.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyBullet.threshold = [self.threshold copyWithZone: zone];
 	copyBullet.borderColor = [self.borderColor copyWithZone: zone];
 	copyBullet.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -59,6 +58,7 @@
 	copyBullet.color = [self.color copyWithZone: zone];
 	copyBullet.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBullet.colorKey = [self.colorKey copyWithZone: zone];
+	copyBullet.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyBullet.point = [self.point copyWithZone: zone];
 	copyBullet.label = [self.label copyWithZone: zone];
 	copyBullet.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -71,7 +71,6 @@
 	copyBullet.animation = [self.animation copyWithZone: zone];
 	copyBullet.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBullet.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyBullet.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBullet.events = [self.events copyWithZone: zone];
 	copyBullet.opacity = [self.opacity copyWithZone: zone];
 	copyBullet.animationLimit = [self.animationLimit copyWithZone: zone];

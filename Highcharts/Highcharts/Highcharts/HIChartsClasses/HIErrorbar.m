@@ -48,7 +48,6 @@
 	copyErrorbar.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyErrorbar.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyErrorbar.colors = [self.colors copyWithZone: zone];
-	copyErrorbar.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyErrorbar.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyErrorbar.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyErrorbar.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
@@ -65,6 +64,7 @@
 	copyErrorbar.clip = [self.clip copyWithZone: zone];
 	copyErrorbar.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyErrorbar.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyErrorbar.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyErrorbar.point = [self.point copyWithZone: zone];
 	copyErrorbar.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyErrorbar.label = [self.label copyWithZone: zone];
@@ -77,7 +77,6 @@
 	copyErrorbar.animation = [self.animation copyWithZone: zone];
 	copyErrorbar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyErrorbar.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyErrorbar.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyErrorbar.events = [self.events copyWithZone: zone];
 	copyErrorbar.opacity = [self.opacity copyWithZone: zone];
 	copyErrorbar.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -97,7 +96,6 @@
 	copyErrorbar.visible = [self.visible copyWithZone: zone];
 	copyErrorbar.className = [self.className copyWithZone: zone];
 	copyErrorbar.pointStart = [self.pointStart copyWithZone: zone];
-	copyErrorbar.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyErrorbar.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyErrorbar.stacking = [self.stacking copyWithZone: zone];
 	return copyErrorbar;

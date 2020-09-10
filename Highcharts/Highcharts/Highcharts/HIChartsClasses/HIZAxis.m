@@ -48,7 +48,6 @@
 	copyZAxis.opposite = [self.opposite copyWithZone: zone];
 	copyZAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
 	copyZAxis.max = [self.max copyWithZone: zone];
-	copyZAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyZAxis.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyZAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyZAxis.startOnTick = [self.startOnTick copyWithZone: zone];
@@ -222,9 +221,6 @@
 	}
 	if (self.max) {
 		params[@"max"] = self.max;
-	}
-	if (self.dateTimeLabelFormats) {
-		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
 	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
@@ -553,12 +549,6 @@
 	NSNumber *oldValue = _max;
 	_max = max;
 	[self updateNSObject:oldValue newValue:max propertyName:@"max"];
-}
-
--(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
-	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
-	_dateTimeLabelFormats = dateTimeLabelFormats;
-	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 -(void)setMinorTicks:(NSNumber *)minorTicks {

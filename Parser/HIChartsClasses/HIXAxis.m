@@ -53,7 +53,6 @@
 	copyXAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
 	copyXAxis.max = [self.max copyWithZone: zone];
 	copyXAxis.breaks = [self.breaks copyWithZone: zone];
-	copyXAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyXAxis.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyXAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyXAxis.startOnTick = [self.startOnTick copyWithZone: zone];
@@ -255,9 +254,6 @@
 			}
 		}
 		params[@"breaks"] = array;
-	}
-	if (self.dateTimeLabelFormats) {
-		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
 	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
@@ -628,12 +624,6 @@
 	NSArray <HIBreaks *> *oldValue = _breaks;
 	_breaks = breaks;
 	[self updateArrayObject:oldValue newValue:breaks propertyName:@"breaks"];
-}
-
--(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
-	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
-	_dateTimeLabelFormats = dateTimeLabelFormats;
-	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 -(void)setMinorTicks:(NSNumber *)minorTicks {

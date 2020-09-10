@@ -20,6 +20,7 @@
 	copyStackLabels.enabled = [self.enabled copyWithZone: zone];
 	copyStackLabels.crop = [self.crop copyWithZone: zone];
 	copyStackLabels.textAlign = [self.textAlign copyWithZone: zone];
+	copyStackLabels.animation = [self.animation copyWithZone: zone];
 	copyStackLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyStackLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyStackLabels.y = [self.y copyWithZone: zone];
@@ -63,6 +64,9 @@
 	}
 	if (self.textAlign) {
 		params[@"textAlign"] = self.textAlign;
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -151,6 +155,12 @@
 	NSString *oldValue = _textAlign;
 	_textAlign = textAlign;
 	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
+}
+
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {

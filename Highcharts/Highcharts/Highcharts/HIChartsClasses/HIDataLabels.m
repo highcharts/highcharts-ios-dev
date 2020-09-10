@@ -27,17 +27,18 @@
 	copyDataLabels.nodeFormat = [self.nodeFormat copyWithZone: zone];
 	copyDataLabels.nullFormatter = [self.nullFormatter copyWithZone: zone];
 	copyDataLabels.borderRadius = [self.borderRadius copyWithZone: zone];
-	copyDataLabels.overflow = [self.overflow copyWithZone: zone];
 	copyDataLabels.shape = [self.shape copyWithZone: zone];
-	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
+	copyDataLabels.overflow = [self.overflow copyWithZone: zone];
 	copyDataLabels.borderColor = [self.borderColor copyWithZone: zone];
 	copyDataLabels.filter = [self.filter copyWithZone: zone];
 	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
 	copyDataLabels.color = [self.color copyWithZone: zone];
+	copyDataLabels.animation = [self.animation copyWithZone: zone];
 	copyDataLabels.nullFormat = [self.nullFormat copyWithZone: zone];
 	copyDataLabels.padding = [self.padding copyWithZone: zone];
-	copyDataLabels.x = [self.x copyWithZone: zone];
 	copyDataLabels.shadow = [self.shadow copyWithZone: zone];
+	copyDataLabels.x = [self.x copyWithZone: zone];
+	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
 	copyDataLabels.className = [self.className copyWithZone: zone];
 	copyDataLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDataLabels.position = [self.position copyWithZone: zone];
@@ -122,14 +123,11 @@
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
-	if (self.overflow) {
-		params[@"overflow"] = self.overflow;
-	}
 	if (self.shape) {
 		params[@"shape"] = self.shape;
 	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
+	if (self.overflow) {
+		params[@"overflow"] = self.overflow;
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
@@ -143,17 +141,23 @@
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
 	if (self.nullFormat) {
 		params[@"nullFormat"] = self.nullFormat;
 	}
 	if (self.padding) {
 		params[@"padding"] = self.padding;
 	}
+	if (self.shadow) {
+		params[@"shadow"] = [self.shadow getParams];
+	}
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
-	if (self.shadow) {
-		params[@"shadow"] = [self.shadow getParams];
+	if (self.rotation) {
+		params[@"rotation"] = self.rotation;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
@@ -253,8 +257,8 @@
 	[self updateNSObject:oldValue newValue:defer propertyName:@"defer"];
 }
 
--(void)setStyle:(HIStyle *)style {
-	HIStyle *oldValue = _style;
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
@@ -343,22 +347,16 @@
 	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
--(void)setOverflow:(NSString *)overflow {
-	NSString *oldValue = _overflow;
-	_overflow = overflow;
-	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
-}
-
 -(void)setShape:(NSString *)shape {
 	NSString *oldValue = _shape;
 	_shape = shape;
 	[self updateNSObject:oldValue newValue:shape propertyName:@"shape"];
 }
 
--(void)setRotation:(NSNumber *)rotation {
-	NSNumber *oldValue = _rotation;
-	_rotation = rotation;
-	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
+-(void)setOverflow:(NSString *)overflow {
+	NSString *oldValue = _overflow;
+	_overflow = overflow;
+	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
@@ -385,6 +383,12 @@
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
+}
+
 -(void)setNullFormat:(id)nullFormat {
 	id oldValue = _nullFormat;
 	_nullFormat = nullFormat;
@@ -397,16 +401,22 @@
 	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
+-(void)setShadow:(HIShadowOptionsObject *)shadow {
+	HIShadowOptionsObject *oldValue = _shadow;
+	_shadow = shadow;
+	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
+}
+
 -(void)setX:(NSNumber *)x {
 	NSNumber *oldValue = _x;
 	_x = x;
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
--(void)setShadow:(HIShadowOptionsObject *)shadow {
-	HIShadowOptionsObject *oldValue = _shadow;
-	_shadow = shadow;
-	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
+-(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
+	_rotation = rotation;
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setClassName:(NSString *)className {

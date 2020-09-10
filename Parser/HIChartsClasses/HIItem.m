@@ -48,7 +48,6 @@
 	copyItem.custom = [self.custom copyWithZone: zone];
 	copyItem.animation = [self.animation copyWithZone: zone];
 	copyItem.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyItem.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyItem.opacity = [self.opacity copyWithZone: zone];
 	copyItem.definition = [self.definition copyWithZone: zone];
 	copyItem.keys = [self.keys copyWithZone: zone];

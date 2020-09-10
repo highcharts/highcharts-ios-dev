@@ -46,7 +46,6 @@
 	copyVenn.custom = [self.custom copyWithZone: zone];
 	copyVenn.animation = [self.animation copyWithZone: zone];
 	copyVenn.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyVenn.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyVenn.events = [self.events copyWithZone: zone];
 	copyVenn.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyVenn.definition = [self.definition copyWithZone: zone];
@@ -60,7 +59,6 @@
 	copyVenn.crisp = [self.crisp copyWithZone: zone];
 	copyVenn.visible = [self.visible copyWithZone: zone];
 	copyVenn.className = [self.className copyWithZone: zone];
-	copyVenn.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyVenn;
 }
 

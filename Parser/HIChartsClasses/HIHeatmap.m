@@ -41,7 +41,6 @@
 	copyHeatmap.selected = [self.selected copyWithZone: zone];
 	copyHeatmap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyHeatmap.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyHeatmap.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyHeatmap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyHeatmap.point = [self.point copyWithZone: zone];
 	copyHeatmap.dataSorting = [self.dataSorting copyWithZone: zone];

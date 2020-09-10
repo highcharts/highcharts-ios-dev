@@ -30,7 +30,6 @@
 	copyScatter.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyScatter.color = [self.color copyWithZone: zone];
 	copyScatter.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyScatter.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyScatter.states = [self.states copyWithZone: zone];
 	copyScatter.colorKey = [self.colorKey copyWithZone: zone];
 	copyScatter.softThreshold = [self.softThreshold copyWithZone: zone];
