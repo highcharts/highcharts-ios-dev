@@ -519,404 +519,404 @@
 		CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICustomFont.m; path = Private/HICustomFont.m; sourceTree = "<group>"; };
 		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
 		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
-		CD70E8982508C4AB00A6A2FB /* HIRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIRotation.m; path = HIChartsClasses/HIRotation.m; sourceTree = "<group>"; };
-		CD70E8992508C4AB00A6A2FB /* HIBreaks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBreaks.m; path = HIChartsClasses/HIBreaks.m; sourceTree = "<group>"; };
-		CD70E89A2508C4AC00A6A2FB /* HIBreaks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBreaks.h; path = HIChartsClasses/HIBreaks.h; sourceTree = "<group>"; };
-		CD70E89B2508C4AC00A6A2FB /* HILayoutAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILayoutAlgorithm.h; path = HIChartsClasses/HILayoutAlgorithm.h; sourceTree = "<group>"; };
-		CD70E89C2508C4AC00A6A2FB /* HIParentNodeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIParentNodeOptions.h; path = HIChartsClasses/HIParentNodeOptions.h; sourceTree = "<group>"; };
-		CD70E89D2508C4AC00A6A2FB /* HIColorAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIColorAxis.m; path = HIChartsClasses/HIColorAxis.m; sourceTree = "<group>"; };
-		CD70E89E2508C4AC00A6A2FB /* HILinearGradientColorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILinearGradientColorObject.h; path = HIChartsClasses/HILinearGradientColorObject.h; sourceTree = "<group>"; };
-		CD70E89F2508C4AC00A6A2FB /* HIScrollablePlotArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIScrollablePlotArea.h; path = HIChartsClasses/HIScrollablePlotArea.h; sourceTree = "<group>"; };
-		CD70E8A02508C4AC00A6A2FB /* HISVGDefinitionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISVGDefinitionObject.h; path = HIChartsClasses/HISVGDefinitionObject.h; sourceTree = "<group>"; };
-		CD70E8A12508C4AC00A6A2FB /* HINoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HINoData.h; path = HIChartsClasses/HINoData.h; sourceTree = "<group>"; };
-		CD70E8A22508C4AC00A6A2FB /* HITilemap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITilemap.h; path = HIChartsClasses/HITilemap.h; sourceTree = "<group>"; };
-		CD70E8A32508C4AC00A6A2FB /* HIPareto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPareto.h; path = HIChartsClasses/HIPareto.h; sourceTree = "<group>"; };
-		CD70E8A42508C4AC00A6A2FB /* HIOptions3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIOptions3d.h; path = HIChartsClasses/HIOptions3d.h; sourceTree = "<group>"; };
-		CD70E8A52508C4AC00A6A2FB /* HIMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIMarker.m; path = HIChartsClasses/HIMarker.m; sourceTree = "<group>"; };
-		CD70E8A62508C4AC00A6A2FB /* HIBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBackground.h; path = HIChartsClasses/HIBackground.h; sourceTree = "<group>"; };
-		CD70E8A72508C4AC00A6A2FB /* HILabelIntersectBoxObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILabelIntersectBoxObject.m; path = HIChartsClasses/HILabelIntersectBoxObject.m; sourceTree = "<group>"; };
-		CD70E8A82508C4AC00A6A2FB /* HIPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPolygon.m; path = HIChartsClasses/HIPolygon.m; sourceTree = "<group>"; };
-		CD70E8A92508C4AC00A6A2FB /* HIFunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIFunnel.h; path = HIChartsClasses/HIFunnel.h; sourceTree = "<group>"; };
-		CD70E8AA2508C4AC00A6A2FB /* HIAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAxis.h; path = HIChartsClasses/HIAxis.h; sourceTree = "<group>"; };
-		CD70E8AB2508C4AC00A6A2FB /* HILoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILoading.h; path = HIChartsClasses/HILoading.h; sourceTree = "<group>"; };
-		CD70E8AC2508C4AC00A6A2FB /* HIScrollablePlotArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIScrollablePlotArea.m; path = HIChartsClasses/HIScrollablePlotArea.m; sourceTree = "<group>"; };
-		CD70E8AD2508C4AC00A6A2FB /* HIStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIStyle.m; path = HIChartsClasses/HIStyle.m; sourceTree = "<group>"; };
-		CD70E8AE2508C4AC00A6A2FB /* HIBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBackground.m; path = HIChartsClasses/HIBackground.m; sourceTree = "<group>"; };
-		CD70E8AF2508C4AD00A6A2FB /* HIInactive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIInactive.h; path = HIChartsClasses/HIInactive.h; sourceTree = "<group>"; };
-		CD70E8B02508C4AD00A6A2FB /* HITreemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITreemap.m; path = HIChartsClasses/HITreemap.m; sourceTree = "<group>"; };
-		CD70E8B12508C4AD00A6A2FB /* HIBottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBottom.m; path = HIChartsClasses/HIBottom.m; sourceTree = "<group>"; };
-		CD70E8B22508C4AD00A6A2FB /* HIPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPoint.m; path = HIChartsClasses/HIPoint.m; sourceTree = "<group>"; };
-		CD70E8B32508C4AD00A6A2FB /* HIStreamgraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIStreamgraph.h; path = HIChartsClasses/HIStreamgraph.h; sourceTree = "<group>"; };
-		CD70E8B42508C4AD00A6A2FB /* HIZones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIZones.m; path = HIChartsClasses/HIZones.m; sourceTree = "<group>"; };
-		CD70E8B52508C4AD00A6A2FB /* HILabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILabels.m; path = HIChartsClasses/HILabels.m; sourceTree = "<group>"; };
-		CD70E8B62508C4AD00A6A2FB /* HISeriesTypeDescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISeriesTypeDescriptions.h; path = HIChartsClasses/HISeriesTypeDescriptions.h; sourceTree = "<group>"; };
-		CD70E8B72508C4AD00A6A2FB /* HIPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPoints.m; path = HIChartsClasses/HIPoints.m; sourceTree = "<group>"; };
-		CD70E8B82508C4AD00A6A2FB /* HIPlotLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPlotLines.m; path = HIChartsClasses/HIPlotLines.m; sourceTree = "<group>"; };
-		CD70E8B92508C4AD00A6A2FB /* HIErrorbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIErrorbar.m; path = HIChartsClasses/HIErrorbar.m; sourceTree = "<group>"; };
-		CD70E8BA2508C4AD00A6A2FB /* HIResetZoomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIResetZoomButton.h; path = HIChartsClasses/HIResetZoomButton.h; sourceTree = "<group>"; };
-		CD70E8BB2508C4AD00A6A2FB /* HIFocusBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIFocusBorder.m; path = HIChartsClasses/HIFocusBorder.m; sourceTree = "<group>"; };
-		CD70E8BC2508C4AD00A6A2FB /* HIBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBubble.h; path = HIChartsClasses/HIBubble.h; sourceTree = "<group>"; };
-		CD70E8BD2508C4AD00A6A2FB /* HIHeatmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIHeatmap.m; path = HIChartsClasses/HIHeatmap.m; sourceTree = "<group>"; };
-		CD70E8BE2508C4AD00A6A2FB /* HITable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITable.h; path = HIChartsClasses/HITable.h; sourceTree = "<group>"; };
-		CD70E8BF2508C4AD00A6A2FB /* HIPlotBands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPlotBands.m; path = HIChartsClasses/HIPlotBands.m; sourceTree = "<group>"; };
-		CD70E8C02508C4AD00A6A2FB /* HIStackLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIStackLabels.h; path = HIChartsClasses/HIStackLabels.h; sourceTree = "<group>"; };
-		CD70E8C12508C4AD00A6A2FB /* HIResponsive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIResponsive.h; path = HIChartsClasses/HIResponsive.h; sourceTree = "<group>"; };
-		CD70E8C22508C4AD00A6A2FB /* HILevels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILevels.h; path = HIChartsClasses/HILevels.h; sourceTree = "<group>"; };
-		CD70E8C32508C4AD00A6A2FB /* HIBubbleLegend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBubbleLegend.m; path = HIChartsClasses/HIBubbleLegend.m; sourceTree = "<group>"; };
-		CD70E8C42508C4AE00A6A2FB /* HIGuideBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIGuideBox.h; path = HIChartsClasses/HIGuideBox.h; sourceTree = "<group>"; };
-		CD70E8C52508C4AE00A6A2FB /* HILevels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILevels.m; path = HIChartsClasses/HILevels.m; sourceTree = "<group>"; };
-		CD70E8C62508C4AE00A6A2FB /* HIHalo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIHalo.m; path = HIChartsClasses/HIHalo.m; sourceTree = "<group>"; };
-		CD70E8C72508C4AE00A6A2FB /* HIPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPopup.m; path = HIChartsClasses/HIPopup.m; sourceTree = "<group>"; };
-		CD70E8C82508C4AE00A6A2FB /* HIAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAnimation.m; path = HIChartsClasses/HIAnimation.m; sourceTree = "<group>"; };
-		CD70E8C92508C4AE00A6A2FB /* HIOptions3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIOptions3d.m; path = HIChartsClasses/HIOptions3d.m; sourceTree = "<group>"; };
-		CD70E8CA2508C4AE00A6A2FB /* HIPlotOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPlotOptions.m; path = HIChartsClasses/HIPlotOptions.m; sourceTree = "<group>"; };
-		CD70E8CB2508C4AE00A6A2FB /* HINetworkgraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HINetworkgraph.h; path = HIChartsClasses/HINetworkgraph.h; sourceTree = "<group>"; };
-		CD70E8CC2508C4AE00A6A2FB /* HIColumnpyramid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIColumnpyramid.m; path = HIChartsClasses/HIColumnpyramid.m; sourceTree = "<group>"; };
-		CD70E8CD2508C4AE00A6A2FB /* HIPatternOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPatternOptionsObject.m; path = HIChartsClasses/HIPatternOptionsObject.m; sourceTree = "<group>"; };
-		CD70E8CE2508C4AE00A6A2FB /* HIDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDefault.m; path = HIChartsClasses/HIDefault.m; sourceTree = "<group>"; };
-		CD70E8CF2508C4AE00A6A2FB /* HIPackedbubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPackedbubble.m; path = HIChartsClasses/HIPackedbubble.m; sourceTree = "<group>"; };
-		CD70E8D02508C4AE00A6A2FB /* HIContextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIContextButton.h; path = HIChartsClasses/HIContextButton.h; sourceTree = "<group>"; };
-		CD70E8D12508C4AE00A6A2FB /* HINormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HINormal.m; path = HIChartsClasses/HINormal.m; sourceTree = "<group>"; };
-		CD70E8D22508C4AE00A6A2FB /* HIColorVariation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIColorVariation.h; path = HIChartsClasses/HIColorVariation.h; sourceTree = "<group>"; };
-		CD70E8D32508C4AE00A6A2FB /* HIGuideBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGuideBox.m; path = HIChartsClasses/HIGuideBox.m; sourceTree = "<group>"; };
-		CD70E8D42508C4AE00A6A2FB /* HIDragHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDragHandle.h; path = HIChartsClasses/HIDragHandle.h; sourceTree = "<group>"; };
-		CD70E8D52508C4AE00A6A2FB /* HIDumbbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDumbbell.m; path = HIChartsClasses/HIDumbbell.m; sourceTree = "<group>"; };
-		CD70E8D62508C4AE00A6A2FB /* HIRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIRight.m; path = HIChartsClasses/HIRight.m; sourceTree = "<group>"; };
-		CD70E8D72508C4AE00A6A2FB /* HIDateTimeLabelFormats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDateTimeLabelFormats.h; path = HIChartsClasses/HIDateTimeLabelFormats.h; sourceTree = "<group>"; };
-		CD70E8D82508C4AE00A6A2FB /* HIEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIEvents.m; path = HIChartsClasses/HIEvents.m; sourceTree = "<group>"; };
-		CD70E8D92508C4AF00A6A2FB /* HIArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIArea.m; path = HIChartsClasses/HIArea.m; sourceTree = "<group>"; };
-		CD70E8DA2508C4AF00A6A2FB /* HINavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HINavigation.m; path = HIChartsClasses/HINavigation.m; sourceTree = "<group>"; };
-		CD70E8DB2508C4AF00A6A2FB /* HICredits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICredits.m; path = HIChartsClasses/HICredits.m; sourceTree = "<group>"; };
-		CD70E8DC2508C4AF00A6A2FB /* HIPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPoints.h; path = HIChartsClasses/HIPoints.h; sourceTree = "<group>"; };
-		CD70E8DD2508C4AF00A6A2FB /* HIExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIExporting.h; path = HIChartsClasses/HIExporting.h; sourceTree = "<group>"; };
-		CD70E8DE2508C4AF00A6A2FB /* HIRangeSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIRangeSelector.h; path = HIChartsClasses/HIRangeSelector.h; sourceTree = "<group>"; };
-		CD70E8DF2508C4AF00A6A2FB /* HIPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPosition.h; path = HIChartsClasses/HIPosition.h; sourceTree = "<group>"; };
-		CD70E8E02508C4AF00A6A2FB /* HIBoxplot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBoxplot.m; path = HIChartsClasses/HIBoxplot.m; sourceTree = "<group>"; };
-		CD70E8E12508C4AF00A6A2FB /* HISonification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISonification.m; path = HIChartsClasses/HISonification.m; sourceTree = "<group>"; };
-		CD70E8E22508C4AF00A6A2FB /* HILegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILegend.h; path = HIChartsClasses/HILegend.h; sourceTree = "<group>"; };
-		CD70E8E32508C4AF00A6A2FB /* HITheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITheme.h; path = HIChartsClasses/HITheme.h; sourceTree = "<group>"; };
-		CD70E8E42508C4AF00A6A2FB /* HILine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILine.h; path = HIChartsClasses/HILine.h; sourceTree = "<group>"; };
-		CD70E8E52508C4AF00A6A2FB /* HITitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITitle.h; path = HIChartsClasses/HITitle.h; sourceTree = "<group>"; };
-		CD70E8E62508C4AF00A6A2FB /* HISelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISelect.m; path = HIChartsClasses/HISelect.m; sourceTree = "<group>"; };
-		CD70E8E72508C4AF00A6A2FB /* HIBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBullet.h; path = HIChartsClasses/HIBullet.h; sourceTree = "<group>"; };
-		CD70E8E82508C4AF00A6A2FB /* HIZAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIZAxis.h; path = HIChartsClasses/HIZAxis.h; sourceTree = "<group>"; };
-		CD70E8E92508C4AF00A6A2FB /* HISubtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISubtitle.m; path = HIChartsClasses/HISubtitle.m; sourceTree = "<group>"; };
-		CD70E8EA2508C4AF00A6A2FB /* HIWindbarb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWindbarb.h; path = HIChartsClasses/HIWindbarb.h; sourceTree = "<group>"; };
-		CD70E8EB2508C4AF00A6A2FB /* HIJitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIJitter.m; path = HIChartsClasses/HIJitter.m; sourceTree = "<group>"; };
-		CD70E8EC2508C4AF00A6A2FB /* HIControlPointOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIControlPointOptions.m; path = HIChartsClasses/HIControlPointOptions.m; sourceTree = "<group>"; };
-		CD70E8ED2508C4AF00A6A2FB /* HIBoost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBoost.h; path = HIChartsClasses/HIBoost.h; sourceTree = "<group>"; };
-		CD70E8EE2508C4B000A6A2FB /* HITimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITimeline.h; path = HIChartsClasses/HITimeline.h; sourceTree = "<group>"; };
-		CD70E8EF2508C4B000A6A2FB /* HISpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISpline.h; path = HIChartsClasses/HISpline.h; sourceTree = "<group>"; };
-		CD70E8F02508C4B000A6A2FB /* HITime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITime.m; path = HIChartsClasses/HITime.m; sourceTree = "<group>"; };
-		CD70E8F12508C4B000A6A2FB /* HISeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISeries.h; path = HIChartsClasses/HISeries.h; sourceTree = "<group>"; };
-		CD70E8F22508C4B000A6A2FB /* HICsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICsv.h; path = HIChartsClasses/HICsv.h; sourceTree = "<group>"; };
-		CD70E8F32508C4B000A6A2FB /* HIHover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIHover.m; path = HIChartsClasses/HIHover.m; sourceTree = "<group>"; };
-		CD70E8F42508C4B000A6A2FB /* HILeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILeft.m; path = HIChartsClasses/HILeft.m; sourceTree = "<group>"; };
-		CD70E8F52508C4B000A6A2FB /* HILabelOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILabelOptions.h; path = HIChartsClasses/HILabelOptions.h; sourceTree = "<group>"; };
-		CD70E8F62508C4B000A6A2FB /* HIYAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIYAxis.h; path = HIChartsClasses/HIYAxis.h; sourceTree = "<group>"; };
-		CD70E8F72508C4B000A6A2FB /* HISummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISummary.h; path = HIChartsClasses/HISummary.h; sourceTree = "<group>"; };
-		CD70E8F82508C4B000A6A2FB /* HIBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBar.h; path = HIChartsClasses/HIBar.h; sourceTree = "<group>"; };
-		CD70E8F92508C4B000A6A2FB /* HISankey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISankey.m; path = HIChartsClasses/HISankey.m; sourceTree = "<group>"; };
-		CD70E8FA2508C4B000A6A2FB /* HIGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGauge.m; path = HIChartsClasses/HIGauge.m; sourceTree = "<group>"; };
-		CD70E8FB2508C4B000A6A2FB /* HIJitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIJitter.h; path = HIChartsClasses/HIJitter.h; sourceTree = "<group>"; };
-		CD70E8FC2508C4B000A6A2FB /* HINetworkgraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HINetworkgraph.m; path = HIChartsClasses/HINetworkgraph.m; sourceTree = "<group>"; };
-		CD70E8FD2508C4B000A6A2FB /* HISeriesNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISeriesNavigation.h; path = HIChartsClasses/HISeriesNavigation.h; sourceTree = "<group>"; };
-		CD70E8FE2508C4B000A6A2FB /* HITreemap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITreemap.h; path = HIChartsClasses/HITreemap.h; sourceTree = "<group>"; };
-		CD70E8FF2508C4B000A6A2FB /* HICrosshair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICrosshair.m; path = HIChartsClasses/HICrosshair.m; sourceTree = "<group>"; };
-		CD70E9002508C4B000A6A2FB /* HICrosshair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICrosshair.h; path = HIChartsClasses/HICrosshair.h; sourceTree = "<group>"; };
-		CD70E9012508C4B000A6A2FB /* HIPivot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPivot.m; path = HIChartsClasses/HIPivot.m; sourceTree = "<group>"; };
-		CD70E9022508C4B000A6A2FB /* HIMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIMarker.h; path = HIChartsClasses/HIMarker.h; sourceTree = "<group>"; };
-		CD70E9032508C4B100A6A2FB /* HIColumnrange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIColumnrange.h; path = HIChartsClasses/HIColumnrange.h; sourceTree = "<group>"; };
-		CD70E9042508C4B100A6A2FB /* HICluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICluster.h; path = HIChartsClasses/HICluster.h; sourceTree = "<group>"; };
-		CD70E9052508C4B100A6A2FB /* HIRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIRules.h; path = HIChartsClasses/HIRules.h; sourceTree = "<group>"; };
-		CD70E9062508C4B100A6A2FB /* HIDependencywheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDependencywheel.m; path = HIChartsClasses/HIDependencywheel.m; sourceTree = "<group>"; };
-		CD70E9072508C4B100A6A2FB /* HIWordcloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIWordcloud.m; path = HIChartsClasses/HIWordcloud.m; sourceTree = "<group>"; };
-		CD70E9082508C4B100A6A2FB /* HILink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILink.m; path = HIChartsClasses/HILink.m; sourceTree = "<group>"; };
-		CD70E9092508C4B100A6A2FB /* HIAccessibilitySeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAccessibilitySeries.m; path = HIChartsClasses/HIAccessibilitySeries.m; sourceTree = "<group>"; };
-		CD70E90A2508C4B100A6A2FB /* HIResponsive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIResponsive.m; path = HIChartsClasses/HIResponsive.m; sourceTree = "<group>"; };
-		CD70E90B2508C4B100A6A2FB /* HIAnnotationsOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAnnotationsOptions.h; path = HIChartsClasses/HIAnnotationsOptions.h; sourceTree = "<group>"; };
-		CD70E90C2508C4B100A6A2FB /* HIButtonOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIButtonOptions.m; path = HIChartsClasses/HIButtonOptions.m; sourceTree = "<group>"; };
-		CD70E90D2508C4B100A6A2FB /* HIXrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIXrange.m; path = HIChartsClasses/HIXrange.m; sourceTree = "<group>"; };
-		CD70E90E2508C4B100A6A2FB /* HIXAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIXAxis.h; path = HIChartsClasses/HIXAxis.h; sourceTree = "<group>"; };
-		CD70E90F2508C4B100A6A2FB /* HIDataLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDataLabels.m; path = HIChartsClasses/HIDataLabels.m; sourceTree = "<group>"; };
-		CD70E9102508C4B100A6A2FB /* HIAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAnnotations.h; path = HIChartsClasses/HIAnnotations.h; sourceTree = "<group>"; };
-		CD70E9112508C4B100A6A2FB /* HIFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIFrame.m; path = HIChartsClasses/HIFrame.m; sourceTree = "<group>"; };
-		CD70E9122508C4B100A6A2FB /* HIScatter3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIScatter3d.m; path = HIChartsClasses/HIScatter3d.m; sourceTree = "<group>"; };
-		CD70E9132508C4B100A6A2FB /* HIRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIRight.h; path = HIChartsClasses/HIRight.h; sourceTree = "<group>"; };
-		CD70E9142508C4B100A6A2FB /* HIControlPointOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIControlPointOptions.h; path = HIChartsClasses/HIControlPointOptions.h; sourceTree = "<group>"; };
-		CD70E9152508C4B100A6A2FB /* HIData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIData.h; path = HIChartsClasses/HIData.h; sourceTree = "<group>"; };
-		CD70E9162508C4B100A6A2FB /* HILabelOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILabelOptions.m; path = HIChartsClasses/HILabelOptions.m; sourceTree = "<group>"; };
-		CD70E9172508C4B200A6A2FB /* HIScatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIScatter.m; path = HIChartsClasses/HIScatter.m; sourceTree = "<group>"; };
-		CD70E9182508C4B200A6A2FB /* HIVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIVector.h; path = HIChartsClasses/HIVector.h; sourceTree = "<group>"; };
-		CD70E9192508C4B200A6A2FB /* HIParentNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIParentNode.h; path = HIChartsClasses/HIParentNode.h; sourceTree = "<group>"; };
-		CD70E91A2508C4B200A6A2FB /* HITextPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITextPath.m; path = HIChartsClasses/HITextPath.m; sourceTree = "<group>"; };
-		CD70E91B2508C4B200A6A2FB /* HILollipop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILollipop.h; path = HIChartsClasses/HILollipop.h; sourceTree = "<group>"; };
-		CD70E91C2508C4B200A6A2FB /* HIScreenReaderSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIScreenReaderSection.m; path = HIChartsClasses/HIScreenReaderSection.m; sourceTree = "<group>"; };
-		CD70E91D2508C4B200A6A2FB /* HIDragDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDragDrop.h; path = HIChartsClasses/HIDragDrop.h; sourceTree = "<group>"; };
-		CD70E91E2508C4B200A6A2FB /* HIDataSorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDataSorting.m; path = HIChartsClasses/HIDataSorting.m; sourceTree = "<group>"; };
-		CD70E91F2508C4B200A6A2FB /* HIBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBottom.h; path = HIChartsClasses/HIBottom.h; sourceTree = "<group>"; };
-		CD70E9202508C4B200A6A2FB /* HIPyramid3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPyramid3d.m; path = HIChartsClasses/HIPyramid3d.m; sourceTree = "<group>"; };
-		CD70E9212508C4B200A6A2FB /* HIRadialGradientColorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIRadialGradientColorObject.m; path = HIChartsClasses/HIRadialGradientColorObject.m; sourceTree = "<group>"; };
-		CD70E9222508C4B200A6A2FB /* HIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIFilter.h; path = HIChartsClasses/HIFilter.h; sourceTree = "<group>"; };
-		CD70E9232508C4B200A6A2FB /* HINavigationBindingsOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HINavigationBindingsOptionsObject.h; path = HIChartsClasses/HINavigationBindingsOptionsObject.h; sourceTree = "<group>"; };
-		CD70E9242508C4B200A6A2FB /* HIFunnel3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIFunnel3d.h; path = HIChartsClasses/HIFunnel3d.h; sourceTree = "<group>"; };
-		CD70E9252508C4B200A6A2FB /* HIRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIRotation.h; path = HIChartsClasses/HIRotation.h; sourceTree = "<group>"; };
-		CD70E9262508C4B200A6A2FB /* HIDrillUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDrillUpButton.h; path = HIChartsClasses/HIDrillUpButton.h; sourceTree = "<group>"; };
-		CD70E9272508C4B200A6A2FB /* HIPackedbubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPackedbubble.h; path = HIChartsClasses/HIPackedbubble.h; sourceTree = "<group>"; };
-		CD70E9282508C4B200A6A2FB /* HIGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGlobal.m; path = HIChartsClasses/HIGlobal.m; sourceTree = "<group>"; };
-		CD70E9292508C4B200A6A2FB /* HILinkTextPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILinkTextPath.m; path = HIChartsClasses/HILinkTextPath.m; sourceTree = "<group>"; };
-		CD70E92A2508C4B200A6A2FB /* HIWaterfall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIWaterfall.m; path = HIChartsClasses/HIWaterfall.m; sourceTree = "<group>"; };
-		CD70E92B2508C4B300A6A2FB /* HICondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICondition.m; path = HIChartsClasses/HICondition.m; sourceTree = "<group>"; };
-		CD70E92C2508C4B300A6A2FB /* HISeriesNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISeriesNavigation.m; path = HIChartsClasses/HISeriesNavigation.m; sourceTree = "<group>"; };
-		CD70E92D2508C4B300A6A2FB /* HIPanning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPanning.h; path = HIChartsClasses/HIPanning.h; sourceTree = "<group>"; };
-		CD70E92E2508C4B300A6A2FB /* HISummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISummary.m; path = HIChartsClasses/HISummary.m; sourceTree = "<group>"; };
-		CD70E92F2508C4B300A6A2FB /* HIDial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDial.h; path = HIChartsClasses/HIDial.h; sourceTree = "<group>"; };
-		CD70E9302508C4B300A6A2FB /* HIFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIFront.h; path = HIChartsClasses/HIFront.h; sourceTree = "<group>"; };
-		CD70E9312508C4B300A6A2FB /* HIDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDefault.h; path = HIChartsClasses/HIDefault.h; sourceTree = "<group>"; };
-		CD70E9322508C4B300A6A2FB /* HIParentNodeOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIParentNodeOptions.m; path = HIChartsClasses/HIParentNodeOptions.m; sourceTree = "<group>"; };
-		CD70E9332508C4B300A6A2FB /* HITime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITime.h; path = HIChartsClasses/HITime.h; sourceTree = "<group>"; };
-		CD70E9342508C4B300A6A2FB /* HIVenn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIVenn.m; path = HIChartsClasses/HIVenn.m; sourceTree = "<group>"; };
-		CD70E9352508C4B300A6A2FB /* HISpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISpline.m; path = HIChartsClasses/HISpline.m; sourceTree = "<group>"; };
-		CD70E9362508C4B300A6A2FB /* HIDataSortingOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDataSortingOptionsObject.h; path = HIChartsClasses/HIDataSortingOptionsObject.h; sourceTree = "<group>"; };
-		CD70E9372508C4B300A6A2FB /* HILang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILang.h; path = HIChartsClasses/HILang.h; sourceTree = "<group>"; };
-		CD70E9382508C4B300A6A2FB /* HIRangeSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIRangeSelector.m; path = HIChartsClasses/HIRangeSelector.m; sourceTree = "<group>"; };
-		CD70E9392508C4B300A6A2FB /* HIParallelAxes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIParallelAxes.h; path = HIChartsClasses/HIParallelAxes.h; sourceTree = "<group>"; };
-		CD70E93A2508C4B300A6A2FB /* HIRanges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIRanges.h; path = HIChartsClasses/HIRanges.h; sourceTree = "<group>"; };
-		CD70E93B2508C4B300A6A2FB /* HIDependencywheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDependencywheel.h; path = HIChartsClasses/HIDependencywheel.h; sourceTree = "<group>"; };
-		CD70E93C2508C4B300A6A2FB /* HIShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIShapes.h; path = HIChartsClasses/HIShapes.h; sourceTree = "<group>"; };
-		CD70E93D2508C4B300A6A2FB /* HIDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDebug.h; path = HIChartsClasses/HIDebug.h; sourceTree = "<group>"; };
-		CD70E93E2508C4B300A6A2FB /* HIXAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIXAxis.m; path = HIChartsClasses/HIXAxis.m; sourceTree = "<group>"; };
-		CD70E93F2508C4B300A6A2FB /* HIDragHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDragHandle.m; path = HIChartsClasses/HIDragHandle.m; sourceTree = "<group>"; };
-		CD70E9402508C4B400A6A2FB /* HIChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIChart.h; path = HIChartsClasses/HIChart.h; sourceTree = "<group>"; };
-		CD70E9412508C4B400A6A2FB /* HIFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIFrame.h; path = HIChartsClasses/HIFrame.h; sourceTree = "<group>"; };
-		CD70E9422508C4B400A6A2FB /* HIFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIFilter.m; path = HIChartsClasses/HIFilter.m; sourceTree = "<group>"; };
-		CD70E9432508C4B400A6A2FB /* HIZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIZoom.h; path = HIChartsClasses/HIZoom.h; sourceTree = "<group>"; };
-		CD70E9442508C4B400A6A2FB /* HINormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HINormal.h; path = HIChartsClasses/HINormal.h; sourceTree = "<group>"; };
-		CD70E9452508C4B400A6A2FB /* HIDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDebug.m; path = HIChartsClasses/HIDebug.m; sourceTree = "<group>"; };
-		CD70E9462508C4B400A6A2FB /* HILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILabel.h; path = HIChartsClasses/HILabel.h; sourceTree = "<group>"; };
-		CD70E9472508C4B400A6A2FB /* HIPatternOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPatternOptionsObject.h; path = HIChartsClasses/HIPatternOptionsObject.h; sourceTree = "<group>"; };
-		CD70E9482508C4B400A6A2FB /* HIZAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIZAxis.m; path = HIChartsClasses/HIZAxis.m; sourceTree = "<group>"; };
-		CD70E9492508C4B400A6A2FB /* HIStackLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIStackLabels.m; path = HIChartsClasses/HIStackLabels.m; sourceTree = "<group>"; };
-		CD70E94A2508C4B400A6A2FB /* HIVenn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIVenn.h; path = HIChartsClasses/HIVenn.h; sourceTree = "<group>"; };
-		CD70E94B2508C4B400A6A2FB /* HIGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIGlobal.h; path = HIChartsClasses/HIGlobal.h; sourceTree = "<group>"; };
-		CD70E94C2508C4B400A6A2FB /* HIGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIGauge.h; path = HIChartsClasses/HIGauge.h; sourceTree = "<group>"; };
-		CD70E94D2508C4B400A6A2FB /* HIPyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPyramid.h; path = HIChartsClasses/HIPyramid.h; sourceTree = "<group>"; };
-		CD70E94E2508C4B400A6A2FB /* HIFocusBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIFocusBorder.h; path = HIChartsClasses/HIFocusBorder.h; sourceTree = "<group>"; };
-		CD70E94F2508C4B400A6A2FB /* HIAccessibilityLegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAccessibilityLegend.h; path = HIChartsClasses/HIAccessibilityLegend.h; sourceTree = "<group>"; };
-		CD70E9502508C4B500A6A2FB /* HILinkTextPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILinkTextPath.h; path = HIChartsClasses/HILinkTextPath.h; sourceTree = "<group>"; };
-		CD70E9512508C4B500A6A2FB /* HIStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIStates.m; path = HIChartsClasses/HIStates.m; sourceTree = "<group>"; };
-		CD70E9522508C4B500A6A2FB /* HIVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIVector.m; path = HIChartsClasses/HIVector.m; sourceTree = "<group>"; };
-		CD70E9532508C4B500A6A2FB /* HISelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISelect.h; path = HIChartsClasses/HISelect.h; sourceTree = "<group>"; };
-		CD70E9542508C4B500A6A2FB /* HIBellcurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBellcurve.m; path = HIChartsClasses/HIBellcurve.m; sourceTree = "<group>"; };
-		CD70E9552508C4B500A6A2FB /* HITooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITooltip.m; path = HIChartsClasses/HITooltip.m; sourceTree = "<group>"; };
-		CD70E9562508C4B500A6A2FB /* HIVariablepie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIVariablepie.m; path = HIChartsClasses/HIVariablepie.m; sourceTree = "<group>"; };
-		CD70E9572508C4B500A6A2FB /* HIOrganization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIOrganization.h; path = HIChartsClasses/HIOrganization.h; sourceTree = "<group>"; };
-		CD70E9582508C4B500A6A2FB /* HISeriesTypeDescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISeriesTypeDescriptions.m; path = HIChartsClasses/HISeriesTypeDescriptions.m; sourceTree = "<group>"; };
-		CD70E9592508C4B500A6A2FB /* HILink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILink.h; path = HIChartsClasses/HILink.h; sourceTree = "<group>"; };
-		CD70E95A2508C4B500A6A2FB /* HIGeoJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGeoJSON.m; path = HIChartsClasses/HIGeoJSON.m; sourceTree = "<group>"; };
-		CD70E95B2508C4B500A6A2FB /* HIBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBindings.h; path = HIChartsClasses/HIBindings.h; sourceTree = "<group>"; };
-		CD70E95C2508C4B500A6A2FB /* HIParentNodeTextPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIParentNodeTextPath.m; path = HIChartsClasses/HIParentNodeTextPath.m; sourceTree = "<group>"; };
-		CD70E95D2508C4B600A6A2FB /* HITitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITitle.m; path = HIChartsClasses/HITitle.m; sourceTree = "<group>"; };
-		CD70E95E2508C4B600A6A2FB /* HIPyramid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPyramid.m; path = HIChartsClasses/HIPyramid.m; sourceTree = "<group>"; };
-		CD70E95F2508C4B600A6A2FB /* HIDrilldown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDrilldown.m; path = HIChartsClasses/HIDrilldown.m; sourceTree = "<group>"; };
-		CD70E9602508C4B600A6A2FB /* HIAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAnnotations.m; path = HIChartsClasses/HIAnnotations.m; sourceTree = "<group>"; };
-		CD70E9612508C4B600A6A2FB /* HIEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIEvents.h; path = HIChartsClasses/HIEvents.h; sourceTree = "<group>"; };
-		CD70E9622508C4B600A6A2FB /* HILabelIntersectBoxObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILabelIntersectBoxObject.h; path = HIChartsClasses/HILabelIntersectBoxObject.h; sourceTree = "<group>"; };
-		CD70E9632508C4B600A6A2FB /* HIPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPane.m; path = HIChartsClasses/HIPane.m; sourceTree = "<group>"; };
-		CD70E9642508C4B600A6A2FB /* HIAccessibilitySeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAccessibilitySeries.h; path = HIChartsClasses/HIAccessibilitySeries.h; sourceTree = "<group>"; };
-		CD70E9652508C4B600A6A2FB /* HIScatter3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIScatter3d.h; path = HIChartsClasses/HIScatter3d.h; sourceTree = "<group>"; };
-		CD70E9662508C4B600A6A2FB /* HIAreasplinerange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAreasplinerange.h; path = HIChartsClasses/HIAreasplinerange.h; sourceTree = "<group>"; };
-		CD70E9672508C4B600A6A2FB /* HIArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIArrow.m; path = HIChartsClasses/HIArrow.m; sourceTree = "<group>"; };
-		CD70E9682508C4B600A6A2FB /* HIStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIStates.h; path = HIChartsClasses/HIStates.h; sourceTree = "<group>"; };
-		CD70E9692508C4B600A6A2FB /* HIParentNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIParentNode.m; path = HIChartsClasses/HIParentNode.m; sourceTree = "<group>"; };
-		CD70E96A2508C4B600A6A2FB /* HIHistogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIHistogram.h; path = HIChartsClasses/HIHistogram.h; sourceTree = "<group>"; };
-		CD70E96B2508C4B600A6A2FB /* HIResetZoomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIResetZoomButton.m; path = HIChartsClasses/HIResetZoomButton.m; sourceTree = "<group>"; };
-		CD70E96C2508C4B600A6A2FB /* HIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIItem.h; path = HIChartsClasses/HIItem.h; sourceTree = "<group>"; };
-		CD70E96D2508C4B600A6A2FB /* HIDataLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDataLabels.h; path = HIChartsClasses/HIDataLabels.h; sourceTree = "<group>"; };
-		CD70E96E2508C4B600A6A2FB /* HIAreaspline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAreaspline.h; path = HIChartsClasses/HIAreaspline.h; sourceTree = "<group>"; };
-		CD70E96F2508C4B700A6A2FB /* HIPartialFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPartialFill.h; path = HIChartsClasses/HIPartialFill.h; sourceTree = "<group>"; };
-		CD70E9702508C4B700A6A2FB /* HISeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISeries.m; path = HIChartsClasses/HISeries.m; sourceTree = "<group>"; };
-		CD70E9712508C4B700A6A2FB /* HIAnnounceNewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAnnounceNewData.m; path = HIChartsClasses/HIAnnounceNewData.m; sourceTree = "<group>"; };
-		CD70E9722508C4B700A6A2FB /* HIWindbarb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIWindbarb.m; path = HIChartsClasses/HIWindbarb.m; sourceTree = "<group>"; };
-		CD70E9732508C4B700A6A2FB /* HISVGAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISVGAttributes.h; path = HIChartsClasses/HISVGAttributes.h; sourceTree = "<group>"; };
-		CD70E9742508C4B700A6A2FB /* HIAnnounceNewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAnnounceNewData.h; path = HIChartsClasses/HIAnnounceNewData.h; sourceTree = "<group>"; };
-		CD70E9752508C4B700A6A2FB /* HIDumbbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDumbbell.h; path = HIChartsClasses/HIDumbbell.h; sourceTree = "<group>"; };
-		CD70E9762508C4B700A6A2FB /* HILevelSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILevelSize.m; path = HIChartsClasses/HILevelSize.m; sourceTree = "<group>"; };
-		CD70E9772508C4B700A6A2FB /* HIAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAnimation.h; path = HIChartsClasses/HIAnimation.h; sourceTree = "<group>"; };
-		CD70E9782508C4B700A6A2FB /* HITilemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITilemap.m; path = HIChartsClasses/HITilemap.m; sourceTree = "<group>"; };
-		CD70E9792508C4B700A6A2FB /* HICylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICylinder.h; path = HIChartsClasses/HICylinder.h; sourceTree = "<group>"; };
-		CD70E97A2508C4B700A6A2FB /* HIChartTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIChartTypes.h; path = HIChartsClasses/HIChartTypes.h; sourceTree = "<group>"; };
-		CD70E97B2508C4B700A6A2FB /* HIDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDefs.m; path = HIChartsClasses/HIDefs.m; sourceTree = "<group>"; };
-		CD70E97C2508C4B700A6A2FB /* HIColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIColumn.h; path = HIChartsClasses/HIColumn.h; sourceTree = "<group>"; };
-		CD70E97D2508C4B700A6A2FB /* HIPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPoint.h; path = HIChartsClasses/HIPoint.h; sourceTree = "<group>"; };
-		CD70E97E2508C4B800A6A2FB /* HICSSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICSSObject.h; path = HIChartsClasses/HICSSObject.h; sourceTree = "<group>"; };
-		CD70E97F2508C4B800A6A2FB /* HITheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITheme.m; path = HIChartsClasses/HITheme.m; sourceTree = "<group>"; };
-		CD70E9802508C4B800A6A2FB /* HIData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIData.m; path = HIChartsClasses/HIData.m; sourceTree = "<group>"; };
-		CD70E9812508C4B800A6A2FB /* HIPlotBands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPlotBands.h; path = HIChartsClasses/HIPlotBands.h; sourceTree = "<group>"; };
-		CD70E9822508C4B800A6A2FB /* HIFront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIFront.m; path = HIChartsClasses/HIFront.m; sourceTree = "<group>"; };
-		CD70E9832508C4B800A6A2FB /* HIPie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPie.h; path = HIChartsClasses/HIPie.h; sourceTree = "<group>"; };
-		CD70E9842508C4B800A6A2FB /* HIArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIArrow.h; path = HIChartsClasses/HIArrow.h; sourceTree = "<group>"; };
-		CD70E9852508C4B800A6A2FB /* HIVariwide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIVariwide.m; path = HIChartsClasses/HIVariwide.m; sourceTree = "<group>"; };
-		CD70E9862508C4B800A6A2FB /* HIAlignObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAlignObject.h; path = HIChartsClasses/HIAlignObject.h; sourceTree = "<group>"; };
-		CD70E9872508C4B800A6A2FB /* HIColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIColumn.m; path = HIChartsClasses/HIColumn.m; sourceTree = "<group>"; };
-		CD70E9882508C4B800A6A2FB /* HIRadialGradientColorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIRadialGradientColorObject.h; path = HIChartsClasses/HIRadialGradientColorObject.h; sourceTree = "<group>"; };
-		CD70E9892508C4B800A6A2FB /* HILabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILabels.h; path = HIChartsClasses/HILabels.h; sourceTree = "<group>"; };
-		CD70E98A2508C4B800A6A2FB /* HINodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HINodes.h; path = HIChartsClasses/HINodes.h; sourceTree = "<group>"; };
-		CD70E98B2508C4B800A6A2FB /* HIButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIButtons.m; path = HIChartsClasses/HIButtons.m; sourceTree = "<group>"; };
-		CD70E98C2508C4B800A6A2FB /* HIChartTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIChartTypes.m; path = HIChartsClasses/HIChartTypes.m; sourceTree = "<group>"; };
-		CD70E98D2508C4B800A6A2FB /* HILang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILang.m; path = HIChartsClasses/HILang.m; sourceTree = "<group>"; };
-		CD70E98E2508C4B900A6A2FB /* HIDragDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDragDrop.m; path = HIChartsClasses/HIDragDrop.m; sourceTree = "<group>"; };
-		CD70E98F2508C4B900A6A2FB /* HIBubbleLegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBubbleLegend.h; path = HIChartsClasses/HIBubbleLegend.h; sourceTree = "<group>"; };
-		CD70E9902508C4B900A6A2FB /* HIReverseArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIReverseArrow.m; path = HIChartsClasses/HIReverseArrow.m; sourceTree = "<group>"; };
-		CD70E9912508C4B900A6A2FB /* HIGradientColorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGradientColorObject.m; path = HIChartsClasses/HIGradientColorObject.m; sourceTree = "<group>"; };
-		CD70E9922508C4B900A6A2FB /* HILevelSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILevelSize.h; path = HIChartsClasses/HILevelSize.h; sourceTree = "<group>"; };
-		CD70E9932508C4B900A6A2FB /* HIHalo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIHalo.h; path = HIChartsClasses/HIHalo.h; sourceTree = "<group>"; };
-		CD70E9942508C4B900A6A2FB /* HIAccessibilityExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAccessibilityExporting.h; path = HIChartsClasses/HIAccessibilityExporting.h; sourceTree = "<group>"; };
-		CD70E9952508C4B900A6A2FB /* HIChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIChart.m; path = HIChartsClasses/HIChart.m; sourceTree = "<group>"; };
-		CD70E9962508C4B900A6A2FB /* HITextPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITextPath.h; path = HIChartsClasses/HITextPath.h; sourceTree = "<group>"; };
-		CD70E9972508C4B900A6A2FB /* HIActiveDataLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIActiveDataLabelStyle.h; path = HIChartsClasses/HIActiveDataLabelStyle.h; sourceTree = "<group>"; };
-		CD70E9982508C4B900A6A2FB /* HIErrorbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIErrorbar.h; path = HIChartsClasses/HIErrorbar.h; sourceTree = "<group>"; };
-		CD70E9992508C4B900A6A2FB /* HIZones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIZones.h; path = HIChartsClasses/HIZones.h; sourceTree = "<group>"; };
-		CD70E99A2508C4B900A6A2FB /* HIDrillUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDrillUpButton.m; path = HIChartsClasses/HIDrillUpButton.m; sourceTree = "<group>"; };
-		CD70E99B2508C4B900A6A2FB /* HIPlotOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPlotOptions.h; path = HIChartsClasses/HIPlotOptions.h; sourceTree = "<group>"; };
-		CD70E99C2508C4B900A6A2FB /* HINoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HINoData.m; path = HIChartsClasses/HINoData.m; sourceTree = "<group>"; };
-		CD70E99D2508C4B900A6A2FB /* HIShapeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIShapeOptions.h; path = HIChartsClasses/HIShapeOptions.h; sourceTree = "<group>"; };
-		CD70E99E2508C4BA00A6A2FB /* HIInactive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIInactive.m; path = HIChartsClasses/HIInactive.m; sourceTree = "<group>"; };
-		CD70E99F2508C4BA00A6A2FB /* HIGradientColorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIGradientColorObject.h; path = HIChartsClasses/HIGradientColorObject.h; sourceTree = "<group>"; };
-		CD70E9A02508C4BA00A6A2FB /* HIPatternObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPatternObject.h; path = HIChartsClasses/HIPatternObject.h; sourceTree = "<group>"; };
-		CD70E9A12508C4BA00A6A2FB /* HIPanning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPanning.m; path = HIChartsClasses/HIPanning.m; sourceTree = "<group>"; };
-		CD70E9A22508C4BA00A6A2FB /* HILine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILine.m; path = HIChartsClasses/HILine.m; sourceTree = "<group>"; };
-		CD70E9A32508C4BA00A6A2FB /* HIVariwide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIVariwide.h; path = HIChartsClasses/HIVariwide.h; sourceTree = "<group>"; };
-		CD70E9A42508C4BA00A6A2FB /* HIPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPane.h; path = HIChartsClasses/HIPane.h; sourceTree = "<group>"; };
-		CD70E9A52508C4BA00A6A2FB /* HIShapes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIShapes.m; path = HIChartsClasses/HIShapes.m; sourceTree = "<group>"; };
-		CD70E9A62508C4BA00A6A2FB /* HIHeatmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIHeatmap.h; path = HIChartsClasses/HIHeatmap.h; sourceTree = "<group>"; };
-		CD70E9A72508C4BA00A6A2FB /* HISunburst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISunburst.m; path = HIChartsClasses/HISunburst.m; sourceTree = "<group>"; };
-		CD70E9A82508C4BA00A6A2FB /* HIAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAccessibility.m; path = HIChartsClasses/HIAccessibility.m; sourceTree = "<group>"; };
-		CD70E9A92508C4BA00A6A2FB /* HICredits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICredits.h; path = HIChartsClasses/HICredits.h; sourceTree = "<group>"; };
-		CD70E9AA2508C4BA00A6A2FB /* HIAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAccessibility.h; path = HIChartsClasses/HIAccessibility.h; sourceTree = "<group>"; };
-		CD70E9AB2508C4BA00A6A2FB /* HIAccessibilityLegend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAccessibilityLegend.m; path = HIChartsClasses/HIAccessibilityLegend.m; sourceTree = "<group>"; };
-		CD70E9AC2508C4BA00A6A2FB /* HIOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIOptions.m; path = HIChartsClasses/HIOptions.m; sourceTree = "<group>"; };
-		CD70E9AD2508C4BA00A6A2FB /* HISubtitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISubtitle.h; path = HIChartsClasses/HISubtitle.h; sourceTree = "<group>"; };
-		CD70E9AE2508C4BB00A6A2FB /* HILoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILoading.m; path = HIChartsClasses/HILoading.m; sourceTree = "<group>"; };
-		CD70E9AF2508C4BB00A6A2FB /* HISVGAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISVGAttributes.m; path = HIChartsClasses/HISVGAttributes.m; sourceTree = "<group>"; };
-		CD70E9B02508C4BB00A6A2FB /* HITop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITop.m; path = HIChartsClasses/HITop.m; sourceTree = "<group>"; };
-		CD70E9B12508C4BB00A6A2FB /* HIScreenReaderSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIScreenReaderSection.h; path = HIChartsClasses/HIScreenReaderSection.h; sourceTree = "<group>"; };
-		CD70E9B22508C4BB00A6A2FB /* HILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILabel.m; path = HIChartsClasses/HILabel.m; sourceTree = "<group>"; };
-		CD70E9B32508C4BB00A6A2FB /* HIOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIOptions.h; path = HIChartsClasses/HIOptions.h; sourceTree = "<group>"; };
-		CD70E9B42508C4BB00A6A2FB /* HIAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAttributes.h; path = HIChartsClasses/HIAttributes.h; sourceTree = "<group>"; };
-		CD70E9B52508C4BB00A6A2FB /* HITraverseUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITraverseUpButton.h; path = HIChartsClasses/HITraverseUpButton.h; sourceTree = "<group>"; };
-		CD70E9B62508C4BB00A6A2FB /* HIBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBindings.m; path = HIChartsClasses/HIBindings.m; sourceTree = "<group>"; };
-		CD70E9B72508C4BB00A6A2FB /* HIGeoJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIGeoJSON.h; path = HIChartsClasses/HIGeoJSON.h; sourceTree = "<group>"; };
-		CD70E9B82508C4BB00A6A2FB /* HIShadowOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIShadowOptionsObject.h; path = HIChartsClasses/HIShadowOptionsObject.h; sourceTree = "<group>"; };
-		CD70E9B92508C4BB00A6A2FB /* HIPyramid3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPyramid3d.h; path = HIChartsClasses/HIPyramid3d.h; sourceTree = "<group>"; };
-		CD70E9BA2508C4BB00A6A2FB /* HINavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HINavigation.h; path = HIChartsClasses/HINavigation.h; sourceTree = "<group>"; };
-		CD70E9BB2508C4BB00A6A2FB /* HIAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAxis.m; path = HIChartsClasses/HIAxis.m; sourceTree = "<group>"; };
-		CD70E9BC2508C4BB00A6A2FB /* HIReverseArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIReverseArrow.h; path = HIChartsClasses/HIReverseArrow.h; sourceTree = "<group>"; };
-		CD70E9BD2508C4BB00A6A2FB /* HITraverseUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITraverseUpButton.m; path = HIChartsClasses/HITraverseUpButton.m; sourceTree = "<group>"; };
-		CD70E9BE2508C4BB00A6A2FB /* HIBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBubble.m; path = HIChartsClasses/HIBubble.m; sourceTree = "<group>"; };
-		CD70E9BF2508C4BB00A6A2FB /* HIShadowOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIShadowOptionsObject.m; path = HIChartsClasses/HIShadowOptionsObject.m; sourceTree = "<group>"; };
-		CD70E9C02508C4BC00A6A2FB /* HIBoost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBoost.m; path = HIChartsClasses/HIBoost.m; sourceTree = "<group>"; };
-		CD70E9C12508C4BC00A6A2FB /* HICluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICluster.m; path = HIChartsClasses/HICluster.m; sourceTree = "<group>"; };
-		CD70E9C22508C4BC00A6A2FB /* HIRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIRules.m; path = HIChartsClasses/HIRules.m; sourceTree = "<group>"; };
-		CD70E9C32508C4BC00A6A2FB /* HIAttr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAttr.m; path = HIChartsClasses/HIAttr.m; sourceTree = "<group>"; };
-		CD70E9C42508C4BC00A6A2FB /* HIFunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIFunnel.m; path = HIChartsClasses/HIFunnel.m; sourceTree = "<group>"; };
-		CD70E9C52508C4BC00A6A2FB /* HIDataGrouping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDataGrouping.m; path = HIChartsClasses/HIDataGrouping.m; sourceTree = "<group>"; };
-		CD70E9C62508C4BC00A6A2FB /* HICaption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICaption.m; path = HIChartsClasses/HICaption.m; sourceTree = "<group>"; };
-		CD70E9C72508C4BC00A6A2FB /* HIDataClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDataClasses.h; path = HIChartsClasses/HIDataClasses.h; sourceTree = "<group>"; };
-		CD70E9C82508C4BC00A6A2FB /* HITargetOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITargetOptions.m; path = HIChartsClasses/HITargetOptions.m; sourceTree = "<group>"; };
-		CD70E9C92508C4BC00A6A2FB /* HIExportData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIExportData.m; path = HIChartsClasses/HIExportData.m; sourceTree = "<group>"; };
-		CD70E9CA2508C4BC00A6A2FB /* HITimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITimeline.m; path = HIChartsClasses/HITimeline.m; sourceTree = "<group>"; };
-		CD70E9CB2508C4BC00A6A2FB /* HISunburst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISunburst.h; path = HIChartsClasses/HISunburst.h; sourceTree = "<group>"; };
-		CD70E9CC2508C4BD00A6A2FB /* HIDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDefs.h; path = HIChartsClasses/HIDefs.h; sourceTree = "<group>"; };
-		CD70E9CD2508C4BD00A6A2FB /* HISolidgauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISolidgauge.h; path = HIChartsClasses/HISolidgauge.h; sourceTree = "<group>"; };
-		CD70E9CE2508C4BD00A6A2FB /* HIKeyboardNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIKeyboardNavigation.m; path = HIChartsClasses/HIKeyboardNavigation.m; sourceTree = "<group>"; };
-		CD70E9CF2508C4BD00A6A2FB /* HIAreaspline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAreaspline.m; path = HIChartsClasses/HIAreaspline.m; sourceTree = "<group>"; };
-		CD70E9D02508C4BD00A6A2FB /* HIStreamgraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIStreamgraph.m; path = HIChartsClasses/HIStreamgraph.m; sourceTree = "<group>"; };
-		CD70E9D12508C4BD00A6A2FB /* HIActiveDataLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIActiveDataLabelStyle.m; path = HIChartsClasses/HIActiveDataLabelStyle.m; sourceTree = "<group>"; };
-		CD70E9D22508C4BD00A6A2FB /* HIExporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIExporting.m; path = HIChartsClasses/HIExporting.m; sourceTree = "<group>"; };
-		CD70E9D32508C4BD00A6A2FB /* HICaption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICaption.h; path = HIChartsClasses/HICaption.h; sourceTree = "<group>"; };
-		CD70E9D42508C4BD00A6A2FB /* HIPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPopup.h; path = HIChartsClasses/HIPopup.h; sourceTree = "<group>"; };
-		CD70E9D52508C4BD00A6A2FB /* HIParallelAxes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIParallelAxes.m; path = HIChartsClasses/HIParallelAxes.m; sourceTree = "<group>"; };
-		CD70E9D62508C4BE00A6A2FB /* HIBoxplot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBoxplot.h; path = HIChartsClasses/HIBoxplot.h; sourceTree = "<group>"; };
-		CD70E9D72508C4BE00A6A2FB /* HIAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAttributes.m; path = HIChartsClasses/HIAttributes.m; sourceTree = "<group>"; };
-		CD70E9D82508C4BE00A6A2FB /* HILayoutAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILayoutAlgorithm.m; path = HIChartsClasses/HILayoutAlgorithm.m; sourceTree = "<group>"; };
-		CD70E9D92508C4BE00A6A2FB /* HIBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBullet.m; path = HIChartsClasses/HIBullet.m; sourceTree = "<group>"; };
-		CD70E9DA2508C4BE00A6A2FB /* HIYAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIYAxis.m; path = HIChartsClasses/HIYAxis.m; sourceTree = "<group>"; };
-		CD70E9DB2508C4BE00A6A2FB /* HILegend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILegend.m; path = HIChartsClasses/HILegend.m; sourceTree = "<group>"; };
-		CD70E9DC2508C4BE00A6A2FB /* HISankey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISankey.h; path = HIChartsClasses/HISankey.h; sourceTree = "<group>"; };
-		CD70E9DD2508C4BE00A6A2FB /* HIWordcloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWordcloud.h; path = HIChartsClasses/HIWordcloud.h; sourceTree = "<group>"; };
-		CD70E9DE2508C4BE00A6A2FB /* HIAttr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAttr.h; path = HIChartsClasses/HIAttr.h; sourceTree = "<group>"; };
-		CD70E9DF2508C4BE00A6A2FB /* HINavigationBindingsOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HINavigationBindingsOptionsObject.m; path = HIChartsClasses/HINavigationBindingsOptionsObject.m; sourceTree = "<group>"; };
-		CD70E9E02508C4BE00A6A2FB /* HIButtonOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIButtonOptions.h; path = HIChartsClasses/HIButtonOptions.h; sourceTree = "<group>"; };
-		CD70E9E12508C4BF00A6A2FB /* HITargetOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITargetOptions.h; path = HIChartsClasses/HITargetOptions.h; sourceTree = "<group>"; };
-		CD70E9E22508C4BF00A6A2FB /* HIKeyboardNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIKeyboardNavigation.h; path = HIChartsClasses/HIKeyboardNavigation.h; sourceTree = "<group>"; };
-		CD70E9E32508C4BF00A6A2FB /* HITop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITop.h; path = HIChartsClasses/HITop.h; sourceTree = "<group>"; };
-		CD70E9E42508C4BF00A6A2FB /* HIHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIHistogram.m; path = HIChartsClasses/HIHistogram.m; sourceTree = "<group>"; };
-		CD70E9E52508C4BF00A6A2FB /* HIAccessibilityExporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAccessibilityExporting.m; path = HIChartsClasses/HIAccessibilityExporting.m; sourceTree = "<group>"; };
-		CD70E9E62508C4BF00A6A2FB /* HIZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIZoom.m; path = HIChartsClasses/HIZoom.m; sourceTree = "<group>"; };
-		CD70E9E72508C4BF00A6A2FB /* HIParentNodeTextPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIParentNodeTextPath.h; path = HIChartsClasses/HIParentNodeTextPath.h; sourceTree = "<group>"; };
-		CD70E9E82508C4BF00A6A2FB /* HIArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIArea.h; path = HIChartsClasses/HIArea.h; sourceTree = "<group>"; };
-		CD70E9E92508C4BF00A6A2FB /* HIDataSortingOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDataSortingOptionsObject.m; path = HIChartsClasses/HIDataSortingOptionsObject.m; sourceTree = "<group>"; };
-		CD70E9EA2508C4BF00A6A2FB /* HIDataSorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDataSorting.h; path = HIChartsClasses/HIDataSorting.h; sourceTree = "<group>"; };
-		CD70E9EB2508C4C000A6A2FB /* HIPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPolygon.h; path = HIChartsClasses/HIPolygon.h; sourceTree = "<group>"; };
-		CD70E9EC2508C4C000A6A2FB /* HISolidgauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISolidgauge.m; path = HIChartsClasses/HISolidgauge.m; sourceTree = "<group>"; };
-		CD70E9ED2508C4C000A6A2FB /* HIItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIItem.m; path = HIChartsClasses/HIItem.m; sourceTree = "<group>"; };
-		CD70E9EE2508C4C000A6A2FB /* HIPivot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPivot.h; path = HIChartsClasses/HIPivot.h; sourceTree = "<group>"; };
-		CD70E9EF2508C4C000A6A2FB /* HIColorAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIColorAxis.h; path = HIChartsClasses/HIColorAxis.h; sourceTree = "<group>"; };
-		CD70E9F02508C4C000A6A2FB /* HIXrange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIXrange.h; path = HIChartsClasses/HIXrange.h; sourceTree = "<group>"; };
-		CD70E9F12508C4C000A6A2FB /* HIOrganization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIOrganization.m; path = HIChartsClasses/HIOrganization.m; sourceTree = "<group>"; };
-		CD70E9F22508C4C000A6A2FB /* HIPatternObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPatternObject.m; path = HIChartsClasses/HIPatternObject.m; sourceTree = "<group>"; };
-		CD70E9F32508C4C000A6A2FB /* HIRanges.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIRanges.m; path = HIChartsClasses/HIRanges.m; sourceTree = "<group>"; };
-		CD70E9F42508C4C000A6A2FB /* HIBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBack.h; path = HIChartsClasses/HIBack.h; sourceTree = "<group>"; };
-		CD70E9F52508C4C100A6A2FB /* HIPie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPie.m; path = HIChartsClasses/HIPie.m; sourceTree = "<group>"; };
-		CD70E9F62508C4C100A6A2FB /* HIHover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIHover.h; path = HIChartsClasses/HIHover.h; sourceTree = "<group>"; };
-		CD70E9F72508C4C100A6A2FB /* HIStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIStyle.h; path = HIChartsClasses/HIStyle.h; sourceTree = "<group>"; };
-		CD70E9F82508C4C100A6A2FB /* HIDial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDial.m; path = HIChartsClasses/HIDial.m; sourceTree = "<group>"; };
-		CD70E9F92508C4C100A6A2FB /* HILinearGradientColorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILinearGradientColorObject.m; path = HIChartsClasses/HILinearGradientColorObject.m; sourceTree = "<group>"; };
-		CD70E9FA2508C4C100A6A2FB /* HICsv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICsv.m; path = HIChartsClasses/HICsv.m; sourceTree = "<group>"; };
-		CD70E9FB2508C4C100A6A2FB /* HIDrilldown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDrilldown.h; path = HIChartsClasses/HIDrilldown.h; sourceTree = "<group>"; };
-		CD70E9FC2508C4C100A6A2FB /* HICylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICylinder.m; path = HIChartsClasses/HICylinder.m; sourceTree = "<group>"; };
-		CD70E9FD2508C4C100A6A2FB /* HIAreasplinerange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAreasplinerange.m; path = HIChartsClasses/HIAreasplinerange.m; sourceTree = "<group>"; };
-		CD70E9FE2508C4C100A6A2FB /* HIExportData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIExportData.h; path = HIChartsClasses/HIExportData.h; sourceTree = "<group>"; };
-		CD70E9FF2508C4C200A6A2FB /* HISonification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISonification.h; path = HIChartsClasses/HISonification.h; sourceTree = "<group>"; };
-		CD70EA002508C4C200A6A2FB /* HIBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBar.m; path = HIChartsClasses/HIBar.m; sourceTree = "<group>"; };
-		CD70EA012508C4C200A6A2FB /* HICSSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICSSObject.m; path = HIChartsClasses/HICSSObject.m; sourceTree = "<group>"; };
-		CD70EA022508C4C200A6A2FB /* HICondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HICondition.h; path = HIChartsClasses/HICondition.h; sourceTree = "<group>"; };
-		CD70EA032508C4C200A6A2FB /* HIWaterfall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWaterfall.h; path = HIChartsClasses/HIWaterfall.h; sourceTree = "<group>"; };
-		CD70EA042508C4C200A6A2FB /* HIPartialFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPartialFill.m; path = HIChartsClasses/HIPartialFill.m; sourceTree = "<group>"; };
-		CD70EA052508C4C200A6A2FB /* HIPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPosition.m; path = HIChartsClasses/HIPosition.m; sourceTree = "<group>"; };
-		CD70EA062508C4C200A6A2FB /* HIFunnel3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIFunnel3d.m; path = HIChartsClasses/HIFunnel3d.m; sourceTree = "<group>"; };
-		CD70EA072508C4C200A6A2FB /* HILeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILeft.h; path = HIChartsClasses/HILeft.h; sourceTree = "<group>"; };
-		CD70EA082508C4C200A6A2FB /* HIAnnotationsOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAnnotationsOptions.m; path = HIChartsClasses/HIAnnotationsOptions.m; sourceTree = "<group>"; };
-		CD70EA092508C4C300A6A2FB /* HIDataClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDataClasses.m; path = HIChartsClasses/HIDataClasses.m; sourceTree = "<group>"; };
-		CD70EA0A2508C4C300A6A2FB /* HIPlotLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIPlotLines.h; path = HIChartsClasses/HIPlotLines.h; sourceTree = "<group>"; };
-		CD70EA0B2508C4C300A6A2FB /* HIColumnrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIColumnrange.m; path = HIChartsClasses/HIColumnrange.m; sourceTree = "<group>"; };
-		CD70EA0C2508C4C300A6A2FB /* HINodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HINodes.m; path = HIChartsClasses/HINodes.m; sourceTree = "<group>"; };
-		CD70EA0D2508C4C300A6A2FB /* HIButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIButtons.h; path = HIChartsClasses/HIButtons.h; sourceTree = "<group>"; };
-		CD70EA0E2508C4C300A6A2FB /* HIVariablepie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIVariablepie.h; path = HIChartsClasses/HIVariablepie.h; sourceTree = "<group>"; };
-		CD70EA0F2508C4C300A6A2FB /* HITable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITable.m; path = HIChartsClasses/HITable.m; sourceTree = "<group>"; };
-		CD70EA102508C4C300A6A2FB /* HIArearange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIArearange.m; path = HIChartsClasses/HIArearange.m; sourceTree = "<group>"; };
-		CD70EA112508C4C300A6A2FB /* HITooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITooltip.h; path = HIChartsClasses/HITooltip.h; sourceTree = "<group>"; };
-		CD70EA122508C4C300A6A2FB /* HIScatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIScatter.h; path = HIChartsClasses/HIScatter.h; sourceTree = "<group>"; };
-		CD70EA132508C4C400A6A2FB /* HIDateTimeLabelFormats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIDateTimeLabelFormats.m; path = HIChartsClasses/HIDateTimeLabelFormats.m; sourceTree = "<group>"; };
-		CD70EA142508C4C400A6A2FB /* HIColumnpyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIColumnpyramid.h; path = HIChartsClasses/HIColumnpyramid.h; sourceTree = "<group>"; };
-		CD70EA152508C4C400A6A2FB /* HIShapeOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIShapeOptions.m; path = HIChartsClasses/HIShapeOptions.m; sourceTree = "<group>"; };
-		CD70EA162508C4C400A6A2FB /* HIContextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIContextButton.m; path = HIChartsClasses/HIContextButton.m; sourceTree = "<group>"; };
-		CD70EA172508C4C400A6A2FB /* HISVGDefinitionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISVGDefinitionObject.m; path = HIChartsClasses/HISVGDefinitionObject.m; sourceTree = "<group>"; };
-		CD70EA182508C4C400A6A2FB /* HILollipop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILollipop.m; path = HIChartsClasses/HILollipop.m; sourceTree = "<group>"; };
-		CD70EA192508C4C400A6A2FB /* HIAlignObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAlignObject.m; path = HIChartsClasses/HIAlignObject.m; sourceTree = "<group>"; };
-		CD70EA1A2508C4C400A6A2FB /* HIPareto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIPareto.m; path = HIChartsClasses/HIPareto.m; sourceTree = "<group>"; };
-		CD70EA1B2508C4C400A6A2FB /* HIBellcurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIBellcurve.h; path = HIChartsClasses/HIBellcurve.h; sourceTree = "<group>"; };
-		CD70EA1C2508C4C400A6A2FB /* HIColorVariation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIColorVariation.m; path = HIChartsClasses/HIColorVariation.m; sourceTree = "<group>"; };
-		CD70EA1D2508C4C500A6A2FB /* HIDataGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIDataGrouping.h; path = HIChartsClasses/HIDataGrouping.h; sourceTree = "<group>"; };
-		CD70EA1E2508C4C500A6A2FB /* HIArearange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIArearange.h; path = HIChartsClasses/HIArearange.h; sourceTree = "<group>"; };
-		CD70EA1F2508C4C500A6A2FB /* HIBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIBack.m; path = HIChartsClasses/HIBack.m; sourceTree = "<group>"; };
-		CD70EBA82508C50B00A6A2FB /* HIAnimationOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIAnimationOptionsObject.h; path = HIChartsClasses/HIAnimationOptionsObject.h; sourceTree = "<group>"; };
-		CD70EBA92508C50B00A6A2FB /* HIAnimationOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIAnimationOptionsObject.m; path = HIChartsClasses/HIAnimationOptionsObject.m; sourceTree = "<group>"; };
-		CD70EBAC2508C57100A6A2FB /* HILabelsAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILabelsAccessibility.m; path = HIChartsClasses/HILabelsAccessibility.m; sourceTree = "<group>"; };
-		CD70EBAD2508C57100A6A2FB /* HILabelsAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILabelsAccessibility.h; path = HIChartsClasses/HILabelsAccessibility.h; sourceTree = "<group>"; };
-		CD70EBB02508C5BA00A6A2FB /* HILabelOptionsAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HILabelOptionsAccessibility.h; path = HIChartsClasses/HILabelOptionsAccessibility.h; sourceTree = "<group>"; };
-		CD70EBB12508C5BA00A6A2FB /* HILabelOptionsAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HILabelOptionsAccessibility.m; path = HIChartsClasses/HILabelOptionsAccessibility.m; sourceTree = "<group>"; };
+		CD70E8982508C4AB00A6A2FB /* HIRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIRotation.m; sourceTree = "<group>"; };
+		CD70E8992508C4AB00A6A2FB /* HIBreaks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBreaks.m; sourceTree = "<group>"; };
+		CD70E89A2508C4AC00A6A2FB /* HIBreaks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBreaks.h; sourceTree = "<group>"; };
+		CD70E89B2508C4AC00A6A2FB /* HILayoutAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILayoutAlgorithm.h; sourceTree = "<group>"; };
+		CD70E89C2508C4AC00A6A2FB /* HIParentNodeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIParentNodeOptions.h; sourceTree = "<group>"; };
+		CD70E89D2508C4AC00A6A2FB /* HIColorAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIColorAxis.m; sourceTree = "<group>"; };
+		CD70E89E2508C4AC00A6A2FB /* HILinearGradientColorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILinearGradientColorObject.h; sourceTree = "<group>"; };
+		CD70E89F2508C4AC00A6A2FB /* HIScrollablePlotArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIScrollablePlotArea.h; sourceTree = "<group>"; };
+		CD70E8A02508C4AC00A6A2FB /* HISVGDefinitionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISVGDefinitionObject.h; sourceTree = "<group>"; };
+		CD70E8A12508C4AC00A6A2FB /* HINoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HINoData.h; sourceTree = "<group>"; };
+		CD70E8A22508C4AC00A6A2FB /* HITilemap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITilemap.h; sourceTree = "<group>"; };
+		CD70E8A32508C4AC00A6A2FB /* HIPareto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPareto.h; sourceTree = "<group>"; };
+		CD70E8A42508C4AC00A6A2FB /* HIOptions3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIOptions3d.h; sourceTree = "<group>"; };
+		CD70E8A52508C4AC00A6A2FB /* HIMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIMarker.m; sourceTree = "<group>"; };
+		CD70E8A62508C4AC00A6A2FB /* HIBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBackground.h; sourceTree = "<group>"; };
+		CD70E8A72508C4AC00A6A2FB /* HILabelIntersectBoxObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILabelIntersectBoxObject.m; sourceTree = "<group>"; };
+		CD70E8A82508C4AC00A6A2FB /* HIPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPolygon.m; sourceTree = "<group>"; };
+		CD70E8A92508C4AC00A6A2FB /* HIFunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFunnel.h; sourceTree = "<group>"; };
+		CD70E8AA2508C4AC00A6A2FB /* HIAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAxis.h; sourceTree = "<group>"; };
+		CD70E8AB2508C4AC00A6A2FB /* HILoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILoading.h; sourceTree = "<group>"; };
+		CD70E8AC2508C4AC00A6A2FB /* HIScrollablePlotArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIScrollablePlotArea.m; sourceTree = "<group>"; };
+		CD70E8AD2508C4AC00A6A2FB /* HIStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIStyle.m; sourceTree = "<group>"; };
+		CD70E8AE2508C4AC00A6A2FB /* HIBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBackground.m; sourceTree = "<group>"; };
+		CD70E8AF2508C4AD00A6A2FB /* HIInactive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIInactive.h; sourceTree = "<group>"; };
+		CD70E8B02508C4AD00A6A2FB /* HITreemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITreemap.m; sourceTree = "<group>"; };
+		CD70E8B12508C4AD00A6A2FB /* HIBottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBottom.m; sourceTree = "<group>"; };
+		CD70E8B22508C4AD00A6A2FB /* HIPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPoint.m; sourceTree = "<group>"; };
+		CD70E8B32508C4AD00A6A2FB /* HIStreamgraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIStreamgraph.h; sourceTree = "<group>"; };
+		CD70E8B42508C4AD00A6A2FB /* HIZones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIZones.m; sourceTree = "<group>"; };
+		CD70E8B52508C4AD00A6A2FB /* HILabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILabels.m; sourceTree = "<group>"; };
+		CD70E8B62508C4AD00A6A2FB /* HISeriesTypeDescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISeriesTypeDescriptions.h; sourceTree = "<group>"; };
+		CD70E8B72508C4AD00A6A2FB /* HIPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPoints.m; sourceTree = "<group>"; };
+		CD70E8B82508C4AD00A6A2FB /* HIPlotLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPlotLines.m; sourceTree = "<group>"; };
+		CD70E8B92508C4AD00A6A2FB /* HIErrorbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIErrorbar.m; sourceTree = "<group>"; };
+		CD70E8BA2508C4AD00A6A2FB /* HIResetZoomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIResetZoomButton.h; sourceTree = "<group>"; };
+		CD70E8BB2508C4AD00A6A2FB /* HIFocusBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFocusBorder.m; sourceTree = "<group>"; };
+		CD70E8BC2508C4AD00A6A2FB /* HIBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBubble.h; sourceTree = "<group>"; };
+		CD70E8BD2508C4AD00A6A2FB /* HIHeatmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIHeatmap.m; sourceTree = "<group>"; };
+		CD70E8BE2508C4AD00A6A2FB /* HITable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITable.h; sourceTree = "<group>"; };
+		CD70E8BF2508C4AD00A6A2FB /* HIPlotBands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPlotBands.m; sourceTree = "<group>"; };
+		CD70E8C02508C4AD00A6A2FB /* HIStackLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIStackLabels.h; sourceTree = "<group>"; };
+		CD70E8C12508C4AD00A6A2FB /* HIResponsive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIResponsive.h; sourceTree = "<group>"; };
+		CD70E8C22508C4AD00A6A2FB /* HILevels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILevels.h; sourceTree = "<group>"; };
+		CD70E8C32508C4AD00A6A2FB /* HIBubbleLegend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBubbleLegend.m; sourceTree = "<group>"; };
+		CD70E8C42508C4AE00A6A2FB /* HIGuideBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGuideBox.h; sourceTree = "<group>"; };
+		CD70E8C52508C4AE00A6A2FB /* HILevels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILevels.m; sourceTree = "<group>"; };
+		CD70E8C62508C4AE00A6A2FB /* HIHalo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIHalo.m; sourceTree = "<group>"; };
+		CD70E8C72508C4AE00A6A2FB /* HIPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPopup.m; sourceTree = "<group>"; };
+		CD70E8C82508C4AE00A6A2FB /* HIAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAnimation.m; sourceTree = "<group>"; };
+		CD70E8C92508C4AE00A6A2FB /* HIOptions3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIOptions3d.m; sourceTree = "<group>"; };
+		CD70E8CA2508C4AE00A6A2FB /* HIPlotOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPlotOptions.m; sourceTree = "<group>"; };
+		CD70E8CB2508C4AE00A6A2FB /* HINetworkgraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HINetworkgraph.h; sourceTree = "<group>"; };
+		CD70E8CC2508C4AE00A6A2FB /* HIColumnpyramid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIColumnpyramid.m; sourceTree = "<group>"; };
+		CD70E8CD2508C4AE00A6A2FB /* HIPatternOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPatternOptionsObject.m; sourceTree = "<group>"; };
+		CD70E8CE2508C4AE00A6A2FB /* HIDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDefault.m; sourceTree = "<group>"; };
+		CD70E8CF2508C4AE00A6A2FB /* HIPackedbubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPackedbubble.m; sourceTree = "<group>"; };
+		CD70E8D02508C4AE00A6A2FB /* HIContextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIContextButton.h; sourceTree = "<group>"; };
+		CD70E8D12508C4AE00A6A2FB /* HINormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HINormal.m; sourceTree = "<group>"; };
+		CD70E8D22508C4AE00A6A2FB /* HIColorVariation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIColorVariation.h; sourceTree = "<group>"; };
+		CD70E8D32508C4AE00A6A2FB /* HIGuideBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGuideBox.m; sourceTree = "<group>"; };
+		CD70E8D42508C4AE00A6A2FB /* HIDragHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDragHandle.h; sourceTree = "<group>"; };
+		CD70E8D52508C4AE00A6A2FB /* HIDumbbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDumbbell.m; sourceTree = "<group>"; };
+		CD70E8D62508C4AE00A6A2FB /* HIRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIRight.m; sourceTree = "<group>"; };
+		CD70E8D72508C4AE00A6A2FB /* HIDateTimeLabelFormats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDateTimeLabelFormats.h; sourceTree = "<group>"; };
+		CD70E8D82508C4AE00A6A2FB /* HIEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIEvents.m; sourceTree = "<group>"; };
+		CD70E8D92508C4AF00A6A2FB /* HIArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIArea.m; sourceTree = "<group>"; };
+		CD70E8DA2508C4AF00A6A2FB /* HINavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HINavigation.m; sourceTree = "<group>"; };
+		CD70E8DB2508C4AF00A6A2FB /* HICredits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICredits.m; sourceTree = "<group>"; };
+		CD70E8DC2508C4AF00A6A2FB /* HIPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPoints.h; sourceTree = "<group>"; };
+		CD70E8DD2508C4AF00A6A2FB /* HIExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIExporting.h; sourceTree = "<group>"; };
+		CD70E8DE2508C4AF00A6A2FB /* HIRangeSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIRangeSelector.h; sourceTree = "<group>"; };
+		CD70E8DF2508C4AF00A6A2FB /* HIPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPosition.h; sourceTree = "<group>"; };
+		CD70E8E02508C4AF00A6A2FB /* HIBoxplot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBoxplot.m; sourceTree = "<group>"; };
+		CD70E8E12508C4AF00A6A2FB /* HISonification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISonification.m; sourceTree = "<group>"; };
+		CD70E8E22508C4AF00A6A2FB /* HILegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILegend.h; sourceTree = "<group>"; };
+		CD70E8E32508C4AF00A6A2FB /* HITheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITheme.h; sourceTree = "<group>"; };
+		CD70E8E42508C4AF00A6A2FB /* HILine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILine.h; sourceTree = "<group>"; };
+		CD70E8E52508C4AF00A6A2FB /* HITitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITitle.h; sourceTree = "<group>"; };
+		CD70E8E62508C4AF00A6A2FB /* HISelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISelect.m; sourceTree = "<group>"; };
+		CD70E8E72508C4AF00A6A2FB /* HIBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBullet.h; sourceTree = "<group>"; };
+		CD70E8E82508C4AF00A6A2FB /* HIZAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIZAxis.h; sourceTree = "<group>"; };
+		CD70E8E92508C4AF00A6A2FB /* HISubtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISubtitle.m; sourceTree = "<group>"; };
+		CD70E8EA2508C4AF00A6A2FB /* HIWindbarb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIWindbarb.h; sourceTree = "<group>"; };
+		CD70E8EB2508C4AF00A6A2FB /* HIJitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIJitter.m; sourceTree = "<group>"; };
+		CD70E8EC2508C4AF00A6A2FB /* HIControlPointOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIControlPointOptions.m; sourceTree = "<group>"; };
+		CD70E8ED2508C4AF00A6A2FB /* HIBoost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBoost.h; sourceTree = "<group>"; };
+		CD70E8EE2508C4B000A6A2FB /* HITimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITimeline.h; sourceTree = "<group>"; };
+		CD70E8EF2508C4B000A6A2FB /* HISpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISpline.h; sourceTree = "<group>"; };
+		CD70E8F02508C4B000A6A2FB /* HITime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITime.m; sourceTree = "<group>"; };
+		CD70E8F12508C4B000A6A2FB /* HISeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISeries.h; sourceTree = "<group>"; };
+		CD70E8F22508C4B000A6A2FB /* HICsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICsv.h; sourceTree = "<group>"; };
+		CD70E8F32508C4B000A6A2FB /* HIHover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIHover.m; sourceTree = "<group>"; };
+		CD70E8F42508C4B000A6A2FB /* HILeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILeft.m; sourceTree = "<group>"; };
+		CD70E8F52508C4B000A6A2FB /* HILabelOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILabelOptions.h; sourceTree = "<group>"; };
+		CD70E8F62508C4B000A6A2FB /* HIYAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIYAxis.h; sourceTree = "<group>"; };
+		CD70E8F72508C4B000A6A2FB /* HISummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISummary.h; sourceTree = "<group>"; };
+		CD70E8F82508C4B000A6A2FB /* HIBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBar.h; sourceTree = "<group>"; };
+		CD70E8F92508C4B000A6A2FB /* HISankey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISankey.m; sourceTree = "<group>"; };
+		CD70E8FA2508C4B000A6A2FB /* HIGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGauge.m; sourceTree = "<group>"; };
+		CD70E8FB2508C4B000A6A2FB /* HIJitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIJitter.h; sourceTree = "<group>"; };
+		CD70E8FC2508C4B000A6A2FB /* HINetworkgraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HINetworkgraph.m; sourceTree = "<group>"; };
+		CD70E8FD2508C4B000A6A2FB /* HISeriesNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISeriesNavigation.h; sourceTree = "<group>"; };
+		CD70E8FE2508C4B000A6A2FB /* HITreemap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITreemap.h; sourceTree = "<group>"; };
+		CD70E8FF2508C4B000A6A2FB /* HICrosshair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICrosshair.m; sourceTree = "<group>"; };
+		CD70E9002508C4B000A6A2FB /* HICrosshair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICrosshair.h; sourceTree = "<group>"; };
+		CD70E9012508C4B000A6A2FB /* HIPivot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPivot.m; sourceTree = "<group>"; };
+		CD70E9022508C4B000A6A2FB /* HIMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIMarker.h; sourceTree = "<group>"; };
+		CD70E9032508C4B100A6A2FB /* HIColumnrange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIColumnrange.h; sourceTree = "<group>"; };
+		CD70E9042508C4B100A6A2FB /* HICluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICluster.h; sourceTree = "<group>"; };
+		CD70E9052508C4B100A6A2FB /* HIRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIRules.h; sourceTree = "<group>"; };
+		CD70E9062508C4B100A6A2FB /* HIDependencywheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDependencywheel.m; sourceTree = "<group>"; };
+		CD70E9072508C4B100A6A2FB /* HIWordcloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIWordcloud.m; sourceTree = "<group>"; };
+		CD70E9082508C4B100A6A2FB /* HILink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILink.m; sourceTree = "<group>"; };
+		CD70E9092508C4B100A6A2FB /* HIAccessibilitySeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAccessibilitySeries.m; sourceTree = "<group>"; };
+		CD70E90A2508C4B100A6A2FB /* HIResponsive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIResponsive.m; sourceTree = "<group>"; };
+		CD70E90B2508C4B100A6A2FB /* HIAnnotationsOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAnnotationsOptions.h; sourceTree = "<group>"; };
+		CD70E90C2508C4B100A6A2FB /* HIButtonOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIButtonOptions.m; sourceTree = "<group>"; };
+		CD70E90D2508C4B100A6A2FB /* HIXrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIXrange.m; sourceTree = "<group>"; };
+		CD70E90E2508C4B100A6A2FB /* HIXAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIXAxis.h; sourceTree = "<group>"; };
+		CD70E90F2508C4B100A6A2FB /* HIDataLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDataLabels.m; sourceTree = "<group>"; };
+		CD70E9102508C4B100A6A2FB /* HIAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAnnotations.h; sourceTree = "<group>"; };
+		CD70E9112508C4B100A6A2FB /* HIFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFrame.m; sourceTree = "<group>"; };
+		CD70E9122508C4B100A6A2FB /* HIScatter3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIScatter3d.m; sourceTree = "<group>"; };
+		CD70E9132508C4B100A6A2FB /* HIRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIRight.h; sourceTree = "<group>"; };
+		CD70E9142508C4B100A6A2FB /* HIControlPointOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIControlPointOptions.h; sourceTree = "<group>"; };
+		CD70E9152508C4B100A6A2FB /* HIData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIData.h; sourceTree = "<group>"; };
+		CD70E9162508C4B100A6A2FB /* HILabelOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILabelOptions.m; sourceTree = "<group>"; };
+		CD70E9172508C4B200A6A2FB /* HIScatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIScatter.m; sourceTree = "<group>"; };
+		CD70E9182508C4B200A6A2FB /* HIVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIVector.h; sourceTree = "<group>"; };
+		CD70E9192508C4B200A6A2FB /* HIParentNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIParentNode.h; sourceTree = "<group>"; };
+		CD70E91A2508C4B200A6A2FB /* HITextPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITextPath.m; sourceTree = "<group>"; };
+		CD70E91B2508C4B200A6A2FB /* HILollipop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILollipop.h; sourceTree = "<group>"; };
+		CD70E91C2508C4B200A6A2FB /* HIScreenReaderSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIScreenReaderSection.m; sourceTree = "<group>"; };
+		CD70E91D2508C4B200A6A2FB /* HIDragDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDragDrop.h; sourceTree = "<group>"; };
+		CD70E91E2508C4B200A6A2FB /* HIDataSorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDataSorting.m; sourceTree = "<group>"; };
+		CD70E91F2508C4B200A6A2FB /* HIBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBottom.h; sourceTree = "<group>"; };
+		CD70E9202508C4B200A6A2FB /* HIPyramid3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPyramid3d.m; sourceTree = "<group>"; };
+		CD70E9212508C4B200A6A2FB /* HIRadialGradientColorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIRadialGradientColorObject.m; sourceTree = "<group>"; };
+		CD70E9222508C4B200A6A2FB /* HIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFilter.h; sourceTree = "<group>"; };
+		CD70E9232508C4B200A6A2FB /* HINavigationBindingsOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HINavigationBindingsOptionsObject.h; sourceTree = "<group>"; };
+		CD70E9242508C4B200A6A2FB /* HIFunnel3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFunnel3d.h; sourceTree = "<group>"; };
+		CD70E9252508C4B200A6A2FB /* HIRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIRotation.h; sourceTree = "<group>"; };
+		CD70E9262508C4B200A6A2FB /* HIDrillUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDrillUpButton.h; sourceTree = "<group>"; };
+		CD70E9272508C4B200A6A2FB /* HIPackedbubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPackedbubble.h; sourceTree = "<group>"; };
+		CD70E9282508C4B200A6A2FB /* HIGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGlobal.m; sourceTree = "<group>"; };
+		CD70E9292508C4B200A6A2FB /* HILinkTextPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILinkTextPath.m; sourceTree = "<group>"; };
+		CD70E92A2508C4B200A6A2FB /* HIWaterfall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIWaterfall.m; sourceTree = "<group>"; };
+		CD70E92B2508C4B300A6A2FB /* HICondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICondition.m; sourceTree = "<group>"; };
+		CD70E92C2508C4B300A6A2FB /* HISeriesNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISeriesNavigation.m; sourceTree = "<group>"; };
+		CD70E92D2508C4B300A6A2FB /* HIPanning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPanning.h; sourceTree = "<group>"; };
+		CD70E92E2508C4B300A6A2FB /* HISummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISummary.m; sourceTree = "<group>"; };
+		CD70E92F2508C4B300A6A2FB /* HIDial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDial.h; sourceTree = "<group>"; };
+		CD70E9302508C4B300A6A2FB /* HIFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFront.h; sourceTree = "<group>"; };
+		CD70E9312508C4B300A6A2FB /* HIDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDefault.h; sourceTree = "<group>"; };
+		CD70E9322508C4B300A6A2FB /* HIParentNodeOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIParentNodeOptions.m; sourceTree = "<group>"; };
+		CD70E9332508C4B300A6A2FB /* HITime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITime.h; sourceTree = "<group>"; };
+		CD70E9342508C4B300A6A2FB /* HIVenn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIVenn.m; sourceTree = "<group>"; };
+		CD70E9352508C4B300A6A2FB /* HISpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISpline.m; sourceTree = "<group>"; };
+		CD70E9362508C4B300A6A2FB /* HIDataSortingOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDataSortingOptionsObject.h; sourceTree = "<group>"; };
+		CD70E9372508C4B300A6A2FB /* HILang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILang.h; sourceTree = "<group>"; };
+		CD70E9382508C4B300A6A2FB /* HIRangeSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIRangeSelector.m; sourceTree = "<group>"; };
+		CD70E9392508C4B300A6A2FB /* HIParallelAxes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIParallelAxes.h; sourceTree = "<group>"; };
+		CD70E93A2508C4B300A6A2FB /* HIRanges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIRanges.h; sourceTree = "<group>"; };
+		CD70E93B2508C4B300A6A2FB /* HIDependencywheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDependencywheel.h; sourceTree = "<group>"; };
+		CD70E93C2508C4B300A6A2FB /* HIShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIShapes.h; sourceTree = "<group>"; };
+		CD70E93D2508C4B300A6A2FB /* HIDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDebug.h; sourceTree = "<group>"; };
+		CD70E93E2508C4B300A6A2FB /* HIXAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIXAxis.m; sourceTree = "<group>"; };
+		CD70E93F2508C4B300A6A2FB /* HIDragHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDragHandle.m; sourceTree = "<group>"; };
+		CD70E9402508C4B400A6A2FB /* HIChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIChart.h; sourceTree = "<group>"; };
+		CD70E9412508C4B400A6A2FB /* HIFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFrame.h; sourceTree = "<group>"; };
+		CD70E9422508C4B400A6A2FB /* HIFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFilter.m; sourceTree = "<group>"; };
+		CD70E9432508C4B400A6A2FB /* HIZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIZoom.h; sourceTree = "<group>"; };
+		CD70E9442508C4B400A6A2FB /* HINormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HINormal.h; sourceTree = "<group>"; };
+		CD70E9452508C4B400A6A2FB /* HIDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDebug.m; sourceTree = "<group>"; };
+		CD70E9462508C4B400A6A2FB /* HILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILabel.h; sourceTree = "<group>"; };
+		CD70E9472508C4B400A6A2FB /* HIPatternOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPatternOptionsObject.h; sourceTree = "<group>"; };
+		CD70E9482508C4B400A6A2FB /* HIZAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIZAxis.m; sourceTree = "<group>"; };
+		CD70E9492508C4B400A6A2FB /* HIStackLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIStackLabels.m; sourceTree = "<group>"; };
+		CD70E94A2508C4B400A6A2FB /* HIVenn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIVenn.h; sourceTree = "<group>"; };
+		CD70E94B2508C4B400A6A2FB /* HIGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGlobal.h; sourceTree = "<group>"; };
+		CD70E94C2508C4B400A6A2FB /* HIGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGauge.h; sourceTree = "<group>"; };
+		CD70E94D2508C4B400A6A2FB /* HIPyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPyramid.h; sourceTree = "<group>"; };
+		CD70E94E2508C4B400A6A2FB /* HIFocusBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFocusBorder.h; sourceTree = "<group>"; };
+		CD70E94F2508C4B400A6A2FB /* HIAccessibilityLegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAccessibilityLegend.h; sourceTree = "<group>"; };
+		CD70E9502508C4B500A6A2FB /* HILinkTextPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILinkTextPath.h; sourceTree = "<group>"; };
+		CD70E9512508C4B500A6A2FB /* HIStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIStates.m; sourceTree = "<group>"; };
+		CD70E9522508C4B500A6A2FB /* HIVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIVector.m; sourceTree = "<group>"; };
+		CD70E9532508C4B500A6A2FB /* HISelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISelect.h; sourceTree = "<group>"; };
+		CD70E9542508C4B500A6A2FB /* HIBellcurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBellcurve.m; sourceTree = "<group>"; };
+		CD70E9552508C4B500A6A2FB /* HITooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITooltip.m; sourceTree = "<group>"; };
+		CD70E9562508C4B500A6A2FB /* HIVariablepie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIVariablepie.m; sourceTree = "<group>"; };
+		CD70E9572508C4B500A6A2FB /* HIOrganization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIOrganization.h; sourceTree = "<group>"; };
+		CD70E9582508C4B500A6A2FB /* HISeriesTypeDescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISeriesTypeDescriptions.m; sourceTree = "<group>"; };
+		CD70E9592508C4B500A6A2FB /* HILink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILink.h; sourceTree = "<group>"; };
+		CD70E95A2508C4B500A6A2FB /* HIGeoJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGeoJSON.m; sourceTree = "<group>"; };
+		CD70E95B2508C4B500A6A2FB /* HIBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBindings.h; sourceTree = "<group>"; };
+		CD70E95C2508C4B500A6A2FB /* HIParentNodeTextPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIParentNodeTextPath.m; sourceTree = "<group>"; };
+		CD70E95D2508C4B600A6A2FB /* HITitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITitle.m; sourceTree = "<group>"; };
+		CD70E95E2508C4B600A6A2FB /* HIPyramid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPyramid.m; sourceTree = "<group>"; };
+		CD70E95F2508C4B600A6A2FB /* HIDrilldown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDrilldown.m; sourceTree = "<group>"; };
+		CD70E9602508C4B600A6A2FB /* HIAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAnnotations.m; sourceTree = "<group>"; };
+		CD70E9612508C4B600A6A2FB /* HIEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIEvents.h; sourceTree = "<group>"; };
+		CD70E9622508C4B600A6A2FB /* HILabelIntersectBoxObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILabelIntersectBoxObject.h; sourceTree = "<group>"; };
+		CD70E9632508C4B600A6A2FB /* HIPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPane.m; sourceTree = "<group>"; };
+		CD70E9642508C4B600A6A2FB /* HIAccessibilitySeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAccessibilitySeries.h; sourceTree = "<group>"; };
+		CD70E9652508C4B600A6A2FB /* HIScatter3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIScatter3d.h; sourceTree = "<group>"; };
+		CD70E9662508C4B600A6A2FB /* HIAreasplinerange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAreasplinerange.h; sourceTree = "<group>"; };
+		CD70E9672508C4B600A6A2FB /* HIArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIArrow.m; sourceTree = "<group>"; };
+		CD70E9682508C4B600A6A2FB /* HIStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIStates.h; sourceTree = "<group>"; };
+		CD70E9692508C4B600A6A2FB /* HIParentNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIParentNode.m; sourceTree = "<group>"; };
+		CD70E96A2508C4B600A6A2FB /* HIHistogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIHistogram.h; sourceTree = "<group>"; };
+		CD70E96B2508C4B600A6A2FB /* HIResetZoomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIResetZoomButton.m; sourceTree = "<group>"; };
+		CD70E96C2508C4B600A6A2FB /* HIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIItem.h; sourceTree = "<group>"; };
+		CD70E96D2508C4B600A6A2FB /* HIDataLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDataLabels.h; sourceTree = "<group>"; };
+		CD70E96E2508C4B600A6A2FB /* HIAreaspline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAreaspline.h; sourceTree = "<group>"; };
+		CD70E96F2508C4B700A6A2FB /* HIPartialFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPartialFill.h; sourceTree = "<group>"; };
+		CD70E9702508C4B700A6A2FB /* HISeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISeries.m; sourceTree = "<group>"; };
+		CD70E9712508C4B700A6A2FB /* HIAnnounceNewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAnnounceNewData.m; sourceTree = "<group>"; };
+		CD70E9722508C4B700A6A2FB /* HIWindbarb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIWindbarb.m; sourceTree = "<group>"; };
+		CD70E9732508C4B700A6A2FB /* HISVGAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISVGAttributes.h; sourceTree = "<group>"; };
+		CD70E9742508C4B700A6A2FB /* HIAnnounceNewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAnnounceNewData.h; sourceTree = "<group>"; };
+		CD70E9752508C4B700A6A2FB /* HIDumbbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDumbbell.h; sourceTree = "<group>"; };
+		CD70E9762508C4B700A6A2FB /* HILevelSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILevelSize.m; sourceTree = "<group>"; };
+		CD70E9772508C4B700A6A2FB /* HIAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAnimation.h; sourceTree = "<group>"; };
+		CD70E9782508C4B700A6A2FB /* HITilemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITilemap.m; sourceTree = "<group>"; };
+		CD70E9792508C4B700A6A2FB /* HICylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICylinder.h; sourceTree = "<group>"; };
+		CD70E97A2508C4B700A6A2FB /* HIChartTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIChartTypes.h; sourceTree = "<group>"; };
+		CD70E97B2508C4B700A6A2FB /* HIDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDefs.m; sourceTree = "<group>"; };
+		CD70E97C2508C4B700A6A2FB /* HIColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIColumn.h; sourceTree = "<group>"; };
+		CD70E97D2508C4B700A6A2FB /* HIPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPoint.h; sourceTree = "<group>"; };
+		CD70E97E2508C4B800A6A2FB /* HICSSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICSSObject.h; sourceTree = "<group>"; };
+		CD70E97F2508C4B800A6A2FB /* HITheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITheme.m; sourceTree = "<group>"; };
+		CD70E9802508C4B800A6A2FB /* HIData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIData.m; sourceTree = "<group>"; };
+		CD70E9812508C4B800A6A2FB /* HIPlotBands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPlotBands.h; sourceTree = "<group>"; };
+		CD70E9822508C4B800A6A2FB /* HIFront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFront.m; sourceTree = "<group>"; };
+		CD70E9832508C4B800A6A2FB /* HIPie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPie.h; sourceTree = "<group>"; };
+		CD70E9842508C4B800A6A2FB /* HIArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIArrow.h; sourceTree = "<group>"; };
+		CD70E9852508C4B800A6A2FB /* HIVariwide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIVariwide.m; sourceTree = "<group>"; };
+		CD70E9862508C4B800A6A2FB /* HIAlignObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAlignObject.h; sourceTree = "<group>"; };
+		CD70E9872508C4B800A6A2FB /* HIColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIColumn.m; sourceTree = "<group>"; };
+		CD70E9882508C4B800A6A2FB /* HIRadialGradientColorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIRadialGradientColorObject.h; sourceTree = "<group>"; };
+		CD70E9892508C4B800A6A2FB /* HILabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILabels.h; sourceTree = "<group>"; };
+		CD70E98A2508C4B800A6A2FB /* HINodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HINodes.h; sourceTree = "<group>"; };
+		CD70E98B2508C4B800A6A2FB /* HIButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIButtons.m; sourceTree = "<group>"; };
+		CD70E98C2508C4B800A6A2FB /* HIChartTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIChartTypes.m; sourceTree = "<group>"; };
+		CD70E98D2508C4B800A6A2FB /* HILang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILang.m; sourceTree = "<group>"; };
+		CD70E98E2508C4B900A6A2FB /* HIDragDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDragDrop.m; sourceTree = "<group>"; };
+		CD70E98F2508C4B900A6A2FB /* HIBubbleLegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBubbleLegend.h; sourceTree = "<group>"; };
+		CD70E9902508C4B900A6A2FB /* HIReverseArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIReverseArrow.m; sourceTree = "<group>"; };
+		CD70E9912508C4B900A6A2FB /* HIGradientColorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGradientColorObject.m; sourceTree = "<group>"; };
+		CD70E9922508C4B900A6A2FB /* HILevelSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILevelSize.h; sourceTree = "<group>"; };
+		CD70E9932508C4B900A6A2FB /* HIHalo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIHalo.h; sourceTree = "<group>"; };
+		CD70E9942508C4B900A6A2FB /* HIAccessibilityExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAccessibilityExporting.h; sourceTree = "<group>"; };
+		CD70E9952508C4B900A6A2FB /* HIChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIChart.m; sourceTree = "<group>"; };
+		CD70E9962508C4B900A6A2FB /* HITextPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITextPath.h; sourceTree = "<group>"; };
+		CD70E9972508C4B900A6A2FB /* HIActiveDataLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIActiveDataLabelStyle.h; sourceTree = "<group>"; };
+		CD70E9982508C4B900A6A2FB /* HIErrorbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIErrorbar.h; sourceTree = "<group>"; };
+		CD70E9992508C4B900A6A2FB /* HIZones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIZones.h; sourceTree = "<group>"; };
+		CD70E99A2508C4B900A6A2FB /* HIDrillUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDrillUpButton.m; sourceTree = "<group>"; };
+		CD70E99B2508C4B900A6A2FB /* HIPlotOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPlotOptions.h; sourceTree = "<group>"; };
+		CD70E99C2508C4B900A6A2FB /* HINoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HINoData.m; sourceTree = "<group>"; };
+		CD70E99D2508C4B900A6A2FB /* HIShapeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIShapeOptions.h; sourceTree = "<group>"; };
+		CD70E99E2508C4BA00A6A2FB /* HIInactive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIInactive.m; sourceTree = "<group>"; };
+		CD70E99F2508C4BA00A6A2FB /* HIGradientColorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGradientColorObject.h; sourceTree = "<group>"; };
+		CD70E9A02508C4BA00A6A2FB /* HIPatternObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPatternObject.h; sourceTree = "<group>"; };
+		CD70E9A12508C4BA00A6A2FB /* HIPanning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPanning.m; sourceTree = "<group>"; };
+		CD70E9A22508C4BA00A6A2FB /* HILine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILine.m; sourceTree = "<group>"; };
+		CD70E9A32508C4BA00A6A2FB /* HIVariwide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIVariwide.h; sourceTree = "<group>"; };
+		CD70E9A42508C4BA00A6A2FB /* HIPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPane.h; sourceTree = "<group>"; };
+		CD70E9A52508C4BA00A6A2FB /* HIShapes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIShapes.m; sourceTree = "<group>"; };
+		CD70E9A62508C4BA00A6A2FB /* HIHeatmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIHeatmap.h; sourceTree = "<group>"; };
+		CD70E9A72508C4BA00A6A2FB /* HISunburst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISunburst.m; sourceTree = "<group>"; };
+		CD70E9A82508C4BA00A6A2FB /* HIAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAccessibility.m; sourceTree = "<group>"; };
+		CD70E9A92508C4BA00A6A2FB /* HICredits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICredits.h; sourceTree = "<group>"; };
+		CD70E9AA2508C4BA00A6A2FB /* HIAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAccessibility.h; sourceTree = "<group>"; };
+		CD70E9AB2508C4BA00A6A2FB /* HIAccessibilityLegend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAccessibilityLegend.m; sourceTree = "<group>"; };
+		CD70E9AC2508C4BA00A6A2FB /* HIOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIOptions.m; sourceTree = "<group>"; };
+		CD70E9AD2508C4BA00A6A2FB /* HISubtitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISubtitle.h; sourceTree = "<group>"; };
+		CD70E9AE2508C4BB00A6A2FB /* HILoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILoading.m; sourceTree = "<group>"; };
+		CD70E9AF2508C4BB00A6A2FB /* HISVGAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISVGAttributes.m; sourceTree = "<group>"; };
+		CD70E9B02508C4BB00A6A2FB /* HITop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITop.m; sourceTree = "<group>"; };
+		CD70E9B12508C4BB00A6A2FB /* HIScreenReaderSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIScreenReaderSection.h; sourceTree = "<group>"; };
+		CD70E9B22508C4BB00A6A2FB /* HILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILabel.m; sourceTree = "<group>"; };
+		CD70E9B32508C4BB00A6A2FB /* HIOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIOptions.h; sourceTree = "<group>"; };
+		CD70E9B42508C4BB00A6A2FB /* HIAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAttributes.h; sourceTree = "<group>"; };
+		CD70E9B52508C4BB00A6A2FB /* HITraverseUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITraverseUpButton.h; sourceTree = "<group>"; };
+		CD70E9B62508C4BB00A6A2FB /* HIBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBindings.m; sourceTree = "<group>"; };
+		CD70E9B72508C4BB00A6A2FB /* HIGeoJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGeoJSON.h; sourceTree = "<group>"; };
+		CD70E9B82508C4BB00A6A2FB /* HIShadowOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIShadowOptionsObject.h; sourceTree = "<group>"; };
+		CD70E9B92508C4BB00A6A2FB /* HIPyramid3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPyramid3d.h; sourceTree = "<group>"; };
+		CD70E9BA2508C4BB00A6A2FB /* HINavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HINavigation.h; sourceTree = "<group>"; };
+		CD70E9BB2508C4BB00A6A2FB /* HIAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAxis.m; sourceTree = "<group>"; };
+		CD70E9BC2508C4BB00A6A2FB /* HIReverseArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIReverseArrow.h; sourceTree = "<group>"; };
+		CD70E9BD2508C4BB00A6A2FB /* HITraverseUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITraverseUpButton.m; sourceTree = "<group>"; };
+		CD70E9BE2508C4BB00A6A2FB /* HIBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBubble.m; sourceTree = "<group>"; };
+		CD70E9BF2508C4BB00A6A2FB /* HIShadowOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIShadowOptionsObject.m; sourceTree = "<group>"; };
+		CD70E9C02508C4BC00A6A2FB /* HIBoost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBoost.m; sourceTree = "<group>"; };
+		CD70E9C12508C4BC00A6A2FB /* HICluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICluster.m; sourceTree = "<group>"; };
+		CD70E9C22508C4BC00A6A2FB /* HIRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIRules.m; sourceTree = "<group>"; };
+		CD70E9C32508C4BC00A6A2FB /* HIAttr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAttr.m; sourceTree = "<group>"; };
+		CD70E9C42508C4BC00A6A2FB /* HIFunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFunnel.m; sourceTree = "<group>"; };
+		CD70E9C52508C4BC00A6A2FB /* HIDataGrouping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDataGrouping.m; sourceTree = "<group>"; };
+		CD70E9C62508C4BC00A6A2FB /* HICaption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICaption.m; sourceTree = "<group>"; };
+		CD70E9C72508C4BC00A6A2FB /* HIDataClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDataClasses.h; sourceTree = "<group>"; };
+		CD70E9C82508C4BC00A6A2FB /* HITargetOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITargetOptions.m; sourceTree = "<group>"; };
+		CD70E9C92508C4BC00A6A2FB /* HIExportData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIExportData.m; sourceTree = "<group>"; };
+		CD70E9CA2508C4BC00A6A2FB /* HITimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITimeline.m; sourceTree = "<group>"; };
+		CD70E9CB2508C4BC00A6A2FB /* HISunburst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISunburst.h; sourceTree = "<group>"; };
+		CD70E9CC2508C4BD00A6A2FB /* HIDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDefs.h; sourceTree = "<group>"; };
+		CD70E9CD2508C4BD00A6A2FB /* HISolidgauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISolidgauge.h; sourceTree = "<group>"; };
+		CD70E9CE2508C4BD00A6A2FB /* HIKeyboardNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIKeyboardNavigation.m; sourceTree = "<group>"; };
+		CD70E9CF2508C4BD00A6A2FB /* HIAreaspline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAreaspline.m; sourceTree = "<group>"; };
+		CD70E9D02508C4BD00A6A2FB /* HIStreamgraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIStreamgraph.m; sourceTree = "<group>"; };
+		CD70E9D12508C4BD00A6A2FB /* HIActiveDataLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIActiveDataLabelStyle.m; sourceTree = "<group>"; };
+		CD70E9D22508C4BD00A6A2FB /* HIExporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIExporting.m; sourceTree = "<group>"; };
+		CD70E9D32508C4BD00A6A2FB /* HICaption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICaption.h; sourceTree = "<group>"; };
+		CD70E9D42508C4BD00A6A2FB /* HIPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPopup.h; sourceTree = "<group>"; };
+		CD70E9D52508C4BD00A6A2FB /* HIParallelAxes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIParallelAxes.m; sourceTree = "<group>"; };
+		CD70E9D62508C4BE00A6A2FB /* HIBoxplot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBoxplot.h; sourceTree = "<group>"; };
+		CD70E9D72508C4BE00A6A2FB /* HIAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAttributes.m; sourceTree = "<group>"; };
+		CD70E9D82508C4BE00A6A2FB /* HILayoutAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILayoutAlgorithm.m; sourceTree = "<group>"; };
+		CD70E9D92508C4BE00A6A2FB /* HIBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBullet.m; sourceTree = "<group>"; };
+		CD70E9DA2508C4BE00A6A2FB /* HIYAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIYAxis.m; sourceTree = "<group>"; };
+		CD70E9DB2508C4BE00A6A2FB /* HILegend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILegend.m; sourceTree = "<group>"; };
+		CD70E9DC2508C4BE00A6A2FB /* HISankey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISankey.h; sourceTree = "<group>"; };
+		CD70E9DD2508C4BE00A6A2FB /* HIWordcloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIWordcloud.h; sourceTree = "<group>"; };
+		CD70E9DE2508C4BE00A6A2FB /* HIAttr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAttr.h; sourceTree = "<group>"; };
+		CD70E9DF2508C4BE00A6A2FB /* HINavigationBindingsOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HINavigationBindingsOptionsObject.m; sourceTree = "<group>"; };
+		CD70E9E02508C4BE00A6A2FB /* HIButtonOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIButtonOptions.h; sourceTree = "<group>"; };
+		CD70E9E12508C4BF00A6A2FB /* HITargetOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITargetOptions.h; sourceTree = "<group>"; };
+		CD70E9E22508C4BF00A6A2FB /* HIKeyboardNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIKeyboardNavigation.h; sourceTree = "<group>"; };
+		CD70E9E32508C4BF00A6A2FB /* HITop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITop.h; sourceTree = "<group>"; };
+		CD70E9E42508C4BF00A6A2FB /* HIHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIHistogram.m; sourceTree = "<group>"; };
+		CD70E9E52508C4BF00A6A2FB /* HIAccessibilityExporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAccessibilityExporting.m; sourceTree = "<group>"; };
+		CD70E9E62508C4BF00A6A2FB /* HIZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIZoom.m; sourceTree = "<group>"; };
+		CD70E9E72508C4BF00A6A2FB /* HIParentNodeTextPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIParentNodeTextPath.h; sourceTree = "<group>"; };
+		CD70E9E82508C4BF00A6A2FB /* HIArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIArea.h; sourceTree = "<group>"; };
+		CD70E9E92508C4BF00A6A2FB /* HIDataSortingOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDataSortingOptionsObject.m; sourceTree = "<group>"; };
+		CD70E9EA2508C4BF00A6A2FB /* HIDataSorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDataSorting.h; sourceTree = "<group>"; };
+		CD70E9EB2508C4C000A6A2FB /* HIPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPolygon.h; sourceTree = "<group>"; };
+		CD70E9EC2508C4C000A6A2FB /* HISolidgauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISolidgauge.m; sourceTree = "<group>"; };
+		CD70E9ED2508C4C000A6A2FB /* HIItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIItem.m; sourceTree = "<group>"; };
+		CD70E9EE2508C4C000A6A2FB /* HIPivot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPivot.h; sourceTree = "<group>"; };
+		CD70E9EF2508C4C000A6A2FB /* HIColorAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIColorAxis.h; sourceTree = "<group>"; };
+		CD70E9F02508C4C000A6A2FB /* HIXrange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIXrange.h; sourceTree = "<group>"; };
+		CD70E9F12508C4C000A6A2FB /* HIOrganization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIOrganization.m; sourceTree = "<group>"; };
+		CD70E9F22508C4C000A6A2FB /* HIPatternObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPatternObject.m; sourceTree = "<group>"; };
+		CD70E9F32508C4C000A6A2FB /* HIRanges.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIRanges.m; sourceTree = "<group>"; };
+		CD70E9F42508C4C000A6A2FB /* HIBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBack.h; sourceTree = "<group>"; };
+		CD70E9F52508C4C100A6A2FB /* HIPie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPie.m; sourceTree = "<group>"; };
+		CD70E9F62508C4C100A6A2FB /* HIHover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIHover.h; sourceTree = "<group>"; };
+		CD70E9F72508C4C100A6A2FB /* HIStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIStyle.h; sourceTree = "<group>"; };
+		CD70E9F82508C4C100A6A2FB /* HIDial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDial.m; sourceTree = "<group>"; };
+		CD70E9F92508C4C100A6A2FB /* HILinearGradientColorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILinearGradientColorObject.m; sourceTree = "<group>"; };
+		CD70E9FA2508C4C100A6A2FB /* HICsv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICsv.m; sourceTree = "<group>"; };
+		CD70E9FB2508C4C100A6A2FB /* HIDrilldown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDrilldown.h; sourceTree = "<group>"; };
+		CD70E9FC2508C4C100A6A2FB /* HICylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICylinder.m; sourceTree = "<group>"; };
+		CD70E9FD2508C4C100A6A2FB /* HIAreasplinerange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAreasplinerange.m; sourceTree = "<group>"; };
+		CD70E9FE2508C4C100A6A2FB /* HIExportData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIExportData.h; sourceTree = "<group>"; };
+		CD70E9FF2508C4C200A6A2FB /* HISonification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISonification.h; sourceTree = "<group>"; };
+		CD70EA002508C4C200A6A2FB /* HIBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBar.m; sourceTree = "<group>"; };
+		CD70EA012508C4C200A6A2FB /* HICSSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICSSObject.m; sourceTree = "<group>"; };
+		CD70EA022508C4C200A6A2FB /* HICondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICondition.h; sourceTree = "<group>"; };
+		CD70EA032508C4C200A6A2FB /* HIWaterfall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIWaterfall.h; sourceTree = "<group>"; };
+		CD70EA042508C4C200A6A2FB /* HIPartialFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPartialFill.m; sourceTree = "<group>"; };
+		CD70EA052508C4C200A6A2FB /* HIPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPosition.m; sourceTree = "<group>"; };
+		CD70EA062508C4C200A6A2FB /* HIFunnel3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFunnel3d.m; sourceTree = "<group>"; };
+		CD70EA072508C4C200A6A2FB /* HILeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILeft.h; sourceTree = "<group>"; };
+		CD70EA082508C4C200A6A2FB /* HIAnnotationsOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAnnotationsOptions.m; sourceTree = "<group>"; };
+		CD70EA092508C4C300A6A2FB /* HIDataClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDataClasses.m; sourceTree = "<group>"; };
+		CD70EA0A2508C4C300A6A2FB /* HIPlotLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPlotLines.h; sourceTree = "<group>"; };
+		CD70EA0B2508C4C300A6A2FB /* HIColumnrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIColumnrange.m; sourceTree = "<group>"; };
+		CD70EA0C2508C4C300A6A2FB /* HINodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HINodes.m; sourceTree = "<group>"; };
+		CD70EA0D2508C4C300A6A2FB /* HIButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIButtons.h; sourceTree = "<group>"; };
+		CD70EA0E2508C4C300A6A2FB /* HIVariablepie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIVariablepie.h; sourceTree = "<group>"; };
+		CD70EA0F2508C4C300A6A2FB /* HITable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITable.m; sourceTree = "<group>"; };
+		CD70EA102508C4C300A6A2FB /* HIArearange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIArearange.m; sourceTree = "<group>"; };
+		CD70EA112508C4C300A6A2FB /* HITooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITooltip.h; sourceTree = "<group>"; };
+		CD70EA122508C4C300A6A2FB /* HIScatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIScatter.h; sourceTree = "<group>"; };
+		CD70EA132508C4C400A6A2FB /* HIDateTimeLabelFormats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDateTimeLabelFormats.m; sourceTree = "<group>"; };
+		CD70EA142508C4C400A6A2FB /* HIColumnpyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIColumnpyramid.h; sourceTree = "<group>"; };
+		CD70EA152508C4C400A6A2FB /* HIShapeOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIShapeOptions.m; sourceTree = "<group>"; };
+		CD70EA162508C4C400A6A2FB /* HIContextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIContextButton.m; sourceTree = "<group>"; };
+		CD70EA172508C4C400A6A2FB /* HISVGDefinitionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISVGDefinitionObject.m; sourceTree = "<group>"; };
+		CD70EA182508C4C400A6A2FB /* HILollipop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILollipop.m; sourceTree = "<group>"; };
+		CD70EA192508C4C400A6A2FB /* HIAlignObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAlignObject.m; sourceTree = "<group>"; };
+		CD70EA1A2508C4C400A6A2FB /* HIPareto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPareto.m; sourceTree = "<group>"; };
+		CD70EA1B2508C4C400A6A2FB /* HIBellcurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBellcurve.h; sourceTree = "<group>"; };
+		CD70EA1C2508C4C400A6A2FB /* HIColorVariation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIColorVariation.m; sourceTree = "<group>"; };
+		CD70EA1D2508C4C500A6A2FB /* HIDataGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDataGrouping.h; sourceTree = "<group>"; };
+		CD70EA1E2508C4C500A6A2FB /* HIArearange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIArearange.h; sourceTree = "<group>"; };
+		CD70EA1F2508C4C500A6A2FB /* HIBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBack.m; sourceTree = "<group>"; };
+		CD70EBA82508C50B00A6A2FB /* HIAnimationOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAnimationOptionsObject.h; sourceTree = "<group>"; };
+		CD70EBA92508C50B00A6A2FB /* HIAnimationOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAnimationOptionsObject.m; sourceTree = "<group>"; };
+		CD70EBAC2508C57100A6A2FB /* HILabelsAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILabelsAccessibility.m; sourceTree = "<group>"; };
+		CD70EBAD2508C57100A6A2FB /* HILabelsAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILabelsAccessibility.h; sourceTree = "<group>"; };
+		CD70EBB02508C5BA00A6A2FB /* HILabelOptionsAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILabelOptionsAccessibility.h; sourceTree = "<group>"; };
+		CD70EBB12508C5BA00A6A2FB /* HILabelOptionsAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILabelOptionsAccessibility.m; sourceTree = "<group>"; };
 		CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWKSyncedWebView.h; path = Private/HIWKSyncedWebView.h; sourceTree = "<group>"; };
 		CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIWKSyncedWebView.m; path = Private/HIWKSyncedWebView.m; sourceTree = "<group>"; };
 		CD91B2F02062741000BCEE37 /* HIGDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGDependency.m; path = Private/HIGDependency.m; sourceTree = "<group>"; };
@@ -956,92 +956,6 @@
 
 /* Begin PBXGroup section */
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HIChartsClasses;
-			sourceTree = "<group>";
-		};
-		3408AFC41C4FD61000A37AF5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				343E138F1C38513D006DDD68 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		343E13801C38513D006DDD68 = {
-			isa = PBXGroup;
-			children = (
-				3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */,
-				3408AFC41C4FD61000A37AF5 /* Supporting Files */,
-				343E138C1C38513D006DDD68 /* Highcharts */,
-				343E138D1C38513D006DDD68 /* Highcharts.h */,
-				348F281F1CDB790F005CA399 /* HighchartsTests */,
-				343E138B1C38513D006DDD68 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		343E138B1C38513D006DDD68 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				343E138A1C38513D006DDD68 /* Highcharts.framework */,
-				348F281E1CDB790F005CA399 /* HighchartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		343E138C1C38513D006DDD68 /* Highcharts */ = {
-			isa = PBXGroup;
-			children = (
-				34A531C81CCE49470014124A /* Private */,
-				34A531C91CCE494E0014124A /* Public */,
-				348675451CF5BB0300FB5E54 /* Plugins.plist */,
-				342B40E71CF8821400B09FA1 /* Charts.plist */,
-			);
-			path = Highcharts;
-			sourceTree = "<group>";
-		};
-		348F281F1CDB790F005CA399 /* HighchartsTests */ = {
-			isa = PBXGroup;
-			children = (
-				348F28221CDB790F005CA399 /* Info.plist */,
-				348F28291CDB7998005CA399 /* UIColorTests.m */,
-				348F282D1CDB7CB0005CA399 /* HIGJavaScriptTests.m */,
-				34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */,
-				348F28311CDB8459005CA399 /* HIGHTMLTests.m */,
-				34B60A6E1CDB8EE300FEFA7A /* TestTemplate.html */,
-				34B60A701CDB909A00FEFA7A /* TestResult.html */,
-			);
-			path = HighchartsTests;
-			sourceTree = "<group>";
-		};
-		34A531C81CCE49470014124A /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				CD91B2F42062741100BCEE37 /* HIChartsJSONSerializableSubclass.h */,
-				CD91B2F62062741100BCEE37 /* HIFunctionSubclass.h */,
-				CD91B2F12062741000BCEE37 /* HIGBundle.h */,
-				CD91B2F32062741100BCEE37 /* HIGBundle.m */,
-				CD91B2F52062741100BCEE37 /* HIGDependency.h */,
-				CD91B2F02062741000BCEE37 /* HIGDependency.m */,
-				CD91B2FB2062741200BCEE37 /* HIGExport.h */,
-				CD91B2F22062741000BCEE37 /* HIGExport.m */,
-				CD91B2F72062741100BCEE37 /* HIGHTML.h */,
-				CD91B2F92062741100BCEE37 /* HIGHTML.m */,
-				CD91B2F82062741100BCEE37 /* HIGJavaScript.h */,
-				CD91B2FA2062741200BCEE37 /* HIGJavaScript.m */,
-				CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */,
-				CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */,
-				CD1DF88F21F9EECA005DF8A7 /* HIClassJSMethods.h */,
-				CD1DF88D21F9EECA005DF8A7 /* HIClassJSMethods.m */,
-				CD1DF88E21F9EECA005DF8A7 /* HICustomFont.h */,
-				CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */,
-			);
-			name = Private;
-			sourceTree = "<group>";
-		};
-		34A531C91CCE494E0014124A /* Public */ = {
 			isa = PBXGroup;
 			children = (
 				CD70EBB02508C5BA00A6A2FB /* HILabelOptionsAccessibility.h */,
@@ -1442,6 +1356,92 @@
 				CD70E8B42508C4AD00A6A2FB /* HIZones.m */,
 				CD70E9432508C4B400A6A2FB /* HIZoom.h */,
 				CD70E9E62508C4BF00A6A2FB /* HIZoom.m */,
+			);
+			path = HIChartsClasses;
+			sourceTree = "<group>";
+		};
+		3408AFC41C4FD61000A37AF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				343E138F1C38513D006DDD68 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		343E13801C38513D006DDD68 = {
+			isa = PBXGroup;
+			children = (
+				3453314F1C544241008BD0D8 /* com.highcharts.charts.bundle */,
+				3408AFC41C4FD61000A37AF5 /* Supporting Files */,
+				343E138C1C38513D006DDD68 /* Highcharts */,
+				343E138D1C38513D006DDD68 /* Highcharts.h */,
+				348F281F1CDB790F005CA399 /* HighchartsTests */,
+				343E138B1C38513D006DDD68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		343E138B1C38513D006DDD68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				343E138A1C38513D006DDD68 /* Highcharts.framework */,
+				348F281E1CDB790F005CA399 /* HighchartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		343E138C1C38513D006DDD68 /* Highcharts */ = {
+			isa = PBXGroup;
+			children = (
+				34A531C81CCE49470014124A /* Private */,
+				34A531C91CCE494E0014124A /* Public */,
+				348675451CF5BB0300FB5E54 /* Plugins.plist */,
+				342B40E71CF8821400B09FA1 /* Charts.plist */,
+			);
+			path = Highcharts;
+			sourceTree = "<group>";
+		};
+		348F281F1CDB790F005CA399 /* HighchartsTests */ = {
+			isa = PBXGroup;
+			children = (
+				348F28221CDB790F005CA399 /* Info.plist */,
+				348F28291CDB7998005CA399 /* UIColorTests.m */,
+				348F282D1CDB7CB0005CA399 /* HIGJavaScriptTests.m */,
+				34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */,
+				348F28311CDB8459005CA399 /* HIGHTMLTests.m */,
+				34B60A6E1CDB8EE300FEFA7A /* TestTemplate.html */,
+				34B60A701CDB909A00FEFA7A /* TestResult.html */,
+			);
+			path = HighchartsTests;
+			sourceTree = "<group>";
+		};
+		34A531C81CCE49470014124A /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				CD91B2F42062741100BCEE37 /* HIChartsJSONSerializableSubclass.h */,
+				CD91B2F62062741100BCEE37 /* HIFunctionSubclass.h */,
+				CD91B2F12062741000BCEE37 /* HIGBundle.h */,
+				CD91B2F32062741100BCEE37 /* HIGBundle.m */,
+				CD91B2F52062741100BCEE37 /* HIGDependency.h */,
+				CD91B2F02062741000BCEE37 /* HIGDependency.m */,
+				CD91B2FB2062741200BCEE37 /* HIGExport.h */,
+				CD91B2F22062741000BCEE37 /* HIGExport.m */,
+				CD91B2F72062741100BCEE37 /* HIGHTML.h */,
+				CD91B2F92062741100BCEE37 /* HIGHTML.m */,
+				CD91B2F82062741100BCEE37 /* HIGJavaScript.h */,
+				CD91B2FA2062741200BCEE37 /* HIGJavaScript.m */,
+				CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */,
+				CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */,
+				CD1DF88F21F9EECA005DF8A7 /* HIClassJSMethods.h */,
+				CD1DF88D21F9EECA005DF8A7 /* HIClassJSMethods.m */,
+				CD1DF88E21F9EECA005DF8A7 /* HICustomFont.h */,
+				CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		34A531C91CCE494E0014124A /* Public */ = {
+			isa = PBXGroup;
+			children = (
 				2011ABB31E7013F30027DA10 /* HIChartsClasses */,
 				208C104F1E5C4BD8005C425F /* HIChartsJSONSerializable.h */,
 				208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */,

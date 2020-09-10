@@ -74,6 +74,10 @@
     return [self initWithRGBA:red green:green blue:blue alpha:alpha];
 }
 
+- (instancetype)initWithPattern:(HIPatternObject *)pattern {
+  return [self initWithDictionary:[pattern getParams]];
+}
+
 -(id)copyWithZone:(NSZone *)zone {
     [super copyWithZone:zone];
     HIColor *copyColor = [[HIColor allocWithZone: zone] init];
