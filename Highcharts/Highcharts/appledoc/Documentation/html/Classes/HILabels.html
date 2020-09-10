@@ -88,6 +88,8 @@
 		
 		<option value="//api/name/formatter">formatter</option>
 		
+		<option value="//api/name/includeInDataExport">includeInDataExport</option>
+		
 		<option value="//api/name/overflow">overflow</option>
 		
 		<option value="//api/name/padding">padding</option>
@@ -302,7 +304,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The y position offset of the label relative to the tick position on the axis.</p>
+				<p>The y position offset of all labels relative to the tick positions on the axis. For polar and radial axis consider the use of the <code>distance</code> option.</p>
 			</div>
 			
 		    
@@ -355,7 +357,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The x position offset of the label relative to the tick position on the axis. Defaults to -15 for left axis, 15 for right axis.</p>
+				<p>The x position offset of all labels relative to the tick positions on the axis. Defaults to -15 for left axis, 15 for right axis.</p>
 			</div>
 			
 		    
@@ -1241,6 +1243,57 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-point/">Attach annotation to a mock point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/includeInDataExport" title="includeInDataExport"></a>
+	<h3 class="method-title"><code><a href="#//api/name/includeInDataExport">&nbsp;&nbsp;includeInDataExport</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether the annotation is visible in the exported data table.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *includeInDataExport</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/include-in-data-export/">Do not include in the data export</a></li>
 </ul>
 
 			</div>
