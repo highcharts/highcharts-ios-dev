@@ -50,7 +50,7 @@ Styles for the label. The default `color` setting is `"contrast"`, which is a ps
 * [Long labels truncated with an ellipsis in a pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-overflow/)
 * [Long labels are wrapped in a pie](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-overflow-wrap/)
 */
-@property(nonatomic, readwrite) HIStyle *style;
+@property(nonatomic, readwrite) HICSSObject *style;
 /**
 Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are `auto`, `circular`, `parallel` and `perpendicular`. When `auto`, the best fit will be computed for the point. The `circular` option works similiar to `auto`, but uses the `textPath` feature - labels are curved, resulting in a better layout, however multiple lines and `textOutline` are not supported. The `series.rotation` option takes precedence over `rotationMode`.
 
