@@ -83,6 +83,7 @@
 	copyXAxis.margin = [self.margin copyWithZone: zone];
 	copyXAxis.plotBands = [self.plotBands copyWithZone: zone];
 	copyXAxis.left = [self.left copyWithZone: zone];
+  copyXAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	return copyXAxis;
 }
 
@@ -363,6 +364,9 @@
 	if (self.left) {
 		params[@"left"] = self.left;
 	}
+  if (self.dateTimeLabelFormats) {
+    params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+  }
 	return params;
 }
 
@@ -804,6 +808,12 @@
 	id oldValue = _left;
 	_left = left;
 	[self updateNSObject:oldValue newValue:left propertyName:@"left"];
+}
+
+-(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
+  HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
+  _dateTimeLabelFormats = dateTimeLabelFormats;
+  [self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 - (void)addPlotBand:(HIPlotBands *)options {
