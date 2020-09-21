@@ -74,6 +74,7 @@
 	copyZAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyZAxis.margin = [self.margin copyWithZone: zone];
 	copyZAxis.plotBands = [self.plotBands copyWithZone: zone];
+  copyZAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	return copyZAxis;
 }
 
@@ -318,6 +319,9 @@
 		}
 		params[@"plotBands"] = array;
 	}
+  if (self.dateTimeLabelFormats) {
+    params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+  }
 	return params;
 }
 
@@ -705,6 +709,12 @@
 	NSArray <HIPlotBands *> *oldValue = _plotBands;
 	_plotBands = plotBands;
 	[self updateArrayObject:oldValue newValue:plotBands propertyName:@"plotBands"];
+}
+
+-(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
+  HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
+  _dateTimeLabelFormats = dateTimeLabelFormats;
+  [self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 - (void)addPlotBand:(HIPlotBands *)options {

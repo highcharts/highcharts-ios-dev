@@ -88,6 +88,7 @@
 	copyYAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyYAxis.margin = [self.margin copyWithZone: zone];
 	copyYAxis.left = [self.left copyWithZone: zone];
+  copyYAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	return copyYAxis;
 }
 
@@ -392,6 +393,9 @@
 	if (self.left) {
 		params[@"left"] = self.left;
 	}
+  if (self.dateTimeLabelFormats) {
+    params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+  }
 	return params;
 }
 
@@ -863,6 +867,12 @@
 	id oldValue = _left;
 	_left = left;
 	[self updateNSObject:oldValue newValue:left propertyName:@"left"];
+}
+
+-(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
+  HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
+  _dateTimeLabelFormats = dateTimeLabelFormats;
+  [self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 - (void)addPlotBand:(HIPlotBands *)options {
