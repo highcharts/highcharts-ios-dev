@@ -2191,6 +2191,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "TRIAL=1";
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 8.2.0;
@@ -2352,6 +2353,7 @@
 				);
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 8.2.0;
@@ -2383,6 +2385,7 @@
 				);
 				INFOPLIST_FILE = Highcharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 8.2.0;
