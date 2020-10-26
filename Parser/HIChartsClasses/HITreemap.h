@@ -62,7 +62,7 @@ The sort index of the point inside the treemap level.
 /**
 When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
+@property(nonatomic, readwrite) id colorByPoint;
 /**
 When enabled the user can click on a point which is a parent and zoom in on its children.
 
