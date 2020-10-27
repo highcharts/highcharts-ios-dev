@@ -20,6 +20,10 @@
 	copyDataLabels.enabled = [self.enabled copyWithZone: zone];
 	copyDataLabels.inside = [self.inside copyWithZone: zone];
 	copyDataLabels.y = [self.y copyWithZone: zone];
+	copyDataLabels.yHigh = [self.yHigh copyWithZone: zone];
+	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
+	copyDataLabels.xLow = [self.xLow copyWithZone: zone];
+	copyDataLabels.yLow = [self.yLow copyWithZone: zone];
 	copyDataLabels.crop = [self.crop copyWithZone: zone];
 	copyDataLabels.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	copyDataLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
@@ -44,10 +48,6 @@
 	copyDataLabels.position = [self.position copyWithZone: zone];
 	copyDataLabels.z = [self.z copyWithZone: zone];
 	copyDataLabels.textPath = [self.textPath copyWithZone: zone];
-	copyDataLabels.yHigh = [self.yHigh copyWithZone: zone];
-	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
-	copyDataLabels.xLow = [self.xLow copyWithZone: zone];
-	copyDataLabels.yLow = [self.yLow copyWithZone: zone];
 	copyDataLabels.parentNodeFormat = [self.parentNodeFormat copyWithZone: zone];
 	copyDataLabels.parentNodeTextPath = [self.parentNodeTextPath copyWithZone: zone];
 	copyDataLabels.parentNodeFormatter = [self.parentNodeFormatter copyWithZone: zone];
@@ -61,11 +61,11 @@
 	copyDataLabels.linkFormat = [self.linkFormat copyWithZone: zone];
 	copyDataLabels.linkFormatter = [self.linkFormatter copyWithZone: zone];
 	copyDataLabels.linkTextPath = [self.linkTextPath copyWithZone: zone];
+	copyDataLabels.crookDistance = [self.crookDistance copyWithZone: zone];
 	copyDataLabels.alignTo = [self.alignTo copyWithZone: zone];
 	copyDataLabels.softConnector = [self.softConnector copyWithZone: zone];
 	copyDataLabels.connectorPadding = [self.connectorPadding copyWithZone: zone];
 	copyDataLabels.connectorShape = [self.connectorShape copyWithZone: zone];
-	copyDataLabels.crookDistance = [self.crookDistance copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -101,6 +101,18 @@
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
+	}
+	if (self.yHigh) {
+		params[@"yHigh"] = self.yHigh;
+	}
+	if (self.xHigh) {
+		params[@"xHigh"] = self.xHigh;
+	}
+	if (self.xLow) {
+		params[@"xLow"] = self.xLow;
+	}
+	if (self.yLow) {
+		params[@"yLow"] = self.yLow;
 	}
 	if (self.crop) {
 		params[@"crop"] = self.crop;
@@ -174,18 +186,6 @@
 	if (self.textPath) {
 		params[@"textPath"] = [self.textPath getParams];
 	}
-	if (self.yHigh) {
-		params[@"yHigh"] = self.yHigh;
-	}
-	if (self.xHigh) {
-		params[@"xHigh"] = self.xHigh;
-	}
-	if (self.xLow) {
-		params[@"xLow"] = self.xLow;
-	}
-	if (self.yLow) {
-		params[@"yLow"] = self.yLow;
-	}
 	if (self.parentNodeFormat) {
 		params[@"parentNodeFormat"] = self.parentNodeFormat;
 	}
@@ -225,6 +225,9 @@
 	if (self.linkTextPath) {
 		params[@"linkTextPath"] = [self.linkTextPath getParams];
 	}
+	if (self.crookDistance) {
+		params[@"crookDistance"] = self.crookDistance;
+	}
 	if (self.alignTo) {
 		params[@"alignTo"] = self.alignTo;
 	}
@@ -236,9 +239,6 @@
 	}
 	if (self.connectorShape) {
 		params[@"connectorShape"] = self.connectorShape;
-	}
-	if (self.crookDistance) {
-		params[@"crookDistance"] = self.crookDistance;
 	}
 	return params;
 }
@@ -303,6 +303,30 @@
 	NSNumber *oldValue = _y;
 	_y = y;
 	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
+}
+
+-(void)setYHigh:(NSNumber *)yHigh {
+	NSNumber *oldValue = _yHigh;
+	_yHigh = yHigh;
+	[self updateNSObject:oldValue newValue:yHigh propertyName:@"yHigh"];
+}
+
+-(void)setXHigh:(NSNumber *)xHigh {
+	NSNumber *oldValue = _xHigh;
+	_xHigh = xHigh;
+	[self updateNSObject:oldValue newValue:xHigh propertyName:@"xHigh"];
+}
+
+-(void)setXLow:(NSNumber *)xLow {
+	NSNumber *oldValue = _xLow;
+	_xLow = xLow;
+	[self updateNSObject:oldValue newValue:xLow propertyName:@"xLow"];
+}
+
+-(void)setYLow:(NSNumber *)yLow {
+	NSNumber *oldValue = _yLow;
+	_yLow = yLow;
+	[self updateNSObject:oldValue newValue:yLow propertyName:@"yLow"];
 }
 
 -(void)setCrop:(NSNumber *)crop {
@@ -449,30 +473,6 @@
 	[self updateHIObject:oldValue newValue:textPath propertyName:@"textPath"];
 }
 
--(void)setYHigh:(NSNumber *)yHigh {
-	NSNumber *oldValue = _yHigh;
-	_yHigh = yHigh;
-	[self updateNSObject:oldValue newValue:yHigh propertyName:@"yHigh"];
-}
-
--(void)setXHigh:(NSNumber *)xHigh {
-	NSNumber *oldValue = _xHigh;
-	_xHigh = xHigh;
-	[self updateNSObject:oldValue newValue:xHigh propertyName:@"xHigh"];
-}
-
--(void)setXLow:(NSNumber *)xLow {
-	NSNumber *oldValue = _xLow;
-	_xLow = xLow;
-	[self updateNSObject:oldValue newValue:xLow propertyName:@"xLow"];
-}
-
--(void)setYLow:(NSNumber *)yLow {
-	NSNumber *oldValue = _yLow;
-	_yLow = yLow;
-	[self updateNSObject:oldValue newValue:yLow propertyName:@"yLow"];
-}
-
 -(void)setParentNodeFormat:(NSString *)parentNodeFormat {
 	NSString *oldValue = _parentNodeFormat;
 	_parentNodeFormat = parentNodeFormat;
@@ -551,6 +551,12 @@
 	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
 }
 
+-(void)setCrookDistance:(NSString *)crookDistance {
+	NSString *oldValue = _crookDistance;
+	_crookDistance = crookDistance;
+	[self updateNSObject:oldValue newValue:crookDistance propertyName:@"crookDistance"];
+}
+
 -(void)setAlignTo:(NSString *)alignTo {
 	NSString *oldValue = _alignTo;
 	_alignTo = alignTo;
@@ -573,12 +579,6 @@
 	NSString *oldValue = _connectorShape;
 	_connectorShape = connectorShape;
 	[self updateNSObject:oldValue newValue:connectorShape propertyName:@"connectorShape"];
-}
-
--(void)setCrookDistance:(NSString *)crookDistance {
-	NSString *oldValue = _crookDistance;
-	_crookDistance = crookDistance;
-	[self updateNSObject:oldValue newValue:crookDistance propertyName:@"crookDistance"];
 }
 
 @end

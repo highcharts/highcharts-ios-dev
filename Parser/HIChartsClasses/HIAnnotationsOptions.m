@@ -10,7 +10,6 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIAnnotationsOptions *copyAnnotationsOptions = [[HIAnnotationsOptions allocWithZone: zone] init];
-	copyAnnotationsOptions.animation = [self.animation copyWithZone: zone];
 	copyAnnotationsOptions.controlPointOptions = [self.controlPointOptions copyWithZone: zone];
 	copyAnnotationsOptions.shapes = [self.shapes copyWithZone: zone];
 	copyAnnotationsOptions.shapeOptions = [self.shapeOptions copyWithZone: zone];
@@ -20,6 +19,7 @@
 	copyAnnotationsOptions.labelOptions = [self.labelOptions copyWithZone: zone];
 	copyAnnotationsOptions.id = [self.id copyWithZone: zone];
 	copyAnnotationsOptions.draggable = [self.draggable copyWithZone: zone];
+	copyAnnotationsOptions.animation = [self.animation copyWithZone: zone];
 	copyAnnotationsOptions.events = [self.events copyWithZone: zone];
 	return copyAnnotationsOptions;
 }
@@ -27,9 +27,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.animation) {
-		params[@"animation"] = [self.animation getParams];
-	}
 	if (self.controlPointOptions) {
 		params[@"controlPointOptions"] = [self.controlPointOptions getParams];
 	}
@@ -75,6 +72,9 @@
 	if (self.draggable) {
 		params[@"draggable"] = self.draggable;
 	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
@@ -82,12 +82,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setAnimation:(HIAnimation *)animation {
-	HIAnimation *oldValue = _animation;
-	_animation = animation;
-	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
-}
 
 -(void)setControlPointOptions:(HIControlPointOptions *)controlPointOptions {
 	HIControlPointOptions *oldValue = _controlPointOptions;
@@ -141,6 +135,12 @@
 	NSString *oldValue = _draggable;
 	_draggable = draggable;
 	[self updateNSObject:oldValue newValue:draggable propertyName:@"draggable"];
+}
+
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setEvents:(HIEvents *)events {

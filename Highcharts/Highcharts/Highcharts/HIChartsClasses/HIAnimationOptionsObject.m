@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HIAnimationOptionsObject *copyAnimationOptionsObject = [[HIAnimationOptionsObject allocWithZone: zone] init];
 	copyAnimationOptionsObject.complete = [self.complete copyWithZone: zone];
+  copyAnimationOptionsObject.defer = [self.defer copyWithZone: zone];
 	copyAnimationOptionsObject.duration = [self.duration copyWithZone: zone];
 	copyAnimationOptionsObject.easing = [self.easing copyWithZone: zone];
 	copyAnimationOptionsObject.step = [self.step copyWithZone: zone];
@@ -23,6 +24,9 @@
 	if (self.complete) {
 		params[@"complete"] = [self.complete getFunction];
 	}
+  if (self.defer) {
+    params[@"defer"] = self.defer;
+  }
 	if (self.duration) {
 		params[@"duration"] = self.duration;
 	}
@@ -41,6 +45,12 @@
 	HIFunction *oldValue = _complete;
 	_complete = complete;
 	[self updateHIObject:oldValue newValue:complete propertyName:@"complete"];
+}
+
+-(void)setDefer:(NSNumber *)defer {
+  NSNumber *oldValue = _defer;
+  _defer = defer;
+  [self updateNSObject:oldValue newValue:defer propertyName:@"defer"];
 }
 
 -(void)setDuration:(NSNumber *)duration {

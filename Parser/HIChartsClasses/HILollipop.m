@@ -31,11 +31,11 @@
 	copyLollipop.crisp = [self.crisp copyWithZone: zone];
 	copyLollipop.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyLollipop.pointRange = [self.pointRange copyWithZone: zone];
-	copyLollipop.states = [self.states copyWithZone: zone];
 	copyLollipop.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyLollipop.color = [self.color copyWithZone: zone];
 	copyLollipop.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyLollipop.colorKey = [self.colorKey copyWithZone: zone];
 	copyLollipop.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyLollipop.colorKey = [self.colorKey copyWithZone: zone];
 	copyLollipop.threshold = [self.threshold copyWithZone: zone];
 	copyLollipop.shadow = [self.shadow copyWithZone: zone];
 	copyLollipop.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
@@ -46,9 +46,9 @@
 	copyLollipop.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyLollipop.clip = [self.clip copyWithZone: zone];
 	copyLollipop.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyLollipop.color = [self.color copyWithZone: zone];
 	copyLollipop.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyLollipop.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyLollipop.states = [self.states copyWithZone: zone];
 	copyLollipop.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyLollipop.point = [self.point copyWithZone: zone];
 	copyLollipop.dataSorting = [self.dataSorting copyWithZone: zone];

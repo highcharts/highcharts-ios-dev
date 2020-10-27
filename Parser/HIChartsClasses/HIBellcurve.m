@@ -15,7 +15,10 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIBellcurve *copyBellcurve = [[HIBellcurve allocWithZone: zone] init];
+	copyBellcurve.color = [self.color copyWithZone: zone];
 	copyBellcurve.baseSeries = [self.baseSeries copyWithZone: zone];
+	copyBellcurve.fillColor = [self.fillColor copyWithZone: zone];
+	copyBellcurve.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyBellcurve.id = [self.id copyWithZone: zone];
 	copyBellcurve.index = [self.index copyWithZone: zone];
 	copyBellcurve.legendIndex = [self.legendIndex copyWithZone: zone];
@@ -25,22 +28,19 @@
 	copyBellcurve.xAxis = [self.xAxis copyWithZone: zone];
 	copyBellcurve.yAxis = [self.yAxis copyWithZone: zone];
 	copyBellcurve.zIndex = [self.zIndex copyWithZone: zone];
-	copyBellcurve.marker = [self.marker copyWithZone: zone];
 	copyBellcurve.intervals = [self.intervals copyWithZone: zone];
 	copyBellcurve.pointsInInterval = [self.pointsInInterval copyWithZone: zone];
+	copyBellcurve.marker = [self.marker copyWithZone: zone];
 	copyBellcurve.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyBellcurve.lineColor = [self.lineColor copyWithZone: zone];
-	copyBellcurve.fillColor = [self.fillColor copyWithZone: zone];
 	copyBellcurve.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyBellcurve.lineColor = [self.lineColor copyWithZone: zone];
 	copyBellcurve.threshold = [self.threshold copyWithZone: zone];
-	copyBellcurve.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyBellcurve.linecap = [self.linecap copyWithZone: zone];
 	copyBellcurve.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyBellcurve.selected = [self.selected copyWithZone: zone];
 	copyBellcurve.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBellcurve.clip = [self.clip copyWithZone: zone];
 	copyBellcurve.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyBellcurve.color = [self.color copyWithZone: zone];
 	copyBellcurve.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBellcurve.states = [self.states copyWithZone: zone];
 	copyBellcurve.colorKey = [self.colorKey copyWithZone: zone];
@@ -91,6 +91,12 @@
 	if (self.baseSeries) {
 		params[@"baseSeries"] = self.baseSeries;
 	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.fillOpacity) {
+		params[@"fillOpacity"] = self.fillOpacity;
+	}
 	if (self.intervals) {
 		params[@"intervals"] = self.intervals;
 	}
@@ -100,17 +106,11 @@
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
 	}
-	if (self.fillOpacity) {
-		params[@"fillOpacity"] = self.fillOpacity;
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	return params;
 }
@@ -121,6 +121,18 @@
 	id oldValue = _baseSeries;
 	_baseSeries = baseSeries;
 	[self updateNSObject:oldValue newValue:baseSeries propertyName:@"baseSeries"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setFillOpacity:(NSNumber *)fillOpacity {
+	NSNumber *oldValue = _fillOpacity;
+	_fillOpacity = fillOpacity;
+	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }
 
 -(void)setIntervals:(NSNumber *)intervals {
@@ -141,28 +153,16 @@
 	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
 -(void)setTrackByArea:(NSNumber *)trackByArea {
 	NSNumber *oldValue = _trackByArea;
 	_trackByArea = trackByArea;
 	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
 }
 
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	NSNumber *oldValue = _fillOpacity;
-	_fillOpacity = fillOpacity;
-	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 @end

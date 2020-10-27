@@ -69,6 +69,7 @@
 	copyYAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
 	copyYAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
 	copyYAxis.breaks = [self.breaks copyWithZone: zone];
+	copyYAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyYAxis.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyYAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyYAxis.offset = [self.offset copyWithZone: zone];
@@ -88,7 +89,6 @@
 	copyYAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
 	copyYAxis.margin = [self.margin copyWithZone: zone];
 	copyYAxis.left = [self.left copyWithZone: zone];
-  copyYAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	return copyYAxis;
 }
 
@@ -327,6 +327,9 @@
 		}
 		params[@"breaks"] = array;
 	}
+	if (self.dateTimeLabelFormats) {
+		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
 	}
@@ -393,9 +396,6 @@
 	if (self.left) {
 		params[@"left"] = self.left;
 	}
-  if (self.dateTimeLabelFormats) {
-    params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
-  }
 	return params;
 }
 
@@ -755,6 +755,12 @@
 	[self updateArrayObject:oldValue newValue:breaks propertyName:@"breaks"];
 }
 
+-(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
+	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
+	_dateTimeLabelFormats = dateTimeLabelFormats;
+	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
+}
+
 -(void)setMinorTicks:(NSNumber *)minorTicks {
 	NSNumber *oldValue = _minorTicks;
 	_minorTicks = minorTicks;
@@ -867,12 +873,6 @@
 	id oldValue = _left;
 	_left = left;
 	[self updateNSObject:oldValue newValue:left propertyName:@"left"];
-}
-
--(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
-  HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
-  _dateTimeLabelFormats = dateTimeLabelFormats;
-  [self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
 - (void)addPlotBand:(HIPlotBands *)options {

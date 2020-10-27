@@ -15,7 +15,10 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIStreamgraph *copyStreamgraph = [[HIStreamgraph allocWithZone: zone] init];
+	copyStreamgraph.color = [self.color copyWithZone: zone];
 	copyStreamgraph.data = [self.data copyWithZone: zone];
+	copyStreamgraph.fillColor = [self.fillColor copyWithZone: zone];
+	copyStreamgraph.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyStreamgraph.id = [self.id copyWithZone: zone];
 	copyStreamgraph.index = [self.index copyWithZone: zone];
 	copyStreamgraph.legendIndex = [self.legendIndex copyWithZone: zone];
@@ -25,14 +28,12 @@
 	copyStreamgraph.xAxis = [self.xAxis copyWithZone: zone];
 	copyStreamgraph.yAxis = [self.yAxis copyWithZone: zone];
 	copyStreamgraph.zIndex = [self.zIndex copyWithZone: zone];
-	copyStreamgraph.marker = [self.marker copyWithZone: zone];
 	copyStreamgraph.stacking = [self.stacking copyWithZone: zone];
+	copyStreamgraph.marker = [self.marker copyWithZone: zone];
 	copyStreamgraph.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyStreamgraph.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyStreamgraph.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyStreamgraph.lineColor = [self.lineColor copyWithZone: zone];
-	copyStreamgraph.fillColor = [self.fillColor copyWithZone: zone];
 	copyStreamgraph.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyStreamgraph.lineColor = [self.lineColor copyWithZone: zone];
 	copyStreamgraph.threshold = [self.threshold copyWithZone: zone];
 	copyStreamgraph.linecap = [self.linecap copyWithZone: zone];
 	copyStreamgraph.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -40,7 +41,6 @@
 	copyStreamgraph.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyStreamgraph.clip = [self.clip copyWithZone: zone];
 	copyStreamgraph.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyStreamgraph.color = [self.color copyWithZone: zone];
 	copyStreamgraph.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyStreamgraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyStreamgraph.states = [self.states copyWithZone: zone];
@@ -91,25 +91,31 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
 	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
+	}
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
 	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
 
 -(void)setFillOpacity:(NSNumber *)fillOpacity {
 	NSNumber *oldValue = _fillOpacity;
@@ -123,22 +129,16 @@
 	[self updateHIObject:oldValue newValue:negativeFillColor propertyName:@"negativeFillColor"];
 }
 
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
 -(void)setTrackByArea:(NSNumber *)trackByArea {
 	NSNumber *oldValue = _trackByArea;
 	_trackByArea = trackByArea;
 	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
+}
+
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
 }
 
 @end

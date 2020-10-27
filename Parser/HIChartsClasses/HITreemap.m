@@ -110,7 +110,6 @@
 		params[@"sortIndex"] = self.sortIndex;
 	}
 	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.allowTraversingTree) {
 		params[@"allowTraversingTree"] = self.allowTraversingTree;
@@ -171,8 +170,8 @@
 	[self updateNSObject:oldValue newValue:sortIndex propertyName:@"sortIndex"];
 }
 
--(void)setColorByPoint:(NSNumber *)colorByPoint {
-	NSNumber *oldValue = _colorByPoint;
+-(void)setColorByPoint:(id)colorByPoint {
+	id oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }

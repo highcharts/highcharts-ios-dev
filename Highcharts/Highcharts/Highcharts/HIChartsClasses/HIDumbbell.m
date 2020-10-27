@@ -20,13 +20,13 @@
 	copyDumbbell.crisp = [self.crisp copyWithZone: zone];
 	copyDumbbell.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyDumbbell.pointRange = [self.pointRange copyWithZone: zone];
-	copyDumbbell.states = [self.states copyWithZone: zone];
 	copyDumbbell.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyDumbbell.lowColor = [self.lowColor copyWithZone: zone];
+	copyDumbbell.color = [self.color copyWithZone: zone];
 	copyDumbbell.tooltip = [self.tooltip copyWithZone: zone];
 	copyDumbbell.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyDumbbell.colorKey = [self.colorKey copyWithZone: zone];
 	copyDumbbell.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyDumbbell.colorKey = [self.colorKey copyWithZone: zone];
 	copyDumbbell.threshold = [self.threshold copyWithZone: zone];
 	copyDumbbell.shadow = [self.shadow copyWithZone: zone];
 	copyDumbbell.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
@@ -37,9 +37,9 @@
 	copyDumbbell.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyDumbbell.clip = [self.clip copyWithZone: zone];
 	copyDumbbell.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyDumbbell.color = [self.color copyWithZone: zone];
 	copyDumbbell.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyDumbbell.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyDumbbell.states = [self.states copyWithZone: zone];
 	copyDumbbell.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyDumbbell.point = [self.point copyWithZone: zone];
 	copyDumbbell.dataSorting = [self.dataSorting copyWithZone: zone];

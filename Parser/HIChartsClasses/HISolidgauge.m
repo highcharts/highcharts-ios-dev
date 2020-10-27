@@ -23,7 +23,6 @@
 	copySolidgauge.radius = [self.radius copyWithZone: zone];
 	copySolidgauge.linecap = [self.linecap copyWithZone: zone];
 	copySolidgauge.threshold = [self.threshold copyWithZone: zone];
-	copySolidgauge.tooltip = [self.tooltip copyWithZone: zone];
 	copySolidgauge.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySolidgauge.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySolidgauge.selected = [self.selected copyWithZone: zone];
@@ -32,6 +31,7 @@
 	copySolidgauge.color = [self.color copyWithZone: zone];
 	copySolidgauge.pointInterval = [self.pointInterval copyWithZone: zone];
 	copySolidgauge.point = [self.point copyWithZone: zone];
+	copySolidgauge.tooltip = [self.tooltip copyWithZone: zone];
 	copySolidgauge.label = [self.label copyWithZone: zone];
 	copySolidgauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySolidgauge.cursor = [self.cursor copyWithZone: zone];

@@ -15,7 +15,10 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIAreasplinerange *copyAreasplinerange = [[HIAreasplinerange allocWithZone: zone] init];
+	copyAreasplinerange.color = [self.color copyWithZone: zone];
 	copyAreasplinerange.data = [self.data copyWithZone: zone];
+	copyAreasplinerange.fillColor = [self.fillColor copyWithZone: zone];
+	copyAreasplinerange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyAreasplinerange.id = [self.id copyWithZone: zone];
 	copyAreasplinerange.index = [self.index copyWithZone: zone];
 	copyAreasplinerange.legendIndex = [self.legendIndex copyWithZone: zone];
@@ -26,23 +29,20 @@
 	copyAreasplinerange.zIndex = [self.zIndex copyWithZone: zone];
 	copyAreasplinerange.tooltip = [self.tooltip copyWithZone: zone];
 	copyAreasplinerange.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyAreasplinerange.colorKey = [self.colorKey copyWithZone: zone];
 	copyAreasplinerange.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyAreasplinerange.colorKey = [self.colorKey copyWithZone: zone];
 	copyAreasplinerange.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyAreasplinerange.threshold = [self.threshold copyWithZone: zone];
 	copyAreasplinerange.shadow = [self.shadow copyWithZone: zone];
 	copyAreasplinerange.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyAreasplinerange.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
 	copyAreasplinerange.lineColor = [self.lineColor copyWithZone: zone];
-	copyAreasplinerange.fillColor = [self.fillColor copyWithZone: zone];
-	copyAreasplinerange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyAreasplinerange.linecap = [self.linecap copyWithZone: zone];
 	copyAreasplinerange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyAreasplinerange.selected = [self.selected copyWithZone: zone];
 	copyAreasplinerange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyAreasplinerange.clip = [self.clip copyWithZone: zone];
 	copyAreasplinerange.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyAreasplinerange.color = [self.color copyWithZone: zone];
 	copyAreasplinerange.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyAreasplinerange.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyAreasplinerange.states = [self.states copyWithZone: zone];
@@ -89,6 +89,12 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
+	if (self.fillOpacity) {
+		params[@"fillOpacity"] = self.fillOpacity;
+	}
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
 	}
@@ -98,16 +104,22 @@
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
 	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.fillOpacity) {
-		params[@"fillOpacity"] = self.fillOpacity;
-	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
+-(void)setFillOpacity:(NSNumber *)fillOpacity {
+	NSNumber *oldValue = _fillOpacity;
+	_fillOpacity = fillOpacity;
+	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
+}
 
 -(void)setTrackByArea:(NSNumber *)trackByArea {
 	NSNumber *oldValue = _trackByArea;
@@ -125,18 +137,6 @@
 	HIColor *oldValue = _lineColor;
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	NSNumber *oldValue = _fillOpacity;
-	_fillOpacity = fillOpacity;
-	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }
 
 @end
