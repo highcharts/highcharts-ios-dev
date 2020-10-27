@@ -29,7 +29,6 @@
 	copyHover.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyHover.shadow = [self.shadow copyWithZone: zone];
 	copyHover.color = [self.color copyWithZone: zone];
-	copyHover.connectorWidthPlus = [self.connectorWidthPlus copyWithZone: zone];
 	return copyHover;
 }
 
@@ -92,9 +91,6 @@
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
-	}
-	if (self.connectorWidthPlus) {
-		params[@"connectorWidthPlus"] = self.connectorWidthPlus;
 	}
 	return params;
 }
@@ -213,12 +209,6 @@
 	HIColor *oldValue = _color;
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
-}
-
--(void)setConnectorWidthPlus:(NSNumber *)connectorWidthPlus {
-	NSNumber *oldValue = _connectorWidthPlus;
-	_connectorWidthPlus = connectorWidthPlus;
-	[self updateNSObject:oldValue newValue:connectorWidthPlus propertyName:@"connectorWidthPlus"];
 }
 
 @end

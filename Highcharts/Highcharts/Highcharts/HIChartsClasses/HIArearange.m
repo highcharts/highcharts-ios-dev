@@ -15,25 +15,25 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIArearange *copyArearange = [[HIArearange allocWithZone: zone] init];
+	copyArearange.color = [self.color copyWithZone: zone];
 	copyArearange.tooltip = [self.tooltip copyWithZone: zone];
 	copyArearange.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyArearange.colorKey = [self.colorKey copyWithZone: zone];
 	copyArearange.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyArearange.colorKey = [self.colorKey copyWithZone: zone];
+	copyArearange.fillColor = [self.fillColor copyWithZone: zone];
 	copyArearange.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyArearange.threshold = [self.threshold copyWithZone: zone];
 	copyArearange.shadow = [self.shadow copyWithZone: zone];
 	copyArearange.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyArearange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyArearange.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
 	copyArearange.lineColor = [self.lineColor copyWithZone: zone];
-	copyArearange.fillColor = [self.fillColor copyWithZone: zone];
-	copyArearange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyArearange.linecap = [self.linecap copyWithZone: zone];
 	copyArearange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyArearange.selected = [self.selected copyWithZone: zone];
 	copyArearange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyArearange.clip = [self.clip copyWithZone: zone];
 	copyArearange.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyArearange.color = [self.color copyWithZone: zone];
 	copyArearange.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyArearange.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyArearange.states = [self.states copyWithZone: zone];
@@ -92,8 +92,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
+	}
+	if (self.fillOpacity) {
+		params[@"fillOpacity"] = self.fillOpacity;
 	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
@@ -101,21 +107,27 @@
 	if (self.lineColor) {
 		params[@"lineColor"] = [self.lineColor getData];
 	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.fillOpacity) {
-		params[@"fillOpacity"] = self.fillOpacity;
-	}
 	return params;
 }
 
 # pragma mark - Setters
 
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
+}
+
 -(void)setTrackByArea:(NSNumber *)trackByArea {
 	NSNumber *oldValue = _trackByArea;
 	_trackByArea = trackByArea;
 	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
+}
+
+-(void)setFillOpacity:(NSNumber *)fillOpacity {
+	NSNumber *oldValue = _fillOpacity;
+	_fillOpacity = fillOpacity;
+	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }
 
 -(void)setNegativeFillColor:(HIColor *)negativeFillColor {
@@ -128,18 +140,6 @@
 	HIColor *oldValue = _lineColor;
 	_lineColor = lineColor;
 	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	NSNumber *oldValue = _fillOpacity;
-	_fillOpacity = fillOpacity;
-	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }
 
 @end
