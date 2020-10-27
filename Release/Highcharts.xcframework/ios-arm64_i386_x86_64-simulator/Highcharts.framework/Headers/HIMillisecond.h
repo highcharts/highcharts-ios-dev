@@ -10,11 +10,11 @@
 
 
 /**
-An object of additional SVG attributes for the no-data label.
-*/
-@interface HIAttr: HIChartsJSONSerializable
+ */
+@interface HIMillisecond: HIChartsJSONSerializable
 
-@property(nonatomic, readwrite) NSNumber *zIndex;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *range;
+@property(nonatomic, readwrite) NSString *main;
 
 -(NSDictionary *)getParams;
 
