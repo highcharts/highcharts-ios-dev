@@ -1,4 +1,4 @@
-a<p align="center" >
+<p align="center" >
 <img src="https://github.com/highcharts/highcharts-ios/blob/master/Images/logo.png" alt="Highcharts" title="Highcharts">
 </p>
 
