@@ -18,6 +18,7 @@
 	copyChart.alignTicks = [self.alignTicks copyWithZone: zone];
 	copyChart.displayErrors = [self.displayErrors copyWithZone: zone];
 	copyChart.marginRight = [self.marginRight copyWithZone: zone];
+	copyChart.zoomBySingleTouch = [self.zoomBySingleTouch copyWithZone: zone];
 	copyChart.plotBorderColor = [self.plotBorderColor copyWithZone: zone];
 	copyChart.spacingRight = [self.spacingRight copyWithZone: zone];
 	copyChart.borderColor = [self.borderColor copyWithZone: zone];
@@ -88,6 +89,9 @@
 	}
 	if (self.marginRight) {
 		params[@"marginRight"] = self.marginRight;
+	}
+	if (self.zoomBySingleTouch) {
+		params[@"zoomBySingleTouch"] = self.zoomBySingleTouch;
 	}
 	if (self.plotBorderColor) {
 		params[@"plotBorderColor"] = [self.plotBorderColor getData];
@@ -281,6 +285,12 @@
 	NSNumber *oldValue = _marginRight;
 	_marginRight = marginRight;
 	[self updateNSObject:oldValue newValue:marginRight propertyName:@"marginRight"];
+}
+
+-(void)setZoomBySingleTouch:(NSNumber *)zoomBySingleTouch {
+	NSNumber *oldValue = _zoomBySingleTouch;
+	_zoomBySingleTouch = zoomBySingleTouch;
+	[self updateNSObject:oldValue newValue:zoomBySingleTouch propertyName:@"zoomBySingleTouch"];
 }
 
 -(void)setPlotBorderColor:(HIColor *)plotBorderColor {

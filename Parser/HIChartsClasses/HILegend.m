@@ -50,6 +50,7 @@
 	copyLegend.x = [self.x copyWithZone: zone];
 	copyLegend.margin = [self.margin copyWithZone: zone];
 	copyLegend.legendLabel = [self.legendLabel copyWithZone: zone];
+	copyLegend.legendLabelNoTitle = [self.legendLabelNoTitle copyWithZone: zone];
 	copyLegend.legendItem = [self.legendItem copyWithZone: zone];
 	return copyLegend;
 }
@@ -177,6 +178,9 @@
 	}
 	if (self.legendLabel) {
 		params[@"legendLabel"] = self.legendLabel;
+	}
+	if (self.legendLabelNoTitle) {
+		params[@"legendLabelNoTitle"] = self.legendLabelNoTitle;
 	}
 	if (self.legendItem) {
 		params[@"legendItem"] = self.legendItem;
@@ -424,6 +428,12 @@
 	NSString *oldValue = _legendLabel;
 	_legendLabel = legendLabel;
 	[self updateNSObject:oldValue newValue:legendLabel propertyName:@"legendLabel"];
+}
+
+-(void)setLegendLabelNoTitle:(NSString *)legendLabelNoTitle {
+	NSString *oldValue = _legendLabelNoTitle;
+	_legendLabelNoTitle = legendLabelNoTitle;
+	[self updateNSObject:oldValue newValue:legendLabelNoTitle propertyName:@"legendLabelNoTitle"];
 }
 
 -(void)setLegendItem:(NSString *)legendItem {

@@ -29,14 +29,14 @@
 
 # pragma mark - Setters
 
--(void)setReverse-arrow:(HISVGDefinitionObject *)reverse-arrow {
-	HISVGDefinitionObject *oldValue = _reverse-arrow;
+-(void)setReverse-arrow:(HIASTNode *)reverse-arrow {
+	HIASTNode *oldValue = _reverse-arrow;
 	_reverse-arrow = reverse-arrow;
 	[self updateHIObject:oldValue newValue:reverse-arrow propertyName:@"reverse-arrow"];
 }
 
--(void)setArrow:(HISVGDefinitionObject *)arrow {
-	HISVGDefinitionObject *oldValue = _arrow;
+-(void)setArrow:(HIASTNode *)arrow {
+	HIASTNode *oldValue = _arrow;
 	_arrow = arrow;
 	[self updateHIObject:oldValue newValue:arrow propertyName:@"arrow"];
 }

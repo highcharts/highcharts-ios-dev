@@ -14,12 +14,12 @@
 	copyLevels.colorVariation = [self.colorVariation copyWithZone: zone];
 	copyLevels.levelSize = [self.levelSize copyWithZone: zone];
 	copyLevels.borderDashStyle = [self.borderDashStyle copyWithZone: zone];
+	copyLevels.level = [self.level copyWithZone: zone];
 	copyLevels.color = [self.color copyWithZone: zone];
 	copyLevels.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyLevels.rotationMode = [self.rotationMode copyWithZone: zone];
 	copyLevels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyLevels.rotation = [self.rotation copyWithZone: zone];
-	copyLevels.level = [self.level copyWithZone: zone];
 	copyLevels.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyLevels.layoutStartingDirection = [self.layoutStartingDirection copyWithZone: zone];
 	copyLevels.colorByPoint = [self.colorByPoint copyWithZone: zone];
@@ -43,6 +43,9 @@
 	if (self.borderDashStyle) {
 		params[@"borderDashStyle"] = self.borderDashStyle;
 	}
+	if (self.level) {
+		params[@"level"] = self.level;
+	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
@@ -57,9 +60,6 @@
 	}
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
-	}
-	if (self.level) {
-		params[@"level"] = self.level;
 	}
 	if (self.layoutAlgorithm) {
 		params[@"layoutAlgorithm"] = self.layoutAlgorithm;
@@ -105,6 +105,12 @@
 	[self updateNSObject:oldValue newValue:borderDashStyle propertyName:@"borderDashStyle"];
 }
 
+-(void)setLevel:(NSNumber *)level {
+	NSNumber *oldValue = _level;
+	_level = level;
+	[self updateNSObject:oldValue newValue:level propertyName:@"level"];
+}
+
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
 	_color = color;
@@ -133,12 +139,6 @@
 	NSNumber *oldValue = _rotation;
 	_rotation = rotation;
 	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
-}
-
--(void)setLevel:(NSNumber *)level {
-	NSNumber *oldValue = _level;
-	_level = level;
-	[self updateNSObject:oldValue newValue:level propertyName:@"level"];
 }
 
 -(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {

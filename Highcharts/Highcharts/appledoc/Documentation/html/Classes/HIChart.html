@@ -152,6 +152,8 @@
 		
 		<option value="//api/name/width">width</option>
 		
+		<option value="//api/name/zoomBySingleTouch">zoomBySingleTouch</option>
+		
 		<option value="//api/name/zoomKey">zoomKey</option>
 		
 		<option value="//api/name/zoomType">zoomType</option>
@@ -632,6 +634,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/zoomBySingleTouch" title="zoomBySingleTouch"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zoomBySingleTouch">&nbsp;&nbsp;zoomBySingleTouch</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enables zooming by a single touch, in combination with <code>chart.zoomType</code>. When enabled, two-finger pinch will still work as set up by <code>chart.pinchType</code>. However, <code>zoomBySingleTouch</code> will interfere with touch-dragging the chart to read the tooltip. And especially when vertical zooming is enabled, it will make it hard to scroll vertically on the page.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zoomBySingleTouch</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoombysingletouch">Zoom by single touch enabled, with buttons to toggle</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChart.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/plotBorderColor" title="plotBorderColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/plotBorderColor">&nbsp;&nbsp;plotBorderColor</a></code>
 </h3>
@@ -918,7 +971,6 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/reflow-true/">String</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-object/">Object reference</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/renderto-jquery/">Object reference through jQuery</a></li>
 </ul>
 
 			</div>
@@ -2724,7 +2776,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2021 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
