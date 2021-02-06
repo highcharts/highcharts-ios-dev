@@ -10,9 +10,9 @@
 
 
 /**
-Serialized form of an SVG definition, including children. Some key property names are reserved: tagName, textContent, and children.
+Serialized form of an SVG/HTML definition, including children. Some key property names are reserved: tagName, textContent, and children.
 */
-@interface HISVGDefinitionObject: HIChartsJSONSerializable
+@interface HIASTNode: HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) NSArray *children;
 @property(nonatomic, readwrite) NSString *tagName;
