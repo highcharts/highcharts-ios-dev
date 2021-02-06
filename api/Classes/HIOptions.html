@@ -746,10 +746,54 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the Boost module. The Boost module allows certain series types to be rendered by WebGL instead of the default SVG. This allows hundreds of thousands of data points to be rendered in milliseconds. In addition to the WebGL rendering it saves time by skipping processing and inspection of the data wherever possible. This introduces some limitations to what features are available in boost mode. See <a href="https://www.highcharts.com/docs/advanced-chart-features/boost-module">the docs</a> for details. In addition to the global <code>boost</code> option, each series has a <code>boostThreshold</code> that defines when the boost should kick in. Requires the <code>modules/boost.js</code> module.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBoost *boost</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line">Line chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-series-heavy">Line chart with hundreds of series</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/scatter">Scatter chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/area">Area chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/arearange">Area range chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/column">Column chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/columnrange">Column range chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/bubble">Bubble chart</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/heatmap">Heat map</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/treemap">Tree map</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOptions.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -818,7 +862,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for configuring markers for annotations. An example of the arrow marker:  {  arrow: {   id: &lsquo;arrow&rsquo;,   tagName: &lsquo;marker&rsquo;,   refY: 5,   refX: 5,   markerWidth: 10,   markerHeight: 10,   children: [{    tagName: &lsquo;path&rsquo;,    attrs: {     d: &rsquo;M 0 0 L 10 5 L 0 10 Z',     strokeWidth: 0    }   }]  } }</p>
+				<p>Options for configuring markers for annotations. An example of the arrow marker:  {  arrow: {   id: &lsquo;arrow&rsquo;,   tagName: &lsquo;marker&rsquo;,   refY: 5,   refX: 5,   markerWidth: 10,   markerHeight: 10,   children: [{    tagName: &lsquo;path&rsquo;,    attrs: {     d: &rsquo;M 0 0 L 10 5 L 0 10 Z',     &lsquo;stroke-width&rsquo;: 0    }   }]  } }</p>
 			</div>
 			
 		    
@@ -1437,7 +1481,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2021 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

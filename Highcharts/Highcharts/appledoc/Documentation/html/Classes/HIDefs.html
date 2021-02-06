@@ -106,7 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for configuring markers for annotations. An example of the arrow marker:  {  arrow: {   id: &lsquo;arrow&rsquo;,   tagName: &lsquo;marker&rsquo;,   refY: 5,   refX: 5,   markerWidth: 10,   markerHeight: 10,   children: [{    tagName: &lsquo;path&rsquo;,    attrs: {     d: &rsquo;M 0 0 L 10 5 L 0 10 Z',     strokeWidth: 0    }   }]  } }</p>
+						<p>Options for configuring markers for annotations. An example of the arrow marker:  {  arrow: {   id: &lsquo;arrow&rsquo;,   tagName: &lsquo;marker&rsquo;,   refY: 5,   refX: 5,   markerWidth: 10,   markerHeight: 10,   children: [{    tagName: &lsquo;path&rsquo;,    attrs: {     d: &rsquo;M 0 0 L 10 5 L 0 10 Z',     &lsquo;stroke-width&rsquo;: 0    }   }]  } }</p>
 
 <p><strong>Try it</strong></p>
 
@@ -140,7 +140,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGDefinitionObject *reverseArrow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIASTNode *reverseArrow</code></div>
 
 		    
 		</div>
@@ -156,7 +156,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISVGDefinitionObject *arrow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIASTNode *arrow</code></div>
 
 		    
 		</div>
@@ -194,7 +194,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2020 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2021 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
