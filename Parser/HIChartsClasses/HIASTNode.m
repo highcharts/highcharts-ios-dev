@@ -1,7 +1,7 @@
 #import "HIChartsJSONSerializableSubclass.h"
-#import "HISVGDefinitionObject.h"
+#import "HIASTNode.h"
 
-@implementation HISVGDefinitionObject
+@implementation HIASTNode
 
 -(instancetype)init {
 	return [super init];
@@ -9,11 +9,11 @@
 
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
-	HISVGDefinitionObject *copySVGDefinitionObject = [[HISVGDefinitionObject allocWithZone: zone] init];
-	copySVGDefinitionObject.children = [self.children copyWithZone: zone];
-	copySVGDefinitionObject.tagName = [self.tagName copyWithZone: zone];
-	copySVGDefinitionObject.textContent = [self.textContent copyWithZone: zone];
-	return copySVGDefinitionObject;
+	HIASTNode *copyASTNode = [[HIASTNode allocWithZone: zone] init];
+	copyASTNode.children = [self.children copyWithZone: zone];
+	copyASTNode.tagName = [self.tagName copyWithZone: zone];
+	copyASTNode.textContent = [self.textContent copyWithZone: zone];
+	return copyASTNode;
 }
 
 -(NSDictionary *)getParams
