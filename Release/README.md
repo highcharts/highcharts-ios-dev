@@ -215,7 +215,7 @@ First of all, you need to create a `plotOptions` object for your series type:
 let plotOptions = HIPlotOptions()
 plotOptions.series = HISeries()
 ```
-Now, you can refer to the point event and add on click closure like this:
+Now, you can refer to the point event and add on click function like this:
 ```swift
 plotOptions.series.point = HIPoint()
 plotOptions.series.point.events = HIEvents()
