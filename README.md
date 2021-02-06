@@ -221,10 +221,10 @@ plotOptions.series.point = HIPoint()
 plotOptions.series.point.events = HIEvents()
     
 let clickFunction = HIFunction(closure: { [weak self] context in
-  guard let self = self else { return }
+  guard let self = self, let context = context else { return }
 
-  let category = context?.getProperty("this.category") ?? "",
-      value = context?.getProperty("this.y") ?? ""
+  let category = context.getProperty("this.category") ?? "",
+      value = context.getProperty("this.y") ?? ""
 
   let alertMessage = "Category: \(category), value: \(value)"
 
