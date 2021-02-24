@@ -1,9 +1,9 @@
 {
   "_meta": {
     "branch": "master",
-    "commit": "ea08706707",
-    "version": "9.0.0",
-    "date": "Tue Feb 02 2021 14:07:21 GMT+0100 (Central European Standard Time)"
+    "commit": "c0936cdafc",
+    "version": "9.0.1",
+    "date": "Tue Feb 16 2021 09:10:20 GMT+0100 (sentraleuropeisk normaltid)"
   },
   "accessibility": {
     "doclet": {
@@ -22,8 +22,8 @@
       "filename": "js/Accessibility/Options/Options.js",
       "name": "accessibility",
       "fullname": "accessibility",
-      "line": 75,
-      "lineEnd": 85,
+      "line": 81,
+      "lineEnd": 91,
       "column": 4
     },
     "children": {
@@ -41,8 +41,8 @@
         "meta": {
           "fullname": "accessibility.announceNewData",
           "name": "announceNewData",
-          "line": 559,
-          "lineEnd": 570,
+          "line": 569,
+          "lineEnd": 580,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js"
         },
@@ -68,8 +68,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 572,
-              "lineEnd": 594
+              "line": 582,
+              "lineEnd": 604
             },
             "children": {}
           },
@@ -96,8 +96,8 @@
             "meta": {
               "fullname": "accessibility.announceNewData.enabled",
               "name": "enabled",
-              "line": 572,
-              "lineEnd": 594,
+              "line": 582,
+              "lineEnd": 604,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": false
@@ -118,8 +118,8 @@
             "meta": {
               "fullname": "accessibility.announceNewData.interruptUser",
               "name": "interruptUser",
-              "line": 611,
-              "lineEnd": 616,
+              "line": 621,
+              "lineEnd": 626,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": false
@@ -140,8 +140,8 @@
             "meta": {
               "fullname": "accessibility.announceNewData.minAnnounceInterval",
               "name": "minAnnounceInterval",
-              "line": 601,
-              "lineEnd": 609,
+              "line": 611,
+              "lineEnd": 619,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": 5000
@@ -171,8 +171,8 @@
         },
         "meta": {
           "filename": "js/Accessibility/Options/Options.js",
-          "line": 372,
-          "lineEnd": 386
+          "line": 382,
+          "lineEnd": 396
         },
         "children": {}
       },
@@ -193,8 +193,8 @@
         },
         "meta": {
           "filename": "js/Accessibility/Options/Options.js",
-          "line": 396,
-          "lineEnd": 419
+          "line": 406,
+          "lineEnd": 429
         },
         "children": {}
       },
@@ -212,8 +212,8 @@
         "meta": {
           "fullname": "accessibility.enabled",
           "name": "enabled",
-          "line": 87,
-          "lineEnd": 91,
+          "line": 93,
+          "lineEnd": 97,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js",
           "default": true
@@ -232,8 +232,8 @@
         },
         "meta": {
           "filename": "js/Accessibility/Options/Options.js",
-          "line": 387,
-          "lineEnd": 395
+          "line": 397,
+          "lineEnd": 405
         },
         "children": {}
       },
@@ -251,8 +251,8 @@
         "meta": {
           "fullname": "accessibility.keyboardNavigation",
           "name": "keyboardNavigation",
-          "line": 372,
-          "lineEnd": 386,
+          "line": 382,
+          "lineEnd": 396,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js"
         },
@@ -271,8 +271,8 @@
             "meta": {
               "fullname": "accessibility.keyboardNavigation.enabled",
               "name": "enabled",
-              "line": 441,
-              "lineEnd": 445,
+              "line": 451,
+              "lineEnd": 455,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": true
@@ -302,8 +302,8 @@
             "meta": {
               "fullname": "accessibility.keyboardNavigation.focusBorder",
               "name": "focusBorder",
-              "line": 447,
-              "lineEnd": 456,
+              "line": 457,
+              "lineEnd": 466,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js"
             },
@@ -322,8 +322,8 @@
                 "meta": {
                   "fullname": "accessibility.keyboardNavigation.focusBorder.enabled",
                   "name": "enabled",
-                  "line": 458,
-                  "lineEnd": 462,
+                  "line": 468,
+                  "lineEnd": 472,
                   "column": 16,
                   "filename": "js/Accessibility/Options/Options.js",
                   "default": true
@@ -344,8 +344,8 @@
                 "meta": {
                   "fullname": "accessibility.keyboardNavigation.focusBorder.hideBrowserFocusOutline",
                   "name": "hideBrowserFocusOutline",
-                  "line": 464,
-                  "lineEnd": 468,
+                  "line": 474,
+                  "lineEnd": 478,
                   "column": 16,
                   "filename": "js/Accessibility/Options/Options.js",
                   "default": true
@@ -366,8 +366,8 @@
                 "meta": {
                   "fullname": "accessibility.keyboardNavigation.focusBorder.margin",
                   "name": "margin",
-                  "line": 490,
-                  "lineEnd": 494,
+                  "line": 500,
+                  "lineEnd": 504,
                   "column": 16,
                   "filename": "js/Accessibility/Options/Options.js",
                   "default": 2
@@ -387,8 +387,8 @@
                 "meta": {
                   "fullname": "accessibility.keyboardNavigation.focusBorder.style",
                   "name": "style",
-                  "line": 470,
-                  "lineEnd": 481,
+                  "line": 480,
+                  "lineEnd": 491,
                   "column": 16,
                   "filename": "js/Accessibility/Options/Options.js"
                 },
@@ -406,8 +406,8 @@
                     "meta": {
                       "fullname": "accessibility.keyboardNavigation.focusBorder.style.borderRadius",
                       "name": "borderRadius",
-                      "line": 487,
-                      "lineEnd": 487,
+                      "line": 497,
+                      "lineEnd": 497,
                       "column": 20,
                       "filename": "js/Accessibility/Options/Options.js",
                       "default": 3
@@ -427,8 +427,8 @@
                     "meta": {
                       "fullname": "accessibility.keyboardNavigation.focusBorder.style.color",
                       "name": "color",
-                      "line": 483,
-                      "lineEnd": 483,
+                      "line": 493,
+                      "lineEnd": 493,
                       "column": 20,
                       "filename": "js/Accessibility/Options/Options.js",
                       "default": "#335cad"
@@ -448,8 +448,8 @@
                     "meta": {
                       "fullname": "accessibility.keyboardNavigation.focusBorder.style.lineWidth",
                       "name": "lineWidth",
-                      "line": 485,
-                      "lineEnd": 485,
+                      "line": 495,
+                      "lineEnd": 495,
                       "column": 20,
                       "filename": "js/Accessibility/Options/Options.js",
                       "default": 2
@@ -473,8 +473,8 @@
             "meta": {
               "fullname": "accessibility.keyboardNavigation.order",
               "name": "order",
-              "line": 497,
-              "lineEnd": 505,
+              "line": 507,
+              "lineEnd": 515,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js"
             },
@@ -494,8 +494,8 @@
             "meta": {
               "fullname": "accessibility.keyboardNavigation.seriesNavigation",
               "name": "seriesNavigation",
-              "line": 513,
-              "lineEnd": 518,
+              "line": 523,
+              "lineEnd": 528,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js"
             },
@@ -514,8 +514,8 @@
                 },
                 "meta": {
                   "filename": "js/Accessibility/Options/Options.js",
-                  "line": 520,
-                  "lineEnd": 539
+                  "line": 530,
+                  "lineEnd": 549
                 },
                 "children": {}
               },
@@ -534,8 +534,8 @@
                 "meta": {
                   "fullname": "accessibility.keyboardNavigation.seriesNavigation.pointNavigationEnabledThreshold",
                   "name": "pointNavigationEnabledThreshold",
-                  "line": 547,
-                  "lineEnd": 555,
+                  "line": 557,
+                  "lineEnd": 565,
                   "column": 16,
                   "filename": "js/Accessibility/Options/Options.js",
                   "default": false
@@ -556,8 +556,8 @@
                 "meta": {
                   "fullname": "accessibility.keyboardNavigation.seriesNavigation.skipNullPoints",
                   "name": "skipNullPoints",
-                  "line": 520,
-                  "lineEnd": 539,
+                  "line": 530,
+                  "lineEnd": 549,
                   "column": 16,
                   "filename": "js/Accessibility/Options/Options.js",
                   "default": true
@@ -580,8 +580,8 @@
             "meta": {
               "fullname": "accessibility.keyboardNavigation.wrapAround",
               "name": "wrapAround",
-              "line": 507,
-              "lineEnd": 511,
+              "line": 517,
+              "lineEnd": 521,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": true
@@ -605,8 +605,8 @@
         "meta": {
           "fullname": "accessibility.landmarkVerbosity",
           "name": "landmarkVerbosity",
-          "line": 317,
-          "lineEnd": 329,
+          "line": 327,
+          "lineEnd": 339,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js",
           "default": "all"
@@ -642,8 +642,8 @@
         "meta": {
           "fullname": "accessibility.linkedDescription",
           "name": "linkedDescription",
-          "line": 331,
-          "lineEnd": 370,
+          "line": 341,
+          "lineEnd": 380,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js",
           "default": "*[data-highcharts-chart=\"{index}\"] + .highcharts-description"
@@ -663,8 +663,8 @@
         "meta": {
           "fullname": "accessibility.point",
           "name": "point",
-          "line": 220,
-          "lineEnd": 224,
+          "line": 230,
+          "lineEnd": 234,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js"
         },
@@ -684,8 +684,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 226,
-              "lineEnd": 240
+              "line": 236,
+              "lineEnd": 250
             },
             "children": {}
           },
@@ -704,8 +704,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 241,
-              "lineEnd": 253
+              "line": 251,
+              "lineEnd": 263
             },
             "children": {}
           },
@@ -725,8 +725,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 278,
-              "lineEnd": 297
+              "line": 288,
+              "lineEnd": 307
             },
             "children": {}
           },
@@ -742,8 +742,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 270,
-              "lineEnd": 277
+              "line": 280,
+              "lineEnd": 287
             },
             "children": {}
           },
@@ -765,8 +765,8 @@
             "meta": {
               "fullname": "accessibility.point.valueDescriptionFormat",
               "name": "valueDescriptionFormat",
-              "line": 226,
-              "lineEnd": 240,
+              "line": 236,
+              "lineEnd": 250,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": "{index}. {xDescription}{separator}{value}."
@@ -785,8 +785,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 254,
-              "lineEnd": 261
+              "line": 264,
+              "lineEnd": 271
             },
             "children": {}
           },
@@ -802,8 +802,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 262,
-              "lineEnd": 269
+              "line": 272,
+              "lineEnd": 279
             },
             "children": {}
           }
@@ -822,8 +822,8 @@
         "meta": {
           "fullname": "accessibility.screenReaderSection",
           "name": "screenReaderSection",
-          "line": 93,
-          "lineEnd": 98,
+          "line": 99,
+          "lineEnd": 104,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js"
         },
@@ -842,8 +842,8 @@
             "meta": {
               "fullname": "accessibility.screenReaderSection.afterChartFormat",
               "name": "afterChartFormat",
-              "line": 153,
-              "lineEnd": 161,
+              "line": 163,
+              "lineEnd": 171,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": "{endOfChartMarker}"
@@ -862,8 +862,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 153,
-              "lineEnd": 161
+              "line": 163,
+              "lineEnd": 171
             },
             "children": {}
           },
@@ -884,8 +884,8 @@
             "meta": {
               "fullname": "accessibility.screenReaderSection.axisRangeDateFormat",
               "name": "axisRangeDateFormat",
-              "line": 169,
-              "lineEnd": 178,
+              "line": 179,
+              "lineEnd": 188,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": "%Y-%m-%d %H:%M:%S"
@@ -894,23 +894,23 @@
           },
           "beforeChartFormat": {
             "doclet": {
-              "description": "Format for the screen reader information region before the chart.\nSupported HTML tags are `<h1-7>`, `<p>`, `<div>`, `<a>`, `<ul>`,\n`<ol>`, `<li>`, and `<button>`. Attributes are not supported,\nexcept for id on `<div>`, `<a>`, and `<button>`. Id is required\non `<a>` and `<button>` in the format `<tag id=\"abcd\">`. Numbers,\nlower- and uppercase letters, \"-\" and \"#\" are valid characters in\nIDs.",
+              "description": "Format for the screen reader information region before the chart.\nSupported HTML tags are `<h1-6>`, `<p>`, `<div>`, `<a>`, `<ul>`,\n`<ol>`, `<li>`, and `<button>`. Attributes are not supported,\nexcept for id on `<div>`, `<a>`, and `<button>`. Id is required\non `<a>` and `<button>` in the format `<tag id=\"abcd\">`. Numbers,\nlower- and uppercase letters, \"-\" and \"#\" are valid characters in\nIDs.\n\nThe headingTagName is an auto-detected heading (h1-h6) that\ncorresponds to the heading level below the previous heading in\nthe DOM.",
               "since": "8.0.0",
               "type": {
                 "names": [
                   "string"
                 ]
               },
-              "default": "<h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{playAsSoundButton}</div><div>{viewTableButton}</div><div>{xAxisDescription}</div><div>{yAxisDescription}</div><div>{annotationsTitle}{annotationsList}</div>"
+              "default": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{playAsSoundButton}</div><div>{viewTableButton}</div><div>{xAxisDescription}</div><div>{yAxisDescription}</div><div>{annotationsTitle}{annotationsList}</div>"
             },
             "meta": {
               "fullname": "accessibility.screenReaderSection.beforeChartFormat",
               "name": "beforeChartFormat",
-              "line": 100,
-              "lineEnd": 110,
+              "line": 106,
+              "lineEnd": 116,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
-              "default": "<h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{playAsSoundButton}</div><div>{viewTableButton}</div><div>{xAxisDescription}</div><div>{yAxisDescription}</div><div>{annotationsTitle}{annotationsList}</div>"
+              "default": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{playAsSoundButton}</div><div>{viewTableButton}</div><div>{xAxisDescription}</div><div>{yAxisDescription}</div><div>{annotationsTitle}{annotationsList}</div>"
             },
             "children": {}
           },
@@ -926,8 +926,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 121,
-              "lineEnd": 132
+              "line": 127,
+              "lineEnd": 138
             },
             "children": {}
           },
@@ -943,8 +943,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 111,
-              "lineEnd": 120
+              "line": 117,
+              "lineEnd": 126
             },
             "children": {}
           },
@@ -960,8 +960,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 100,
-              "lineEnd": 110
+              "line": 106,
+              "lineEnd": 116
             },
             "children": {}
           }
@@ -980,8 +980,8 @@
         "meta": {
           "fullname": "accessibility.series",
           "name": "series",
-          "line": 181,
-          "lineEnd": 187,
+          "line": 191,
+          "lineEnd": 197,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js"
         },
@@ -1000,8 +1000,8 @@
             "meta": {
               "fullname": "accessibility.series.describeSingleSeries",
               "name": "describeSingleSeries",
-              "line": 189,
-              "lineEnd": 201,
+              "line": 199,
+              "lineEnd": 211,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": false
@@ -1023,8 +1023,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 189,
-              "lineEnd": 201
+              "line": 199,
+              "lineEnd": 211
             },
             "children": {}
           },
@@ -1043,8 +1043,8 @@
             "meta": {
               "fullname": "accessibility.series.pointDescriptionEnabledThreshold",
               "name": "pointDescriptionEnabledThreshold",
-              "line": 209,
-              "lineEnd": 217,
+              "line": 219,
+              "lineEnd": 227,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": 200
@@ -1065,8 +1065,8 @@
         },
         "meta": {
           "filename": "js/Accessibility/Options/Options.js",
-          "line": 420,
-          "lineEnd": 433
+          "line": 430,
+          "lineEnd": 443
         },
         "children": {}
       }
@@ -2339,8 +2339,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 688,
-              "lineEnd": 695
+              "line": 707,
+              "lineEnd": 714
             },
             "children": {
               "description": {
@@ -2355,8 +2355,8 @@
                 },
                 "meta": {
                   "filename": "js/Accessibility/Options/Options.js",
-                  "line": 696,
-                  "lineEnd": 703
+                  "line": 715,
+                  "lineEnd": 722
                 },
                 "children": {}
               }
@@ -4296,7 +4296,7 @@
               "type": {
                 "names": [
                   "string",
-                  "*"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -8710,8 +8710,8 @@
         },
         "meta": {
           "filename": "js/Extensions/ScrollablePlotArea.js",
-          "line": 26,
-          "lineEnd": 47
+          "line": 28,
+          "lineEnd": 49
         },
         "children": {
           "minHeight": {
@@ -8726,8 +8726,8 @@
             },
             "meta": {
               "filename": "js/Extensions/ScrollablePlotArea.js",
-              "line": 48,
-              "lineEnd": 54
+              "line": 50,
+              "lineEnd": 56
             },
             "children": {}
           },
@@ -8743,8 +8743,8 @@
             },
             "meta": {
               "filename": "js/Extensions/ScrollablePlotArea.js",
-              "line": 55,
-              "lineEnd": 61
+              "line": 57,
+              "lineEnd": 63
             },
             "children": {}
           },
@@ -8776,8 +8776,8 @@
             },
             "meta": {
               "filename": "js/Extensions/ScrollablePlotArea.js",
-              "line": 77,
-              "lineEnd": 88
+              "line": 79,
+              "lineEnd": 90
             },
             "children": {}
           },
@@ -8793,8 +8793,8 @@
             },
             "meta": {
               "filename": "js/Extensions/ScrollablePlotArea.js",
-              "line": 62,
-              "lineEnd": 69
+              "line": 64,
+              "lineEnd": 71
             },
             "children": {}
           },
@@ -8810,8 +8810,8 @@
             },
             "meta": {
               "filename": "js/Extensions/ScrollablePlotArea.js",
-              "line": 70,
-              "lineEnd": 76
+              "line": 72,
+              "lineEnd": 78
             },
             "children": {}
           }
@@ -9354,7 +9354,7 @@
           ],
           "products": [
             "highcharts",
-            "higstock",
+            "highstock",
             "gantt"
           ],
           "type": {
@@ -13445,8 +13445,8 @@
         "meta": {
           "fullname": "exporting.accessibility",
           "name": "accessibility",
-          "line": 777,
-          "lineEnd": 783,
+          "line": 796,
+          "lineEnd": 802,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js"
         },
@@ -13465,8 +13465,8 @@
             "meta": {
               "fullname": "exporting.accessibility.enabled",
               "name": "enabled",
-              "line": 785,
-              "lineEnd": 789,
+              "line": 804,
+              "lineEnd": 808,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": true
@@ -17965,8 +17965,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.backgroundColor",
                   "name": "backgroundColor",
-                  "line": 772,
-                  "lineEnd": 772,
+                  "line": 770,
+                  "lineEnd": 770,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Background color"
@@ -17985,8 +17985,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.backgroundColors",
                   "name": "backgroundColors",
-                  "line": 773,
-                  "lineEnd": 773,
+                  "line": 771,
+                  "lineEnd": 771,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Background colors"
@@ -18005,8 +18005,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.borderColor",
                   "name": "borderColor",
-                  "line": 774,
-                  "lineEnd": 774,
+                  "line": 772,
+                  "lineEnd": 772,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Border color"
@@ -18025,8 +18025,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.borderRadius",
                   "name": "borderRadius",
-                  "line": 775,
-                  "lineEnd": 775,
+                  "line": 773,
+                  "lineEnd": 773,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Border radius"
@@ -18045,8 +18045,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.borderWidth",
                   "name": "borderWidth",
-                  "line": 776,
-                  "lineEnd": 776,
+                  "line": 774,
+                  "lineEnd": 774,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Border width"
@@ -18085,8 +18085,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.color",
                   "name": "color",
-                  "line": 780,
-                  "lineEnd": 780,
+                  "line": 778,
+                  "lineEnd": 778,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Color"
@@ -18285,8 +18285,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.fill",
                   "name": "fill",
-                  "line": 764,
-                  "lineEnd": 764,
+                  "line": 762,
+                  "lineEnd": 762,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Fill"
@@ -18325,8 +18325,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.fontSize",
                   "name": "fontSize",
-                  "line": 779,
-                  "lineEnd": 779,
+                  "line": 777,
+                  "lineEnd": 777,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Font size"
@@ -18345,8 +18345,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.format",
                   "name": "format",
-                  "line": 765,
-                  "lineEnd": 765,
+                  "line": 763,
+                  "lineEnd": 763,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Text"
@@ -18365,8 +18365,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.height",
                   "name": "height",
-                  "line": 781,
-                  "lineEnd": 781,
+                  "line": 779,
+                  "lineEnd": 779,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Height"
@@ -18465,8 +18465,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.labelOptions",
                   "name": "labelOptions",
-                  "line": 770,
-                  "lineEnd": 770,
+                  "line": 768,
+                  "lineEnd": 768,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Label options"
@@ -18485,8 +18485,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.labels",
                   "name": "labels",
-                  "line": 771,
-                  "lineEnd": 771,
+                  "line": 769,
+                  "lineEnd": 769,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Labels"
@@ -18525,8 +18525,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.lines",
                   "name": "lines",
-                  "line": 758,
-                  "lineEnd": 758,
+                  "line": 756,
+                  "lineEnd": 756,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Lines"
@@ -18625,8 +18625,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.name",
                   "name": "name",
-                  "line": 769,
-                  "lineEnd": 769,
+                  "line": 767,
+                  "lineEnd": 767,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Name"
@@ -18665,8 +18665,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.padding",
                   "name": "padding",
-                  "line": 778,
-                  "lineEnd": 778,
+                  "line": 776,
+                  "lineEnd": 776,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Padding"
@@ -18845,8 +18845,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.shapeOptions",
                   "name": "shapeOptions",
-                  "line": 762,
-                  "lineEnd": 762,
+                  "line": 760,
+                  "lineEnd": 760,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Shape options"
@@ -18865,8 +18865,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.shapes",
                   "name": "shapes",
-                  "line": 782,
-                  "lineEnd": 782,
+                  "line": 780,
+                  "lineEnd": 780,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Shape options"
@@ -18885,8 +18885,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.simpleShapes",
                   "name": "simpleShapes",
-                  "line": 757,
-                  "lineEnd": 757,
+                  "line": 755,
+                  "lineEnd": 755,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Simple shapes"
@@ -18905,8 +18905,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.stroke",
                   "name": "stroke",
-                  "line": 767,
-                  "lineEnd": 767,
+                  "line": 765,
+                  "lineEnd": 765,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Line color"
@@ -18925,8 +18925,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.strokeWidth",
                   "name": "strokeWidth",
-                  "line": 766,
-                  "lineEnd": 766,
+                  "line": 764,
+                  "lineEnd": 764,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Line width"
@@ -18945,8 +18945,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.style",
                   "name": "style",
-                  "line": 777,
-                  "lineEnd": 777,
+                  "line": 775,
+                  "lineEnd": 775,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Style"
@@ -18965,8 +18965,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.title",
                   "name": "title",
-                  "line": 768,
-                  "lineEnd": 768,
+                  "line": 766,
+                  "lineEnd": 766,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Title"
@@ -19005,8 +19005,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.typeOptions",
                   "name": "typeOptions",
-                  "line": 763,
-                  "lineEnd": 763,
+                  "line": 761,
+                  "lineEnd": 761,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Details"
@@ -19270,8 +19270,8 @@
         "meta": {
           "fullname": "lang.rangeSelectorFrom",
           "name": "rangeSelectorFrom",
-          "line": 534,
-          "lineEnd": 540,
+          "line": 535,
+          "lineEnd": 541,
           "column": 4,
           "filename": "js/Extensions/RangeSelector.js",
           "default": ""
@@ -19295,8 +19295,8 @@
         "meta": {
           "fullname": "lang.rangeSelectorTo",
           "name": "rangeSelectorTo",
-          "line": 542,
-          "lineEnd": 546,
+          "line": 543,
+          "lineEnd": 547,
           "column": 4,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "â†’"
@@ -19320,8 +19320,8 @@
         "meta": {
           "fullname": "lang.rangeSelectorZoom",
           "name": "rangeSelectorZoom",
-          "line": 528,
-          "lineEnd": 532,
+          "line": 529,
+          "lineEnd": 533,
           "column": 4,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "Zoom"
@@ -20613,8 +20613,8 @@
         "meta": {
           "fullname": "legend.accessibility",
           "name": "accessibility",
-          "line": 741,
-          "lineEnd": 747,
+          "line": 760,
+          "lineEnd": 766,
           "column": 8,
           "filename": "js/Accessibility/Options/Options.js"
         },
@@ -20633,8 +20633,8 @@
             "meta": {
               "fullname": "legend.accessibility.enabled",
               "name": "enabled",
-              "line": 749,
-              "lineEnd": 753,
+              "line": 768,
+              "lineEnd": 772,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js",
               "default": true
@@ -20657,8 +20657,8 @@
             "meta": {
               "fullname": "legend.accessibility.keyboardNavigation",
               "name": "keyboardNavigation",
-              "line": 755,
-              "lineEnd": 760,
+              "line": 774,
+              "lineEnd": 779,
               "column": 12,
               "filename": "js/Accessibility/Options/Options.js"
             },
@@ -20680,8 +20680,8 @@
                 "meta": {
                   "fullname": "legend.accessibility.keyboardNavigation.enabled",
                   "name": "enabled",
-                  "line": 762,
-                  "lineEnd": 768,
+                  "line": 781,
+                  "lineEnd": 787,
                   "column": 16,
                   "filename": "js/Accessibility/Options/Options.js",
                   "default": true
@@ -24148,7 +24148,7 @@
           ],
           "type": {
             "names": [
-              "*"
+              "Highcharts.AnnotationsOptions"
             ]
           },
           "extends": "annotations",
@@ -24166,8 +24166,8 @@
         },
         "meta": {
           "filename": "js/Extensions/Annotations/NavigationBindings.js",
-          "line": 1023,
-          "lineEnd": 1034
+          "line": 1021,
+          "lineEnd": 1032
         },
         "children": {}
       },
@@ -24301,8 +24301,8 @@
             "meta": {
               "fullname": "navigation.bindings.circleAnnotation",
               "name": "circleAnnotation",
-              "line": 826,
-              "lineEnd": 832,
+              "line": 824,
+              "lineEnd": 830,
               "column": 12,
               "filename": "js/Extensions/Annotations/NavigationBindings.js"
             },
@@ -24703,8 +24703,8 @@
             "meta": {
               "fullname": "navigation.bindings.labelAnnotation",
               "name": "labelAnnotation",
-              "line": 936,
-              "lineEnd": 941,
+              "line": 934,
+              "lineEnd": 939,
               "column": 12,
               "filename": "js/Extensions/Annotations/NavigationBindings.js"
             },
@@ -24889,8 +24889,8 @@
             "meta": {
               "fullname": "navigation.bindings.rectangleAnnotation",
               "name": "rectangleAnnotation",
-              "line": 871,
-              "lineEnd": 877,
+              "line": 869,
+              "lineEnd": 875,
               "column": 12,
               "filename": "js/Extensions/Annotations/NavigationBindings.js"
             },
@@ -25263,8 +25263,8 @@
         "meta": {
           "fullname": "navigation.bindingsClassName",
           "name": "bindingsClassName",
-          "line": 793,
-          "lineEnd": 802,
+          "line": 791,
+          "lineEnd": 800,
           "column": 8,
           "filename": "js/Extensions/Annotations/NavigationBindings.js",
           "default": "highcharts-bindings-container"
@@ -25823,8 +25823,8 @@
         "meta": {
           "fullname": "navigation.events",
           "name": "events",
-          "line": 972,
-          "lineEnd": 980,
+          "line": 970,
+          "lineEnd": 978,
           "column": 8,
           "filename": "js/Extensions/Annotations/NavigationBindings.js"
         },
@@ -25841,8 +25841,8 @@
             },
             "meta": {
               "filename": "js/Extensions/Annotations/NavigationBindings.js",
-              "line": 987,
-              "lineEnd": 993
+              "line": 985,
+              "lineEnd": 991
             },
             "children": {}
           },
@@ -25871,8 +25871,8 @@
             },
             "meta": {
               "filename": "js/Extensions/Annotations/NavigationBindings.js",
-              "line": 1004,
-              "lineEnd": 1014
+              "line": 1002,
+              "lineEnd": 1012
             },
             "children": {}
           },
@@ -25901,8 +25901,8 @@
             },
             "meta": {
               "filename": "js/Extensions/Annotations/NavigationBindings.js",
-              "line": 994,
-              "lineEnd": 1003
+              "line": 992,
+              "lineEnd": 1001
             },
             "children": {}
           },
@@ -25918,8 +25918,8 @@
             },
             "meta": {
               "filename": "js/Extensions/Annotations/NavigationBindings.js",
-              "line": 981,
-              "lineEnd": 986
+              "line": 979,
+              "lineEnd": 984
             },
             "children": {}
           }
@@ -25941,8 +25941,8 @@
         },
         "meta": {
           "filename": "js/Extensions/Annotations/NavigationBindings.js",
-          "line": 972,
-          "lineEnd": 980
+          "line": 970,
+          "lineEnd": 978
         },
         "children": {}
       },
@@ -28379,8 +28379,8 @@
       "filename": "js/Series/XRange/XRangeSeries.js",
       "name": "plotOptions",
       "fullname": "plotOptions",
-      "line": 400,
-      "lineEnd": 404,
+      "line": 417,
+      "lineEnd": 421,
       "column": 4
     },
     "doclet": {
@@ -37570,8 +37570,8 @@
             },
             "meta": {
               "filename": "js/Series/XRange/XRangeSeries.js",
-              "line": 447,
-              "lineEnd": 456
+              "line": 464,
+              "lineEnd": 473
             },
             "children": {}
           },
@@ -39776,8 +39776,8 @@
           "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
           "name": "ikh",
           "fullname": "plotOptions.ikh",
-          "line": 479,
-          "lineEnd": 496,
+          "line": 480,
+          "lineEnd": 497,
           "column": 4
         },
         "children": {
@@ -39794,8 +39794,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.chikouLine",
               "name": "chikouLine",
-              "line": 554,
-              "lineEnd": 556,
+              "line": 555,
+              "lineEnd": 557,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -39811,8 +39811,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.chikouLine.styles",
                   "name": "styles",
-                  "line": 558,
-                  "lineEnd": 558,
+                  "line": 559,
+                  "lineEnd": 559,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
                 },
@@ -39830,8 +39830,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.chikouLine.styles.lineColor",
                       "name": "lineColor",
-                      "line": 563,
-                      "lineEnd": 567,
+                      "line": 564,
+                      "lineEnd": 568,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": "undefined"
@@ -39851,8 +39851,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.chikouLine.styles.lineWidth",
                       "name": "lineWidth",
-                      "line": 559,
-                      "lineEnd": 561,
+                      "line": 560,
+                      "lineEnd": 562,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": 1
@@ -39874,8 +39874,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.dataGrouping",
               "name": "dataGrouping",
-              "line": 645,
-              "lineEnd": 645,
+              "line": 646,
+              "lineEnd": 646,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -39892,8 +39892,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.dataGrouping.approximation",
                   "name": "approximation",
-                  "line": 646,
-                  "lineEnd": 646,
+                  "line": 647,
+                  "lineEnd": 647,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                   "default": "ichimoku-averages"
@@ -39915,8 +39915,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.kijunLine",
               "name": "kijunLine",
-              "line": 537,
-              "lineEnd": 539,
+              "line": 538,
+              "lineEnd": 540,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -39932,8 +39932,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.kijunLine.styles",
                   "name": "styles",
-                  "line": 541,
-                  "lineEnd": 541,
+                  "line": 542,
+                  "lineEnd": 542,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
                 },
@@ -39951,8 +39951,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.kijunLine.styles.lineColor",
                       "name": "lineColor",
-                      "line": 546,
-                      "lineEnd": 550,
+                      "line": 547,
+                      "lineEnd": 551,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": "undefined"
@@ -39972,8 +39972,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.kijunLine.styles.lineWidth",
                       "name": "lineWidth",
-                      "line": 542,
-                      "lineEnd": 544,
+                      "line": 543,
+                      "lineEnd": 545,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": 1
@@ -39995,8 +39995,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.marker",
               "name": "marker",
-              "line": 509,
-              "lineEnd": 509,
+              "line": 510,
+              "lineEnd": 510,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -40013,8 +40013,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.marker.enabled",
                   "name": "enabled",
-                  "line": 510,
-                  "lineEnd": 510,
+                  "line": 511,
+                  "lineEnd": 511,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                   "default": false
@@ -40034,8 +40034,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.params",
               "name": "params",
-              "line": 498,
-              "lineEnd": 498,
+              "line": 499,
+              "lineEnd": 499,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -40052,8 +40052,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.params.period",
                   "name": "period",
-                  "line": 499,
-                  "lineEnd": 499,
+                  "line": 500,
+                  "lineEnd": 500,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                   "default": 26
@@ -40073,8 +40073,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.params.periodSenkouSpanB",
                   "name": "periodSenkouSpanB",
-                  "line": 504,
-                  "lineEnd": 506,
+                  "line": 505,
+                  "lineEnd": 507,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                   "default": 52
@@ -40094,8 +40094,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.params.periodTenkan",
                   "name": "periodTenkan",
-                  "line": 500,
-                  "lineEnd": 502,
+                  "line": 501,
+                  "lineEnd": 503,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                   "default": 9
@@ -40117,8 +40117,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.senkouSpan",
               "name": "senkouSpan",
-              "line": 605,
-              "lineEnd": 607,
+              "line": 606,
+              "lineEnd": 608,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -40149,8 +40149,8 @@
                 },
                 "meta": {
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
-                  "line": 609,
-                  "lineEnd": 623
+                  "line": 610,
+                  "lineEnd": 624
                 },
                 "children": {}
               },
@@ -40177,8 +40177,8 @@
                 },
                 "meta": {
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
-                  "line": 624,
-                  "lineEnd": 634
+                  "line": 625,
+                  "lineEnd": 635
                 },
                 "children": {}
               }
@@ -40197,8 +40197,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.senkouSpanA",
               "name": "senkouSpanA",
-              "line": 571,
-              "lineEnd": 573,
+              "line": 572,
+              "lineEnd": 574,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -40214,8 +40214,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.senkouSpanA.styles",
                   "name": "styles",
-                  "line": 575,
-                  "lineEnd": 575,
+                  "line": 576,
+                  "lineEnd": 576,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
                 },
@@ -40233,8 +40233,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.senkouSpanA.styles.lineColor",
                       "name": "lineColor",
-                      "line": 580,
-                      "lineEnd": 584,
+                      "line": 581,
+                      "lineEnd": 585,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": "undefined"
@@ -40254,8 +40254,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.senkouSpanA.styles.lineWidth",
                       "name": "lineWidth",
-                      "line": 576,
-                      "lineEnd": 578,
+                      "line": 577,
+                      "lineEnd": 579,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": 1
@@ -40279,8 +40279,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.senkouSpanB",
               "name": "senkouSpanB",
-              "line": 588,
-              "lineEnd": 590,
+              "line": 589,
+              "lineEnd": 591,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -40296,8 +40296,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.senkouSpanB.styles",
                   "name": "styles",
-                  "line": 592,
-                  "lineEnd": 592,
+                  "line": 593,
+                  "lineEnd": 593,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
                 },
@@ -40315,8 +40315,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.senkouSpanB.styles.lineColor",
                       "name": "lineColor",
-                      "line": 597,
-                      "lineEnd": 601,
+                      "line": 598,
+                      "lineEnd": 602,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": "undefined"
@@ -40336,8 +40336,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.senkouSpanB.styles.lineWidth",
                       "name": "lineWidth",
-                      "line": 593,
-                      "lineEnd": 595,
+                      "line": 594,
+                      "lineEnd": 596,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": 1
@@ -40361,8 +40361,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.tenkanLine",
               "name": "tenkanLine",
-              "line": 520,
-              "lineEnd": 522,
+              "line": 521,
+              "lineEnd": 523,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -40378,8 +40378,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.tenkanLine.styles",
                   "name": "styles",
-                  "line": 524,
-                  "lineEnd": 524,
+                  "line": 525,
+                  "lineEnd": 525,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
                 },
@@ -40397,8 +40397,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.tenkanLine.styles.lineColor",
                       "name": "lineColor",
-                      "line": 529,
-                      "lineEnd": 533,
+                      "line": 530,
+                      "lineEnd": 534,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": "undefined"
@@ -40418,8 +40418,8 @@
                     "meta": {
                       "fullname": "plotOptions.ikh.tenkanLine.styles.lineWidth",
                       "name": "lineWidth",
-                      "line": 525,
-                      "lineEnd": 527,
+                      "line": 526,
+                      "lineEnd": 528,
                       "column": 16,
                       "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                       "default": 1
@@ -40441,8 +40441,8 @@
             "meta": {
               "fullname": "plotOptions.ikh.tooltip",
               "name": "tooltip",
-              "line": 512,
-              "lineEnd": 512,
+              "line": 513,
+              "lineEnd": 513,
               "column": 8,
               "filename": "js/Stock/Indicators/IKH/IKHIndicator.js"
             },
@@ -40459,8 +40459,8 @@
                 "meta": {
                   "fullname": "plotOptions.ikh.tooltip.pointFormat",
                   "name": "pointFormat",
-                  "line": 513,
-                  "lineEnd": 513,
+                  "line": 514,
+                  "lineEnd": 514,
                   "column": 12,
                   "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
                   "default": "<span style=\"color:{point.color}\">â—</span> <b> {series.name}</b><br/>TENKAN SEN: {point.tenkanSen:.3f}<br/>KIJUN SEN: {point.kijunSen:.3f}<br/>CHIKOU SPAN: {point.chikouSpan:.3f}<br/>SENKOU SPAN A: {point.senkouSpanA:.3f}<br/>SENKOU SPAN B: {point.senkouSpanB:.3f}<br/>"
@@ -41690,8 +41690,8 @@
           "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
           "name": "macd",
           "fullname": "plotOptions.macd",
-          "line": 262,
-          "lineEnd": 276,
+          "line": 264,
+          "lineEnd": 278,
           "column": 4
         },
         "children": {
@@ -41707,8 +41707,8 @@
             "meta": {
               "fullname": "plotOptions.macd.crisp",
               "name": "crisp",
-              "line": 347,
-              "lineEnd": 347,
+              "line": 349,
+              "lineEnd": 349,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
               "default": false
@@ -41726,8 +41726,8 @@
             "meta": {
               "fullname": "plotOptions.macd.dataGrouping",
               "name": "dataGrouping",
-              "line": 361,
-              "lineEnd": 361,
+              "line": 363,
+              "lineEnd": 363,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
             },
@@ -41744,8 +41744,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.dataGrouping.approximation",
                   "name": "approximation",
-                  "line": 362,
-                  "lineEnd": 362,
+                  "line": 364,
+                  "lineEnd": 364,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                   "default": "averages"
@@ -41766,8 +41766,8 @@
             "meta": {
               "fullname": "plotOptions.macd.groupPadding",
               "name": "groupPadding",
-              "line": 345,
-              "lineEnd": 345,
+              "line": 347,
+              "lineEnd": 347,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
               "default": 0.1
@@ -41787,8 +41787,8 @@
             "meta": {
               "fullname": "plotOptions.macd.macdLine",
               "name": "macdLine",
-              "line": 317,
-              "lineEnd": 319,
+              "line": 319,
+              "lineEnd": 321,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
             },
@@ -41804,8 +41804,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.macdLine.styles",
                   "name": "styles",
-                  "line": 328,
-                  "lineEnd": 328,
+                  "line": 330,
+                  "lineEnd": 330,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
                 },
@@ -41823,8 +41823,8 @@
                     "meta": {
                       "fullname": "plotOptions.macd.macdLine.styles.lineColor",
                       "name": "lineColor",
-                      "line": 333,
-                      "lineEnd": 337,
+                      "line": 335,
+                      "lineEnd": 339,
                       "column": 16,
                       "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                       "default": "undefined"
@@ -41844,8 +41844,8 @@
                     "meta": {
                       "fullname": "plotOptions.macd.macdLine.styles.lineWidth",
                       "name": "lineWidth",
-                      "line": 329,
-                      "lineEnd": 331,
+                      "line": 331,
+                      "lineEnd": 333,
                       "column": 16,
                       "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                       "default": 1
@@ -41870,8 +41870,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.macdLine.zones",
                   "name": "zones",
-                  "line": 321,
-                  "lineEnd": 326,
+                  "line": 323,
+                  "lineEnd": 328,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
                 },
@@ -41891,8 +41891,8 @@
             "meta": {
               "fullname": "plotOptions.macd.minPointLength",
               "name": "minPointLength",
-              "line": 364,
-              "lineEnd": 364,
+              "line": 366,
+              "lineEnd": 366,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
               "default": 0
@@ -41910,8 +41910,8 @@
             "meta": {
               "fullname": "plotOptions.macd.params",
               "name": "params",
-              "line": 278,
-              "lineEnd": 278,
+              "line": 280,
+              "lineEnd": 280,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
             },
@@ -41929,8 +41929,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.params.longPeriod",
                   "name": "longPeriod",
-                  "line": 283,
-                  "lineEnd": 285,
+                  "line": 285,
+                  "lineEnd": 287,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                   "default": 26
@@ -41949,8 +41949,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.params.period",
                   "name": "period",
-                  "line": 291,
-                  "lineEnd": 291,
+                  "line": 293,
+                  "lineEnd": 293,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                   "default": 26
@@ -41970,8 +41970,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.params.shortPeriod",
                   "name": "shortPeriod",
-                  "line": 279,
-                  "lineEnd": 281,
+                  "line": 281,
+                  "lineEnd": 283,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                   "default": 12
@@ -41991,8 +41991,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.params.signalPeriod",
                   "name": "signalPeriod",
-                  "line": 287,
-                  "lineEnd": 289,
+                  "line": 289,
+                  "lineEnd": 291,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                   "default": 9
@@ -42013,8 +42013,8 @@
             "meta": {
               "fullname": "plotOptions.macd.pointPadding",
               "name": "pointPadding",
-              "line": 346,
-              "lineEnd": 346,
+              "line": 348,
+              "lineEnd": 348,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
               "default": 0.1
@@ -42034,8 +42034,8 @@
             "meta": {
               "fullname": "plotOptions.macd.signalLine",
               "name": "signalLine",
-              "line": 293,
-              "lineEnd": 295,
+              "line": 295,
+              "lineEnd": 297,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
             },
@@ -42051,8 +42051,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.signalLine.styles",
                   "name": "styles",
-                  "line": 304,
-                  "lineEnd": 304,
+                  "line": 306,
+                  "lineEnd": 306,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
                 },
@@ -42070,8 +42070,8 @@
                     "meta": {
                       "fullname": "plotOptions.macd.signalLine.styles.lineColor",
                       "name": "lineColor",
-                      "line": 309,
-                      "lineEnd": 313,
+                      "line": 311,
+                      "lineEnd": 315,
                       "column": 16,
                       "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                       "default": "undefined"
@@ -42091,8 +42091,8 @@
                     "meta": {
                       "fullname": "plotOptions.macd.signalLine.styles.lineWidth",
                       "name": "lineWidth",
-                      "line": 305,
-                      "lineEnd": 307,
+                      "line": 307,
+                      "lineEnd": 309,
                       "column": 16,
                       "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                       "default": 1
@@ -42117,8 +42117,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.signalLine.zones",
                   "name": "zones",
-                  "line": 297,
-                  "lineEnd": 302,
+                  "line": 299,
+                  "lineEnd": 304,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
                 },
@@ -42137,8 +42137,8 @@
             "meta": {
               "fullname": "plotOptions.macd.states",
               "name": "states",
-              "line": 348,
-              "lineEnd": 348,
+              "line": 350,
+              "lineEnd": 350,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
             },
@@ -42154,8 +42154,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.states.hover",
                   "name": "hover",
-                  "line": 349,
-                  "lineEnd": 349,
+                  "line": 351,
+                  "lineEnd": 351,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
                 },
@@ -42171,8 +42171,8 @@
                     "meta": {
                       "fullname": "plotOptions.macd.states.hover.halo",
                       "name": "halo",
-                      "line": 350,
-                      "lineEnd": 350,
+                      "line": 352,
+                      "lineEnd": 352,
                       "column": 16,
                       "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
                     },
@@ -42189,8 +42189,8 @@
                         "meta": {
                           "fullname": "plotOptions.macd.states.hover.halo.size",
                           "name": "size",
-                          "line": 351,
-                          "lineEnd": 351,
+                          "line": 353,
+                          "lineEnd": 353,
                           "column": 20,
                           "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                           "default": 0
@@ -42216,8 +42216,8 @@
             "meta": {
               "fullname": "plotOptions.macd.threshold",
               "name": "threshold",
-              "line": 341,
-              "lineEnd": 343,
+              "line": 343,
+              "lineEnd": 345,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
               "default": 0
@@ -42235,8 +42235,8 @@
             "meta": {
               "fullname": "plotOptions.macd.tooltip",
               "name": "tooltip",
-              "line": 355,
-              "lineEnd": 355,
+              "line": 357,
+              "lineEnd": 357,
               "column": 8,
               "filename": "js/Stock/Indicators/MACD/MACDIndicator.js"
             },
@@ -42253,8 +42253,8 @@
                 "meta": {
                   "fullname": "plotOptions.macd.tooltip.pointFormat",
                   "name": "pointFormat",
-                  "line": 356,
-                  "lineEnd": 356,
+                  "line": 358,
+                  "lineEnd": 358,
                   "column": 12,
                   "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
                   "default": "<span style=\"color:{point.color}\">â—</span> <b> {series.name}</b><br/>Value: {point.MACD}<br/>Signal: {point.signal}<br/>Histogram: {point.y}<br/>"
@@ -50813,7 +50813,7 @@
                   "description": "Options for the cluster data labels.",
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.DataLabelsOptions"
                     ]
                   },
                   "since": "8.0.0"
@@ -51224,7 +51224,7 @@
                   ],
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.PointMarkerOptionsObject"
                     ]
                   },
                   "since": "8.0.0"
@@ -51927,8 +51927,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 634,
-              "lineEnd": 641
+              "line": 653,
+              "lineEnd": 660
             },
             "children": {
               "description": {
@@ -51943,8 +51943,8 @@
                 },
                 "meta": {
                   "filename": "js/Accessibility/Options/Options.js",
-                  "line": 649,
-                  "lineEnd": 655
+                  "line": 668,
+                  "lineEnd": 674
                 },
                 "children": {}
               },
@@ -51960,8 +51960,8 @@
                 },
                 "meta": {
                   "filename": "js/Accessibility/Options/Options.js",
-                  "line": 642,
-                  "lineEnd": 648
+                  "line": 661,
+                  "lineEnd": 667
                 },
                 "children": {}
               },
@@ -51977,8 +51977,8 @@
                 },
                 "meta": {
                   "filename": "js/Accessibility/Options/Options.js",
-                  "line": 667,
-                  "lineEnd": 673
+                  "line": 686,
+                  "lineEnd": 692
                 },
                 "children": {}
               },
@@ -51995,8 +51995,8 @@
                 },
                 "meta": {
                   "filename": "js/Accessibility/Options/Options.js",
-                  "line": 674,
-                  "lineEnd": 680
+                  "line": 693,
+                  "lineEnd": 699
                 },
                 "children": {
                   "enabled": {
@@ -52011,8 +52011,8 @@
                     },
                     "meta": {
                       "filename": "js/Accessibility/Options/Options.js",
-                      "line": 681,
-                      "lineEnd": 687
+                      "line": 700,
+                      "lineEnd": 706
                     },
                     "children": {}
                   }
@@ -52033,8 +52033,8 @@
                 },
                 "meta": {
                   "filename": "js/Accessibility/Options/Options.js",
-                  "line": 656,
-                  "lineEnd": 666
+                  "line": 675,
+                  "lineEnd": 685
                 },
                 "children": {}
               }
@@ -52639,8 +52639,8 @@
             },
             "meta": {
               "filename": "js/Core/Chart/StockChart.js",
-              "line": 738,
-              "lineEnd": 758
+              "line": 748,
+              "lineEnd": 768
             },
             "children": {}
           },
@@ -52676,8 +52676,8 @@
             },
             "meta": {
               "filename": "js/Core/Chart/StockChart.js",
-              "line": 776,
-              "lineEnd": 789
+              "line": 786,
+              "lineEnd": 799
             },
             "children": {}
           },
@@ -52712,8 +52712,8 @@
             },
             "meta": {
               "filename": "js/Core/Chart/StockChart.js",
-              "line": 759,
-              "lineEnd": 775
+              "line": 769,
+              "lineEnd": 785
             },
             "children": {}
           },
@@ -62408,8 +62408,8 @@
             "meta": {
               "fullname": "plotOptions.timeline.colorKey",
               "name": "colorKey",
-              "line": 428,
-              "lineEnd": 428,
+              "line": 432,
+              "lineEnd": 432,
               "column": 8,
               "filename": "js/Series/Timeline/TimelineSeries.js",
               "default": "x"
@@ -62428,8 +62428,8 @@
             "meta": {
               "fullname": "plotOptions.timeline.dataLabels",
               "name": "dataLabels",
-              "line": 318,
-              "lineEnd": 322,
+              "line": 322,
+              "lineEnd": 326,
               "column": 8,
               "filename": "js/Series/Timeline/TimelineSeries.js"
             },
@@ -62446,8 +62446,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.allowOverlap",
                   "name": "allowOverlap",
-                  "line": 325,
-                  "lineEnd": 325,
+                  "line": 329,
+                  "lineEnd": 329,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": true
@@ -62482,8 +62482,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.alternate",
                   "name": "alternate",
-                  "line": 326,
-                  "lineEnd": 334,
+                  "line": 330,
+                  "lineEnd": 338,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": true
@@ -62502,8 +62502,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.backgroundColor",
                   "name": "backgroundColor",
-                  "line": 336,
-                  "lineEnd": 336,
+                  "line": 340,
+                  "lineEnd": 340,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": "#ffffff"
@@ -62522,8 +62522,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.borderColor",
                   "name": "borderColor",
-                  "line": 338,
-                  "lineEnd": 338,
+                  "line": 342,
+                  "lineEnd": 342,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": "#999999"
@@ -62542,8 +62542,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.borderRadius",
                   "name": "borderRadius",
-                  "line": 339,
-                  "lineEnd": 339,
+                  "line": 343,
+                  "lineEnd": 343,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": 3
@@ -62562,8 +62562,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.borderWidth",
                   "name": "borderWidth",
-                  "line": 337,
-                  "lineEnd": 337,
+                  "line": 341,
+                  "lineEnd": 341,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": 1
@@ -62582,8 +62582,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.color",
                   "name": "color",
-                  "line": 340,
-                  "lineEnd": 340,
+                  "line": 344,
+                  "lineEnd": 344,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": "#333333"
@@ -62618,8 +62618,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Timeline/TimelineSeries.js",
-                  "line": 341,
-                  "lineEnd": 353
+                  "line": 345,
+                  "lineEnd": 357
                 },
                 "children": {}
               },
@@ -62651,8 +62651,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.connectorWidth",
                   "name": "connectorWidth",
-                  "line": 341,
-                  "lineEnd": 353,
+                  "line": 345,
+                  "lineEnd": 357,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": 1
@@ -62672,8 +62672,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.distance",
                   "name": "distance",
-                  "line": 364,
-                  "lineEnd": 367,
+                  "line": 368,
+                  "lineEnd": 371,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": 100
@@ -62692,8 +62692,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.enabled",
                   "name": "enabled",
-                  "line": 324,
-                  "lineEnd": 324,
+                  "line": 328,
+                  "lineEnd": 328,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": true
@@ -62712,8 +62712,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.formatter",
                   "name": "formatter",
-                  "line": 369,
-                  "lineEnd": 369,
+                  "line": 373,
+                  "lineEnd": 373,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js"
                 },
@@ -62733,8 +62733,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.shadow",
                   "name": "shadow",
-                  "line": 408,
-                  "lineEnd": 412,
+                  "line": 412,
+                  "lineEnd": 416,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": false
@@ -62752,8 +62752,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.dataLabels.style",
                   "name": "style",
-                  "line": 400,
-                  "lineEnd": 400,
+                  "line": 404,
+                  "lineEnd": 404,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js"
                 },
@@ -62771,8 +62771,8 @@
                     "meta": {
                       "fullname": "plotOptions.timeline.dataLabels.style.fontSize",
                       "name": "fontSize",
-                      "line": 405,
-                      "lineEnd": 405,
+                      "line": 409,
+                      "lineEnd": 409,
                       "column": 16,
                       "filename": "js/Series/Timeline/TimelineSeries.js",
                       "default": "12px"
@@ -62792,8 +62792,8 @@
                     "meta": {
                       "fullname": "plotOptions.timeline.dataLabels.style.fontWeight",
                       "name": "fontWeight",
-                      "line": 403,
-                      "lineEnd": 403,
+                      "line": 407,
+                      "lineEnd": 407,
                       "column": 16,
                       "filename": "js/Series/Timeline/TimelineSeries.js",
                       "default": "normal"
@@ -62813,8 +62813,8 @@
                     "meta": {
                       "fullname": "plotOptions.timeline.dataLabels.style.textOutline",
                       "name": "textOutline",
-                      "line": 401,
-                      "lineEnd": 401,
+                      "line": 405,
+                      "lineEnd": 405,
                       "column": 16,
                       "filename": "js/Series/Timeline/TimelineSeries.js",
                       "default": "none"
@@ -62833,8 +62833,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Timeline/TimelineSeries.js",
-                  "line": 414,
-                  "lineEnd": 417
+                  "line": 418,
+                  "lineEnd": 421
                 },
                 "children": {}
               }
@@ -62860,26 +62860,6 @@
             },
             "children": {}
           },
-          "legendType": {
-            "doclet": {
-              "type": {
-                "names": [
-                  "string"
-                ]
-              },
-              "default": "point"
-            },
-            "meta": {
-              "fullname": "plotOptions.timeline.legendType",
-              "name": "legendType",
-              "line": 306,
-              "lineEnd": 306,
-              "column": 8,
-              "filename": "js/Series/Timeline/TimelineSeries.js",
-              "default": "point"
-            },
-            "children": {}
-          },
           "lineWidth": {
             "doclet": {
               "type": {
@@ -62892,8 +62872,8 @@
             "meta": {
               "fullname": "plotOptions.timeline.lineWidth",
               "name": "lineWidth",
-              "line": 307,
-              "lineEnd": 307,
+              "line": 311,
+              "lineEnd": 311,
               "column": 8,
               "filename": "js/Series/Timeline/TimelineSeries.js",
               "default": 4
@@ -62911,8 +62891,8 @@
             "meta": {
               "fullname": "plotOptions.timeline.marker",
               "name": "marker",
-              "line": 420,
-              "lineEnd": 420,
+              "line": 424,
+              "lineEnd": 424,
               "column": 8,
               "filename": "js/Series/Timeline/TimelineSeries.js"
             },
@@ -62929,8 +62909,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.marker.enabledThreshold",
                   "name": "enabledThreshold",
-                  "line": 421,
-                  "lineEnd": 421,
+                  "line": 425,
+                  "lineEnd": 425,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": 0
@@ -62949,8 +62929,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.marker.height",
                   "name": "height",
-                  "line": 425,
-                  "lineEnd": 425,
+                  "line": 429,
+                  "lineEnd": 429,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": 15
@@ -62969,8 +62949,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.marker.lineWidth",
                   "name": "lineWidth",
-                  "line": 424,
-                  "lineEnd": 424,
+                  "line": 428,
+                  "lineEnd": 428,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": 2
@@ -62989,8 +62969,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.marker.radius",
                   "name": "radius",
-                  "line": 423,
-                  "lineEnd": 423,
+                  "line": 427,
+                  "lineEnd": 427,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": 6
@@ -63009,8 +62989,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.marker.symbol",
                   "name": "symbol",
-                  "line": 422,
-                  "lineEnd": 422,
+                  "line": 426,
+                  "lineEnd": 426,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": "square"
@@ -63031,8 +63011,8 @@
             "meta": {
               "fullname": "plotOptions.timeline.showInLegend",
               "name": "showInLegend",
-              "line": 427,
-              "lineEnd": 427,
+              "line": 431,
+              "lineEnd": 431,
               "column": 8,
               "filename": "js/Series/Timeline/TimelineSeries.js",
               "default": false
@@ -63050,8 +63030,8 @@
             "meta": {
               "fullname": "plotOptions.timeline.states",
               "name": "states",
-              "line": 313,
-              "lineEnd": 313,
+              "line": 317,
+              "lineEnd": 317,
               "column": 8,
               "filename": "js/Series/Timeline/TimelineSeries.js"
             },
@@ -63067,8 +63047,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.states.hover",
                   "name": "hover",
-                  "line": 314,
-                  "lineEnd": 314,
+                  "line": 318,
+                  "lineEnd": 318,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js"
                 },
@@ -63085,8 +63065,8 @@
                     "meta": {
                       "fullname": "plotOptions.timeline.states.hover.lineWidthPlus",
                       "name": "lineWidthPlus",
-                      "line": 315,
-                      "lineEnd": 315,
+                      "line": 319,
+                      "lineEnd": 319,
                       "column": 16,
                       "filename": "js/Series/Timeline/TimelineSeries.js",
                       "default": 0
@@ -63128,8 +63108,8 @@
             "meta": {
               "fullname": "plotOptions.timeline.tooltip",
               "name": "tooltip",
-              "line": 308,
-              "lineEnd": 308,
+              "line": 312,
+              "lineEnd": 312,
               "column": 8,
               "filename": "js/Series/Timeline/TimelineSeries.js"
             },
@@ -63146,8 +63126,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.tooltip.headerFormat",
                   "name": "headerFormat",
-                  "line": 309,
-                  "lineEnd": 309,
+                  "line": 313,
+                  "lineEnd": 313,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": "<span style=\"color:{point.color}\">â—</span> <span style=\"font-size: 10px\"> {point.key}</span><br/>"
@@ -63166,8 +63146,8 @@
                 "meta": {
                   "fullname": "plotOptions.timeline.tooltip.pointFormat",
                   "name": "pointFormat",
-                  "line": 311,
-                  "lineEnd": 311,
+                  "line": 315,
+                  "lineEnd": 315,
                   "column": 12,
                   "filename": "js/Series/Timeline/TimelineSeries.js",
                   "default": "{point.description}"
@@ -67995,8 +67975,8 @@
           "filename": "js/Series/XRange/XRangeSeries.js",
           "name": "xrange",
           "fullname": "plotOptions.xrange",
-          "line": 400,
-          "lineEnd": 404,
+          "line": 417,
+          "lineEnd": 421,
           "column": 4
         },
         "children": {
@@ -68012,8 +67992,8 @@
             "meta": {
               "fullname": "plotOptions.xrange.borderRadius",
               "name": "borderRadius",
-              "line": 479,
-              "lineEnd": 479,
+              "line": 496,
+              "lineEnd": 496,
               "column": 8,
               "filename": "js/Series/XRange/XRangeSeries.js",
               "default": 3
@@ -68034,8 +68014,8 @@
             "meta": {
               "fullname": "plotOptions.xrange.colorByPoint",
               "name": "colorByPoint",
-              "line": 428,
-              "lineEnd": 438,
+              "line": 445,
+              "lineEnd": 455,
               "column": 8,
               "filename": "js/Series/XRange/XRangeSeries.js",
               "default": true
@@ -68053,8 +68033,8 @@
             "meta": {
               "fullname": "plotOptions.xrange.dataLabels",
               "name": "dataLabels",
-              "line": 462,
-              "lineEnd": 462,
+              "line": 479,
+              "lineEnd": 479,
               "column": 8,
               "filename": "js/Series/XRange/XRangeSeries.js"
             },
@@ -68071,8 +68051,8 @@
                 "meta": {
                   "fullname": "plotOptions.xrange.dataLabels.inside",
                   "name": "inside",
-                  "line": 472,
-                  "lineEnd": 472,
+                  "line": 489,
+                  "lineEnd": 489,
                   "column": 12,
                   "filename": "js/Series/XRange/XRangeSeries.js",
                   "default": true
@@ -68091,8 +68071,8 @@
                 "meta": {
                   "fullname": "plotOptions.xrange.dataLabels.verticalAlign",
                   "name": "verticalAlign",
-                  "line": 473,
-                  "lineEnd": 473,
+                  "line": 490,
+                  "lineEnd": 490,
                   "column": 12,
                   "filename": "js/Series/XRange/XRangeSeries.js",
                   "default": "middle"
@@ -68185,8 +68165,8 @@
             },
             "meta": {
               "filename": "js/Series/XRange/XRangeSeries.js",
-              "line": 428,
-              "lineEnd": 438
+              "line": 445,
+              "lineEnd": 455
             },
             "children": {
               "fill": {
@@ -68208,8 +68188,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/XRange/XRangeSeries.js",
-                  "line": 439,
-                  "lineEnd": 446
+                  "line": 456,
+                  "lineEnd": 463
                 },
                 "children": {}
               }
@@ -68227,8 +68207,8 @@
             "meta": {
               "fullname": "plotOptions.xrange.pointRange",
               "name": "pointRange",
-              "line": 480,
-              "lineEnd": 480,
+              "line": 497,
+              "lineEnd": 497,
               "column": 8,
               "filename": "js/Series/XRange/XRangeSeries.js",
               "default": 0
@@ -68246,8 +68226,8 @@
             "meta": {
               "fullname": "plotOptions.xrange.tooltip",
               "name": "tooltip",
-              "line": 475,
-              "lineEnd": 475,
+              "line": 492,
+              "lineEnd": 492,
               "column": 8,
               "filename": "js/Series/XRange/XRangeSeries.js"
             },
@@ -68264,8 +68244,8 @@
                 "meta": {
                   "fullname": "plotOptions.xrange.tooltip.headerFormat",
                   "name": "headerFormat",
-                  "line": 476,
-                  "lineEnd": 476,
+                  "line": 493,
+                  "lineEnd": 493,
                   "column": 12,
                   "filename": "js/Series/XRange/XRangeSeries.js",
                   "default": "<span style=\"font-size: 10px\">{point.x} - {point.x2}</span><br/>"
@@ -68284,8 +68264,8 @@
                 "meta": {
                   "fullname": "plotOptions.xrange.tooltip.pointFormat",
                   "name": "pointFormat",
-                  "line": 477,
-                  "lineEnd": 477,
+                  "line": 494,
+                  "lineEnd": 494,
                   "column": 12,
                   "filename": "js/Series/XRange/XRangeSeries.js",
                   "default": "<span style=\"color:{point.color}\">â—</span> {series.name}: <b>{point.yCategory}</b><br/>"
@@ -68489,8 +68469,8 @@
         "meta": {
           "fullname": "rangeSelector.buttonPosition",
           "name": "buttonPosition",
-          "line": 441,
-          "lineEnd": 445,
+          "line": 442,
+          "lineEnd": 446,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js"
         },
@@ -68524,8 +68504,8 @@
             "meta": {
               "fullname": "rangeSelector.buttonPosition.align",
               "name": "align",
-              "line": 447,
-              "lineEnd": 456,
+              "line": 448,
+              "lineEnd": 457,
               "column": 12,
               "filename": "js/Extensions/RangeSelector.js",
               "default": "left"
@@ -68546,8 +68526,8 @@
             "meta": {
               "fullname": "rangeSelector.buttonPosition.x",
               "name": "x",
-              "line": 458,
-              "lineEnd": 460,
+              "line": 459,
+              "lineEnd": 461,
               "column": 12,
               "filename": "js/Extensions/RangeSelector.js",
               "default": 0
@@ -68568,8 +68548,8 @@
             "meta": {
               "fullname": "rangeSelector.buttonPosition.y",
               "name": "y",
-              "line": 462,
-              "lineEnd": 464,
+              "line": 463,
+              "lineEnd": 465,
               "column": 12,
               "filename": "js/Extensions/RangeSelector.js",
               "default": 0
@@ -68626,8 +68606,8 @@
         "meta": {
           "fullname": "rangeSelector.buttonTheme",
           "name": "buttonTheme",
-          "line": 256,
-          "lineEnd": 275,
+          "line": 257,
+          "lineEnd": 276,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js"
         },
@@ -68968,21 +68948,22 @@
               ]
             }
           ],
-          "default": "undefined",
-          "defaultByProduct": {
-            "highstock": "true"
-          },
           "type": {
             "names": [
-              "string"
+              "boolean",
+              "undefined"
             ]
+          },
+          "default": "undefined",
+          "defaultByProduct": {
+            "highstock": true
           }
         },
         "meta": {
           "fullname": "rangeSelector.enabled",
           "name": "enabled",
           "line": 233,
-          "lineEnd": 241,
+          "lineEnd": 242,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "undefined"
@@ -69018,8 +68999,8 @@
         "meta": {
           "fullname": "rangeSelector.floating",
           "name": "floating",
-          "line": 286,
-          "lineEnd": 295,
+          "line": 287,
+          "lineEnd": 296,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": false
@@ -69042,8 +69023,8 @@
         "meta": {
           "fullname": "rangeSelector.height",
           "name": "height",
-          "line": 311,
-          "lineEnd": 318,
+          "line": 312,
+          "lineEnd": 319,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "undefined"
@@ -69079,8 +69060,8 @@
         "meta": {
           "fullname": "rangeSelector.inputBoxBorderColor",
           "name": "inputBoxBorderColor",
-          "line": 320,
-          "lineEnd": 328,
+          "line": 321,
+          "lineEnd": 329,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "none"
@@ -69116,8 +69097,8 @@
         "meta": {
           "fullname": "rangeSelector.inputBoxHeight",
           "name": "inputBoxHeight",
-          "line": 330,
-          "lineEnd": 337,
+          "line": 331,
+          "lineEnd": 338,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": 17
@@ -69154,8 +69135,8 @@
         "meta": {
           "fullname": "rangeSelector.inputBoxWidth",
           "name": "inputBoxWidth",
-          "line": 339,
-          "lineEnd": 348,
+          "line": 340,
+          "lineEnd": 349,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "undefined"
@@ -69197,8 +69178,8 @@
         "meta": {
           "fullname": "rangeSelector.inputDateFormat",
           "name": "inputDateFormat",
-          "line": 350,
-          "lineEnd": 364,
+          "line": 351,
+          "lineEnd": 365,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "%b %e, %Y"
@@ -69234,8 +69215,8 @@
         "meta": {
           "fullname": "rangeSelector.inputDateParser",
           "name": "inputDateParser",
-          "line": 366,
-          "lineEnd": 381,
+          "line": 367,
+          "lineEnd": 382,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "undefined"
@@ -69270,8 +69251,8 @@
         "meta": {
           "fullname": "rangeSelector.inputEditDateFormat",
           "name": "inputEditDateFormat",
-          "line": 383,
-          "lineEnd": 395,
+          "line": 384,
+          "lineEnd": 396,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "%Y-%m-%d"
@@ -69291,8 +69272,8 @@
         "meta": {
           "fullname": "rangeSelector.inputEnabled",
           "name": "inputEnabled",
-          "line": 397,
-          "lineEnd": 399,
+          "line": 398,
+          "lineEnd": 400,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": true
@@ -69312,8 +69293,8 @@
         "meta": {
           "fullname": "rangeSelector.inputPosition",
           "name": "inputPosition",
-          "line": 401,
-          "lineEnd": 406,
+          "line": 402,
+          "lineEnd": 407,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js"
         },
@@ -69347,8 +69328,8 @@
             "meta": {
               "fullname": "rangeSelector.inputPosition.align",
               "name": "align",
-              "line": 408,
-              "lineEnd": 417,
+              "line": 409,
+              "lineEnd": 418,
               "column": 12,
               "filename": "js/Extensions/RangeSelector.js",
               "default": "right"
@@ -69369,8 +69350,8 @@
             "meta": {
               "fullname": "rangeSelector.inputPosition.x",
               "name": "x",
-              "line": 419,
-              "lineEnd": 421,
+              "line": 420,
+              "lineEnd": 422,
               "column": 12,
               "filename": "js/Extensions/RangeSelector.js",
               "default": 0
@@ -69391,8 +69372,8 @@
             "meta": {
               "fullname": "rangeSelector.inputPosition.y",
               "name": "y",
-              "line": 423,
-              "lineEnd": 425,
+              "line": 424,
+              "lineEnd": 426,
               "column": 12,
               "filename": "js/Extensions/RangeSelector.js",
               "default": 0
@@ -69415,8 +69396,8 @@
         "meta": {
           "fullname": "rangeSelector.inputSpacing",
           "name": "inputSpacing",
-          "line": 428,
-          "lineEnd": 433,
+          "line": 429,
+          "lineEnd": 434,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": 5
@@ -69449,8 +69430,8 @@
         },
         "meta": {
           "filename": "js/Extensions/RangeSelector.js",
-          "line": 467,
-          "lineEnd": 479
+          "line": 468,
+          "lineEnd": 480
         },
         "children": {}
       },
@@ -69481,8 +69462,8 @@
         "meta": {
           "fullname": "rangeSelector.labelStyle",
           "name": "labelStyle",
-          "line": 486,
-          "lineEnd": 496,
+          "line": 487,
+          "lineEnd": 497,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js"
         },
@@ -69501,8 +69482,8 @@
         "meta": {
           "fullname": "rangeSelector.selected",
           "name": "selected",
-          "line": 435,
-          "lineEnd": 439,
+          "line": 436,
+          "lineEnd": 440,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "undefined"
@@ -69545,8 +69526,8 @@
         "meta": {
           "fullname": "rangeSelector.verticalAlign",
           "name": "verticalAlign",
-          "line": 243,
-          "lineEnd": 254,
+          "line": 244,
+          "lineEnd": 255,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": "top"
@@ -69567,8 +69548,8 @@
         "meta": {
           "fullname": "rangeSelector.x",
           "name": "x",
-          "line": 297,
-          "lineEnd": 302,
+          "line": 298,
+          "lineEnd": 303,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": 0
@@ -69589,8 +69570,8 @@
         "meta": {
           "fullname": "rangeSelector.y",
           "name": "y",
-          "line": 304,
-          "lineEnd": 309,
+          "line": 305,
+          "lineEnd": 310,
           "column": 8,
           "filename": "js/Extensions/RangeSelector.js",
           "default": 0
@@ -70850,7 +70831,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "plotOptions.arearange.dataLabels",
+                  "extends": "series.arearange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -72858,7 +72839,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "plotOptions.columnrange.dataLabels",
+                  "extends": "series.columnrange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -73474,8 +73455,8 @@
         },
         "meta": {
           "filename": "js/Series/Flags/FlagsSeries.js",
-          "line": 543,
-          "lineEnd": 554
+          "line": 545,
+          "lineEnd": 556
         },
         "children": {
           "data": {
@@ -73499,8 +73480,8 @@
             },
             "meta": {
               "filename": "js/Series/Flags/FlagsSeries.js",
-              "line": 555,
-              "lineEnd": 581
+              "line": 557,
+              "lineEnd": 583
             },
             "children": {
               "fillColor": {
@@ -73519,8 +73500,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Flags/FlagsSeries.js",
-                  "line": 582,
-                  "lineEnd": 589
+                  "line": 584,
+                  "lineEnd": 591
                 },
                 "children": {}
               },
@@ -73538,8 +73519,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Flags/FlagsSeries.js",
-                  "line": 590,
-                  "lineEnd": 596
+                  "line": 592,
+                  "lineEnd": 598
                 },
                 "children": {}
               },
@@ -73557,8 +73538,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Flags/FlagsSeries.js",
-                  "line": 597,
-                  "lineEnd": 603
+                  "line": 599,
+                  "lineEnd": 605
                 },
                 "children": {}
               }
@@ -75300,8 +75281,8 @@
         },
         "meta": {
           "filename": "js/Stock/Indicators/IKH/IKHIndicator.js",
-          "line": 664,
-          "lineEnd": 675
+          "line": 665,
+          "lineEnd": 676
         },
         "children": {}
       },
@@ -75587,8 +75568,8 @@
                 },
                 "meta": {
                   "filename": "js/Accessibility/Options/Options.js",
-                  "line": 620,
-                  "lineEnd": 626
+                  "line": 630,
+                  "lineEnd": 636
                 },
                 "children": {
                   "description": {
@@ -75603,8 +75584,25 @@
                     },
                     "meta": {
                       "filename": "js/Accessibility/Options/Options.js",
-                      "line": 627,
-                      "lineEnd": 633
+                      "line": 637,
+                      "lineEnd": 643
+                    },
+                    "children": {}
+                  },
+                  "enabled": {
+                    "doclet": {
+                      "description": "Set to false to disable accessibility functionality for a specific point.\nThe point will not be included in keyboard navigation, and will not be\nexposed to assistive technology.",
+                      "type": {
+                        "names": [
+                          "boolean"
+                        ]
+                      },
+                      "since": "9.0.1"
+                    },
+                    "meta": {
+                      "filename": "js/Accessibility/Options/Options.js",
+                      "line": 644,
+                      "lineEnd": 652
                     },
                     "children": {}
                   }
@@ -75734,7 +75732,7 @@
                     }
                   ],
                   "declare": "Highcharts.DataLabelsOptions",
-                  "extends": "plotOptions.series.dataLabels",
+                  "extends": "plotOptions.line.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock",
@@ -76110,7 +76108,7 @@
       "lollipop": {
         "doclet": {
           "description": "The `lollipop` series. If the [type](#series.lollipop.type) option is\nnot specified, it is inherited from [chart.type](#chart.type).\n\nIn TypeScript the [type](series.lollipop.type) option must always be set.\n\nConfiguration options for the series are given in three levels:\n1. Options for all series in a chart are defined in the\n   [plotOptions.series](plotOptions.series) object.\n2. Options for all `lollipop` series are defined in\n   [plotOptions.lollipop](plotOptions.lollipop).\n3. Options for one single series are given in\n   [the series instance array](series.lollipop).\n\n```\nHighcharts.chart('container', {\n    plotOptions: {\n        series: {\n            // general options for all series\n        },\n        lollipop: {\n            // shared options for all lollipop series\n        }\n    },\n    series: [{\n        // specific options for this series instance\n        type: 'lollipop'\n    }]\n});\n```\n            ",
-          "extends": "series,plotOptions.lollipop",
+          "extends": "series,plotOptions.lollipop,",
           "exclude": [
             "boostThreshold",
             "boostBlending"
@@ -76221,8 +76219,8 @@
         },
         "meta": {
           "filename": "js/Stock/Indicators/MACD/MACDIndicator.js",
-          "line": 388,
-          "lineEnd": 399
+          "line": 390,
+          "lineEnd": 401
         },
         "children": {}
       },
@@ -77939,7 +77937,7 @@
                 "doclet": {
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.SeriesPieDataLabelsOptionsObject"
                     ]
                   },
                   "products": [
@@ -80095,8 +80093,8 @@
         },
         "meta": {
           "filename": "js/Series/Timeline/TimelineSeries.js",
-          "line": 484,
-          "lineEnd": 498
+          "line": 488,
+          "lineEnd": 502
         },
         "children": {
           "data": {
@@ -80140,8 +80138,8 @@
             },
             "meta": {
               "filename": "js/Series/Timeline/TimelineSeries.js",
-              "line": 499,
-              "lineEnd": 530
+              "line": 503,
+              "lineEnd": 534
             },
             "children": {
               "description": {
@@ -80158,8 +80156,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Timeline/TimelineSeries.js",
-                  "line": 545,
-                  "lineEnd": 551
+                  "line": 549,
+                  "lineEnd": 555
                 },
                 "children": {}
               },
@@ -80177,8 +80175,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Timeline/TimelineSeries.js",
-                  "line": 538,
-                  "lineEnd": 544
+                  "line": 542,
+                  "lineEnd": 548
                 },
                 "children": {}
               },
@@ -80196,8 +80194,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Timeline/TimelineSeries.js",
-                  "line": 531,
-                  "lineEnd": 537
+                  "line": 535,
+                  "lineEnd": 541
                 },
                 "children": {}
               }
@@ -81523,8 +81521,8 @@
         },
         "meta": {
           "filename": "js/Series/XRange/XRangeSeries.js",
-          "line": 507,
-          "lineEnd": 520
+          "line": 524,
+          "lineEnd": 537
         },
         "children": {
           "data": {
@@ -81560,8 +81558,8 @@
             },
             "meta": {
               "filename": "js/Series/XRange/XRangeSeries.js",
-              "line": 521,
-              "lineEnd": 551
+              "line": 538,
+              "lineEnd": 568
             },
             "children": {
               "connect": {
@@ -81656,8 +81654,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/XRange/XRangeSeries.js",
-                  "line": 582,
-                  "lineEnd": 593
+                  "line": 599,
+                  "lineEnd": 610
                 },
                 "children": {
                   "amount": {
@@ -81676,8 +81674,8 @@
                     },
                     "meta": {
                       "filename": "js/Series/XRange/XRangeSeries.js",
-                      "line": 594,
-                      "lineEnd": 601
+                      "line": 611,
+                      "lineEnd": 618
                     },
                     "children": {}
                   },
@@ -81699,8 +81697,8 @@
                     },
                     "meta": {
                       "filename": "js/Series/XRange/XRangeSeries.js",
-                      "line": 602,
-                      "lineEnd": 609
+                      "line": 619,
+                      "lineEnd": 626
                     },
                     "children": {}
                   }
@@ -81737,8 +81735,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/XRange/XRangeSeries.js",
-                  "line": 552,
-                  "lineEnd": 561
+                  "line": 569,
+                  "lineEnd": 578
                 },
                 "children": {}
               },
@@ -81773,8 +81771,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/XRange/XRangeSeries.js",
-                  "line": 562,
-                  "lineEnd": 571
+                  "line": 579,
+                  "lineEnd": 588
                 },
                 "children": {}
               },
@@ -81809,8 +81807,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/XRange/XRangeSeries.js",
-                  "line": 572,
-                  "lineEnd": 581
+                  "line": 589,
+                  "lineEnd": 598
                 },
                 "children": {}
               }
@@ -85577,7 +85575,7 @@
       },
       "dateTimeLabelFormats": {
         "doclet": {
-          "description": "For series on a datetime axes, the date format in the tooltip's\nheader will by default be guessed based on the closest data points.\nThis member gives the default string representations used for\neach unit. For an overview of the replacement codes, see\n[dateFormat](/class-reference/Highcharts#dateFormat).",
+          "description": "For series on datetime axes, the date format in the tooltip's\nheader will by default be guessed based on the closest data points.\nThis member gives the default string representations used for\neach unit. For an overview of the replacement codes, see\n[dateFormat](/class-reference/Highcharts#dateFormat).",
           "see": [
             "[xAxis.dateTimeLabelFormats](#xAxis.dateTimeLabelFormats)"
           ],
@@ -86943,8 +86941,8 @@
         },
         "meta": {
           "filename": "js/Accessibility/Options/Options.js",
-          "line": 704,
-          "lineEnd": 711
+          "line": 723,
+          "lineEnd": 730
         },
         "children": {
           "description": {
@@ -86959,8 +86957,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 722,
-              "lineEnd": 728
+              "line": 741,
+              "lineEnd": 747
             },
             "children": {}
           },
@@ -86976,8 +86974,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 712,
-              "lineEnd": 721
+              "line": 731,
+              "lineEnd": 740
             },
             "children": {}
           },
@@ -86993,8 +86991,8 @@
             },
             "meta": {
               "filename": "js/Accessibility/Options/Options.js",
-              "line": 729,
-              "lineEnd": 736
+              "line": 748,
+              "lineEnd": 755
             },
             "children": {}
           }
