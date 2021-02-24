@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIASTNode *copyASTNode = [[HIASTNode allocWithZone: zone] init];
+	copyASTNode.attributes = [self.attributes copyWithZone: zone];
 	copyASTNode.children = [self.children copyWithZone: zone];
 	copyASTNode.tagName = [self.tagName copyWithZone: zone];
 	copyASTNode.textContent = [self.textContent copyWithZone: zone];
@@ -19,6 +20,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.attributes) {
+		params[@"attributes"] = [self.attributes getParams];
+	}
 	if (self.children) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.children) {
@@ -41,6 +45,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setAttributes:(HISVGAttributes *)attributes {
+	HISVGAttributes *oldValue = _attributes;
+	_attributes = attributes;
+	[self updateHIObject:oldValue newValue:attributes propertyName:@"attributes"];
+}
 
 -(void)setChildren:(NSArray *)children {
 	NSArray *oldValue = _children;

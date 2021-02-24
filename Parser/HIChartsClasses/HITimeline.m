@@ -31,7 +31,6 @@
 	copyTimeline.states = [self.states copyWithZone: zone];
 	copyTimeline.colorKey = [self.colorKey copyWithZone: zone];
 	copyTimeline.marker = [self.marker copyWithZone: zone];
-	copyTimeline.legendType = [self.legendType copyWithZone: zone];
 	copyTimeline.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTimeline.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyTimeline.linecap = [self.linecap copyWithZone: zone];
@@ -74,9 +73,6 @@
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
 	}
-	if (self.legendType) {
-		params[@"legendType"] = self.legendType;
-	}
 	return params;
 }
 
@@ -92,12 +88,6 @@
 	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
 	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
-}
-
--(void)setLegendType:(NSString *)legendType {
-	NSString *oldValue = _legendType;
-	_legendType = legendType;
-	[self updateNSObject:oldValue newValue:legendType propertyName:@"legendType"];
 }
 
 @end
