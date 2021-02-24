@@ -16,6 +16,18 @@
 		<data>
 		M7Kq3ou+O8q8GvYqNhlAK7yZC3o=
 		</data>
+		<key>Headers/HIAccessibilityExporting.h</key>
+		<data>
+		BbDaR01taUvZA3ja+QrBHEXQFe8=
+		</data>
+		<key>Headers/HIAccessibilityLegend.h</key>
+		<data>
+		CiVbq3Sl6mLRHnsF0iAdSuG1sMw=
+		</data>
+		<key>Headers/HIAccessibilitySeries.h</key>
+		<data>
+		OZrscFOsWjS+UOMnlgSNXJNyrlg=
+		</data>
 		<key>Headers/HIActiveDataLabelStyle.h</key>
 		<data>
 		7UCOAE9/jpEERcvog2ZJICROS2A=
@@ -27,6 +39,10 @@
 		<key>Headers/HIAnimation.h</key>
 		<data>
 		wGVgVcGSkvw+wkjczBZ0kqq3lDo=
+		</data>
+		<key>Headers/HIAnimationOptionsObject.h</key>
+		<data>
+		1uSkyOLghuK563vlKBiRLr7YlAU=
 		</data>
 		<key>Headers/HIAnnotations.h</key>
 		<data>
@@ -400,9 +416,17 @@
 		<data>
 		JTziSXwHkjn48XkGprMBg/iakdI=
 		</data>
+		<key>Headers/HILabelOptionsAccessibility.h</key>
+		<data>
+		+4BtmJLBjwtKVCSl8ysYpHy8PT8=
+		</data>
 		<key>Headers/HILabels.h</key>
 		<data>
 		vsLv7F5eZc3+Z16zcEWvFA5lM9U=
+		</data>
+		<key>Headers/HILabelsAccessibility.h</key>
+		<data>
+		fyu8ZsUvpOTDxbbWpu5h6t26CCA=
 		</data>
 		<key>Headers/HILang.h</key>
 		<data>
@@ -3936,6 +3960,39 @@
 			BmEyruKqyJaId9bVoAWME0HGcV1dw9ACKP9wDo/NMPE=
 			</data>
 		</dict>
+		<key>Headers/HIAccessibilityExporting.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BbDaR01taUvZA3ja+QrBHEXQFe8=
+			</data>
+			<key>hash2</key>
+			<data>
+			OcWA+wTR4MErs0yzuFekkE0rhOpcbJ/jYfKgiEMnrxw=
+			</data>
+		</dict>
+		<key>Headers/HIAccessibilityLegend.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CiVbq3Sl6mLRHnsF0iAdSuG1sMw=
+			</data>
+			<key>hash2</key>
+			<data>
+			cBxlvk662rAU9wN/UxVhJMlcQW13PiFS8cwsxVmv3JU=
+			</data>
+		</dict>
+		<key>Headers/HIAccessibilitySeries.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OZrscFOsWjS+UOMnlgSNXJNyrlg=
+			</data>
+			<key>hash2</key>
+			<data>
+			Hj6/h2ylXUQg4iRqcJPuWcOCVp7dR7QxqyQJ689v3w0=
+			</data>
+		</dict>
 		<key>Headers/HIActiveDataLabelStyle.h</key>
 		<dict>
 			<key>hash</key>
@@ -3967,6 +4024,17 @@
 			<key>hash2</key>
 			<data>
 			ICeDGYVe6Uqf5A5HwoV/2yl7tUgxtMgujf9iPTe3pyQ=
+			</data>
+		</dict>
+		<key>Headers/HIAnimationOptionsObject.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1uSkyOLghuK563vlKBiRLr7YlAU=
+			</data>
+			<key>hash2</key>
+			<data>
+			DQdxcGASLT4AWuebQYm/kAVeK0E+BlmZrWU2CXwLkvs=
 			</data>
 		</dict>
 		<key>Headers/HIAnnotations.h</key>
@@ -4992,6 +5060,17 @@
 			UMIMPfazWPp7Sj0gcbSovjTuNTPhnL7ZtmMsarnSc+A=
 			</data>
 		</dict>
+		<key>Headers/HILabelOptionsAccessibility.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+4BtmJLBjwtKVCSl8ysYpHy8PT8=
+			</data>
+			<key>hash2</key>
+			<data>
+			14fpq3yy/H9SO9tPpoV1yBMHXOH7GIHo6ZO3DQqpwz4=
+			</data>
+		</dict>
 		<key>Headers/HILabels.h</key>
 		<dict>
 			<key>hash</key>
@@ -5001,6 +5080,17 @@
 			<key>hash2</key>
 			<data>
 			8idwSBT4MM8VUAwNFTSftH88swTNz3y9q3avW0m89H0=
+			</data>
+		</dict>
+		<key>Headers/HILabelsAccessibility.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fyu8ZsUvpOTDxbbWpu5h6t26CCA=
+			</data>
+			<key>hash2</key>
+			<data>
+			XDGPQfEAnW/F5SX36vN5tQjYXccTKQVFr8gPTGMAbbE=
 			</data>
 		</dict>
 		<key>Headers/HILang.h</key>

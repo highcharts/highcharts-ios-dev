@@ -460,6 +460,12 @@
 		CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
 		CD5B359A1F90C478006159D7 /* UIImage+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */; };
 		CD5B359B1F90C47A006159D7 /* HIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 208980271E6412EA007280D7 /* HIColor.m */; };
+		CD75BEDD25E7133900A3D71A /* HIAnimationOptionsObject.h in Headers */ = {isa = PBXBuildFile; fileRef = CD209FC725E6EC3B00DE0C65 /* HIAnimationOptionsObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD75BEE625E713D700A3D71A /* HILabelsAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE0D0B725CE81770055467B /* HILabelsAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD75BEEF25E713E000A3D71A /* HILabelOptionsAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE0D0CA25CE822F0055467B /* HILabelOptionsAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD75BEF825E713E700A3D71A /* HIAccessibilitySeries.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE0D0D725CE83CA0055467B /* HIAccessibilitySeries.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD75BF0125E713ED00A3D71A /* HIAccessibilityLegend.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE0D0DF25CE83D80055467B /* HIAccessibilityLegend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD75BF0A25E713F300A3D71A /* HIAccessibilityExporting.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE0D0E625CE83EC0055467B /* HIAccessibilityExporting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD77F94A21FB4BFD005E53CB /* HIWKSyncedWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */; };
 		CD77F94B21FB4BFD005E53CB /* HIWKSyncedWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */; };
 		CD91B2FC2062741200BCEE37 /* HIGDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = CD91B2F02062741000BCEE37 /* HIGDependency.m */; };
@@ -476,7 +482,6 @@
 		CD91B3072062741200BCEE37 /* HIGExport.h in Headers */ = {isa = PBXBuildFile; fileRef = CD91B2FB2062741200BCEE37 /* HIGExport.h */; };
 		CDDF95D51F9F5D260021A129 /* HIFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDF95D41F9F5D260021A129 /* HIFunction.m */; };
 		CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDF95D61F9F5D480021A129 /* HIFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDE0D0A825CE80F00055467B /* HIAnimationOptionsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0D0A625CE80EF0055467B /* HIAnimationOptionsObject.m */; };
 		CDE0D0B825CE81770055467B /* HILabelsAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0D0B625CE81770055467B /* HILabelsAccessibility.m */; };
 		CDE0D0CD25CE822F0055467B /* HILabelOptionsAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0D0CB25CE822F0055467B /* HILabelOptionsAccessibility.m */; };
 		CDE0D0D825CE83CA0055467B /* HIAccessibilitySeries.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0D0D625CE83CA0055467B /* HIAccessibilitySeries.m */; };
@@ -945,7 +950,6 @@
 		CD91B2FB2062741200BCEE37 /* HIGExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIGExport.h; path = Private/HIGExport.h; sourceTree = "<group>"; };
 		CDDF95D41F9F5D260021A129 /* HIFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIFunction.m; sourceTree = "<group>"; };
 		CDDF95D61F9F5D480021A129 /* HIFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFunction.h; sourceTree = "<group>"; };
-		CDE0D0A625CE80EF0055467B /* HIAnimationOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAnimationOptionsObject.m; sourceTree = "<group>"; };
 		CDE0D0B625CE81770055467B /* HILabelsAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILabelsAccessibility.m; sourceTree = "<group>"; };
 		CDE0D0B725CE81770055467B /* HILabelsAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILabelsAccessibility.h; sourceTree = "<group>"; };
 		CDE0D0CA25CE822F0055467B /* HILabelOptionsAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HILabelOptionsAccessibility.h; sourceTree = "<group>"; };
@@ -1393,7 +1397,6 @@
 				CDE0D0CB25CE822F0055467B /* HILabelOptionsAccessibility.m */,
 				CDE0D0B725CE81770055467B /* HILabelsAccessibility.h */,
 				CDE0D0B625CE81770055467B /* HILabelsAccessibility.m */,
-				CDE0D0A625CE80EF0055467B /* HIAnimationOptionsObject.m */,
 			);
 			path = HIChartsClasses;
 			sourceTree = "<group>";
@@ -1575,6 +1578,7 @@
 				CD20A22825E6EC4300DE0C65 /* HISelect.h in Headers */,
 				CD20A17225E6EC4300DE0C65 /* HIBoxplot.h in Headers */,
 				CD20A0D225E6EC4300DE0C65 /* HILabelOptions.h in Headers */,
+				CD75BEE625E713D700A3D71A /* HILabelsAccessibility.h in Headers */,
 				CD20A17425E6EC4300DE0C65 /* HIContextButton.h in Headers */,
 				CD20A1A925E6EC4300DE0C65 /* HIPivot.h in Headers */,
 				CD91B3002062741200BCEE37 /* HIChartsJSONSerializableSubclass.h in Headers */,
@@ -1619,6 +1623,7 @@
 				CD20A0DB25E6EC4300DE0C65 /* HIBindings.h in Headers */,
 				CD20A16125E6EC4300DE0C65 /* HILink.h in Headers */,
 				CD20A0C225E6EC4300DE0C65 /* HIShadowOptionsObject.h in Headers */,
+				CD75BEEF25E713E000A3D71A /* HILabelOptionsAccessibility.h in Headers */,
 				CD20A1C425E6EC4300DE0C65 /* HITime.h in Headers */,
 				CD20A0B525E6EC4300DE0C65 /* HIFunnel3d.h in Headers */,
 				CD20A1C525E6EC4300DE0C65 /* HITextPath.h in Headers */,
@@ -1677,18 +1682,22 @@
 				CD20A14225E6EC4300DE0C65 /* HIPackedbubble.h in Headers */,
 				CD20A18725E6EC4300DE0C65 /* HIDefault.h in Headers */,
 				CD20A15625E6EC4300DE0C65 /* HIKeyboardNavigation.h in Headers */,
+				CD75BF0125E713ED00A3D71A /* HIAccessibilityLegend.h in Headers */,
 				CD20A17725E6EC4300DE0C65 /* HIParentNodeTextPath.h in Headers */,
 				CD20A10D25E6EC4300DE0C65 /* HISummary.h in Headers */,
 				CD20A1F925E6EC4300DE0C65 /* HIDragDrop.h in Headers */,
+				CD75BF0A25E713F300A3D71A /* HIAccessibilityExporting.h in Headers */,
 				CD20A13025E6EC4300DE0C65 /* HIStyle.h in Headers */,
 				CD20A09925E6EC4200DE0C65 /* HISunburst.h in Headers */,
 				CD20A19025E6EC4300DE0C65 /* HIDial.h in Headers */,
+				CD75BEF825E713E700A3D71A /* HIAccessibilitySeries.h in Headers */,
 				CD20A0CD25E6EC4300DE0C65 /* HIDebug.h in Headers */,
 				CD20A0BF25E6EC4300DE0C65 /* HIWordcloud.h in Headers */,
 				CD20A18225E6EC4300DE0C65 /* HIAttributes.h in Headers */,
 				CD20A21725E6EC4300DE0C65 /* HICylinder.h in Headers */,
 				CD20A09F25E6EC4200DE0C65 /* HIPopup.h in Headers */,
 				CD20A1E325E6EC4300DE0C65 /* HILoading.h in Headers */,
+				CD75BEDD25E7133900A3D71A /* HIAnimationOptionsObject.h in Headers */,
 				CD20A11525E6EC4300DE0C65 /* HIStreamgraph.h in Headers */,
 				CD20A1EF25E6EC4300DE0C65 /* HIBullet.h in Headers */,
 				CD20A22125E6EC4300DE0C65 /* HIAnnotations.h in Headers */,
@@ -1950,7 +1959,6 @@
 				CD20A09D25E6EC4200DE0C65 /* HIMonth.m in Sources */,
 				CD91B2FF2062741200BCEE37 /* HIGBundle.m in Sources */,
 				CD20A1EA25E6EC4300DE0C65 /* HIVariablepie.m in Sources */,
-				CDE0D0A825CE80F00055467B /* HIAnimationOptionsObject.m in Sources */,
 				CD20A1C625E6EC4300DE0C65 /* HIASTNode.m in Sources */,
 				CD20A16B25E6EC4300DE0C65 /* HIShadowOptionsObject.m in Sources */,
 				CD20A23125E6EC4300DE0C65 /* HIFunnel.m in Sources */,
