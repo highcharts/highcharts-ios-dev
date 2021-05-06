@@ -24,9 +24,10 @@
 	copyLabels.skew3d = [self.skew3d copyWithZone: zone];
 	copyLabels.formatter = [self.formatter copyWithZone: zone];
 	copyLabels.autoRotation = [self.autoRotation copyWithZone: zone];
-	copyLabels.padding = [self.padding copyWithZone: zone];
-	copyLabels.format = [self.format copyWithZone: zone];
+	copyLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
 	copyLabels.zIndex = [self.zIndex copyWithZone: zone];
+	copyLabels.format = [self.format copyWithZone: zone];
+	copyLabels.padding = [self.padding copyWithZone: zone];
 	copyLabels.step = [self.step copyWithZone: zone];
 	copyLabels.overflow = [self.overflow copyWithZone: zone];
 	copyLabels.enabled = [self.enabled copyWithZone: zone];
@@ -39,7 +40,6 @@
 	copyLabels.shape = [self.shape copyWithZone: zone];
 	copyLabels.borderColor = [self.borderColor copyWithZone: zone];
 	copyLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
-	copyLabels.allowOverlap = [self.allowOverlap copyWithZone: zone];
 	copyLabels.shadow = [self.shadow copyWithZone: zone];
 	copyLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyLabels.className = [self.className copyWithZone: zone];
@@ -63,7 +63,6 @@
 		params[@"x"] = self.x;
 	}
 	if (self.staggerLines) {
-		params[@"staggerLines"] = self.staggerLines;
 	}
 	if (self.autoRotationLimit) {
 		params[@"autoRotationLimit"] = self.autoRotationLimit;
@@ -101,14 +100,17 @@
 		}
 		params[@"autoRotation"] = array;
 	}
-	if (self.padding) {
-		params[@"padding"] = self.padding;
+	if (self.allowOverlap) {
+		params[@"allowOverlap"] = self.allowOverlap;
+	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.format) {
 		params[@"format"] = self.format;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
+	if (self.padding) {
+		params[@"padding"] = self.padding;
 	}
 	if (self.step) {
 		params[@"step"] = self.step;
@@ -145,9 +147,6 @@
 	}
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
-	}
-	if (self.allowOverlap) {
-		params[@"allowOverlap"] = self.allowOverlap;
 	}
 	if (self.shadow) {
 		params[@"shadow"] = [self.shadow getParams];
@@ -190,8 +189,8 @@
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
--(void)setStaggerLines:(NSNumber *)staggerLines {
-	NSNumber *oldValue = _staggerLines;
+-(void)setStaggerLines:(id)staggerLines {
+	id oldValue = _staggerLines;
 	_staggerLines = staggerLines;
 	[self updateNSObject:oldValue newValue:staggerLines propertyName:@"staggerLines"];
 }
@@ -250,10 +249,16 @@
 	[self updateArrayObject:oldValue newValue:autoRotation propertyName:@"autoRotation"];
 }
 
--(void)setPadding:(NSNumber *)padding {
-	NSNumber *oldValue = _padding;
-	_padding = padding;
-	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
+-(void)setAllowOverlap:(NSNumber *)allowOverlap {
+	NSNumber *oldValue = _allowOverlap;
+	_allowOverlap = allowOverlap;
+	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setFormat:(NSString *)format {
@@ -262,10 +267,10 @@
 	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
 }
 
--(void)setZIndex:(NSNumber *)zIndex {
-	NSNumber *oldValue = _zIndex;
-	_zIndex = zIndex;
-	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
+-(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
+	_padding = padding;
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setStep:(NSNumber *)step {
@@ -338,12 +343,6 @@
 	HIColor *oldValue = _backgroundColor;
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
-}
-
--(void)setAllowOverlap:(NSNumber *)allowOverlap {
-	NSNumber *oldValue = _allowOverlap;
-	_allowOverlap = allowOverlap;
-	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
 }
 
 -(void)setShadow:(HIShadowOptionsObject *)shadow {
