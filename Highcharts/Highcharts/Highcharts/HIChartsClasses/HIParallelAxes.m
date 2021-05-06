@@ -57,6 +57,7 @@
 	copyParallelAxes.showEmpty = [self.showEmpty copyWithZone: zone];
 	copyParallelAxes.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
 	copyParallelAxes.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyParallelAxes.zIndex = [self.zIndex copyWithZone: zone];
 	copyParallelAxes.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyParallelAxes.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyParallelAxes.tickColor = [self.tickColor copyWithZone: zone];
@@ -236,6 +237,9 @@
 	}
 	if (self.dateTimeLabelFormats) {
 		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
@@ -576,6 +580,12 @@
 	HIDateTimeLabelFormats *oldValue = _dateTimeLabelFormats;
 	_dateTimeLabelFormats = dateTimeLabelFormats;
 	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setMinorTicks:(NSNumber *)minorTicks {

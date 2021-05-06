@@ -55,6 +55,7 @@
 	copyColorAxis.ceiling = [self.ceiling copyWithZone: zone];
 	copyColorAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
 	copyColorAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
+	copyColorAxis.zIndex = [self.zIndex copyWithZone: zone];
 	copyColorAxis.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyColorAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyColorAxis.softMax = [self.softMax copyWithZone: zone];
@@ -244,6 +245,9 @@
 	}
 	if (self.minorTickPosition) {
 		params[@"minorTickPosition"] = self.minorTickPosition;
+	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
@@ -557,6 +561,12 @@
 	NSString *oldValue = _minorTickPosition;
 	_minorTickPosition = minorTickPosition;
 	[self updateNSObject:oldValue newValue:minorTickPosition propertyName:@"minorTickPosition"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setMinorTicks:(NSNumber *)minorTicks {
