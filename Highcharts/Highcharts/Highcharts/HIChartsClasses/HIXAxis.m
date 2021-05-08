@@ -54,6 +54,7 @@
 	copyXAxis.max = [self.max copyWithZone: zone];
 	copyXAxis.breaks = [self.breaks copyWithZone: zone];
 	copyXAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
+	copyXAxis.zIndex = [self.zIndex copyWithZone: zone];
 	copyXAxis.minorTicks = [self.minorTicks copyWithZone: zone];
 	copyXAxis.minorTickWidth = [self.minorTickWidth copyWithZone: zone];
 	copyXAxis.startOnTick = [self.startOnTick copyWithZone: zone];
@@ -258,6 +259,9 @@
 	}
 	if (self.dateTimeLabelFormats) {
 		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
+	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.minorTicks) {
 		params[@"minorTicks"] = self.minorTicks;
@@ -636,6 +640,12 @@
 	[self updateHIObject:oldValue newValue:dateTimeLabelFormats propertyName:@"dateTimeLabelFormats"];
 }
 
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
+}
+
 -(void)setMinorTicks:(NSNumber *)minorTicks {
 	NSNumber *oldValue = _minorTicks;
 	_minorTicks = minorTicks;
@@ -654,8 +664,8 @@
 	[self updateNSObject:oldValue newValue:startOnTick propertyName:@"startOnTick"];
 }
 
--(void)setOffset:(NSNumber *)offset {
-	NSNumber *oldValue = _offset;
+-(void)setOffset:(NSString *)offset {
+	NSString *oldValue = _offset;
 	_offset = offset;
 	[self updateNSObject:oldValue newValue:offset propertyName:@"offset"];
 }

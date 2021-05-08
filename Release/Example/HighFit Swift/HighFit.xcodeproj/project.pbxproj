@@ -23,18 +23,18 @@
 		45DAC0C51F56A9210004F0B1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAC0C31F56A9210004F0B1 /* DataViewController.swift */; };
 		45DAC0C61F56A9210004F0B1 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC0C41F56A9210004F0B1 /* DataViewController.xib */; };
 		45DAC0C81F56A9960004F0B1 /* OptionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAC0C71F56A9960004F0B1 /* OptionsProvider.swift */; };
-		CDE0D16225CE9A7D0055467B /* Highcharts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE0D16025CE9A6B0055467B /* Highcharts.xcframework */; };
-		CDE0D16325CE9A7D0055467B /* Highcharts.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDE0D16025CE9A6B0055467B /* Highcharts.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD073A8B2646FA8200D6EF30 /* Highcharts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD073A872646FA7900D6EF30 /* Highcharts.xcframework */; };
+		CD073A8C2646FA8200D6EF30 /* Highcharts.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD073A872646FA7900D6EF30 /* Highcharts.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		45DAC0AA1F56A6FB0004F0B1 /* Embed Frameworks */ = {
+		CD073A8D2646FA8200D6EF30 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CDE0D16325CE9A7D0055467B /* Highcharts.xcframework in Embed Frameworks */,
+				CD073A8C2646FA8200D6EF30 /* Highcharts.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +60,7 @@
 		45DAC0C31F56A9210004F0B1 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		45DAC0C41F56A9210004F0B1 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
 		45DAC0C71F56A9960004F0B1 /* OptionsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsProvider.swift; sourceTree = "<group>"; };
-		CDE0D16025CE9A6B0055467B /* Highcharts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Highcharts.xcframework; sourceTree = "<group>"; };
+		CD073A872646FA7900D6EF30 /* Highcharts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Highcharts.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDE0D16225CE9A7D0055467B /* Highcharts.xcframework in Frameworks */,
+				CD073A8B2646FA8200D6EF30 /* Highcharts.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 		45DAC0A31F56A6870004F0B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CDE0D16025CE9A6B0055467B /* Highcharts.xcframework */,
+				CD073A872646FA7900D6EF30 /* Highcharts.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 				45DAC08A1F56A5680004F0B1 /* Sources */,
 				45DAC08B1F56A5680004F0B1 /* Frameworks */,
 				45DAC08C1F56A5680004F0B1 /* Resources */,
-				45DAC0AA1F56A6FB0004F0B1 /* Embed Frameworks */,
+				CD073A8D2646FA8200D6EF30 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

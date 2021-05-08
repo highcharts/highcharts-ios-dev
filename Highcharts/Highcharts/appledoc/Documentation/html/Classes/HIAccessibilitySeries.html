@@ -22,15 +22,6 @@
 	<meta name="twitter:creator" content="@highcharts">
 	<meta name="twitter:site" content="@highcharts">
 	<script type="text/javascript" src="./js/api.js"></script>
-	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8be0770c-8b7f-4e2d-aeb5-2cfded81e177" data-blockingmode="auto" type="text/javascript"></script>
-	<!-- Google Tag Manager -->
-	<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5WLVCCK');</script>
-	<!-- End Google Tag Manager -->
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
 	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
@@ -81,6 +72,16 @@
 	<optgroup label="Properties">
 		
 		<option value="//api/name/definition">definition</option>
+		
+		<option value="//api/name/describeSingleSeries">describeSingleSeries</option>
+		
+		<option value="//api/name/descriptionFormatter">descriptionFormatter</option>
+		
+		<option value="//api/name/nullPointValue">nullPointValue</option>
+		
+		<option value="//api/name/pointAnnotationsDescription">pointAnnotationsDescription</option>
+		
+		<option value="//api/name/pointDescriptionEnabledThreshold">pointDescriptionEnabledThreshold</option>
 		
 		<option value="//api/name/summary">summary</option>
 		
@@ -177,6 +178,98 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>{description}</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibilitySeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nullPointValue" title="nullPointValue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nullPointValue">&nbsp;&nbsp;nullPointValue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Description for the value of null points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nullPointValue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>No value</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibilitySeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointAnnotationsDescription" title="pointAnnotationsDescription"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointAnnotationsDescription">&nbsp;&nbsp;pointAnnotationsDescription</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Description for annotations on a point, as it is made available to assistive technology.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pointAnnotationsDescription</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{Annotation: #each(annotations). }</code>.</p>
 			</div>
 			
 
@@ -319,6 +412,144 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>Y axis, {name}</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibilitySeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/describeSingleSeries" title="describeSingleSeries"></a>
+	<h3 class="method-title"><code><a href="#//api/name/describeSingleSeries">&nbsp;&nbsp;describeSingleSeries</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not to add series descriptions to charts with a single series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *describeSingleSeries</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibilitySeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/descriptionFormatter" title="descriptionFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/descriptionFormatter">&nbsp;&nbsp;descriptionFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Formatter function to use instead of the default for series descriptions. Receives one argument, <code>series</code>, referring to the series to describe. Should return a string with the description of the series for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *descriptionFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibilitySeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDescriptionEnabledThreshold" title="pointDescriptionEnabledThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionEnabledThreshold">&nbsp;&nbsp;pointDescriptionEnabledThreshold</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When a series contains more points than this, we no longer expose information about individual points to screen readers.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointDescriptionEnabledThreshold</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>200</code>.</p>
 			</div>
 			
 

@@ -12,6 +12,7 @@
     HIAccessibilityLegend *copyAccessibility = [[HIAccessibilityLegend allocWithZone: zone] init];
     copyAccessibility.legendItem = [self.legendItem copyWithZone: zone];
     copyAccessibility.legendLabel = [self.legendLabel copyWithZone: zone];
+    copyAccessibility.legendLabelNoTitle = [self.legendLabelNoTitle copyWithZone: zone];
     return copyAccessibility;
 }
 
@@ -23,6 +24,9 @@
     }
     if (self.legendLabel) {
         params[@"legendLabel"] = self.legendLabel;
+    }
+    if (self.legendLabelNoTitle) {
+        params[@"legendLabelNoTitle"] = self.legendLabelNoTitle;
     }
     return params;
 }
@@ -39,6 +43,12 @@
     NSString *oldValue = _legendLabel;
     _legendLabel = legendLabel;
     [self updateNSObject:oldValue newValue:legendLabel propertyName:@"legendLabel"];
+}
+
+-(void)setLegendLabelNoTitle:(NSString *)legendLabelNoTitle {
+    NSString *oldValue = _legendLabelNoTitle;
+    _legendLabelNoTitle = legendLabelNoTitle;
+    [self updateNSObject:oldValue newValue:legendLabelNoTitle propertyName:@"legendLabelNoTitle"];
 }
 
 @end

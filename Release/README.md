@@ -1,4 +1,4 @@
-a<p align="center" >
+<p align="center" >
 <img src="https://github.com/highcharts/highcharts-ios/blob/master/Images/logo.png" alt="Highcharts" title="Highcharts">
 </p>
 
@@ -30,13 +30,13 @@ Here we present how to create basic chart and place it in your project.
 - First of all download Highcharts xcframework from here: [Highcharts](https://github.com/highcharts/highcharts-ios/tree/master/XCFramework) 
 or by using **Cocoapods** by adding 
     ```
-    pod 'Highcharts', '~> 9.0.1'
+    pod 'Highcharts', '~> 9.1.0'
     ```
     to your Podfile
     
     or **Carthage** by adding
     ```
-    github "https://github.com/highcharts/highcharts-ios" >= 9.0.1
+    github "https://github.com/highcharts/highcharts-ios" >= 9.1.0
     ```
     to your Cartfile
     

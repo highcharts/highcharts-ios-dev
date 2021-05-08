@@ -43,8 +43,8 @@
 	copyPlotOptions.bubble = [self.bubble copyWithZone: zone];
 	copyPlotOptions.funnel = [self.funnel copyWithZone: zone];
 	copyPlotOptions.histogram = [self.histogram copyWithZone: zone];
-	copyPlotOptions.line = [self.line copyWithZone: zone];
 	copyPlotOptions.sunburst = [self.sunburst copyWithZone: zone];
+	copyPlotOptions.line = [self.line copyWithZone: zone];
 	copyPlotOptions.wordcloud = [self.wordcloud copyWithZone: zone];
 	copyPlotOptions.scatter = [self.scatter copyWithZone: zone];
 	copyPlotOptions.sankey = [self.sankey copyWithZone: zone];
@@ -166,11 +166,11 @@
 	if (self.histogram) {
 		params[@"histogram"] = [self.histogram getParams];
 	}
-	if (self.line) {
-		params[@"line"] = [self.line getParams];
-	}
 	if (self.sunburst) {
 		params[@"sunburst"] = [self.sunburst getParams];
+	}
+	if (self.line) {
+		params[@"line"] = [self.line getParams];
 	}
 	if (self.wordcloud) {
 		params[@"wordcloud"] = [self.wordcloud getParams];
@@ -423,16 +423,16 @@
 	[self updateHIObject:oldValue newValue:histogram propertyName:@"histogram"];
 }
 
--(void)setLine:(HILine *)line {
-	HILine *oldValue = _line;
-	_line = line;
-	[self updateHIObject:oldValue newValue:line propertyName:@"line"];
-}
-
 -(void)setSunburst:(HISunburst *)sunburst {
 	HISunburst *oldValue = _sunburst;
 	_sunburst = sunburst;
 	[self updateHIObject:oldValue newValue:sunburst propertyName:@"sunburst"];
+}
+
+-(void)setLine:(HILine *)line {
+	HILine *oldValue = _line;
+	_line = line;
+	[self updateHIObject:oldValue newValue:line propertyName:@"line"];
 }
 
 -(void)setWordcloud:(HIWordcloud *)wordcloud {
