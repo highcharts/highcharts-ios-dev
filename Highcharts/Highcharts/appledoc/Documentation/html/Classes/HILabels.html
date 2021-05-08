@@ -22,15 +22,6 @@
 	<meta name="twitter:creator" content="@highcharts">
 	<meta name="twitter:site" content="@highcharts">
 	<script type="text/javascript" src="./js/api.js"></script>
-	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8be0770c-8b7f-4e2d-aeb5-2cfded81e177" data-blockingmode="auto" type="text/javascript"></script>
-	<!-- Google Tag Manager -->
-	<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5WLVCCK');</script>
-	<!-- End Google Tag Manager -->
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
 	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
@@ -430,7 +421,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Horizontal axes only. The number of lines to spread the labels over to make room or tighter labels.</p>
+				<p>Horizontal axes only. The number of lines to spread the labels over to make room or tighter labels. 0 disables staggering.</p>
 			</div>
 			
 		    
@@ -498,9 +489,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>80</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-autorotationlimit/">Lower limit</a></li>
@@ -587,7 +576,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Rotation of the labels in degrees.</p>
+				<p>Rotation of the labels in degrees. When <code>undefined</code>, the <code>autoRotation</code> option takes precedence.</p>
 			</div>
 			
 		    
@@ -758,11 +747,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-			</div>
-			
 
 			
 
@@ -840,7 +824,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback JavaScript function to format the label. The value is given by <code>this.value</code>. Additional properties for <code>this</code> are <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>. The value of the default label formatter can be retrieved by calling <code>this.axis.defaultLabelFormatter.call(this)</code> within the function. Defaults to: <code>js function() {   return this.value; }</code></p>
+				<p>Callback JavaScript function to format the label. The value is given by <code>this.value</code>. Additional properties for <code>this</code> are <code>axis</code>, <code>chart</code>, <code>isFirst</code>, <code>isLast</code> and <code>text</code> which holds the value of the default formatter. Defaults to a built in function returning a formatted string depending on whether the axis is <code>category</code>, <code>datetime</code>, <code>numeric</code> or other.</p>
 			</div>
 			
 		    
@@ -892,7 +876,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For horizontal axes, the allowed degrees of label rotation to prevent overlapping labels. If there is enough space, labels are not rotated. As the chart gets narrower, it will start rotating the labels -45 degrees, then remove every second label and try again with rotations 0 and -45 etc. Set it to <code>false</code> to disable rotation, which will cause the labels to word-wrap if possible.</p>
+				<p>For horizontal axes, the allowed degrees of label rotation to prevent overlapping labels. If there is enough space, labels are not rotated. As the chart gets narrower, it will start rotating the labels -45 degrees, then remove every second label and try again with rotations 0 and -45 etc. Set it to <code>undefined</code> to disable rotation, which will cause the labels to word-wrap if possible. Defaults to <code>[-45]`` on bottom and top axes,</code>undefined` on left and right axes.</p>
 			</div>
 			
 		    
@@ -909,7 +893,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>[-45]</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -935,8 +919,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/padding" title="padding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
+	<a name="//api/name/allowOverlap" title="allowOverlap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowOverlap">&nbsp;&nbsp;allowOverlap</a></code>
 </h3>
 
 	<div class="method-info">
@@ -946,12 +930,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The pixel padding for axis labels, to ensure white space between them.</p>
+				<p>Whether to allow the axis labels to overlap. When false, overlapping labels are hidden.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *padding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowOverlap</code></div>
 
 		    
 			
@@ -963,56 +947,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>5</code>.</p>
-			</div>
-			
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/format" title="format"></a>
-	<h3 class="method-title"><code><a href="#//api/name/format">&nbsp;&nbsp;format</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A format string for the axis label. See <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for example usage. Note: The default value is not specified due to the dynamic nature of the default implementation.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *format</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/labels-format/">Add units to Y axis label</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-allowoverlap-true/">X axis labels overlap enabled</a></li>
 </ul>
 
 			</div>
@@ -1058,10 +998,99 @@
 			
 
 			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/format" title="format"></a>
+	<h3 class="method-title"><code><a href="#//api/name/format">&nbsp;&nbsp;format</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A format string for the axis label. The context is available as format string variables. For example, you can use <code>{text}</code> to insert the default formatted text. The recommended way of adding units for the label is using <code>text</code>, for example <code>{text} km</code>. To add custom numeric or datetime formatting, use <code>{value}</code> with formatting, for example <code>{value:.1f}</code> or <code>{value:%Y-%m-%d}</code>. See <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for more examples of formatting. The default value is not specified due to the dynamic nature of the default implementation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *format</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>7</code>.</p>
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/labels-format/">Add units to Y axis label</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-format-linked/">Linked category names</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-format-custom/">Custom number format</a></li>
+</ul>
+
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/padding" title="padding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/padding">&nbsp;&nbsp;padding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel padding for axis labels, to ensure white space between them.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *padding</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1089,7 +1118,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>To show only every <em>n</em>&lsquo;th label on the axis, set the step to <em>n</em>. Setting the step to 2 shows every other label. By default, the step is calculated automatically to avoid overlap. To prevent this, set it to 1. This usually only happens on a category axis, and is often a sign that you have chosen the wrong axis type. Read more at <a href="https://www.highcharts.com/docs/chart-concepts/axes">Axis docs</a> => What axis should I use?</p>
+				<p>To show only every <em>n</em>&lsquo;th label on the axis, set the step to <em>n</em>. Setting the step to 2 shows every other label. By default, when 0, the step is calculated automatically to avoid overlap. To prevent this, set it to 1. This usually only happens on a category axis, and is often a sign that you have chosen the wrong axis type. Read more at <a href="https://www.highcharts.com/docs/chart-concepts/axes">Axis docs</a> => What axis should I use?</p>
 			</div>
 			
 		    
@@ -1159,8 +1188,6 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["allow", "justify"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>justify</code>.</p>
 			</div>
 			
 
@@ -1661,57 +1688,6 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/label-presentation/">Set labels graphic options</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HILabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/allowOverlap" title="allowOverlap"></a>
-	<h3 class="method-title"><code><a href="#//api/name/allowOverlap">&nbsp;&nbsp;allowOverlap</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to allow the annotation&rsquo;s labels to overlap. To make the labels less sensitive for overlapping, the can be set to 0.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowOverlap</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/tooltip-like/">Hide overlapping labels</a></li>
 </ul>
 
 			</div>
