@@ -26,13 +26,14 @@
 	copyHeatmap.yAxis = [self.yAxis copyWithZone: zone];
 	copyHeatmap.zIndex = [self.zIndex copyWithZone: zone];
 	copyHeatmap.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyHeatmap.rowsize = [self.rowsize copyWithZone: zone];
 	copyHeatmap.colsize = [self.colsize copyWithZone: zone];
 	copyHeatmap.clip = [self.clip copyWithZone: zone];
-	copyHeatmap.color = [self.color copyWithZone: zone];
+	copyHeatmap.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyHeatmap.tooltip = [self.tooltip copyWithZone: zone];
 	copyHeatmap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyHeatmap.states = [self.states copyWithZone: zone];
-	copyHeatmap.rowsize = [self.rowsize copyWithZone: zone];
+	copyHeatmap.color = [self.color copyWithZone: zone];
 	copyHeatmap.colorKey = [self.colorKey copyWithZone: zone];
 	copyHeatmap.animation = [self.animation copyWithZone: zone];
 	copyHeatmap.nullColor = [self.nullColor copyWithZone: zone];
@@ -77,11 +78,14 @@
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
+	if (self.rowsize) {
+		params[@"rowsize"] = self.rowsize;
+	}
 	if (self.colsize) {
 		params[@"colsize"] = self.colsize;
 	}
-	if (self.rowsize) {
-		params[@"rowsize"] = self.rowsize;
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.nullColor) {
 		params[@"nullColor"] = [self.nullColor getData];
@@ -97,16 +101,22 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
+-(void)setRowsize:(NSNumber *)rowsize {
+	NSNumber *oldValue = _rowsize;
+	_rowsize = rowsize;
+	[self updateNSObject:oldValue newValue:rowsize propertyName:@"rowsize"];
+}
+
 -(void)setColsize:(NSNumber *)colsize {
 	NSNumber *oldValue = _colsize;
 	_colsize = colsize;
 	[self updateNSObject:oldValue newValue:colsize propertyName:@"colsize"];
 }
 
--(void)setRowsize:(NSNumber *)rowsize {
-	NSNumber *oldValue = _rowsize;
-	_rowsize = rowsize;
-	[self updateNSObject:oldValue newValue:rowsize propertyName:@"rowsize"];
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setNullColor:(HIColor *)nullColor {

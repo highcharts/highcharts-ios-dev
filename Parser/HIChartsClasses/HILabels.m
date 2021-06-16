@@ -63,6 +63,7 @@
 		params[@"x"] = self.x;
 	}
 	if (self.staggerLines) {
+		params[@"staggerLines"] = self.staggerLines;
 	}
 	if (self.autoRotationLimit) {
 		params[@"autoRotationLimit"] = self.autoRotationLimit;
@@ -189,8 +190,8 @@
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
--(void)setStaggerLines:(id)staggerLines {
-	id oldValue = _staggerLines;
+-(void)setStaggerLines:(NSNumber *)staggerLines {
+	NSNumber *oldValue = _staggerLines;
 	_staggerLines = staggerLines;
 	[self updateNSObject:oldValue newValue:staggerLines propertyName:@"staggerLines"];
 }

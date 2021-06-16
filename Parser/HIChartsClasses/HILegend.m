@@ -21,6 +21,7 @@
 	copyLegend.symbolWidth = [self.symbolWidth copyWithZone: zone];
 	copyLegend.useHTML = [self.useHTML copyWithZone: zone];
 	copyLegend.borderColor = [self.borderColor copyWithZone: zone];
+	copyLegend.className = [self.className copyWithZone: zone];
 	copyLegend.layout = [self.layout copyWithZone: zone];
 	copyLegend.title = [self.title copyWithZone: zone];
 	copyLegend.width = [self.width copyWithZone: zone];
@@ -91,6 +92,9 @@
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.className) {
+		params[@"className"] = self.className;
 	}
 	if (self.layout) {
 		params[@"layout"] = self.layout;
@@ -254,6 +258,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setClassName:(NSString *)className {
+	NSString *oldValue = _className;
+	_className = className;
+	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
 -(void)setLayout:(NSString *)layout {
