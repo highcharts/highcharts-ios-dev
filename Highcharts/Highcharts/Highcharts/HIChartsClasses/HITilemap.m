@@ -21,9 +21,10 @@
 	copyTilemap.states = [self.states copyWithZone: zone];
 	copyTilemap.tileShape = [self.tileShape copyWithZone: zone];
 	copyTilemap.clip = [self.clip copyWithZone: zone];
-	copyTilemap.color = [self.color copyWithZone: zone];
+	copyTilemap.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyTilemap.tooltip = [self.tooltip copyWithZone: zone];
 	copyTilemap.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyTilemap.color = [self.color copyWithZone: zone];
 	copyTilemap.colorKey = [self.colorKey copyWithZone: zone];
 	copyTilemap.animation = [self.animation copyWithZone: zone];
 	copyTilemap.nullColor = [self.nullColor copyWithZone: zone];
@@ -83,6 +84,9 @@
 	if (self.tileShape) {
 		params[@"tileShape"] = self.tileShape;
 	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
+	}
 	if (self.nullColor) {
 		params[@"nullColor"] = [self.nullColor getData];
 	}
@@ -113,6 +117,12 @@
 	NSString *oldValue = _tileShape;
 	_tileShape = tileShape;
 	[self updateNSObject:oldValue newValue:tileShape propertyName:@"tileShape"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setNullColor:(HIColor *)nullColor {

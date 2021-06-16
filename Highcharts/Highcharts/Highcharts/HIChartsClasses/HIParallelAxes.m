@@ -52,6 +52,7 @@
 	copyParallelAxes.width = [self.width copyWithZone: zone];
 	copyParallelAxes.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyParallelAxes.units = [self.units copyWithZone: zone];
+	copyParallelAxes.panningEnabled = [self.panningEnabled copyWithZone: zone];
 	copyParallelAxes.tickLength = [self.tickLength copyWithZone: zone];
 	copyParallelAxes.ceiling = [self.ceiling copyWithZone: zone];
 	copyParallelAxes.showEmpty = [self.showEmpty copyWithZone: zone];
@@ -222,6 +223,9 @@
 			}
 		}
 		params[@"units"] = array;
+	}
+	if (self.panningEnabled) {
+		params[@"panningEnabled"] = self.panningEnabled;
 	}
 	if (self.tickLength) {
 		params[@"tickLength"] = self.tickLength;
@@ -550,6 +554,12 @@
 	NSArray<NSArray *> *oldValue = _units;
 	_units = units;
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
+}
+
+-(void)setPanningEnabled:(NSNumber *)panningEnabled {
+	NSNumber *oldValue = _panningEnabled;
+	_panningEnabled = panningEnabled;
+	[self updateNSObject:oldValue newValue:panningEnabled propertyName:@"panningEnabled"];
 }
 
 -(void)setTickLength:(NSNumber *)tickLength {
