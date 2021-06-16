@@ -4296,7 +4296,7 @@
               "type": {
                 "names": [
                   "string",
-                  "Highcharts.AnnotationMockPointOptionsObject"
+                  "*"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -24669,7 +24669,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.AnnotationsOptions"
+              "*"
             ]
           },
           "extends": "annotations",
@@ -53027,7 +53027,7 @@
                   "description": "Options for the cluster data labels.",
                   "type": {
                     "names": [
-                      "Highcharts.DataLabelsOptions"
+                      "*"
                     ]
                   },
                   "since": "8.0.0"
@@ -53438,7 +53438,7 @@
                   ],
                   "type": {
                     "names": [
-                      "Highcharts.PointMarkerOptionsObject"
+                      "*"
                     ]
                   },
                   "since": "8.0.0"
@@ -73718,7 +73718,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.arearange.dataLabels",
+                  "extends": "plotOptions.arearange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -75751,7 +75751,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.columnrange.dataLabels",
+                  "extends": "plotOptions.columnrange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -78737,7 +78737,7 @@
                     }
                   ],
                   "declare": "Highcharts.DataLabelsOptions",
-                  "extends": "plotOptions.line.dataLabels",
+                  "extends": "plotOptions.series.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock",
@@ -79113,7 +79113,7 @@
       "lollipop": {
         "doclet": {
           "description": "The `lollipop` series. If the [type](#series.lollipop.type) option is\nnot specified, it is inherited from [chart.type](#chart.type).\n\nIn TypeScript the [type](series.lollipop.type) option must always be set.\n\nConfiguration options for the series are given in three levels:\n1. Options for all series in a chart are defined in the\n   [plotOptions.series](plotOptions.series) object.\n2. Options for all `lollipop` series are defined in\n   [plotOptions.lollipop](plotOptions.lollipop).\n3. Options for one single series are given in\n   [the series instance array](series.lollipop).\n\n```\nHighcharts.chart('container', {\n    plotOptions: {\n        series: {\n            // general options for all series\n        },\n        lollipop: {\n            // shared options for all lollipop series\n        }\n    },\n    series: [{\n        // specific options for this series instance\n        type: 'lollipop'\n    }]\n});\n```\n            ",
-          "extends": "series,plotOptions.lollipop,",
+          "extends": "series,plotOptions.lollipop",
           "exclude": [
             "boostThreshold",
             "boostBlending"
@@ -80966,7 +80966,7 @@
                 "doclet": {
                   "type": {
                     "names": [
-                      "Highcharts.SeriesPieDataLabelsOptionsObject"
+                      "*"
                     ]
                   },
                   "products": [
