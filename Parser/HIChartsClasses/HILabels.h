@@ -65,7 +65,7 @@ Horizontal axes only. The number of lines to spread the labels over to make room
 
 * [Show labels over two lines](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-staggerlines/)
 */
-@property(nonatomic, readwrite) id staggerLines;
+@property(nonatomic, readwrite) NSNumber *staggerLines;
 /**
 When each category width is more than this many pixels, we don't apply auto rotation. Instead, we lay out the axis label with word wrap. A lower limit makes sense when the label contains multiple short words that don't extend the available horizontal space for each label.
 

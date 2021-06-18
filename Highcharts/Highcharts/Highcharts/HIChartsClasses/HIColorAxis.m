@@ -51,6 +51,7 @@
 	copyColorAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyColorAxis.units = [self.units copyWithZone: zone];
 	copyColorAxis.softMin = [self.softMin copyWithZone: zone];
+	copyColorAxis.panningEnabled = [self.panningEnabled copyWithZone: zone];
 	copyColorAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
 	copyColorAxis.ceiling = [self.ceiling copyWithZone: zone];
 	copyColorAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
@@ -233,6 +234,9 @@
 	}
 	if (self.softMin) {
 		params[@"softMin"] = self.softMin;
+	}
+	if (self.panningEnabled) {
+		params[@"panningEnabled"] = self.panningEnabled;
 	}
 	if (self.gridLineInterpolation) {
 		params[@"gridLineInterpolation"] = self.gridLineInterpolation;
@@ -537,6 +541,12 @@
 	NSNumber *oldValue = _softMin;
 	_softMin = softMin;
 	[self updateNSObject:oldValue newValue:softMin propertyName:@"softMin"];
+}
+
+-(void)setPanningEnabled:(NSNumber *)panningEnabled {
+	NSNumber *oldValue = _panningEnabled;
+	_panningEnabled = panningEnabled;
+	[self updateNSObject:oldValue newValue:panningEnabled propertyName:@"panningEnabled"];
 }
 
 -(void)setGridLineInterpolation:(NSString *)gridLineInterpolation {

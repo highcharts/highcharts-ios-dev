@@ -21,6 +21,7 @@
 	copyZAxis.visible = [self.visible copyWithZone: zone];
 	copyZAxis.alignTicks = [self.alignTicks copyWithZone: zone];
 	copyZAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
+	copyZAxis.type = [self.type copyWithZone: zone];
 	copyZAxis.tickWidth = [self.tickWidth copyWithZone: zone];
 	copyZAxis.showFirstLabel = [self.showFirstLabel copyWithZone: zone];
 	copyZAxis.maxPadding = [self.maxPadding copyWithZone: zone];
@@ -40,7 +41,7 @@
 	copyZAxis.plotLines = [self.plotLines copyWithZone: zone];
 	copyZAxis.units = [self.units copyWithZone: zone];
 	copyZAxis.softMin = [self.softMin copyWithZone: zone];
-	copyZAxis.type = [self.type copyWithZone: zone];
+	copyZAxis.panningEnabled = [self.panningEnabled copyWithZone: zone];
 	copyZAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
 	copyZAxis.tickLength = [self.tickLength copyWithZone: zone];
 	copyZAxis.ceiling = [self.ceiling copyWithZone: zone];
@@ -115,6 +116,9 @@
 	}
 	if (self.minTickInterval) {
 		params[@"minTickInterval"] = self.minTickInterval;
+	}
+	if (self.type) {
+		params[@"type"] = self.type;
 	}
 	if (self.tickWidth) {
 		params[@"tickWidth"] = self.tickWidth;
@@ -200,8 +204,8 @@
 	if (self.softMin) {
 		params[@"softMin"] = self.softMin;
 	}
-	if (self.type) {
-		params[@"type"] = self.type;
+	if (self.panningEnabled) {
+		params[@"panningEnabled"] = self.panningEnabled;
 	}
 	if (self.gridLineInterpolation) {
 		params[@"gridLineInterpolation"] = self.gridLineInterpolation;
@@ -397,6 +401,12 @@
 	[self updateNSObject:oldValue newValue:minTickInterval propertyName:@"minTickInterval"];
 }
 
+-(void)setType:(NSString *)type {
+	NSString *oldValue = _type;
+	_type = type;
+	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
+}
+
 -(void)setTickWidth:(NSNumber *)tickWidth {
 	NSNumber *oldValue = _tickWidth;
 	_tickWidth = tickWidth;
@@ -511,10 +521,10 @@
 	[self updateNSObject:oldValue newValue:softMin propertyName:@"softMin"];
 }
 
--(void)setType:(NSString *)type {
-	NSString *oldValue = _type;
-	_type = type;
-	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
+-(void)setPanningEnabled:(NSNumber *)panningEnabled {
+	NSNumber *oldValue = _panningEnabled;
+	_panningEnabled = panningEnabled;
+	[self updateNSObject:oldValue newValue:panningEnabled propertyName:@"panningEnabled"];
 }
 
 -(void)setGridLineInterpolation:(NSString *)gridLineInterpolation {
@@ -589,8 +599,8 @@
 	[self updateNSObject:oldValue newValue:startOnTick propertyName:@"startOnTick"];
 }
 
--(void)setOffset:(NSString *)offset {
-	NSString *oldValue = _offset;
+-(void)setOffset:(NSNumber *)offset {
+	NSNumber *oldValue = _offset;
 	_offset = offset;
 	[self updateNSObject:oldValue newValue:offset propertyName:@"offset"];
 }

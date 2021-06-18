@@ -62,6 +62,7 @@
 	copyYAxis.width = [self.width copyWithZone: zone];
 	copyYAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyYAxis.units = [self.units copyWithZone: zone];
+	copyYAxis.panningEnabled = [self.panningEnabled copyWithZone: zone];
 	copyYAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
 	copyYAxis.tickLength = [self.tickLength copyWithZone: zone];
 	copyYAxis.ceiling = [self.ceiling copyWithZone: zone];
@@ -297,6 +298,9 @@
 			}
 		}
 		params[@"units"] = array;
+	}
+	if (self.panningEnabled) {
+		params[@"panningEnabled"] = self.panningEnabled;
 	}
 	if (self.gridLineInterpolation) {
 		params[@"gridLineInterpolation"] = self.gridLineInterpolation;
@@ -717,6 +721,12 @@
 	[self updateArrayObject:oldValue newValue:units propertyName:@"units"];
 }
 
+-(void)setPanningEnabled:(NSNumber *)panningEnabled {
+	NSNumber *oldValue = _panningEnabled;
+	_panningEnabled = panningEnabled;
+	[self updateNSObject:oldValue newValue:panningEnabled propertyName:@"panningEnabled"];
+}
+
 -(void)setGridLineInterpolation:(NSString *)gridLineInterpolation {
 	NSString *oldValue = _gridLineInterpolation;
 	_gridLineInterpolation = gridLineInterpolation;
@@ -783,8 +793,8 @@
 	[self updateNSObject:oldValue newValue:minorTickWidth propertyName:@"minorTickWidth"];
 }
 
--(void)setOffset:(NSString *)offset {
-	NSString *oldValue = _offset;
+-(void)setOffset:(NSNumber *)offset {
+	NSNumber *oldValue = _offset;
 	_offset = offset;
 	[self updateNSObject:oldValue newValue:offset propertyName:@"offset"];
 }
