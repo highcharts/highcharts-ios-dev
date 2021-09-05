@@ -43,6 +43,7 @@
 	copyPolygon.custom = [self.custom copyWithZone: zone];
 	copyPolygon.stacking = [self.stacking copyWithZone: zone];
 	copyPolygon.animation = [self.animation copyWithZone: zone];
+	copyPolygon.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPolygon.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPolygon.events = [self.events copyWithZone: zone];
 	copyPolygon.opacity = [self.opacity copyWithZone: zone];

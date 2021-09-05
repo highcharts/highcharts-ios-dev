@@ -62,6 +62,7 @@
 	copyWindbarb.custom = [self.custom copyWithZone: zone];
 	copyWindbarb.animation = [self.animation copyWithZone: zone];
 	copyWindbarb.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyWindbarb.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyWindbarb.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyWindbarb.events = [self.events copyWithZone: zone];
 	copyWindbarb.opacity = [self.opacity copyWithZone: zone];

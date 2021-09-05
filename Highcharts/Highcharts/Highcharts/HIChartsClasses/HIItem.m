@@ -47,6 +47,7 @@
 	copyItem.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyItem.custom = [self.custom copyWithZone: zone];
 	copyItem.animation = [self.animation copyWithZone: zone];
+	copyItem.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyItem.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyItem.opacity = [self.opacity copyWithZone: zone];
 	copyItem.definition = [self.definition copyWithZone: zone];

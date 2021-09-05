@@ -60,6 +60,7 @@
 	copySeries.stacking = [self.stacking copyWithZone: zone];
 	copySeries.animation = [self.animation copyWithZone: zone];
 	copySeries.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copySeries.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySeries.threshold = [self.threshold copyWithZone: zone];
 	copySeries.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySeries.boostBlending = [self.boostBlending copyWithZone: zone];
@@ -243,6 +244,9 @@
 	}
 	if (self.findNearestPointBy) {
 		params[@"findNearestPointBy"] = self.findNearestPointBy;
+	}
+	if (self.relativeXValue) {
+		params[@"relativeXValue"] = self.relativeXValue;
 	}
 	if (self.threshold) {
 		params[@"threshold"] = self.threshold;
@@ -646,6 +650,12 @@
 	NSString *oldValue = _findNearestPointBy;
 	_findNearestPointBy = findNearestPointBy;
 	[self updateNSObject:oldValue newValue:findNearestPointBy propertyName:@"findNearestPointBy"];
+}
+
+-(void)setRelativeXValue:(NSNumber *)relativeXValue {
+	NSNumber *oldValue = _relativeXValue;
+	_relativeXValue = relativeXValue;
+	[self updateNSObject:oldValue newValue:relativeXValue propertyName:@"relativeXValue"];
 }
 
 -(void)setThreshold:(NSNumber *)threshold {

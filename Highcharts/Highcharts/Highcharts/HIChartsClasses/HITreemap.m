@@ -69,6 +69,7 @@
 	copyTreemap.custom = [self.custom copyWithZone: zone];
 	copyTreemap.stacking = [self.stacking copyWithZone: zone];
 	copyTreemap.animation = [self.animation copyWithZone: zone];
+	copyTreemap.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyTreemap.threshold = [self.threshold copyWithZone: zone];
 	copyTreemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTreemap.boostBlending = [self.boostBlending copyWithZone: zone];

@@ -69,6 +69,7 @@
 	copyHistogram.custom = [self.custom copyWithZone: zone];
 	copyHistogram.animation = [self.animation copyWithZone: zone];
 	copyHistogram.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyHistogram.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyHistogram.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyHistogram.events = [self.events copyWithZone: zone];
 	copyHistogram.opacity = [self.opacity copyWithZone: zone];

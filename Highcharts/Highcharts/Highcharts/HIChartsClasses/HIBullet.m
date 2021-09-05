@@ -70,6 +70,7 @@
 	copyBullet.stacking = [self.stacking copyWithZone: zone];
 	copyBullet.animation = [self.animation copyWithZone: zone];
 	copyBullet.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyBullet.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBullet.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBullet.events = [self.events copyWithZone: zone];
 	copyBullet.opacity = [self.opacity copyWithZone: zone];

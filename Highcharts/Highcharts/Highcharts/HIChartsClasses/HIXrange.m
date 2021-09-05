@@ -58,6 +58,7 @@
 	copyXrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyXrange.custom = [self.custom copyWithZone: zone];
 	copyXrange.animation = [self.animation copyWithZone: zone];
+	copyXrange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyXrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyXrange.events = [self.events copyWithZone: zone];
 	copyXrange.opacity = [self.opacity copyWithZone: zone];

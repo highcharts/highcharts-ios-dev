@@ -11,18 +11,18 @@
 	[super copyWithZone:zone];
 	HIData *copyData = [[HIData allocWithZone: zone] init];
 	copyData.enablePolling = [self.enablePolling copyWithZone: zone];
+	copyData.googleSpreadsheetRange = [self.googleSpreadsheetRange copyWithZone: zone];
 	copyData.startColumn = [self.startColumn copyWithZone: zone];
 	copyData.lineDelimiter = [self.lineDelimiter copyWithZone: zone];
 	copyData.table = [self.table copyWithZone: zone];
-	copyData.rowsURL = [self.rowsURL copyWithZone: zone];
+	copyData.parsed = [self.parsed copyWithZone: zone];
 	copyData.parseDate = [self.parseDate copyWithZone: zone];
 	copyData.seriesMapping = [self.seriesMapping copyWithZone: zone];
 	copyData.rows = [self.rows copyWithZone: zone];
 	copyData.csvURL = [self.csvURL copyWithZone: zone];
 	copyData.dateFormat = [self.dateFormat copyWithZone: zone];
-	copyData.googleSpreadsheetWorksheet = [self.googleSpreadsheetWorksheet copyWithZone: zone];
 	copyData.dataRefreshRate = [self.dataRefreshRate copyWithZone: zone];
-	copyData.parsed = [self.parsed copyWithZone: zone];
+	copyData.rowsURL = [self.rowsURL copyWithZone: zone];
 	copyData.startRow = [self.startRow copyWithZone: zone];
 	copyData.csv = [self.csv copyWithZone: zone];
 	copyData.columns = [self.columns copyWithZone: zone];
@@ -32,6 +32,7 @@
 	copyData.beforeParse = [self.beforeParse copyWithZone: zone];
 	copyData.endColumn = [self.endColumn copyWithZone: zone];
 	copyData.firstRowAsNames = [self.firstRowAsNames copyWithZone: zone];
+	copyData.googleAPIKey = [self.googleAPIKey copyWithZone: zone];
 	copyData.googleSpreadsheetKey = [self.googleSpreadsheetKey copyWithZone: zone];
 	copyData.switchRowsAndColumns = [self.switchRowsAndColumns copyWithZone: zone];
 	copyData.decimalPoint = [self.decimalPoint copyWithZone: zone];
@@ -102,6 +103,9 @@
 	if (self.enablePolling) {
 		params[@"enablePolling"] = self.enablePolling;
 	}
+	if (self.googleSpreadsheetRange) {
+		params[@"googleSpreadsheetRange"] = self.googleSpreadsheetRange;
+	}
 	if (self.startColumn) {
 		params[@"startColumn"] = self.startColumn;
 	}
@@ -111,8 +115,8 @@
 	if (self.table) {
 		params[@"table"] = self.table;
 	}
-	if (self.rowsURL) {
-		params[@"rowsURL"] = self.rowsURL;
+	if (self.parsed) {
+		params[@"parsed"] = [self.parsed getFunction];
 	}
 	if (self.parseDate) {
 		params[@"parseDate"] = [self.parseDate getFunction];
@@ -147,14 +151,11 @@
 	if (self.dateFormat) {
 		params[@"dateFormat"] = self.dateFormat;
 	}
-	if (self.googleSpreadsheetWorksheet) {
-		params[@"googleSpreadsheetWorksheet"] = self.googleSpreadsheetWorksheet;
-	}
 	if (self.dataRefreshRate) {
 		params[@"dataRefreshRate"] = self.dataRefreshRate;
 	}
-	if (self.parsed) {
-		params[@"parsed"] = [self.parsed getFunction];
+	if (self.rowsURL) {
+		params[@"rowsURL"] = self.rowsURL;
 	}
 	if (self.startRow) {
 		params[@"startRow"] = self.startRow;
@@ -191,6 +192,9 @@
 	}
 	if (self.firstRowAsNames) {
 		params[@"firstRowAsNames"] = self.firstRowAsNames;
+	}
+	if (self.googleAPIKey) {
+		params[@"googleAPIKey"] = self.googleAPIKey;
 	}
 	if (self.googleSpreadsheetKey) {
 		params[@"googleSpreadsheetKey"] = self.googleSpreadsheetKey;
@@ -395,6 +399,12 @@
 	[self updateNSObject:oldValue newValue:enablePolling propertyName:@"enablePolling"];
 }
 
+-(void)setGoogleSpreadsheetRange:(NSString *)googleSpreadsheetRange {
+	NSString *oldValue = _googleSpreadsheetRange;
+	_googleSpreadsheetRange = googleSpreadsheetRange;
+	[self updateNSObject:oldValue newValue:googleSpreadsheetRange propertyName:@"googleSpreadsheetRange"];
+}
+
 -(void)setStartColumn:(NSNumber *)startColumn {
 	NSNumber *oldValue = _startColumn;
 	_startColumn = startColumn;
@@ -413,10 +423,10 @@
 	[self updateNSObject:oldValue newValue:table propertyName:@"table"];
 }
 
--(void)setRowsURL:(NSString *)rowsURL {
-	NSString *oldValue = _rowsURL;
-	_rowsURL = rowsURL;
-	[self updateNSObject:oldValue newValue:rowsURL propertyName:@"rowsURL"];
+-(void)setParsed:(HIFunction *)parsed {
+	HIFunction *oldValue = _parsed;
+	_parsed = parsed;
+	[self updateHIObject:oldValue newValue:parsed propertyName:@"parsed"];
 }
 
 -(void)setParseDate:(HIFunction *)parseDate {
@@ -449,22 +459,16 @@
 	[self updateNSObject:oldValue newValue:dateFormat propertyName:@"dateFormat"];
 }
 
--(void)setGoogleSpreadsheetWorksheet:(NSString *)googleSpreadsheetWorksheet {
-	NSString *oldValue = _googleSpreadsheetWorksheet;
-	_googleSpreadsheetWorksheet = googleSpreadsheetWorksheet;
-	[self updateNSObject:oldValue newValue:googleSpreadsheetWorksheet propertyName:@"googleSpreadsheetWorksheet"];
-}
-
 -(void)setDataRefreshRate:(NSNumber *)dataRefreshRate {
 	NSNumber *oldValue = _dataRefreshRate;
 	_dataRefreshRate = dataRefreshRate;
 	[self updateNSObject:oldValue newValue:dataRefreshRate propertyName:@"dataRefreshRate"];
 }
 
--(void)setParsed:(HIFunction *)parsed {
-	HIFunction *oldValue = _parsed;
-	_parsed = parsed;
-	[self updateHIObject:oldValue newValue:parsed propertyName:@"parsed"];
+-(void)setRowsURL:(NSString *)rowsURL {
+	NSString *oldValue = _rowsURL;
+	_rowsURL = rowsURL;
+	[self updateNSObject:oldValue newValue:rowsURL propertyName:@"rowsURL"];
 }
 
 -(void)setStartRow:(NSNumber *)startRow {
@@ -519,6 +523,12 @@
 	NSNumber *oldValue = _firstRowAsNames;
 	_firstRowAsNames = firstRowAsNames;
 	[self updateNSObject:oldValue newValue:firstRowAsNames propertyName:@"firstRowAsNames"];
+}
+
+-(void)setGoogleAPIKey:(NSString *)googleAPIKey {
+	NSString *oldValue = _googleAPIKey;
+	_googleAPIKey = googleAPIKey;
+	[self updateNSObject:oldValue newValue:googleAPIKey propertyName:@"googleAPIKey"];
 }
 
 -(void)setGoogleSpreadsheetKey:(NSString *)googleSpreadsheetKey {
