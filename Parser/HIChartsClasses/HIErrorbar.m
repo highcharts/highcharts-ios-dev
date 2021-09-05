@@ -76,6 +76,7 @@
 	copyErrorbar.custom = [self.custom copyWithZone: zone];
 	copyErrorbar.animation = [self.animation copyWithZone: zone];
 	copyErrorbar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyErrorbar.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyErrorbar.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyErrorbar.events = [self.events copyWithZone: zone];
 	copyErrorbar.opacity = [self.opacity copyWithZone: zone];

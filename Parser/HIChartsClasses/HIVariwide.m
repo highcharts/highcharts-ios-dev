@@ -56,6 +56,7 @@
 	copyVariwide.stacking = [self.stacking copyWithZone: zone];
 	copyVariwide.animation = [self.animation copyWithZone: zone];
 	copyVariwide.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyVariwide.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVariwide.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVariwide.events = [self.events copyWithZone: zone];
 	copyVariwide.opacity = [self.opacity copyWithZone: zone];

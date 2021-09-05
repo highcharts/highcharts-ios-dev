@@ -50,6 +50,7 @@
 	copyHeatmap.cursor = [self.cursor copyWithZone: zone];
 	copyHeatmap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyHeatmap.custom = [self.custom copyWithZone: zone];
+	copyHeatmap.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyHeatmap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyHeatmap.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyHeatmap.events = [self.events copyWithZone: zone];

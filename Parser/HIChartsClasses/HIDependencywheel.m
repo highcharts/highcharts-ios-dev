@@ -57,6 +57,7 @@
 	copyDependencywheel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyDependencywheel.custom = [self.custom copyWithZone: zone];
 	copyDependencywheel.animation = [self.animation copyWithZone: zone];
+	copyDependencywheel.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyDependencywheel.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyDependencywheel.events = [self.events copyWithZone: zone];
 	copyDependencywheel.opacity = [self.opacity copyWithZone: zone];

@@ -63,6 +63,7 @@
 	copyLollipop.custom = [self.custom copyWithZone: zone];
 	copyLollipop.animation = [self.animation copyWithZone: zone];
 	copyLollipop.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyLollipop.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyLollipop.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyLollipop.events = [self.events copyWithZone: zone];
 	copyLollipop.opacity = [self.opacity copyWithZone: zone];

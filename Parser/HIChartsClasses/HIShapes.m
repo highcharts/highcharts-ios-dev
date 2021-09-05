@@ -52,7 +52,7 @@
 		params[@"markerStart"] = self.markerStart;
 	}
 	if (self.point) {
-		params[@"point"] = [self.point getParams];
+		params[@"point"] = self.point;
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
@@ -92,8 +92,8 @@
 	[self updateNSObject:oldValue newValue:src propertyName:@"src"];
 }
 
--(void)setPoints:(NSArray <HIPoints *> *)points {
-	NSArray <HIPoints *> *oldValue = _points;
+-(void)setPoints:(NSArray<NSString *> *)points {
+	NSArray<NSString *> *oldValue = _points;
 	_points = points;
 	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
 }
@@ -110,10 +110,10 @@
 	[self updateNSObject:oldValue newValue:markerStart propertyName:@"markerStart"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
+-(void)setPoint:(NSString *)point {
+	NSString *oldValue = _point;
 	_point = point;
-	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+	[self updateNSObject:oldValue newValue:point propertyName:@"point"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {

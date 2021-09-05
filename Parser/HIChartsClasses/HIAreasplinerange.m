@@ -60,6 +60,7 @@
 	copyAreasplinerange.custom = [self.custom copyWithZone: zone];
 	copyAreasplinerange.animation = [self.animation copyWithZone: zone];
 	copyAreasplinerange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyAreasplinerange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyAreasplinerange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyAreasplinerange.events = [self.events copyWithZone: zone];
 	copyAreasplinerange.opacity = [self.opacity copyWithZone: zone];

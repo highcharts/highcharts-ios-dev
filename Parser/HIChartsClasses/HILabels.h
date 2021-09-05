@@ -6,7 +6,6 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIPoint.h"
 #import "HIAccessibility.h"
 #import "HIColor.h"
 #import "HIFunction.h"
@@ -202,8 +201,9 @@ This option defines the point to which the label will be connected. It can be ei
 **Try it**
 
 * [Attach annotation to a mock point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-point/)
+* [Attach annotation to a mock point with different ways](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-points/)
 */
-@property(nonatomic, readwrite) HIPoint *point;
+@property(nonatomic, readwrite) NSString *point;
 /**
 Whether the annotation is visible in the exported data table.
 

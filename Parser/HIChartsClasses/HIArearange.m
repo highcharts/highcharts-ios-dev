@@ -51,6 +51,7 @@
 	copyArearange.custom = [self.custom copyWithZone: zone];
 	copyArearange.animation = [self.animation copyWithZone: zone];
 	copyArearange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyArearange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyArearange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyArearange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyArearange.events = [self.events copyWithZone: zone];

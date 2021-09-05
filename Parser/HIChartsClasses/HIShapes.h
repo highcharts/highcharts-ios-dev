@@ -6,8 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIPoints.h"
-#import "HIPoint.h"
+#import "HIChartsJSONSerializable.h"
 #import "HIColor.h"
 
 
@@ -25,9 +24,9 @@ The URL for an image to use as the annotation shape. Note, type has to be set to
 */
 @property(nonatomic, readwrite) NSString *src;
 /**
-An array of points for the shape. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point's id.
+An array of points for the shape or a callback function that returns that shape point. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point's id.
 */
-@property(nonatomic, readwrite) NSArray <HIPoints *> *points;
+@property(nonatomic, readwrite) NSArray<NSString *> *points;
 /**
 Id of the marker which will be drawn at the final vertex of the path. Custom markers can be defined in defs property.
 
@@ -46,8 +45,12 @@ Id of the marker which will be drawn at the first vertex of the path. Custom mar
 @property(nonatomic, readwrite) NSString *markerStart;
 /**
 This option defines the point to which the shape will be connected. It can be either the point which exists in the series - it is referenced by the point's id - or a new point with defined x, y properties and optionally axes.
+
+**Try it**
+
+* [Attach annotation to a mock point with different ways](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-points/)
 */
-@property(nonatomic, readwrite) HIPoint *point;
+@property(nonatomic, readwrite) NSString *point;
 /**
 Name of the dash style to use for the shape's stroke.
 

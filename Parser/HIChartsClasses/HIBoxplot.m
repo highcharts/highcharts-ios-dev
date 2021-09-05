@@ -75,6 +75,7 @@
 	copyBoxplot.custom = [self.custom copyWithZone: zone];
 	copyBoxplot.animation = [self.animation copyWithZone: zone];
 	copyBoxplot.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyBoxplot.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBoxplot.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBoxplot.events = [self.events copyWithZone: zone];
 	copyBoxplot.opacity = [self.opacity copyWithZone: zone];

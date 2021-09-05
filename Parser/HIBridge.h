@@ -31,7 +31,6 @@
 #import "HISeries.h"
 #import "HITimeline.h"
 #import "HIShapes.h"
-#import "HIPoints.h"
 #import "HIMillisecond.h"
 #import "HIColorAxis.h"
 #import "HIBoost.h"

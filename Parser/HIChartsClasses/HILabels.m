@@ -123,7 +123,7 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.point) {
-		params[@"point"] = [self.point getParams];
+		params[@"point"] = self.point;
 	}
 	if (self.includeInDataExport) {
 		params[@"includeInDataExport"] = self.includeInDataExport;
@@ -292,10 +292,10 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
+-(void)setPoint:(NSString *)point {
+	NSString *oldValue = _point;
 	_point = point;
-	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+	[self updateNSObject:oldValue newValue:point propertyName:@"point"];
 }
 
 -(void)setIncludeInDataExport:(NSNumber *)includeInDataExport {

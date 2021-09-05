@@ -38,6 +38,7 @@
 	copySolidgauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySolidgauge.custom = [self.custom copyWithZone: zone];
 	copySolidgauge.animation = [self.animation copyWithZone: zone];
+	copySolidgauge.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySolidgauge.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySolidgauge.events = [self.events copyWithZone: zone];
 	copySolidgauge.opacity = [self.opacity copyWithZone: zone];
