@@ -60,6 +60,7 @@
 	copyColumn.stacking = [self.stacking copyWithZone: zone];
 	copyColumn.animation = [self.animation copyWithZone: zone];
 	copyColumn.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyColumn.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyColumn.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyColumn.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyColumn.events = [self.events copyWithZone: zone];

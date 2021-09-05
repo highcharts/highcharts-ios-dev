@@ -63,6 +63,7 @@
 	copyPackedbubble.custom = [self.custom copyWithZone: zone];
 	copyPackedbubble.stacking = [self.stacking copyWithZone: zone];
 	copyPackedbubble.animation = [self.animation copyWithZone: zone];
+	copyPackedbubble.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPackedbubble.threshold = [self.threshold copyWithZone: zone];
 	copyPackedbubble.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPackedbubble.events = [self.events copyWithZone: zone];

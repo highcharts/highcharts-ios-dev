@@ -69,6 +69,7 @@
 	copyBar.stacking = [self.stacking copyWithZone: zone];
 	copyBar.animation = [self.animation copyWithZone: zone];
 	copyBar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyBar.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBar.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBar.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBar.events = [self.events copyWithZone: zone];

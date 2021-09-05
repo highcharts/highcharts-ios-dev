@@ -66,6 +66,7 @@
 	copyFunnel3d.custom = [self.custom copyWithZone: zone];
 	copyFunnel3d.stacking = [self.stacking copyWithZone: zone];
 	copyFunnel3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyFunnel3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyFunnel3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyFunnel3d.events = [self.events copyWithZone: zone];
 	copyFunnel3d.opacity = [self.opacity copyWithZone: zone];

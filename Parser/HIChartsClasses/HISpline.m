@@ -52,6 +52,7 @@
 	copySpline.stacking = [self.stacking copyWithZone: zone];
 	copySpline.animation = [self.animation copyWithZone: zone];
 	copySpline.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copySpline.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySpline.threshold = [self.threshold copyWithZone: zone];
 	copySpline.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySpline.events = [self.events copyWithZone: zone];

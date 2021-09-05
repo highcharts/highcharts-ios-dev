@@ -36,6 +36,7 @@
 	copyPareto.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPareto.custom = [self.custom copyWithZone: zone];
 	copyPareto.animation = [self.animation copyWithZone: zone];
+	copyPareto.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPareto.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPareto.events = [self.events copyWithZone: zone];
 	copyPareto.opacity = [self.opacity copyWithZone: zone];

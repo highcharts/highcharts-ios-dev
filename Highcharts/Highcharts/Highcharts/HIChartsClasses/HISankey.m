@@ -44,6 +44,7 @@
 	copySankey.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySankey.custom = [self.custom copyWithZone: zone];
 	copySankey.animation = [self.animation copyWithZone: zone];
+	copySankey.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySankey.events = [self.events copyWithZone: zone];
 	copySankey.opacity = [self.opacity copyWithZone: zone];

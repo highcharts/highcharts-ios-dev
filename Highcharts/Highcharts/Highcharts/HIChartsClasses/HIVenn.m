@@ -45,6 +45,7 @@
 	copyVenn.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVenn.custom = [self.custom copyWithZone: zone];
 	copyVenn.animation = [self.animation copyWithZone: zone];
+	copyVenn.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVenn.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVenn.events = [self.events copyWithZone: zone];
 	copyVenn.animationLimit = [self.animationLimit copyWithZone: zone];

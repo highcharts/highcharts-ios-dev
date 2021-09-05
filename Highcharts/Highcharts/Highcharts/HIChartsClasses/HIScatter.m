@@ -45,6 +45,7 @@
 	copyScatter.custom = [self.custom copyWithZone: zone];
 	copyScatter.stacking = [self.stacking copyWithZone: zone];
 	copyScatter.animation = [self.animation copyWithZone: zone];
+	copyScatter.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyScatter.threshold = [self.threshold copyWithZone: zone];
 	copyScatter.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyScatter.boostBlending = [self.boostBlending copyWithZone: zone];

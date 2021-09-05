@@ -60,6 +60,7 @@
 	copyStreamgraph.custom = [self.custom copyWithZone: zone];
 	copyStreamgraph.animation = [self.animation copyWithZone: zone];
 	copyStreamgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyStreamgraph.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyStreamgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyStreamgraph.events = [self.events copyWithZone: zone];
 	copyStreamgraph.opacity = [self.opacity copyWithZone: zone];

@@ -65,6 +65,7 @@
 	copyBubble.custom = [self.custom copyWithZone: zone];
 	copyBubble.stacking = [self.stacking copyWithZone: zone];
 	copyBubble.animation = [self.animation copyWithZone: zone];
+	copyBubble.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBubble.threshold = [self.threshold copyWithZone: zone];
 	copyBubble.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBubble.boostBlending = [self.boostBlending copyWithZone: zone];

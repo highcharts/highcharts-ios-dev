@@ -17,9 +17,7 @@
 	copyLevels.level = [self.level copyWithZone: zone];
 	copyLevels.color = [self.color copyWithZone: zone];
 	copyLevels.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyLevels.rotationMode = [self.rotationMode copyWithZone: zone];
 	copyLevels.borderWidth = [self.borderWidth copyWithZone: zone];
-	copyLevels.rotation = [self.rotation copyWithZone: zone];
 	copyLevels.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyLevels.layoutStartingDirection = [self.layoutStartingDirection copyWithZone: zone];
 	copyLevels.colorByPoint = [self.colorByPoint copyWithZone: zone];
@@ -52,14 +50,8 @@
 	if (self.dataLabels) {
 		params[@"dataLabels"] = [self.dataLabels getParams];
 	}
-	if (self.rotationMode) {
-		params[@"rotationMode"] = self.rotationMode;
-	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
-	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
 	}
 	if (self.layoutAlgorithm) {
 		params[@"layoutAlgorithm"] = self.layoutAlgorithm;
@@ -123,22 +115,10 @@
 	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
--(void)setRotationMode:(NSString *)rotationMode {
-	NSString *oldValue = _rotationMode;
-	_rotationMode = rotationMode;
-	[self updateNSObject:oldValue newValue:rotationMode propertyName:@"rotationMode"];
-}
-
 -(void)setBorderWidth:(NSNumber *)borderWidth {
 	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
-}
-
--(void)setRotation:(NSNumber *)rotation {
-	NSNumber *oldValue = _rotation;
-	_rotation = rotation;
-	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {

@@ -70,6 +70,7 @@
 	copyPopup.xAxisUnit = [self.xAxisUnit copyWithZone: zone];
 	copyPopup.shapeOptions = [self.shapeOptions copyWithZone: zone];
 	copyPopup.outerBackground = [self.outerBackground copyWithZone: zone];
+	copyPopup.periods = [self.periods copyWithZone: zone];
 	copyPopup.simpleShapes = [self.simpleShapes copyWithZone: zone];
 	copyPopup.stroke = [self.stroke copyWithZone: zone];
 	copyPopup.fibonacci = [self.fibonacci copyWithZone: zone];
@@ -285,6 +286,9 @@
 	}
 	if (self.outerBackground) {
 		params[@"outerBackground"] = self.outerBackground;
+	}
+	if (self.periods) {
+		params[@"periods"] = self.periods;
 	}
 	if (self.simpleShapes) {
 		params[@"simpleShapes"] = self.simpleShapes;
@@ -739,6 +743,12 @@
 	NSString *oldValue = _outerBackground;
 	_outerBackground = outerBackground;
 	[self updateNSObject:oldValue newValue:outerBackground propertyName:@"outerBackground"];
+}
+
+-(void)setPeriods:(NSString *)periods {
+	NSString *oldValue = _periods;
+	_periods = periods;
+	[self updateNSObject:oldValue newValue:periods propertyName:@"periods"];
 }
 
 -(void)setSimpleShapes:(NSString *)simpleShapes {

@@ -63,6 +63,7 @@
 	copyWaterfall.stacking = [self.stacking copyWithZone: zone];
 	copyWaterfall.animation = [self.animation copyWithZone: zone];
 	copyWaterfall.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyWaterfall.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyWaterfall.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyWaterfall.events = [self.events copyWithZone: zone];
 	copyWaterfall.opacity = [self.opacity copyWithZone: zone];

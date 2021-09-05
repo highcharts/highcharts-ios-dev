@@ -59,6 +59,7 @@
 	copyArea.stacking = [self.stacking copyWithZone: zone];
 	copyArea.animation = [self.animation copyWithZone: zone];
 	copyArea.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyArea.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyArea.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyArea.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyArea.events = [self.events copyWithZone: zone];

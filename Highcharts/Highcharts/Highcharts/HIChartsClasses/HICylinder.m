@@ -59,6 +59,7 @@
 	copyCylinder.stacking = [self.stacking copyWithZone: zone];
 	copyCylinder.animation = [self.animation copyWithZone: zone];
 	copyCylinder.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyCylinder.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyCylinder.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyCylinder.events = [self.events copyWithZone: zone];
 	copyCylinder.opacity = [self.opacity copyWithZone: zone];

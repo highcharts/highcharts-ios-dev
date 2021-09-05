@@ -57,6 +57,7 @@
 	copyBellcurve.custom = [self.custom copyWithZone: zone];
 	copyBellcurve.animation = [self.animation copyWithZone: zone];
 	copyBellcurve.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyBellcurve.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBellcurve.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBellcurve.events = [self.events copyWithZone: zone];
 	copyBellcurve.opacity = [self.opacity copyWithZone: zone];

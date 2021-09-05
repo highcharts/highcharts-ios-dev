@@ -47,6 +47,7 @@
 	copyTimeline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTimeline.custom = [self.custom copyWithZone: zone];
 	copyTimeline.animation = [self.animation copyWithZone: zone];
+	copyTimeline.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyTimeline.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTimeline.events = [self.events copyWithZone: zone];
 	copyTimeline.opacity = [self.opacity copyWithZone: zone];

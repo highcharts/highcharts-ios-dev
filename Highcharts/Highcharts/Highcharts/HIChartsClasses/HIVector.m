@@ -40,6 +40,7 @@
 	copyVector.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVector.custom = [self.custom copyWithZone: zone];
 	copyVector.animation = [self.animation copyWithZone: zone];
+	copyVector.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVector.threshold = [self.threshold copyWithZone: zone];
 	copyVector.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVector.events = [self.events copyWithZone: zone];

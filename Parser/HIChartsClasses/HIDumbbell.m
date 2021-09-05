@@ -54,6 +54,7 @@
 	copyDumbbell.custom = [self.custom copyWithZone: zone];
 	copyDumbbell.animation = [self.animation copyWithZone: zone];
 	copyDumbbell.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyDumbbell.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyDumbbell.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyDumbbell.events = [self.events copyWithZone: zone];
 	copyDumbbell.opacity = [self.opacity copyWithZone: zone];

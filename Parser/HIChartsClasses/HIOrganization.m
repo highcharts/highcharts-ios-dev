@@ -59,6 +59,7 @@
 	copyOrganization.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyOrganization.custom = [self.custom copyWithZone: zone];
 	copyOrganization.animation = [self.animation copyWithZone: zone];
+	copyOrganization.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyOrganization.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyOrganization.events = [self.events copyWithZone: zone];
 	copyOrganization.opacity = [self.opacity copyWithZone: zone];

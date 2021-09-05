@@ -43,6 +43,7 @@
 	copyLine.stacking = [self.stacking copyWithZone: zone];
 	copyLine.animation = [self.animation copyWithZone: zone];
 	copyLine.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyLine.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyLine.threshold = [self.threshold copyWithZone: zone];
 	copyLine.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyLine.boostBlending = [self.boostBlending copyWithZone: zone];
