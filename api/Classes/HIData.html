@@ -135,9 +135,11 @@
 		
 		<option value="//api/name/from">from</option>
 		
+		<option value="//api/name/googleAPIKey">googleAPIKey</option>
+		
 		<option value="//api/name/googleSpreadsheetKey">googleSpreadsheetKey</option>
 		
-		<option value="//api/name/googleSpreadsheetWorksheet">googleSpreadsheetWorksheet</option>
+		<option value="//api/name/googleSpreadsheetRange">googleSpreadsheetRange</option>
 		
 		<option value="//api/name/gradientForSides">gradientForSides</option>
 		
@@ -359,6 +361,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/googleSpreadsheetRange" title="googleSpreadsheetRange"></a>
+	<h3 class="method-title"><code><a href="#//api/name/googleSpreadsheetRange">&nbsp;&nbsp;googleSpreadsheetRange</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The Google Spreadsheet <code>range</code> to use in combination with <code>googleSpreadsheetKey</code>. See <a href="https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get">developers.google.com</a> for details. If given, it takes precedence over <code>startColumn</code>, <code>endColumn</code>, <code>startRow</code> and <code>endRow</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *googleSpreadsheetRange</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/">Load a Google Spreadsheet</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/startColumn" title="startColumn"></a>
 	<h3 class="method-title"><code><a href="#//api/name/startColumn">&nbsp;&nbsp;startColumn</a></code>
 </h3>
@@ -516,8 +569,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/rowsURL" title="rowsURL"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rowsURL">&nbsp;&nbsp;rowsURL</a></code>
+	<a name="//api/name/parsed" title="parsed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parsed">&nbsp;&nbsp;parsed</a></code>
 </h3>
 
 	<div class="method-info">
@@ -527,12 +580,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A URL to a remote JSON dataset, structured as a row array. Will be fetched when the chart is created using Ajax.</p>
+				<p>A callback function to access the parsed columns, the two-dimentional input data array directly, before they are interpreted into series data and categories. Return <code>false</code> to stop completion, or call <code>this.complete()</code> to continue async.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rowsURL</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *parsed</code></div>
 
 		    
 			
@@ -547,7 +600,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/livedata-rows">Rows with live polling</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/">Modify data after parse</a></li>
 </ul>
 
 			</div>
@@ -816,57 +869,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/googleSpreadsheetWorksheet" title="googleSpreadsheetWorksheet"></a>
-	<h3 class="method-title"><code><a href="#//api/name/googleSpreadsheetWorksheet">&nbsp;&nbsp;googleSpreadsheetWorksheet</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The Google Spreadsheet worksheet to use in combination with <code>googleSpreadsheetKey</code>. The available id&rsquo;s from your sheet can be read from <code>https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *googleSpreadsheetWorksheet</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/">Load a Google Spreadsheet</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/dataRefreshRate" title="dataRefreshRate"></a>
 	<h3 class="method-title"><code><a href="#//api/name/dataRefreshRate">&nbsp;&nbsp;dataRefreshRate</a></code>
 </h3>
@@ -920,8 +922,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/parsed" title="parsed"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parsed">&nbsp;&nbsp;parsed</a></code>
+	<a name="//api/name/rowsURL" title="rowsURL"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rowsURL">&nbsp;&nbsp;rowsURL</a></code>
 </h3>
 
 	<div class="method-info">
@@ -931,12 +933,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A callback function to access the parsed columns, the two-dimentional input data array directly, before they are interpreted into series data and categories. Return <code>false</code> to stop completion, or call <code>this.complete()</code> to continue async.</p>
+				<p>A URL to a remote JSON dataset, structured as a row array. Will be fetched when the chart is created using Ajax.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *parsed</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rowsURL</code></div>
 
 		    
 			
@@ -951,7 +953,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/parsed/">Modify data after parse</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/livedata-rows">Rows with live polling</a></li>
 </ul>
 
 			</div>
@@ -1434,6 +1436,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/googleAPIKey" title="googleAPIKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/googleAPIKey">&nbsp;&nbsp;googleAPIKey</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The Google Spreadsheet API key required for access generated at <a href="https://console.cloud.google.com/apis/credentials">APIServices/Credentials</a>. See a comprehensive tutorial for setting up the key at the <a href="https://handsondataviz.org/google-sheets-api-key.html">Hands-On Data Visualization</a> book website.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *googleAPIKey</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/google-spreadsheet/">Load a Google Spreadsheet</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/googleSpreadsheetKey" title="googleSpreadsheetKey"></a>
 	<h3 class="method-title"><code><a href="#//api/name/googleSpreadsheetKey">&nbsp;&nbsp;googleSpreadsheetKey</a></code>
 </h3>
@@ -1445,7 +1498,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The key for a Google Spreadsheet to load. See <a href="https://developers.google.com/gdata/samples/spreadsheet_sample">general information on GS</a>.</p>
+				<p>The key or <code>spreadsheetId</code> value for a Google Spreadsheet to load. See <a href="https://developers.google.com/sheets/api/guides/concepts">developers.google.com</a> for how to find the <code>spreadsheetId</code>. In order for Google Sheets to load, a valid <code>googleAPIKey</code> must also be given.</p>
 			</div>
 			
 		    

@@ -175,6 +175,8 @@
 		
 		<option value="//api/name/pointStart">pointStart</option>
 		
+		<option value="//api/name/relativeXValue">relativeXValue</option>
+		
 		<option value="//api/name/selected">selected</option>
 		
 		<option value="//api/name/shadow">shadow</option>
@@ -1554,7 +1556,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If no x values are given for the points in a series, <code>pointInterval</code> defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set <code>pointInterval</code> to <code>10</code>. In true <code>datetime</code> axes, the <code>pointInterval</code> is set in milliseconds. It can be also be combined with <code>pointIntervalUnit</code> to draw irregular time intervals. Please note that this options applies to the <em>series data</em>, not the interval of the axis ticks, which is independent.</p>
+				<p>If no x values are given for the points in a series, <code>pointInterval</code> defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set <code>pointInterval</code> to <code>10</code>. In true <code>datetime</code> axes, the <code>pointInterval</code> is set in milliseconds. It can be also be combined with <code>pointIntervalUnit</code> to draw irregular time intervals. If combined with <code>relativeXValue</code>, an x value can be set on each point, and the <code>pointInterval</code> is added x times to the <code>pointStart</code> setting. Please note that this options applies to the <em>series data</em>, not the interval of the axis ticks, which is independent.</p>
 			</div>
 			
 		    
@@ -1577,6 +1579,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/">Datetime X axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-relativexvalue/">Relative x value</a></li>
 </ul>
 
 			</div>
@@ -2529,6 +2532,59 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/findnearestpointby/">Different hover behaviors</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/relativeXValue" title="relativeXValue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/relativeXValue">&nbsp;&nbsp;relativeXValue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When true, X values in the data set are relative to the current <code>pointStart</code>, <code>pointInterval</code> and <code>pointIntervalUnit</code> settings. This allows compression of the data for datasets with irregular X values. The real X values are computed on the formula <code>f(x) = ax + b</code>, where <code>a</code> is the <code>pointInterval</code> (optionally with a time unit given by <code>pointIntervalUnit</code>), and <code>b</code> is the <code>pointStart</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *relativeXValue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-relativexvalue/">Relative X value</a></li>
 </ul>
 
 			</div>
@@ -3775,7 +3831,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.</p>
+				<p>If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945. If combined with <code>relativeXValue</code>, an x value can be set on each point. The x value from the point options is multiplied by <code>pointInterval</code> and added to <code>pointStart</code> to produce a modified x value.</p>
 			</div>
 			
 		    
@@ -3799,6 +3855,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/">Linear</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/">Datetime</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-relativexvalue/">Relative x value</a></li>
 </ul>
 
 			</div>
