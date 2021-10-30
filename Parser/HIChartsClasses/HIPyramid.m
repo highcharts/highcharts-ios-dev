@@ -50,7 +50,6 @@
 	copyPyramid.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPyramid.linecap = [self.linecap copyWithZone: zone];
 	copyPyramid.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPyramid.selected = [self.selected copyWithZone: zone];
 	copyPyramid.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPyramid.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -62,6 +61,7 @@
 	copyPyramid.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid.definition = [self.definition copyWithZone: zone];
 	copyPyramid.keys = [self.keys copyWithZone: zone];
+	copyPyramid.selected = [self.selected copyWithZone: zone];
 	copyPyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid.accessibility = [self.accessibility copyWithZone: zone];
 	copyPyramid.shadow = [self.shadow copyWithZone: zone];

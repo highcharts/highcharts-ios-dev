@@ -51,7 +51,6 @@
 	copyBullet.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBullet.grouping = [self.grouping copyWithZone: zone];
 	copyBullet.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyBullet.selected = [self.selected copyWithZone: zone];
 	copyBullet.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBullet.clip = [self.clip copyWithZone: zone];
 	copyBullet.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -75,9 +74,10 @@
 	copyBullet.events = [self.events copyWithZone: zone];
 	copyBullet.opacity = [self.opacity copyWithZone: zone];
 	copyBullet.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyBullet.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBullet.definition = [self.definition copyWithZone: zone];
 	copyBullet.keys = [self.keys copyWithZone: zone];
-	copyBullet.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyBullet.selected = [self.selected copyWithZone: zone];
 	copyBullet.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBullet.accessibility = [self.accessibility copyWithZone: zone];
 	copyBullet.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

@@ -203,7 +203,7 @@ This option defines the point to which the label will be connected. It can be ei
 * [Attach annotation to a mock point](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-point/)
 * [Attach annotation to a mock point with different ways](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-points/)
 */
-@property(nonatomic, readwrite) NSString *point;
+@property(nonatomic, readwrite) id point;
 /**
 Whether the annotation is visible in the exported data table.
 

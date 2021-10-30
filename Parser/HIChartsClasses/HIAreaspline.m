@@ -24,7 +24,6 @@
 	copyAreaspline.threshold = [self.threshold copyWithZone: zone];
 	copyAreaspline.linecap = [self.linecap copyWithZone: zone];
 	copyAreaspline.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyAreaspline.selected = [self.selected copyWithZone: zone];
 	copyAreaspline.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyAreaspline.clip = [self.clip copyWithZone: zone];
 	copyAreaspline.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -54,9 +53,10 @@
 	copyAreaspline.events = [self.events copyWithZone: zone];
 	copyAreaspline.opacity = [self.opacity copyWithZone: zone];
 	copyAreaspline.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyAreaspline.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyAreaspline.definition = [self.definition copyWithZone: zone];
 	copyAreaspline.keys = [self.keys copyWithZone: zone];
-	copyAreaspline.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyAreaspline.selected = [self.selected copyWithZone: zone];
 	copyAreaspline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyAreaspline.accessibility = [self.accessibility copyWithZone: zone];
 	copyAreaspline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

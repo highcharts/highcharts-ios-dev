@@ -32,7 +32,6 @@
 	copyNetworkgraph.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyNetworkgraph.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyNetworkgraph.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyNetworkgraph.selected = [self.selected copyWithZone: zone];
 	copyNetworkgraph.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyNetworkgraph.clip = [self.clip copyWithZone: zone];
 	copyNetworkgraph.color = [self.color copyWithZone: zone];
@@ -48,9 +47,10 @@
 	copyNetworkgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyNetworkgraph.events = [self.events copyWithZone: zone];
 	copyNetworkgraph.opacity = [self.opacity copyWithZone: zone];
+	copyNetworkgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyNetworkgraph.definition = [self.definition copyWithZone: zone];
 	copyNetworkgraph.keys = [self.keys copyWithZone: zone];
-	copyNetworkgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyNetworkgraph.selected = [self.selected copyWithZone: zone];
 	copyNetworkgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyNetworkgraph.accessibility = [self.accessibility copyWithZone: zone];
 	copyNetworkgraph.shadow = [self.shadow copyWithZone: zone];

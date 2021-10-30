@@ -39,7 +39,6 @@
 	copyPie.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPie.linecap = [self.linecap copyWithZone: zone];
 	copyPie.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPie.selected = [self.selected copyWithZone: zone];
 	copyPie.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPie.colorKey = [self.colorKey copyWithZone: zone];
 	copyPie.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -52,6 +51,7 @@
 	copyPie.opacity = [self.opacity copyWithZone: zone];
 	copyPie.definition = [self.definition copyWithZone: zone];
 	copyPie.keys = [self.keys copyWithZone: zone];
+	copyPie.selected = [self.selected copyWithZone: zone];
 	copyPie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPie.accessibility = [self.accessibility copyWithZone: zone];
 	copyPie.shadow = [self.shadow copyWithZone: zone];

@@ -50,7 +50,7 @@ This option defines the point to which the shape will be connected. It can be ei
 
 * [Attach annotation to a mock point with different ways](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/mock-points/)
 */
-@property(nonatomic, readwrite) NSString *point;
+@property(nonatomic, readwrite) id point;
 /**
 Name of the dash style to use for the shape's stroke.
 
@@ -67,6 +67,18 @@ The pixel stroke width of the shape.
 * [Basic shape annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
 */
 @property(nonatomic, readwrite) NSNumber *strokeWidth;
+/**
+The yAxis index to which the points should be attached. Used for the ellipse.
+*/
+@property(nonatomic, readwrite) NSNumber *yAxis;
+/**
+The radius of the shape in y direction. Used for the ellipse.
+
+**Try it**
+
+* [Ellipse annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/ellipse/)
+*/
+@property(nonatomic, readwrite) NSNumber *ry;
 /**
 The height of the shape.
 
@@ -100,17 +112,22 @@ The radius of the shape.
 */
 @property(nonatomic, readwrite) NSNumber *r;
 /**
+The xAxis index to which the points should be attached. Used for the ellipse.
+*/
+@property(nonatomic, readwrite) NSNumber *xAxis;
+/**
 Defines additional snapping area around an annotation making this annotation to focus. Defined in pixels.
 */
 @property(nonatomic, readwrite) NSNumber *snap;
 /**
-The type of the shape, e.g. circle or rectangle.
+The type of the shape. Avaliable options are circle, rect and ellipse.
 
 **Defaults to** `rect`.
 
 **Try it**
 
 * [Basic shape annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/shape/)
+* [Ellipse annotation](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/ellipse/)
 */
 @property(nonatomic, readwrite) NSString *type;
 /**

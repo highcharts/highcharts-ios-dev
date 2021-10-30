@@ -39,7 +39,6 @@
 	copySunburst.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySunburst.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySunburst.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copySunburst.selected = [self.selected copyWithZone: zone];
 	copySunburst.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySunburst.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySunburst.cursor = [self.cursor copyWithZone: zone];
@@ -51,6 +50,7 @@
 	copySunburst.opacity = [self.opacity copyWithZone: zone];
 	copySunburst.definition = [self.definition copyWithZone: zone];
 	copySunburst.keys = [self.keys copyWithZone: zone];
+	copySunburst.selected = [self.selected copyWithZone: zone];
 	copySunburst.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySunburst.accessibility = [self.accessibility copyWithZone: zone];
 	copySunburst.shadow = [self.shadow copyWithZone: zone];

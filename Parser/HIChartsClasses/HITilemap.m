@@ -30,7 +30,6 @@
 	copyTilemap.nullColor = [self.nullColor copyWithZone: zone];
 	copyTilemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTilemap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyTilemap.selected = [self.selected copyWithZone: zone];
 	copyTilemap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyTilemap.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyTilemap.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -44,9 +43,10 @@
 	copyTilemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTilemap.events = [self.events copyWithZone: zone];
 	copyTilemap.opacity = [self.opacity copyWithZone: zone];
+	copyTilemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyTilemap.definition = [self.definition copyWithZone: zone];
 	copyTilemap.keys = [self.keys copyWithZone: zone];
-	copyTilemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyTilemap.selected = [self.selected copyWithZone: zone];
 	copyTilemap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTilemap.accessibility = [self.accessibility copyWithZone: zone];
 	copyTilemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];

@@ -47,7 +47,6 @@
 	copyOrganization.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyOrganization.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyOrganization.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyOrganization.selected = [self.selected copyWithZone: zone];
 	copyOrganization.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyOrganization.clip = [self.clip copyWithZone: zone];
 	copyOrganization.color = [self.color copyWithZone: zone];
@@ -63,9 +62,10 @@
 	copyOrganization.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyOrganization.events = [self.events copyWithZone: zone];
 	copyOrganization.opacity = [self.opacity copyWithZone: zone];
+	copyOrganization.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyOrganization.definition = [self.definition copyWithZone: zone];
 	copyOrganization.keys = [self.keys copyWithZone: zone];
-	copyOrganization.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyOrganization.selected = [self.selected copyWithZone: zone];
 	copyOrganization.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyOrganization.accessibility = [self.accessibility copyWithZone: zone];
 	copyOrganization.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

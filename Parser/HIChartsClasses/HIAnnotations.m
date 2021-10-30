@@ -10,17 +10,18 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIAnnotations *copyAnnotations = [[HIAnnotations allocWithZone: zone] init];
-	copyAnnotations.controlPointOptions = [self.controlPointOptions copyWithZone: zone];
-	copyAnnotations.shapes = [self.shapes copyWithZone: zone];
-	copyAnnotations.shapeOptions = [self.shapeOptions copyWithZone: zone];
-	copyAnnotations.zIndex = [self.zIndex copyWithZone: zone];
-	copyAnnotations.visible = [self.visible copyWithZone: zone];
 	copyAnnotations.labels = [self.labels copyWithZone: zone];
-	copyAnnotations.labelOptions = [self.labelOptions copyWithZone: zone];
+	copyAnnotations.crop = [self.crop copyWithZone: zone];
+	copyAnnotations.visible = [self.visible copyWithZone: zone];
 	copyAnnotations.id = [self.id copyWithZone: zone];
+	copyAnnotations.controlPointOptions = [self.controlPointOptions copyWithZone: zone];
 	copyAnnotations.draggable = [self.draggable copyWithZone: zone];
 	copyAnnotations.animation = [self.animation copyWithZone: zone];
 	copyAnnotations.events = [self.events copyWithZone: zone];
+	copyAnnotations.labelOptions = [self.labelOptions copyWithZone: zone];
+	copyAnnotations.zIndex = [self.zIndex copyWithZone: zone];
+	copyAnnotations.shapes = [self.shapes copyWithZone: zone];
+	copyAnnotations.shapeOptions = [self.shapeOptions copyWithZone: zone];
 	copyAnnotations.descriptionMultiplePoints = [self.descriptionMultiplePoints copyWithZone: zone];
 	copyAnnotations.descriptionSinglePoint = [self.descriptionSinglePoint copyWithZone: zone];
 	copyAnnotations.descriptionNoPoints = [self.descriptionNoPoints copyWithZone: zone];
@@ -34,8 +35,44 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	params[@"_wrapperID"] = self.uuid;
+	if (self.labels) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.labels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"labels"] = array;
+	}
+	if (self.crop) {
+		params[@"crop"] = self.crop;
+	}
+	if (self.visible) {
+		params[@"visible"] = self.visible;
+	}
+	if (self.id) {
+		params[@"id"] = self.id;
+	}
 	if (self.controlPointOptions) {
 		params[@"controlPointOptions"] = [self.controlPointOptions getParams];
+	}
+	if (self.draggable) {
+		params[@"draggable"] = self.draggable;
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
+	}
+	if (self.labelOptions) {
+		params[@"labelOptions"] = [self.labelOptions getParams];
+	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.shapes) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -51,39 +88,6 @@
 	}
 	if (self.shapeOptions) {
 		params[@"shapeOptions"] = [self.shapeOptions getParams];
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.visible) {
-		params[@"visible"] = self.visible;
-	}
-	if (self.labels) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.labels) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"labels"] = array;
-	}
-	if (self.labelOptions) {
-		params[@"labelOptions"] = [self.labelOptions getParams];
-	}
-	if (self.id) {
-		params[@"id"] = self.id;
-	}
-	if (self.draggable) {
-		params[@"draggable"] = self.draggable;
-	}
-	if (self.animation) {
-		params[@"animation"] = [self.animation getParams];
-	}
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
 	}
 	if (self.descriptionMultiplePoints) {
 		params[@"descriptionMultiplePoints"] = self.descriptionMultiplePoints;
@@ -108,28 +112,16 @@
 
 # pragma mark - Setters
 
--(void)setControlPointOptions:(HIControlPointOptions *)controlPointOptions {
-	HIControlPointOptions *oldValue = _controlPointOptions;
-	_controlPointOptions = controlPointOptions;
-	[self updateHIObject:oldValue newValue:controlPointOptions propertyName:@"controlPointOptions"];
+-(void)setLabels:(NSArray <HILabels *> *)labels {
+	NSArray <HILabels *> *oldValue = _labels;
+	_labels = labels;
+	[self updateArrayObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
--(void)setShapes:(NSArray <HIShapes *> *)shapes {
-	NSArray <HIShapes *> *oldValue = _shapes;
-	_shapes = shapes;
-	[self updateArrayObject:oldValue newValue:shapes propertyName:@"shapes"];
-}
-
--(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
-	HIShapeOptions *oldValue = _shapeOptions;
-	_shapeOptions = shapeOptions;
-	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
-}
-
--(void)setZIndex:(NSNumber *)zIndex {
-	NSNumber *oldValue = _zIndex;
-	_zIndex = zIndex;
-	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
+-(void)setCrop:(NSNumber *)crop {
+	NSNumber *oldValue = _crop;
+	_crop = crop;
+	[self updateNSObject:oldValue newValue:crop propertyName:@"crop"];
 }
 
 -(void)setVisible:(NSNumber *)visible {
@@ -138,22 +130,16 @@
 	[self updateNSObject:oldValue newValue:visible propertyName:@"visible"];
 }
 
--(void)setLabels:(NSArray <HILabels *> *)labels {
-	NSArray <HILabels *> *oldValue = _labels;
-	_labels = labels;
-	[self updateArrayObject:oldValue newValue:labels propertyName:@"labels"];
-}
-
--(void)setLabelOptions:(HILabelOptions *)labelOptions {
-	HILabelOptions *oldValue = _labelOptions;
-	_labelOptions = labelOptions;
-	[self updateHIObject:oldValue newValue:labelOptions propertyName:@"labelOptions"];
-}
-
 -(void)setId:(id)id {
 	id oldValue = _id;
 	_id = id;
 	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
+}
+
+-(void)setControlPointOptions:(HIControlPointOptions *)controlPointOptions {
+	HIControlPointOptions *oldValue = _controlPointOptions;
+	_controlPointOptions = controlPointOptions;
+	[self updateHIObject:oldValue newValue:controlPointOptions propertyName:@"controlPointOptions"];
 }
 
 -(void)setDraggable:(NSString *)draggable {
@@ -172,6 +158,30 @@
 	HIEvents *oldValue = _events;
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+}
+
+-(void)setLabelOptions:(HILabelOptions *)labelOptions {
+	HILabelOptions *oldValue = _labelOptions;
+	_labelOptions = labelOptions;
+	[self updateHIObject:oldValue newValue:labelOptions propertyName:@"labelOptions"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
+}
+
+-(void)setShapes:(NSArray <HIShapes *> *)shapes {
+	NSArray <HIShapes *> *oldValue = _shapes;
+	_shapes = shapes;
+	[self updateArrayObject:oldValue newValue:shapes propertyName:@"shapes"];
+}
+
+-(void)setShapeOptions:(HIShapeOptions *)shapeOptions {
+	HIShapeOptions *oldValue = _shapeOptions;
+	_shapeOptions = shapeOptions;
+	[self updateHIObject:oldValue newValue:shapeOptions propertyName:@"shapeOptions"];
 }
 
 -(void)setDescriptionMultiplePoints:(NSString *)descriptionMultiplePoints {

@@ -25,7 +25,6 @@
 	copySolidgauge.threshold = [self.threshold copyWithZone: zone];
 	copySolidgauge.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySolidgauge.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copySolidgauge.selected = [self.selected copyWithZone: zone];
 	copySolidgauge.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySolidgauge.clip = [self.clip copyWithZone: zone];
 	copySolidgauge.color = [self.color copyWithZone: zone];
@@ -44,6 +43,7 @@
 	copySolidgauge.opacity = [self.opacity copyWithZone: zone];
 	copySolidgauge.definition = [self.definition copyWithZone: zone];
 	copySolidgauge.keys = [self.keys copyWithZone: zone];
+	copySolidgauge.selected = [self.selected copyWithZone: zone];
 	copySolidgauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySolidgauge.accessibility = [self.accessibility copyWithZone: zone];
 	copySolidgauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];

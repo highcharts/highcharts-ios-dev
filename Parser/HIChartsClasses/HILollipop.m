@@ -42,7 +42,6 @@
 	copyLollipop.lineColor = [self.lineColor copyWithZone: zone];
 	copyLollipop.linecap = [self.linecap copyWithZone: zone];
 	copyLollipop.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyLollipop.selected = [self.selected copyWithZone: zone];
 	copyLollipop.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyLollipop.clip = [self.clip copyWithZone: zone];
 	copyLollipop.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -68,9 +67,10 @@
 	copyLollipop.events = [self.events copyWithZone: zone];
 	copyLollipop.opacity = [self.opacity copyWithZone: zone];
 	copyLollipop.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyLollipop.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyLollipop.definition = [self.definition copyWithZone: zone];
 	copyLollipop.keys = [self.keys copyWithZone: zone];
-	copyLollipop.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyLollipop.selected = [self.selected copyWithZone: zone];
 	copyLollipop.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyLollipop.accessibility = [self.accessibility copyWithZone: zone];
 	copyLollipop.step = [self.step copyWithZone: zone];

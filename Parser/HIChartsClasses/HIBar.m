@@ -49,7 +49,6 @@
 	copyBar.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBar.grouping = [self.grouping copyWithZone: zone];
 	copyBar.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyBar.selected = [self.selected copyWithZone: zone];
 	copyBar.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBar.clip = [self.clip copyWithZone: zone];
 	copyBar.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -75,9 +74,10 @@
 	copyBar.events = [self.events copyWithZone: zone];
 	copyBar.opacity = [self.opacity copyWithZone: zone];
 	copyBar.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyBar.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBar.definition = [self.definition copyWithZone: zone];
 	copyBar.keys = [self.keys copyWithZone: zone];
-	copyBar.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyBar.selected = [self.selected copyWithZone: zone];
 	copyBar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBar.accessibility = [self.accessibility copyWithZone: zone];
 	copyBar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

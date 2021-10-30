@@ -292,8 +292,8 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setPoint:(NSString *)point {
-	NSString *oldValue = _point;
+-(void)setPoint:(id)point {
+	id oldValue = _point;
 	_point = point;
 	[self updateNSObject:oldValue newValue:point propertyName:@"point"];
 }

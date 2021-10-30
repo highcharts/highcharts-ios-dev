@@ -10,14 +10,14 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIPoint *copyPoint = [[HIPoint allocWithZone: zone] init];
-	copyPoint.events = [self.events copyWithZone: zone];
+	copyPoint.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
 	copyPoint.valueDescriptionFormat = [self.valueDescriptionFormat copyWithZone: zone];
 	copyPoint.valueSuffix = [self.valueSuffix copyWithZone: zone];
 	copyPoint.dateFormat = [self.dateFormat copyWithZone: zone];
 	copyPoint.dateFormatter = [self.dateFormatter copyWithZone: zone];
 	copyPoint.valuePrefix = [self.valuePrefix copyWithZone: zone];
-	copyPoint.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
 	copyPoint.valueDecimals = [self.valueDecimals copyWithZone: zone];
+	copyPoint.events = [self.events copyWithZone: zone];
 	return copyPoint;
 }
 
@@ -25,8 +25,8 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	params[@"_wrapperID"] = self.uuid;
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
+	if (self.descriptionFormatter) {
+		params[@"descriptionFormatter"] = [self.descriptionFormatter getFunction];
 	}
 	if (self.valueDescriptionFormat) {
 		params[@"valueDescriptionFormat"] = self.valueDescriptionFormat;
@@ -43,21 +43,21 @@
 	if (self.valuePrefix) {
 		params[@"valuePrefix"] = self.valuePrefix;
 	}
-	if (self.descriptionFormatter) {
-		params[@"descriptionFormatter"] = [self.descriptionFormatter getFunction];
-	}
 	if (self.valueDecimals) {
 		params[@"valueDecimals"] = self.valueDecimals;
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
-	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+-(void)setDescriptionFormatter:(HIFunction *)descriptionFormatter {
+	HIFunction *oldValue = _descriptionFormatter;
+	_descriptionFormatter = descriptionFormatter;
+	[self updateHIObject:oldValue newValue:descriptionFormatter propertyName:@"descriptionFormatter"];
 }
 
 -(void)setValueDescriptionFormat:(NSString *)valueDescriptionFormat {
@@ -90,16 +90,16 @@
 	[self updateNSObject:oldValue newValue:valuePrefix propertyName:@"valuePrefix"];
 }
 
--(void)setDescriptionFormatter:(HIFunction *)descriptionFormatter {
-	HIFunction *oldValue = _descriptionFormatter;
-	_descriptionFormatter = descriptionFormatter;
-	[self updateHIObject:oldValue newValue:descriptionFormatter propertyName:@"descriptionFormatter"];
-}
-
 -(void)setValueDecimals:(NSNumber *)valueDecimals {
 	NSNumber *oldValue = _valueDecimals;
 	_valueDecimals = valueDecimals;
 	[self updateNSObject:oldValue newValue:valueDecimals propertyName:@"valueDecimals"];
+}
+
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 - (void)cancelSonify {
