@@ -10,14 +10,10 @@
 
 
 /**
-An array of points for the shape. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point's id.
+Object of shape point.
 */
-@interface HIPoints: HIChartsJSONSerializable
+@interface HIAnnotationMockPointOptionsObject: HIChartsJSONSerializable
 
-/**
-The y position of the point. Units can be either in axis or chart pixel coordinates.
-*/
-@property(nonatomic, readwrite) NSNumber *y;
 /**
 The x position of the point. Units can be either in axis or chart pixel coordinates.
 */
@@ -26,6 +22,10 @@ The x position of the point. Units can be either in axis or chart pixel coordina
 This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array. If the option is not configured or the axis is not found the point's x coordinate refers to the chart pixels.
 */
 @property(nonatomic, readwrite) id /* NSNumber, NSString */ xAxis;
+/**
+The y position of the point. Units can be either in axis or chart pixel coordinates.
+*/
+@property(nonatomic, readwrite) NSNumber *y;
 /**
 This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the yAxis array. If the option is not configured or the axis is not found the point's y coordinate refers to the chart pixels.
 */

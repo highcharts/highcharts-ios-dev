@@ -131,6 +131,7 @@
 #import "HIMonth.h"
 #import "HILinkTextPath.h"
 #import "HIAttributes.h"
+#import "HIAnnotationMockPointOptionsObject.h"
 #import "HIPatternOptionsObject.h"
 #import "HIVector.h"
 #import "HIColorVariation.h"

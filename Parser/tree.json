@@ -3208,7 +3208,7 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "*"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "requires": [
@@ -4435,7 +4435,7 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "*"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "extends": "annotations.labels.point",

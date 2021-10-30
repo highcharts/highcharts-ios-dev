@@ -55,7 +55,7 @@
 		params[@"markerStart"] = self.markerStart;
 	}
 	if (self.point) {
-		params[@"point"] = self.point;
+		params[@"point"] = [self.point getParams];
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
@@ -104,8 +104,8 @@
 	[self updateNSObject:oldValue newValue:src propertyName:@"src"];
 }
 
--(void)setPoints:(NSArray<NSString *> *)points {
-	NSArray<NSString *> *oldValue = _points;
+-(void)setPoints:(NSArray<HIAnnotationMockPointOptionsObject *> *)points {
+	NSArray<HIAnnotationMockPointOptionsObject *> *oldValue = _points;
 	_points = points;
 	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
 }
@@ -122,10 +122,10 @@
 	[self updateNSObject:oldValue newValue:markerStart propertyName:@"markerStart"];
 }
 
--(void)setPoint:(id)point {
-	id oldValue = _point;
+-(void)setPoint:(HIAnnotationMockPointOptionsObject *)point {
+	HIAnnotationMockPointOptionsObject *oldValue = _point;
 	_point = point;
-	[self updateNSObject:oldValue newValue:point propertyName:@"point"];
+	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {

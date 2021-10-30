@@ -292,8 +292,8 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
+-(void)setPoint:(HIAnnotationMockPointOptionsObject *)point {
+	HIAnnotationMockPointOptionsObject *oldValue = _point;
 	_point = point;
 	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }

@@ -1,7 +1,7 @@
 #import "HIChartsJSONSerializableSubclass.h"
-#import "HIPoints.h"
+#import "HIAnnotationMockPointOptionsObject.h"
 
-@implementation HIPoints
+@implementation HIAnnotationMockPointOptionsObject
 
 -(instancetype)init {
 	return [super init];
@@ -9,25 +9,25 @@
 
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
-	HIPoints *copyPoints = [[HIPoints allocWithZone: zone] init];
-	copyPoints.y = [self.y copyWithZone: zone];
-	copyPoints.x = [self.x copyWithZone: zone];
-	copyPoints.xAxis = [self.xAxis copyWithZone: zone];
-	copyPoints.yAxis = [self.yAxis copyWithZone: zone];
-	return copyPoints;
+	HIAnnotationMockPointOptionsObject *copyAnnotationMockPointOptionsObject = [[HIAnnotationMockPointOptionsObject allocWithZone: zone] init];
+	copyAnnotationMockPointOptionsObject.x = [self.x copyWithZone: zone];
+	copyAnnotationMockPointOptionsObject.xAxis = [self.xAxis copyWithZone: zone];
+	copyAnnotationMockPointOptionsObject.y = [self.y copyWithZone: zone];
+	copyAnnotationMockPointOptionsObject.yAxis = [self.yAxis copyWithZone: zone];
+	return copyAnnotationMockPointOptionsObject;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.y) {
-		params[@"y"] = self.y;
-	}
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
 	if (self.xAxis) {
 		params[@"xAxis"] = self.xAxis;
+	}
+	if (self.y) {
+		params[@"y"] = self.y;
 	}
 	if (self.yAxis) {
 		params[@"yAxis"] = self.yAxis;
@@ -36,12 +36,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setY:(NSNumber *)y {
-	NSNumber *oldValue = _y;
-	_y = y;
-	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
-}
 
 -(void)setX:(NSNumber *)x {
 	NSNumber *oldValue = _x;
@@ -53,6 +47,12 @@
 	id oldValue = _xAxis;
 	_xAxis = xAxis;
 	[self updateNSObject:oldValue newValue:xAxis propertyName:@"xAxis"];
+}
+
+-(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
+	_y = y;
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setYAxis:(id)yAxis {

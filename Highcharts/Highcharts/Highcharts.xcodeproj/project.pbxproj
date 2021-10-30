@@ -69,7 +69,6 @@
 		CD07385F264479B900D6EF30 /* HITreemap.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736CF2644799A00D6EF30 /* HITreemap.m */; };
 		CD073860264479B900D6EF30 /* HITitle.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736D02644799A00D6EF30 /* HITitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073861264479B900D6EF30 /* HIButtonOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736D12644799B00D6EF30 /* HIButtonOptions.m */; };
-		CD073862264479B900D6EF30 /* HIPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736D22644799B00D6EF30 /* HIPoints.m */; };
 		CD073863264479B900D6EF30 /* HIResetZoomButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736D32644799B00D6EF30 /* HIResetZoomButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073864264479B900D6EF30 /* HIStreamgraph.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736D42644799B00D6EF30 /* HIStreamgraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073865264479B900D6EF30 /* HIParentNodeTextPath.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736D52644799B00D6EF30 /* HIParentNodeTextPath.m */; };
@@ -100,7 +99,6 @@
 		CD07387F264479BA00D6EF30 /* HIParentNodeTextPath.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736EF2644799D00D6EF30 /* HIParentNodeTextPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073880264479BA00D6EF30 /* HIPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736F02644799D00D6EF30 /* HIPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073881264479BA00D6EF30 /* HIPatternObject.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736F12644799D00D6EF30 /* HIPatternObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD073882264479BA00D6EF30 /* HIPoints.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736F22644799D00D6EF30 /* HIPoints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073883264479BA00D6EF30 /* HIBoxplot.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736F32644799D00D6EF30 /* HIBoxplot.m */; };
 		CD073884264479BA00D6EF30 /* HIGauge.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736F42644799D00D6EF30 /* HIGauge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073885264479BA00D6EF30 /* HIHistogram.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736F52644799D00D6EF30 /* HIHistogram.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -457,6 +455,10 @@
 		CD1DF89421F9EECA005DF8A7 /* HICustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */; };
 		CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3F77092056AE4300527CBE /* HIChartContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3F770C2056AE5F00527CBE /* HIChartContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3F770B2056AE5F00527CBE /* HIChartContext.m */; };
+		CD5AF2E9272DA03E00287289 /* HIAnnotationMockPointOptionsObject.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5AF2E7272DA03E00287289 /* HIAnnotationMockPointOptionsObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD5AF2EA272DA03E00287289 /* HIAnnotationMockPointOptionsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AF2E8272DA03E00287289 /* HIAnnotationMockPointOptionsObject.m */; };
+		CD5AF2ED272DA29C00287289 /* HIEllipseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AF2EB272DA29C00287289 /* HIEllipseAnnotation.m */; };
+		CD5AF2EE272DA29C00287289 /* HIEllipseAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5AF2EC272DA29C00287289 /* HIEllipseAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD5B35961F90C469006159D7 /* HIChartsJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C10501E5C4BD8005C425F /* HIChartsJSONSerializable.m */; };
 		CD5B35971F90C46C006159D7 /* HIChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345BA00F1C39AFB9001DAB1B /* HIChartView.m */; };
 		CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E28E451CD1071C00DFE9CD /* UIColor+HIG.m */; };
@@ -547,7 +549,6 @@
 		CD0736CF2644799A00D6EF30 /* HITreemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITreemap.m; sourceTree = "<group>"; };
 		CD0736D02644799A00D6EF30 /* HITitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITitle.h; sourceTree = "<group>"; };
 		CD0736D12644799B00D6EF30 /* HIButtonOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIButtonOptions.m; sourceTree = "<group>"; };
-		CD0736D22644799B00D6EF30 /* HIPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPoints.m; sourceTree = "<group>"; };
 		CD0736D32644799B00D6EF30 /* HIResetZoomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIResetZoomButton.h; sourceTree = "<group>"; };
 		CD0736D42644799B00D6EF30 /* HIStreamgraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIStreamgraph.h; sourceTree = "<group>"; };
 		CD0736D52644799B00D6EF30 /* HIParentNodeTextPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIParentNodeTextPath.m; sourceTree = "<group>"; };
@@ -578,7 +579,6 @@
 		CD0736EF2644799D00D6EF30 /* HIParentNodeTextPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIParentNodeTextPath.h; sourceTree = "<group>"; };
 		CD0736F02644799D00D6EF30 /* HIPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPolygon.h; sourceTree = "<group>"; };
 		CD0736F12644799D00D6EF30 /* HIPatternObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPatternObject.h; sourceTree = "<group>"; };
-		CD0736F22644799D00D6EF30 /* HIPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPoints.h; sourceTree = "<group>"; };
 		CD0736F32644799D00D6EF30 /* HIBoxplot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBoxplot.m; sourceTree = "<group>"; };
 		CD0736F42644799D00D6EF30 /* HIGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIGauge.h; sourceTree = "<group>"; };
 		CD0736F52644799D00D6EF30 /* HIHistogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIHistogram.h; sourceTree = "<group>"; };
@@ -935,6 +935,10 @@
 		CD1DF89021F9EECA005DF8A7 /* HICustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HICustomFont.m; path = Private/HICustomFont.m; sourceTree = "<group>"; };
 		CD3F77092056AE4300527CBE /* HIChartContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIChartContext.h; sourceTree = "<group>"; };
 		CD3F770B2056AE5F00527CBE /* HIChartContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIChartContext.m; sourceTree = "<group>"; };
+		CD5AF2E7272DA03E00287289 /* HIAnnotationMockPointOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAnnotationMockPointOptionsObject.h; sourceTree = "<group>"; };
+		CD5AF2E8272DA03E00287289 /* HIAnnotationMockPointOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIAnnotationMockPointOptionsObject.m; sourceTree = "<group>"; };
+		CD5AF2EB272DA29C00287289 /* HIEllipseAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIEllipseAnnotation.m; sourceTree = "<group>"; };
+		CD5AF2EC272DA29C00287289 /* HIEllipseAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIEllipseAnnotation.h; sourceTree = "<group>"; };
 		CD77F94821FB4BFC005E53CB /* HIWKSyncedWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIWKSyncedWebView.h; path = Private/HIWKSyncedWebView.h; sourceTree = "<group>"; };
 		CD77F94921FB4BFD005E53CB /* HIWKSyncedWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIWKSyncedWebView.m; path = Private/HIWKSyncedWebView.m; sourceTree = "<group>"; };
 		CD91B2F02062741000BCEE37 /* HIGDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIGDependency.m; path = Private/HIGDependency.m; sourceTree = "<group>"; };
@@ -986,6 +990,10 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				CD5AF2EC272DA29C00287289 /* HIEllipseAnnotation.h */,
+				CD5AF2EB272DA29C00287289 /* HIEllipseAnnotation.m */,
+				CD5AF2E7272DA03E00287289 /* HIAnnotationMockPointOptionsObject.h */,
+				CD5AF2E8272DA03E00287289 /* HIAnnotationMockPointOptionsObject.m */,
 				CD073A22264486F400D6EF30 /* HIAnimationOptionsObject.h */,
 				CD073A282644879700D6EF30 /* HIAnimationOptionsObject.m */,
 				CD073A0E2644858800D6EF30 /* HIReverseArrow.h */,
@@ -1258,8 +1266,6 @@
 				CD0736CC2644799A00D6EF30 /* HIPlotOptions.m */,
 				CD07375C264479A500D6EF30 /* HIPoint.h */,
 				CD0737AB264479AB00D6EF30 /* HIPoint.m */,
-				CD0736F22644799D00D6EF30 /* HIPoints.h */,
-				CD0736D22644799B00D6EF30 /* HIPoints.m */,
 				CD0736F02644799D00D6EF30 /* HIPolygon.h */,
 				CD073770264479A700D6EF30 /* HIPolygon.m */,
 				CD0736F82644799E00D6EF30 /* HIPopup.h */,
@@ -1649,7 +1655,6 @@
 				CD073891264479BA00D6EF30 /* HIFilter.h in Headers */,
 				CD073936264479BA00D6EF30 /* HICrosshair.h in Headers */,
 				CD0738EC264479BA00D6EF30 /* HIPoint.h in Headers */,
-				CD073882264479BA00D6EF30 /* HIPoints.h in Headers */,
 				CD07399F264479BA00D6EF30 /* HIFrame.h in Headers */,
 				CD0738F2264479BA00D6EF30 /* HITraverseUpButton.h in Headers */,
 				CD07392C264479BA00D6EF30 /* HIBullet.h in Headers */,
@@ -1661,6 +1666,7 @@
 				CD0739A4264479BA00D6EF30 /* HIControlPointOptions.h in Headers */,
 				CD07386B264479B900D6EF30 /* HIResponsive.h in Headers */,
 				CD073895264479BA00D6EF30 /* HIVariablepie.h in Headers */,
+				CD5AF2E9272DA03E00287289 /* HIAnnotationMockPointOptionsObject.h in Headers */,
 				CD0738B5264479BA00D6EF30 /* HIColorAxis.h in Headers */,
 				CD0738DD264479BA00D6EF30 /* HIDataClasses.h in Headers */,
 				CD073867264479B900D6EF30 /* HISubtitle.h in Headers */,
@@ -1697,6 +1703,7 @@
 				CD0738DF264479BA00D6EF30 /* HIGeoJSON.h in Headers */,
 				CD0738BD264479BA00D6EF30 /* HIFunnel.h in Headers */,
 				CD0739DB264479BA00D6EF30 /* HIOptions.h in Headers */,
+				CD5AF2EE272DA29C00287289 /* HIEllipseAnnotation.h in Headers */,
 				CD073972264479BA00D6EF30 /* HIChartTypes.h in Headers */,
 				CD07392D264479BA00D6EF30 /* HILabelOptions.h in Headers */,
 				CD07389B264479BA00D6EF30 /* HIBoost.h in Headers */,
@@ -1952,7 +1959,6 @@
 				CD073879264479BA00D6EF30 /* HISolidgauge.m in Sources */,
 				CD0739CC264479BA00D6EF30 /* HIYear.m in Sources */,
 				CD073922264479BA00D6EF30 /* HIMinute.m in Sources */,
-				CD073862264479B900D6EF30 /* HIPoints.m in Sources */,
 				CD0738C1264479BA00D6EF30 /* HITheme.m in Sources */,
 				CD0739C5264479BA00D6EF30 /* HISVGAttributes.m in Sources */,
 				CD0738CB264479BA00D6EF30 /* HITimeline.m in Sources */,
@@ -2019,6 +2025,7 @@
 				CD073949264479BA00D6EF30 /* HIArea.m in Sources */,
 				CD0739DA264479BA00D6EF30 /* HIBindings.m in Sources */,
 				CD073914264479BA00D6EF30 /* HIPyramid3d.m in Sources */,
+				CD5AF2EA272DA03E00287289 /* HIAnnotationMockPointOptionsObject.m in Sources */,
 				CD073930264479BA00D6EF30 /* HIControlPointOptions.m in Sources */,
 				CD0738FE264479BA00D6EF30 /* HIFocusBorder.m in Sources */,
 				CD07391F264479BA00D6EF30 /* HIAlignObject.m in Sources */,
@@ -2037,6 +2044,7 @@
 				CD0738BF264479BA00D6EF30 /* HIDebug.m in Sources */,
 				CD0739AA264479BA00D6EF30 /* HIPie.m in Sources */,
 				CD5B35991F90C473006159D7 /* UIColor+HIG.m in Sources */,
+				CD5AF2ED272DA29C00287289 /* HIEllipseAnnotation.m in Sources */,
 				CD5B359A1F90C478006159D7 /* UIImage+HIG.m in Sources */,
 				CD073982264479BA00D6EF30 /* HIDataSorting.m in Sources */,
 				CD0738F4264479BA00D6EF30 /* HIOrganization.m in Sources */,
