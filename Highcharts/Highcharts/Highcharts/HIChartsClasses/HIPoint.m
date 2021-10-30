@@ -10,18 +10,14 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIPoint *copyPoint = [[HIPoint allocWithZone: zone] init];
-	copyPoint.events = [self.events copyWithZone: zone];
-	copyPoint.y = [self.y copyWithZone: zone];
-	copyPoint.x = [self.x copyWithZone: zone];
-	copyPoint.xAxis = [self.xAxis copyWithZone: zone];
-	copyPoint.yAxis = [self.yAxis copyWithZone: zone];
+	copyPoint.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
 	copyPoint.valueDescriptionFormat = [self.valueDescriptionFormat copyWithZone: zone];
 	copyPoint.valueSuffix = [self.valueSuffix copyWithZone: zone];
 	copyPoint.dateFormat = [self.dateFormat copyWithZone: zone];
 	copyPoint.dateFormatter = [self.dateFormatter copyWithZone: zone];
 	copyPoint.valuePrefix = [self.valuePrefix copyWithZone: zone];
-	copyPoint.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
 	copyPoint.valueDecimals = [self.valueDecimals copyWithZone: zone];
+	copyPoint.events = [self.events copyWithZone: zone];
 	return copyPoint;
 }
 
@@ -29,20 +25,8 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	params[@"_wrapperID"] = self.uuid;
-	if (self.events) {
-		params[@"events"] = [self.events getParams];
-	}
-	if (self.y) {
-		params[@"y"] = self.y;
-	}
-	if (self.x) {
-		params[@"x"] = self.x;
-	}
-	if (self.xAxis) {
-		params[@"xAxis"] = self.xAxis;
-	}
-	if (self.yAxis) {
-		params[@"yAxis"] = self.yAxis;
+	if (self.descriptionFormatter) {
+		params[@"descriptionFormatter"] = [self.descriptionFormatter getFunction];
 	}
 	if (self.valueDescriptionFormat) {
 		params[@"valueDescriptionFormat"] = self.valueDescriptionFormat;
@@ -59,45 +43,21 @@
 	if (self.valuePrefix) {
 		params[@"valuePrefix"] = self.valuePrefix;
 	}
-	if (self.descriptionFormatter) {
-		params[@"descriptionFormatter"] = [self.descriptionFormatter getFunction];
-	}
 	if (self.valueDecimals) {
 		params[@"valueDecimals"] = self.valueDecimals;
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
 
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
-	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
-}
-
--(void)setY:(NSNumber *)y {
-	NSNumber *oldValue = _y;
-	_y = y;
-	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
-}
-
--(void)setX:(NSNumber *)x {
-	NSNumber *oldValue = _x;
-	_x = x;
-	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
-}
-
--(void)setXAxis:(id)xAxis {
-	id oldValue = _xAxis;
-	_xAxis = xAxis;
-	[self updateNSObject:oldValue newValue:xAxis propertyName:@"xAxis"];
-}
-
--(void)setYAxis:(id)yAxis {
-	id oldValue = _yAxis;
-	_yAxis = yAxis;
-	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
+-(void)setDescriptionFormatter:(HIFunction *)descriptionFormatter {
+	HIFunction *oldValue = _descriptionFormatter;
+	_descriptionFormatter = descriptionFormatter;
+	[self updateHIObject:oldValue newValue:descriptionFormatter propertyName:@"descriptionFormatter"];
 }
 
 -(void)setValueDescriptionFormat:(NSString *)valueDescriptionFormat {
@@ -130,16 +90,16 @@
 	[self updateNSObject:oldValue newValue:valuePrefix propertyName:@"valuePrefix"];
 }
 
--(void)setDescriptionFormatter:(HIFunction *)descriptionFormatter {
-	HIFunction *oldValue = _descriptionFormatter;
-	_descriptionFormatter = descriptionFormatter;
-	[self updateHIObject:oldValue newValue:descriptionFormatter propertyName:@"descriptionFormatter"];
-}
-
 -(void)setValueDecimals:(NSNumber *)valueDecimals {
 	NSNumber *oldValue = _valueDecimals;
 	_valueDecimals = valueDecimals;
 	[self updateNSObject:oldValue newValue:valueDecimals propertyName:@"valueDecimals"];
+}
+
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 - (void)cancelSonify {

@@ -17,10 +17,13 @@
 	copyShapes.point = [self.point copyWithZone: zone];
 	copyShapes.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyShapes.strokeWidth = [self.strokeWidth copyWithZone: zone];
+	copyShapes.yAxis = [self.yAxis copyWithZone: zone];
+	copyShapes.ry = [self.ry copyWithZone: zone];
 	copyShapes.height = [self.height copyWithZone: zone];
 	copyShapes.width = [self.width copyWithZone: zone];
 	copyShapes.stroke = [self.stroke copyWithZone: zone];
 	copyShapes.r = [self.r copyWithZone: zone];
+	copyShapes.xAxis = [self.xAxis copyWithZone: zone];
 	copyShapes.snap = [self.snap copyWithZone: zone];
 	copyShapes.type = [self.type copyWithZone: zone];
 	copyShapes.fill = [self.fill copyWithZone: zone];
@@ -52,13 +55,19 @@
 		params[@"markerStart"] = self.markerStart;
 	}
 	if (self.point) {
-		params[@"point"] = [self.point getParams];
+		params[@"point"] = self.point;
 	}
 	if (self.dashStyle) {
 		params[@"dashStyle"] = self.dashStyle;
 	}
 	if (self.strokeWidth) {
 		params[@"strokeWidth"] = self.strokeWidth;
+	}
+	if (self.yAxis) {
+		params[@"yAxis"] = self.yAxis;
+	}
+	if (self.ry) {
+		params[@"ry"] = self.ry;
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
@@ -71,6 +80,9 @@
 	}
 	if (self.r) {
 		params[@"r"] = self.r;
+	}
+	if (self.xAxis) {
+		params[@"xAxis"] = self.xAxis;
 	}
 	if (self.snap) {
 		params[@"snap"] = self.snap;
@@ -92,8 +104,8 @@
 	[self updateNSObject:oldValue newValue:src propertyName:@"src"];
 }
 
--(void)setPoints:(NSArray <HIPoints *> *)points {
-	NSArray <HIPoints *> *oldValue = _points;
+-(void)setPoints:(NSArray<NSString *> *)points {
+	NSArray<NSString *> *oldValue = _points;
 	_points = points;
 	[self updateArrayObject:oldValue newValue:points propertyName:@"points"];
 }
@@ -110,10 +122,10 @@
 	[self updateNSObject:oldValue newValue:markerStart propertyName:@"markerStart"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
+-(void)setPoint:(id)point {
+	id oldValue = _point;
 	_point = point;
-	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+	[self updateNSObject:oldValue newValue:point propertyName:@"point"];
 }
 
 -(void)setDashStyle:(NSString *)dashStyle {
@@ -126,6 +138,18 @@
 	NSNumber *oldValue = _strokeWidth;
 	_strokeWidth = strokeWidth;
 	[self updateNSObject:oldValue newValue:strokeWidth propertyName:@"strokeWidth"];
+}
+
+-(void)setYAxis:(NSNumber *)yAxis {
+	NSNumber *oldValue = _yAxis;
+	_yAxis = yAxis;
+	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
+}
+
+-(void)setRy:(NSNumber *)ry {
+	NSNumber *oldValue = _ry;
+	_ry = ry;
+	[self updateNSObject:oldValue newValue:ry propertyName:@"ry"];
 }
 
 -(void)setHeight:(NSNumber *)height {
@@ -150,6 +174,12 @@
 	NSNumber *oldValue = _r;
 	_r = r;
 	[self updateNSObject:oldValue newValue:r propertyName:@"r"];
+}
+
+-(void)setXAxis:(NSNumber *)xAxis {
+	NSNumber *oldValue = _xAxis;
+	_xAxis = xAxis;
+	[self updateNSObject:oldValue newValue:xAxis propertyName:@"xAxis"];
 }
 
 -(void)setSnap:(NSNumber *)snap {

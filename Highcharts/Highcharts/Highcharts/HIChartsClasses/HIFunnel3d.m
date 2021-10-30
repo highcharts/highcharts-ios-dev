@@ -47,7 +47,6 @@
 	copyFunnel3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyFunnel3d.grouping = [self.grouping copyWithZone: zone];
 	copyFunnel3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyFunnel3d.selected = [self.selected copyWithZone: zone];
 	copyFunnel3d.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyFunnel3d.clip = [self.clip copyWithZone: zone];
 	copyFunnel3d.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -71,9 +70,10 @@
 	copyFunnel3d.events = [self.events copyWithZone: zone];
 	copyFunnel3d.opacity = [self.opacity copyWithZone: zone];
 	copyFunnel3d.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyFunnel3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyFunnel3d.definition = [self.definition copyWithZone: zone];
 	copyFunnel3d.keys = [self.keys copyWithZone: zone];
-	copyFunnel3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyFunnel3d.selected = [self.selected copyWithZone: zone];
 	copyFunnel3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyFunnel3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

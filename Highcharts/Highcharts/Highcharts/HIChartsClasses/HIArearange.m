@@ -30,7 +30,6 @@
 	copyArearange.lineColor = [self.lineColor copyWithZone: zone];
 	copyArearange.linecap = [self.linecap copyWithZone: zone];
 	copyArearange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyArearange.selected = [self.selected copyWithZone: zone];
 	copyArearange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyArearange.clip = [self.clip copyWithZone: zone];
 	copyArearange.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -57,9 +56,10 @@
 	copyArearange.events = [self.events copyWithZone: zone];
 	copyArearange.opacity = [self.opacity copyWithZone: zone];
 	copyArearange.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyArearange.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyArearange.definition = [self.definition copyWithZone: zone];
 	copyArearange.keys = [self.keys copyWithZone: zone];
-	copyArearange.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyArearange.selected = [self.selected copyWithZone: zone];
 	copyArearange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyArearange.accessibility = [self.accessibility copyWithZone: zone];
 	copyArearange.step = [self.step copyWithZone: zone];

@@ -34,7 +34,6 @@
 	copyVenn.cluster = [self.cluster copyWithZone: zone];
 	copyVenn.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVenn.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyVenn.selected = [self.selected copyWithZone: zone];
 	copyVenn.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVenn.color = [self.color copyWithZone: zone];
 	copyVenn.colorKey = [self.colorKey copyWithZone: zone];
@@ -49,9 +48,10 @@
 	copyVenn.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVenn.events = [self.events copyWithZone: zone];
 	copyVenn.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyVenn.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyVenn.definition = [self.definition copyWithZone: zone];
 	copyVenn.keys = [self.keys copyWithZone: zone];
-	copyVenn.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyVenn.selected = [self.selected copyWithZone: zone];
 	copyVenn.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVenn.accessibility = [self.accessibility copyWithZone: zone];
 	copyVenn.step = [self.step copyWithZone: zone];

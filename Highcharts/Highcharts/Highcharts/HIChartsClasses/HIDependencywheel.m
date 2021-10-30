@@ -45,7 +45,6 @@
 	copyDependencywheel.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyDependencywheel.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyDependencywheel.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyDependencywheel.selected = [self.selected copyWithZone: zone];
 	copyDependencywheel.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyDependencywheel.clip = [self.clip copyWithZone: zone];
 	copyDependencywheel.color = [self.color copyWithZone: zone];
@@ -61,9 +60,10 @@
 	copyDependencywheel.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyDependencywheel.events = [self.events copyWithZone: zone];
 	copyDependencywheel.opacity = [self.opacity copyWithZone: zone];
+	copyDependencywheel.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyDependencywheel.definition = [self.definition copyWithZone: zone];
 	copyDependencywheel.keys = [self.keys copyWithZone: zone];
-	copyDependencywheel.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyDependencywheel.selected = [self.selected copyWithZone: zone];
 	copyDependencywheel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyDependencywheel.accessibility = [self.accessibility copyWithZone: zone];
 	copyDependencywheel.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

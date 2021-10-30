@@ -35,7 +35,6 @@
 	copyTimeline.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyTimeline.linecap = [self.linecap copyWithZone: zone];
 	copyTimeline.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyTimeline.selected = [self.selected copyWithZone: zone];
 	copyTimeline.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyTimeline.clip = [self.clip copyWithZone: zone];
 	copyTimeline.color = [self.color copyWithZone: zone];
@@ -53,6 +52,7 @@
 	copyTimeline.opacity = [self.opacity copyWithZone: zone];
 	copyTimeline.definition = [self.definition copyWithZone: zone];
 	copyTimeline.keys = [self.keys copyWithZone: zone];
+	copyTimeline.selected = [self.selected copyWithZone: zone];
 	copyTimeline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTimeline.accessibility = [self.accessibility copyWithZone: zone];
 	copyTimeline.shadow = [self.shadow copyWithZone: zone];

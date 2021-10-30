@@ -33,7 +33,6 @@
 	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
 	copyExporting.error = [self.error copyWithZone: zone];
 	copyExporting.libURL = [self.libURL copyWithZone: zone];
-	copyExporting.exportRegionLabel = [self.exportRegionLabel copyWithZone: zone];
 	copyExporting.menuButtonLabel = [self.menuButtonLabel copyWithZone: zone];
 	copyExporting.chartMenuLabel = [self.chartMenuLabel copyWithZone: zone];
 	return copyExporting;
@@ -110,9 +109,6 @@
 	}
 	if (self.libURL) {
 		params[@"libURL"] = self.libURL;
-	}
-	if (self.exportRegionLabel) {
-		params[@"exportRegionLabel"] = self.exportRegionLabel;
 	}
 	if (self.menuButtonLabel) {
 		params[@"menuButtonLabel"] = self.menuButtonLabel;
@@ -261,12 +257,6 @@
 	NSString *oldValue = _libURL;
 	_libURL = libURL;
 	[self updateNSObject:oldValue newValue:libURL propertyName:@"libURL"];
-}
-
--(void)setExportRegionLabel:(NSString *)exportRegionLabel {
-	NSString *oldValue = _exportRegionLabel;
-	_exportRegionLabel = exportRegionLabel;
-	[self updateNSObject:oldValue newValue:exportRegionLabel propertyName:@"exportRegionLabel"];
 }
 
 -(void)setMenuButtonLabel:(NSString *)menuButtonLabel {

@@ -17,7 +17,6 @@
 	HILine *copyLine = [[HILine allocWithZone: zone] init];
 	copyLine.linecap = [self.linecap copyWithZone: zone];
 	copyLine.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyLine.selected = [self.selected copyWithZone: zone];
 	copyLine.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyLine.clip = [self.clip copyWithZone: zone];
 	copyLine.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -50,9 +49,10 @@
 	copyLine.events = [self.events copyWithZone: zone];
 	copyLine.opacity = [self.opacity copyWithZone: zone];
 	copyLine.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyLine.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyLine.definition = [self.definition copyWithZone: zone];
 	copyLine.keys = [self.keys copyWithZone: zone];
-	copyLine.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyLine.selected = [self.selected copyWithZone: zone];
 	copyLine.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyLine.accessibility = [self.accessibility copyWithZone: zone];
 	copyLine.step = [self.step copyWithZone: zone];

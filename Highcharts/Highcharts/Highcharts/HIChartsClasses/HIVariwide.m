@@ -35,7 +35,6 @@
 	copyVariwide.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVariwide.grouping = [self.grouping copyWithZone: zone];
 	copyVariwide.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyVariwide.selected = [self.selected copyWithZone: zone];
 	copyVariwide.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVariwide.clip = [self.clip copyWithZone: zone];
 	copyVariwide.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -61,9 +60,10 @@
 	copyVariwide.events = [self.events copyWithZone: zone];
 	copyVariwide.opacity = [self.opacity copyWithZone: zone];
 	copyVariwide.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyVariwide.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyVariwide.definition = [self.definition copyWithZone: zone];
 	copyVariwide.keys = [self.keys copyWithZone: zone];
-	copyVariwide.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyVariwide.selected = [self.selected copyWithZone: zone];
 	copyVariwide.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVariwide.accessibility = [self.accessibility copyWithZone: zone];
 	copyVariwide.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

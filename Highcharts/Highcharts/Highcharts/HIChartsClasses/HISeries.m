@@ -34,7 +34,6 @@
 	copySeries.summary = [self.summary copyWithZone: zone];
 	copySeries.nullPointValue = [self.nullPointValue copyWithZone: zone];
 	copySeries.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copySeries.selected = [self.selected copyWithZone: zone];
 	copySeries.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySeries.clip = [self.clip copyWithZone: zone];
 	copySeries.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -67,8 +66,9 @@
 	copySeries.events = [self.events copyWithZone: zone];
 	copySeries.opacity = [self.opacity copyWithZone: zone];
 	copySeries.animationLimit = [self.animationLimit copyWithZone: zone];
-	copySeries.keys = [self.keys copyWithZone: zone];
 	copySeries.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copySeries.keys = [self.keys copyWithZone: zone];
+	copySeries.selected = [self.selected copyWithZone: zone];
 	copySeries.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySeries.accessibility = [self.accessibility copyWithZone: zone];
 	copySeries.step = [self.step copyWithZone: zone];
@@ -167,9 +167,6 @@
 	if (self.includeInDataExport) {
 		params[@"includeInDataExport"] = self.includeInDataExport;
 	}
-	if (self.selected) {
-		params[@"selected"] = self.selected;
-	}
 	if (self.colorIndex) {
 		params[@"colorIndex"] = self.colorIndex;
 	}
@@ -266,6 +263,9 @@
 	if (self.animationLimit) {
 		params[@"animationLimit"] = self.animationLimit;
 	}
+	if (self.turboThreshold) {
+		params[@"turboThreshold"] = self.turboThreshold;
+	}
 	if (self.keys) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.keys) {
@@ -278,8 +278,8 @@
 		}
 		params[@"keys"] = array;
 	}
-	if (self.turboThreshold) {
-		params[@"turboThreshold"] = self.turboThreshold;
+	if (self.selected) {
+		params[@"selected"] = self.selected;
 	}
 	if (self.skipKeyboardNavigation) {
 		params[@"skipKeyboardNavigation"] = self.skipKeyboardNavigation;
@@ -496,12 +496,6 @@
 	[self updateNSObject:oldValue newValue:includeInDataExport propertyName:@"includeInDataExport"];
 }
 
--(void)setSelected:(NSNumber *)selected {
-	NSNumber *oldValue = _selected;
-	_selected = selected;
-	[self updateNSObject:oldValue newValue:selected propertyName:@"selected"];
-}
-
 -(void)setColorIndex:(NSNumber *)colorIndex {
 	NSNumber *oldValue = _colorIndex;
 	_colorIndex = colorIndex;
@@ -694,16 +688,22 @@
 	[self updateNSObject:oldValue newValue:animationLimit propertyName:@"animationLimit"];
 }
 
+-(void)setTurboThreshold:(NSNumber *)turboThreshold {
+	NSNumber *oldValue = _turboThreshold;
+	_turboThreshold = turboThreshold;
+	[self updateNSObject:oldValue newValue:turboThreshold propertyName:@"turboThreshold"];
+}
+
 -(void)setKeys:(NSArray<NSString *> *)keys {
 	NSArray<NSString *> *oldValue = _keys;
 	_keys = keys;
 	[self updateArrayObject:oldValue newValue:keys propertyName:@"keys"];
 }
 
--(void)setTurboThreshold:(NSNumber *)turboThreshold {
-	NSNumber *oldValue = _turboThreshold;
-	_turboThreshold = turboThreshold;
-	[self updateNSObject:oldValue newValue:turboThreshold propertyName:@"turboThreshold"];
+-(void)setSelected:(NSNumber *)selected {
+	NSNumber *oldValue = _selected;
+	_selected = selected;
+	[self updateNSObject:oldValue newValue:selected propertyName:@"selected"];
 }
 
 -(void)setSkipKeyboardNavigation:(NSNumber *)skipKeyboardNavigation {

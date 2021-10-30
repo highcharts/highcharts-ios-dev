@@ -23,7 +23,6 @@
 	copyPolygon.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPolygon.linecap = [self.linecap copyWithZone: zone];
 	copyPolygon.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPolygon.selected = [self.selected copyWithZone: zone];
 	copyPolygon.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPolygon.clip = [self.clip copyWithZone: zone];
 	copyPolygon.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -48,9 +47,10 @@
 	copyPolygon.events = [self.events copyWithZone: zone];
 	copyPolygon.opacity = [self.opacity copyWithZone: zone];
 	copyPolygon.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyPolygon.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPolygon.definition = [self.definition copyWithZone: zone];
 	copyPolygon.keys = [self.keys copyWithZone: zone];
-	copyPolygon.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyPolygon.selected = [self.selected copyWithZone: zone];
 	copyPolygon.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPolygon.accessibility = [self.accessibility copyWithZone: zone];
 	copyPolygon.step = [self.step copyWithZone: zone];

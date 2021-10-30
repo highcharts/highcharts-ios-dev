@@ -48,7 +48,6 @@
 	copyBubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBubble.linecap = [self.linecap copyWithZone: zone];
 	copyBubble.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyBubble.selected = [self.selected copyWithZone: zone];
 	copyBubble.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBubble.clip = [self.clip copyWithZone: zone];
 	copyBubble.color = [self.color copyWithZone: zone];
@@ -73,6 +72,7 @@
 	copyBubble.opacity = [self.opacity copyWithZone: zone];
 	copyBubble.definition = [self.definition copyWithZone: zone];
 	copyBubble.keys = [self.keys copyWithZone: zone];
+	copyBubble.selected = [self.selected copyWithZone: zone];
 	copyBubble.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyBubble.step = [self.step copyWithZone: zone];

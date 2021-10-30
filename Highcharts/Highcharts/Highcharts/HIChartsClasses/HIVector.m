@@ -24,7 +24,6 @@
 	copyVector.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyVector.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVector.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyVector.selected = [self.selected copyWithZone: zone];
 	copyVector.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVector.clip = [self.clip copyWithZone: zone];
 	copyVector.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -46,9 +45,10 @@
 	copyVector.events = [self.events copyWithZone: zone];
 	copyVector.opacity = [self.opacity copyWithZone: zone];
 	copyVector.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyVector.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyVector.definition = [self.definition copyWithZone: zone];
 	copyVector.keys = [self.keys copyWithZone: zone];
-	copyVector.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyVector.selected = [self.selected copyWithZone: zone];
 	copyVector.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVector.accessibility = [self.accessibility copyWithZone: zone];
 	copyVector.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
