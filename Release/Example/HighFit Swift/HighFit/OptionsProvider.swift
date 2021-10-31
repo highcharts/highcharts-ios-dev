@@ -49,7 +49,7 @@ class OptionsProvider {
             
             let navigation = HINavigation()
             navigation.buttonOptions = HIButtonOptions()
-            navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
+            // navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
             navigation.buttonOptions.theme = HITheme()
             navigation.buttonOptions.theme.fill = HIColor(rgba: 0, green: 0, blue: 0, alpha: 0.0)
             hioptions.navigation = navigation
@@ -143,7 +143,7 @@ class OptionsProvider {
             
             let navigation = HINavigation()
             navigation.buttonOptions = HIButtonOptions()
-            navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
+            // navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
             navigation.buttonOptions.theme = HITheme()
             navigation.buttonOptions.theme.fill = HIColor(rgba: 0, green: 0, blue: 0, alpha: 0.0)
             hioptions.navigation = navigation
@@ -237,7 +237,7 @@ class OptionsProvider {
             
             let navigation = HINavigation()
             navigation.buttonOptions = HIButtonOptions()
-            navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
+            // navigation.buttonOptions.symbolStroke = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.4)
             navigation.buttonOptions.theme = HITheme()
             navigation.buttonOptions.theme.fill = HIColor(rgba: 0, green: 0, blue: 0, alpha: 0.0)
             hioptions.navigation = navigation
