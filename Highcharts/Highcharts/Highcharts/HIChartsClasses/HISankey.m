@@ -32,7 +32,6 @@
 	copySankey.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copySankey.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySankey.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copySankey.selected = [self.selected copyWithZone: zone];
 	copySankey.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySankey.clip = [self.clip copyWithZone: zone];
 	copySankey.color = [self.color copyWithZone: zone];
@@ -48,9 +47,10 @@
 	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySankey.events = [self.events copyWithZone: zone];
 	copySankey.opacity = [self.opacity copyWithZone: zone];
+	copySankey.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySankey.definition = [self.definition copyWithZone: zone];
 	copySankey.keys = [self.keys copyWithZone: zone];
-	copySankey.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copySankey.selected = [self.selected copyWithZone: zone];
 	copySankey.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySankey.accessibility = [self.accessibility copyWithZone: zone];
 	copySankey.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

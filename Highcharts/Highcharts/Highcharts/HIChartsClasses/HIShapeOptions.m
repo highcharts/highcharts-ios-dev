@@ -13,10 +13,13 @@
 	copyShapeOptions.src = [self.src copyWithZone: zone];
 	copyShapeOptions.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyShapeOptions.strokeWidth = [self.strokeWidth copyWithZone: zone];
+	copyShapeOptions.yAxis = [self.yAxis copyWithZone: zone];
+	copyShapeOptions.ry = [self.ry copyWithZone: zone];
 	copyShapeOptions.height = [self.height copyWithZone: zone];
 	copyShapeOptions.width = [self.width copyWithZone: zone];
 	copyShapeOptions.stroke = [self.stroke copyWithZone: zone];
 	copyShapeOptions.r = [self.r copyWithZone: zone];
+	copyShapeOptions.xAxis = [self.xAxis copyWithZone: zone];
 	copyShapeOptions.snap = [self.snap copyWithZone: zone];
 	copyShapeOptions.type = [self.type copyWithZone: zone];
 	copyShapeOptions.fill = [self.fill copyWithZone: zone];
@@ -35,6 +38,12 @@
 	if (self.strokeWidth) {
 		params[@"strokeWidth"] = self.strokeWidth;
 	}
+	if (self.yAxis) {
+		params[@"yAxis"] = self.yAxis;
+	}
+	if (self.ry) {
+		params[@"ry"] = self.ry;
+	}
 	if (self.height) {
 		params[@"height"] = self.height;
 	}
@@ -46,6 +55,9 @@
 	}
 	if (self.r) {
 		params[@"r"] = self.r;
+	}
+	if (self.xAxis) {
+		params[@"xAxis"] = self.xAxis;
 	}
 	if (self.snap) {
 		params[@"snap"] = self.snap;
@@ -79,6 +91,18 @@
 	[self updateNSObject:oldValue newValue:strokeWidth propertyName:@"strokeWidth"];
 }
 
+-(void)setYAxis:(NSNumber *)yAxis {
+	NSNumber *oldValue = _yAxis;
+	_yAxis = yAxis;
+	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
+}
+
+-(void)setRy:(NSNumber *)ry {
+	NSNumber *oldValue = _ry;
+	_ry = ry;
+	[self updateNSObject:oldValue newValue:ry propertyName:@"ry"];
+}
+
 -(void)setHeight:(NSNumber *)height {
 	NSNumber *oldValue = _height;
 	_height = height;
@@ -101,6 +125,12 @@
 	NSNumber *oldValue = _r;
 	_r = r;
 	[self updateNSObject:oldValue newValue:r propertyName:@"r"];
+}
+
+-(void)setXAxis:(NSNumber *)xAxis {
+	NSNumber *oldValue = _xAxis;
+	_xAxis = xAxis;
+	[self updateNSObject:oldValue newValue:xAxis propertyName:@"xAxis"];
 }
 
 -(void)setSnap:(NSNumber *)snap {

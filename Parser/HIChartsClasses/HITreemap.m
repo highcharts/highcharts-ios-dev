@@ -52,7 +52,6 @@
 	copyTreemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTreemap.linecap = [self.linecap copyWithZone: zone];
 	copyTreemap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyTreemap.selected = [self.selected copyWithZone: zone];
 	copyTreemap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyTreemap.clip = [self.clip copyWithZone: zone];
 	copyTreemap.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -73,9 +72,10 @@
 	copyTreemap.threshold = [self.threshold copyWithZone: zone];
 	copyTreemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTreemap.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyTreemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyTreemap.definition = [self.definition copyWithZone: zone];
 	copyTreemap.keys = [self.keys copyWithZone: zone];
-	copyTreemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyTreemap.selected = [self.selected copyWithZone: zone];
 	copyTreemap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTreemap.accessibility = [self.accessibility copyWithZone: zone];
 	copyTreemap.step = [self.step copyWithZone: zone];

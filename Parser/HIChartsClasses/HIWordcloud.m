@@ -36,7 +36,6 @@
 	copyWordcloud.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyWordcloud.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWordcloud.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyWordcloud.selected = [self.selected copyWithZone: zone];
 	copyWordcloud.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyWordcloud.color = [self.color copyWithZone: zone];
 	copyWordcloud.colorKey = [self.colorKey copyWithZone: zone];
@@ -51,9 +50,10 @@
 	copyWordcloud.events = [self.events copyWithZone: zone];
 	copyWordcloud.opacity = [self.opacity copyWithZone: zone];
 	copyWordcloud.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyWordcloud.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyWordcloud.definition = [self.definition copyWithZone: zone];
 	copyWordcloud.keys = [self.keys copyWithZone: zone];
-	copyWordcloud.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyWordcloud.selected = [self.selected copyWithZone: zone];
 	copyWordcloud.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWordcloud.accessibility = [self.accessibility copyWithZone: zone];
 	copyWordcloud.allowPointSelect = [self.allowPointSelect copyWithZone: zone];

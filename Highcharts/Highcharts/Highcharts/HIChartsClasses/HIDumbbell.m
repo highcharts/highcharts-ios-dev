@@ -33,7 +33,6 @@
 	copyDumbbell.lineColor = [self.lineColor copyWithZone: zone];
 	copyDumbbell.linecap = [self.linecap copyWithZone: zone];
 	copyDumbbell.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyDumbbell.selected = [self.selected copyWithZone: zone];
 	copyDumbbell.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyDumbbell.clip = [self.clip copyWithZone: zone];
 	copyDumbbell.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -59,9 +58,10 @@
 	copyDumbbell.events = [self.events copyWithZone: zone];
 	copyDumbbell.opacity = [self.opacity copyWithZone: zone];
 	copyDumbbell.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyDumbbell.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyDumbbell.definition = [self.definition copyWithZone: zone];
 	copyDumbbell.keys = [self.keys copyWithZone: zone];
-	copyDumbbell.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyDumbbell.selected = [self.selected copyWithZone: zone];
 	copyDumbbell.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyDumbbell.accessibility = [self.accessibility copyWithZone: zone];
 	copyDumbbell.step = [self.step copyWithZone: zone];

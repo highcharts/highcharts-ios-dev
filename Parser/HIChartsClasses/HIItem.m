@@ -39,7 +39,6 @@
 	copyItem.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyItem.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyItem.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyItem.selected = [self.selected copyWithZone: zone];
 	copyItem.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyItem.colorKey = [self.colorKey copyWithZone: zone];
 	copyItem.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -52,6 +51,7 @@
 	copyItem.opacity = [self.opacity copyWithZone: zone];
 	copyItem.definition = [self.definition copyWithZone: zone];
 	copyItem.keys = [self.keys copyWithZone: zone];
+	copyItem.selected = [self.selected copyWithZone: zone];
 	copyItem.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyItem.accessibility = [self.accessibility copyWithZone: zone];
 	copyItem.allowPointSelect = [self.allowPointSelect copyWithZone: zone];

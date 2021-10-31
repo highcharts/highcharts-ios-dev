@@ -37,7 +37,6 @@
 	copyStreamgraph.threshold = [self.threshold copyWithZone: zone];
 	copyStreamgraph.linecap = [self.linecap copyWithZone: zone];
 	copyStreamgraph.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyStreamgraph.selected = [self.selected copyWithZone: zone];
 	copyStreamgraph.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyStreamgraph.clip = [self.clip copyWithZone: zone];
 	copyStreamgraph.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -65,9 +64,10 @@
 	copyStreamgraph.events = [self.events copyWithZone: zone];
 	copyStreamgraph.opacity = [self.opacity copyWithZone: zone];
 	copyStreamgraph.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyStreamgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyStreamgraph.definition = [self.definition copyWithZone: zone];
 	copyStreamgraph.keys = [self.keys copyWithZone: zone];
-	copyStreamgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyStreamgraph.selected = [self.selected copyWithZone: zone];
 	copyStreamgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyStreamgraph.accessibility = [self.accessibility copyWithZone: zone];
 	copyStreamgraph.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

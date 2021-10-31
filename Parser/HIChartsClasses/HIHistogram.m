@@ -52,7 +52,6 @@
 	copyHistogram.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyHistogram.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyHistogram.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyHistogram.selected = [self.selected copyWithZone: zone];
 	copyHistogram.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyHistogram.clip = [self.clip copyWithZone: zone];
 	copyHistogram.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -74,9 +73,10 @@
 	copyHistogram.events = [self.events copyWithZone: zone];
 	copyHistogram.opacity = [self.opacity copyWithZone: zone];
 	copyHistogram.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyHistogram.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyHistogram.definition = [self.definition copyWithZone: zone];
 	copyHistogram.keys = [self.keys copyWithZone: zone];
-	copyHistogram.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyHistogram.selected = [self.selected copyWithZone: zone];
 	copyHistogram.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyHistogram.accessibility = [self.accessibility copyWithZone: zone];
 	copyHistogram.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

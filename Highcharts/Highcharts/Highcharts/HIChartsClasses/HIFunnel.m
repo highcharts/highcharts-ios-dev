@@ -50,7 +50,6 @@
 	copyFunnel.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyFunnel.linecap = [self.linecap copyWithZone: zone];
 	copyFunnel.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyFunnel.selected = [self.selected copyWithZone: zone];
 	copyFunnel.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyFunnel.colorKey = [self.colorKey copyWithZone: zone];
 	copyFunnel.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -62,6 +61,7 @@
 	copyFunnel.opacity = [self.opacity copyWithZone: zone];
 	copyFunnel.definition = [self.definition copyWithZone: zone];
 	copyFunnel.keys = [self.keys copyWithZone: zone];
+	copyFunnel.selected = [self.selected copyWithZone: zone];
 	copyFunnel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel.accessibility = [self.accessibility copyWithZone: zone];
 	copyFunnel.shadow = [self.shadow copyWithZone: zone];

@@ -33,7 +33,6 @@
 	copyScatter3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyScatter3d.linecap = [self.linecap copyWithZone: zone];
 	copyScatter3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyScatter3d.selected = [self.selected copyWithZone: zone];
 	copyScatter3d.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyScatter3d.clip = [self.clip copyWithZone: zone];
 	copyScatter3d.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -59,9 +58,10 @@
 	copyScatter3d.events = [self.events copyWithZone: zone];
 	copyScatter3d.opacity = [self.opacity copyWithZone: zone];
 	copyScatter3d.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyScatter3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyScatter3d.definition = [self.definition copyWithZone: zone];
 	copyScatter3d.keys = [self.keys copyWithZone: zone];
-	copyScatter3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyScatter3d.selected = [self.selected copyWithZone: zone];
 	copyScatter3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyScatter3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyScatter3d.step = [self.step copyWithZone: zone];

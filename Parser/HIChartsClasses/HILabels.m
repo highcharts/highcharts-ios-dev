@@ -123,7 +123,7 @@
 		params[@"enabled"] = self.enabled;
 	}
 	if (self.point) {
-		params[@"point"] = self.point;
+		params[@"point"] = [self.point getParams];
 	}
 	if (self.includeInDataExport) {
 		params[@"includeInDataExport"] = self.includeInDataExport;
@@ -292,10 +292,10 @@
 	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
--(void)setPoint:(NSString *)point {
-	NSString *oldValue = _point;
+-(void)setPoint:(HIAnnotationMockPointOptionsObject *)point {
+	HIAnnotationMockPointOptionsObject *oldValue = _point;
 	_point = point;
-	[self updateNSObject:oldValue newValue:point propertyName:@"point"];
+	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
 }
 
 -(void)setIncludeInDataExport:(NSNumber *)includeInDataExport {

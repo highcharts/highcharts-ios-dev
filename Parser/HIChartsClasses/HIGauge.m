@@ -23,7 +23,6 @@
 	copyGauge.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyGauge.linecap = [self.linecap copyWithZone: zone];
 	copyGauge.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyGauge.selected = [self.selected copyWithZone: zone];
 	copyGauge.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyGauge.clip = [self.clip copyWithZone: zone];
 	copyGauge.color = [self.color copyWithZone: zone];
@@ -42,6 +41,7 @@
 	copyGauge.opacity = [self.opacity copyWithZone: zone];
 	copyGauge.definition = [self.definition copyWithZone: zone];
 	copyGauge.keys = [self.keys copyWithZone: zone];
+	copyGauge.selected = [self.selected copyWithZone: zone];
 	copyGauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyGauge.accessibility = [self.accessibility copyWithZone: zone];
 	copyGauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];

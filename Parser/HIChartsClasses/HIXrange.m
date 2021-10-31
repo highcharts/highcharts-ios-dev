@@ -45,7 +45,6 @@
 	copyXrange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyXrange.grouping = [self.grouping copyWithZone: zone];
 	copyXrange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyXrange.selected = [self.selected copyWithZone: zone];
 	copyXrange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyXrange.clip = [self.clip copyWithZone: zone];
 	copyXrange.color = [self.color copyWithZone: zone];
@@ -63,9 +62,10 @@
 	copyXrange.events = [self.events copyWithZone: zone];
 	copyXrange.opacity = [self.opacity copyWithZone: zone];
 	copyXrange.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyXrange.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyXrange.definition = [self.definition copyWithZone: zone];
 	copyXrange.keys = [self.keys copyWithZone: zone];
-	copyXrange.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyXrange.selected = [self.selected copyWithZone: zone];
 	copyXrange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyXrange.accessibility = [self.accessibility copyWithZone: zone];
 	copyXrange.shadow = [self.shadow copyWithZone: zone];

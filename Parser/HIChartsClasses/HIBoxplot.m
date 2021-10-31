@@ -57,7 +57,6 @@
 	copyBoxplot.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBoxplot.grouping = [self.grouping copyWithZone: zone];
 	copyBoxplot.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyBoxplot.selected = [self.selected copyWithZone: zone];
 	copyBoxplot.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBoxplot.clip = [self.clip copyWithZone: zone];
 	copyBoxplot.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -80,9 +79,10 @@
 	copyBoxplot.events = [self.events copyWithZone: zone];
 	copyBoxplot.opacity = [self.opacity copyWithZone: zone];
 	copyBoxplot.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyBoxplot.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBoxplot.definition = [self.definition copyWithZone: zone];
 	copyBoxplot.keys = [self.keys copyWithZone: zone];
-	copyBoxplot.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyBoxplot.selected = [self.selected copyWithZone: zone];
 	copyBoxplot.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBoxplot.accessibility = [self.accessibility copyWithZone: zone];
 	copyBoxplot.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

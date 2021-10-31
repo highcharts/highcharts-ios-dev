@@ -13,6 +13,7 @@
 	copyBindings.rectangleAnnotation = [self.rectangleAnnotation copyWithZone: zone];
 	copyBindings.labelAnnotation = [self.labelAnnotation copyWithZone: zone];
 	copyBindings.circleAnnotation = [self.circleAnnotation copyWithZone: zone];
+	copyBindings.ellipseAnnotation = [self.ellipseAnnotation copyWithZone: zone];
 	return copyBindings;
 }
 
@@ -27,6 +28,9 @@
 	}
 	if (self.circleAnnotation) {
 		params[@"circleAnnotation"] = [self.circleAnnotation getParams];
+	}
+	if (self.ellipseAnnotation) {
+		params[@"ellipseAnnotation"] = [self.ellipseAnnotation getParams];
 	}
 	return params;
 }
@@ -49,6 +53,12 @@
 	HINavigationBindingsOptionsObject *oldValue = _circleAnnotation;
 	_circleAnnotation = circleAnnotation;
 	[self updateHIObject:oldValue newValue:circleAnnotation propertyName:@"circleAnnotation"];
+}
+
+-(void)setEllipseAnnotation:(HIEllipseAnnotation *)ellipseAnnotation {
+	HIEllipseAnnotation *oldValue = _ellipseAnnotation;
+	_ellipseAnnotation = ellipseAnnotation;
+	[self updateHIObject:oldValue newValue:ellipseAnnotation propertyName:@"ellipseAnnotation"];
 }
 
 @end

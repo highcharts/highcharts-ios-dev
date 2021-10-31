@@ -11,7 +11,6 @@
 	[super copyWithZone:zone];
 	HITheme *copyTheme = [[HITheme allocWithZone: zone] init];
 	copyTheme.zIndex = [self.zIndex copyWithZone: zone];
-	copyTheme.padding = [self.padding copyWithZone: zone];
 	copyTheme.stroke = [self.stroke copyWithZone: zone];
 	copyTheme.fill = [self.fill copyWithZone: zone];
 	return copyTheme;
@@ -22,9 +21,6 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
-	}
-	if (self.padding) {
-		params[@"padding"] = self.padding;
 	}
 	if (self.stroke) {
 		params[@"stroke"] = [self.stroke getData];
@@ -41,12 +37,6 @@
 	NSNumber *oldValue = _zIndex;
 	_zIndex = zIndex;
 	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
-}
-
--(void)setPadding:(NSNumber *)padding {
-	NSNumber *oldValue = _padding;
-	_padding = padding;
-	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
 
 -(void)setStroke:(HIColor *)stroke {

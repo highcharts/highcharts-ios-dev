@@ -49,7 +49,6 @@
 	copyPackedbubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPackedbubble.linecap = [self.linecap copyWithZone: zone];
 	copyPackedbubble.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPackedbubble.selected = [self.selected copyWithZone: zone];
 	copyPackedbubble.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPackedbubble.clip = [self.clip copyWithZone: zone];
 	copyPackedbubble.color = [self.color copyWithZone: zone];
@@ -69,6 +68,7 @@
 	copyPackedbubble.events = [self.events copyWithZone: zone];
 	copyPackedbubble.opacity = [self.opacity copyWithZone: zone];
 	copyPackedbubble.definition = [self.definition copyWithZone: zone];
+	copyPackedbubble.selected = [self.selected copyWithZone: zone];
 	copyPackedbubble.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPackedbubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyPackedbubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

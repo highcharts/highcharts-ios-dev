@@ -37,7 +37,6 @@
 	copyBellcurve.threshold = [self.threshold copyWithZone: zone];
 	copyBellcurve.linecap = [self.linecap copyWithZone: zone];
 	copyBellcurve.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyBellcurve.selected = [self.selected copyWithZone: zone];
 	copyBellcurve.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBellcurve.clip = [self.clip copyWithZone: zone];
 	copyBellcurve.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -62,9 +61,10 @@
 	copyBellcurve.events = [self.events copyWithZone: zone];
 	copyBellcurve.opacity = [self.opacity copyWithZone: zone];
 	copyBellcurve.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyBellcurve.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBellcurve.definition = [self.definition copyWithZone: zone];
 	copyBellcurve.keys = [self.keys copyWithZone: zone];
-	copyBellcurve.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyBellcurve.selected = [self.selected copyWithZone: zone];
 	copyBellcurve.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBellcurve.accessibility = [self.accessibility copyWithZone: zone];
 	copyBellcurve.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

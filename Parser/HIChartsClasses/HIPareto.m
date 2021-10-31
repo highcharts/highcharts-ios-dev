@@ -17,7 +17,6 @@
 	HIPareto *copyPareto = [[HIPareto allocWithZone: zone] init];
 	copyPareto.linecap = [self.linecap copyWithZone: zone];
 	copyPareto.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPareto.selected = [self.selected copyWithZone: zone];
 	copyPareto.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPareto.clip = [self.clip copyWithZone: zone];
 	copyPareto.color = [self.color copyWithZone: zone];
@@ -41,8 +40,9 @@
 	copyPareto.events = [self.events copyWithZone: zone];
 	copyPareto.opacity = [self.opacity copyWithZone: zone];
 	copyPareto.animationLimit = [self.animationLimit copyWithZone: zone];
-	copyPareto.definition = [self.definition copyWithZone: zone];
 	copyPareto.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyPareto.definition = [self.definition copyWithZone: zone];
+	copyPareto.selected = [self.selected copyWithZone: zone];
 	copyPareto.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPareto.accessibility = [self.accessibility copyWithZone: zone];
 	copyPareto.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

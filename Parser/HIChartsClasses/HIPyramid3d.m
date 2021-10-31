@@ -50,7 +50,6 @@
 	copyPyramid3d.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPyramid3d.linecap = [self.linecap copyWithZone: zone];
 	copyPyramid3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -62,6 +61,7 @@
 	copyPyramid3d.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid3d.definition = [self.definition copyWithZone: zone];
 	copyPyramid3d.keys = [self.keys copyWithZone: zone];
+	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyPyramid3d.shadow = [self.shadow copyWithZone: zone];
@@ -100,7 +100,6 @@
 	copyPyramid3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPyramid3d.grouping = [self.grouping copyWithZone: zone];
 	copyPyramid3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPyramid3d.clip = [self.clip copyWithZone: zone];
 	copyPyramid3d.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -124,9 +123,10 @@
 	copyPyramid3d.events = [self.events copyWithZone: zone];
 	copyPyramid3d.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid3d.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyPyramid3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPyramid3d.definition = [self.definition copyWithZone: zone];
 	copyPyramid3d.keys = [self.keys copyWithZone: zone];
-	copyPyramid3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyPyramid3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

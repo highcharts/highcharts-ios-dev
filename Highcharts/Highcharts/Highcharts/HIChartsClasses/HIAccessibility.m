@@ -23,7 +23,6 @@
 	copyAccessibility.highContrastTheme = [self.highContrastTheme copyWithZone: zone];
 	copyAccessibility.definition = [self.definition copyWithZone: zone];
 	copyAccessibility.exposeAsGroupOnly = [self.exposeAsGroupOnly copyWithZone: zone];
-	copyAccessibility.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyAccessibility.rangeDescription = [self.rangeDescription copyWithZone: zone];
 	copyAccessibility.defaultChartTitle = [self.defaultChartTitle copyWithZone: zone];
 	copyAccessibility.svgContainerLabel = [self.svgContainerLabel copyWithZone: zone];
@@ -86,9 +85,6 @@
 	}
 	if (self.exposeAsGroupOnly) {
 		params[@"exposeAsGroupOnly"] = self.exposeAsGroupOnly;
-	}
-	if (self.pointDescriptionFormatter) {
-		params[@"pointDescriptionFormatter"] = [self.pointDescriptionFormatter getFunction];
 	}
 	if (self.rangeDescription) {
 		params[@"rangeDescription"] = self.rangeDescription;
@@ -225,12 +221,6 @@
 	NSNumber *oldValue = _exposeAsGroupOnly;
 	_exposeAsGroupOnly = exposeAsGroupOnly;
 	[self updateNSObject:oldValue newValue:exposeAsGroupOnly propertyName:@"exposeAsGroupOnly"];
-}
-
--(void)setPointDescriptionFormatter:(HIFunction *)pointDescriptionFormatter {
-	HIFunction *oldValue = _pointDescriptionFormatter;
-	_pointDescriptionFormatter = pointDescriptionFormatter;
-	[self updateHIObject:oldValue newValue:pointDescriptionFormatter propertyName:@"pointDescriptionFormatter"];
 }
 
 -(void)setRangeDescription:(NSString *)rangeDescription {

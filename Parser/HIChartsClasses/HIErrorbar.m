@@ -59,7 +59,6 @@
 	copyErrorbar.depth = [self.depth copyWithZone: zone];
 	copyErrorbar.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyErrorbar.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyErrorbar.selected = [self.selected copyWithZone: zone];
 	copyErrorbar.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyErrorbar.clip = [self.clip copyWithZone: zone];
 	copyErrorbar.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -81,9 +80,10 @@
 	copyErrorbar.events = [self.events copyWithZone: zone];
 	copyErrorbar.opacity = [self.opacity copyWithZone: zone];
 	copyErrorbar.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyErrorbar.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyErrorbar.definition = [self.definition copyWithZone: zone];
 	copyErrorbar.keys = [self.keys copyWithZone: zone];
-	copyErrorbar.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyErrorbar.selected = [self.selected copyWithZone: zone];
 	copyErrorbar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyErrorbar.accessibility = [self.accessibility copyWithZone: zone];
 	copyErrorbar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

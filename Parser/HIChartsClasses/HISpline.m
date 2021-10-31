@@ -26,7 +26,6 @@
 	copySpline.yAxis = [self.yAxis copyWithZone: zone];
 	copySpline.zIndex = [self.zIndex copyWithZone: zone];
 	copySpline.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copySpline.selected = [self.selected copyWithZone: zone];
 	copySpline.colorIndex = [self.colorIndex copyWithZone: zone];
 	copySpline.clip = [self.clip copyWithZone: zone];
 	copySpline.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -58,9 +57,10 @@
 	copySpline.events = [self.events copyWithZone: zone];
 	copySpline.opacity = [self.opacity copyWithZone: zone];
 	copySpline.animationLimit = [self.animationLimit copyWithZone: zone];
+	copySpline.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySpline.definition = [self.definition copyWithZone: zone];
 	copySpline.keys = [self.keys copyWithZone: zone];
-	copySpline.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copySpline.selected = [self.selected copyWithZone: zone];
 	copySpline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySpline.accessibility = [self.accessibility copyWithZone: zone];
 	copySpline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

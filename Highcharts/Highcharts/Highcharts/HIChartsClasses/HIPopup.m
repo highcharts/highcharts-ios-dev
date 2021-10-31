@@ -18,6 +18,7 @@
 	copyPopup.style = [self.style copyWithZone: zone];
 	copyPopup.crosshairX = [self.crosshairX copyWithZone: zone];
 	copyPopup.crosshairY = [self.crosshairY copyWithZone: zone];
+	copyPopup.clearFilter = [self.clearFilter copyWithZone: zone];
 	copyPopup.highIndex = [self.highIndex copyWithZone: zone];
 	copyPopup.factor = [self.factor copyWithZone: zone];
 	copyPopup.arrowSegment = [self.arrowSegment copyWithZone: zone];
@@ -27,6 +28,7 @@
 	copyPopup.elliott3 = [self.elliott3 copyWithZone: zone];
 	copyPopup.verticalLine = [self.verticalLine copyWithZone: zone];
 	copyPopup.background = [self.background copyWithZone: zone];
+	copyPopup.color = [self.color copyWithZone: zone];
 	copyPopup.slowAvgPeriod = [self.slowAvgPeriod copyWithZone: zone];
 	copyPopup.name = [self.name copyWithZone: zone];
 	copyPopup.shapes = [self.shapes copyWithZone: zone];
@@ -35,10 +37,11 @@
 	copyPopup.deviation = [self.deviation copyWithZone: zone];
 	copyPopup.periodTenkan = [self.periodTenkan copyWithZone: zone];
 	copyPopup.series = [self.series copyWithZone: zone];
-	copyPopup.maxAccelerationFactor = [self.maxAccelerationFactor copyWithZone: zone];
+	copyPopup.fibonacciTimeZones = [self.fibonacciTimeZones copyWithZone: zone];
 	copyPopup.measure = [self.measure copyWithZone: zone];
 	copyPopup.shortPeriod = [self.shortPeriod copyWithZone: zone];
 	copyPopup.index = [self.index copyWithZone: zone];
+	copyPopup.timeCycles = [self.timeCycles copyWithZone: zone];
 	copyPopup.typeOptions = [self.typeOptions copyWithZone: zone];
 	copyPopup.lowIndex = [self.lowIndex copyWithZone: zone];
 	copyPopup.label = [self.label copyWithZone: zone];
@@ -48,15 +51,18 @@
 	copyPopup.ranges = [self.ranges copyWithZone: zone];
 	copyPopup.multiplier = [self.multiplier copyWithZone: zone];
 	copyPopup.saveButton = [self.saveButton copyWithZone: zone];
+	copyPopup.noFilterMatch = [self.noFilterMatch copyWithZone: zone];
+	copyPopup.maxAccelerationFactor = [self.maxAccelerationFactor copyWithZone: zone];
 	copyPopup.title = [self.title copyWithZone: zone];
 	copyPopup.verticalArrow = [self.verticalArrow copyWithZone: zone];
 	copyPopup.decimals = [self.decimals copyWithZone: zone];
 	copyPopup.horizontalLine = [self.horizontalLine copyWithZone: zone];
-	copyPopup.color = [self.color copyWithZone: zone];
+	copyPopup.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyPopup.period = [self.period copyWithZone: zone];
 	copyPopup.height = [self.height copyWithZone: zone];
 	copyPopup.signalPeriod = [self.signalPeriod copyWithZone: zone];
 	copyPopup.removeButton = [self.removeButton copyWithZone: zone];
+	copyPopup.ellipse = [self.ellipse copyWithZone: zone];
 	copyPopup.borderColor = [self.borderColor copyWithZone: zone];
 	copyPopup.connector = [self.connector copyWithZone: zone];
 	copyPopup.arrowRay = [self.arrowRay copyWithZone: zone];
@@ -71,6 +77,7 @@
 	copyPopup.shapeOptions = [self.shapeOptions copyWithZone: zone];
 	copyPopup.outerBackground = [self.outerBackground copyWithZone: zone];
 	copyPopup.periods = [self.periods copyWithZone: zone];
+	copyPopup.searchIndicators = [self.searchIndicators copyWithZone: zone];
 	copyPopup.simpleShapes = [self.simpleShapes copyWithZone: zone];
 	copyPopup.stroke = [self.stroke copyWithZone: zone];
 	copyPopup.fibonacci = [self.fibonacci copyWithZone: zone];
@@ -78,12 +85,11 @@
 	copyPopup.longPeriod = [self.longPeriod copyWithZone: zone];
 	copyPopup.multiplierATR = [self.multiplierATR copyWithZone: zone];
 	copyPopup.fill = [self.fill copyWithZone: zone];
-	copyPopup.arrowLine = [self.arrowLine copyWithZone: zone];
 	copyPopup.ray = [self.ray copyWithZone: zone];
 	copyPopup.verticalLabel = [self.verticalLabel copyWithZone: zone];
-	copyPopup.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyPopup.initialAccelerationFactor = [self.initialAccelerationFactor copyWithZone: zone];
 	copyPopup.strokeWidth = [self.strokeWidth copyWithZone: zone];
+	copyPopup.arrowInfinityLine = [self.arrowInfinityLine copyWithZone: zone];
 	copyPopup.labelOptions = [self.labelOptions copyWithZone: zone];
 	copyPopup.parallelChannel = [self.parallelChannel copyWithZone: zone];
 	copyPopup.bottomBand = [self.bottomBand copyWithZone: zone];
@@ -131,6 +137,9 @@
 	if (self.crosshairY) {
 		params[@"crosshairY"] = self.crosshairY;
 	}
+	if (self.clearFilter) {
+		params[@"clearFilter"] = self.clearFilter;
+	}
 	if (self.highIndex) {
 		params[@"highIndex"] = self.highIndex;
 	}
@@ -158,6 +167,9 @@
 	if (self.background) {
 		params[@"background"] = self.background;
 	}
+	if (self.color) {
+		params[@"color"] = self.color;
+	}
 	if (self.slowAvgPeriod) {
 		params[@"slowAvgPeriod"] = self.slowAvgPeriod;
 	}
@@ -182,8 +194,8 @@
 	if (self.series) {
 		params[@"series"] = self.series;
 	}
-	if (self.maxAccelerationFactor) {
-		params[@"maxAccelerationFactor"] = self.maxAccelerationFactor;
+	if (self.fibonacciTimeZones) {
+		params[@"fibonacciTimeZones"] = self.fibonacciTimeZones;
 	}
 	if (self.measure) {
 		params[@"measure"] = self.measure;
@@ -193,6 +205,9 @@
 	}
 	if (self.index) {
 		params[@"index"] = self.index;
+	}
+	if (self.timeCycles) {
+		params[@"timeCycles"] = self.timeCycles;
 	}
 	if (self.typeOptions) {
 		params[@"typeOptions"] = self.typeOptions;
@@ -221,6 +236,12 @@
 	if (self.saveButton) {
 		params[@"saveButton"] = self.saveButton;
 	}
+	if (self.noFilterMatch) {
+		params[@"noFilterMatch"] = self.noFilterMatch;
+	}
+	if (self.maxAccelerationFactor) {
+		params[@"maxAccelerationFactor"] = self.maxAccelerationFactor;
+	}
 	if (self.title) {
 		params[@"title"] = self.title;
 	}
@@ -233,8 +254,8 @@
 	if (self.horizontalLine) {
 		params[@"horizontalLine"] = self.horizontalLine;
 	}
-	if (self.color) {
-		params[@"color"] = self.color;
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.period) {
 		params[@"period"] = self.period;
@@ -247,6 +268,9 @@
 	}
 	if (self.removeButton) {
 		params[@"removeButton"] = self.removeButton;
+	}
+	if (self.ellipse) {
+		params[@"ellipse"] = self.ellipse;
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = self.borderColor;
@@ -290,6 +314,9 @@
 	if (self.periods) {
 		params[@"periods"] = self.periods;
 	}
+	if (self.searchIndicators) {
+		params[@"searchIndicators"] = self.searchIndicators;
+	}
 	if (self.simpleShapes) {
 		params[@"simpleShapes"] = self.simpleShapes;
 	}
@@ -311,23 +338,20 @@
 	if (self.fill) {
 		params[@"fill"] = self.fill;
 	}
-	if (self.arrowLine) {
-		params[@"arrowLine"] = self.arrowLine;
-	}
 	if (self.ray) {
 		params[@"ray"] = self.ray;
 	}
 	if (self.verticalLabel) {
 		params[@"verticalLabel"] = self.verticalLabel;
 	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
-	}
 	if (self.initialAccelerationFactor) {
 		params[@"initialAccelerationFactor"] = self.initialAccelerationFactor;
 	}
 	if (self.strokeWidth) {
 		params[@"strokeWidth"] = self.strokeWidth;
+	}
+	if (self.arrowInfinityLine) {
+		params[@"arrowInfinityLine"] = self.arrowInfinityLine;
 	}
 	if (self.labelOptions) {
 		params[@"labelOptions"] = self.labelOptions;
@@ -433,6 +457,12 @@
 	[self updateNSObject:oldValue newValue:crosshairY propertyName:@"crosshairY"];
 }
 
+-(void)setClearFilter:(NSString *)clearFilter {
+	NSString *oldValue = _clearFilter;
+	_clearFilter = clearFilter;
+	[self updateNSObject:oldValue newValue:clearFilter propertyName:@"clearFilter"];
+}
+
 -(void)setHighIndex:(NSString *)highIndex {
 	NSString *oldValue = _highIndex;
 	_highIndex = highIndex;
@@ -487,6 +517,12 @@
 	[self updateNSObject:oldValue newValue:background propertyName:@"background"];
 }
 
+-(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
+	_color = color;
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
+}
+
 -(void)setSlowAvgPeriod:(NSString *)slowAvgPeriod {
 	NSString *oldValue = _slowAvgPeriod;
 	_slowAvgPeriod = slowAvgPeriod;
@@ -535,10 +571,10 @@
 	[self updateNSObject:oldValue newValue:series propertyName:@"series"];
 }
 
--(void)setMaxAccelerationFactor:(NSString *)maxAccelerationFactor {
-	NSString *oldValue = _maxAccelerationFactor;
-	_maxAccelerationFactor = maxAccelerationFactor;
-	[self updateNSObject:oldValue newValue:maxAccelerationFactor propertyName:@"maxAccelerationFactor"];
+-(void)setFibonacciTimeZones:(NSString *)fibonacciTimeZones {
+	NSString *oldValue = _fibonacciTimeZones;
+	_fibonacciTimeZones = fibonacciTimeZones;
+	[self updateNSObject:oldValue newValue:fibonacciTimeZones propertyName:@"fibonacciTimeZones"];
 }
 
 -(void)setMeasure:(NSString *)measure {
@@ -557,6 +593,12 @@
 	NSString *oldValue = _index;
 	_index = index;
 	[self updateNSObject:oldValue newValue:index propertyName:@"index"];
+}
+
+-(void)setTimeCycles:(NSString *)timeCycles {
+	NSString *oldValue = _timeCycles;
+	_timeCycles = timeCycles;
+	[self updateNSObject:oldValue newValue:timeCycles propertyName:@"timeCycles"];
 }
 
 -(void)setTypeOptions:(NSString *)typeOptions {
@@ -613,6 +655,18 @@
 	[self updateNSObject:oldValue newValue:saveButton propertyName:@"saveButton"];
 }
 
+-(void)setNoFilterMatch:(NSString *)noFilterMatch {
+	NSString *oldValue = _noFilterMatch;
+	_noFilterMatch = noFilterMatch;
+	[self updateNSObject:oldValue newValue:noFilterMatch propertyName:@"noFilterMatch"];
+}
+
+-(void)setMaxAccelerationFactor:(NSString *)maxAccelerationFactor {
+	NSString *oldValue = _maxAccelerationFactor;
+	_maxAccelerationFactor = maxAccelerationFactor;
+	[self updateNSObject:oldValue newValue:maxAccelerationFactor propertyName:@"maxAccelerationFactor"];
+}
+
 -(void)setTitle:(NSString *)title {
 	NSString *oldValue = _title;
 	_title = title;
@@ -637,10 +691,10 @@
 	[self updateNSObject:oldValue newValue:horizontalLine propertyName:@"horizontalLine"];
 }
 
--(void)setColor:(NSString *)color {
-	NSString *oldValue = _color;
-	_color = color;
-	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
+-(void)setBorderRadius:(NSString *)borderRadius {
+	NSString *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPeriod:(NSString *)period {
@@ -665,6 +719,12 @@
 	NSString *oldValue = _removeButton;
 	_removeButton = removeButton;
 	[self updateNSObject:oldValue newValue:removeButton propertyName:@"removeButton"];
+}
+
+-(void)setEllipse:(NSString *)ellipse {
+	NSString *oldValue = _ellipse;
+	_ellipse = ellipse;
+	[self updateNSObject:oldValue newValue:ellipse propertyName:@"ellipse"];
 }
 
 -(void)setBorderColor:(NSString *)borderColor {
@@ -751,6 +811,12 @@
 	[self updateNSObject:oldValue newValue:periods propertyName:@"periods"];
 }
 
+-(void)setSearchIndicators:(NSString *)searchIndicators {
+	NSString *oldValue = _searchIndicators;
+	_searchIndicators = searchIndicators;
+	[self updateNSObject:oldValue newValue:searchIndicators propertyName:@"searchIndicators"];
+}
+
 -(void)setSimpleShapes:(NSString *)simpleShapes {
 	NSString *oldValue = _simpleShapes;
 	_simpleShapes = simpleShapes;
@@ -793,12 +859,6 @@
 	[self updateNSObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
--(void)setArrowLine:(NSString *)arrowLine {
-	NSString *oldValue = _arrowLine;
-	_arrowLine = arrowLine;
-	[self updateNSObject:oldValue newValue:arrowLine propertyName:@"arrowLine"];
-}
-
 -(void)setRay:(NSString *)ray {
 	NSString *oldValue = _ray;
 	_ray = ray;
@@ -811,12 +871,6 @@
 	[self updateNSObject:oldValue newValue:verticalLabel propertyName:@"verticalLabel"];
 }
 
--(void)setBorderRadius:(NSString *)borderRadius {
-	NSString *oldValue = _borderRadius;
-	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
-}
-
 -(void)setInitialAccelerationFactor:(NSString *)initialAccelerationFactor {
 	NSString *oldValue = _initialAccelerationFactor;
 	_initialAccelerationFactor = initialAccelerationFactor;
@@ -827,6 +881,12 @@
 	NSString *oldValue = _strokeWidth;
 	_strokeWidth = strokeWidth;
 	[self updateNSObject:oldValue newValue:strokeWidth propertyName:@"strokeWidth"];
+}
+
+-(void)setArrowInfinityLine:(NSString *)arrowInfinityLine {
+	NSString *oldValue = _arrowInfinityLine;
+	_arrowInfinityLine = arrowInfinityLine;
+	[self updateNSObject:oldValue newValue:arrowInfinityLine propertyName:@"arrowInfinityLine"];
 }
 
 -(void)setLabelOptions:(NSString *)labelOptions {

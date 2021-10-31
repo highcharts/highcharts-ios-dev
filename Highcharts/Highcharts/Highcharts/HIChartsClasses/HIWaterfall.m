@@ -44,7 +44,6 @@
 	copyWaterfall.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWaterfall.grouping = [self.grouping copyWithZone: zone];
 	copyWaterfall.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyWaterfall.selected = [self.selected copyWithZone: zone];
 	copyWaterfall.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyWaterfall.clip = [self.clip copyWithZone: zone];
 	copyWaterfall.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -68,9 +67,10 @@
 	copyWaterfall.events = [self.events copyWithZone: zone];
 	copyWaterfall.opacity = [self.opacity copyWithZone: zone];
 	copyWaterfall.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyWaterfall.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyWaterfall.definition = [self.definition copyWithZone: zone];
 	copyWaterfall.keys = [self.keys copyWithZone: zone];
-	copyWaterfall.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyWaterfall.selected = [self.selected copyWithZone: zone];
 	copyWaterfall.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWaterfall.accessibility = [self.accessibility copyWithZone: zone];
 	copyWaterfall.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

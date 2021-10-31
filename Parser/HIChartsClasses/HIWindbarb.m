@@ -45,7 +45,6 @@
 	copyWindbarb.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWindbarb.grouping = [self.grouping copyWithZone: zone];
 	copyWindbarb.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyWindbarb.selected = [self.selected copyWithZone: zone];
 	copyWindbarb.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyWindbarb.clip = [self.clip copyWithZone: zone];
 	copyWindbarb.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -67,9 +66,10 @@
 	copyWindbarb.events = [self.events copyWithZone: zone];
 	copyWindbarb.opacity = [self.opacity copyWithZone: zone];
 	copyWindbarb.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyWindbarb.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyWindbarb.definition = [self.definition copyWithZone: zone];
 	copyWindbarb.keys = [self.keys copyWithZone: zone];
-	copyWindbarb.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyWindbarb.selected = [self.selected copyWithZone: zone];
 	copyWindbarb.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWindbarb.accessibility = [self.accessibility copyWithZone: zone];
 	copyWindbarb.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

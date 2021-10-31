@@ -51,7 +51,6 @@
 	copyVariablepie.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVariablepie.linecap = [self.linecap copyWithZone: zone];
 	copyVariablepie.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyVariablepie.selected = [self.selected copyWithZone: zone];
 	copyVariablepie.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVariablepie.colorKey = [self.colorKey copyWithZone: zone];
 	copyVariablepie.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -64,6 +63,7 @@
 	copyVariablepie.opacity = [self.opacity copyWithZone: zone];
 	copyVariablepie.definition = [self.definition copyWithZone: zone];
 	copyVariablepie.keys = [self.keys copyWithZone: zone];
+	copyVariablepie.selected = [self.selected copyWithZone: zone];
 	copyVariablepie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVariablepie.accessibility = [self.accessibility copyWithZone: zone];
 	copyVariablepie.shadow = [self.shadow copyWithZone: zone];

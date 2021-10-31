@@ -39,7 +39,6 @@
 	copyColumn.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyColumn.grouping = [self.grouping copyWithZone: zone];
 	copyColumn.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyColumn.selected = [self.selected copyWithZone: zone];
 	copyColumn.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyColumn.clip = [self.clip copyWithZone: zone];
 	copyColumn.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -66,9 +65,10 @@
 	copyColumn.events = [self.events copyWithZone: zone];
 	copyColumn.opacity = [self.opacity copyWithZone: zone];
 	copyColumn.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyColumn.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyColumn.definition = [self.definition copyWithZone: zone];
 	copyColumn.keys = [self.keys copyWithZone: zone];
-	copyColumn.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyColumn.selected = [self.selected copyWithZone: zone];
 	copyColumn.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumn.accessibility = [self.accessibility copyWithZone: zone];
 	copyColumn.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];

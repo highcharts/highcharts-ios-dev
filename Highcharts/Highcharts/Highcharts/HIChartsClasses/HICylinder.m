@@ -39,7 +39,6 @@
 	copyCylinder.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyCylinder.grouping = [self.grouping copyWithZone: zone];
 	copyCylinder.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyCylinder.selected = [self.selected copyWithZone: zone];
 	copyCylinder.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyCylinder.clip = [self.clip copyWithZone: zone];
 	copyCylinder.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -64,9 +63,10 @@
 	copyCylinder.events = [self.events copyWithZone: zone];
 	copyCylinder.opacity = [self.opacity copyWithZone: zone];
 	copyCylinder.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyCylinder.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyCylinder.definition = [self.definition copyWithZone: zone];
 	copyCylinder.keys = [self.keys copyWithZone: zone];
-	copyCylinder.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyCylinder.selected = [self.selected copyWithZone: zone];
 	copyCylinder.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyCylinder.accessibility = [self.accessibility copyWithZone: zone];
 	copyCylinder.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
