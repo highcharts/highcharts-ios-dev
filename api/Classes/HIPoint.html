@@ -87,14 +87,6 @@
 		
 		<option value="//api/name/valueSuffix">valueSuffix</option>
 		
-		<option value="//api/name/x">x</option>
-		
-		<option value="//api/name/xAxis">xAxis</option>
-		
-		<option value="//api/name/y">y</option>
-		
-		<option value="//api/name/yAxis">yAxis</option>
-		
 	</optgroup>
 	
 
@@ -175,7 +167,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Properties for each single point.</p>
+						<p>Point accessibility options for a series.</p>
 					</div>
 					
 					
@@ -191,24 +183,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/events" title="events"></a>
-	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/y" title="y"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
+	<a name="//api/name/descriptionFormatter" title="descriptionFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/descriptionFormatter">&nbsp;&nbsp;descriptionFormatter</a></code>
 </h3>
 
 	<div class="method-info">
@@ -218,135 +194,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The y position of the point. Units can be either in axis or chart pixel coordinates.</p>
+				<p>Formatter function to use instead of the default for point descriptions. Same as <code>accessibility.point.descriptionFormatter</code>, but applies to a series instead of the whole chart. Note: Prefer using <code>accessibility.point.valueDescriptionFormat</code> instead if possible, as default functionality such as describing annotations will be preserved.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPoint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/x" title="x"></a>
-	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The x position of the point. Units can be either in axis or chart pixel coordinates.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPoint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/xAxis" title="xAxis"></a>
-	<h3 class="method-title"><code><a href="#//api/name/xAxis">&nbsp;&nbsp;xAxis</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array. If the option is not configured or the axis is not found the point&rsquo;s x coordinate refers to the chart pixels.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id xAxis</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPoint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/yAxis" title="yAxis"></a>
-	<h3 class="method-title"><code><a href="#//api/name/yAxis">&nbsp;&nbsp;yAxis</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the yAxis array. If the option is not configured or the axis is not found the point&rsquo;s y coordinate refers to the chart pixels.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id yAxis</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *descriptionFormatter</code></div>
 
 		    
 			
@@ -576,47 +429,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/descriptionFormatter" title="descriptionFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/descriptionFormatter">&nbsp;&nbsp;descriptionFormatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Formatter function to use instead of the default for point descriptions. Receives one argument, <code>point</code>, referring to the point to describe. Should return a string with the description of the point for a screen reader user. If <code>false</code> is returned, the default formatter will be used for that point. Note: Prefer using <code>accessibility.point.valueDescriptionFormat</code> instead if possible, as default functionality such as describing annotations will be preserved.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *descriptionFormatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIPoint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/valueDecimals" title="valueDecimals"></a>
 	<h3 class="method-title"><code><a href="#//api/name/valueDecimals">&nbsp;&nbsp;valueDecimals</a></code>
 </h3>
@@ -655,6 +467,22 @@
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/events" title="events"></a>
+	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+
+		    
 		</div>
 	</div>
 </div><div class="section-method">

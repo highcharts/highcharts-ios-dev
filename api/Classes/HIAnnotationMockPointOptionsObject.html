@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIBindings Class Reference</title>
+	<title>HIAnnotationMockPointOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,13 +71,13 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/circleAnnotation">circleAnnotation</option>
+		<option value="//api/name/x">x</option>
 		
-		<option value="//api/name/ellipseAnnotation">ellipseAnnotation</option>
+		<option value="//api/name/xAxis">xAxis</option>
 		
-		<option value="//api/name/labelAnnotation">labelAnnotation</option>
+		<option value="//api/name/y">y</option>
 		
-		<option value="//api/name/rectangleAnnotation">rectangleAnnotation</option>
+		<option value="//api/name/yAxis">yAxis</option>
 		
 	</optgroup>
 	
@@ -104,7 +104,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIBindings Class Reference</h1>
+					<h1 class="title">HIAnnotationMockPointOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -113,7 +113,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIBindings.h</td>
+	<td>HIAnnotationMockPointOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -123,15 +123,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Bindings definitions for custom HTML buttons. Each binding implements simple event-driven interface: - <code>className</code>: classname used to bind event to - <code>init</code>: initial event, fired on button click - <code>start</code>: fired on first click on a chart - <code>steps</code>: array of sequential events fired one after another on each  of users clicks - <code>end</code>: last event to be called after last step event</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/bindings/">Simple binding</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/annotations/bindings-custom-annotation/">Custom annotation binding</a></li>
-</ul>
-
+						<p>Object of shape point.</p>
 					</div>
 					
 					
@@ -147,8 +139,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/rectangleAnnotation" title="rectangleAnnotation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rectangleAnnotation">&nbsp;&nbsp;rectangleAnnotation</a></code>
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
 </h3>
 
 	<div class="method-info">
@@ -158,12 +150,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A rectangle annotation bindings. Includes <code>start</code> and one event in <code>steps</code> array.</p>
+				<p>The x position of the point. Units can be either in axis or chart pixel coordinates.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINavigationBindingsOptionsObject *rectangleAnnotation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
 
 		    
 			
@@ -181,15 +173,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBindings.h</code></p>
+				<p><code class="declared-in-ref">HIAnnotationMockPointOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/labelAnnotation" title="labelAnnotation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/labelAnnotation">&nbsp;&nbsp;labelAnnotation</a></code>
+	<a name="//api/name/xAxis" title="xAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/xAxis">&nbsp;&nbsp;xAxis</a></code>
 </h3>
 
 	<div class="method-info">
@@ -199,12 +191,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A label annotation bindings. Includes <code>start</code> event only.</p>
+				<p>This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array. If the option is not configured or the axis is not found the point&rsquo;s x coordinate refers to the chart pixels.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINavigationBindingsOptionsObject *labelAnnotation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *xAxis</code></div>
 
 		    
 			
@@ -222,15 +214,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBindings.h</code></p>
+				<p><code class="declared-in-ref">HIAnnotationMockPointOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/circleAnnotation" title="circleAnnotation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/circleAnnotation">&nbsp;&nbsp;circleAnnotation</a></code>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
 
 	<div class="method-info">
@@ -240,12 +232,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A circle annotation bindings. Includes <code>start</code> and one event in <code>steps</code> array.</p>
+				<p>The y position of the point. Units can be either in axis or chart pixel coordinates.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HINavigationBindingsOptionsObject *circleAnnotation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *y</code></div>
 
 		    
 			
@@ -263,15 +255,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIBindings.h</code></p>
+				<p><code class="declared-in-ref">HIAnnotationMockPointOptionsObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/ellipseAnnotation" title="ellipseAnnotation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/ellipseAnnotation">&nbsp;&nbsp;ellipseAnnotation</a></code>
+	<a name="//api/name/yAxis" title="yAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/yAxis">&nbsp;&nbsp;yAxis</a></code>
 </h3>
 
 	<div class="method-info">
@@ -279,10 +271,35 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the yAxis array. If the option is not configured or the axis is not found the point&rsquo;s y coordinate refers to the chart pixels.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEllipseAnnotation *ellipseAnnotation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *yAxis</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAnnotationMockPointOptionsObject.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
